@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://qming-kids.app/schemas/session-v1.0.json",
+  "title": "Quiz Session Schema",
+  "description": "Schema for quiz session state. Complies with North Star §8 (Quiz Session Rules).",
+  "type": "object",
+  "required": ["version", "session_id", "status", "config", "progress", "created_at"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Unique session identifier"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current session status",
+      "enum": ["not_started", "in_progress", "paused", "completed", "abandoned"]
+    },
+    "config": {
+      "type": "object",
+      "required": ["time_mode", "topic_id"],
+      "properties": {
+        "time_mode": {
+          "type": "string",
+          "description": "Time mode per North Star §8.1",
+          "enum": ["unlimited", "10min", "5min", "3min"]
+        },
+        "time_limit_ms": {
+          "type": "integer",
+          "description": "Time limit in milliseconds (null for unlimited)",
+          "minimum": 0
+        },
+        "topic_id": {
+          "type": "string",
+          "description": "Topic being practiced",
+          "pattern": "^T\\d{2}\\.\\d{2}$"
+        },
+        "topic_name": {
+          "type": "string"
+        },
+        "question_count": {
+          "type": "integer",
+          "description": "Number of questions for this session (optional, defaults to all available)",
+          "minimum": 1
+        }
+      }
+    },
+    "progress": {
+      "type": "object",
+      "required": ["questions_answered", "questions_correct", "xp_earned", "current_question_index"],
+      "properties": {
+        "questions_answered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "questions_correct": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "xp_earned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "current_question_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "time_elapsed_ms": {
+          "type": "integer",
+          "description": "Total time elapsed in milliseconds",
+          "minimum": 0
+        },
+        "time_remaining_ms": {
+          "type": "integer",
+          "description": "Time remaining for timed sessions",
+          "minimum": 0
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "description": "Questions selected for this session",
+      "items": {
+        "$ref": "#/definitions/session_question"
+      }
+    },
+    "current_question": {
+      "description": "The current question being displayed",
+      "$ref": "#/definitions/session_question"
+    },
+    "answers": {
+      "type": "array",
+      "description": "User answers for this session",
+      "items": {
+        "$ref": "#/definitions/session_answer"
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "paused_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "definitions": {
+    "session_question": {
+      "type": "object",
+      "required": ["question_id", "concept_id", "difficulty", "type", "question_text", "correct_answer"],
+      "properties": {
+        "question_id": {
+          "type": "string"
+        },
+        "concept_id": {
+          "type": "string"
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": ["familiarity", "application", "exam_style"]
+        },
+        "type": {
+          "type": "string",
+          "enum": ["mcq", "fill_blank", "true_false", "match", "ordering"]
+        },
+        "question_text": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "text": { "type": "string" }
+            }
+          }
+        },
+        "correct_answer": {},
+        "match_pairs": {
+          "type": "array"
+        },
+        "ordering_items": {
+          "type": "array"
+        },
+        "hint": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "answered", "skipped"]
+        },
+        "order_in_session": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "session_answer": {
+      "type": "object",
+      "required": ["question_id", "user_answer", "is_correct", "answered_at"],
+      "properties": {
+        "question_id": {
+          "type": "string"
+        },
+        "user_answer": {
+          "description": "User's answer (format depends on question type)"
+        },
+        "is_correct": {
+          "type": "boolean"
+        },
+        "xp_earned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "time_taken_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answered_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

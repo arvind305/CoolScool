@@ -1,0 +1,231 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://qming-kids.app/schemas/question-bank-v1.0.json",
+  "title": "Question Bank Schema",
+  "description": "Schema for topic-wise question banks. All questions must be CAM-validated and comply with North Star §6, §7, §10, §11.",
+  "type": "object",
+  "required": ["version", "cam_reference", "topic_id", "topic_name", "canonical_explanation", "questions", "metadata"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Question bank version",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "cam_reference": {
+      "type": "object",
+      "description": "Reference to the authoritative CAM",
+      "required": ["cam_version", "board", "class", "subject"],
+      "properties": {
+        "cam_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "board": {
+          "type": "string",
+          "enum": ["ICSE"]
+        },
+        "class": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "subject": {
+          "type": "string",
+          "enum": ["Mathematics"]
+        }
+      }
+    },
+    "topic_id": {
+      "type": "string",
+      "description": "CAM topic identifier",
+      "pattern": "^T\\d{2}\\.\\d{2}$"
+    },
+    "topic_name": {
+      "type": "string",
+      "description": "Human-readable topic name (must match CAM)"
+    },
+    "canonical_explanation": {
+      "type": "object",
+      "description": "Topic-level canonical explanation per North Star §10",
+      "required": ["text", "rules"],
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "2-4 factual sentences explaining the core concept. No teaching, no worked steps.",
+          "minLength": 50,
+          "maxLength": 500
+        },
+        "rules": {
+          "type": "array",
+          "description": "Key rules/facts for this topic",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 5
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "description": "Finite set of questions for this topic (per North Star §7)",
+      "minItems": 5,
+      "items": {
+        "$ref": "#/definitions/question"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "status", "question_count"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "validated", "locked"],
+          "description": "Question bank lifecycle status"
+        },
+        "validated_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "locked_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "question_count": {
+          "type": "object",
+          "required": ["total", "by_difficulty", "by_type"],
+          "properties": {
+            "total": {
+              "type": "integer",
+              "minimum": 5
+            },
+            "by_difficulty": {
+              "type": "object",
+              "properties": {
+                "familiarity": { "type": "integer", "minimum": 0 },
+                "application": { "type": "integer", "minimum": 0 },
+                "exam_style": { "type": "integer", "minimum": 0 }
+              }
+            },
+            "by_type": {
+              "type": "object",
+              "properties": {
+                "mcq": { "type": "integer", "minimum": 0 },
+                "fill_blank": { "type": "integer", "minimum": 0 },
+                "true_false": { "type": "integer", "minimum": 0 },
+                "match": { "type": "integer", "minimum": 0 },
+                "ordering": { "type": "integer", "minimum": 0 }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "question": {
+      "type": "object",
+      "required": ["question_id", "concept_id", "difficulty", "type", "question_text", "correct_answer"],
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "description": "Unique question identifier: {topic_id}.Q{number}",
+          "pattern": "^T\\d{2}\\.\\d{2}\\.Q\\d{3}$"
+        },
+        "concept_id": {
+          "type": "string",
+          "description": "Single CAM concept this question tests (no multi-concept per North Star §6)",
+          "pattern": "^T\\d{2}\\.\\d{2}\\.C\\d{2}$"
+        },
+        "difficulty": {
+          "type": "string",
+          "description": "Difficulty level per North Star §6",
+          "enum": ["familiarity", "application", "exam_style"]
+        },
+        "type": {
+          "type": "string",
+          "description": "Question format type",
+          "enum": ["mcq", "fill_blank", "true_false", "match", "ordering"]
+        },
+        "question_text": {
+          "type": "string",
+          "description": "The question prompt. Must be clear, unambiguous, and within CAM boundaries.",
+          "minLength": 10
+        },
+        "options": {
+          "type": "array",
+          "description": "Answer options for MCQ type (required if type=mcq)",
+          "items": {
+            "type": "object",
+            "required": ["id", "text"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": ["A", "B", "C", "D"]
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "correct_answer": {
+          "description": "The deterministic correct answer (per North Star §11)",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "boolean" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "match_pairs": {
+          "type": "array",
+          "description": "For match type questions - left/right pairs",
+          "items": {
+            "type": "object",
+            "required": ["left", "right"],
+            "properties": {
+              "left": { "type": "string" },
+              "right": { "type": "string" }
+            }
+          }
+        },
+        "ordering_items": {
+          "type": "array",
+          "description": "For ordering type questions - items to be ordered",
+          "items": { "type": "string" }
+        },
+        "hint": {
+          "type": "string",
+          "description": "Optional hint (not teaching, just a nudge)",
+          "maxLength": 100
+        },
+        "tags": {
+          "type": "array",
+          "description": "Optional tags for filtering",
+          "items": { "type": "string" }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "mcq" } } },
+          "then": { "required": ["options"] }
+        },
+        {
+          "if": { "properties": { "type": { "const": "match" } } },
+          "then": { "required": ["match_pairs"] }
+        },
+        {
+          "if": { "properties": { "type": { "const": "ordering" } } },
+          "then": { "required": ["ordering_items"] }
+        }
+      ]
+    }
+  }
+}

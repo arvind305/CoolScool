@@ -1,0 +1,39 @@
+# Render Blueprint for Cool S-Cool Backend
+# https://render.com/docs/blueprint-spec
+
+services:
+  # Web API Service
+  - type: web
+    name: coolscool-api
+    env: node
+    plan: free
+    region: singapore  # Closer to Neon ap-southeast-1
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: API_VERSION
+        value: v1
+      - key: DATABASE_URL
+        sync: false  # Set in Render dashboard (Neon connection string)
+      - key: GOOGLE_CLIENT_ID
+        sync: false  # Set in Render dashboard
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false  # Set in Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: https://coolscool.vercel.app
+      - key: RATE_LIMIT_WINDOW_MS
+        value: "60000"
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: "100"
+
+# Note: Using external Neon PostgreSQL database (free tier)
+# Database already provisioned at: ep-odd-math-a13hp42k-pooler.ap-southeast-1.aws.neon.tech

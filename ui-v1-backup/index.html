@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QMing Kids - Pressure-free curriculum practice for ICSE Class 5 Mathematics">
+  <meta name="theme-color" content="#4a7c59">
+
+  <!-- Offline capability -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000">
+
+  <title>QMing Kids - Practice Math</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <a href="#" class="app-logo" id="logo-btn" aria-label="Go to home">
+          <div class="app-logo-icon" aria-hidden="true">Q</div>
+          <span class="app-title">QMing Kids</span>
+        </a>
+        <div class="header-actions">
+          <button class="btn btn-ghost btn-icon" id="settings-btn" aria-label="Settings">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Loading View -->
+    <main class="view active" id="loading-view" aria-label="Loading">
+      <div class="loading">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <p>Loading your practice topics...</p>
+      </div>
+    </main>
+
+    <!-- Home View (Topic Browser) -->
+    <main class="view" id="home-view" aria-label="Topic selection">
+      <div class="container">
+        <div class="home-header">
+          <h1>ICSE Class 5 Mathematics</h1>
+          <p>Choose a topic to practice</p>
+        </div>
+
+        <div class="theme-list" id="theme-list" role="list" aria-label="Themes and topics">
+          <!-- Themes and topics will be rendered here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Quiz View -->
+    <main class="view" id="quiz-view" aria-label="Quiz session">
+      <div class="quiz-header">
+        <div class="quiz-header-content">
+          <div class="quiz-topic-name" id="quiz-topic-name">Topic Name</div>
+          <div class="quiz-meta">
+            <div class="quiz-timer" id="quiz-timer" aria-live="polite">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span id="timer-display">Unlimited</span>
+            </div>
+            <div class="quiz-progress" id="quiz-progress-text">
+              <span id="current-question-num">1</span> of <span id="total-questions">10</span>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="quiz-progress-fill" id="quiz-progress-bar" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="question-container" id="question-container">
+        <div class="question-number" id="question-number">Question 1</div>
+        <div class="question-text" id="question-text">Loading question...</div>
+
+        <!-- MCQ Options -->
+        <div class="answer-options" id="answer-options" role="radiogroup" aria-label="Answer options">
+          <!-- Options will be rendered here -->
+        </div>
+
+        <!-- Fill in the blank -->
+        <div class="answer-input-container" id="answer-input-container" style="display: none;">
+          <label for="fill-blank-input" class="sr-only">Your answer</label>
+          <input type="text"
+                 id="fill-blank-input"
+                 class="fill-blank-input"
+                 placeholder="Type your answer here..."
+                 autocomplete="off">
+        </div>
+
+        <!-- Ordering interface -->
+        <div class="ordering-container" id="ordering-container" style="display: none;">
+          <p class="text-secondary" style="margin-bottom: var(--spacing-md);">Drag items to arrange in the correct order:</p>
+          <div class="ordering-items" id="ordering-items">
+            <!-- Ordering items will be rendered here -->
+          </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="feedback-section" id="feedback-section" aria-live="polite">
+          <div class="feedback-header">
+            <span class="feedback-icon" id="feedback-icon"></span>
+            <span id="feedback-title">Feedback</span>
+          </div>
+          <div class="feedback-explanation" id="feedback-explanation">
+            <!-- Explanation will be shown here -->
+          </div>
+        </div>
+
+        <!-- Quiz Actions -->
+        <div class="quiz-actions">
+          <button class="btn btn-secondary" id="skip-btn">Skip</button>
+          <button class="btn btn-primary" id="submit-btn" disabled>Check Answer</button>
+          <button class="btn btn-primary" id="next-btn" style="display: none;">Next Question</button>
+          <button class="btn btn-primary" id="finish-btn" style="display: none;">See Results</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Summary View -->
+    <main class="view" id="summary-view" aria-label="Session summary">
+      <div class="summary-container">
+        <div class="summary-header">
+          <h1 class="summary-title">Practice Complete</h1>
+          <p class="summary-subtitle" id="summary-topic-name">Topic Name</p>
+        </div>
+
+        <div class="summary-stats" id="summary-stats">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-answered">0</div>
+            <div class="stat-label">Questions Answered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-correct">0</div>
+            <div class="stat-label">Correct</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-xp">0</div>
+            <div class="stat-label">XP Earned</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-time">0:00</div>
+            <div class="stat-label">Time Taken</div>
+          </div>
+        </div>
+
+        <div class="summary-proficiency">
+          <div class="proficiency-title">Your Current Level</div>
+          <div class="proficiency-band-large not-started" id="summary-proficiency-band">
+            Not Started
+          </div>
+          <p class="proficiency-message" id="summary-proficiency-message">
+            Keep practicing to build familiarity with this topic.
+          </p>
+        </div>
+
+        <div class="summary-actions">
+          <button class="btn btn-primary btn-lg btn-block" id="practice-again-btn">
+            Practice Again
+          </button>
+          <button class="btn btn-secondary btn-block" id="choose-topic-btn">
+            Choose Another Topic
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Settings View -->
+    <main class="view" id="settings-view" aria-label="Settings">
+      <div class="settings-container">
+        <div class="settings-header">
+          <h1>Settings</h1>
+        </div>
+
+        <section class="settings-section">
+          <h2 class="settings-section-title">Your Progress</h2>
+          <div class="storage-stats" id="storage-stats">
+            <div class="storage-stat">
+              <div class="storage-stat-value" id="total-sessions">0</div>
+              <div class="storage-stat-label">Practice Sessions</div>
+            </div>
+            <div class="storage-stat">
+              <div class="storage-stat-value" id="total-xp">0</div>
+              <div class="storage-stat-label">Total XP</div>
+            </div>
+            <div class="storage-stat">
+              <div class="storage-stat-value" id="topics-started">0</div>
+              <div class="storage-stat-label">Topics Started</div>
+            </div>
+            <div class="storage-stat">
+              <div class="storage-stat-value" id="topics-mastered">0</div>
+              <div class="storage-stat-label">Topics Mastered</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2 class="settings-section-title">Data Management</h2>
+          <div class="settings-item">
+            <div class="settings-item-info">
+              <h4>Export Progress</h4>
+              <p>Download your progress as a JSON file</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="export-btn">Export</button>
+          </div>
+          <div class="settings-item">
+            <div class="settings-item-info">
+              <h4>Import Progress</h4>
+              <p>Restore progress from a backup file</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="import-btn">Import</button>
+            <input type="file" id="import-file" accept=".json" style="display: none;">
+          </div>
+          <div class="settings-item">
+            <div class="settings-item-info">
+              <h4>Reset All Progress</h4>
+              <p>Start fresh (this cannot be undone)</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" id="reset-btn">Reset</button>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2 class="settings-section-title">About</h2>
+          <div class="settings-item">
+            <div class="settings-item-info">
+              <h4>QMing Kids</h4>
+              <p>Pressure-free Curriculum Practice App v1.0</p>
+              <p style="margin-top: var(--spacing-xs);">ICSE Class 5 Mathematics</p>
+            </div>
+          </div>
+        </section>
+
+        <div style="padding: var(--spacing-lg) 0;">
+          <button class="btn btn-secondary btn-block" id="back-to-home-btn">
+            Back to Topics
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Time Mode Selection Modal -->
+    <div class="modal-overlay" id="time-mode-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modal-title">Choose Practice Style</h2>
+          <p class="modal-subtitle" id="modal-topic-name">Topic Name</p>
+        </div>
+
+        <div class="time-mode-list" role="radiogroup" aria-label="Time mode options">
+          <div class="time-mode-option selected" data-mode="unlimited" role="radio" aria-checked="true" tabindex="0">
+            <div class="time-mode-radio" aria-hidden="true"></div>
+            <div class="time-mode-info">
+              <div class="time-mode-label">Unlimited Time</div>
+              <div class="time-mode-desc">Take your time, no rush</div>
+            </div>
+          </div>
+          <div class="time-mode-option" data-mode="10min" role="radio" aria-checked="false" tabindex="0">
+            <div class="time-mode-radio" aria-hidden="true"></div>
+            <div class="time-mode-info">
+              <div class="time-mode-label">10 Minutes</div>
+              <div class="time-mode-desc">Relaxed practice session</div>
+            </div>
+          </div>
+          <div class="time-mode-option" data-mode="5min" role="radio" aria-checked="false" tabindex="0">
+            <div class="time-mode-radio" aria-hidden="true"></div>
+            <div class="time-mode-info">
+              <div class="time-mode-label">5 Minutes</div>
+              <div class="time-mode-desc">Quick practice round</div>
+            </div>
+          </div>
+          <div class="time-mode-option" data-mode="3min" role="radio" aria-checked="false" tabindex="0">
+            <div class="time-mode-radio" aria-hidden="true"></div>
+            <div class="time-mode-info">
+              <div class="time-mode-label">3 Minutes</div>
+              <div class="time-mode-desc">Fast-paced challenge</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+          <button class="btn btn-primary" id="modal-start-btn">Start Practice</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm Reset Modal -->
+    <div class="modal-overlay" id="reset-modal" role="dialog" aria-labelledby="reset-modal-title" aria-modal="true">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title" id="reset-modal-title">Reset All Progress?</h2>
+          <p class="modal-subtitle">This will delete all your practice history and start fresh. This action cannot be undone.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" id="reset-cancel-btn">Cancel</button>
+          <button class="btn btn-primary" id="reset-confirm-btn">Reset Everything</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true">
+      <!-- Toasts will be added here -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/quiz-engine-browser.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

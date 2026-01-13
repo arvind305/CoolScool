@@ -1,0 +1,289 @@
+/**
+ * Question Model
+ *
+ * Database operations for questions.
+ * SECURITY: Never expose correct_answer until AFTER submission.
+ */
+
+import { query } from '../db/index.js';
+
+// Question type as stored in database
+export interface Question {
+  id: string;
+  question_id: string;
+  concept_id: string;
+  concept_id_str: string;
+  topic_id_str: string;
+  difficulty: 'familiarity' | 'application' | 'exam_style';
+  question_type: 'mcq' | 'fill_blank' | 'true_false' | 'match' | 'ordering';
+  question_text: string;
+  options: { id: string; text: string }[] | null;
+  correct_answer: string | boolean | string[] | Record<string, string>;
+  match_pairs: { left: string; right: string }[] | null;
+  ordering_items: string[] | null;
+  hint: string | null;
+  tags: string[];
+  created_at: Date;
+  updated_at: Date;
+}
+
+// Question as sent to client (no answer data)
+export interface QuestionForClient {
+  id: string;
+  question_id: string;
+  concept_id_str: string;
+  topic_id_str: string;
+  difficulty: string;
+  question_type: string;
+  question_text: string;
+  options: { id: string; text: string }[] | null;
+  // For match questions: only the left side (shuffled right side)
+  match_left: string[] | null;
+  match_right_shuffled: string[] | null;
+  // For ordering questions: shuffled items
+  ordering_items_shuffled: string[] | null;
+  hint: string | null;
+}
+
+// Find question by UUID
+export async function findById(id: string): Promise<Question | null> {
+  const result = await query<Question>(
+    'SELECT * FROM questions WHERE id = $1',
+    [id]
+  );
+  return result.rows[0] || null;
+}
+
+// Find question by question_id string (e.g., T01.01.C01.F.001)
+export async function findByQuestionId(questionId: string): Promise<Question | null> {
+  const result = await query<Question>(
+    'SELECT * FROM questions WHERE question_id = $1',
+    [questionId]
+  );
+  return result.rows[0] || null;
+}
+
+// Get questions by topic
+export async function getQuestionsByTopic(
+  topicIdStr: string,
+  difficulty?: string
+): Promise<Question[]> {
+  if (difficulty) {
+    const result = await query<Question>(
+      `SELECT * FROM questions
+       WHERE topic_id_str = $1 AND difficulty = $2
+       ORDER BY concept_id_str, question_id`,
+      [topicIdStr, difficulty]
+    );
+    return result.rows;
+  }
+
+  const result = await query<Question>(
+    `SELECT * FROM questions
+     WHERE topic_id_str = $1
+     ORDER BY concept_id_str, difficulty, question_id`,
+    [topicIdStr]
+  );
+  return result.rows;
+}
+
+// Get questions by concept
+export async function getQuestionsByConcept(
+  conceptIdStr: string,
+  difficulty?: string
+): Promise<Question[]> {
+  if (difficulty) {
+    const result = await query<Question>(
+      `SELECT * FROM questions
+       WHERE concept_id_str = $1 AND difficulty = $2
+       ORDER BY question_id`,
+      [conceptIdStr, difficulty]
+    );
+    return result.rows;
+  }
+
+  const result = await query<Question>(
+    `SELECT * FROM questions
+     WHERE concept_id_str = $1
+     ORDER BY difficulty, question_id`,
+    [conceptIdStr]
+  );
+  return result.rows;
+}
+
+// Get questions by UUIDs (for session question queue)
+export async function getQuestionsByIds(ids: string[]): Promise<Question[]> {
+  if (ids.length === 0) return [];
+
+  const result = await query<Question>(
+    `SELECT * FROM questions
+     WHERE id = ANY($1)`,
+    [ids]
+  );
+
+  // Preserve order from input array
+  const questionMap = new Map(result.rows.map(q => [q.id, q]));
+  return ids.map(id => questionMap.get(id)).filter((q): q is Question => q !== undefined);
+}
+
+// Get a single question by UUID for session
+export async function getQuestionForSession(id: string): Promise<Question | null> {
+  return findById(id);
+}
+
+// Count questions by topic
+export async function countQuestionsByTopic(topicIdStr: string): Promise<number> {
+  const result = await query<{ count: string }>(
+    'SELECT COUNT(*) as count FROM questions WHERE topic_id_str = $1',
+    [topicIdStr]
+  );
+  return parseInt(result.rows[0]?.count || '0', 10);
+}
+
+// Count questions by topic and difficulty
+export async function countQuestionsByTopicAndDifficulty(
+  topicIdStr: string,
+  difficulty: string
+): Promise<number> {
+  const result = await query<{ count: string }>(
+    'SELECT COUNT(*) as count FROM questions WHERE topic_id_str = $1 AND difficulty = $2',
+    [topicIdStr, difficulty]
+  );
+  return parseInt(result.rows[0]?.count || '0', 10);
+}
+
+/**
+ * SECURITY CRITICAL: Strip answer data before sending to client
+ *
+ * This function removes:
+ * - correct_answer (for all question types)
+ * - match_pairs (replaced with shuffled left/right arrays)
+ * - ordering_items (replaced with shuffled array)
+ */
+export function stripAnswerData(question: Question): QuestionForClient {
+  const base: QuestionForClient = {
+    id: question.id,
+    question_id: question.question_id,
+    concept_id_str: question.concept_id_str,
+    topic_id_str: question.topic_id_str,
+    difficulty: question.difficulty,
+    question_type: question.question_type,
+    question_text: question.question_text,
+    options: question.options,
+    match_left: null,
+    match_right_shuffled: null,
+    ordering_items_shuffled: null,
+    hint: question.hint,
+  };
+
+  // For match questions: separate left and right, shuffle right side
+  if (question.question_type === 'match' && question.match_pairs) {
+    const pairs = question.match_pairs;
+    base.match_left = pairs.map(p => p.left);
+    // Shuffle right side so student can't guess by position
+    base.match_right_shuffled = shuffleArray(pairs.map(p => p.right));
+  }
+
+  // For ordering questions: shuffle the items
+  if (question.question_type === 'ordering' && question.ordering_items) {
+    base.ordering_items_shuffled = shuffleArray([...question.ordering_items]);
+  }
+
+  return base;
+}
+
+/**
+ * Fisher-Yates shuffle algorithm
+ */
+function shuffleArray<T>(array: T[]): T[] {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = result[i]!;
+    result[i] = result[j]!;
+    result[j] = temp;
+  }
+  return result;
+}
+
+/**
+ * Check if user's answer is correct
+ *
+ * IMPORTANT: This runs server-side only. Never expose logic to client.
+ */
+export function checkAnswer(
+  question: Question,
+  userAnswer: unknown
+): boolean {
+  switch (question.question_type) {
+    case 'mcq':
+    case 'true_false':
+      return checkStringAnswer(question.correct_answer as string, userAnswer);
+
+    case 'fill_blank':
+      return checkFillBlankAnswer(question.correct_answer as string, userAnswer);
+
+    case 'ordering':
+      return checkOrderingAnswer(question.correct_answer as string[], userAnswer);
+
+    case 'match':
+      return checkMatchAnswer(question.match_pairs || [], userAnswer);
+
+    default:
+      return false;
+  }
+}
+
+// MCQ/True-False: case-insensitive string comparison
+function checkStringAnswer(correctAnswer: string, userAnswer: unknown): boolean {
+  if (typeof userAnswer !== 'string') return false;
+  return userAnswer.toLowerCase().trim() === String(correctAnswer).toLowerCase().trim();
+}
+
+// Fill blank: case-insensitive, trimmed comparison
+function checkFillBlankAnswer(correctAnswer: string, userAnswer: unknown): boolean {
+  if (typeof userAnswer !== 'string') return false;
+  return userAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
+}
+
+// Ordering: exact array order match
+function checkOrderingAnswer(correctOrder: string[], userAnswer: unknown): boolean {
+  if (!Array.isArray(userAnswer)) return false;
+  if (userAnswer.length !== correctOrder.length) return false;
+  return userAnswer.every((item, index) => item === correctOrder[index]);
+}
+
+// Match: all pairs must be correctly matched
+function checkMatchAnswer(
+  matchPairs: { left: string; right: string }[],
+  userAnswer: unknown
+): boolean {
+  if (typeof userAnswer !== 'object' || userAnswer === null) return false;
+
+  const answer = userAnswer as Record<string, string>;
+  const answerKeys = Object.keys(answer);
+
+  // Must have same number of pairs
+  if (answerKeys.length !== matchPairs.length) return false;
+
+  // Each left item must map to correct right item
+  for (const pair of matchPairs) {
+    if (answer[pair.left] !== pair.right) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/**
+ * Get correct answer for a question (for feedback after submission)
+ */
+export function getCorrectAnswerForFeedback(question: Question): {
+  correct_answer: unknown;
+  explanation?: string;
+} {
+  return {
+    correct_answer: question.correct_answer,
+  };
+}

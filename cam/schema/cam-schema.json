@@ -1,0 +1,192 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://qming-kids.app/schemas/cam-v1.0.json",
+  "title": "Curriculum Authority Model (CAM) Schema",
+  "description": "Schema for defining curriculum structure. This is the ONLY authority for what can and cannot be asked in the app.",
+  "type": "object",
+  "required": ["version", "board", "class", "subject", "academic_year", "themes", "metadata"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "CAM version identifier",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "board": {
+      "type": "string",
+      "description": "Education board (e.g., ICSE, CBSE)",
+      "enum": ["ICSE"]
+    },
+    "class": {
+      "type": "integer",
+      "description": "Grade/Class level",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject name",
+      "enum": ["Mathematics"]
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Academic year for this curriculum",
+      "pattern": "^\\d{4}-\\d{4}$"
+    },
+    "themes": {
+      "type": "array",
+      "description": "List of curriculum themes/chapters",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/theme"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created_at", "source", "status"],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "source": {
+          "type": "string",
+          "description": "Authority source for this CAM"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "validated", "locked"],
+          "description": "CAM lifecycle status"
+        },
+        "validated_by": {
+          "type": "string"
+        },
+        "locked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "theme": {
+      "type": "object",
+      "required": ["theme_id", "theme_name", "theme_order", "topics"],
+      "properties": {
+        "theme_id": {
+          "type": "string",
+          "description": "Unique theme identifier",
+          "pattern": "^T\\d{2}$"
+        },
+        "theme_name": {
+          "type": "string",
+          "description": "Human-readable theme name"
+        },
+        "theme_order": {
+          "type": "integer",
+          "description": "Display order of theme",
+          "minimum": 1
+        },
+        "topics": {
+          "type": "array",
+          "description": "Topics within this theme",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/topic"
+          }
+        }
+      }
+    },
+    "topic": {
+      "type": "object",
+      "required": ["topic_id", "topic_name", "topic_order", "concepts", "boundaries"],
+      "properties": {
+        "topic_id": {
+          "type": "string",
+          "description": "Unique topic identifier",
+          "pattern": "^T\\d{2}\\.\\d{2}$"
+        },
+        "topic_name": {
+          "type": "string",
+          "description": "Human-readable topic name"
+        },
+        "topic_order": {
+          "type": "integer",
+          "description": "Display order within theme",
+          "minimum": 1
+        },
+        "concepts": {
+          "type": "array",
+          "description": "List of concepts that CAN be asked",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/concept"
+          }
+        },
+        "boundaries": {
+          "$ref": "#/definitions/boundaries"
+        }
+      }
+    },
+    "concept": {
+      "type": "object",
+      "required": ["concept_id", "concept_name", "difficulty_levels"],
+      "properties": {
+        "concept_id": {
+          "type": "string",
+          "description": "Unique concept identifier",
+          "pattern": "^T\\d{2}\\.\\d{2}\\.C\\d{2}$"
+        },
+        "concept_name": {
+          "type": "string",
+          "description": "Concept description"
+        },
+        "difficulty_levels": {
+          "type": "array",
+          "description": "Allowed difficulty levels for this concept",
+          "items": {
+            "type": "string",
+            "enum": ["familiarity", "application", "exam_style"]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "required": ["in_scope", "out_of_scope"],
+      "description": "Explicit boundaries for what can and cannot be asked",
+      "properties": {
+        "in_scope": {
+          "type": "array",
+          "description": "What CAN be asked (explicit allowlist)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "out_of_scope": {
+          "type": "array",
+          "description": "What CANNOT be asked (explicit blocklist)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "numeric_limits": {
+          "type": "object",
+          "description": "Numeric constraints for this topic",
+          "properties": {
+            "max_digits": {
+              "type": "integer"
+            },
+            "max_value": {
+              "type": "integer"
+            },
+            "decimal_places": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

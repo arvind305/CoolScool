@@ -675,9 +675,9 @@
   // ============================================================
 
   const STORAGE_KEYS = {
-    PROGRESS: 'qming_kids_progress',
-    SESSIONS: 'qming_kids_sessions',
-    SETTINGS: 'qming_kids_settings'
+    PROGRESS: 'coolscool_progress',
+    SESSIONS: 'coolscool_sessions',
+    SETTINGS: 'coolscool_settings'
   };
 
   const DATA_VERSION = '1.0.0';
@@ -824,7 +824,7 @@
     const { includeProgress = true, includeSessions = true, includeSettings = true } = options;
     const exportData = {
       export_version: EXPORT_VERSION,
-      app_name: 'QMing-Kids Pressure-free Curriculum Practice',
+      app_name: 'Cool S-Cool Pressure-free Curriculum Practice',
       exported_at: new Date().toISOString(),
       data: {}
     };
@@ -846,7 +846,7 @@
 
   function generateExportFilename() {
     const date = new Date().toISOString().split('T')[0];
-    return `qming-kids-progress-${date}.json`;
+    return `coolscool-progress-${date}.json`;
   }
 
   function importData(importData, options = {}) {

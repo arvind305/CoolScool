@@ -40,7 +40,7 @@ function createExport(options = {}) {
 
   const exportData = {
     export_version: EXPORT_VERSION,
-    app_name: 'QMing-Kids Pressure-free Curriculum Practice',
+    app_name: 'Cool S-Cool Pressure-free Curriculum Practice',
     exported_at: now,
     data: {}
   };
@@ -118,7 +118,7 @@ function createDownloadUrl(exportData) {
  */
 function generateExportFilename() {
   const date = new Date().toISOString().split('T')[0];
-  return `qming-kids-progress-${date}.json`;
+  return `coolscool-progress-${date}.json`;
 }
 
 /**

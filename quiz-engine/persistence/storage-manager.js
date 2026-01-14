@@ -15,9 +15,9 @@ const { createTopicProgress } = require('../core/proficiency-calculator');
 
 // Storage keys
 const STORAGE_KEYS = {
-  PROGRESS: 'qming_kids_progress',
-  SESSIONS: 'qming_kids_sessions',
-  SETTINGS: 'qming_kids_settings'
+  PROGRESS: 'coolscool_progress',
+  SESSIONS: 'coolscool_sessions',
+  SETTINGS: 'coolscool_settings'
 };
 
 // Current data version (for migrations)

@@ -1,4 +1,4 @@
--- QMing-Kids Database Schema
+-- Cool S-Cool Database Schema
 -- Version: 1.0.0
 -- Description: Initial schema for enterprise quiz application
 

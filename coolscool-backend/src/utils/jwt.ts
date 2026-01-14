@@ -24,8 +24,8 @@ function generateJti(): string {
 export function generateAccessToken(payload: TokenPayload): string {
   const options: SignOptions = {
     expiresIn: config.jwt.accessExpiry as jwt.SignOptions['expiresIn'],
-    issuer: 'qming-kids-api',
-    audience: 'qming-kids-app',
+    issuer: 'coolscool-api',
+    audience: 'coolscool-app',
     jwtid: generateJti(),
   };
 
@@ -38,7 +38,7 @@ export function generateRefreshToken(userId: string): { token: string; hash: str
 
   const options: SignOptions = {
     expiresIn: config.jwt.refreshExpiry as jwt.SignOptions['expiresIn'],
-    issuer: 'qming-kids-api',
+    issuer: 'coolscool-api',
     jwtid: jti,
   };
 
@@ -59,8 +59,8 @@ export function generateRefreshToken(userId: string): { token: string; hash: str
 export function verifyAccessToken(token: string): DecodedToken {
   try {
     const decoded = jwt.verify(token, config.jwt.secret, {
-      issuer: 'qming-kids-api',
-      audience: 'qming-kids-app',
+      issuer: 'coolscool-api',
+      audience: 'coolscool-app',
     }) as DecodedToken;
 
     return decoded;
@@ -79,7 +79,7 @@ export function verifyAccessToken(token: string): DecodedToken {
 export function verifyRefreshToken(token: string): { sub: string; jti: string } {
   try {
     const decoded = jwt.verify(token, config.jwt.refreshSecret, {
-      issuer: 'qming-kids-api',
+      issuer: 'coolscool-api',
     }) as JwtPayload;
 
     if (!decoded.sub || !decoded.jti) {

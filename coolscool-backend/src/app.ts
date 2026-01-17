@@ -10,6 +10,8 @@ import authRoutes from './routes/auth.routes.js';
 import camRoutes from './routes/cam.routes.js';
 import sessionRoutes from './routes/session.routes.js';
 import progressRoutes from './routes/progress.routes.js';
+import settingsRoutes from './routes/settings.routes.js';
+import parentRoutes from './routes/parent.routes.js';
 
 // Create Express app
 const app: Express = express();
@@ -41,6 +43,8 @@ app.use(`/api/${config.apiVersion}/auth`, authRoutes);
 app.use(`/api/${config.apiVersion}/cam`, camRoutes);
 app.use(`/api/${config.apiVersion}/sessions`, sessionRoutes);
 app.use(`/api/${config.apiVersion}/progress`, progressRoutes);
+app.use(`/api/${config.apiVersion}/settings`, settingsRoutes);
+app.use(`/api/${config.apiVersion}/parent`, parentRoutes);
 
 // 404 handler
 app.use(notFoundHandler);

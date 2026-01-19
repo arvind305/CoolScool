@@ -41,6 +41,12 @@ export interface AuthResult {
 // Verify Google ID token and extract user info
 export async function verifyGoogleToken(idToken: string): Promise<GoogleUserInfo> {
   try {
+    // Debug logging for audience mismatch
+    console.log('=== Google Token Verification Debug ===');
+    console.log('Expected audience (GOOGLE_CLIENT_ID):', config.google.clientId);
+    console.log('Client ID length:', config.google.clientId?.length);
+    console.log('Client ID first 20 chars:', config.google.clientId?.substring(0, 20));
+
     const ticket = await googleClient.verifyIdToken({
       idToken,
       audience: config.google.clientId,
@@ -51,6 +57,10 @@ export async function verifyGoogleToken(idToken: string): Promise<GoogleUserInfo
       throw new UnauthorizedError('Invalid Google token');
     }
 
+    console.log('Token verified successfully for:', payload.email);
+    console.log('Token audience (aud):', payload.aud);
+    console.log('=== End Debug ===');
+
     return {
       googleId: payload.sub,
       email: payload.email!,
@@ -59,7 +69,23 @@ export async function verifyGoogleToken(idToken: string): Promise<GoogleUserInfo
     };
   } catch (error) {
     if (error instanceof UnauthorizedError) throw error;
+
+    // Enhanced error logging
     console.error('Google token verification failed:', error);
+    console.error('Expected client ID:', config.google.clientId);
+
+    // Try to decode the token to see its audience (without verification)
+    try {
+      const tokenParts = idToken.split('.');
+      if (tokenParts.length === 3) {
+        const payload = JSON.parse(Buffer.from(tokenParts[1], 'base64').toString());
+        console.error('Token audience from payload:', payload.aud);
+        console.error('Audience match:', payload.aud === config.google.clientId);
+      }
+    } catch (decodeError) {
+      console.error('Could not decode token for debugging');
+    }
+
     throw new UnauthorizedError('Failed to verify Google token');
   }
 }

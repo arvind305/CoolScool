@@ -59,4 +59,22 @@ export function validateConfig(): void {
       throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
     }
   }
+
+  // Validate Google OAuth Client ID format (in all environments if set)
+  const googleClientId = config.google.clientId;
+  if (googleClientId) {
+    const validGoogleClientIdPattern = /^[\w-]+\.apps\.googleusercontent\.com$/;
+    if (!validGoogleClientIdPattern.test(googleClientId)) {
+      throw new Error(
+        `Invalid GOOGLE_CLIENT_ID format. Expected format: "<client-id>.apps.googleusercontent.com". ` +
+        `Got: "${googleClientId.substring(0, 20)}${googleClientId.length > 20 ? '...' : ''}". ` +
+        `Please verify your Google Cloud Console credentials.`
+      );
+    }
+    console.log(`✓ Google OAuth Client ID configured (${googleClientId.substring(0, 15)}...)`);
+  } else if (config.isProduction) {
+    throw new Error('GOOGLE_CLIENT_ID is required in production but not set');
+  } else {
+    console.warn('⚠ GOOGLE_CLIENT_ID not set - Google OAuth will not work');
+  }
 }

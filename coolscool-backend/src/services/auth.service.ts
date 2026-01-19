@@ -77,8 +77,9 @@ export async function verifyGoogleToken(idToken: string): Promise<GoogleUserInfo
     // Try to decode the token to see its audience (without verification)
     try {
       const tokenParts = idToken.split('.');
-      if (tokenParts.length === 3) {
-        const payload = JSON.parse(Buffer.from(tokenParts[1], 'base64').toString());
+      const payloadPart = tokenParts[1];
+      if (tokenParts.length === 3 && payloadPart) {
+        const payload = JSON.parse(Buffer.from(payloadPart, 'base64').toString());
         console.error('Token audience from payload:', payload.aud);
         console.error('Audience match:', payload.aud === config.google.clientId);
       }

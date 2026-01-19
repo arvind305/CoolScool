@@ -62,7 +62,7 @@ export async function unlinkChild(
 ): Promise<void> {
   try {
     const parentId = req.user!.id;
-    const { childId } = req.params;
+    const childId = req.params.childId!;
 
     await parentService.unlinkChild(parentId, childId);
 
@@ -83,7 +83,7 @@ export async function grantConsent(
 ): Promise<void> {
   try {
     const parentId = req.user!.id;
-    const { childId } = req.params;
+    const childId = req.params.childId!;
 
     await parentService.grantConsent(parentId, childId);
 
@@ -104,7 +104,7 @@ export async function revokeConsent(
 ): Promise<void> {
   try {
     const parentId = req.user!.id;
-    const { childId } = req.params;
+    const childId = req.params.childId!;
 
     await parentService.revokeConsent(parentId, childId);
 
@@ -125,7 +125,7 @@ export async function getChildProgress(
 ): Promise<void> {
   try {
     const parentId = req.user!.id;
-    const { childId } = req.params;
+    const childId = req.params.childId!;
 
     const progress = await parentService.getChildFullProgress(parentId, childId);
 
@@ -148,7 +148,7 @@ export async function getChildSessions(
 ): Promise<void> {
   try {
     const parentId = req.user!.id;
-    const { childId } = req.params;
+    const childId = req.params.childId!;
     const limit = parseInt(req.query.limit as string) || 20;
     const offset = parseInt(req.query.offset as string) || 0;
 

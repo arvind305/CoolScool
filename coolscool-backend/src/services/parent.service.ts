@@ -480,7 +480,7 @@ export async function getChildActivity(
   }
 
   const child = childResult.rows[0];
-  const childName = child.display_name || child.email.split('@')[0];
+  const childName = child.display_name ?? child.email.split('@')[0] ?? 'Child';
 
   // Get completed sessions as activity
   const sessions = await query<{

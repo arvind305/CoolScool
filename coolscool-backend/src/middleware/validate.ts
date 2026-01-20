@@ -54,6 +54,13 @@ export const schemas = {
 
   // Session schemas
   createSession: Joi.object({
+    curriculumId: Joi.string()
+      .uuid()
+      .required()
+      .messages({
+        'string.guid': 'Curriculum ID must be a valid UUID',
+        'any.required': 'Curriculum ID is required',
+      }),
     topicId: Joi.string()
       .pattern(/^T\d{2}\.\d{2}$/)
       .required()

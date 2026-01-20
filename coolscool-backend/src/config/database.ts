@@ -3,10 +3,11 @@ import { config } from './index.js';
 
 const poolConfig: PoolConfig = {
   connectionString: config.databaseUrl,
-  ssl: config.isProduction ? { rejectUnauthorized: false } : undefined,
+  // Neon requires SSL even in development
+  ssl: config.databaseUrl.includes('neon.tech') ? { rejectUnauthorized: false } : (config.isProduction ? { rejectUnauthorized: false } : undefined),
   max: 20,
   idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
+  connectionTimeoutMillis: 10000,
 };
 
 export const pool = new Pool(poolConfig);

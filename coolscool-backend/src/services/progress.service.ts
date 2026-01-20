@@ -17,6 +17,7 @@ import {
   getBandMessage,
   updateTopicProgress,
 } from './proficiency.service.js';
+import * as CurriculumModel from '../models/curriculum.model.js';
 
 // ============================================
 // INTERFACES
@@ -84,19 +85,43 @@ interface TopicProgressExport {
 }
 
 // ============================================
+// HELPER FUNCTIONS
+// ============================================
+
+/**
+ * Gets the curriculum ID for progress operations.
+ * Uses provided curriculum ID or falls back to user's default or system default.
+ */
+async function resolveCurriculumId(curriculumId?: string): Promise<string> {
+  if (curriculumId) {
+    return curriculumId;
+  }
+
+  // Fall back to default curriculum
+  const defaultCurriculum = await CurriculumModel.getDefault();
+  if (!defaultCurriculum) {
+    throw new Error('No curriculum available');
+  }
+  return defaultCurriculum.id;
+}
+
+// ============================================
 // PROGRESS QUERIES
 // ============================================
 
 /**
- * Gets full user progress across all topics
+ * Gets full user progress across all topics in a curriculum
  */
-export async function getUserProgress(userId: string): Promise<UserProgressSummary> {
-  // Get all topics
+export async function getUserProgress(userId: string, curriculumId?: string): Promise<UserProgressSummary> {
+  const resolvedCurriculumId = await resolveCurriculumId(curriculumId);
+
+  // Get all topics for this curriculum
   const topicsResult = await query<{ topic_id: string; topic_name: string }>(
-    'SELECT topic_id, topic_name FROM topics ORDER BY topic_order'
+    'SELECT topic_id, topic_name FROM topics WHERE curriculum_id = $1 ORDER BY topic_order',
+    [resolvedCurriculumId]
   );
 
-  // Get user's topic progress
+  // Get user's topic progress for this curriculum
   const topicProgressResult = await query<TopicProgress & { topic_name: string; topic_id_str: string }>(
     `SELECT tp.topic_id_str, tp.proficiency_band, tp.concepts_count, tp.concepts_started,
             tp.concepts_mastered, tp.total_attempts, tp.total_correct, tp.xp_earned,
@@ -104,8 +129,8 @@ export async function getUserProgress(userId: string): Promise<UserProgressSumma
             tp.topic_id_str as topic_id
      FROM topic_progress tp
      JOIN topics t ON tp.topic_id_str = t.topic_id
-     WHERE tp.user_id = $1`,
-    [userId]
+     WHERE tp.user_id = $1 AND tp.curriculum_id = $2`,
+    [userId, resolvedCurriculumId]
   );
 
   const topicProgressMap = new Map<string, TopicProgress & { topic_name: string; topic_id_str: string }>();
@@ -113,12 +138,14 @@ export async function getUserProgress(userId: string): Promise<UserProgressSumma
     topicProgressMap.set(tp.topic_id_str, tp);
   }
 
-  // Get concept counts per topic
+  // Get concept counts per topic for this curriculum
   const conceptCountResult = await query<{ topic_id: string; count: string }>(
     `SELECT t.topic_id, COUNT(c.id) as count
      FROM topics t
      LEFT JOIN concepts c ON c.topic_id = t.id
-     GROUP BY t.topic_id`
+     WHERE t.curriculum_id = $1
+     GROUP BY t.topic_id`,
+    [resolvedCurriculumId]
   );
 
   const conceptCountMap = new Map<string, number>();
@@ -126,12 +153,12 @@ export async function getUserProgress(userId: string): Promise<UserProgressSumma
     conceptCountMap.set(row.topic_id, parseInt(row.count, 10));
   }
 
-  // Get session stats
+  // Get session stats for this curriculum
   const sessionStatsResult = await query<{ count: string; xp: string }>(
     `SELECT COUNT(*) as count, COALESCE(SUM(xp_earned), 0) as xp
      FROM quiz_sessions
-     WHERE user_id = $1 AND session_status = 'completed'`,
-    [userId]
+     WHERE user_id = $1 AND curriculum_id = $2 AND session_status = 'completed'`,
+    [userId, resolvedCurriculumId]
   );
 
   const sessionsCompleted = parseInt(sessionStatsResult.rows[0]?.count || '0', 10);
@@ -183,41 +210,44 @@ export async function getUserProgress(userId: string): Promise<UserProgressSumma
 }
 
 /**
- * Gets dashboard summary (lightweight version)
+ * Gets dashboard summary (lightweight version) for a curriculum
  */
-export async function getProgressSummary(userId: string): Promise<{
+export async function getProgressSummary(userId: string, curriculumId?: string): Promise<{
   total_xp: number;
   sessions_completed: number;
   topics_started: number;
   topics_total: number;
   proficiency_breakdown: Record<string, number>;
 }> {
-  // Get session stats
+  const resolvedCurriculumId = await resolveCurriculumId(curriculumId);
+
+  // Get session stats for this curriculum
   const sessionStatsResult = await query<{ count: string; xp: string }>(
     `SELECT COUNT(*) as count, COALESCE(SUM(xp_earned), 0) as xp
      FROM quiz_sessions
-     WHERE user_id = $1 AND session_status = 'completed'`,
-    [userId]
+     WHERE user_id = $1 AND curriculum_id = $2 AND session_status = 'completed'`,
+    [userId, resolvedCurriculumId]
   );
 
-  // Get topic counts
+  // Get topic counts for this curriculum
   const topicCountResult = await query<{ count: string }>(
-    'SELECT COUNT(*) as count FROM topics'
+    'SELECT COUNT(*) as count FROM topics WHERE curriculum_id = $1',
+    [resolvedCurriculumId]
   );
 
-  // Get proficiency breakdown
+  // Get proficiency breakdown for this curriculum
   const proficiencyResult = await query<{ proficiency_band: string; count: string }>(
     `SELECT proficiency_band, COUNT(*) as count
      FROM topic_progress
-     WHERE user_id = $1
+     WHERE user_id = $1 AND curriculum_id = $2
      GROUP BY proficiency_band`,
-    [userId]
+    [userId, resolvedCurriculumId]
   );
 
-  // Get total XP from concept progress (more accurate)
+  // Get total XP from concept progress for this curriculum (more accurate)
   const xpResult = await query<{ total: string }>(
-    'SELECT COALESCE(SUM(xp_earned), 0) as total FROM concept_progress WHERE user_id = $1',
-    [userId]
+    'SELECT COALESCE(SUM(xp_earned), 0) as total FROM concept_progress WHERE user_id = $1 AND curriculum_id = $2',
+    [userId, resolvedCurriculumId]
   );
 
   const proficiencyBreakdown: Record<string, number> = {
@@ -247,16 +277,19 @@ export async function getProgressSummary(userId: string): Promise<{
 }
 
 /**
- * Gets progress for a single topic
+ * Gets progress for a single topic in a curriculum
  */
 export async function getTopicProgress(
   userId: string,
-  topicIdStr: string
+  topicIdStr: string,
+  curriculumId?: string
 ): Promise<TopicProgressSummary | null> {
-  // Get topic info
+  const resolvedCurriculumId = await resolveCurriculumId(curriculumId);
+
+  // Get topic info for this curriculum
   const topicResult = await query<{ topic_id: string; topic_name: string }>(
-    'SELECT topic_id, topic_name FROM topics WHERE topic_id = $1',
-    [topicIdStr]
+    'SELECT topic_id, topic_name FROM topics WHERE curriculum_id = $1 AND topic_id = $2',
+    [resolvedCurriculumId, topicIdStr]
   );
 
   if (!topicResult.rows[0]) {
@@ -266,15 +299,15 @@ export async function getTopicProgress(
   const topic = topicResult.rows[0];
 
   // Update topic progress (recalculate from concept progress)
-  const progress = await updateTopicProgress(userId, topicIdStr);
+  const progress = await updateTopicProgress(userId, resolvedCurriculumId, topicIdStr);
 
-  // Get concept count
+  // Get concept count for this curriculum
   const conceptCountResult = await query<{ count: string }>(
     `SELECT COUNT(*) as count
      FROM concepts c
      JOIN topics t ON c.topic_id = t.id
-     WHERE t.topic_id = $1`,
-    [topicIdStr]
+     WHERE c.curriculum_id = $1 AND t.topic_id = $2`,
+    [resolvedCurriculumId, topicIdStr]
   );
 
   return {
@@ -295,16 +328,24 @@ export async function getTopicProgress(
 // ============================================
 
 /**
- * Exports user progress as JSON
+ * Exports user progress as JSON for a curriculum
  */
-export async function exportProgress(userId: string): Promise<ProgressExport> {
-  // Get concept progress
+export async function exportProgress(userId: string, curriculumId?: string): Promise<ProgressExport> {
+  const resolvedCurriculumId = await resolveCurriculumId(curriculumId);
+
+  // Get curriculum info
+  const curriculum = await CurriculumModel.findById(resolvedCurriculumId);
+  if (!curriculum) {
+    throw new Error('Curriculum not found');
+  }
+
+  // Get concept progress for this curriculum
   const conceptProgressResult = await query<ConceptProgress>(
-    'SELECT * FROM concept_progress WHERE user_id = $1',
-    [userId]
+    'SELECT * FROM concept_progress WHERE user_id = $1 AND curriculum_id = $2',
+    [userId, resolvedCurriculumId]
   );
 
-  // Get topic progress
+  // Get topic progress for this curriculum
   const topicProgressResult = await query<{
     topic_id_str: string;
     proficiency_band: string;
@@ -316,19 +357,19 @@ export async function exportProgress(userId: string): Promise<ProgressExport> {
     xp_earned: number;
     last_attempted_at: string | null;
   }>(
-    'SELECT topic_id_str, proficiency_band, concepts_count, concepts_started, concepts_mastered, total_attempts, total_correct, xp_earned, last_attempted_at FROM topic_progress WHERE user_id = $1',
-    [userId]
+    'SELECT topic_id_str, proficiency_band, concepts_count, concepts_started, concepts_mastered, total_attempts, total_correct, xp_earned, last_attempted_at FROM topic_progress WHERE user_id = $1 AND curriculum_id = $2',
+    [userId, resolvedCurriculumId]
   );
 
-  // Get session stats
+  // Get session stats for this curriculum
   const sessionStatsResult = await query<{ total: string; completed: string; xp: string }>(
     `SELECT
        COUNT(*) as total,
        COUNT(*) FILTER (WHERE session_status = 'completed') as completed,
        COALESCE(SUM(xp_earned), 0) as xp
      FROM quiz_sessions
-     WHERE user_id = $1`,
-    [userId]
+     WHERE user_id = $1 AND curriculum_id = $2`,
+    [userId, resolvedCurriculumId]
   );
 
   const stats = sessionStatsResult.rows[0] || { total: '0', completed: '0', xp: '0' };
@@ -338,9 +379,9 @@ export async function exportProgress(userId: string): Promise<ProgressExport> {
     exported_at: new Date().toISOString(),
     user_id: userId,
     cam_reference: {
-      board: 'ICSE',
-      class_level: 5,
-      subject: 'Mathematics',
+      board: curriculum.board,
+      class_level: curriculum.class_level,
+      subject: curriculum.subject,
     },
     concept_progress: conceptProgressResult.rows.map(cp => ({
       concept_id_str: cp.concept_id_str,
@@ -363,29 +404,31 @@ export async function exportProgress(userId: string): Promise<ProgressExport> {
 }
 
 /**
- * Imports user progress from JSON
+ * Imports user progress from JSON for a curriculum
  */
 export async function importProgress(
   userId: string,
   data: ProgressExport,
-  merge: boolean = false
+  merge: boolean = false,
+  curriculumId?: string
 ): Promise<{ imported: number; skipped: number }> {
+  const resolvedCurriculumId = await resolveCurriculumId(curriculumId);
   let imported = 0;
   let skipped = 0;
 
   await withTransaction(async (client) => {
-    // Clear existing progress if not merging
+    // Clear existing progress for this curriculum if not merging
     if (!merge) {
-      await client.query('DELETE FROM concept_progress WHERE user_id = $1', [userId]);
-      await client.query('DELETE FROM topic_progress WHERE user_id = $1', [userId]);
+      await client.query('DELETE FROM concept_progress WHERE user_id = $1 AND curriculum_id = $2', [userId, resolvedCurriculumId]);
+      await client.query('DELETE FROM topic_progress WHERE user_id = $1 AND curriculum_id = $2', [userId, resolvedCurriculumId]);
     }
 
     // Import concept progress
     for (const cp of data.concept_progress) {
-      // Validate concept exists
+      // Validate concept exists in this curriculum
       const conceptResult = await client.query(
-        'SELECT id FROM concepts WHERE concept_id = $1',
-        [cp.concept_id_str]
+        'SELECT id FROM concepts WHERE curriculum_id = $1 AND concept_id = $2',
+        [resolvedCurriculumId, cp.concept_id_str]
       );
 
       if (!conceptResult.rows[0]) {
@@ -399,9 +442,9 @@ export async function importProgress(
         // Merge: update if exists, insert if not
         await client.query(
           `INSERT INTO concept_progress
-           (user_id, concept_id, concept_id_str, current_difficulty, total_attempts, total_correct, xp_earned, mastery_data, last_attempted_at)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-           ON CONFLICT (user_id, concept_id) DO UPDATE SET
+           (user_id, curriculum_id, concept_id, concept_id_str, current_difficulty, total_attempts, total_correct, xp_earned, mastery_data, last_attempted_at)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+           ON CONFLICT (user_id, curriculum_id, concept_id) DO UPDATE SET
              current_difficulty = CASE WHEN concept_progress.total_attempts < EXCLUDED.total_attempts THEN EXCLUDED.current_difficulty ELSE concept_progress.current_difficulty END,
              total_attempts = GREATEST(concept_progress.total_attempts, EXCLUDED.total_attempts),
              total_correct = GREATEST(concept_progress.total_correct, EXCLUDED.total_correct),
@@ -410,6 +453,7 @@ export async function importProgress(
              last_attempted_at = GREATEST(concept_progress.last_attempted_at, EXCLUDED.last_attempted_at)`,
           [
             userId,
+            resolvedCurriculumId,
             conceptId,
             cp.concept_id_str,
             cp.current_difficulty,
@@ -424,10 +468,11 @@ export async function importProgress(
         // Replace: just insert
         await client.query(
           `INSERT INTO concept_progress
-           (user_id, concept_id, concept_id_str, current_difficulty, total_attempts, total_correct, xp_earned, mastery_data, last_attempted_at)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+           (user_id, curriculum_id, concept_id, concept_id_str, current_difficulty, total_attempts, total_correct, xp_earned, mastery_data, last_attempted_at)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
           [
             userId,
+            resolvedCurriculumId,
             conceptId,
             cp.concept_id_str,
             cp.current_difficulty,
@@ -442,35 +487,6 @@ export async function importProgress(
 
       imported++;
     }
-
-    // Recalculate topic progress (don't import directly - recalculate from concepts)
-    const uniqueTopics = new Set(
-      data.concept_progress.map(cp => cp.concept_id_str.substring(0, 6))
-    );
-
-    for (const topicIdStr of uniqueTopics) {
-      // Get topic progress data
-      const progressResult = await client.query(
-        `SELECT cp.concept_id_str as concept_id, cp.total_attempts, cp.mastery_data
-         FROM concept_progress cp
-         JOIN concepts c ON cp.concept_id = c.id
-         JOIN topics t ON c.topic_id = t.id
-         WHERE cp.user_id = $1 AND t.topic_id = $2`,
-        [userId, topicIdStr]
-      );
-
-      // Get CAM concepts
-      const camResult = await client.query(
-        `SELECT c.concept_id, c.difficulty_levels
-         FROM concepts c
-         JOIN topics t ON c.topic_id = t.id
-         WHERE t.topic_id = $1`,
-        [topicIdStr]
-      );
-
-      // Simplified proficiency calculation for import
-      // The full calculation happens in updateTopicProgress
-    }
   });
 
   // Recalculate all topic progress after import
@@ -479,7 +495,7 @@ export async function importProgress(
   );
 
   for (const topicIdStr of uniqueTopics) {
-    await updateTopicProgress(userId, topicIdStr);
+    await updateTopicProgress(userId, resolvedCurriculumId, topicIdStr);
   }
 
   return { imported, skipped };
@@ -490,15 +506,19 @@ export async function importProgress(
 // ============================================
 
 /**
- * Resets all user progress
+ * Resets user progress for a curriculum (or all curricula if not specified)
  */
-export async function resetProgress(userId: string): Promise<void> {
+export async function resetProgress(userId: string, curriculumId?: string): Promise<void> {
   await withTransaction(async (client) => {
-    // Delete concept progress
-    await client.query('DELETE FROM concept_progress WHERE user_id = $1', [userId]);
-
-    // Delete topic progress
-    await client.query('DELETE FROM topic_progress WHERE user_id = $1', [userId]);
+    if (curriculumId) {
+      // Reset progress for specific curriculum
+      await client.query('DELETE FROM concept_progress WHERE user_id = $1 AND curriculum_id = $2', [userId, curriculumId]);
+      await client.query('DELETE FROM topic_progress WHERE user_id = $1 AND curriculum_id = $2', [userId, curriculumId]);
+    } else {
+      // Reset progress for all curricula
+      await client.query('DELETE FROM concept_progress WHERE user_id = $1', [userId]);
+      await client.query('DELETE FROM topic_progress WHERE user_id = $1', [userId]);
+    }
 
     // Optionally delete session history (keeping for audit)
     // await client.query('DELETE FROM session_answers WHERE session_id IN (SELECT id FROM quiz_sessions WHERE user_id = $1)', [userId]);

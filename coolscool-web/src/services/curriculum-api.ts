@@ -1,13 +1,190 @@
 /**
  * Curriculum API Service
- * Fetches themes, topics, and question banks from the backend or static files
+ * Fetches curricula, themes, topics, and questions from the backend API.
+ *
+ * Supports two modes:
+ * 1. Curriculum-based (recommended): Uses curriculumId to fetch content
+ * 2. Legacy board/class/subject: For backward compatibility
  */
 
-import type { CAM, CAMTheme, QuestionBank } from '@/lib/quiz-engine/types';
+import type { CAM, CAMTheme, CAMTopic, QuestionBank } from '@/lib/quiz-engine/types';
+import type { Curriculum, CurriculumWithCounts } from '@/lib/api/types';
+import { ENDPOINTS } from '@/lib/api/endpoints';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://coolscool.onrender.com';
 
-// Map of known topic IDs to their file names (for static data loading)
+// ============================================
+// Curriculum API Functions
+// ============================================
+
+/**
+ * Fetch all active curricula
+ */
+export async function fetchCurricula(): Promise<Curriculum[]> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULA}`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch curricula: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.data?.curricula || [];
+  } catch (error) {
+    console.error('Error fetching curricula:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetch all curricula with content counts
+ */
+export async function fetchCurriculaOverview(): Promise<CurriculumWithCounts[]> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULA_OVERVIEW}`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch curricula overview: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.data?.curricula || [];
+  } catch (error) {
+    console.error('Error fetching curricula overview:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetch single curriculum by ID
+ */
+export async function fetchCurriculumById(curriculumId: string): Promise<Curriculum | null> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULUM(curriculumId)}`);
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`Failed to fetch curriculum: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.data?.curriculum || null;
+  } catch (error) {
+    console.error('Error fetching curriculum:', error);
+    return null;
+  }
+}
+
+/**
+ * Find curriculum by board/class/subject
+ */
+export async function findCurriculumByBoardClassSubject(
+  board: string,
+  classLevel: number,
+  subject: string
+): Promise<Curriculum | null> {
+  const curricula = await fetchCurricula();
+  return curricula.find(
+    c =>
+      c.board.toLowerCase() === board.toLowerCase() &&
+      c.classLevel === classLevel &&
+      c.subject.toLowerCase() === subject.toLowerCase()
+  ) || null;
+}
+
+// ============================================
+// Curriculum-Scoped CAM Functions
+// ============================================
+
+/**
+ * Fetch full CAM structure for a curriculum
+ */
+export async function fetchCAMByCurriculumId(curriculumId: string): Promise<CAM | null> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULUM_CAM(curriculumId)}`);
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`Failed to fetch CAM: ${response.status}`);
+    }
+    const data = await response.json();
+
+    if (!data.success || !data.data) {
+      return null;
+    }
+
+    // Transform API response to CAM type
+    const cam = data.data;
+    return {
+      cam_version: cam.cam_version || cam.camVersion || '1.0',
+      board: cam.board,
+      class_level: cam.class_level || cam.classLevel,
+      subject: cam.subject,
+      themes: cam.themes || [],
+    };
+  } catch (error) {
+    console.error('Error fetching CAM:', error);
+    return null;
+  }
+}
+
+/**
+ * Fetch themes for a curriculum
+ */
+export async function fetchThemesByCurriculumId(curriculumId: string): Promise<CAMTheme[]> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULUM_THEMES(curriculumId)}`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch themes: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.data?.themes || [];
+  } catch (error) {
+    console.error('Error fetching themes:', error);
+    return [];
+  }
+}
+
+/**
+ * Fetch single theme with topics
+ */
+export async function fetchThemeByCurriculumId(
+  curriculumId: string,
+  themeId: string
+): Promise<CAMTheme | null> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULUM_THEME(curriculumId, themeId)}`);
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`Failed to fetch theme: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.data?.theme || null;
+  } catch (error) {
+    console.error('Error fetching theme:', error);
+    return null;
+  }
+}
+
+/**
+ * Fetch single topic with concepts
+ */
+export async function fetchTopicByCurriculumId(
+  curriculumId: string,
+  topicId: string
+): Promise<CAMTopic | null> {
+  try {
+    const response = await fetch(`${API_URL}${ENDPOINTS.CURRICULUM_TOPIC(curriculumId, topicId)}`);
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`Failed to fetch topic: ${response.status}`);
+    }
+    const data = await response.json();
+    return data.data?.topic || null;
+  } catch (error) {
+    console.error('Error fetching topic:', error);
+    return null;
+  }
+}
+
+// ============================================
+// Legacy Functions (Backward Compatibility)
+// ============================================
+
+// Map of known topic IDs to their file names (for static data loading fallback)
 const QUESTION_BANK_FILES: Record<string, string> = {
   'T01.01': 'T01.01-place-value-number-sense.json',
   'T01.02': 'T01.02-natural-whole-numbers.json',
@@ -45,14 +222,21 @@ const QUESTION_BANK_FILES: Record<string, string> = {
 
 /**
  * Fetch CAM (Curriculum Aligned Map) for a given board/class/subject
- * Currently loads from static file, will switch to API later
+ * First tries API, then falls back to static file for ICSE Class 5 Math
  */
 export async function fetchCAM(
   board: string,
   classLevel: number,
   subject: string
 ): Promise<CAM | null> {
-  // For now, only support ICSE Class 5 Mathematics
+  // First try to find the curriculum and fetch via API
+  const curriculum = await findCurriculumByBoardClassSubject(board, classLevel, subject);
+  if (curriculum) {
+    const cam = await fetchCAMByCurriculumId(curriculum.id);
+    if (cam) return cam;
+  }
+
+  // Fallback to static file for ICSE Class 5 Mathematics
   if (board.toLowerCase() === 'icse' && classLevel === 5 && subject.toLowerCase() === 'mathematics') {
     try {
       const response = await fetch('/cam/data/icse-class5-mathematics-cam.json');
@@ -60,7 +244,6 @@ export async function fetchCAM(
         throw new Error(`Failed to fetch CAM: ${response.status}`);
       }
       const data = await response.json();
-      // Transform to CAM type
       return {
         cam_version: data.version,
         board: data.board.toLowerCase(),
@@ -74,18 +257,17 @@ export async function fetchCAM(
         })),
       };
     } catch (error) {
-      console.error('Error fetching CAM:', error);
+      console.error('Error fetching CAM from static file:', error);
       return null;
     }
   }
 
-  // For other boards/classes, return null (no data available yet)
   console.warn(`No CAM data available for ${board} Class ${classLevel} ${subject}`);
   return null;
 }
 
 /**
- * Fetch question bank for a specific topic
+ * Fetch question bank for a specific topic (still uses static files)
  */
 export async function fetchQuestionBank(topicId: string): Promise<QuestionBank | null> {
   const fileName = QUESTION_BANK_FILES[topicId];
@@ -136,9 +318,23 @@ export async function fetchAllQuestionCounts(): Promise<Map<string, number>> {
 
 /**
  * Check if content is available for a board/class/subject combination
+ * Now uses the API to check for available curricula
+ */
+export async function hasContentForAsync(
+  board: string,
+  classLevel: number,
+  subject: string
+): Promise<boolean> {
+  const curriculum = await findCurriculumByBoardClassSubject(board, classLevel, subject);
+  return curriculum !== null;
+}
+
+/**
+ * Synchronous check - use with cached curricula or for quick fallback
  */
 export function hasContentFor(board: string, classLevel: number, subject: string): boolean {
-  // Currently only ICSE Class 5 Mathematics has content
+  // For synchronous checks, still use the hardcoded list
+  // This is for backward compatibility with components that expect sync results
   return (
     board.toLowerCase() === 'icse' &&
     classLevel === 5 &&
@@ -147,7 +343,8 @@ export function hasContentFor(board: string, classLevel: number, subject: string
 }
 
 /**
- * Get themes from the API (future implementation)
+ * Get themes from the API
+ * @deprecated Use fetchThemesByCurriculumId instead
  */
 export async function fetchThemesFromAPI(
   board: string,
@@ -155,30 +352,13 @@ export async function fetchThemesFromAPI(
   subject: string,
   accessToken?: string
 ): Promise<CAMTheme[]> {
-  try {
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-
-    if (accessToken) {
-      headers['Authorization'] = `Bearer ${accessToken}`;
-    }
-
-    const response = await fetch(
-      `${API_URL}/api/v1/curriculum/${board}/${classLevel}/${subject}/themes`,
-      { headers }
-    );
-
-    if (!response.ok) {
-      throw new Error(`Failed to fetch themes: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.themes || [];
-  } catch (error) {
-    console.error('Error fetching themes from API:', error);
-    // Fallback to static data
-    const cam = await fetchCAM(board, classLevel, subject);
-    return cam?.themes || [];
+  // Find curriculum first
+  const curriculum = await findCurriculumByBoardClassSubject(board, classLevel, subject);
+  if (curriculum) {
+    return fetchThemesByCurriculumId(curriculum.id);
   }
+
+  // Fallback to static data
+  const cam = await fetchCAM(board, classLevel, subject);
+  return cam?.themes || [];
 }

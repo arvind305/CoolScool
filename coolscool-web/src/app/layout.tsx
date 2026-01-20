@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout';
 import { SessionProvider } from '@/components/providers/session-provider';
 import { QueryProvider } from '@/components/providers/query-provider';
 import { ToastProvider } from '@/components/ui/toast';
+import { CurriculumProvider } from '@/contexts/CurriculumContext';
 
 export const metadata: Metadata = {
   title: 'Cool S-Cool | Pressure-free Curriculum Practice',
@@ -22,13 +23,15 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <SessionProvider>
           <QueryProvider>
-            <ToastProvider>
-              <Header />
-              <main className="flex-1">
-                {children}
-              </main>
-              <Footer />
-            </ToastProvider>
+            <CurriculumProvider>
+              <ToastProvider>
+                <Header />
+                <main className="flex-1">
+                  {children}
+                </main>
+                <Footer />
+              </ToastProvider>
+            </CurriculumProvider>
           </QueryProvider>
         </SessionProvider>
       </body>

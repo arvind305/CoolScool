@@ -22,13 +22,15 @@ import type {
   EnrichedQuestion,
   ProficiencyBand,
 } from '@/lib/quiz-engine/types';
-import { fetchCAM, fetchQuestionBank } from '@/services/curriculum-api';
+import { fetchCAM, fetchCAMByCurriculumId, fetchQuestionBank } from '@/services/curriculum-api';
 
 export interface UseQuizEngineOptions {
   board?: string;
   classLevel?: number;
   subject?: string;
   userId?: string;
+  /** Optional curriculum ID for multi-curriculum support */
+  curriculumId?: string;
 }
 
 export interface QuizEngineState {
@@ -77,6 +79,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
     classLevel = 5,
     subject = 'mathematics',
     userId = 'anonymous',
+    curriculumId,
   } = options;
 
   const engineRef = useRef<QuizEngine | null>(null);
@@ -109,8 +112,15 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
         subject,
       });
 
-      // Load CAM data
-      const cam = await fetchCAM(board, classLevel, subject);
+      // Load CAM data - prefer curriculumId if available
+      let cam: CAM | null = null;
+      if (curriculumId) {
+        cam = await fetchCAMByCurriculumId(curriculumId);
+      }
+      // Fallback to board/class/subject based fetch
+      if (!cam) {
+        cam = await fetchCAM(board, classLevel, subject);
+      }
       if (!cam) {
         throw new Error(`No curriculum data available for ${board} Class ${classLevel} ${subject}`);
       }
@@ -135,7 +145,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
         error: error instanceof Error ? error.message : 'Failed to initialize',
       }));
     }
-  }, [board, classLevel, subject, userId, state.isInitialized, state.isLoading]);
+  }, [board, classLevel, subject, userId, curriculumId, state.isInitialized, state.isLoading]);
 
   // Auto-initialize on mount
   useEffect(() => {

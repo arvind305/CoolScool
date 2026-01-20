@@ -7,6 +7,7 @@ import { globalLimiter } from './middleware/rateLimit.js';
 import { notFoundHandler, errorHandler } from './middleware/error.js';
 import healthRoutes from './routes/health.js';
 import authRoutes from './routes/auth.routes.js';
+import curriculumRoutes from './routes/curriculum.routes.js';
 import camRoutes from './routes/cam.routes.js';
 import sessionRoutes from './routes/session.routes.js';
 import progressRoutes from './routes/progress.routes.js';
@@ -40,7 +41,8 @@ app.use('/health', healthRoutes);
 
 // API routes
 app.use(`/api/${config.apiVersion}/auth`, authRoutes);
-app.use(`/api/${config.apiVersion}/cam`, camRoutes);
+app.use(`/api/${config.apiVersion}/curricula`, curriculumRoutes);
+app.use(`/api/${config.apiVersion}/cam`, camRoutes);  // Backwards compatible - uses default curriculum
 app.use(`/api/${config.apiVersion}/sessions`, sessionRoutes);
 app.use(`/api/${config.apiVersion}/progress`, progressRoutes);
 app.use(`/api/${config.apiVersion}/settings`, settingsRoutes);

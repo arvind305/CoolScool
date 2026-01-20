@@ -1,0 +1,1 @@
+export { CurriculumSelector } from './CurriculumSelector';

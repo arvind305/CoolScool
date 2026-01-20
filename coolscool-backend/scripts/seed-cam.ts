@@ -36,50 +36,75 @@ interface CAMData {
   board: string;
   class: number;
   subject: string;
+  academic_year?: string;
   themes: Theme[];
 }
 
-async function seedCAM(): Promise<void> {
-  console.log('Seeding CAM data...\n');
+async function seedCAM(camFilePath: string): Promise<void> {
+  console.log(`Seeding CAM from: ${camFilePath}\n`);
 
-  // Path to CAM JSON file
-  const camPath = path.join(__dirname, '../../cam/data/icse-class5-mathematics-cam.json');
-
-  if (!fs.existsSync(camPath)) {
-    console.error(`CAM file not found: ${camPath}`);
+  if (!fs.existsSync(camFilePath)) {
+    console.error(`CAM file not found: ${camFilePath}`);
     process.exit(1);
   }
 
-  const camData: CAMData = JSON.parse(fs.readFileSync(camPath, 'utf8'));
+  const camData: CAMData = JSON.parse(fs.readFileSync(camFilePath, 'utf8'));
   console.log(`Loaded CAM version ${camData.version}`);
-  console.log(`Board: ${camData.board}, Class: ${camData.class}, Subject: ${camData.subject}\n`);
+  console.log(`Board: ${camData.board}, Class: ${camData.class}, Subject: ${camData.subject}`);
+  if (camData.academic_year) {
+    console.log(`Academic Year: ${camData.academic_year}`);
+  }
+  console.log('');
 
   const client = await pool.connect();
 
   try {
     await client.query('BEGIN');
 
+    // 1. Create or find curriculum using UPSERT
+    const displayName = `${camData.board} Class ${camData.class} ${camData.subject}`;
+    const curriculumResult = await client.query(
+      `INSERT INTO curricula (board, class_level, subject, academic_year, cam_version, display_name)
+       VALUES ($1, $2, $3, $4, $5, $6)
+       ON CONFLICT (board, class_level, subject) DO UPDATE SET
+         cam_version = EXCLUDED.cam_version,
+         academic_year = COALESCE(EXCLUDED.academic_year, curricula.academic_year),
+         updated_at = NOW()
+       RETURNING id, is_active`,
+      [
+        camData.board,
+        camData.class,
+        camData.subject,
+        camData.academic_year || null,
+        camData.version,
+        displayName,
+      ]
+    );
+    const curriculumId = curriculumResult.rows[0].id;
+    const isNew = curriculumResult.rowCount === 1 && !curriculumResult.rows[0].is_active;
+    console.log(`Curriculum ID: ${curriculumId}`);
+    console.log(`Curriculum: ${displayName} (${isNew ? 'created' : 'updated'})\n`);
+
     let themeCount = 0;
     let topicCount = 0;
     let conceptCount = 0;
 
-    // Insert themes
+    // 2. Seed themes with curriculum_id
     for (const theme of camData.themes) {
       const themeResult = await client.query(
-        `INSERT INTO themes (theme_id, theme_name, theme_order, cam_version, board, class_level, subject)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)
-         ON CONFLICT (theme_id) DO UPDATE SET
+        `INSERT INTO themes (curriculum_id, theme_id, theme_name, theme_order, cam_version)
+         VALUES ($1, $2, $3, $4, $5)
+         ON CONFLICT (curriculum_id, theme_id) DO UPDATE SET
            theme_name = EXCLUDED.theme_name,
-           theme_order = EXCLUDED.theme_order
+           theme_order = EXCLUDED.theme_order,
+           cam_version = EXCLUDED.cam_version
          RETURNING id`,
         [
+          curriculumId,
           theme.theme_id,
           theme.theme_name,
           theme.theme_order || themeCount,
           camData.version,
-          camData.board,
-          camData.class,
-          camData.subject,
         ]
       );
       const themeUuid = themeResult.rows[0].id;
@@ -87,12 +112,13 @@ async function seedCAM(): Promise<void> {
 
       console.log(`  Theme: ${theme.theme_id} - ${theme.theme_name}`);
 
-      // Insert topics
+      // 3. Seed topics with curriculum_id
       for (const topic of theme.topics) {
         const topicResult = await client.query(
-          `INSERT INTO topics (theme_id, topic_id, topic_name, topic_order, boundaries_in_scope, boundaries_out_of_scope, numeric_limits)
-           VALUES ($1, $2, $3, $4, $5, $6, $7)
-           ON CONFLICT (topic_id) DO UPDATE SET
+          `INSERT INTO topics (curriculum_id, theme_id, topic_id, topic_name, topic_order, boundaries_in_scope, boundaries_out_of_scope, numeric_limits)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+           ON CONFLICT (curriculum_id, topic_id) DO UPDATE SET
+             theme_id = EXCLUDED.theme_id,
              topic_name = EXCLUDED.topic_name,
              topic_order = EXCLUDED.topic_order,
              boundaries_in_scope = EXCLUDED.boundaries_in_scope,
@@ -100,6 +126,7 @@ async function seedCAM(): Promise<void> {
              numeric_limits = EXCLUDED.numeric_limits
            RETURNING id`,
           [
+            curriculumId,
             themeUuid,
             topic.topic_id,
             topic.topic_name,
@@ -114,15 +141,17 @@ async function seedCAM(): Promise<void> {
 
         console.log(`    Topic: ${topic.topic_id} - ${topic.topic_name}`);
 
-        // Insert concepts
+        // 4. Seed concepts with curriculum_id
         for (const concept of topic.concepts) {
           await client.query(
-            `INSERT INTO concepts (topic_id, concept_id, concept_name, difficulty_levels)
-             VALUES ($1, $2, $3, $4)
-             ON CONFLICT (concept_id) DO UPDATE SET
+            `INSERT INTO concepts (curriculum_id, topic_id, concept_id, concept_name, difficulty_levels)
+             VALUES ($1, $2, $3, $4, $5)
+             ON CONFLICT (curriculum_id, concept_id) DO UPDATE SET
+               topic_id = EXCLUDED.topic_id,
                concept_name = EXCLUDED.concept_name,
                difficulty_levels = EXCLUDED.difficulty_levels`,
             [
+              curriculumId,
               topicUuid,
               concept.concept_id,
               concept.concept_name,
@@ -139,6 +168,7 @@ async function seedCAM(): Promise<void> {
     await client.query('COMMIT');
 
     console.log('\n--- Summary ---');
+    console.log(`Curriculum: ${displayName}`);
     console.log(`Themes: ${themeCount}`);
     console.log(`Topics: ${topicCount}`);
     console.log(`Concepts: ${conceptCount}`);
@@ -154,7 +184,9 @@ async function seedCAM(): Promise<void> {
   }
 }
 
-seedCAM().catch((error) => {
+// Allow passing CAM file as argument
+const camFile = process.argv[2] || path.join(__dirname, '../../cam/data/icse-class5-mathematics-cam.json');
+seedCAM(camFile).catch((error) => {
   console.error('CAM seeding failed:', error);
   process.exit(1);
 });

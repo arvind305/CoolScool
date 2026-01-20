@@ -43,6 +43,7 @@ export interface MasteryData {
 export interface ConceptProgress {
   id: string;
   user_id: string;
+  curriculum_id: string;
   concept_id: string;
   concept_id_str: string;
   current_difficulty: string;
@@ -85,37 +86,38 @@ function createDefaultMasteryData(): MasteryData {
   };
 }
 
-// Get or create concept progress for a user
+// Get or create concept progress for a user in a curriculum
 export async function getOrCreateConceptProgress(
   userId: string,
+  curriculumId: string,
   conceptIdStr: string
 ): Promise<ConceptProgress> {
   // Try to find existing progress
   const existing = await query<ConceptProgress>(
-    `SELECT * FROM concept_progress WHERE user_id = $1 AND concept_id_str = $2`,
-    [userId, conceptIdStr]
+    `SELECT * FROM concept_progress WHERE user_id = $1 AND curriculum_id = $2 AND concept_id_str = $3`,
+    [userId, curriculumId, conceptIdStr]
   );
 
   if (existing.rows[0]) {
     return existing.rows[0];
   }
 
-  // Get the concept UUID
+  // Get the concept UUID (must be from the specified curriculum)
   const conceptResult = await query<{ id: string }>(
-    'SELECT id FROM concepts WHERE concept_id = $1',
-    [conceptIdStr]
+    'SELECT id FROM concepts WHERE curriculum_id = $1 AND concept_id = $2',
+    [curriculumId, conceptIdStr]
   );
 
   if (!conceptResult.rows[0]) {
-    throw new Error(`Concept not found: ${conceptIdStr}`);
+    throw new Error(`Concept not found in curriculum: ${conceptIdStr}`);
   }
 
-  // Create new progress
+  // Create new progress with curriculum_id
   const result = await query<ConceptProgress>(
-    `INSERT INTO concept_progress (user_id, concept_id, concept_id_str, current_difficulty, mastery_data)
-     VALUES ($1, $2, $3, $4, $5)
+    `INSERT INTO concept_progress (user_id, curriculum_id, concept_id, concept_id_str, current_difficulty, mastery_data)
+     VALUES ($1, $2, $3, $4, $5, $6)
      RETURNING *`,
-    [userId, conceptResult.rows[0].id, conceptIdStr, 'familiarity', JSON.stringify(createDefaultMasteryData())]
+    [userId, curriculumId, conceptResult.rows[0].id, conceptIdStr, 'familiarity', JSON.stringify(createDefaultMasteryData())]
   );
 
   return result.rows[0]!;
@@ -124,14 +126,15 @@ export async function getOrCreateConceptProgress(
 // Record a question attempt
 export async function recordAttempt(
   userId: string,
+  curriculumId: string,
   conceptIdStr: string,
   attempt: AttemptInput
 ): Promise<AttemptResult> {
   const { questionId, difficulty, isCorrect, timeTakenMs } = attempt;
   const now = new Date().toISOString();
 
-  // Get current progress
-  let progress = await getOrCreateConceptProgress(userId, conceptIdStr);
+  // Get current progress for this curriculum
+  let progress = await getOrCreateConceptProgress(userId, curriculumId, conceptIdStr);
   const masteryData = typeof progress.mastery_data === 'string'
     ? JSON.parse(progress.mastery_data)
     : progress.mastery_data;
@@ -247,9 +250,10 @@ function advanceDifficulty(currentDifficulty: string, masteryData: MasteryData):
   return currentDifficulty; // Stay at current if no next available
 }
 
-// Get all concept progress for a user in a topic
+// Get all concept progress for a user in a topic within a curriculum
 export async function getTopicConceptProgress(
   userId: string,
+  curriculumId: string,
   topicIdStr: string
 ): Promise<ConceptProgress[]> {
   const result = await query<ConceptProgress>(
@@ -257,8 +261,8 @@ export async function getTopicConceptProgress(
      FROM concept_progress cp
      JOIN concepts c ON cp.concept_id = c.id
      JOIN topics t ON c.topic_id = t.id
-     WHERE cp.user_id = $1 AND t.topic_id = $2`,
-    [userId, topicIdStr]
+     WHERE cp.user_id = $1 AND cp.curriculum_id = $2 AND t.topic_id = $3`,
+    [userId, curriculumId, topicIdStr]
   );
 
   return result.rows;

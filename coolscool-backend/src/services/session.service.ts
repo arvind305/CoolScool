@@ -61,6 +61,7 @@ export type SelectionStrategy = typeof SELECTION_STRATEGIES[keyof typeof SELECTI
 export interface QuizSession {
   id: string;
   user_id: string;
+  curriculum_id: string;
   session_status: SessionStatus;
   time_mode: TimeMode;
   time_limit_ms: number | null;
@@ -80,6 +81,7 @@ export interface QuizSession {
 }
 
 export interface CreateSessionInput {
+  curriculumId: string;
   topicIdStr: string;
   timeMode?: TimeMode;
   questionCount?: number | null;
@@ -142,44 +144,45 @@ export async function createSession(
   input: CreateSessionInput
 ): Promise<QuizSession> {
   const {
+    curriculumId,
     topicIdStr,
     timeMode = TIME_MODES.UNLIMITED,
     questionCount = null,
     strategy = SELECTION_STRATEGIES.ADAPTIVE,
   } = input;
 
-  // Validate topic exists
+  // Validate topic exists in this curriculum
   const topicResult = await query<{ topic_id: string; topic_name: string }>(
-    'SELECT topic_id, topic_name FROM topics WHERE topic_id = $1',
-    [topicIdStr]
+    'SELECT topic_id, topic_name FROM topics WHERE curriculum_id = $1 AND topic_id = $2',
+    [curriculumId, topicIdStr]
   );
 
   if (!topicResult.rows[0]) {
-    throw new Error(`Topic not found: ${topicIdStr}`);
+    throw new Error(`Topic not found in curriculum: ${topicIdStr}`);
   }
 
   const topic = topicResult.rows[0];
 
-  // Get questions for this topic
-  const questions = await QuestionModel.getQuestionsByTopic(topicIdStr);
+  // Get questions for this topic in this curriculum
+  const questions = await QuestionModel.getQuestionsByTopic(curriculumId, topicIdStr);
   if (questions.length === 0) {
     throw new Error(`No questions available for topic: ${topicIdStr}`);
   }
 
-  // Get CAM concepts for this topic
+  // Get CAM concepts for this topic in this curriculum
   const camResult = await query<CAMConcept>(
     `SELECT concept_id, difficulty_levels
      FROM concepts c
      JOIN topics t ON c.topic_id = t.id
-     WHERE t.topic_id = $1`,
-    [topicIdStr]
+     WHERE c.curriculum_id = $1 AND t.topic_id = $2`,
+    [curriculumId, topicIdStr]
   );
 
-  // Get user's concept progress for this topic
+  // Get user's concept progress for this topic in this curriculum
   const progressResult = await query<ConceptProgress>(
     `SELECT * FROM concept_progress
-     WHERE user_id = $1 AND concept_id_str LIKE $2`,
-    [userId, `${topicIdStr}%`]
+     WHERE user_id = $1 AND curriculum_id = $2 AND concept_id_str LIKE $3`,
+    [userId, curriculumId, `${topicIdStr}%`]
   );
 
   const conceptProgresses = new Map<string, ConceptProgress>();
@@ -200,14 +203,15 @@ export async function createSession(
     throw new Error('No eligible questions found for this topic');
   }
 
-  // Create session in database
+  // Create session in database with curriculum_id
   const result = await query<QuizSession>(
     `INSERT INTO quiz_sessions
-     (user_id, session_status, time_mode, time_limit_ms, topic_id_str, topic_name, question_queue)
-     VALUES ($1, $2, $3, $4, $5, $6, $7)
+     (user_id, curriculum_id, session_status, time_mode, time_limit_ms, topic_id_str, topic_name, question_queue)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
      RETURNING *`,
     [
       userId,
+      curriculumId,
       SESSION_STATUS.NOT_STARTED,
       timeMode,
       TIME_LIMITS[timeMode],
@@ -315,7 +319,7 @@ export async function endSession(
   );
 
   // Update topic progress after session ends
-  await updateTopicProgress(userId, session.topic_id_str);
+  await updateTopicProgress(userId, session.curriculum_id, session.topic_id_str);
 
   return result.rows[0]!;
 }
@@ -380,8 +384,8 @@ export async function submitAnswer(
   // Calculate XP (no negative marking)
   const xpEarned = isCorrect ? (XP_VALUES[question.difficulty] || 0) : 0;
 
-  // Record the attempt in mastery service
-  const masteryResult = await recordAttempt(userId, question.concept_id_str, {
+  // Record the attempt in mastery service (with curriculum_id from session)
+  const masteryResult = await recordAttempt(userId, session.curriculum_id, question.concept_id_str, {
     questionId: question.question_id,
     difficulty: question.difficulty,
     isCorrect,
@@ -423,7 +427,7 @@ export async function submitAnswer(
 
   // Update topic progress if session complete
   if (isSessionComplete) {
-    await updateTopicProgress(userId, session.topic_id_str);
+    await updateTopicProgress(userId, session.curriculum_id, session.topic_id_str);
   }
 
   // Get next question if available
@@ -485,7 +489,7 @@ export async function skipQuestion(
 
   // Update topic progress if session complete
   if (isSessionComplete) {
-    await updateTopicProgress(userId, session.topic_id_str);
+    await updateTopicProgress(userId, session.curriculum_id, session.topic_id_str);
   }
 
   // Get next question if available

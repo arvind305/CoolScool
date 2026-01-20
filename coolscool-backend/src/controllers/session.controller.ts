@@ -17,9 +17,21 @@ export async function createSession(
 ): Promise<void> {
   try {
     const userId = req.user!.id;
-    const { topicId, timeMode, questionCount, strategy } = req.body;
+    const { curriculumId, topicId, timeMode, questionCount, strategy } = req.body;
+
+    if (!curriculumId) {
+      res.status(400).json({
+        success: false,
+        error: {
+          code: 'CURRICULUM_REQUIRED',
+          message: 'curriculumId is required to create a session',
+        },
+      });
+      return;
+    }
 
     const session = await sessionService.createSession(userId, {
+      curriculumId,
       topicIdStr: topicId,
       timeMode: timeMode as TimeMode,
       questionCount: questionCount || null,
@@ -34,6 +46,7 @@ export async function createSession(
       data: {
         session: {
           id: session.id,
+          curriculumId: session.curriculum_id,
           status: session.session_status,
           timeMode: session.time_mode,
           timeLimitMs: session.time_limit_ms,

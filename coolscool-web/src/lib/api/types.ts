@@ -125,6 +125,38 @@ export interface ChildSession {
   completedAt: string | null;
 }
 
+// Curriculum types
+export interface Curriculum {
+  id: string;
+  board: string;
+  classLevel: number;
+  subject: string;
+  displayName: string;
+  description?: string;
+  academicYear: string | null;
+  camVersion: string;
+  isActive: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface CurriculumWithCounts extends Curriculum {
+  counts: {
+    themes: number;
+    topics: number;
+    concepts: number;
+    questions: number;
+  };
+}
+
+export interface CurriculaListResponse {
+  curricula: Curriculum[];
+}
+
+export interface CurriculaOverviewResponse {
+  curricula: CurriculumWithCounts[];
+}
+
 // Progress types
 export interface UserProgress {
   userId: string;

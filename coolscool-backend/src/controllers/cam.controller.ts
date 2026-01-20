@@ -3,10 +3,14 @@
  *
  * Handles Curriculum Authority Model (CAM) read-only endpoints.
  * Authentication is optional for CAM endpoints to allow browsing.
+ *
+ * Per North Star §5: All content is derived from a curriculum-specific CAM
+ * Per North Star §15: Content from different curricula must never mix
  */
 
 import { Request, Response, NextFunction } from 'express';
 import { query } from '../db/index.js';
+import * as CurriculumModel from '../models/curriculum.model.js';
 
 // Interface definitions
 interface Theme {
@@ -15,9 +19,7 @@ interface Theme {
   theme_name: string;
   theme_order: number;
   cam_version: string;
-  board: string;
-  class_level: number;
-  subject: string;
+  curriculum_id: string;
 }
 
 interface Topic {
@@ -29,6 +31,7 @@ interface Topic {
   boundaries_in_scope: string[];
   boundaries_out_of_scope: string[];
   numeric_limits: Record<string, unknown>;
+  curriculum_id: string;
 }
 
 interface Concept {
@@ -37,6 +40,7 @@ interface Concept {
   concept_id: string;
   concept_name: string;
   difficulty_levels: string[];
+  curriculum_id: string;
 }
 
 interface CanonicalExplanation {
@@ -44,32 +48,78 @@ interface CanonicalExplanation {
   rules: string[];
 }
 
-// GET /cam - Get full curriculum structure
+/**
+ * Helper to get curriculum_id from request
+ * Returns the curriculumId param or falls back to default curriculum
+ */
+async function getCurriculumId(req: Request): Promise<string | null> {
+  // Check URL params first
+  if (req.params.curriculumId) {
+    return req.params.curriculumId;
+  }
+
+  // Fall back to default curriculum for backwards compatibility
+  const defaultCurriculum = await CurriculumModel.getDefault();
+  return defaultCurriculum?.id || null;
+}
+
+// GET /curricula/:curriculumId/cam - Get full curriculum structure
 export async function getFullCurriculum(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
   try {
-    // Get all themes
+    const curriculumId = await getCurriculumId(req);
+
+    if (!curriculumId) {
+      res.status(404).json({
+        success: false,
+        error: {
+          code: 'NO_CURRICULUM',
+          message: 'No curriculum found',
+        },
+      });
+      return;
+    }
+
+    // Get curriculum info
+    const curriculum = await CurriculumModel.findById(curriculumId);
+    if (!curriculum) {
+      res.status(404).json({
+        success: false,
+        error: {
+          code: 'CURRICULUM_NOT_FOUND',
+          message: 'Curriculum not found',
+        },
+      });
+      return;
+    }
+
+    // Get all themes for this curriculum
     const themesResult = await query<Theme>(
-      'SELECT * FROM themes ORDER BY theme_order'
+      'SELECT * FROM themes WHERE curriculum_id = $1 ORDER BY theme_order',
+      [curriculumId]
     );
 
-    // Get all topics
+    // Get all topics for this curriculum
     const topicsResult = await query<Topic & { theme_id_str: string }>(
       `SELECT t.*, th.theme_id as theme_id_str
        FROM topics t
        JOIN themes th ON t.theme_id = th.id
-       ORDER BY th.theme_order, t.topic_order`
+       WHERE t.curriculum_id = $1
+       ORDER BY th.theme_order, t.topic_order`,
+      [curriculumId]
     );
 
-    // Get all concepts
+    // Get all concepts for this curriculum
     const conceptsResult = await query<Concept & { topic_id_str: string }>(
       `SELECT c.*, t.topic_id as topic_id_str
        FROM concepts c
        JOIN topics t ON c.topic_id = t.id
-       ORDER BY t.topic_order, c.concept_id`
+       WHERE c.curriculum_id = $1
+       ORDER BY t.topic_order, c.concept_id`,
+      [curriculumId]
     );
 
     // Build hierarchical structure
@@ -87,6 +137,7 @@ export async function getFullCurriculum(
         concept_id: concept.concept_id,
         concept_name: concept.concept_name,
         difficulty_levels: concept.difficulty_levels,
+        curriculum_id: concept.curriculum_id,
       });
     }
 
@@ -104,12 +155,13 @@ export async function getFullCurriculum(
         boundaries_in_scope: topic.boundaries_in_scope || [],
         boundaries_out_of_scope: topic.boundaries_out_of_scope || [],
         numeric_limits: topic.numeric_limits || {},
+        curriculum_id: topic.curriculum_id,
         concepts: conceptsMap.get(topic.topic_id) || [],
       });
     }
 
     // Build final structure
-    const curriculum = themesResult.rows.map(theme => ({
+    const themes = themesResult.rows.map(theme => ({
       themeId: theme.theme_id,
       themeName: theme.theme_name,
       order: theme.theme_order,
@@ -130,16 +182,17 @@ export async function getFullCurriculum(
       })),
     }));
 
-    const theme0 = themesResult.rows[0];
     res.status(200).json({
       success: true,
       data: {
         cam: {
-          version: theme0?.cam_version || '1.0.0',
-          board: theme0?.board || 'ICSE',
-          classLevel: theme0?.class_level || 5,
-          subject: theme0?.subject || 'Mathematics',
-          themes: curriculum,
+          curriculumId: curriculum.id,
+          version: curriculum.cam_version,
+          board: curriculum.board,
+          classLevel: curriculum.class_level,
+          subject: curriculum.subject,
+          displayName: curriculum.display_name,
+          themes,
         },
       },
     });
@@ -148,20 +201,35 @@ export async function getFullCurriculum(
   }
 }
 
-// GET /cam/themes - List all themes
+// GET /curricula/:curriculumId/themes - List all themes for curriculum
 export async function getThemes(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
   try {
+    const curriculumId = await getCurriculumId(req);
+
+    if (!curriculumId) {
+      res.status(404).json({
+        success: false,
+        error: {
+          code: 'NO_CURRICULUM',
+          message: 'No curriculum found',
+        },
+      });
+      return;
+    }
+
     const result = await query<Theme>(
-      'SELECT * FROM themes ORDER BY theme_order'
+      'SELECT * FROM themes WHERE curriculum_id = $1 ORDER BY theme_order',
+      [curriculumId]
     );
 
     res.status(200).json({
       success: true,
       data: {
+        curriculumId,
         themes: result.rows.map(theme => ({
           themeId: theme.theme_id,
           themeName: theme.theme_name,
@@ -174,18 +242,30 @@ export async function getThemes(
   }
 }
 
-// GET /cam/themes/:themeId - Get single theme with topics
+// GET /curricula/:curriculumId/themes/:themeId - Get single theme with topics
 export async function getTheme(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
   try {
+    const curriculumId = await getCurriculumId(req);
     const { themeId } = req.params;
 
+    if (!curriculumId) {
+      res.status(404).json({
+        success: false,
+        error: {
+          code: 'NO_CURRICULUM',
+          message: 'No curriculum found',
+        },
+      });
+      return;
+    }
+
     const themeResult = await query<Theme>(
-      'SELECT * FROM themes WHERE theme_id = $1',
-      [themeId]
+      'SELECT * FROM themes WHERE curriculum_id = $1 AND theme_id = $2',
+      [curriculumId, themeId]
     );
 
     if (!themeResult.rows[0]) {
@@ -193,7 +273,7 @@ export async function getTheme(
         success: false,
         error: {
           code: 'THEME_NOT_FOUND',
-          message: 'Theme not found',
+          message: 'Theme not found in this curriculum',
         },
       });
       return;
@@ -206,14 +286,15 @@ export async function getTheme(
       `SELECT t.*
        FROM topics t
        JOIN themes th ON t.theme_id = th.id
-       WHERE th.theme_id = $1
+       WHERE th.curriculum_id = $1 AND th.theme_id = $2
        ORDER BY t.topic_order`,
-      [themeId]
+      [curriculumId, themeId]
     );
 
     res.status(200).json({
       success: true,
       data: {
+        curriculumId,
         theme: {
           themeId: theme.theme_id,
           themeName: theme.theme_name,
@@ -231,21 +312,33 @@ export async function getTheme(
   }
 }
 
-// GET /cam/topics/:topicId - Get single topic with concepts
+// GET /curricula/:curriculumId/topics/:topicId - Get single topic with concepts
 export async function getTopic(
   req: Request,
   res: Response,
   next: NextFunction
 ): Promise<void> {
   try {
+    const curriculumId = await getCurriculumId(req);
     const { topicId } = req.params;
+
+    if (!curriculumId) {
+      res.status(404).json({
+        success: false,
+        error: {
+          code: 'NO_CURRICULUM',
+          message: 'No curriculum found',
+        },
+      });
+      return;
+    }
 
     const topicResult = await query<Topic & { theme_id_str: string; theme_name: string }>(
       `SELECT t.*, th.theme_id as theme_id_str, th.theme_name
        FROM topics t
        JOIN themes th ON t.theme_id = th.id
-       WHERE t.topic_id = $1`,
-      [topicId]
+       WHERE t.curriculum_id = $1 AND t.topic_id = $2`,
+      [curriculumId, topicId]
     );
 
     if (!topicResult.rows[0]) {
@@ -253,7 +346,7 @@ export async function getTopic(
         success: false,
         error: {
           code: 'TOPIC_NOT_FOUND',
-          message: 'Topic not found',
+          message: 'Topic not found in this curriculum',
         },
       });
       return;
@@ -266,9 +359,9 @@ export async function getTopic(
       `SELECT c.*
        FROM concepts c
        JOIN topics t ON c.topic_id = t.id
-       WHERE t.topic_id = $1
+       WHERE c.curriculum_id = $1 AND t.topic_id = $2
        ORDER BY c.concept_id`,
-      [topicId]
+      [curriculumId, topicId]
     );
 
     // Get canonical explanation if exists
@@ -276,8 +369,8 @@ export async function getTopic(
       `SELECT ce.explanation_text, ce.rules
        FROM canonical_explanations ce
        JOIN topics t ON ce.topic_id = t.id
-       WHERE t.topic_id = $1`,
-      [topicId]
+       WHERE ce.curriculum_id = $1 AND t.topic_id = $2`,
+      [curriculumId, topicId]
     );
 
     const explanation = explanationResult.rows[0] || null;
@@ -286,9 +379,9 @@ export async function getTopic(
     const questionCountResult = await query<{ difficulty: string; count: string }>(
       `SELECT difficulty, COUNT(*) as count
        FROM questions
-       WHERE topic_id_str = $1
+       WHERE curriculum_id = $1 AND topic_id_str = $2
        GROUP BY difficulty`,
-      [topicId]
+      [curriculumId, topicId]
     );
 
     const questionCounts: Record<string, number> = {};
@@ -299,6 +392,7 @@ export async function getTopic(
     res.status(200).json({
       success: true,
       data: {
+        curriculumId,
         topic: {
           topicId: topic.topic_id,
           topicName: topic.topic_name,

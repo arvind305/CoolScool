@@ -43,9 +43,22 @@ export const ENDPOINTS = {
   PARENT_CHILD_CONSENT: (childId: string) => `/api/v1/parent/children/${childId}/consent`,
   PARENT_ACTIVITY: '/api/v1/parent/activity',
 
-  // CAM / Curriculum
+  // CAM / Curriculum (legacy - uses default curriculum)
   CAM: '/api/v1/cam',
   CAM_THEMES: '/api/v1/cam/themes',
   CAM_THEME: (themeId: string) => `/api/v1/cam/themes/${themeId}`,
   CAM_TOPIC: (topicId: string) => `/api/v1/cam/topics/${topicId}`,
+
+  // Curricula
+  CURRICULA: '/api/v1/curricula',
+  CURRICULA_OVERVIEW: '/api/v1/curricula/overview',
+  CURRICULUM: (curriculumId: string) => `/api/v1/curricula/${curriculumId}`,
+  CURRICULUM_OVERVIEW: (curriculumId: string) => `/api/v1/curricula/${curriculumId}/overview`,
+
+  // Curriculum-scoped CAM (recommended)
+  CURRICULUM_CAM: (curriculumId: string) => `/api/v1/curricula/${curriculumId}/cam`,
+  CURRICULUM_THEMES: (curriculumId: string) => `/api/v1/curricula/${curriculumId}/themes`,
+  CURRICULUM_THEME: (curriculumId: string, themeId: string) => `/api/v1/curricula/${curriculumId}/themes/${themeId}`,
+  CURRICULUM_TOPICS: (curriculumId: string) => `/api/v1/curricula/${curriculumId}/topics`,
+  CURRICULUM_TOPIC: (curriculumId: string, topicId: string) => `/api/v1/curricula/${curriculumId}/topics/${topicId}`,
 } as const;

@@ -14,6 +14,7 @@ export interface Question {
   concept_id: string;
   concept_id_str: string;
   topic_id_str: string;
+  curriculum_id: string;
   difficulty: 'familiarity' | 'application' | 'exam_style';
   question_type: 'mcq' | 'fill_blank' | 'true_false' | 'match' | 'ordering';
   question_text: string;
@@ -63,50 +64,52 @@ export async function findByQuestionId(questionId: string): Promise<Question | n
   return result.rows[0] || null;
 }
 
-// Get questions by topic
+// Get questions by topic (with curriculum scope)
 export async function getQuestionsByTopic(
+  curriculumId: string,
   topicIdStr: string,
   difficulty?: string
 ): Promise<Question[]> {
   if (difficulty) {
     const result = await query<Question>(
       `SELECT * FROM questions
-       WHERE topic_id_str = $1 AND difficulty = $2
+       WHERE curriculum_id = $1 AND topic_id_str = $2 AND difficulty = $3
        ORDER BY concept_id_str, question_id`,
-      [topicIdStr, difficulty]
+      [curriculumId, topicIdStr, difficulty]
     );
     return result.rows;
   }
 
   const result = await query<Question>(
     `SELECT * FROM questions
-     WHERE topic_id_str = $1
+     WHERE curriculum_id = $1 AND topic_id_str = $2
      ORDER BY concept_id_str, difficulty, question_id`,
-    [topicIdStr]
+    [curriculumId, topicIdStr]
   );
   return result.rows;
 }
 
-// Get questions by concept
+// Get questions by concept (with curriculum scope)
 export async function getQuestionsByConcept(
+  curriculumId: string,
   conceptIdStr: string,
   difficulty?: string
 ): Promise<Question[]> {
   if (difficulty) {
     const result = await query<Question>(
       `SELECT * FROM questions
-       WHERE concept_id_str = $1 AND difficulty = $2
+       WHERE curriculum_id = $1 AND concept_id_str = $2 AND difficulty = $3
        ORDER BY question_id`,
-      [conceptIdStr, difficulty]
+      [curriculumId, conceptIdStr, difficulty]
     );
     return result.rows;
   }
 
   const result = await query<Question>(
     `SELECT * FROM questions
-     WHERE concept_id_str = $1
+     WHERE curriculum_id = $1 AND concept_id_str = $2
      ORDER BY difficulty, question_id`,
-    [conceptIdStr]
+    [curriculumId, conceptIdStr]
   );
   return result.rows;
 }
@@ -131,23 +134,24 @@ export async function getQuestionForSession(id: string): Promise<Question | null
   return findById(id);
 }
 
-// Count questions by topic
-export async function countQuestionsByTopic(topicIdStr: string): Promise<number> {
+// Count questions by topic (with curriculum scope)
+export async function countQuestionsByTopic(curriculumId: string, topicIdStr: string): Promise<number> {
   const result = await query<{ count: string }>(
-    'SELECT COUNT(*) as count FROM questions WHERE topic_id_str = $1',
-    [topicIdStr]
+    'SELECT COUNT(*) as count FROM questions WHERE curriculum_id = $1 AND topic_id_str = $2',
+    [curriculumId, topicIdStr]
   );
   return parseInt(result.rows[0]?.count || '0', 10);
 }
 
-// Count questions by topic and difficulty
+// Count questions by topic and difficulty (with curriculum scope)
 export async function countQuestionsByTopicAndDifficulty(
+  curriculumId: string,
   topicIdStr: string,
   difficulty: string
 ): Promise<number> {
   const result = await query<{ count: string }>(
-    'SELECT COUNT(*) as count FROM questions WHERE topic_id_str = $1 AND difficulty = $2',
-    [topicIdStr, difficulty]
+    'SELECT COUNT(*) as count FROM questions WHERE curriculum_id = $1 AND topic_id_str = $2 AND difficulty = $3',
+    [curriculumId, topicIdStr, difficulty]
   );
   return parseInt(result.rows[0]?.count || '0', 10);
 }

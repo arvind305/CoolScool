@@ -5,8 +5,15 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ThemeList, type ThemeData, type ThemeTopic } from './theme-list';
 import { TimeModeModal } from '@/components/quiz/time-mode-modal';
-import { fetchCAM, fetchAllQuestionCounts, hasContentFor } from '@/services/curriculum-api';
+import {
+  fetchCAM,
+  fetchCAMByCurriculumId,
+  fetchAllQuestionCounts,
+  hasContentFor,
+  findCurriculumByBoardClassSubject,
+} from '@/services/curriculum-api';
 import { useAccessControl } from '@/hooks';
+import { useCurriculumOptional } from '@/contexts/CurriculumContext';
 import type { CAM, TimeMode, ProficiencyBand } from '@/lib/quiz-engine/types';
 
 // Storage key for banner dismissal
@@ -16,20 +23,23 @@ export interface TopicBrowserProps {
   board: string;
   classLevel: number;
   subject: string;
+  /** Optional curriculum ID - if not provided, will look up from board/class/subject */
+  curriculumId?: string;
 }
 
 /**
  * TopicBrowser - Client component for browsing and selecting topics
  *
  * Features:
- * - Loads CAM data for the given board/class/subject
+ * - Loads CAM data for the given board/class/subject or curriculumId
  * - Displays themes and topics with ThemeList component
  * - Opens time mode modal when a topic is selected
  * - Navigates to quiz page when quiz is started
  */
-export function TopicBrowser({ board, classLevel, subject }: TopicBrowserProps) {
+export function TopicBrowser({ board, classLevel, subject, curriculumId: propCurriculumId }: TopicBrowserProps) {
   const router = useRouter();
   const access = useAccessControl();
+  const curriculumContext = useCurriculumOptional();
 
   // State
   const [cam, setCam] = useState<CAM | null>(null);
@@ -37,6 +47,7 @@ export function TopicBrowser({ board, classLevel, subject }: TopicBrowserProps) 
   const [questionCounts, setQuestionCounts] = useState<Map<string, number>>(new Map());
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [curriculumId, setCurriculumId] = useState<string | null>(propCurriculumId || null);
 
   // Modal state
   const [selectedTopic, setSelectedTopic] = useState<{ id: string; name: string } | null>(null);
@@ -68,19 +79,55 @@ export function TopicBrowser({ board, classLevel, subject }: TopicBrowserProps) 
       setIsLoading(true);
       setError(null);
 
-      // Check if content is available
-      if (!hasContentFor(board, classLevel, subject)) {
-        setError(`Content for ${board.toUpperCase()} Class ${classLevel} ${subject} is coming soon!`);
-        setIsLoading(false);
-        return;
-      }
-
       try {
-        // Load CAM and question counts in parallel
-        const [camData, counts] = await Promise.all([
-          fetchCAM(board, classLevel, subject),
-          fetchAllQuestionCounts(),
-        ]);
+        // Determine curriculum ID - try multiple sources (prop first, then context, then API)
+        let resolvedCurriculumId = propCurriculumId;
+
+        // Try to get from context if matching board/class/subject
+        if (!resolvedCurriculumId && curriculumContext?.currentCurriculum) {
+          const contextCurriculum = curriculumContext.currentCurriculum;
+          if (
+            contextCurriculum.board.toLowerCase() === board.toLowerCase() &&
+            contextCurriculum.classLevel === classLevel &&
+            contextCurriculum.subject.toLowerCase() === subject.toLowerCase()
+          ) {
+            resolvedCurriculumId = contextCurriculum.id;
+          }
+        }
+
+        // Try to find curriculum from API if not found
+        if (!resolvedCurriculumId) {
+          const foundCurriculum = await findCurriculumByBoardClassSubject(board, classLevel, subject);
+          if (foundCurriculum) {
+            resolvedCurriculumId = foundCurriculum.id;
+          }
+        }
+
+        // Check if content is available (fallback for non-API content)
+        if (!resolvedCurriculumId && !hasContentFor(board, classLevel, subject)) {
+          setError(`Content for ${board.toUpperCase()} Class ${classLevel} ${subject} is coming soon!`);
+          setIsLoading(false);
+          return;
+        }
+
+        // Store the resolved curriculum ID for quiz navigation
+        if (resolvedCurriculumId) {
+          setCurriculumId(resolvedCurriculumId);
+        }
+
+        // Load CAM data - prefer curriculum ID based fetch
+        let camData: CAM | null = null;
+        if (resolvedCurriculumId) {
+          camData = await fetchCAMByCurriculumId(resolvedCurriculumId);
+        }
+
+        // Fallback to board/class/subject based fetch
+        if (!camData) {
+          camData = await fetchCAM(board, classLevel, subject);
+        }
+
+        // Load question counts in parallel
+        const counts = await fetchAllQuestionCounts();
 
         if (!camData) {
           setError('Unable to load curriculum data. Please try again later.');
@@ -118,7 +165,7 @@ export function TopicBrowser({ board, classLevel, subject }: TopicBrowserProps) 
     }
 
     loadData();
-  }, [board, classLevel, subject]);
+  }, [board, classLevel, subject, propCurriculumId, curriculumContext?.currentCurriculum]);
 
   // Handle topic selection
   const handleTopicSelect = useCallback((topicId: string) => {
@@ -157,9 +204,14 @@ export function TopicBrowser({ board, classLevel, subject }: TopicBrowserProps) 
         subject,
       });
 
+      // Include curriculum ID if available
+      if (curriculumId) {
+        params.set('curriculumId', curriculumId);
+      }
+
       router.push(`/quiz?${params.toString()}`);
     },
-    [selectedTopic, board, classLevel, subject, router]
+    [selectedTopic, board, classLevel, subject, curriculumId, router]
   );
 
   // Loading state

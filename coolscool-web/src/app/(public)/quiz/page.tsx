@@ -47,6 +47,7 @@ function QuizPageContent() {
   const board = searchParams.get('board') || 'icse';
   const classLevel = parseInt(searchParams.get('class') || '5', 10);
   const subject = searchParams.get('subject') || 'mathematics';
+  const curriculumId = searchParams.get('curriculumId') || undefined;
 
   // Access control for sample tracking
   const access = useAccessControl();
@@ -56,6 +57,7 @@ function QuizPageContent() {
     board,
     classLevel,
     subject,
+    curriculumId,
   });
 
   // Local state

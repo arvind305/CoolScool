@@ -241,28 +241,29 @@ function calculateMasteryStats(
   };
 }
 
-// Update topic progress in database
+// Update topic progress in database (curriculum-scoped)
 export async function updateTopicProgress(
   userId: string,
+  curriculumId: string,
   topicIdStr: string
 ): Promise<TopicProgress> {
-  // Get all concept progress for this topic
+  // Get all concept progress for this topic in this curriculum
   const progressResult = await query<ConceptProgressRow>(
     `SELECT cp.concept_id_str as concept_id, cp.total_attempts, cp.mastery_data
      FROM concept_progress cp
      JOIN concepts c ON cp.concept_id = c.id
      JOIN topics t ON c.topic_id = t.id
-     WHERE cp.user_id = $1 AND t.topic_id = $2`,
-    [userId, topicIdStr]
+     WHERE cp.user_id = $1 AND cp.curriculum_id = $2 AND t.topic_id = $3`,
+    [userId, curriculumId, topicIdStr]
   );
 
-  // Get CAM concepts for this topic
+  // Get CAM concepts for this topic in this curriculum
   const camResult = await query<CAMConcept>(
     `SELECT c.concept_id, c.difficulty_levels
      FROM concepts c
      JOIN topics t ON c.topic_id = t.id
-     WHERE t.topic_id = $1`,
-    [topicIdStr]
+     WHERE c.curriculum_id = $1 AND t.topic_id = $2`,
+    [curriculumId, topicIdStr]
   );
 
   const proficiency = calculateTopicProficiency(progressResult.rows, camResult.rows);
@@ -286,8 +287,8 @@ export async function updateTopicProgress(
      FROM concept_progress cp
      JOIN concepts c ON cp.concept_id = c.id
      JOIN topics t ON c.topic_id = t.id
-     WHERE cp.user_id = $1 AND t.topic_id = $2`,
-    [userId, topicIdStr]
+     WHERE cp.user_id = $1 AND cp.curriculum_id = $2 AND t.topic_id = $3`,
+    [userId, curriculumId, topicIdStr]
   );
 
   if (fullProgressResult.rows[0]) {
@@ -311,12 +312,12 @@ export async function updateTopicProgress(
     last_attempted_at: lastAttemptedAt,
   };
 
-  // Upsert topic progress
+  // Upsert topic progress with curriculum_id
   await query(
-    `INSERT INTO topic_progress (user_id, topic_id_str, proficiency_band, concepts_count,
+    `INSERT INTO topic_progress (user_id, curriculum_id, topic_id_str, proficiency_band, concepts_count,
        concepts_started, concepts_mastered, total_attempts, total_correct, xp_earned, last_attempted_at)
-     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
-     ON CONFLICT (user_id, topic_id_str) DO UPDATE SET
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+     ON CONFLICT (user_id, curriculum_id, topic_id_str) DO UPDATE SET
        proficiency_band = EXCLUDED.proficiency_band,
        concepts_count = EXCLUDED.concepts_count,
        concepts_started = EXCLUDED.concepts_started,
@@ -328,6 +329,7 @@ export async function updateTopicProgress(
        updated_at = NOW()`,
     [
       userId,
+      curriculumId,
       topicIdStr,
       topicProgress.proficiency_band,
       topicProgress.concepts_count,

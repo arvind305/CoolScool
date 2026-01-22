@@ -10,9 +10,14 @@ export function validate(
   property: RequestProperty = 'body'
 ) {
   return (req: Request, _res: Response, next: NextFunction): void => {
+    // For params, allow unknown to preserve route params from parent routers (mergeParams)
+    // and don't strip them so they remain accessible
+    const isParams = property === 'params';
+
     const { error, value } = schema.validate(req[property], {
       abortEarly: false,
-      stripUnknown: true,
+      stripUnknown: !isParams,
+      allowUnknown: isParams,
     });
 
     if (error) {

@@ -815,11 +815,43 @@ questions/data/
 - curriculumId passed through URL to quiz page
 - Backward compatible: falls back to static files when API unavailable
 
-### Phase 5: Add New Curriculum
-1. Create CAM file for new curriculum
-2. Create question files
-3. Run seeding scripts
-4. Verify in UI
+### Phase 5: Add New Curriculum (Test Data) ✅ COMPLETE
+1. ✅ Create CAM file for new curriculum
+2. ✅ Create question files
+3. ✅ Run seeding scripts
+4. ✅ Verify API isolation works
+5. ✅ Clean up test data
+
+**Completed:** 2026-01-22
+
+**Bug fix applied during verification:**
+- Fixed `coolscool-backend/src/middleware/validate.ts` - The Joi validation middleware was using `stripUnknown: true` for params, which removed `curriculumId` from merged route params. Changed to use `allowUnknown: true` and `stripUnknown: false` for params validation.
+
+**API verification results (after bug fix):**
+- `GET /api/v1/curricula` - Lists all curricula ✓
+- `GET /api/v1/curricula/:curriculumId/themes` - Returns curriculum-scoped themes ✓
+- `GET /api/v1/curricula/:curriculumId/themes/:themeId` - Returns curriculum-scoped topics ✓
+- Topic isolation confirmed: same topic_id returns different content per curriculum ✓
+
+**Test data cleanup completed:**
+- Deleted `cam/data/icse-class6-mathematics-cam.json`
+- Deleted `questions/data/class6/` folder
+- Removed from database: 90 questions, 3 explanations, 55 concepts, 11 topics, 6 themes, 1 curriculum
+- Cleanup script created: `coolscool-backend/scripts/remove-class6-curriculum.ts`
+
+### Phase 6: UI Integration ⏳ PENDING
+1. ⏳ Add CurriculumSelector to Header component
+2. ⏳ Manual UI verification with multiple curricula
+3. ⏳ Integration tests (optional)
+
+**Files to modify:**
+- `coolscool-web/src/components/layout/Header.tsx` - Add CurriculumSelector
+
+**Existing components ready for use:**
+- `coolscool-web/src/components/curriculum/CurriculumSelector.tsx` - Created and working
+- `coolscool-web/src/contexts/CurriculumContext.tsx` - Created and working
+
+**Note:** CurriculumSelector shows as a label when only one curriculum exists, and as a dropdown when multiple curricula are available. Integration can wait until a second real curriculum is added.
 
 ---
 
@@ -856,9 +888,19 @@ questions/data/
 - [x] Quiz page receives and uses curriculumId
 - [x] CurriculumProvider added to root layout
 - [x] TypeScript compilation verified
-- [ ] User can switch between curricula (requires multiple curricula in DB)
-- [ ] UI shows correct content per curriculum (requires testing with multiple curricula)
-- [ ] No cross-curriculum data leakage (integration tests)
+
+### Phase 5 (Test Data & API Verification) - COMPLETE
+- [x] Sample Class 6 CAM created and seeded
+- [x] Sample question files created and seeded
+- [x] Bug fix: validate.ts params stripping curriculumId
+- [x] API isolation verified (themes, topics return correct curriculum content)
+- [x] Test data cleaned up (files deleted, database purged)
+
+### Phase 6 (UI Integration) - PENDING
+- [ ] Add CurriculumSelector to Header component
+- [ ] User can switch between curricula (requires multiple curricula)
+- [ ] UI shows correct content per curriculum
+- [ ] No cross-curriculum data leakage (integration tests - optional)
 
 ---
 

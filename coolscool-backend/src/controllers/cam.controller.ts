@@ -11,6 +11,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { query } from '../db/index.js';
 import * as CurriculumModel from '../models/curriculum.model.js';
+import * as QuestionModel from '../models/question.model.js';
 
 // Interface definitions
 interface Theme {
@@ -419,6 +420,65 @@ export async function getTopic(
             : null,
           questionCounts,
         },
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /curricula/:curriculumId/topics/:topicId/questions - Get question bank for a topic
+export async function getTopicQuestions(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const curriculumId = await getCurriculumId(req);
+    const { topicId } = req.params;
+
+    if (!curriculumId) {
+      res.status(404).json({
+        success: false,
+        error: { code: 'NO_CURRICULUM', message: 'No curriculum found' },
+      });
+      return;
+    }
+
+    const questions = await QuestionModel.getQuestionsByTopic(curriculumId!, topicId as string);
+
+    // Get canonical explanation
+    const explanationResult = await query<CanonicalExplanation>(
+      `SELECT ce.explanation_text, ce.rules
+       FROM canonical_explanations ce
+       JOIN topics t ON ce.topic_id = t.id
+       WHERE ce.curriculum_id = $1 AND t.topic_id = $2`,
+      [curriculumId, topicId]
+    );
+    const explanation = explanationResult.rows[0] || null;
+
+    res.status(200).json({
+      success: true,
+      data: {
+        topic_id: topicId,
+        curriculum_id: curriculumId,
+        canonical_explanation: explanation
+          ? { text: explanation.explanation_text, rules: explanation.rules }
+          : null,
+        questions: questions.map(q => ({
+          question_id: q.question_id,
+          concept_id: q.concept_id_str,
+          difficulty: q.difficulty,
+          type: q.question_type,
+          question_text: q.question_text,
+          options: q.options,
+          correct_answer: q.correct_answer,
+          match_pairs: q.match_pairs,
+          ordering_items: q.ordering_items,
+          hint: q.hint,
+          tags: q.tags,
+        })),
+        question_count: questions.length,
       },
     });
   } catch (error) {

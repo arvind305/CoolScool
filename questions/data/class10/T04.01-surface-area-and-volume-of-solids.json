@@ -1,0 +1,904 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 10,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Surface Area and Volume of Solids",
+  "canonical_explanation": {
+    "text": "Surface area and volume calculations are fundamental in mensuration. For cylinders, the curved surface area is 2πrh and total surface area is 2πr(r+h), while volume is πr²h. For cones, curved surface area is πrl (where l is slant height), total surface area is πr(r+l), and volume is (1/3)πr²h. For spheres, surface area is 4πr² and volume is (4/3)πr³. For hemispheres, curved surface area is 2πr², total surface area is 3πr², and volume is (2/3)πr³. When solids are combined, total surface area excludes common surfaces while volume is the sum of individual volumes. In melting and recasting problems, volume remains constant. Capacity problems involve converting cubic units to litres (1 litre = 1000 cm³).",
+    "rules": [
+      "Always identify the solid shape correctly before applying formulas",
+      "For combined solids, subtract the areas of surfaces that are joined",
+      "In conversion problems, volume before melting = volume after recasting",
+      "Use π = 22/7 or 3.14 as specified in the problem",
+      "Convert units consistently (1 m³ = 1000000 cm³, 1 litre = 1000 cm³)",
+      "Slant height l = √(r² + h²) for cones",
+      "For optimization, use differentiation to find maximum or minimum values"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "concept_id": "T04.01.C01",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "2πr(r + h)"
+        },
+        {
+          "id": "B",
+          "text": "2πrh"
+        },
+        {
+          "id": "C",
+          "text": "πr²h"
+        },
+        {
+          "id": "D",
+          "text": "πr(r + h)"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "What is the formula for the total surface area of a cylinder with radius r and height h?"
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "concept_id": "T04.01.C02",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "(4/3)πr³"
+        },
+        {
+          "id": "B",
+          "text": "(1/3)πr²h"
+        },
+        {
+          "id": "C",
+          "text": "πr²h"
+        },
+        {
+          "id": "D",
+          "text": "(2/3)πr³"
+        }
+      ],
+      "correct_answer": "B",
+      "question_text": "The volume of a cone is given by which formula?"
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "concept_id": "T04.01.C03",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "2πr²"
+        },
+        {
+          "id": "B",
+          "text": "3πr²"
+        },
+        {
+          "id": "C",
+          "text": "4πr²"
+        },
+        {
+          "id": "D",
+          "text": "πr²"
+        }
+      ],
+      "correct_answer": "C",
+      "question_text": "What is the surface area of a sphere with radius r?"
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "concept_id": "T04.01.C01",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "1540 m³"
+        },
+        {
+          "id": "B",
+          "text": "1540 cm³"
+        },
+        {
+          "id": "C",
+          "text": "440 m³"
+        },
+        {
+          "id": "D",
+          "text": "2200 m³"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "A cylindrical water tank has a radius of 7 m and height of 10 m. What is its volume? (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "concept_id": "T04.01.C02",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "47.1 cm²"
+        },
+        {
+          "id": "B",
+          "text": "15.7 cm²"
+        },
+        {
+          "id": "C",
+          "text": "28.26 cm²"
+        },
+        {
+          "id": "D",
+          "text": "94.2 cm²"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "A cone has radius 3 cm and slant height 5 cm. What is its curved surface area? (Use π = 3.14)"
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "concept_id": "T04.01.C03",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "462 cm²"
+        },
+        {
+          "id": "B",
+          "text": "308 cm²"
+        },
+        {
+          "id": "C",
+          "text": "616 cm²"
+        },
+        {
+          "id": "D",
+          "text": "154 cm²"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "A hemisphere has a radius of 7 cm. What is its total surface area? (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "concept_id": "T04.01.C04",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "141.17 cm³"
+        },
+        {
+          "id": "B",
+          "text": "179.67 cm³"
+        },
+        {
+          "id": "C",
+          "text": "102.67 cm³"
+        },
+        {
+          "id": "D",
+          "text": "256.67 cm³"
+        }
+      ],
+      "correct_answer": "B",
+      "question_text": "A toy consists of a cone mounted on a hemisphere. The radius of both is 3.5 cm and the height of the cone is 4 cm. What is the total volume of the toy? (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "concept_id": "T04.01.C05",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "18 cm"
+        },
+        {
+          "id": "B",
+          "text": "12 cm"
+        },
+        {
+          "id": "C",
+          "text": "9 cm"
+        },
+        {
+          "id": "D",
+          "text": "24 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "A metallic sphere of radius 6 cm is melted and recast into a cylinder of radius 4 cm. What is the height of the cylinder?"
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "concept_id": "T04.01.C06",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "18.48 litres"
+        },
+        {
+          "id": "B",
+          "text": "1.848 litres"
+        },
+        {
+          "id": "C",
+          "text": "184.8 litres"
+        },
+        {
+          "id": "D",
+          "text": "1848 litres"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "A cylindrical container with radius 14 cm and height 30 cm is filled with water. How many litres of water does it hold? (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "concept_id": "T04.01.C04",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "1848 cm³"
+        },
+        {
+          "id": "B",
+          "text": "1540 cm³"
+        },
+        {
+          "id": "C",
+          "text": "308 cm³"
+        },
+        {
+          "id": "D",
+          "text": "2156 cm³"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "A solid is formed by joining a cylinder and a cone at their common base. If the radius is 7 cm and heights of cylinder and cone are 10 cm and 6 cm respectively, what is the total volume? (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "concept_id": "T04.01.C01",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "2πrh",
+      "question_text": "The curved surface area of a cylinder with radius r and height h is _____."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "concept_id": "T04.01.C02",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "√(r² + h²)",
+      "question_text": "The slant height of a cone with radius r and height h is given by l = _____."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "concept_id": "T04.01.C03",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "(2/3)πr³",
+      "question_text": "The volume of a hemisphere with radius r is _____."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "concept_id": "T04.01.C06",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "1000",
+      "question_text": "1 cubic metre equals _____ litres."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "concept_id": "T04.01.C01",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "942",
+      "question_text": "A cylinder with radius 5 cm and height 12 cm has a volume of _____ cm³. (Use π = 3.14)"
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "concept_id": "T04.01.C02",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "25",
+      "question_text": "A cone with radius 7 cm and height 24 cm has a slant height of _____ cm."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "concept_id": "T04.01.C03",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "616",
+      "question_text": "A sphere with diameter 14 cm has a surface area of _____ cm². (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "concept_id": "T04.01.C05",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "∛9",
+      "question_text": "A spherical ball of radius 3 cm is melted and recast into three equal smaller spheres. The radius of each smaller sphere is _____ cm."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "concept_id": "T04.01.C04",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "471",
+      "question_text": "A solid consists of a hemisphere surmounted by a cone. Both have radius 6 cm and the cone's height is 8 cm. The total surface area is _____ cm². (Use π = 3.14)"
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "concept_id": "T04.01.C06",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "12320",
+      "question_text": "A cylindrical tank with radius 1.4 m and height 2 m can hold _____ litres of water. (Use π = 22/7)"
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "concept_id": "T04.01.C01",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "question_text": "The volume of a cylinder is directly proportional to the square of its radius."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "concept_id": "T04.01.C02",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "question_text": "The curved surface area of a cone is πr², where r is the radius of the base."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "concept_id": "T04.01.C03",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "question_text": "The volume of a sphere is greater than the volume of a hemisphere with the same radius."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "concept_id": "T04.01.C05",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "question_text": "In melting and recasting problems, the volume of the original solid equals the volume of the new solid."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "concept_id": "T04.01.C01",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": false,
+      "question_text": "Two cylinders with the same volume must have the same radius and height."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "concept_id": "T04.01.C02",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": true,
+      "question_text": "If the radius of a cone is doubled while keeping the slant height constant, the curved surface area doubles."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "concept_id": "T04.01.C03",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": false,
+      "question_text": "The total surface area of a hemisphere is 2πr²."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "concept_id": "T04.01.C04",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "question_text": "When calculating the surface area of a solid formed by joining two shapes, we must exclude the area of the common surface."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "concept_id": "T04.01.C06",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": false,
+      "question_text": "A cylindrical tank with dimensions in metres will have its capacity in litres equal to its volume in cubic metres."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "concept_id": "T04.01.C05",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "question_text": "If a sphere is melted and recast into a cylinder with the same radius, the height of the cylinder will be (4/3)r."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "concept_id": "T04.01.C01",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "2πrh",
+          "right": "Curved surface area"
+        },
+        {
+          "left": "2πr(r + h)",
+          "right": "Total surface area"
+        },
+        {
+          "left": "πr²h",
+          "right": "Volume"
+        },
+        {
+          "left": "2πr²",
+          "right": "Area of both bases"
+        }
+      ],
+      "question_text": "Match the cylinder formulas with their descriptions."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "concept_id": "T04.01.C02",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "πrl",
+          "right": "Curved surface area"
+        },
+        {
+          "left": "(1/3)πr²h",
+          "right": "Volume"
+        },
+        {
+          "left": "πr(r + l)",
+          "right": "Total surface area"
+        },
+        {
+          "left": "√(r² + h²)",
+          "right": "Slant height"
+        }
+      ],
+      "question_text": "Match the cone formulas with their descriptions."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "concept_id": "T04.01.C03",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "4πr²",
+          "right": "Surface area of sphere"
+        },
+        {
+          "left": "(4/3)πr³",
+          "right": "Volume of sphere"
+        },
+        {
+          "left": "2πr²",
+          "right": "Curved surface area of hemisphere"
+        },
+        {
+          "left": "(2/3)πr³",
+          "right": "Volume of hemisphere"
+        }
+      ],
+      "question_text": "Match the sphere and hemisphere formulas with their descriptions."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "concept_id": "T04.01.C06",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "1 m³",
+          "right": "1000 litres"
+        },
+        {
+          "left": "1 litre",
+          "right": "1000 cm³"
+        },
+        {
+          "left": "1 m³",
+          "right": "1000000 cm³"
+        },
+        {
+          "left": "1000 litres",
+          "right": "1 m³"
+        }
+      ],
+      "question_text": "Match the volume conversions with their correct values."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "concept_id": "T04.01.C04",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "Cylinder + Cone (same base)",
+          "right": "πr²h₁ + (1/3)πr²h₂"
+        },
+        {
+          "left": "Hemisphere + Cone (same base)",
+          "right": "(2/3)πr³ + (1/3)πr²h"
+        },
+        {
+          "left": "Cylinder + Two hemispheres (same radius)",
+          "right": "πr²h + (4/3)πr³"
+        },
+        {
+          "left": "Sphere - Cone (removed)",
+          "right": "(4/3)πr³ - (1/3)πr²h"
+        }
+      ],
+      "question_text": "Match the combined solid descriptions with their volume formulas."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "concept_id": "T04.01.C05",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "Sphere to Cylinder",
+          "right": "(4/3)πr₁³ = πr₂²h"
+        },
+        {
+          "left": "Cone to Sphere",
+          "right": "(1/3)πr₁²h = (4/3)πr₂³"
+        },
+        {
+          "left": "Cylinder to Cone",
+          "right": "πr₁²h₁ = (1/3)πr₂²h₂"
+        },
+        {
+          "left": "Hemisphere to Cylinder",
+          "right": "(2/3)πr₁³ = πr₂²h"
+        }
+      ],
+      "question_text": "Match the recasting scenarios with the conservation principle."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "concept_id": "T04.01.C01",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "r = 7 cm, h = 10 cm",
+          "right": "748 cm²"
+        },
+        {
+          "left": "r = 3.5 cm, h = 8 cm",
+          "right": "253 cm²"
+        },
+        {
+          "left": "r = 14 cm, h = 5 cm",
+          "right": "1672 cm²"
+        },
+        {
+          "left": "r = 21 cm, h = 2 cm",
+          "right": "3036 cm²"
+        }
+      ],
+      "question_text": "Match the cylinder dimensions with their total surface areas (Use π = 22/7)."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "concept_id": "T04.01.C02",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "r = 7 cm, h = 12 cm",
+          "right": "616 cm³"
+        },
+        {
+          "left": "r = 14 cm, h = 6 cm",
+          "right": "1232 cm³"
+        },
+        {
+          "left": "r = 3.5 cm, h = 24 cm",
+          "right": "308 cm³"
+        },
+        {
+          "left": "r = 21 cm, h = 4 cm",
+          "right": "1848 cm³"
+        }
+      ],
+      "question_text": "Match the cone dimensions with their volumes (Use π = 22/7)."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "concept_id": "T04.01.C03",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "r = 7 cm",
+          "right": "1437.33 cm³"
+        },
+        {
+          "left": "r = 10.5 cm",
+          "right": "4851 cm³"
+        },
+        {
+          "left": "r = 3.5 cm",
+          "right": "179.67 cm³"
+        },
+        {
+          "left": "r = 21 cm",
+          "right": "38808 cm³"
+        }
+      ],
+      "question_text": "Match the sphere radius with its volume (Use π = 22/7)."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "concept_id": "T04.01.C06",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "r = 0.7 m, h = 2 m",
+          "right": "3080 litres"
+        },
+        {
+          "left": "r = 1.4 m, h = 1 m",
+          "right": "6160 litres"
+        },
+        {
+          "left": "r = 0.35 m, h = 4 m",
+          "right": "1540 litres"
+        },
+        {
+          "left": "r = 2.1 m, h = 0.5 m",
+          "right": "6930 litres"
+        }
+      ],
+      "question_text": "Match the cylindrical tank dimensions with their capacities in litres (Use π = 22/7)."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "concept_id": "T04.01.C01",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Calculate the area of two circular bases: 2πr²",
+        "Identify the radius r and height h of the cylinder",
+        "Add the curved surface area and base areas: 2πrh + 2πr² = 2πr(r + h)",
+        "Calculate the curved surface area: 2πrh"
+      ],
+      "correct_answer": [
+        "Identify the radius r and height h of the cylinder",
+        "Calculate the area of two circular bases: 2πr²",
+        "Calculate the curved surface area: 2πrh",
+        "Add the curved surface area and base areas: 2πrh + 2πr² = 2πr(r + h)"
+      ],
+      "question_text": "Arrange the steps to find the total surface area of a cylinder in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "concept_id": "T04.01.C02",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Apply the formula: V = (1/3)πr²h",
+        "Identify the radius r and perpendicular height h",
+        "Calculate the numerical value",
+        "Substitute the values into the formula"
+      ],
+      "correct_answer": [
+        "Identify the radius r and perpendicular height h",
+        "Apply the formula: V = (1/3)πr²h",
+        "Substitute the values into the formula",
+        "Calculate the numerical value"
+      ],
+      "question_text": "Arrange the steps to find the volume of a cone in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "concept_id": "T04.01.C03",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Calculate the value of 4πr²",
+        "Square the radius: r²",
+        "Identify the radius r of the sphere",
+        "Multiply by 4π"
+      ],
+      "correct_answer": [
+        "Identify the radius r of the sphere",
+        "Square the radius: r²",
+        "Multiply by 4π",
+        "Calculate the value of 4πr²"
+      ],
+      "question_text": "Arrange the steps to find the surface area of a sphere in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "concept_id": "T04.01.C04",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Calculate volume of cylinder: πr²h₁",
+        "Add both volumes to get total volume",
+        "Calculate volume of cone: (1/3)πr²h₂",
+        "Identify radius r, height of cylinder h₁, and height of cone h₂"
+      ],
+      "correct_answer": [
+        "Identify radius r, height of cylinder h₁, and height of cone h₂",
+        "Calculate volume of cylinder: πr²h₁",
+        "Calculate volume of cone: (1/3)πr²h₂",
+        "Add both volumes to get total volume"
+      ],
+      "question_text": "Arrange the steps to find the volume of a solid formed by a cylinder with a cone on top, in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "concept_id": "T04.01.C05",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Simplify and solve for the unknown dimension",
+        "Calculate volume of original sphere: (4/3)πr₁³",
+        "Set up equation: (4/3)πr₁³ = πr₂²h",
+        "Equate volumes using conservation principle"
+      ],
+      "correct_answer": [
+        "Calculate volume of original sphere: (4/3)πr₁³",
+        "Equate volumes using conservation principle",
+        "Set up equation: (4/3)πr₁³ = πr₂²h",
+        "Simplify and solve for the unknown dimension"
+      ],
+      "question_text": "Arrange the steps to solve a recasting problem where a sphere is melted into a cylinder, in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "concept_id": "T04.01.C06",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Calculate volume: V = πr²h",
+        "Convert volume from m³ to cm³ or directly to litres",
+        "Express capacity in litres (1000 cm³ = 1 litre or 1 m³ = 1000 litres)",
+        "Identify radius and height in consistent units"
+      ],
+      "correct_answer": [
+        "Identify radius and height in consistent units",
+        "Calculate volume: V = πr²h",
+        "Convert volume from m³ to cm³ or directly to litres",
+        "Express capacity in litres (1000 cm³ = 1 litre or 1 m³ = 1000 litres)"
+      ],
+      "question_text": "Arrange the steps to find the capacity of a cylindrical tank in litres, in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "concept_id": "T04.01.C02",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Add curved surface area and base area: πrl + πr² = πr(r + l)",
+        "Calculate slant height: l = √(r² + h²)",
+        "Identify radius r and height h",
+        "Calculate curved surface area: πrl"
+      ],
+      "correct_answer": [
+        "Identify radius r and height h",
+        "Calculate slant height: l = √(r² + h²)",
+        "Calculate curved surface area: πrl",
+        "Add curved surface area and base area: πrl + πr² = πr(r + l)"
+      ],
+      "question_text": "Arrange the steps to find the total surface area of a cone given radius and height, in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "concept_id": "T04.01.C04",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Calculate slant height of cone: l = √(r² + h²)",
+        "Calculate curved surface area of hemisphere: 2πr²",
+        "Add the two surface areas (exclude the common base)",
+        "Calculate curved surface area of cone: πrl"
+      ],
+      "correct_answer": [
+        "Calculate slant height of cone: l = √(r² + h²)",
+        "Calculate curved surface area of hemisphere: 2πr²",
+        "Calculate curved surface area of cone: πrl",
+        "Add the two surface areas (exclude the common base)"
+      ],
+      "question_text": "Arrange the steps to find the surface area of a toy consisting of a hemisphere with a cone on top, in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "concept_id": "T04.01.C05",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Calculate volume of cone: (1/3)πr₁²h",
+        "Simplify: r₂³ = (r₁²h)/4",
+        "Set up equation: (1/3)πr₁²h = (4/3)πr₂³",
+        "Solve for radius of sphere: r₂ = ∛[(r₁²h)/4]"
+      ],
+      "correct_answer": [
+        "Calculate volume of cone: (1/3)πr₁²h",
+        "Set up equation: (1/3)πr₁²h = (4/3)πr₂³",
+        "Simplify: r₂³ = (r₁²h)/4",
+        "Solve for radius of sphere: r₂ = ∛[(r₁²h)/4]"
+      ],
+      "question_text": "Arrange the steps to solve a problem where a cone is melted and recast into a sphere, in the correct order."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "concept_id": "T04.01.C06",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Calculate volume of small container: V₁ = πr₁²h₁",
+        "Calculate volume of large tank: V₂ = πr₂²h₂",
+        "Identify dimensions of both containers",
+        "Divide large volume by small volume: n = V₂/V₁"
+      ],
+      "correct_answer": [
+        "Identify dimensions of both containers",
+        "Calculate volume of small container: V₁ = πr₁²h₁",
+        "Calculate volume of large tank: V₂ = πr₂²h₂",
+        "Divide large volume by small volume: n = V₂/V₁"
+      ],
+      "question_text": "Arrange the steps to find how many times a small cylindrical container must be filled to fill a large tank, in the correct order."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-01",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 18,
+        "application": 16,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 10,
+        "fill_blank": 10,
+        "true_false": 10,
+        "match": 10,
+        "ordering": 10
+      }
+    }
+  }
+}

@@ -14,6 +14,11 @@ export interface MCQOption {
   text: string;
 }
 
+export interface MatchPair {
+  left: string;
+  right: string;
+}
+
 export interface AnswerOptionsProps {
   /** Question type determines the UI layout */
   type: QuestionType;
@@ -21,14 +26,16 @@ export interface AnswerOptionsProps {
   options?: MCQOption[];
   /** Items for ordering questions */
   orderingItems?: string[];
+  /** Match pairs for match questions */
+  matchPairs?: MatchPair[];
   /** Currently selected answer */
-  selectedAnswer?: string | string[] | null;
+  selectedAnswer?: string | string[] | Record<string, string> | null;
   /** The correct answer (shown after submission) */
-  correctAnswer?: string | string[] | null;
+  correctAnswer?: string | string[] | Record<string, string> | null;
   /** Whether the options are disabled (after submission) */
   disabled?: boolean;
   /** Callback when an option is selected */
-  onSelect?: (answer: string | string[]) => void;
+  onSelect?: (answer: string | string[] | Record<string, string>) => void;
   /** Optional className for the container */
   className?: string;
 }
@@ -46,6 +53,7 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
       type,
       options = [],
       orderingItems = [],
+      matchPairs = [],
       selectedAnswer,
       correctAnswer,
       disabled = false,
@@ -121,6 +129,18 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
             onReorder={(newOrder) => onSelect?.(newOrder)}
             disabled={disabled}
             correctOrder={correctAnswer as string[] | undefined}
+            className={className}
+          />
+        );
+      case 'match':
+        return (
+          <MatchOptions
+            ref={ref}
+            pairs={matchPairs}
+            selectedMatches={(selectedAnswer as Record<string, string>) || {}}
+            onMatch={(matches) => onSelect?.(matches)}
+            disabled={disabled}
+            correctMatches={correctAnswer as Record<string, string> | undefined}
             className={className}
           />
         );
@@ -424,6 +444,136 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
   }
 );
 
+// ============================================================
+// Match Options Sub-component
+// ============================================================
+
+interface MatchOptionsProps {
+  pairs: MatchPair[];
+  selectedMatches: Record<string, string>;
+  onMatch: (matches: Record<string, string>) => void;
+  disabled: boolean;
+  correctMatches?: Record<string, string>;
+  className?: string;
+}
+
+const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
+  function MatchOptions(
+    { pairs, selectedMatches, onMatch, disabled, correctMatches, className = '' },
+    ref
+  ) {
+    const [activeLeft, setActiveLeft] = useState<string | null>(null);
+
+    // Get shuffled right items (stable across renders)
+    const [shuffledRight] = useState<string[]>(() => {
+      const rights = pairs.map(p => p.right);
+      for (let i = rights.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [rights[i], rights[j]] = [rights[j], rights[i]];
+      }
+      return rights;
+    });
+
+    const handleLeftClick = (left: string) => {
+      if (disabled) return;
+      setActiveLeft(activeLeft === left ? null : left);
+    };
+
+    const handleRightClick = (right: string) => {
+      if (disabled || !activeLeft) return;
+      const newMatches = { ...selectedMatches, [activeLeft]: right };
+      setActiveLeft(null);
+      onMatch(newMatches);
+    };
+
+    const getLeftState = (left: string): string => {
+      if (disabled && correctMatches) {
+        const correctRight = pairs.find(p => p.left === left)?.right;
+        if (selectedMatches[left] === correctRight) return 'correct';
+        if (selectedMatches[left] && selectedMatches[left] !== correctRight) return 'incorrect';
+      }
+      if (activeLeft === left) return 'selected';
+      if (selectedMatches[left]) return 'matched';
+      return '';
+    };
+
+    const getRightState = (right: string): string => {
+      if (disabled && correctMatches) {
+        const isCorrectlyMatched = Object.entries(selectedMatches).some(([left, r]) => {
+          if (r !== right) return false;
+          return pairs.find(p => p.left === left)?.right === right;
+        });
+        const isIncorrectlyMatched = Object.values(selectedMatches).includes(right) && !isCorrectlyMatched;
+        if (isCorrectlyMatched) return 'correct';
+        if (isIncorrectlyMatched) return 'incorrect';
+      }
+      if (Object.values(selectedMatches).includes(right)) return 'matched';
+      return '';
+    };
+
+    return (
+      <div ref={ref} className={`match-container ${className}`.trim()}>
+        <div className="match-columns">
+          <div className="match-column match-left-column">
+            {pairs.map(pair => {
+              const state = getLeftState(pair.left);
+              return (
+                <div
+                  key={pair.left}
+                  className={`match-item ${state}`.trim()}
+                  onClick={() => handleLeftClick(pair.left)}
+                  role="button"
+                  tabIndex={disabled ? -1 : 0}
+                  aria-disabled={disabled}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleLeftClick(pair.left);
+                    }
+                  }}
+                >
+                  <span className="match-item-text">{pair.left}</span>
+                  {selectedMatches[pair.left] && (
+                    <span className="match-item-link">→ {selectedMatches[pair.left]}</span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div className="match-column match-right-column">
+            {shuffledRight.map(right => {
+              const state = getRightState(right);
+              return (
+                <div
+                  key={right}
+                  className={`match-item ${state}`.trim()}
+                  onClick={() => handleRightClick(right)}
+                  role="button"
+                  tabIndex={disabled ? -1 : 0}
+                  aria-disabled={disabled}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleRightClick(right);
+                    }
+                  }}
+                >
+                  <span className="match-item-text">{right}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        {!disabled && (
+          <p className="match-hint">
+            {activeLeft ? `Select the match for "${activeLeft}"` : 'Select an item on the left, then its match on the right'}
+          </p>
+        )}
+      </div>
+    );
+  }
+);
+
 // Styles for this component (add to globals.css or a CSS module)
 // These match the reference styles.css lines 952-1127
 const styles = `
@@ -604,6 +754,75 @@ const styles = `
   font-size: var(--font-size-sm);
   margin-right: var(--spacing-md);
   flex-shrink: 0;
+}
+
+/* Match interface */
+.match-container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.match-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.match-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.match-item {
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--color-bg-card);
+}
+
+.match-item:hover:not([aria-disabled="true"]) {
+  border-color: var(--color-primary-light);
+  background: var(--color-primary-subtle);
+}
+
+.match-item.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.match-item.matched {
+  border-color: var(--color-primary-light);
+  opacity: 0.8;
+}
+
+.match-item.correct {
+  border-color: var(--color-correct);
+  background: var(--color-correct-bg);
+}
+
+.match-item.incorrect {
+  border-color: var(--color-incorrect);
+  background: var(--color-incorrect-bg);
+}
+
+.match-item-text {
+  line-height: var(--line-height-normal);
+}
+
+.match-item-link {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-xs);
+}
+
+.match-hint {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-md);
 }
 `;
 

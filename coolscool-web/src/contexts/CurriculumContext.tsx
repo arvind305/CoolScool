@@ -8,6 +8,7 @@ import {
   useCallback,
   ReactNode,
 } from 'react';
+import { setCurriculaCache } from '@/services/curriculum-api';
 
 // ============================================
 // Types
@@ -91,6 +92,9 @@ export function CurriculumProvider({ children }: CurriculumProviderProps) {
 
       const loadedCurricula: Curriculum[] = data.data.curricula;
       setCurricula(loadedCurricula);
+
+      // Populate the synchronous cache for hasContentFor()
+      setCurriculaCache(loadedCurricula as import('@/lib/api/types').Curriculum[]);
 
       // Restore previously selected curriculum from storage
       if (loadedCurricula.length > 0) {

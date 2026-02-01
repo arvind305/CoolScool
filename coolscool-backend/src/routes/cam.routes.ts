@@ -98,3 +98,11 @@ curriculumScopedCamRouter.get(
   validate(topicIdSchema, 'params'),
   camController.getTopic
 );
+
+// GET /curricula/:curriculumId/topics/:topicId/questions - Get question bank for topic
+curriculumScopedCamRouter.get(
+  '/topics/:topicId/questions',
+  optionalAuth,
+  validate(topicIdSchema, 'params'),
+  camController.getTopicQuestions
+);

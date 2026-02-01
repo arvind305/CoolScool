@@ -62,7 +62,7 @@ function QuizPageContent() {
 
   // Local state
   const [quizState, setQuizState] = useState<QuizState>('loading');
-  const [selectedAnswer, setSelectedAnswer] = useState<string | string[] | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | string[] | Record<string, string> | null>(null);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [summary, setSummary] = useState<SessionSummary | null>(null);
   const [proficiency, setProficiency] = useState<{ band: ProficiencyBand; label: string }>({
@@ -147,7 +147,7 @@ function QuizPageContent() {
   }, [stopTimer]);
 
   // Handle answer selection
-  const handleAnswerSelect = useCallback((answer: string | string[]) => {
+  const handleAnswerSelect = useCallback((answer: string | string[] | Record<string, string>) => {
     setSelectedAnswer(answer);
   }, []);
 
@@ -395,6 +395,9 @@ function QuizPageContent() {
               orderingItems={
                 (currentQuestion as unknown as { ordering_items?: string[] }).ordering_items || []
               }
+              matchPairs={
+                (currentQuestion as unknown as { match_pairs?: { left: string; right: string }[] }).match_pairs || []
+              }
               selectedAnswer={selectedAnswer}
               correctAnswer={showingFeedback ? lastResult.correctAnswer : undefined}
               disabled={showingFeedback}
@@ -408,6 +411,8 @@ function QuizPageContent() {
                 correctAnswer={
                   Array.isArray(lastResult.correctAnswer)
                     ? lastResult.correctAnswer.join(' -> ')
+                    : typeof lastResult.correctAnswer === 'object' && lastResult.correctAnswer !== null
+                    ? Object.entries(lastResult.correctAnswer).map(([k, v]) => `${k} → ${v}`).join(', ')
                     : lastResult.correctAnswer
                 }
                 explanation={lastResult.explanation}

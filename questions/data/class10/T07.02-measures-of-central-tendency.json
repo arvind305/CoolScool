@@ -1,0 +1,1094 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 10,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T07.02",
+  "topic_name": "Measures of Central Tendency for Grouped Data",
+  "canonical_explanation": {
+    "text": "Measures of central tendency for grouped data include mean, median, and mode. The mean can be calculated using three methods: (1) Direct method: Mean = Σ(f×x)/Σf where x is the class mark and f is frequency, (2) Assumed-mean method: Mean = A + Σ(f×d)/Σf where A is assumed mean and d = x - A, (3) Step-deviation method: Mean = A + [Σ(f×u)/Σf] × h where u = (x-A)/h and h is class width. The median is the middle value when data is arranged in order, calculated using the formula: Median = L + [(N/2 - cf)/f] × h, where L is lower boundary of median class, N is total frequency, cf is cumulative frequency before median class, f is frequency of median class, and h is class width. It can also be found graphically using an ogive (cumulative frequency curve). The mode is the most frequently occurring value, calculated using the formula: Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h, where L is lower boundary of modal class, f₁ is frequency of modal class, f₀ is frequency of class before modal class, f₂ is frequency of class after modal class, and h is class width. Mode can also be determined from a histogram by drawing lines from the tops of the modal class to the adjacent bars.",
+    "rules": [
+      "For mean calculations, class mark x = (lower limit + upper limit)/2",
+      "Choose assumed mean A preferably as the class mark of the middle class for easier calculations",
+      "Step-deviation method is most efficient when class widths are equal and frequencies are large numbers",
+      "Median class is the class where cumulative frequency first exceeds or equals N/2",
+      "Modal class is the class with the highest frequency",
+      "In an ogive, median corresponds to the x-value at y = N/2",
+      "Less than ogive uses upper class boundaries; greater than ogive uses lower class boundaries",
+      "For interpretation, consider context: mean is affected by extreme values, median is positional, mode shows most common value",
+      "Always verify that Σf equals the total number of observations",
+      "Class width h must be consistent in step-deviation and median/mode formulas"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T07.02.Q001",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean = Σ(f×x)/Σf"
+        },
+        {
+          "id": "B",
+          "text": "Mean = Σf/Σx"
+        },
+        {
+          "id": "C",
+          "text": "Mean = Σx/Σf"
+        },
+        {
+          "id": "D",
+          "text": "Mean = Σ(f+x)/Σf"
+        }
+      ],
+      "correct_answer": "A",
+      "boundary_tags": [
+        "Direct method"
+      ],
+      "question_text": "What is the formula for calculating the mean of grouped data using the direct method?",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q002",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "d = x + A"
+        },
+        {
+          "id": "B",
+          "text": "d = x - A"
+        },
+        {
+          "id": "C",
+          "text": "d = A - x"
+        },
+        {
+          "id": "D",
+          "text": "d = x/A"
+        }
+      ],
+      "correct_answer": "B",
+      "boundary_tags": [
+        "Assumed-mean method"
+      ],
+      "question_text": "In the assumed-mean method, what does 'd' represent in the formula Mean = A + Σ(f×d)/Σf?",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q003",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "The class with the highest frequency"
+        },
+        {
+          "id": "B",
+          "text": "The class where cumulative frequency first exceeds or equals N/2"
+        },
+        {
+          "id": "C",
+          "text": "The middle class in the frequency distribution"
+        },
+        {
+          "id": "D",
+          "text": "The class with the lowest frequency"
+        }
+      ],
+      "correct_answer": "B",
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "Which class is called the median class in grouped data?",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q004",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "The class with the lowest frequency"
+        },
+        {
+          "id": "B",
+          "text": "The class with the highest frequency"
+        },
+        {
+          "id": "C",
+          "text": "The class at the center of the distribution"
+        },
+        {
+          "id": "D",
+          "text": "The class containing the median"
+        }
+      ],
+      "correct_answer": "B",
+      "boundary_tags": [
+        "Mode formula"
+      ],
+      "question_text": "What does the modal class represent in a frequency distribution?",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q005",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "47.4"
+        },
+        {
+          "id": "C",
+          "text": "69"
+        },
+        {
+          "id": "D",
+          "text": "45"
+        }
+      ],
+      "correct_answer": "C",
+      "boundary_tags": [
+        "Step-deviation method"
+      ],
+      "question_text": "For a grouped frequency distribution with class intervals of equal width 10, if the assumed mean A = 45 and Σ(f×u)/Σf = 2.4, what is the mean using step-deviation method?",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q006",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "30.42"
+        },
+        {
+          "id": "C",
+          "text": "34.17"
+        },
+        {
+          "id": "D",
+          "text": "40"
+        }
+      ],
+      "correct_answer": "C",
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "In a frequency distribution, the median class is 30-40 with f = 12, cf = 25, N = 50, and h = 10. What is the median?",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q007",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "30"
+        },
+        {
+          "id": "C",
+          "text": "31.67"
+        },
+        {
+          "id": "D",
+          "text": "35"
+        }
+      ],
+      "correct_answer": "C",
+      "boundary_tags": [
+        "Mode formula"
+      ],
+      "question_text": "If the modal class is 25-35 with f₁ = 20, f₀ = 12, f₂ = 8, and h = 10, what is the mode?",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q008",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.4"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "2.5"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "boundary_tags": [
+        "Step-deviation method"
+      ],
+      "question_text": "The mean of a grouped frequency distribution is 52. If the assumed mean A = 50 and the class width h = 5, what is the value of Σ(f×u)/Σf in the step-deviation method?",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q009",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "75"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "B",
+      "boundary_tags": [
+        "Median from ogive"
+      ],
+      "question_text": "An ogive is drawn for a frequency distribution of 100 observations. At what cumulative frequency value should a horizontal line be drawn to find the median?",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q010",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "The distribution is symmetric"
+        },
+        {
+          "id": "B",
+          "text": "The distribution is positively skewed with some high-income outliers"
+        },
+        {
+          "id": "C",
+          "text": "The distribution is negatively skewed"
+        },
+        {
+          "id": "D",
+          "text": "All incomes are equal"
+        }
+      ],
+      "correct_answer": "B",
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "In interpreting statistical results for income distribution, the mean is Rs. 45,000, median is Rs. 35,000, and mode is Rs. 28,000. What does this indicate about the distribution?",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q011",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "h",
+      "boundary_tags": [
+        "Step-deviation method"
+      ],
+      "question_text": "In the step-deviation method, the variable u is calculated as u = (x - A)/_____, where h represents the class width.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q012",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "2",
+      "boundary_tags": [
+        "Direct method"
+      ],
+      "question_text": "The class mark (x) of a class interval is calculated as x = (lower limit + upper limit)/_____.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q013",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "lower",
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "In the median formula for grouped data, L represents the _____ boundary of the median class.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q014",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "less",
+      "boundary_tags": [
+        "Median from ogive"
+      ],
+      "question_text": "A _____ than ogive is drawn using the upper class boundaries and cumulative frequencies.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q015",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "45",
+      "boundary_tags": [
+        "Direct method"
+      ],
+      "question_text": "If the class interval 40-50 has a lower limit of 40 and upper limit of 50, the class mark is _____.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q016",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "40",
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "If total frequency N = 80, the median corresponds to the cumulative frequency value of _____.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q017",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "38",
+      "boundary_tags": [
+        "Assumed-mean method"
+      ],
+      "question_text": "Using the assumed-mean method with A = 35, if Σ(f×d) = 120 and Σf = 40, the mean is _____.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q018",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "modal",
+      "boundary_tags": [
+        "Mode from histogram"
+      ],
+      "question_text": "In a histogram, the mode can be found by drawing lines from the top corners of the _____ class to the adjacent bars and finding their intersection point.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q019",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "positively",
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "For a distribution where mean = 68, median = 65, and mode = 62, the distribution is _____ skewed.",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q020",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "7",
+      "boundary_tags": [
+        "Mode formula"
+      ],
+      "question_text": "If in the mode formula, f₁ = 25, f₀ = 18, f₂ = 15, L = 50, and h = 10, then (f₁ - f₀)/(2f₁ - f₀ - f₂) × h equals _____.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q021",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "boundary_tags": [
+        "Direct method"
+      ],
+      "question_text": "The direct method for calculating mean of grouped data uses the formula Mean = Σ(f×x)/Σf.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q022",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "boundary_tags": [
+        "Assumed-mean method"
+      ],
+      "question_text": "In the assumed-mean method, any value can be chosen as the assumed mean A.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q023",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "The median class is always the class with the highest frequency.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q024",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "boundary_tags": [
+        "Median from ogive"
+      ],
+      "question_text": "A 'less than' ogive is drawn by plotting cumulative frequencies against lower class boundaries.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q025",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": true,
+      "boundary_tags": [
+        "Step-deviation method"
+      ],
+      "question_text": "The step-deviation method is most efficient when all class intervals have equal width.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q026",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": false,
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "In a frequency distribution, if the mean is less than the median, the distribution is positively skewed.",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q027",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": false,
+      "boundary_tags": [
+        "Mode from histogram"
+      ],
+      "question_text": "The mode can be determined from a histogram by identifying the tallest bar and finding its class mark.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q028",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": false,
+      "boundary_tags": [
+        "Median from ogive",
+        "Median formula"
+      ],
+      "question_text": "The median obtained from an ogive and the median calculated using the formula will always give exactly the same result.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q029",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "If all three measures (mean, median, mode) are equal, the distribution is perfectly symmetric.",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q030",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "boundary_tags": [
+        "Mode formula"
+      ],
+      "question_text": "In the mode formula, if f₀ and f₂ are equal, the mode equals the class mark of the modal class.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q031",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Direct method",
+          "right": "Mean = Σ(f×x)/Σf"
+        },
+        {
+          "left": "Assumed-mean method",
+          "right": "Mean = A + Σ(f×d)/Σf"
+        },
+        {
+          "left": "Step-deviation method",
+          "right": "Mean = A + [Σ(f×u)/Σf] × h"
+        },
+        {
+          "left": "Median formula",
+          "right": "Median = L + [(N/2 - cf)/f] × h"
+        }
+      ],
+      "boundary_tags": [
+        "Direct method",
+        "Assumed-mean method",
+        "Step-deviation method",
+        "Median formula"
+      ],
+      "question_text": "Match the methods of calculating mean with their respective formulas.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q032",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Class mark",
+          "right": "Midpoint of a class interval"
+        },
+        {
+          "left": "Modal class",
+          "right": "Class with highest frequency"
+        },
+        {
+          "left": "Median class",
+          "right": "Class where cumulative frequency ≥ N/2"
+        },
+        {
+          "left": "Ogive",
+          "right": "Cumulative frequency curve"
+        }
+      ],
+      "boundary_tags": [
+        "Direct method",
+        "Median formula",
+        "Mode formula",
+        "Median from ogive"
+      ],
+      "question_text": "Match the statistical terms with their definitions.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q033",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "L",
+          "right": "Lower boundary of median class"
+        },
+        {
+          "left": "N",
+          "right": "Total frequency"
+        },
+        {
+          "left": "cf",
+          "right": "Cumulative frequency before median class"
+        },
+        {
+          "left": "h",
+          "right": "Class width"
+        }
+      ],
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "Match the variable symbols with their meanings in the median formula.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q034",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Positively skewed",
+          "right": "Mean > Median > Mode"
+        },
+        {
+          "left": "Negatively skewed",
+          "right": "Mean < Median < Mode"
+        },
+        {
+          "left": "Symmetric",
+          "right": "Mean = Median = Mode"
+        },
+        {
+          "left": "Bimodal",
+          "right": "Two classes with equally high frequencies"
+        }
+      ],
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "Match the distribution types with their characteristics.",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q035",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "Step-deviation (u)",
+          "right": "(x - A)/h"
+        },
+        {
+          "left": "Deviation (d)",
+          "right": "x - A"
+        },
+        {
+          "left": "Class mark (x)",
+          "right": "(Lower limit + Upper limit)/2"
+        },
+        {
+          "left": "Assumed mean (A)",
+          "right": "Class mark of a chosen class"
+        }
+      ],
+      "boundary_tags": [
+        "Step-deviation method",
+        "Assumed-mean method"
+      ],
+      "question_text": "Match the calculation components in step-deviation method with their expressions.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q036",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "f₁",
+          "right": "Frequency of modal class"
+        },
+        {
+          "left": "f₀",
+          "right": "Frequency of class before modal class"
+        },
+        {
+          "left": "f₂",
+          "right": "Frequency of class after modal class"
+        },
+        {
+          "left": "L",
+          "right": "Lower boundary of modal class"
+        }
+      ],
+      "boundary_tags": [
+        "Mode formula"
+      ],
+      "question_text": "Match the mode formula components with their descriptions.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q037",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "Less than ogive",
+          "right": "Plot cumulative frequency vs upper class boundaries"
+        },
+        {
+          "left": "Greater than ogive",
+          "right": "Plot cumulative frequency vs lower class boundaries"
+        },
+        {
+          "left": "Median from ogive",
+          "right": "Draw horizontal line at N/2 and find x-intercept"
+        },
+        {
+          "left": "Quartiles from ogive",
+          "right": "Draw horizontal lines at N/4 and 3N/4"
+        }
+      ],
+      "boundary_tags": [
+        "Median from ogive"
+      ],
+      "question_text": "Match the ogive types with their plotting methods.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q038",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "Finding most common shoe size sold",
+          "right": "Mode"
+        },
+        {
+          "left": "Calculating average income when there are billionaires",
+          "right": "Median"
+        },
+        {
+          "left": "Determining mean test score for grading",
+          "right": "Mean"
+        },
+        {
+          "left": "Finding middle value in house prices",
+          "right": "Median"
+        }
+      ],
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "Match the real-world scenarios with the most appropriate measure of central tendency to use.",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q039",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "When A = mean in assumed-mean method",
+          "right": "Σ(f×d) = 0"
+        },
+        {
+          "left": "When f₀ = f₂ in mode formula",
+          "right": "Mode = L + h/2"
+        },
+        {
+          "left": "When cf = N/2 exactly at class boundary",
+          "right": "Median = that class boundary"
+        },
+        {
+          "left": "When all class widths equal h",
+          "right": "Step-deviation method is most efficient"
+        }
+      ],
+      "boundary_tags": [
+        "Assumed-mean method",
+        "Mode formula",
+        "Median formula",
+        "Step-deviation method"
+      ],
+      "question_text": "Match the given conditions with the resulting simplifications in formulas.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q040",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "Wrong mean using direct method",
+          "right": "Incorrect class marks calculated"
+        },
+        {
+          "left": "Wrong median class identified",
+          "right": "Cumulative frequency not calculated correctly"
+        },
+        {
+          "left": "Wrong mode from histogram",
+          "right": "Lines drawn from wrong corners of modal bar"
+        },
+        {
+          "left": "Inconsistent results across methods",
+          "right": "Computational errors in Σf or class boundaries"
+        }
+      ],
+      "boundary_tags": [
+        "Direct method",
+        "Median formula",
+        "Mode from histogram"
+      ],
+      "question_text": "Match the error types in calculating central tendency with their causes.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q041",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Calculate class mark for each class interval",
+        "Find Σ(f×x) by multiplying each frequency with its class mark and summing",
+        "Multiply each class mark by its frequency",
+        "Find Σf (sum of all frequencies)",
+        "Divide Σ(f×x) by Σf to get the mean"
+      ],
+      "correct_answer": [
+        "Calculate class mark for each class interval",
+        "Multiply each class mark by its frequency",
+        "Find Σ(f×x) by multiplying each frequency with its class mark and summing",
+        "Find Σf (sum of all frequencies)",
+        "Divide Σ(f×x) by Σf to get the mean"
+      ],
+      "boundary_tags": [
+        "Direct method"
+      ],
+      "question_text": "Arrange the steps to calculate mean using the direct method in correct order.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q042",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Calculate N/2 where N is total frequency",
+        "Calculate cumulative frequencies for all classes",
+        "Identify the median class where cumulative frequency ≥ N/2",
+        "Note L, f, cf, and h for the median class",
+        "Apply formula: Median = L + [(N/2 - cf)/f] × h"
+      ],
+      "correct_answer": [
+        "Calculate cumulative frequencies for all classes",
+        "Calculate N/2 where N is total frequency",
+        "Identify the median class where cumulative frequency ≥ N/2",
+        "Note L, f, cf, and h for the median class",
+        "Apply formula: Median = L + [(N/2 - cf)/f] × h"
+      ],
+      "boundary_tags": [
+        "Median formula"
+      ],
+      "question_text": "Arrange the steps to find median using the formula in correct order.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q043",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Apply formula: Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h",
+        "Identify the modal class (highest frequency)",
+        "Note the frequencies f₀ (before), f₁ (modal), f₂ (after)",
+        "Note L (lower boundary) and h (class width) of modal class",
+        "Calculate the mode value"
+      ],
+      "correct_answer": [
+        "Identify the modal class (highest frequency)",
+        "Note the frequencies f₀ (before), f₁ (modal), f₂ (after)",
+        "Note L (lower boundary) and h (class width) of modal class",
+        "Apply formula: Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h",
+        "Calculate the mode value"
+      ],
+      "boundary_tags": [
+        "Mode formula"
+      ],
+      "question_text": "Arrange the steps to calculate mode using the formula in correct order.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q044",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Draw a horizontal line from N/2 on y-axis",
+        "Calculate N/2 (half of total frequency)",
+        "Draw the less than ogive by plotting cumulative frequencies",
+        "Mark the point where horizontal line meets the ogive",
+        "Draw a perpendicular to x-axis from intersection point to read median"
+      ],
+      "correct_answer": [
+        "Draw the less than ogive by plotting cumulative frequencies",
+        "Calculate N/2 (half of total frequency)",
+        "Draw a horizontal line from N/2 on y-axis",
+        "Mark the point where horizontal line meets the ogive",
+        "Draw a perpendicular to x-axis from intersection point to read median"
+      ],
+      "boundary_tags": [
+        "Median from ogive"
+      ],
+      "question_text": "Arrange the steps to find median from an ogive in correct order.",
+      "concept_id": "T07.02.C02"
+    },
+    {
+      "question_id": "T07.02.Q045",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Calculate d = x - A for each class",
+        "Choose an assumed mean A (preferably middle class mark)",
+        "Calculate Σ(f×d) by summing all f×d values",
+        "Find f×d for each class and sum to get Σ(f×d)",
+        "Apply formula: Mean = A + Σ(f×d)/Σf"
+      ],
+      "correct_answer": [
+        "Choose an assumed mean A (preferably middle class mark)",
+        "Calculate d = x - A for each class",
+        "Find f×d for each class and sum to get Σ(f×d)",
+        "Calculate Σ(f×d) by summing all f×d values",
+        "Apply formula: Mean = A + Σ(f×d)/Σf"
+      ],
+      "boundary_tags": [
+        "Assumed-mean method"
+      ],
+      "question_text": "Arrange the steps to calculate mean using assumed-mean method in correct order.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q046",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Apply formula: Mean = A + [Σ(f×u)/Σf] × h",
+        "Choose assumed mean A and determine class width h",
+        "Calculate step-deviation u = (x - A)/h for each class",
+        "Calculate Σ(f×u) by summing all f×u values",
+        "Multiply each u by its frequency f to get f×u"
+      ],
+      "correct_answer": [
+        "Choose assumed mean A and determine class width h",
+        "Calculate step-deviation u = (x - A)/h for each class",
+        "Multiply each u by its frequency f to get f×u",
+        "Calculate Σ(f×u) by summing all f×u values",
+        "Apply formula: Mean = A + [Σ(f×u)/Σf] × h"
+      ],
+      "boundary_tags": [
+        "Step-deviation method"
+      ],
+      "question_text": "Arrange the steps to calculate mean using step-deviation method in correct order.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q047",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Draw a line from top-right corner of modal bar to top-right of previous bar",
+        "Identify the modal class (tallest bar in histogram)",
+        "Draw a line from top-left corner of modal bar to top-left of next bar",
+        "Mark the intersection point of the two lines",
+        "Draw a perpendicular from intersection to x-axis to read the mode"
+      ],
+      "correct_answer": [
+        "Identify the modal class (tallest bar in histogram)",
+        "Draw a line from top-right corner of modal bar to top-right of previous bar",
+        "Draw a line from top-left corner of modal bar to top-left of next bar",
+        "Mark the intersection point of the two lines",
+        "Draw a perpendicular from intersection to x-axis to read the mode"
+      ],
+      "boundary_tags": [
+        "Mode from histogram"
+      ],
+      "question_text": "Arrange the steps to find mode from a histogram in correct order.",
+      "concept_id": "T07.02.C03"
+    },
+    {
+      "question_id": "T07.02.Q048",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "If class widths equal and large frequencies, choose step-deviation method",
+        "Check if class widths are equal throughout the distribution",
+        "If class widths unequal or small frequencies, use direct or assumed-mean method",
+        "Examine the magnitude of class marks and frequencies",
+        "Consider computational convenience based on data characteristics"
+      ],
+      "correct_answer": [
+        "Check if class widths are equal throughout the distribution",
+        "Examine the magnitude of class marks and frequencies",
+        "Consider computational convenience based on data characteristics",
+        "If class widths equal and large frequencies, choose step-deviation method",
+        "If class widths unequal or small frequencies, use direct or assumed-mean method"
+      ],
+      "boundary_tags": [
+        "Direct method",
+        "Assumed-mean method",
+        "Step-deviation method"
+      ],
+      "question_text": "Arrange the decision-making steps when choosing which method to calculate mean in correct order.",
+      "concept_id": "T07.02.C01"
+    },
+    {
+      "question_id": "T07.02.Q049",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "If mean > median > mode, conclude positive skewness",
+        "Calculate all three measures of central tendency",
+        "Consider the practical implications for the context",
+        "If mean < median < mode, conclude negative skewness",
+        "Compare the values of mean, median, and mode"
+      ],
+      "correct_answer": [
+        "Calculate all three measures of central tendency",
+        "Compare the values of mean, median, and mode",
+        "If mean > median > mode, conclude positive skewness",
+        "If mean < median < mode, conclude negative skewness",
+        "Consider the practical implications for the context"
+      ],
+      "boundary_tags": [
+        "Contextual interpretation"
+      ],
+      "question_text": "Arrange the interpretation steps when comparing mean, median, and mode in correct order.",
+      "concept_id": "T07.02.C04"
+    },
+    {
+      "question_id": "T07.02.Q050",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Verify that the calculated value makes logical sense for the data",
+        "Check if mean lies between minimum and maximum class marks",
+        "Verify that Σf equals the given total number of observations",
+        "Recalculate if any check fails",
+        "Check if median and mode fall within their respective classes"
+      ],
+      "correct_answer": [
+        "Verify that Σf equals the given total number of observations",
+        "Check if mean lies between minimum and maximum class marks",
+        "Check if median and mode fall within their respective classes",
+        "Verify that the calculated value makes logical sense for the data",
+        "Recalculate if any check fails"
+      ],
+      "boundary_tags": [
+        "Direct method",
+        "Median formula",
+        "Mode formula"
+      ],
+      "question_text": "Arrange the quality checking steps after calculating measures of central tendency in correct order.",
+      "concept_id": "T07.02.C01"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-01",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 20,
+        "application": 15,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 10,
+        "fill_blank": 10,
+        "true_false": 10,
+        "match": 10,
+        "ordering": 10
+      }
+    }
+  }
+}

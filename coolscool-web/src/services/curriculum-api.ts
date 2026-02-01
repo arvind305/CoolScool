@@ -181,6 +181,49 @@ export async function fetchTopicByCurriculumId(
 }
 
 // ============================================
+// Curriculum-Scoped Question Bank Functions
+// ============================================
+
+/**
+ * Fetch question bank for a topic from the backend API
+ */
+export async function fetchQuestionBankByCurriculumId(
+  curriculumId: string,
+  topicId: string
+): Promise<QuestionBank | null> {
+  try {
+    const response = await fetch(
+      `${API_URL}${ENDPOINTS.CURRICULUM_TOPIC_QUESTIONS(curriculumId, topicId)}`
+    );
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`Failed to fetch question bank: ${response.status}`);
+    }
+    const data = await response.json();
+    if (!data.success || !data.data) return null;
+
+    return {
+      topic_id: data.data.topic_id,
+      questions: data.data.questions.map((q: Record<string, unknown>) => ({
+        question_id: q.question_id,
+        concept_id: q.concept_id,
+        difficulty: q.difficulty,
+        type: q.type,
+        question_text: q.question_text,
+        options: q.options,
+        correct_answer: q.correct_answer,
+        match_pairs: q.match_pairs,
+        ordering_items: q.ordering_items,
+      })),
+      canonical_explanation: data.data.canonical_explanation?.text,
+    };
+  } catch (error) {
+    console.error(`Error fetching question bank for ${topicId}:`, error);
+    return null;
+  }
+}
+
+// ============================================
 // Legacy Functions (Backward Compatibility)
 // ============================================
 
@@ -330,16 +373,36 @@ export async function hasContentForAsync(
 }
 
 /**
- * Synchronous check - use with cached curricula or for quick fallback
+ * Synchronous check - checks against cached curricula list
+ * Falls back to async check if no cache available
  */
+let _curriculaCache: Curriculum[] | null = null;
+
 export function hasContentFor(board: string, classLevel: number, subject: string): boolean {
-  // For synchronous checks, still use the hardcoded list
-  // This is for backward compatibility with components that expect sync results
-  return (
-    board.toLowerCase() === 'icse' &&
-    classLevel === 5 &&
-    subject.toLowerCase() === 'mathematics'
-  );
+  if (_curriculaCache) {
+    return _curriculaCache.some(
+      c =>
+        c.board.toLowerCase() === board.toLowerCase() &&
+        c.classLevel === classLevel &&
+        c.subject.toLowerCase() === subject.toLowerCase()
+    );
+  }
+  // Before cache is populated, allow all ICSE Mathematics classes
+  return board.toLowerCase() === 'icse' && subject.toLowerCase() === 'mathematics';
+}
+
+/**
+ * Initialize the curricula cache for synchronous hasContentFor checks
+ */
+export async function initCurriculaCache(): Promise<void> {
+  _curriculaCache = await fetchCurricula();
+}
+
+/**
+ * Set the curricula cache directly (avoids duplicate API call when data is already available)
+ */
+export function setCurriculaCache(curricula: Curriculum[]): void {
+  _curriculaCache = curricula;
 }
 
 /**

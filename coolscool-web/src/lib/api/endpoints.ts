@@ -61,4 +61,5 @@ export const ENDPOINTS = {
   CURRICULUM_THEME: (curriculumId: string, themeId: string) => `/api/v1/curricula/${curriculumId}/themes/${themeId}`,
   CURRICULUM_TOPICS: (curriculumId: string) => `/api/v1/curricula/${curriculumId}/topics`,
   CURRICULUM_TOPIC: (curriculumId: string, topicId: string) => `/api/v1/curricula/${curriculumId}/topics/${topicId}`,
+  CURRICULUM_TOPIC_QUESTIONS: (curriculumId: string, topicId: string) => `/api/v1/curricula/${curriculumId}/topics/${topicId}/questions`,
 } as const;

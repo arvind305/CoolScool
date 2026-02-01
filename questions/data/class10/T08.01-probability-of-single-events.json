@@ -1,0 +1,908 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 10,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T08.01",
+  "topic_name": "Probability of Single Events",
+  "canonical_explanation": {
+    "text": "Probability is a measure of the likelihood of an event occurring. In a random experiment, the sample space (S) is the set of all possible outcomes. An event (E) is a subset of the sample space. The probability of an event E is given by P(E) = n(E)/n(S), where n(E) is the number of favorable outcomes and n(S) is the total number of possible outcomes. The probability of any event lies between 0 and 1 inclusive. A sure event has probability 1, while an impossible event has probability 0. For complementary events, P(E) + P(not E) = 1. Common experiments include tossing coins, rolling dice, drawing cards from a standard 52-card deck, and selecting balls from a bag.",
+    "rules": [
+      "The probability of any event E is: P(E) = Number of favorable outcomes / Total number of possible outcomes",
+      "Probability values range from 0 to 1: 0 ≤ P(E) ≤ 1",
+      "For complementary events: P(E) + P(E') = 1, where E' is the complement of E",
+      "P(sure event) = 1 and P(impossible event) = 0",
+      "A standard deck has 52 cards: 13 cards each of 4 suits (Hearts, Diamonds, Clubs, Spades)",
+      "Each suit has: Ace, 2-10, Jack, Queen, King (13 cards)",
+      "Face cards are Jack, Queen, King (12 in total)",
+      "A fair die has 6 equally likely outcomes: 1, 2, 3, 4, 5, 6",
+      "A fair coin has 2 equally likely outcomes: Head and Tail"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T08.01.Q001",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "{H, T}"
+        },
+        {
+          "id": "B",
+          "text": "{H}"
+        },
+        {
+          "id": "C",
+          "text": "{T}"
+        },
+        {
+          "id": "D",
+          "text": "{0, 1}"
+        }
+      ],
+      "correct_answer": "A",
+      "concept_id": "T08.01.C01",
+      "question_text": "What is the sample space when a fair coin is tossed once?"
+    },
+    {
+      "question_id": "T08.01.Q002",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "C",
+      "concept_id": "T08.01.C01",
+      "question_text": "How many outcomes are there in the sample space when a die is rolled once?"
+    },
+    {
+      "question_id": "T08.01.Q003",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "C",
+      "concept_id": "T08.01.C03",
+      "question_text": "What is the probability of getting a head when a fair coin is tossed?"
+    },
+    {
+      "question_id": "T08.01.Q004",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "26"
+        }
+      ],
+      "correct_answer": "C",
+      "concept_id": "T08.01.C05",
+      "question_text": "In a standard deck of 52 cards, how many cards are there in each suit?"
+    },
+    {
+      "question_id": "T08.01.Q005",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/7"
+        },
+        {
+          "id": "B",
+          "text": "5/12"
+        },
+        {
+          "id": "C",
+          "text": "7/12"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "B",
+      "concept_id": "T08.01.C03",
+      "question_text": "A bag contains 5 red balls and 7 blue balls. What is the probability of drawing a red ball?"
+    },
+    {
+      "question_id": "T08.01.Q006",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "2/3"
+        },
+        {
+          "id": "D",
+          "text": "3/4"
+        }
+      ],
+      "correct_answer": "B",
+      "concept_id": "T08.01.C03",
+      "question_text": "What is the probability of getting an even number when a fair die is rolled?"
+    },
+    {
+      "question_id": "T08.01.Q007",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.35"
+        },
+        {
+          "id": "B",
+          "text": "0.50"
+        },
+        {
+          "id": "C",
+          "text": "0.65"
+        },
+        {
+          "id": "D",
+          "text": "0.70"
+        }
+      ],
+      "correct_answer": "C",
+      "concept_id": "T08.01.C04",
+      "question_text": "If the probability of an event occurring is 0.35, what is the probability of the event not occurring?"
+    },
+    {
+      "question_id": "T08.01.Q008",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/52"
+        },
+        {
+          "id": "B",
+          "text": "1/13"
+        },
+        {
+          "id": "C",
+          "text": "1/4"
+        },
+        {
+          "id": "D",
+          "text": "4/13"
+        }
+      ],
+      "correct_answer": "B",
+      "concept_id": "T08.01.C03",
+      "question_text": "A card is drawn at random from a well-shuffled deck of 52 cards. What is the probability of drawing a king?"
+    },
+    {
+      "question_id": "T08.01.Q009",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "4/12"
+        },
+        {
+          "id": "D",
+          "text": "5/12"
+        }
+      ],
+      "correct_answer": "C",
+      "concept_id": "T08.01.C03",
+      "question_text": "A bag contains 3 white, 4 black, and 5 green balls. What is the probability of drawing a black ball?"
+    },
+    {
+      "question_id": "T08.01.Q010",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "13/52"
+        },
+        {
+          "id": "D",
+          "text": "3/4"
+        }
+      ],
+      "correct_answer": "B",
+      "concept_id": "T08.01.C03",
+      "question_text": "What is the probability of drawing a red card from a standard deck of 52 cards?"
+    },
+    {
+      "question_id": "T08.01.Q011",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "favorable",
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of an event is calculated by dividing the number of _______ outcomes by the total number of outcomes."
+    },
+    {
+      "question_id": "T08.01.Q012",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "sample space",
+      "concept_id": "T08.01.C01",
+      "question_text": "The set of all possible outcomes of a random experiment is called the _______."
+    },
+    {
+      "question_id": "T08.01.Q013",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "1",
+      "concept_id": "T08.01.C04",
+      "question_text": "For any event E, P(E) + P(not E) = _______."
+    },
+    {
+      "question_id": "T08.01.Q014",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "0",
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of an impossible event is _______."
+    },
+    {
+      "question_id": "T08.01.Q015",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "12",
+      "concept_id": "T08.01.C05",
+      "question_text": "In a standard deck of 52 cards, the total number of face cards is _______."
+    },
+    {
+      "question_id": "T08.01.Q016",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "4",
+      "concept_id": "T08.01.C03",
+      "question_text": "When two coins are tossed simultaneously, the total number of possible outcomes is _______."
+    },
+    {
+      "question_id": "T08.01.Q017",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "1/2",
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of getting a prime number when a die is rolled is _______."
+    },
+    {
+      "question_id": "T08.01.Q018",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "1/3",
+      "concept_id": "T08.01.C03",
+      "question_text": "A bag contains 8 red and 4 blue balls. The probability of drawing a blue ball is _______."
+    },
+    {
+      "question_id": "T08.01.Q019",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "4/7",
+      "concept_id": "T08.01.C04",
+      "question_text": "If P(E) = 3/7, then P(not E) = _______."
+    },
+    {
+      "question_id": "T08.01.Q020",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "1/13",
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of drawing an ace from a standard deck of 52 cards is _______."
+    },
+    {
+      "question_id": "T08.01.Q021",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of any event always lies between 0 and 1 inclusive."
+    },
+    {
+      "question_id": "T08.01.Q022",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of a sure event is 0."
+    },
+    {
+      "question_id": "T08.01.Q023",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "concept_id": "T08.01.C05",
+      "question_text": "A standard deck of cards contains 52 cards divided into 4 suits."
+    },
+    {
+      "question_id": "T08.01.Q024",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "concept_id": "T08.01.C01",
+      "question_text": "The sample space for rolling two dice contains 12 outcomes."
+    },
+    {
+      "question_id": "T08.01.Q025",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": true,
+      "concept_id": "T08.01.C04",
+      "question_text": "If P(E) = 0.6, then P(not E) = 0.4."
+    },
+    {
+      "question_id": "T08.01.Q026",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": true,
+      "concept_id": "T08.01.C03",
+      "question_text": "The probability of getting a number greater than 4 when rolling a die is 1/3."
+    },
+    {
+      "question_id": "T08.01.Q027",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": false,
+      "concept_id": "T08.01.C05",
+      "question_text": "In a standard deck, there are more red cards than black cards."
+    },
+    {
+      "question_id": "T08.01.Q028",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "concept_id": "T08.01.C03",
+      "question_text": "If an event has 5 favorable outcomes out of 20 total outcomes, its probability is 0.25."
+    },
+    {
+      "question_id": "T08.01.Q029",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": false,
+      "concept_id": "T08.01.C02",
+      "question_text": "The probability of an event can be greater than 1 if there are many favorable outcomes."
+    },
+    {
+      "question_id": "T08.01.Q030",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "concept_id": "T08.01.C04",
+      "question_text": "If two events are complementary, the sum of their probabilities equals 1."
+    },
+    {
+      "question_id": "T08.01.Q031",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Sample Space",
+          "right": "Set of all possible outcomes"
+        },
+        {
+          "left": "Event",
+          "right": "Subset of sample space"
+        },
+        {
+          "left": "Favorable Outcome",
+          "right": "Outcome that satisfies the event condition"
+        },
+        {
+          "left": "Random Experiment",
+          "right": "Experiment with uncertain outcomes"
+        }
+      ],
+      "concept_id": "T08.01.C01",
+      "question_text": "Match the probability terms with their definitions."
+    },
+    {
+      "question_id": "T08.01.Q032",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Tossing one coin",
+          "right": "2"
+        },
+        {
+          "left": "Rolling one die",
+          "right": "6"
+        },
+        {
+          "left": "Drawing one card from deck",
+          "right": "52"
+        },
+        {
+          "left": "Tossing two coins",
+          "right": "4"
+        }
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Match the standard probability experiments with the number of outcomes in their sample space."
+    },
+    {
+      "question_id": "T08.01.Q033",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Total cards",
+          "right": "52"
+        },
+        {
+          "left": "Cards per suit",
+          "right": "13"
+        },
+        {
+          "left": "Face cards",
+          "right": "12"
+        },
+        {
+          "left": "Aces",
+          "right": "4"
+        }
+      ],
+      "concept_id": "T08.01.C05",
+      "question_text": "Match the card types with their count in a standard 52-card deck."
+    },
+    {
+      "question_id": "T08.01.Q034",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "P(E) = 0",
+          "right": "Impossible event"
+        },
+        {
+          "left": "P(E) = 1",
+          "right": "Sure event"
+        },
+        {
+          "left": "0 < P(E) < 1",
+          "right": "Uncertain event"
+        },
+        {
+          "left": "P(E) = 0.5",
+          "right": "Equally likely to occur or not"
+        }
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Match the probability values with their corresponding event types."
+    },
+    {
+      "question_id": "T08.01.Q035",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "Getting number 3",
+          "right": "1/6"
+        },
+        {
+          "left": "Getting even number",
+          "right": "1/2"
+        },
+        {
+          "left": "Getting number less than 7",
+          "right": "1"
+        },
+        {
+          "left": "Getting number greater than 6",
+          "right": "0"
+        }
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Match the die outcomes with their probabilities."
+    },
+    {
+      "question_id": "T08.01.Q036",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "P(E) = 1/4",
+          "right": "3/4"
+        },
+        {
+          "left": "P(E) = 0.7",
+          "right": "0.3"
+        },
+        {
+          "left": "P(E) = 2/5",
+          "right": "3/5"
+        },
+        {
+          "left": "P(E) = 0",
+          "right": "1"
+        }
+      ],
+      "concept_id": "T08.01.C04",
+      "question_text": "Match each probability P(E) with its complementary probability P(not E)."
+    },
+    {
+      "question_id": "T08.01.Q037",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "Drawing a Heart",
+          "right": "1/4"
+        },
+        {
+          "left": "Drawing a King",
+          "right": "1/13"
+        },
+        {
+          "left": "Drawing a red card",
+          "right": "1/2"
+        },
+        {
+          "left": "Drawing a face card",
+          "right": "3/13"
+        }
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Match the card drawing events with their probabilities from a standard deck."
+    },
+    {
+      "question_id": "T08.01.Q038",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "Drawing a red ball",
+          "right": "1/3"
+        },
+        {
+          "left": "Drawing a blue ball",
+          "right": "1/2"
+        },
+        {
+          "left": "Drawing a green ball",
+          "right": "1/6"
+        },
+        {
+          "left": "Drawing a non-red ball",
+          "right": "2/3"
+        }
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "A bag contains 10 red, 15 blue, and 5 green balls. Match the events with their probabilities."
+    },
+    {
+      "question_id": "T08.01.Q039",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "n(E)",
+          "right": "Number of favorable outcomes"
+        },
+        {
+          "left": "n(S)",
+          "right": "Total number of outcomes"
+        },
+        {
+          "left": "P(E)",
+          "right": "Probability of event E"
+        },
+        {
+          "left": "P(E) = n(E)/n(S)",
+          "right": "Probability formula"
+        }
+      ],
+      "concept_id": "T08.01.C02",
+      "question_text": "Match the probability formula components with their meanings."
+    },
+    {
+      "question_id": "T08.01.Q040",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "Rolling a 5",
+          "right": "1"
+        },
+        {
+          "left": "Rolling an odd number",
+          "right": "3"
+        },
+        {
+          "left": "Rolling a number ≤ 4",
+          "right": "4"
+        },
+        {
+          "left": "Rolling any number",
+          "right": "6"
+        }
+      ],
+      "concept_id": "T08.01.C05",
+      "question_text": "Match the die rolling events with their number of favorable outcomes."
+    },
+    {
+      "question_id": "T08.01.Q041",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Perform the random experiment",
+        "Identify the sample space",
+        "Define the event",
+        "Count favorable outcomes",
+        "Apply formula P(E) = n(E)/n(S)"
+      ],
+      "correct_answer": [
+        "Perform the random experiment",
+        "Identify the sample space",
+        "Define the event",
+        "Count favorable outcomes",
+        "Apply formula P(E) = n(E)/n(S)"
+      ],
+      "concept_id": "T08.01.C01",
+      "question_text": "Arrange the steps to calculate probability in the correct order."
+    },
+    {
+      "question_id": "T08.01.Q042",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "0.8",
+        "0.25",
+        "1",
+        "0"
+      ],
+      "correct_answer": [
+        "0",
+        "0.25",
+        "0.8",
+        "1"
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Arrange these probability values from smallest to largest."
+    },
+    {
+      "question_id": "T08.01.Q043",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Number of suits (4)",
+        "Number of aces (4)",
+        "Number of face cards (12)",
+        "Cards per suit (13)",
+        "Total cards (52)"
+      ],
+      "correct_answer": [
+        "Number of suits (4)",
+        "Number of aces (4)",
+        "Number of face cards (12)",
+        "Cards per suit (13)",
+        "Total cards (52)"
+      ],
+      "concept_id": "T08.01.C05",
+      "question_text": "Arrange the following card counts from smallest to largest in a standard deck."
+    },
+    {
+      "question_id": "T08.01.Q044",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Getting number 8",
+        "Getting number 4",
+        "Getting an even number",
+        "Getting a number less than 7"
+      ],
+      "correct_answer": [
+        "Getting number 8",
+        "Getting number 4",
+        "Getting an even number",
+        "Getting a number less than 7"
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Arrange these events in order of increasing probability when a fair die is rolled."
+    },
+    {
+      "question_id": "T08.01.Q045",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "P(green ball)",
+        "P(blue ball)",
+        "P(red ball)"
+      ],
+      "correct_answer": [
+        "P(green ball)",
+        "P(blue ball)",
+        "P(red ball)"
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "A bag contains 20 red, 15 blue, and 5 green balls. Arrange the probabilities of drawing each color from smallest to largest."
+    },
+    {
+      "question_id": "T08.01.Q046",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "P(E)",
+        "P(not E)",
+        "P(E) + P(not E)"
+      ],
+      "correct_answer": [
+        "P(E)",
+        "P(not E)",
+        "P(E) + P(not E)"
+      ],
+      "concept_id": "T08.01.C04",
+      "question_text": "If P(E) = 0.2, arrange the following values in ascending order."
+    },
+    {
+      "question_id": "T08.01.Q047",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "P(drawing an ace)",
+        "P(drawing a heart)",
+        "P(drawing a red card)",
+        "P(drawing any card)"
+      ],
+      "correct_answer": [
+        "P(drawing an ace)",
+        "P(drawing a heart)",
+        "P(drawing a red card)",
+        "P(drawing any card)"
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Arrange these probabilities when drawing from a standard deck, from smallest to largest."
+    },
+    {
+      "question_id": "T08.01.Q048",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Identify sample space S = {1,2,3,4,5,6}",
+        "Define event E = getting prime number",
+        "List favorable outcomes E = {2,3,5}",
+        "Count n(S) = 6 and n(E) = 3",
+        "Calculate P(E) = 3/6 = 1/2"
+      ],
+      "correct_answer": [
+        "Identify sample space S = {1,2,3,4,5,6}",
+        "Define event E = getting prime number",
+        "List favorable outcomes E = {2,3,5}",
+        "Count n(S) = 6 and n(E) = 3",
+        "Calculate P(E) = 3/6 = 1/2"
+      ],
+      "concept_id": "T08.01.C01",
+      "question_text": "Arrange the problem-solving steps for: 'A die is rolled. What is the probability of getting a prime number?'"
+    },
+    {
+      "question_id": "T08.01.Q049",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "1/13",
+        "1/6",
+        "1/4",
+        "1/2"
+      ],
+      "correct_answer": [
+        "1/13",
+        "1/6",
+        "1/4",
+        "1/2"
+      ],
+      "concept_id": "T08.01.C03",
+      "question_text": "Arrange these fractions representing probabilities from smallest to largest."
+    },
+    {
+      "question_id": "T08.01.Q050",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Sum equals 2",
+        "Sum equals 7",
+        "Sum is even",
+        "Sum is less than 13"
+      ],
+      "correct_answer": [
+        "Sum equals 2",
+        "Sum equals 7",
+        "Sum is even",
+        "Sum is less than 13"
+      ],
+      "concept_id": "T08.01.C05",
+      "question_text": "When two dice are rolled, arrange these events by their probabilities from smallest to largest."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-01",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 20,
+        "application": 15,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 10,
+        "fill_blank": 10,
+        "true_false": 10,
+        "match": 10,
+        "ordering": 10
+      }
+    }
+  }
+}

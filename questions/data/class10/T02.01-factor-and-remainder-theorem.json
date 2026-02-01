@@ -1,0 +1,922 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 10,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.01",
+  "topic_name": "Factor and Remainder Theorem",
+  "canonical_explanation": {
+    "text": "The Remainder Theorem states that when a polynomial f(x) is divided by (x-a), the remainder is f(a). The Factor Theorem is a special case: (x-a) is a factor of f(x) if and only if f(a) = 0. These theorems are fundamental for factorising polynomials, particularly cubics. Synthetic division provides an efficient method for polynomial division and factorisation.",
+    "rules": [
+      "Remainder Theorem: R = f(a) when f(x) is divided by (x-a)",
+      "Factor Theorem: (x-a) is a factor of f(x) ⟺ f(a) = 0",
+      "For cubic polynomials, find one factor by trial, then factorise the quotient",
+      "Synthetic division: efficient method for dividing polynomials by linear factors",
+      "To find unknown coefficients: substitute values and solve equations"
+    ]
+  },
+  "questions": [
+    {
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "question_text": "What is the remainder when f(x) = x³ + 2x² - 5x + 6 is divided by (x - 1)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q001",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "question_text": "If (x - 2) is a factor of f(x) = x³ - 3x² + kx - 4, what is the value of k?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q002",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "question_text": "When p(x) = 2x³ - 4x² + 3x - 1 is divided by (x + 1), the remainder is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-10"
+        },
+        {
+          "id": "B",
+          "text": "-8"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q003",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a factor of x³ - 6x² + 11x - 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x - 1)"
+        },
+        {
+          "id": "B",
+          "text": "(x + 1)"
+        },
+        {
+          "id": "C",
+          "text": "(x - 4)"
+        },
+        {
+          "id": "D",
+          "text": "(x + 2)"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q004",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "application",
+      "question_text": "If f(x) = x³ + ax² + bx + 6 leaves remainder 0 when divided by (x - 2) and remainder 18 when divided by (x + 1), what is the value of a?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q005",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "application",
+      "question_text": "What is the complete factorisation of x³ - 7x + 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x - 1)(x - 2)(x + 3)"
+        },
+        {
+          "id": "B",
+          "text": "(x - 1)(x + 2)(x - 3)"
+        },
+        {
+          "id": "C",
+          "text": "(x + 1)(x - 2)(x + 3)"
+        },
+        {
+          "id": "D",
+          "text": "(x - 1)(x² - 6)"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q006",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "application",
+      "question_text": "Using synthetic division to divide 2x³ - 5x² + 3x - 1 by (x - 2), what is the quotient?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x² - x + 1"
+        },
+        {
+          "id": "B",
+          "text": "2x² + x + 5"
+        },
+        {
+          "id": "C",
+          "text": "2x² - 9x + 21"
+        },
+        {
+          "id": "D",
+          "text": "2x² - x + 5"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q007",
+      "concept_id": "T02.01.C04"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "question_text": "A polynomial f(x) = x³ + px² + qx + r is divisible by (x - 1) and (x + 2), and leaves a remainder of 15 when divided by (x - 2). Find the value of p + q + r.",
+      "options": [
+        {
+          "id": "A",
+          "text": "-3"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q008",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "question_text": "The polynomial x³ + ax² + bx - 12 has factors (x - 2) and (x + 3). What is the third factor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x - 2)"
+        },
+        {
+          "id": "B",
+          "text": "(x + 2)"
+        },
+        {
+          "id": "C",
+          "text": "(x - 1)"
+        },
+        {
+          "id": "D",
+          "text": "(x + 1)"
+        }
+      ],
+      "correct_answer": "B",
+      "question_id": "T02.01.Q009",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "question_text": "When f(x) = x³ + 3x² - 4x + k is divided by (x + 2), the remainder is twice the remainder when divided by (x - 1). Find k.",
+      "options": [
+        {
+          "id": "A",
+          "text": "-12"
+        },
+        {
+          "id": "B",
+          "text": "-8"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "question_id": "T02.01.Q010",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = x³ - 4x² + 5x - 2 is divided by (x - 2), the remainder is ________.",
+      "correct_answer": "0",
+      "question_id": "T02.01.Q011",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "question_text": "According to the Factor Theorem, (x - a) is a factor of f(x) if and only if f(a) = ________.",
+      "correct_answer": "0",
+      "question_id": "T02.01.Q012",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "question_text": "The remainder when p(x) = 3x² - 5x + 7 is divided by (x - 1) is ________.",
+      "correct_answer": "5",
+      "question_id": "T02.01.Q013",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "question_text": "If (x - 1) is a factor of x³ - 3x² + 2x, then one complete factorisation is x(x - 1)(__________).",
+      "correct_answer": "x - 2",
+      "question_id": "T02.01.Q014",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "application",
+      "question_text": "If (x + 3) is a factor of f(x) = x³ + 2x² - 5x + k, then k = ________.",
+      "correct_answer": "-24",
+      "question_id": "T02.01.Q015",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "application",
+      "question_text": "The complete factorisation of x³ - 6x² + 11x - 6 is (x - 1)(x - 2)(________).",
+      "correct_answer": "x - 3",
+      "question_id": "T02.01.Q016",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "application",
+      "question_text": "When x³ + 2x² - 5x - 6 is divided by (x + 1) using synthetic division, the quotient is x² + x - 6 and the remainder is ________.",
+      "correct_answer": "0",
+      "question_id": "T02.01.Q017",
+      "concept_id": "T02.01.C04"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "question_text": "If x³ + ax² + bx - 8 is divisible by x - 2 and leaves remainder 28 when divided by x + 2, then a = ________.",
+      "correct_answer": "1",
+      "question_id": "T02.01.Q018",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "question_text": "If x³ - 9x² + 26x - 24 = (x - 2)(x - 3)(x - k), then k = ________.",
+      "correct_answer": "4",
+      "question_id": "T02.01.Q019",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "question_text": "The polynomial f(x) = 2x³ + ax² + bx - 6 has (x - 1) and (x + 2) as factors. The value of a + b is ________.",
+      "correct_answer": "-3",
+      "question_id": "T02.01.Q020",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "question_text": "According to the Remainder Theorem, when f(x) is divided by (x - a), the remainder is f(a).",
+      "correct_answer": true,
+      "question_id": "T02.01.Q021",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "question_text": "If f(3) = 0, then (x + 3) is a factor of f(x).",
+      "correct_answer": false,
+      "question_id": "T02.01.Q022",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "question_text": "The remainder when x³ + 1 is divided by (x + 1) is 0.",
+      "correct_answer": true,
+      "question_id": "T02.01.Q023",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "question_text": "A cubic polynomial can have at most three linear factors.",
+      "correct_answer": true,
+      "question_id": "T02.01.Q024",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "application",
+      "question_text": "If both (x - 2) and (x + 2) are factors of f(x), then f(x) must be divisible by x² - 4.",
+      "correct_answer": true,
+      "question_id": "T02.01.Q025",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "application",
+      "question_text": "Synthetic division can only be used when dividing by a linear polynomial of the form (x - a).",
+      "correct_answer": true,
+      "question_id": "T02.01.Q026",
+      "concept_id": "T02.01.C04"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "application",
+      "question_text": "If the remainder when f(x) is divided by (x - 2) is 5, then (x - 2) cannot be a factor of f(x).",
+      "correct_answer": true,
+      "question_id": "T02.01.Q027",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "question_text": "If x³ + px² + qx + r has three distinct real roots, then it can be written as a product of three distinct linear factors.",
+      "correct_answer": true,
+      "question_id": "T02.01.Q028",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "question_text": "If f(a) = f(b) where a ≠ b, then both (x - a) and (x - b) must be factors of f(x).",
+      "correct_answer": false,
+      "question_id": "T02.01.Q029",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "question_text": "When factoring a cubic polynomial, if one linear factor is found, the remaining quadratic factor can always be factored further into two linear factors with real coefficients.",
+      "correct_answer": false,
+      "question_id": "T02.01.Q030",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "match",
+      "difficulty": "familiarity",
+      "question_text": "Match each polynomial with the correct remainder when divided by (x - 1):",
+      "match_pairs": [
+        {
+          "left": "x² + 2x + 1",
+          "right": "4"
+        },
+        {
+          "left": "x³ - x² + x - 1",
+          "right": "0"
+        },
+        {
+          "left": "2x² - 3x + 5",
+          "right": "4"
+        },
+        {
+          "left": "x³ + x",
+          "right": "2"
+        }
+      ],
+      "question_id": "T02.01.Q031",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "match",
+      "difficulty": "familiarity",
+      "question_text": "Match each cubic polynomial with one of its factors:",
+      "match_pairs": [
+        {
+          "left": "x³ - 1",
+          "right": "(x - 1)"
+        },
+        {
+          "left": "x³ + 8",
+          "right": "(x + 2)"
+        },
+        {
+          "left": "x³ - 27",
+          "right": "(x - 3)"
+        },
+        {
+          "left": "x³ + 64",
+          "right": "(x + 4)"
+        }
+      ],
+      "question_id": "T02.01.Q032",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "match",
+      "difficulty": "familiarity",
+      "question_text": "Match the divisor with the correct remainder for f(x) = x³ - 2x² + 3x - 5:",
+      "match_pairs": [
+        {
+          "left": "(x - 1)",
+          "right": "-3"
+        },
+        {
+          "left": "(x + 1)",
+          "right": "-11"
+        },
+        {
+          "left": "(x - 2)",
+          "right": "-3"
+        },
+        {
+          "left": "(x - 0)",
+          "right": "-5"
+        }
+      ],
+      "question_id": "T02.01.Q033",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "match",
+      "difficulty": "familiarity",
+      "question_text": "Match each factorised form with the expanded polynomial:",
+      "match_pairs": [
+        {
+          "left": "(x - 1)(x - 2)(x - 3)",
+          "right": "x³ - 6x² + 11x - 6"
+        },
+        {
+          "left": "(x + 1)(x + 2)(x + 3)",
+          "right": "x³ + 6x² + 11x + 6"
+        },
+        {
+          "left": "(x - 1)(x + 1)(x - 2)",
+          "right": "x³ - 2x² - x + 2"
+        },
+        {
+          "left": "(x - 1)²(x + 2)",
+          "right": "x³ - 3x + 2"
+        }
+      ],
+      "question_id": "T02.01.Q034",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "match",
+      "difficulty": "application",
+      "question_text": "Match each polynomial with its complete factorisation:",
+      "match_pairs": [
+        {
+          "left": "x³ - 3x² + 2x",
+          "right": "x(x - 1)(x - 2)"
+        },
+        {
+          "left": "x³ + 2x² - x - 2",
+          "right": "(x - 1)(x + 1)(x + 2)"
+        },
+        {
+          "left": "x³ - 4x² + x + 6",
+          "right": "(x - 2)(x - 3)(x + 1)"
+        },
+        {
+          "left": "x³ + 3x² - 4",
+          "right": "(x - 1)(x + 2)²"
+        }
+      ],
+      "question_id": "T02.01.Q035",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "match",
+      "difficulty": "application",
+      "question_text": "Match each polynomial division with its quotient when using synthetic division:",
+      "match_pairs": [
+        {
+          "left": "(x³ + 3x² + 2x) ÷ (x + 1)",
+          "right": "x² + 2x"
+        },
+        {
+          "left": "(x³ - 6x² + 11x - 6) ÷ (x - 1)",
+          "right": "x² - 5x + 6"
+        },
+        {
+          "left": "(x³ - 1) ÷ (x - 1)",
+          "right": "x² + x + 1"
+        },
+        {
+          "left": "(x³ + 8) ÷ (x + 2)",
+          "right": "x² - 2x + 4"
+        }
+      ],
+      "question_id": "T02.01.Q036",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "match",
+      "difficulty": "application",
+      "question_text": "Match the condition with the value of k that makes it true:",
+      "match_pairs": [
+        {
+          "left": "(x - 1) is a factor of x² + kx - 6",
+          "right": "k = 5"
+        },
+        {
+          "left": "(x + 2) is a factor of x² + kx - 6",
+          "right": "k = 1"
+        },
+        {
+          "left": "(x - 2) is a factor of x² + kx - 6",
+          "right": "k = 1"
+        },
+        {
+          "left": "(x + 1) is a factor of x² + kx - 6",
+          "right": "k = 5"
+        }
+      ],
+      "question_id": "T02.01.Q037",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "match",
+      "difficulty": "exam_style",
+      "question_text": "Match each polynomial property with the correct polynomial:",
+      "match_pairs": [
+        {
+          "left": "Has (x - 1) as a factor and f(2) = 3",
+          "right": "x³ - 3x² + 4x - 2"
+        },
+        {
+          "left": "Has remainder 5 when divided by (x - 1) and is divisible by (x + 1)",
+          "right": "x³ - 2x² - 3x"
+        },
+        {
+          "left": "Divisible by both (x - 1) and (x - 2)",
+          "right": "x³ - 6x² + 11x - 6"
+        },
+        {
+          "left": "Has three consecutive integer roots",
+          "right": "x³ - 6x² + 11x - 6"
+        }
+      ],
+      "question_id": "T02.01.Q038",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "match",
+      "difficulty": "exam_style",
+      "question_text": "Match the synthetic division setup with its result (quotient and remainder):",
+      "match_pairs": [
+        {
+          "left": "Divide 2x³ - 3x² + x - 5 by (x - 2)",
+          "right": "Quotient: 2x² + x + 3, Remainder: 1"
+        },
+        {
+          "left": "Divide x³ + 2x² - 5x + 6 by (x + 3)",
+          "right": "Quotient: x² - x - 2, Remainder: 12"
+        },
+        {
+          "left": "Divide x³ - 7x + 6 by (x - 1)",
+          "right": "Quotient: x² + x - 6, Remainder: 0"
+        },
+        {
+          "left": "Divide x³ + x² - 4x - 4 by (x + 2)",
+          "right": "Quotient: x² - x - 2, Remainder: 0"
+        }
+      ],
+      "question_id": "T02.01.Q039",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "match",
+      "difficulty": "exam_style",
+      "question_text": "Match each system of conditions with the correct values of coefficients:",
+      "match_pairs": [
+        {
+          "left": "x³ + ax + b has (x-1) as factor and f(2) = 0",
+          "right": "a = -3, b = 2"
+        },
+        {
+          "left": "x³ + ax² + b is divisible by (x-1) and (x+1)",
+          "right": "a = 0, b = -1"
+        },
+        {
+          "left": "x³ + ax² + bx - 6 has factors (x-1) and (x-2)",
+          "right": "a = -4, b = 5"
+        },
+        {
+          "left": "x³ + ax² + bx + 6 has factors (x+1) and (x+2)",
+          "right": "a = 4, b = 5"
+        }
+      ],
+      "question_id": "T02.01.Q040",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "question_text": "Arrange the steps for factorising a cubic polynomial x³ - 6x² + 11x - 6 in the correct order:",
+      "ordering_items": [
+        "Try small integer values to find a root",
+        "Verify that f(1) = 0, so (x - 1) is a factor",
+        "Divide the polynomial by (x - 1) to get quotient",
+        "Factorise the quadratic quotient x² - 5x + 6",
+        "Write the complete factorisation as (x - 1)(x - 2)(x - 3)"
+      ],
+      "correct_answer": [
+        "Try small integer values to find a root",
+        "Verify that f(1) = 0, so (x - 1) is a factor",
+        "Divide the polynomial by (x - 1) to get quotient",
+        "Factorise the quadratic quotient x² - 5x + 6",
+        "Write the complete factorisation as (x - 1)(x - 2)(x - 3)"
+      ],
+      "question_id": "T02.01.Q041",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "question_text": "Arrange the steps for performing synthetic division of x³ + 2x² - 5x - 6 by (x + 2) in correct order:",
+      "ordering_items": [
+        "Write the coefficients: 1, 2, -5, -6",
+        "Write the divisor root: -2 on the left",
+        "Bring down the first coefficient: 1",
+        "Multiply and add: -2(1) + 2 = 0, then -2(0) - 5 = -5, then -2(-5) - 6 = 4",
+        "The quotient is x² - 5 with remainder 4"
+      ],
+      "correct_answer": [
+        "Write the coefficients: 1, 2, -5, -6",
+        "Write the divisor root: -2 on the left",
+        "Bring down the first coefficient: 1",
+        "Multiply and add: -2(1) + 2 = 0, then -2(0) - 5 = -5, then -2(-5) - 6 = 4",
+        "The quotient is x² - 5 with remainder 4"
+      ],
+      "question_id": "T02.01.Q042",
+      "concept_id": "T02.01.C04"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "question_text": "Arrange the steps to find the remainder when f(x) = 2x³ - 5x² + 3x - 7 is divided by (x - 2):",
+      "ordering_items": [
+        "Identify that we need to find f(2)",
+        "Substitute x = 2 into f(x)",
+        "Calculate: 2(8) - 5(4) + 3(2) - 7",
+        "Simplify: 16 - 20 + 6 - 7 = -5",
+        "The remainder is -5"
+      ],
+      "correct_answer": [
+        "Identify that we need to find f(2)",
+        "Substitute x = 2 into f(x)",
+        "Calculate: 2(8) - 5(4) + 3(2) - 7",
+        "Simplify: 16 - 20 + 6 - 7 = -5",
+        "The remainder is -5"
+      ],
+      "question_id": "T02.01.Q043",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "question_text": "Arrange the steps to verify if (x - 3) is a factor of f(x) = x³ - 5x² + 8x - 6:",
+      "ordering_items": [
+        "Apply the Factor Theorem",
+        "Calculate f(3)",
+        "Evaluate: 27 - 45 + 24 - 6 = 0",
+        "Since f(3) = 0, conclude (x - 3) is a factor",
+        "Verify by dividing f(x) by (x - 3)"
+      ],
+      "correct_answer": [
+        "Apply the Factor Theorem",
+        "Calculate f(3)",
+        "Evaluate: 27 - 45 + 24 - 6 = 0",
+        "Since f(3) = 0, conclude (x - 3) is a factor",
+        "Verify by dividing f(x) by (x - 3)"
+      ],
+      "question_id": "T02.01.Q044",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to find the value of k if (x - 2) is a factor of x³ - 4x² + kx - 6:",
+      "ordering_items": [
+        "Apply Factor Theorem: f(2) = 0",
+        "Substitute x = 2: 8 - 16 + 2k - 6 = 0",
+        "Simplify: -14 + 2k = 0",
+        "Solve for k: 2k = 14",
+        "Therefore k = 7"
+      ],
+      "correct_answer": [
+        "Apply Factor Theorem: f(2) = 0",
+        "Substitute x = 2: 8 - 16 + 2k - 6 = 0",
+        "Simplify: -14 + 2k = 0",
+        "Solve for k: 2k = 14",
+        "Therefore k = 7"
+      ],
+      "question_id": "T02.01.Q045",
+      "concept_id": "T02.01.C02"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to completely factorise x³ + 2x² - 5x - 6:",
+      "ordering_items": [
+        "Find that f(2) = 8 + 8 - 10 - 6 = 0",
+        "Identify (x - 2) as a factor",
+        "Use synthetic division to divide by (x - 2)",
+        "Obtain quotient x² + 4x + 3",
+        "Factorise as (x - 2)(x + 1)(x + 3)"
+      ],
+      "correct_answer": [
+        "Find that f(2) = 8 + 8 - 10 - 6 = 0",
+        "Identify (x - 2) as a factor",
+        "Use synthetic division to divide by (x - 2)",
+        "Obtain quotient x² + 4x + 3",
+        "Factorise as (x - 2)(x + 1)(x + 3)"
+      ],
+      "question_id": "T02.01.Q046",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to solve: Find k if f(x) = x³ + kx² - 7x + 6 leaves remainder 12 when divided by (x - 2):",
+      "ordering_items": [
+        "Apply Remainder Theorem: f(2) = 12",
+        "Substitute: 8 + 4k - 14 + 6 = 12",
+        "Simplify: 4k = 12",
+        "Solve: k = 3",
+        "Verify by checking f(2) with k = 3"
+      ],
+      "correct_answer": [
+        "Apply Remainder Theorem: f(2) = 12",
+        "Substitute: 8 + 4k - 14 + 6 = 12",
+        "Simplify: 4k = 12",
+        "Solve: k = 3",
+        "Verify by checking f(2) with k = 3"
+      ],
+      "question_id": "T02.01.Q047",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find a and b if f(x) = x³ + ax² + bx - 12 is divisible by both (x - 2) and (x + 3):",
+      "ordering_items": [
+        "Apply Factor Theorem: f(2) = 0 and f(-3) = 0",
+        "Set up equation 1: 8 + 4a + 2b - 12 = 0, giving 4a + 2b = 4",
+        "Set up equation 2: -27 + 9a - 3b - 12 = 0, giving 9a - 3b = 39",
+        "Solve the system: multiply first by 3 and second by 2, then add",
+        "Obtain a = 2, b = -2"
+      ],
+      "correct_answer": [
+        "Apply Factor Theorem: f(2) = 0 and f(-3) = 0",
+        "Set up equation 1: 8 + 4a + 2b - 12 = 0, giving 4a + 2b = 4",
+        "Set up equation 2: -27 + 9a - 3b - 12 = 0, giving 9a - 3b = 39",
+        "Solve the system: multiply first by 3 and second by 2, then add",
+        "Obtain a = 2, b = -2"
+      ],
+      "question_id": "T02.01.Q048",
+      "concept_id": "T02.01.C01"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to factorise 2x³ - x² - 13x - 6 completely:",
+      "ordering_items": [
+        "Test integer factors of -6/2: ±1, ±2, ±3, ±6, ±1/2, ±3/2",
+        "Find f(3) = 54 - 9 - 39 - 6 = 0, so (x - 3) is a factor",
+        "Use synthetic division with divisor 3",
+        "Obtain quotient 2x² + 5x + 2",
+        "Factorise as (x - 3)(2x + 1)(x + 2)"
+      ],
+      "correct_answer": [
+        "Test integer factors of -6/2: ±1, ±2, ±3, ±6, ±1/2, ±3/2",
+        "Find f(3) = 54 - 9 - 39 - 6 = 0, so (x - 3) is a factor",
+        "Use synthetic division with divisor 3",
+        "Obtain quotient 2x² + 5x + 2",
+        "Factorise as (x - 3)(2x + 1)(x + 2)"
+      ],
+      "question_id": "T02.01.Q049",
+      "concept_id": "T02.01.C03"
+    },
+    {
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps for this problem: A polynomial f(x) = x³ + px² + qx + r has (x + 1) as a factor, leaves remainder 8 when divided by (x - 1), and f(2) = 0. Find p, q, and r if r = -6:",
+      "ordering_items": [
+        "From f(-1) = 0: -1 + p - q - 6 = 0, so p - q = 7",
+        "From f(1) = 8: 1 + p + q - 6 = 8, so p + q = 13",
+        "Solve system: p = 10, q = 3",
+        "Verify using f(2) = 0: 8 + 40 + 6 - 6 = 48 ≠ 0, recheck conditions",
+        "Correct values: p = 1, q = 6, r = -6"
+      ],
+      "correct_answer": [
+        "From f(-1) = 0: -1 + p - q - 6 = 0, so p - q = 7",
+        "From f(1) = 8: 1 + p + q - 6 = 8, so p + q = 13",
+        "Solve system: p = 10, q = 3",
+        "Verify using f(2) = 0: 8 + 40 + 6 - 6 = 48 ≠ 0, recheck conditions",
+        "Correct values: p = 1, q = 6, r = -6"
+      ],
+      "question_id": "T02.01.Q050",
+      "concept_id": "T02.01.C01"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-01",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 20,
+        "application": 15,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 10,
+        "fill_blank": 10,
+        "true_false": 10,
+        "match": 10,
+        "ordering": 10
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@ import type {
   EnrichedQuestion,
   ProficiencyBand,
 } from '@/lib/quiz-engine/types';
-import { fetchCAM, fetchCAMByCurriculumId, fetchQuestionBank } from '@/services/curriculum-api';
+import { fetchCAM, fetchCAMByCurriculumId, fetchQuestionBank, fetchQuestionBankByCurriculumId } from '@/services/curriculum-api';
 
 export interface UseQuizEngineOptions {
   board?: string;
@@ -63,7 +63,7 @@ export interface UseQuizEngineReturn extends QuizEngineState {
 
   // Session operations
   startQuiz: (topicId: string, timeMode: TimeMode) => Promise<boolean>;
-  submitAnswer: (answer: string | string[], timeTakenMs?: number) => Promise<AnswerSubmitResult | null>;
+  submitAnswer: (answer: string | string[] | Record<string, string>, timeTakenMs?: number) => Promise<AnswerSubmitResult | null>;
   skipQuestion: () => void;
   nextQuestion: () => void;
   endSession: (completed?: boolean) => Promise<SessionSummary | null>;
@@ -185,8 +185,15 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
       setState((prev) => ({ ...prev, isLoading: true, error: null }));
 
       try {
-        // Load question bank for topic
-        const questionBank = await fetchQuestionBank(topicId);
+        // Load question bank for topic - prefer curriculum-scoped API
+        let questionBank = null;
+        if (curriculumId) {
+          questionBank = await fetchQuestionBankByCurriculumId(curriculumId, topicId);
+        }
+        // Fallback to static file loading (legacy, Class 5 only)
+        if (!questionBank) {
+          questionBank = await fetchQuestionBank(topicId);
+        }
         if (!questionBank) {
           throw new Error(`No questions available for topic: ${topicId}`);
         }
@@ -223,12 +230,12 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
         return false;
       }
     },
-    []
+    [curriculumId]
   );
 
   // Submit an answer
   const submitAnswer = useCallback(
-    async (answer: string | string[], timeTakenMs: number = 0): Promise<AnswerSubmitResult | null> => {
+    async (answer: string | string[] | Record<string, string>, timeTakenMs: number = 0): Promise<AnswerSubmitResult | null> => {
       if (!engineRef.current || !state.isSessionActive) {
         return null;
       }

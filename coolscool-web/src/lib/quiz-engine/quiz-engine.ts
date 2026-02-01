@@ -312,7 +312,7 @@ export class QuizEngine {
    * Submits an answer for the current question
    */
   async submitAnswer(
-    userAnswer: string | string[],
+    userAnswer: string | string[] | Record<string, string>,
     timeTakenMs: number = 0
   ): Promise<AnswerSubmitResult> {
     await this.ensureInitialized();

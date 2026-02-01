@@ -1,0 +1,905 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 10,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.04",
+  "topic_name": "Matrices",
+  "canonical_explanation": {
+    "text": "A matrix is a rectangular arrangement of numbers in rows and columns, enclosed in square brackets. Matrices are classified by their order (m × n), where m is the number of rows and n is the number of columns. Key types include: Row matrix (1 × n), Column matrix (m × 1), Square matrix (m = n), Null/Zero matrix (all elements are 0), and Identity matrix (square matrix with 1s on main diagonal and 0s elsewhere). Two matrices are equal if they have the same order and corresponding elements are equal. Matrix operations include addition/subtraction (only for matrices of same order), scalar multiplication (multiplying each element by a scalar), and matrix multiplication (for compatible matrices where number of columns in first equals number of rows in second). For 2×2 matrices A and B, if A = [[a,b],[c,d]] and B = [[e,f],[g,h]], then AB = [[ae+bg, af+bh],[ce+dg, cf+dh]].",
+    "rules": [
+      "Matrix order is written as rows × columns (m × n)",
+      "Two matrices can be added/subtracted only if they have the same order",
+      "In scalar multiplication, multiply each element of the matrix by the scalar",
+      "For matrix multiplication AB to exist, number of columns in A must equal number of rows in B",
+      "Matrix multiplication is not commutative: AB ≠ BA in general",
+      "The identity matrix I has the property AI = IA = A",
+      "A null matrix has all elements equal to zero",
+      "The order of the product AB is (rows of A) × (columns of B)"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.04.Q001",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 × 2"
+        },
+        {
+          "id": "B",
+          "text": "2 × 3"
+        },
+        {
+          "id": "C",
+          "text": "3 × 3"
+        },
+        {
+          "id": "D",
+          "text": "2 × 2"
+        }
+      ],
+      "correct_answer": "B",
+      "question_text": "What is the order of the matrix [[2, 3, 5], [1, 4, 6]]?",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q002",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[1, 1], [1, 1]]"
+        },
+        {
+          "id": "B",
+          "text": "[[1, 0], [0, 1]]"
+        },
+        {
+          "id": "C",
+          "text": "[[0, 1], [1, 0]]"
+        },
+        {
+          "id": "D",
+          "text": "[[2, 0], [0, 2]]"
+        }
+      ],
+      "correct_answer": "B",
+      "question_text": "Which of the following is an identity matrix of order 2?",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q003",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "Column matrix"
+        },
+        {
+          "id": "B",
+          "text": "Row matrix"
+        },
+        {
+          "id": "C",
+          "text": "Square matrix"
+        },
+        {
+          "id": "D",
+          "text": "Null matrix"
+        }
+      ],
+      "correct_answer": "B",
+      "question_text": "A matrix with only one row is called a:",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q004",
+      "type": "mcq",
+      "difficulty": "familiarity",
+      "options": [
+        {
+          "id": "A",
+          "text": "They have the same number of elements"
+        },
+        {
+          "id": "B",
+          "text": "They have the same order and corresponding elements are equal"
+        },
+        {
+          "id": "C",
+          "text": "They are both square matrices"
+        },
+        {
+          "id": "D",
+          "text": "Their determinants are equal"
+        }
+      ],
+      "correct_answer": "B",
+      "question_text": "Two matrices A and B are equal if:",
+      "concept_id": "T02.04.C02"
+    },
+    {
+      "question_id": "T02.04.Q005",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[3, 5], [7, 9]]"
+        },
+        {
+          "id": "B",
+          "text": "[[2, 6], [12, 20]]"
+        },
+        {
+          "id": "C",
+          "text": "[[1, 1], [1, 1]]"
+        },
+        {
+          "id": "D",
+          "text": "[[3, 6], [12, 20]]"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "If A = [[2, 3], [4, 5]] and B = [[1, 2], [3, 4]], what is A + B?",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q006",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[2, 3], [4, 5]]"
+        },
+        {
+          "id": "B",
+          "text": "[[3, 6], [9, 12]]"
+        },
+        {
+          "id": "C",
+          "text": "[[18, 27], [36, 45]]"
+        },
+        {
+          "id": "D",
+          "text": "[[6, 9], [12, 15]]"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "If matrix C = [[6, 9], [12, 15]], what is (1/3)C?",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q007",
+      "type": "mcq",
+      "difficulty": "application",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[4, 6], [10, 12]]"
+        },
+        {
+          "id": "B",
+          "text": "[[4, 6], [11, 12]]"
+        },
+        {
+          "id": "C",
+          "text": "[[2, 0], [3, 12]]"
+        },
+        {
+          "id": "D",
+          "text": "[[3, 2], [4, 7]]"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "If A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 3]], what is AB?",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q008",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "A (2×3) and B (3×2)"
+        },
+        {
+          "id": "B",
+          "text": "A (2×2) and B (2×3)"
+        },
+        {
+          "id": "C",
+          "text": "A (3×2) and B (3×2)"
+        },
+        {
+          "id": "D",
+          "text": "A (1×2) and B (2×1)"
+        }
+      ],
+      "correct_answer": "C",
+      "question_text": "For which pair of matrices is multiplication NOT possible?",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q009",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "A",
+      "question_text": "If [[x, 2], [3, y]] + [[2, 3], [4, 5]] = [[5, 5], [7, 8]], find x + y.",
+      "concept_id": "T02.04.C05"
+    },
+    {
+      "question_id": "T02.04.Q010",
+      "type": "mcq",
+      "difficulty": "exam_style",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "C",
+      "question_text": "If A = [[2, 1], [3, 2]] and A² = [[a, b], [c, d]], what is the value of a + d?",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q011",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "square",
+      "question_text": "A matrix in which the number of rows equals the number of columns is called a ________ matrix.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q012",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "null",
+      "question_text": "A matrix with all elements equal to zero is called a ________ matrix.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q013",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "columns",
+      "question_text": "For matrix multiplication AB to be defined, the number of ________ in A must equal the number of rows in B.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q014",
+      "type": "fill_blank",
+      "difficulty": "familiarity",
+      "correct_answer": "order",
+      "question_text": "Two matrices can be added only if they have the same ________.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q015",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "5",
+      "question_text": "If A = [[3, 5], [7, 9]] and B = [[1, 2], [3, 4]], then A - B = [[2, 3], [4, ________]].",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q016",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "10",
+      "question_text": "If 3A = [[12, 18], [24, 30]], then A = [[4, 6], [8, ________]].",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q017",
+      "type": "fill_blank",
+      "difficulty": "application",
+      "correct_answer": "1",
+      "question_text": "If A = [[2, 3], [1, 4]] and I = [[1, 0], [0, 1]], then AI = [[2, 3], [________, 4]].",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q018",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "5",
+      "question_text": "If [[2x, 4], [6, 8]] = [[10, 4], [6, 8]], then x = ________.",
+      "concept_id": "T02.04.C05"
+    },
+    {
+      "question_id": "T02.04.Q019",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "19",
+      "question_text": "If A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]], then the element in the first row and first column of AB is ________.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q020",
+      "type": "fill_blank",
+      "difficulty": "exam_style",
+      "correct_answer": "1",
+      "question_text": "If 2[[x, 3], [y, 5]] - [[4, 2], [6, 4]] = [[6, 4], [2, 6]], then x - y = ________.",
+      "concept_id": "T02.04.C05"
+    },
+    {
+      "question_id": "T02.04.Q021",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "question_text": "A matrix of order 3 × 1 is a row matrix.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q022",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": true,
+      "question_text": "An identity matrix is always a square matrix.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q023",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "question_text": "Matrix multiplication is commutative, i.e., AB = BA for all matrices A and B.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q024",
+      "type": "true_false",
+      "difficulty": "familiarity",
+      "correct_answer": false,
+      "question_text": "Two matrices of different orders can be added.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q025",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": true,
+      "question_text": "If A = [[2, 3], [4, 5]] and B = [[2, 3], [4, 5]], then A = B.",
+      "concept_id": "T02.04.C02"
+    },
+    {
+      "question_id": "T02.04.Q026",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": true,
+      "question_text": "If k is a scalar and A is a matrix, then kA = Ak.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q027",
+      "type": "true_false",
+      "difficulty": "application",
+      "correct_answer": false,
+      "question_text": "If A is a 2×3 matrix and B is a 2×3 matrix, then AB is defined.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q028",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "question_text": "For any square matrix A and identity matrix I of the same order, AI = IA = A.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q029",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "question_text": "If A is a 2×2 matrix and B is a 2×2 matrix, then the order of AB is 2×2.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q030",
+      "type": "true_false",
+      "difficulty": "exam_style",
+      "correct_answer": true,
+      "question_text": "If A + B = A, then B must be a null matrix.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q031",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Row matrix",
+          "right": "A matrix with only one row"
+        },
+        {
+          "left": "Column matrix",
+          "right": "A matrix with only one column"
+        },
+        {
+          "left": "Square matrix",
+          "right": "A matrix with equal number of rows and columns"
+        },
+        {
+          "left": "Null matrix",
+          "right": "A matrix with all elements equal to zero"
+        }
+      ],
+      "question_text": "Match the matrix types with their definitions.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q032",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "[[1, 2, 3]]",
+          "right": "1 × 3"
+        },
+        {
+          "left": "[[1], [2], [3]]",
+          "right": "3 × 1"
+        },
+        {
+          "left": "[[1, 2], [3, 4]]",
+          "right": "2 × 2"
+        },
+        {
+          "left": "[[1, 2, 3], [4, 5, 6]]",
+          "right": "2 × 3"
+        }
+      ],
+      "question_text": "Match the matrices with their orders.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q033",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Matrix addition",
+          "right": "Matrices must have same order"
+        },
+        {
+          "left": "Scalar multiplication",
+          "right": "Multiply each element by the scalar"
+        },
+        {
+          "left": "Matrix multiplication",
+          "right": "Columns in first must equal rows in second"
+        },
+        {
+          "left": "Matrix equality",
+          "right": "Same order and corresponding elements equal"
+        }
+      ],
+      "question_text": "Match the operations with their requirements.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q034",
+      "type": "match",
+      "difficulty": "familiarity",
+      "match_pairs": [
+        {
+          "left": "Identity matrix [[1, 0], [0, 1]]",
+          "right": "AI = IA = A"
+        },
+        {
+          "left": "Null matrix [[0, 0], [0, 0]]",
+          "right": "A + O = A"
+        },
+        {
+          "left": "Square matrix",
+          "right": "Number of rows equals number of columns"
+        },
+        {
+          "left": "2×2 matrix",
+          "right": "Has 4 elements in total"
+        }
+      ],
+      "question_text": "Match the special matrices with their properties.",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q035",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "2A",
+          "right": "[[2, 4], [6, 8]]"
+        },
+        {
+          "left": "A + A",
+          "right": "[[2, 4], [6, 8]]"
+        },
+        {
+          "left": "3A",
+          "right": "[[3, 6], [9, 12]]"
+        },
+        {
+          "left": "A - A",
+          "right": "[[0, 0], [0, 0]]"
+        }
+      ],
+      "question_text": "Match the matrix expressions with their results (given A = [[1, 2], [3, 4]]).",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q036",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "A(2×3) × B(3×2)",
+          "right": "2 × 2"
+        },
+        {
+          "left": "A(2×2) × B(2×3)",
+          "right": "2 × 3"
+        },
+        {
+          "left": "A(3×2) × B(2×1)",
+          "right": "3 × 1"
+        },
+        {
+          "left": "A(1×2) × B(2×2)",
+          "right": "1 × 2"
+        }
+      ],
+      "question_text": "Match the matrix products with their orders.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q037",
+      "type": "match",
+      "difficulty": "application",
+      "match_pairs": [
+        {
+          "left": "A(2×3) × B(3×2)",
+          "right": "Possible"
+        },
+        {
+          "left": "A(2×3) × B(2×3)",
+          "right": "Not possible"
+        },
+        {
+          "left": "A(3×3) × B(3×1)",
+          "right": "Possible"
+        },
+        {
+          "left": "A(2×1) × B(3×2)",
+          "right": "Not possible"
+        }
+      ],
+      "question_text": "Match the matrix multiplication scenarios with their validity.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q038",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "[[x, 2], [3, 4]] = [[5, 2], [3, 4]]",
+          "right": "x = 5"
+        },
+        {
+          "left": "[[2x, 4], [6, 8]] = [[6, 4], [6, 8]]",
+          "right": "x = 3"
+        },
+        {
+          "left": "[[x+1, 2], [3, 4]] = [[4, 2], [3, 4]]",
+          "right": "x = 3"
+        },
+        {
+          "left": "[[3x, 6], [9, 12]] = [[12, 6], [9, 12]]",
+          "right": "x = 4"
+        }
+      ],
+      "question_text": "Match the matrix equations with the values of x.",
+      "concept_id": "T02.04.C05"
+    },
+    {
+      "question_id": "T02.04.Q039",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "AB",
+          "right": "[[2, 3], [4, 5]]"
+        },
+        {
+          "left": "BA",
+          "right": "[[2, 3], [4, 5]]"
+        },
+        {
+          "left": "AA",
+          "right": "[[1, 0], [0, 1]]"
+        },
+        {
+          "left": "BB",
+          "right": "[[16, 21], [28, 37]]"
+        }
+      ],
+      "question_text": "Match the products with their results (A = [[1, 0], [0, 1]], B = [[2, 3], [4, 5]]).",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q040",
+      "type": "match",
+      "difficulty": "exam_style",
+      "match_pairs": [
+        {
+          "left": "A + B",
+          "right": "[[3, 6], [9, 12]]"
+        },
+        {
+          "left": "A - B",
+          "right": "[[1, 2], [3, 4]]"
+        },
+        {
+          "left": "2B",
+          "right": "[[2, 4], [6, 8]]"
+        },
+        {
+          "left": "(1/2)A",
+          "right": "[[1, 2], [3, 4]]"
+        }
+      ],
+      "question_text": "Match the matrix operations with their results (A = [[2, 4], [6, 8]], B = [[1, 2], [3, 4]]).",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q041",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Multiply elements of second row of A with elements of first column of B and add",
+        "Multiply elements of first row of A with elements of second column of B and add",
+        "Identify the elements of matrices A and B",
+        "Multiply elements of first row of A with elements of first column of B and add"
+      ],
+      "correct_answer": [
+        "Identify the elements of matrices A and B",
+        "Multiply elements of first row of A with elements of first column of B and add",
+        "Multiply elements of first row of A with elements of second column of B and add",
+        "Multiply elements of second row of A with elements of first column of B and add"
+      ],
+      "question_text": "Arrange the steps to multiply two 2×2 matrices A and B in correct order.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q042",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Write the resulting matrix",
+        "Add corresponding elements from both matrices",
+        "Verify that both matrices have the same order",
+        "Identify the elements of both matrices"
+      ],
+      "correct_answer": [
+        "Verify that both matrices have the same order",
+        "Identify the elements of both matrices",
+        "Add corresponding elements from both matrices",
+        "Write the resulting matrix"
+      ],
+      "question_text": "Arrange the steps to add two matrices in correct order.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q043",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "Conclude whether matrices are equal or not",
+        "Check if corresponding elements are equal",
+        "Compare the orders of both matrices",
+        "Identify the two matrices"
+      ],
+      "correct_answer": [
+        "Identify the two matrices",
+        "Compare the orders of both matrices",
+        "Check if corresponding elements are equal",
+        "Conclude whether matrices are equal or not"
+      ],
+      "question_text": "Arrange the steps to check if two matrices are equal in correct order.",
+      "concept_id": "T02.04.C02"
+    },
+    {
+      "question_id": "T02.04.Q044",
+      "type": "ordering",
+      "difficulty": "familiarity",
+      "ordering_items": [
+        "A 2×3 matrix (6 elements)",
+        "A 1×2 matrix (2 elements)",
+        "A 3×3 matrix (9 elements)",
+        "A 2×2 matrix (4 elements)"
+      ],
+      "correct_answer": [
+        "A 1×2 matrix (2 elements)",
+        "A 2×2 matrix (4 elements)",
+        "A 2×3 matrix (6 elements)",
+        "A 3×3 matrix (9 elements)"
+      ],
+      "question_text": "Arrange these matrix types from smallest to largest total number of elements (for the given examples).",
+      "concept_id": "T02.04.C01"
+    },
+    {
+      "question_id": "T02.04.Q045",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "3A (first element = 3)",
+        "A (first element = 1)",
+        "4A (first element = 4)",
+        "2A (first element = 2)"
+      ],
+      "correct_answer": [
+        "A (first element = 1)",
+        "2A (first element = 2)",
+        "3A (first element = 3)",
+        "4A (first element = 4)"
+      ],
+      "question_text": "Arrange the following scalar multiples of matrix A = [[1, 2], [3, 4]] from smallest to largest first element.",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q046",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Conclude whether AB = BA or not",
+        "Compare the two products AB and BA",
+        "Calculate the product BA",
+        "Calculate the product AB"
+      ],
+      "correct_answer": [
+        "Calculate the product AB",
+        "Calculate the product BA",
+        "Compare the two products AB and BA",
+        "Conclude whether AB = BA or not"
+      ],
+      "question_text": "Arrange the steps to verify if matrix multiplication is commutative for given matrices A and B.",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q047",
+      "type": "ordering",
+      "difficulty": "application",
+      "ordering_items": [
+        "Write the final value of x",
+        "Solve the equation 4 + x = 7",
+        "Add the matrices on the left side",
+        "Equate corresponding elements"
+      ],
+      "correct_answer": [
+        "Add the matrices on the left side",
+        "Equate corresponding elements",
+        "Solve the equation 4 + x = 7",
+        "Write the final value of x"
+      ],
+      "question_text": "Arrange the steps to solve for x in the matrix equation [[x, 2], [3, 4]] + [[2, 3], [1, x]] = [[5, 5], [4, 7]].",
+      "concept_id": "T02.04.C05"
+    },
+    {
+      "question_id": "T02.04.Q048",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "B×A: (1,1) element = 5",
+        "A×A: (1,1) element = 7",
+        "A×B: (1,1) element = 4",
+        "B×B: (1,1) element = 5"
+      ],
+      "correct_answer": [
+        "A×B: (1,1) element = 4",
+        "B×A: (1,1) element = 5",
+        "B×B: (1,1) element = 5",
+        "A×A: (1,1) element = 7"
+      ],
+      "question_text": "Arrange the matrix products in increasing order of their (1,1) element value: A×B, B×A, A×A, B×B where A = [[1, 2], [3, 4]] and B = [[2, 1], [1, 2]].",
+      "concept_id": "T02.04.C04"
+    },
+    {
+      "question_id": "T02.04.Q049",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Divide both sides by 3 to get A",
+        "Add 2B to both sides",
+        "Calculate 2B",
+        "Rearrange the equation to isolate terms with A"
+      ],
+      "correct_answer": [
+        "Rearrange the equation to isolate terms with A",
+        "Add 2B to both sides",
+        "Calculate 2B",
+        "Divide both sides by 3 to get A"
+      ],
+      "question_text": "Arrange the steps to solve: 3A - 2B = C for matrix A, given B = [[1, 2], [3, 4]] and C = [[4, 5], [6, 7]].",
+      "concept_id": "T02.04.C03"
+    },
+    {
+      "question_id": "T02.04.Q050",
+      "type": "ordering",
+      "difficulty": "exam_style",
+      "ordering_items": [
+        "Write the final answer A = [[3, 5], [7, 9]]",
+        "Use the property AI = A",
+        "Recognize that [[1, 0], [0, 1]] is the identity matrix",
+        "Conclude that A must equal [[3, 5], [7, 9]]"
+      ],
+      "correct_answer": [
+        "Recognize that [[1, 0], [0, 1]] is the identity matrix",
+        "Use the property AI = A",
+        "Conclude that A must equal [[3, 5], [7, 9]]",
+        "Write the final answer A = [[3, 5], [7, 9]]"
+      ],
+      "question_text": "Arrange the steps to find matrix A if A × [[1, 0], [0, 1]] = [[3, 5], [7, 9]].",
+      "concept_id": "T02.04.C04"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-01",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 20,
+        "application": 15,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 10,
+        "fill_blank": 10,
+        "true_false": 10,
+        "match": 10,
+        "ordering": 10
+      }
+    }
+  }
+}

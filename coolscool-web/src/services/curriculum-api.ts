@@ -107,13 +107,28 @@ export async function fetchCAMByCurriculumId(curriculumId: string): Promise<CAM 
     }
 
     // Transform API response to CAM type
-    const cam = data.data;
+    // API wraps in data.data.cam with camelCase keys
+    const cam = data.data.cam || data.data;
     return {
-      cam_version: cam.cam_version || cam.camVersion || '1.0',
+      cam_version: cam.cam_version || cam.camVersion || cam.version || '1.0',
       board: cam.board,
-      class_level: cam.class_level || cam.classLevel,
+      class_level: cam.class_level ?? cam.classLevel,
       subject: cam.subject,
-      themes: cam.themes || [],
+      themes: (cam.themes || []).map((theme: Record<string, unknown>) => ({
+        theme_id: theme.theme_id || theme.themeId,
+        theme_name: theme.theme_name || theme.themeName,
+        theme_order: theme.theme_order ?? theme.order,
+        topics: ((theme.topics as Record<string, unknown>[]) || []).map((topic: Record<string, unknown>) => ({
+          topic_id: topic.topic_id || topic.topicId,
+          topic_name: topic.topic_name || topic.topicName,
+          topic_order: topic.topic_order ?? topic.order,
+          concepts: ((topic.concepts as Record<string, unknown>[]) || []).map((concept: Record<string, unknown>) => ({
+            concept_id: concept.concept_id || concept.conceptId,
+            concept_name: concept.concept_name || concept.conceptName,
+            difficulty_levels: concept.difficulty_levels || concept.difficultyLevels || [],
+          })),
+        })),
+      })),
     };
   } catch (error) {
     console.error('Error fetching CAM:', error);

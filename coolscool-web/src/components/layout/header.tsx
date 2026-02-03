@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { UserMenu } from '@/components/auth';
-import { CurriculumSelector } from '@/components/curriculum/CurriculumSelector';
 
 export function Header() {
   return (
@@ -15,12 +14,7 @@ export function Header() {
           </span>
         </Link>
 
-        <CurriculumSelector compact />
-
         <nav className="header-actions">
-          <Link href="/browse" className="btn btn-ghost-light">
-            Browse
-          </Link>
           <UserMenu />
         </nav>
       </div>

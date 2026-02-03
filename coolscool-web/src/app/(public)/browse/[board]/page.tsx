@@ -29,6 +29,37 @@ export default async function BoardPage({ params }: Props) {
     notFound();
   }
 
+  // Show coming soon message for non-live boards
+  if (board.status !== 'live') {
+    return (
+      <div className="px-4 py-8 max-w-4xl mx-auto">
+        <nav className="mb-6 text-sm">
+          <Link href="/browse" className="text-[var(--color-text-muted)] hover:text-[var(--color-text)]">
+            Browse
+          </Link>
+          <span className="mx-2 text-[var(--color-text-muted)]">/</span>
+          <span className="text-[var(--color-text)]">{board.name}</span>
+        </nav>
+
+        <div className="text-center py-16">
+          <h1 className="mb-4">{board.name}</h1>
+          <p className="text-[var(--color-text-secondary)] mb-6">
+            {board.fullName}
+          </p>
+          <span className="inline-block text-sm font-medium text-[var(--color-text-muted)] bg-[var(--color-surface-elevated)] px-4 py-2 rounded-lg">
+            Coming Soon
+          </span>
+          <p className="text-sm text-[var(--color-text-muted)] mt-6">
+            We&apos;re working on adding content for this board. Check back soon!
+          </p>
+          <Link href="/browse" className="btn btn-primary mt-8">
+            Browse Other Boards
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="px-4 py-8 max-w-4xl mx-auto">
       {/* Breadcrumb */}

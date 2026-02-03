@@ -9,18 +9,14 @@ export const BOARDS = {
     name: 'ICSE',
     fullName: 'Indian Certificate of Secondary Education',
     description: 'Comprehensive curriculum focusing on analytical skills',
+    status: 'live' as const,
   },
   cbse: {
     id: 'cbse',
     name: 'CBSE',
     fullName: 'Central Board of Secondary Education',
     description: 'National curriculum with NCERT-aligned content',
-  },
-  karnataka: {
-    id: 'karnataka',
-    name: 'Karnataka',
-    fullName: 'Karnataka State Board',
-    description: 'Karnataka state curriculum',
+    status: 'coming_soon' as const,
   },
 } as const;
 

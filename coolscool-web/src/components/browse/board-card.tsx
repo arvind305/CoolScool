@@ -9,7 +9,7 @@ export interface BoardCardProps {
 }
 
 /**
- * BoardCard - Displays a board option (ICSE, CBSE, Karnataka State, etc.)
+ * BoardCard - Displays a board option (ICSE, CBSE, etc.)
  * Server component - no client-side interactivity needed
  */
 export function BoardCard({ name, fullName, href, description }: BoardCardProps) {

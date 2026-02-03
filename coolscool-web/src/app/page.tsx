@@ -29,7 +29,7 @@ export default function HomePage() {
           <FeatureCard
             icon="+"
             title="Multi-Board Support"
-            description="ICSE, CBSE, Karnataka State Board and more. Content aligned to your curriculum."
+            description="ICSE and CBSE. Content aligned to your curriculum."
           />
           <FeatureCard
             icon="*"
@@ -47,21 +47,18 @@ export default function HomePage() {
       {/* Board Selection Preview */}
       <section className="w-full max-w-4xl mx-auto mt-16">
         <h2 className="text-center mb-8">Choose Your Board</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
           <BoardCard
             board="icse"
             name="ICSE"
             fullName="Indian Certificate of Secondary Education"
+            status="live"
           />
           <BoardCard
             board="cbse"
             name="CBSE"
             fullName="Central Board of Secondary Education"
-          />
-          <BoardCard
-            board="karnataka"
-            name="Karnataka"
-            fullName="Karnataka State Board"
+            status="coming_soon"
           />
         </div>
       </section>
@@ -79,12 +76,12 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="card text-center">
-      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[var(--color-primary-subtle)] flex items-center justify-center text-[var(--color-primary)] text-2xl font-bold">
+    <div className="card text-center p-4">
+      <div className="w-10 h-10 mx-auto mb-3 rounded-full bg-[var(--color-primary-subtle)] flex items-center justify-center text-[var(--color-primary)] text-xl font-bold">
         {icon}
       </div>
-      <h3 className="text-lg mb-2">{title}</h3>
-      <p className="text-sm text-[var(--color-text-muted)]">{description}</p>
+      <h3 className="text-base mb-1">{title}</h3>
+      <p className="text-xs text-[var(--color-text-muted)]">{description}</p>
     </div>
   );
 }
@@ -93,15 +90,34 @@ function BoardCard({
   board,
   name,
   fullName,
+  status,
 }: {
   board: string;
   name: string;
   fullName: string;
+  status: 'live' | 'coming_soon';
 }) {
+  const isLive = status === 'live';
+
+  if (!isLive) {
+    return (
+      <div className="card relative opacity-75 cursor-not-allowed p-4">
+        <span className="absolute top-2 right-2 text-xs font-medium text-[var(--color-text-muted)] bg-[var(--color-surface-elevated)] px-2 py-0.5 rounded">
+          Coming Soon
+        </span>
+        <h3 className="text-base mb-1">{name}</h3>
+        <p className="text-xs text-[var(--color-text-muted)]">{fullName}</p>
+      </div>
+    );
+  }
+
   return (
-    <Link href={`/browse/${board}`} className="card card-interactive">
-      <h3 className="text-lg mb-1">{name}</h3>
-      <p className="text-sm text-[var(--color-text-muted)]">{fullName}</p>
+    <Link href={`/browse/${board}`} className="card card-interactive relative p-4">
+      <span className="absolute top-2 right-2 text-xs font-medium text-green-600 bg-green-100 px-2 py-0.5 rounded">
+        Live
+      </span>
+      <h3 className="text-base mb-1">{name}</h3>
+      <p className="text-xs text-[var(--color-text-muted)]">{fullName}</p>
     </Link>
   );
 }

@@ -73,26 +73,58 @@ export default async function ClassPage({ params }: Props) {
       </header>
 
       <div className="grid sm:grid-cols-2 gap-4">
-        {subjects.map((subject) => (
-          <Link
-            key={subject.id}
-            href={`/browse/${boardId}/${classSlug}/${subject.id}`}
-            className="card card-interactive flex items-center gap-4"
-          >
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center text-white text-xl font-bold"
-              style={{ backgroundColor: subject.color }}
+        {subjects.map((subject) => {
+          const isLive = subject.status === 'live';
+
+          if (!isLive) {
+            return (
+              <div
+                key={subject.id}
+                className="card relative flex items-center gap-4 opacity-75 cursor-not-allowed"
+              >
+                <span className="absolute top-2 right-2 text-xs font-medium text-[var(--color-text-muted)] bg-[var(--color-surface-elevated)] px-2 py-0.5 rounded">
+                  Coming Soon
+                </span>
+                <div
+                  className="w-12 h-12 rounded-lg flex items-center justify-center text-white text-xl"
+                  style={{ backgroundColor: subject.color }}
+                >
+                  {subject.icon}
+                </div>
+                <div>
+                  <h2 className="text-lg">{subject.name}</h2>
+                  <p className="text-sm text-[var(--color-text-muted)]">
+                    Browse topics
+                  </p>
+                </div>
+              </div>
+            );
+          }
+
+          return (
+            <Link
+              key={subject.id}
+              href={`/browse/${boardId}/${classSlug}/${subject.id}`}
+              className="card card-interactive relative flex items-center gap-4"
             >
-              {subject.icon}
-            </div>
-            <div>
-              <h2 className="text-lg">{subject.name}</h2>
-              <p className="text-sm text-[var(--color-text-muted)]">
-                Browse topics
-              </p>
-            </div>
-          </Link>
-        ))}
+              <span className="absolute top-2 right-2 text-xs font-medium text-green-600 bg-green-100 px-2 py-0.5 rounded">
+                Live
+              </span>
+              <div
+                className="w-12 h-12 rounded-lg flex items-center justify-center text-white text-xl"
+                style={{ backgroundColor: subject.color }}
+              >
+                {subject.icon}
+              </div>
+              <div>
+                <h2 className="text-lg">{subject.name}</h2>
+                <p className="text-sm text-[var(--color-text-muted)]">
+                  Browse topics
+                </p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

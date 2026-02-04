@@ -29,26 +29,30 @@ export const SUBJECTS = {
   mathematics: {
     id: 'mathematics',
     name: 'Mathematics',
-    icon: '+',
+    icon: '🔢',
     color: '#7c3aed',
+    status: 'live' as const,
   },
   science: {
     id: 'science',
     name: 'Science',
-    icon: '*',
+    icon: '🧬',
     color: '#14b8a6',
+    status: 'coming_soon' as const,
   },
   english: {
     id: 'english',
     name: 'English',
-    icon: 'A',
+    icon: '✏',
     color: '#f97316',
+    status: 'coming_soon' as const,
   },
   social_studies: {
     id: 'social_studies',
     name: 'Social Studies',
-    icon: '#',
+    icon: '🗺',
     color: '#ec4899',
+    status: 'coming_soon' as const,
   },
 } as const;
 

@@ -2,16 +2,19 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-16 md:py-24">
+    <div className="flex flex-col items-center justify-center px-4 py-8 md:py-12">
       {/* Hero Section */}
       <section className="text-center max-w-3xl mx-auto mb-16">
         <h1 className="mb-6">
           Master Your Curriculum,{' '}
           <span className="text-[var(--color-primary)]">Pressure-Free</span>
         </h1>
-        <p className="text-lg text-[var(--color-text-secondary)] mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-[var(--color-text-secondary)] mb-4 max-w-2xl mx-auto">
           Adaptive practice for ICSE, CBSE, and State Board students.
           Build genuine understanding with personalized quizzes that match your pace.
+        </p>
+        <p className="text-sm text-[var(--color-text-muted)] mb-8 max-w-2xl mx-auto">
+          <span className="font-medium text-[var(--color-primary)]">Multi-Board Support</span> &bull; <span className="font-medium text-[var(--color-secondary)]">Adaptive Learning</span> &bull; <span className="font-medium text-[var(--color-accent)]">Track Progress</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/browse" className="btn btn-primary btn-lg">
@@ -20,27 +23,6 @@ export default function HomePage() {
           <Link href="/login" className="btn btn-secondary btn-lg">
             Sign In
           </Link>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="w-full max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6">
-          <FeatureCard
-            icon="+"
-            title="Multi-Board Support"
-            description="ICSE and CBSE. Content aligned to your curriculum."
-          />
-          <FeatureCard
-            icon="*"
-            title="Adaptive Learning"
-            description="Questions adapt to your level. Build confidence through gradual progression."
-          />
-          <FeatureCard
-            icon=">"
-            title="Track Progress"
-            description="See your growth across topics. Know exactly where you stand."
-          />
         </div>
       </section>
 
@@ -66,25 +48,6 @@ export default function HomePage() {
   );
 }
 
-function FeatureCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="card text-center p-4">
-      <div className="w-10 h-10 mx-auto mb-3 rounded-full bg-[var(--color-primary-subtle)] flex items-center justify-center text-[var(--color-primary)] text-xl font-bold">
-        {icon}
-      </div>
-      <h3 className="text-base mb-1">{title}</h3>
-      <p className="text-xs text-[var(--color-text-muted)]">{description}</p>
-    </div>
-  );
-}
 
 function BoardCard({
   board,

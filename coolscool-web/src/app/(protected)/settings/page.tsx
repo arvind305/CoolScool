@@ -150,29 +150,6 @@ export default function SettingsPage() {
             topicsCount={data?.topicsStarted || 0}
           />
         </section>
-
-        {/* About Section */}
-        <section className="settings-section">
-          <h2 className="settings-section-title">About</h2>
-          <div className="settings-about">
-            <div className="settings-about-item">
-              <span className="settings-about-label">App Version</span>
-              <span className="settings-about-value">2.0.0</span>
-            </div>
-            <div className="settings-about-item">
-              <span className="settings-about-label">Board</span>
-              <span className="settings-about-value">ICSE</span>
-            </div>
-            <div className="settings-about-item">
-              <span className="settings-about-label">Class</span>
-              <span className="settings-about-value">Class 5</span>
-            </div>
-            <div className="settings-about-item">
-              <span className="settings-about-label">Subject</span>
-              <span className="settings-about-value">Mathematics</span>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
   );

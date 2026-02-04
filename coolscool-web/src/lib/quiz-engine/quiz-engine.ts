@@ -357,8 +357,9 @@ export class QuizEngine {
       isCorrect: result.answer.is_correct,
       xpEarned: result.answer.xp_earned,
       correctAnswer: currentQuestion.correct_answer,
-      explanation: this.getQuestionBank(this.currentSession.config.topic_id)
-        ?.canonical_explanation,
+      explanation: result.answer.is_correct
+        ? currentQuestion.explanation_correct || this.getQuestionBank(this.currentSession.config.topic_id)?.canonical_explanation
+        : currentQuestion.explanation_incorrect || this.getQuestionBank(this.currentSession.config.topic_id)?.canonical_explanation,
       masteryAchieved: result.masteryResult?.masteryAchieved || false,
       isSessionComplete: result.isSessionComplete,
       sessionProgress: {

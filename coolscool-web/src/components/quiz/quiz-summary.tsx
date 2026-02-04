@@ -15,6 +15,8 @@ export interface QuizSummaryProps {
   onChooseTopic: () => void;
   /** Whether the user is authenticated */
   isAuthenticated?: boolean;
+  /** Topic-level canonical explanation for post-test summary */
+  canonicalExplanation?: string;
 }
 
 function formatTime(ms: number): string {
@@ -29,6 +31,7 @@ export function QuizSummary({
   onPracticeAgain,
   onChooseTopic,
   isAuthenticated,
+  canonicalExplanation,
 }: QuizSummaryProps) {
   const bandClass = proficiency.band.replace(/_/g, '-');
   const bandMessage = getBandMessage(proficiency.band);
@@ -109,6 +112,13 @@ export function QuizSummary({
           {bandMessage}
         </p>
       </div>
+
+      {canonicalExplanation && (
+        <div className="summary-key-concepts">
+          <div className="summary-key-concepts-title">Key Concepts</div>
+          <p className="summary-key-concepts-text">{canonicalExplanation}</p>
+        </div>
+      )}
 
       <div className="summary-actions">
         <Button

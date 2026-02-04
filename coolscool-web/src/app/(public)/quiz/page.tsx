@@ -182,6 +182,21 @@ function QuizPageContent() {
     }
   }, [selectedAnswer, engine, topicId, access]);
 
+  // Submit on Enter key when an answer is selected
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && selectedAnswer !== null && quizState !== 'feedback') {
+        const tag = (e.target as HTMLElement)?.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA') {
+          e.preventDefault();
+        }
+        handleSubmit();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [selectedAnswer, quizState, handleSubmit]);
+
   // Handle skip question
   const handleSkip = useCallback(() => {
     engine.skipQuestion();
@@ -348,6 +363,7 @@ function QuizPageContent() {
         <QuizSummary
           summary={summary}
           proficiency={proficiency}
+          canonicalExplanation={engine.canonicalExplanation}
           onPracticeAgain={handlePracticeAgain}
           onChooseTopic={handleChooseTopic}
           isAuthenticated={access.isAuthenticated}

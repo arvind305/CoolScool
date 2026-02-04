@@ -22,7 +22,7 @@ import type {
   EnrichedQuestion,
   ProficiencyBand,
 } from '@/lib/quiz-engine/types';
-import { fetchCAM, fetchCAMByCurriculumId, fetchQuestionBank, fetchQuestionBankByCurriculumId } from '@/services/curriculum-api';
+import { fetchCAM, fetchCAMByCurriculumId, fetchQuestionBankByCurriculumId } from '@/services/curriculum-api';
 
 export interface UseQuizEngineOptions {
   board?: string;
@@ -51,6 +51,9 @@ export interface QuizEngineState {
   // Answer feedback
   lastAnswerResult: AnswerSubmitResult | null;
   showingFeedback: boolean;
+
+  // Topic-level canonical explanation
+  canonicalExplanation: string | undefined;
 }
 
 export interface UseQuizEngineReturn extends QuizEngineState {
@@ -95,6 +98,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
     isSessionActive: false,
     lastAnswerResult: null,
     showingFeedback: false,
+    canonicalExplanation: undefined,
   });
 
   // Initialize the quiz engine
@@ -185,20 +189,19 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
       setState((prev) => ({ ...prev, isLoading: true, error: null }));
 
       try {
-        // Load question bank for topic - prefer curriculum-scoped API
-        let questionBank = null;
-        if (curriculumId) {
-          questionBank = await fetchQuestionBankByCurriculumId(curriculumId, topicId);
+        // Load question bank for topic via curriculum API
+        if (!curriculumId) {
+          throw new Error('curriculumId is required to load questions');
         }
-        // Fallback to static file loading (legacy, Class 5 only)
-        if (!questionBank) {
-          questionBank = await fetchQuestionBank(topicId);
-        }
+        const questionBank = await fetchQuestionBankByCurriculumId(curriculumId, topicId);
         if (!questionBank) {
           throw new Error(`No questions available for topic: ${topicId}`);
         }
 
         engineRef.current.registerQuestionBank(topicId, questionBank);
+
+        // Store canonical explanation for post-test summary
+        const storedCanonicalExplanation = questionBank.canonical_explanation;
 
         // Create and start session
         await engineRef.current.createSession({
@@ -217,6 +220,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
           isSessionActive: true,
           lastAnswerResult: null,
           showingFeedback: false,
+          canonicalExplanation: storedCanonicalExplanation,
         }));
 
         return true;

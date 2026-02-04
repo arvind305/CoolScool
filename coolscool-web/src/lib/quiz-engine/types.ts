@@ -144,7 +144,8 @@ export interface Question {
   correct_answer: string | string[] | Record<string, string>;
   match_pairs?: { left: string; right: string }[];
   ordering_items?: string[];
-  explanation?: string;
+  explanation_correct?: string;
+  explanation_incorrect?: string;
 }
 
 export interface EnrichedQuestion extends Question {

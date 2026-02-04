@@ -8,7 +8,6 @@ import { TimeModeModal } from '@/components/quiz/time-mode-modal';
 import {
   fetchCAM,
   fetchCAMByCurriculumId,
-  fetchAllQuestionCounts,
   hasContentFor,
   findCurriculumByBoardClassSubject,
 } from '@/services/curriculum-api';
@@ -126,11 +125,7 @@ export function TopicBrowser({ board, classLevel, subject, curriculumId: propCur
           camData = await fetchCAM(board, classLevel, subject);
         }
 
-        // Load question counts - only use static file counts for legacy (Class 5) path
-        // For curriculum-scoped classes, skip static file fetching (those files don't exist)
-        const counts = resolvedCurriculumId
-          ? new Map<string, number>()
-          : await fetchAllQuestionCounts();
+        const counts = new Map<string, number>();
 
         if (!camData) {
           setError('Unable to load curriculum data. Please try again later.');

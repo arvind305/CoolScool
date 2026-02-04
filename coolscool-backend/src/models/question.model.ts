@@ -24,6 +24,8 @@ export interface Question {
   ordering_items: string[] | null;
   hint: string | null;
   tags: string[];
+  explanation_correct: string | null;
+  explanation_incorrect: string | null;
   created_at: Date;
   updated_at: Date;
 }

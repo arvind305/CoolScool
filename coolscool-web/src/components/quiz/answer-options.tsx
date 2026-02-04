@@ -462,7 +462,7 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
     { pairs, selectedMatches, onMatch, disabled, correctMatches, className = '' },
     ref
   ) {
-    const [activeLeft, setActiveLeft] = useState<string | null>(null);
+    const [activeChip, setActiveChip] = useState<string | null>(null);
 
     // Get shuffled right items (stable across renders)
     const [shuffledRight] = useState<string[]>(() => {
@@ -474,99 +474,147 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
       return rights;
     });
 
-    const handleLeftClick = (left: string) => {
+    const assignedValues = new Set(Object.values(selectedMatches).filter(Boolean));
+    const availableChips = shuffledRight.filter(r => !assignedValues.has(r));
+
+    const handleChipClick = (right: string) => {
       if (disabled) return;
-      setActiveLeft(activeLeft === left ? null : left);
+      setActiveChip(activeChip === right ? null : right);
     };
 
-    const handleRightClick = (right: string) => {
-      if (disabled || !activeLeft) return;
-      const newMatches = { ...selectedMatches, [activeLeft]: right };
-      setActiveLeft(null);
+    const handleSlotClick = (left: string) => {
+      if (disabled) return;
+      // If slot is filled, return chip to bank
+      if (selectedMatches[left]) {
+        const newMatches = { ...selectedMatches };
+        delete newMatches[left];
+        onMatch(newMatches);
+        return;
+      }
+      // If a chip is active, place it in this slot
+      if (activeChip) {
+        const newMatches = { ...selectedMatches, [left]: activeChip };
+        setActiveChip(null);
+        onMatch(newMatches);
+      }
+    };
+
+    const handleDragStart = (e: React.DragEvent, right: string) => {
+      if (disabled) return;
+      e.dataTransfer.setData('text/plain', right);
+      e.dataTransfer.effectAllowed = 'move';
+    };
+
+    const handleDragOver = (e: React.DragEvent) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+    };
+
+    const handleDrop = (e: React.DragEvent, left: string) => {
+      e.preventDefault();
+      if (disabled) return;
+      const right = e.dataTransfer.getData('text/plain');
+      if (!right) return;
+      // If slot already filled, return old chip first
+      const newMatches = { ...selectedMatches, [left]: right };
+      setActiveChip(null);
       onMatch(newMatches);
     };
 
-    const getLeftState = (left: string): string => {
+    const getSlotState = (left: string): string => {
       if (disabled && correctMatches) {
         const correctRight = pairs.find(p => p.left === left)?.right;
         if (selectedMatches[left] === correctRight) return 'correct';
         if (selectedMatches[left] && selectedMatches[left] !== correctRight) return 'incorrect';
       }
-      if (activeLeft === left) return 'selected';
-      if (selectedMatches[left]) return 'matched';
+      if (selectedMatches[left]) return 'filled';
       return '';
     };
 
-    const getRightState = (right: string): string => {
+    const getChipState = (right: string): string => {
       if (disabled && correctMatches) {
         const isCorrectlyMatched = Object.entries(selectedMatches).some(([left, r]) => {
           if (r !== right) return false;
           return pairs.find(p => p.left === left)?.right === right;
         });
-        const isIncorrectlyMatched = Object.values(selectedMatches).includes(right) && !isCorrectlyMatched;
+        const isIncorrectlyMatched = assignedValues.has(right) && !isCorrectlyMatched;
         if (isCorrectlyMatched) return 'correct';
         if (isIncorrectlyMatched) return 'incorrect';
       }
-      if (Object.values(selectedMatches).includes(right)) return 'matched';
+      if (activeChip === right) return 'active';
       return '';
     };
 
     return (
       <div ref={ref} className={`match-container ${className}`.trim()}>
-        <div className="match-columns">
-          <div className="match-column match-left-column">
-            {pairs.map(pair => {
-              const state = getLeftState(pair.left);
-              return (
+        <div className="match-prompt-list">
+          {pairs.map(pair => {
+            const slotState = getSlotState(pair.left);
+            const filledRight = selectedMatches[pair.left];
+            const chipState = filledRight ? getChipState(filledRight) : '';
+            return (
+              <div key={pair.left} className="match-prompt-row">
+                <span className="match-prompt-text">{pair.left}</span>
                 <div
-                  key={pair.left}
-                  className={`match-item ${state}`.trim()}
-                  onClick={() => handleLeftClick(pair.left)}
+                  className={`match-slot ${slotState} ${chipState}`.trim()}
+                  onClick={() => handleSlotClick(pair.left)}
+                  onDragOver={handleDragOver}
+                  onDrop={(e) => handleDrop(e, pair.left)}
                   role="button"
                   tabIndex={disabled ? -1 : 0}
-                  aria-disabled={disabled}
+                  aria-label={filledRight ? `${pair.left} matched with ${filledRight}. Tap to remove.` : `Empty slot for ${pair.left}`}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
-                      handleLeftClick(pair.left);
+                      handleSlotClick(pair.left);
                     }
                   }}
                 >
-                  <span className="match-item-text">{pair.left}</span>
-                  {selectedMatches[pair.left] && (
-                    <span className="match-item-link">→ {selectedMatches[pair.left]}</span>
+                  {filledRight ? (
+                    <span className="match-slot-chip">{filledRight}</span>
+                  ) : (
+                    <span className="match-slot-empty">drop here</span>
                   )}
                 </div>
-              );
-            })}
-          </div>
-          <div className="match-column match-right-column">
-            {shuffledRight.map(right => {
-              const state = getRightState(right);
-              return (
-                <div
-                  key={right}
-                  className={`match-item ${state}`.trim()}
-                  onClick={() => handleRightClick(right)}
-                  role="button"
-                  tabIndex={disabled ? -1 : 0}
-                  aria-disabled={disabled}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      handleRightClick(right);
-                    }
-                  }}
-                >
-                  <span className="match-item-text">{right}</span>
-                </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
+
+        {(!disabled || availableChips.length > 0) && (
+          <div className="match-word-bank">
+            <span className="match-word-bank-label">Word Bank</span>
+            <div className="match-word-bank-chips">
+              {availableChips.map(right => {
+                const state = getChipState(right);
+                return (
+                  <div
+                    key={right}
+                    className={`match-chip ${state}`.trim()}
+                    onClick={() => handleChipClick(right)}
+                    draggable={!disabled}
+                    onDragStart={(e) => handleDragStart(e, right)}
+                    role="button"
+                    tabIndex={disabled ? -1 : 0}
+                    aria-label={right}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleChipClick(right);
+                      }
+                    }}
+                  >
+                    {right}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {!disabled && (
           <p className="match-hint">
-            {activeLeft ? `Select the match for "${activeLeft}"` : 'Select an item on the left, then its match on the right'}
+            {activeChip ? `Tap a slot to place "${activeChip}"` : 'Tap a chip, then tap a slot. Or drag and drop.'}
           </p>
         )}
       </div>
@@ -756,66 +804,126 @@ const styles = `
   flex-shrink: 0;
 }
 
-/* Match interface */
+/* Match interface — drag-to-slot */
 .match-container {
   margin-bottom: var(--spacing-xl);
 }
 
-.match-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-lg);
-}
-
-.match-column {
+.match-prompt-list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
 }
 
-.match-item {
-  padding: var(--spacing-md);
-  border: 2px solid var(--color-border);
+.match-prompt-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.match-prompt-text {
+  flex: 1;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  min-width: 0;
+  word-break: break-word;
+}
+
+.match-slot {
+  flex: 1;
+  min-height: 44px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px dashed var(--color-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all var(--transition-fast);
   background: var(--color-bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.match-item:hover:not([aria-disabled="true"]) {
+.match-slot:hover:not([aria-disabled="true"]) {
   border-color: var(--color-primary-light);
   background: var(--color-primary-subtle);
 }
 
-.match-item.selected {
-  border-color: var(--color-primary);
+.match-slot.filled {
+  border-style: solid;
+  border-color: var(--color-primary-light);
   background: var(--color-primary-subtle);
 }
 
-.match-item.matched {
-  border-color: var(--color-primary-light);
-  opacity: 0.8;
-}
-
-.match-item.correct {
+.match-slot.correct {
+  border-style: solid;
   border-color: var(--color-correct);
   background: var(--color-correct-bg);
 }
 
-.match-item.incorrect {
+.match-slot.incorrect {
+  border-style: solid;
   border-color: var(--color-incorrect);
   background: var(--color-incorrect-bg);
 }
 
-.match-item-text {
-  line-height: var(--line-height-normal);
+.match-slot-chip {
+  font-weight: var(--font-weight-medium);
 }
 
-.match-item-link {
+.match-slot-empty {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+}
+
+.match-word-bank {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+}
+
+.match-word-bank-label {
   display: block;
   font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-text-muted);
-  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.match-word-bank-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.match-chip {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: 999px;
+  cursor: grab;
+  transition: all var(--transition-fast);
+  background: var(--color-bg-card);
+  font-weight: var(--font-weight-medium);
+  user-select: none;
+}
+
+.match-chip:hover {
+  border-color: var(--color-primary-light);
+  background: var(--color-primary-subtle);
+}
+
+.match-chip.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  box-shadow: 0 0 0 2px var(--color-primary-subtle);
+}
+
+.match-chip:active {
+  cursor: grabbing;
 }
 
 .match-hint {

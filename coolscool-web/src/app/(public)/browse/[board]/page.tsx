@@ -72,9 +72,9 @@ export default async function BoardPage({ params }: Props) {
       </nav>
 
       <header className="mb-8">
-        <h1 className="mb-2">{board.name}</h1>
-        <p className="text-[var(--color-text-secondary)]">
-          {board.fullName} - Select a class to view subjects
+        <h1 className="mb-2">{board.name} - {board.fullName}</h1>
+        <p className="font-semibold text-[var(--color-text-secondary)]">
+          Select a class to view subjects
         </p>
       </header>
 
@@ -85,11 +85,8 @@ export default async function BoardPage({ params }: Props) {
             href={`/browse/${boardId}/${classLevelToSlug(classLevel)}`}
             className="card card-interactive text-center py-6"
           >
-            <span className="text-2xl font-bold text-[var(--color-primary)]">
-              {classLevel}
-            </span>
-            <span className="block text-sm text-[var(--color-text-secondary)] mt-1">
-              {formatClassLevel(classLevel)}
+            <span className="text-lg font-bold text-[var(--color-primary)]">
+              Grade {classLevel}
             </span>
           </Link>
         ))}

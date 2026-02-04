@@ -62,17 +62,8 @@ export default async function BoardPage({ params }: Props) {
 
   return (
     <div className="px-4 py-8 max-w-4xl mx-auto">
-      {/* Breadcrumb */}
-      <nav className="mb-6 text-sm">
-        <Link href="/browse" className="text-[var(--color-text-muted)] hover:text-[var(--color-text)]">
-          Browse
-        </Link>
-        <span className="mx-2 text-[var(--color-text-muted)]">/</span>
-        <span className="text-[var(--color-text)]">{board.name}</span>
-      </nav>
-
       <header className="mb-8">
-        <h1 className="mb-2">{board.name} - {board.fullName}</h1>
+        <h1 className="mb-2">{board.name}</h1>
         <p className="font-semibold text-[var(--color-text-secondary)]">
           Select a class to view subjects
         </p>

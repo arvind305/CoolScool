@@ -50,15 +50,40 @@ const THEME_OPTIONS: { value: Theme; label: string; icon: React.ReactNode }[] = 
   },
 ];
 
+function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (theme === 'dark' || (theme === 'system' && systemDark)) {
+    root.classList.add('dark');
+  } else {
+    root.classList.remove('dark');
+  }
+}
+
 export function ThemeToggle({ value = 'system', onChange }: ThemeToggleProps) {
   const [currentTheme, setCurrentTheme] = useState<Theme>(value);
 
+  // Apply theme on mount and when value changes
   useEffect(() => {
     setCurrentTheme(value);
+    applyTheme(value);
   }, [value]);
+
+  // Listen for system theme changes when in system mode
+  useEffect(() => {
+    if (currentTheme !== 'system') return;
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => applyTheme('system');
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [currentTheme]);
 
   const handleChange = (theme: Theme) => {
     setCurrentTheme(theme);
+    applyTheme(theme);
     onChange?.(theme);
   };
 

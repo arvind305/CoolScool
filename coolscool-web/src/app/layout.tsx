@@ -13,13 +13,31 @@ export const metadata: Metadata = {
   keywords: ['education', 'quiz', 'practice', 'ICSE', 'CBSE', 'mathematics', 'science'],
 };
 
+// Script to apply theme immediately on page load (prevents flash)
+const themeScript = `
+  (function() {
+    try {
+      const stored = localStorage.getItem('coolscool_settings');
+      const settings = stored ? JSON.parse(stored) : null;
+      const theme = settings?.theme || 'system';
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (theme === 'dark' || (theme === 'system' && systemDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-screen flex flex-col">
         <SessionProvider>
           <QueryProvider>

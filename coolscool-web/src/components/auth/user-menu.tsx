@@ -12,9 +12,9 @@ const roleLabels: Record<UserRole, string> = {
 };
 
 const roleColors: Record<UserRole, string> = {
-  child: 'bg-blue-100 text-blue-700',
-  parent: 'bg-purple-100 text-purple-700',
-  admin: 'bg-amber-100 text-amber-700',
+  child: 'bg-blue-500/20 text-blue-400',
+  parent: 'bg-purple-500/20 text-purple-400',
+  admin: 'bg-amber-500/20 text-amber-400',
 };
 
 export function UserMenu() {
@@ -99,7 +99,7 @@ export function UserMenu() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-[var(--color-border)] py-2 z-50">
+        <div className="absolute right-0 mt-2 w-64 bg-[var(--color-bg-card)] rounded-lg shadow-lg border border-[var(--color-border)] py-2 z-50">
           {/* User info */}
           <div className="px-4 py-3 border-b border-[var(--color-border)]">
             <div className="flex items-center gap-3">
@@ -161,7 +161,7 @@ export function UserMenu() {
           <div className="border-t border-[var(--color-border)] pt-1">
             <button
               onClick={handleSignOut}
-              className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors"
+              className="w-full text-left px-4 py-2 text-sm text-[var(--color-incorrect)] hover:bg-[var(--color-incorrect-bg)] transition-colors"
             >
               Sign Out
             </button>

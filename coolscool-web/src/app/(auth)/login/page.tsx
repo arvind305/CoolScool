@@ -80,7 +80,7 @@ function LoginContent() {
         </p>
 
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+          <div className="mb-6 p-4 bg-[var(--color-incorrect-bg)] border border-[var(--color-incorrect)] rounded-lg text-[var(--color-incorrect)] text-sm">
             {error}
           </div>
         )}

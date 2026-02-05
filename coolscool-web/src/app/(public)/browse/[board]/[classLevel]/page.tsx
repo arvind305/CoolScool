@@ -107,7 +107,7 @@ export default async function ClassPage({ params }: Props) {
               href={`/browse/${boardId}/${classSlug}/${subject.id}`}
               className="card card-interactive relative flex items-center gap-4"
             >
-              <span className="absolute top-2 right-2 text-xs font-medium text-green-600 bg-green-100 px-2 py-0.5 rounded">
+              <span className="absolute top-2 right-2 text-xs font-medium text-[var(--color-correct)] bg-[var(--color-correct-bg)] px-2 py-0.5 rounded">
                 Live
               </span>
               <div

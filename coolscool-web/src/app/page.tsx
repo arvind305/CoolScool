@@ -13,7 +13,7 @@ export default function HomePage() {
           Adaptive practice for ICSE, CBSE, and State Board students.
           Build genuine understanding with personalized quizzes that match your pace.
         </p>
-        <p className="text-sm text-[var(--color-text-muted)] mb-8 max-w-2xl mx-auto">
+        <p className="text-base text-[var(--color-text-muted)] mb-8 max-w-2xl mx-auto">
           <span className="font-medium text-[var(--color-primary)]">Multi-Board Support</span> &bull; <span className="font-medium text-[var(--color-secondary)]">Adaptive Learning</span> &bull; <span className="font-medium text-[var(--color-accent)]">Track Progress</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

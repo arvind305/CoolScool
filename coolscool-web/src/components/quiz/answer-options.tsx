@@ -62,19 +62,39 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
     },
     ref
   ) {
+    // Normalize answer for comparison (handles case differences in true_false, etc.)
+    const normalizeAnswer = useCallback(
+      (answer: string | string[] | Record<string, string> | null | undefined): string => {
+        if (answer === null || answer === undefined) return '';
+        if (typeof answer === 'string') return answer.toLowerCase().trim();
+        return JSON.stringify(answer).toLowerCase();
+      },
+      []
+    );
+
     // Determine answer state for an option
     const getOptionState = useCallback(
       (value: string): AnswerState => {
         if (disabled) {
-          if (correctAnswer === value) return 'correct';
-          if (selectedAnswer === value && correctAnswer !== value) return 'incorrect';
-          if (selectedAnswer === value) return 'selected';
+          // Normalize both values for case-insensitive comparison
+          const normalizedCorrect = normalizeAnswer(correctAnswer);
+          const normalizedValue = normalizeAnswer(value);
+          const normalizedSelected = normalizeAnswer(selectedAnswer);
+
+          const isThisCorrect = normalizedCorrect === normalizedValue;
+          const isThisSelected = normalizedSelected === normalizedValue;
+
+          if (isThisCorrect) return 'correct';
+          if (isThisSelected && !isThisCorrect) return 'incorrect';
           return 'disabled';
         }
-        if (selectedAnswer === value) return 'selected';
+        // When not disabled, just check selection (case-insensitive)
+        const normalizedSelected = normalizeAnswer(selectedAnswer);
+        const normalizedValue = normalizeAnswer(value);
+        if (normalizedSelected === normalizedValue) return 'selected';
         return 'default';
       },
-      [selectedAnswer, correctAnswer, disabled]
+      [selectedAnswer, correctAnswer, disabled, normalizeAnswer]
     );
 
     // Handle option click

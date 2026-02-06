@@ -406,9 +406,11 @@ function QuizPageContent() {
           `Item ${i + 1}: ${item}`
         ) || [];
       case 'match':
-        return (question as unknown as { match_pairs?: { left: string; right: string }[] }).match_pairs?.map(pair =>
-          `Match ${pair.left} with ${pair.right}`
-        ) || [];
+        const matchPairs = (question as unknown as { match_pairs?: { left: string; right: string }[] }).match_pairs;
+        if (!matchPairs || matchPairs.length === 0) return [];
+        // Only read the left items (questions) - don't reveal answers!
+        const leftItems = matchPairs.map((pair, i) => `Item ${i + 1}: ${pair.left}`).join(', ');
+        return [`The items to match are: ${leftItems}`];
       default:
         return [];
     }

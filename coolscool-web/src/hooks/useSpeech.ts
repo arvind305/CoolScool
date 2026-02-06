@@ -1,5 +1,47 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 
+/**
+ * Decodes HTML entities in text for proper speech synthesis.
+ * e.g., "&amp;" -> "&", "&lt;" -> "<", etc.
+ */
+function sanitizeForSpeech(text: string): string {
+  if (!text) return '';
+
+  // Decode HTML entities
+  const textarea = typeof document !== 'undefined'
+    ? document.createElement('textarea')
+    : null;
+
+  if (textarea) {
+    textarea.innerHTML = text;
+    text = textarea.value;
+  } else {
+    // Fallback for SSR - decode common entities
+    text = text
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&nbsp;/g, ' ');
+  }
+
+  // Remove any HTML tags
+  text = text.replace(/<[^>]*>/g, '');
+
+  // Normalize whitespace
+  text = text.replace(/\s+/g, ' ').trim();
+
+  return text;
+}
+
+/**
+ * Check if text is valid for speech (non-empty after trimming)
+ */
+function isValidSpeechText(text: string): boolean {
+  return typeof text === 'string' && text.trim().length > 0;
+}
+
 export interface UseSpeechOptions {
   rate?: number;      // Speech rate (0.5-2, default 0.8 for kids)
   pitch?: number;     // Voice pitch (0-2, default 1)
@@ -84,10 +126,14 @@ export function useSpeech(options?: UseSpeechOptions): UseSpeechReturn {
   const speak = useCallback((text: string) => {
     if (!isSupported) return;
 
+    // Sanitize and validate text
+    const sanitizedText = sanitizeForSpeech(text);
+    if (!isValidSpeechText(sanitizedText)) return;
+
     // Cancel any ongoing speech
     window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(text);
+    const utterance = new SpeechSynthesisUtterance(sanitizedText);
     utterance.rate = rate;
     utterance.pitch = pitch;
     utterance.volume = volume;
@@ -103,9 +149,16 @@ export function useSpeech(options?: UseSpeechOptions): UseSpeechReturn {
   const speakSequence = useCallback(async (texts: string[], pauseMs: number = 500): Promise<void> => {
     if (!isSupported || texts.length === 0) return;
 
+    // Filter and sanitize texts before speaking
+    const validTexts = texts
+      .map(t => sanitizeForSpeech(t))
+      .filter(t => isValidSpeechText(t));
+
+    if (validTexts.length === 0) return;
+
     sequenceAbortRef.current = false;
 
-    for (const text of texts) {
+    for (const text of validTexts) {
       if (sequenceAbortRef.current) break;
 
       await new Promise<void>((resolve) => {

@@ -4242,3 +4242,91 @@ h4 { font-size: var(--font-size-lg); }
     padding: var(--spacing-sm) var(--spacing-md);
   }
 }
+
+/* ============================================================
+   Match UI Responsive Styles
+   ============================================================ */
+
+/* Tablet: Reduce gaps */
+@media (max-width: 768px) {
+  .match-columns {
+    gap: var(--spacing-md);
+  }
+
+  .match-question-item,
+  .match-slot-row {
+    min-height: 44px;
+  }
+
+  .match-word-bank {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+/* Mobile: Stack columns vertically */
+@media (max-width: 640px) {
+  .match-columns {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .match-column-questions {
+    order: 1;
+  }
+
+  .match-column-slots {
+    order: 2;
+  }
+
+  .match-column-header {
+    font-size: var(--font-size-xs);
+  }
+
+  .match-question-item {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    min-height: 40px;
+  }
+
+  .match-question-number,
+  .match-slot-number {
+    width: 20px;
+    height: 20px;
+    font-size: var(--font-size-xs);
+  }
+
+  .match-slot {
+    min-height: 40px;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .match-word-bank-chips {
+    gap: var(--spacing-xs);
+  }
+
+  .match-chip {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Small phones: Full-width chips */
+@media (max-width: 400px) {
+  .match-word-bank-chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .match-chip {
+    width: 100%;
+    text-align: center;
+    border-radius: var(--radius-lg);
+  }
+
+  .match-prompt-text {
+    font-size: var(--font-size-sm);
+  }
+
+  .match-slot-chip {
+    font-size: var(--font-size-sm);
+  }
+}

@@ -826,44 +826,61 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
           </div>
         )}
 
-        <div className="match-prompt-list">
-          {pairs.map(pair => {
-            const slotState = getSlotState(pair.left);
-            const filledRight = selectedMatches[pair.left];
-            const chipState = filledRight ? getChipState(filledRight) : '';
-            return (
-              <div key={pair.left} className="match-prompt-row">
+        {/* Two-column layout: Questions on left, Answer slots on right */}
+        <div className="match-columns">
+          {/* Left Column: Questions */}
+          <div className="match-column match-column-questions">
+            <div className="match-column-header">Questions</div>
+            {pairs.map((pair, index) => (
+              <div key={pair.left} className="match-question-item">
+                <span className="match-question-number">{index + 1}</span>
                 <span className="match-prompt-text">{pair.left}</span>
-                <div
-                  className={`match-slot ${slotState} ${chipState}`.trim()}
-                  data-left={pair.left}
-                  onClick={() => handleSlotClick(pair.left)}
-                  onDragOver={(e) => handleDragOver(e, pair.left)}
-                  onDragLeave={handleDragLeave}
-                  onDrop={(e) => handleDrop(e, pair.left)}
-                  role="button"
-                  tabIndex={disabled ? -1 : 0}
-                  aria-label={filledRight ? `${pair.left} matched with ${filledRight}. Tap to remove.` : `Empty slot for ${pair.left}`}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      handleSlotClick(pair.left);
-                    }
-                  }}
-                >
-                  {filledRight ? (
-                    <span className="match-slot-chip">{filledRight}</span>
-                  ) : (
-                    <span className="match-slot-empty">
-                      {activeChip ? 'tap here' : 'drop here'}
-                    </span>
-                  )}
-                </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
+
+          {/* Right Column: Answer Slots */}
+          <div className="match-column match-column-slots">
+            <div className="match-column-header">Answers</div>
+            {pairs.map((pair, index) => {
+              const slotState = getSlotState(pair.left);
+              const filledRight = selectedMatches[pair.left];
+              const chipState = filledRight ? getChipState(filledRight) : '';
+              return (
+                <div key={pair.left} className="match-slot-row">
+                  <span className="match-slot-number">{index + 1}</span>
+                  <div
+                    className={`match-slot ${slotState} ${chipState}`.trim()}
+                    data-left={pair.left}
+                    onClick={() => handleSlotClick(pair.left)}
+                    onDragOver={(e) => handleDragOver(e, pair.left)}
+                    onDragLeave={handleDragLeave}
+                    onDrop={(e) => handleDrop(e, pair.left)}
+                    role="button"
+                    tabIndex={disabled ? -1 : 0}
+                    aria-label={filledRight ? `${pair.left} matched with ${filledRight}. Tap to remove.` : `Empty slot for ${pair.left}`}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleSlotClick(pair.left);
+                      }
+                    }}
+                  >
+                    {filledRight ? (
+                      <span className="match-slot-chip">{filledRight}</span>
+                    ) : (
+                      <span className="match-slot-empty">
+                        {activeChip ? 'tap here' : 'drop here'}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
+        {/* Word Bank below the columns */}
         {(!disabled || availableChips.length > 0) && (
           <div className="match-word-bank">
             <span className="match-word-bank-label">Word Bank</span>
@@ -1159,7 +1176,7 @@ const styles = `
   background: var(--color-bg-card);
 }
 
-/* Match interface — drag-to-slot */
+/* Match interface — two-column layout */
 .match-container {
   margin-bottom: var(--spacing-xl);
 }
@@ -1192,16 +1209,75 @@ const styles = `
   transition: width var(--transition-fast);
 }
 
-.match-prompt-list {
+/* Two-column grid layout */
+.match-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.match-column {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
 }
 
-.match-prompt-row {
+.match-column-header {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--spacing-xs);
+}
+
+.match-question-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  min-height: 48px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.match-question-number {
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.match-slot-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-height: 48px;
+}
+
+.match-slot-number {
+  width: 24px;
+  height: 24px;
+  background: var(--color-bg-hover);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
 }
 
 .match-prompt-text {
@@ -1277,19 +1353,20 @@ const styles = `
   font-style: italic;
 }
 
+/* Word bank with prominent styling */
 .match-word-bank {
   margin-top: var(--spacing-lg);
-  padding: var(--spacing-md);
-  border: 1px solid var(--color-border);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--color-primary-light);
   border-radius: var(--radius-lg);
-  background: var(--color-bg-card);
+  background: linear-gradient(to bottom, var(--color-primary-subtle), var(--color-bg-card));
 }
 
 .match-word-bank-label {
   display: block;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-text-muted);
+  color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1299,6 +1376,7 @@ const styles = `
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
+  justify-content: center;
 }
 
 .match-chip {
@@ -1311,17 +1389,20 @@ const styles = `
   font-weight: var(--font-weight-medium);
   user-select: none;
   touch-action: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .match-chip:hover {
   border-color: var(--color-primary-light);
   background: var(--color-primary-subtle);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .match-chip.active {
   border-color: var(--color-primary);
   background: var(--color-primary-subtle);
-  box-shadow: 0 0 0 2px var(--color-primary-subtle);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
 }
 
 .match-chip:active {

@@ -44,8 +44,12 @@ export function SpeakerButton({
     if (isSpeaking) {
       stop();
     } else {
-      // Build the sequence: question, "The options are:", then each answer
-      const sequence = [questionText, 'The options are:', ...answerTexts];
+      // Filter out empty or whitespace-only texts
+      const validAnswerTexts = answerTexts.filter(t => t && t.trim().length > 0);
+      // Build the sequence: question, then optionally "The options are:" with answers
+      const sequence = validAnswerTexts.length > 0
+        ? [questionText, 'The options are:', ...validAnswerTexts]
+        : [questionText];
       speakSequence(sequence);
     }
   };

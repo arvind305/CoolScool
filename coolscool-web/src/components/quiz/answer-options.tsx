@@ -331,34 +331,72 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
     { items, currentOrder, onReorder, disabled, correctOrder, className = '' },
     ref
   ) {
-    const [orderedItems, setOrderedItems] = useState<string[]>(() => {
-      // Initialize with shuffled items if no current order
-      if (currentOrder.length > 0) return currentOrder;
+    const hasInitialized = useRef(false);
+    const [orderedItems, setOrderedItems] = useState<string[]>([]);
+    const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
+    const [dropTargetIndex, setDropTargetIndex] = useState<number | null>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    // Touch drag state
+    const touchState = useRef<{
+      startY: number;
+      currentIndex: number;
+      itemHeight: number;
+      clone: HTMLElement | null;
+    } | null>(null);
+
+    // Always shuffle on first mount, regardless of currentOrder
+    useEffect(() => {
+      if (hasInitialized.current) return;
+      hasInitialized.current = true;
+
       const shuffled = [...items];
+      // Fisher-Yates shuffle - ensure items are randomized
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      return shuffled;
-    });
-    const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
-    const containerRef = useRef<HTMLDivElement>(null);
+      // If shuffle resulted in correct order, swap first two items
+      if (shuffled.length >= 2 && JSON.stringify(shuffled) === JSON.stringify(items)) {
+        [shuffled[0], shuffled[1]] = [shuffled[1], shuffled[0]];
+      }
+      setOrderedItems(shuffled);
+      onReorder(shuffled);
+    }, [items, onReorder]);
 
-    // Sync with external state
+    // Sync with external state changes (but not on initial mount)
     useEffect(() => {
+      if (!hasInitialized.current) return;
       if (currentOrder.length > 0 && JSON.stringify(currentOrder) !== JSON.stringify(orderedItems)) {
         setOrderedItems(currentOrder);
       }
-    }, [currentOrder]);
+    }, [currentOrder, orderedItems]);
 
-    const handleDragStart = (index: number) => {
+    const handleDragStart = (e: React.DragEvent, index: number) => {
       if (disabled) return;
       setDraggedIndex(index);
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', String(index));
     };
 
     const handleDragOver = (e: React.DragEvent, index: number) => {
       e.preventDefault();
-      if (disabled || draggedIndex === null || draggedIndex === index) return;
+      if (disabled || draggedIndex === null) return;
+      e.dataTransfer.dropEffect = 'move';
+      // Only update drop target indicator, don't reorder yet
+      setDropTargetIndex(index);
+    };
+
+    const handleDragLeave = () => {
+      setDropTargetIndex(null);
+    };
+
+    const handleDrop = (e: React.DragEvent, index: number) => {
+      e.preventDefault();
+      if (disabled || draggedIndex === null || draggedIndex === index) {
+        setDropTargetIndex(null);
+        return;
+      }
 
       const newOrder = [...orderedItems];
       const draggedItem = newOrder[draggedIndex];
@@ -366,14 +404,103 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
       newOrder.splice(index, 0, draggedItem);
 
       setOrderedItems(newOrder);
-      setDraggedIndex(index);
+      onReorder(newOrder);
+      setDropTargetIndex(null);
     };
 
     const handleDragEnd = () => {
-      if (draggedIndex !== null) {
-        onReorder(orderedItems);
-      }
       setDraggedIndex(null);
+      setDropTargetIndex(null);
+    };
+
+    // Touch event handlers for mobile
+    const handleTouchStart = (e: React.TouchEvent, index: number) => {
+      if (disabled) return;
+      const touch = e.touches[0];
+      const target = e.currentTarget as HTMLElement;
+      const rect = target.getBoundingClientRect();
+
+      // Create visual clone for drag preview
+      const clone = target.cloneNode(true) as HTMLElement;
+      clone.style.position = 'fixed';
+      clone.style.left = `${rect.left}px`;
+      clone.style.top = `${rect.top}px`;
+      clone.style.width = `${rect.width}px`;
+      clone.style.zIndex = '1000';
+      clone.style.opacity = '0.9';
+      clone.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+      clone.style.pointerEvents = 'none';
+      clone.classList.add('touch-dragging');
+      document.body.appendChild(clone);
+
+      touchState.current = {
+        startY: touch.clientY,
+        currentIndex: index,
+        itemHeight: rect.height + 8, // Include gap
+        clone
+      };
+
+      setDraggedIndex(index);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+      if (!touchState.current || disabled) return;
+      e.preventDefault();
+
+      const touch = e.touches[0];
+      const { startY, currentIndex, itemHeight, clone } = touchState.current;
+
+      // Move the clone
+      if (clone) {
+        const deltaY = touch.clientY - startY;
+        clone.style.transform = `translateY(${deltaY}px)`;
+      }
+
+      // Calculate new target index based on movement
+      const deltaY = touch.clientY - startY;
+      const indexDelta = Math.round(deltaY / itemHeight);
+      const newTargetIndex = Math.max(0, Math.min(orderedItems.length - 1, currentIndex + indexDelta));
+
+      if (newTargetIndex !== dropTargetIndex) {
+        setDropTargetIndex(newTargetIndex);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      if (!touchState.current) return;
+
+      const { clone, currentIndex } = touchState.current;
+
+      // Remove clone
+      if (clone && clone.parentNode) {
+        clone.parentNode.removeChild(clone);
+      }
+
+      // Perform the reorder if target is different
+      if (dropTargetIndex !== null && dropTargetIndex !== currentIndex) {
+        const newOrder = [...orderedItems];
+        const draggedItem = newOrder[currentIndex];
+        newOrder.splice(currentIndex, 1);
+        newOrder.splice(dropTargetIndex, 0, draggedItem);
+        setOrderedItems(newOrder);
+        onReorder(newOrder);
+      }
+
+      touchState.current = null;
+      setDraggedIndex(null);
+      setDropTargetIndex(null);
+    };
+
+    // Move item up/down with buttons
+    const moveItem = (index: number, direction: 'up' | 'down') => {
+      if (disabled) return;
+      const targetIndex = direction === 'up' ? index - 1 : index + 1;
+      if (targetIndex < 0 || targetIndex >= orderedItems.length) return;
+
+      const newOrder = [...orderedItems];
+      [newOrder[index], newOrder[targetIndex]] = [newOrder[targetIndex], newOrder[index]];
+      setOrderedItems(newOrder);
+      onReorder(newOrder);
     };
 
     // Keyboard navigation for reordering
@@ -382,16 +509,10 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
 
       if (e.key === 'ArrowUp' && index > 0) {
         e.preventDefault();
-        const newOrder = [...orderedItems];
-        [newOrder[index], newOrder[index - 1]] = [newOrder[index - 1], newOrder[index]];
-        setOrderedItems(newOrder);
-        onReorder(newOrder);
+        moveItem(index, 'up');
       } else if (e.key === 'ArrowDown' && index < orderedItems.length - 1) {
         e.preventDefault();
-        const newOrder = [...orderedItems];
-        [newOrder[index], newOrder[index + 1]] = [newOrder[index + 1], newOrder[index]];
-        setOrderedItems(newOrder);
-        onReorder(newOrder);
+        moveItem(index, 'down');
       }
     };
 
@@ -405,21 +526,55 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
         >
           {orderedItems.map((item, index) => {
             const isDragging = draggedIndex === index;
+            const isDropTarget = dropTargetIndex === index && draggedIndex !== null && draggedIndex !== index;
 
             return (
               <div
                 key={`${item}-${index}`}
-                className={`ordering-item ${isDragging ? 'dragging' : ''} ${disabled ? 'disabled' : ''}`.trim()}
+                className={`ordering-item ${isDragging ? 'dragging' : ''} ${isDropTarget ? 'drop-target' : ''} ${disabled ? 'disabled' : ''}`.trim()}
                 draggable={!disabled}
-                onDragStart={() => handleDragStart(index)}
+                onDragStart={(e) => handleDragStart(e, index)}
                 onDragOver={(e) => handleDragOver(e, index)}
+                onDragLeave={handleDragLeave}
+                onDrop={(e) => handleDrop(e, index)}
                 onDragEnd={handleDragEnd}
+                onTouchStart={(e) => handleTouchStart(e, index)}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
                 onKeyDown={(e) => handleKeyDown(e, index)}
                 role="option"
                 tabIndex={disabled ? -1 : 0}
                 aria-selected={false}
                 data-value={item}
               >
+                {!disabled && (
+                  <div className="ordering-item-buttons">
+                    <button
+                      type="button"
+                      className="ordering-btn"
+                      onClick={() => moveItem(index, 'up')}
+                      disabled={index === 0}
+                      aria-label="Move up"
+                      tabIndex={-1}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M18 15l-6-6-6 6"/>
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      className="ordering-btn"
+                      onClick={() => moveItem(index, 'down')}
+                      disabled={index === orderedItems.length - 1}
+                      aria-label="Move down"
+                      tabIndex={-1}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M6 9l6 6 6-6"/>
+                      </svg>
+                    </button>
+                  </div>
+                )}
                 <span className="ordering-item-handle" aria-hidden="true">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <circle cx="9" cy="6" r="1.5"></circle>
@@ -436,8 +591,8 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
             );
           })}
         </div>
-        <p className="sr-only">
-          Use arrow keys to reorder items, or drag and drop with mouse
+        <p className="ordering-hint">
+          {disabled ? '' : 'Drag items or use arrows to reorder'}
         </p>
       </div>
     );
@@ -463,6 +618,9 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
     ref
   ) {
     const [activeChip, setActiveChip] = useState<string | null>(null);
+    const [dragOverSlot, setDragOverSlot] = useState<string | null>(null);
+    const touchDragChip = useRef<string | null>(null);
+    const touchClone = useRef<HTMLElement | null>(null);
 
     // Get shuffled right items (stable across renders)
     const [shuffledRight] = useState<string[]>(() => {
@@ -476,6 +634,8 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
 
     const assignedValues = new Set(Object.values(selectedMatches).filter(Boolean));
     const availableChips = shuffledRight.filter(r => !assignedValues.has(r));
+    const matchedCount = Object.keys(selectedMatches).length;
+    const totalCount = pairs.length;
 
     const handleChipClick = (right: string) => {
       if (disabled) return;
@@ -503,11 +663,17 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
       if (disabled) return;
       e.dataTransfer.setData('text/plain', right);
       e.dataTransfer.effectAllowed = 'move';
+      setActiveChip(right);
     };
 
-    const handleDragOver = (e: React.DragEvent) => {
+    const handleDragOver = (e: React.DragEvent, left: string) => {
       e.preventDefault();
       e.dataTransfer.dropEffect = 'move';
+      setDragOverSlot(left);
+    };
+
+    const handleDragLeave = () => {
+      setDragOverSlot(null);
     };
 
     const handleDrop = (e: React.DragEvent, left: string) => {
@@ -518,17 +684,94 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
       // If slot already filled, return old chip first
       const newMatches = { ...selectedMatches, [left]: right };
       setActiveChip(null);
+      setDragOverSlot(null);
       onMatch(newMatches);
     };
 
+    const handleDragEnd = () => {
+      setActiveChip(null);
+      setDragOverSlot(null);
+    };
+
+    // Touch drag handlers for mobile
+    const handleTouchStart = (e: React.TouchEvent, right: string) => {
+      if (disabled) return;
+      const touch = e.touches[0];
+      const target = e.currentTarget as HTMLElement;
+      const rect = target.getBoundingClientRect();
+
+      // Create visual clone for drag preview
+      const clone = target.cloneNode(true) as HTMLElement;
+      clone.style.position = 'fixed';
+      clone.style.left = `${touch.clientX - rect.width / 2}px`;
+      clone.style.top = `${touch.clientY - rect.height / 2}px`;
+      clone.style.zIndex = '1000';
+      clone.style.opacity = '0.9';
+      clone.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+      clone.style.pointerEvents = 'none';
+      clone.style.transform = 'scale(1.05)';
+      document.body.appendChild(clone);
+
+      touchClone.current = clone;
+      touchDragChip.current = right;
+      setActiveChip(right);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+      if (!touchDragChip.current || !touchClone.current) return;
+      e.preventDefault();
+
+      const touch = e.touches[0];
+      const clone = touchClone.current;
+      const rect = clone.getBoundingClientRect();
+
+      // Move the clone
+      clone.style.left = `${touch.clientX - rect.width / 2}px`;
+      clone.style.top = `${touch.clientY - rect.height / 2}px`;
+
+      // Find slot under touch point
+      const elementsUnder = document.elementsFromPoint(touch.clientX, touch.clientY);
+      const slotElement = elementsUnder.find(el => el.classList.contains('match-slot'));
+      if (slotElement) {
+        const left = slotElement.getAttribute('data-left');
+        if (left && !selectedMatches[left]) {
+          setDragOverSlot(left);
+        } else {
+          setDragOverSlot(null);
+        }
+      } else {
+        setDragOverSlot(null);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      if (touchClone.current && touchClone.current.parentNode) {
+        touchClone.current.parentNode.removeChild(touchClone.current);
+      }
+
+      // If over a valid slot, complete the match
+      if (touchDragChip.current && dragOverSlot && !selectedMatches[dragOverSlot]) {
+        const newMatches = { ...selectedMatches, [dragOverSlot]: touchDragChip.current };
+        onMatch(newMatches);
+      }
+
+      touchClone.current = null;
+      touchDragChip.current = null;
+      setActiveChip(null);
+      setDragOverSlot(null);
+    };
+
     const getSlotState = (left: string): string => {
+      const states: string[] = [];
       if (disabled && correctMatches) {
         const correctRight = pairs.find(p => p.left === left)?.right;
-        if (selectedMatches[left] === correctRight) return 'correct';
-        if (selectedMatches[left] && selectedMatches[left] !== correctRight) return 'incorrect';
+        if (selectedMatches[left] === correctRight) states.push('correct');
+        else if (selectedMatches[left] && selectedMatches[left] !== correctRight) states.push('incorrect');
       }
-      if (selectedMatches[left]) return 'filled';
-      return '';
+      if (selectedMatches[left]) states.push('filled');
+      if (dragOverSlot === left) states.push('drag-over');
+      if (activeChip && !selectedMatches[left]) states.push('valid-target');
+      return states.join(' ');
     };
 
     const getChipState = (right: string): string => {
@@ -545,8 +788,24 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
       return '';
     };
 
+    const hasFilledSlots = matchedCount > 0;
+
     return (
       <div ref={ref} className={`match-container ${className}`.trim()}>
+        {!disabled && (
+          <div className="match-progress">
+            <span className="match-progress-text">
+              {matchedCount} of {totalCount} matched
+            </span>
+            <div className="match-progress-bar">
+              <div
+                className="match-progress-fill"
+                style={{ width: `${(matchedCount / totalCount) * 100}%` }}
+              />
+            </div>
+          </div>
+        )}
+
         <div className="match-prompt-list">
           {pairs.map(pair => {
             const slotState = getSlotState(pair.left);
@@ -557,8 +816,10 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
                 <span className="match-prompt-text">{pair.left}</span>
                 <div
                   className={`match-slot ${slotState} ${chipState}`.trim()}
+                  data-left={pair.left}
                   onClick={() => handleSlotClick(pair.left)}
-                  onDragOver={handleDragOver}
+                  onDragOver={(e) => handleDragOver(e, pair.left)}
+                  onDragLeave={handleDragLeave}
                   onDrop={(e) => handleDrop(e, pair.left)}
                   role="button"
                   tabIndex={disabled ? -1 : 0}
@@ -573,7 +834,9 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
                   {filledRight ? (
                     <span className="match-slot-chip">{filledRight}</span>
                   ) : (
-                    <span className="match-slot-empty">drop here</span>
+                    <span className="match-slot-empty">
+                      {activeChip ? 'tap here' : 'drop here'}
+                    </span>
                   )}
                 </div>
               </div>
@@ -594,6 +857,10 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
                     onClick={() => handleChipClick(right)}
                     draggable={!disabled}
                     onDragStart={(e) => handleDragStart(e, right)}
+                    onDragEnd={handleDragEnd}
+                    onTouchStart={(e) => handleTouchStart(e, right)}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                     role="button"
                     tabIndex={disabled ? -1 : 0}
                     aria-label={right}
@@ -614,7 +881,11 @@ const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
 
         {!disabled && (
           <p className="match-hint">
-            {activeChip ? `Tap a slot to place "${activeChip}"` : 'Tap a chip, then tap a slot. Or drag and drop.'}
+            {activeChip
+              ? `Tap a slot to place "${activeChip}"`
+              : hasFilledSlots
+                ? 'Tap a filled slot to remove. Tap a chip to select.'
+                : 'Tap a chip, then tap a slot to match.'}
           </p>
         )}
       </div>
@@ -769,6 +1040,7 @@ const styles = `
   border-radius: var(--radius-lg);
   cursor: grab;
   transition: all var(--transition-fast);
+  touch-action: none;
 }
 
 .ordering-item:active {
@@ -776,12 +1048,63 @@ const styles = `
 }
 
 .ordering-item.dragging {
-  opacity: 0.5;
+  opacity: 0.4;
   border-style: dashed;
+  border-color: var(--color-primary);
+}
+
+.ordering-item.drop-target {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  box-shadow: inset 0 0 0 2px var(--color-primary-light);
+}
+
+.ordering-item.drop-target::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -6px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
 }
 
 .ordering-item.disabled {
   cursor: default;
+}
+
+.ordering-item-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: var(--spacing-sm);
+}
+
+.ordering-btn {
+  width: 24px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.ordering-btn:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.ordering-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .ordering-item-handle {
@@ -804,9 +1127,49 @@ const styles = `
   flex-shrink: 0;
 }
 
+.ordering-hint {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-md);
+}
+
+.touch-dragging {
+  border-color: var(--color-primary);
+  background: var(--color-bg-card);
+}
+
 /* Match interface — drag-to-slot */
 .match-container {
   margin-bottom: var(--spacing-xl);
+}
+
+.match-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.match-progress-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.match-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-bg-hover);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.match-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transition: width var(--transition-fast);
 }
 
 .match-prompt-list {
@@ -846,6 +1209,24 @@ const styles = `
 .match-slot:hover:not([aria-disabled="true"]) {
   border-color: var(--color-primary-light);
   background: var(--color-primary-subtle);
+}
+
+.match-slot.valid-target {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  animation: pulse-border 1s ease-in-out infinite;
+}
+
+.match-slot.drag-over {
+  border-color: var(--color-primary);
+  border-style: solid;
+  background: var(--color-primary-subtle);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: var(--color-primary-light); }
+  50% { border-color: var(--color-primary); }
 }
 
 .match-slot.filled {
@@ -909,6 +1290,7 @@ const styles = `
   background: var(--color-bg-card);
   font-weight: var(--font-weight-medium);
   user-select: none;
+  touch-action: none;
 }
 
 .match-chip:hover {

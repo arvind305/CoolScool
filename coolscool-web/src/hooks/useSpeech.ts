@@ -15,6 +15,12 @@ export interface UseSpeechReturn {
   isSupported: boolean;
 }
 
+// Check if we're on iOS
+const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+// Check if we're on Android
+const isAndroid = typeof navigator !== 'undefined' && /Android/.test(navigator.userAgent);
+
 export function useSpeech(options?: UseSpeechOptions): UseSpeechReturn {
   const {
     rate = 0.8,
@@ -24,8 +30,49 @@ export function useSpeech(options?: UseSpeechOptions): UseSpeechReturn {
   } = options || {};
 
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [voicesLoaded, setVoicesLoaded] = useState(false);
   const isSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
   const sequenceAbortRef = useRef(false);
+  const resumeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Load voices (needed for some mobile browsers)
+  useEffect(() => {
+    if (!isSupported) return;
+
+    const loadVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      if (voices.length > 0) {
+        setVoicesLoaded(true);
+      }
+    };
+
+    // Try to load voices immediately
+    loadVoices();
+
+    // Also listen for voiceschanged event (needed for Chrome/Android)
+    window.speechSynthesis.addEventListener('voiceschanged', loadVoices);
+
+    return () => {
+      window.speechSynthesis.removeEventListener('voiceschanged', loadVoices);
+    };
+  }, [isSupported]);
+
+  // Chrome mobile bug: speech synthesis can pause indefinitely
+  // This workaround resumes it periodically while speaking
+  useEffect(() => {
+    if (!isSupported || !isSpeaking) return;
+
+    // Only apply workaround on mobile Chrome/Android
+    if (!isAndroid) return;
+
+    const resumeInterval = setInterval(() => {
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+    }, 3000);
+
+    return () => clearInterval(resumeInterval);
+  }, [isSupported, isSpeaking]);
 
   const stop = useCallback(() => {
     if (!isSupported) return;

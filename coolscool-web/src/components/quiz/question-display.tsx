@@ -1,6 +1,7 @@
 'use client';
 
 import { forwardRef } from 'react';
+import { SpeakerButton } from './speaker-button';
 
 // ============================================================
 // QuestionDisplay Component
@@ -13,6 +14,8 @@ export interface QuestionDisplayProps {
   totalQuestions: number;
   /** The question text to display */
   questionText: string;
+  /** Pass answer options for reading */
+  answerTexts?: string[];
   /** Optional className for the container */
   className?: string;
 }
@@ -23,7 +26,7 @@ export interface QuestionDisplayProps {
  */
 export const QuestionDisplay = forwardRef<HTMLDivElement, QuestionDisplayProps>(
   function QuestionDisplay(
-    { questionNumber, totalQuestions, questionText, className = '' },
+    { questionNumber, totalQuestions, questionText, answerTexts, className = '' },
     ref
   ) {
     return (
@@ -33,9 +36,15 @@ export const QuestionDisplay = forwardRef<HTMLDivElement, QuestionDisplayProps>(
         role="region"
         aria-label={`Question ${questionNumber} of ${totalQuestions}`}
       >
-        <span className="question-number" aria-hidden="true">
-          Question {questionNumber}
-        </span>
+        <div className="question-header" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: 'var(--spacing-md)' }}>
+          <span className="question-number" aria-hidden="true" style={{ marginBottom: 0 }}>
+            Question {questionNumber}
+          </span>
+          <SpeakerButton
+            questionText={questionText}
+            answerTexts={answerTexts}
+          />
+        </div>
         <p className="question-text" id="question-text">
           {questionText}
         </p>

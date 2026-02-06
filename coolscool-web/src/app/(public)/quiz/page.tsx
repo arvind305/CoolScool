@@ -155,6 +155,9 @@ function QuizPageContent() {
   const handleSubmit = useCallback(async () => {
     if (selectedAnswer === null) return;
 
+    // Stop any ongoing speech
+    window.dispatchEvent(new Event('quiz:stop-speech'));
+
     const timeTaken = Date.now() - questionStartTimeRef.current;
     const result = await engine.submitAnswer(selectedAnswer, timeTaken);
 
@@ -199,6 +202,9 @@ function QuizPageContent() {
 
   // Handle skip question
   const handleSkip = useCallback(() => {
+    // Stop any ongoing speech
+    window.dispatchEvent(new Event('quiz:stop-speech'));
+
     engine.skipQuestion();
     setSelectedAnswer(null);
     questionStartTimeRef.current = Date.now();
@@ -211,6 +217,9 @@ function QuizPageContent() {
 
   // Handle next question
   const handleNext = useCallback(() => {
+    // Stop any ongoing speech
+    window.dispatchEvent(new Event('quiz:stop-speech'));
+
     // For anonymous users, check if samples are exhausted before moving to next
     if (!access.isAuthenticated && !access.hasFreeSamples(topicId)) {
       stopTimer();
@@ -282,6 +291,13 @@ function QuizPageContent() {
   const handleContinueBrowsing = useCallback(() => {
     router.push(`/browse/${board}/class-${classLevel}/${subject}`);
   }, [router, board, classLevel, subject]);
+
+  // Cleanup speech on unmount
+  useEffect(() => {
+    return () => {
+      window.dispatchEvent(new Event('quiz:stop-speech'));
+    };
+  }, []);
 
   // Get session info
   const session = engine.session;
@@ -372,6 +388,32 @@ function QuizPageContent() {
     );
   }
 
+  // Helper to extract answer texts for speech
+  function getAnswerTextsForSpeech(question: typeof currentQuestion): string[] {
+    if (!question) return [];
+
+    switch (question.type) {
+      case 'mcq':
+        return question.options?.map((opt, i) =>
+          `Option ${String.fromCharCode(65 + i)}: ${opt}`
+        ) || [];
+      case 'true_false':
+        return ['Option A: True', 'Option B: False'];
+      case 'fill_blank':
+        return ['Fill in the blank with your answer'];
+      case 'ordering':
+        return (question as unknown as { ordering_items?: string[] }).ordering_items?.map((item, i) =>
+          `Item ${i + 1}: ${item}`
+        ) || [];
+      case 'match':
+        return (question as unknown as { match_pairs?: { left: string; right: string }[] }).match_pairs?.map(pair =>
+          `Match ${pair.left} with ${pair.right}`
+        ) || [];
+      default:
+        return [];
+    }
+  }
+
   // Quiz session active
   const questionNum = session.progress.current_question_index + 1;
   const totalQuestions = session.questions.length;
@@ -397,6 +439,7 @@ function QuizPageContent() {
               questionNumber={questionNum}
               totalQuestions={totalQuestions}
               questionText={currentQuestion.question_text}
+              answerTexts={getAnswerTextsForSpeech(currentQuestion)}
             />
 
             {/* Answer Options */}

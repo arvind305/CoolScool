@@ -350,8 +350,11 @@ export class QuizEngine {
       camTopic
     );
 
-    // Persist progress
-    await this.storageAdapter.saveProgress(this.progress!);
+    // Persist progress in background (non-blocking)
+    // Progress is kept in memory and will be saved; this prevents slow API from blocking UI
+    this.storageAdapter.saveProgress(this.progress!).catch((error) => {
+      console.error('Failed to save progress:', error);
+    });
 
     return {
       isCorrect: result.answer.is_correct,
@@ -390,6 +393,8 @@ export class QuizEngine {
 
   /**
    * Ends the current session
+   * Note: Session history is saved in the background (non-blocking) to ensure
+   * fast result display even with slow network/cold server starts.
    */
   async endSession(completed: boolean = false): Promise<SessionSummary> {
     if (!this.currentSession) {
@@ -399,8 +404,11 @@ export class QuizEngine {
     this.currentSession = endSession(this.currentSession, completed);
     const summary = getSessionSummary(this.currentSession);
 
-    // Save to session history
-    await this.storageAdapter.saveSessionToHistory(summary);
+    // Save to session history in background (non-blocking)
+    // This prevents slow API responses from blocking the results display
+    this.storageAdapter.saveSessionToHistory(summary).catch((error) => {
+      console.error('Failed to save session to history:', error);
+    });
 
     return summary;
   }

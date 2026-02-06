@@ -331,6 +331,22 @@ function QuizPageContent() {
     );
   }
 
+  // Summary state - check BEFORE loading state since session is null after ending
+  if (quizState === 'summary' && summary) {
+    return (
+      <div className="px-4 py-8">
+        <QuizSummary
+          summary={summary}
+          proficiency={proficiency}
+          canonicalExplanation={engine.canonicalExplanation}
+          onPracticeAgain={handlePracticeAgain}
+          onChooseTopic={handleChooseTopic}
+          isAuthenticated={access.isAuthenticated}
+        />
+      </div>
+    );
+  }
+
   // Loading state (including waiting for access control)
   if (quizState === 'loading' || engine.isLoading || access.isLoading || !session) {
     return (
@@ -368,22 +384,6 @@ function QuizPageContent() {
         <Link href={`/browse/${board}/class-${classLevel}/${subject}`} className="btn btn-primary">
           Back to Topics
         </Link>
-      </div>
-    );
-  }
-
-  // Summary state
-  if (quizState === 'summary' && summary) {
-    return (
-      <div className="px-4 py-8">
-        <QuizSummary
-          summary={summary}
-          proficiency={proficiency}
-          canonicalExplanation={engine.canonicalExplanation}
-          onPracticeAgain={handlePracticeAgain}
-          onChooseTopic={handleChooseTopic}
-          isAuthenticated={access.isAuthenticated}
-        />
       </div>
     );
   }

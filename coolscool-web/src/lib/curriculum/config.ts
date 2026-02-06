@@ -22,7 +22,7 @@ export const BOARDS = {
 
 export type BoardId = keyof typeof BOARDS;
 
-export const CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
+export const CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
 export type ClassLevel = (typeof CLASSES)[number];
 
 export const SUBJECTS = {

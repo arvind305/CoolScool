@@ -69,14 +69,14 @@ export default async function BoardPage({ params }: Props) {
         </p>
       </header>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4">
         {CLASSES.map((classLevel) => (
           <Link
             key={classLevel}
             href={`/browse/${boardId}/${classLevelToSlug(classLevel)}`}
-            className="card card-interactive text-center py-6"
+            className="card card-interactive text-center py-5 sm:py-6"
           >
-            <span className="text-lg font-bold text-[var(--color-primary)]">
+            <span className="text-base sm:text-lg font-bold text-[var(--color-primary)]">
               Grade {classLevel}
             </span>
           </Link>

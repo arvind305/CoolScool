@@ -405,12 +405,6 @@ function QuizPageContent() {
         return (question as unknown as { ordering_items?: string[] }).ordering_items?.map((item, i) =>
           `Item ${i + 1}: ${item}`
         ) || [];
-      case 'match':
-        const matchPairs = (question as unknown as { match_pairs?: { left: string; right: string }[] }).match_pairs;
-        if (!matchPairs || matchPairs.length === 0) return [];
-        // Only read the left items (questions) - don't reveal answers!
-        const leftItems = matchPairs.map((pair, i) => `Item ${i + 1}: ${pair.left}`).join(', ');
-        return [`The items to match are: ${leftItems}`];
       default:
         return [];
     }
@@ -456,9 +450,6 @@ function QuizPageContent() {
               orderingItems={
                 (currentQuestion as unknown as { ordering_items?: string[] }).ordering_items || []
               }
-              matchPairs={
-                (currentQuestion as unknown as { match_pairs?: { left: string; right: string }[] }).match_pairs || []
-              }
               selectedAnswer={selectedAnswer}
               correctAnswer={showingFeedback ? lastResult.correctAnswer : undefined}
               disabled={showingFeedback}
@@ -472,8 +463,6 @@ function QuizPageContent() {
                 correctAnswer={
                   Array.isArray(lastResult.correctAnswer)
                     ? lastResult.correctAnswer.join(' -> ')
-                    : typeof lastResult.correctAnswer === 'object' && lastResult.correctAnswer !== null
-                    ? Object.entries(lastResult.correctAnswer).map(([k, v]) => `${k} → ${v}`).join(', ')
                     : lastResult.correctAnswer
                 }
                 explanation={lastResult.explanation}

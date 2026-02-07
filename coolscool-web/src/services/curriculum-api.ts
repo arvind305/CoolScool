@@ -227,7 +227,6 @@ export async function fetchQuestionBankByCurriculumId(
         question_text: q.question_text,
         options: q.options,
         correct_answer: q.correct_answer,
-        match_pairs: q.match_pairs,
         ordering_items: q.ordering_items,
         explanation_correct: q.explanation_correct,
         explanation_incorrect: q.explanation_incorrect,

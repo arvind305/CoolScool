@@ -68,7 +68,7 @@ function generateSessionId(): string {
  * Checks if a user's answer is correct
  */
 export function checkAnswer(
-  userAnswer: string | string[] | Record<string, string>,
+  userAnswer: string | string[],
   question: EnrichedQuestion
 ): boolean {
   const correctAnswer = question.correct_answer;
@@ -92,16 +92,6 @@ export function checkAnswer(
       }
       if (userAnswer.length !== correctAnswer.length) return false;
       return userAnswer.every((item, i) => item === correctAnswer[i]);
-
-    case 'match': {
-      if (!question.match_pairs || typeof userAnswer !== 'object' || Array.isArray(userAnswer)) {
-        return false;
-      }
-      const answer = userAnswer as Record<string, string>;
-      const pairs = question.match_pairs;
-      if (Object.keys(answer).length !== pairs.length) return false;
-      return pairs.every(pair => answer[pair.left] === pair.right);
-    }
 
     default:
       return userAnswer === correctAnswer;

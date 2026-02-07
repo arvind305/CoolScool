@@ -14,11 +14,6 @@ export interface MCQOption {
   text: string;
 }
 
-export interface MatchPair {
-  left: string;
-  right: string;
-}
-
 export interface AnswerOptionsProps {
   /** Question type determines the UI layout */
   type: QuestionType;
@@ -26,16 +21,14 @@ export interface AnswerOptionsProps {
   options?: MCQOption[];
   /** Items for ordering questions */
   orderingItems?: string[];
-  /** Match pairs for match questions */
-  matchPairs?: MatchPair[];
   /** Currently selected answer */
-  selectedAnswer?: string | string[] | Record<string, string> | null;
+  selectedAnswer?: string | string[] | null;
   /** The correct answer (shown after submission) */
-  correctAnswer?: string | string[] | Record<string, string> | null;
+  correctAnswer?: string | string[] | null;
   /** Whether the options are disabled (after submission) */
   disabled?: boolean;
   /** Callback when an option is selected */
-  onSelect?: (answer: string | string[] | Record<string, string>) => void;
+  onSelect?: (answer: string | string[]) => void;
   /** Optional className for the container */
   className?: string;
 }
@@ -46,6 +39,8 @@ export interface AnswerOptionsProps {
  * - True/False: Grid layout with T/F buttons
  * - Fill-in-the-blank: Text input field
  * - Ordering: Drag-and-drop sortable list
+ *
+ * Note: Match type was removed - all match questions have been converted to MCQs.
  */
 export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
   function AnswerOptions(
@@ -53,7 +48,6 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
       type,
       options = [],
       orderingItems = [],
-      matchPairs = [],
       selectedAnswer,
       correctAnswer,
       disabled = false,
@@ -64,7 +58,7 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
   ) {
     // Normalize answer for comparison (handles case differences in true_false, etc.)
     const normalizeAnswer = useCallback(
-      (answer: string | string[] | Record<string, string> | null | undefined): string => {
+      (answer: string | string[] | null | undefined): string => {
         if (answer === null || answer === undefined) return '';
         if (typeof answer === 'string') return answer.toLowerCase().trim();
         return JSON.stringify(answer).toLowerCase();
@@ -149,18 +143,6 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
             onReorder={(newOrder) => onSelect?.(newOrder)}
             disabled={disabled}
             correctOrder={correctAnswer as string[] | undefined}
-            className={className}
-          />
-        );
-      case 'match':
-        return (
-          <MatchOptions
-            ref={ref}
-            pairs={matchPairs}
-            selectedMatches={(selectedAnswer as Record<string, string>) || {}}
-            onMatch={(matches) => onSelect?.(matches)}
-            disabled={disabled}
-            correctMatches={correctAnswer as Record<string, string> | undefined}
             className={className}
           />
         );
@@ -619,317 +601,6 @@ const OrderingOptions = forwardRef<HTMLDivElement, OrderingOptionsProps>(
   }
 );
 
-// ============================================================
-// Match Options Sub-component
-// ============================================================
-
-interface MatchOptionsProps {
-  pairs: MatchPair[];
-  selectedMatches: Record<string, string>;
-  onMatch: (matches: Record<string, string>) => void;
-  disabled: boolean;
-  correctMatches?: Record<string, string>;
-  className?: string;
-}
-
-const MatchOptions = forwardRef<HTMLDivElement, MatchOptionsProps>(
-  function MatchOptions(
-    { pairs, selectedMatches, onMatch, disabled, correctMatches, className = '' },
-    ref
-  ) {
-    const [activeChip, setActiveChip] = useState<string | null>(null);
-    const [dragOverSlot, setDragOverSlot] = useState<string | null>(null);
-    const touchDragChip = useRef<string | null>(null);
-    const touchClone = useRef<HTMLElement | null>(null);
-
-    // Get shuffled right items (stable across renders)
-    const [shuffledRight] = useState<string[]>(() => {
-      const rights = pairs.map(p => p.right);
-      for (let i = rights.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [rights[i], rights[j]] = [rights[j], rights[i]];
-      }
-      return rights;
-    });
-
-    const assignedValues = new Set(Object.values(selectedMatches).filter(Boolean));
-    const availableChips = shuffledRight.filter(r => !assignedValues.has(r));
-    const matchedCount = Object.keys(selectedMatches).length;
-    const totalCount = pairs.length;
-
-    const handleChipClick = (right: string) => {
-      if (disabled) return;
-      setActiveChip(activeChip === right ? null : right);
-    };
-
-    const handleSlotClick = (left: string) => {
-      if (disabled) return;
-      // If slot is filled, return chip to bank
-      if (selectedMatches[left]) {
-        const newMatches = { ...selectedMatches };
-        delete newMatches[left];
-        onMatch(newMatches);
-        return;
-      }
-      // If a chip is active, place it in this slot
-      if (activeChip) {
-        const newMatches = { ...selectedMatches, [left]: activeChip };
-        setActiveChip(null);
-        onMatch(newMatches);
-      }
-    };
-
-    const handleDragStart = (e: React.DragEvent, right: string) => {
-      if (disabled) return;
-      e.dataTransfer.setData('text/plain', right);
-      e.dataTransfer.effectAllowed = 'move';
-      setActiveChip(right);
-    };
-
-    const handleDragOver = (e: React.DragEvent, left: string) => {
-      e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
-      setDragOverSlot(left);
-    };
-
-    const handleDragLeave = () => {
-      setDragOverSlot(null);
-    };
-
-    const handleDrop = (e: React.DragEvent, left: string) => {
-      e.preventDefault();
-      if (disabled) return;
-      const right = e.dataTransfer.getData('text/plain');
-      if (!right) return;
-      // If slot already filled, return old chip first
-      const newMatches = { ...selectedMatches, [left]: right };
-      setActiveChip(null);
-      setDragOverSlot(null);
-      onMatch(newMatches);
-    };
-
-    const handleDragEnd = () => {
-      setActiveChip(null);
-      setDragOverSlot(null);
-    };
-
-    // Touch drag handlers for mobile
-    const handleTouchStart = (e: React.TouchEvent, right: string) => {
-      if (disabled) return;
-      const touch = e.touches[0];
-      const target = e.currentTarget as HTMLElement;
-      const rect = target.getBoundingClientRect();
-
-      // Create visual clone for drag preview
-      const clone = target.cloneNode(true) as HTMLElement;
-      clone.style.position = 'fixed';
-      clone.style.left = `${touch.clientX - rect.width / 2}px`;
-      clone.style.top = `${touch.clientY - rect.height / 2}px`;
-      clone.style.zIndex = '1000';
-      clone.style.opacity = '0.9';
-      clone.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-      clone.style.pointerEvents = 'none';
-      clone.style.transform = 'scale(1.05)';
-      document.body.appendChild(clone);
-
-      touchClone.current = clone;
-      touchDragChip.current = right;
-      setActiveChip(right);
-    };
-
-    const handleTouchMove = (e: React.TouchEvent) => {
-      if (!touchDragChip.current || !touchClone.current) return;
-      e.preventDefault();
-
-      const touch = e.touches[0];
-      const clone = touchClone.current;
-      const rect = clone.getBoundingClientRect();
-
-      // Move the clone
-      clone.style.left = `${touch.clientX - rect.width / 2}px`;
-      clone.style.top = `${touch.clientY - rect.height / 2}px`;
-
-      // Find slot under touch point
-      const elementsUnder = document.elementsFromPoint(touch.clientX, touch.clientY);
-      const slotElement = elementsUnder.find(el => el.classList.contains('match-slot'));
-      if (slotElement) {
-        const left = slotElement.getAttribute('data-left');
-        if (left && !selectedMatches[left]) {
-          setDragOverSlot(left);
-        } else {
-          setDragOverSlot(null);
-        }
-      } else {
-        setDragOverSlot(null);
-      }
-    };
-
-    const handleTouchEnd = () => {
-      if (touchClone.current && touchClone.current.parentNode) {
-        touchClone.current.parentNode.removeChild(touchClone.current);
-      }
-
-      // If over a valid slot, complete the match
-      if (touchDragChip.current && dragOverSlot && !selectedMatches[dragOverSlot]) {
-        const newMatches = { ...selectedMatches, [dragOverSlot]: touchDragChip.current };
-        onMatch(newMatches);
-      }
-
-      touchClone.current = null;
-      touchDragChip.current = null;
-      setActiveChip(null);
-      setDragOverSlot(null);
-    };
-
-    const getSlotState = (left: string): string => {
-      const states: string[] = [];
-      if (disabled && correctMatches) {
-        const correctRight = pairs.find(p => p.left === left)?.right;
-        if (selectedMatches[left] === correctRight) states.push('correct');
-        else if (selectedMatches[left] && selectedMatches[left] !== correctRight) states.push('incorrect');
-      }
-      if (selectedMatches[left]) states.push('filled');
-      if (dragOverSlot === left) states.push('drag-over');
-      if (activeChip && !selectedMatches[left]) states.push('valid-target');
-      return states.join(' ');
-    };
-
-    const getChipState = (right: string): string => {
-      if (disabled && correctMatches) {
-        const isCorrectlyMatched = Object.entries(selectedMatches).some(([left, r]) => {
-          if (r !== right) return false;
-          return pairs.find(p => p.left === left)?.right === right;
-        });
-        const isIncorrectlyMatched = assignedValues.has(right) && !isCorrectlyMatched;
-        if (isCorrectlyMatched) return 'correct';
-        if (isIncorrectlyMatched) return 'incorrect';
-      }
-      if (activeChip === right) return 'active';
-      return '';
-    };
-
-    const hasFilledSlots = matchedCount > 0;
-
-    return (
-      <div ref={ref} className={`match-container ${className}`.trim()}>
-        {!disabled && (
-          <div className="match-progress">
-            <span className="match-progress-text">
-              {matchedCount} of {totalCount} matched
-            </span>
-            <div className="match-progress-bar">
-              <div
-                className="match-progress-fill"
-                style={{ width: `${(matchedCount / totalCount) * 100}%` }}
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Two-column layout: Questions on left, Answer slots on right */}
-        <div className="match-columns">
-          {/* Left Column: Questions */}
-          <div className="match-column match-column-questions">
-            <div className="match-column-header">Questions</div>
-            {pairs.map((pair, index) => (
-              <div key={pair.left} className="match-question-item">
-                <span className="match-question-number">{index + 1}</span>
-                <span className="match-prompt-text">{pair.left}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column: Answer Slots */}
-          <div className="match-column match-column-slots">
-            <div className="match-column-header">Answers</div>
-            {pairs.map((pair, index) => {
-              const slotState = getSlotState(pair.left);
-              const filledRight = selectedMatches[pair.left];
-              const chipState = filledRight ? getChipState(filledRight) : '';
-              return (
-                <div key={pair.left} className="match-slot-row">
-                  <span className="match-slot-number">{index + 1}</span>
-                  <div
-                    className={`match-slot ${slotState} ${chipState}`.trim()}
-                    data-left={pair.left}
-                    onClick={() => handleSlotClick(pair.left)}
-                    onDragOver={(e) => handleDragOver(e, pair.left)}
-                    onDragLeave={handleDragLeave}
-                    onDrop={(e) => handleDrop(e, pair.left)}
-                    role="button"
-                    tabIndex={disabled ? -1 : 0}
-                    aria-label={filledRight ? `${pair.left} matched with ${filledRight}. Tap to remove.` : `Empty slot for ${pair.left}`}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleSlotClick(pair.left);
-                      }
-                    }}
-                  >
-                    {filledRight ? (
-                      <span className="match-slot-chip">{filledRight}</span>
-                    ) : (
-                      <span className="match-slot-empty">
-                        {activeChip ? 'tap here' : 'drop here'}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Word Bank below the columns */}
-        {(!disabled || availableChips.length > 0) && (
-          <div className="match-word-bank">
-            <span className="match-word-bank-label">Word Bank</span>
-            <div className="match-word-bank-chips">
-              {availableChips.map(right => {
-                const state = getChipState(right);
-                return (
-                  <div
-                    key={right}
-                    className={`match-chip ${state}`.trim()}
-                    onClick={() => handleChipClick(right)}
-                    draggable={!disabled}
-                    onDragStart={(e) => handleDragStart(e, right)}
-                    onDragEnd={handleDragEnd}
-                    onTouchStart={(e) => handleTouchStart(e, right)}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
-                    role="button"
-                    tabIndex={disabled ? -1 : 0}
-                    aria-label={right}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleChipClick(right);
-                      }
-                    }}
-                  >
-                    {right}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {!disabled && (
-          <p className="match-hint">
-            {activeChip
-              ? `Tap a slot to place "${activeChip}"`
-              : hasFilledSlots
-                ? 'Tap a filled slot to remove. Tap a chip to select.'
-                : 'Tap a chip, then tap a slot to match.'}
-          </p>
-        )}
-      </div>
-    );
-  }
-);
-
 // Styles for this component (add to globals.css or a CSS module)
 // These match the reference styles.css lines 952-1127
 const styles = `
@@ -1174,246 +845,6 @@ const styles = `
 .touch-dragging {
   border-color: var(--color-primary);
   background: var(--color-bg-card);
-}
-
-/* Match interface — two-column layout */
-.match-container {
-  margin-bottom: var(--spacing-xl);
-}
-
-.match-progress {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
-}
-
-.match-progress-text {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  white-space: nowrap;
-}
-
-.match-progress-bar {
-  flex: 1;
-  height: 6px;
-  background: var(--color-bg-hover);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.match-progress-fill {
-  height: 100%;
-  background: var(--color-primary);
-  border-radius: 3px;
-  transition: width var(--transition-fast);
-}
-
-/* Two-column grid layout */
-.match-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-}
-
-.match-column {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-.match-column-header {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding-bottom: var(--spacing-xs);
-  border-bottom: 2px solid var(--color-border);
-  margin-bottom: var(--spacing-xs);
-}
-
-.match-question-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
-  min-height: 48px;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-}
-
-.match-question-number {
-  width: 24px;
-  height: 24px;
-  background: var(--color-primary-subtle);
-  color: var(--color-primary);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  flex-shrink: 0;
-}
-
-.match-slot-row {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  min-height: 48px;
-}
-
-.match-slot-number {
-  width: 24px;
-  height: 24px;
-  background: var(--color-bg-hover);
-  color: var(--color-text-muted);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  flex-shrink: 0;
-}
-
-.match-prompt-text {
-  flex: 1;
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-normal);
-  min-width: 0;
-  word-break: break-word;
-}
-
-.match-slot {
-  flex: 1;
-  min-height: 44px;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  background: var(--color-bg-card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.match-slot:hover:not([aria-disabled="true"]) {
-  border-color: var(--color-primary-light);
-  background: var(--color-primary-subtle);
-}
-
-.match-slot.valid-target {
-  border-color: var(--color-primary);
-  background: var(--color-primary-subtle);
-  animation: pulse-border 1s ease-in-out infinite;
-}
-
-.match-slot.drag-over {
-  border-color: var(--color-primary);
-  border-style: solid;
-  background: var(--color-primary-subtle);
-  box-shadow: 0 0 0 3px var(--color-primary-subtle);
-}
-
-@keyframes pulse-border {
-  0%, 100% { border-color: var(--color-primary-light); }
-  50% { border-color: var(--color-primary); }
-}
-
-.match-slot.filled {
-  border-style: solid;
-  border-color: var(--color-primary-light);
-  background: var(--color-primary-subtle);
-}
-
-.match-slot.correct {
-  border-style: solid;
-  border-color: var(--color-correct);
-  background: var(--color-correct-bg);
-}
-
-.match-slot.incorrect {
-  border-style: solid;
-  border-color: var(--color-incorrect);
-  background: var(--color-incorrect-bg);
-}
-
-.match-slot-chip {
-  font-weight: var(--font-weight-medium);
-}
-
-.match-slot-empty {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-  font-style: italic;
-}
-
-/* Word bank with prominent styling */
-.match-word-bank {
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-md) var(--spacing-lg);
-  border: 2px solid var(--color-primary-light);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(to bottom, var(--color-primary-subtle), var(--color-bg-card));
-}
-
-.match-word-bank-label {
-  display: block;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.match-word-bank-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  justify-content: center;
-}
-
-.match-chip {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px solid var(--color-border);
-  border-radius: 999px;
-  cursor: grab;
-  transition: all var(--transition-fast);
-  background: var(--color-bg-card);
-  font-weight: var(--font-weight-medium);
-  user-select: none;
-  touch-action: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.match-chip:hover {
-  border-color: var(--color-primary-light);
-  background: var(--color-primary-subtle);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.match-chip.active {
-  border-color: var(--color-primary);
-  background: var(--color-primary-subtle);
-  box-shadow: 0 0 0 3px var(--color-primary-subtle);
-}
-
-.match-chip:active {
-  cursor: grabbing;
-}
-
-.match-hint {
-  text-align: center;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-  margin-top: var(--spacing-md);
 }
 `;
 

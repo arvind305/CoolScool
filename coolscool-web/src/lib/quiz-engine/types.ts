@@ -132,7 +132,7 @@ export interface MasteryStatus {
 // Question Types
 // ============================================================
 
-export type QuestionType = 'mcq' | 'true_false' | 'fill_blank' | 'ordering' | 'match';
+export type QuestionType = 'mcq' | 'true_false' | 'fill_blank' | 'ordering';
 
 export interface Question {
   question_id: string;
@@ -141,8 +141,7 @@ export interface Question {
   type: QuestionType;
   question_text: string;
   options?: string[];
-  correct_answer: string | string[] | Record<string, string>;
-  match_pairs?: { left: string; right: string }[];
+  correct_answer: string | string[];
   ordering_items?: string[];
   explanation_correct?: string;
   explanation_incorrect?: string;
@@ -231,7 +230,7 @@ export interface SessionProgress {
 
 export interface SessionAnswer {
   question_id: string;
-  user_answer: string | string[] | Record<string, string>;
+  user_answer: string | string[];
   is_correct: boolean;
   xp_earned: number;
   time_taken_ms: number;
@@ -274,7 +273,7 @@ export interface SessionSummary {
 }
 
 export interface AnswerInput {
-  userAnswer: string | string[] | Record<string, string>;
+  userAnswer: string | string[];
   timeTakenMs?: number;
 }
 
@@ -430,7 +429,7 @@ export interface CreateSessionParams {
 export interface AnswerSubmitResult {
   isCorrect: boolean;
   xpEarned: number;
-  correctAnswer: string | string[] | Record<string, string>;
+  correctAnswer: string | string[];
   explanation?: string;
   masteryAchieved: boolean;
   isSessionComplete: boolean;

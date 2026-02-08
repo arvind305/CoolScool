@@ -6,6 +6,8 @@
  *   npx tsx scripts/generate-explanations.ts --topic T01.01
  *   npx tsx scripts/generate-explanations.ts --topic T01.01 --dry-run
  *   npx tsx scripts/generate-explanations.ts --class 5
+ *   npx tsx scripts/generate-explanations.ts --subject Physics
+ *   npx tsx scripts/generate-explanations.ts --subject Science --class 3
  */
 
 import dotenv from 'dotenv';
@@ -23,9 +25,11 @@ const { Pool } = pg;
 const args = process.argv.slice(2);
 const topicFlag = args.indexOf('--topic');
 const classFlag = args.indexOf('--class');
+const subjectFlag = args.indexOf('--subject');
 const dryRun = args.includes('--dry-run');
 const targetTopic = topicFlag !== -1 ? args[topicFlag + 1] : null;
 const targetClass = classFlag !== -1 ? parseInt(args[classFlag + 1], 10) : null;
+const targetSubject = subjectFlag !== -1 ? args[subjectFlag + 1] : null;
 
 // Class level to age mapping
 const CLASS_AGE_MAP: Record<number, string> = {
@@ -96,9 +100,14 @@ async function main() {
       whereClause += ` AND c.class_level = $${params.length}`;
     }
 
+    if (targetSubject) {
+      params.push(targetSubject);
+      whereClause += ` AND LOWER(c.subject) = LOWER($${params.length})`;
+    }
+
     // Get questions with topic info
-    const questionsResult = await pool.query<QuestionRow & { topic_name: string; class_level: number; canonical_explanation_text: string | null }>(
-      `SELECT q.*, t.topic_name, c.class_level,
+    const questionsResult = await pool.query<QuestionRow & { topic_name: string; class_level: number; subject: string; canonical_explanation_text: string | null }>(
+      `SELECT q.*, t.topic_name, c.class_level, c.subject,
               ce.explanation_text as canonical_explanation_text
        FROM questions q
        JOIN topics t ON q.topic_id_str = t.topic_id AND q.curriculum_id = t.curriculum_id
@@ -120,6 +129,7 @@ async function main() {
     console.log(`Found ${total} questions needing explanations${dryRun ? ' (DRY RUN)' : ''}`);
     if (targetTopic) console.log(`Filtering to topic: ${targetTopic}`);
     if (targetClass) console.log(`Filtering to class: ${targetClass}`);
+    if (targetSubject) console.log(`Filtering to subject: ${targetSubject}`);
 
     let processed = 0;
     let errors = 0;
@@ -147,7 +157,8 @@ async function main() {
         ? JSON.stringify(q.correct_answer)
         : String(q.correct_answer);
 
-      const prompt = `You are writing explanations for a Class ${q.class_level} student (ICSE board, Mathematics).
+      const subjectName = q.subject || 'Mathematics';
+      const prompt = `You are writing explanations for a Class ${q.class_level} student (ICSE board, ${subjectName}).
 Use simple language appropriate for a ${age}. Be concise and specific to this exact question.
 
 Topic: ${q.topic_name}

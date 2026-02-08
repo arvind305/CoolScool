@@ -38,7 +38,32 @@ export const SUBJECTS = {
     name: 'Science',
     icon: '🧬',
     color: '#14b8a6',
-    status: 'coming_soon' as const,
+    status: 'live' as const,
+    classRange: [1, 5] as const, // EVS/General Science for Classes 1-5
+  },
+  physics: {
+    id: 'physics',
+    name: 'Physics',
+    icon: '⚛️',
+    color: '#3b82f6',
+    status: 'live' as const,
+    classRange: [6, 10] as const, // Physics for Classes 6-10
+  },
+  chemistry: {
+    id: 'chemistry',
+    name: 'Chemistry',
+    icon: '🧪',
+    color: '#10b981',
+    status: 'live' as const,
+    classRange: [6, 10] as const, // Chemistry for Classes 6-10
+  },
+  biology: {
+    id: 'biology',
+    name: 'Biology',
+    icon: '🧬',
+    color: '#8b5cf6',
+    status: 'live' as const,
+    classRange: [6, 10] as const, // Biology for Classes 6-10
   },
   english: {
     id: 'english',

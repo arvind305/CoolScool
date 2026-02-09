@@ -8,6 +8,8 @@ export interface BackendUser {
   displayName: string | null;
   avatarUrl: string | null;
   role: UserRole;
+  firstName: string | null;
+  lastName: string | null;
   parentalConsentGiven?: boolean;
   createdAt?: string;
 }

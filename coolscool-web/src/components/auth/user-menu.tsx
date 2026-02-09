@@ -142,6 +142,13 @@ export function UserMenu() {
               {user.role === 'parent' ? 'Parent Dashboard' : 'My Dashboard'}
             </Link>
             <Link
+              href="/profile"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+            >
+              My Profile
+            </Link>
+            <Link
               href="/browse"
               onClick={() => setIsOpen(false)}
               className="block px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors"

@@ -1,6 +1,7 @@
 import { OAuth2Client } from 'google-auth-library';
 import { config } from '../config/index.js';
 import * as userModel from '../models/user.model.js';
+import * as profileModel from '../models/profile.model.js';
 import {
   generateAccessToken,
   generateRefreshToken,
@@ -19,6 +20,8 @@ export interface GoogleUserInfo {
   email: string;
   name?: string;
   picture?: string;
+  givenName?: string;
+  familyName?: string;
 }
 
 export interface AuthTokens {
@@ -66,6 +69,8 @@ export async function verifyGoogleToken(idToken: string): Promise<GoogleUserInfo
       email: payload.email!,
       name: payload.name,
       picture: payload.picture,
+      givenName: payload.given_name,
+      familyName: payload.family_name,
     };
   } catch (error) {
     if (error instanceof UnauthorizedError) throw error;
@@ -106,6 +111,9 @@ export async function authenticateWithGoogle(
     display_name: googleUser.name,
     avatar_url: googleUser.picture,
   });
+
+  // Upsert profile with Google name data (preserves manually-edited names)
+  await profileModel.upsertProfile(user.id, googleUser.givenName, googleUser.familyName);
 
   // Generate tokens
   const tokens = await createTokenPair(user, deviceInfo);

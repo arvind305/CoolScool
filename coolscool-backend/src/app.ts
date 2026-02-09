@@ -13,6 +13,7 @@ import sessionRoutes from './routes/session.routes.js';
 import progressRoutes from './routes/progress.routes.js';
 import settingsRoutes from './routes/settings.routes.js';
 import parentRoutes from './routes/parent.routes.js';
+import profileRoutes from './routes/profile.routes.js';
 
 // Create Express app
 const app: Express = express();
@@ -47,6 +48,7 @@ app.use(`/api/${config.apiVersion}/sessions`, sessionRoutes);
 app.use(`/api/${config.apiVersion}/progress`, progressRoutes);
 app.use(`/api/${config.apiVersion}/settings`, settingsRoutes);
 app.use(`/api/${config.apiVersion}/parent`, parentRoutes);
+app.use(`/api/${config.apiVersion}/profile`, profileRoutes);
 
 // 404 handler
 app.use(notFoundHandler);

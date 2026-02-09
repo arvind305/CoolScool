@@ -46,7 +46,13 @@ export default async function ClassPage({ params }: Props) {
     notFound();
   }
 
-  const subjects = Object.values(SUBJECTS);
+  const subjects = Object.values(SUBJECTS).filter((subject) => {
+    if ('classRange' in subject && subject.classRange) {
+      const [min, max] = subject.classRange;
+      return classLevel >= min && classLevel <= max;
+    }
+    return true; // No classRange means available for all classes
+  });
 
   return (
     <div className="px-4 py-8 max-w-4xl mx-auto">

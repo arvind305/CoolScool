@@ -9,6 +9,8 @@ export const mockSession: Session = {
     displayName: 'Test User',
     avatarUrl: null,
     role: 'child',
+    firstName: 'Test',
+    lastName: 'User',
   },
   accessToken: 'mock-access-token',
   accessTokenExpires: Date.now() + 24 * 60 * 60 * 1000,

@@ -16,7 +16,7 @@ import { pool } from '../src/config/database.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ALL_CLASSES = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+const ALL_CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 interface Concept {
   concept_id: string;
@@ -69,6 +69,8 @@ interface Question {
   ordering_items?: string[];
   hint?: string;
   tags?: string[];
+  explanation_correct?: string;
+  explanation_incorrect?: string;
 }
 
 interface QuestionBank {
@@ -251,9 +253,10 @@ async function seedClass(classLevel: number): Promise<{
           `INSERT INTO questions (
              curriculum_id, question_id, concept_id, concept_id_str, topic_id_str,
              difficulty, question_type, question_text, options,
-             correct_answer, match_pairs, ordering_items, hint, tags
+             correct_answer, match_pairs, ordering_items, hint, tags,
+             explanation_correct, explanation_incorrect
            )
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
            ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
              concept_id = EXCLUDED.concept_id,
              concept_id_str = EXCLUDED.concept_id_str,
@@ -264,7 +267,9 @@ async function seedClass(classLevel: number): Promise<{
              match_pairs = EXCLUDED.match_pairs,
              ordering_items = EXCLUDED.ordering_items,
              hint = EXCLUDED.hint,
-             tags = EXCLUDED.tags`,
+             tags = EXCLUDED.tags,
+             explanation_correct = COALESCE(EXCLUDED.explanation_correct, questions.explanation_correct),
+             explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect)`,
           [
             curriculumId, q.question_id, conceptUuid, q.concept_id, data.topic_id,
             q.difficulty, q.type, q.question_text,
@@ -273,6 +278,8 @@ async function seedClass(classLevel: number): Promise<{
             q.match_pairs ? JSON.stringify(q.match_pairs) : null,
             q.ordering_items ? JSON.stringify(q.ordering_items) : null,
             q.hint || null, q.tags || [],
+            q.explanation_correct || null,
+            q.explanation_incorrect || null,
           ]
         );
         questionCount++;
@@ -296,11 +303,6 @@ async function seedClass(classLevel: number): Promise<{
 async function main(): Promise<void> {
   const singleClass = process.argv[2] ? parseInt(process.argv[2], 10) : null;
   const classesToSeed = singleClass ? [singleClass] : ALL_CLASSES;
-
-  if (singleClass === 5) {
-    console.error('ERROR: Class 5 is already live with user progress. Not re-seeding.');
-    process.exit(1);
-  }
 
   console.log(`Seeding ICSE Mathematics classes: ${classesToSeed.join(', ')}`);
 

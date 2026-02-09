@@ -46,7 +46,9 @@
       ],
       "correct_answer": "B",
       "question_text": "What is the order of the matrix [[2, 3, 5], [1, 4, 6]]?",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "The matrix given has 2 rows and 3 columns, so its order is 2 × 3. This means it has 2 rows and 3 columns, which matches option B.",
+      "explanation_incorrect": "The matrix given is not a square matrix, so it cannot have an order of 3 × 3 (option C). It also does not have 2 rows and 2 columns, so it cannot have an order of 2 × 2 (option D). The correct order is 2 × 3, which means 2 rows and 3 columns, matching option B."
     },
     {
       "question_id": "T02.04.Q002",
@@ -72,7 +74,9 @@
       ],
       "correct_answer": "B",
       "question_text": "Which of the following is an identity matrix of order 2?",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "The identity matrix of order 2 is a square matrix with 1s on the main diagonal and 0s elsewhere. This is represented by [[1, 0], [0, 1]], which matches option B.",
+      "explanation_incorrect": "Option A is not an identity matrix because it has all 1s, not just on the main diagonal. Option C is a rotation matrix, not an identity matrix. Option D is a scalar matrix, not an identity matrix. The key features of an identity matrix of order 2 are that it has 1s on the main diagonal and 0s elsewhere, which is shown in option B."
     },
     {
       "question_id": "T02.04.Q003",
@@ -98,7 +102,9 @@
       ],
       "correct_answer": "B",
       "question_text": "A matrix with only one row is called a:",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "A matrix with only one row is called a row matrix because it has one row and multiple columns, unlike a column matrix which has one column and multiple rows.",
+      "explanation_incorrect": "A column matrix has only one column, while a row matrix has only one row. A square matrix has the same number of rows and columns. A null matrix has all its elements as zero, which is not the case here."
     },
     {
       "question_id": "T02.04.Q004",
@@ -124,7 +130,9 @@
       ],
       "correct_answer": "B",
       "question_text": "Two matrices A and B are equal if:",
-      "concept_id": "T02.04.C02"
+      "concept_id": "T02.04.C02",
+      "explanation_correct": "Matrices A and B are equal if they have the same order (same number of rows and columns) and their corresponding elements are equal. This ensures that the matrices are identical in structure and values.",
+      "explanation_incorrect": "Option B is correct. For two matrices to be equal, they must have the same order (number of rows and columns) and their corresponding elements must be equal, regardless of whether they are square matrices or not. The number of elements alone or the determinants being equal are not sufficient criteria for matrix equality."
     },
     {
       "question_id": "T02.04.Q005",
@@ -150,7 +158,9 @@
       ],
       "correct_answer": "A",
       "question_text": "If A = [[2, 3], [4, 5]] and B = [[1, 2], [3, 4]], what is A + B?",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The correct answer is A) [[3, 5], [7, 9]]. To add two matrices, we add the corresponding elements. For example, the first element of the first row in A is 2, and the first element of the first row in B is 1, so the first element of the first row in the sum is 2 + 1 = 3. This process is repeated for all elements to get the final matrix A + B.",
+      "explanation_incorrect": "The incorrect answer is D) [[3, 6], [12, 20]]. This is not the correct answer because matrix addition is done by adding the corresponding elements of the two matrices, not by multiplying them. The correct way to add A = [[2, 3], [4, 5]] and B = [[1, 2], [3, 4]] is to add the elements in the same positions, resulting in A + B = [[2 + 1, 3 + 2], [4 + 3, 5 + 4]] = [[3, 5], [7, 9]]."
     },
     {
       "question_id": "T02.04.Q006",
@@ -176,7 +186,9 @@
       ],
       "correct_answer": "A",
       "question_text": "If matrix C = [[6, 9], [12, 15]], what is (1/3)C?",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The correct answer is A) [[2, 3], [4, 5]]. This is because to find (1/3)C, we need to divide each element of matrix C by 3. Since C = [[6, 9], [12, 15]], dividing each element by 3 gives us the matrix [[2, 3], [4, 5]].",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not represent (1/3)C. B) [[3, 6], [9, 12]] is incorrect because it is not the result of dividing each element of C by 3. C) [[18, 27], [36, 45]] is incorrect because it is 3 times the original matrix C, not (1/3)C. D) [[6, 9], [12, 15]] is the original matrix C, not (1/3)C."
     },
     {
       "question_id": "T02.04.Q007",
@@ -202,7 +214,9 @@
       ],
       "correct_answer": "A",
       "question_text": "If A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 3]], what is AB?",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct answer is A) [[4, 6], [10, 12]]. To find the product of two matrices, we multiply each row of the first matrix with each column of the second matrix. Applying this, we get the result shown in option A.",
+      "explanation_incorrect": "The incorrect options B, C, and D do not represent the correct matrix multiplication of A and B. Option B has a wrong element in the second row, first column. Option C has the rows and columns of the result flipped. Option D does not correctly multiply the elements of the two matrices."
     },
     {
       "question_id": "T02.04.Q008",
@@ -228,7 +242,9 @@
       ],
       "correct_answer": "C",
       "question_text": "For which pair of matrices is multiplication NOT possible?",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "Matrix multiplication is only possible when the number of columns in the first matrix is equal to the number of rows in the second matrix. Since option C has two matrices with 3 columns and 2 rows each, matrix multiplication is not possible in this case.",
+      "explanation_incorrect": "Option A is correct because for matrix multiplication, the number of columns in the first matrix (2) must be equal to the number of rows in the second matrix (3). In option C, both matrices have 3 columns and 2 rows, so the dimensions are not compatible for multiplication."
     },
     {
       "question_id": "T02.04.Q009",
@@ -254,7 +270,9 @@
       ],
       "correct_answer": "A",
       "question_text": "If [[x, 2], [3, y]] + [[2, 3], [4, 5]] = [[5, 5], [7, 8]], find x + y.",
-      "concept_id": "T02.04.C05"
+      "concept_id": "T02.04.C05",
+      "explanation_correct": "The correct answer is A) 6. To find x + y, we need to add the corresponding elements of the two given matrices. The first matrix is [[x, 2], [3, y]] and the second matrix is [[2, 3], [4, 5]]. Adding these matrices, we get [[x + 2, 2 + 3], [3 + 4, y + 5]] = [[5, 5], [7, 8]]. Comparing the corresponding elements, we can find that x = 3 and y = 3, so x + y = 6.",
+      "explanation_incorrect": "The incorrect answer is B) 7. This is because the student might have assumed that the addition of the corresponding elements in the matrices would result in a simple addition of the elements, rather than considering the specific values of x and y. The correct approach is to set up the matrix addition and solve for the unknown values of x and y, which gives x + y = 6."
     },
     {
       "question_id": "T02.04.Q010",
@@ -280,7 +298,9 @@
       ],
       "correct_answer": "C",
       "question_text": "If A = [[2, 1], [3, 2]] and A² = [[a, b], [c, d]], what is the value of a + d?",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct answer is C) 13. To find the value of a + d, we need to calculate the matrix A². Given that A = [[2, 1], [3, 2]], we can find A² by multiplying A with itself. The result is A² = [[7, 5], [11, 8]], so a = 7 and d = 8, making a + d = 15.",
+      "explanation_incorrect": "The incorrect answer is D) 14. This is because the correct value of a + d in the matrix A² is 7 + 8 = 15, not 14. The step-by-step process to find A² involves multiplying the matrix A with itself, resulting in the matrix [[7, 5], [11, 8]], where a = 7 and d = 8."
     },
     {
       "question_id": "T02.04.Q011",
@@ -288,7 +308,9 @@
       "difficulty": "familiarity",
       "correct_answer": "square",
       "question_text": "A matrix in which the number of rows equals the number of columns is called a ________ matrix.",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "A matrix in which the number of rows equals the number of columns is called a square matrix. This is because the matrix has the same number of rows and columns, forming a square-like structure.",
+      "explanation_incorrect": "The question asks for the type of matrix where the number of rows equals the number of columns. The accepted answer format is 'square'. A square matrix is a matrix where the number of rows and columns are equal, so the correct answer is 'square'. Other matrix types like row matrix, column matrix, and null/zero matrix do not have the same number of rows and columns."
     },
     {
       "question_id": "T02.04.Q012",
@@ -296,7 +318,9 @@
       "difficulty": "familiarity",
       "correct_answer": "null",
       "question_text": "A matrix with all elements equal to zero is called a ________ matrix.",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "A matrix with all its elements equal to zero is called a null or zero matrix. This is because a null matrix has no non-zero elements, making it a 'null' or empty matrix.",
+      "explanation_incorrect": "The question asks for the type of matrix that has all its elements equal to zero. The accepted answer format is 'null', which is correct. A null matrix is a matrix where all the elements are equal to zero, unlike a non-zero matrix which has at least one non-zero element. Therefore, the correct answer is 'null' matrix."
     },
     {
       "question_id": "T02.04.Q013",
@@ -304,7 +328,9 @@
       "difficulty": "familiarity",
       "correct_answer": "columns",
       "question_text": "For matrix multiplication AB to be defined, the number of ________ in A must equal the number of rows in B.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "For matrix multiplication AB to be defined, the number of columns in matrix A must equal the number of rows in matrix B. This is because the inner dimensions of the two matrices must match for the multiplication to be possible.",
+      "explanation_incorrect": "The number of rows in matrix A does not need to match the number of rows in matrix B for matrix multiplication to be defined. Instead, the number of columns in A must match the number of rows in B. This is because the inner dimensions of the two matrices must be compatible for the multiplication operation to work."
     },
     {
       "question_id": "T02.04.Q014",
@@ -312,7 +338,9 @@
       "difficulty": "familiarity",
       "correct_answer": "order",
       "question_text": "Two matrices can be added only if they have the same ________.",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "Two matrices can be added only if they have the same order, meaning they must have the same number of rows and columns. This is because the corresponding elements in the two matrices must be of the same order to be added together.",
+      "explanation_incorrect": "The correct answer is 'order'. Matrices can only be added if they have the same number of rows and columns, or the same 'order'. This is because the corresponding elements in the two matrices must be of the same order to be added together. If the matrices have different orders, they cannot be added."
     },
     {
       "question_id": "T02.04.Q015",
@@ -320,7 +348,9 @@
       "difficulty": "application",
       "correct_answer": "5",
       "question_text": "If A = [[3, 5], [7, 9]] and B = [[1, 2], [3, 4]], then A - B = [[2, 3], [4, ________]].",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The question asks to find the difference of the two matrices A and B. To do this, we need to subtract the corresponding elements of the two matrices. For the given matrices A = [[3, 5], [7, 9]] and B = [[1, 2], [3, 4]], the difference A - B is [[3 - 1, 5 - 2], [7 - 3, 9 - 4]], which is [[2, 3], [4, 5]].",
+      "explanation_incorrect": "The incorrect answer would be 6 instead of 5. This is because the subtraction of the corresponding elements in the second row and second column of A and B is 9 - 4 = 5, not 9 - 6 = 3. The complete correct answer is [[2, 3], [4, 5]], where the blank should be filled with 5."
     },
     {
       "question_id": "T02.04.Q016",
@@ -328,7 +358,9 @@
       "difficulty": "application",
       "correct_answer": "10",
       "question_text": "If 3A = [[12, 18], [24, 30]], then A = [[4, 6], [8, ________]].",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "Since 3A = [[12, 18], [24, 30]], we can divide each element by 3 to find the values in matrix A. This gives us A = [[4, 6], [8, 10]].",
+      "explanation_incorrect": "The accepted answer format is a single number, 10. However, the correct answer is found by dividing the elements of 3A by 3. The second row, second column element of A is 30 ÷ 3 = 10."
     },
     {
       "question_id": "T02.04.Q017",
@@ -336,7 +368,9 @@
       "difficulty": "application",
       "correct_answer": "1",
       "question_text": "If A = [[2, 3], [1, 4]] and I = [[1, 0], [0, 1]], then AI = [[2, 3], [________, 4]].",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct answer is 1 because the given matrix I is the identity matrix, which means when multiplied with another matrix, it does not change the other matrix. Therefore, the element in the second row and first column of the resulting matrix AI is 1, the same as the element in the corresponding position in matrix A.",
+      "explanation_incorrect": "The incorrect answer would be to leave the second row, first column element blank. This is because the student may think that when multiplying a matrix by the identity matrix, the resulting matrix will have the same elements as the original matrix. However, this is not the case - the identity matrix does not change the other matrix when multiplied, so the resulting matrix AI will have the same elements as matrix A."
     },
     {
       "question_id": "T02.04.Q018",
@@ -344,7 +378,9 @@
       "difficulty": "exam_style",
       "correct_answer": "5",
       "question_text": "If [[2x, 4], [6, 8]] = [[10, 4], [6, 8]], then x = ________.",
-      "concept_id": "T02.04.C05"
+      "concept_id": "T02.04.C05",
+      "explanation_correct": "The correct answer is x = 5. To reach this conclusion, we can set up the two given matrices and solve for x. When we equate the corresponding elements, we get the equation 2x = 10, which simplifies to x = 5.",
+      "explanation_incorrect": "The incorrect answer would be x = 2. This is because some students may try to solve the equation by subtracting the elements in the first column of the two matrices, thinking that 10 - 2x = 6. However, this approach is incorrect, as the given matrices are equal, meaning their corresponding elements must be equal. The correct way to solve for x is to set up the equation 2x = 10 and solve for x, which gives us the answer x = 5."
     },
     {
       "question_id": "T02.04.Q019",
@@ -352,7 +388,9 @@
       "difficulty": "exam_style",
       "correct_answer": "19",
       "question_text": "If A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]], then the element in the first row and first column of AB is ________.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "To find the element in the first row and first column of the matrix AB, we need to multiply the matrices A and B according to the matrix multiplication formula. Since A is a 2x2 matrix and B is a 2x2 matrix, the resulting matrix AB will also be a 2x2 matrix. The element in the first row and first column of AB is calculated as (1 x 5) + (2 x 7) = 19, which is the correct answer.",
+      "explanation_incorrect": "The incorrect answer would be a number other than 19. For example, if you calculated the element in the first row and first column of AB as (1 x 5) + (2 x 8) = 21, that would be incorrect. The correct answer, as explained above, is 19 because the element in the first row and first column of AB is calculated as (1 x 5) + (2 x 7) = 19."
     },
     {
       "question_id": "T02.04.Q020",
@@ -360,7 +398,9 @@
       "difficulty": "exam_style",
       "correct_answer": "1",
       "question_text": "If 2[[x, 3], [y, 5]] - [[4, 2], [6, 4]] = [[6, 4], [2, 6]], then x - y = ________.",
-      "concept_id": "T02.04.C05"
+      "concept_id": "T02.04.C05",
+      "explanation_correct": "The key step is to set up the matrix equation and solve for x - y. By subtracting the second matrix from 2 times the first matrix, we get the given result matrix. Comparing the elements, we can see that x - y = 1.",
+      "explanation_incorrect": "The incorrect answer would be thinking that x - y = 2. This is because the given result matrix has 6 - 4 = 2 and 2 - (-4) = 6, which does not match x - y = 1. The correct step is to set up the matrix equation and solve for x - y directly."
     },
     {
       "question_id": "T02.04.Q021",
@@ -368,7 +408,9 @@
       "difficulty": "familiarity",
       "correct_answer": false,
       "question_text": "A matrix of order 3 × 1 is a row matrix.",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "A matrix of order 3 × 1 is a column matrix, not a row matrix. A row matrix has 1 row and n columns, while a column matrix has m rows and 1 column. So a 3 × 1 matrix is a column matrix with 3 rows and 1 column.",
+      "explanation_incorrect": "The question states that a matrix of order 3 × 1 is a row matrix, but this is incorrect. A row matrix has 1 row and n columns, while a 3 × 1 matrix has 3 rows and 1 column, making it a column matrix, not a row matrix."
     },
     {
       "question_id": "T02.04.Q022",
@@ -376,7 +418,9 @@
       "difficulty": "familiarity",
       "correct_answer": true,
       "question_text": "An identity matrix is always a square matrix.",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "Yes, an identity matrix is always a square matrix. An identity matrix is a special type of square matrix where the diagonal elements are 1 and all other elements are 0. The number of rows and columns in an identity matrix must be equal, which means it is a square matrix.",
+      "explanation_incorrect": "The statement is correct. An identity matrix is a square matrix because the number of rows and columns must be equal. For example, a 3x3 identity matrix will have 3 rows and 3 columns, making it a square matrix. It would be incorrect to say an identity matrix can have a different number of rows and columns, as that would not meet the definition of an identity matrix."
     },
     {
       "question_id": "T02.04.Q023",
@@ -384,7 +428,9 @@
       "difficulty": "familiarity",
       "correct_answer": false,
       "question_text": "Matrix multiplication is commutative, i.e., AB = BA for all matrices A and B.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "Matrix multiplication is not commutative, meaning AB is not always equal to BA. The order of multiplication is important, as the number of columns in the first matrix must match the number of rows in the second matrix for the multiplication to be possible.",
+      "explanation_incorrect": "Many students assume that matrix multiplication is commutative, but this is not the case. For matrix multiplication, the order of the matrices is crucial. If the number of columns in the first matrix does not match the number of rows in the second matrix, then the multiplication is not possible. Even if the dimensions are compatible, the resulting matrices will generally be different, i.e., AB is not equal to BA."
     },
     {
       "question_id": "T02.04.Q024",
@@ -392,7 +438,9 @@
       "difficulty": "familiarity",
       "correct_answer": false,
       "question_text": "Two matrices of different orders can be added.",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "Two matrices can only be added if they have the same order, i.e., the same number of rows and columns. Matrices of different orders cannot be added because the corresponding elements are not aligned and cannot be added up.",
+      "explanation_incorrect": "It is a common misconception that matrices of different orders can be added. However, this is not possible as the matrices must have the same order for the addition to be defined. The corresponding elements in the matrices must be aligned in order to be added. If the matrices have different numbers of rows and columns, they cannot be added."
     },
     {
       "question_id": "T02.04.Q025",
@@ -400,7 +448,9 @@
       "difficulty": "application",
       "correct_answer": true,
       "question_text": "If A = [[2, 3], [4, 5]] and B = [[2, 3], [4, 5]], then A = B.",
-      "concept_id": "T02.04.C02"
+      "concept_id": "T02.04.C02",
+      "explanation_correct": "If two matrices have the same order (number of rows and columns) and their corresponding elements are equal, then the matrices are considered equal. Since A = [[2, 3], [4, 5]] and B = [[2, 3], [4, 5]] have the same order (2x2) and their corresponding elements are equal, the statement A = B is true.",
+      "explanation_incorrect": "The incorrect explanation would be that if the matrices have different elements, then they are not equal. However, in this case, the matrices A and B have the same order (2x2) and their corresponding elements are equal, so the statement A = B is true. The matrices are considered equal when they have the same order and their corresponding elements are equal, regardless of the actual values in the matrices."
     },
     {
       "question_id": "T02.04.Q026",
@@ -408,7 +458,9 @@
       "difficulty": "application",
       "correct_answer": true,
       "question_text": "If k is a scalar and A is a matrix, then kA = Ak.",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The statement 'If k is a scalar and A is a matrix, then kA = Ak' is true. This is because scalar multiplication with a matrix commutes, meaning the order in which the scalar and the matrix are multiplied does not affect the final result.",
+      "explanation_incorrect": "The statement 'If k is a scalar and A is a matrix, then kA = Ak' is false. This is because scalar multiplication and matrix multiplication are not commutative operations. When multiplying a scalar k with a matrix A, the order in which they are multiplied does matter. The correct expression is kA, not Ak, as the scalar k is multiplied with each element of the matrix A."
     },
     {
       "question_id": "T02.04.Q027",
@@ -416,7 +468,9 @@
       "difficulty": "application",
       "correct_answer": false,
       "question_text": "If A is a 2×3 matrix and B is a 2×3 matrix, then AB is defined.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. Since A is a 2x3 matrix and B is also a 2x3 matrix, the number of columns in A (3) does not match the number of rows in B (2), so the operation AB is not defined.",
+      "explanation_incorrect": "One might think that since both A and B are 2x3 matrices, their multiplication AB would be defined. However, this is not the case. For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. Since A is a 2x3 matrix and B is also a 2x3 matrix, the number of columns in A (3) does not match the number of rows in B (2), so the operation AB is not defined."
     },
     {
       "question_id": "T02.04.Q028",
@@ -424,7 +478,9 @@
       "difficulty": "exam_style",
       "correct_answer": true,
       "question_text": "For any square matrix A and identity matrix I of the same order, AI = IA = A.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "This statement is true because the identity matrix I has 1s on the main diagonal and 0s elsewhere. When multiplied with any square matrix A, the result is the same matrix A since the identity matrix does not change the values of A.",
+      "explanation_incorrect": "The statement is not true if the matrix A is not a square matrix. For matrix multiplication to be defined, the number of columns in the first matrix (A) must be equal to the number of rows in the second matrix (I). If A is not square, then AI or IA will not be defined, and the equality will not hold."
     },
     {
       "question_id": "T02.04.Q029",
@@ -432,7 +488,9 @@
       "difficulty": "exam_style",
       "correct_answer": true,
       "question_text": "If A is a 2×2 matrix and B is a 2×2 matrix, then the order of AB is 2×2.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The order of the product of two matrices A and B is determined by the number of columns in A and the number of rows in B. Since both A and B are 2×2 matrices, the order of AB is also 2×2, as the number of columns in A (2) matches the number of rows in B (2).",
+      "explanation_incorrect": "The common misconception is that the order of the product matrix AB is always the same as the order of the individual matrices A and B. However, this is not the case. The order of AB is determined by the number of columns in A and the number of rows in B. Since both A and B are 2×2 matrices, the order of AB is also 2×2, as the number of columns in A (2) matches the number of rows in B (2)."
     },
     {
       "question_id": "T02.04.Q030",
@@ -440,7 +498,9 @@
       "difficulty": "exam_style",
       "correct_answer": true,
       "question_text": "If A + B = A, then B must be a null matrix.",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "If A + B = A, then B must be a null matrix (all elements are 0). This is because adding a null matrix to any matrix A will not change the matrix A, since 0 added to any number does not change the number.",
+      "explanation_incorrect": "The incorrect explanation would be that B can be any matrix, not necessarily a null matrix. This is wrong because for the equation A + B = A to be true, B must be a null matrix. If B was any other matrix, then adding it to A would change the value of A, which is not the case here."
     },
     {
       "question_id": "T02.04.Q041",
@@ -459,7 +519,9 @@
         "Multiply elements of second row of A with elements of first column of B and add"
       ],
       "question_text": "Arrange the steps to multiply two 2×2 matrices A and B in correct order.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct order of steps is important because matrix multiplication is a well-defined process that involves specific operations performed in a specific sequence. By following the correct order, you ensure that the resulting product is calculated accurately according to the matrix multiplication rules.",
+      "explanation_incorrect": "The incorrect order would not lead to the correct matrix product. The steps should be: 1) Identify the elements of matrices A and B, 2) Multiply elements of first row of A with elements of first column of B and add, 3) Multiply elements of first row of A with elements of second column of B and add, 4) Multiply elements of second row of A with elements of first column of B and add. This ensures that the matrix multiplication is carried out correctly according to the defined process."
     },
     {
       "question_id": "T02.04.Q042",
@@ -478,7 +540,9 @@
         "Write the resulting matrix"
       ],
       "question_text": "Arrange the steps to add two matrices in correct order.",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The correct order of steps to add two matrices is important because both matrices must have the same order (number of rows and columns) for the addition to be possible. Verifying the order first ensures that the corresponding elements can be added correctly in the next step.",
+      "explanation_incorrect": "The incorrect order would be to first write the resulting matrix, then identify the elements of both matrices, and finally add the corresponding elements. This is wrong because you need to verify that the matrices have the same order before you can add the corresponding elements to get the correct resulting matrix."
     },
     {
       "question_id": "T02.04.Q043",
@@ -497,7 +561,9 @@
         "Conclude whether matrices are equal or not"
       ],
       "question_text": "Arrange the steps to check if two matrices are equal in correct order.",
-      "concept_id": "T02.04.C02"
+      "concept_id": "T02.04.C02",
+      "explanation_correct": "The correct order of steps to check if two matrices are equal is to first identify the two matrices, then compare their orders, check if the corresponding elements are equal, and finally conclude whether the matrices are equal or not. This is the logical sequence to systematically verify if the matrices are equal.",
+      "explanation_incorrect": "The incorrect order would be to first conclude whether the matrices are equal or not, without first comparing their orders and checking the corresponding elements. This approach is flawed as you cannot directly conclude the equality of matrices without verifying their order and individual elements. The correct sequence is to first identify the matrices, then compare their orders, check the elements, and finally conclude the equality."
     },
     {
       "question_id": "T02.04.Q044",
@@ -516,7 +582,9 @@
         "A 3×3 matrix (9 elements)"
       ],
       "question_text": "Arrange these matrix types from smallest to largest total number of elements (for the given examples).",
-      "concept_id": "T02.04.C01"
+      "concept_id": "T02.04.C01",
+      "explanation_correct": "The order of the matrices from smallest to largest total number of elements is correct because the number of elements in a matrix is equal to the product of its number of rows and columns. A 1x2 matrix has 2 elements, a 2x2 matrix has 4 elements, a 2x3 matrix has 6 elements, and a 3x3 matrix has 9 elements.",
+      "explanation_incorrect": "The incorrect explanation would be to simply list the matrices in a different order, for example: 'A 2x2 matrix (4 elements), A 1x2 matrix (2 elements), A 2x3 matrix (6 elements), A 3x3 matrix (9 elements)'. This is wrong because it does not consider the fact that the number of elements in a matrix is directly proportional to its dimensions (number of rows and columns)."
     },
     {
       "question_id": "T02.04.Q045",
@@ -535,7 +603,9 @@
         "4A (first element = 4)"
       ],
       "question_text": "Arrange the following scalar multiples of matrix A = [[1, 2], [3, 4]] from smallest to largest first element.",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The scalar multiples of matrix A are arranged correctly from smallest to largest first element. This is because as the scalar multiplier increases from 1 to 2 to 3 to 4, the first element of the resulting matrix also increases correspondingly from 1 to 2 to 3 to 4.",
+      "explanation_incorrect": "The scalar multiples are not ordered correctly. The correct order from smallest to largest first element is: A (first element = 1), 2A (first element = 2), 3A (first element = 3), 4A (first element = 4). This is because as the scalar multiplier increases, the first element of the resulting matrix also increases proportionally."
     },
     {
       "question_id": "T02.04.Q046",
@@ -554,7 +624,9 @@
         "Conclude whether AB = BA or not"
       ],
       "question_text": "Arrange the steps to verify if matrix multiplication is commutative for given matrices A and B.",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct order of steps to verify if matrix multiplication is commutative is to first calculate the product AB, then calculate the product BA, compare the two results, and finally conclude whether AB = BA or not. This is the logical sequence to follow to properly check if matrix multiplication is commutative for the given matrices.",
+      "explanation_incorrect": "The incorrect order would be to first conclude whether AB = BA or not without actually calculating the two products. This is wrong because you need to perform the matrix multiplications first to compare the results and then determine if the multiplication is commutative. You cannot conclude the commutativity without actually calculating the products AB and BA."
     },
     {
       "question_id": "T02.04.Q047",
@@ -573,7 +645,9 @@
         "Write the final value of x"
       ],
       "question_text": "Arrange the steps to solve for x in the matrix equation [[x, 2], [3, 4]] + [[2, 3], [1, x]] = [[5, 5], [4, 7]].",
-      "concept_id": "T02.04.C05"
+      "concept_id": "T02.04.C05",
+      "explanation_correct": "The correct order of steps is to first add the matrices on the left side, then equate the corresponding elements, solve the resulting equation, and finally write the final value of x. This is the logical sequence to solve the matrix equation step-by-step.",
+      "explanation_incorrect": "The incorrect order would be to first write the final value of x, then try to solve the equation 4 + x = 7, which cannot be done without first equating the corresponding elements of the matrices on both sides of the equation. The key is to follow the logical flow of solving a matrix equation by first adding the matrices, then equating the corresponding elements to set up the equations, and only then solving for the unknown variable."
     },
     {
       "question_id": "T02.04.Q048",
@@ -592,7 +666,9 @@
         "A×A: (1,1) element = 7"
       ],
       "question_text": "Arrange the matrix products in increasing order of their (1,1) element value: A×B, B×A, A×A, B×B where A = [[1, 2], [3, 4]] and B = [[2, 1], [1, 2]].",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct order is 'A×B: (1,1) element = 4', 'B×A: (1,1) element = 5', 'B×B: (1,1) element = 5', 'A×A: (1,1) element = 7' because when multiplying the matrices, the (1,1) element value increases in this order.",
+      "explanation_incorrect": "The incorrect order would be 'B×A: (1,1) element = 5', 'B×B: (1,1) element = 5', 'A×A: (1,1) element = 7', 'A×B: (1,1) element = 4'. This is wrong because the (1,1) element values do not increase in this order. The correct order is based on the increasing values of the (1,1) element when the matrix products are calculated."
     },
     {
       "question_id": "T02.04.Q049",
@@ -611,7 +687,9 @@
         "Divide both sides by 3 to get A"
       ],
       "question_text": "Arrange the steps to solve: 3A - 2B = C for matrix A, given B = [[1, 2], [3, 4]] and C = [[4, 5], [6, 7]].",
-      "concept_id": "T02.04.C03"
+      "concept_id": "T02.04.C03",
+      "explanation_correct": "The correct order of steps is to first rearrange the equation to isolate the terms with matrix A, then add 2B to both sides, calculate 2B, and finally divide both sides by 3 to get the value of A. This sequence of steps logically leads to solving for the unknown matrix A given the information provided for matrices B and C.",
+      "explanation_incorrect": "The incorrect order of steps would be to first calculate 2B, then add 2B to both sides, rearrange the equation to isolate A, and finally divide both sides by 3. This sequence does not make logical sense, as you need to first isolate the terms with A before you can divide both sides by 3 to solve for A. The correct order of steps follows the logical flow of the given problem."
     },
     {
       "question_id": "T02.04.Q050",
@@ -630,7 +708,9 @@
         "Write the final answer A = [[3, 5], [7, 9]]"
       ],
       "question_text": "Arrange the steps to find matrix A if A × [[1, 0], [0, 1]] = [[3, 5], [7, 9]].",
-      "concept_id": "T02.04.C04"
+      "concept_id": "T02.04.C04",
+      "explanation_correct": "The correct answer is the sequence of steps to find the matrix A, given the condition A × [[1, 0], [0, 1]] = [[3, 5], [7, 9]]. The key is recognizing that [[1, 0], [0, 1]] is the identity matrix, so using the property that A multiplied by the identity matrix equals A, we can directly conclude that A must equal [[3, 5], [7, 9]].",
+      "explanation_incorrect": "The incorrect explanation would be to try to solve for A by multiplying the two matrices directly. However, this would not work because the dimensions of the matrices are not compatible for multiplication. The correct approach is to recognize the identity matrix property and conclude that A must be equal to the given matrix [[3, 5], [7, 9]]."
     },
     {
       "question_id": "T02.04.Q051",
@@ -656,7 +736,9 @@
           "text": "A matrix with all elements equal to zero"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "A row matrix is a matrix with only one row, meaning it has a single horizontal arrangement of numbers. This is different from a square matrix or a column matrix, which have multiple rows and columns.",
+      "explanation_incorrect": "Option A describes a square matrix, which has an equal number of rows and columns. Option C describes a column matrix, which has only one column. Option D describes a null or zero matrix, where all the elements are zero. The correct answer is B, which describes a row matrix - a matrix with only one row."
     },
     {
       "question_id": "T02.04.Q052",
@@ -682,7 +764,9 @@
           "text": "A matrix with equal number of rows and columns"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "A column matrix is a matrix with only one column. This means it has a single column and multiple rows, unlike a row matrix which has a single row and multiple columns.",
+      "explanation_incorrect": "Option A, a matrix with only one row, is not a column matrix. A column matrix has a single column, not a single row. Option C, a matrix with all elements equal to zero, is a different type of matrix called a null or zero matrix. Option D, a matrix with equal number of rows and columns, is a square matrix, not a column matrix."
     },
     {
       "question_id": "T02.04.Q053",
@@ -708,7 +792,9 @@
           "text": "A matrix with all elements equal to zero"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "A square matrix is a matrix with an equal number of rows and columns. This means the matrix has the same dimensions, i.e., it has the same number of rows and columns, making it a square-shaped arrangement of numbers.",
+      "explanation_incorrect": "Option A is correct because a square matrix is defined as a matrix with an equal number of rows and columns. This means the matrix has the same dimensions, i.e., the same number of rows and columns. Options B and C describe row matrices and column matrices, respectively, which are not square matrices. Option D describes a null or zero matrix, which is a special case of a matrix but not specifically a square matrix."
     },
     {
       "question_id": "T02.04.Q054",
@@ -734,7 +820,9 @@
           "text": "A matrix with only one column"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) A matrix with all elements equal to zero. A null matrix is a special type of matrix where all the elements are equal to zero, regardless of the number of rows and columns. This means that a null matrix has no non-zero elements, making it a unique and easily identifiable type of matrix.",
+      "explanation_incorrect": "The other options are not correct. Option B) refers to a square matrix, which has an equal number of rows and columns. Option C) describes a row matrix, which has only one row. Option D) describes a column matrix, which has only one column. None of these options accurately capture the definition of a null matrix, which is a matrix with all elements equal to zero."
     },
     {
       "question_id": "T02.04.Q055",
@@ -760,7 +848,9 @@
           "text": "2 × 2"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The given matrix [[1, 2, 3]] is a row matrix, which means it has 1 row and 3 columns. The order of a matrix is denoted as m × n, where m is the number of rows and n is the number of columns. Therefore, the order of this matrix is 1 × 3.",
+      "explanation_incorrect": "The incorrect options B, C, and D do not match the given matrix. Option B (2 × 3) has 2 rows, while the given matrix has only 1 row. Option C (3 × 1) has 3 rows, which is also incorrect. Option D (2 × 2) has a different number of rows and columns compared to the given matrix. Therefore, the correct order of the given matrix is 1 × 3, as it has 1 row and 3 columns."
     },
     {
       "question_id": "T02.04.Q056",
@@ -786,7 +876,9 @@
           "text": "2 × 2"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The given matrix has 3 rows and 1 column, so its order is 3 × 1. This means it is a column matrix with 3 elements arranged in 3 rows and 1 column.",
+      "explanation_incorrect": "The matrix has 3 elements, but they are arranged in 3 rows and 1 column, not 1 row and 3 columns. So the correct order is 3 × 1, not 1 × 3. It is also not a 2 × 3 or 2 × 2 matrix, as the number of rows and columns do not match the given information."
     },
     {
       "question_id": "T02.04.Q057",
@@ -812,7 +904,9 @@
           "text": "2 × 3"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The given matrix [[1, 2], [3, 4]] is a 2 × 2 matrix, meaning it has 2 rows and 2 columns. Therefore, the correct order of this matrix is 2 × 2.",
+      "explanation_incorrect": "The other options are incorrect because a row matrix has 1 row and n columns, a column matrix has m rows and 1 column, and a 2 × 3 matrix has 2 rows and 3 columns. The given matrix clearly has 2 rows and 2 columns, so the correct order is 2 × 2."
     },
     {
       "question_id": "T02.04.Q058",
@@ -838,7 +932,9 @@
           "text": "1 × 3"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The matrix given is [[1, 2, 3], [4, 5, 6]], which has 2 rows and 3 columns. Therefore, the order of this matrix is 2 × 3, which corresponds to option C.",
+      "explanation_incorrect": "The matrix [[1, 2, 3], [4, 5, 6]] cannot have an order of 2 × 2 (option A) because it has 3 columns, not 2. It also cannot be a 3 × 1 matrix (option B) because it has 2 rows, not 1. And it cannot be a 1 × 3 matrix (option D) because it has 2 rows, not 1. The correct order is 2 × 3, as described in option C."
     },
     {
       "question_id": "T02.04.Q059",
@@ -864,7 +960,9 @@
           "text": "Same order and corresponding elements equal"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The requirements for matrix addition are that the two matrices must have the same order, meaning they must have the same number of rows and columns. This ensures that the corresponding elements can be added together to get the result.",
+      "explanation_incorrect": "The requirements for matrix addition are not that the columns in the first matrix must equal the rows in the second matrix, nor that you need to multiply each element by a scalar. The correct requirement is that the two matrices must have the same order, meaning they must have the same number of rows and columns. This allows the corresponding elements to be added together."
     },
     {
       "question_id": "T02.04.Q060",
@@ -890,7 +988,9 @@
           "text": "Matrices must have same order"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) Multiply each element by the scalar. This is the key requirement for scalar multiplication of a matrix. The scalar is a single number that is multiplied with each individual element of the matrix.",
+      "explanation_incorrect": "The incorrect options B, C, and D are not the requirements for scalar multiplication. Option B refers to the requirements for matrix multiplication, where the number of columns in the first matrix must equal the number of rows in the second matrix. Option C describes the requirements for matrix equality, where the matrices must have the same order and corresponding elements must be equal. Option D describes the requirements for matrix addition/subtraction, where the matrices must have the same order."
     },
     {
       "question_id": "T02.04.Q061",
@@ -916,7 +1016,9 @@
           "text": "Same order and corresponding elements equal"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) Columns in first must equal rows in second. For matrix multiplication to be possible, the number of columns in the first matrix must be equal to the number of rows in the second matrix. This ensures that the elements can be multiplied and added correctly to get the final result.",
+      "explanation_incorrect": "The correct answer is C) Columns in first must equal rows in second. Matrices must have the same order (number of rows and columns) for addition or subtraction to be possible, but this is not the requirement for matrix multiplication. Scalar multiplication involves multiplying each element by a scalar, which is a different operation. The requirement for matrix multiplication is that the number of columns in the first matrix must be equal to the number of rows in the second matrix."
     },
     {
       "question_id": "T02.04.Q062",
@@ -942,7 +1044,9 @@
           "text": "Matrices must have same order"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B because for two matrices to be equal, they must have the same order (same number of rows and columns) and their corresponding elements must also be equal.",
+      "explanation_incorrect": "The correct answer is B. Option A is incorrect because scalar multiplication involves multiplying each element of a matrix by a scalar (single number), not checking for matrix equality. Option C is incorrect because the number of columns in the first matrix must equal the number of rows in the second matrix for matrix multiplication to be possible, not for matrix equality. Option D is also incorrect because having the same order is just one of the requirements for matrix equality, not the only requirement."
     },
     {
       "question_id": "T02.04.Q063",
@@ -968,7 +1072,9 @@
           "text": "Number of rows equals number of columns"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The identity matrix [[1, 0], [0, 1]] has the property that when multiplied with any matrix A, it leaves A unchanged. This is because the identity matrix has 1s on the main diagonal and 0s elsewhere, so when multiplied with A, it just 'copies' A without changing it. This property is represented as AI = IA = A.",
+      "explanation_incorrect": "Option A is correct because the identity matrix has the special property that when multiplied with any other matrix, it leaves that matrix unchanged. This is not true for the other options - option B is incorrect because the identity matrix does not 'add' to another matrix, and option C is incorrect because the identity matrix has 2 rows and 2 columns, not 4 elements. Option D is also incorrect because the identity matrix must have the same number of rows and columns to be a square matrix."
     },
     {
       "question_id": "T02.04.Q064",
@@ -994,7 +1100,9 @@
           "text": "AI = IA = A"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) A + O = A. This is because the null matrix, which has all elements as 0, is the additive identity for matrix addition. When you add the null matrix to any other matrix, the result is the original matrix itself. This property is true for the null matrix of any size.",
+      "explanation_incorrect": "The other options are incorrect. Option A) is wrong because the null matrix [[0, 0], [0, 0]] has 4 elements total, not a variable number. Option B) is wrong because the null matrix does not have to be a square matrix - it can have any number of rows and columns. Option D) is wrong because the identity matrix property AI = IA = A is not true for the null matrix."
     },
     {
       "question_id": "T02.04.Q065",
@@ -1020,7 +1128,9 @@
           "text": "Has 4 elements in total"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The key property of a square matrix is that the number of rows is equal to the number of columns, so a square matrix has the same number of rows and columns. This is the correct option B.",
+      "explanation_incorrect": "Option A, AI = IA = A, is a property of the identity matrix, not a general property of all square matrices. Option C, A + O = A, is a property of the zero matrix, not a general square matrix. Option D is incorrect because a square matrix does not have a fixed number of 4 elements - the number of elements depends on the size (order) of the matrix."
     },
     {
       "question_id": "T02.04.Q066",
@@ -1046,7 +1156,9 @@
           "text": "A + O = A"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "A 2x2 matrix has a total of 4 elements, since it has 2 rows and 2 columns. This is the key property that distinguishes a 2x2 matrix from other matrix types.",
+      "explanation_incorrect": "Option B is incorrect because a 2x2 matrix does not necessarily have to be a square matrix, where the number of rows equals the number of columns. Option C is incorrect because the identity matrix property AI = IA = A only applies to square matrices, not 2x2 matrices specifically. Option D is incorrect because the property A + O = A applies to all matrices, not just 2x2 matrices."
     },
     {
       "question_id": "T02.04.Q067",
@@ -1068,7 +1180,9 @@
           "text": "[[2, 4], [6, 8]]"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C because 2A means multiplying each element of matrix A by the scalar 2. Since A = [[1, 2], [3, 4]], the resulting 2A = [[2, 4], [6, 8]].",
+      "explanation_incorrect": "Option A is incorrect because it represents the result of matrix multiplication AB, not scalar multiplication of A by 2. Option B is the zero matrix, which is not the result of 2A. The correct answer C shows the result of multiplying each element of A by 2, which is the correct operation for 2A."
     },
     {
       "question_id": "T02.04.Q068",
@@ -1090,7 +1204,9 @@
           "text": "[[2, 4], [6, 8]]"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) [[2, 4], [6, 8]]. This is because if we add the matrix A to itself, each element in the matrix will be doubled. So, if the original matrix A is [[1, 2], [3, 4]], then the result of A + A will be [[2, 4], [6, 8]].",
+      "explanation_incorrect": "The incorrect options are not correct. Option A) [[0, 0], [0, 0]] is the zero matrix, which is not the result of adding a matrix to itself. Option B) [[3, 6], [9, 12]] is the result of multiplying the matrix A by 3, not adding it to itself."
     },
     {
       "question_id": "T02.04.Q069",
@@ -1112,7 +1228,9 @@
           "text": "[[2, 4], [6, 8]]"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[3, 6], [9, 12]]. This is because when we multiply a matrix by a scalar (in this case 3), we multiply each element of the matrix by that scalar. So, 3A means we multiply each element of matrix A by 3.",
+      "explanation_incorrect": "The incorrect options B) [[0, 0], [0, 0]] and C) [[2, 4], [6, 8]] are not correct. Option B) is for a zero matrix, which is not the result of multiplying matrix A by 3. Option C) is the result of multiplying matrix A by 2, not 3."
     },
     {
       "question_id": "T02.04.Q070",
@@ -1134,7 +1252,9 @@
           "text": "[[0, 0], [0, 0]]"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The result of A - A is a zero matrix, where all the elements are 0. This is because subtracting a matrix from itself will cancel out all the elements, leaving a matrix of all 0s.",
+      "explanation_incorrect": "Option C is the correct answer. Subtracting a matrix from itself will cancel out all the elements, resulting in a zero matrix. This is because the corresponding elements in the two matrices will be the same, so when you subtract them, you get 0. Options A and B are incorrect because they represent different matrix operations, not the result of subtracting a matrix from itself."
     },
     {
       "question_id": "T02.04.Q071",
@@ -1160,7 +1280,9 @@
           "text": "2 × 2"
         }
       ],
-      "correct_answer": "D"
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D) 2 × 2. When multiplying two matrices, the number of columns in the first matrix must equal the number of rows in the second matrix. Here, matrix A has 2 rows and 3 columns, while matrix B has 3 rows and 2 columns. Therefore, the resulting matrix will have 2 rows and 2 columns, giving a 2 × 2 matrix.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the dimensions of the resulting matrix. Option A) 3 × 1 is incorrect because the number of columns in matrix A (3) does not match the number of rows in matrix B (2). Option B) 2 × 3 is incorrect because the number of columns in the resulting matrix should be 2, not 3. Option C) 1 × 2 is incorrect because the number of rows in the resulting matrix should be 2, not 1."
     },
     {
       "question_id": "T02.04.Q072",
@@ -1186,7 +1308,9 @@
           "text": "3 × 1"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The result of A(2×2) × B(2×3) is a matrix of size 2×3, since the number of columns in the first matrix (A) must be equal to the number of rows in the second matrix (B) for matrix multiplication to be possible. The resulting matrix will have 2 rows and 3 columns.",
+      "explanation_incorrect": "The result of matrix multiplication A(2×2) × B(2×3) cannot be 1×2, 2×2, or 3×1, as these do not match the required dimensions. The correct result is a 2×3 matrix, since the number of columns in A (2) is equal to the number of rows in B (2), allowing the matrices to be multiplied."
     },
     {
       "question_id": "T02.04.Q073",
@@ -1212,7 +1336,9 @@
           "text": "2 × 2"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 3 × 1. When you multiply a 3×2 matrix by a 2×1 matrix, the result is a 3×1 matrix. This is because the number of columns in the first matrix (2) must match the number of rows in the second matrix (2) for the multiplication to be possible, and the resulting matrix will have 3 rows (from the first matrix) and 1 column (from the second matrix).",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the dimensions of the resulting matrix. Option A) 2 × 3 is the wrong size, as the first matrix has 3 rows and the second matrix has 1 column. Option B) 1 × 2 is also the wrong size, as the resulting matrix should have 3 rows and 1 column. Option D) 2 × 2 is incorrect because the dimensions of the resulting matrix do not match the given dimensions."
     },
     {
       "question_id": "T02.04.Q074",
@@ -1238,7 +1364,9 @@
           "text": "3 × 1"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The result of multiplying a 1×2 matrix (matrix A) with a 2×2 matrix (matrix B) will be a 1×2 matrix. This is because the number of columns in the first matrix (A) must be equal to the number of rows in the second matrix (B) for matrix multiplication to be possible. The resulting matrix will have the same number of rows as the first matrix (A) and the same number of columns as the second matrix (B).",
+      "explanation_incorrect": "The correct answer is C) 1 × 2. This is because when you multiply a 1×2 matrix with a 2×2 matrix, the resulting matrix will have 1 row and 2 columns. Option A) 2 × 2 is incorrect because the resulting matrix would have 2 rows and 2 columns, which does not match the given problem. Options B) 2 × 3 and D) 3 × 1 are also incorrect as the dimensions of the resulting matrix do not match the question."
     },
     {
       "question_id": "T02.04.Q075",
@@ -1256,7 +1384,9 @@
           "text": "Possible"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The multiplication of a 2x3 matrix A and a 3x2 matrix B is possible, as the number of columns in the first matrix (A) matches the number of rows in the second matrix (B). This allows the two matrices to be multiplied, resulting in a 2x2 matrix.",
+      "explanation_incorrect": "The multiplication of A(2x3) and B(3x2) is not possible because the number of columns in the first matrix (A) does not match the number of rows in the second matrix (B). For matrix multiplication to be valid, the number of columns in the first matrix must be equal to the number of rows in the second matrix."
     },
     {
       "question_id": "T02.04.Q076",
@@ -1274,7 +1404,9 @@
           "text": "Not possible"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The operation A(2×3) × B(2×3) is not possible because the number of columns in the first matrix (A) must be equal to the number of rows in the second matrix (B) for matrix multiplication to be defined. In this case, the matrices have different dimensions, so the multiplication cannot be performed.",
+      "explanation_incorrect": "The operation A(2×3) × B(2×3) is not possible because the dimensions of the matrices do not match. For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows in the second matrix. In this case, both A and B have 2 rows and 3 columns, so the multiplication cannot be carried out. The correct answer is that this operation is 'Not possible'."
     },
     {
       "question_id": "T02.04.Q077",
@@ -1292,7 +1424,9 @@
           "text": "Possible"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The multiplication A(3x3) x B(3x1) is possible because the number of columns in the first matrix (3) is equal to the number of rows in the second matrix (3). This allows for matrix multiplication, resulting in a 3x1 matrix.",
+      "explanation_incorrect": "The incorrect answer is 'Not possible'. This is incorrect because the order (dimensions) of the matrices are compatible for matrix multiplication. For a 3x3 matrix to be multiplied by a 3x1 matrix, the number of columns in the first matrix must match the number of rows in the second matrix. Since both conditions are met here, the multiplication is valid and possible."
     },
     {
       "question_id": "T02.04.Q078",
@@ -1310,7 +1444,9 @@
           "text": "Not possible"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The multiplication of a 2×1 matrix A and a 3×2 matrix B is not possible. This is because the number of columns in the first matrix (2) must be equal to the number of rows in the second matrix (3) for matrix multiplication to be defined.",
+      "explanation_incorrect": "The multiplication of a 2×1 matrix A and a 3×2 matrix B is not possible. Matrix multiplication can only be performed when the number of columns in the first matrix is equal to the number of rows in the second matrix. In this case, the 2×1 matrix A has 2 columns, but the 3×2 matrix B has 3 rows, so the multiplication is not compatible. Therefore, option B 'Not possible' is the correct answer."
     },
     {
       "question_id": "T02.04.Q079",
@@ -1332,7 +1468,9 @@
           "text": "x = 3"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x = 5. This is because the given matrices are equal, so their corresponding elements must be equal. The top-left element of the first matrix is x, and the top-left element of the second matrix is 5, so x = 5.",
+      "explanation_incorrect": "The incorrect answers B) x = 4 and C) x = 3 are not correct because the given matrices are equal, and their corresponding elements must be equal. The top-left element of the first matrix is x, and the top-left element of the second matrix is 5, so x must be equal to 5."
     },
     {
       "question_id": "T02.04.Q080",
@@ -1354,7 +1492,9 @@
           "text": "x = 5"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x = 3. This is because when we multiply the two 2x2 matrices, the resulting matrix elements are calculated using the formula for matrix multiplication. Plugging in the values, we get: [[2(3) + 4(6), 2(4) + 4(8)], [6(3) + 8(6), 6(4) + 8(8)]] = [[6, 4], [6, 8]].",
+      "explanation_incorrect": "The incorrect answers B) x = 4 and C) x = 5 are not correct because they do not satisfy the given matrix equation. When we multiply the two 2x2 matrices using the formula for matrix multiplication, the resulting elements must match the right-hand side of the equation. Only x = 3 satisfies this condition."
     },
     {
       "question_id": "T02.04.Q081",
@@ -1376,7 +1516,9 @@
           "text": "x = 4"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The value of x is 3 because when we equate the corresponding elements of the two 2x2 matrices, we get the equations: x+1 = 4, 2 = 2, 3 = 3, and 4 = 4. Solving for x, we get x = 3.",
+      "explanation_incorrect": "The value of x cannot be 5 or 4 because when we equate the corresponding elements of the two 2x2 matrices, the equations we get do not have a solution for x = 5 or x = 4. The correct value of x is 3, which satisfies all the equations obtained by equating the corresponding elements."
     },
     {
       "question_id": "T02.04.Q082",
@@ -1398,7 +1540,9 @@
           "text": "x = 4"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) x = 4. This is because when we multiply the two 2x2 matrices, the resulting elements are: [12, 6] and [9, 12]. Therefore, the value of x in the given matrix must be 4 to satisfy this equality.",
+      "explanation_incorrect": "The incorrect answers A) x = 5 and B) x = 3 are not correct because they do not satisfy the given equality of the two 2x2 matrices. For the matrix multiplication to work, the value of x must be 4 so that the resulting matrix elements match the given matrix on the right side."
     },
     {
       "question_id": "T02.04.Q083",
@@ -1420,7 +1564,9 @@
           "text": "[[16, 21], [28, 37]]"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, [[2, 3], [4, 5]]. This is because when you multiply two 2x2 matrices, the resulting matrix will have the same order (2x2). The formula for multiplying 2x2 matrices is provided in the question context, and if you plug in the given values for A and B, you get the result [[2, 3], [4, 5]].",
+      "explanation_incorrect": "The incorrect options B and C are not the correct result of multiplying the given 2x2 matrices A and B. Option B is the identity matrix, which is not the result of multiplying A and B. Option C is the result of multiplying a different set of 2x2 matrices, not the ones given in the question. To get the correct result, you need to follow the provided formula for multiplying 2x2 matrices, which leads to the answer A."
     },
     {
       "question_id": "T02.04.Q084",
@@ -1442,7 +1588,9 @@
           "text": "[[2, 3], [4, 5]]"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) [[2, 3], [4, 5]]. This is because the matrix multiplication of B and A results in this product, where B = [[1, 2], [3, 4]] and A = [[1, 1], [2, 2]].",
+      "explanation_incorrect": "The incorrect answer A) [[16, 21], [28, 37]] is not correct because it represents the result of multiplying the matrices in the opposite order, AB, not BA. Matrix multiplication is not commutative, so the order of the matrices matters. The correct way to calculate BA is to multiply the second matrix by the first matrix, resulting in the answer C) [[2, 3], [4, 5]]."
     },
     {
       "question_id": "T02.04.Q085",
@@ -1464,7 +1612,9 @@
           "text": "[[16, 21], [28, 37]]"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The result of AA is the identity matrix [[1, 0], [0, 1]]. This is because when you multiply a square matrix A by itself, the result is the identity matrix, where all diagonal elements are 1 and all other elements are 0.",
+      "explanation_incorrect": "The correct answer is A) [[1, 0], [0, 1]]. This is the identity matrix, which is the result of multiplying any square matrix by itself. The other options are incorrect because they do not represent the identity matrix."
     },
     {
       "question_id": "T02.04.Q086",
@@ -1486,7 +1636,9 @@
           "text": "[[2, 3], [4, 5]]"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[16, 21], [28, 37]]. This is because when you multiply a 2x2 matrix B by itself, you get the matrix BB, which is calculated by matrix multiplication. The elements of the resulting 2x2 matrix are obtained by multiplying the corresponding elements of the two matrices B.",
+      "explanation_incorrect": "The incorrect answers B) [[1, 0], [0, 1]] and C) [[2, 3], [4, 5]] are not correct because they do not represent the result of multiplying the matrix B by itself. The identity matrix B) would only be the result if B was an identity matrix, which it is not. The matrix C) is a different 2x2 matrix that is unrelated to the multiplication of B with itself."
     },
     {
       "question_id": "T02.04.Q087",
@@ -1508,7 +1660,9 @@
           "text": "[[3, 6], [9, 12]]"
         }
       ],
-      "correct_answer": "C"
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) [[3, 6], [9, 12]]. This is because when you add two matrices of the same order (2x2 in this case), you add the corresponding elements. So [1+2, 2+4] = [3, 6] and [3+6, 4+8] = [9, 12].",
+      "explanation_incorrect": "The incorrect options are not the result of adding the given 2x2 matrices A and B. Option A) [[2, 4], [6, 8]] is the result of scalar multiplication of B by 2, not the addition of A and B. Option B) [[1, 2], [3, 4]] is simply the matrix B, not the sum of A and B."
     },
     {
       "question_id": "T02.04.Q088",
@@ -1530,7 +1684,9 @@
           "text": "[[2, 4], [6, 8]]"
         }
       ],
-      "correct_answer": "B"
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) [[1, 2], [3, 4]]. This is because matrix subtraction is performed by subtracting the corresponding elements of the two matrices. So, A - B = [[3-1, 6-2], [9-3, 12-4]] = [[1, 2], [3, 4]].",
+      "explanation_incorrect": "The incorrect options A) [[3, 6], [9, 12]] and C) [[2, 4], [6, 8]] are not the result of A - B. Option A) is the result of adding the two matrices, and option C) is the result of doubling the elements of matrix B. However, the question asks for the result of subtracting matrix B from matrix A, which is correctly shown in option B)."
     },
     {
       "question_id": "T02.04.Q089",
@@ -1552,7 +1708,9 @@
           "text": "[[3, 6], [9, 12]]"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[2, 4], [6, 8]]. This is because if we have a matrix B = [[1, 2], [3, 4]], then 2B means multiplying each element of B by 2. This results in the matrix 2B = [[2, 4], [6, 8]].",
+      "explanation_incorrect": "The incorrect answers B) [[1, 2], [3, 4]] and C) [[3, 6], [9, 12]] are not correct because they do not represent the result of multiplying the matrix B = [[1, 2], [3, 4]] by the scalar 2. The correct answer is A) [[2, 4], [6, 8]], which is obtained by multiplying each element of B by 2."
     },
     {
       "question_id": "T02.04.Q090",
@@ -1574,7 +1732,9 @@
           "text": "[[2, 4], [6, 8]]"
         }
       ],
-      "correct_answer": "A"
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[1, 2], [3, 4]]. When you multiply a matrix by a scalar (in this case, 1/2), you simply divide each element of the matrix by the scalar. So, 1/2 times the matrix [[2, 4], [6, 8]] is [[1, 2], [3, 4]].",
+      "explanation_incorrect": "The incorrect answers B) [[3, 6], [9, 12]] and C) [[2, 4], [6, 8]] are not correct because they do not represent the result of multiplying the matrix [[2, 4], [6, 8]] by the scalar 1/2. To get the correct result, you need to divide each element of the matrix by 2."
     }
   ],
   "metadata": {

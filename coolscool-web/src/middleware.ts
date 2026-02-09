@@ -2,7 +2,7 @@ import { auth } from '@/auth';
 import { NextResponse } from 'next/server';
 
 // Routes that require authentication
-const protectedRoutes = ['/dashboard', '/parent', '/settings'];
+const protectedRoutes = ['/dashboard', '/parent', '/settings', '/profile'];
 
 // Routes that require specific roles
 const parentRoutes = ['/parent'];
@@ -65,6 +65,7 @@ export const config = {
     '/dashboard/:path*',
     '/parent/:path*',
     '/settings/:path*',
+    '/profile/:path*',
     // Auth routes (for session error handling)
     '/browse/:path*',
     '/practice/:path*',

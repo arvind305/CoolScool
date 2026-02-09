@@ -89,6 +89,11 @@ interface QuestionOption {
   text: string;
 }
 
+interface OrderingItem {
+  id: string;
+  text: string;
+}
+
 interface Question {
   question_id: string;
   concept_id: string;
@@ -96,8 +101,13 @@ interface Question {
   type: string;
   question_text: string;
   options?: QuestionOption[];
-  correct_answer: unknown;
+  correct_answer?: unknown;
   ordering_items?: string[];
+  // Ordering question alternative format
+  items?: OrderingItem[];
+  correct_order?: string[];
+  explanation_correct?: string;
+  explanation_incorrect?: string;
 }
 
 interface QuestionBank {
@@ -250,17 +260,30 @@ async function seedSubjectClass(
         const conceptUuid = conceptResult.rows[0].id;
 
         let correctAnswer = q.correct_answer;
-        if (q.type === 'ordering' && q.ordering_items && !correctAnswer) {
-          correctAnswer = q.ordering_items;
+        let orderingItems = q.ordering_items;
+
+        // Handle ordering questions with items/correct_order format
+        if (q.type === 'ordering') {
+          if (q.items && q.correct_order) {
+            // Convert items array to ordering_items format (just the text values in correct order)
+            orderingItems = q.correct_order.map(id => {
+              const item = q.items!.find(i => i.id === id);
+              return item ? item.text : id;
+            });
+            correctAnswer = q.correct_order;
+          } else if (q.ordering_items && !correctAnswer) {
+            correctAnswer = q.ordering_items;
+          }
         }
 
         await client.query(
           `INSERT INTO questions (
              curriculum_id, question_id, concept_id, concept_id_str, topic_id_str,
              difficulty, question_type, question_text, options,
-             correct_answer, ordering_items
+             correct_answer, ordering_items,
+             explanation_correct, explanation_incorrect
            )
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
            ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
              concept_id = EXCLUDED.concept_id,
              concept_id_str = EXCLUDED.concept_id_str,
@@ -268,13 +291,17 @@ async function seedSubjectClass(
              question_text = EXCLUDED.question_text,
              options = EXCLUDED.options,
              correct_answer = EXCLUDED.correct_answer,
-             ordering_items = EXCLUDED.ordering_items`,
+             ordering_items = EXCLUDED.ordering_items,
+             explanation_correct = COALESCE(EXCLUDED.explanation_correct, questions.explanation_correct),
+             explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect)`,
           [
             curriculumId, q.question_id, conceptUuid, q.concept_id, data.topic_id,
             q.difficulty, q.type, q.question_text,
             q.options ? JSON.stringify(q.options) : null,
             JSON.stringify(correctAnswer),
-            q.ordering_items ? JSON.stringify(q.ordering_items) : null,
+            orderingItems ? JSON.stringify(orderingItems) : null,
+            q.explanation_correct || null,
+            q.explanation_incorrect || null,
           ]
         );
         questionCount++;

@@ -839,19 +839,24 @@ questions/data/
 - Removed from database: 90 questions, 3 explanations, 55 concepts, 11 topics, 6 themes, 1 curriculum
 - Cleanup script created: `coolscool-backend/scripts/remove-class6-curriculum.ts`
 
-### Phase 6: UI Integration ⏳ PENDING
-1. ⏳ Add CurriculumSelector to Header component
-2. ⏳ Manual UI verification with multiple curricula
-3. ⏳ Integration tests (optional)
+### Phase 6: UI Integration ✅ COMPLETE
+1. ✅ Add CurriculumSelector to Header component
+2. ⏳ Manual UI verification with multiple curricula (deferred - only 1 curriculum exists)
+3. ⏳ Integration tests (optional, deferred)
 
-**Files to modify:**
-- `coolscool-web/src/components/layout/Header.tsx` - Add CurriculumSelector
+**Completed:** 2026-01-23
 
-**Existing components ready for use:**
-- `coolscool-web/src/components/curriculum/CurriculumSelector.tsx` - Created and working
-- `coolscool-web/src/contexts/CurriculumContext.tsx` - Created and working
+**Files modified:**
+- `coolscool-web/src/components/layout/Header.tsx` - Added CurriculumSelector import and component
+- `coolscool-web/src/components/layout/index.ts` - Fixed import casing (header → Header)
 
-**Note:** CurriculumSelector shows as a label when only one curriculum exists, and as a dropdown when multiple curricula are available. Integration can wait until a second real curriculum is added.
+**Implementation details:**
+- CurriculumSelector added to Header between logo and nav actions
+- Uses `compact` prop (no label, just the selector)
+- With 1 curriculum: Shows as a badge/label ("ICSE Class 5 Mathematics")
+- With multiple curricula: Shows as a dropdown for switching
+
+**Note:** Full UI verification will be done when a second real curriculum is added. The CurriculumSelector automatically adapts its display based on the number of available curricula.
 
 ---
 
@@ -896,11 +901,11 @@ questions/data/
 - [x] API isolation verified (themes, topics return correct curriculum content)
 - [x] Test data cleaned up (files deleted, database purged)
 
-### Phase 6 (UI Integration) - PENDING
-- [ ] Add CurriculumSelector to Header component
-- [ ] User can switch between curricula (requires multiple curricula)
-- [ ] UI shows correct content per curriculum
-- [ ] No cross-curriculum data leakage (integration tests - optional)
+### Phase 6 (UI Integration) - COMPLETE
+- [x] Add CurriculumSelector to Header component
+- [ ] User can switch between curricula (deferred - requires multiple curricula)
+- [ ] UI shows correct content per curriculum (deferred - requires multiple curricula)
+- [ ] No cross-curriculum data leakage (integration tests - optional, deferred)
 
 ---
 

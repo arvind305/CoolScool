@@ -66,7 +66,7 @@ export interface UseQuizEngineReturn extends QuizEngineState {
 
   // Session operations
   startQuiz: (topicId: string, timeMode: TimeMode) => Promise<boolean>;
-  submitAnswer: (answer: string | string[] | Record<string, string>, timeTakenMs?: number) => Promise<AnswerSubmitResult | null>;
+  submitAnswer: (answer: string | string[], timeTakenMs?: number) => Promise<AnswerSubmitResult | null>;
   skipQuestion: () => void;
   nextQuestion: () => void;
   endSession: (completed?: boolean) => Promise<SessionSummary | null>;
@@ -239,7 +239,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
 
   // Submit an answer
   const submitAnswer = useCallback(
-    async (answer: string | string[] | Record<string, string>, timeTakenMs: number = 0): Promise<AnswerSubmitResult | null> => {
+    async (answer: string | string[], timeTakenMs: number = 0): Promise<AnswerSubmitResult | null> => {
       if (!engineRef.current || !state.isSessionActive) {
         return null;
       }

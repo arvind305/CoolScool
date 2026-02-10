@@ -62,7 +62,7 @@ function QuizPageContent() {
 
   // Local state
   const [quizState, setQuizState] = useState<QuizState>('loading');
-  const [selectedAnswer, setSelectedAnswer] = useState<string | string[] | Record<string, string> | null>(null);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | string[] | null>(null);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [summary, setSummary] = useState<SessionSummary | null>(null);
   const [proficiency, setProficiency] = useState<{ band: ProficiencyBand; label: string }>({
@@ -147,7 +147,7 @@ function QuizPageContent() {
   }, [stopTimer]);
 
   // Handle answer selection
-  const handleAnswerSelect = useCallback((answer: string | string[] | Record<string, string>) => {
+  const handleAnswerSelect = useCallback((answer: string | string[]) => {
     setSelectedAnswer(answer);
   }, []);
 

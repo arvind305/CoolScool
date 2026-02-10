@@ -19,6 +19,7 @@ export interface BackendAuthResponse {
   data: {
     user: BackendUser;
     accessToken: string;
+    refreshToken: string;
     expiresIn: number;
   };
 }
@@ -27,6 +28,7 @@ export interface BackendRefreshResponse {
   success: boolean;
   data: {
     accessToken: string;
+    refreshToken: string;
     expiresIn: number;
   };
 }

@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import Google from 'next-auth/providers/google';
 import type { NextAuthConfig } from 'next-auth';
-import { authenticateWithGoogle } from '@/services/auth-api';
+import { authenticateWithGoogle, refreshAccessToken } from '@/services/auth-api';
 
 export const authConfig: NextAuthConfig = {
   secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
@@ -31,6 +31,7 @@ export const authConfig: NextAuthConfig = {
 
           token.backendUser = backendAuth.data.user;
           token.accessToken = backendAuth.data.accessToken;
+          token.refreshToken = backendAuth.data.refreshToken;
           token.accessTokenExpires = Date.now() + backendAuth.data.expiresIn * 1000;
 
           return token;
@@ -41,16 +42,27 @@ export const authConfig: NextAuthConfig = {
         }
       }
 
-      // Return previous token if the access token has not expired
+      // Return previous token if the access token has not expired (with 60s buffer)
       const expiresAt = token.accessTokenExpires as number | undefined;
-      if (expiresAt && Date.now() < expiresAt) {
+      if (expiresAt && Date.now() < expiresAt - 60_000) {
         return token;
       }
 
-      // Access token has expired, try to refresh it
-      // Note: In production, you'd want to implement refresh token rotation
-      // For now, we'll require re-authentication
-      console.log('Access token expired, requiring re-authentication');
+      // Access token has expired or is about to — refresh it
+      const storedRefreshToken = token.refreshToken as string | undefined;
+      if (storedRefreshToken) {
+        try {
+          const refreshed = await refreshAccessToken(storedRefreshToken);
+          token.accessToken = refreshed.data.accessToken;
+          token.refreshToken = refreshed.data.refreshToken;
+          token.accessTokenExpires = Date.now() + refreshed.data.expiresIn * 1000;
+          delete token.error;
+          return token;
+        } catch {
+          console.error('Failed to refresh access token');
+        }
+      }
+
       token.error = 'RefreshAccessTokenError';
       return token;
     },

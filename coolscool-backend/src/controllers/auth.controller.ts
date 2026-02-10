@@ -27,6 +27,7 @@ export async function googleAuth(
       data: {
         user: result.user,
         accessToken: result.tokens.accessToken,
+        refreshToken: result.tokens.refreshToken,
         expiresIn: result.tokens.expiresIn,
       },
     });
@@ -76,6 +77,7 @@ export async function refreshToken(
       success: true,
       data: {
         accessToken: tokens.accessToken,
+        refreshToken: tokens.refreshToken,
         expiresIn: tokens.expiresIn,
       },
     });

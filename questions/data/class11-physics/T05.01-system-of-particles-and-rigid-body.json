@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T05.01",
+  "topic_name": "System of Particles & Rigid Body",
+  "canonical_explanation": {
+    "text": "The centre of mass of a system of particles is a unique point whose motion represents the motion of the entire system when acted upon by external forces. For two particles of masses m₁ and m₂ separated by distance d, the centre of mass lies at x_cm = (m₁x₁ + m₂x₂)/(m₁ + m₂). Torque (τ = r × F) is the rotational analogue of force and causes angular acceleration. Angular momentum (L = Iω) is the rotational analogue of linear momentum, and the relation τ = dL/dt is the rotational form of Newton's second law. Moment of inertia (I) measures resistance to angular acceleration and depends on mass distribution relative to the axis of rotation: I = MR² for a ring, ½MR² for a disc, (1/12)ML² for a rod about its centre, and (2/5)MR² for a solid sphere. The parallel axis theorem (I = I_cm + Md²) and perpendicular axis theorem (I_z = I_x + I_y for planar bodies) allow calculation of moment of inertia about any axis. The equations of rotational kinematics mirror their translational counterparts. Rolling without slipping combines translation and rotation with the constraint v = Rω. A rigid body is in equilibrium when both the net force and net torque about any point are zero.",
+    "rules": [
+      "Centre of mass: x_cm = Σ(m_i × x_i) / Σm_i; the centre of mass moves as if all external forces act on the total mass concentrated at that point.",
+      "Torque: τ = r × F = rF sin θ; torque causes angular acceleration according to τ = Iα.",
+      "Moment of inertia of standard bodies: ring MR², disc ½MR², thin rod (centre) (1/12)ML², solid sphere (2/5)MR², hollow sphere (2/3)MR².",
+      "Parallel axis theorem: I = I_cm + Md²; perpendicular axis theorem (planar bodies): I_z = I_x + I_y.",
+      "Conservation of angular momentum: If net external torque is zero, L = Iω = constant."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.01.Q001",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of two particles of masses 2 kg and 3 kg separated by 10 m lies at a distance from the 2 kg mass of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 m"
+        },
+        {
+          "id": "B",
+          "text": "5 m"
+        },
+        {
+          "id": "C",
+          "text": "6 m"
+        },
+        {
+          "id": "D",
+          "text": "8 m"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The centre of mass of the two-particle system lies at a distance of 6 m from the 2 kg mass, since the centre of mass is located at (m1x1 + m2x2)/(m1 + m2), where m1 = 2 kg, m2 = 3 kg, and the separation distance is 10 m.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula for the centre of mass. Option A (4 m) would be correct if the masses were equal, but with 2 kg and 3 kg, the centre of mass is shifted closer to the heavier 3 kg mass. Options B (5 m) and D (8 m) do not match the actual calculation using the given formula."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of a uniform triangular lamina lies at its:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Circumcentre"
+        },
+        {
+          "id": "B",
+          "text": "Incentre"
+        },
+        {
+          "id": "C",
+          "text": "Centroid"
+        },
+        {
+          "id": "D",
+          "text": "Orthocentre"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The centre of mass of a uniform triangular lamina lies at its centroid, which is the point where the three medians of the triangle intersect. This is because the mass is evenly distributed throughout the triangle, so the centre of mass coincides with the geometric centre.",
+      "explanation_incorrect": "The centre of mass of a uniform triangular lamina does not lie at the circumcentre, incentre, or orthocentre of the triangle. These are special points related to the geometry of the triangle, but they do not necessarily coincide with the centre of mass. The correct answer is the centroid, which is the point where the three medians of the triangle intersect and represents the average position of the mass distribution."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Three masses of 1 kg, 2 kg and 3 kg are placed at the vertices of an equilateral triangle of side 1 m. The x-coordinate of the centre of mass (1 kg at origin, 2 kg at (1, 0), 3 kg at (0.5, √3/2)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7/12 m"
+        },
+        {
+          "id": "B",
+          "text": "1/2 m"
+        },
+        {
+          "id": "C",
+          "text": "2/3 m"
+        },
+        {
+          "id": "D",
+          "text": "5/12 m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The formula for the x-coordinate of the center of mass is (m1*x1 + m2*x2 + m3*x3)/(m1 + m2 + m3). Plugging in the given masses and positions, we get (1*0 + 2*1 + 3*0.5)/(1 + 2 + 3) = 7/12 m, which is option A.",
+      "explanation_incorrect": "The incorrect options are based on faulty calculations or misunderstanding the formula. Option B assumes the center of mass is halfway between the 2 kg and 3 kg masses, while option C assumes it is 2/3 of the way from the 1 kg mass to the midpoint of the other two masses. Option D incorrectly calculates the weighted average of the x-coordinates. The correct formula and application leads to option A as the right answer."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of torque is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "N"
+        },
+        {
+          "id": "B",
+          "text": "N·m"
+        },
+        {
+          "id": "C",
+          "text": "J/s"
+        },
+        {
+          "id": "D",
+          "text": "kg·m/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of torque is N·m (newton-metre) because torque is the product of force and distance, and the SI units of force and distance are newtons (N) and metres (m), respectively.",
+      "explanation_incorrect": "The incorrect options are not the correct units of torque. Option A (N) is the unit of force, option C (J/s) is the unit of power, and option D (kg·m/s) is the unit of angular momentum, not torque. The correct unit of torque is N·m, which represents the product of force and distance."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A force of 10 N is applied perpendicularly at the end of a 0.5 m wrench. The torque produced is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 N·m"
+        },
+        {
+          "id": "B",
+          "text": "5 N·m"
+        },
+        {
+          "id": "C",
+          "text": "20 N·m"
+        },
+        {
+          "id": "D",
+          "text": "50 N·m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 5 N·m. Torque is defined as the product of the force applied and the perpendicular distance from the force to the axis of rotation. In this case, the force of 10 N is applied perpendicularly at the end of a 0.5 m wrench, so the torque produced is 10 N × 0.5 m = 5 N·m.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not properly apply the formula for calculating torque. Torque is equal to the force multiplied by the perpendicular distance from the force to the axis of rotation. Answers A, C, and D do not correctly calculate this product using the given information of a 10 N force and a 0.5 m wrench."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "The angular momentum of a particle of mass 2 kg moving in a circle of radius 3 m with a speed of 4 m/s is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 kg·m²/s"
+        },
+        {
+          "id": "B",
+          "text": "12 kg·m²/s"
+        },
+        {
+          "id": "C",
+          "text": "24 kg·m²/s"
+        },
+        {
+          "id": "D",
+          "text": "6 kg·m²/s"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The angular momentum of a particle is calculated as L = mvr, where m is the mass, v is the speed, and r is the radius of the circular motion. Given the mass as 2 kg, speed as 4 m/s, and radius as 3 m, the angular momentum is L = (2 kg)(4 m/s)(3 m) = 24 kg·m²/s, which corresponds to option C.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula for angular momentum. Option A calculates linear momentum instead of angular momentum, Option B incorrectly uses the radius instead of the mass, and Option D uses an incorrect combination of the given values. The correct option C properly applies the formula L = mvr to calculate the angular momentum of the particle."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a thin ring of mass M and radius R about an axis through its centre and perpendicular to its plane is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "½MR²"
+        },
+        {
+          "id": "B",
+          "text": "MR²"
+        },
+        {
+          "id": "C",
+          "text": "2MR²"
+        },
+        {
+          "id": "D",
+          "text": "⅔MR²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The moment of inertia of a thin ring about an axis through its centre and perpendicular to its plane is MR², where M is the mass of the ring and R is its radius. This is because the mass of the ring is distributed uniformly along the circumference, and the distance of each mass element from the axis of rotation is R.",
+      "explanation_incorrect": "Option A (½MR²) is incorrect because the moment of inertia of a thin ring is MR², not half of that. Option C (2MR²) is incorrect because the moment of inertia is not double the given expression. Option D (⅔MR²) is incorrect because the moment of inertia of a thin ring is not ⅔ of the given expression."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a uniform disc of mass M and radius R about an axis through its centre and perpendicular to its plane is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "MR²"
+        },
+        {
+          "id": "B",
+          "text": "½MR²"
+        },
+        {
+          "id": "C",
+          "text": "¼MR²"
+        },
+        {
+          "id": "D",
+          "text": "⅔MR²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) ½MR². For a uniform disc, the moment of inertia about an axis through the centre and perpendicular to the plane is given by the formula I = ½MR², where M is the mass and R is the radius of the disc.",
+      "explanation_incorrect": "The incorrect options A) MR², C) ¼MR², and D) ⅔MR² are not correct because they do not match the formula for the moment of inertia of a uniform disc about an axis through its centre and perpendicular to its plane. The correct formula is I = ½MR²."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The moment of inertia of a disc of mass 4 kg and radius 0.5 m about an axis through its centre perpendicular to its plane is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.25 kg·m²"
+        },
+        {
+          "id": "B",
+          "text": "0.5 kg·m²"
+        },
+        {
+          "id": "C",
+          "text": "1.0 kg·m²"
+        },
+        {
+          "id": "D",
+          "text": "2.0 kg·m²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The formula for the moment of inertia of a disc about an axis through its centre perpendicular to its plane is (1/2)MR^2, where M is the mass of the disc and R is its radius. With M = 4 kg and R = 0.5 m, the moment of inertia is 0.5 kg·m^2, which corresponds to option B.",
+      "explanation_incorrect": "The moment of inertia of a disc about an axis through its centre perpendicular to its plane is not 0.25 kg·m^2 (option A), 1.0 kg·m^2 (option C), or 2.0 kg·m^2 (option D). These values do not match the formula (1/2)MR^2 for the moment of inertia of a disc about this axis."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "Using the parallel axis theorem, the moment of inertia of a disc of mass M and radius R about a tangent in its plane is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "MR²"
+        },
+        {
+          "id": "B",
+          "text": "(3/2)MR²"
+        },
+        {
+          "id": "C",
+          "text": "(5/4)MR²"
+        },
+        {
+          "id": "D",
+          "text": "2MR²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C, (5/4)MR². The parallel axis theorem states that the moment of inertia about any axis is equal to the moment of inertia about the centre of mass plus the product of the mass and the square of the distance between the two axes. For a disc, the moment of inertia about its centre of mass is (1/2)MR², so the moment of inertia about a tangent in the plane is (1/2)MR² + MR² = (5/4)MR².",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly apply the parallel axis theorem. Option A, MR², is the moment of inertia about the centre of mass, but does not account for the distance from the tangent to the centre of mass. Option B, (3/2)MR², is the moment of inertia about a diameter, not a tangent. Option D, 2MR², is the moment of inertia about an axis through the centre perpendicular to the plane of the disc, not a tangent in the plane."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a solid sphere of mass 5 kg and radius 0.2 m about an axis through its centre is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.04 kg·m²"
+        },
+        {
+          "id": "B",
+          "text": "0.08 kg·m²"
+        },
+        {
+          "id": "C",
+          "text": "0.10 kg·m²"
+        },
+        {
+          "id": "D",
+          "text": "0.20 kg·m²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The moment of inertia of a solid sphere about an axis through its centre is given by the formula (2/5)MR^2, where M is the mass of the sphere and R is its radius. Plugging in the given values, we get (2/5) × 5 kg × (0.2 m)^2 = 0.08 kg·m^2, which is option B.",
+      "explanation_incorrect": "The correct answer is option B, 0.08 kg·m^2. This is because the formula for the moment of inertia of a solid sphere about an axis through its centre is (2/5)MR^2, where M is the mass and R is the radius. Plugging in the given values of M = 5 kg and R = 0.2 m, we get (2/5) × 5 kg × (0.2 m)^2 = 0.08 kg·m^2. The other options do not correctly apply this formula."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The rotational analogue of Newton's second law (F = ma) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "L = Iω"
+        },
+        {
+          "id": "B",
+          "text": "τ = Iα"
+        },
+        {
+          "id": "C",
+          "text": "KE = ½Iω²"
+        },
+        {
+          "id": "D",
+          "text": "W = τθ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rotational analogue of Newton's second law is τ = Iα, where τ is the torque, I is the moment of inertia, and α is the angular acceleration. This equation relates the rotational quantities in the same way that F = ma relates the translational quantities.",
+      "explanation_incorrect": "The other options are not the rotational analogue of Newton's second law. Option A, L = Iω, is the equation for angular momentum, not the law of motion. Option C, KE = 1/2Iω^2, is the equation for rotational kinetic energy. Option D, W = τθ, is the work-energy theorem for rotational motion, not the law of motion."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "A disc of moment of inertia 2 kg·m² is rotating at 10 rad/s. A torque of 4 N·m is applied to decelerate it. The time taken to stop is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.5 s"
+        },
+        {
+          "id": "B",
+          "text": "5 s"
+        },
+        {
+          "id": "C",
+          "text": "10 s"
+        },
+        {
+          "id": "D",
+          "text": "20 s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 5 s. This can be calculated using the rotational kinematics equation: τ = Iα, where τ is the applied torque, I is the moment of inertia, and α is the angular acceleration. Rearranging this, we get α = τ/I = 4 N·m / 2 kg·m² = 2 rad/s². Using the equation ω = ω₀ + αt, where ω₀ is the initial angular velocity and ω is the final angular velocity (0 rad/s), the time taken to stop the disc is 10 rad/s / 2 rad/s² = 5 s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculated time of 5 s to stop the rotating disc. Option A) 2.5 s is too fast, option C) 10 s is too slow, and option D) 20 s is also too slow. The key is to use the rotational kinematics equations to solve for the time taken, which results in the correct answer of 5 s."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "A solid sphere rolls down an incline of height h without slipping. Its speed at the bottom is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(2gh)"
+        },
+        {
+          "id": "B",
+          "text": "√(10gh/7)"
+        },
+        {
+          "id": "C",
+          "text": "√(5gh/3)"
+        },
+        {
+          "id": "D",
+          "text": "√(gh)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) √(10gh/7) because for a solid sphere rolling without slipping, the total kinetic energy at the bottom of the incline is the sum of the translational kinetic energy (1/2)mv² and the rotational kinetic energy (1/2)Iω², which can be shown to equal (10/7)mgh.",
+      "explanation_incorrect": "The other options are incorrect because they do not account for the rotational kinetic energy of the solid sphere. Option A) √(2gh) considers only the translational kinetic energy, while options C) √(5gh/3) and D) √(gh) are incorrect simplifications that do not properly include the contribution from the rotational motion."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A disc and a ring of the same mass and radius roll down an incline from the same height. Which reaches the bottom first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ring"
+        },
+        {
+          "id": "B",
+          "text": "The disc"
+        },
+        {
+          "id": "C",
+          "text": "Both reach simultaneously"
+        },
+        {
+          "id": "D",
+          "text": "Depends on the angle of incline"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The disc reaches the bottom first because it has a lower moment of inertia (I = 1/2 MR^2) compared to the ring (I = MR^2). A lower moment of inertia means the disc experiences less resistance to angular acceleration, allowing it to roll down the incline faster.",
+      "explanation_incorrect": "The incorrect options are not correct because: A) The ring has a higher moment of inertia than the disc, so it will experience more resistance to angular acceleration and roll down the incline slower. C) The disc and ring cannot reach the bottom simultaneously, as they have different moments of inertia. D) The angle of the incline does not affect which object reaches the bottom first, as the comparison is based solely on their moments of inertia."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A spinning ice skater pulls her arms inward, reducing her moment of inertia to half. Her angular velocity:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Halves"
+        },
+        {
+          "id": "B",
+          "text": "Doubles"
+        },
+        {
+          "id": "C",
+          "text": "Remains the same"
+        },
+        {
+          "id": "D",
+          "text": "Quadruples"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the ice skater pulls her arms inward, her moment of inertia is reduced to half. According to the law of conservation of angular momentum, the angular velocity must double to compensate for the reduced moment of inertia, in order to maintain the same angular momentum.",
+      "explanation_incorrect": "The incorrect answers do not make sense. If the moment of inertia is reduced to half, the angular velocity must double to maintain the same angular momentum. The angular velocity does not remain the same or quadruple, as that would violate the law of conservation of angular momentum."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "For a rigid body to be in complete equilibrium, which conditions must be satisfied?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Net force = 0 only"
+        },
+        {
+          "id": "B",
+          "text": "Net torque = 0 only"
+        },
+        {
+          "id": "C",
+          "text": "Both net force = 0 and net torque = 0"
+        },
+        {
+          "id": "D",
+          "text": "Net force = 0 or net torque = 0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a rigid body to be in complete equilibrium, both the net force and net torque acting on the body must be zero. This ensures that the body is not undergoing any translational or rotational acceleration, and is therefore in a state of static equilibrium.",
+      "explanation_incorrect": "Option C is correct because a rigid body can only be in complete equilibrium if there is no net force and no net torque acting on it. If either the net force or net torque is non-zero, the body will experience either translational or rotational acceleration, and will not be in a state of equilibrium."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "A uniform rod of mass 10 kg and length 4 m is supported at its two ends. A 20 kg weight is placed 1 m from one end. The reaction at the nearer end is (g = 10 m/s²):",
+      "options": [
+        {
+          "id": "A",
+          "text": "200 N"
+        },
+        {
+          "id": "B",
+          "text": "100 N"
+        },
+        {
+          "id": "C",
+          "text": "150 N"
+        },
+        {
+          "id": "D",
+          "text": "200 N"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 200 N. To find the reaction force at the nearer end, we can use the moment equation. The net torque on the rod must be zero for it to be in equilibrium. The weight of 20 kg placed 1 m from one end creates a clockwise moment, which must be balanced by the reaction force at the nearer end creating a counterclockwise moment. This gives the reaction force as 200 N.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly account for the equilibrium condition of the rod. The 20 kg weight creates a clockwise moment that must be balanced by the reaction force at the nearer end, which results in a reaction force of 200 N, not 100 N, 150 N, or any other value."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "If no external force acts on a system, its centre of mass:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moves with increasing velocity"
+        },
+        {
+          "id": "B",
+          "text": "Moves with constant velocity (or remains at rest)"
+        },
+        {
+          "id": "C",
+          "text": "Accelerates"
+        },
+        {
+          "id": "D",
+          "text": "Comes to rest eventually"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If no external force acts on a system, the centre of mass of the system moves with a constant velocity or remains at rest, according to Newton's first law. This is because the net force on the system is zero, and the centre of mass has no reason to accelerate or decelerate.",
+      "explanation_incorrect": "Option A is incorrect because the centre of mass of a system will not move with increasing velocity if there are no external forces acting on it. Option C is incorrect because the centre of mass will not accelerate if there are no external forces. Option D is incorrect because the centre of mass will not come to rest eventually if there are no external forces - it will either remain at rest or move with constant velocity."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a thin rod of mass M and length L about an axis through one end perpendicular to the rod is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ML²/12"
+        },
+        {
+          "id": "B",
+          "text": "ML²/3"
+        },
+        {
+          "id": "C",
+          "text": "ML²/2"
+        },
+        {
+          "id": "D",
+          "text": "ML²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The moment of inertia of a thin rod about an axis through one end perpendicular to the rod is ML²/3. This is because the moment of inertia formula for a rod about its center is (1/12)ML², and the parallel axis theorem tells us that the moment of inertia about an axis through one end is (1/12)ML² + M(L/2)² = ML²/3.",
+      "explanation_incorrect": "The moment of inertia of a thin rod about an axis through one end perpendicular to the rod is ML²/3, not ML²/12. This is because the formula for moment of inertia of a rod about its center is (1/12)ML², and the parallel axis theorem says the moment of inertia about an axis through one end is (1/12)ML² + M(L/2)² = ML²/3. The other options like ML²/2 and ML² do not correctly apply the parallel axis theorem to find the moment of inertia about the end of the rod."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The rotational kinetic energy of a disc of mass 2 kg and radius 0.5 m rotating at 4 rad/s is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 J"
+        },
+        {
+          "id": "B",
+          "text": "2 J"
+        },
+        {
+          "id": "C",
+          "text": "4 J"
+        },
+        {
+          "id": "D",
+          "text": "8 J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2 J. The rotational kinetic energy of a rigid body is given by (1/2)Iω^2, where I is the moment of inertia and ω is the angular speed. For a disc, the moment of inertia is I = (1/2)MR^2, where M is the mass and R is the radius. Plugging in the given values, we get (1/2) × 2 kg × (0.5 m)^2 × (4 rad/s)^2 = 2 J.",
+      "explanation_incorrect": "The incorrect answer is D) 8 J. This is likely because the student confused the formula for rotational kinetic energy with the formula for translational kinetic energy, which is (1/2)mv^2. In this case, the correct formula to use is the one for rotational kinetic energy, (1/2)Iω^2, which gives the correct answer of 2 J."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A torque of 10 N·m acts on a wheel of moment of inertia 5 kg·m². The angular acceleration produced is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 rad/s²"
+        },
+        {
+          "id": "B",
+          "text": "2 rad/s²"
+        },
+        {
+          "id": "C",
+          "text": "5 rad/s²"
+        },
+        {
+          "id": "D",
+          "text": "50 rad/s²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, 2 rad/s². This can be calculated using the rotational form of Newton's second law, τ = Iα, where τ is the torque, I is the moment of inertia, and α is the angular acceleration. Plugging in the given values, we get 10 N·m = 5 kg·m² × α, which simplifies to α = 2 rad/s².",
+      "explanation_incorrect": "The incorrect answer options are not correct. Option A, 0.5 rad/s², is too low because the torque of 10 N·m would produce a larger angular acceleration given the moment of inertia of 5 kg·m². Option C, 5 rad/s², is too high because the torque is not strong enough to produce such a large angular acceleration. Option D, 50 rad/s², is far too high and is not the correct answer."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A see-saw has a pivot at its centre. A child of mass 30 kg sits 2 m from the pivot. Where must a 40 kg child sit to balance the see-saw?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 m from the pivot"
+        },
+        {
+          "id": "B",
+          "text": "1.5 m from the pivot"
+        },
+        {
+          "id": "C",
+          "text": "2.0 m from the pivot"
+        },
+        {
+          "id": "D",
+          "text": "2.5 m from the pivot"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1.5 m from the pivot. This is because the seesaw needs to be balanced, so the product of the mass and distance from the pivot must be the same on both sides. Since the child on the left has a mass of 30 kg and is 2 m from the pivot, the child on the right must be 1.5 m from the pivot to have the same product of mass and distance.",
+      "explanation_incorrect": "The incorrect answer is A) 1.0 m from the pivot. This is because the child on the right would need to be closer to the pivot than the child on the left in order to balance the seesaw, but the question states that the child on the right has a greater mass of 40 kg compared to the 30 kg child on the left. To balance the seesaw, the heavier child must be further from the pivot than the lighter child."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "By the perpendicular axis theorem, the moment of inertia of a disc about a diameter is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "MR²"
+        },
+        {
+          "id": "B",
+          "text": "½MR²"
+        },
+        {
+          "id": "C",
+          "text": "¼MR²"
+        },
+        {
+          "id": "D",
+          "text": "⅔MR²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The perpendicular axis theorem states that for a planar body, the moment of inertia about an axis perpendicular to the plane is the sum of the moments of inertia about two perpendicular axes in the plane. For a disc, the moment of inertia about a diameter is ¼MR², which is the correct option C.",
+      "explanation_incorrect": "The moment of inertia of a disc about its diameter is not the full MR² (option A), which would be the moment of inertia about the central axis. It is also not ½MR² (option B), which is the moment of inertia about a tangent axis. The correct answer is ¼MR², as derived from the perpendicular axis theorem."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "For a body rolling without slipping, the condition relating linear velocity v and angular velocity ω is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "v = Rω"
+        },
+        {
+          "id": "B",
+          "text": "v = R/ω"
+        },
+        {
+          "id": "C",
+          "text": "v = ω/R"
+        },
+        {
+          "id": "D",
+          "text": "v = R²ω"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) v = Rω because for a body rolling without slipping, the linear velocity of the point of contact with the surface is equal to the product of the angular velocity and the radius of the body.",
+      "explanation_incorrect": "The correct answer is A) v = Rω. This is because when a body rolls without slipping, the linear velocity of the point of contact is equal to the angular velocity multiplied by the radius of the body. The other options do not correctly relate the linear and angular velocities in this scenario."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A circular disc of mass M has a circular hole of mass M/4 cut from it. The centre of the hole is at R/2 from the centre of the disc. The centre of mass of the remaining portion is at a distance from the centre of the original disc of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "R/6"
+        },
+        {
+          "id": "B",
+          "text": "R/8"
+        },
+        {
+          "id": "C",
+          "text": "R/4"
+        },
+        {
+          "id": "D",
+          "text": "R/12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The center of mass of the remaining portion of the disc is at a distance of R/6 from the center of the original disc. This is because the mass of the remaining portion is 3/4 of the original disc, and the center of mass is shifted towards the center of the hole, which is at a distance of R/2 from the center.",
+      "explanation_incorrect": "The incorrect options do not accurately account for the distribution of mass in the modified disc. The center of mass is not at R/8, R/4, or R/12 because the mass of the remaining portion is not evenly distributed. The correct answer, R/6, is the distance where the center of mass of the remaining portion is located."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A disc of moment of inertia I₁ rotating at ω₁ is brought in contact with another disc of moment of inertia I₂ at rest. The common angular velocity after coupling is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "I₁ω₁/(I₁ + I₂)"
+        },
+        {
+          "id": "B",
+          "text": "(I₁ + I₂)ω₁/I₁"
+        },
+        {
+          "id": "C",
+          "text": "I₂ω₁/(I₁ + I₂)"
+        },
+        {
+          "id": "D",
+          "text": "ω₁/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) I₁ω₁/(I₁ + I₂). When two discs of different moments of inertia are coupled, they will have a common angular velocity after coupling, which is equal to the ratio of the initial angular momentum of the first disc to the total moment of inertia of the coupled system.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for the conservation of angular momentum when the two discs are coupled. The common angular velocity after coupling is determined by the ratio of the initial angular momentum of the first disc to the total moment of inertia of the coupled system, which is given by the correct option A."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A ring rolls down an incline of height h without slipping. Its speed at the bottom is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(2gh)"
+        },
+        {
+          "id": "B",
+          "text": "√(gh)"
+        },
+        {
+          "id": "C",
+          "text": "√(gh/2)"
+        },
+        {
+          "id": "D",
+          "text": "√(4gh/3)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) √(gh), which represents the speed of the ring at the bottom of the incline. This is because the ring is rolling without slipping, so its linear speed is equal to the product of its angular speed and the radius of the ring (v = Rω).",
+      "explanation_incorrect": "The other options are incorrect because they do not account for the fact that the ring is rolling without slipping. Option A) √(2gh) represents the speed of a falling object, not a rolling object. Options C) √(gh/2) and D) √(4gh/3) do not correctly incorporate the relationship between linear and angular speed for a rolling object."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "A couple consists of two forces of magnitude 10 N separated by 0.3 m. The torque of the couple is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5 N·m"
+        },
+        {
+          "id": "B",
+          "text": "3 N·m"
+        },
+        {
+          "id": "C",
+          "text": "6 N·m"
+        },
+        {
+          "id": "D",
+          "text": "30 N·m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 3 N·m. Torque is defined as the cross product of the force and the displacement vector, τ = r × F. With a force of 10 N and a separation of 0.3 m, the torque is simply the product of the force and the displacement, which is 10 N × 0.3 m = 3 N·m.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not properly calculate the torque. Torque is the product of the force and the perpendicular distance between the line of action of the force and the axis of rotation. With a force of 10 N and a separation of 0.3 m, the torque is 10 N × 0.3 m = 3 N·m, not the other values given in the options."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of a uniform rod lies at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "One end"
+        },
+        {
+          "id": "B",
+          "text": "One-third from one end"
+        },
+        {
+          "id": "C",
+          "text": "Its geometric centre"
+        },
+        {
+          "id": "D",
+          "text": "One-quarter from one end"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The centre of mass of a uniform rod lies at its geometric centre because the mass is evenly distributed along the length of the rod, so the centre of mass is at the midpoint.",
+      "explanation_incorrect": "The centre of mass of a uniform rod does not lie at one end (option A) or one-third from one end (option B) because the mass is evenly distributed along the length of the rod. Option D (one-quarter from one end) is incorrect because the centre of mass is at the geometric centre, which is the midpoint of the rod."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a ring of mass M and radius R about a tangent perpendicular to its plane is (using parallel axis theorem):",
+      "options": [
+        {
+          "id": "A",
+          "text": "MR²"
+        },
+        {
+          "id": "B",
+          "text": "2MR²"
+        },
+        {
+          "id": "C",
+          "text": "(3/2)MR²"
+        },
+        {
+          "id": "D",
+          "text": "(5/2)MR²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The moment of inertia of a ring about a tangent perpendicular to its plane is 2MR², which can be calculated using the parallel axis theorem. This is because the centre of mass of the ring is located at the centre of the ring, and the distance between the axis of rotation and the centre of mass is R.",
+      "explanation_incorrect": "Option A, MR², is incorrect because it only considers the moment of inertia about the central axis, not the tangent axis perpendicular to the plane. Option C, (3/2)MR², and Option D, (5/2)MR², are also incorrect because they do not correctly apply the parallel axis theorem to calculate the moment of inertia about the given axis."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "A bomb at rest explodes into two fragments of masses 2 kg and 3 kg. If the 2 kg fragment moves at 15 m/s, the velocity of the 3 kg fragment is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 m/s in the opposite direction"
+        },
+        {
+          "id": "B",
+          "text": "10 m/s in the same direction"
+        },
+        {
+          "id": "C",
+          "text": "15 m/s in the opposite direction"
+        },
+        {
+          "id": "D",
+          "text": "5 m/s in the opposite direction"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. Since the total momentum of the system must be conserved, the 3 kg fragment must move at 10 m/s in the opposite direction to the 2 kg fragment to balance the initial momentum.",
+      "explanation_incorrect": "The incorrect answer is B. This is not possible because the total momentum of the system must be conserved, so the 3 kg fragment must move at 10 m/s in the opposite direction to the 2 kg fragment to balance the initial momentum. Answers C and D are also incorrect because the speeds calculated do not satisfy the momentum conservation principle."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "The SI unit of angular momentum is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "kg·m/s"
+        },
+        {
+          "id": "B",
+          "text": "kg·m²/s"
+        },
+        {
+          "id": "C",
+          "text": "N·m"
+        },
+        {
+          "id": "D",
+          "text": "J·s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of angular momentum is kg·m²/s because angular momentum is a rotational quantity that depends on the moment of inertia (I, in kg·m²) and the angular velocity (ω, in rad/s), with the relationship L = Iω.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct units for angular momentum. Option A (kg·m/s) is the unit for linear momentum, option C (N·m) is the unit for torque, and option D (J·s) is the unit for action or energy-time."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The total kinetic energy of a body rolling without slipping is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "½mv²"
+        },
+        {
+          "id": "B",
+          "text": "½Iω²"
+        },
+        {
+          "id": "C",
+          "text": "½mv² + ½Iω²"
+        },
+        {
+          "id": "D",
+          "text": "mv² + Iω²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The total kinetic energy of a body rolling without slipping is the sum of its translational kinetic energy (½mv²) and its rotational kinetic energy (½Iω²), which is option C.",
+      "explanation_incorrect": "The total kinetic energy of a rolling body has two components - the translational kinetic energy due to the linear motion of the center of mass, and the rotational kinetic energy due to the rotation of the body about its center of mass. Option C correctly captures both these components, while the other options do not account for the full kinetic energy."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A ladder of weight 200 N and length 4 m rests against a smooth wall at 60° to the horizontal. The friction force at the ground is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "100/√3 N ≈ 57.7 N"
+        },
+        {
+          "id": "B",
+          "text": "100 N"
+        },
+        {
+          "id": "C",
+          "text": "200 N"
+        },
+        {
+          "id": "D",
+          "text": "50√3 N ≈ 86.6 N"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 100/√3 N ≈ 57.7 N. This is because the ladder is in equilibrium, so the net force and net torque on it must be zero. The weight of the ladder acts downwards at its center of mass, and the normal force from the wall acts at the top of the ladder. The horizontal component of the normal force is balanced by the friction force at the ground, which is therefore 100/√3 N.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the condition of equilibrium. Option B) 100 N and option C) 200 N are incorrect because the friction force cannot be equal to the weight of the ladder or twice the weight of the ladder, respectively. Option D) 50√3 N ≈ 86.6 N is incorrect because it is not the horizontal component of the normal force, which is the friction force at the ground."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "type": "true_false",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of a system must lie within the body.",
+      "correct_answer": false,
+      "explanation_correct": "The centre of mass of a system can lie outside the body. This is because the centre of mass is a unique point that represents the average position of all the masses in the system, and it depends on the masses and positions of the individual particles.",
+      "explanation_incorrect": "It is a common misconception that the centre of mass must lie within the body. However, this is not always the case. The centre of mass is a mathematical point that represents the average position of all the masses in the system, and it can be located outside the physical boundaries of the body if the masses are distributed in a certain way, such as having a heavy object on one side and a lighter object on the other side."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "type": "true_false",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a body depends on the axis of rotation.",
+      "correct_answer": true,
+      "explanation_correct": "The moment of inertia of a body depends on the axis of rotation because it measures the body's resistance to angular acceleration. The moment of inertia changes based on how the mass is distributed around the axis of rotation.",
+      "explanation_incorrect": "The incorrect answer would be that the moment of inertia does not depend on the axis of rotation. This is wrong because the moment of inertia is a measure of a body's resistance to angular acceleration, and it changes depending on how the mass is distributed around the axis. The moment of inertia is different for the same object rotated around different axes."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "type": "true_false",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "If the net external torque on a system is zero, the angular momentum of the system is conserved.",
+      "correct_answer": true,
+      "explanation_correct": "If the net external torque on a system is zero, the angular momentum of the system is conserved. This is because torque is the rate of change of angular momentum, so if the net torque is zero, the angular momentum remains constant over time.",
+      "explanation_incorrect": "The statement is true. If the net external torque on a system is zero, it means that the system is not experiencing any rotational forces from the outside. In this case, the angular momentum of the system remains constant over time, as there is no external influence to change it. This is a direct consequence of the conservation of angular momentum."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "type": "true_false",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "In pure rolling without slipping, the velocity of the point of contact with the ground is zero.",
+      "correct_answer": true,
+      "explanation_correct": "In pure rolling without slipping, the point of contact between the rolling object and the ground has a velocity of zero. This is because in pure rolling, the object is both rotating and translating, and the point of contact remains stationary relative to the ground.",
+      "explanation_incorrect": "A common misconception is that the velocity of the point of contact is non-zero during rolling without slipping. However, this is not the case. In pure rolling, the translational and rotational motions are coupled such that the velocity of the point of contact is zero. This is a key characteristic of rolling without slipping."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "type": "true_false",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The perpendicular axis theorem is valid for all three-dimensional rigid bodies.",
+      "correct_answer": false,
+      "explanation_correct": "The perpendicular axis theorem is only valid for planar rigid bodies, not all three-dimensional rigid bodies. It relates the moment of inertia about an axis perpendicular to the plane of the body to the moments of inertia about two perpendicular axes in that plane.",
+      "explanation_incorrect": "The perpendicular axis theorem states that for any planar rigid body, the moment of inertia about an axis perpendicular to the plane (I_z) is equal to the sum of the moments of inertia about the two perpendicular axes in the plane (I_x and I_y). However, this theorem does not hold true for all three-dimensional rigid bodies, as their moment of inertia depends on the mass distribution in all three dimensions."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a solid sphere of mass M and radius R about a diametrical axis is ___.",
+      "correct_answer": "2/5 MR²",
+      "explanation_correct": "The moment of inertia of a solid sphere about a diametrical axis is 2/5 MR², as this is the expression given for a solid sphere in the topic context. This is because the mass distribution of a solid sphere is uniform, so the moment of inertia depends on the total mass and the square of the radius.",
+      "explanation_incorrect": "The accepted answer format is 2/5 MR². The incorrect answer might be some other expression like MR² or 1/2 MR², but these are not correct. The moment of inertia of a solid sphere about a diametrical axis is 2/5 MR² because the mass distribution is uniform, so the moment of inertia depends on the total mass and the square of the radius."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A torque of 20 N·m acts on a body of moment of inertia 4 kg·m². The angular acceleration is ___ rad/s².",
+      "correct_answer": "5",
+      "explanation_correct": "The correct answer is 5 rad/s². This is because the equation of rotational motion is τ = Iα, where τ is the torque, I is the moment of inertia, and α is the angular acceleration. Plugging in the given values, we get 20 N·m = 4 kg·m² × α, which simplifies to α = 5 rad/s².",
+      "explanation_incorrect": "The incorrect answer would be 10 rad/s². This is because the student may have confused the relationship between torque and angular acceleration, thinking that doubling the torque would double the angular acceleration. However, the correct relationship is that the angular acceleration is directly proportional to the torque and inversely proportional to the moment of inertia. Therefore, the correct answer is 5 rad/s² in the given format."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Two masses 4 kg and 6 kg are 5 m apart. The centre of mass from the 4 kg mass is ___ m.",
+      "correct_answer": "3",
+      "explanation_correct": "The formula for the position of the centre of mass (x_cm) is (m₁x₁ + m₂x₂)/(m₁ + m₂). Plugging in the given values of m₁ = 4 kg, m₂ = 6 kg, and the distance between them d = 5 m, we get x_cm = (4 × 0 + 6 × 5)/(4 + 6) = 3 m. So the centre of mass is located 3 m from the 4 kg mass.",
+      "explanation_incorrect": "If the incorrect answer was 4 m, that would mean the centre of mass is located halfway between the two masses. However, this is not correct because the centre of mass is not simply the average of the positions of the two masses. The correct formula needs to take into account the masses of the two objects, not just their positions. The accepted answer format is a single number value, in this case 3 m."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "A wheel starting from rest reaches 20 rad/s in 4 s with constant angular acceleration. The angular acceleration is ___ rad/s².",
+      "correct_answer": "5",
+      "explanation_correct": "The angular acceleration is 5 rad/s² because the angular velocity changes from 0 to 20 rad/s over 4 seconds, and the equation for angular acceleration is α = (ω - ω₀)/t, where ω is the final angular velocity, ω₀ is the initial angular velocity, and t is the time taken. Plugging in the values, we get α = (20 - 0)/4 = 5 rad/s².",
+      "explanation_incorrect": "The accepted answer format is a single number, so the incorrect answer would be something like '5 rad/s' or '5.0 rad/s²'. The correct answer is 5 rad/s² because the angular velocity changes from 0 to 20 rad/s over 4 seconds, and the equation for angular acceleration is α = (ω - ω₀)/t, where ω is the final angular velocity, ω₀ is the initial angular velocity, and t is the time taken. Plugging in the values, we get α = (20 - 0)/4 = 5 rad/s²."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a disc of mass M and radius R about an axis tangential to its rim and perpendicular to its plane is ___.",
+      "correct_answer": "3/2 MR²",
+      "explanation_correct": "The moment of inertia of a disc about an axis tangential to its rim and perpendicular to its plane is 3/2 MR² because the mass is distributed farther from the axis compared to the disc's center of mass, increasing its resistance to angular acceleration.",
+      "explanation_incorrect": "The correct answer is 3/2 MR². This is because the moment of inertia formula for a disc about an axis through its center is 1/2 MR², but when the axis is tangential to the rim, the mass is farther from the axis, so the moment of inertia increases to 3/2 MR²."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A uniform beam of weight 100 N and length 6 m is supported at both ends. A 200 N weight is placed 2 m from the left end. The reaction at the left support is ___ N.",
+      "correct_answer": "183.3",
+      "explanation_correct": "The reaction at the left support is 183.3 N because the net force on the beam must be zero for it to be in equilibrium. The 200 N weight creates a downward force, balanced by an upward force from the left and right supports. The reaction at the left support can be calculated using the principle of moments about the right support.",
+      "explanation_incorrect": "The accepted answer format is a decimal number with one decimal place, such as 183.3 N. An incorrect explanation might state that the reaction at the left support is 100 N, as this is the weight of the beam itself. However, this does not account for the additional 200 N weight placed on the beam, which creates an unbalanced force that must be supported by the left and right supports."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A disc rotating at 60 rad/s has angular momentum 30 kg·m²/s. Its moment of inertia is ___ kg·m².",
+      "correct_answer": "0.5",
+      "explanation_correct": "The moment of inertia of a disc about its center is given by I = (1/2)MR^2, where M is the mass of the disc and R is its radius. Given the angular momentum L = 30 kg·m²/s and the angular velocity ω = 60 rad/s, we can use the formula L = Iω to find the moment of inertia I = L/ω = 30 kg·m²/s / 60 rad/s = 0.5 kg·m².",
+      "explanation_incorrect": "The incorrect answer would be to assume that the moment of inertia is directly proportional to the angular momentum, which is not the case. The moment of inertia is a measure of the object's resistance to angular acceleration and depends on the mass distribution relative to the axis of rotation. For a disc, the moment of inertia is given by I = (1/2)MR^2, where M is the mass and R is the radius of the disc. The correct answer of 0.5 kg·m² can be calculated using the given information about the angular momentum and angular velocity."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "type": "ordering",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "Arrange the following objects in order of increasing speed at the bottom when rolling down the same incline from the same height (without slipping): (A) Solid sphere, (B) Hollow sphere, (C) Disc, (D) Ring",
+      "ordering_items": [
+        "Solid sphere",
+        "Hollow sphere",
+        "Disc",
+        "Ring"
+      ],
+      "correct_answer": [
+        "Ring",
+        "Hollow sphere",
+        "Disc",
+        "Solid sphere"
+      ],
+      "explanation_correct": "The ring has the lowest moment of inertia, so it will have the highest acceleration and speed when rolling down the incline. The solid sphere has the highest moment of inertia, so it will have the lowest acceleration and speed.",
+      "explanation_incorrect": "The incorrect order is: Solid sphere, Disc, Hollow sphere, Ring. This is because the solid sphere has the highest mass, so it will accelerate the slowest. The ring has the lowest moment of inertia, so it will accelerate the fastest and reach the highest speed at the bottom of the incline."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "type": "ordering",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following in order of increasing moment of inertia about an axis through the centre perpendicular to the plane (all have same mass M and radius/length R): (A) Disc (½MR²), (B) Ring (MR²), (C) Solid sphere (2/5 MR²), (D) Hollow sphere (2/3 MR²)",
+      "ordering_items": [
+        "Disc (½MR²)",
+        "Ring (MR²)",
+        "Solid sphere (2/5 MR²)",
+        "Hollow sphere (2/3 MR²)"
+      ],
+      "correct_answer": [
+        "Solid sphere (2/5 MR²)",
+        "Disc (½MR²)",
+        "Hollow sphere (2/3 MR²)",
+        "Ring (MR²)"
+      ],
+      "explanation_correct": "The moment of inertia about the given axis depends on the mass distribution of the object. A solid sphere has the lowest moment of inertia (2/5 MR²) since the mass is concentrated close to the axis of rotation, while a ring has the highest (MR²) since the mass is distributed farthest from the axis.",
+      "explanation_incorrect": "The correct order from lowest to highest moment of inertia is: solid sphere (2/5 MR²), disc (1/2 MR²), hollow sphere (2/3 MR²), ring (MR²). This is because the moment of inertia depends on how the mass is distributed relative to the axis of rotation - objects with more mass farther from the axis will have higher moments of inertia."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "type": "ordering",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Three particles of masses 1 kg, 2 kg and 3 kg are at positions x = 1 m, x = 3 m and x = 5 m. Arrange the following in order: (A) Position of 1 kg mass, (B) Centre of mass position, (C) Position of 2 kg mass, (D) Position of 3 kg mass",
+      "ordering_items": [
+        "Position of 1 kg mass (x=1)",
+        "Centre of mass position",
+        "Position of 2 kg mass (x=3)",
+        "Position of 3 kg mass (x=5)"
+      ],
+      "correct_answer": [
+        "Position of 1 kg mass (x=1)",
+        "Centre of mass position",
+        "Position of 2 kg mass (x=3)",
+        "Position of 3 kg mass (x=5)"
+      ],
+      "explanation_correct": "The centre of mass position lies between the individual masses, so it must be arranged between the positions of the 1 kg and 3 kg masses. The order of the positions from left to right is: 1 kg mass, centre of mass, 2 kg mass, 3 kg mass.",
+      "explanation_incorrect": "One common mistake could be to arrange the masses in the order of their positions, i.e., 1 kg at 1 m, 2 kg at 3 m, 3 kg at 5 m. However, the centre of mass position is calculated based on the masses and their positions, and it will lie between the individual masses. Therefore, the correct order is: position of 1 kg mass, centre of mass position, position of 2 kg mass, position of 3 kg mass."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 13,
+        "application": 21,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.01",
+  "topic_name": "Continuity & Differentiability",
+  "canonical_explanation": {
+    "text": "Continuity and Differentiability form the backbone of calculus at the Class 12 level. A function f is continuous at x = a if lim(x→a) f(x) = f(a), meaning the left-hand limit, right-hand limit, and function value all agree. Differentiability at a point implies continuity, but the converse is not necessarily true (e.g., f(x) = |x| is continuous at x = 0 but not differentiable). Key differentiation techniques include the chain rule for composite functions dy/dx = (dy/du)(du/dx), implicit differentiation for equations involving both x and y, parametric differentiation where dy/dx = (dy/dt)/(dx/dt), and logarithmic differentiation for functions of the form y = [f(x)]^g(x). Derivatives of inverse trigonometric functions (sin⁻¹x, cos⁻¹x, tan⁻¹x), exponential and logarithmic functions are essential. Second-order derivatives d²y/dx² are computed by differentiating dy/dx. Rolle's theorem and the Mean Value Theorem provide theoretical foundations connecting function values with derivatives.",
+    "rules": [
+      "A function f is continuous at x = a if and only if lim(x→a⁻) f(x) = lim(x→a⁺) f(x) = f(a).",
+      "If a function is differentiable at a point, it is necessarily continuous there; the converse is not always true.",
+      "The chain rule states: if y = f(g(x)), then dy/dx = f'(g(x)) · g'(x)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.01.Q001",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A function f(x) is continuous at x = a if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(a) is defined"
+        },
+        {
+          "id": "B",
+          "text": "lim(x→a) f(x) exists"
+        },
+        {
+          "id": "C",
+          "text": "lim(x→a) f(x) = f(a)"
+        },
+        {
+          "id": "D",
+          "text": "f'(a) exists"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A function f(x) is continuous at x = a if the left-hand limit, right-hand limit, and function value all agree, i.e. lim(x→a) f(x) = f(a). This is the standard definition of continuity, which ensures the function has no jumps or breaks at that point.",
+      "explanation_incorrect": "Option B is incorrect because the existence of the limit lim(x→a) f(x) is just a necessary condition for continuity, not the full definition. Option A is also incorrect because the function value f(a) being defined is not enough to ensure continuity - the limits must also match f(a). Option D is incorrect because the existence of the derivative f'(a) is a stronger condition than just continuity."
+    },
+    {
+      "question_id": "T02.01.Q002",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The function f(x) = |x| is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continuous and differentiable everywhere"
+        },
+        {
+          "id": "B",
+          "text": "Continuous everywhere but not differentiable at x = 0"
+        },
+        {
+          "id": "C",
+          "text": "Neither continuous nor differentiable at x = 0"
+        },
+        {
+          "id": "D",
+          "text": "Differentiable but not continuous at x = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = |x| is continuous everywhere but not differentiable at x = 0. This is because the left-hand and right-hand limits of the derivative f'(x) = ±1 do not agree at x = 0, even though the function values agree.",
+      "explanation_incorrect": "Option A is incorrect because the function f(x) = |x| is not differentiable at x = 0. While the function is continuous everywhere, the left-hand and right-hand limits of the derivative f'(x) = ±1 do not agree at x = 0, so the function is not differentiable at that point. Options C and D are also incorrect because the function is continuous everywhere, even though it is not differentiable at x = 0."
+    },
+    {
+      "question_id": "T02.01.Q003",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Every polynomial function is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continuous everywhere on ℝ"
+        },
+        {
+          "id": "B",
+          "text": "Continuous only at integer points"
+        },
+        {
+          "id": "C",
+          "text": "Discontinuous at x = 0"
+        },
+        {
+          "id": "D",
+          "text": "Continuous only on [0, ∞)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Every polynomial function is continuous everywhere on the real line (ℝ). This is because polynomials are built from basic arithmetic operations (+, -, ×, ÷) which preserve continuity. As a result, polynomial functions have no points of discontinuity.",
+      "explanation_incorrect": "Option A is the correct answer. Polynomial functions are defined by sums of powers of the variable x, such as f(x) = 3x^2 - 2x + 5. These functions do not have any points of discontinuity, meaning they are continuous for all real numbers x. Options B, C, and D are incorrect because they describe limitations on the continuity of polynomial functions, which is not accurate."
+    },
+    {
+      "question_id": "T02.01.Q004",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If f(x) = (x² − 4)/(x − 2) for x ≠ 2 and f(2) = k, then f is continuous at x = 2 when k equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "−2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 4. For a function to be continuous at a point, the limit of the function as x approaches that point must equal the function value at that point. In this case, the given function f(x) = (x^2 - 4)/(x - 2) is undefined at x = 2, so we need to find the limit of f(x) as x approaches 2. Evaluating the limit gives lim(x->2) f(x) = 4, which is the value of k that makes the function continuous at x = 2.",
+      "explanation_incorrect": "The incorrect options are: A) 0, B) 2, and D) -2. These values for k would not make the function f(x) = (x^2 - 4)/(x - 2) continuous at x = 2. The correct answer is C) 4, because this is the value of k that makes the limit of f(x) as x approaches 2 equal the function value f(2), satisfying the continuity condition."
+    },
+    {
+      "question_id": "T02.01.Q005",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If f is differentiable at x = a, then f is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Not necessarily continuous at x = a"
+        },
+        {
+          "id": "B",
+          "text": "Continuous at x = a"
+        },
+        {
+          "id": "C",
+          "text": "Discontinuous at x = a"
+        },
+        {
+          "id": "D",
+          "text": "Differentiable everywhere"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If a function f is differentiable at a point x = a, then it must be continuous at that point. Differentiability implies continuity, but the converse is not always true - a function can be continuous without being differentiable.",
+      "explanation_incorrect": "Option A is incorrect because differentiability at a point does require the function to be continuous at that point. Option C is incorrect because a differentiable function must be continuous. Option D is incorrect because differentiability is a local property, not a global one - a function may be differentiable at some points but not others."
+    },
+    {
+      "question_id": "T02.01.Q006",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f(x) = x^(1/3) at x = 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continuous and differentiable"
+        },
+        {
+          "id": "B",
+          "text": "Continuous but not differentiable"
+        },
+        {
+          "id": "C",
+          "text": "Differentiable but not continuous"
+        },
+        {
+          "id": "D",
+          "text": "Neither continuous nor differentiable"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = x^(1/3) is continuous at x = 0 because the left-hand and right-hand limits both approach 0 as x approaches 0. However, it is not differentiable at x = 0 because the derivative does not exist at that point.",
+      "explanation_incorrect": "Option A is incorrect because while the function f(x) = x^(1/3) is continuous at x = 0, it is not differentiable at that point. The derivative of this function is not defined at x = 0, so the function is not differentiable there. Option C is incorrect because the function is continuous at x = 0. Option D is incorrect because the function is continuous, even though it is not differentiable."
+    },
+    {
+      "question_id": "T02.01.Q007",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The chain rule states that if y = f(g(x)), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f'(x) · g'(x)"
+        },
+        {
+          "id": "B",
+          "text": "f'(g(x)) · g'(x)"
+        },
+        {
+          "id": "C",
+          "text": "f(g'(x))"
+        },
+        {
+          "id": "D",
+          "text": "f'(g(x)) + g'(x)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The chain rule states that if y = f(g(x)), then dy/dx = f'(g(x)) * g'(x). This means the derivative of the composite function y = f(g(x)) with respect to x is the product of the derivative of f(x) evaluated at g(x) and the derivative of g(x).",
+      "explanation_incorrect": "The incorrect options do not correctly apply the chain rule. Option A, f'(x) * g'(x), does not take into account the composition of the functions. Option C, f(g'(x)), does not properly differentiate the composite function. Option D, f'(g(x)) + g'(x), incorrectly adds the derivatives instead of multiplying them as per the chain rule."
+    },
+    {
+      "question_id": "T02.01.Q008",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of sin(3x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "cos(3x)"
+        },
+        {
+          "id": "B",
+          "text": "3cos(3x)"
+        },
+        {
+          "id": "C",
+          "text": "−3cos(3x)"
+        },
+        {
+          "id": "D",
+          "text": "3sin(3x)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The derivative of sin(3x) is 3cos(3x) because of the chain rule. The derivative of sin(u) is cos(u), and the derivative of 3x is 3. Applying the chain rule gives us d/dx sin(3x) = (d/du sin(u))(d/dx 3x) = cos(3x) * 3 = 3cos(3x).",
+      "explanation_incorrect": "Option A, cos(3x), is incorrect because it does not account for the chain rule. Option C, -3cos(3x), is incorrect because the derivative of sin(3x) should be positive, not negative. Option D, 3sin(3x), is incorrect because the derivative of sin(u) is cos(u), not sin(u)."
+    },
+    {
+      "question_id": "T02.01.Q009",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "If y = (2x + 3)⁵, then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5(2x + 3)⁴"
+        },
+        {
+          "id": "B",
+          "text": "10(2x + 3)⁴"
+        },
+        {
+          "id": "C",
+          "text": "5(2x + 3)⁴ · 2x"
+        },
+        {
+          "id": "D",
+          "text": "(2x + 3)⁴"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 10(2x + 3)⁴. This is because the derivative of y = (2x + 3)⁵ using the power rule is dy/dx = 5(2x + 3)⁴ * 2 = 10(2x + 3)⁴.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the power rule for differentiation. Option A) 5(2x + 3)⁴ is missing the factor of 2 that comes from differentiating the (2x + 3) term. Option C) 5(2x + 3)⁴ * 2x is incorrect because the 2x should be outside the parentheses. Option D) (2x + 3)⁴ is the result of only differentiating the exponent and not the entire expression."
+    },
+    {
+      "question_id": "T02.01.Q010",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "If x² + y² = 25, then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−x/y"
+        },
+        {
+          "id": "B",
+          "text": "x/y"
+        },
+        {
+          "id": "C",
+          "text": "−y/x"
+        },
+        {
+          "id": "D",
+          "text": "y/x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is (A) -x/y. To find dy/dx, we can use implicit differentiation on the equation x^2 + y^2 = 25. Differentiating both sides with respect to x gives 2x + 2y(dy/dx) = 0, which simplifies to dy/dx = -x/y.",
+      "explanation_incorrect": "The incorrect options (B) x/y, (C) -y/x, and (D) y/x are not correct because they do not satisfy the implicit differentiation of the given equation. The correct step-by-step solution is to differentiate both sides of the equation x^2 + y^2 = 25 with respect to x, which gives 2x + 2y(dy/dx) = 0, and then solving for dy/dx to get the final answer (A) -x/y."
+    },
+    {
+      "question_id": "T02.01.Q011",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "If x = at² and y = 2at, then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/t"
+        },
+        {
+          "id": "B",
+          "text": "t"
+        },
+        {
+          "id": "C",
+          "text": "2a/t"
+        },
+        {
+          "id": "D",
+          "text": "a/t"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/t. This can be derived by using the chain rule for differentiation. Since x = at^2 and y = 2at, we can find dy/dx as (dy/dt)/(dx/dt), which simplifies to (2a)/(2at) = 1/t.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly apply the chain rule for differentiation. Option B) t is incorrect because it does not account for the relationship between x and y. Option C) 2a/t is incorrect because it does not properly divide dy/dt by dx/dt. Option D) a/t is incorrect because it does not properly cancel out the t terms in the chain rule expression."
+    },
+    {
+      "question_id": "T02.01.Q012",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of sin⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/√(1 + x²)"
+        },
+        {
+          "id": "B",
+          "text": "1/√(1 − x²)"
+        },
+        {
+          "id": "C",
+          "text": "−1/√(1 − x²)"
+        },
+        {
+          "id": "D",
+          "text": "1/(1 + x²)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The derivative of sin⁻¹(x) is 1/√(1 - x²) because the derivative of an inverse trigonometric function is the reciprocal of the square root of 1 minus the square of the argument.",
+      "explanation_incorrect": "The correct derivative of sin⁻¹(x) is 1/√(1 - x²), not 1/√(1 + x²) or -1/√(1 - x²) or 1/(1 + x²). This is because the derivative of an inverse trigonometric function is the reciprocal of the square root of 1 minus the square of the argument. So the correct option is B."
+    },
+    {
+      "question_id": "T02.01.Q013",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of eˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "xeˣ⁻¹"
+        },
+        {
+          "id": "B",
+          "text": "eˣ"
+        },
+        {
+          "id": "C",
+          "text": "eˣ · ln(e)"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The derivative of e^x is e^x, as given in option B. This is because the derivative of an exponential function f(x) = e^x is the function itself, f'(x) = e^x.",
+      "explanation_incorrect": "The correct answer is option D, which is both options B and C. The derivative of e^x is e^x (option B) because the derivative of an exponential function is the function itself. Additionally, e^x can be written as e raised to the power of x, so the derivative is also e^x * ln(e) = e^x (option C)."
+    },
+    {
+      "question_id": "T02.01.Q014",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of tan⁻¹(x/a) with respect to x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "a/(a² + x²)"
+        },
+        {
+          "id": "B",
+          "text": "1/(a² + x²)"
+        },
+        {
+          "id": "C",
+          "text": "x/(a² + x²)"
+        },
+        {
+          "id": "D",
+          "text": "a²/(a² + x²)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of tan⁻¹(x/a) with respect to x is a/(a² + x²) because the derivative of tan⁻¹(u) is 1/(1 + u²), and we can apply the chain rule by differentiating with respect to x, where u = x/a.",
+      "explanation_incorrect": "Option A is correct because the derivative of tan⁻¹(x/a) can be found by using the chain rule. The derivative of tan⁻¹(u) is 1/(1 + u²), and in this case, u = x/a, so the derivative becomes (1/a)/(1 + (x/a)²) = a/(a² + x²). Options B, C, and D do not correctly apply the chain rule to find the derivative."
+    },
+    {
+      "question_id": "T02.01.Q015",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "question_text": "If y = xˣ, then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "xˣ · ln(x)"
+        },
+        {
+          "id": "B",
+          "text": "xˣ(1 + ln(x))"
+        },
+        {
+          "id": "C",
+          "text": "x · xˣ⁻¹"
+        },
+        {
+          "id": "D",
+          "text": "xˣ⁺¹"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, xˣ(1 + ln(x)), because the derivative of a function of the form y = xˣ is given by the product rule: dy/dx = xˣ(1 + ln(x)).",
+      "explanation_incorrect": "The correct answer is B, xˣ(1 + ln(x)). Option A, xˣ · ln(x), is incorrect because it does not account for the exponent x in the original function y = xˣ. Option C, x · xˣ⁻¹, is incorrect because it does not use the product rule correctly. Option D, xˣ⁺¹, is incorrect because it does not match the actual derivative formula."
+    },
+    {
+      "question_id": "T02.01.Q016",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of ln(sin(x)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "cos(x)/sin(x)"
+        },
+        {
+          "id": "B",
+          "text": "1/sin(x)"
+        },
+        {
+          "id": "C",
+          "text": "−cot(x)"
+        },
+        {
+          "id": "D",
+          "text": "cot(x)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The derivative of ln(sin(x)) is cot(x). This is because the derivative of an inner function (sin(x)) is cos(x), and the derivative of the outer function ln(x) is 1/x. Applying the chain rule, the derivative becomes (cos(x)/sin(x)).",
+      "explanation_incorrect": "The incorrect options do not correctly apply the chain rule to find the derivative of ln(sin(x)). Option A is incorrect because it is missing the 1/sin(x) term from the outer function derivative. Option B is incorrect because it is the derivative of just sin(x), not the composite function ln(sin(x)). Option C is incorrect because it has the wrong sign for the derivative."
+    },
+    {
+      "question_id": "T02.01.Q017",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "The function f(x) = {sin(x)/x for x ≠ 0, k for x = 0} is continuous at x = 0 if k equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = {sin(x)/x for x ≠ 0, k for x = 0} is continuous at x = 0 if k = 1. This is because the limit of sin(x)/x as x approaches 0 is equal to 1, so the function value at x = 0 must also be 1 for continuity.",
+      "explanation_incorrect": "The function f(x) = {sin(x)/x for x ≠ 0, k for x = 0} is continuous at x = 0 when k = 1. This is because the limit of sin(x)/x as x approaches 0 is equal to 1, so the function value at x = 0 must also be 1 for the function to be continuous. Options A, C, and D would make the function discontinuous at x = 0."
+    },
+    {
+      "question_id": "T02.01.Q018",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If y = sin⁻¹(2x√(1 − x²)), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/√(1 − x²)"
+        },
+        {
+          "id": "B",
+          "text": "1/√(1 − x²)"
+        },
+        {
+          "id": "C",
+          "text": "−2/√(1 − x²)"
+        },
+        {
+          "id": "D",
+          "text": "2x/√(1 − x²)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2/√(1 - x²). This is because the derivative of an inverse sine function (sin⁻¹x) is given by the formula dy/dx = 1/√(1 - x²), and in this case, the inner function is 2x√(1 - x²), so we need to apply the chain rule to get the final derivative.",
+      "explanation_incorrect": "The correct answer is A) 2/√(1 - x²). Option B) 1/√(1 - x²) is incorrect because it does not take into account the chain rule. Option C) -2/√(1 - x²) is incorrect because the derivative of sin⁻¹(2x√(1 - x²)) is positive, not negative. Option D) 2x/√(1 - x²) is incorrect because it does not correctly apply the chain rule to the inner function 2x√(1 - x²)."
+    },
+    {
+      "question_id": "T02.01.Q019",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If x = a(θ − sin θ) and y = a(1 − cos θ), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin θ/(1 − cos θ)"
+        },
+        {
+          "id": "B",
+          "text": "cos θ/(1 + sin θ)"
+        },
+        {
+          "id": "C",
+          "text": "cot(θ/2)"
+        },
+        {
+          "id": "D",
+          "text": "tan(θ/2)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D) tan(θ/2). This is because using parametric differentiation, dy/dx = (dy/dθ)/(dx/dθ) = a(sin θ)/(a(1 - cos θ)) = sin θ/(1 - cos θ) = tan(θ/2).",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct differentiation of the given parametric equations. Option A) sin θ/(1 - cos θ) is the ratio dy/dθ over dx/dθ, but not the final result dy/dx. Option B) cos θ/(1 + sin θ) is not the correct derivative. Option C) cot(θ/2) is the reciprocal of the correct derivative tan(θ/2)."
+    },
+    {
+      "question_id": "T02.01.Q020",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If y = (sin x)^(cos x), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(sin x)^(cos x) [cos x · cot x − sin x · ln(sin x)]"
+        },
+        {
+          "id": "B",
+          "text": "(sin x)^(cos x) · cos x · cot x"
+        },
+        {
+          "id": "C",
+          "text": "cos x · (sin x)^(cos x − 1)"
+        },
+        {
+          "id": "D",
+          "text": "(sin x)^(cos x) · ln(cos x)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because this expression uses the chain rule for differentiation. The derivative of y = (sin x)^(cos x) involves differentiating both the exponent (cos x) and the base (sin x).",
+      "explanation_incorrect": "Option B is incorrect because it is missing the term involving the natural log of sin x. Option C is incorrect because it does not account for the full chain rule expression. Option D is incorrect because it does not involve the derivative of the exponent (cos x)."
+    },
+    {
+      "question_id": "T02.01.Q021",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If y = eˣ sin(x), then d²y/dx² equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2eˣ cos(x)"
+        },
+        {
+          "id": "B",
+          "text": "2eˣ sin(x)"
+        },
+        {
+          "id": "C",
+          "text": "eˣ(sin x + cos x)"
+        },
+        {
+          "id": "D",
+          "text": "eˣ(sin x − cos x)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2eˣ cos(x). To find the second derivative of y = eˣ sin(x), we first take the first derivative: dy/dx = eˣ(sin(x) + cos(x)). Then, we differentiate this again to get the second derivative: d²y/dx² = eˣ(sin(x) - cos(x)) = 2eˣ cos(x).",
+      "explanation_incorrect": "The other options are incorrect because they do not accurately represent the second derivative of y = eˣ sin(x). Option B) 2eˣ sin(x) is wrong as it lacks the cos(x) term. Option C) eˣ(sin x + cos x) is the first derivative, not the second derivative. Option D) eˣ(sin x - cos x) is also incorrect as it does not have the factor of 2 in front of the eˣ cos(x) term."
+    },
+    {
+      "question_id": "T02.01.Q022",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "question_text": "Rolle's theorem is applicable to f(x) = x² − 4x + 3 on the interval:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[0, 4]"
+        },
+        {
+          "id": "B",
+          "text": "[1, 3]"
+        },
+        {
+          "id": "C",
+          "text": "[−1, 1]"
+        },
+        {
+          "id": "D",
+          "text": "[2, 5]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rolle's theorem states that if a function f(x) is continuous on a closed interval [a, b], differentiable on the open interval (a, b), and f(a) = f(b), then there exists at least one point c in the open interval (a, b) where f'(c) = 0. In this case, the function f(x) = x^2 - 4x + 3 is continuous and differentiable on the interval [1, 3], and f(1) = f(3) = 0, so Rolle's theorem applies.",
+      "explanation_incorrect": "The correct interval for Rolle's theorem to apply is [1, 3]. This is because the function f(x) = x^2 - 4x + 3 is continuous and differentiable on the interval [1, 3], and f(1) = f(3) = 0. The other intervals given do not satisfy the conditions of Rolle's theorem, as the function is either not continuous or does not have equal function values at the endpoints."
+    },
+    {
+      "question_id": "T02.01.Q023",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The Mean Value Theorem states that if f is continuous on [a, b] and differentiable on (a, b), then there exists c ∈ (a, b) such that f'(c) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(b) − f(a)"
+        },
+        {
+          "id": "B",
+          "text": "[f(b) − f(a)] / (b − a)"
+        },
+        {
+          "id": "C",
+          "text": "f(a) + f(b)"
+        },
+        {
+          "id": "D",
+          "text": "[f(a) + f(b)] / 2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Mean Value Theorem states that the average rate of change of a continuous and differentiable function over an interval [a, b] is equal to the value of the derivative at some point c within that interval. Therefore, the correct answer is option B, which gives the average rate of change [(f(b) - f(a)) / (b - a)].",
+      "explanation_incorrect": "The Mean Value Theorem does not state that the derivative f'(c) equals the function values f(a) and f(b) directly. Rather, it relates the average rate of change [(f(b) - f(a)) / (b - a)] to the derivative f'(c) at some point c between a and b. Options A, C, and D do not correctly capture the relationship described by the Mean Value Theorem."
+    },
+    {
+      "question_id": "T02.01.Q024",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "If y² = 4ax, then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2a/y"
+        },
+        {
+          "id": "B",
+          "text": "4a/y"
+        },
+        {
+          "id": "C",
+          "text": "y/(2a)"
+        },
+        {
+          "id": "D",
+          "text": "2a/x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2a/y. To find dy/dx, we can use implicit differentiation on the given equation y² = 4ax. Differentiating both sides with respect to x gives 2y(dy/dx) = 4a, which simplifies to dy/dx = 2a/y.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly apply the implicit differentiation process. Option B) 4a/y is incorrect as it does not account for the 2y term in the differentiation. Option C) y/(2a) is incorrect as it does not have the right expression for dy/dx. Option D) 2a/x is incorrect as it does not involve the y term from the original equation."
+    },
+    {
+      "question_id": "T02.01.Q025",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of cos⁻¹(x) with respect to x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/√(1 − x²)"
+        },
+        {
+          "id": "B",
+          "text": "−1/√(1 − x²)"
+        },
+        {
+          "id": "C",
+          "text": "1/(1 + x²)"
+        },
+        {
+          "id": "D",
+          "text": "−1/(1 + x²)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is option B) -1/√(1 - x²). This is because the derivative of cos⁻¹(x) with respect to x is equal to -1/√(1 - x²), as shown by the standard derivative formula for inverse trigonometric functions.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the standard derivative formula for cos⁻¹(x). Option A) 1/√(1 - x²) is incorrect because the derivative should be negative. Option C) 1/(1 + x²) and option D) -1/(1 + x²) are incorrect because they do not involve the square root term √(1 - x²) that appears in the derivative of cos⁻¹(x)."
+    },
+    {
+      "question_id": "T02.01.Q026",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The function f(x) = {(x² − 9)/(x − 3) for x ≠ 3, k for x = 3} is continuous at x = 3 when k equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) is continuous at x = 3 when k = 6, because lim(x→3) (x^2 - 9)/(x - 3) = 6. This ensures that the left-hand limit, right-hand limit, and function value all agree at x = 3, satisfying the definition of continuity.",
+      "explanation_incorrect": "Option A, C, and D are incorrect because they do not make the function continuous at x = 3. For the function to be continuous, the limit of (x^2 - 9)/(x - 3) as x approaches 3 must equal the value of the function at x = 3, which is k. Only when k = 6 does this condition hold, satisfying the continuity requirement."
+    },
+    {
+      "question_id": "T02.01.Q027",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If y = tan⁻¹((3x − x³)/(1 − 3x²)), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/(1 + x²)"
+        },
+        {
+          "id": "B",
+          "text": "1/(1 + x²)"
+        },
+        {
+          "id": "C",
+          "text": "−3/(1 + x²)"
+        },
+        {
+          "id": "D",
+          "text": "3/(1 − x²)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. To find the derivative of y = tan⁻¹((3x - x³)/(1 - 3x²)), we can use the chain rule. The derivative of tan⁻¹(x) is 1/(1 + x²), so the derivative of y is 3/(1 + x²).",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the chain rule to differentiate tan⁻¹((3x - x³)/(1 - 3x²)). Option B ignores the numerator, Option C has the wrong sign, and Option D is incorrect because it does not account for the denominator of the function."
+    },
+    {
+      "question_id": "T02.01.Q028",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If y = e^(sin⁻¹(x)), then (1 − x²)d²y/dx² − x·dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y"
+        },
+        {
+          "id": "B",
+          "text": "−y"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "2y"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) y. This can be verified by applying the chain rule for differentiation to the given function y = e^(sin⁻¹(x)). The derivative dy/dx = e^(sin⁻¹(x)) * cos(sin⁻¹(x)) * (1/√(1-x²)), and the second derivative d²y/dx² can be simplified to (1 - x²)d²y/dx² - x*dy/dx = y.",
+      "explanation_incorrect": "The incorrect options B) -y, C) 0, and D) 2y are not correct. The key is to apply the chain rule for differentiation properly and simplify the resulting expression, which leads to the correct answer of A) y. The other options do not match the correct derivative expression."
+    },
+    {
+      "question_id": "T02.01.Q029",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If f(x) = x · sin(1/x) for x ≠ 0 and f(0) = 0, then f is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Continuous and differentiable at x = 0"
+        },
+        {
+          "id": "B",
+          "text": "Continuous but not differentiable at x = 0"
+        },
+        {
+          "id": "C",
+          "text": "Differentiable but not continuous at x = 0"
+        },
+        {
+          "id": "D",
+          "text": "Neither continuous nor differentiable at x = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = x · sin(1/x) is continuous at x = 0, since the left-hand limit, right-hand limit, and function value all agree at x = 0. However, the function is not differentiable at x = 0 because the derivative does not exist at that point.",
+      "explanation_incorrect": "Option A is incorrect because the function is not differentiable at x = 0, even though it is continuous there. Option C is incorrect because the function is continuous at x = 0. Option D is incorrect because the function is continuous, just not differentiable, at x = 0."
+    },
+    {
+      "question_id": "T02.01.Q030",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "The derivative of e^(x²) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "e^(x²)"
+        },
+        {
+          "id": "B",
+          "text": "2x · e^(x²)"
+        },
+        {
+          "id": "C",
+          "text": "x² · e^(x²−1)"
+        },
+        {
+          "id": "D",
+          "text": "2e^(x²)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The derivative of e^(x²) is 2x · e^(x²) because the chain rule for differentiating composite functions states that the derivative of f(g(x)) is f'(g(x)) * g'(x), and here f(x) = e^x and g(x) = x², so the derivative is 2x * e^(x²).",
+      "explanation_incorrect": "The derivative of e^(x²) is not just e^(x²) (option A), because that does not take into account the fact that x is raised to the power of 2 inside the exponent. The correct application of the chain rule gives the derivative as 2x · e^(x²) (option B). Option C is incorrect because it does not have the factor of 2 out front. Option D is incorrect because it is missing the x term inside the exponent."
+    },
+    {
+      "question_id": "T02.01.Q031",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "question_text": "The value of c in Rolle's theorem for f(x) = x(x − 1)(x − 2) on [0, 2] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 ± 1/√3"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "0 and 2"
+        },
+        {
+          "id": "D",
+          "text": "1/2 and 3/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1 ± 1/√3 because Rolle's Theorem states that if a function f(x) is continuous on a closed interval [a, b] and differentiable on the open interval (a, b), and if f(a) = f(b), then there exists at least one point c in the open interval (a, b) where the derivative f'(c) = 0. For the given function f(x) = x(x - 1)(x - 2) on the interval [0, 2], the points where the derivative is 0 are x = 1 ± 1/√3.",
+      "explanation_incorrect": "The other options are incorrect because they do not satisfy the conditions of Rolle's Theorem. Option B) 1 is incorrect because it is not the only point where the derivative is 0. Option C) 0 and 2 are incorrect because the function values at the endpoints are not equal, so Rolle's Theorem does not apply. Option D) 1/2 and 3/2 are incorrect because these are not the points where the derivative is 0 for the given function."
+    },
+    {
+      "question_id": "T02.01.Q032",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If y = ln(x + √(x² + 1)), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/√(x² + 1)"
+        },
+        {
+          "id": "B",
+          "text": "1/(x + √(x² + 1))"
+        },
+        {
+          "id": "C",
+          "text": "x/√(x² + 1)"
+        },
+        {
+          "id": "D",
+          "text": "1/√(x² − 1)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, 1/√(x² + 1). This is because the derivative of ln(x + √(x² + 1)) is (1/(x + √(x² + 1))) * 1/√(x² + 1), which simplifies to 1/√(x² + 1).",
+      "explanation_incorrect": "The correct answer is A, 1/√(x² + 1). Option B, 1/(x + √(x² + 1)), is incorrect because it does not take into account the chain rule correctly. Option C, x/√(x² + 1), is incorrect because it does not properly differentiate the square root term. Option D, 1/√(x² - 1), is incorrect because the denominator is incorrect - it should be √(x² + 1), not √(x² - 1)."
+    },
+    {
+      "question_id": "T02.01.Q033",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The number of points of discontinuity of f(x) = 1/(x − 1)(x − 2) in the interval [0, 4] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function f(x) = 1/(x - 1)(x - 2) has two points of discontinuity in the interval [0, 4] - at x = 1 and x = 2, where the denominator of the function becomes zero. Therefore, the number of points of discontinuity is 2.",
+      "explanation_incorrect": "The function f(x) = 1/(x - 1)(x - 2) is not continuous at the points where the denominator becomes zero, which occurs at x = 1 and x = 2. Therefore, the number of points of discontinuity in the interval [0, 4] is 2, not 0, 1, or 3."
+    },
+    {
+      "question_id": "T02.01.Q034",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For the function f(x) = |x − 1|, the left-hand derivative and right-hand derivative at x = 1 are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−1 and 1 respectively"
+        },
+        {
+          "id": "B",
+          "text": "1 and −1 respectively"
+        },
+        {
+          "id": "C",
+          "text": "Both equal to 1"
+        },
+        {
+          "id": "D",
+          "text": "Both equal to 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The function f(x) = |x - 1| is not differentiable at x = 1, but it has a left-hand derivative of -1 and a right-hand derivative of 1 at that point. This is because the function has a 'corner' or 'kink' at x = 1, where the left and right limits of the derivative do not agree.",
+      "explanation_incorrect": "Option A is correct because the function f(x) = |x - 1| is not differentiable at x = 1. The left-hand limit of the derivative as x approaches 1 from the left is -1, while the right-hand limit of the derivative as x approaches 1 from the right is 1. Therefore, the left-hand derivative is -1 and the right-hand derivative is 1 at x = 1."
+    },
+    {
+      "question_id": "T02.01.Q035",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "If x = cos(θ) and y = sin(θ), then dy/dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−tan(θ)"
+        },
+        {
+          "id": "B",
+          "text": "−cot(θ)"
+        },
+        {
+          "id": "C",
+          "text": "tan(θ)"
+        },
+        {
+          "id": "D",
+          "text": "cot(θ)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) -cot(θ). This is because dy/dx = (dy/dθ)/(dx/dθ), where dy/dθ = cos(θ) and dx/dθ = -sin(θ). Simplifying this ratio gives us -cos(θ)/(-sin(θ)) = cot(θ), and the negative sign indicates that dy/dx is in the opposite direction of dx/dθ.",
+      "explanation_incorrect": "The incorrect answers are: A) -tan(θ), C) tan(θ), and D) cot(θ). These are incorrect because they do not correctly represent the derivative dy/dx in terms of the given variables x = cos(θ) and y = sin(θ). The correct approach is to use the quotient rule for derivatives, which gives us dy/dx = (dy/dθ)/(dx/dθ), where dy/dθ = cos(θ) and dx/dθ = -sin(θ)."
+    },
+    {
+      "question_id": "T02.01.Q036",
+      "type": "true_false",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Every differentiable function is continuous.",
+      "correct_answer": true,
+      "explanation_correct": "Every differentiable function is continuous because differentiation requires the function to be continuous at the point of differentiation. If a function is not continuous at a point, it cannot be differentiable at that point either.",
+      "explanation_incorrect": "A common misconception is that a continuous function is always differentiable. However, this is not true. There are functions that are continuous but not differentiable at certain points. For example, the absolute value function |x| is continuous at x = 0 but not differentiable there. Differentiability is a stronger condition than continuity - it requires the function to have a well-defined slope or derivative at every point."
+    },
+    {
+      "question_id": "T02.01.Q037",
+      "type": "true_false",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If a function is continuous at a point, it is necessarily differentiable at that point.",
+      "correct_answer": false,
+      "explanation_correct": "A function can be continuous at a point without being differentiable at that point. For example, the absolute value function |x| is continuous at x = 0, but it is not differentiable at x = 0 because the left-hand and right-hand limits of the derivative do not exist.",
+      "explanation_incorrect": "The statement that if a function is continuous at a point, it is necessarily differentiable at that point is false. Continuity and differentiability are related but distinct properties of a function. Continuity requires that the left-hand limit, right-hand limit, and function value all agree at a point, but differentiability requires that the derivative, or slope of the tangent line, also exists at that point. There are functions that are continuous but not differentiable, such as the absolute value function |x|."
+    },
+    {
+      "question_id": "T02.01.Q038",
+      "type": "true_false",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "The derivative of sin²(x) is 2sin(x)cos(x) = sin(2x).",
+      "correct_answer": true,
+      "explanation_correct": "The derivative of sin²(x) can be found using the chain rule. The derivative of sin(x) is cos(x), and the derivative of x² is 2x. Applying the chain rule, the derivative of sin²(x) is 2sin(x)cos(x).",
+      "explanation_incorrect": "The incorrect answer assumes that the derivative of sin²(x) is simply sin(2x). However, this is not the case. The correct derivative is 2sin(x)cos(x), which is obtained by applying the chain rule to differentiate sin²(x)."
+    },
+    {
+      "question_id": "T02.01.Q039",
+      "type": "true_false",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of ln|x| is 1/x for all x ≠ 0.",
+      "correct_answer": true,
+      "explanation_correct": "The derivative of ln|x| is 1/x for all x ≠ 0 because the derivative of the natural logarithm function ln(x) is 1/x, and the absolute value function |x| is continuous everywhere, including at x = 0.",
+      "explanation_incorrect": "The statement is not correct for x = 0, because the derivative of ln|x| is not defined at x = 0. The derivative of ln|x| is 1/x for all x ≠ 0, but at x = 0, the function ln|x| is not differentiable, as the left-hand and right-hand limits of the derivative do not exist."
+    },
+    {
+      "question_id": "T02.01.Q040",
+      "type": "true_false",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Rolle's theorem requires that f(a) = f(b), f is continuous on [a, b], and differentiable on (a, b).",
+      "correct_answer": true,
+      "explanation_correct": "Rolle's theorem states that if a function f(x) is continuous on a closed interval [a, b], differentiable on the open interval (a, b), and if f(a) = f(b), then there exists at least one point c in the open interval (a, b) such that the derivative f'(c) = 0. Therefore, the given statement is true.",
+      "explanation_incorrect": "The statement is correct. Rolle's theorem requires that the function f(x) is continuous on the closed interval [a, b], differentiable on the open interval (a, b), and that f(a) = f(b). This means that the function value at the endpoints must be equal, not that the function values must be equal at any two points within the interval. The theorem then guarantees the existence of at least one point c in the open interval (a, b) where the derivative f'(c) = 0."
+    },
+    {
+      "question_id": "T02.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A function f(x) is continuous at x = a if lim(x→a) f(x) = ___.",
+      "correct_answer": "f(a)",
+      "explanation_correct": "The correct answer is f(a) because a function f(x) is said to be continuous at x = a if the limit of f(x) as x approaches a is equal to the value of the function at x = a. This means the left-hand limit, right-hand limit, and function value all agree at that point.",
+      "explanation_incorrect": "The incorrect answer would be something other than f(a), such as f(x). For a function to be continuous at x = a, the limit of f(x) as x approaches a must equal the value of the function at x = a, which is f(a). The function value at x = a, not some other x, is the correct answer to satisfy the definition of continuity."
+    },
+    {
+      "question_id": "T02.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of cos(5x) using the chain rule is ___.",
+      "correct_answer": "−5sin(5x)",
+      "explanation_correct": "The derivative of cos(5x) can be found using the chain rule, where the inner function is u = 5x and the outer function is f(u) = cos(u). Applying the chain rule, the derivative is dy/dx = (dy/du)(du/dx) = -5sin(5x).",
+      "explanation_incorrect": "The correct answer is -5sin(5x). Some students may think the derivative is just 5sin(5x), but that is incorrect because the chain rule must be applied. The chain rule states that for a composite function f(g(x)), the derivative is f'(g(x))g'(x). In this case, the inner function is u = 5x, so the derivative is -5sin(5x)."
+    },
+    {
+      "question_id": "T02.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of tan⁻¹(x) is ___.",
+      "correct_answer": "1/(1 + x²)",
+      "explanation_correct": "The derivative of tan⁻¹(x) is 1/(1 + x²) because the derivative of an inverse trigonometric function is the reciprocal of 1 plus the square of the original function. This is a key result in differentiation that allows us to find derivatives of inverse trigonometric functions.",
+      "explanation_incorrect": "The correct answer is 1/(1 + x²). Many students may be tempted to say the derivative is just x, but that is incorrect. The derivative of tan⁻¹(x) requires using the inverse trigonometric function rule, where the derivative is the reciprocal of 1 plus the square of the original function."
+    },
+    {
+      "question_id": "T02.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "If x = t² and y = t³, then dy/dx = ___.",
+      "correct_answer": "3t/2",
+      "explanation_correct": "The given relations are x = t² and y = t³. To find dy/dx, we can use the chain rule. The chain rule states that dy/dx = (dy/dt)/(dx/dt). Differentiating y = t³ gives dy/dt = 3t². Differentiating x = t² gives dx/dt = 2t. Substituting these values, we get dy/dx = (3t²)/(2t) = 3t/2.",
+      "explanation_incorrect": "The most common mistake here would be to directly substitute the given relations into the derivative formula, resulting in dy/dx = (dy/dt)/(dx/dt) = (3t³)/(2t²) = 3/2t. However, this is incorrect. The correct application of the chain rule, as explained in the correct explanation, gives dy/dx = 3t/2."
+    },
+    {
+      "question_id": "T02.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The second derivative of y = e²ˣ is ___.",
+      "correct_answer": "4e²ˣ",
+      "explanation_correct": "To find the second derivative of y = e^(2x), we first take the first derivative using the power rule: dy/dx = 2e^(2x). Then, we differentiate the first derivative again to get the second derivative: d^2y/dx^2 = 2 * 2e^(2x) = 4e^(2x).",
+      "explanation_incorrect": "The second derivative of y = e^(2x) is not e^(2x). This is the first derivative, which is found by applying the power rule. To get the second derivative, we need to differentiate the first derivative again, which results in 4e^(2x). The correct answer is 4e^(2x)."
+    },
+    {
+      "question_id": "T02.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "The function f(x) = tan(x) is discontinuous at x = ___ (give the smallest positive value).",
+      "correct_answer": "π/2",
+      "explanation_correct": "The function f(x) = tan(x) is discontinuous at x = π/2 because the limit of tan(x) as x approaches π/2 does not exist. This is because tan(x) approaches positive or negative infinity as x gets closer to π/2 from either side.",
+      "explanation_incorrect": "The function f(x) = tan(x) is discontinuous at x = π/2, not x = 0. This is because tan(x) is undefined at x = π/2, as the denominator in the tangent function becomes 0 at that point. The smallest positive value of x where tan(x) is discontinuous is π/2."
+    },
+    {
+      "question_id": "T02.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For Rolle's theorem applied to f(x) = x² − 6x + 8 on [2, 4], the value of c is ___.",
+      "correct_answer": "3",
+      "explanation_correct": "The value of c is 3 because Rolle's Theorem states that if a function f(x) is continuous on [a, b] and differentiable on (a, b), and f(a) = f(b), then there exists at least one point c in (a, b) such that f'(c) = 0. In this case, f(x) = x^2 - 6x + 8 is continuous on [2, 4] and differentiable on (2, 4), and f(2) = f(4) = 0, so the point c where the derivative is 0 is c = 3.",
+      "explanation_incorrect": "The incorrect answer would be any value other than 3. Rolle's Theorem requires that the function f(x) be continuous on the closed interval [a, b] and differentiable on the open interval (a, b), and that f(a) = f(b). For the given function f(x) = x^2 - 6x + 8 on the interval [2, 4], these conditions are satisfied, and the value of c where the derivative is 0 is c = 3."
+    },
+    {
+      "question_id": "T02.01.Q048",
+      "type": "ordering",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to differentiate y = ln(sin(x²)) using the chain rule:",
+      "ordering_items": [
+        "Identify the outermost function: ln(u) where u = sin(x²)",
+        "Differentiate outer: 1/sin(x²)",
+        "Multiply by derivative of sin(x²): cos(x²)",
+        "Multiply by derivative of x²: 2x, giving final answer 2x·cos(x²)/sin(x²)"
+      ],
+      "correct_answer": [
+        "Identify the outermost function: ln(u) where u = sin(x²)",
+        "Differentiate outer: 1/sin(x²)",
+        "Multiply by derivative of sin(x²): cos(x²)",
+        "Multiply by derivative of x²: 2x, giving final answer 2x·cos(x²)/sin(x²)"
+      ],
+      "explanation_correct": "The correct answer arranges the steps in the right order to differentiate the given function y = ln(sin(x²)) using the chain rule. The key steps are identifying the outermost function, differentiating it, and then multiplying by the derivatives of the inner functions. This leads to the final answer of 2x·cos(x²)/sin(x²).",
+      "explanation_incorrect": "The incorrect answer does not follow the proper chain rule steps. While the individual steps are correct, they are not in the right order. The correct sequence is: 1) Identify the outermost function ln(u) where u = sin(x²), 2) Differentiate the outer function 1/sin(x²), 3) Multiply by the derivative of the inner function cos(x²), and 4) Multiply by the derivative of x², which is 2x. This gives the final answer of 2x·cos(x²)/sin(x²)."
+    },
+    {
+      "question_id": "T02.01.Q049",
+      "type": "ordering",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find dy/dx when y = x^(sin x) using logarithmic differentiation:",
+      "ordering_items": [
+        "Take natural log: ln y = sin(x) · ln(x)",
+        "Differentiate both sides: (1/y)(dy/dx) = cos(x)·ln(x) + sin(x)/x",
+        "Multiply both sides by y",
+        "Substitute y = x^(sin x) to get dy/dx = x^(sin x)[cos(x)·ln(x) + sin(x)/x]"
+      ],
+      "correct_answer": [
+        "Take natural log: ln y = sin(x) · ln(x)",
+        "Differentiate both sides: (1/y)(dy/dx) = cos(x)·ln(x) + sin(x)/x",
+        "Multiply both sides by y",
+        "Substitute y = x^(sin x) to get dy/dx = x^(sin x)[cos(x)·ln(x) + sin(x)/x]"
+      ],
+      "explanation_correct": "The correct order of steps is logical as it follows the standard process of logarithmic differentiation. First, we take the natural log of the given function y = x^(sin x) to simplify the expression. Then, we differentiate both sides to find the derivative dy/dx, and finally substitute the original function to get the final answer.",
+      "explanation_incorrect": "The incorrect order mixes up the steps. Differentiating both sides first before taking the natural log would not make sense, as the natural log is a necessary intermediate step to simplify the expression before differentiating. Additionally, multiplying both sides by y should come after differentiating, not before, in order to isolate dy/dx on one side of the equation."
+    },
+    {
+      "question_id": "T02.01.Q050",
+      "type": "ordering",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to check continuity of f(x) at x = a:",
+      "ordering_items": [
+        "Check that f(a) is defined",
+        "Compute lim(x→a⁻) f(x) (left-hand limit)",
+        "Compute lim(x→a⁺) f(x) (right-hand limit)",
+        "Verify LHL = RHL = f(a); if so, f is continuous at x = a"
+      ],
+      "correct_answer": [
+        "Check that f(a) is defined",
+        "Compute lim(x→a⁻) f(x) (left-hand limit)",
+        "Compute lim(x→a⁺) f(x) (right-hand limit)",
+        "Verify LHL = RHL = f(a); if so, f is continuous at x = a"
+      ],
+      "explanation_correct": "The given steps to check continuity of a function f(x) at x = a are correct because continuity requires that the left-hand limit, right-hand limit, and function value all agree at that point. By verifying these conditions, you can determine if the function is continuous at the given point.",
+      "explanation_incorrect": "The correct steps are: 1) Check that f(a) is defined, 2) Compute the left-hand limit lim(x→a⁻) f(x), 3) Compute the right-hand limit lim(x→a⁺) f(x), and 4) Verify that the left-hand limit, right-hand limit, and function value f(a) are all equal. If this is true, then the function f(x) is continuous at x = a."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 13,
+        "application": 21,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

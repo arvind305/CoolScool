@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T10.01",
+  "topic_name": "Oscillations",
+  "canonical_explanation": {
+    "text": "Oscillatory motion is a periodic back-and-forth motion about an equilibrium position. Simple harmonic motion (SHM) is the simplest form, in which the restoring force is directly proportional to the displacement and directed towards the equilibrium (F = −kx). The displacement in SHM is x = A sin(ωt + φ), where A is amplitude, ω = 2π/T is angular frequency, and φ is the initial phase. The velocity v = Aω cos(ωt + φ) is maximum at the equilibrium and zero at the extremes; the acceleration a = −ω²x is maximum at the extremes and zero at the equilibrium. The total energy E = ½mω²A² is constant: it oscillates between kinetic energy KE = ½mω²(A² − x²) and potential energy PE = ½mω²x². The simple pendulum (T = 2π√(l/g)) and spring-mass system (T = 2π√(m/k)) are the two most common SHM systems. Springs in series (1/k_eff = 1/k₁ + 1/k₂) and parallel (k_eff = k₁ + k₂) allow calculation of effective spring constants. Damped oscillations involve energy loss (typically through friction or viscosity), causing amplitude to decrease over time. Forced oscillations occur when an external periodic force drives the system; when the driving frequency matches the natural frequency, resonance occurs and the amplitude reaches a maximum.",
+    "rules": [
+      "SHM displacement: x = A sin(ωt + φ); velocity: v = Aω cos(ωt + φ); acceleration: a = −ω²x.",
+      "Time period of a simple pendulum: T = 2π√(l/g); of a spring-mass system: T = 2π√(m/k).",
+      "Energy in SHM: Total E = ½mω²A² = ½kA²; KE = ½mω²(A² − x²); PE = ½mω²x²; KE + PE = constant.",
+      "Springs in series: 1/k_eff = 1/k₁ + 1/k₂; springs in parallel: k_eff = k₁ + k₂.",
+      "Resonance occurs in forced oscillations when the driving frequency equals the natural frequency, maximising amplitude."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T10.01.Q001",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In simple harmonic motion, the restoring force is proportional to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Velocity"
+        },
+        {
+          "id": "B",
+          "text": "Displacement from equilibrium"
+        },
+        {
+          "id": "C",
+          "text": "Acceleration"
+        },
+        {
+          "id": "D",
+          "text": "Time"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In simple harmonic motion, the restoring force is directly proportional to the displacement from the equilibrium position. This is a fundamental property of SHM, where the force acts to bring the object back to its equilibrium position.",
+      "explanation_incorrect": "The correct answer is that the restoring force in simple harmonic motion is proportional to the displacement from the equilibrium position, not the velocity, acceleration, or time. The restoring force always acts in the opposite direction of the displacement, trying to bring the object back to its equilibrium position."
+    },
+    {
+      "question_id": "T10.01.Q002",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In SHM, the velocity of the particle is maximum at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The extreme positions"
+        },
+        {
+          "id": "B",
+          "text": "The mean (equilibrium) position"
+        },
+        {
+          "id": "C",
+          "text": "Midway between mean and extreme"
+        },
+        {
+          "id": "D",
+          "text": "It is constant throughout"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In simple harmonic motion (SHM), the velocity of the particle is maximum at the mean or equilibrium position. This is because the acceleration, which is proportional to the displacement, is zero at the equilibrium position. Since velocity is the derivative of displacement, it will be maximum at this point.",
+      "explanation_incorrect": "The velocity in SHM is not constant throughout, nor is it maximum at the extreme positions. Rather, the velocity is zero at the extreme positions, where the acceleration and displacement are maximum. The velocity is maximum at the equilibrium position, where the acceleration and displacement are zero."
+    },
+    {
+      "question_id": "T10.01.Q003",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The acceleration in SHM is maximum at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The mean position"
+        },
+        {
+          "id": "B",
+          "text": "The extreme positions"
+        },
+        {
+          "id": "C",
+          "text": "Midway between mean and extreme"
+        },
+        {
+          "id": "D",
+          "text": "The acceleration is constant"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The acceleration in simple harmonic motion (SHM) is maximum at the extreme positions, where the displacement from the equilibrium is greatest. This is because the acceleration a = -ω²x, and the displacement x is maximum at the extreme positions.",
+      "explanation_incorrect": "The acceleration in SHM is not constant, but varies with the position. It is maximum at the extreme positions, where the displacement from the equilibrium is greatest. At the mean position, the acceleration is zero because the displacement is zero. The acceleration is directed towards the equilibrium, so it is maximum when the displacement is maximum, which occurs at the extreme positions."
+    },
+    {
+      "question_id": "T10.01.Q004",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "A particle executes SHM with amplitude 5 cm and time period 2 s. Its maximum velocity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5π cm/s"
+        },
+        {
+          "id": "B",
+          "text": "10π cm/s"
+        },
+        {
+          "id": "C",
+          "text": "5 cm/s"
+        },
+        {
+          "id": "D",
+          "text": "2.5π cm/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 5π cm/s. In simple harmonic motion, the maximum velocity is given by the formula v_max = Aω, where A is the amplitude and ω is the angular frequency. With A = 5 cm and T = 2 s, the angular frequency ω = 2π/T = π rad/s, so the maximum velocity is v_max = 5π cm/s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly apply the formula for maximum velocity in simple harmonic motion. Option B) 10π cm/s is double the correct value, while options C) 5 cm/s and D) 2.5π cm/s do not account for the given amplitude and time period correctly."
+    },
+    {
+      "question_id": "T10.01.Q005",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "A particle executing SHM has displacement x = 4 sin(πt + π/6) cm. Its amplitude is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 cm"
+        },
+        {
+          "id": "B",
+          "text": "4 cm"
+        },
+        {
+          "id": "C",
+          "text": "π cm"
+        },
+        {
+          "id": "D",
+          "text": "8 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The amplitude of the given SHM is 4 cm. This is because the displacement equation is x = 4 sin(πt + π/6) cm, and the amplitude A is the maximum displacement from the equilibrium position, which is 4 cm.",
+      "explanation_incorrect": "The amplitude of the given SHM is not 2 cm, π cm, or 8 cm. The amplitude A is the maximum displacement from the equilibrium position, which is 4 cm as given in the displacement equation x = 4 sin(πt + π/6) cm."
+    },
+    {
+      "question_id": "T10.01.Q006",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "The maximum acceleration of a particle in SHM with amplitude 0.1 m and angular frequency 10 rad/s is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "10 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "100 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "0.1 m/s²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum acceleration in simple harmonic motion is given by the formula a = -ω²x, where ω is the angular frequency and x is the displacement. With an amplitude of 0.1 m and an angular frequency of 10 rad/s, the maximum acceleration is 10 m/s², which corresponds to option B.",
+      "explanation_incorrect": "The maximum acceleration in simple harmonic motion is not constant, but rather varies with the position of the particle. At the extremes (where x = ±A), the acceleration is maximum and equal to -ω²A, which in this case is -100 m/s². Therefore, the correct answer is option C, not options A, B, or D."
+    },
+    {
+      "question_id": "T10.01.Q007",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The total mechanical energy in SHM is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum at the mean position"
+        },
+        {
+          "id": "B",
+          "text": "Maximum at the extreme position"
+        },
+        {
+          "id": "C",
+          "text": "Constant throughout the motion"
+        },
+        {
+          "id": "D",
+          "text": "Zero at the mean position"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The total mechanical energy in simple harmonic motion is constant throughout the motion. This is because the sum of the kinetic energy and potential energy remains the same, with the energy oscillating between the two but the total staying fixed.",
+      "explanation_incorrect": "The total mechanical energy in simple harmonic motion is not maximum at the mean position (option A) or zero at the mean position (option D). This is because the potential energy is maximum at the extreme positions and the kinetic energy is maximum at the mean position, but the total energy remains constant throughout the motion (option C)."
+    },
+    {
+      "question_id": "T10.01.Q008",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "In SHM, at what displacement from the mean position is the kinetic energy equal to the potential energy? (A = amplitude)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "A/2"
+        },
+        {
+          "id": "C",
+          "text": "A/√2"
+        },
+        {
+          "id": "D",
+          "text": "A/4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In simple harmonic motion (SHM), the kinetic energy (KE) and potential energy (PE) oscillate between zero and the maximum value, which is equal to half the total energy E. At the points where the displacement is A/√2 (about 70.7% of the amplitude), the KE is equal to the PE, as the total energy is equally distributed between the two.",
+      "explanation_incorrect": "The kinetic energy is equal to the potential energy when the displacement is A/√2 from the mean position. This is because at this point, the velocity (and hence the kinetic energy) is maximum, while the potential energy is also at its maximum. The other options do not represent the point where the kinetic and potential energies are equal in SHM."
+    },
+    {
+      "question_id": "T10.01.Q009",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "A spring of constant 100 N/m is stretched by 0.1 m. The total energy of oscillation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 J"
+        },
+        {
+          "id": "B",
+          "text": "1.0 J"
+        },
+        {
+          "id": "C",
+          "text": "5.0 J"
+        },
+        {
+          "id": "D",
+          "text": "10 J"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.5 J. The total energy of oscillation for a spring-mass system in simple harmonic motion is given by the formula E = 1/2 * k * A^2, where k is the spring constant and A is the amplitude of oscillation. In this case, with k = 100 N/m and A = 0.1 m, the total energy is 1/2 * 100 * 0.1^2 = 0.5 J.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculation for the total energy of oscillation. The formula E = 1/2 * k * A^2 must be used to calculate the correct energy, which is 0.5 J in this case. Option B) 1.0 J, C) 5.0 J, and D) 10 J are all incorrect values that do not match the actual energy of the system."
+    },
+    {
+      "question_id": "T10.01.Q010",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A particle of mass 0.2 kg executes SHM with amplitude 0.1 m and angular frequency 10 rad/s. The total energy is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.01 J"
+        },
+        {
+          "id": "B",
+          "text": "0.1 J"
+        },
+        {
+          "id": "C",
+          "text": "1.0 J"
+        },
+        {
+          "id": "D",
+          "text": "0.5 J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The total energy of a simple harmonic oscillator is given by E = 1/2 m ω^2 A^2, where m is the mass, ω is the angular frequency, and A is the amplitude. Plugging in the values given, we get E = 1/2 × 0.2 kg × (10 rad/s)^2 × (0.1 m)^2 = 0.1 J, which corresponds to option B.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the correct formula for the total energy of a simple harmonic oscillator. Option A (0.01 J) is too low, option C (1.0 J) is too high, and option D (0.5 J) is also incorrect. The correct option is B (0.1 J), which is calculated using the formula E = 1/2 m ω^2 A^2."
+    },
+    {
+      "question_id": "T10.01.Q011",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The time period of a simple pendulum of length 1 m is (g = 10 m/s², π² ≈ 10):",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 s"
+        },
+        {
+          "id": "B",
+          "text": "2 s"
+        },
+        {
+          "id": "C",
+          "text": "π s"
+        },
+        {
+          "id": "D",
+          "text": "2π s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2 s. The time period of a simple pendulum is given by the formula T = 2π√(l/g), where l is the length of the pendulum and g is the acceleration due to gravity. Plugging in the values given in the question, with l = 1 m and g = 10 m/s², we get T = 2π√(1/10) = 2 s.",
+      "explanation_incorrect": "The incorrect options are: A) 1 s, C) π s, and D) 2π s. These answers do not correctly apply the formula for the time period of a simple pendulum, which depends on the length of the pendulum and the acceleration due to gravity. The correct formula is T = 2π√(l/g), and with the given values of l = 1 m and g = 10 m/s², the time period works out to be 2 s."
+    },
+    {
+      "question_id": "T10.01.Q012",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The time period of a spring-mass system depends on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mass and spring constant"
+        },
+        {
+          "id": "B",
+          "text": "Amplitude and mass"
+        },
+        {
+          "id": "C",
+          "text": "Amplitude and spring constant"
+        },
+        {
+          "id": "D",
+          "text": "Only the amplitude"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The time period of a spring-mass system depends on the mass of the object attached to the spring and the spring constant (stiffness) of the spring. This is because the time period of a simple harmonic oscillator is given by the formula T = 2π√(m/k), where m is the mass and k is the spring constant.",
+      "explanation_incorrect": "The time period of a spring-mass system does not depend on the amplitude of the oscillations or the spring constant alone. The amplitude affects the total energy of the system, but not the time period. The time period is determined by the combination of the mass and the spring constant, as shown in the formula T = 2π√(m/k)."
+    },
+    {
+      "question_id": "T10.01.Q013",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "If the length of a simple pendulum is made 4 times, its time period becomes:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 times"
+        },
+        {
+          "id": "B",
+          "text": "2 times"
+        },
+        {
+          "id": "C",
+          "text": "½ times"
+        },
+        {
+          "id": "D",
+          "text": "Unchanged"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the length of a simple pendulum is made 4 times, the time period becomes 2 times. This is because the time period of a simple pendulum is proportional to the square root of the length, so doubling the length increases the time period by a factor of √4 = 2.",
+      "explanation_incorrect": "The incorrect options are not correct because: A) Increasing the length by 4 times does not make the time period 4 times, it makes it 2 times. C) Decreasing the length by 4 times does not make the time period 1/2 times, it makes it 1/2 times. D) The time period does change when the length is changed, it becomes 2 times the original time period."
+    },
+    {
+      "question_id": "T10.01.Q014",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "A mass of 0.5 kg is attached to a spring of constant 200 N/m. The time period of oscillation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/10 s"
+        },
+        {
+          "id": "B",
+          "text": "π/5 s"
+        },
+        {
+          "id": "C",
+          "text": "2π/10 s"
+        },
+        {
+          "id": "D",
+          "text": "π s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) π/10 s. This is because the time period of simple harmonic motion is given by the formula T = 2π√(m/k), where m is the mass and k is the spring constant. Plugging in the values given in the question, we get T = 2π√(0.5/200) = π/10 s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for the time period of simple harmonic motion. Option B) π/5 s is incorrect because it is double the correct answer. Option C) 2π/10 s is incorrect because it is not the correct formula. Option D) π s is incorrect because it does not match the formula."
+    },
+    {
+      "question_id": "T10.01.Q015",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two springs of constants 100 N/m and 200 N/m are connected in series. The effective spring constant is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "300 N/m"
+        },
+        {
+          "id": "B",
+          "text": "200/3 N/m"
+        },
+        {
+          "id": "C",
+          "text": "150 N/m"
+        },
+        {
+          "id": "D",
+          "text": "100 N/m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 200/3 N/m. When two springs are connected in series, the effective spring constant is given by the formula 1/k_eff = 1/k₁ + 1/k₂. Plugging in the given values, we get 1/k_eff = 1/100 + 1/200, which simplifies to 1/k_eff = 3/600, or k_eff = 200/3 N/m.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the formula for calculating the effective spring constant of springs connected in series. Option A) 300 N/m is incorrect because it does not account for the different spring constants. Option C) 150 N/m is incorrect because it is the average of the two spring constants, not the effective spring constant. Option D) 100 N/m is incorrect because it is just one of the given spring constants, not the effective spring constant."
+    },
+    {
+      "question_id": "T10.01.Q016",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two springs of constants 100 N/m and 200 N/m are connected in parallel. A mass of 3 kg is attached. The time period is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2π/10 s"
+        },
+        {
+          "id": "B",
+          "text": "2π√(3/300) s = 2π/10 s"
+        },
+        {
+          "id": "C",
+          "text": "π/5 s"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is both A and B, because the time period of a spring-mass system in simple harmonic motion is given by T = 2π√(m/k), where m is the mass and k is the spring constant. With the two springs in parallel, the effective spring constant is k_eff = k₁ + k₂ = 100 + 200 = 300 N/m. Plugging this into the formula, we get T = 2π√(3/300) = 2π/10 s.",
+      "explanation_incorrect": "Option C is incorrect because the time period is not π/5 s. The time period is calculated using the formula T = 2π√(m/k), where m is the mass and k is the spring constant. With the two springs in parallel, the effective spring constant is k_eff = 300 N/m, and the mass is 3 kg. Plugging these values into the formula, we get T = 2π√(3/300) = 2π/10 s."
+    },
+    {
+      "question_id": "T10.01.Q017",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "In damped oscillations, the amplitude of oscillation:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increases with time"
+        },
+        {
+          "id": "B",
+          "text": "Remains constant"
+        },
+        {
+          "id": "C",
+          "text": "Decreases with time"
+        },
+        {
+          "id": "D",
+          "text": "Oscillates randomly"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In damped oscillations, the amplitude of oscillation decreases over time due to energy loss from friction or viscosity. This is because the restoring force is no longer strong enough to maintain a constant amplitude, causing the oscillations to die down.",
+      "explanation_incorrect": "The amplitude of oscillations does not increase with time in damped oscillations, as the energy loss would cause the amplitude to decrease. The amplitude also does not remain constant, as the damping effect causes it to diminish over time. Lastly, the oscillations do not occur randomly, but rather follow a predictable pattern of decreasing amplitude."
+    },
+    {
+      "question_id": "T10.01.Q018",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Resonance in forced oscillations occurs when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The driving frequency is much greater than the natural frequency"
+        },
+        {
+          "id": "B",
+          "text": "The driving frequency equals the natural frequency"
+        },
+        {
+          "id": "C",
+          "text": "The damping is very large"
+        },
+        {
+          "id": "D",
+          "text": "The amplitude is zero"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Resonance occurs when the driving frequency equals the natural frequency of the oscillating system. At this condition, the amplitude of the oscillations is maximized due to the system absorbing energy efficiently from the driving force.",
+      "explanation_incorrect": "Resonance does not occur when the driving frequency is much greater than the natural frequency, as the system will not be able to absorb energy efficiently. Similarly, large damping or zero amplitude do not lead to resonance, as resonance is characterized by a maximum amplitude when the driving and natural frequencies match."
+    },
+    {
+      "question_id": "T10.01.Q019",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A body executing SHM has a displacement x = 3 sin(4πt) cm. Its frequency is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 Hz"
+        },
+        {
+          "id": "B",
+          "text": "4π Hz"
+        },
+        {
+          "id": "C",
+          "text": "4 Hz"
+        },
+        {
+          "id": "D",
+          "text": "0.5 Hz"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2 Hz. The given displacement equation is x = 3 sin(4πt) cm. The angular frequency ω is 4π rad/s, and the frequency f is ω/2π = 4π/2π = 2 Hz.",
+      "explanation_incorrect": "The correct frequency is 2 Hz, not the other options. Option B) 4π Hz is incorrect because the angular frequency ω is 4π rad/s, not the frequency. Option C) 4 Hz is incorrect because the frequency f is 2 Hz, not 4 Hz. Option D) 0.5 Hz is incorrect because the frequency f is 2 Hz, not 0.5 Hz."
+    },
+    {
+      "question_id": "T10.01.Q020",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In SHM with amplitude A, the ratio of kinetic energy to potential energy at x = A/2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:1"
+        },
+        {
+          "id": "B",
+          "text": "3:1"
+        },
+        {
+          "id": "C",
+          "text": "1:3"
+        },
+        {
+          "id": "D",
+          "text": "4:1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 3:1. In simple harmonic motion, the kinetic energy (KE) and potential energy (PE) oscillate between each other. At the midpoint (x = A/2), the displacement is half the amplitude, so the PE is 1/4 the maximum PE (1/2 kA^2). The KE at this point is 3/4 the maximum KE (1/2 mω^2A^2), since the velocity is maximum. Therefore, the ratio of KE to PE at x = A/2 is 3:1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the ratio of kinetic energy to potential energy at the midpoint of simple harmonic motion. At x = A/2, the kinetic energy is greater than the potential energy, with a ratio of 3:1, not 1:1, 1:3, or 4:1."
+    },
+    {
+      "question_id": "T10.01.Q021",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "The length of a seconds pendulum (T = 2 s) on Earth (g = 9.8 m/s²) is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 m"
+        },
+        {
+          "id": "B",
+          "text": "1.0 m"
+        },
+        {
+          "id": "C",
+          "text": "1.5 m"
+        },
+        {
+          "id": "D",
+          "text": "2.0 m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1.0 m. The formula for the period of a simple pendulum is T = 2π√(l/g), where l is the length of the pendulum and g is the acceleration due to gravity. Since the period is given as 2 seconds, we can rearrange the formula to solve for the length: l = (T²g)/(4π²) = (2²)*(9.8)/(4π²) = 0.99 m, which rounds to 1.0 m.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not satisfy the given formula for the period of a simple pendulum. Option A) 0.5 m is too short, Option C) 1.5 m is too long, and Option D) 2.0 m is also too long. The correct length of 1.0 m is obtained by substituting the given period of 2 seconds and the acceleration due to gravity of 9.8 m/s² into the pendulum formula."
+    },
+    {
+      "question_id": "T10.01.Q022",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A simple pendulum of length 1 m is taken to the Moon where g = 1.6 m/s². Its time period on the Moon (π² ≈ 10) is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 s"
+        },
+        {
+          "id": "B",
+          "text": "5 s"
+        },
+        {
+          "id": "C",
+          "text": "2π√(1/1.6) s ≈ 4.97 s"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D, both B and C. The time period T of a simple pendulum is given by the formula T = 2π√(l/g), where l is the length of the pendulum and g is the acceleration due to gravity. Since the length of the pendulum is 1 m and the acceleration due to gravity on the Moon is 1.6 m/s², the time period on the Moon is T = 2π√(1/1.6) ≈ 4.97 s, which matches option C. This matches the time period of 5 s given in option B as well.",
+      "explanation_incorrect": "The time period of a simple pendulum depends on the length of the pendulum and the acceleration due to gravity. When the pendulum is taken to the Moon, the acceleration due to gravity decreases from 9.8 m/s² on Earth to 1.6 m/s² on the Moon. This causes the time period to increase, as shown by the formula T = 2π√(l/g). Option A, 2 seconds, is incorrect because it is too short for the given length and gravity on the Moon."
+    },
+    {
+      "question_id": "T10.01.Q023",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "The phase difference between velocity and displacement in SHM is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "π"
+        },
+        {
+          "id": "D",
+          "text": "2π"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The phase difference between velocity and displacement in simple harmonic motion (SHM) is π/2 or 90 degrees. This is because the velocity is maximum at the equilibrium position where the displacement is zero, and the velocity is zero at the maximum and minimum displacements.",
+      "explanation_incorrect": "The phase difference between velocity and displacement in SHM is not 0, π, or 2π. In SHM, the velocity leads the displacement by a phase of π/2 or 90 degrees. This is because the velocity is maximum when the displacement is zero at the equilibrium position, and the velocity is zero when the displacement is maximum or minimum."
+    },
+    {
+      "question_id": "T10.01.Q024",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "Which of the following is an example of resonance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Breaking of a wine glass by a loud sound at the right frequency"
+        },
+        {
+          "id": "B",
+          "text": "A ball falling under gravity"
+        },
+        {
+          "id": "C",
+          "text": "A body sliding on a rough surface"
+        },
+        {
+          "id": "D",
+          "text": "An object floating in water"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Option A is the correct answer because breaking of a wine glass by a loud sound at the right frequency is an example of resonance. Resonance occurs when the driving frequency (in this case, the frequency of the sound wave) matches the natural frequency of the system (the wine glass), causing the amplitude of oscillations to reach a maximum.",
+      "explanation_incorrect": "Option B, C, and D are not examples of resonance. Option B (a ball falling under gravity) is an example of free fall, not oscillations. Option C (a body sliding on a rough surface) is an example of damped motion, not resonance. Option D (an object floating in water) is an example of buoyancy, not oscillations or resonance."
+    },
+    {
+      "question_id": "T10.01.Q025",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "If the amplitude of SHM is doubled, the total energy becomes:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Double"
+        },
+        {
+          "id": "B",
+          "text": "Four times"
+        },
+        {
+          "id": "C",
+          "text": "Half"
+        },
+        {
+          "id": "D",
+          "text": "Same"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The total energy in simple harmonic motion is given by E = 1/2 m ω^2 A^2, where m is the mass, ω is the angular frequency, and A is the amplitude. If the amplitude is doubled, the total energy will become 4 times the original value since the amplitude is squared in the formula.",
+      "explanation_incorrect": "The total energy in simple harmonic motion is directly proportional to the square of the amplitude. If the amplitude is doubled, the total energy will become 4 times the original value, not double or half. This is because the amplitude is squared in the formula for the total energy, so a change in the amplitude will be magnified in the total energy calculation."
+    },
+    {
+      "question_id": "T10.01.Q026",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The velocity of a particle in SHM at displacement x from the mean position (amplitude A, angular frequency ω) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ω√(A² − x²)"
+        },
+        {
+          "id": "B",
+          "text": "ωA"
+        },
+        {
+          "id": "C",
+          "text": "ω²x"
+        },
+        {
+          "id": "D",
+          "text": "ω(A − x)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. The velocity in simple harmonic motion is given by the formula v = Aω cos(ωt + φ), where A is the amplitude, ω is the angular frequency, and x = A sin(ωt + φ) is the displacement. Substituting x = A sin(ωt + φ), we get v = Aω cos(ωt + φ) = ω√(A² - x²).",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for velocity in simple harmonic motion. Option B, ωA, is the formula for maximum velocity, but it does not depend on the displacement x. Option C, ω²x, is the formula for acceleration, not velocity. Option D, ω(A - x), is not the correct formula for velocity in simple harmonic motion."
+    },
+    {
+      "question_id": "T10.01.Q027",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A spring of constant k is cut into two equal halves. The spring constant of each half is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "k/2"
+        },
+        {
+          "id": "B",
+          "text": "k"
+        },
+        {
+          "id": "C",
+          "text": "2k"
+        },
+        {
+          "id": "D",
+          "text": "4k"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When a spring is cut into two equal halves, the spring constant of each half is twice the original spring constant. This is because the spring constant is inversely proportional to the length of the spring, and cutting the spring in half reduces the length by half, resulting in a spring constant that is twice the original value.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly represent the relationship between the original spring constant and the spring constant of the halves. Option A (k/2) is incorrect because cutting the spring in half should increase the spring constant, not decrease it. Option B (k) is incorrect because the spring constant should change when the spring is cut in half. Option D (4k) is incorrect because the spring constant should double, not quadruple, when the spring is cut in half."
+    },
+    {
+      "question_id": "T10.01.Q028",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "In damped oscillations, the quantity that decreases exponentially with time is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frequency"
+        },
+        {
+          "id": "B",
+          "text": "Time period"
+        },
+        {
+          "id": "C",
+          "text": "Amplitude"
+        },
+        {
+          "id": "D",
+          "text": "Phase"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The amplitude of a damped oscillation decreases exponentially with time as energy is lost due to friction or viscosity. The frequency and time period remain constant, while the phase may change due to the energy loss.",
+      "explanation_incorrect": "The amplitude decreases exponentially in a damped oscillation because the restoring force is proportional to the displacement, but there is an opposing frictional or viscous force that opposes the motion. This causes the amplitude to decrease over time, while the frequency and time period remain unchanged."
+    },
+    {
+      "question_id": "T10.01.Q029",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The phase difference between displacement and acceleration in SHM is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "π"
+        },
+        {
+          "id": "D",
+          "text": "3π/2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In simple harmonic motion, the displacement and acceleration are 180 degrees out of phase, or a phase difference of π radians. This is because the acceleration is proportional to the displacement, but in the opposite direction, as stated by the equation a = -ω²x.",
+      "explanation_incorrect": "The phase difference between displacement and acceleration in SHM is π radians, or 180 degrees. This is because the acceleration is proportional to the displacement, but in the opposite direction. The other options do not correctly represent the phase relationship between displacement and acceleration in SHM."
+    },
+    {
+      "question_id": "T10.01.Q030",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "A pendulum clock runs slow in summer. This is because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "g decreases in summer"
+        },
+        {
+          "id": "B",
+          "text": "The pendulum length increases due to thermal expansion, increasing T"
+        },
+        {
+          "id": "C",
+          "text": "The mass of the bob increases"
+        },
+        {
+          "id": "D",
+          "text": "The amplitude decreases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The pendulum length increases due to thermal expansion in summer, causing the pendulum period T to increase. Since the clock's timekeeping depends on the pendulum period, the clock will run slow in summer.",
+      "explanation_incorrect": "The acceleration due to gravity g does not change significantly with season, so option A is incorrect. The mass of the pendulum bob is also constant, so option C is incorrect. While a decrease in amplitude would affect the period, this is not the primary reason the clock runs slow in summer, so option D is also incorrect."
+    },
+    {
+      "question_id": "T10.01.Q031",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "At what displacement from equilibrium is the speed of a particle in SHM half of its maximum speed? (A = amplitude)",
+      "options": [
+        {
+          "id": "A",
+          "text": "A/2"
+        },
+        {
+          "id": "B",
+          "text": "A√3/2"
+        },
+        {
+          "id": "C",
+          "text": "A/√2"
+        },
+        {
+          "id": "D",
+          "text": "3A/4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) A√3/2. In simple harmonic motion, the speed of the particle is maximum at the equilibrium position (x = 0) and zero at the extremes (x = ±A). The speed is half the maximum speed when the displacement is A√3/2, as this is the point where cos(ωt + φ) = 1/2.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not correspond to the displacement where the speed is half the maximum speed. Option A) A/2 is incorrect because at this displacement, the speed is not half the maximum. Option C) A/√2 is incorrect because this corresponds to the displacement where the acceleration is maximum, not the speed. Option D) 3A/4 is incorrect because this is not the displacement where the speed is half the maximum."
+    },
+    {
+      "question_id": "T10.01.Q032",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "The effect of increased damping on resonance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The resonance amplitude increases"
+        },
+        {
+          "id": "B",
+          "text": "The resonance amplitude decreases and the resonance peak broadens"
+        },
+        {
+          "id": "C",
+          "text": "The natural frequency changes significantly"
+        },
+        {
+          "id": "D",
+          "text": "No effect on resonance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Increased damping reduces the resonance amplitude and causes the resonance peak to broaden. This is because the damping force opposes the motion, reducing the amplitude of oscillations at the resonant frequency.",
+      "explanation_incorrect": "Increased damping does not increase the resonance amplitude. Instead, it decreases the amplitude and broadens the resonance peak. This is because the damping force opposes the motion, reducing the overall oscillation amplitude at the resonant frequency."
+    },
+    {
+      "question_id": "T10.01.Q033",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The time period of SHM is independent of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mass (for a pendulum)"
+        },
+        {
+          "id": "B",
+          "text": "Spring constant (for a spring-mass system)"
+        },
+        {
+          "id": "C",
+          "text": "Amplitude (for ideal SHM)"
+        },
+        {
+          "id": "D",
+          "text": "Length (for a pendulum)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The time period of simple harmonic motion (SHM) is independent of the amplitude (the maximum displacement from the equilibrium position). This is because the time period of SHM depends only on the properties of the system, such as the spring constant (for a spring-mass system) or the length of the pendulum (for a pendulum), and not on the initial displacement.",
+      "explanation_incorrect": "Option A and D are incorrect because the time period of a pendulum in SHM does depend on the mass and length, respectively. Option B is incorrect because the time period of a spring-mass system in SHM does depend on the spring constant. The correct option is C because the time period of ideal SHM is independent of the amplitude and only depends on the properties of the system."
+    },
+    {
+      "question_id": "T10.01.Q034",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A loaded spring has time period T. If the spring is cut in half and the same mass is attached, the new time period is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "T"
+        },
+        {
+          "id": "B",
+          "text": "T/√2"
+        },
+        {
+          "id": "C",
+          "text": "T√2"
+        },
+        {
+          "id": "D",
+          "text": "2T"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the spring is cut in half, the spring constant k is doubled, since the spring constant is inversely proportional to the length of the spring. Since the mass remains the same, the time period T = 2π√(m/k) is reduced by a factor of √2 when k is doubled.",
+      "explanation_incorrect": "Option A is incorrect because the time period T does not remain the same when the spring is cut in half. Option C is incorrect because the time period does not increase by a factor of √2 when the spring is cut in half. Option D is incorrect because the time period does not double when the spring is cut in half."
+    },
+    {
+      "question_id": "T10.01.Q035",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "At the extreme positions of SHM, the kinetic energy is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum"
+        },
+        {
+          "id": "B",
+          "text": "Zero"
+        },
+        {
+          "id": "C",
+          "text": "Half the total energy"
+        },
+        {
+          "id": "D",
+          "text": "Equal to the potential energy"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At the extreme positions of simple harmonic motion (SHM), the displacement is maximum, and the velocity is zero. Since kinetic energy is proportional to the square of the velocity, the kinetic energy is zero at the extreme positions.",
+      "explanation_incorrect": "The kinetic energy is not maximum at the extreme positions of SHM. The kinetic energy is zero at the extreme positions because the velocity is zero there. The kinetic energy is maximum at the equilibrium position, where the displacement is zero and the velocity is maximum."
+    },
+    {
+      "question_id": "T10.01.Q036",
+      "type": "true_false",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The time period of SHM depends on the amplitude of oscillation.",
+      "correct_answer": false,
+      "explanation_correct": "The time period of simple harmonic motion (SHM) depends only on the properties of the system, such as the spring constant and mass, and not on the amplitude of oscillation. The time period T = 2π√(m/k), where m is the mass and k is the spring constant, and it remains constant regardless of the amplitude.",
+      "explanation_incorrect": "It is a common misconception that the time period of SHM depends on the amplitude of oscillation. However, this is not the case. The time period is determined by the properties of the system, such as the spring constant and mass, and remains constant regardless of the amplitude. The amplitude affects the maximum displacement from the equilibrium position, but it does not affect the time period of the oscillation."
+    },
+    {
+      "question_id": "T10.01.Q037",
+      "type": "true_false",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "In SHM, kinetic energy and potential energy are equal at displacement x = A/√2.",
+      "correct_answer": true,
+      "explanation_correct": "In simple harmonic motion (SHM), the total energy of the system is constant and oscillates between kinetic energy (KE) and potential energy (PE). At the displacement x = A/√2, the KE and PE are equal, as the system has equal amounts of kinetic and potential energy at this point.",
+      "explanation_incorrect": "At the maximum displacement (x = A), the system has only potential energy and no kinetic energy. At the equilibrium position (x = 0), the system has only kinetic energy and no potential energy. However, at the displacement x = A/√2, the system has equal amounts of kinetic and potential energy, which is the condition stated in the question."
+    },
+    {
+      "question_id": "T10.01.Q038",
+      "type": "true_false",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "The time period of a simple pendulum does not depend on the mass of the bob.",
+      "correct_answer": true,
+      "explanation_correct": "The time period of a simple pendulum depends only on the length of the pendulum and the acceleration due to gravity, not on the mass of the bob. This is because the restoring force that drives the pendulum's oscillation is the force of gravity, which is independent of the bob's mass.",
+      "explanation_incorrect": "The common misconception is that the mass of the bob affects the time period of a simple pendulum. However, this is not the case. The time period of a simple pendulum is given by the formula T = 2π√(l/g), where l is the length of the pendulum and g is the acceleration due to gravity. The mass of the bob does not appear in this formula, so it does not affect the time period."
+    },
+    {
+      "question_id": "T10.01.Q039",
+      "type": "true_false",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "In forced oscillations, if the driving frequency is very different from the natural frequency, the amplitude is large.",
+      "correct_answer": false,
+      "explanation_correct": "In forced oscillations, if the driving frequency is very different from the natural frequency, the amplitude is actually small. This is because the system will not be able to absorb much energy from the external force when the frequencies are not well-matched.",
+      "explanation_incorrect": "The statement is incorrect. In forced oscillations, if the driving frequency is very different from the natural frequency, the amplitude will be small, not large. This is because the system will not be able to absorb much energy from the external force when the frequencies are not well-matched. The maximum amplitude occurs when the driving frequency matches the natural frequency, resulting in resonance."
+    },
+    {
+      "question_id": "T10.01.Q040",
+      "type": "true_false",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Velocity and acceleration are always in opposite directions in SHM.",
+      "correct_answer": false,
+      "explanation_correct": "In simple harmonic motion (SHM), the velocity and acceleration are not always in opposite directions. At the extremes of the oscillation, where the displacement is maximum, the velocity is zero and the acceleration is maximum. At the equilibrium position, where the displacement is zero, the velocity is maximum and the acceleration is zero. So the velocity and acceleration are in the same direction at some points and in opposite directions at other points during the oscillation.",
+      "explanation_incorrect": "The statement 'Velocity and acceleration are always in opposite directions in SHM' is incorrect. This is a common misconception, as people often think that since the acceleration is directed towards the equilibrium position (and thus opposite to the displacement), it must also be opposite to the velocity. However, this is not the case. The velocity and acceleration in SHM are related by the equation a = -ω²x, where ω is the angular frequency and x is the displacement. This means that the acceleration is proportional to the displacement, not the velocity. So the velocity and acceleration can be in the same direction or in opposite directions, depending on the position in the oscillation cycle."
+    },
+    {
+      "question_id": "T10.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The restoring force in SHM is F = ___, where k is the force constant and x is displacement.",
+      "correct_answer": "−kx",
+      "explanation_correct": "The restoring force in simple harmonic motion is proportional to the displacement and directed towards the equilibrium position. This means the force is given by F = -kx, where k is the force constant and x is the displacement.",
+      "explanation_incorrect": "The incorrect answer would be F = kx, which is the wrong expression for the restoring force in simple harmonic motion. The correct expression is F = -kx, where k is the force constant and x is the displacement. This negative sign indicates that the restoring force is directed towards the equilibrium position, opposing the displacement."
+    },
+    {
+      "question_id": "T10.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "The time period of a simple pendulum of length 4 m is ___ s (g = 10 m/s², π² ≈ 10).",
+      "correct_answer": "4",
+      "explanation_correct": "The time period of a simple pendulum is given by the formula T = 2π√(l/g), where l is the length of the pendulum and g is the acceleration due to gravity. Plugging in the given values of l = 4 m and g = 10 m/s², we get T = 2π√(4/10) = 4 s.",
+      "explanation_incorrect": "The accepted answer format is a single number, so the incorrect answer '4 s' would not be accepted. To calculate the time period, we use the formula T = 2π√(l/g), where l is the length of the pendulum and g is the acceleration due to gravity. Plugging in the given values of l = 4 m and g = 10 m/s², we get T = 2π√(4/10) = 4 s."
+    },
+    {
+      "question_id": "T10.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "The total energy of a spring-mass system in SHM is E = ___.",
+      "correct_answer": "½kA²",
+      "explanation_correct": "The total energy of a spring-mass system in simple harmonic motion (SHM) is equal to ½kA², where k is the spring constant and A is the amplitude of the oscillation. This is because the total energy is the sum of the potential energy (½kx²) and the kinetic energy (½mv²), and in SHM the displacement x = A sin(ωt) and the velocity v = Aω cos(ωt), so the total energy simplifies to ½kA².",
+      "explanation_incorrect": "The accepted answer format is ½kA², where k is the spring constant and A is the amplitude. This is incorrect because the total energy of a spring-mass system in SHM is not simply the spring constant multiplied by the amplitude. The total energy is the sum of the potential energy and the kinetic energy, which varies throughout the oscillation cycle, and the correct expression for the total energy is ½kA²."
+    },
+    {
+      "question_id": "T10.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two springs of constants 200 N/m and 300 N/m in parallel have an effective constant of ___ N/m.",
+      "correct_answer": "500",
+      "explanation_correct": "The two springs in parallel have effective spring constant k_eff = k₁ + k₂ = 200 N/m + 300 N/m = 500 N/m. This is because when springs are connected in parallel, their individual spring constants add up to give the total effective spring constant.",
+      "explanation_incorrect": "The accepted answer format is a single number, so the correct answer is 500 N/m. If the two springs were connected in series, the effective spring constant would be calculated as 1/k_eff = 1/k₁ + 1/k₂, which would give a lower value. However, since the question states the springs are in parallel, the correct way to calculate the effective spring constant is to add the individual constants, resulting in 500 N/m."
+    },
+    {
+      "question_id": "T10.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "In SHM with amplitude 10 cm and ω = 5 rad/s, the maximum velocity is ___ cm/s.",
+      "correct_answer": "50",
+      "explanation_correct": "The maximum velocity in simple harmonic motion (SHM) is given by the formula v = Aω, where A is the amplitude and ω is the angular frequency. With A = 10 cm and ω = 5 rad/s, the maximum velocity is 50 cm/s.",
+      "explanation_incorrect": "The accepted answer format is a single number, 50. The incorrect reasoning would be to use the formula for displacement in SHM, x = A sin(ωt + φ), and plug in the values to find the displacement at a specific time. However, this would not give you the maximum velocity, which is the key quantity asked for in the question."
+    },
+    {
+      "question_id": "T10.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "At resonance, the driving frequency equals the ___ frequency of the system.",
+      "correct_answer": "natural",
+      "explanation_correct": "At resonance, the driving frequency equals the natural frequency of the system. This is because the natural frequency is the frequency at which the system tends to oscillate on its own, so when the driving frequency matches this, the system will oscillate with the maximum amplitude.",
+      "explanation_incorrect": "The accepted answer format is 'natural'. The natural frequency of a system is the frequency at which the system tends to oscillate on its own, without any external driving force. When the driving frequency equals the natural frequency, the system will resonate and the amplitude of the oscillations will be maximized. So the driving frequency must match the natural frequency of the system at resonance."
+    },
+    {
+      "question_id": "T10.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A 2 kg mass on a spring of k = 200 N/m oscillates with amplitude 5 cm. The total energy is ___ J.",
+      "correct_answer": "0.25",
+      "explanation_correct": "The total energy of the oscillating system is the sum of its kinetic energy and potential energy. In simple harmonic motion, the total energy is constant and equal to 1/2 * m * ω^2 * A^2, where m is the mass, ω is the angular frequency, and A is the amplitude. Plugging in the values given in the question (m = 2 kg, k = 200 N/m, A = 0.05 m), we get the total energy as 0.25 J.",
+      "explanation_incorrect": "The incorrect answer would be to calculate the potential energy or kinetic energy alone, rather than the total energy. The total energy is the sum of the potential and kinetic energies, which is 0.25 J. The accepted answer format is a single numeric value, so the correct answer should be entered as '0.25' and not in any other format."
+    },
+    {
+      "question_id": "T10.01.Q048",
+      "type": "ordering",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "In SHM, arrange the following displacements in order of increasing kinetic energy (A = amplitude): (A) x = A, (B) x = A/2, (C) x = 0, (D) x = A/√2",
+      "ordering_items": [
+        "x = A",
+        "x = A/2",
+        "x = 0",
+        "x = A/√2"
+      ],
+      "correct_answer": [
+        "x = A",
+        "x = A/√2",
+        "x = A/2",
+        "x = 0"
+      ],
+      "explanation_correct": "The kinetic energy in simple harmonic motion is given by the formula KE = 1/2 * m * (Aω)^2 * (1 - (x/A)^2), where A is the amplitude, ω is the angular frequency, and x is the displacement. Since the kinetic energy is maximum when x = 0 (at the equilibrium position), the order of increasing kinetic energy is: x = A, x = A/√2, x = A/2, x = 0.",
+      "explanation_incorrect": "The incorrect explanation would be that the kinetic energy is maximum when the displacement is maximum (x = A). This is not correct because the kinetic energy is actually maximum when the displacement is zero (x = 0), as the formula shows. The order of increasing kinetic energy is: x = A, x = A/√2, x = A/2, x = 0."
+    },
+    {
+      "question_id": "T10.01.Q049",
+      "type": "ordering",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following spring configurations in order of increasing effective spring constant: (A) Single spring k, (B) Two springs k in series, (C) Two springs k in parallel, (D) Three springs k in parallel",
+      "ordering_items": [
+        "Single spring k",
+        "Two springs k in series",
+        "Two springs k in parallel",
+        "Three springs k in parallel"
+      ],
+      "correct_answer": [
+        "Two springs k in series",
+        "Single spring k",
+        "Two springs k in parallel",
+        "Three springs k in parallel"
+      ],
+      "explanation_correct": "The effective spring constant increases when springs are arranged in parallel, but decreases when arranged in series. So the order from lowest to highest effective spring constant is: two springs k in series, single spring k, two springs k in parallel, three springs k in parallel.",
+      "explanation_incorrect": "The reason the order is incorrect is that when springs are arranged in parallel, the effective spring constant increases, but when arranged in series, the effective spring constant decreases. So the correct order from lowest to highest effective spring constant is: two springs k in series, single spring k, two springs k in parallel, three springs k in parallel."
+    },
+    {
+      "question_id": "T10.01.Q050",
+      "type": "ordering",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a particle at the mean position in SHM, arrange the following quantities from minimum to maximum: (A) Displacement, (B) Velocity, (C) Potential energy, (D) Kinetic energy",
+      "ordering_items": [
+        "Displacement",
+        "Velocity",
+        "Potential energy",
+        "Kinetic energy"
+      ],
+      "correct_answer": [
+        "Displacement",
+        "Potential energy",
+        "Velocity",
+        "Kinetic energy"
+      ],
+      "explanation_correct": "At the mean position in simple harmonic motion, the displacement is zero, so the potential energy is maximum. The velocity is non-zero, so the kinetic energy is also non-zero. Therefore, the correct order from minimum to maximum is: Displacement, Potential energy, Velocity, Kinetic energy.",
+      "explanation_incorrect": "A common misconception is that the quantities would be in the order: Displacement, Velocity, Potential energy, Kinetic energy. However, this is incorrect because at the mean position, the displacement is zero but the velocity is non-zero, so the kinetic energy is greater than the potential energy. The correct order is: Displacement, Potential energy, Velocity, Kinetic energy."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 14,
+        "application": 19,
+        "exam_style": 17
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

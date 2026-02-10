@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.04",
+  "topic_name": "Permutations & Combinations",
+  "canonical_explanation": {
+    "text": "Permutations deal with the arrangement of objects where order matters, while combinations deal with the selection of objects where order does not matter. The fundamental principle of counting states that if one task can be done in m ways and another in n ways, then both tasks together can be done in m × n ways (multiplication principle). A permutation of n objects taken r at a time is given by nPr = n!/(n−r)!, while a combination is given by nCr = n!/[r!(n−r)!]. Circular permutations of n objects equal (n−1)!, and permutations with repeated objects use the formula n!/(p!q!r!...).",
+    "rules": [
+      "Factorial: n! = n × (n−1) × ... × 1, with 0! = 1.",
+      "nPr = n!/(n−r)! counts arrangements of r objects from n.",
+      "nCr = n!/[r!(n−r)!] counts selections of r objects from n.",
+      "nCr = nC(n−r) and nCr + nC(r−1) = (n+1)Cr.",
+      "Circular permutations of n distinct objects = (n−1)!."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.04.Q001",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of 5! is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "720"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of 5! is 120 because the factorial of a number n is the product of all positive integers less than or equal to n. Therefore, 5! = 5 × 4 × 3 × 2 × 1 = 120.",
+      "explanation_incorrect": "The value of 5! is not 25, 60, or 720. The factorial of a number represents the product of all positive integers from 1 up to that number. In this case, 5! = 5 × 4 × 3 × 2 × 1 = 120."
+    },
+    {
+      "question_id": "T02.04.Q002",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of 0! is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "Undefined"
+        },
+        {
+          "id": "D",
+          "text": "−1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of 0! is 1, because the factorial of any non-negative integer n is defined as the product of all positive integers less than or equal to n. For n=0, this gives 1, since there are no positive integers less than or equal to 0.",
+      "explanation_incorrect": "The value of 0! is not 0, as 0 does not have any positive integers less than or equal to it. The value of 0! is also not undefined, as the factorial function is well-defined for non-negative integers. Finally, the value of 0! is not -1, as factorial values are always non-negative."
+    },
+    {
+      "question_id": "T02.04.Q003",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "If a coin is tossed 3 times, the total number of possible outcomes is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 8. Since a coin can land on either heads or tails, and the coin is tossed 3 times, the total number of possible outcomes is 2 × 2 × 2 = 8.",
+      "explanation_incorrect": "The incorrect options are: A) 3 - This is wrong because with 3 coin tosses, there are 8 possible outcomes, not 3. B) 6 - This is wrong because the total number of possible outcomes is 8, not 6. D) 9 - This is wrong because with 3 coin tosses, the total number of possible outcomes is 8, not 9."
+    },
+    {
+      "question_id": "T02.04.Q004",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "If there are 3 routes from city A to city B and 4 routes from city B to city C, the number of routes from A to C via B is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of routes from A to C via B is 12 because there are 3 routes from A to B and 4 routes from B to C, and the total number of possible routes is 3 × 4 = 12 (multiplication principle).",
+      "explanation_incorrect": "The correct answer is 12, not 7 or 4. This is because there are 3 routes from A to B and 4 routes from B to C, so the total number of routes from A to C via B is 3 × 4 = 12, not 7 or 4."
+    },
+    {
+      "question_id": "T02.04.Q005",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "question_text": "The value of ⁵P₂ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of ⁵P₂ is 20. This is because permutations deal with the arrangement of objects where order matters. The formula for the number of permutations of n objects taken r at a time is n!/(n-r)!. So for 5 objects taken 2 at a time, the formula becomes 5!/(5-2)! = 20.",
+      "explanation_incorrect": "The correct answer is 20, not 10, 25, or 60. The formula for the number of permutations of n objects taken r at a time is n!/(n-r)!. So for 5 objects taken 2 at a time, the formula becomes 5!/(5-2)! = 20. The other options do not correctly apply this formula."
+    },
+    {
+      "question_id": "T02.04.Q006",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "question_text": "The number of ways to arrange 4 distinct books on a shelf is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The number of ways to arrange 4 distinct books on a shelf is 24 because there are 4 choices for the first book, 3 choices for the second book, 2 choices for the third book, and 1 choice for the last book, which gives a total of 4 × 3 × 2 × 1 = 24 possible arrangements.",
+      "explanation_incorrect": "Option B (16) is incorrect because it does not consider the order in which the books are arranged. Permutations deal with the arrangement of objects where order matters, so the correct answer is 24, which is the number of possible arrangements of 4 distinct books on a shelf."
+    },
+    {
+      "question_id": "T02.04.Q007",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of 3-digit numbers that can be formed using digits 1, 2, 3, 4, 5 without repetition is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "125"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The number of 3-digit numbers that can be formed using digits 1, 2, 3, 4, 5 without repetition is 60. This is because there are 5 choices for the first digit, 4 choices for the second digit, and 3 choices for the third digit, which gives a total of 5 × 4 × 3 = 60 possible 3-digit numbers.",
+      "explanation_incorrect": "Option B (125) is incorrect because it assumes that there are 5 choices for each of the three digits, which is not the case. The correct answer is option A (60) because the first digit can be chosen in 5 ways, the second digit in 4 ways, and the third digit in 3 ways, which gives a total of 5 × 4 × 3 = 60 possible 3-digit numbers."
+    },
+    {
+      "question_id": "T02.04.Q008",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of ways to arrange the letters of the word 'BOOK' is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The word 'BOOK' has 4 letters, and there are 2 B's, 1 O, and 1 K. The formula for permutations with repeated objects is n!/(p!q!r!...), where n is the total number of objects and p, q, r, etc. are the number of repeated objects. Applying this, we get 4!/(2!1!1!) = 12 ways to arrange the letters of 'BOOK'.",
+      "explanation_incorrect": "The incorrect answer of 24 would assume that all 4 letters in 'BOOK' are unique, when in fact there are 2 B's. The incorrect answer of 6 would assume that the 2 B's are treated as a single object, when in fact they can be arranged in 2! = 2 ways. The incorrect answer of 4 would assume that the word 'BOOK' can only be arranged in one way, when in fact there are multiple ways to arrange the letters."
+    },
+    {
+      "question_id": "T02.04.Q009",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of ways 5 persons can sit around a circular table is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of ways 5 persons can sit around a circular table is 24. This is because there are (5-1)! = 4! = 24 ways to arrange the 5 persons around the circular table, as the order of the persons matters.",
+      "explanation_incorrect": "The correct answer is B) 24. This is because in a circular arrangement, the first person can be placed in 5 ways, the second person can be placed in 4 ways, the third person can be placed in 3 ways, and so on. Therefore, the total number of ways to arrange the 5 persons around the circular table is 5 × 4 × 3 × 2 × 1 = 24."
+    },
+    {
+      "question_id": "T02.04.Q010",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "familiarity",
+      "question_text": "The value of ⁶C₂ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "720"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of ⁶C₂ is 15. This is because the formula for the number of combinations of n objects taken r at a time is nCr = n!/(r!(n-r)!). Plugging in the values, we get ⁶C₂ = 6!/(2!(6-2)!) = 15.",
+      "explanation_incorrect": "The value of ⁶C₂ is not 30, 12, or 720. These options are incorrect because they do not match the result obtained by applying the formula for combinations, which is n!/(r!(n-r)!). The correct answer is option B, 15, as this is the result of evaluating ⁶C₂ using the formula."
+    },
+    {
+      "question_id": "T02.04.Q011",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "familiarity",
+      "question_text": "The value of ⁿCₙ for any positive integer n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "n"
+        },
+        {
+          "id": "B",
+          "text": "n!"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The value of nCn, which is the number of combinations of n objects taken n at a time, is always 1. This is because there is only one way to choose all n objects from a set of n objects, regardless of the value of n.",
+      "explanation_incorrect": "The value of nCn is not n, n!, or 0. The formula for combinations is nCr = n!/(r!(n-r)!), where r is the number of objects chosen. When r = n, the formula simplifies to nCn = n!/(n!(n-n)!) = n!/n! = 1, since n-n = 0."
+    },
+    {
+      "question_id": "T02.04.Q012",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "A committee of 3 is to be formed from 8 people. The number of ways is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "336"
+        },
+        {
+          "id": "B",
+          "text": "56"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "512"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 56. This is because the number of ways to form a committee of 3 people from 8 people is the combination formula nCr = n!/(r!(n-r)!), where n = 8 and r = 3. Plugging in the values, we get 8C3 = 8!/(3!(8-3)!) = 56.",
+      "explanation_incorrect": "The incorrect options are: A) 336, C) 24, and D) 512. These do not represent the correct number of ways to form a committee of 3 people from 8 people. The correct formula to use is the combination formula nCr = n!/(r!(n-r)!), where n = 8 and r = 3, which gives us 56 ways to form the committee."
+    },
+    {
+      "question_id": "T02.04.Q013",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "If ⁿC₅ = ⁿC₃, then n equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 8. This is because the formula for combinations is nCr = n!/(r!(n-r)!). If nC5 = nC3, then n!/(5!(n-5)!) = n!/(3!(n-3)!). Simplifying this equation, we get n-5 = n-3, which means n = 8.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the condition that nC5 = nC3. For example, if n = 5, then 5C5 = 1 and 5C3 = 10, which are not equal. Similarly, if n = 3, then 3C3 = 1 and 3C1 = 3, which are also not equal. The correct answer is 8 because only for n = 8 is it true that 8C5 = 8C3."
+    },
+    {
+      "question_id": "T02.04.Q014",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "application",
+      "question_text": "The number of ways to arrange the letters of the word 'MISSISSIPPI' is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "11!/(4!4!2!)"
+        },
+        {
+          "id": "B",
+          "text": "11!/(4!4!2!1!)"
+        },
+        {
+          "id": "C",
+          "text": "11!"
+        },
+        {
+          "id": "D",
+          "text": "11!/(4!2!)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 11!/(4!4!2!). This is because the word 'MISSISSIPPI' has 11 letters, with 4 'I's, 4 'S's, and 2 'P's. The formula for permutations with repeated objects is n!/(p!q!r!...), where n is the total number of objects and p, q, r, etc. are the number of repeated objects.",
+      "explanation_incorrect": "The other options are incorrect because they do not account for the repeated letters in the word 'MISSISSIPPI'. Option B) 11!/(4!4!2!1!) is incorrect because it includes an unnecessary factorial for the single 'I' letter. Option C) 11! is incorrect because it does not consider the repeated letters. Option D) 11!/(4!2!) is incorrect because it only accounts for the 'I' and 'P' letters, and not the 'S' letters."
+    },
+    {
+      "question_id": "T02.04.Q015",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "application",
+      "question_text": "A team of 5 is to be selected from 6 boys and 4 girls such that exactly 3 boys are included. The number of ways is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "90"
+        },
+        {
+          "id": "D",
+          "text": "180"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 120. This is because there are 6 boys and 4 girls, and we need to select a team of 5 with exactly 3 boys. The number of ways to do this is given by the formula for combinations: 6C3 × 4C2 = 20 × 6 = 120.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the formula for combinations correctly. Option B) 60 is incorrect because it only considers the combinations of boys, not the combinations of girls. Option C) 90 is incorrect because it does not account for the specific requirement of 3 boys in the team. Option D) 180 is incorrect because it double-counts the possible arrangements."
+    },
+    {
+      "question_id": "T02.04.Q016",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "A student must answer 8 out of 10 questions in an exam. The number of ways to choose the questions is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "45"
+        },
+        {
+          "id": "B",
+          "text": "90"
+        },
+        {
+          "id": "C",
+          "text": "80"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 45. This is because the number of ways to choose 8 questions out of 10 is a combination problem, given by the formula nCr = n!/(r!(n-r)!). In this case, n = 10 and r = 8, so the answer is 10C8 = 10!/(8!(10-8)!) = 45.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for combinations. Option B) 90 is incorrect because it does not take into account the order of the questions. Option C) 80 is incorrect because it does not consider the combination of 8 questions out of 10. Option D) 100 is incorrect because it is not the correct formula for combinations."
+    },
+    {
+      "question_id": "T02.04.Q017",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The number of 4-letter words (with or without meaning) that can be formed from the letters of 'RANDOM' without repetition is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "360"
+        },
+        {
+          "id": "C",
+          "text": "180"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The answer is B) 360. This is because there are 6 letters in the word 'RANDOM', and we need to find the number of 4-letter words that can be formed from these 6 letters without repetition. The formula for permutations of n objects taken r at a time is nPr = n!/(n-r)!, which in this case is 6P4 = 6!/(6-4)! = 720.",
+      "explanation_incorrect": "The incorrect options are: A) 720, C) 180, and D) 24. Option A is incorrect because it does not account for the fact that the order of the letters matters. Option C is incorrect because it assumes that the number of 4-letter words is simply the number of combinations of 4 letters from the 6 letters in 'RANDOM', which is not the case. Option D is incorrect because it is too small and does not consider the full set of possible 4-letter words that can be formed from the letters of 'RANDOM' without repetition."
+    },
+    {
+      "question_id": "T02.04.Q018",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The number of diagonals in a polygon of 8 sides is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "28"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "56"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The number of diagonals in a polygon with n sides is given by the formula n(n-3)/2. In this case, for an 8-sided polygon, the number of diagonals is 8(8-3)/2 = 20, which matches option A.",
+      "explanation_incorrect": "Option B, 28, is incorrect because the formula for the number of diagonals in a polygon with n sides is n(n-3)/2, not n(n-1)/2. Option C, 8, is incorrect because it represents the number of sides in the polygon, not the number of diagonals. Option D, 56, is incorrect because it does not match the formula for the number of diagonals."
+    },
+    {
+      "question_id": "T02.04.Q019",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "exam_style",
+      "question_text": "How many 4-digit even numbers can be formed using digits 1, 2, 3, 4, 5 without repetition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "48"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The answer is A) 48. This is because there are 5 digits to choose from (1, 2, 3, 4, 5), and we need to form a 4-digit even number. Since the last digit must be even, we have 4 choices for the last digit (2, 4). For the other 3 digits, we have 4 choices each, so the total number of possible 4-digit even numbers is 4 × 4 × 4 = 48.",
+      "explanation_incorrect": "The correct answer is A) 48. The incorrect options are not right because they do not account for the fact that the last digit must be even, and that we have 4 choices for each of the other 3 digits. Option B) 24 is incorrect as it only considers the 4 even digits, while option C) 60 does not consider the restriction of no repetition, and option D) 36 does not correctly calculate the total number of possible 4-digit even numbers."
+    },
+    {
+      "question_id": "T02.04.Q020",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The number of 3-digit numbers with distinct digits that can be formed using 0, 1, 2, 3, 4, 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "100"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "80"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The number of 3-digit numbers with distinct digits that can be formed using 0, 1, 2, 3, 4, 5 is 100. This is because there are 6 choices for the first digit, 5 choices for the second digit (since it cannot be the same as the first digit), and 4 choices for the third digit (since it cannot be the same as the first two digits), which gives 6 × 5 × 4 = 100 possible numbers.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for the requirement that the digits must be distinct. Option B (120) is incorrect because it does not consider the restriction that the digits must be distinct. Option C (80) is incorrect because it assumes that there are only 4 choices for the third digit, when in fact there are 5 choices. Option D (60) is incorrect because it assumes there are only 3 choices for each digit, when in fact there are 6, 5, and 4 choices for the first, second, and third digits, respectively."
+    },
+    {
+      "question_id": "T02.04.Q021",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The value of ¹⁰C₃ + ¹⁰C₇ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "¹⁰C₃"
+        },
+        {
+          "id": "B",
+          "text": "2 × ¹⁰C₃"
+        },
+        {
+          "id": "C",
+          "text": "¹¹C₃"
+        },
+        {
+          "id": "D",
+          "text": "²⁰C₁₀"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of ¹⁰C₃ + ¹⁰C₇ is 2 × ¹⁰C₃ because the formula for combinations, nCr = n!/(r!(n-r)!), shows that ¹⁰C₃ = 10!/(3!(10-3)!) = 120, and ¹⁰C₇ = 10!/(7!(10-7)!) = 120, so the total is 2 × 120 = 240.",
+      "explanation_incorrect": "The value of ¹⁰C₃ is 120, as per the combination formula. Selecting 3 objects out of 10 in any order gives 120 different combinations. Adding ¹⁰C₇ to this does not give ¹¹C₃ or ²⁰C₁₀, as those represent different calculations. The correct answer is 2 × ¹⁰C₃ = 240."
+    },
+    {
+      "question_id": "T02.04.Q022",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "exam_style",
+      "question_text": "A committee of 5 is to be formed from 6 men and 4 women such that at least 2 women are included. The number of ways is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "186"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "246"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 186. This is because there are 4 women, and we need to select at least 2 of them. The number of ways to do this is the sum of the number of ways to select 2 women (6C2) and the number of ways to select 3 women (6C3), which gives us 15 + 20 = 186 ways.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for the requirement that at least 2 women must be included in the committee. Option B) 120 would be the correct answer if there was no restriction on the number of women, while options C) 60 and D) 246 do not correctly calculate the number of ways to form the committee with the given constraints."
+    },
+    {
+      "question_id": "T02.04.Q023",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "A licence plate consists of 2 letters followed by 3 digits. The number of distinct plates possible (26 letters, 10 digits, repetition allowed) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "676000"
+        },
+        {
+          "id": "B",
+          "text": "468000"
+        },
+        {
+          "id": "C",
+          "text": "260000"
+        },
+        {
+          "id": "D",
+          "text": "175760"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The answer is A) 676000. This is because there are 26 letters and 10 digits, so there are 26 × 26 = 676 possible ways to select the 2 letters, and 10 × 10 × 10 = 1000 possible ways to select the 3 digits. Multiplying these gives 676 × 1000 = 676000 distinct licence plates.",
+      "explanation_incorrect": "The incorrect options B) 468000, C) 260000, and D) 175760 do not correctly account for the fact that there are 26 letters and 10 digits, and that repetition is allowed. The correct formula is to multiply the number of choices for the 2 letters (26 × 26 = 676) by the number of choices for the 3 digits (10 × 10 × 10 = 1000), which gives 676 × 1000 = 676000 distinct licence plates."
+    },
+    {
+      "question_id": "T02.04.Q024",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of ways to arrange 3 identical red balls and 2 identical blue balls in a row is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 10. This is because there are 5 objects (3 red balls and 2 blue balls) and we need to arrange them in a row. Since the red balls are identical and the blue balls are identical, the order of the red balls and the order of the blue balls do not matter. Therefore, the number of ways to arrange them is given by the formula for combinations: 5C3 = 10.",
+      "explanation_incorrect": "The incorrect options do not correctly account for the fact that the red balls and blue balls are identical. Option A) 120 would be the correct answer if the balls were all distinct. Option C) 20 and option D) 60 are incorrect because they do not use the formula for combinations correctly."
+    },
+    {
+      "question_id": "T02.04.Q025",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "From 7 consonants and 4 vowels, how many words of 3 consonants and 2 vowels can be formed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "210"
+        },
+        {
+          "id": "B",
+          "text": "25200"
+        },
+        {
+          "id": "C",
+          "text": "2520"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 25200. This is calculated by the formula for combinations, which is n!/(r!(n-r)!). In this case, we have 7 consonants and 4 vowels, and we need to choose 3 consonants and 2 vowels. So, the formula becomes 11C5 = 11!/(5!(11-5)!) = 25200.",
+      "explanation_incorrect": "The incorrect answers are: A) 210, C) 2520, and D) 120. These answers are incorrect because they do not take into account the combination of 3 consonants and 2 vowels. The correct formula to use is the combination formula, n!/(r!(n-r)!), which gives us 25200 possible words."
+    },
+    {
+      "question_id": "T02.04.Q026",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "question_text": "The value of 8!/(6! × 2!) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "56"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The value of 8!/(6! × 2!) is 28. This is because 8! (8 factorial) represents the total number of permutations of 8 objects, while 6! (6 factorial) represents the permutations of the first 6 objects, and 2! (2 factorial) represents the permutations of the remaining 2 objects. Dividing 8! by 6! × 2! gives the number of ways to select 2 objects from the 8 objects, which is the definition of the combination 8C2.",
+      "explanation_incorrect": "The incorrect explanations for the given options are: B) 56 is incorrect because the formula for combinations (nCr = n!/(r!(n-r)!)) gives 8C2 = 8!/(2!(8-2)!) = 28; C) 36 is incorrect because it does not follow the formula for combinations; D) 14 is incorrect because it does not match the correct answer of 28."
+    },
+    {
+      "question_id": "T02.04.Q027",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "How many words can be formed from the letters of 'TRIANGLE' that begin with T and end with E?",
+      "options": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "5040"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "40320"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 720. This is because the word 'TRIANGLE' has 8 letters, and we need to form words that begin with T and end with E. The number of permutations of 6 letters (T, R, I, A, N, G) is 6! = 720.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not consider the specific constraints of the question. Option B) 5040 is the total number of permutations of all 8 letters in 'TRIANGLE', which is not what the question is asking. Options C) 120 and D) 40320 are also incorrect as they do not take into account the requirement for the words to start with T and end with E."
+    },
+    {
+      "question_id": "T02.04.Q028",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "application",
+      "question_text": "The number of ways to select 4 cards from a pack of 52 cards is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "270725"
+        },
+        {
+          "id": "B",
+          "text": "52 × 51 × 50 × 49"
+        },
+        {
+          "id": "C",
+          "text": "52⁴"
+        },
+        {
+          "id": "D",
+          "text": "6497400"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 270725. This is because the number of ways to select 4 cards from a pack of 52 cards is a combination problem, where order does not matter. The formula for combinations is nCr = n!/(r!(n-r)!), where n is the total number of objects (52 cards) and r is the number of objects selected (4 cards). Plugging in the values, we get 52C4 = 52!/(4!(52-4)!) = 270725.",
+      "explanation_incorrect": "The other options are incorrect. B) 52 × 51 × 50 × 49 is the formula for permutations, where order matters, not combinations. C) 52⁴ is incorrect because it does not follow the combination formula. D) 6497400 is also incorrect, as it is not the correct number of ways to select 4 cards from a pack of 52 cards."
+    },
+    {
+      "question_id": "T02.04.Q029",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "If ⁿC₂ = 10, then n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If nC2 = 10, then n = 5. This is because the formula for combinations is nCr = n!/(r!(n-r)!). Plugging in r = 2 and nC2 = 10, we get n = 5.",
+      "explanation_incorrect": "The incorrect options do not satisfy the given condition of nC2 = 10. Option A (n = 4) would give nC2 = 6, Option C (n = 10) would give nC2 = 45, and Option D (n = 20) would give nC2 = 190. Only Option B (n = 5) correctly satisfies the given condition of nC2 = 10."
+    },
+    {
+      "question_id": "T02.04.Q030",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "By the addition principle, if task A can be done in 3 ways and task B (mutually exclusive to A) in 5 ways, then A or B can be done in:",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 ways"
+        },
+        {
+          "id": "B",
+          "text": "8 ways"
+        },
+        {
+          "id": "C",
+          "text": "2 ways"
+        },
+        {
+          "id": "D",
+          "text": "35 ways"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 8 ways. This is because if task A can be done in 3 ways and task B (mutually exclusive to A) can be done in 5 ways, then the total number of ways to do either A or B is the sum of the individual ways, which is 3 + 5 = 8 ways.",
+      "explanation_incorrect": "The incorrect answer is A) 15 ways. This is not correct because the addition principle applies only when the tasks are mutually exclusive, meaning you can do either task A or task B, but not both. So the total number of ways to do either A or B is the sum of the individual ways, which is 3 + 5 = 8 ways, not 15 ways."
+    },
+    {
+      "question_id": "T02.04.Q031",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "exam_style",
+      "question_text": "How many triangles can be formed by joining 10 points on a plane, no three of which are collinear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "720"
+        },
+        {
+          "id": "C",
+          "text": "45"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 120. This is because the formula for the number of combinations of n objects taken 3 at a time is nC3 = n!/(3!(n-3)!). Substituting n = 10, we get 10C3 = 10!/(3!(10-3)!) = 120 triangles.",
+      "explanation_incorrect": "The incorrect answer is B) 720. This is a common mistake, as the formula for the number of permutations of n objects taken 3 at a time is nP3 = n!/(n-3)!. However, the question asks about forming triangles, which involves the combination of 3 points, not the permutation of 3 points. Therefore, the correct formula to use is the combination formula nC3."
+    },
+    {
+      "question_id": "T02.04.Q032",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The number of 4-digit numbers greater than 5000 formed using 0, 1, 3, 5, 7 without repetition is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "48"
+        },
+        {
+          "id": "B",
+          "text": "72"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 48. To form a 4-digit number greater than 5000 using the digits 0, 1, 3, 5, 7 without repetition, the first digit can be chosen in 4 ways (5, 7, 1, 3), the second digit in 4 ways, the third digit in 3 ways, and the fourth digit in 2 ways. Applying the multiplication principle, the total number of 4-digit numbers is 4 × 4 × 3 × 2 = 48.",
+      "explanation_incorrect": "The incorrect answer is C) 36. This is because the number of 4-digit numbers greater than 5000 formed using 0, 1, 3, 5, 7 without repetition is not 36. The correct answer is 48, as the first digit can be chosen in 4 ways, the second digit in 4 ways, the third digit in 3 ways, and the fourth digit in 2 ways, giving a total of 4 × 4 × 3 × 2 = 48 possible numbers."
+    },
+    {
+      "question_id": "T02.04.Q033",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The value of ⁵C₀ + ⁵C₁ + ⁵C₂ + ⁵C₃ + ⁵C₄ + ⁵C₅ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "32"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "64"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of ⁵C₀ + ⁵C₁ + ⁵C₂ + ⁵C₃ + ⁵C₄ + ⁵C₅ is 32 because the formula for the combination of n objects taken r at a time is nCr = n!/[r!(n-r)!]. Plugging in n=5 and r=0,1,2,3,4,5, we get the values 1, 5, 10, 10, 5, 1 respectively, which add up to 32.",
+      "explanation_incorrect": "The incorrect answer is 25. This is because the student may have mistakenly calculated the individual combination values (⁵C₀ = 1, ⁵C₁ = 5, ⁵C₂ = 10, ⁵C₃ = 10, ⁵C₄ = 5, ⁵C₅ = 1) but then added them up incorrectly. The correct sum is 32, not 25."
+    },
+    {
+      "question_id": "T02.04.Q034",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of ways to arrange 6 people in a row such that two particular persons are always together is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "240"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "720"
+        },
+        {
+          "id": "D",
+          "text": "360"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 240. This is because there are 6 people in total, and 2 of them are always together. So, we can first arrange the 2 people who are always together in 2! = 2 ways. Then, we can arrange the remaining 4 people in 4! = 24 ways. Multiplying these two numbers gives us 2 × 24 = 240 ways to arrange the 6 people in a row such that the two particular persons are always together.",
+      "explanation_incorrect": "The incorrect answer is C) 720. This is because 720 is the total number of permutations of 6 people, without the constraint that two particular persons are always together. The correct answer of 240 takes into account the fact that the two particular persons must always be together, which reduces the number of possible arrangements."
+    },
+    {
+      "question_id": "T02.04.Q035",
+      "type": "mcq",
+      "concept_id": "T02.04.C04",
+      "difficulty": "exam_style",
+      "question_text": "A hand of 5 cards is drawn from a standard deck of 52 cards. The number of hands containing all 4 aces is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "48"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 48. This is because there are 4 aces in a standard deck of 52 cards, and the remaining 48 cards can be chosen in any order to make a hand of 5 cards.",
+      "explanation_incorrect": "The incorrect answer is B) 4. This is not correct because the number of hands containing all 4 aces is not 4. The correct answer is A) 48, as there are 4 aces in a standard deck of 52 cards, and the remaining 48 cards can be chosen in any order to make a hand of 5 cards."
+    },
+    {
+      "question_id": "T02.04.Q036",
+      "type": "true_false",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of 1! is 1.",
+      "correct_answer": true,
+      "explanation_correct": "The value of 1! is 1 because the factorial of 1 is defined as the product of all positive integers less than or equal to 1, which is just 1 itself.",
+      "explanation_incorrect": "The common misconception is that 1! should be 0, as the factorial of a number is the product of all positive integers less than or equal to that number. However, by definition, the factorial of 1 is 1, as there is only one positive integer less than or equal to 1, which is 1 itself."
+    },
+    {
+      "question_id": "T02.04.Q037",
+      "type": "true_false",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "question_text": "nPr is always greater than or equal to nCr for a given n and r.",
+      "correct_answer": true,
+      "explanation_correct": "The number of permutations (nPr) of n objects taken r at a time is always greater than or equal to the number of combinations (nCr) of n objects taken r at a time. This is because permutations consider the order of selection, while combinations do not.",
+      "explanation_incorrect": "The statement is incorrect because nPr is not always greater than nCr. This is because the formula for permutations, nPr = n!/(n-r)!, considers the order of selection, while the formula for combinations, nCr = n!/(r!(n-r)!), does not. For example, when n=4 and r=2, 4P2 = 4! / (4-2)! = 12, while 4C2 = 4! / (2!(4-2)!) = 6, which is less than 12."
+    },
+    {
+      "question_id": "T02.04.Q038",
+      "type": "true_false",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "⁸C₃ = ⁸C₅.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because the combinations nCr and nC(n-r) are equal. In this case, 8C3 = 8C5 since 8C3 = 8!/(3!(8-3)!) = 56, and 8C5 = 8!/(5!(8-5)!) = 56, so they are equal.",
+      "explanation_incorrect": "A common misconception is that the number of combinations will be different if the number of objects selected (r) is different. However, this is not the case as the formula for combinations, nCr = n!/(r!(n-r)!), is the same regardless of the value of r. In this case, 8C3 and 8C5 are both calculated using the same formula, which results in the same value of 56."
+    },
+    {
+      "question_id": "T02.04.Q039",
+      "type": "true_false",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of circular permutations of n objects is n!.",
+      "correct_answer": false,
+      "explanation_correct": "The number of circular permutations of n objects is (n-1)!, not n!. This is because in a circular arrangement, the first object can be placed in n ways, but the remaining (n-1) objects can only be arranged in (n-1)! ways.",
+      "explanation_incorrect": "The number of circular permutations of n objects is not n!. This is a common misconception, as n! would represent the number of linear permutations of n objects, where the order of the objects matters. In a circular arrangement, the first object can be placed in n ways, but the remaining (n-1) objects can only be arranged in (n-1)! ways, leading to a total of (n-1)! circular permutations."
+    },
+    {
+      "question_id": "T02.04.Q040",
+      "type": "true_false",
+      "concept_id": "T02.04.C04",
+      "difficulty": "application",
+      "question_text": "The number of ways to select a committee is always less than the number of ways to arrange the same group.",
+      "correct_answer": true,
+      "explanation_correct": "The number of ways to select a committee is always less than the number of ways to arrange the same group because combinations consider the order of selection as unimportant, whereas permutations consider the order of arrangement as important.",
+      "explanation_incorrect": "The statement is true because the number of ways to select a committee (combinations) is always less than the number of ways to arrange the same group (permutations). This is because when you are arranging the group, the order of the members matters, whereas when you are selecting a committee, the order of the members does not matter."
+    },
+    {
+      "question_id": "T02.04.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of 7!/5! is ___.",
+      "correct_answer": "42",
+      "explanation_correct": "The value of 7!/5! is 42 because 7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040, and 5! = 5 × 4 × 3 × 2 × 1 = 120. Therefore, 7!/5! = 5040/120 = 42.",
+      "explanation_incorrect": "The incorrect answer could be 7, which is obtained by simply subtracting 5 from 7 (7 - 5 = 2). However, this is not the correct way to calculate 7!/5!. The correct formula is to divide the factorial of 7 by the factorial of 5, which gives the result of 42."
+    },
+    {
+      "question_id": "T02.04.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The value of ⁶P₃ is ___.",
+      "correct_answer": "120",
+      "explanation_correct": "The value of ⁶P₃ is 120 because permutations deal with the arrangement of objects where order matters. The formula for permutations of n objects taken r at a time is n!/(n-r)!, which in this case is 6!/(6-3)! = 120.",
+      "explanation_incorrect": "The accepted answer format is a number, so the value of ⁶P₃ is not 'one hundred and twenty', but 120. Permutations calculate the number of ways to arrange r objects out of n, where order matters. The formula is n!/(n-r)!, so for 6 objects taken 3 at a time, the value is 6!/(6-3)! = 120."
+    },
+    {
+      "question_id": "T02.04.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The value of ¹⁰C₈ is ___.",
+      "correct_answer": "45",
+      "explanation_correct": "The value of 10C8 is 45 because the formula for combinations of n objects taken r at a time is nCr = n!/(r!(n-r)!). Plugging in the values, we get 10C8 = 10!/(8!(10-8)!) = 45.",
+      "explanation_incorrect": "The accepted answer format for this question is a single number. The incorrect answer of 45 is actually the correct value for 10C8. This is because combinations deal with the selection of objects where order does not matter, and the formula for combinations of n objects taken r at a time is nCr = n!/(r!(n-r)!)."
+    },
+    {
+      "question_id": "T02.04.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The number of ways to arrange the letters of the word 'MATHS' is ___.",
+      "correct_answer": "120",
+      "explanation_correct": "The word 'MATHS' has 5 letters, so the number of ways to arrange them is 5! = 120. This is because permutations deal with the arrangement of objects where order matters, and there are 5 choices for the first position, 4 choices for the second position, and so on.",
+      "explanation_incorrect": "An incorrect explanation would be that the number of ways to arrange the letters of 'MATHS' is 5, since there are 5 letters in the word. This is incorrect because permutations take into account the order of the letters, so the correct answer is 120."
+    },
+    {
+      "question_id": "T02.04.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C04",
+      "difficulty": "exam_style",
+      "question_text": "The number of ways to choose 2 boys and 2 girls from 5 boys and 4 girls is ___.",
+      "correct_answer": "60",
+      "explanation_correct": "The number of ways to choose 2 boys and 2 girls from 5 boys and 4 girls is 60. This is because there are 5 boys and 4 girls, and we need to choose 2 boys and 2 girls. Using the combination formula, nCr = n!/[r!(n-r)!], we get 5C2 * 4C2 = 10 * 15 = 60 ways to choose 2 boys and 2 girls.",
+      "explanation_incorrect": "The incorrect answer could be 120. This is because one might think that the number of ways to choose 2 boys and 2 girls is the same as the number of permutations of 2 boys and 2 girls, which would be 4! = 24. However, this is not correct, as the order of selection does not matter in combinations, so the correct answer is 60 ways."
+    },
+    {
+      "question_id": "T02.04.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "question_text": "If ⁿP₂ = 30, then n = ___.",
+      "correct_answer": "6",
+      "explanation_correct": "The formula for permutations of n objects taken r at a time is n!/(n-r)!. Since nP2 = 30, we can substitute the values and solve for n to get n = 6.",
+      "explanation_incorrect": "The accepted answer format is a single number, 6. However, the incorrect reasoning would be to assume that nP2 = n(n-1). This is not correct, as the formula for permutations is n!/(n-r)!. Plugging in nP2 = 30, we can solve for n to get n = 6."
+    },
+    {
+      "question_id": "T02.04.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The number of straight lines that can be drawn through 6 points (no three collinear) is ___.",
+      "correct_answer": "15",
+      "explanation_correct": "The number of straight lines that can be drawn through 6 points (no three collinear) is 15, because each pair of points can be connected by a straight line, and there are 6 choose 2 = 15 such pairs of points.",
+      "explanation_incorrect": "The incorrect answer would be to think that the number of lines is equal to the number of points, which is 6. However, this is not correct because each pair of points can be connected by a straight line, and there are 6 choose 2 = 15 such pairs of points."
+    },
+    {
+      "question_id": "T02.04.Q048",
+      "type": "ordering",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "Arrange in increasing order: (A) 3!, (B) 5!, (C) 2!, (D) 4!",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "explanation_correct": "The correct order from smallest to largest is C, A, D, B. This is because 2! = 2, 3! = 6, 4! = 24, and 5! = 120. The factorial function increases rapidly as the number gets larger, so the correct order follows the sequence of these factorials.",
+      "explanation_incorrect": "A common mistake would be to think that the order is simply the numerical order of the letters (A, B, C, D). However, this is incorrect because the values represented by the letters are not numerical, but rather represent factorials. The correct order is based on the increasing magnitude of the factorials, not the alphabetical order of the letters."
+    },
+    {
+      "question_id": "T02.04.Q049",
+      "type": "ordering",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange in increasing order: (A) ⁵C₃, (B) ⁷C₂, (C) ⁴C₂, (D) ⁶C₁",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "explanation_correct": "The correct order is D, C, A, B. The values of the combinations increase as the number of objects (n) increases and the number of objects selected (r) decreases. Therefore, the order from smallest to largest is ⁶C₁, ⁴C₂, ⁵C₃, ⁷C₂.",
+      "explanation_incorrect": "A common mistake would be to arrange the combinations based on the value of r alone, without considering the value of n. However, the correct order depends on both n and r. For example, ⁴C₂ is smaller than ⁵C₃ even though 4 < 5, because the formula for combinations depends on both n and r."
+    },
+    {
+      "question_id": "T02.04.Q050",
+      "type": "ordering",
+      "concept_id": "T02.04.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the number of committees of 3 from 10 people: (A) Compute 10!/(3! × 7!), (B) Recognize this is a combination problem (order doesn't matter), (C) Result is 120, (D) Apply ¹⁰C₃ formula",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "explanation_correct": "The correct order is B, D, A, C because this reflects the logical steps to solve a combination problem. First, we recognize this is a combination problem where order does not matter (B). Then we apply the combination formula ¹⁰C₃ to calculate the number of committees (D). Finally, we compute the result using the formula 10!/(3! × 7!) (A), which gives us the final answer of 120 (C).",
+      "explanation_incorrect": "The incorrect order would be to start by computing 10!/(3! × 7!) (A) without first recognizing this as a combination problem where order does not matter. This is incorrect because the combination formula ¹⁰C₃ (D) should be applied first to determine the appropriate calculation. Only after applying the combination formula should we compute the result (A) to arrive at the final answer of 120 (C)."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

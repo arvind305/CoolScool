@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.01",
+  "topic_name": "Sets & Relations",
+  "canonical_explanation": {
+    "text": "A set is a well-defined collection of distinct objects called elements. Sets can be represented in roster form by listing elements within braces, or in set-builder form by stating a property that characterises the elements. Operations on sets such as union (∪), intersection (∩), difference, and complement allow us to combine or compare sets. The Cartesian product A × B of two sets produces ordered pairs, and a relation from A to B is any subset of A × B. Venn diagrams provide a visual tool for understanding set operations and verifying algebraic laws such as De Morgan's laws.",
+    "rules": [
+      "The empty set ∅ is a subset of every set, and every set is a subset of itself.",
+      "The power set P(A) of a set with n elements has 2ⁿ elements.",
+      "De Morgan's Laws: (A ∪ B)' = A' ∩ B' and (A ∩ B)' = A' ∪ B'.",
+      "For any two finite sets, n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+      "The Cartesian product A × B has n(A) × n(B) elements and is not commutative in general."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.01.Q001",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a well-defined set?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The collection of all tall people"
+        },
+        {
+          "id": "B",
+          "text": "The collection of all beautiful paintings"
+        },
+        {
+          "id": "C",
+          "text": "The collection of all prime numbers less than 20"
+        },
+        {
+          "id": "D",
+          "text": "The collection of all good books"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The collection of all prime numbers less than 20 is a well-defined set because the criteria of being a prime number less than 20 is clear and unambiguous, allowing us to determine which numbers belong to the set.",
+      "explanation_incorrect": "The other options are not well-defined sets because the terms 'tall', 'beautiful', and 'good' are subjective and can have different meanings for different people. There is no clear and objective way to determine which people or paintings or books belong to these sets."
+    },
+    {
+      "question_id": "T01.01.Q002",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2, 3, 4, 5}, then A is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Infinite set"
+        },
+        {
+          "id": "B",
+          "text": "Finite set"
+        },
+        {
+          "id": "C",
+          "text": "Empty set"
+        },
+        {
+          "id": "D",
+          "text": "Singleton set"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A is a finite set because it contains a specific number of elements (5 elements). A finite set has a definite number of elements that can be counted, unlike an infinite set which has no end.",
+      "explanation_incorrect": "Option A is incorrect because a finite set has a specific, countable number of elements, which matches the given set A = {1, 2, 3, 4, 5}. Option C is incorrect because an empty set has no elements, while this set clearly has 5 elements. Option D is incorrect because a singleton set has only one element, while this set has 5 distinct elements."
+    },
+    {
+      "question_id": "T01.01.Q003",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The set {x : x ∈ ℕ and x² = 9} in roster form is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{3, −3}"
+        },
+        {
+          "id": "B",
+          "text": "{3}"
+        },
+        {
+          "id": "C",
+          "text": "{9}"
+        },
+        {
+          "id": "D",
+          "text": "{−3}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The set {x : x ∈ ℕ and x² = 9} refers to the set of natural numbers x whose square is equal to 9. The only natural number whose square is 9 is 3, so the correct answer is {3}.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the set correctly. Option A includes both 3 and -3, but the given set only contains positive natural numbers. Option C includes the number 9, which is not a natural number whose square is 9. Option D includes only -3, but the set only contains positive natural numbers."
+    },
+    {
+      "question_id": "T01.01.Q004",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The power set of A = {a, b, c} has how many elements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The power set of a set with n elements has 2^n elements. Since the set A has 3 elements, the power set of A has 2^3 = 8 elements.",
+      "explanation_incorrect": "The power set of a set A is the set of all subsets of A. For a set with 3 elements, the power set will have 8 elements - the empty set, and the 3 individual elements {a}, {b}, {c}, the 3 pairs {a,b}, {a,c}, {b,c}, and the full set {a,b,c}."
+    },
+    {
+      "question_id": "T01.01.Q005",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Two sets A and B are said to be equivalent if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A = B"
+        },
+        {
+          "id": "B",
+          "text": "A ⊂ B"
+        },
+        {
+          "id": "C",
+          "text": "n(A) = n(B)"
+        },
+        {
+          "id": "D",
+          "text": "A ∩ B = ∅"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Two sets A and B are said to be equivalent if they have the same number of elements, or the same cardinality. This is represented by the condition n(A) = n(B), where n(A) and n(B) denote the number of elements in sets A and B, respectively.",
+      "explanation_incorrect": "Option A is incorrect because for two sets to be equivalent, they must have the same number of elements, not necessarily be equal. Option B is incorrect because set inclusion (A ⊂ B) does not imply equivalence between A and B. Option D is incorrect because disjointness (A ∩ B = ∅) does not indicate equivalence between the sets."
+    },
+    {
+      "question_id": "T01.01.Q006",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = {x : x is a letter in the word 'FOLLOW'}, then A in roster form is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{F, O, L, L, O, W}"
+        },
+        {
+          "id": "B",
+          "text": "{F, O, L, W}"
+        },
+        {
+          "id": "C",
+          "text": "{F, O, L}"
+        },
+        {
+          "id": "D",
+          "text": "{F, L, O, W, E}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The set A contains the distinct letters in the word 'FOLLOW', which are F, O, L, and W. Therefore, the roster form of set A is {F, O, L, W}.",
+      "explanation_incorrect": "The incorrect options include repeated letters (Option A) or letters not present in the word 'FOLLOW' (Option D). The correct answer, Option B, correctly lists the distinct letters in the word 'FOLLOW' without any duplicates."
+    },
+    {
+      "question_id": "T01.01.Q007",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2, 3} and B = {3, 4, 5}, then A ∪ B is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{3}"
+        },
+        {
+          "id": "B",
+          "text": "{1, 2, 3, 4, 5}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 2, 4, 5}"
+        },
+        {
+          "id": "D",
+          "text": "{1, 2, 3, 3, 4, 5}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) {1, 2, 3, 4, 5} because the union of two sets A and B contains all the unique elements from both sets. Since A = {1, 2, 3} and B = {3, 4, 5}, the union A ∪ B includes all the elements from both sets, which is the set {1, 2, 3, 4, 5}.",
+      "explanation_incorrect": "The incorrect options are not correct because the union of sets A and B should include all the unique elements from both sets. Option A) {3} is incorrect because it only includes one element, which is not the complete union. Option C) {1, 2, 4, 5} is incorrect because it is missing the element 3 from set A. Option D) {1, 2, 3, 3, 4, 5} is incorrect because it includes the element 3 twice, which is not the correct representation of the union of two sets."
+    },
+    {
+      "question_id": "T01.01.Q008",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2, 3, 4} and B = {2, 4, 6}, then A ∩ B is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{1, 2, 3, 4, 6}"
+        },
+        {
+          "id": "B",
+          "text": "{2, 4}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 3}"
+        },
+        {
+          "id": "D",
+          "text": "{6}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) {2, 4} because the intersection of sets A = {1, 2, 3, 4} and B = {2, 4, 6} contains only the elements that are common to both sets, which are 2 and 4.",
+      "explanation_incorrect": "The incorrect options are not the intersection of sets A and B. Option A) {1, 2, 3, 4, 6} includes all the elements from both sets, which is the union of A and B, not the intersection. Option C) {1, 3} includes only the elements that are in set A but not in set B. Option D) {6} includes only the element that is in set B but not in set A."
+    },
+    {
+      "question_id": "T01.01.Q009",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} and A = {2, 4, 6, 8}, then A' (complement of A) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{1, 3, 5, 7, 9, 10}"
+        },
+        {
+          "id": "B",
+          "text": "{1, 3, 5, 7, 9}"
+        },
+        {
+          "id": "C",
+          "text": "{2, 4, 6, 8, 10}"
+        },
+        {
+          "id": "D",
+          "text": "{1, 2, 3, 4, 5}"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The complement of a set A, denoted as A', contains all elements in the universal set U that are not members of A. Since A = {2, 4, 6, 8}, the complement A' contains all the other elements in the universal set U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, which is {1, 3, 5, 7, 9, 10}.",
+      "explanation_incorrect": "The correct answer is option A, {1, 3, 5, 7, 9, 10}. This is because the complement of a set A, denoted as A', contains all elements in the universal set U that are not members of A. The wrong options like B, C, and D either include elements that are already in A or exclude elements that should be in A'."
+    },
+    {
+      "question_id": "T01.01.Q010",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}, then A − B is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{1, 2, 3}"
+        },
+        {
+          "id": "B",
+          "text": "{6, 7}"
+        },
+        {
+          "id": "C",
+          "text": "{4, 5}"
+        },
+        {
+          "id": "D",
+          "text": "{1, 2, 3, 4, 5, 6, 7}"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) {1, 2, 3}. The set difference A - B represents the elements that are in set A but not in set B. Since A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7}, the elements that are in A but not in B are {1, 2, 3}.",
+      "explanation_incorrect": "The correct answer is A) {1, 2, 3}. Option B) {6, 7} is incorrect because these elements are not in set A. Option C) {4, 5} is incorrect because these elements are in both sets A and B, and therefore would not be in the set difference A - B. Option D) {1, 2, 3, 4, 5, 6, 7} is incorrect because it includes all the elements from both sets A and B, rather than just the elements that are in A but not in B."
+    },
+    {
+      "question_id": "T01.01.Q011",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "The symmetric difference A Δ B is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A ∪ B) − (A ∩ B)"
+        },
+        {
+          "id": "B",
+          "text": "A ∪ B"
+        },
+        {
+          "id": "C",
+          "text": "A ∩ B"
+        },
+        {
+          "id": "D",
+          "text": "A − B"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The symmetric difference A Δ B is defined as the set of elements that are in either A or B, but not in both. This is represented as (A ∪ B) - (A ∩ B), which is the correct option A.",
+      "explanation_incorrect": "Option B, A ∪ B, is incorrect because the symmetric difference is not the union of the two sets. Option C, A ∩ B, is incorrect because the symmetric difference includes elements that are in either A or B, but not both. Option D, A - B, is incorrect because the symmetric difference includes elements in both A and B, not just those in A but not in B."
+    },
+    {
+      "question_id": "T01.01.Q012",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "In a class of 40 students, 25 play cricket, 20 play football, and 10 play both. How many students play at least one of the two games?",
+      "options": [
+        {
+          "id": "A",
+          "text": "45"
+        },
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "40"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 35. This is because the number of students playing cricket is 25, the number of students playing football is 20, and the number of students playing both games is 10. To find the total number of students playing at least one of the two games, we need to add the number of students playing cricket and the number of students playing football, and then subtract the number of students playing both games to avoid double counting. So, the total number of students playing at least one of the two games is 25 + 20 - 10 = 35.",
+      "explanation_incorrect": "The incorrect options are: A) 45, C) 30, and D) 40. Option A) 45 is incorrect because it includes the 10 students who play both cricket and football twice, leading to an overcount. Option C) 30 is incorrect because it does not account for the students who play both games. Option D) 40 is incorrect because it does not subtract the 10 students who play both games, leading to double counting."
+    },
+    {
+      "question_id": "T01.01.Q013",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In a survey of 100 students, 60 like Mathematics, 50 like Science, and 20 like both. How many students like neither?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "40"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 10 students. The question states that 60 students like Mathematics, 50 students like Science, and 20 students like both. This means that the total number of students who like either Mathematics or Science is 60 + 50 - 20 = 90. Since the total number of students is 100, the number of students who like neither Mathematics nor Science is 100 - 90 = 10.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not correctly calculate the number of students who like neither Mathematics nor Science. The question provides the number of students who like Mathematics, Science, and both, and the total number of students. By subtracting the number of students who like either Mathematics or Science from the total number of students, we can find the number of students who like neither."
+    },
+    {
+      "question_id": "T01.01.Q014",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "According to De Morgan's first law, (A ∪ B)' equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A' ∪ B'"
+        },
+        {
+          "id": "B",
+          "text": "A' ∩ B'"
+        },
+        {
+          "id": "C",
+          "text": "A ∩ B"
+        },
+        {
+          "id": "D",
+          "text": "(A ∩ B)'"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to De Morgan's first law, the complement of the union of two sets A and B is equal to the intersection of the complements of A and B. So, the correct answer is A' ∩ B'.",
+      "explanation_incorrect": "The incorrect options do not correctly represent De Morgan's first law. Option A is the union of the complements, not the intersection. Option C is the intersection of the sets, not the complement. Option D is the complement of the intersection, not the union."
+    },
+    {
+      "question_id": "T01.01.Q015",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The distributive law A ∩ (B ∪ C) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A ∩ B) ∪ (A ∩ C)"
+        },
+        {
+          "id": "B",
+          "text": "(A ∪ B) ∩ (A ∪ C)"
+        },
+        {
+          "id": "C",
+          "text": "A ∪ (B ∩ C)"
+        },
+        {
+          "id": "D",
+          "text": "(A ∩ B) ∩ (A ∩ C)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) (A ∩ B) ∪ (A ∩ C). This is because the distributive law states that the intersection of a set A with the union of sets B and C is equivalent to the union of the intersections of A with B, and A with C.",
+      "explanation_incorrect": "The correct answer is A) (A ∩ B) ∪ (A ∩ C), not the other options. Option B) (A ∪ B) ∩ (A ∪ C) is the distributive law for union, not intersection. Option C) A ∪ (B ∩ C) is not the distributive law. Option D) (A ∩ B) ∩ (A ∩ C) is the intersection of the intersections, not the union."
+    },
+    {
+      "question_id": "T01.01.Q016",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If A and B are any two sets, then A ∪ (A ∩ B) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "B"
+        },
+        {
+          "id": "B",
+          "text": "A ∩ B"
+        },
+        {
+          "id": "C",
+          "text": "A"
+        },
+        {
+          "id": "D",
+          "text": "A ∪ B"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) A. This is because the union of a set A with the intersection of A and another set B is simply the original set A. In other words, adding the elements in A that are also found in B to the set A does not change the composition of A.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the relationship between the sets A, B, and their union and intersection. Option A) B is incorrect because the union of A with the intersection of A and B is not equal to B. Option B) A ∩ B is incorrect because the union of A with the intersection of A and B is not equal to their intersection. Option D) A ∪ B is incorrect because the union of A with the intersection of A and B is not equal to the union of A and B."
+    },
+    {
+      "question_id": "T01.01.Q017",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "Which of the following is always true for any sets A, B, and C?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ∪ (B ∩ C) = (A ∪ B) ∩ C"
+        },
+        {
+          "id": "B",
+          "text": "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)"
+        },
+        {
+          "id": "C",
+          "text": "A ∩ (B ∪ C) = A ∪ B ∪ C"
+        },
+        {
+          "id": "D",
+          "text": "A − (B ∪ C) = (A − B) ∪ (A − C)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Option B is correct because the distributive property of set operations states that the union of a set with the intersection of two other sets is equal to the intersection of the union of the first set with the second set, and the union of the first set with the third set.",
+      "explanation_incorrect": "Option A is incorrect because the distributive property states that A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C), not (A ∪ B) ∩ C. Option C is incorrect because A ∩ (B ∪ C) is not equal to A ∪ B ∪ C. Option D is incorrect because A - (B ∪ C) is not equal to (A - B) ∪ (A - C)."
+    },
+    {
+      "question_id": "T01.01.Q018",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "For any set A, the expression A ∪ A' equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "∅"
+        },
+        {
+          "id": "B",
+          "text": "A"
+        },
+        {
+          "id": "C",
+          "text": "U (universal set)"
+        },
+        {
+          "id": "D",
+          "text": "A'"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The expression A ∪ A' equals the universal set U. This is because A' represents the complement of set A, which contains all elements that are not in A. When you take the union of set A and its complement A', you get all elements in the universe, which is the universal set U.",
+      "explanation_incorrect": "The expression A ∪ A' does not equal the empty set ∅, set A, or the complement of set A (A'). This is because when you take the union of a set and its complement, you get all the elements in the universal set U. The complement of a set contains all the elements that are not in the original set, so combining the set and its complement results in the entire universal set."
+    },
+    {
+      "question_id": "T01.01.Q019",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2} and B = {a, b}, then the number of elements in A × B is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Cartesian product A × B gives all possible ordered pairs (a, b) where a is an element from set A and b is an element from set B. Since A = {1, 2} and B = {a, b}, the Cartesian product A × B will have 2 × 2 = 4 elements.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the Cartesian product of two sets. The Cartesian product A × B always has a number of elements equal to the product of the number of elements in A and the number of elements in B. Since A has 2 elements and B has 2 elements, the Cartesian product A × B will have 2 × 2 = 4 elements."
+    },
+    {
+      "question_id": "T01.01.Q020",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2, 3} and B = {3, 4}, then (1, 4) is an element of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A × A"
+        },
+        {
+          "id": "B",
+          "text": "B × A"
+        },
+        {
+          "id": "C",
+          "text": "A × B"
+        },
+        {
+          "id": "D",
+          "text": "B × B"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) A × B. The Cartesian product of two sets A and B is the set of all ordered pairs (a, b) where a is an element of A and b is an element of B. Since A = {1, 2, 3} and B = {3, 4}, the ordered pair (1, 4) is an element of the Cartesian product A × B.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the Cartesian product of the given sets A and B. Option A) A × A represents the Cartesian product of set A with itself, option B) B × A represents the Cartesian product of set B with set A, and option D) B × B represents the Cartesian product of set B with itself. The correct answer is C) A × B, which represents the Cartesian product of set A with set B."
+    },
+    {
+      "question_id": "T01.01.Q021",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "Let A = {1, 2} and B = {1, 2, 3}. Which of the following relations from A to B is a function from A to B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R = {(1, 1), (2, 1), (1, 3)}"
+        },
+        {
+          "id": "B",
+          "text": "R = {(1, 2), (2, 3)}"
+        },
+        {
+          "id": "C",
+          "text": "R = {(1, 1), (1, 2)}"
+        },
+        {
+          "id": "D",
+          "text": "R = {(2, 3)}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Option B is the correct answer because a function from set A to set B is a relation where each element in A is paired with exactly one element in B. In this case, the relation R = {(1, 2), (2, 3)} satisfies this property, as each element in A (1 and 2) is paired with a unique element in B (2 and 3).",
+      "explanation_incorrect": "The other options are not functions from A to B because they either have an element in A paired with multiple elements in B (like option A) or have an element in A that is not paired with any element in B (like options C and D). For a relation to be a function, each element in the domain (set A) must be paired with exactly one element in the codomain (set B)."
+    },
+    {
+      "question_id": "T01.01.Q022",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "Let R = {(1, 1), (2, 2), (3, 3), (1, 2)} be a relation on A = {1, 2, 3}. R is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive and symmetric"
+        },
+        {
+          "id": "B",
+          "text": "Reflexive but not symmetric"
+        },
+        {
+          "id": "C",
+          "text": "Symmetric and transitive"
+        },
+        {
+          "id": "D",
+          "text": "Neither reflexive nor symmetric"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The relation R is reflexive because the ordered pairs (1, 1), (2, 2), and (3, 3) are present, indicating that each element is related to itself. However, R is not symmetric because the ordered pair (1, 2) is present but the pair (2, 1) is not, so the relation is not bidirectional.",
+      "explanation_incorrect": "The relation R is not reflexive and symmetric because not all elements are related to themselves, and the relation is not bidirectional. Option A is incorrect because a relation must be both reflexive and symmetric to be considered reflexive and symmetric. Option C is incorrect because the relation is not symmetric, and option D is incorrect because the relation is reflexive."
+    },
+    {
+      "question_id": "T01.01.Q023",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If A = {1, 2, 3}, the total number of relations from A to A is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2⁶"
+        },
+        {
+          "id": "B",
+          "text": "2⁹"
+        },
+        {
+          "id": "C",
+          "text": "3⁹"
+        },
+        {
+          "id": "D",
+          "text": "9²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The total number of relations from a set A to itself is 2^(A x A), where A has n elements. Since A = {1, 2, 3} has 3 elements, the total number of relations is 2^(3 x 3) = 2^9 = 512, which is option B.",
+      "explanation_incorrect": "Option A, 2^6 = 64, is incorrect because it considers the number of subsets of A, not the number of relations from A to A. Option C, 3^9 = 19683, is incorrect because it is the number of functions from A to A, not just relations. Option D, 9^2 = 81, is incorrect because it is the number of ordered pairs in A x A, not the total number of relations."
+    },
+    {
+      "question_id": "T01.01.Q024",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A has 3 elements and B has 2 elements, then the number of subsets of A × B is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "32"
+        },
+        {
+          "id": "B",
+          "text": "64"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Cartesian product A × B of two sets A and B creates a set of ordered pairs (a, b) where a is an element of A and b is an element of B. Since A has 3 elements and B has 2 elements, the Cartesian product A × B will have 3 × 2 = 6 ordered pairs. The number of subsets of a set with n elements is 2^n, so the number of subsets of A × B is 2^6 = 64.",
+      "explanation_incorrect": "The incorrect options do not accurately represent the number of subsets of A × B. The number of subsets is determined by the number of elements in the Cartesian product, which is 6 in this case (3 elements in A and 2 in B). The correct answer of 64 is obtained by calculating 2^6, since the number of subsets of a set with n elements is 2^n."
+    },
+    {
+      "question_id": "T01.01.Q025",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If n(A) = 20, n(B) = 16, and n(A ∪ B) = 30, then n(A ∩ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 6. This can be found using the formula n(A ∪ B) = n(A) + n(B) - n(A ∩ B). Since n(A) = 20, n(B) = 16, and n(A ∪ B) = 30, we can calculate n(A ∩ B) = 20 + 16 - 30 = 6.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the formula for finding the intersection of two sets. Option A) 4 and Option D) 8 are incorrect because they do not consider the given information about the sizes of the sets A, B, and their union A ∪ B. Option C) 10 is incorrect because it does not take into account the relationship between the sizes of the sets."
+    },
+    {
+      "question_id": "T01.01.Q026",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If (A ∩ B)' = U where U is the universal set, then which must be true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A = ∅ or B = ∅"
+        },
+        {
+          "id": "B",
+          "text": "A ∩ B = ∅"
+        },
+        {
+          "id": "C",
+          "text": "A = B"
+        },
+        {
+          "id": "D",
+          "text": "A ∪ B = ∅"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If (A ∩ B)' = U, then A ∩ B must be an empty set, or ∅. This is because the complement of an empty set is the whole universal set U, and the only way for (A ∩ B)' to equal U is if A ∩ B = ∅.",
+      "explanation_incorrect": "Option B is correct because if (A ∩ B)' = U, then A ∩ B must be an empty set, ∅. This means the sets A and B have no elements in common. However, options A, C, and D are incorrect - A = ∅ or B = ∅ is not necessarily true, A = B is not implied, and A ∪ B = ∅ is also not true if (A ∩ B)' = U."
+    },
+    {
+      "question_id": "T01.01.Q027",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If A ⊂ B, then A ∩ B equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "∅"
+        },
+        {
+          "id": "D",
+          "text": "A ∪ B"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If A is a subset of B (A ⊂ B), then all the elements in set A are also present in set B. Therefore, the intersection of A and B (A ∩ B) is equal to set A itself.",
+      "explanation_incorrect": "Option B is incorrect because if A is a subset of B, then set B is larger than set A and contains more elements. Option C is incorrect because the intersection of two sets is never an empty set (∅) if one set is a subset of the other. Option D is incorrect because the union of two sets (A ∪ B) is not the same as their intersection (A ∩ B) when A is a subset of B."
+    },
+    {
+      "question_id": "T01.01.Q028",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The domain of the relation R = {(1, 3), (2, 5), (3, 7), (4, 9)} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{3, 5, 7, 9}"
+        },
+        {
+          "id": "B",
+          "text": "{1, 2, 3, 4}"
+        },
+        {
+          "id": "C",
+          "text": "{1, 3, 5, 7, 9}"
+        },
+        {
+          "id": "D",
+          "text": "{(1, 3), (4, 9)}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of a relation is the set of all first elements (or x-coordinates) in the ordered pairs. Since the relation R = {(1, 3), (2, 5), (3, 7), (4, 9)}, the domain is the set of the first elements, which is {1, 2, 3, 4}.",
+      "explanation_incorrect": "Option B is correct because the domain of a relation is the set of all first elements (or x-coordinates) in the ordered pairs. The given relation R has four ordered pairs, and the first elements are 1, 2, 3, and 4. Therefore, the domain is the set {1, 2, 3, 4}. Option A, C, and D are incorrect because they do not represent the domain of the given relation."
+    },
+    {
+      "question_id": "T01.01.Q029",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "Which of the following sets is an empty set?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{x : x ∈ ℝ and x² = −1}"
+        },
+        {
+          "id": "B",
+          "text": "{x : x ∈ ℕ and x < 1}"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B"
+        },
+        {
+          "id": "D",
+          "text": "Neither A nor B"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Both sets A and B are empty sets. A set with the condition x^2 = -1 is empty because there are no real numbers that satisfy this condition. Similarly, the set of natural numbers less than 1 is also empty, as the smallest natural number is 1.",
+      "explanation_incorrect": "The correct answer is option C, which states that both sets A and B are empty sets. Set A represents the set of all real numbers x such that x^2 = -1, but there are no real numbers that satisfy this condition, so the set is empty. Set B represents the set of all natural numbers x less than 1, but the smallest natural number is 1, so this set is also empty. Therefore, both sets A and B are empty sets."
+    },
+    {
+      "question_id": "T01.01.Q030",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A ∩ B = B, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ⊂ B"
+        },
+        {
+          "id": "B",
+          "text": "B ⊂ A"
+        },
+        {
+          "id": "C",
+          "text": "A = ∅"
+        },
+        {
+          "id": "D",
+          "text": "B = U"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If A ∩ B = B, then all the elements in B are also present in A, which means that B is a subset of A (B ⊂ A). This is the correct answer, option B.",
+      "explanation_incorrect": "The correct answer is option B, B ⊂ A. This means that the set B is a subset of the set A. If A ∩ B = B, it implies that all the elements in B are also present in A, but the converse is not necessarily true - A may have additional elements not present in B. Therefore, options A, C, and D are incorrect."
+    },
+    {
+      "question_id": "T01.01.Q031",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In a group of 70 people, 37 like coffee, 52 like tea. Each person likes at least one of the two drinks. How many like both?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17"
+        },
+        {
+          "id": "B",
+          "text": "19"
+        },
+        {
+          "id": "C",
+          "text": "21"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 19. Since each person likes at least one of the two drinks, the number of people who like both coffee and tea can be calculated using the formula: 'Number who like coffee + Number who like tea - Total number of people'.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the formula mentioned above. For example, option A) 17 is incorrect as it does not account for the fact that each person likes at least one of the two drinks. Similarly, options C) 21 and D) 15 do not correctly apply the formula to calculate the number of people who like both coffee and tea."
+    },
+    {
+      "question_id": "T01.01.Q032",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "A relation R on the set A = {1, 2, 3} defined as R = {(1, 1), (2, 2), (3, 3)} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive only"
+        },
+        {
+          "id": "B",
+          "text": "Reflexive and symmetric"
+        },
+        {
+          "id": "C",
+          "text": "Reflexive, symmetric, and transitive"
+        },
+        {
+          "id": "D",
+          "text": "Symmetric only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The relation R is reflexive because every element is paired with itself, symmetric because the ordered pairs are reversed (1,1), (2,2), (3,3), and transitive because if (x,y) and (y,z) are in the relation, then (x,z) is also in the relation. Therefore, the relation R is reflexive, symmetric, and transitive.",
+      "explanation_incorrect": "The correct answer is that the relation R is reflexive, symmetric, and transitive. Option A is incorrect because the relation is not just reflexive, but also symmetric and transitive. Option B is incorrect because the relation is not just reflexive and symmetric, but also transitive. Option D is incorrect because the relation is not just symmetric, but also reflexive and transitive."
+    },
+    {
+      "question_id": "T01.01.Q033",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "For any set A, A ∩ ∅ equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "U"
+        },
+        {
+          "id": "C",
+          "text": "∅"
+        },
+        {
+          "id": "D",
+          "text": "A'"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) ∅ (empty set). The intersection of any set A with the empty set ∅ will always result in the empty set, because there are no elements that are common to both sets.",
+      "explanation_incorrect": "The incorrect answers are not correct because: A) A would mean the set A itself, which is not the result of intersecting A with the empty set. B) U would represent the universal set, which is also not the result of intersecting A with the empty set. D) A' would represent the complement of set A, which is also not the result of intersecting A with the empty set."
+    },
+    {
+      "question_id": "T01.01.Q034",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A = {x : x is a multiple of 3, x < 20} and B = {x : x is a multiple of 5, x < 20}, then n(A ∩ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1. The set A contains all multiples of 3 less than 20, which are {3, 6, 9, 12, 15, 18}. The set B contains all multiples of 5 less than 20, which are {5, 10, 15}. The intersection of A and B is the set {15}, which has only one element, so n(A ∩ B) = 1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the actual size of the intersection set A ∩ B. Option A) 0 is wrong because the intersection is not empty. Option C) 2 is wrong because there is only one common element between the two sets. Option D) 3 is wrong because there are not 3 elements in the intersection set."
+    },
+    {
+      "question_id": "T01.01.Q035",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If |P(A)| = 16, then the number of elements in A is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If |P(A)| = 16, then the number of elements in set A is 4. This is because the power set P(A) of a set A with n elements has 2^n elements. So, if |P(A)| = 16, then n = 4.",
+      "explanation_incorrect": "The number of elements in set A cannot be 2, 3, or 5. This is because the power set P(A) of a set A with n elements has 2^n elements. If |P(A)| = 16, then n must be 4, as 2^4 = 16. Therefore, the correct answer is that the number of elements in set A is 4."
+    },
+    {
+      "question_id": "T01.01.Q036",
+      "type": "true_false",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The empty set is a subset of every set.",
+      "correct_answer": true,
+      "explanation_correct": "The empty set (denoted as ∅) is a subset of every set because it does not contain any elements. By definition, a set A is a subset of another set B if all the elements in A are also present in B. Since the empty set has no elements, it is automatically a subset of every set.",
+      "explanation_incorrect": "The statement 'The empty set is a subset of every set' is true. Some students may think that the empty set cannot be a subset of any set because it has no elements. However, this is not the case. By the definition of a subset, a set A is a subset of another set B if all the elements in A are also present in B. Since the empty set has no elements, it automatically satisfies this condition and is therefore a subset of every set, regardless of the size or contents of the other set."
+    },
+    {
+      "question_id": "T01.01.Q037",
+      "type": "true_false",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "For any two sets A and B, A ∪ B = B ∪ A.",
+      "correct_answer": true,
+      "explanation_correct": "For any two sets A and B, the order in which you combine the sets using the union operation (∪) does not matter. The union of A and B will always result in the same set, regardless of whether you write A ∪ B or B ∪ A. This is a fundamental property of the union operation, known as the commutative property of sets.",
+      "explanation_incorrect": "A common misconception is that the order of the sets in a union operation matters. However, this is not the case. The union of two sets combines all the distinct elements from both sets, and the order in which you write the sets does not affect the final result. So, the statement 'A ∪ B = B ∪ A' is always true, as the union operation is commutative."
+    },
+    {
+      "question_id": "T01.01.Q038",
+      "type": "true_false",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "De Morgan's law states that (A ∪ B)' = A' ∪ B'.",
+      "correct_answer": false,
+      "explanation_correct": "De Morgan's law states that (A ∪ B)' = A' ∩ B', not A' ∪ B'. The complement of the union of two sets is equal to the intersection of their individual complements.",
+      "explanation_incorrect": "The statement (A ∪ B)' = A' ∪ B' is incorrect because it contradicts De Morgan's law. The correct De Morgan's law states that the complement of the union of two sets is equal to the intersection of their individual complements, not the union of their complements."
+    },
+    {
+      "question_id": "T01.01.Q039",
+      "type": "true_false",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "The Cartesian product A × B is always equal to B × A.",
+      "correct_answer": false,
+      "explanation_correct": "The Cartesian product A × B is not always equal to B × A. The Cartesian product is an ordered pair, where the order of the elements matters. So, (a, b) is not the same as (b, a) in the Cartesian product.",
+      "explanation_incorrect": "The Cartesian product A × B is not always equal to B × A. This is because the Cartesian product is an ordered pair, and the order of the elements matters. For example, if A = {1, 2} and B = {3, 4}, then A × B = {(1, 3), (1, 4), (2, 3), (2, 4)}, but B × A = {(3, 1), (3, 2), (4, 1), (4, 2)}, which is not the same as A × B."
+    },
+    {
+      "question_id": "T01.01.Q040",
+      "type": "true_false",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2, 3} and B = {3, 2, 1}, then A and B are equal sets.",
+      "correct_answer": true,
+      "explanation_correct": "The sets A = {1, 2, 3} and B = {3, 2, 1} are equal because they contain the same elements, even though the order in which they are listed is different. The order of elements in a set does not matter, as long as the set contains the same distinct elements.",
+      "explanation_incorrect": "One common misconception is that if the elements in two sets are listed in a different order, then the sets are not equal. However, this is not the case. The order of elements in a set does not matter, as long as the set contains the same distinct elements. Since A = {1, 2, 3} and B = {3, 2, 1} both contain the same elements, they are equal sets."
+    },
+    {
+      "question_id": "T01.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of elements in the power set of a set with 5 elements is ___.",
+      "correct_answer": "32",
+      "explanation_correct": "The power set of a set with 5 elements contains all possible subsets of that set. Since there are 5 elements, the power set will have 2^5 = 32 elements.",
+      "explanation_incorrect": "The correct answer is 32. A set with 5 elements has 2^5 = 32 possible subsets, which make up the power set. Some students may think the power set has 5 elements, as that is the number of elements in the original set, but the power set contains all possible subsets, not just the individual elements."
+    },
+    {
+      "question_id": "T01.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If n(A) = 10, n(B) = 15, and n(A ∩ B) = 5, then n(A ∪ B) = ___.",
+      "correct_answer": "20",
+      "explanation_correct": "The correct answer is 20 because the formula for the size of the union of two sets (n(A ∪ B)) is n(A) + n(B) - n(A ∩ B). Substituting the given values, we get 10 + 15 - 5 = 20.",
+      "explanation_incorrect": "The incorrect answer would be 25, which is obtained by simply adding the sizes of the two sets A and B (10 + 15 = 25). However, this is not correct because it does not account for the elements that are common to both sets, which are represented by the intersection A ∩ B. The correct formula to find the size of the union is n(A ∪ B) = n(A) + n(B) - n(A ∩ B)."
+    },
+    {
+      "question_id": "T01.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "If A = {1, 2, 3} and B = {a, b}, then the number of elements in A × B is ___.",
+      "correct_answer": "6",
+      "explanation_correct": "The Cartesian product A × B contains all ordered pairs (a, b) where a is an element of A and b is an element of B. Since A = {1, 2, 3} and B = {a, b}, there are 3 elements in A and 2 elements in B, resulting in a total of 3 × 2 = 6 ordered pairs in A × B.",
+      "explanation_incorrect": "The number of elements in A × B is 6, not 3. This is because the Cartesian product A × B contains all possible ordered pairs (a, b) where a is an element of A and b is an element of B. With A = {1, 2, 3} and B = {a, b}, there are 3 choices for the first element and 2 choices for the second element, resulting in a total of 3 × 2 = 6 ordered pairs."
+    },
+    {
+      "question_id": "T01.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "According to De Morgan's second law, (A ∩ B)' = A' ___ B'.",
+      "correct_answer": "∪",
+      "explanation_correct": "According to De Morgan's second law, the complement of the intersection of two sets A and B is equal to the union of the complements of A and B. This is because the elements that are not in both A and B are the same as the elements that are in either A' or B'.",
+      "explanation_incorrect": "The correct answer is 'union' (∪), because the complement of the intersection of two sets A and B is equal to the union of the complements of A and B. The 'difference' operation is not correct here, as that would be represented by the symbol '-' instead of '∪'."
+    },
+    {
+      "question_id": "T01.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A and B are disjoint sets with n(A) = 8 and n(B) = 12, then n(A ∪ B) = ___.",
+      "correct_answer": "20",
+      "explanation_correct": "Since A and B are disjoint sets, all the elements in A and B are distinct. Therefore, the total number of elements in A ∪ B is the sum of the number of elements in A and the number of elements in B, which is 8 + 12 = 20.",
+      "explanation_incorrect": "The incorrect answer would be to think that the number of elements in A ∪ B is the product of the number of elements in A and the number of elements in B, which is 8 × 12 = 96. This is wrong because A and B are disjoint sets, so the elements do not multiply but instead add up to 20."
+    },
+    {
+      "question_id": "T01.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The range of the relation R = {(1, 2), (3, 4), (5, 6)} is ___.",
+      "correct_answer": "{2, 4, 6}",
+      "explanation_correct": "The range of a relation R is the set of all the second elements (or Y-coordinates) in the ordered pairs that make up the relation. In this case, the relation R = {(1, 2), (3, 4), (5, 6)}, so the range is the set of all the second elements: {2, 4, 6}.",
+      "explanation_incorrect": "The range of a relation is not the set of all the elements in the relation. The range is specifically the set of all the second elements (or Y-coordinates) in the ordered pairs that make up the relation. In this case, the correct range is {2, 4, 6}, as these are the second elements in the ordered pairs (1, 2), (3, 4), and (5, 6)."
+    },
+    {
+      "question_id": "T01.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The set {x : x ∈ ℤ and −2 ≤ x < 3} in roster form is ___.",
+      "correct_answer": "{−2, −1, 0, 1, 2}",
+      "explanation_correct": "The set {x : x ∈ ℤ and −2 ≤ x < 3} describes all the integers (whole numbers) between -2 and 3, not including 3. So the roster form of this set is {-2, -1, 0, 1, 2}.",
+      "explanation_incorrect": "The accepted answer format for this question is {-2, -1, 0, 1, 2}. The incorrect answer might be {-3, -2, -1, 0, 1, 2, 3}, which includes integers outside the range of -2 to less than 3. The correct set only includes the integers -2, -1, 0, 1, and 2, as they are the only whole numbers that satisfy the given condition."
+    },
+    {
+      "question_id": "T01.01.Q048",
+      "type": "ordering",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the following sets in increasing order of the number of elements: (A) Power set of {1, 2}, (B) {1, 2, 3, 4, 5}, (C) {a}, (D) Power set of {1, 2, 3}",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation_correct": "The sets are arranged in increasing order of the number of elements. Set C has 1 element, set A has 2^2 = 4 elements, set B has 5 elements, and set D has 2^3 = 8 elements. Therefore, the correct order is C, A, B, D.",
+      "explanation_incorrect": "The incorrect order would be to arrange the sets in alphabetical order of the set names, which does not take into account the number of elements in each set. The correct order is based on the increasing number of elements in each set."
+    },
+    {
+      "question_id": "T01.01.Q049",
+      "type": "ordering",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Given U = {1,2,3,4,5,6,7,8,9,10}, A = {1,2,3,4,5}, B = {4,5,6,7}. Arrange the following in increasing order of cardinality: (A) A ∩ B, (B) A − B, (C) A ∪ B, (D) A'",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "explanation_correct": "The correct order is A, B, D, C. A ∩ B has the smallest cardinality because it contains only the common elements between sets A and B, which are 4 and 5. A - B has a larger cardinality because it includes the elements in A that are not in B. A' has an even larger cardinality since it includes all elements in the universal set U that are not in A. Finally, A ∪ B has the largest cardinality as it includes all the unique elements from both sets.",
+      "explanation_incorrect": "The incorrect order would be A, D, B, C. This is wrong because A' (the complement of A) does not have a larger cardinality than A - B. The complement of a set always has a cardinality equal to the cardinality of the universal set U minus the cardinality of the original set A. So A' should come after A - B in the order."
+    },
+    {
+      "question_id": "T01.01.Q050",
+      "type": "ordering",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange these steps in the correct order to find the domain of a relation R ⊂ A × B: (A) List the ordered pairs in R, (B) Identify the first element of each ordered pair, (C) Form the Cartesian product A × B, (D) Collect all distinct first elements as the domain",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation_correct": "The correct order is C, A, B, D because to find the domain of a relation R ⊂ A × B, you first need to form the Cartesian product A × B, then list the ordered pairs in R, identify the first element of each ordered pair, and finally collect all distinct first elements as the domain.",
+      "explanation_incorrect": "The incorrect order would be A, B, C, D. This is incorrect because you cannot list the ordered pairs in R (step A) before forming the Cartesian product A × B (step C). The correct order is to first form the Cartesian product, then list the ordered pairs, identify the first elements, and finally collect the distinct first elements as the domain."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.04",
+  "topic_name": "Applications of Integrals",
+  "canonical_explanation": {
+    "text": "Applications of Integrals use definite integrals to compute areas of plane regions. The area under a curve y = f(x) from x = a to x = b (when f(x) ≥ 0) is given by ∫ₐᵇ f(x) dx. If the curve lies below the x-axis, the area is the absolute value of the integral. For area bounded by a curve and the y-axis, we integrate with respect to y: ∫_{c}^{d} x dy. The area between two curves y = f(x) and y = g(x), where f(x) ≥ g(x) on [a, b], is ∫ₐᵇ [f(x) − g(x)] dx. Standard applications include computing the area of a circle x² + y² = r² as πr² using integration, the area of an ellipse x²/a² + y²/b² = 1 as πab, and the area enclosed between a parabola and a line. When curves intersect, the points of intersection determine the limits of integration.",
+    "rules": [
+      "Area under a curve y = f(x) above the x-axis from x = a to x = b is ∫ₐᵇ f(x) dx.",
+      "Area between two curves y = f(x) and y = g(x) is ∫ₐᵇ |f(x) − g(x)| dx.",
+      "When the curve is below the x-axis, take the absolute value of the integral to get the area."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.04.Q001",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area under the curve y = x² from x = 0 to x = 3 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "27"
+        },
+        {
+          "id": "C",
+          "text": "9/2"
+        },
+        {
+          "id": "D",
+          "text": "27/3 = 9"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area under the curve y = x² from x = 0 to x = 3 is calculated by integrating the function from 0 to 3. The integral of x² from 0 to 3 gives the area under the curve, which is 9 square units.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the area under the curve. Option B (27) is the value of the integral at the upper limit (x = 3), not the area. Option C (9/2) is half the correct answer, and Option D (27/3 = 9) is the average value of the function, not the area."
+    },
+    {
+      "question_id": "T02.04.Q002",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area bounded by y = x, the x-axis, and x = 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area bounded by y = x, the x-axis, and x = 4 is 8 because the area is given by the definite integral ∫₀⁴ x dx, which evaluates to (x²/2) from 0 to 4, giving 8.",
+      "explanation_incorrect": "The area is not 4 because that would correspond to the area of a triangle with base 4 and height 2, which is not the correct area. The area is also not 16, which would be the area of a rectangle with base 4 and height 4. The area is also not 2, which is too small and does not match the correct area calculation using the integral."
+    },
+    {
+      "question_id": "T02.04.Q003",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area under y = sin(x) from x = 0 to x = π is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area under the curve y = sin(x) from x = 0 to x = π is 2 units. This is because the sine function is periodic with period 2π, and the area of one complete cycle (from 0 to 2π) is 2 units. Since the given interval is from 0 to π, which is half a cycle, the area is 2 units.",
+      "explanation_incorrect": "The area under the curve y = sin(x) is not 0, 1, or π. The correct answer is 2 units. This is because the sine function is periodic with period 2π, and the area of one complete cycle (from 0 to 2π) is 2 units. Since the given interval is from 0 to π, which is half a cycle, the area is 2 units."
+    },
+    {
+      "question_id": "T02.04.Q004",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) < 0 on [a, b], then the area between y = f(x) and the x-axis is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "∫ₐᵇ f(x) dx"
+        },
+        {
+          "id": "B",
+          "text": "−∫ₐᵇ f(x) dx"
+        },
+        {
+          "id": "C",
+          "text": "|∫ₐᵇ f(x) dx|"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D. When the function f(x) is negative on the interval [a, b], the area between the curve y = f(x) and the x-axis is the absolute value of the integral, which is represented by |∫ₐᵇ f(x) dx|. This is because the area is considered to be below the x-axis, and the negative sign indicates the direction of the area.",
+      "explanation_incorrect": "Option A, ∫ₐᵇ f(x) dx, is incorrect because it does not account for the fact that the function f(x) is negative on the interval [a, b]. Option B, -∫ₐᵇ f(x) dx, is correct, but the question asks for the absolute value of the integral, which is represented by Option D. Option C, |∫ₐᵇ f(x) dx|, is also correct as it takes the absolute value of the integral, which is the appropriate way to represent the area when the function is negative on the given interval."
+    },
+    {
+      "question_id": "T02.04.Q005",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area bounded by y = x³, the x-axis, x = −1, and x = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area bounded by the curve y = x³, the x-axis, x = -1, and x = 1 is the area under the curve from x = -1 to x = 1. This can be calculated using the definite integral ∫₋₁¹ x³ dx, which gives a value of 1/2.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the area under the curve y = x³ from x = -1 to x = 1. Option A (0) is incorrect because the area under the curve is not zero. Option B (1/4) is incorrect because it does not account for the full area under the curve from -1 to 1. Option D (1) is incorrect because the area under the curve is less than 1."
+    },
+    {
+      "question_id": "T02.04.Q006",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area bounded by y = eˣ, the x-axis, x = 0, and x = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "e"
+        },
+        {
+          "id": "B",
+          "text": "e − 1"
+        },
+        {
+          "id": "C",
+          "text": "e + 1"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area bounded by y = e^x, the x-axis, x = 0, and x = 1 is the definite integral of e^x from 0 to 1, which evaluates to e - 1. This is because the area under the curve y = e^x from x = 0 to x = 1 is the difference between the value of the function at x = 1 and the value at x = 0, which is e - 1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the area under the curve y = e^x from x = 0 to x = 1. Option A, e, would be the value of the function at x = 1, but it does not account for the area from x = 0 to x = 1. Option C, e + 1, is the sum of the value of the function at x = 1 and the value at x = 0, which is not the correct formula for the area. Option D, 1, is simply incorrect as it does not represent the area under the curve."
+    },
+    {
+      "question_id": "T02.04.Q007",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area bounded by y = 1/x, the x-axis, x = 1, and x = e is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "e"
+        },
+        {
+          "id": "C",
+          "text": "e − 1"
+        },
+        {
+          "id": "D",
+          "text": "ln(e) = 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1. To find the area bounded by the curve y = 1/x, the x-axis, x = 1, and x = e, we need to integrate the function 1/x from 1 to e. This gives the area as the definite integral ∫₁ᵉ 1/x dx = [ln(x)]₁ᵉ = ln(e) - ln(1) = 1.",
+      "explanation_incorrect": "The incorrect options are not correct. Option B) e is incorrect because it does not represent the area under the curve y = 1/x from x = 1 to x = e. Option C) e - 1 is incorrect because it does not account for the full area under the curve. Option D) ln(e) = 1 is incorrect because it only gives the value of the integral at the upper limit, not the full area."
+    },
+    {
+      "question_id": "T02.04.Q008",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "question_text": "The area between two curves y = f(x) and y = g(x) from x = a to x = b, where f(x) ≥ g(x), is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "∫ₐᵇ f(x) dx − ∫ₐᵇ g(x) dx"
+        },
+        {
+          "id": "B",
+          "text": "∫ₐᵇ [f(x) − g(x)] dx"
+        },
+        {
+          "id": "C",
+          "text": "∫ₐᵇ [f(x) + g(x)] dx"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The area between two curves y = f(x) and y = g(x) from x = a to x = b, where f(x) ≥ g(x), is given by the integral ∫₀ᵇ [f(x) - g(x)] dx. This is because the area is the region bounded by the two curves, and this integral calculates the difference between the areas under the two curves over the given range.",
+      "explanation_incorrect": "Option A is incorrect because it calculates the areas under the two curves separately, rather than the area between them. Option C is incorrect because adding the two curves does not give the area between them. The correct answer is option B, which directly calculates the area between the two curves by subtracting g(x) from f(x) and integrating the result over the given range."
+    },
+    {
+      "question_id": "T02.04.Q009",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The area between y = x and y = x² in the first quadrant is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "1/6"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "2/3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area between the curve y = x and y = x² in the first quadrant is 1/6. This is because the region bounded by the two curves and the x-axis can be represented by the definite integral ∫₀¹ (x - x²) dx, which evaluates to 1/6.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the area between the two curves. Option A (1/3) is the area under the curve y = x from 0 to 1, while option C (1/2) is the area under the curve y = x² from 0 to 1. Option D (2/3) is the area under the curve y = x from 0 to 1, which is not the same as the area between the two curves."
+    },
+    {
+      "question_id": "T02.04.Q010",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The area enclosed between y = x² and y = 2x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/3"
+        },
+        {
+          "id": "B",
+          "text": "2/3"
+        },
+        {
+          "id": "C",
+          "text": "8/3"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area enclosed between the curves y = x² and y = 2x is given by the integral ∫₀² (x² - 2x) dx. This evaluates to 4/3, which is option A.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct value of the integral. Option B (2/3) is too small, option C (8/3) is too large, and option D (1) does not match the actual area calculated from the integral."
+    },
+    {
+      "question_id": "T02.04.Q011",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The curves y = x² and y = x intersect at the points:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 0) and (1, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(0, 0) and (2, 4)"
+        },
+        {
+          "id": "C",
+          "text": "(1, 1) and (−1, 1)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 0) only"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. The curves y = x² and y = x intersect at the points (0, 0) and (1, 1) because the equations are equal at these points, i.e., x² = x.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the condition that the curves y = x² and y = x intersect. Option B (0, 0) and (2, 4) is incorrect because the coordinates (2, 4) do not satisfy both equations. Option C (1, 1) and (-1, 1) is incorrect because the coordinates (-1, 1) do not satisfy the equation y = x²."
+    },
+    {
+      "question_id": "T02.04.Q012",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The area of the circle x² + y² = 16 using integration is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8π"
+        },
+        {
+          "id": "B",
+          "text": "16π"
+        },
+        {
+          "id": "C",
+          "text": "4π"
+        },
+        {
+          "id": "D",
+          "text": "32π"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 16π. The equation x² + y² = 16 represents a circle with radius r = 4. The area of a circle is given by the formula πr², so the area of this circle is π(4)² = 16π.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for the area of a circle. Option A) 8π is incorrect because it is half the actual area. Option C) 4π is incorrect because it is a quarter of the actual area. Option D) 32π is incorrect because it is double the actual area. The correct formula to find the area of a circle with radius r is πr², which in this case gives 16π."
+    },
+    {
+      "question_id": "T02.04.Q013",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The area of the ellipse x²/9 + y²/4 = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6π"
+        },
+        {
+          "id": "B",
+          "text": "12π"
+        },
+        {
+          "id": "C",
+          "text": "36π"
+        },
+        {
+          "id": "D",
+          "text": "9π"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area of an ellipse is given by the formula πab, where a and b are the lengths of the major and minor axes, respectively. In this case, a = 3 and b = 2, so the area of the ellipse is π × 3 × 2 = 6π.",
+      "explanation_incorrect": "Option B (12π) is incorrect because the formula for the area of an ellipse is πab, not 2πab. Option C (36π) is incorrect because the area is not the square of the area of a circle with radius 3. Option D (9π) is incorrect because the area of an ellipse with a = 3 and b = 2 is 6π, not 9π."
+    },
+    {
+      "question_id": "T02.04.Q014",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The area bounded by the parabola y² = 4x and the line y = 2x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "2/3"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "4/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area bounded by the parabola y² = 4x and the line y = 2x is 1/3. This is because the region is a triangle, and the area of a triangle is (1/2) * base * height. The base is the x-coordinate of the point where the parabola and line intersect, which is 4, and the height is the y-coordinate of that point, which is 8. Therefore, the area is (1/2) * 4 * 8 = 16.",
+      "explanation_incorrect": "The correct answer is A) 1/3. The area is calculated by finding the region where the parabola y² = 4x is above the line y = 2x. This is a triangular region, and the area of a triangle is (1/2) * base * height. The base is the x-coordinate of the intersection point, which is 4, and the height is the y-coordinate of that point, which is 8. Therefore, the area is (1/2) * 4 * 8 = 16, which simplifies to 1/3."
+    },
+    {
+      "question_id": "T02.04.Q015",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "question_text": "The area bounded by y = √x, the x-axis, and x = 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8/3"
+        },
+        {
+          "id": "B",
+          "text": "16/3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area bounded by y = √x, the x-axis, and x = 4 is calculated by integrating the function y = √x from 0 to 4. This gives the integral ∫₀⁴ √x dx, which evaluates to 16/3, making option B the correct answer.",
+      "explanation_incorrect": "The incorrect options are not supported by the correct working. Option A (8/3) is wrong because the integral ∫₀⁴ √x dx does not evaluate to 8/3. Option C (4) is wrong because the area under the curve y = √x from x = 0 to x = 4 is not 4 square units. Option D (2) is wrong because the area is more than 2 square units."
+    },
+    {
+      "question_id": "T02.04.Q016",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The area enclosed between y² = 4x and x² = 4y is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8/3"
+        },
+        {
+          "id": "B",
+          "text": "16/3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "32/3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area enclosed between the parabola y² = 4x and the circle x² = 4y is the region where the two curves intersect. To find this area, we need to integrate the difference between the two curves from the points of intersection. This gives us the area as ∫[√(4x) - √(x/4)] dx = 16/3.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the area. Option A, 8/3, is half the correct area. Option C, 4, is the area of the square formed by the intersection points of the two curves. Option D, 32/3, is double the correct area. The correct approach is to find the intersection points of the two curves, set up the integral for the area between them, and evaluate it."
+    },
+    {
+      "question_id": "T02.04.Q017",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The area of the region bounded by y² = 4ax and x = a is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4a²/3"
+        },
+        {
+          "id": "B",
+          "text": "8a²/3"
+        },
+        {
+          "id": "C",
+          "text": "2a²/3"
+        },
+        {
+          "id": "D",
+          "text": "16a²/3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area of the region bounded by y² = 4ax and x = a is 8a²/3. This is because the region is a parabolic segment, and the formula for the area of a parabolic segment is (2/3) × base × height, where the base is the distance between the two points where the parabola intersects the x-axis, which is 2a, and the height is the maximum y-value, which is 2a.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for the full area of the parabolic segment. Option A, 4a²/3, is only half the correct area, as it considers only the area of a triangle formed by the parabola and the x-axis. Option C, 2a²/3, is also incorrect as it is only a quarter of the correct area. Option D, 16a²/3, is too large as it includes the area outside the parabolic segment."
+    },
+    {
+      "question_id": "T02.04.Q018",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area bounded by y = cos(x), the x-axis, x = 0, and x = π/2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "π/2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area bounded by y = cos(x), the x-axis, x = 0, and x = π/2 is equal to 1. This is because the integral of cos(x) from 0 to π/2 is equal to 1, which represents the area under the cosine curve over this interval.",
+      "explanation_incorrect": "The area under the cosine curve from 0 to π/2 is not 0, 2, or π/2. The correct answer is 1 because the integral of cos(x) from 0 to π/2 is equal to the area under the curve, which is 1. This is because the cosine function has a maximum value of 1 and a minimum value of -1, and the area under the positive portion of the curve from 0 to π/2 is exactly 1 unit square."
+    },
+    {
+      "question_id": "T02.04.Q019",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The area enclosed between y = |x| and y = 2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area enclosed between y = |x| and y = 2 is 4. This is because the region bounded by these two lines is a triangle with base 4 and height 2, so the area is 1/2 * 4 * 2 = 4.",
+      "explanation_incorrect": "The incorrect answer of 6 likely comes from misunderstanding the area calculation. The region is not a rectangle, but a triangle. The correct way to calculate the area is to use the formula for the area of a triangle, which is 1/2 * base * height. In this case, the base is 4 and the height is 2, so the area is 1/2 * 4 * 2 = 4."
+    },
+    {
+      "question_id": "T02.04.Q020",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The area in the first quadrant enclosed by x² + y² = a² (quarter circle) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "πa²"
+        },
+        {
+          "id": "B",
+          "text": "πa²/2"
+        },
+        {
+          "id": "C",
+          "text": "πa²/4"
+        },
+        {
+          "id": "D",
+          "text": "2πa²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area of the first quadrant of a circle with radius a is equal to 1/4 of the total area of the circle, which is πa²/4. This is because the first quadrant represents 1/4 of the entire circle.",
+      "explanation_incorrect": "The area of the entire circle with radius a is πa², not πa²/2 or 2πa². The area of the first quadrant, which is a quarter of the circle, is πa²/4. This is because the first quadrant represents 1/4 of the entire circle, and the area of a circle is given by the formula πr², where r is the radius."
+    },
+    {
+      "question_id": "T02.04.Q021",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area bounded by y = x + 1, the x-axis, x = 0, and x = 3 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7.5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "4.5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area bounded by the curve y = x + 1, the x-axis, x = 0, and x = 3 can be calculated by integrating the function f(x) = x + 1 from x = 0 to x = 3. This gives the area of 7.5 square units, which is the correct answer (A).",
+      "explanation_incorrect": "Option B) 6 is incorrect because the area is calculated by integrating the function f(x) = x + 1 from x = 0 to x = 3, which gives the area of 7.5 square units. Option C) 9 is incorrect because it does not match the correct area calculation. Option D) 4.5 is incorrect because it is half the correct area value."
+    },
+    {
+      "question_id": "T02.04.Q022",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The area between y = x² and y = 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "16/3"
+        },
+        {
+          "id": "B",
+          "text": "32/3"
+        },
+        {
+          "id": "C",
+          "text": "8/3"
+        },
+        {
+          "id": "D",
+          "text": "64/3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area between the curve y = x^2 and the line y = 4 is the integral of [x^2 - 4] from 0 to 2, which equals 32/3. This is because the curve y = x^2 is above the line y = 4 between x = 0 and x = 2.",
+      "explanation_incorrect": "The incorrect options A, C, and D do not correctly compute the area between the curve y = x^2 and the line y = 4. The correct formula is to integrate [f(x) - g(x)] from the lower bound to the upper bound, where f(x) is the upper curve (x^2) and g(x) is the lower curve (4). Integrating [x^2 - 4] from 0 to 2 gives the correct answer of 32/3."
+    },
+    {
+      "question_id": "T02.04.Q023",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "question_text": "The area bounded by y = |sin(x)|, the x-axis, from x = 0 to x = 2π is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "2π"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area bounded by y = |sin(x)| and the x-axis from x = 0 to x = 2π is 4 square units. This is because the absolute value of the sine function creates a triangle-like shape, and the area of this shape can be calculated by integrating the function from 0 to 2π.",
+      "explanation_incorrect": "The area bounded by y = |sin(x)| and the x-axis from x = 0 to x = 2π is not 0, 2, or 2π. The correct answer is 4 square units. This is because the absolute value of the sine function creates a triangle-like shape, and the area of this shape can be calculated by integrating the function from 0 to 2π, which gives a result of 4 square units."
+    },
+    {
+      "question_id": "T02.04.Q024",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The area of the region {(x, y) : x² + y² ≤ 4, x + y ≥ 2} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π − 2"
+        },
+        {
+          "id": "B",
+          "text": "π + 2"
+        },
+        {
+          "id": "C",
+          "text": "2π − 2"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area of the region {(x, y) : x² + y² ≤ 4, x + y ≥ 2} is π - 2. This is because the region is bounded by the circle of radius 2 and the line x + y = 2, and the area of this region is the area of the circle (πr² = π) minus the area of the triangle (1/2 * base * height = 1).",
+      "explanation_incorrect": "Option B) π + 2 is incorrect because the area of the circle with radius 2 is π, not π + 2. Option C) 2π - 2 is incorrect because it includes the area outside the given region. Option D) π is incorrect because it only accounts for the area of the circle, not the subtraction of the area of the triangle."
+    },
+    {
+      "question_id": "T02.04.Q025",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area bounded by y = x² and the y-axis from y = 0 to y = 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "16/3"
+        },
+        {
+          "id": "B",
+          "text": "8/3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "32/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area bounded by y = x² and the y-axis from y = 0 to y = 4 is 16/3. This is because the curve y = x² is the equation of a parabola, and the area under a parabola from x = 0 to x = 2 (where y = 4) is given by the definite integral ∫₀²x² dx, which evaluates to 16/3.",
+      "explanation_incorrect": "The correct answer is A) 16/3. This is because the area under the curve y = x² from y = 0 to y = 4 can be calculated using integration. The limits of integration are from x = 0 to x = 2, since when y = 4, x = 2. The integral ∫₀²x² dx gives the area, which evaluates to 16/3. Options B, C, and D are incorrect as they do not represent the correct area calculation."
+    },
+    {
+      "question_id": "T02.04.Q026",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The area between y = sin(x) and y = cos(x) from x = 0 to x = π/4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√2 − 1"
+        },
+        {
+          "id": "B",
+          "text": "2 − √2"
+        },
+        {
+          "id": "C",
+          "text": "1 − 1/√2"
+        },
+        {
+          "id": "D",
+          "text": "√2 + 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area between the sine and cosine curves from 0 to π/4 is given by the integral ∫₀^(π/4) [sin(x) - cos(x)] dx, which evaluates to √2 - 1. This is the correct answer (option A).",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the result of evaluating the integral ∫₀^(π/4) [sin(x) - cos(x)] dx. Option B (2 - √2) is the area between the sine and cosine curves from 0 to π/2, not π/4. Option C (1 - 1/√2) is the value of the integral ∫₀^(π/4) cos(x) dx, not the difference between the sine and cosine curves. Option D (√2 + 1) is not the correct area between the two curves."
+    },
+    {
+      "question_id": "T02.04.Q027",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area under y = 2x + 1 from x = 1 to x = 3 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area under the curve y = 2x + 1 from x = 1 to x = 3 is the definite integral of 2x + 1 from 1 to 3, which equals 10. This is the correct answer because the formula for the area under a curve is the definite integral, and the integral of 2x + 1 from 1 to 3 evaluates to 10.",
+      "explanation_incorrect": "The incorrect answers do not accurately represent the area under the curve y = 2x + 1 from x = 1 to x = 3. To calculate the area, we need to integrate the function 2x + 1 from x = 1 to x = 3, which gives us 10. The other options, such as 8, 12, and 6, do not correctly represent the area calculated using the definite integral."
+    },
+    {
+      "question_id": "T02.04.Q028",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The area of the ellipse x²/a² + y²/b² = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "πa²"
+        },
+        {
+          "id": "B",
+          "text": "πb²"
+        },
+        {
+          "id": "C",
+          "text": "πab"
+        },
+        {
+          "id": "D",
+          "text": "2πab"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area of an ellipse with equation x²/a² + y²/b² = 1 is given by the formula πab, where a and b are the semi-major and semi-minor axes of the ellipse. This is because the integral of the ellipse equation from x = -a to x = a, or from y = -b to y = b, gives the area πab.",
+      "explanation_incorrect": "The incorrect options A and B represent the areas of circles with radii a and b, respectively. However, an ellipse is a different shape, and its area is given by the formula πab, which is the correct option C. Option D is incorrect because it represents twice the area of the ellipse."
+    },
+    {
+      "question_id": "T02.04.Q029",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The area between y = 4 − x² and y = 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "16/3"
+        },
+        {
+          "id": "B",
+          "text": "32/3"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area between the parabola y = 4 - x^2 and the x-axis is given by the definite integral from x = 0 to x = 2 of the expression (4 - x^2), which gives 32/3. This is the correct option B.",
+      "explanation_incorrect": "The incorrect options do not correctly compute the area between the given curves. Option A (16/3) would be the area under the parabola from x = 0 to x = 1, but the question asks for the area between the parabola and the x-axis from x = 0 to x = 2. Options C (8) and D (4) are incorrect as they do not match the actual area computed using integration."
+    },
+    {
+      "question_id": "T02.04.Q030",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "question_text": "The area bounded by y = x², the y-axis, and y = 1 and y = 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "14/3"
+        },
+        {
+          "id": "B",
+          "text": "7/3"
+        },
+        {
+          "id": "C",
+          "text": "10/3"
+        },
+        {
+          "id": "D",
+          "text": "16/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area bounded by y = x², the y-axis, and y = 1 and y = 4 is 14/3 because the region is a triangle with base 3 (from y = 1 to y = 4) and height 1 (from x = 0 to x = 1), so the area is 1/2 × 3 × 1 = 14/3.",
+      "explanation_incorrect": "The correct answer is A) 14/3. This is the area of the triangle bounded by y = x², the y-axis, and y = 1 and y = 4. The base of the triangle is 3 (from y = 1 to y = 4) and the height is 1 (from x = 0 to x = 1), so the area is 1/2 × 3 × 1 = 14/3. The other options do not correctly calculate the area of this region."
+    },
+    {
+      "question_id": "T02.04.Q031",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The area enclosed by the line x + y = 2, the x-axis, and the y-axis is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area enclosed by the line x + y = 2, the x-axis, and the y-axis is 2 square units. This can be found by integrating the equation of the line, x + y = 2, with respect to x from 0 to 2, which gives the area as 2.",
+      "explanation_incorrect": "Option C, 4 square units, is incorrect because the area enclosed by the line x + y = 2, the x-axis, and the y-axis is not a square. The line x + y = 2 is a straight line that intersects the x-axis and y-axis at the points (0, 2) and (2, 0), respectively, forming a right-angled triangle with an area of 2 square units."
+    },
+    {
+      "question_id": "T02.04.Q032",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The area bounded by y = √(4 − x²), the x-axis, x = 0, and x = 2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π"
+        },
+        {
+          "id": "B",
+          "text": "2π"
+        },
+        {
+          "id": "C",
+          "text": "4π"
+        },
+        {
+          "id": "D",
+          "text": "π/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The area bounded by the given curve y = √(4 - x²), the x-axis, x = 0, and x = 2 is π. This is because the curve is a semicircle with radius 2, and the area of a semicircle is π * r²/2 = π.",
+      "explanation_incorrect": "Option C) 4π is incorrect. The area of a semicircle with radius 2 is π * r²/2 = π, not 4π. Option B) 2π is incorrect because that would be the area of a full circle, not a semicircle. Option D) π/2 is incorrect because that would be the area of a quarter-circle, not a semicircle."
+    },
+    {
+      "question_id": "T02.04.Q033",
+      "type": "mcq",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area under the curve y = 3 from x = 0 to x = 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area under a constant function y = 3 from x = 0 to x = 5 is calculated by integrating the function over the given interval. The integral of 3 from 0 to 5 is 3 × (5 - 0) = 15, so the area under the curve is 15 square units.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the area under the curve. Option A) 3 is the value of the constant function, not the area. Option B) 5 is the length of the interval, not the area. Option D) 8 is incorrect because it does not account for the full interval from 0 to 5."
+    },
+    {
+      "question_id": "T02.04.Q034",
+      "type": "mcq",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The area between y = x and y = x³ from x = 0 to x = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "1/3"
+        },
+        {
+          "id": "D",
+          "text": "1/6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1/4. This is because the area between the two curves y = x and y = x³ from x = 0 to x = 1 is the integral of [x - x³] dx over the interval [0, 1], which evaluates to 1/4.",
+      "explanation_incorrect": "The incorrect options are not correct because the area between the two curves is not 1/2 (option A), 1/3 (option C), or 1/6 (option D). The correct formula to calculate the area is to integrate the difference between the two functions, y = x and y = x³, from x = 0 to x = 1, which gives the result of 1/4."
+    },
+    {
+      "question_id": "T02.04.Q035",
+      "type": "mcq",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The area of the region bounded by y² = 8x and x = 2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "16√2/3"
+        },
+        {
+          "id": "B",
+          "text": "32/3"
+        },
+        {
+          "id": "C",
+          "text": "16/3"
+        },
+        {
+          "id": "D",
+          "text": "8√2/3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area of the region bounded by the parabola y² = 8x and the line x = 2 is given by the definite integral ∫₀² (8x)^(1/2) dx, which evaluates to 32/3 square units.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the integration formula for the area bounded by a curve and the x-axis. Option A incorrectly calculates the area as 16√2/3 square units, while options C and D are also incorrect. The correct approach is to integrate the square root of 8x from 0 to 2, which gives the area of 32/3 square units."
+    },
+    {
+      "question_id": "T02.04.Q036",
+      "type": "true_false",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area under a curve above the x-axis is always positive.",
+      "correct_answer": true,
+      "explanation_correct": "The area under a curve above the x-axis is always positive because the function value f(x) is greater than or equal to 0. Since the definite integral ∫ f(x) dx represents the area, and the function is non-negative, the area must be positive.",
+      "explanation_incorrect": "The statement that the area under a curve above the x-axis is always positive is true. This is because the function value f(x) is greater than or equal to 0 in this case. If the curve lies below the x-axis, the area would be negative, but the question specifies that the curve is above the x-axis, so the area is always positive."
+    },
+    {
+      "question_id": "T02.04.Q037",
+      "type": "true_false",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "question_text": "To find the area between two curves, we always need to find their points of intersection.",
+      "correct_answer": true,
+      "explanation_correct": "The points of intersection between two curves are important to determine the limits of integration when finding the area between them. The area is the integral of the difference between the two curves, and the limits of integration are defined by the intersection points.",
+      "explanation_incorrect": "The points of intersection are not always necessary to find the area between two curves. If the curves do not intersect within the given interval, you can still find the area by integrating the difference between the two curves over the entire interval. However, if the curves do intersect, the intersection points are needed to determine the correct limits of integration."
+    },
+    {
+      "question_id": "T02.04.Q038",
+      "type": "true_false",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "∫₀^(2π) sin(x) dx gives the total area enclosed between y = sin(x) and the x-axis from 0 to 2π.",
+      "correct_answer": false,
+      "explanation_correct": "The integral ∫₀^(2π) sin(x) dx gives the area under the curve y = sin(x) from x = 0 to x = 2π. However, this area is not the total area enclosed between the curve and the x-axis, as the curve goes both above and below the x-axis. The total area enclosed would require taking the absolute value of the integral.",
+      "explanation_incorrect": "The statement is incorrect because the integral ∫₀^(2π) sin(x) dx only gives the area under the curve y = sin(x) from x = 0 to x = 2π, not the total area enclosed between the curve and the x-axis. The curve goes both above and below the x-axis, so the total area enclosed would require taking the absolute value of the integral to account for the negative regions."
+    },
+    {
+      "question_id": "T02.04.Q039",
+      "type": "true_false",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The area of a circle of radius r can be computed as 4∫₀ʳ √(r² − x²) dx.",
+      "correct_answer": true,
+      "explanation_correct": "The formula for the area of a circle is πr², which can be computed using integration as ∫₀ʳ 2πx dx, where x is the variable representing the radius. This is equivalent to 4∫₀ʳ √(r² - x²) dx, since the integrand represents the area of an infinitesimal strip of the circle's cross-section.",
+      "explanation_incorrect": "The incorrect answer likely comes from a misunderstanding that the area of a circle can be computed by integrating the square root of the difference between the square of the radius and the square of the variable x. However, this formula does not correctly represent the area of a circle, which is given by the well-known formula πr². The correct formula using integration is ∫₀ʳ 2πx dx, which simplifies to 4∫₀ʳ √(r² - x²) dx."
+    },
+    {
+      "question_id": "T02.04.Q040",
+      "type": "true_false",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "If two curves do not intersect on [a, b] and one is always above the other, the area between them equals ∫ₐᵇ [f(x) − g(x)] dx where f(x) ≥ g(x).",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because if two curves do not intersect on the interval [a, b], and one curve is always above the other, then the area between the two curves can be calculated by integrating the difference between the functions of the two curves, where the upper curve function is f(x) and the lower curve function is g(x), over the interval [a, b].",
+      "explanation_incorrect": "If the two curves intersect on the interval [a, b], the points of intersection determine the limits of integration, and the area between the curves is calculated by integrating the difference between the functions of the two curves, where the upper curve function is f(x) and the lower curve function is g(x), over the relevant subintervals. However, the statement is correct if the two curves do not intersect on [a, b] and one curve is always above the other."
+    },
+    {
+      "question_id": "T02.04.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area under y = x from x = 0 to x = 6 is ___.",
+      "correct_answer": "18",
+      "explanation_correct": "The area under the curve y = x from x = 0 to x = 6 is the area of a triangle with base 6 and height 6, which is 1/2 * 6 * 6 = 18 square units.",
+      "explanation_incorrect": "The accepted answer format is a number, so the correct answer is 18. Some students may think the area is the sum of the y-values from 0 to 6, which would be 0 + 1 + 2 + 3 + 4 + 5 + 6 = 21. However, the area under the curve y = x is calculated using integration, which gives the exact formula 1/2 * 6 * 6 = 18 square units."
+    },
+    {
+      "question_id": "T02.04.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "question_text": "The area under y = x² from x = 0 to x = 2 is ___.",
+      "correct_answer": "8/3",
+      "explanation_correct": "The area under the curve y = x² from x = 0 to x = 2 can be calculated using the definite integral ∫₀²x² dx. Evaluating this integral, we get the area as 8/3 square units.",
+      "explanation_incorrect": "The incorrect answer would be to simply integrate y = x² from 0 to 2, which would give the result as ∫₀²x² dx = (x³/3)₀² = 2³/3 - 0³/3 = 8/3 square units. The accepted answer format is a fraction, so the correct answer is 8/3."
+    },
+    {
+      "question_id": "T02.04.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "The area between y = x and y = x² from x = 0 to x = 1 is ___.",
+      "correct_answer": "1/6",
+      "explanation_correct": "The area between the curves y = x and y = x² from x = 0 to x = 1 is 1/6 because the area under the curve y = x from x = 0 to x = 1 is 1/2, and the area under the curve y = x² from x = 0 to x = 1 is 1/3, so the difference between these two areas is 1/2 - 1/3 = 1/6.",
+      "explanation_incorrect": "The incorrect answer would be to say the area is 1/3. This is because the student may have mistaken the integral for the area under just one of the curves, y = x or y = x², instead of the area between the two curves. The correct answer is 1/6, as explained in the correct explanation."
+    },
+    {
+      "question_id": "T02.04.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "question_text": "The area of the circle x² + y² = 25 is ___.",
+      "correct_answer": "25π",
+      "explanation_correct": "The area of the circle x² + y² = 25 is 25π because the radius of the circle is 5 units, and the area of a circle is given by the formula πr², where r is the radius. Substituting r = 5 gives us the area as 25π.",
+      "explanation_incorrect": "The incorrect answer would be to think that the area is simply 25 units squared. This is wrong because the formula for the area of a circle is πr², where r is the radius. In this case, the radius is 5 units, so the correct formula to use is πr², which gives us 25π as the area of the circle x² + y² = 25."
+    },
+    {
+      "question_id": "T02.04.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "The area of the ellipse x²/4 + y²/9 = 1 is ___.",
+      "correct_answer": "6π",
+      "explanation_correct": "The area of an ellipse with equation x²/a² + y²/b² = 1 is given by the formula πab, where a and b are the lengths of the major and minor axes, respectively. In this case, a = 2 and b = 3, so the area is 6π.",
+      "explanation_incorrect": "The accepted answer format is a single number, not an expression. The correct answer is 6π. To find the area of the given ellipse, we use the formula πab, where a and b are the lengths of the major and minor axes. In this case, a = 2 and b = 3, so the area is 6π."
+    },
+    {
+      "question_id": "T02.04.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "question_text": "The area enclosed between y = x² and y = x from x = 0 to x = 2 is ___.",
+      "correct_answer": "2/3",
+      "explanation_correct": "To find the area enclosed between the two curves y = x^2 and y = x from x = 0 to x = 2, we need to integrate the difference between the two functions. The area is given by the definite integral of [x^2 - x] from 0 to 2, which evaluates to 2/3.",
+      "explanation_incorrect": "The incorrect answer would be to simply integrate one of the functions, say y = x^2, from 0 to 2. This would give the area under the parabola y = x^2, which is not the area between the two curves. The correct answer is 2/3, obtained by integrating the difference between the two functions, [x^2 - x], from 0 to 2."
+    },
+    {
+      "question_id": "T02.04.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is ___.",
+      "correct_answer": "2",
+      "explanation_correct": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is 2 units. This is because the cosine function is positive between 0 and π, and the definite integral of cos(x) from 0 to π is equal to 2.",
+      "explanation_incorrect": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is not 1. The correct answer is 2. This is because the area under the cosine curve from 0 to π is equal to 2 units, as the definite integral of cos(x) from 0 to π is 2."
+    },
+    {
+      "question_id": "T02.04.Q048",
+      "type": "ordering",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to find the area between two curves y = f(x) and y = g(x):",
+      "ordering_items": [
+        "Find points of intersection by solving f(x) = g(x)",
+        "Determine which curve is on top in each interval",
+        "Set up the integral ∫ₐᵇ [f(x) − g(x)] dx for each sub-interval",
+        "Evaluate the integrals and sum the absolute values"
+      ],
+      "correct_answer": [
+        "Find points of intersection by solving f(x) = g(x)",
+        "Determine which curve is on top in each interval",
+        "Set up the integral ∫ₐᵇ [f(x) − g(x)] dx for each sub-interval",
+        "Evaluate the integrals and sum the absolute values"
+      ],
+      "explanation_correct": "This is the correct order of steps because first you need to find the points where the two curves intersect, then determine which curve is on top in each interval, then set up the integral to calculate the area between the curves in each interval, and finally evaluate and sum the absolute values of the integrals to get the total area.",
+      "explanation_incorrect": "The incorrect order would be to skip the first step of finding the points of intersection. This is important because the points of intersection define the limits of integration for each sub-interval where one curve is above the other. Without knowing the intersection points, you cannot properly set up the integral to calculate the area between the curves."
+    },
+    {
+      "question_id": "T02.04.Q049",
+      "type": "ordering",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the area of the circle x² + y² = r² using integration:",
+      "ordering_items": [
+        "Express y = √(r² − x²) for the upper semicircle",
+        "Set up ∫₋ᵣʳ √(r² − x²) dx for the upper half",
+        "Use symmetry: Area = 4∫₀ʳ √(r² − x²) dx",
+        "Evaluate using substitution x = r sin(θ) to get πr²"
+      ],
+      "correct_answer": [
+        "Express y = √(r² − x²) for the upper semicircle",
+        "Set up ∫₋ᵣʳ √(r² − x²) dx for the upper half",
+        "Use symmetry: Area = 4∫₀ʳ √(r² − x²) dx",
+        "Evaluate using substitution x = r sin(θ) to get πr²"
+      ],
+      "explanation_correct": "The correct order of steps makes sense because we first need to express the circle equation in terms of y to set up the integral, then use symmetry to simplify the integral, and finally evaluate the integral using a clever substitution to get the final area of πr².",
+      "explanation_incorrect": "The incorrect order would not work because you need to first express the circle equation in terms of y before setting up the integral. Simply setting up the integral without first expressing y in terms of x would not give the correct integral to evaluate. The steps must be in the right order to properly set up and evaluate the integral to find the area of the circle."
+    },
+    {
+      "question_id": "T02.04.Q050",
+      "type": "ordering",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to find the area bounded by a curve, the x-axis, and two vertical lines:",
+      "ordering_items": [
+        "Identify the curve y = f(x) and the limits x = a and x = b",
+        "Check whether f(x) ≥ 0 or f(x) < 0 on [a, b]",
+        "If f(x) ≥ 0, compute ∫ₐᵇ f(x) dx; if f(x) < 0, compute −∫ₐᵇ f(x) dx",
+        "If f(x) changes sign, split into sub-intervals and add absolute values"
+      ],
+      "correct_answer": [
+        "Identify the curve y = f(x) and the limits x = a and x = b",
+        "Check whether f(x) ≥ 0 or f(x) < 0 on [a, b]",
+        "If f(x) ≥ 0, compute ∫ₐᵇ f(x) dx; if f(x) < 0, compute −∫ₐᵇ f(x) dx",
+        "If f(x) changes sign, split into sub-intervals and add absolute values"
+      ],
+      "explanation_correct": "The given steps are in the correct order to find the area bounded by a curve, the x-axis, and two vertical lines. The first step is to identify the curve y = f(x) and the limits x = a and x = b. Then, you need to check whether the function f(x) is greater than or equal to 0 or less than 0 on the given interval [a, b]. Based on this, you can compute the definite integral to find the area.",
+      "explanation_incorrect": "The incorrect explanation would be to skip the step of checking the sign of the function f(x) on the interval [a, b]. This is important because if the function is negative, you need to compute the negative of the definite integral to get the correct area. Additionally, if the function changes sign within the interval, you would need to split the interval and add the absolute values of the integrals for each sub-interval."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 11,
+        "application": 23,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

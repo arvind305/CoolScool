@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Linear Programming",
+  "canonical_explanation": {
+    "text": "Linear Programming (LP) is a mathematical method for optimising a linear objective function Z = ax + by subject to a system of linear inequality constraints. The decision variables x and y typically satisfy non-negativity constraints (x ≥ 0, y ≥ 0). The feasible region is the set of all points (x, y) satisfying all constraints simultaneously, forming a convex polygon (or unbounded region). By the Corner Point Theorem, the optimal value (maximum or minimum) of the objective function, if it exists, occurs at one of the vertices (corner points) of the feasible region. The graphical method involves: (1) plotting each constraint as a line and shading the appropriate half-plane, (2) identifying the feasible region, (3) finding all corner points, and (4) evaluating Z at each corner point to determine the optimum. Common applications include manufacturing problems (maximise profit), diet problems (minimise cost), and transportation/allocation problems.",
+    "rules": [
+      "The optimal value of the objective function occurs at a corner point of the feasible region (Corner Point Theorem).",
+      "A bounded feasible region always has both a maximum and a minimum; an unbounded feasible region may have only one or neither.",
+      "Non-negativity constraints (x ≥ 0, y ≥ 0) restrict the feasible region to the first quadrant."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In a linear programming problem, the function to be maximised or minimised is called the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constraint function"
+        },
+        {
+          "id": "B",
+          "text": "Decision function"
+        },
+        {
+          "id": "C",
+          "text": "Objective function"
+        },
+        {
+          "id": "D",
+          "text": "Feasible function"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function to be maximised or minimised in a linear programming problem is called the objective function, as it is the function that represents the quantity you want to optimise (such as profit or cost).",
+      "explanation_incorrect": "The objective function is the main function in a linear programming problem that you want to maximise or minimise, such as profit or cost. It is not a constraint function, decision function, or feasible function, which are all different concepts in linear programming."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The variables x and y in a linear programming problem are called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constraint variables"
+        },
+        {
+          "id": "B",
+          "text": "Decision variables"
+        },
+        {
+          "id": "C",
+          "text": "Objective variables"
+        },
+        {
+          "id": "D",
+          "text": "Slack variables"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The variables x and y in a linear programming problem are called decision variables because they represent the quantities being optimised (e.g. the number of units of each product to manufacture) to maximise or minimise the objective function.",
+      "explanation_incorrect": "The variables x and y are not constraint variables, objective variables, or slack variables in a linear programming problem. Constraint variables represent the limits or resources in the problem, while objective variables represent the function to be optimised. Slack variables are used to convert inequality constraints into equalities, which is not relevant in this case."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a non-negativity constraint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x + y ≤ 10"
+        },
+        {
+          "id": "B",
+          "text": "2x + 3y ≥ 6"
+        },
+        {
+          "id": "C",
+          "text": "x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "D",
+          "text": "x − y = 0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The non-negativity constraint requires that the decision variables must be greater than or equal to 0. Option C, x ≥ 0, y ≥ 0, is the correct non-negativity constraint in linear programming.",
+      "explanation_incorrect": "Options A, B, and D are not non-negativity constraints. Option A, x + y ≤ 10, is a linear inequality constraint. Option B, 2x + 3y ≥ 6, is also a linear inequality constraint. Option D, x - y = 0, is a linear equality constraint. The non-negativity constraint requires that the decision variables must be greater than or equal to 0, as shown in option C."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A linear constraint is of the form:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ax² + by² ≤ c"
+        },
+        {
+          "id": "B",
+          "text": "ax + by ≤ c (or ≥, =)"
+        },
+        {
+          "id": "C",
+          "text": "xy ≤ c"
+        },
+        {
+          "id": "D",
+          "text": "sin(x) + cos(y) ≤ 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A linear constraint in linear programming is of the form ax + by ≤ c (or ≥, =), where a, b, and c are constants. This is because the objective function and constraints in linear programming must be linear expressions, not involving any nonlinear functions like squares or trigonometric functions.",
+      "explanation_incorrect": "The other options are not valid forms of linear constraints. Option A involves a quadratic expression, which is not linear. Option C involves a nonlinear expression xy, and Option D involves trigonometric functions, which are also not linear expressions. Only option B, with the linear expression ax + by ≤ c, correctly represents a valid linear constraint in linear programming."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A factory produces tables and chairs. Each table gives a profit of ₹250 and each chair ₹150. If x tables and y chairs are produced, the objective function for maximising profit is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Z = 250x + 150y"
+        },
+        {
+          "id": "B",
+          "text": "Z = 250y + 150x"
+        },
+        {
+          "id": "C",
+          "text": "Z = x + y"
+        },
+        {
+          "id": "D",
+          "text": "Z = 250/x + 150/y"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The objective function for maximising profit is Z = 250x + 150y, where x is the number of tables and y is the number of chairs produced. This is because each table gives a profit of ₹250 and each chair gives a profit of ₹150, so the total profit is the sum of the profits from tables and chairs.",
+      "explanation_incorrect": "Option B is incorrect because the profits from tables and chairs are reversed. Option C is incorrect because the objective is to maximise the total profit, not just the sum of the number of tables and chairs. Option D is incorrect because the objective function should be linear in the decision variables x and y, not their reciprocals."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The set of all points satisfying all constraints of an LPP is called the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Optimal region"
+        },
+        {
+          "id": "B",
+          "text": "Feasible region"
+        },
+        {
+          "id": "C",
+          "text": "Constraint region"
+        },
+        {
+          "id": "D",
+          "text": "Decision region"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The set of all points (x, y) that satisfy all the constraints of the linear programming problem is called the feasible region. This is because the feasible region represents the set of all possible solutions to the problem.",
+      "explanation_incorrect": "The feasible region is not the optimal region, as the optimal region refers to the specific point(s) within the feasible region that optimizes (maximizes or minimizes) the objective function. The feasible region is also not the constraint region, as the constraints define the boundaries of the feasible region. Finally, the feasible region is not the decision region, as the decision region refers to the set of possible values that the decision variables (x and y) can take."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The corner point theorem states that the optimal value of Z occurs at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The centre of the feasible region"
+        },
+        {
+          "id": "B",
+          "text": "Any point on the boundary"
+        },
+        {
+          "id": "C",
+          "text": "A vertex (corner point) of the feasible region"
+        },
+        {
+          "id": "D",
+          "text": "The origin"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The corner point theorem states that the optimal value of the objective function Z occurs at one of the vertices (corner points) of the feasible region. This is because the feasible region is a convex polygon, and the maximum or minimum value of a linear function over a convex set must occur at an extreme point (corner).",
+      "explanation_incorrect": "The optimal value of Z does not occur at the centre of the feasible region (option A) or the origin (option D), as these points may not even be part of the feasible region. The optimal value also does not occur at any arbitrary point on the boundary (option B) - it must be at one of the vertices or corner points of the feasible region, as per the corner point theorem."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The corner points of a feasible region are (0, 0), (4, 0), (3, 2), and (0, 3). The maximum value of Z = 5x + 7y is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "21"
+        },
+        {
+          "id": "C",
+          "text": "29"
+        },
+        {
+          "id": "D",
+          "text": "35"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The maximum value of the objective function Z = 5x + 7y occurs at one of the corner points of the feasible region. Since the corner points are (0, 0), (4, 0), (3, 2), and (0, 3), we need to evaluate Z at each of these points. Calculating the values, we get Z = 0 at (0, 0), Z = 20 at (4, 0), Z = 29 at (3, 2), and Z = 21 at (0, 3). Therefore, the maximum value of Z is 29, which occurs at the corner point (3, 2).",
+      "explanation_incorrect": "The incorrect options do not represent the maximum value of the objective function Z = 5x + 7y. Option A (20) is the value of Z at the corner point (4, 0), which is not the maximum. Option B (21) is the value of Z at the corner point (0, 3), which is also not the maximum. Option D (35) is incorrect because it does not match the maximum value calculated from the given corner points."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The corner points of a feasible region are (0, 8), (4, 4), (6, 0). The minimum value of Z = 3x + 2y is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "16"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The minimum value of the objective function Z = 3x + 2y occurs at the corner point (6, 0), where Z = 3(6) + 2(0) = 18. This is the lowest value of Z among the given corner points (0, 8), (4, 4), and (6, 0).",
+      "explanation_incorrect": "The correct answer is A) 16. To find the minimum value of Z, we need to evaluate the objective function at each corner point and select the lowest value. At the corner point (0, 8), Z = 3(0) + 2(8) = 16, which is the minimum value among the given options."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For Z = 2x + 3y with feasible region vertices (0, 0), (5, 0), (3, 4), (0, 6), the maximum value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "18"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum value of the objective function Z = 2x + 3y is 18, which occurs at the corner point (3, 4). By the Corner Point Theorem, the optimal value of Z must occur at one of the vertices of the feasible region, so we need to evaluate Z at each corner point and find the maximum.",
+      "explanation_incorrect": "The incorrect options are not the maximum value of Z. Option A (10) is the value of Z at the corner point (5, 0), Option C (12) is the value of Z at the corner point (0, 4), and Option D (15) is the value of Z at the corner point (0, 5). The correct maximum value is 18, which occurs at the corner point (3, 4)."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A diet requires at least 100 units of vitamin A and 80 units of vitamin B. Food X provides 2 units of A and 1 unit of B per kg, and costs ₹5/kg. Food Y provides 1 unit of A and 2 units of B per kg, and costs ₹7/kg. The constraints for this problem are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + y ≥ 100, x + 2y ≥ 80, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "B",
+          "text": "2x + y ≤ 100, x + 2y ≤ 80, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "C",
+          "text": "x + y ≥ 180, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "D",
+          "text": "5x + 7y ≤ 100, x ≥ 0, y ≥ 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct constraints are 2x + y ≥ 100 (at least 100 units of vitamin A), x + 2y ≥ 80 (at least 80 units of vitamin B), x ≥ 0, and y ≥ 0. This represents the feasible region where the requirements for both vitamins A and B are met.",
+      "explanation_incorrect": "Option B is incorrect because the constraints should be greater than or equal to the vitamin requirements, not less than or equal to. Option C is incorrect because it does not capture the specific vitamin requirements. Option D is incorrect because it does not include the constraints for the vitamin requirements."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "If no point satisfies all the constraints simultaneously, the LPP is said to be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unbounded"
+        },
+        {
+          "id": "B",
+          "text": "Infeasible"
+        },
+        {
+          "id": "C",
+          "text": "Bounded"
+        },
+        {
+          "id": "D",
+          "text": "Degenerate"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If no point satisfies all the constraints simultaneously, the linear programming problem (LPP) is said to be infeasible. This means there is no solution that satisfies all the given constraints, and the problem has no feasible region.",
+      "explanation_incorrect": "The correct answer is that the LPP is infeasible. If there are no points that satisfy all the constraints, it means the constraints are incompatible, and the feasible region is empty. The LPP is not unbounded, as that refers to a situation where the feasible region extends indefinitely. It is also not bounded, as that implies the feasible region is a finite polygon. Finally, the LPP is not degenerate, which is a special case where some constraints are redundant or the optimal solution lies on multiple corners of the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A feasible region that extends indefinitely in some direction is called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bounded"
+        },
+        {
+          "id": "B",
+          "text": "Infeasible"
+        },
+        {
+          "id": "C",
+          "text": "Unbounded"
+        },
+        {
+          "id": "D",
+          "text": "Optimal"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A feasible region that extends indefinitely in some direction is called 'unbounded'. This means that the feasible region has no finite limits in one or more dimensions, unlike a 'bounded' region which is confined within finite boundaries.",
+      "explanation_incorrect": "The feasible region in a linear programming problem is not 'bounded' if it extends indefinitely in some direction. This means that the region has no finite limits in one or more dimensions, and is therefore considered 'unbounded'. It is not 'infeasible' as that refers to a region that has no feasible solutions at all, and it is not 'optimal' as that refers to the best solution, not the shape of the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Maximise Z = 4x + 6y subject to x + y ≤ 8, x ≤ 5, y ≤ 5, x ≥ 0, y ≥ 0. The maximum value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "40"
+        },
+        {
+          "id": "B",
+          "text": "42"
+        },
+        {
+          "id": "C",
+          "text": "44"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum value of the objective function Z = 4x + 6y is 42, which occurs at the corner point (3, 5) of the feasible region. This can be verified by evaluating Z at each corner point and finding the maximum value.",
+      "explanation_incorrect": "The correct answer is B) 42. To find the maximum value, we need to first identify the feasible region by plotting the constraints on a graph. The feasible region is a triangle with vertices at (0, 0), (5, 0), and (3, 5). Evaluating the objective function Z = 4x + 6y at each of these corner points, we get Z = 0 at (0, 0), Z = 20 at (5, 0), and Z = 42 at (3, 5). Therefore, the maximum value of Z is 42."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Minimise Z = x + 2y subject to 2x + y ≥ 3, x + 2y ≥ 6, x ≥ 0, y ≥ 0. The minimum value of Z occurs at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 3)"
+        },
+        {
+          "id": "B",
+          "text": "(6, 0)"
+        },
+        {
+          "id": "C",
+          "text": "(0, 6)"
+        },
+        {
+          "id": "D",
+          "text": "(3, 0)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The minimum value of Z = x + 2y occurs at the point (0, 3), which is one of the corner points of the feasible region defined by the given constraints. This can be verified by evaluating Z at each corner point and finding the smallest value.",
+      "explanation_incorrect": "The correct answer is option A, (0, 3). The feasible region for the given constraints forms a convex polygon, and the optimal (minimum) value of the objective function Z = x + 2y occurs at one of the vertices or corner points of this polygon. By evaluating Z at each corner point, we can see that the minimum value of Z is 6, which occurs at the point (0, 3)."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A manufacturer makes two products A and B. Product A requires 2 hours on machine I and 1 hour on machine II. Product B requires 1 hour on machine I and 3 hours on machine II. Machine I is available for 10 hours and machine II for 12 hours. Profits are ₹40 and ₹60 per unit. The LPP formulation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Max Z = 40x + 60y; 2x + y ≤ 10, x + 3y ≤ 12, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "B",
+          "text": "Max Z = 40x + 60y; 2x + y ≤ 12, x + 3y ≤ 10, x ≥ 0, y ≥ 0"
+        },
+        {
+          "id": "C",
+          "text": "Min Z = 40x + 60y; 2x + y ≥ 10, x + 3y ≥ 12"
+        },
+        {
+          "id": "D",
+          "text": "Max Z = 60x + 40y; 2x + y ≤ 10, x + 3y ≤ 12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The LPP formulation is correct because the objective function is to maximize profit (Z = 40x + 60y), and the constraints are the time limits on the two machines (2x + y ≤ 10 and x + 3y ≤ 12), with non-negativity constraints on the decision variables (x ≥ 0, y ≥ 0).",
+      "explanation_incorrect": "The incorrect options have the following issues: Option B has the constraints reversed, Option C is minimizing the objective function instead of maximizing, and Option D has the wrong coefficients in the objective function. The correct LPP formulation is to maximize the profit function Z = 40x + 60y subject to the given machine time constraints and non-negativity constraints."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "In an unbounded feasible region, which of the following is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum of Z always exists"
+        },
+        {
+          "id": "B",
+          "text": "Minimum of Z always exists"
+        },
+        {
+          "id": "C",
+          "text": "The maximum or minimum may or may not exist"
+        },
+        {
+          "id": "D",
+          "text": "Neither maximum nor minimum ever exists"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an unbounded feasible region, the maximum or minimum value of the objective function Z may or may not exist. This is because as you move further out in the unbounded region, the values of Z can keep increasing or decreasing without bound, so there may not be a definite maximum or minimum point.",
+      "explanation_incorrect": "Option C is correct because in an unbounded feasible region, the objective function Z can keep increasing or decreasing without bound, so a maximum or minimum may not necessarily exist. Options A and B are incorrect because the maximum or minimum of Z is not guaranteed to exist in an unbounded region. Option D is incorrect because it is possible for either the maximum or minimum to exist, even if the other does not."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The feasible region is a triangle with vertices (0, 0), (4, 0), (0, 3). The value of Z = 3x + 5y at (0, 3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The feasible region is a triangle with vertices (0, 0), (4, 0), and (0, 3). The value of the objective function Z = 3x + 5y at the point (0, 3) can be calculated as Z = 3(0) + 5(3) = 15, which is option B.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the value of Z at the point (0, 3). Option A (12) and option C (3) do not properly substitute the values of x and y into the objective function Z = 3x + 5y. Option D (0) is incorrect because the objective function value at (0, 3) is clearly not 0."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "The inequality x + y ≤ 10 represents the half-plane:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Below and including the line x + y = 10"
+        },
+        {
+          "id": "B",
+          "text": "Above and including the line x + y = 10"
+        },
+        {
+          "id": "C",
+          "text": "Only the line x + y = 10"
+        },
+        {
+          "id": "D",
+          "text": "The entire coordinate plane"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The inequality x + y ≤ 10 represents the half-plane below and including the line x + y = 10. This is because the inequality 'less than or equal to' (≤) means that the feasible region includes the line itself, and the points on the 'lower' side of the line.",
+      "explanation_incorrect": "Option B is incorrect because the inequality x + y ≤ 10 represents the half-plane below and including the line x + y = 10, not above it. Option C is incorrect because the inequality represents a half-plane, not just the line itself. Option D is incorrect because the inequality represents a specific half-plane, not the entire coordinate plane."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the maximum of Z = ax + by occurs at two adjacent corner points of the feasible region, then Z attains the same maximum value at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only those two points"
+        },
+        {
+          "id": "B",
+          "text": "Every point on the line segment joining those two corner points"
+        },
+        {
+          "id": "C",
+          "text": "Every point in the feasible region"
+        },
+        {
+          "id": "D",
+          "text": "The midpoint of the line segment only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum of the linear objective function Z = ax + by occurs at the corner points of the feasible region. If the maximum occurs at two adjacent corner points, then the linear function Z must be constant along the line segment joining those two points. Therefore, Z attains the same maximum value at every point on that line segment.",
+      "explanation_incorrect": "The correct option is B. The maximum of Z = ax + by occurs at the corner points of the feasible region. If the maximum occurs at two adjacent corner points, then the linear function Z must be constant along the line segment joining those two points. This means that Z attains the same maximum value at every point on that line segment, not just the two corner points (option A) or the midpoint (option D). Option C is incorrect because Z does not necessarily attain the same maximum value at every point in the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Maximise Z = 11x + 7y subject to 2x + y ≤ 6, x ≤ 2, x ≥ 0, y ≥ 0. The maximum value of Z is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "22"
+        },
+        {
+          "id": "B",
+          "text": "33"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "42"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The maximum value of Z is 36. By plotting the feasible region and evaluating the objective function Z at each corner point, we find that the maximum value of Z occurs at the point (2, 2), where Z = 11(2) + 7(2) = 36.",
+      "explanation_incorrect": "Option C is correct because the graphical method of solving the linear programming problem involves finding the optimal value of the objective function at the corner points of the feasible region. In this case, the feasible region is a triangle with vertices at (0, 0), (2, 0), and (2, 2), and the maximum value of Z occurs at the point (2, 2) where Z = 11(2) + 7(2) = 36."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The graphical method of solving LPPs is applicable when the number of decision variables is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Any number"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The graphical method is applicable when there are only 2 decision variables (x and y). This is because the feasible region can be plotted on a 2D graph, and the optimal solution can be found by evaluating the objective function at the corner points of this region.",
+      "explanation_incorrect": "The graphical method cannot be used when there are 1, 3, or any other number of decision variables. With 1 variable, the feasible region would be a line segment, and with 3 or more variables, the feasible region would exist in a higher-dimensional space that cannot be easily visualized on a 2D graph. In these cases, other optimization methods such as the simplex method must be used to solve the linear programming problem."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The constraints x ≥ 0, y ≥ 0 restrict the feasible region to the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "First quadrant"
+        },
+        {
+          "id": "B",
+          "text": "Second quadrant"
+        },
+        {
+          "id": "C",
+          "text": "Third quadrant"
+        },
+        {
+          "id": "D",
+          "text": "Fourth quadrant"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The constraints x ≥ 0 and y ≥ 0 restrict the feasible region to the first quadrant (where both x and y are non-negative) because they define the positive coordinate plane where both variables have positive values.",
+      "explanation_incorrect": "The feasible region is not restricted to the second, third, or fourth quadrants because the constraints x ≥ 0 and y ≥ 0 require both variables to be non-negative. This means the feasible region lies in the first quadrant, where both x and y have positive values."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Minimise Z = 3x + 5y subject to x + 3y ≥ 3, x + y ≥ 2, x ≥ 0, y ≥ 0. The minimum value of Z is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The minimum value of Z = 3x + 5y occurs at the corner point (0, 2), where x = 0 and y = 2. Substituting these values, we get Z = 3(0) + 5(2) = 10, which is the minimum value of the objective function.",
+      "explanation_incorrect": "The incorrect options do not correctly minimize the objective function Z = 3x + 5y. Option A (5) is too low, Option C (6) is too high, and Option D (9) is also too high. The correct minimum value of Z is 7, which occurs at the corner point (0, 2) of the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Maximise Z = x + y subject to x + 2y ≤ 10, 2x + y ≤ 14, x ≥ 0, y ≥ 0. The maximum value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum value of the objective function Z = x + y is 8. This can be determined by finding the corner points of the feasible region defined by the given constraints, and evaluating Z at each corner point. The corner points are (0, 5), (4, 3), and (10, 0), and Z evaluated at these points gives 5, 7, and 8 respectively. Therefore, the maximum value of Z is 8.",
+      "explanation_incorrect": "The correct answer is A) 8. This is because the optimal value of the objective function Z = x + y occurs at one of the corner points of the feasible region, and the maximum value of Z evaluated at the corner points is 8. The other options are incorrect because they do not represent the maximum value of the objective function given the constraints."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "In a transportation problem, the objective is typically to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximise the number of routes"
+        },
+        {
+          "id": "B",
+          "text": "Minimise the total transportation cost"
+        },
+        {
+          "id": "C",
+          "text": "Maximise the distance"
+        },
+        {
+          "id": "D",
+          "text": "Minimise the number of products"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a transportation problem, the objective is typically to minimise the total transportation cost. This is because the goal is to find the most efficient and cost-effective way to transport goods or resources from one location to another.",
+      "explanation_incorrect": "The objective in a transportation problem is not to maximise the number of routes, maximise the distance, or minimise the number of products. The main goal is to find the most cost-effective way to transport the goods, so the correct answer is to minimise the total transportation cost."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A bounded feasible region always has:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A maximum only"
+        },
+        {
+          "id": "B",
+          "text": "A minimum only"
+        },
+        {
+          "id": "C",
+          "text": "Both a maximum and a minimum"
+        },
+        {
+          "id": "D",
+          "text": "Neither a maximum nor a minimum"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A bounded feasible region, which is a convex polygon, always has both a maximum and a minimum value for the objective function. This is because the optimal value occurs at one of the vertices (corner points) of the feasible region, and a bounded region has a finite number of vertices.",
+      "explanation_incorrect": "Option C is correct because a bounded feasible region is a closed and finite set, which means it must have both a maximum and a minimum value for the objective function. This is due to the Corner Point Theorem, which states that the optimal value occurs at one of the vertices of the feasible region. Options A and B are incorrect because a bounded region must have both a maximum and a minimum."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If the feasible region is a quadrilateral with vertices (0, 0), (5, 0), (4, 3), (0, 4), then the maximum of Z = 2x + 3y occurs at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(5, 0)"
+        },
+        {
+          "id": "B",
+          "text": "(4, 3)"
+        },
+        {
+          "id": "C",
+          "text": "(0, 4)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 0)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum of Z = 2x + 3y occurs at the vertex (4, 3) because this point is a corner point of the feasible region, and by the Corner Point Theorem, the optimal value of the objective function occurs at one of the vertices.",
+      "explanation_incorrect": "The maximum of Z = 2x + 3y does not occur at (5, 0), (0, 4), or (0, 0) because these points are not corner points of the feasible region. The correct answer is (4, 3) because this vertex maximizes the objective function Z = 2x + 3y within the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A carpenter makes chairs and tables. Each chair takes 2 hours of cutting and 3 hours of assembly. Each table takes 3 hours of cutting and 2 hours of assembly. Maximum available hours: cutting = 12, assembly = 12. If profit per chair is ₹100 and per table is ₹120, the maximum profit is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "₹480"
+        },
+        {
+          "id": "B",
+          "text": "₹528"
+        },
+        {
+          "id": "C",
+          "text": "₹540"
+        },
+        {
+          "id": "D",
+          "text": "₹600"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) ₹528. This is because the maximum profit is obtained by making the maximum number of chairs (3) and tables (2), given the time constraints. The profit per chair is ₹100 and per table is ₹120, so the total profit is 3 x ₹100 + 2 x ₹120 = ₹480 + ₹240 = ₹528.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not consider the time constraints and the maximum number of chairs and tables that can be made. Option A) ₹480 is too low, as it does not account for the maximum possible production. Option C) ₹540 is too high, as it exceeds the maximum profit that can be obtained given the time constraints. Option D) ₹600 is also incorrect, as it is not the maximum profit that can be achieved."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The feasible region of the constraints x ≥ 0, y ≥ 0, x + y ≤ 6 is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Line"
+        },
+        {
+          "id": "B",
+          "text": "Triangle"
+        },
+        {
+          "id": "C",
+          "text": "Rectangle"
+        },
+        {
+          "id": "D",
+          "text": "Pentagon"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The feasible region of the constraints x ≥ 0, y ≥ 0, x + y ≤ 6 is a triangle because the three constraints form the vertices of a triangle. The non-negativity constraints x ≥ 0 and y ≥ 0 create the positive quadrant, and the constraint x + y ≤ 6 forms the third side of the triangle.",
+      "explanation_incorrect": "The feasible region is not a line, rectangle, or pentagon. A line would only satisfy one constraint, a rectangle would require four constraints, and a pentagon would require five constraints. The three constraints given - x ≥ 0, y ≥ 0, and x + y ≤ 6 - form the vertices of a triangle, which is the correct feasible region."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The constraints x + y ≤ 4, x ≥ 6, y ≥ 0 define a feasible region that is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A bounded polygon"
+        },
+        {
+          "id": "B",
+          "text": "An unbounded region"
+        },
+        {
+          "id": "C",
+          "text": "Empty (infeasible)"
+        },
+        {
+          "id": "D",
+          "text": "A single point"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The constraints x + y ≤ 4, x ≥ 6, y ≥ 0 define a region that is empty (infeasible) because there are no points (x, y) that can satisfy all three constraints simultaneously. The condition x ≥ 6 means the x-value must be at least 6, but the constraint x + y ≤ 4 limits the sum of x and y to be at most 4, which is impossible.",
+      "explanation_incorrect": "The feasible region is not a bounded polygon because the constraint x ≥ 6 makes the region unbounded in the positive x-direction. It is also not a single point since there are infinitely many points (x, y) that could satisfy the constraints. The correct answer is that the feasible region is empty (infeasible) because there are no points that can satisfy all the constraints at the same time."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The feasible region is always a ___ set:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Concave"
+        },
+        {
+          "id": "B",
+          "text": "Convex"
+        },
+        {
+          "id": "C",
+          "text": "Circular"
+        },
+        {
+          "id": "D",
+          "text": "Parabolic"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The feasible region in linear programming is always a convex set, meaning any two points in the region can be connected by a line segment that also lies within the region. This is because the constraints in linear programming are linear inequalities, which represent half-planes, and the intersection of these half-planes forms a convex polygon.",
+      "explanation_incorrect": "The feasible region is not concave, circular, or parabolic. A concave set is the opposite of a convex set, where the line segment between any two points does not necessarily lie within the set. A circular or parabolic region would not satisfy the linear inequality constraints in linear programming."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "If Z = 7x + y and the feasible region has corner points (0, 0), (3, 0), (2, 3), (0, 4), then the maximum value of Z is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "21"
+        },
+        {
+          "id": "B",
+          "text": "17"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum value of Z occurs at the corner point (3, 0) since the objective function Z = 7x + y is maximized when x = 3 and y = 0, giving a maximum value of 7(3) + 0 = 21.",
+      "explanation_incorrect": "The correct answer is A) 21. This is because the objective function Z = 7x + y is maximized when x = 3 and y = 0, which is the corner point (3, 0). Plugging in these values gives Z = 7(3) + 0 = 21, which is the maximum value of the objective function."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "For an unbounded feasible region, maximisation of Z may result in:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A finite maximum always"
+        },
+        {
+          "id": "B",
+          "text": "Z can increase without bound (no maximum)"
+        },
+        {
+          "id": "C",
+          "text": "Z is always zero"
+        },
+        {
+          "id": "D",
+          "text": "The problem has no solution at all"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the feasible region is unbounded, then the objective function Z can increase without bound, meaning there is no maximum value that can be achieved. This is because as the values of the decision variables x and y get larger, the value of Z can continue increasing without reaching an upper limit.",
+      "explanation_incorrect": "Option B is correct because in an unbounded feasible region, the objective function Z can increase without bound. The other options are incorrect - option A is wrong because a finite maximum is not guaranteed, option C is wrong because Z is not always zero, and option D is wrong because the problem does have a solution, even if it is an unbounded maximum."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Maximise Z = 3x + 4y subject to x + y ≤ 7, 2x + y ≤ 10, x ≥ 0, y ≥ 0. The maximum value of Z is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "27"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum value of Z = 3x + 4y is 28, which occurs at the vertex (4, 3) of the feasible region. This can be verified by evaluating the objective function at each corner point of the feasible region (determined by the given constraints) and finding the maximum value.",
+      "explanation_incorrect": "The correct answer is A) 28. To find the maximum value, we first plot the constraints x + y ≤ 7 and 2x + y ≤ 10 to determine the feasible region, which is a triangle. We then evaluate the objective function Z = 3x + 4y at each corner point of the triangle and find that the maximum value is 28, which occurs at the point (4, 3)."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "true_false",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The optimal solution of a linear programming problem always occurs at a corner point of the feasible region.",
+      "correct_answer": true,
+      "explanation_correct": "The optimal solution of a linear programming problem always occurs at a corner point of the feasible region because the objective function is linear, and the Corner Point Theorem states that the maximum or minimum value of a linear function over a convex region occurs at one of the vertices (corner points) of that region.",
+      "explanation_incorrect": "The incorrect statement would be that the optimal solution can occur anywhere within the feasible region, not just at the corner points. This is not true because the objective function is linear, and the Corner Point Theorem guarantees that the maximum or minimum value will be achieved at one of the vertices of the feasible region, which is a convex polygon. The optimal solution cannot lie anywhere else within the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "true_false",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In a linear programming problem, the objective function and all constraints must be linear.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because linear programming, by definition, requires the objective function and all constraints to be linear. If any part of the problem is non-linear, it would not be a linear programming problem.",
+      "explanation_incorrect": "The statement is true because in linear programming, the objective function and all constraints must be linear. If any part of the problem is non-linear, it would not be a valid linear programming problem. Some common misconceptions may be that the decision variables can be non-linear, or that the feasible region can have a non-linear boundary, but these are not correct. Linear programming requires linearity throughout the entire problem formulation."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "An infeasible LPP has an empty feasible region.",
+      "correct_answer": true,
+      "explanation_correct": "An infeasible linear programming problem (LPP) has an empty feasible region because the system of linear constraints cannot be satisfied simultaneously. This means there are no points (x, y) that satisfy all the constraints, so the feasible region is empty.",
+      "explanation_incorrect": "A common misconception is that an infeasible LPP has a non-empty feasible region. However, this is not correct. In an infeasible LPP, the system of linear constraints is inconsistent, meaning there are no points (x, y) that can satisfy all the constraints simultaneously. This results in an empty feasible region, and the problem has no feasible solution."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "true_false",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The feasible region of a linear programming problem is always bounded.",
+      "correct_answer": false,
+      "explanation_correct": "The feasible region of a linear programming problem is not always bounded. In some cases, the feasible region may be unbounded, extending infinitely in one or more directions. This can occur when the constraints do not form a closed polygon, but rather an open region.",
+      "explanation_incorrect": "It is a common misconception that the feasible region of a linear programming problem is always bounded. However, this is not the case. The feasible region can be unbounded, meaning it extends infinitely in one or more directions. This can happen when the constraints do not form a closed polygon, but rather an open region. So the statement 'The feasible region of a linear programming problem is always bounded' is false."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the objective function Z takes the same optimal value at two corner points, it takes the same value at all points on the line segment joining them.",
+      "correct_answer": true,
+      "explanation_correct": "If the objective function Z takes the same optimal value at two corner points, then the line segment joining these points is part of the feasible region. Since the objective function Z is linear, it will have the same value at all points along this line segment.",
+      "explanation_incorrect": "The incorrect answer assumes that if the objective function takes the same value at two corner points, it must take the same value at all points in the feasible region. However, this is not true. The objective function can take the same value at two corner points, but have different values at other points in the feasible region. The key is that the objective function is linear, so it will have the same value at all points along the line segment joining the two corner points."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The function Z = ax + by to be maximised or minimised in an LPP is called the ___ function.",
+      "correct_answer": "objective",
+      "explanation_correct": "The function Z = ax + by is called the objective function because it represents the quantity you want to maximize or minimize in the linear programming problem. The objective function defines the goal of the optimization, such as maximizing profit or minimizing cost.",
+      "explanation_incorrect": "The accepted answer format for the missing word is 'objective'. The objective function is the linear expression Z = ax + by that you want to optimize, either by maximizing or minimizing its value. It is not called the 'constraint' function, as the constraints in a linear programming problem are the set of linear inequalities that define the feasible region."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The vertices of the feasible region are also called ___ points.",
+      "correct_answer": "corner",
+      "explanation_correct": "The vertices of the feasible region in linear programming are called corner points because they represent the extreme points or corners of the convex polygon formed by the constraints. According to the Corner Point Theorem, the optimal value of the objective function occurs at one of these corner points.",
+      "explanation_incorrect": "The vertices of the feasible region in linear programming are not called 'edge points' - this is an incorrect term. The correct term is 'corner points', as these represent the vertices or corners of the feasible region, which is a convex polygon. The optimal solution in linear programming is guaranteed to occur at one of these corner points."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "If Z = 10x + 20y and the corner points are (0, 5), (3, 2), (5, 0), the maximum value of Z is ___.",
+      "correct_answer": "100",
+      "explanation_correct": "The maximum value of Z occurs at one of the corner points of the feasible region, as per the Corner Point Theorem. Evaluating Z at each corner point, we get: Z(0, 5) = 100, Z(3, 2) = 90, and Z(5, 0) = 50. So the maximum value of Z is 100.",
+      "explanation_incorrect": "The accepted answer format is a single number. The correct maximum value of Z is 100, which occurs at the corner point (0, 5). This is because evaluating the objective function Z = 10x + 20y at each corner point gives Z(0, 5) = 100, Z(3, 2) = 90, and Z(5, 0) = 50. The maximum of these is 100."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A feasible region that does not extend to infinity in any direction is called ___.",
+      "correct_answer": "bounded",
+      "explanation_correct": "A feasible region that does not extend to infinity in any direction is called a bounded region. This means that the feasible region is contained within a finite area or space, as opposed to an unbounded region that extends indefinitely in one or more directions.",
+      "explanation_incorrect": "The correct answer is 'bounded'. The feasible region in a linear programming problem is considered bounded if it is contained within a finite area or space, meaning it does not extend to infinity in any direction. If the feasible region extends to infinity in one or more directions, it is called an unbounded region. Therefore, the term 'bounded' refers to a feasible region that has a defined, finite area."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "In a diet problem, the objective is typically to ___ the total cost.",
+      "correct_answer": "minimise",
+      "explanation_correct": "In a diet problem, the objective is typically to minimise the total cost of the diet, since the goal is to find the least expensive combination of foods that meets all the nutritional requirements. Minimising cost is the key objective in this type of linear programming problem.",
+      "explanation_incorrect": "The incorrect answer would be to 'maximise' the total cost. This is not the objective in a diet problem, as the goal is to find the least expensive diet that meets the nutritional needs, not the most expensive one. The correct answer is to 'minimise' the total cost, as this aligns with the typical objective in a diet-related linear programming problem."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For Z = x + y with corner points (0, 0), (6, 0), (4, 5), (0, 8), the minimum value is ___.",
+      "correct_answer": "0",
+      "explanation_correct": "The minimum value of the objective function Z = x + y is 0, which occurs at the corner point (0, 0). This is because the objective function is minimised when both x and y are as small as possible, which happens at the origin (0, 0).",
+      "explanation_incorrect": "The accepted answer format is a single number, 0. The incorrect explanation would be that the minimum value is 4, which occurs at the corner point (4, 5). However, this is incorrect because the objective function Z = x + y is minimised when both x and y are as small as possible, which happens at the corner point (0, 0) where the value of Z is 0."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If no feasible solution exists, the LPP is said to be ___.",
+      "correct_answer": "infeasible",
+      "explanation_correct": "If there is no set of values for the variables (x, y) that satisfies all the given constraints, then the linear programming problem (LPP) is said to be infeasible. This means there is no feasible solution that meets the requirements of the problem.",
+      "explanation_incorrect": "The correct answer is 'infeasible'. If the LPP has no feasible solution, it means there are no values for the variables (x, y) that satisfy all the given constraints simultaneously. In such a case, the LPP is considered infeasible, as there is no point in the feasible region that can optimize the objective function."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "ordering",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to solve an LPP using the graphical method:",
+      "ordering_items": [
+        "Graph all constraints and identify the feasible region",
+        "Find the coordinates of all corner points of the feasible region",
+        "Evaluate the objective function Z at each corner point",
+        "Select the corner point giving the optimal (maximum or minimum) value of Z"
+      ],
+      "correct_answer": [
+        "Graph all constraints and identify the feasible region",
+        "Find the coordinates of all corner points of the feasible region",
+        "Evaluate the objective function Z at each corner point",
+        "Select the corner point giving the optimal (maximum or minimum) value of Z"
+      ],
+      "explanation_correct": "The correct order of steps is crucial because it follows the logical progression of solving a linear programming problem using the graphical method. First, you need to graph all the constraints and identify the feasible region, which is the area where all constraints are satisfied. Then, you find the coordinates of the corner points of this feasible region. Next, you evaluate the objective function at each corner point to determine the optimal value, either the maximum or minimum. Finally, you select the corner point that gives the optimal value of the objective function.",
+      "explanation_incorrect": "The steps are not in the correct order. You cannot evaluate the objective function at each corner point before finding the coordinates of the corner points. Similarly, you cannot select the optimal corner point before evaluating the objective function at each of them. The correct order is to first graph the constraints, identify the feasible region, then find the coordinates of the corner points, evaluate the objective function at each corner point, and finally select the corner point that gives the optimal value of the objective function."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "ordering",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to formulate a linear programming problem from a word problem:",
+      "ordering_items": [
+        "Identify the decision variables (x, y)",
+        "Write the objective function Z = ax + by",
+        "Express all restrictions as linear inequality constraints",
+        "Include non-negativity constraints x ≥ 0, y ≥ 0"
+      ],
+      "correct_answer": [
+        "Identify the decision variables (x, y)",
+        "Write the objective function Z = ax + by",
+        "Express all restrictions as linear inequality constraints",
+        "Include non-negativity constraints x ≥ 0, y ≥ 0"
+      ],
+      "explanation_correct": "The correct order is crucial because it follows the logical steps to set up a linear programming problem. First, you need to identify the decision variables (x and y) that represent the quantities you want to optimize. Then, you can write the objective function Z = ax + by, which is what you want to maximize or minimize. Next, you express all the restrictions on x and y as linear inequality constraints. Finally, you include the non-negativity constraints to ensure the decision variables are non-negative.",
+      "explanation_incorrect": "The incorrect order would be to start by writing the objective function Z = ax + by before identifying the decision variables (x and y). This doesn't make sense because you need to know the variables you are optimizing before you can write the objective function. The correct order ensures you have all the necessary information to properly formulate the linear programming problem."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "ordering",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to determine whether an LPP with an unbounded feasible region has a maximum:",
+      "ordering_items": [
+        "Find the corner points and evaluate Z at each",
+        "Identify the largest value M among corner point evaluations",
+        "Check if the half-plane Z > M intersects the feasible region",
+        "If no intersection, M is the maximum; otherwise, no maximum exists"
+      ],
+      "correct_answer": [
+        "Find the corner points and evaluate Z at each",
+        "Identify the largest value M among corner point evaluations",
+        "Check if the half-plane Z > M intersects the feasible region",
+        "If no intersection, M is the maximum; otherwise, no maximum exists"
+      ],
+      "explanation_correct": "The given steps are the correct way to determine whether an LPP with an unbounded feasible region has a maximum. By finding the corner points, evaluating the objective function at each, and identifying the largest value, we can check if the region above this maximum value is feasible. If not, then the maximum exists; otherwise, there is no maximum.",
+      "explanation_incorrect": "The incorrect explanation would be to not check if the half-plane Z > M intersects the feasible region. Simply finding the corner points, evaluating the objective function, and identifying the largest value M is not enough - we need to verify that the region above M is actually part of the feasible region. If it is not, then there is no maximum, even though M is the largest value among the corner points."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 12,
+        "application": 20,
+        "exam_style": 18
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

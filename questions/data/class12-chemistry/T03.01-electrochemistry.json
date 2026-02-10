@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T03.01",
+  "topic_name": "Electrochemistry",
+  "canonical_explanation": {
+    "text": "Electrochemistry deals with the interconversion of chemical energy and electrical energy. Galvanic (voltaic) cells convert chemical energy into electrical energy through spontaneous redox reactions, while electrolytic cells use electrical energy to drive non-spontaneous reactions. The electrode potential is the tendency of an electrode to gain or lose electrons, measured relative to the Standard Hydrogen Electrode (SHE). The Nernst equation relates cell potential to concentration: E = E° - (RT/nF) ln Q. The relationship between Gibbs energy and cell potential is given by delta G = -nFE. Conductance of electrolytic solutions is characterised by specific conductivity, molar conductivity, and Kohlrausch's law. Faraday's laws of electrolysis quantitatively relate the amount of substance deposited to the quantity of electricity passed. Practical applications include batteries (dry cell, lead storage, fuel cells) and understanding corrosion as an electrochemical process.",
+    "rules": [
+      "Nernst equation: E_cell = E°_cell - (0.0592/n) log Q at 298 K, where n is the number of electrons transferred.",
+      "Faraday's first law: m = ZIt, where Z is the electrochemical equivalent; 1 Faraday = 96485 C/mol of electrons.",
+      "Kohlrausch's law: the molar conductivity at infinite dilution equals the sum of the individual ionic conductivities of cations and anions."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.01.Q001",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In a galvanic cell, oxidation occurs at the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cathode"
+        },
+        {
+          "id": "B",
+          "text": "Anode"
+        },
+        {
+          "id": "C",
+          "text": "Salt bridge"
+        },
+        {
+          "id": "D",
+          "text": "Electrolyte"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a galvanic (voltaic) cell, the oxidation reaction occurs at the anode. This is because the anode is the electrode where the spontaneous reduction-oxidation (redox) reaction takes place, with the less reactive metal being oxidized to release electrons.",
+      "explanation_incorrect": "The cathode is where the reduction reaction occurs in a galvanic cell, not the oxidation. The anode is the electrode where the oxidation half-reaction takes place, with the less reactive metal being oxidized and losing electrons. The salt bridge and electrolyte merely provide a pathway for ions to flow and maintain charge balance, they do not undergo the actual redox reaction."
+    },
+    {
+      "question_id": "T03.01.Q002",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The standard electrode potential of the Standard Hydrogen Electrode (SHE) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "+1.0 V"
+        },
+        {
+          "id": "B",
+          "text": "-1.0 V"
+        },
+        {
+          "id": "C",
+          "text": "0.00 V"
+        },
+        {
+          "id": "D",
+          "text": "+0.76 V"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The standard electrode potential of the Standard Hydrogen Electrode (SHE) is defined as 0.00 V by convention. This sets the reference point for all other electrode potentials to be measured against.",
+      "explanation_incorrect": "Option C, 0.00 V, is the correct answer because the standard electrode potential of the SHE is set to this value by definition. The other options are incorrect - option A (+1.0 V) and option B (-1.0 V) do not correspond to the standard potential of the SHE, and option D (+0.76 V) is the standard potential of the Cu2+/Cu half-cell, not the SHE."
+    },
+    {
+      "question_id": "T03.01.Q003",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The relationship between Gibbs energy change and cell EMF is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "delta G = nFE"
+        },
+        {
+          "id": "B",
+          "text": "delta G = -nFE"
+        },
+        {
+          "id": "C",
+          "text": "delta G = -nF/E"
+        },
+        {
+          "id": "D",
+          "text": "delta G = nE/F"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The relationship between Gibbs energy change (ΔG) and cell electromotive force (EMF or E) is given by the equation ΔG = -nFE, where n is the number of electrons transferred and F is the Faraday constant. This equation shows that as the cell potential increases, the Gibbs energy change becomes more negative, indicating a more spontaneous reaction.",
+      "explanation_incorrect": "The correct answer is B) ΔG = -nFE. This equation shows that as the cell potential increases, the Gibbs energy change becomes more negative, indicating a more spontaneous reaction. The other options are incorrect because they do not correctly represent the relationship between Gibbs energy and cell potential."
+    },
+    {
+      "question_id": "T03.01.Q004",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The function of a salt bridge in a galvanic cell is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the cell potential"
+        },
+        {
+          "id": "B",
+          "text": "Maintain electrical neutrality in the half-cells"
+        },
+        {
+          "id": "C",
+          "text": "Supply electrons to the cathode"
+        },
+        {
+          "id": "D",
+          "text": "Prevent any ion movement"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The salt bridge maintains electrical neutrality in the half-cells by allowing the flow of ions between the two half-cells. This maintains the charge balance and prevents the build-up of charge that would otherwise limit the cell potential.",
+      "explanation_incorrect": "The function of the salt bridge is not to increase the cell potential, supply electrons to the cathode, or prevent ion movement. The salt bridge allows ions to flow between the half-cells, maintaining electrical neutrality and enabling the electrochemical reaction to proceed. It does not directly affect the cell potential or electron flow."
+    },
+    {
+      "question_id": "T03.01.Q005",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "For the cell Zn | Zn2+(1M) || Cu2+(1M) | Cu, if E°(Zn2+/Zn) = -0.76 V and E°(Cu2+/Cu) = +0.34 V, the standard cell EMF is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.42 V"
+        },
+        {
+          "id": "B",
+          "text": "1.10 V"
+        },
+        {
+          "id": "C",
+          "text": "-1.10 V"
+        },
+        {
+          "id": "D",
+          "text": "0.76 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The standard cell EMF (electromotive force) is calculated as the difference between the standard reduction potentials of the two half-reactions. Since E°(Zn2+/Zn) = -0.76 V and E°(Cu2+/Cu) = +0.34 V, the standard cell EMF is 0.34 V - (-0.76 V) = 1.10 V.",
+      "explanation_incorrect": "Option A is incorrect because the standard cell EMF is the difference between the reduction potentials, not the sum. Option C is incorrect because the cell EMF is positive, indicating a spontaneous redox reaction. Option D is incorrect because it only considers the reduction potential of one of the half-reactions, not the difference between the two."
+    },
+    {
+      "question_id": "T03.01.Q006",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "Using the Nernst equation at 298 K, if a cell has E° = 1.10 V and n = 2, and the reaction quotient Q = 10, the cell EMF is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.07 V"
+        },
+        {
+          "id": "B",
+          "text": "1.13 V"
+        },
+        {
+          "id": "C",
+          "text": "0.80 V"
+        },
+        {
+          "id": "D",
+          "text": "1.40 V"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1.07 V. Using the Nernst equation, E = E° - (RT/nF) ln Q, with E° = 1.10 V, n = 2, and Q = 10, the calculated cell EMF is approximately 1.07 V.",
+      "explanation_incorrect": "The incorrect options are not correct. Option B) 1.13 V is too high, option C) 0.80 V is too low, and option D) 1.40 V is too high. The Nernst equation must be used to calculate the correct cell EMF based on the given values of E°, n, and Q."
+    },
+    {
+      "question_id": "T03.01.Q007",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to Faraday's first law of electrolysis, the mass of substance deposited is directly proportional to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The voltage applied"
+        },
+        {
+          "id": "B",
+          "text": "The quantity of electricity passed"
+        },
+        {
+          "id": "C",
+          "text": "The concentration of the electrolyte"
+        },
+        {
+          "id": "D",
+          "text": "The temperature of the solution"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to Faraday's first law, the mass of a substance deposited during electrolysis is directly proportional to the quantity of electricity (charge) passed through the electrolytic solution. This is because the amount of a substance produced is directly related to the number of electrons transferred, which is measured by the total charge passed.",
+      "explanation_incorrect": "The mass of the substance deposited is not directly proportional to the voltage applied, the concentration of the electrolyte, or the temperature of the solution. These factors can influence the rate of the electrolytic process, but the key factor that determines the mass of the deposited substance is the total quantity of electricity (charge) that passes through the solution, as stated in Faraday's first law."
+    },
+    {
+      "question_id": "T03.01.Q008",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "One Faraday of electricity is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "96485 amperes"
+        },
+        {
+          "id": "B",
+          "text": "96485 coulombs"
+        },
+        {
+          "id": "C",
+          "text": "96485 volts"
+        },
+        {
+          "id": "D",
+          "text": "96485 joules"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "One Faraday of electricity is equal to 96,485 coulombs, which is the amount of electric charge carried by one mole of electrons. This is a fundamental constant in electrochemistry that relates the quantity of electricity passed to the amount of chemical reactions that occur.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the amount of electric charge. Amperes (A) is a unit of electric current, volts (V) is a unit of electric potential, and joules (J) is a unit of energy. One Faraday of electricity specifically refers to the amount of electric charge that reacts in an electrochemical process, which is measured in coulombs (C)."
+    },
+    {
+      "question_id": "T03.01.Q009",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "How much copper (atomic mass = 63.5) will be deposited by passing 2 Faradays of electricity through a CuSO4 solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "31.75 g"
+        },
+        {
+          "id": "B",
+          "text": "63.5 g"
+        },
+        {
+          "id": "C",
+          "text": "127 g"
+        },
+        {
+          "id": "D",
+          "text": "16 g"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 63.5 g. This is because 1 Faraday of electricity (96,485 C) deposits 1 mole of copper (63.5 g), and the question states that 2 Faradays of electricity were passed, so the amount of copper deposited is 2 times this, or 63.5 g.",
+      "explanation_incorrect": "The incorrect answer is A) 31.75 g. This is because the amount of copper deposited is proportional to the amount of electricity passed, which is given as 2 Faradays. The atomic mass of copper is 63.5 g/mol, so 2 Faradays of electricity would deposit 2 moles of copper, which is equal to 63.5 g, not 31.75 g."
+    },
+    {
+      "question_id": "T03.01.Q010",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "Kohlrausch's law states that the molar conductivity at infinite dilution of an electrolyte equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The product of the ionic conductivities of all ions"
+        },
+        {
+          "id": "B",
+          "text": "The sum of the molar conductivities of its individual ions"
+        },
+        {
+          "id": "C",
+          "text": "The average of the ionic conductivities"
+        },
+        {
+          "id": "D",
+          "text": "The ratio of cationic to anionic conductivity"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kohlrausch's law states that the molar conductivity of an electrolyte at infinite dilution is equal to the sum of the molar conductivities of its individual ions. This is because at infinite dilution, the ions move independently without interference from each other.",
+      "explanation_incorrect": "The correct option is B, the sum of the molar conductivities of its individual ions. Option A is incorrect because the molar conductivity is not the product of ionic conductivities. Option C is incorrect because the molar conductivity is not the average of ionic conductivities. Option D is incorrect because the molar conductivity is not the ratio of cationic to anionic conductivity."
+    },
+    {
+      "question_id": "T03.01.Q011",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The molar conductivity of a strong electrolyte increases with dilution because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "More electrolyte dissolves"
+        },
+        {
+          "id": "B",
+          "text": "Interionic attractions decrease, increasing ionic mobility"
+        },
+        {
+          "id": "C",
+          "text": "The number of ions increases"
+        },
+        {
+          "id": "D",
+          "text": "The voltage increases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "As a strong electrolyte is diluted, the interionic attractions between the ions decrease, allowing the ions to move more freely and increasing their ionic mobility. This increase in ionic mobility leads to higher molar conductivity of the solution.",
+      "explanation_incorrect": "The molar conductivity of a strong electrolyte increases with dilution because the decrease in interionic attractions allows the ions to move more freely, increasing their ionic mobility. The number of ions and the voltage do not change with dilution, so options C and D are incorrect."
+    },
+    {
+      "question_id": "T03.01.Q012",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "In a dry cell (Leclanche cell), the anode is made of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carbon rod"
+        },
+        {
+          "id": "B",
+          "text": "Zinc container"
+        },
+        {
+          "id": "C",
+          "text": "MnO2 paste"
+        },
+        {
+          "id": "D",
+          "text": "Copper wire"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a dry cell (Leclanche cell), the anode is made of zinc. This is because zinc is the reducing agent that undergoes oxidation at the anode, generating electrons that flow through the external circuit and drive the reduction reaction at the cathode.",
+      "explanation_incorrect": "The anode in a dry cell is not made of carbon, MnO2 paste, or copper wire. The anode is made of zinc because zinc is the reducing agent that gets oxidized, producing electrons that power the cell. The other options are incorrect because they do not participate in the redox reaction at the anode in a Leclanche cell."
+    },
+    {
+      "question_id": "T03.01.Q013",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A fuel cell converts:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrical energy to chemical energy"
+        },
+        {
+          "id": "B",
+          "text": "Chemical energy of a fuel directly to electrical energy"
+        },
+        {
+          "id": "C",
+          "text": "Heat energy to electrical energy"
+        },
+        {
+          "id": "D",
+          "text": "Nuclear energy to electrical energy"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A fuel cell converts the chemical energy of a fuel (such as hydrogen) directly into electrical energy through an electrochemical reaction, which makes option B the correct answer.",
+      "explanation_incorrect": "Option A is incorrect because fuel cells do not convert electrical energy to chemical energy - they do the opposite, converting the chemical energy of a fuel directly into electrical energy. Option C is incorrect because fuel cells do not convert heat energy to electrical energy; they use the chemical energy of a fuel. Option D is incorrect because fuel cells do not use nuclear energy, but rather the chemical energy of a fuel."
+    },
+    {
+      "question_id": "T03.01.Q014",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "In the lead storage battery, the overall cell reaction during discharge is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pb + PbO2 + 2H2SO4 -> 2PbSO4 + 2H2O"
+        },
+        {
+          "id": "B",
+          "text": "2PbSO4 + 2H2O -> Pb + PbO2 + 2H2SO4"
+        },
+        {
+          "id": "C",
+          "text": "Pb + H2SO4 -> PbSO4 + H2"
+        },
+        {
+          "id": "D",
+          "text": "PbO2 + 2H2O -> Pb(OH)4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, as this represents the overall cell reaction during the discharge of a lead storage battery. During discharge, the lead (Pb) and lead dioxide (PbO2) electrodes react with the sulfuric acid (H2SO4) in the electrolyte to produce lead sulfate (PbSO4) and water (H2O).",
+      "explanation_incorrect": "Option B represents the opposite, the charging reaction of the lead storage battery, where the lead sulfate is converted back to lead and lead dioxide. Option C is incomplete, as it does not show the full reaction. Option D is incorrect, as lead dioxide (PbO2) does not form lead hydroxide (Pb(OH)4) during the discharge process."
+    },
+    {
+      "question_id": "T03.01.Q015",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "Corrosion of iron is an electrochemical process. At the anodic region, the reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fe -> Fe2+ + 2e-"
+        },
+        {
+          "id": "B",
+          "text": "O2 + 4H+ + 4e- -> 2H2O"
+        },
+        {
+          "id": "C",
+          "text": "Fe2+ + 2OH- -> Fe(OH)2"
+        },
+        {
+          "id": "D",
+          "text": "2Fe(OH)2 + O2 -> Fe2O3.xH2O"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, Fe -> Fe2+ + 2e-, because this represents the half-reaction that occurs at the anodic (oxidation) region during the corrosion of iron. At the anode, iron metal is oxidized to form iron(II) ions, releasing electrons in the process.",
+      "explanation_incorrect": "The other options are not correct because they represent different reactions that may occur during the overall corrosion process of iron, but they do not specifically describe the anodic half-reaction. Option B represents the cathodic half-reaction where oxygen is reduced, option C shows the formation of iron(II) hydroxide, and option D depicts the formation of iron(III) oxide hydrate, which is a product of further reactions."
+    },
+    {
+      "question_id": "T03.01.Q016",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For the reaction 2Ag+(aq) + Cu(s) -> 2Ag(s) + Cu2+(aq), if E° = +0.46 V, the equilibrium constant at 298 K is approximately (log K = nE°/0.0592):",
+      "options": [
+        {
+          "id": "A",
+          "text": "10^15.5"
+        },
+        {
+          "id": "B",
+          "text": "10^7.8"
+        },
+        {
+          "id": "C",
+          "text": "10^3.9"
+        },
+        {
+          "id": "D",
+          "text": "10^23.1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 10^15.5. Using the Nernst equation and the given cell potential, we can calculate the equilibrium constant as log K = nE°/0.0592, where n is the number of electrons transferred (2 in this case) and E° is the standard cell potential (+0.46 V). Plugging these values, we get log K = 2 × 0.46 / 0.0592 = 15.5, which corresponds to an equilibrium constant of about 10^15.5.",
+      "explanation_incorrect": "The incorrect answers do not correctly apply the Nernst equation to calculate the equilibrium constant. The correct approach is to use the formula log K = nE°/0.0592, where n is the number of electrons transferred and E° is the standard cell potential. Applying this formula with the given values results in an equilibrium constant of approximately 10^15.5, which matches option A."
+    },
+    {
+      "question_id": "T03.01.Q017",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A metal ion Mn+ is reduced at the cathode. If 0.5 A current is passed for 1930 s and 0.3175 g of metal (atomic mass = 63.5) is deposited, the value of n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2. This is because the amount of metal deposited is directly proportional to the quantity of electricity (charge) passed, as given by Faraday's laws of electrolysis. Using the provided data and the formula, we can calculate that the metal ion Mn+ has a charge of 2 (n = 2).",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the charge on the metal ion Mn+ based on the given data. Option A) 1 would imply that the metal has a charge of 1, which is not consistent with the mass of metal deposited. Options C) 3 and D) 4 would imply higher charges on the metal ion, which are also not supported by the provided information."
+    },
+    {
+      "question_id": "T03.01.Q018",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The molar conductivity at infinite dilution of NaCl, HCl, and CH3COONa are 126.4, 425.9, and 91.0 S cm^2 mol^-1 respectively. The molar conductivity at infinite dilution of CH3COOH is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "390.5 S cm^2 mol^-1"
+        },
+        {
+          "id": "B",
+          "text": "517.3 S cm^2 mol^-1"
+        },
+        {
+          "id": "C",
+          "text": "643.3 S cm^2 mol^-1"
+        },
+        {
+          "id": "D",
+          "text": "252.8 S cm^2 mol^-1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 390.5 S cm^2 mol^-1. This can be calculated using Kohlrausch's law, which states that the molar conductivity at infinite dilution of a weak electrolyte is the sum of the molar conductivities of its ions at infinite dilution.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow Kohlrausch's law. The molar conductivity at infinite dilution of CH3COOH can be calculated using the molar conductivities of the acetate ion (CH3COO-) and the hydrogen ion (H+), which are given as 91.0 and 425.9 S cm^2 mol^-1, respectively. Adding these two values gives the molar conductivity of CH3COOH as 390.5 S cm^2 mol^-1."
+    },
+    {
+      "question_id": "T03.01.Q019",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "A stronger reducing agent will have:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A more positive standard reduction potential"
+        },
+        {
+          "id": "B",
+          "text": "A more negative standard reduction potential"
+        },
+        {
+          "id": "C",
+          "text": "Zero reduction potential"
+        },
+        {
+          "id": "D",
+          "text": "A positive oxidation potential only at high temperature"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A stronger reducing agent will have a more negative standard reduction potential. This is because a stronger reducing agent is more eager to lose electrons and get oxidized, which corresponds to a more negative reduction potential on the electrochemical series.",
+      "explanation_incorrect": "Option A is incorrect because a stronger reducing agent will actually have a more negative (not more positive) standard reduction potential. This is because the more eager the reducing agent is to lose electrons and get oxidized, the more negative its reduction potential will be on the electrochemical series. Option C is incorrect because a reducing agent will always have a non-zero reduction potential. Option D is incorrect because the oxidation potential of a reducing agent does not depend on temperature."
+    },
+    {
+      "question_id": "T03.01.Q020",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The quantity of electricity required to deposit 108 g of silver (atomic mass = 108, Ag+ -> Ag) from AgNO3 solution is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 Faraday"
+        },
+        {
+          "id": "B",
+          "text": "2 Faraday"
+        },
+        {
+          "id": "C",
+          "text": "0.5 Faraday"
+        },
+        {
+          "id": "D",
+          "text": "3 Faraday"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The quantity of electricity required to deposit 108 g of silver from AgNO3 solution is 1 Faraday because Faraday's first law states that the amount of a substance deposited at an electrode is directly proportional to the quantity of electricity passed, where 1 Faraday is the charge required to deposit 1 mole of electrons.",
+      "explanation_incorrect": "The correct answer is A) 1 Faraday. This is because the mass of silver (108 g) corresponds to 1 mole, and according to Faraday's first law, the amount of a substance deposited is directly proportional to the quantity of electricity passed, where 1 Faraday is the charge required to deposit 1 mole of electrons. Therefore, 1 Faraday of electricity is required to deposit 108 g of silver."
+    },
+    {
+      "question_id": "T03.01.Q021",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The specific conductivity (kappa) of a solution is related to molar conductivity (Lambda_m) by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lambda_m = kappa x M"
+        },
+        {
+          "id": "B",
+          "text": "Lambda_m = 1000 x kappa / M"
+        },
+        {
+          "id": "C",
+          "text": "Lambda_m = 1000 x kappa / c"
+        },
+        {
+          "id": "D",
+          "text": "Lambda_m = c / kappa"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The specific conductivity (κ) of a solution is a measure of the solution's ability to conduct electricity per unit volume. The molar conductivity (Λ_m) is the conductivity per mole of the dissolved electrolyte. The relationship between these two quantities is Λ_m = 1000κ/c, where c is the molar concentration of the electrolyte. This allows us to relate the macroscopic property (specific conductivity) to the concentration and mobility of the charge carriers in the solution.",
+      "explanation_incorrect": "Option A is incorrect because molar conductivity is not simply the specific conductivity multiplied by the molar mass of the electrolyte. Option B is incorrect because the relationship involves the molar concentration, not the molar mass. Option D is incorrect because the molar conductivity is not the reciprocal of the specific conductivity divided by the concentration."
+    },
+    {
+      "question_id": "T03.01.Q022",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "In cell notation, the double vertical line (||) represents:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The anode"
+        },
+        {
+          "id": "B",
+          "text": "The cathode"
+        },
+        {
+          "id": "C",
+          "text": "The salt bridge"
+        },
+        {
+          "id": "D",
+          "text": "The external circuit"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The double vertical line (||) in cell notation represents the salt bridge, which connects the two half-cells and allows the flow of ions to maintain electrical neutrality.",
+      "explanation_incorrect": "The double vertical line (||) does not represent the anode, cathode, or external circuit. It specifically represents the salt bridge, which is a critical component of a galvanic cell that allows the flow of ions between the two half-cells to maintain the charge balance and complete the circuit."
+    },
+    {
+      "question_id": "T03.01.Q023",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following methods prevents corrosion by providing a sacrificial anode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Painting"
+        },
+        {
+          "id": "B",
+          "text": "Cathodic protection (galvanisation)"
+        },
+        {
+          "id": "C",
+          "text": "Oiling"
+        },
+        {
+          "id": "D",
+          "text": "Alloying"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Cathodic protection (galvanisation) is the correct method to prevent corrosion by providing a sacrificial anode. This works by connecting the metal that needs to be protected (the cathode) to a more reactive metal that will preferentially corrode instead (the sacrificial anode).",
+      "explanation_incorrect": "The other options do not provide a sacrificial anode to prevent corrosion. Painting and oiling simply create a barrier to protect the metal from the environment, while alloying changes the metal composition but does not provide a sacrificial anode. Cathodic protection is the only method among the options that uses a sacrificial anode to prevent corrosion."
+    },
+    {
+      "question_id": "T03.01.Q024",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a hydrogen-oxygen fuel cell, the cell reaction is 2H2(g) + O2(g) -> 2H2O(l). If the standard cell potential is 1.23 V, the Gibbs energy change per mole of O2 consumed is: (F = 96485 C/mol)",
+      "options": [
+        {
+          "id": "A",
+          "text": "-237 kJ"
+        },
+        {
+          "id": "B",
+          "text": "-474 kJ"
+        },
+        {
+          "id": "C",
+          "text": "-118.5 kJ"
+        },
+        {
+          "id": "D",
+          "text": "-948 kJ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) -474 kJ. This is because the Gibbs energy change (ΔG) is related to the cell potential (E) by the equation ΔG = -nFE, where n is the number of electrons transferred and F is the Faraday constant. Since n = 4 for the given reaction and E = 1.23 V, the Gibbs energy change per mole of O2 consumed is -4 × 96485 C/mol × 1.23 V = -474 kJ.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly apply the relationship between Gibbs energy and cell potential. Option A) -237 kJ is half the correct value, option C) -118.5 kJ is a quarter of the correct value, and option D) -948 kJ is too large. The correct answer B) -474 kJ is obtained by using the equation ΔG = -nFE, where n = 4 for the given reaction and E = 1.23 V."
+    },
+    {
+      "question_id": "T03.01.Q025",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "At equilibrium, the cell EMF of a galvanic cell is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum"
+        },
+        {
+          "id": "B",
+          "text": "Zero"
+        },
+        {
+          "id": "C",
+          "text": "Equal to E°"
+        },
+        {
+          "id": "D",
+          "text": "Negative"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At equilibrium, the cell EMF of a galvanic cell is zero because the forward and backward reactions occurring at the electrodes are equal, resulting in no net flow of electrons and no potential difference across the cell.",
+      "explanation_incorrect": "The correct answer is that the cell EMF of a galvanic cell is zero at equilibrium. This is because at equilibrium, the forward and backward reactions occurring at the electrodes are equal, resulting in no net flow of electrons and no potential difference across the cell. The cell EMF is not maximum, equal to E°, or negative at equilibrium."
+    },
+    {
+      "question_id": "T03.01.Q026",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "During electrolysis of molten NaCl, the product at the cathode is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chlorine gas"
+        },
+        {
+          "id": "B",
+          "text": "Sodium metal"
+        },
+        {
+          "id": "C",
+          "text": "Sodium hydroxide"
+        },
+        {
+          "id": "D",
+          "text": "Hydrogen gas"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "During the electrolysis of molten sodium chloride (NaCl), the product formed at the cathode is sodium metal. This is because sodium has a lower reduction potential compared to hydrogen, so it is preferentially reduced at the cathode to form sodium metal.",
+      "explanation_incorrect": "The other options are incorrect because: Option A is incorrect as chlorine gas is produced at the anode, not the cathode. Option C is incorrect as sodium hydroxide is not a product of the electrolysis of molten NaCl. Option D is incorrect as hydrogen gas is not produced at the cathode during the electrolysis of molten NaCl."
+    },
+    {
+      "question_id": "T03.01.Q027",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A current of 0.965 A is passed through molten AlCl3 for 100 s. The mass of Al deposited at the cathode is: (atomic mass of Al = 27)",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.009 g"
+        },
+        {
+          "id": "B",
+          "text": "0.027 g"
+        },
+        {
+          "id": "C",
+          "text": "0.054 g"
+        },
+        {
+          "id": "D",
+          "text": "0.081 g"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.009 g. This is calculated using Faraday's laws of electrolysis, which state that the amount of a substance deposited at an electrode is proportional to the quantity of electricity passed. With a current of 0.965 A passed for 100 s, the total charge passed is 96.5 C. Using the molar mass of Al and the charge per mole, this gives a mass of 0.009 g of Al deposited.",
+      "explanation_incorrect": "The incorrect options B, C, and D are too high. This is because the amount of Al deposited depends on the charge passed, not just the time or current alone. The correct calculation using Faraday's laws is required to get the right mass of 0.009 g deposited."
+    },
+    {
+      "question_id": "T03.01.Q028",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In the electrochemical series, the metal with the most negative standard reduction potential is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gold"
+        },
+        {
+          "id": "B",
+          "text": "Silver"
+        },
+        {
+          "id": "C",
+          "text": "Lithium"
+        },
+        {
+          "id": "D",
+          "text": "Copper"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The metal with the most negative standard reduction potential is lithium, because it has the highest tendency to lose electrons and form positive ions. This makes lithium the most reactive metal in the electrochemical series.",
+      "explanation_incorrect": "The correct answer is lithium, not gold, silver, or copper. Lithium has the most negative standard reduction potential because it is the least stable metal, meaning it has the highest tendency to lose electrons and form positive ions. The other options (gold, silver, copper) have more positive reduction potentials, meaning they are less reactive metals compared to lithium."
+    },
+    {
+      "question_id": "T03.01.Q029",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "In a mercury cell used in hearing aids, the anode is made of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mercury"
+        },
+        {
+          "id": "B",
+          "text": "Zinc amalgam"
+        },
+        {
+          "id": "C",
+          "text": "Carbon"
+        },
+        {
+          "id": "D",
+          "text": "Lead"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The anode in a mercury cell is made of a zinc amalgam, which is a mixture of zinc and mercury. This is because the zinc-mercury alloy has a higher energy content compared to pure zinc, making it a more stable and efficient anode material for this type of electrochemical cell.",
+      "explanation_incorrect": "The correct answer is that the anode in a mercury cell is made of a zinc amalgam, not mercury, carbon, or lead. Zinc amalgam is used because it has a higher energy content and is more stable than pure zinc, which is important for the efficient functioning of this type of battery in devices like hearing aids."
+    },
+    {
+      "question_id": "T03.01.Q030",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The cell constant of a conductivity cell is 0.5 cm^-1. If the measured resistance of a KCl solution is 100 ohm, the specific conductivity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.005 S cm^-1"
+        },
+        {
+          "id": "B",
+          "text": "0.05 S cm^-1"
+        },
+        {
+          "id": "C",
+          "text": "0.5 S cm^-1"
+        },
+        {
+          "id": "D",
+          "text": "50 S cm^-1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The specific conductivity (σ) is calculated using the formula σ = 1 / (cell constant × resistance). The cell constant is given as 0.5 cm^-1, and the resistance is 100 ohm. Plugging in these values, we get σ = 1 / (0.5 cm^-1 × 100 ohm) = 0.005 S cm^-1, which matches option A.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculated specific conductivity value. Option B (0.05 S cm^-1) is 10 times too high, option C (0.5 S cm^-1) is 100 times too high, and option D (50 S cm^-1) is 10,000 times too high. The correct specific conductivity value is 0.005 S cm^-1, which corresponds to option A."
+    },
+    {
+      "question_id": "T03.01.Q031",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For the Daniell cell at non-standard conditions, the Nernst equation at 298 K is E = E° - (0.0592/2) log([Zn2+]/[Cu2+]). If [Zn2+] = 0.1 M and [Cu2+] = 1 M, and E° = 1.10 V, the cell EMF is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.07 V"
+        },
+        {
+          "id": "B",
+          "text": "1.13 V"
+        },
+        {
+          "id": "C",
+          "text": "1.10 V"
+        },
+        {
+          "id": "D",
+          "text": "0.80 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1.13 V. This is calculated using the Nernst equation, where E = E° - (0.0592/2) log([Zn2+]/[Cu2+]). Plugging in the given values of E° = 1.10 V, [Zn2+] = 0.1 M, and [Cu2+] = 1 M, we get E = 1.10 V - (0.0592/2) log(0.1/1) = 1.13 V.",
+      "explanation_incorrect": "The incorrect options are: A) 1.07 V, C) 1.10 V, and D) 0.80 V. These answers do not correctly apply the Nernst equation to calculate the cell EMF under the given non-standard conditions. The Nernst equation must be used to find the correct cell potential, which is 1.13 V."
+    },
+    {
+      "question_id": "T03.01.Q032",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following is a secondary (rechargeable) cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dry cell"
+        },
+        {
+          "id": "B",
+          "text": "Mercury cell"
+        },
+        {
+          "id": "C",
+          "text": "Lead storage battery"
+        },
+        {
+          "id": "D",
+          "text": "Hydrogen-oxygen fuel cell"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A lead storage battery is a secondary (rechargeable) cell because it can be recharged by passing an electric current through it, allowing the chemical reactions to be reversed and the battery to be reused.",
+      "explanation_incorrect": "The dry cell, mercury cell, and hydrogen-oxygen fuel cell are all primary cells, meaning they cannot be recharged and reused. Only the lead storage battery is a secondary cell that can be recharged and used repeatedly."
+    },
+    {
+      "question_id": "T03.01.Q033",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "For a weak electrolyte, the molar conductivity at infinite dilution can be obtained using:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct measurement by extrapolation"
+        },
+        {
+          "id": "B",
+          "text": "Kohlrausch's law"
+        },
+        {
+          "id": "C",
+          "text": "Ohm's law"
+        },
+        {
+          "id": "D",
+          "text": "Faraday's second law"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kohlrausch's law states that the molar conductivity of a weak electrolyte at infinite dilution can be calculated from the ionic conductivities of the constituent ions. This allows the molar conductivity to be determined indirectly without directly measuring the conductivity at infinite dilution.",
+      "explanation_incorrect": "The other options are not appropriate for determining the molar conductivity at infinite dilution for a weak electrolyte. Direct measurement by extrapolation would be difficult for a weak electrolyte, Ohm's law relates current and voltage rather than conductivity, and Faraday's second law describes the relationship between the amount of substance deposited and the quantity of electricity passed, which is not relevant here."
+    },
+    {
+      "question_id": "T03.01.Q034",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "In a concentration cell, the EMF arises because of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Different electrode materials"
+        },
+        {
+          "id": "B",
+          "text": "Different concentrations of the same electrolyte in the two half-cells"
+        },
+        {
+          "id": "C",
+          "text": "Different temperatures in the half-cells"
+        },
+        {
+          "id": "D",
+          "text": "Use of different solvents"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The EMF of a concentration cell arises due to the difference in concentrations of the same electrolyte solution in the two half-cells. This creates a potential difference between the two electrodes, as the electrodes have different affinities for the ions in solution.",
+      "explanation_incorrect": "The EMF of a concentration cell does not arise from different electrode materials, temperatures, or solvents. These factors would create different types of electrochemical cells, but not a concentration cell specifically. The correct answer is that the EMF is generated by the difference in concentrations of the same electrolyte in the two half-cells."
+    },
+    {
+      "question_id": "T03.01.Q035",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Galvanisation of iron is coating it with:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tin"
+        },
+        {
+          "id": "B",
+          "text": "Copper"
+        },
+        {
+          "id": "C",
+          "text": "Zinc"
+        },
+        {
+          "id": "D",
+          "text": "Chromium"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Galvanisation of iron is coating it with zinc. Zinc is a more reactive metal than iron, so a layer of zinc protects the underlying iron from corrosion and rusting.",
+      "explanation_incorrect": "Galvanisation does not involve coating iron with tin, copper, or chromium. These metals are less reactive than iron and would not provide effective protection against corrosion. Zinc is the correct choice because it is more reactive than iron, forming a protective layer that prevents the iron from rusting."
+    },
+    {
+      "question_id": "T03.01.Q036",
+      "type": "true_false",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In a galvanic cell, the cathode is positively charged.",
+      "correct_answer": true,
+      "explanation_correct": "In a galvanic (or voltaic) cell, the cathode is the electrode where reduction occurs and thus has a positive charge. This is because the cathode accepts electrons, completing the reduction half-reaction and generating a positive charge.",
+      "explanation_incorrect": "A common misconception is that the cathode is negatively charged. However, this is not the case. The cathode is the positively charged electrode in a galvanic cell, as it is the site where reduction takes place and electrons are accepted, resulting in a net positive charge."
+    },
+    {
+      "question_id": "T03.01.Q037",
+      "type": "true_false",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "Molar conductivity of both strong and weak electrolytes increases with dilution.",
+      "correct_answer": true,
+      "explanation_correct": "The molar conductivity of both strong and weak electrolytes increases with dilution because as the concentration decreases, the number of charge carriers (ions) per unit volume increases, leading to higher conductivity.",
+      "explanation_incorrect": "The molar conductivity of strong electrolytes increases with dilution because the number of charge carriers increases, but the molar conductivity of weak electrolytes actually decreases with dilution. This is because for weak electrolytes, the degree of dissociation increases as the concentration decreases, which leads to a lower concentration of ions and thus lower molar conductivity."
+    },
+    {
+      "question_id": "T03.01.Q038",
+      "type": "true_false",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A positive value of E°cell indicates that the cell reaction is non-spontaneous.",
+      "correct_answer": false,
+      "explanation_correct": "A positive value of E°cell indicates that the cell reaction is spontaneous, not non-spontaneous. The sign of the standard cell potential (E°cell) determines whether the cell reaction is spontaneous or non-spontaneous. A positive E°cell value means the cell reaction is spontaneous and can occur naturally.",
+      "explanation_incorrect": "The statement is incorrect because a positive value of E°cell actually indicates that the cell reaction is spontaneous, not non-spontaneous. A positive E°cell value means the cell reaction releases energy and occurs naturally, while a negative E°cell value indicates a non-spontaneous reaction that requires an external energy input to proceed."
+    },
+    {
+      "question_id": "T03.01.Q039",
+      "type": "true_false",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "Corrosion is enhanced in the presence of moisture and electrolytes like salt.",
+      "correct_answer": true,
+      "explanation_correct": "Corrosion is an electrochemical process that involves the oxidation of metals. The presence of moisture and electrolytes like salt increases the conductivity of the medium, allowing the flow of ions and enhancing the corrosion reaction.",
+      "explanation_incorrect": "Corrosion is not inhibited by the presence of moisture and electrolytes. In fact, these environmental factors actually promote the electrochemical corrosion process by increasing the conductivity of the medium. The flow of ions is facilitated, allowing the oxidation of the metal to occur more readily, thus enhancing the rate of corrosion."
+    },
+    {
+      "question_id": "T03.01.Q040",
+      "type": "true_false",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "According to Faraday's second law, when the same quantity of electricity is passed through different electrolytes, the masses of substances deposited are proportional to their equivalent weights.",
+      "correct_answer": true,
+      "explanation_correct": "Faraday's second law of electrolysis states that the masses of substances deposited at the electrodes during electrolysis are proportional to their equivalent weights. This means that when the same quantity of electricity is passed through different electrolytes, the masses of the substances deposited will be directly proportional to their equivalent weights.",
+      "explanation_incorrect": "The incorrect answer would be to say that the masses of substances deposited are not proportional to their equivalent weights. This is wrong because Faraday's second law clearly states that the masses are proportional to the equivalent weights of the substances. The equivalent weight is the molar mass divided by the charge on the ion, and this determines the amount of the substance that will be deposited per unit of electric charge passed."
+    },
+    {
+      "question_id": "T03.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The Nernst equation at 298 K is E = E° - (___/n) log Q.",
+      "correct_answer": "0.0592",
+      "explanation_correct": "The Nernst equation at 298 K is E = E° - (0.0592/n) log Q, where E is the cell potential, E° is the standard cell potential, n is the number of electrons transferred, and Q is the reaction quotient. This value of 0.0592 comes directly from the constants R (the gas constant), T (temperature), and F (the Faraday constant).",
+      "explanation_incorrect": "The value in the blank should be 0.0592, not a different value. The Nernst equation relates the cell potential E to the standard cell potential E°, the number of electrons transferred n, and the reaction quotient Q. At 298 K, the coefficient in front of the log term is (RT/nF), which simplifies to 0.0592/n. So the complete Nernst equation is E = E° - (0.0592/n) log Q."
+    },
+    {
+      "question_id": "T03.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The charge carried by 1 mole of electrons is called one ___ and is equal to 96485 C.",
+      "correct_answer": "Faraday",
+      "explanation_correct": "The charge carried by 1 mole of electrons is called one Faraday, and it is equal to 96485 C. This is named after the famous scientist Michael Faraday, who discovered the fundamental laws of electrolysis.",
+      "explanation_incorrect": "The charge carried by 1 mole of electrons is not called a 'coulomb', which is the unit of electric charge. Instead, it is called a 'Faraday', which is the amount of electric charge carried by 1 mole of electrons, equal to 96485 coulombs. This is an important concept in electrochemistry that relates the amount of chemical change to the quantity of electricity passed."
+    },
+    {
+      "question_id": "T03.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The reciprocal of resistance is called ___ and is measured in siemens (S).",
+      "correct_answer": "conductance",
+      "explanation_correct": "The reciprocal of resistance is called conductance, which is measured in siemens (S). Conductance is the ease with which an electric current can flow through a material, and it is the inverse of resistance. Higher conductance means lower resistance, and vice versa.",
+      "explanation_incorrect": "The accepted answer format is 'conductance'. Resistance is the opposition to the flow of electric current, and it is measured in ohms (Ω). The reciprocal of resistance is conductance, which represents the ease of current flow. Conductance is measured in siemens (S), which is the unit for the electrical property of conductance."
+    },
+    {
+      "question_id": "T03.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The rust formed during corrosion of iron has the approximate formula ___.",
+      "correct_answer": "Fe2O3.xH2O",
+      "explanation_correct": "The rust formed during corrosion of iron has the approximate formula Fe2O3.xH2O because the iron(III) oxide (Fe2O3) combines with water (H2O) molecules to form a hydrated iron(III) oxide compound. This is the typical composition of rust, which is an important byproduct of the electrochemical corrosion process.",
+      "explanation_incorrect": "The correct formula for the rust formed during corrosion of iron is Fe2O3.xH2O, where 'x' represents the variable number of water molecules that can be present. This hydrated iron(III) oxide compound is the main constituent of rust, not just a simple iron(III) oxide (Fe2O3) or iron(II) oxide (FeO). The presence of water molecules in the rust is an important characteristic that must be included in the formula."
+    },
+    {
+      "question_id": "T03.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "The standard cell potential E°cell = E°_cathode - E°___.",
+      "correct_answer": "anode",
+      "explanation_correct": "The standard cell potential E°cell is the difference between the standard reduction potentials of the cathode and anode. Since the anode undergoes oxidation, its standard reduction potential (E°anode) is subtracted from the standard reduction potential of the cathode (E°cathode) to obtain the overall cell potential.",
+      "explanation_incorrect": "The standard cell potential E°cell is the difference between the standard reduction potentials of the cathode and anode. The accepted answer format for the blank is 'anode', as the standard reduction potential of the anode (E°anode) is subtracted from the standard reduction potential of the cathode (E°cathode) to calculate the overall cell potential. Incorrectly, the blank should not be filled with 'cathode', as that would give the wrong expression for calculating the standard cell potential."
+    },
+    {
+      "question_id": "T03.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "In a lead storage battery, the electrolyte used is dilute ___.",
+      "correct_answer": "sulphuric acid",
+      "explanation_correct": "In a lead storage battery, the electrolyte used is dilute sulphuric acid because sulphuric acid is an efficient conductor of electricity and helps in the chemical reactions that occur during the charging and discharging of the battery.",
+      "explanation_incorrect": "The accepted answer format is 'sulphuric acid'. The incorrect explanation would be that the electrolyte used in a lead storage battery is dilute hydrochloric acid. This is not correct because hydrochloric acid is not the electrolyte used in lead storage batteries. Lead storage batteries use dilute sulphuric acid as the electrolyte, which helps facilitate the electrochemical reactions during charging and discharging."
+    },
+    {
+      "question_id": "T03.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The unit of molar conductivity is ___.",
+      "correct_answer": "S cm^2 mol^-1",
+      "explanation_correct": "The unit of molar conductivity is S cm^2 mol^-1 because molar conductivity is a measure of the ability of an electrolyte solution to conduct electricity per unit concentration. It is calculated by dividing the specific conductivity of the solution by the concentration of the electrolyte, hence the units of S cm^2 mol^-1.",
+      "explanation_incorrect": "The incorrect answer would be something like 'S/cm' or 'S cm^-1'. This is because the units of molar conductivity need to account for the concentration of the electrolyte, not just the conductivity itself. The correct units of S cm^2 mol^-1 capture both the conductivity and the concentration in the measurement."
+    },
+    {
+      "question_id": "T03.01.Q048",
+      "type": "ordering",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the following metals in order of increasing standard reduction potential (most negative to most positive): (A) Cu (+0.34 V), (B) Zn (-0.76 V), (C) Fe (-0.44 V), (D) Ag (+0.80 V).",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "explanation_correct": "The order of increasing standard reduction potential is Zn (-0.76 V), Fe (-0.44 V), Cu (+0.34 V), Ag (+0.80 V). This is because the more negative the reduction potential, the greater the tendency of the metal to lose electrons and form positive ions, i.e., the more easily the metal is oxidized.",
+      "explanation_incorrect": "The correct order is Zn (-0.76 V), Fe (-0.44 V), Cu (+0.34 V), Ag (+0.80 V). This is because the standard reduction potential measures the tendency of an element to gain electrons and be reduced. The more positive the value, the greater the tendency to be reduced, so Ag has the highest reduction potential and Zn has the lowest (most negative)."
+    },
+    {
+      "question_id": "T03.01.Q049",
+      "type": "ordering",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following in order of increasing reducing power: (A) Ag (E° = +0.80 V), (B) Cu (E° = +0.34 V), (C) Zn (E° = -0.76 V), (D) K (E° = -2.93 V).",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation_correct": "The correct order from highest to lowest reducing power is A, B, C, D. The reduction potential (E°) values indicate the tendency to lose electrons - the more negative the value, the greater the reducing power. Potassium (D) has the most negative E° value at -2.93 V, so it is the strongest reducing agent, followed by zinc (C), copper (B), and silver (A).",
+      "explanation_incorrect": "The incorrect order would be arranging the elements from highest to lowest E° value, which is A, B, C, D. This is incorrect because the reducing power is inversely related to the reduction potential - the more negative the E° value, the greater the reducing power. The correct order is from strongest reducing agent (D) to weakest (A)."
+    },
+    {
+      "question_id": "T03.01.Q050",
+      "type": "ordering",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following electrolytes in order of increasing molar conductivity at infinite dilution: (A) KCl (150), (B) HCl (426), (C) NaCl (126), (D) LiCl (115). Values in S cm^2 mol^-1.",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "explanation_correct": "The order of increasing molar conductivity at infinite dilution is D, C, A, B. This is because the molar conductivity depends on the ionic mobility, which is higher for smaller, more highly charged ions. The order follows the trend of decreasing ionic radius: Li+ < Na+ < K+ < H+.",
+      "explanation_incorrect": "The incorrect order would be to arrange the electrolytes from highest to lowest molar conductivity. This is incorrect because the molar conductivity is influenced by the ionic radius and charge of the ions. Smaller, more highly charged ions have higher molar conductivity. The correct order is from lowest to highest molar conductivity: D (LiCl, 115), C (NaCl, 126), A (KCl, 150), B (HCl, 426)."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

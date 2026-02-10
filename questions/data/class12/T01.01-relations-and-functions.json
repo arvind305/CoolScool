@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.01",
+  "topic_name": "Relations & Functions",
+  "canonical_explanation": {
+    "text": "Relations and Functions in Class 12 extend the foundational concepts by exploring the classification of relations (reflexive, symmetric, transitive, and equivalence), the composition of functions, and the existence and computation of inverse functions. A relation R on a set A is reflexive if (a, a) belongs to R for every a in A, symmetric if (a, b) in R implies (b, a) in R, and transitive if (a, b) and (b, c) in R implies (a, c) in R. An equivalence relation satisfies all three properties and partitions the set into equivalence classes. The composition of functions (f o g)(x) = f(g(x)) combines two functions into one and is associative but generally not commutative. The inverse of a function f exists if and only if f is bijective (both one-one and onto), and is found by solving y = f(x) for x in terms of y, with verification through f o f⁻¹ = f⁻¹ o f = identity.",
+    "rules": [
+      "A relation R on set A is an equivalence relation if and only if it is reflexive, symmetric, and transitive.",
+      "Composition of functions is associative: f o (g o h) = (f o g) o h, but not commutative in general: f o g ≠ g o f.",
+      "The inverse function f⁻¹ exists if and only if f is bijective (one-one and onto), and satisfies f o f⁻¹ = f⁻¹ o f = I (identity function)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.01.Q001",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A relation R on a set A is called reflexive if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(a, b) ∈ R implies (b, a) ∈ R for all a, b ∈ A"
+        },
+        {
+          "id": "B",
+          "text": "(a, a) ∈ R for every a ∈ A"
+        },
+        {
+          "id": "C",
+          "text": "(a, b) ∈ R and (b, c) ∈ R implies (a, c) ∈ R"
+        },
+        {
+          "id": "D",
+          "text": "R = A × A"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A relation R on a set A is reflexive if (a, a) belongs to R for every element a in A. This means that every element in the set is related to itself, which is the defining property of a reflexive relation.",
+      "explanation_incorrect": "Option B is the correct answer. A relation R on a set A is reflexive if every element in the set is related to itself, i.e., (a, a) belongs to R for all a in A. Options A, C, and D do not correctly define the property of reflexivity."
+    },
+    {
+      "question_id": "T01.01.Q002",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following properties must a relation satisfy to be an equivalence relation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive and symmetric only"
+        },
+        {
+          "id": "B",
+          "text": "Symmetric and transitive only"
+        },
+        {
+          "id": "C",
+          "text": "Reflexive, symmetric, and transitive"
+        },
+        {
+          "id": "D",
+          "text": "Reflexive and transitive only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An equivalence relation must satisfy all three properties - reflexive, symmetric, and transitive. This ensures that the relation partitions the set into distinct, non-overlapping equivalence classes.",
+      "explanation_incorrect": "Option C is correct because an equivalence relation must satisfy all three properties - reflexive, symmetric, and transitive. The relation must be reflexive so that every element is related to itself. It must be symmetric so that if 'a' is related to 'b', then 'b' is also related to 'a'. And it must be transitive so that if 'a' is related to 'b' and 'b' is related to 'c', then 'a' is also related to 'c'. Only satisfying all three properties makes a relation an equivalence relation."
+    },
+    {
+      "question_id": "T01.01.Q003",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Let R = {(1,1), (2,2), (3,3), (1,2), (2,1)} on A = {1, 2, 3}. Which property does R NOT satisfy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive"
+        },
+        {
+          "id": "B",
+          "text": "Symmetric"
+        },
+        {
+          "id": "C",
+          "text": "Transitive"
+        },
+        {
+          "id": "D",
+          "text": "R satisfies all three properties"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The relation R = {(1,1), (2,2), (3,3), (1,2), (2,1)} does not satisfy all three properties (reflexive, symmetric, and transitive) since it is not symmetric - (1,2) is in R but (2,1) is not.",
+      "explanation_incorrect": "The relation R is not reflexive, since not all elements (1, 2, 3) are paired with themselves. It is also not symmetric, as (1,2) is in R but (2,1) is not. However, R is transitive, as (1,2) and (2,1) are both in R, so (1,1) must also be in R. Therefore, R does not satisfy all three properties."
+    },
+    {
+      "question_id": "T01.01.Q004",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The relation R on the set of integers defined by 'a R b if a − b is divisible by 3' is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive only"
+        },
+        {
+          "id": "B",
+          "text": "Symmetric only"
+        },
+        {
+          "id": "C",
+          "text": "Transitive only"
+        },
+        {
+          "id": "D",
+          "text": "An equivalence relation"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The relation R defined by 'a R b if a - b is divisible by 3' is an equivalence relation because it satisfies the three properties: it is reflexive (a - a = 0 is divisible by 3), symmetric (if a - b is divisible by 3, then b - a is also divisible by 3), and transitive (if a - b and b - c are divisible by 3, then a - c is also divisible by 3).",
+      "explanation_incorrect": "The relation R is not just reflexive, symmetric, or transitive alone. It satisfies all three properties, making it an equivalence relation. An equivalence relation partitions the set into disjoint equivalence classes, which is a stronger property than just being reflexive, symmetric, or transitive."
+    },
+    {
+      "question_id": "T01.01.Q005",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A relation R on set A = {1, 2, 3} is symmetric. If (1, 2) ∈ R, which of the following must also be in R?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(2, 1)"
+        },
+        {
+          "id": "C",
+          "text": "(2, 3)"
+        },
+        {
+          "id": "D",
+          "text": "(3, 1)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since the relation R is symmetric, if (1, 2) is in R, then (2, 1) must also be in R. This is because in a symmetric relation, the ordered pairs (a, b) and (b, a) are both present if one of them is in the relation.",
+      "explanation_incorrect": "The correct option is B, (2, 1). This is because the relation R is symmetric, which means that if (1, 2) is in R, then (2, 1) must also be in R. Options A, C, and D do not follow from the given information that (1, 2) is in the symmetric relation R."
+    },
+    {
+      "question_id": "T01.01.Q006",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "Let R be a relation on ℤ defined by a R b if |a − b| ≤ 1. R is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive and symmetric but not transitive"
+        },
+        {
+          "id": "B",
+          "text": "An equivalence relation"
+        },
+        {
+          "id": "C",
+          "text": "Reflexive and transitive but not symmetric"
+        },
+        {
+          "id": "D",
+          "text": "Only reflexive"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The relation R defined by |a - b| ≤ 1 is reflexive because every number a is within 1 of itself, and it is symmetric because if |a - b| ≤ 1, then |b - a| ≤ 1 as well. However, it is not transitive, because if |a - b| ≤ 1 and |b - c| ≤ 1, it does not necessarily mean |a - c| ≤ 1.",
+      "explanation_incorrect": "Option B is incorrect because an equivalence relation must satisfy all three properties: reflexivity, symmetry, and transitivity. The given relation R is not transitive, so it cannot be an equivalence relation. Option C is incorrect because R is symmetric, not just reflexive and transitive. Option D is incorrect because R is both reflexive and symmetric."
+    },
+    {
+      "question_id": "T01.01.Q007",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The number of equivalence relations on the set {1, 2, 3} that contain (1, 2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of equivalence relations on the set {1, 2, 3} that contain (1, 2) is 2. This is because an equivalence relation must be reflexive, symmetric, and transitive. With the given pair (1, 2), there are two possible equivalence relations - one where all three elements are equivalent, and another where 1 and 2 are equivalent but 3 is not.",
+      "explanation_incorrect": "The correct answer is B) 2. Equivalence relations on a set must satisfy the properties of reflexivity, symmetry, and transitivity. With the given pair (1, 2), there are two possible ways to construct an equivalence relation - either all three elements are equivalent, or 1 and 2 are equivalent but 3 is not. Option A) 1 is incorrect because there must be at least two equivalence relations. Options C) 3 and D) 5 are incorrect because they do not account for the constraints of an equivalence relation."
+    },
+    {
+      "question_id": "T01.01.Q008",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The equivalence class [0] for the relation 'a R b if a − b is divisible by 5' on ℤ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{0, 1, 2, 3, 4}"
+        },
+        {
+          "id": "B",
+          "text": "{..., −10, −5, 0, 5, 10, ...}"
+        },
+        {
+          "id": "C",
+          "text": "{0, 5}"
+        },
+        {
+          "id": "D",
+          "text": "{0}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The equivalence class [0] for the relation 'a R b if a - b is divisible by 5' on the integers Z contains all integers that are divisible by 5, which includes {..., -10, -5, 0, 5, 10, ...}. This is because any integer that is a multiple of 5 will have a difference divisible by 5 when compared to any other integer in the same equivalence class.",
+      "explanation_incorrect": "Option A is incorrect because the equivalence class [0] should contain all integers that are divisible by 5, not just the integers 0, 1, 2, 3, and 4. Option C is incorrect because the equivalence class [0] should contain all multiples of 5, not just 0 and 5. Option D is incorrect because the equivalence class [0] should contain all integers divisible by 5, not just 0."
+    },
+    {
+      "question_id": "T01.01.Q009",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let R be a relation on the set A = {1, 2, 3, ..., 10} defined by R = {(a, b) : |a − b| is a multiple of 3}. How many equivalence classes does R partition A into?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 3 equivalence classes. The relation R partitions the set A into classes where the absolute difference between the elements is a multiple of 3. This means the classes are {1, 4, 7, 10}, {2, 5, 8}, and {3, 6, 9}, which gives 3 equivalence classes.",
+      "explanation_incorrect": "The incorrect options are not correct. Option A) 2 is wrong because the relation R actually partitions A into 3 equivalence classes, not 2. Option C) 4 is wrong because there are only 3 equivalence classes, not 4. Option D) 5 is wrong because there are only 3 equivalence classes, not 5. The key is to understand that the relation R partitions the set A based on the absolute difference between the elements being a multiple of 3, which results in 3 distinct equivalence classes."
+    },
+    {
+      "question_id": "T01.01.Q010",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let A = {1, 2, 3, 4} and R = {(1,1), (2,2), (3,3), (4,4), (1,2), (2,1), (3,4), (4,3)}. The number of distinct equivalence classes of R is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The given relation R is an equivalence relation since it is reflexive, symmetric, and transitive. This means the set A can be partitioned into equivalence classes. In this case, there are 2 distinct equivalence classes: {1, 2} and {3, 4}.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately reflect the number of distinct equivalence classes for the given relation R. Option A is incorrect because there is more than one equivalence class. Options C and D are incorrect because the relation R has only 2 distinct equivalence classes, not 3 or 4."
+    },
+    {
+      "question_id": "T01.01.Q011",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = 2x + 1 and g(x) = x², then (f o g)(3) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "49"
+        },
+        {
+          "id": "B",
+          "text": "19"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 19. This is because (f o g)(x) = f(g(x)), so (f o g)(3) = f(g(3)) = f(3²) = f(9) = 2(9) + 1 = 19.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the result of composing the functions f(x) = 2x + 1 and g(x) = x² and evaluating at x = 3. Option A) 49 is incorrect because it is the result of evaluating f(g(3)) = f(9) = 2(9) + 1 = 19. Options C) 18 and D) 7 are incorrect because they do not correctly represent the composition of the given functions."
+    },
+    {
+      "question_id": "T01.01.Q012",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "For functions f and g, the composition (f o g)(x) is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(x) · g(x)"
+        },
+        {
+          "id": "B",
+          "text": "f(g(x))"
+        },
+        {
+          "id": "C",
+          "text": "g(f(x))"
+        },
+        {
+          "id": "D",
+          "text": "f(x) + g(x)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The composition of two functions f and g is defined as (f o g)(x) = f(g(x)), where the output of g is used as the input for f. This combines the two functions into a single function that performs the operations of both functions in succession.",
+      "explanation_incorrect": "The composition of functions f and g is not defined as f(x) · g(x), which would be the multiplication of the two function outputs. It also does not involve simply adding the two function outputs, as in f(x) + g(x). The correct definition is (f o g)(x) = f(g(x)), where the input to the composite function is passed through g first and then the result is passed through f."
+    },
+    {
+      "question_id": "T01.01.Q013",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = x + 3 and g(x) = x − 3, then (f o g)(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x + 6"
+        },
+        {
+          "id": "B",
+          "text": "x − 6"
+        },
+        {
+          "id": "C",
+          "text": "x"
+        },
+        {
+          "id": "D",
+          "text": "x² − 9"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) x. This is because the composition of two functions f(x) = x + 3 and g(x) = x - 3 is (f o g)(x) = f(g(x)) = (x - 3) + 3 = x.",
+      "explanation_incorrect": "The other options are incorrect. Option A) x + 6 is not the correct answer because the composition of f(x) = x + 3 and g(x) = x - 3 is not simply adding 6 to x. Option B) x - 6 is not correct because the composition simplifies to x. Option D) x^2 - 9 is incorrect because the composition of these linear functions does not result in a quadratic expression."
+    },
+    {
+      "question_id": "T01.01.Q014",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f(x) = sin(x) and g(x) = x², then (g o f)(π/6) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "√3/2"
+        },
+        {
+          "id": "D",
+          "text": "sin(π²/36)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/4. This is because (g o f)(x) = g(f(x)) = (sin(x))^2. When x = π/6, sin(π/6) = 1/2, so (g o f)(π/6) = (1/2)^2 = 1/4.",
+      "explanation_incorrect": "The incorrect answers do not correctly apply the concept of function composition. Option B) 1/2 is incorrect because sin(π/6) = 1/2, not 1/2 squared. Option C) √3/2 is incorrect because sin(π/6) is not directly used in the expression. Option D) sin(π²/36) is incorrect because it does not involve the composition of the functions f(x) = sin(x) and g(x) = x²."
+    },
+    {
+      "question_id": "T01.01.Q015",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f(x) = 2x and g(x) = x + 5, then the value of x for which (f o g)(x) = (g o f)(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "−5"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "All real values of x"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The value of x for which (f o g)(x) = (g o f)(x) is any real value, because the composition of these linear functions is commutative. Regardless of the order in which the functions are applied, the final result is the same.",
+      "explanation_incorrect": "Option D is correct because the composition of linear functions like f(x) = 2x and g(x) = x + 5 is commutative, meaning the order in which they are applied does not affect the final result. Substituting the functions, we get (f o g)(x) = f(g(x)) = f(x + 5) = 2(x + 5) = 2x + 10, and (g o f)(x) = g(f(x)) = g(2x) = 2x + 5. Equating the two, we see that the equality holds for all real values of x."
+    },
+    {
+      "question_id": "T01.01.Q016",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f(x) = x² + 1 and g(x) = √(x − 1), then the domain of (g o f) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x ≥ 1"
+        },
+        {
+          "id": "B",
+          "text": "All real numbers"
+        },
+        {
+          "id": "C",
+          "text": "x ≥ 0"
+        },
+        {
+          "id": "D",
+          "text": "x > 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) All real numbers. This is because the domain of the composite function (g o f)(x) is the set of all real numbers x for which both f(x) and g(f(x)) are defined. Since f(x) = x^2 + 1 is defined for all real numbers, and g(x) = sqrt(x-1) is defined for all x greater than 1, the domain of the composite function (g o f)(x) is the set of all real numbers.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not capture the full domain of the composite function (g o f)(x). Option A) x ≥ 1 is incorrect because it is too restrictive - the domain includes all real numbers, not just those greater than or equal to 1. Option C) x ≥ 0 is incorrect because the domain of g(x) = sqrt(x-1) requires x > 1, not just x ≥ 0. Option D) x > 1 is also incorrect because it is too restrictive and does not include the full set of real numbers for which both f(x) and g(f(x)) are defined."
+    },
+    {
+      "question_id": "T01.01.Q017",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Let f(x) = (x − 1)/(x + 1), x ≠ −1. Then f(f(x)) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x"
+        },
+        {
+          "id": "B",
+          "text": "−1/x"
+        },
+        {
+          "id": "C",
+          "text": "1/x"
+        },
+        {
+          "id": "D",
+          "text": "−x"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) -1/x. This is because f(x) = (x - 1)/(x + 1), and f(f(x)) = f((x - 1)/(x + 1)) = ((x - 1)/(x + 1) - 1)/((x - 1)/(x + 1) + 1) = -1/x.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly represent the composition of the function f(x) = (x - 1)/(x + 1). Option A) x is incorrect because the composition f(f(x)) does not simplify to x. Option C) 1/x is incorrect because the composition does not simplify to the reciprocal of x. Option D) -x is incorrect because the composition does not simplify to the negative of x."
+    },
+    {
+      "question_id": "T01.01.Q018",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If f: ℝ → ℝ is defined by f(x) = 3x − 5 and g: ℝ → ℝ by g(x) = (x + 5)/3, then (g o f o g)(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x"
+        },
+        {
+          "id": "B",
+          "text": "3x − 5"
+        },
+        {
+          "id": "C",
+          "text": "(x + 5)/3"
+        },
+        {
+          "id": "D",
+          "text": "x + 5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x. This is because the composition of the three functions, (g o f o g)(x), simplifies to just x. When we apply g to f(x) = 3x - 5, we get g(f(x)) = (3x - 5 + 5)/3 = x. Then, when we apply g again to the result, we get (x + 5)/3 = x.",
+      "explanation_incorrect": "The incorrect options B) 3x - 5, C) (x + 5)/3, and D) x + 5 are not correct because they do not represent the simplified result of the composition (g o f o g)(x). The correct answer is A) x, which is the final result after applying the three functions in succession."
+    },
+    {
+      "question_id": "T01.01.Q019",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A function f: A → B has an inverse if and only if f is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "One-one (injective)"
+        },
+        {
+          "id": "B",
+          "text": "Onto (surjective)"
+        },
+        {
+          "id": "C",
+          "text": "Bijective (both one-one and onto)"
+        },
+        {
+          "id": "D",
+          "text": "Continuous"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a function to have an inverse, it must be bijective, meaning it is both one-one (injective) and onto (surjective). This ensures that every element in the codomain (output set) has a unique corresponding element in the domain (input set), allowing the inverse function to be defined unambiguously.",
+      "explanation_incorrect": "While a one-one (injective) function or an onto (surjective) function are both necessary conditions for a function to have an inverse, they are not individually sufficient. The function must be bijective, meaning it satisfies both properties, in order for the inverse function to exist and be well-defined. Continuity is not a requirement for the existence of an inverse function."
+    },
+    {
+      "question_id": "T01.01.Q020",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = 3x + 7, then f⁻¹(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x + 7)/3"
+        },
+        {
+          "id": "B",
+          "text": "(x − 7)/3"
+        },
+        {
+          "id": "C",
+          "text": "3x − 7"
+        },
+        {
+          "id": "D",
+          "text": "1/(3x + 7)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, (x - 7)/3, because to find the inverse function f⁻¹(x), we need to solve the equation y = f(x) = 3x + 7 for x in terms of y. Solving for x, we get x = (y - 7)/3, which is the inverse function f⁻¹(x).",
+      "explanation_incorrect": "The incorrect options are not the inverse function of f(x) = 3x + 7. Option A, (x + 7)/3, would be the inverse if the original function was f(x) = (x + 7)/3. Option C, 3x - 7, is not the inverse as it does not undo the original function. Option D, 1/(3x + 7), is the reciprocal of the original function, not the inverse."
+    },
+    {
+      "question_id": "T01.01.Q021",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = x³, then f⁻¹(27) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "27"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "1/27"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 3. This is because the function f(x) = x³ is an inverse function, meaning that f⁻¹(x) = ∛x. So, when f(x) = 27, the inverse function f⁻¹(27) = 3, since 3³ = 27.",
+      "explanation_incorrect": "The other options are incorrect because they do not satisfy the inverse function relationship. Option A) 27 is the original value, not the inverse. Option B) 9 is the cube root of 27, but the inverse function would be the cube root, not the cube. Option D) 1/27 is the reciprocal of 27, which is not the inverse of the cube function."
+    },
+    {
+      "question_id": "T01.01.Q022",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following functions does NOT have an inverse over ℝ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(x) = 5x − 2"
+        },
+        {
+          "id": "B",
+          "text": "f(x) = x³"
+        },
+        {
+          "id": "C",
+          "text": "f(x) = x²"
+        },
+        {
+          "id": "D",
+          "text": "f(x) = eˣ"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function f(x) = x² does not have an inverse over the real numbers (ℝ) because it is not one-to-one (injective). For every y ≥ 0, there are two values of x (positive and negative) that satisfy the equation y = x². Therefore, the function cannot be inverted to obtain a unique value of x for a given y.",
+      "explanation_incorrect": "The functions f(x) = 5x - 2, f(x) = x³, and f(x) = e^x all have inverse functions over the real numbers (ℝ). This is because they are one-to-one (injective) functions, meaning that for each y, there is a unique x that satisfies the equation y = f(x). On the other hand, the function f(x) = x² is not one-to-one, as there are two values of x (positive and negative) that satisfy the equation y = x² for any y ≥ 0. Therefore, the function f(x) = x² does not have an inverse over the real numbers."
+    },
+    {
+      "question_id": "T01.01.Q023",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = (2x + 3)/(x − 1), x ≠ 1, then f⁻¹(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x + 3)/(x − 2)"
+        },
+        {
+          "id": "B",
+          "text": "(x − 3)/(x + 2)"
+        },
+        {
+          "id": "C",
+          "text": "(x − 1)/(2x + 3)"
+        },
+        {
+          "id": "D",
+          "text": "(2x − 3)/(x + 1)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) (x + 3)/(x - 2). To find the inverse function f⁻¹(x), we need to solve the original function f(x) = (2x + 3)/(x - 1) for x in terms of y, which gives the inverse function as f⁻¹(x) = (x + 3)/(x - 2).",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the inverse function f⁻¹(x). Option B) (x - 3)/(x + 2) is not the inverse, as it does not satisfy the condition f o f⁻¹ = f⁻¹ o f = identity. Options C) (x - 1)/(2x + 3) and D) (2x - 3)/(x + 1) also do not represent the correct inverse function."
+    },
+    {
+      "question_id": "T01.01.Q024",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f: [0, ∞) → [0, ∞) is defined by f(x) = x², then f⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x²"
+        },
+        {
+          "id": "B",
+          "text": "√x"
+        },
+        {
+          "id": "C",
+          "text": "−√x"
+        },
+        {
+          "id": "D",
+          "text": "±√x"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The inverse function f⁻¹(x) of the function f(x) = x² is √x. This is because the equation y = x² can be solved for x to get x = ±√y, and the positive square root gives the inverse function f⁻¹(x) = √x.",
+      "explanation_incorrect": "Option A, f⁻¹(x) = x², is incorrect because the inverse function undoes the original function, and x² does not undo the squaring operation. Option C, f⁻¹(x) = -√x, is incorrect because the inverse function should give the positive square root. Option D, f⁻¹(x) = ±√x, is incorrect because the inverse function should give only the positive square root, not both positive and negative."
+    },
+    {
+      "question_id": "T01.01.Q025",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = eˣ, then f⁻¹(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/eˣ"
+        },
+        {
+          "id": "B",
+          "text": "ln(x)"
+        },
+        {
+          "id": "C",
+          "text": "e⁻ˣ"
+        },
+        {
+          "id": "D",
+          "text": "10ˣ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) ln(x). This is because if f(x) = e^x, then the inverse function f^-1(x) is the natural logarithm function ln(x). The inverse function 'undoes' the original function, so f^-1(e^x) = x.",
+      "explanation_incorrect": "The other options are incorrect. Option A) 1/e^x is the reciprocal of the original function e^x, not the inverse. Option C) e^-x is the reflection of e^x across the y-axis, not the inverse. Option D) 10^x is a different base exponential function, not the inverse of e^x."
+    },
+    {
+      "question_id": "T01.01.Q026",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Let f: ℝ → ℝ be defined by f(x) = (4x + 3)/(6x − 4), x ≠ 2/3. Then f o f(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x"
+        },
+        {
+          "id": "B",
+          "text": "f(x)"
+        },
+        {
+          "id": "C",
+          "text": "−x"
+        },
+        {
+          "id": "D",
+          "text": "1/x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x. This is because the composition of a function with itself, f o f(x), is equal to the identity function, which means the output is simply the input value x.",
+      "explanation_incorrect": "The other options are incorrect. Option B) f(x) is wrong because the composition of a function with itself should result in the identity function. Option C) -x is incorrect because the composition of f(x) with itself does not result in the negative of the input. Option D) 1/x is wrong because the composition of f(x) with itself does not result in the reciprocal of the input."
+    },
+    {
+      "question_id": "T01.01.Q027",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The relation R on set A = {1, 2, 3} defined by R = {(1,2), (2,3)} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive"
+        },
+        {
+          "id": "B",
+          "text": "Symmetric"
+        },
+        {
+          "id": "C",
+          "text": "Transitive"
+        },
+        {
+          "id": "D",
+          "text": "None of these"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The relation R is transitive because if (1, 2) and (2, 3) are in the relation, then (1, 3) must also be in the relation. This means the relation satisfies the transitive property.",
+      "explanation_incorrect": "The relation R is not reflexive because there is no pair (a, a) in the relation for every a in the set A = {1, 2, 3}. It is also not symmetric because the pair (2, 3) is in the relation, but the pair (3, 2) is not. However, the relation is transitive since if (1, 2) and (2, 3) are in the relation, then (1, 3) must also be in the relation."
+    },
+    {
+      "question_id": "T01.01.Q028",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f: ℝ → ℝ and g: ℝ → ℝ are defined by f(x) = |x| and g(x) = |5x − 2|, then (g o f)(−1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "−3"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "−7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3. This is because (g o f)(-1) = g(f(-1)) = g(|(-1)|) = g(1) = |5(1) - 2| = 3.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the composition of the functions f(x) = |x| and g(x) = |5x - 2| evaluated at x = -1. Option B) -3 is incorrect because g(f(-1)) = g(1) = 3, not -3. Options C) 7 and D) -7 are also incorrect as they do not represent the correct result of the composition."
+    },
+    {
+      "question_id": "T01.01.Q029",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Let f: {1, 2, 3} → {a, b, c} be defined by f(1) = a, f(2) = b, f(3) = c. Then f⁻¹(b) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "f⁻¹ does not exist"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2. Since the function f is defined as f(1) = a, f(2) = b, and f(3) = c, the inverse function f⁻¹ must map b to 2, as this is the only element in the domain that gets mapped to b in the original function.",
+      "explanation_incorrect": "The incorrect answer options are A) 1, C) 3, and D) f⁻¹ does not exist. These are incorrect because the inverse function f⁻¹ must map the element b in the codomain back to the corresponding element 2 in the domain, as this is the only element that gets mapped to b in the original function f."
+    },
+    {
+      "question_id": "T01.01.Q030",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let R be the relation on ℕ defined by R = {(a, b) : a divides b}. Then R is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reflexive and transitive but not symmetric"
+        },
+        {
+          "id": "B",
+          "text": "Reflexive and symmetric but not transitive"
+        },
+        {
+          "id": "C",
+          "text": "An equivalence relation"
+        },
+        {
+          "id": "D",
+          "text": "Only reflexive"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The relation R is reflexive because every number divides itself, and it is transitive because if a divides b and b divides c, then a also divides c. However, R is not symmetric because if a divides b, it does not necessarily mean that b also divides a, so the answer is A.",
+      "explanation_incorrect": "Option C is incorrect because for a relation to be an equivalence relation, it must satisfy all three properties: reflexivity, symmetry, and transitivity. While the given relation R is reflexive and transitive, it is not symmetric, as a dividing b does not imply that b also divides a."
+    },
+    {
+      "question_id": "T01.01.Q031",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x² + 2 and g(x) = 1 − 1/(1 − x), x ≠ 0, 1, then (f o g)(2) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B. To find (f o g)(2), we first evaluate g(2) = 1 - 1/(1 - 2) = 1 - 1/-1 = 1 + 1 = 2. Then, we plug this into f(x) = x^2 + 2, so f(2) = 2^2 + 2 = 4 + 2 = 6.",
+      "explanation_incorrect": "The incorrect answers are: A) 2 - This is incorrect because we need to first evaluate g(2) before plugging it into f(x). C) 6 - This is the correct answer, as shown in the correct explanation. D) 18 - This is incorrect because f(x) = x^2 + 2, so f(2) cannot be 18."
+    },
+    {
+      "question_id": "T01.01.Q032",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = 4x + 5 and g(x) = (x − 5)/4, then (f o g)(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4x + 5"
+        },
+        {
+          "id": "B",
+          "text": "(x − 5)/4"
+        },
+        {
+          "id": "C",
+          "text": "x"
+        },
+        {
+          "id": "D",
+          "text": "x²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) x. This is because the composition of functions (f o g)(x) = f(g(x)) means we first apply the function g(x) = (x - 5)/4 to the input x, and then apply the function f(x) = 4x + 5 to the result. Simplifying, we get (f o g)(x) = f((x - 5)/4) = 4((x - 5)/4) + 5 = x.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the composition of the two given functions. Option A) 4x + 5 is simply the function f(x) alone, and option B) (x - 5)/4 is the function g(x) alone. Option D) x² does not follow from the given functions at all."
+    },
+    {
+      "question_id": "T01.01.Q033",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The total number of equivalence relations on the set {1, 2, 3} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The answer is B) 5. This is because there are 2^n (2 raised to the power n) possible equivalence relations on a set of n elements. In this case, n = 3, so the total number of equivalence relations is 2^3 = 8. However, the empty set and the universal relation (where all elements are related to each other) are not counted as proper equivalence relations. Therefore, the total number of equivalence relations on the set {1, 2, 3} is 8 - 2 = 5.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not consider the proper definition of an equivalence relation and the formula to calculate the total number of equivalence relations on a set. The correct answer is B) 5, as there are 2^n - 2 equivalence relations on a set of n elements, where n = 3 in this case."
+    },
+    {
+      "question_id": "T01.01.Q034",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f: ℝ⁺ → [4, ∞) is defined by f(x) = x² + 4, then f⁻¹(8) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "√2"
+        },
+        {
+          "id": "D",
+          "text": "68"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2. To find the inverse of f(x) = x^2 + 4, we need to solve the equation y = x^2 + 4 for x. Substituting y = 8, we get x^2 = 4, which gives x = ±2. Since the domain of f is the positive real numbers, we take the positive value, which is x = 2.",
+      "explanation_incorrect": "The incorrect options are not the right inverse of f(x) = x^2 + 4 when f(x) = 8. Option A) 4 is incorrect because 4^2 + 4 = 20, not 8. Option C) √2 is incorrect because (√2)^2 + 4 = 4 + 4 = 8, not 8. Option D) 68 is incorrect because (√68)^2 + 4 = 4624 + 4 = 4628, not 8."
+    },
+    {
+      "question_id": "T01.01.Q035",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f and g are two bijections, then (g o f)⁻¹ equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f⁻¹ o g⁻¹"
+        },
+        {
+          "id": "B",
+          "text": "g⁻¹ o f⁻¹"
+        },
+        {
+          "id": "C",
+          "text": "f o g"
+        },
+        {
+          "id": "D",
+          "text": "g o f"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) f⁻¹ o g⁻¹. Since f and g are bijections, their inverses f⁻¹ and g⁻¹ exist. The inverse of a composition (g o f) is the composition of the individual inverses, which is f⁻¹ o g⁻¹.",
+      "explanation_incorrect": "The incorrect options are not correct. Option B) g⁻¹ o f⁻¹ is incorrect because the order of the inverses is reversed. Option C) f o g is incorrect because it is the original composition, not the inverse. Option D) g o f is incorrect because it is the original composition, not the inverse."
+    },
+    {
+      "question_id": "T01.01.Q036",
+      "type": "true_false",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Every equivalence relation on a non-empty set partitions the set into disjoint equivalence classes.",
+      "correct_answer": true,
+      "explanation_correct": "Every equivalence relation on a non-empty set partitions the set into disjoint equivalence classes because equivalence relations satisfy the properties of reflexivity, symmetry, and transitivity, which ensure that each element is associated with a unique equivalence class.",
+      "explanation_incorrect": "A common misconception is that not all equivalence relations necessarily partition the set into disjoint equivalence classes. However, this is incorrect. By definition, an equivalence relation on a set divides the set into mutually exclusive and exhaustive subsets called equivalence classes, where each element in the set belongs to exactly one equivalence class."
+    },
+    {
+      "question_id": "T01.01.Q037",
+      "type": "true_false",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Composition of functions is always commutative, i.e., f o g = g o f for all functions f and g.",
+      "correct_answer": false,
+      "explanation_correct": "The composition of functions is generally not commutative, meaning that f o g is not equal to g o f for most functions f and g. This is because the order of the functions matters - f(g(x)) is different from g(f(x)) in most cases.",
+      "explanation_incorrect": "The statement that composition of functions is always commutative is false. Commutativity means that the order of the functions does not matter, i.e., f o g = g o f. However, this is not the case for most functions. The composition of functions is associative, meaning that (f o g) o h = f o (g o h), but it is generally not commutative."
+    },
+    {
+      "question_id": "T01.01.Q038",
+      "type": "true_false",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "The function f(x) = x² defined on ℝ has an inverse function.",
+      "correct_answer": false,
+      "explanation_correct": "The function f(x) = x^2 defined on the real numbers ℝ is not bijective (one-to-one and onto), so it does not have an inverse function. This is because for any positive real number y, there are two values of x (positive and negative) that satisfy the equation x^2 = y.",
+      "explanation_incorrect": "A common misconception is that every function has an inverse function. However, for the function f(x) = x^2 defined on ℝ, the condition for a function to have an inverse is not satisfied. The function f(x) = x^2 is not bijective (one-to-one and onto) because there are multiple values of x that give the same value of y. Therefore, this function does not have an inverse function."
+    },
+    {
+      "question_id": "T01.01.Q039",
+      "type": "true_false",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "A relation that is symmetric and transitive is always reflexive.",
+      "correct_answer": false,
+      "explanation_correct": "A relation that is symmetric and transitive is not necessarily reflexive. For a relation to be reflexive, it must satisfy the condition that every element in the set is related to itself. Symmetry and transitivity do not automatically guarantee this property.",
+      "explanation_incorrect": "The statement is false because a relation can be symmetric and transitive without being reflexive. For a relation to be reflexive, it must satisfy the condition that every element in the set is related to itself. Symmetry means if (a, b) is in the relation, then (b, a) is also in the relation. Transitivity means if (a, b) and (b, c) are in the relation, then (a, c) is also in the relation. These properties do not necessarily imply that every element is related to itself, which is the defining characteristic of a reflexive relation."
+    },
+    {
+      "question_id": "T01.01.Q040",
+      "type": "true_false",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f is a bijective function, then f o f⁻¹ = f⁻¹ o f = Identity function.",
+      "correct_answer": true,
+      "explanation_correct": "If f is a bijective function, that means it is both one-to-one and onto. This ensures that the inverse function f^(-1) exists, and when we compose f and f^(-1), they 'undo' each other, resulting in the identity function.",
+      "explanation_incorrect": "A common misconception is that if f is just a one-to-one function, then f o f^(-1) = f^(-1) o f = Identity. However, for this to be true, f must be bijective (both one-to-one and onto). If f is not onto, then f^(-1) will not exist, and the composition will not equal the identity function."
+    },
+    {
+      "question_id": "T01.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A relation that is reflexive, symmetric, and transitive is called a(n) ___ relation.",
+      "correct_answer": "equivalence",
+      "explanation_correct": "The relation is called an 'equivalence' relation because it satisfies all three properties of being reflexive, symmetric, and transitive. This means the relation can partition the set into distinct equivalence classes, which is a key characteristic of an equivalence relation.",
+      "explanation_incorrect": "The accepted answer format is 'equivalence'. A relation that is reflexive, symmetric, and transitive is called an equivalence relation. This is because an equivalence relation has the ability to divide the set into distinct equivalence classes, where each element in a class is related to every other element in that class."
+    },
+    {
+      "question_id": "T01.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f(x) = 2x + 1 and g(x) = 3x − 2, then (f o g)(1) = ___",
+      "correct_answer": "3",
+      "explanation_correct": "The correct answer is 3 because the composition of the functions f(x) = 2x + 1 and g(x) = 3x - 2 is (f o g)(x) = f(g(x)) = 2(3x - 2) + 1 = 6x - 5. Plugging in x = 1 gives (f o g)(1) = 6(1) - 5 = 3.",
+      "explanation_incorrect": "The incorrect answer would be 7. This is because someone might try to evaluate the functions separately, first finding g(1) = 3(1) - 2 = 1, and then f(1) = 2(1) + 1 = 3, and add them together to get 1 + 3 = 4. However, the correct way is to first compose the functions to get (f o g)(x) = 2(3x - 2) + 1 = 6x - 5, and then plug in x = 1 to get the final answer of 3."
+    },
+    {
+      "question_id": "T01.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "The inverse of f(x) = 5x − 8 is f⁻¹(x) = ___",
+      "correct_answer": "(x + 8)/5",
+      "explanation_correct": "The inverse of a function f(x) can be found by solving the equation y = f(x) for x in terms of y. In this case, the function is f(x) = 5x - 8, so we solve 5x - 8 = y to get x = (y + 8)/5, which is the inverse function f⁻¹(x) = (x + 8)/5.",
+      "explanation_incorrect": "The incorrect answer of just (x + 8) does not fully capture the inverse function. The inverse function requires dividing the expression by 5 to undo the original multiplication by 5 in the function f(x) = 5x - 8. The correct inverse function is f⁻¹(x) = (x + 8)/5, which satisfies the property that f⁻¹(f(x)) = x."
+    },
+    {
+      "question_id": "T01.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If a relation R on a set A satisfies (a, b) ∈ R implies (b, a) ∈ R, then R is called ___.",
+      "correct_answer": "symmetric",
+      "explanation_correct": "The relation R on a set A is called symmetric if (a, b) in R implies (b, a) is also in R. This means the relation goes both ways between any two elements, so it is symmetric.",
+      "explanation_incorrect": "The correct answer is 'symmetric'. A symmetric relation means that if (a, b) is in the relation, then (b, a) is also in the relation. This is different from a reflexive relation, where (a, a) is in the relation for all a in the set A, or a transitive relation, where if (a, b) and (b, c) are in the relation, then (a, c) is also in the relation."
+    },
+    {
+      "question_id": "T01.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = ln(x), then f⁻¹(x) = ___",
+      "correct_answer": "eˣ",
+      "explanation_correct": "The function f(x) = ln(x) is the natural logarithm function, which is the inverse of the exponential function f⁻¹(x) = e^x. This is because the natural logarithm and exponential functions are inverses of each other, meaning that applying one function and then the other results in the original input value.",
+      "explanation_incorrect": "The accepted answer format is e^x. The incorrect answer might be thinking that the inverse of the natural logarithm function f(x) = ln(x) is simply the variable x. However, the inverse function f⁻¹(x) = e^x, where e is the mathematical constant approximately equal to 2.71828. This is because the natural logarithm and exponential functions are inverses of each other."
+    },
+    {
+      "question_id": "T01.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x² and g(x) = x + 1, then (g o f)(3) − (f o g)(3) = ___",
+      "correct_answer": "-6",
+      "explanation_correct": "The correct answer is -6 because (g o f)(3) = g(f(3)) = g(3^2) = g(9) = 9 + 1 = 10, and (f o g)(3) = f(g(3)) = f(3 + 1) = f(4) = 4^2 = 16. Therefore, (g o f)(3) - (f o g)(3) = 10 - 16 = -6.",
+      "explanation_incorrect": "The incorrect answer would be to simply calculate (g o f)(3) and (f o g)(3) without considering the subtraction between them. This would result in the incorrect answer of 10 - 16 = -6, which is the accepted answer format but not the correct reasoning."
+    },
+    {
+      "question_id": "T01.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The number of distinct equivalence classes formed by the relation 'congruence modulo 4' on ℤ is ___.",
+      "correct_answer": "4",
+      "explanation_correct": "The relation 'congruence modulo 4' on the set of integers (ℤ) is an equivalence relation, which means it satisfies the properties of reflexivity, symmetry, and transitivity. This equivalence relation partitions the set of integers into 4 distinct equivalence classes: [0], [1], [2], and [3].",
+      "explanation_incorrect": "The accepted answer format is a single integer value. The incorrect response may have been a different number, such as 2 or 8. However, the relation 'congruence modulo 4' has 4 distinct equivalence classes because any integer can be expressed as being congruent to one of the numbers 0, 1, 2, or 3 modulo 4. Therefore, the correct number of equivalence classes is 4."
+    },
+    {
+      "question_id": "T01.01.Q048",
+      "type": "ordering",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the following steps to verify that a relation R on a set A is an equivalence relation:",
+      "ordering_items": [
+        "Check that (a, a) ∈ R for all a ∈ A",
+        "Check that (a, b) ∈ R implies (b, a) ∈ R",
+        "Check that (a, b) ∈ R and (b, c) ∈ R implies (a, c) ∈ R",
+        "Conclude that R is an equivalence relation"
+      ],
+      "correct_answer": [
+        "Check that (a, a) ∈ R for all a ∈ A",
+        "Check that (a, b) ∈ R implies (b, a) ∈ R",
+        "Check that (a, b) ∈ R and (b, c) ∈ R implies (a, c) ∈ R",
+        "Conclude that R is an equivalence relation"
+      ],
+      "explanation_correct": "The given steps are the correct order to verify that a relation R on a set A is an equivalence relation. First, you need to check that every element a in A is related to itself, which is the reflexive property. Next, you check the symmetric property - that if a is related to b, then b is also related to a. Finally, you check the transitive property - that if a is related to b and b is related to c, then a is also related to c. If all three properties hold, then the relation is an equivalence relation.",
+      "explanation_incorrect": "The incorrect order would be to first check the transitive property, then the symmetric property, and finally the reflexive property. This is not the right order because you need to establish the fundamental properties of reflexivity and symmetry before you can verify the more complex transitive property. The correct order is to start with reflexivity, then check symmetry, and finally verify transitivity, before concluding that the relation is an equivalence relation."
+    },
+    {
+      "question_id": "T01.01.Q049",
+      "type": "ordering",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the inverse of f(x) = (2x + 3)/(x − 1):",
+      "ordering_items": [
+        "Replace f(x) with y: y = (2x + 3)/(x − 1)",
+        "Cross-multiply: y(x − 1) = 2x + 3",
+        "Solve for x: x(y − 2) = y + 3, so x = (y + 3)/(y − 2)",
+        "Replace y with x to get f⁻¹(x) = (x + 3)/(x − 2)"
+      ],
+      "correct_answer": [
+        "Replace f(x) with y: y = (2x + 3)/(x − 1)",
+        "Cross-multiply: y(x − 1) = 2x + 3",
+        "Solve for x: x(y − 2) = y + 3, so x = (y + 3)/(y − 2)",
+        "Replace y with x to get f⁻¹(x) = (x + 3)/(x − 2)"
+      ],
+      "explanation_correct": "The steps are arranged correctly because the inverse function is derived by solving the original function for x in terms of y, and then replacing y with x to get the final inverse function expression.",
+      "explanation_incorrect": "The steps are not arranged correctly. To find the inverse of f(x) = (2x + 3)/(x - 1), you need to first replace f(x) with y, then cross-multiply to get y(x - 1) = 2x + 3, then solve for x to get x = (y + 3)/(y - 2), and finally replace y with x to get the inverse function f^(-1)(x) = (x + 3)/(x - 2)."
+    },
+    {
+      "question_id": "T01.01.Q050",
+      "type": "ordering",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to compute (f o g)(x) where f(x) = eˣ and g(x) = ln(x²):",
+      "ordering_items": [
+        "Write (f o g)(x) = f(g(x))",
+        "Substitute g(x): f(ln(x²))",
+        "Apply f: e^(ln(x²))",
+        "Simplify: x²"
+      ],
+      "correct_answer": [
+        "Write (f o g)(x) = f(g(x))",
+        "Substitute g(x): f(ln(x²))",
+        "Apply f: e^(ln(x²))",
+        "Simplify: x²"
+      ],
+      "explanation_correct": "The correct order of steps is: Write (f o g)(x) = f(g(x)), Substitute g(x): f(ln(x²)), Apply f: e^(ln(x²)), Simplify: x². This is because the composition of functions (f o g)(x) = f(g(x)) first evaluates the inner function g(x) = ln(x²), and then applies the outer function f(x) = e^x to the result, which simplifies to x².",
+      "explanation_incorrect": "The incorrect order of steps would be: Write (f o g)(x) = f(g(x)), Apply f: e^(ln(x²)), Substitute g(x): f(ln(x²)), Simplify: x². This is wrong because the composition of functions (f o g)(x) requires first evaluating the inner function g(x) = ln(x²), and then applying the outer function f(x) = e^x to the result. Skipping the substitution step would lead to the incorrect simplification."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 20,
+        "exam_style": 14
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,1201 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T06.01",
+  "topic_name": "Thermodynamics",
+  "canonical_explanation": {
+    "text": "Chemical thermodynamics deals with the energy changes accompanying chemical reactions and physical transformations. The first law of thermodynamics (ΔU = q + w) establishes energy conservation, where internal energy change equals heat absorbed plus work done on the system. Enthalpy (H = U + PV) is the heat exchanged at constant pressure. Hess's law states that the enthalpy change for a reaction is independent of the path taken. Standard enthalpies of formation, combustion, and bond dissociation allow calculation of reaction enthalpies. The second law introduces entropy (S) as a measure of disorder; for a spontaneous process at constant T and P, the Gibbs free energy change ΔG = ΔH - TΔS must be negative. The third law states that the entropy of a perfect crystal at 0 K is zero.",
+    "rules": [
+      "First law: ΔU = q + w; for expansion work at constant pressure, w = -PΔV.",
+      "At constant pressure: ΔH = qp; at constant volume: ΔU = qv.",
+      "Hess's law: ΔH_reaction = Σ ΔH_f(products) - Σ ΔH_f(reactants).",
+      "Gibbs free energy criterion: ΔG < 0 (spontaneous), ΔG = 0 (equilibrium), ΔG > 0 (non-spontaneous)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T06.01.Q001",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a state function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heat (q)"
+        },
+        {
+          "id": "B",
+          "text": "Work (w)"
+        },
+        {
+          "id": "C",
+          "text": "Internal energy (U)"
+        },
+        {
+          "id": "D",
+          "text": "Both q and w"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Internal energy (U) is a state function, meaning its value depends only on the current state of the system and not on the path taken to reach that state. Heat (q) and work (w) are not state functions, as their values depend on the specific process the system undergoes.",
+      "explanation_incorrect": "Heat (q) and work (w) are not state functions because their values depend on the specific process the system undergoes, not just the current state of the system. Internal energy (U), on the other hand, is a state function, as its value depends only on the current state of the system and not the path taken to reach that state."
+    },
+    {
+      "question_id": "T06.01.Q002",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The first law of thermodynamics is mathematically expressed as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ΔU = q - w"
+        },
+        {
+          "id": "B",
+          "text": "ΔU = q + w"
+        },
+        {
+          "id": "C",
+          "text": "ΔH = q + w"
+        },
+        {
+          "id": "D",
+          "text": "ΔG = q - w"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The first law of thermodynamics states that the change in internal energy (ΔU) of a system is equal to the sum of the work done on the system (w) and the heat absorbed by the system (q). This is mathematically expressed as ΔU = q + w, which matches option B.",
+      "explanation_incorrect": "Option A is incorrect because the first law states that the change in internal energy is equal to the sum of heat and work, not the difference. Option C is incorrect because the first law equation deals with internal energy change (ΔU), not enthalpy change (ΔH). Option D is incorrect because the first law does not involve Gibbs free energy change (ΔG)."
+    },
+    {
+      "question_id": "T06.01.Q003",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Enthalpy (H) is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "H = U - PV"
+        },
+        {
+          "id": "B",
+          "text": "H = U + PV"
+        },
+        {
+          "id": "C",
+          "text": "H = U + TS"
+        },
+        {
+          "id": "D",
+          "text": "H = G + TS"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Enthalpy (H) is defined as the sum of a system's internal energy (U) and the work done by or on the system due to changes in pressure and volume (PV). This means that enthalpy represents the total energy of a system, both in the form of internal energy and in the form of work done on or by the system.",
+      "explanation_incorrect": "Option A (H = U - PV) is incorrect because enthalpy is defined as the sum of internal energy and the work done on the system, not the difference. Option C (H = U + TS) is incorrect because enthalpy does not include the term for entropy (S). Option D (H = G + TS) is incorrect because enthalpy is not defined in terms of Gibbs free energy (G) and entropy."
+    },
+    {
+      "question_id": "T06.01.Q004",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "For an ideal gas undergoing isothermal expansion, the change in internal energy is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive"
+        },
+        {
+          "id": "B",
+          "text": "Negative"
+        },
+        {
+          "id": "C",
+          "text": "Zero"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal gas undergoing isothermal expansion, the change in internal energy is zero. This is because the internal energy of an ideal gas depends only on its temperature, and not on its volume or pressure. Since the temperature remains constant during an isothermal process, the internal energy does not change.",
+      "explanation_incorrect": "The change in internal energy for an ideal gas undergoing isothermal expansion is zero, not positive or negative. This is because the internal energy of an ideal gas is a function of temperature only, and not pressure or volume. Since the temperature remains constant during an isothermal process, the internal energy does not change, regardless of the expansion or compression of the gas."
+    },
+    {
+      "question_id": "T06.01.Q005",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "The relationship between Cp and Cv for an ideal gas is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cp = Cv + R"
+        },
+        {
+          "id": "B",
+          "text": "Cp = Cv - R"
+        },
+        {
+          "id": "C",
+          "text": "Cp = 2Cv"
+        },
+        {
+          "id": "D",
+          "text": "Cp = Cv/R"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For an ideal gas, the specific heat capacity at constant pressure (Cp) is equal to the specific heat capacity at constant volume (Cv) plus the gas constant (R). This relationship, Cp = Cv + R, is derived from the definition of enthalpy (H = U + PV) and the first law of thermodynamics.",
+      "explanation_incorrect": "The correct answer is option A, Cp = Cv + R. This is because for an ideal gas, the work done during expansion or compression depends only on the change in volume, not the path taken. Therefore, the difference between Cp and Cv is equal to the gas constant R, which represents the work done per unit change in temperature at constant pressure."
+    },
+    {
+      "question_id": "T06.01.Q006",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Hess's law is a consequence of the fact that enthalpy is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Path function"
+        },
+        {
+          "id": "B",
+          "text": "State function"
+        },
+        {
+          "id": "C",
+          "text": "Extensive property only"
+        },
+        {
+          "id": "D",
+          "text": "Temperature-dependent quantity only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Enthalpy is a state function, meaning its value depends only on the initial and final states of a system and not on the path taken to get there. Hess's law states that the enthalpy change for a reaction is independent of the steps involved, as long as the initial and final states are the same. This is because enthalpy is a state function.",
+      "explanation_incorrect": "Enthalpy is not a path function, which means its value depends on the specific steps taken to get from the initial to the final state. If enthalpy were a path function, the enthalpy change for a reaction would depend on the intermediate steps, and Hess's law would not hold. Enthalpy is a state function, and Hess's law is a consequence of this fundamental property."
+    },
+    {
+      "question_id": "T06.01.Q007",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The standard enthalpy of formation of an element in its standard state is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive"
+        },
+        {
+          "id": "B",
+          "text": "Negative"
+        },
+        {
+          "id": "C",
+          "text": "Zero"
+        },
+        {
+          "id": "D",
+          "text": "Depends on the element"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The standard enthalpy of formation of an element in its standard state is zero because an element in its standard state has no chemical reactions involved in its formation, so the enthalpy change is zero.",
+      "explanation_incorrect": "The standard enthalpy of formation is not positive or negative, as it is defined as the enthalpy change when one mole of a compound is formed from its constituent elements in their standard states. For an element in its standard state, this enthalpy change is zero, as the element is already in its most stable form and does not undergo any chemical reaction to form itself."
+    },
+    {
+      "question_id": "T06.01.Q008",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "Given: C(s) + O₂(g) → CO₂(g), ΔH = -393 kJ/mol and C(s) + ½O₂(g) → CO(g), ΔH = -110 kJ/mol. The enthalpy of the reaction CO(g) + ½O₂(g) → CO₂(g) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-283 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "+283 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "-503 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "+503 kJ/mol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The enthalpy of the reaction CO(g) + ½O₂(g) → CO₂(g) can be calculated by subtracting the enthalpy of the first reaction (C(s) + O₂(g) → CO₂(g), ΔH = -393 kJ/mol) from the enthalpy of the second reaction (C(s) + ½O₂(g) → CO(g), ΔH = -110 kJ/mol). This gives the enthalpy change of -393 kJ/mol - (-110 kJ/mol) = -283 kJ/mol, which matches the correct option A.",
+      "explanation_incorrect": "The incorrect options B, C, and D do not correctly calculate the enthalpy of the reaction CO(g) + ½O₂(g) → CO₂(g). Option B adds the two given enthalpy changes, which is incorrect. Options C and D use the sum of the magnitudes of the two given enthalpy changes, which is also incorrect. The correct approach is to subtract the enthalpy of the second reaction from the enthalpy of the first reaction, as shown in the correct explanation."
+    },
+    {
+      "question_id": "T06.01.Q009",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The bond dissociation enthalpy of H-H is 436 kJ/mol, Cl-Cl is 242 kJ/mol, and H-Cl is 431 kJ/mol. The enthalpy of the reaction H₂(g) + Cl₂(g) → 2HCl(g) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-184 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "+184 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "-92 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "+92 kJ/mol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The enthalpy of the reaction H₂(g) + Cl₂(g) → 2HCl(g) is -184 kJ/mol because the sum of the bond dissociation enthalpies of the reactants (H-H and Cl-Cl) is greater than the sum of the bond dissociation enthalpies of the products (2 × H-Cl), resulting in a net release of energy.",
+      "explanation_incorrect": "The incorrect options are incorrect because they do not consider the bond dissociation enthalpies of the reactants and products. The enthalpy change of a reaction is determined by the difference between the sum of the bond dissociation enthalpies of the reactants and the sum of the bond dissociation enthalpies of the products. In this case, the sum of the bond dissociation enthalpies of the reactants is greater than the sum of the bond dissociation enthalpies of the products, resulting in a net release of energy during the reaction."
+    },
+    {
+      "question_id": "T06.01.Q010",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Entropy is a measure of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy of the system"
+        },
+        {
+          "id": "B",
+          "text": "Disorder or randomness of the system"
+        },
+        {
+          "id": "C",
+          "text": "Temperature of the system"
+        },
+        {
+          "id": "D",
+          "text": "Pressure of the system"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Entropy is a measure of the disorder or randomness of a system. The more disordered or random the system, the higher its entropy. This is why option B, 'Disorder or randomness of the system', is the correct answer.",
+      "explanation_incorrect": "Entropy is not a measure of the energy, temperature, or pressure of a system. It specifically quantifies the degree of disorder or randomness in the system. Option A, C, and D are incorrect because they do not accurately describe what entropy represents in thermodynamics."
+    },
+    {
+      "question_id": "T06.01.Q011",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The Gibbs free energy equation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ΔG = ΔH + TΔS"
+        },
+        {
+          "id": "B",
+          "text": "ΔG = ΔH - TΔS"
+        },
+        {
+          "id": "C",
+          "text": "ΔG = ΔU - TΔS"
+        },
+        {
+          "id": "D",
+          "text": "ΔG = ΔH × TΔS"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Gibbs free energy equation is ΔG = ΔH - TΔS, where ΔG is the change in Gibbs free energy, ΔH is the change in enthalpy, T is the absolute temperature, and ΔS is the change in entropy. This equation shows that the spontaneity of a process depends on both the enthalpy and entropy changes.",
+      "explanation_incorrect": "The Gibbs free energy equation is ΔG = ΔH - TΔS, not ΔG = ΔH + TΔS. The correct equation shows that spontaneous processes occur when the decrease in enthalpy (ΔH) is greater than the decrease in entropy multiplied by temperature (TΔS), resulting in a negative Gibbs free energy change (ΔG < 0)."
+    },
+    {
+      "question_id": "T06.01.Q012",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "A reaction with ΔH = -100 kJ/mol and ΔS = +50 J/(mol·K) at 298 K is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always non-spontaneous"
+        },
+        {
+          "id": "B",
+          "text": "Spontaneous at all temperatures"
+        },
+        {
+          "id": "C",
+          "text": "Spontaneous only at high temperatures"
+        },
+        {
+          "id": "D",
+          "text": "At equilibrium"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The reaction is spontaneous at all temperatures because the change in Gibbs free energy (ΔG = ΔH - TΔS) is negative for the given values of ΔH and ΔS at any temperature. Since ΔH is negative and ΔS is positive, ΔG will be negative, indicating a spontaneous process.",
+      "explanation_incorrect": "Option A is incorrect because a reaction with a negative enthalpy change (ΔH < 0) and positive entropy change (ΔS > 0) will be spontaneous at all temperatures, not non-spontaneous. Option C is incorrect because the spontaneity does not depend on the temperature, but rather on the values of ΔH and ΔS. Option D is incorrect because a spontaneous reaction is not at equilibrium, as equilibrium requires ΔG = 0."
+    },
+    {
+      "question_id": "T06.01.Q013",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "In an adiabatic process:",
+      "options": [
+        {
+          "id": "A",
+          "text": "q = 0, so ΔU = w"
+        },
+        {
+          "id": "B",
+          "text": "w = 0, so ΔU = q"
+        },
+        {
+          "id": "C",
+          "text": "ΔU = 0"
+        },
+        {
+          "id": "D",
+          "text": "ΔH = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In an adiabatic process, no heat is exchanged between the system and the surroundings (q = 0). Therefore, the change in internal energy (ΔU) is equal to the work done (w) on or by the system, as stated by the first law of thermodynamics (ΔU = q + w).",
+      "explanation_incorrect": "Options B, C, and D are incorrect because they do not correctly describe the relationship between the variables in an adiabatic process. In an adiabatic process, the work done (w) is not zero, and the change in enthalpy (ΔH) is not necessarily zero either. The correct option is A, where the heat absorbed (q) is zero, and the change in internal energy (ΔU) is equal to the work done (w)."
+    },
+    {
+      "question_id": "T06.01.Q014",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The enthalpy of combustion of CH₄ is -890 kJ/mol. The enthalpy change when 8 g of CH₄ (molar mass = 16 g/mol) is completely burned is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-890 kJ"
+        },
+        {
+          "id": "B",
+          "text": "-445 kJ"
+        },
+        {
+          "id": "C",
+          "text": "-1780 kJ"
+        },
+        {
+          "id": "D",
+          "text": "-222.5 kJ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of combustion of CH₄ is given as -890 kJ/mol. To find the enthalpy change for 8 g of CH₄, we need to convert the moles of CH₄ using the molar mass of 16 g/mol. 8 g of CH₄ is equivalent to 0.5 moles, and the enthalpy change for 0.5 moles is half of the enthalpy of combustion per mole, which is -445 kJ.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not take into account the conversion from grams to moles. Option A assumes the enthalpy change is directly the enthalpy of combustion per mole, without considering the amount of CH₄. Option C doubles the enthalpy of combustion, which is incorrect. Option D incorrectly calculates the enthalpy change by dividing the enthalpy of combustion by the mass of CH₄ instead of the moles."
+    },
+    {
+      "question_id": "T06.01.Q015",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "For a reaction at 400 K with ΔH = +80 kJ/mol and ΔS = +200 J/(mol·K), the value of ΔG is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "+80 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "0 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "-80 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "+160 kJ/mol"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is option B) 0 kJ/mol. This is because for a spontaneous process at constant temperature and pressure, the Gibbs free energy change (ΔG) is given by the equation ΔG = ΔH - TΔS. With the given values of ΔH = +80 kJ/mol and ΔS = +200 J/(mol·K) at 400 K, the calculation gives ΔG = 80 - (400 × 200/1000) = 0 kJ/mol.",
+      "explanation_incorrect": "The incorrect options are A) +80 kJ/mol, C) -80 kJ/mol, and D) +160 kJ/mol. These are incorrect because they do not correctly apply the equation ΔG = ΔH - TΔS for the given values of ΔH, ΔS, and temperature. The correct value of ΔG is 0 kJ/mol, as calculated using the provided information."
+    },
+    {
+      "question_id": "T06.01.Q016",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "At equilibrium, the Gibbs free energy change (ΔG) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive"
+        },
+        {
+          "id": "B",
+          "text": "Negative"
+        },
+        {
+          "id": "C",
+          "text": "Zero"
+        },
+        {
+          "id": "D",
+          "text": "Equal to ΔH"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At equilibrium, the Gibbs free energy change (ΔG) is zero. This is because at equilibrium, the system has reached a stable state where there is no further change in the system's properties, and the driving force for the reaction (ΔG) is no longer present.",
+      "explanation_incorrect": "The Gibbs free energy change (ΔG) is not positive, negative, or equal to the enthalpy change (ΔH) at equilibrium. At equilibrium, ΔG is zero, which means the system has reached a state of balance where there is no further spontaneous change. This is because the driving force for the reaction, represented by ΔG, is no longer present at equilibrium."
+    },
+    {
+      "question_id": "T06.01.Q017",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An exothermic reaction is one in which:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heat is absorbed from the surroundings"
+        },
+        {
+          "id": "B",
+          "text": "Heat is released to the surroundings"
+        },
+        {
+          "id": "C",
+          "text": "No heat change occurs"
+        },
+        {
+          "id": "D",
+          "text": "Work is done on the system"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an exothermic reaction, heat is released to the surroundings, meaning the system loses heat and the temperature of the surroundings increases.",
+      "explanation_incorrect": "An exothermic reaction is not one where heat is absorbed from the surroundings (option A) or where no heat change occurs (option C). It also does not mean that work is done on the system (option D). In an exothermic reaction, the system loses heat to the surroundings, causing the temperature of the surroundings to increase."
+    },
+    {
+      "question_id": "T06.01.Q018",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The enthalpy of formation of H₂O(l) is -286 kJ/mol and that of H₂O(g) is -242 kJ/mol. The enthalpy of vaporization of water is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-44 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "+44 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "-528 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "+528 kJ/mol"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of vaporization of water is the energy required to convert 1 mole of liquid water to 1 mole of gaseous water at constant pressure. This can be calculated as the difference between the enthalpy of formation of water vapor (-242 kJ/mol) and the enthalpy of formation of liquid water (-286 kJ/mol), which is +44 kJ/mol.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the enthalpy of vaporization, which is the energy difference between liquid and gaseous water. Option A (-44 kJ/mol) is the difference between the enthalpies of formation, not the enthalpy of vaporization. Options C (-528 kJ/mol) and D (+528 kJ/mol) are too large in magnitude and do not make sense as the energy required to vaporize 1 mole of water."
+    },
+    {
+      "question_id": "T06.01.Q019",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A reaction with ΔH > 0 and ΔS < 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always spontaneous"
+        },
+        {
+          "id": "B",
+          "text": "Never spontaneous"
+        },
+        {
+          "id": "C",
+          "text": "Spontaneous only at high temperatures"
+        },
+        {
+          "id": "D",
+          "text": "Spontaneous only at low temperatures"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A reaction with ΔH > 0 and ΔS < 0 is never spontaneous because the Gibbs free energy change ΔG = ΔH - TΔS will always be positive, indicating that the process is not spontaneous.",
+      "explanation_incorrect": "The correct option is B) Never spontaneous. For a reaction to be spontaneous, the Gibbs free energy change ΔG must be negative. With ΔH > 0 and ΔS < 0, the term TΔS will be negative, making ΔG = ΔH - TΔS positive, which means the reaction is not spontaneous at any temperature."
+    },
+    {
+      "question_id": "T06.01.Q020",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The work done by 2 moles of an ideal gas expanding isothermally and reversibly from 10 L to 20 L at 300 K is: (R = 8.314 J/(mol·K))",
+      "options": [
+        {
+          "id": "A",
+          "text": "-3458 J"
+        },
+        {
+          "id": "B",
+          "text": "-6916 J"
+        },
+        {
+          "id": "C",
+          "text": "+3458 J"
+        },
+        {
+          "id": "D",
+          "text": "-1729 J"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) -3458 J. For an isothermal and reversible expansion of an ideal gas, the work done is given by the formula w = -nRT ln(V2/V1), where n is the number of moles, R is the gas constant, T is the absolute temperature, and V1 and V2 are the initial and final volumes, respectively. Plugging in the values, we get w = -2 mol × 8.314 J/(mol·K) × 300 K × ln(20 L/10 L) = -3458 J.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the formula for work done in an isothermal and reversible expansion of an ideal gas. Option B) -6916 J is incorrect because it doubles the work done, while options C) +3458 J and D) -1729 J do not use the correct formula or sign convention for the work done."
+    },
+    {
+      "question_id": "T06.01.Q021",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The enthalpy of atomization refers to the enthalpy change when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A compound is formed from its atoms"
+        },
+        {
+          "id": "B",
+          "text": "One mole of a substance is broken into gaseous atoms"
+        },
+        {
+          "id": "C",
+          "text": "A bond is formed between atoms"
+        },
+        {
+          "id": "D",
+          "text": "An atom gains an electron"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of atomization refers to the enthalpy change when one mole of a substance is broken into its gaseous atoms. This process requires energy to overcome the bonds holding the atoms together, resulting in a positive enthalpy change.",
+      "explanation_incorrect": "Option A is incorrect because the enthalpy of formation refers to the enthalpy change when a compound is formed from its elements. Option C is incorrect because the enthalpy of bond formation refers to the enthalpy change when a bond is formed between atoms. Option D is incorrect because the enthalpy of ionization refers to the enthalpy change when an atom gains or loses an electron."
+    },
+    {
+      "question_id": "T06.01.Q022",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "For a reaction at constant volume, the heat exchanged equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ΔH"
+        },
+        {
+          "id": "B",
+          "text": "ΔU"
+        },
+        {
+          "id": "C",
+          "text": "ΔG"
+        },
+        {
+          "id": "D",
+          "text": "ΔS"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At constant volume, the work done is zero (w = 0), so the heat exchanged is equal to the change in internal energy (ΔU) according to the first law of thermodynamics (ΔU = q + w).",
+      "explanation_incorrect": "The heat exchanged in a reaction at constant volume is not equal to the change in enthalpy (ΔH), Gibbs free energy (ΔG), or entropy (ΔS). Enthalpy is the heat exchanged at constant pressure, Gibbs free energy is the spontaneity criterion, and entropy is a measure of disorder. The correct option is ΔU, which represents the change in internal energy of the system."
+    },
+    {
+      "question_id": "T06.01.Q023",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In the Born-Haber cycle for NaCl, which of the following steps is endothermic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formation of NaCl from elements"
+        },
+        {
+          "id": "B",
+          "text": "Ionization of Na(g) to Na⁺(g)"
+        },
+        {
+          "id": "C",
+          "text": "Formation of NaCl lattice from gaseous ions"
+        },
+        {
+          "id": "D",
+          "text": "Electron gain by Cl(g)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ionization of sodium (Na) to form Na+ is an endothermic step in the Born-Haber cycle for NaCl, as it requires energy to remove an electron from the sodium atom.",
+      "explanation_incorrect": "The formation of NaCl from the elements is an exothermic step, meaning it releases energy. The electron gain by chlorine (Cl) to form Cl- is also an exothermic process. The formation of the NaCl lattice from the gaseous ions is an exothermic process as well, as it involves the attraction and packing of the ions into a stable crystal structure. Therefore, the endothermic step in the Born-Haber cycle for NaCl is the ionization of sodium (Na) to form Na+."
+    },
+    {
+      "question_id": "T06.01.Q024",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "The entropy of the universe for a spontaneous process is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Always decreasing"
+        },
+        {
+          "id": "B",
+          "text": "Always increasing"
+        },
+        {
+          "id": "C",
+          "text": "Constant"
+        },
+        {
+          "id": "D",
+          "text": "Zero"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The entropy of the universe for a spontaneous process is always increasing. This is because the second law of thermodynamics states that the entropy of the universe increases for a spontaneous process, as it moves towards a more disordered state.",
+      "explanation_incorrect": "The entropy of the universe does not decrease, stay constant, or become zero for a spontaneous process. The second law of thermodynamics clearly states that the entropy of the universe increases for any spontaneous process, as the system moves towards a more disordered state. This ensures that the Gibbs free energy change (ΔG) is negative, making the process spontaneous."
+    },
+    {
+      "question_id": "T06.01.Q025",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The third law of thermodynamics states that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy cannot be created or destroyed"
+        },
+        {
+          "id": "B",
+          "text": "Entropy of a perfect crystal at absolute zero is zero"
+        },
+        {
+          "id": "C",
+          "text": "All spontaneous processes increase the entropy of the universe"
+        },
+        {
+          "id": "D",
+          "text": "ΔG = ΔH - TΔS"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The third law of thermodynamics states that the entropy of a perfect crystal at absolute zero temperature (0 Kelvin) is zero. This is because at absolute zero, the atoms in a perfect crystal are perfectly ordered and there is no molecular disorder, resulting in zero entropy.",
+      "explanation_incorrect": "The other options are incorrect because: (A) is the first law of thermodynamics, (C) is the second law of thermodynamics, and (D) is the equation for Gibbs free energy. The third law specifically states that the entropy of a perfect crystal at 0 Kelvin is zero, not any of the other statements."
+    },
+    {
+      "question_id": "T06.01.Q026",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An isolated system exchanges with its surroundings:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both matter and energy"
+        },
+        {
+          "id": "B",
+          "text": "Only energy"
+        },
+        {
+          "id": "C",
+          "text": "Only matter"
+        },
+        {
+          "id": "D",
+          "text": "Neither matter nor energy"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "In an isolated system, there is no exchange of either matter or energy with the surroundings. The system is completely sealed off from the external environment, so no energy or material can enter or leave the system.",
+      "explanation_incorrect": "An isolated system does not exchange matter or energy with its surroundings. This is because the system is completely closed off and sealed from the external environment, so nothing can enter or leave the system. Option A, B, and C are incorrect because they all describe some form of exchange between the system and surroundings, which is not the case for an isolated system."
+    },
+    {
+      "question_id": "T06.01.Q027",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "If the enthalpy of formation of CO₂(g) is -393 kJ/mol and H₂O(l) is -286 kJ/mol, and the enthalpy of combustion of C₃H₈(g) is -2220 kJ/mol, the enthalpy of formation of C₃H₈(g) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-103 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "+103 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "-1251 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "-2220 kJ/mol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The enthalpy of formation of C3H8(g) can be calculated using Hess's law and the given enthalpies of formation for CO2(g) and H2O(l), as well as the enthalpy of combustion for C3H8(g). The enthalpy of formation of C3H8(g) is -103 kJ/mol, as this value satisfies the given information.",
+      "explanation_incorrect": "Option B, +103 kJ/mol, is incorrect because the enthalpy of formation of a compound is the energy change when the compound is formed from its constituent elements in their standard states. The enthalpy of formation of C3H8(g) cannot be positive, as it would mean that the compound is less stable than its constituent elements. Option C, -1251 kJ/mol, is also incorrect as it does not match the information provided. Option D, -2220 kJ/mol, is the enthalpy of combustion, not the enthalpy of formation."
+    },
+    {
+      "question_id": "T06.01.Q028",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "For the melting of ice at 0°C and 1 atm (ΔH = +6.01 kJ/mol), the entropy change is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "+22.0 J/(mol·K)"
+        },
+        {
+          "id": "B",
+          "text": "-22.0 J/(mol·K)"
+        },
+        {
+          "id": "C",
+          "text": "+6010 J/(mol·K)"
+        },
+        {
+          "id": "D",
+          "text": "0 J/(mol·K)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The entropy change (ΔS) for the melting of ice at 0°C and 1 atm is positive because the process increases the disorder or randomness of the system. The given enthalpy change (ΔH = +6.01 kJ/mol) is the heat absorbed during melting, which is a positive value indicating an endothermic process. Using the formula ΔG = ΔH - TΔS, with ΔG = 0 for a phase change at equilibrium, the entropy change is calculated to be around +22.0 J/(mol·K).",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the entropy change for the melting of ice. A negative entropy change (option B) would mean the process is decreasing the disorder, which is not the case. A very large positive entropy change (option C) is also unrealistic. Option D, zero entropy change, is incorrect because the melting of ice is a spontaneous process that increases the disorder of the system."
+    },
+    {
+      "question_id": "T06.01.Q029",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The relationship between ΔH and ΔU for a gaseous reaction is given by ΔH = ΔU + ΔngRT, where Δng is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total moles of products minus total moles of reactants"
+        },
+        {
+          "id": "B",
+          "text": "Moles of gaseous products minus moles of gaseous reactants"
+        },
+        {
+          "id": "C",
+          "text": "Total moles of gases"
+        },
+        {
+          "id": "D",
+          "text": "Change in moles of solids"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B because Δng represents the change in the total number of moles of gaseous species between the products and reactants. This term accounts for the work done by the system as gases expand or contract during the reaction, and needs to be added to the change in internal energy (ΔU) to obtain the full enthalpy change (ΔH).",
+      "explanation_incorrect": "Option A is incorrect because Δng does not represent the total moles of products minus reactants, which would not capture the change in gas volumes. Option C is incorrect because Δng refers to the change in moles of gases, not the total moles of gases. Option D is incorrect because the change in moles of solids is not relevant to the relationship between ΔH and ΔU for a gaseous reaction."
+    },
+    {
+      "question_id": "T06.01.Q030",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The lattice enthalpy of an ionic compound increases with:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase in ionic radii and decrease in ionic charges"
+        },
+        {
+          "id": "B",
+          "text": "Decrease in ionic radii and increase in ionic charges"
+        },
+        {
+          "id": "C",
+          "text": "Increase in both ionic radii and charges"
+        },
+        {
+          "id": "D",
+          "text": "Decrease in both ionic radii and charges"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The lattice enthalpy of an ionic compound increases when the ionic radii decrease and the ionic charges increase. This is because the stronger electrostatic attractions between the smaller ions with higher charges results in a more stable crystal lattice, which requires more energy to break apart.",
+      "explanation_incorrect": "The lattice enthalpy of an ionic compound does not increase when the ionic radii increase and the ionic charges decrease. In fact, the opposite is true - smaller ions with higher charges experience stronger electrostatic attractions, leading to a more stable crystal lattice and higher lattice enthalpy."
+    },
+    {
+      "question_id": "T06.01.Q031",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "Which of the following processes has a positive entropy change?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Condensation of steam"
+        },
+        {
+          "id": "B",
+          "text": "Freezing of water"
+        },
+        {
+          "id": "C",
+          "text": "Dissolution of NaCl in water"
+        },
+        {
+          "id": "D",
+          "text": "Crystallization of sugar from solution"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The dissolution of NaCl (sodium chloride) in water has a positive entropy change because it increases the disorder or randomness in the system. When NaCl dissolves, the ions become separated and dispersed in the water, increasing the number of possible arrangements of the particles.",
+      "explanation_incorrect": "The condensation of steam, freezing of water, and crystallization of sugar from solution all involve a decrease in the randomness or disorder of the system, and therefore have a negative entropy change. In these processes, the particles become more organized, leading to a lower number of possible arrangements and a decrease in entropy."
+    },
+    {
+      "question_id": "T06.01.Q032",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "An isochoric process is one in which:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Temperature is constant"
+        },
+        {
+          "id": "B",
+          "text": "Pressure is constant"
+        },
+        {
+          "id": "C",
+          "text": "Volume is constant"
+        },
+        {
+          "id": "D",
+          "text": "No heat is exchanged"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an isochoric process, the volume of the system remains constant. This means that no work is done on or by the system, as work is defined as force applied over a distance, and in an isochoric process, the volume does not change.",
+      "explanation_incorrect": "The other options are incorrect because an isochoric process does not involve the following: A) Temperature remaining constant - the temperature can change in an isochoric process; B) Pressure remaining constant - the pressure can change in an isochoric process; D) No heat exchange - heat can be exchanged in an isochoric process, but no work is done."
+    },
+    {
+      "question_id": "T06.01.Q033",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The temperature above which an endothermic reaction with ΔH = +50 kJ/mol and ΔS = +100 J/(mol·K) becomes spontaneous is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "250 K"
+        },
+        {
+          "id": "B",
+          "text": "500 K"
+        },
+        {
+          "id": "C",
+          "text": "1000 K"
+        },
+        {
+          "id": "D",
+          "text": "100 K"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 500 K. For an endothermic reaction with positive enthalpy (ΔH = +50 kJ/mol) and positive entropy change (ΔS = +100 J/(mol·K)), the reaction becomes spontaneous when the Gibbs free energy change ΔG = ΔH - TΔS is negative. This occurs at a temperature T > ΔH/ΔS = 50,000 J/mol / 100 J/(mol·K) = 500 K.",
+      "explanation_incorrect": "Option A) 250 K is incorrect because at this lower temperature, the Gibbs free energy change ΔG = ΔH - TΔS is still positive, meaning the reaction is not spontaneous. Similarly, option C) 1000 K and D) 100 K are incorrect because they do not satisfy the condition for the reaction to become spontaneous, which is T > ΔH/ΔS = 500 K."
+    },
+    {
+      "question_id": "T06.01.Q034",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The enthalpy of neutralization of a strong acid by a strong base is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-57.1 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "-13.7 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "-100 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "-25.0 kJ/mol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The enthalpy of neutralization of a strong acid by a strong base is approximately -57.1 kJ/mol because this is the standard enthalpy change when an aqueous solution of a strong acid like hydrochloric acid (HCl) is mixed with an aqueous solution of a strong base like sodium hydroxide (NaOH).",
+      "explanation_incorrect": "Option A, -57.1 kJ/mol, is the correct answer because when a strong acid and a strong base react, they form a salt and water. This reaction releases a significant amount of heat, which is measured as the enthalpy of neutralization. The other options, such as -13.7 kJ/mol, -100 kJ/mol, and -25.0 kJ/mol, do not represent the typical enthalpy of neutralization for a strong acid-strong base reaction."
+    },
+    {
+      "question_id": "T06.01.Q035",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An intensive property is one that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Depends on the amount of substance"
+        },
+        {
+          "id": "B",
+          "text": "Does not depend on the amount of substance"
+        },
+        {
+          "id": "C",
+          "text": "Is always positive"
+        },
+        {
+          "id": "D",
+          "text": "Is always a state function"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An intensive property is one that does not depend on the amount of substance. This means that the value of an intensive property, such as temperature, pressure, or density, is the same regardless of the quantity of the substance being measured. This is in contrast to extensive properties, which do depend on the amount of the substance.",
+      "explanation_incorrect": "The incorrect options are not accurate descriptions of an intensive property. Option A is wrong because an intensive property is one that does not depend on the amount of substance. Option C is wrong because an intensive property can have both positive and negative values. Option D is wrong because an intensive property is not necessarily a state function, as some intensive properties, such as refractive index, are not state functions."
+    },
+    {
+      "question_id": "T06.01.Q036",
+      "type": "true_false",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Work and heat are path functions, not state functions.",
+      "correct_answer": true,
+      "explanation_correct": "Work and heat are path functions, meaning their values depend on the path taken between the initial and final states. This is in contrast to state functions like internal energy (U), enthalpy (H), and entropy (S), whose values depend only on the initial and final states of the system.",
+      "explanation_incorrect": "It is a common misconception that work and heat are state functions, like internal energy or enthalpy. However, work and heat are path functions, which means their values depend on the specific process or path taken between the initial and final states of the system, not just the initial and final states themselves."
+    },
+    {
+      "question_id": "T06.01.Q037",
+      "type": "true_false",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The enthalpy of neutralization of a weak acid with a strong base is exactly -57.1 kJ/mol.",
+      "correct_answer": false,
+      "explanation_correct": "The enthalpy of neutralization is not exactly -57.1 kJ/mol, as it depends on the specific acid and base involved. The enthalpy of neutralization can vary depending on the strength of the acid and base.",
+      "explanation_incorrect": "The enthalpy of neutralization is not a fixed value of -57.1 kJ/mol. This value is the enthalpy of neutralization for a strong acid (e.g., hydrochloric acid) and a strong base (e.g., sodium hydroxide). However, the enthalpy of neutralization can be different for other acid-base combinations, especially when one of the reactants is a weak acid or a weak base."
+    },
+    {
+      "question_id": "T06.01.Q038",
+      "type": "true_false",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "A reaction can be spontaneous even if it is endothermic, provided TΔS is large enough to make ΔG negative.",
+      "correct_answer": true,
+      "explanation_correct": "Yes, this statement is true. A reaction can be spontaneous even if it is endothermic, as long as the entropy change (TΔS) is large enough to make the overall Gibbs free energy change (ΔG = ΔH - TΔS) negative. The spontaneity of a process is determined by the sign of ΔG, not just the sign of ΔH.",
+      "explanation_incorrect": "The incorrect reasoning would be to assume that all endothermic reactions are non-spontaneous. However, this is not always the case. The spontaneity of a reaction depends on both the enthalpy change (ΔH) and the entropy change (ΔS) through the Gibbs free energy equation (ΔG = ΔH - TΔS). If the entropy change (TΔS) is large enough to offset the positive enthalpy change, the overall Gibbs free energy change (ΔG) can still be negative, making the reaction spontaneous."
+    },
+    {
+      "question_id": "T06.01.Q039",
+      "type": "true_false",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "For an ideal gas at constant temperature, ΔH = 0 during expansion.",
+      "correct_answer": true,
+      "explanation_correct": "For an ideal gas at constant temperature, the enthalpy (H) does not change during expansion because the internal energy (U) remains constant. Since H = U + PV, and P and V change in opposite directions during expansion, the change in H is zero.",
+      "explanation_incorrect": "The incorrect assumption is that enthalpy (H) changes during the expansion of an ideal gas at constant temperature. However, enthalpy is a state function, and its value depends only on the initial and final states, not the path taken. Since the internal energy (U) of an ideal gas is independent of volume at constant temperature, the change in enthalpy (ΔH) during expansion is zero."
+    },
+    {
+      "question_id": "T06.01.Q040",
+      "type": "true_false",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The entropy of a system always increases during a spontaneous process.",
+      "correct_answer": false,
+      "explanation_correct": "The entropy of a system does not always increase during a spontaneous process. While many spontaneous processes like mixing of gases do increase the entropy, there are also spontaneous processes like crystallization where the entropy decreases as the system becomes more ordered.",
+      "explanation_incorrect": "The statement that the entropy of a system always increases during a spontaneous process is incorrect. Entropy is a measure of disorder, and while many spontaneous processes like dissolution or vaporization increase the disorder and hence the entropy, there are also spontaneous processes like precipitation or condensation where the system becomes more ordered, resulting in a decrease in entropy."
+    },
+    {
+      "question_id": "T06.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A system that can exchange energy but not matter with its surroundings is called a ___ system.",
+      "correct_answer": "closed",
+      "explanation_correct": "A closed system can exchange energy with its surroundings, but cannot exchange matter. This means that the total mass of the system and its surroundings remains constant during any process, even as energy transfers in or out of the system.",
+      "explanation_incorrect": "The accepted answer format is 'closed'. An open system can exchange both energy and matter with its surroundings, while an isolated system can exchange neither energy nor matter. A closed system, on the other hand, can only exchange energy, not matter, with its surroundings."
+    },
+    {
+      "question_id": "T06.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "According to Hess's law, ΔH_rxn = Σ ΔH_f(products) - Σ ΔH_f(___)",
+      "correct_answer": "reactants",
+      "explanation_correct": "According to Hess's law, the enthalpy change for a reaction is independent of the path taken. This means that the overall enthalpy change (ΔH_rxn) is equal to the sum of the standard enthalpies of formation of the products minus the sum of the standard enthalpies of formation of the reactants.",
+      "explanation_incorrect": "The correct answer is 'reactants'. Hess's law states that the enthalpy change for a reaction is the difference between the sum of the standard enthalpies of formation of the products and the sum of the standard enthalpies of formation of the reactants. Therefore, the missing term in the equation is 'reactants'."
+    },
+    {
+      "question_id": "T06.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "For a spontaneous process at constant temperature and pressure, ΔG must be ___ (positive/negative/zero).",
+      "correct_answer": "negative",
+      "explanation_correct": "For a spontaneous process at constant temperature and pressure, the Gibbs free energy change ΔG must be negative. This is because a spontaneous process occurs naturally and releases energy, so the system becomes more disordered (increased entropy), but the total free energy of the system decreases.",
+      "explanation_incorrect": "The correct answer is 'negative'. ΔG, the Gibbs free energy change, must be negative for a spontaneous process at constant temperature and pressure. This is because spontaneous processes occur naturally and release energy, causing an increase in disorder or entropy (ΔS > 0) but a decrease in the overall free energy of the system (ΔG = ΔH - TΔS < 0)."
+    },
+    {
+      "question_id": "T06.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a gaseous reaction with Δng = -2 at 300 K, the value of ΔH - ΔU is ___ kJ. (R = 8.314 J/(mol·K))",
+      "correct_answer": "-4.99",
+      "explanation_correct": "For a gaseous reaction with Δng = -2 (change in moles of gas), the term PΔV in the internal energy change ΔU is equal to -2RT. Since enthalpy H = U + PV, the difference between ΔH and ΔU is -2RT, which is -4.99 kJ at 300 K.",
+      "explanation_incorrect": "The incorrect answer would be to simply calculate ΔU without accounting for the work term PΔV. The correct answer requires subtracting -2RT from ΔU to get the enthalpy change ΔH. The accepted answer format is -4.99 kJ."
+    },
+    {
+      "question_id": "T06.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The enthalpy of a reaction using bond enthalpies is calculated as: ΔH = Σ bond enthalpies of bonds broken - Σ bond enthalpies of bonds ___.",
+      "correct_answer": "formed",
+      "explanation_correct": "The enthalpy change of a reaction can be calculated using the bond enthalpies of the bonds broken and formed during the reaction. This is because the total energy released or absorbed is equal to the difference between the energy required to break the reactant bonds and the energy released when new product bonds are formed.",
+      "explanation_incorrect": "The enthalpy change of a reaction is calculated as the sum of bond enthalpies of bonds broken minus the sum of bond enthalpies of bonds formed. The 'formed' part is the key word that is missing in the original statement, as the energy released or absorbed during a reaction is determined by the bonds that are formed, not just the bonds that are broken."
+    },
+    {
+      "question_id": "T06.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The SI unit of entropy is ___.",
+      "correct_answer": "J/(mol·K)",
+      "explanation_correct": "The SI unit of entropy is Joules per mole-Kelvin (J/mol·K). This is because entropy is a measure of the disorder or randomness in a system, and it is directly proportional to the change in heat energy (in Joules) divided by the change in temperature (in Kelvin) per mole of the substance.",
+      "explanation_incorrect": "The incorrect answer would be something like 'Joules per Kelvin (J/K)'. This is not the correct unit because entropy is a property that is dependent on the amount of substance, so the unit must include moles (mol) to account for the quantity of the system. The correct unit, J/(mol·K), takes into account both the energy change and the temperature change per mole of the substance."
+    },
+    {
+      "question_id": "T06.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "In an isothermal reversible expansion of an ideal gas, the work done by the gas is w = -nRT ln(V₂/V₁). The heat absorbed q equals ___ (in terms of w).",
+      "correct_answer": "-w",
+      "explanation_correct": "The work done by the gas in an isothermal reversible expansion of an ideal gas is given by the formula w = -nRT ln(V₂/V₁). Since the first law of thermodynamics states that ΔU = q + w, and for an isothermal process the internal energy change ΔU is zero, the heat absorbed q must be equal to -w.",
+      "explanation_incorrect": "The incorrect answer would be to think that the heat absorbed q is not related to the work done w. However, this is not correct. The first law of thermodynamics states that the change in internal energy ΔU is equal to the heat absorbed q plus the work done w. Since ΔU = 0 for an isothermal process, q must be equal to -w."
+    },
+    {
+      "question_id": "T06.01.Q048",
+      "type": "ordering",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the following in increasing order of entropy: (A) H₂O(s), (B) H₂O(l), (C) H₂O(g), (D) H₂(g) + ½O₂(g)",
+      "ordering_items": [
+        "H₂O(s)",
+        "H₂O(l)",
+        "H₂O(g)",
+        "H₂(g) + ½O₂(g)"
+      ],
+      "correct_answer": [
+        "H₂O(s)",
+        "H₂O(l)",
+        "H₂O(g)",
+        "H₂(g) + ½O₂(g)"
+      ],
+      "explanation_correct": "The correct order is H₂O(s) < H₂O(l) < H₂O(g) < H₂(g) + ½O₂(g) because as the system goes from a more ordered (solid) to a more disordered (gas) state, the entropy increases. This is because the particles have more freedom to move around in the gas phase compared to the solid and liquid phases.",
+      "explanation_incorrect": "The incorrect order would be H₂O(s) < H₂O(l) < H₂(g) + ½O₂(g) < H₂O(g). This is wrong because the entropy of the gas mixture H₂(g) + ½O₂(g) is higher than the entropy of the water vapor H₂O(g). The gas mixture has a more disordered arrangement of particles compared to the water vapor, so it has a higher entropy."
+    },
+    {
+      "question_id": "T06.01.Q049",
+      "type": "ordering",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following steps in the Born-Haber cycle for NaCl in the correct order starting from elements: (A) Electron affinity of Cl, (B) Sublimation of Na(s), (C) Ionization of Na(g), (D) Dissociation of Cl₂(g)",
+      "ordering_items": [
+        "Electron affinity of Cl",
+        "Sublimation of Na(s)",
+        "Ionization of Na(g)",
+        "Dissociation of Cl₂(g)"
+      ],
+      "correct_answer": [
+        "Sublimation of Na(s)",
+        "Dissociation of Cl₂(g)",
+        "Ionization of Na(g)",
+        "Electron affinity of Cl"
+      ],
+      "explanation_correct": "The correct order is Sublimation of Na(s), Dissociation of Cl₂(g), Ionization of Na(g), and Electron affinity of Cl. This is because the Born-Haber cycle starts with the elements and goes through the individual steps to form the final compound NaCl, following the order of the physical and chemical processes involved.",
+      "explanation_incorrect": "The incorrect order would be Electron affinity of Cl, Sublimation of Na(s), Ionization of Na(g), and Dissociation of Cl₂(g). This is wrong because the Born-Haber cycle starts with the elements and follows the sequence of steps to form the final compound NaCl, beginning with the physical processes like sublimation and dissociation, followed by the ionization of sodium and the electron affinity of chlorine."
+    },
+    {
+      "question_id": "T06.01.Q050",
+      "type": "ordering",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the following types of systems by increasing ability to exchange with surroundings: (A) Isolated system, (B) Closed system, (C) Open system",
+      "ordering_items": [
+        "Isolated system",
+        "Closed system",
+        "Open system"
+      ],
+      "correct_answer": [
+        "Isolated system",
+        "Closed system",
+        "Open system"
+      ],
+      "explanation_correct": "An isolated system has no exchange of matter or energy with the surroundings, while a closed system can exchange energy but not matter, and an open system can exchange both energy and matter. Therefore, the order from least to most ability to exchange with surroundings is: isolated system, closed system, open system.",
+      "explanation_incorrect": "The incorrect order would be: open system, closed system, isolated system. This is incorrect because an open system has the highest ability to exchange with the surroundings, as it can exchange both energy and matter. A closed system has a lower ability to exchange, as it can only exchange energy. An isolated system has the lowest ability to exchange, as it cannot exchange either energy or matter with the surroundings."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 15,
+        "application": 20,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

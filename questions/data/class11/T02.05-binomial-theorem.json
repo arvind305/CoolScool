@@ -1,0 +1,1206 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.05",
+  "topic_name": "Binomial Theorem",
+  "canonical_explanation": {
+    "text": "The Binomial Theorem provides the expansion of (a + b)ⁿ for a positive integer n as the sum from r = 0 to n of ⁿCᵣ aⁿ⁻ʳ bʳ. The general term T(r+1) = ⁿCᵣ aⁿ⁻ʳ bʳ allows us to find any specific term in the expansion. When n is even, there is one middle term T(n/2+1); when n is odd, there are two middle terms. Pascal's triangle provides a visual arrangement of binomial coefficients where each entry is the sum of the two entries above it.",
+    "rules": [
+      "(a + b)ⁿ = Σ (r=0 to n) ⁿCᵣ aⁿ⁻ʳ bʳ.",
+      "The general term is T(r+1) = ⁿCᵣ aⁿ⁻ʳ bʳ.",
+      "The expansion has (n+1) terms.",
+      "Middle term: if n is even, it is T(n/2 + 1); if n is odd, the two middle terms are T((n+1)/2) and T((n+3)/2).",
+      "Sum of binomial coefficients: ⁿC₀ + ⁿC₁ + ... + ⁿCₙ = 2ⁿ."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.05.Q001",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of terms in the expansion of (a + b)⁶ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The expansion of (a + b)⁶ has 7 terms, as the binomial theorem states that the expansion has n+1 terms for a positive integer n. In this case, n = 6, so the expansion has 6+1 = 7 terms.",
+      "explanation_incorrect": "The number of terms in the expansion of (a + b)⁶ is 7, not 6, 5, or 12. This is because the binomial theorem states that the expansion has n+1 terms for a positive integer n, and in this case, n = 6, so the expansion has 6+1 = 7 terms."
+    },
+    {
+      "question_id": "T02.05.Q002",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The expansion of (1 + x)³ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 + 3x + 3x² + x³"
+        },
+        {
+          "id": "B",
+          "text": "1 + x + x² + x³"
+        },
+        {
+          "id": "C",
+          "text": "1 + 3x + 6x² + x³"
+        },
+        {
+          "id": "D",
+          "text": "1 + 3x + 9x² + 27x³"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The expansion of (1 + x)³ is 1 + 3x + 3x² + x³ because the Binomial Theorem states that (a + b)^n = Σ(nCr * a^(n-r) * b^r), where r goes from 0 to n. In this case, a = 1, b = x, and n = 3, so the expansion is the sum of the terms 1^3-0 * x^0, 3 * 1^3-1 * x^1, 3 * 1^3-2 * x^2, and 1^3-3 * x^3.",
+      "explanation_incorrect": "The correct expansion of (1 + x)³ is 1 + 3x + 3x² + x³. Option B is incorrect because it is just the powers of x up to x³, without the correct coefficients. Option C is incorrect because the coefficient of the x² term should be 3, not 6. Option D is incorrect because the coefficients are not correct - they should be 1, 3, 3, 1, not 1, 3, 9, 27."
+    },
+    {
+      "question_id": "T02.05.Q003",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The first term in the expansion of (2 + x)⁵ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2⁵ = 32"
+        },
+        {
+          "id": "B",
+          "text": "x⁵"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "2x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The first term in the expansion of (2 + x)⁵ is 2⁵ = 32. This is because the first term in the binomial expansion always has the coefficient 1 and the power of the first variable (a) as n, which in this case is 5. So the first term is 2⁵, which is 32.",
+      "explanation_incorrect": "The correct answer is A) 2⁵ = 32. The first term in the binomial expansion of (a + b)ⁿ is always aⁿ with a coefficient of 1. In this case, a = 2 and n = 5, so the first term is 2⁵ = 32. The other options are incorrect because B) is the last term, C) is the binomial coefficient, and D) is not the correct first term."
+    },
+    {
+      "question_id": "T02.05.Q004",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The last term in the expansion of (x + y)⁴ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x⁴"
+        },
+        {
+          "id": "B",
+          "text": "y⁴"
+        },
+        {
+          "id": "C",
+          "text": "4xy³"
+        },
+        {
+          "id": "D",
+          "text": "6x²y²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The last term in the expansion of (x + y)⁴ is y⁴. This is because the last term corresponds to r = 4, where all the 'x' terms are gone and only the 'y' term remains, giving y⁴.",
+      "explanation_incorrect": "The correct answer is B) y⁴. This is because the binomial expansion of (x + y)⁴ is x⁴ + 4x³y + 6x²y² + 4xy³ + y⁴, where the last term is y⁴. The other options like x⁴, 4xy³, and 6x²y² are not the last term in the expansion."
+    },
+    {
+      "question_id": "T02.05.Q005",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The general term T(r+1) in the expansion of (a + b)ⁿ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ⁿCᵣ aⁿ bʳ"
+        },
+        {
+          "id": "B",
+          "text": "ⁿCᵣ aⁿ⁻ʳ bʳ"
+        },
+        {
+          "id": "C",
+          "text": "ⁿCᵣ aʳ bⁿ⁻ʳ"
+        },
+        {
+          "id": "D",
+          "text": "ⁿPᵣ aⁿ⁻ʳ bʳ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The general term T(r+1) in the expansion of (a + b)^n is ⁿCᵣ a^(n-r) b^r because this term represents the coefficient ⁿCᵣ (which comes from the binomial theorem) multiplied by a raised to the power (n-r) and b raised to the power r.",
+      "explanation_incorrect": "The correct answer is option B, ⁿCᵣ a^(n-r) b^r. Option A, ⁿCᵣ a^n b^r, is incorrect because the exponent of a should be (n-r), not n. Option C, ⁿCᵣ a^r b^(n-r), is incorrect because the exponents of a and b are swapped. Option D, ⁿPᵣ a^(n-r) b^r, is incorrect because it uses the permutation formula (ⁿPᵣ) instead of the binomial coefficient (ⁿCᵣ)."
+    },
+    {
+      "question_id": "T02.05.Q006",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The third term in the expansion of (x + 2)⁵ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "40x³"
+        },
+        {
+          "id": "B",
+          "text": "80x³"
+        },
+        {
+          "id": "C",
+          "text": "20x³"
+        },
+        {
+          "id": "D",
+          "text": "10x³"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The third term in the expansion of (x + 2)⁵ is 40x³. This is because the general term in the binomial expansion is ⁿCᵣ aⁿ⁻ʳ bʳ, and for the third term, r = 2, so ⁵C₂ = 10 and (x)⁵⁻₂ = x³, and (2)² = 4, so the third term is 10 × x³ × 4 = 40x³.",
+      "explanation_incorrect": "Option B) 80x³ is incorrect because the coefficient of the third term in the binomial expansion is ⁿCᵣ, which for n = 5 and r = 2 is 10, not 20. Therefore, the correct third term is 10 × x³ × 4 = 40x³."
+    },
+    {
+      "question_id": "T02.05.Q007",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The coefficient of x³ in (1 + x)⁷ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "21"
+        },
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "42"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 35. The coefficient of x^3 in the expansion of (1 + x)^7 is given by the term ⁷C₃, which is the binomial coefficient of the third term in the expansion. Using the formula for binomial coefficients, ⁷C₃ = 7! / (3! × 4!) = 35.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the actual binomial coefficient for the term with x^3. Option A) 21 is the coefficient of x^4 in the expansion, not x^3. Option C) 7 is the coefficient of x in the expansion, not x^3. Option D) 42 is incorrect because it does not match the actual binomial coefficient for the term with x^3."
+    },
+    {
+      "question_id": "T02.05.Q008",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The middle term in the expansion of (x + y)⁸ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "T₄ = ⁸C₃ x⁵y³"
+        },
+        {
+          "id": "B",
+          "text": "T₅ = ⁸C₄ x⁴y⁴"
+        },
+        {
+          "id": "C",
+          "text": "T₅ = ⁸C₅ x³y⁵"
+        },
+        {
+          "id": "D",
+          "text": "T₃ = ⁸C₂ x⁶y²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The middle term in the expansion of (x + y)⁸ is T₅ = ⁸C₄ x⁴y⁴, as the binomial theorem states that the middle term in an expansion with an even degree (8 in this case) is the (n/2 + 1)th term, which is the 5th term.",
+      "explanation_incorrect": "The correct answer is B) T₅ = ⁸C₄ x⁴y⁴. This is because the binomial theorem states that the middle term in an expansion with an even degree (8 in this case) is the (n/2 + 1)th term, which is the 5th term. Options A, C, and D do not represent the middle term in the expansion of (x + y)⁸."
+    },
+    {
+      "question_id": "T02.05.Q009",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The number of middle terms in the expansion of (a + b)⁹ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When n is odd, the expansion of (a + b)^n has two middle terms. Since the question is asking about the expansion of (a + b)^9, and 9 is an odd number, the number of middle terms is 2.",
+      "explanation_incorrect": "The expansion of (a + b)^n has only one middle term when n is even. Since 9 is an odd number, there are two middle terms in the expansion of (a + b)^9, not one. The correct answer is option B."
+    },
+    {
+      "question_id": "T02.05.Q010",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "In Pascal's triangle, the entries in the 5th row (starting from row 0) are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 5, 10, 10, 5, 1"
+        },
+        {
+          "id": "B",
+          "text": "1, 4, 6, 4, 1"
+        },
+        {
+          "id": "C",
+          "text": "1, 5, 10, 5, 1"
+        },
+        {
+          "id": "D",
+          "text": "1, 6, 15, 20, 15, 6, 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The 5th row in Pascal's triangle contains the binomial coefficients for the expansion of (a + b)⁴. The entries are 1, 4, 6, 4, 1, which corresponds to the options given in choice A.",
+      "explanation_incorrect": "Option A is the correct answer because the entries in the 5th row of Pascal's triangle are the binomial coefficients for the expansion of (a + b)⁴, which are 1, 4, 6, 4, 1. The other options do not correctly represent the entries in the 5th row."
+    },
+    {
+      "question_id": "T02.05.Q011",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "The sum of all binomial coefficients in (1 + x)⁶ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "32"
+        },
+        {
+          "id": "B",
+          "text": "64"
+        },
+        {
+          "id": "C",
+          "text": "128"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of all binomial coefficients in (1 + x)⁶ is 64 because the binomial expansion of (1 + x)⁶ has 7 terms, and the sum of the binomial coefficients in each term is 2⁶ = 64.",
+      "explanation_incorrect": "The correct answer is 64 because the binomial expansion of (1 + x)⁶ has 7 terms, and the sum of the binomial coefficients in each term is 2⁶ = 64. Option A (32) is incorrect because it is half of the correct answer, and Option C (128) is incorrect because it is double the correct answer. Option D (6) is incorrect because it does not represent the sum of all the binomial coefficients in the expansion."
+    },
+    {
+      "question_id": "T02.05.Q012",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "The expansion of (1 − x)⁴ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 − 4x + 6x² − 4x³ + x⁴"
+        },
+        {
+          "id": "B",
+          "text": "1 + 4x + 6x² + 4x³ + x⁴"
+        },
+        {
+          "id": "C",
+          "text": "1 − 4x + 4x² − x⁴"
+        },
+        {
+          "id": "D",
+          "text": "1 − x + x² − x³ + x⁴"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the expansion of (1 - x)⁴ using the binomial theorem gives the expression 1 - 4x + 6x² - 4x³ + x⁴.",
+      "explanation_incorrect": "Option B is incorrect because the binomial expansion of (1 - x)⁴ does not have positive exponents for x. Option C is incorrect because the binomial expansion has 5 terms, not 4. Option D is incorrect because the correct order of the terms in the expansion is 1 - 4x + 6x² - 4x³ + x⁴."
+    },
+    {
+      "question_id": "T02.05.Q013",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The coefficient of x⁴ in the expansion of (2 + x)⁶ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "240"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "480"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of x⁴ in the expansion of (2 + x)⁶ is 60. This is because the general term of the binomial expansion is ⁿCᵣ a^(n-r) b^r, and in this case, n = 6, r = 4, a = 2, and b = x. So the coefficient of x⁴ is 6C4 * 2^(6-4) * x^4 = 15 * 4 = 60.",
+      "explanation_incorrect": "The correct answer is A) 60. The reason for this is that the coefficient of x⁴ in the expansion of (2 + x)⁶ is the term where r = 4, which means 6C4 * 2^(6-4) * x^4 = 15 * 4 = 60. The other options are incorrect because they do not represent the correct coefficient of x⁴ in the expansion."
+    },
+    {
+      "question_id": "T02.05.Q014",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The property ⁿCᵣ + ⁿC(r−1) = ⁽ⁿ⁺¹⁾Cᵣ is known as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pascal's rule"
+        },
+        {
+          "id": "B",
+          "text": "Binomial theorem"
+        },
+        {
+          "id": "C",
+          "text": "De Morgan's law"
+        },
+        {
+          "id": "D",
+          "text": "Euler's theorem"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The property ⁿCᵣ + ⁿC(r−1) = ⁽ⁿ⁺¹⁾Cᵣ is known as Pascal's rule. This rule helps us find the next row in Pascal's triangle by adding the two numbers above each entry.",
+      "explanation_incorrect": "The property ⁿCᵣ + ⁿC(r−1) = ⁽ⁿ⁺¹⁾Cᵣ is not the Binomial Theorem, De Morgan's Law, or Euler's Theorem. The Binomial Theorem describes the expansion of (a + b)^n, while Pascal's rule is a special property related to the binomial coefficients ⁿCᵣ that can be used to construct Pascal's triangle."
+    },
+    {
+      "question_id": "T02.05.Q015",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The value of (√2 + 1)⁴ + (√2 − 1)⁴ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "34"
+        },
+        {
+          "id": "B",
+          "text": "18"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The value of (√2 + 1)⁴ + (√2 - 1)⁴ is 34. This is because the binomial theorem tells us that (a + b)⁴ = a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴. Plugging in the values a = √2 and b = 1, we get (√2 + 1)⁴ = 16 + 8√2 + 6(2) + 4√2 + 1 = 34.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the result of applying the binomial theorem to the given expressions. Option B (18) and Option C (24) are incorrect because they do not account for the full expansion of the binomial terms. Option D (48) is incorrect because it doubles the correct answer of 34."
+    },
+    {
+      "question_id": "T02.05.Q016",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The term independent of x in the expansion of (x + 1/x)⁶ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The term independent of x in the expansion of (x + 1/x)⁶ is 20. This is because the binomial expression (x + 1/x) has a = x and b = 1/x, and the exponent n = 6. Using the binomial theorem formula, the term independent of x will be the one with r = 3, which gives the coefficient ⁶C₃ = 20.",
+      "explanation_incorrect": "The incorrect options are B) 15, C) 6, and D) 1. These are not the correct answer because the term independent of x in the expansion of (x + 1/x)⁶ is the one with r = 3, which gives the coefficient ⁶C₃ = 20. The binomial theorem formula helps us find the general term, and the specific term independent of x is the one where the exponent of x becomes 0."
+    },
+    {
+      "question_id": "T02.05.Q017",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The coefficient of x² in (1 + x)⁵(1 − x)⁴ is obtained by considering the terms up to x² in both expansions. The coefficient of x² is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "−1"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of x² in (1 + x)⁵(1 - x)⁴ is 0 because the terms with x² cancel out when we multiply the two expansions. The coefficient of x² in (1 + x)⁵ is 10, and the coefficient of x² in (1 - x)⁴ is -4, but when we multiply them, the terms with x² cancel each other out, resulting in a coefficient of 0.",
+      "explanation_incorrect": "The correct coefficient of x² in (1 + x)⁵(1 - x)⁴ is 0, not -1, 1, or 4. This is because the terms with x² in the two expansions cancel each other out when we multiply them. The coefficient of x² in (1 + x)⁵ is 10, and the coefficient of x² in (1 - x)⁴ is -4, but when we multiply them, the x² terms cancel, resulting in a coefficient of 0."
+    },
+    {
+      "question_id": "T02.05.Q018",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "The constant term in the expansion of (x² + 1/x)⁶ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The constant term in the expansion of (x² + 1/x)⁶ is 15. This is because the constant term corresponds to the case where r = 0, i.e., the term with no x and only the constant 1/x raised to the power 6, which gives 1/x⁶ = 15.",
+      "explanation_incorrect": "Option B (20) is incorrect. The constant term in the expansion of (x² + 1/x)⁶ is the term with no x, which is (1/x)⁶ = 1/x⁶ = 15. Option C (6) is incorrect because it does not account for the binomial coefficient. Option D (1) is incorrect because the constant term in the expansion of (x² + 1/x)⁶ is not just 1, but rather the coefficient 15 multiplied by 1/x⁶."
+    },
+    {
+      "question_id": "T02.05.Q019",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The value of ⁶C₀ − ⁶C₁ + ⁶C₂ − ⁶C₃ + ⁶C₄ − ⁶C₅ + ⁶C₆ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "64"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "−1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of ⁶C₀ - ⁶C₁ + ⁶C₂ - ⁶C₃ + ⁶C₄ - ⁶C₅ + ⁶C₆ is 0 because the binomial coefficients in this expression form an alternating series, and the sum of all the binomial coefficients for a given n is always equal to 2ⁿ. When n = 6, 2⁶ = 64, and the sum of the alternating series is 0.",
+      "explanation_incorrect": "The correct answer is B) 0. The value of ⁶C₀ is 1, ⁶C₁ is 6, ⁶C₂ is 15, ⁶C₃ is 20, ⁶C₄ is 15, ⁶C₅ is 6, and ⁶C₆ is 1. When you add up these values with the alternating signs, the result is 0, not 64, 1, or -1."
+    },
+    {
+      "question_id": "T02.05.Q020",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "In the expansion of (3x − 2/x²)⁹, the term independent of x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "T₄"
+        },
+        {
+          "id": "B",
+          "text": "T₅"
+        },
+        {
+          "id": "C",
+          "text": "T₆"
+        },
+        {
+          "id": "D",
+          "text": "There is no such term"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The term independent of x in the expansion of (3x - 2/x²)⁹ is T₄, which corresponds to the coefficient of x⁰. This is because the binomial theorem shows that the general term is ⁿCᵣ aⁿ⁻ʳ bʳ, and in this case a = 3x and b = -2/x², so the term independent of x is when r = 4.",
+      "explanation_incorrect": "The correct answer is A) T₄, which is the term independent of x in the expansion. This is because the exponent of x in the general term is n-r, and when r = 4, the exponent of x becomes 9-4 = 5, resulting in a term that does not contain x. The other options B) T₅, C) T₆, and D) 'There is no such term' are incorrect because they do not correspond to the term independent of x in this expansion."
+    },
+    {
+      "question_id": "T02.05.Q021",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the sum of coefficients in (1 + x)ⁿ is 4096, then n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of coefficients in (1 + x)^n is 2^n, which is 4096 when n = 12. This is because the binomial expansion of (1 + x)^n has (n+1) terms, and the coefficients of these terms are the binomial coefficients, which add up to 2^n.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not satisfy the condition that the sum of coefficients in (1 + x)^n is 4096. For example, if n = 10, the sum of coefficients is 2^10 = 1024, which is not 4096. Similarly, if n = 8 or n = 14, the sum of coefficients would be different from 4096."
+    },
+    {
+      "question_id": "T02.05.Q022",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The expansion of (a − b)⁵ has alternate signs. The 4th term is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−10a²b³"
+        },
+        {
+          "id": "B",
+          "text": "10a²b³"
+        },
+        {
+          "id": "C",
+          "text": "−5a⁴b"
+        },
+        {
+          "id": "D",
+          "text": "5a⁴b"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The expansion of (a - b)⁵ has alternate signs, meaning the terms will have alternating positive and negative signs. The 4th term is the coefficient of a²b³, which is -10 according to the binomial theorem formula.",
+      "explanation_incorrect": "The 4th term in the expansion of (a - b)⁵ is -10a²b³, not 10a²b³, 5a⁴b, or -5a⁴b. This is because the binomial theorem formula gives the coefficient of aⁿ⁻ʳ bʳ as ⁿCᵣ, which for n = 5 and r = 2 is -10."
+    },
+    {
+      "question_id": "T02.05.Q023",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The coefficient of x in (1 + x)¹⁰ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "45"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of x in (1 + x)^10 is 10 because the general term of the binomial expansion is (n choose r) a^(n-r) b^r, where n = 10 and r = 1, so the coefficient of x (which corresponds to b) is (10 choose 1) = 10.",
+      "explanation_incorrect": "Option B (45) is incorrect because the binomial coefficient (10 choose 5) is 252, not 45. Option C (1) is incorrect because the coefficient of x in (1 + x)^10 is not 1, it is 10. Option D (100) is incorrect because the coefficient of x in (1 + x)^10 is not 100, it is 10."
+    },
+    {
+      "question_id": "T02.05.Q024",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The greatest binomial coefficient in the expansion of (1 + x)⁸ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "⁸C₃ = 56"
+        },
+        {
+          "id": "B",
+          "text": "⁸C₄ = 70"
+        },
+        {
+          "id": "C",
+          "text": "⁸C₅ = 56"
+        },
+        {
+          "id": "D",
+          "text": "⁸C₂ = 28"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The greatest binomial coefficient in the expansion of (1 + x)⁸ is ⁸C₄ = 70, because the binomial coefficient ⁿCᵣ is the largest when r is equal to n/2, and in this case n = 8 and r = 4.",
+      "explanation_incorrect": "The correct answer is option B, ⁸C₄ = 70. This is because the binomial coefficient ⁿCᵣ is the largest when r is equal to n/2, where n is the exponent of the binomial expression. In this case, n = 8, so r = 4 gives the largest coefficient of 70. The other options, such as ⁸C₃ = 56, ⁸C₅ = 56, and ⁸C₂ = 28, are smaller than the maximum value of 70."
+    },
+    {
+      "question_id": "T02.05.Q025",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "Using the binomial theorem, (101)⁴ = (100 + 1)⁴. The value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "104060401"
+        },
+        {
+          "id": "B",
+          "text": "100040601"
+        },
+        {
+          "id": "C",
+          "text": "10406041"
+        },
+        {
+          "id": "D",
+          "text": "10040601"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 104060401. Using the binomial theorem, (100 + 1)⁴ can be expanded as 1*100⁴ + 4*100³*1 + 6*100²*1² + 4*100*1³ + 1*1⁴, which simplifies to 100⁴ + 400*100³ + 60000*100² + 400*100 + 1, or 104060401.",
+      "explanation_incorrect": "The incorrect options B) 100040601, C) 10406041, and D) 10040601 are incorrect because they do not properly apply the binomial theorem expansion. The correct expansion is 104060401, which is option A)."
+    },
+    {
+      "question_id": "T02.05.Q026",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The coefficient of x⁵ in the expansion of (x − 3)⁸ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−1512"
+        },
+        {
+          "id": "B",
+          "text": "1512"
+        },
+        {
+          "id": "C",
+          "text": "−504"
+        },
+        {
+          "id": "D",
+          "text": "504"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of x^5 in the expansion of (x - 3)^8 is -1512. This is because the general term of the binomial expansion is n!/(r!(n-r)!) * a^(n-r) * b^r, where n = 8 and r = 5, so the coefficient is 8!/(5!(8-5)!) * x^(8-5) * (-3)^5 = -1512.",
+      "explanation_incorrect": "The correct coefficient is -1512, not the options B) 1512, C) -504, or D) 504. This is because the binomial coefficient 8C5 is 56, and when multiplied by x^3 * (-3)^5, the result is -1512."
+    },
+    {
+      "question_id": "T02.05.Q027",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The 5th term from the end in the expansion of (x − 1/x)¹⁰ is the same as the ___ term from the beginning:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7th"
+        },
+        {
+          "id": "B",
+          "text": "5th"
+        },
+        {
+          "id": "C",
+          "text": "6th"
+        },
+        {
+          "id": "D",
+          "text": "8th"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The 5th term from the end in the expansion of (x - 1/x)^10 is the same as the 7th term from the beginning. This is because the expansion is symmetric, so the 5th term from the end is the same as the 7th term from the beginning.",
+      "explanation_incorrect": "The correct answer is A) 7th term from the beginning. The expansion of (x - 1/x)^10 is symmetric, meaning that the coefficients of the terms are the same from the beginning to the middle, and then repeat in reverse order from the middle to the end. Therefore, the 5th term from the end is the same as the 7th term from the beginning."
+    },
+    {
+      "question_id": "T02.05.Q028",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The value of ⁿC₁ + ⁿC₂ + ... + ⁿCₙ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2ⁿ"
+        },
+        {
+          "id": "B",
+          "text": "2ⁿ − 1"
+        },
+        {
+          "id": "C",
+          "text": "2ⁿ + 1"
+        },
+        {
+          "id": "D",
+          "text": "nⁿ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of ⁿC₁ + ⁿC₂ + ... + ⁿCₙ is 2ⁿ - 1, because the binomial coefficients ⁿC₁, ⁿC₂, ..., ⁿCₙ represent the expansion of (1 + 1)ⁿ = 2ⁿ, and the sum of all these coefficients is 2ⁿ - 1.",
+      "explanation_incorrect": "Option A is incorrect because 2ⁿ represents the expansion of (1 + 1)ⁿ, which is different from the sum of the binomial coefficients ⁿC₁ + ⁿC₂ + ... + ⁿCₙ. Option C is incorrect because it adds 1 to 2ⁿ, which is not the correct formula. Option D is incorrect because nⁿ represents a different expression, not the sum of the binomial coefficients."
+    },
+    {
+      "question_id": "T02.05.Q029",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "In the expansion of (1 + x)²⁰, the two middle terms are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "T₁₀ and T₁₁"
+        },
+        {
+          "id": "B",
+          "text": "T₁₁ only"
+        },
+        {
+          "id": "C",
+          "text": "T₁₀ only"
+        },
+        {
+          "id": "D",
+          "text": "T₉ and T₁₂"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The expansion of (1 + x)²⁰ has 21 terms, since the exponent is 20 (a positive integer). The middle term is the 11th term, T₁₁, because 20 is an even number and the middle term is at (20 / 2) + 1 = 11.",
+      "explanation_incorrect": "Option A is incorrect because the two middle terms are T₁₀ and T₁₁, not T₁₀ and T₁₁. Option C is incorrect because there are two middle terms, not just one. Option D is incorrect because the middle terms are T₁₀ and T₁₁, not T₉ and T₁₂."
+    },
+    {
+      "question_id": "T02.05.Q030",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The expansion of (a + b)² using the binomial theorem gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "a² + 2ab + b²"
+        },
+        {
+          "id": "B",
+          "text": "a² + ab + b²"
+        },
+        {
+          "id": "C",
+          "text": "a² − 2ab + b²"
+        },
+        {
+          "id": "D",
+          "text": "2a² + 2b²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The binomial theorem states that (a + b)^2 = a^2 + 2ab + b^2, which matches option A. This is because the general term for the expansion is n!/(r!(n-r)!) * a^(n-r) * b^r, and when n = 2, this simplifies to 2!/(0!2!) * a^2 + 2!/(1!1!) * a^1b^1 + 2!/(2!0!) * b^2.",
+      "explanation_incorrect": "The other options are incorrect because they do not match the expansion given by the binomial theorem. Option B is missing the 2ab term, option C has the wrong sign for the 2ab term, and option D has the wrong coefficients for the a^2 and b^2 terms. The binomial theorem provides the exact expansion, and the correct option A captures this precisely."
+    },
+    {
+      "question_id": "T02.05.Q031",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "If ⁿC₀ + ⁿC₁ + ⁿC₂ + ... + ⁿCₙ = 512, then n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of all the binomial coefficients for a given n is 2^n. Since the sum is 512, which is 2^9, the value of n must be 9.",
+      "explanation_incorrect": "The incorrect options do not match the given sum of the binomial coefficients. For n = 8, the sum is 2^8 = 256, which is too small. For n = 10, the sum is 2^10 = 1024, which is too large. The correct value of n is 9, as it gives a sum of 2^9 = 512."
+    },
+    {
+      "question_id": "T02.05.Q032",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The ratio of the 5th term to the 3rd term in the expansion of (1 + x)¹⁰ for x = 1/2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "35/24"
+        },
+        {
+          "id": "B",
+          "text": "5/3"
+        },
+        {
+          "id": "C",
+          "text": "35/48"
+        },
+        {
+          "id": "D",
+          "text": "7/6"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The ratio of the 5th term to the 3rd term in the expansion of (1 + x)¹⁰ for x = 1/2 is 35/48. This is because the general term in the binomial expansion is ⁿCᵣ a^(n-r) b^r, where a = 1, b = 1/2, and n = 10. Plugging in the values for the 5th and 3rd terms, we get the ratio 10C5 * (1)^(10-5) * (1/2)^5 / 10C3 * (1)^(10-3) * (1/2)^3 = 35/48.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the ratio of the 5th term to the 3rd term in the expansion of (1 + x)¹⁰ for x = 1/2. The correct answer is 35/48, which is calculated by using the general term in the binomial expansion formula."
+    },
+    {
+      "question_id": "T02.05.Q033",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "The value of (1.01)⁵ using binomial theorem (up to 3 decimal places) is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.051"
+        },
+        {
+          "id": "B",
+          "text": "1.050"
+        },
+        {
+          "id": "C",
+          "text": "1.060"
+        },
+        {
+          "id": "D",
+          "text": "1.105"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1.051. Using the binomial theorem, the expansion of (1.01)^5 is 1 + 5(1.01) + 10(1.01)^2 + 10(1.01)^3 + 5(1.01)^4 + (1.01)^5, which equals approximately 1.051 when calculated up to 3 decimal places.",
+      "explanation_incorrect": "The incorrect options B) 1.050, C) 1.060, and D) 1.105 are not correct because they do not match the actual result of the binomial expansion of (1.01)^5 calculated up to 3 decimal places. The correct answer A) 1.051 is the accurate value obtained using the binomial theorem."
+    },
+    {
+      "question_id": "T02.05.Q034",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "In Pascal's triangle, the sum of entries in the nth row (counting from 0) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "n!"
+        },
+        {
+          "id": "B",
+          "text": "2ⁿ"
+        },
+        {
+          "id": "C",
+          "text": "nⁿ"
+        },
+        {
+          "id": "D",
+          "text": "n²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of the entries in the nth row of Pascal's triangle is 2^n, which corresponds to the binomial expansion (a + b)^n when a = b = 1. This is because the entries in the nth row represent the binomial coefficients, which add up to 2^n when each term is 1.",
+      "explanation_incorrect": "Option A (n!) is incorrect because the factorial function gives the total number of ways to arrange n distinct objects, which is not related to the sum of entries in Pascal's triangle. Option C (n^n) is also incorrect because the entries in the nth row do not increase exponentially. Option D (n^2) is incorrect because the sum of entries in the nth row grows much faster than n^2."
+    },
+    {
+      "question_id": "T02.05.Q035",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The coefficient of a³b² in (a + b)⁵ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The coefficient of a³b² in (a + b)⁵ is 10. This is because the general term T(r+1) = ⁿCᵣ aⁿ⁻ʳ bʳ, and when n = 5 and r = 2, we get ⁵C₂ = 10.",
+      "explanation_incorrect": "The correct answer is B) 10. The binomial expansion of (a + b)⁵ is a⁵ + 5a⁴b + 10a³b² + 10ab³ + b⁵, so the coefficient of a³b² is 10. Option A) 5 is incorrect because the coefficient of a³b² is not 5, and options C) 20 and D) 1 are also incorrect."
+    },
+    {
+      "question_id": "T02.05.Q036",
+      "type": "true_false",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The expansion of (a + b)ⁿ has (n + 1) terms.",
+      "correct_answer": true,
+      "explanation_correct": "The expansion of (a + b)^n has (n + 1) terms because the general term T(r+1) = nCr a^(n-r) b^r, and r goes from 0 to n, giving a total of n+1 terms in the expansion.",
+      "explanation_incorrect": "Some students may think the number of terms is n, but that is not correct. The expansion of (a + b)^n has (n + 1) terms because the general term T(r+1) = nCr a^(n-r) b^r, and r goes from 0 to n, giving a total of n+1 terms in the expansion."
+    },
+    {
+      "question_id": "T02.05.Q037",
+      "type": "true_false",
+      "concept_id": "T02.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The middle term in the expansion of (a + b)⁷ is T₄.",
+      "correct_answer": true,
+      "explanation_correct": "The expansion of (a + b)^7 has 8 terms, with the middle term being T4. This is because the number of terms is n+1, where n = 7, so there are 8 terms. The middle term is the (n/2 + 1)th term, which is T4.",
+      "explanation_incorrect": "If the student thought the middle term was T5, they likely miscounted the terms. The expansion of (a + b)^7 has 8 terms, from T0 to T7, not 9 terms. The middle term is the (n/2 + 1)th term, which is T4 when n = 7."
+    },
+    {
+      "question_id": "T02.05.Q038",
+      "type": "true_false",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The sum of binomial coefficients in (1 + x)ⁿ equals 2ⁿ.",
+      "correct_answer": true,
+      "explanation_correct": "The sum of all the binomial coefficients in the expansion of (1 + x)^n is equal to 2^n. This is because each term in the expansion has the form nCr, and the sum of all these coefficients from r=0 to r=n is 2^n.",
+      "explanation_incorrect": "The incorrect explanation would be that the sum of the binomial coefficients is not equal to 2^n. This is because the binomial coefficients represent the number of ways to choose r items from a set of n items, and the sum of all these coefficients is the total number of possible subsets of a set of n items, which is 2^n."
+    },
+    {
+      "question_id": "T02.05.Q039",
+      "type": "true_false",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "In the expansion of (a − b)⁶, all terms are positive.",
+      "correct_answer": false,
+      "explanation_correct": "The expansion of (a - b)^6 will have both positive and negative terms because the binomial coefficients in the expansion formula can be negative when the power n is even and the exponent r is greater than n/2.",
+      "explanation_incorrect": "The statement is false because in the expansion of (a - b)^6, there will be both positive and negative terms. This is because the binomial coefficients in the expansion formula can be negative when the power n is even and the exponent r is greater than n/2. For example, the term -6a^3b^3 will be negative."
+    },
+    {
+      "question_id": "T02.05.Q040",
+      "type": "true_false",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The general term in (x − 2)⁵ is T(r+1) = ⁵Cᵣ x⁵⁻ʳ (−2)ʳ.",
+      "correct_answer": true,
+      "explanation_correct": "The general term in (x - 2)^5 is T(r+1) = 5C_r x^(5-r) (-2)^r, which is the formula for the general term in the binomial expansion of (a + b)^n. In this case, a = x, b = -2, and n = 5, so the general term matches the given expression.",
+      "explanation_incorrect": "The common mistake here would be to think that the general term is T(r+1) = 5C_r x^5-r (2)^r. This is incorrect because the binomial coefficient should be 5C_r, and the power of b (which is -2) should be raised to the power of r, not 2^r. The correct general term formula uses the negative sign in the power of b to represent the subtraction in the binomial expression (x - 2)^5."
+    },
+    {
+      "question_id": "T02.05.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of terms in the expansion of (x + y)¹⁰ is ___.",
+      "correct_answer": "11",
+      "explanation_correct": "The expansion of (x + y)^10 has 11 terms because the binomial theorem states that the number of terms in the expansion of (a + b)^n is n + 1, where n is a positive integer. Since n = 10 in this case, the expansion has 11 terms.",
+      "explanation_incorrect": "The correct answer is 11 terms. The binomial theorem states that the number of terms in the expansion of (a + b)^n is n + 1, where n is a positive integer. In this case, n = 10, so the expansion of (x + y)^10 has 11 terms. The accepted answer format for this fill-in-the-blank question is a single number, '11'."
+    },
+    {
+      "question_id": "T02.05.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The coefficient of x⁴ in (1 + x)⁸ is ___.",
+      "correct_answer": "70",
+      "explanation_correct": "The coefficient of x⁴ in the expansion of (1 + x)⁸ is 70 because the general term in the binomial expansion is ⁿCᵣ aⁿ⁻ʳ bʳ, where n = 8, r = 4, a = 1, and b = x. So the coefficient is 8C4, which is 70.",
+      "explanation_incorrect": "The incorrect answer would be to say the coefficient is 56. This is because the student may have confused the binomial coefficients and thought that 8C4 is 56. However, the correct binomial coefficient 8C4 is 70, which gives the coefficient of x⁴ in the expansion of (1 + x)⁸."
+    },
+    {
+      "question_id": "T02.05.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The 3rd entry in the 4th row (row 0 is first) of Pascal's triangle is ___.",
+      "correct_answer": "6",
+      "explanation_correct": "The 4th row of Pascal's triangle (starting from row 0) contains the binomial coefficients for (a + b)³. The 3rd entry in this row is 6, which represents the coefficient of the term a²b, as per the binomial expansion formula.",
+      "explanation_incorrect": "The accepted answer format is a single number. The 3rd entry in the 4th row of Pascal's triangle is 6, not 'a²b' or any other expression. The binomial coefficients in Pascal's triangle follow a specific pattern, and the 3rd entry in the 4th row is the coefficient of the a²b term in the expansion of (a + b)³."
+    },
+    {
+      "question_id": "T02.05.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The middle term in the expansion of (1 + x)⁶ is the ___ term.",
+      "correct_answer": "4th",
+      "explanation_correct": "The expansion of (1 + x)^6 has 7 terms. Since n (the exponent) is even, the middle term is the 4th term, which corresponds to r = 3 in the general term formula (nCr a^(n-r) b^r).",
+      "explanation_incorrect": "The incorrect answer would be the 3rd term. However, the expansion of (1 + x)^6 has 7 terms, and since n (the exponent) is even, the middle term is the 4th term, corresponding to r = 3 in the general term formula (nCr a^(n-r) b^r)."
+    },
+    {
+      "question_id": "T02.05.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The second term in the expansion of (3 + 2x)⁵ is ___.",
+      "correct_answer": "810x",
+      "explanation_correct": "The second term in the expansion of (3 + 2x)^5 is 810x. This is because the general term in the binomial expansion is (nCr) a^(n-r) b^r, where n = 5, r = 1, a = 3, and b = 2x. Plugging these values in, we get (5C1) 3^(5-1) (2x)^1 = 5 * 81 * 2x = 810x.",
+      "explanation_incorrect": "The incorrect answer would be 1215x. This is because the student might have used the wrong formula for the binomial coefficient (nCr) and calculated it as 5C1 = 5, instead of the correct value of 5C1 = 5. The correct answer is 810x, as explained in the correct explanation."
+    },
+    {
+      "question_id": "T02.05.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the sum of all binomial coefficients in (1+x)ⁿ is 256, then n = ___.",
+      "correct_answer": "8",
+      "explanation_correct": "The sum of all binomial coefficients in (1+x)^n is 2^n. When this sum is 256, we can solve for n by taking the logarithm base 2 of 256, which gives n = 8.",
+      "explanation_incorrect": "The incorrect answer would be to think that the sum of all binomial coefficients in (1+x)^n is always 256, regardless of the value of n. However, this is not the case. The sum of all binomial coefficients in (1+x)^n is always 2^n. Therefore, if the sum is 256, then n must be 8, since 2^8 = 256."
+    },
+    {
+      "question_id": "T02.05.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The coefficient of x³ in (2 − x)⁵ is ___.",
+      "correct_answer": "−40",
+      "explanation_correct": "The coefficient of x³ in (2 - x)⁵ is -40 because the general term for the binomial expansion is ⁿCᵣ aⁿ⁻ʳ bʳ. In this case, n = 5, r = 3, a = 2, and b = -1. Plugging these values, we get 5C3 * 2⁵⁻³ * (-1)³ = -40.",
+      "explanation_incorrect": "The incorrect answer would be to assume that the coefficient is simply the binomial coefficient 5C3 = 10. However, the binomial expansion also requires us to multiply the coefficient by the appropriate powers of a and b. In this case, the correct coefficient is -40, not 10."
+    },
+    {
+      "question_id": "T02.05.Q048",
+      "type": "ordering",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the terms of (a + b)⁴ in order: (A) 4a³b, (B) a⁴, (C) b⁴, (D) 6a²b², (E) 4ab³. Arrange from first to last term:",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "correct_answer": [
+        "B",
+        "A",
+        "D",
+        "E",
+        "C"
+      ],
+      "explanation_correct": "The correct order is B, A, D, E, C because the binomial theorem states that the terms are arranged in descending powers of 'a' and ascending powers of 'b'. Therefore, the order from first to last term is a⁴, 4a³b, 6a²b², 4ab³, b⁴.",
+      "explanation_incorrect": "The incorrect explanation would be to arrange the terms in alphabetical order. However, the binomial theorem requires the terms to be arranged in descending powers of 'a' and ascending powers of 'b'. The correct order is B, A, D, E, C, not the alphabetical order A, B, C, D, E."
+    },
+    {
+      "question_id": "T02.05.Q049",
+      "type": "ordering",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange these values in increasing order: (A) ⁵C₂, (B) ⁴C₂, (C) ⁶C₃, (D) ³C₁",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation_correct": "The correct order of the given values is D, B, A, C. This is because the binomial coefficient nCr represents the number of ways of choosing r items from n items. The value of nCr increases as n increases and decreases as r increases. Therefore, the order from smallest to largest is ³C₁, ⁴C₂, ⁵C₂, ⁶C₃.",
+      "explanation_incorrect": "The incorrect order would be A, B, C, D. This is because the binomial coefficient nCr is the number of ways of choosing r items from n items. However, the value of nCr does not increase linearly with n and r. Instead, it follows a specific pattern where the value increases as n increases and decreases as r increases. Therefore, the correct order from smallest to largest is D, B, A, C."
+    },
+    {
+      "question_id": "T02.05.Q050",
+      "type": "ordering",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the term independent of x in (x + 1/x)⁸: (A) Set the power of x to 0: 8 − 2r = 0, (B) Write T(r+1) = ⁸Cᵣ x⁸⁻ʳ (1/x)ʳ = ⁸Cᵣ x⁸⁻²ʳ, (C) Solve r = 4, (D) Compute T₅ = ⁸C₄ = 70",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation_correct": "The correct order is B, A, C, D because first we need to write the general term T(r+1) = ⁸Cᵣ x⁸⁻ʳ (1/x)ʳ, then set the power of x to 0 to find the term independent of x, solve for r, and finally compute the value of the term T₅ = ⁸C₄ = 70.",
+      "explanation_incorrect": "The incorrect explanation would be to first solve for r = 4, then write the general term T(r+1), set the power of x to 0, and finally compute the value of the term. This is wrong because we need to start with the general term and then work towards finding the specific term independent of x."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

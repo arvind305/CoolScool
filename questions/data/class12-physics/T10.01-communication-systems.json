@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T10.01",
+  "topic_name": "Communication Systems",
+  "canonical_explanation": {
+    "text": "A communication system consists of a transmitter, a channel, and a receiver. The message signal (information) must be modulated onto a high-frequency carrier wave for efficient transmission. Amplitude modulation (AM) varies the carrier amplitude proportional to the message signal, with modulation index m = A_m/A_c and bandwidth = 2f_m. Electromagnetic waves propagate via ground wave (low frequency, follows Earth's curvature), sky wave (reflected by ionosphere, HF), and space wave (line of sight, VHF/UHF). The line of sight distance is d = sqrt(2Rh) where R is the Earth's radius and h is the antenna height. Bandwidth requirements differ for speech (~4 kHz), music (~20 kHz), and video (~4.2 MHz).",
+    "rules": [
+      "Elements of communication: transmitter, channel, receiver",
+      "Modulation index: m = A_m/A_c; bandwidth of AM signal = 2f_m",
+      "Ground wave: for low frequencies; sky wave: for HF (3-30 MHz); space wave: for VHF and above",
+      "Line of sight distance: d = sqrt(2Rh) where R = 6400 km",
+      "Bandwidth: speech ~4 kHz, music ~20 kHz, TV video ~4.2 MHz"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T10.01.Q001",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The three essential elements of a communication system are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oscillator, amplifier, antenna"
+        },
+        {
+          "id": "B",
+          "text": "Transmitter, channel, receiver"
+        },
+        {
+          "id": "C",
+          "text": "Modulator, demodulator, filter"
+        },
+        {
+          "id": "D",
+          "text": "Encoder, decoder, amplifier"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The three essential elements of a communication system are the transmitter, the channel, and the receiver. This is because the transmitter is responsible for encoding the message signal and transmitting it, the channel carries the signal from the transmitter to the receiver, and the receiver is responsible for decoding the signal and recovering the original message.",
+      "explanation_incorrect": "The other options are not the three essential elements of a communication system. Option A describes the components of the transmitter, option C describes the modulator and demodulator which are part of the transmitter and receiver, and option D describes the encoder and decoder which are also part of the transmitter and receiver. The correct answer is option B, which outlines the three core components of any communication system."
+    },
+    {
+      "question_id": "T10.01.Q002",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The signal-to-noise ratio (SNR) of a communication system should ideally be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "As low as possible"
+        },
+        {
+          "id": "B",
+          "text": "Equal to 1"
+        },
+        {
+          "id": "C",
+          "text": "As high as possible"
+        },
+        {
+          "id": "D",
+          "text": "Zero"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The signal-to-noise ratio (SNR) should be as high as possible in a communication system, as this means the signal is much stronger than the background noise, resulting in a clearer and more reliable transmission.",
+      "explanation_incorrect": "The signal-to-noise ratio (SNR) should not be as low as possible, as this would mean the signal is weak compared to the noise, leading to a poor quality transmission. It also should not be equal to 1, as this would mean the signal and noise are equally strong, which is not desirable. The correct answer is that the SNR should be as high as possible for an efficient and reliable communication system."
+    },
+    {
+      "question_id": "T10.01.Q003",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Bandwidth is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The maximum frequency of a signal"
+        },
+        {
+          "id": "B",
+          "text": "The range of frequencies over which the signal has significant components"
+        },
+        {
+          "id": "C",
+          "text": "The minimum frequency of a signal"
+        },
+        {
+          "id": "D",
+          "text": "The speed of signal transmission"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, as bandwidth refers to the range of frequencies over which the signal has significant components. This means that bandwidth represents the frequency spectrum occupied by the signal, which is important for efficient transmission and reception.",
+      "explanation_incorrect": "The other options are incorrect. Option A, 'The maximum frequency of a signal', is not the definition of bandwidth, as bandwidth includes the range of frequencies, not just the maximum. Option C, 'The minimum frequency of a signal', is also not the definition, as bandwidth is concerned with the full range of frequencies, not just the minimum. Option D, 'The speed of signal transmission', is not the definition of bandwidth, as bandwidth is a measure of the frequency spectrum, not the transmission speed."
+    },
+    {
+      "question_id": "T10.01.Q004",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "The function of a transducer in a communication system is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amplify the signal"
+        },
+        {
+          "id": "B",
+          "text": "Convert one form of energy to another (e.g., sound to electrical)"
+        },
+        {
+          "id": "C",
+          "text": "Filter unwanted frequencies"
+        },
+        {
+          "id": "D",
+          "text": "Modulate the carrier wave"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function of a transducer in a communication system is to convert one form of energy to another, such as converting sound energy into electrical energy. This is necessary to transmit the message signal through the communication channel.",
+      "explanation_incorrect": "The other options are not the primary function of a transducer in a communication system. Amplifying the signal, filtering unwanted frequencies, and modulating the carrier wave are separate components or processes in the communication system, not the role of the transducer itself."
+    },
+    {
+      "question_id": "T10.01.Q005",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "Noise in a communication channel refers to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The original signal"
+        },
+        {
+          "id": "B",
+          "text": "Unwanted signals that get mixed with the transmitted signal"
+        },
+        {
+          "id": "C",
+          "text": "The carrier wave"
+        },
+        {
+          "id": "D",
+          "text": "The modulated signal"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B. Noise in a communication channel refers to unwanted signals that get mixed with the transmitted signal, decreasing the quality and reliability of the communication. This unwanted interference can come from various sources like electromagnetic radiation, static, or other signals in the same frequency range.",
+      "explanation_incorrect": "The other options are incorrect. Option A refers to the original message signal, which is not noise. Option C refers to the carrier wave, which is a separate component of the communication system. Option D refers to the modulated signal, which is the desired transmission, not the noise that interferes with it."
+    },
+    {
+      "question_id": "T10.01.Q006",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The need for modulation in communication is because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Low-frequency signals cannot be transmitted directly over long distances effectively"
+        },
+        {
+          "id": "B",
+          "text": "High-frequency signals have more noise"
+        },
+        {
+          "id": "C",
+          "text": "Modulation reduces the cost of transmission"
+        },
+        {
+          "id": "D",
+          "text": "Modulation increases the wavelength of the signal"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Low-frequency signals cannot be transmitted effectively over long distances due to high signal attenuation. Modulation allows the message signal to be superimposed on a high-frequency carrier wave, enabling more efficient transmission.",
+      "explanation_incorrect": "Option A is correct because low-frequency signals are not suitable for long-distance transmission. They are prone to attenuation and interference, making them inefficient for communication systems. Modulation allows the message signal to be superimposed on a high-frequency carrier wave, which can be transmitted over long distances more effectively. Options B, C, and D are incorrect as they do not address the primary reason for modulation in communication systems."
+    },
+    {
+      "question_id": "T10.01.Q007",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "In amplitude modulation, the parameter of the carrier wave that is varied is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frequency"
+        },
+        {
+          "id": "B",
+          "text": "Phase"
+        },
+        {
+          "id": "C",
+          "text": "Amplitude"
+        },
+        {
+          "id": "D",
+          "text": "Wavelength"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In amplitude modulation (AM), the amplitude of the carrier wave is varied in proportion to the message signal. This means that the amplitude of the carrier is the parameter that is modulated, or varied, to encode the information.",
+      "explanation_incorrect": "The frequency, phase, and wavelength of the carrier wave are not varied in amplitude modulation. Amplitude modulation specifically modulates the amplitude or strength of the carrier wave to transmit the message signal, while the other parameters remain constant."
+    },
+    {
+      "question_id": "T10.01.Q008",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "The modulation index of an AM wave is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "m = A_c / A_m"
+        },
+        {
+          "id": "B",
+          "text": "m = A_m / A_c"
+        },
+        {
+          "id": "C",
+          "text": "m = A_m x A_c"
+        },
+        {
+          "id": "D",
+          "text": "m = (A_m + A_c) / A_c"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The modulation index, m, is defined as the ratio of the amplitude of the modulating signal (A_m) to the amplitude of the carrier signal (A_c). This is because the amplitude of the AM wave varies in proportion to the amplitude of the message signal.",
+      "explanation_incorrect": "Option A, m = A_c / A_m, is incorrect because the modulation index is the ratio of the modulating signal amplitude to the carrier signal amplitude, not the other way around. Option C, m = A_m x A_c, is incorrect because the modulation index is a ratio, not a product. Option D, m = (A_m + A_c) / A_c, is incorrect because the modulation index is defined as the ratio of the amplitudes, not the sum of the amplitudes."
+    },
+    {
+      "question_id": "T10.01.Q009",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "If a carrier of frequency 1 MHz is amplitude modulated by a signal of frequency 5 kHz, the frequencies present in the AM wave are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 MHz only"
+        },
+        {
+          "id": "B",
+          "text": "995 kHz, 1 MHz, 1005 kHz"
+        },
+        {
+          "id": "C",
+          "text": "5 kHz and 1 MHz"
+        },
+        {
+          "id": "D",
+          "text": "1005 kHz only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, as the frequencies present in the AM wave are 995 kHz, 1 MHz, and 1005 kHz. This is because the carrier frequency of 1 MHz is modulated by a 5 kHz signal, resulting in the carrier frequency and two sidebands at 1005 kHz and 995 kHz.",
+      "explanation_incorrect": "The correct answer is not A, C, or D. Option A is incorrect because the AM wave would contain more frequencies than just the carrier frequency of 1 MHz. Option C is incorrect because the AM wave would contain the carrier frequency of 1 MHz, not just the modulating frequency of 5 kHz. Option D is incorrect because the AM wave would contain three frequencies, not just 1005 kHz."
+    },
+    {
+      "question_id": "T10.01.Q010",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The bandwidth of an AM signal with carrier frequency 100 kHz modulated by a signal of maximum frequency 10 kHz is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 kHz"
+        },
+        {
+          "id": "B",
+          "text": "20 kHz"
+        },
+        {
+          "id": "C",
+          "text": "100 kHz"
+        },
+        {
+          "id": "D",
+          "text": "110 kHz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The bandwidth of an AM signal is 2 times the maximum frequency of the modulating signal. Since the maximum frequency of the modulating signal is 10 kHz, the bandwidth of the AM signal is 20 kHz.",
+      "explanation_incorrect": "The bandwidth of an AM signal is not the same as the carrier frequency. The carrier frequency is 100 kHz, but the bandwidth of the AM signal depends on the maximum frequency of the modulating signal, which is 10 kHz. The correct bandwidth is 2 times the maximum frequency of the modulating signal, which is 20 kHz."
+    },
+    {
+      "question_id": "T10.01.Q011",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If the modulation index is 0.5 and the carrier amplitude is 10 V, the amplitude of the modulating signal is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20 V"
+        },
+        {
+          "id": "B",
+          "text": "5 V"
+        },
+        {
+          "id": "C",
+          "text": "2 V"
+        },
+        {
+          "id": "D",
+          "text": "0.5 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The modulation index is given as 0.5, and the carrier amplitude is 10 V. Using the formula for modulation index, m = A_m/A_c, we can solve for the amplitude of the modulating signal, A_m. Rearranging the formula, A_m = m * A_c, which gives A_m = 0.5 * 10 V = 5 V.",
+      "explanation_incorrect": "The incorrect options do not match the calculation for the amplitude of the modulating signal. Option A (20 V) is too high, as the modulation index of 0.5 would imply a modulating signal amplitude less than the carrier amplitude of 10 V. Options C (2 V) and D (0.5 V) are too low, as they do not satisfy the given modulation index formula. Therefore, the correct answer is option B, 5 V."
+    },
+    {
+      "question_id": "T10.01.Q012",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Overmodulation (m > 1) in AM leads to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Better signal quality"
+        },
+        {
+          "id": "B",
+          "text": "Distortion of the transmitted signal"
+        },
+        {
+          "id": "C",
+          "text": "Reduced bandwidth"
+        },
+        {
+          "id": "D",
+          "text": "No effect on the signal"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Overmodulation (m > 1) in AM leads to distortion of the transmitted signal because the carrier amplitude cannot keep up with the rapidly changing message signal, resulting in signal clipping and loss of information.",
+      "explanation_incorrect": "Option B is correct because overmodulation means the message signal is exceeding the maximum amplitude of the carrier wave, leading to distortion and loss of signal quality. Options A, C, and D are incorrect because overmodulation does not improve signal quality, reduce bandwidth, or have no effect on the signal."
+    },
+    {
+      "question_id": "T10.01.Q013",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Ground wave propagation is suitable for:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Very high frequency (VHF) signals"
+        },
+        {
+          "id": "B",
+          "text": "Low frequency signals (up to about 2 MHz)"
+        },
+        {
+          "id": "C",
+          "text": "Microwave signals"
+        },
+        {
+          "id": "D",
+          "text": "Light signals"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ground wave propagation is suitable for low frequency signals (up to about 2 MHz) because these signals can follow the curvature of the Earth's surface, allowing them to travel beyond the line of sight. This is due to the bending of the waves around the Earth's surface, which is more pronounced at lower frequencies.",
+      "explanation_incorrect": "Ground wave propagation is not suitable for very high frequency (VHF) signals, microwave signals, or light signals. VHF and microwave signals travel in a straight line and cannot bend around the Earth's surface, while light signals are not affected by the Earth's curvature and travel in a straight line. Ground wave propagation is specifically suitable for low frequency signals up to around 2 MHz, which can follow the Earth's curvature."
+    },
+    {
+      "question_id": "T10.01.Q014",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Sky wave propagation involves reflection of radio waves from the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Troposphere"
+        },
+        {
+          "id": "B",
+          "text": "Stratosphere"
+        },
+        {
+          "id": "C",
+          "text": "Ionosphere"
+        },
+        {
+          "id": "D",
+          "text": "Mesosphere"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Sky wave propagation involves the reflection of radio waves from the ionosphere, a layer of the upper atmosphere that contains ionized gases. This allows radio signals to travel long distances beyond the line of sight, as the ionosphere can reflect the waves back to the Earth's surface.",
+      "explanation_incorrect": "Sky wave propagation does not involve reflection from the troposphere, stratosphere, or mesosphere. The troposphere is the lowest layer of the atmosphere, the stratosphere is the layer above that, and the mesosphere is the layer above the stratosphere. The ionosphere, which is the layer of the upper atmosphere containing ionized gases, is responsible for the reflection of radio waves in sky wave propagation."
+    },
+    {
+      "question_id": "T10.01.Q015",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "Space wave (line of sight) propagation is used for frequencies above:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 MHz"
+        },
+        {
+          "id": "B",
+          "text": "30 MHz"
+        },
+        {
+          "id": "C",
+          "text": "40 MHz"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C are correct (above ~40 MHz)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D) Both B and C are correct (above ~40 MHz). Space wave propagation is used for frequencies above 30 MHz (VHF and UHF) because these higher frequencies can propagate in a line-of-sight manner without being significantly affected by the Earth's curvature or atmospheric conditions.",
+      "explanation_incorrect": "The space wave propagation method is used for frequencies above 40 MHz, not 2 MHz or 30 MHz. This is because lower frequencies like 2 MHz are better suited for ground wave propagation that follows the Earth's curvature, while higher frequencies above 40 MHz can travel in a straight line without being significantly affected by the Earth's curvature or the atmosphere."
+    },
+    {
+      "question_id": "T10.01.Q016",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "The maximum line of sight distance between a transmitting antenna of height 50 m and a receiving antenna at ground level is (R = 6400 km):",
+      "options": [
+        {
+          "id": "A",
+          "text": "25.3 km"
+        },
+        {
+          "id": "B",
+          "text": "50 km"
+        },
+        {
+          "id": "C",
+          "text": "12.65 km"
+        },
+        {
+          "id": "D",
+          "text": "100 km"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum line of sight distance between a transmitting antenna of height 50 m and a receiving antenna at ground level is 25.3 km, as calculated using the formula d = sqrt(2Rh) where R is the Earth's radius (6400 km) and h is the antenna height (50 m).",
+      "explanation_incorrect": "Option A is correct because the formula to calculate the line of sight distance is d = sqrt(2Rh), where d is the distance, R is the Earth's radius (6400 km), and h is the antenna height (50 m). Plugging in these values, we get d = sqrt(2 x 6400 x 0.05) = 25.3 km. The other options are incorrect because they do not correctly apply the formula to calculate the line of sight distance."
+    },
+    {
+      "question_id": "T10.01.Q017",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A TV tower has a height of 100 m. The maximum distance up to which the signal can be received is (R = 6.4 x 10^6 m):",
+      "options": [
+        {
+          "id": "A",
+          "text": "35.8 km"
+        },
+        {
+          "id": "B",
+          "text": "71.6 km"
+        },
+        {
+          "id": "C",
+          "text": "113 km"
+        },
+        {
+          "id": "D",
+          "text": "17.9 km"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 35.8 km. This is calculated using the formula for line of sight distance, d = sqrt(2Rh), where R is the Earth's radius and h is the antenna height. With R = 6.4 x 10^6 m and h = 100 m, the maximum distance up to which the TV signal can be received is 35.8 km.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not use the formula for line of sight distance correctly. Option B) 71.6 km is double the correct answer, which is not possible. Option C) 113 km is too large, as it exceeds the line of sight distance. Option D) 17.9 km is too small, as it underestimates the line of sight distance given the antenna height of 100 m."
+    },
+    {
+      "question_id": "T10.01.Q018",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The range of a TV transmission tower is to be doubled. The height of the tower should be made:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 times"
+        },
+        {
+          "id": "B",
+          "text": "4 times"
+        },
+        {
+          "id": "C",
+          "text": "sqrt(2) times"
+        },
+        {
+          "id": "D",
+          "text": "8 times"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "To double the range of a TV transmission tower, the height of the tower should be made 4 times higher. This is because the line of sight distance d = sqrt(2Rh), where R is the Earth's radius and h is the antenna height. Doubling the distance requires quadrupling the height of the antenna to get a 4 times increase in range.",
+      "explanation_incorrect": "Option C is incorrect because increasing the height by a factor of sqrt(2) would only increase the range by a factor of sqrt(2), not double it. Option A is incorrect because doubling the height would only increase the range by a factor of sqrt(2), not double it. Option D is incorrect because increasing the height by a factor of 8 would increase the range by a factor of 2^2 = 4, not double it."
+    },
+    {
+      "question_id": "T10.01.Q019",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The bandwidth required for speech signals is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20 Hz to 20 kHz"
+        },
+        {
+          "id": "B",
+          "text": "300 Hz to 3400 Hz"
+        },
+        {
+          "id": "C",
+          "text": "0 Hz to 5 MHz"
+        },
+        {
+          "id": "D",
+          "text": "100 kHz to 1 MHz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The bandwidth required for speech signals is approximately 300 Hz to 3400 Hz because the human voice typically falls within this frequency range. This is the standard bandwidth used for telephone and radio communication systems that transmit speech.",
+      "explanation_incorrect": "The bandwidth required for speech signals is not 20 Hz to 20 kHz, which is the full range of human hearing. It is also not 0 Hz to 5 MHz, which is too wide for just speech, and not 100 kHz to 1 MHz, which is too high for speech alone. The correct answer of 300 Hz to 3400 Hz is the bandwidth specifically needed to transmit speech signals effectively."
+    },
+    {
+      "question_id": "T10.01.Q020",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The bandwidth required for a TV (video) signal is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 kHz"
+        },
+        {
+          "id": "B",
+          "text": "20 kHz"
+        },
+        {
+          "id": "C",
+          "text": "4.2 MHz"
+        },
+        {
+          "id": "D",
+          "text": "100 MHz"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The bandwidth required for a TV (video) signal is approximately 4.2 MHz, as mentioned in the context. This is because video signals have a much higher frequency range compared to speech or music, requiring a wider bandwidth for transmission.",
+      "explanation_incorrect": "The bandwidth required for a TV (video) signal is not 4 kHz, 20 kHz, or 100 MHz. Video signals have a much higher frequency range compared to speech or music, and the correct bandwidth requirement is around 4.2 MHz, as mentioned in the context."
+    },
+    {
+      "question_id": "T10.01.Q021",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "The frequency band allocated for FM radio broadcasting in India is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "540 kHz to 1600 kHz"
+        },
+        {
+          "id": "B",
+          "text": "88 MHz to 108 MHz"
+        },
+        {
+          "id": "C",
+          "text": "47 MHz to 230 MHz"
+        },
+        {
+          "id": "D",
+          "text": "1 GHz to 2 GHz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The frequency band allocated for FM radio broadcasting in India is 88 MHz to 108 MHz, which is in the VHF (very high frequency) range. This is the standard frequency allocation for FM radio in many countries around the world.",
+      "explanation_incorrect": "The other options are incorrect because they do not correspond to the frequency band used for FM radio broadcasting. Option A (540 kHz to 1600 kHz) is the AM radio frequency band, option C (47 MHz to 230 MHz) is a broader range that includes both VHF and UHF frequencies, and option D (1 GHz to 2 GHz) is in the microwave frequency range, which is not used for FM radio broadcasting."
+    },
+    {
+      "question_id": "T10.01.Q022",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "The frequency band allocated for AM radio broadcasting is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "540 kHz to 1600 kHz"
+        },
+        {
+          "id": "B",
+          "text": "88 MHz to 108 MHz"
+        },
+        {
+          "id": "C",
+          "text": "3 MHz to 30 MHz"
+        },
+        {
+          "id": "D",
+          "text": "1 GHz to 10 GHz"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 540 kHz to 1600 kHz. This is the frequency band allocated for AM (Amplitude Modulation) radio broadcasting, which uses low-frequency radio waves that can travel long distances and follow the curvature of the Earth.",
+      "explanation_incorrect": "The other options are incorrect because they correspond to different frequency ranges. Option B) 88 MHz to 108 MHz is the frequency band for FM (Frequency Modulation) radio broadcasting, which uses higher-frequency waves. Option C) 3 MHz to 30 MHz is the High Frequency (HF) band used for long-distance communication, including shortwave radio. Option D) 1 GHz to 10 GHz is the microwave frequency range, which is used for applications like satellite communication and radar."
+    },
+    {
+      "question_id": "T10.01.Q023",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A repeater in a communication system is used to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reduce the signal frequency"
+        },
+        {
+          "id": "B",
+          "text": "Receive, amplify, and retransmit the signal to extend range"
+        },
+        {
+          "id": "C",
+          "text": "Modulate the signal"
+        },
+        {
+          "id": "D",
+          "text": "Filter out noise completely"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A repeater is used to receive, amplify, and retransmit the signal to extend the range of communication. This is because the original signal may become weak after travelling long distances through the communication channel, and the repeater helps boost the signal strength to cover a larger area.",
+      "explanation_incorrect": "A repeater is not used to reduce the signal frequency, as that would go against the purpose of extending the communication range. It also does not completely filter out noise, as some noise may still be present in the retransmitted signal. Modulation is a separate function performed earlier in the communication system, before the signal is transmitted."
+    },
+    {
+      "question_id": "T10.01.Q024",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "The process of recovering the message signal from the modulated carrier is called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Modulation"
+        },
+        {
+          "id": "B",
+          "text": "Amplification"
+        },
+        {
+          "id": "C",
+          "text": "Demodulation (detection)"
+        },
+        {
+          "id": "D",
+          "text": "Transmission"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The process of recovering the message signal from the modulated carrier is called demodulation (detection). This is the final step in the communication system, where the receiver extracts the original information signal from the received modulated signal.",
+      "explanation_incorrect": "Modulation is the process of encoding the message signal onto a high-frequency carrier wave for efficient transmission. Amplification refers to increasing the strength of the signal, while transmission is the process of sending the signal through the communication channel. Demodulation (detection) is the correct answer, as it is the process of extracting the original message signal from the received modulated carrier."
+    },
+    {
+      "question_id": "T10.01.Q025",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "The maximum frequency of radio waves that can be reflected by the ionosphere (critical frequency) depends on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The transmitter power only"
+        },
+        {
+          "id": "B",
+          "text": "The electron density of the ionosphere"
+        },
+        {
+          "id": "C",
+          "text": "The antenna height"
+        },
+        {
+          "id": "D",
+          "text": "The modulation index"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum frequency of radio waves that can be reflected by the ionosphere, known as the critical frequency, depends on the electron density of the ionosphere. The higher the electron density, the higher the critical frequency that can be reflected by the ionosphere.",
+      "explanation_incorrect": "The maximum frequency of radio waves that can be reflected by the ionosphere does not depend on the transmitter power, antenna height, or modulation index. The electron density of the ionosphere is the key factor that determines the critical frequency, as it affects the ability of the ionosphere to reflect the radio waves."
+    },
+    {
+      "question_id": "T10.01.Q026",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "An antenna radiates electromagnetic waves efficiently when its length is comparable to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The wavelength of the signal to be transmitted"
+        },
+        {
+          "id": "B",
+          "text": "The wavelength of the carrier wave (at least lambda/4)"
+        },
+        {
+          "id": "C",
+          "text": "The distance to the receiver"
+        },
+        {
+          "id": "D",
+          "text": "The height of the tower"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The antenna radiates electromagnetic waves efficiently when its length is comparable to at least one-quarter of the wavelength of the carrier wave (lambda/4). This is because the antenna needs to be resonant at the carrier frequency for maximum power transfer.",
+      "explanation_incorrect": "The antenna length should not be comparable to the wavelength of the signal to be transmitted or the distance to the receiver. The antenna length needs to be related to the carrier wave wavelength to achieve resonance and efficient radiation. The height of the tower does not directly determine the optimal antenna length for efficient radiation."
+    },
+    {
+      "question_id": "T10.01.Q027",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In FM, the advantage over AM is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "FM requires less bandwidth"
+        },
+        {
+          "id": "B",
+          "text": "FM is less affected by noise and provides better sound quality"
+        },
+        {
+          "id": "C",
+          "text": "FM has longer range"
+        },
+        {
+          "id": "D",
+          "text": "FM uses simpler circuits"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "FM is less affected by noise and provides better sound quality compared to AM because the frequency of the carrier wave varies with the message signal, whereas AM varies the amplitude. This makes FM more robust against noise and interference, resulting in clearer audio reproduction.",
+      "explanation_incorrect": "Option A is incorrect because FM actually requires a wider bandwidth compared to AM to accommodate the frequency variations. Option C is incorrect because the range of FM and AM are similar, and depend more on the frequency and power used. Option D is incorrect because FM circuits are more complex than AM circuits, as they need to detect and demodulate the frequency variations."
+    },
+    {
+      "question_id": "T10.01.Q028",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The total bandwidth required to transmit 10 AM radio stations, each with an audio signal bandwidth of 5 kHz, without interference is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 kHz"
+        },
+        {
+          "id": "B",
+          "text": "100 kHz"
+        },
+        {
+          "id": "C",
+          "text": "10 kHz"
+        },
+        {
+          "id": "D",
+          "text": "500 kHz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 100 kHz. Each AM radio station has an audio bandwidth of 5 kHz, and the total bandwidth required for 10 such stations would be 10 × 5 kHz = 50 kHz. However, since AM modulation requires a bandwidth of 2 times the audio bandwidth, the total bandwidth required for 10 AM radio stations is 2 × 50 kHz = 100 kHz.",
+      "explanation_incorrect": "Option A) 50 kHz is incorrect because the total bandwidth required is 2 times the audio bandwidth of the individual stations. Option C) 10 kHz is incorrect because the audio bandwidth of a single station is 5 kHz, and the total bandwidth required for 10 stations would be much higher. Option D) 500 kHz is incorrect because the total bandwidth required is only 100 kHz, as explained in the correct explanation."
+    },
+    {
+      "question_id": "T10.01.Q029",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If both transmitting and receiving antennas have heights h_T and h_R respectively, the maximum line of sight distance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sqrt(2Rh_T) + sqrt(2Rh_R)"
+        },
+        {
+          "id": "B",
+          "text": "sqrt(2R(h_T + h_R))"
+        },
+        {
+          "id": "C",
+          "text": "sqrt(2Rh_T) x sqrt(2Rh_R)"
+        },
+        {
+          "id": "D",
+          "text": "sqrt(2Rh_T) - sqrt(2Rh_R)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum line of sight distance is the sum of the distances from the Earth's surface to the transmitting antenna and to the receiving antenna. This is represented by the formula d = sqrt(2Rh_T) + sqrt(2Rh_R), which corresponds to option A.",
+      "explanation_incorrect": "The correct answer is option A, not option B. Option B represents the distance to the midpoint between the two antennas, not the maximum line of sight distance. The line of sight distance is the sum of the distances to the individual antennas, not the distance to the midpoint."
+    },
+    {
+      "question_id": "T10.01.Q030",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Attenuation in a communication channel refers to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase in signal strength"
+        },
+        {
+          "id": "B",
+          "text": "Decrease in signal strength as it propagates through the channel"
+        },
+        {
+          "id": "C",
+          "text": "Change in frequency of the signal"
+        },
+        {
+          "id": "D",
+          "text": "Addition of noise"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Attenuation refers to the decrease in signal strength as the signal propagates through the communication channel. This is due to factors like absorption, scattering, and spreading of the signal, which reduce the received power compared to the transmitted power.",
+      "explanation_incorrect": "The correct answer is 'Decrease in signal strength as it propagates through the channel'. This is because the signal experiences attenuation due to various factors in the communication channel, which reduces the received power compared to the transmitted power. The other options are incorrect - option A refers to an increase in signal strength, option C refers to a change in frequency, and option D refers to the addition of noise, which are not the definitions of attenuation."
+    },
+    {
+      "question_id": "T10.01.Q031",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "In frequency modulation, the parameter of the carrier wave that is varied is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amplitude"
+        },
+        {
+          "id": "B",
+          "text": "Frequency"
+        },
+        {
+          "id": "C",
+          "text": "Phase"
+        },
+        {
+          "id": "D",
+          "text": "Wavelength only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In frequency modulation (FM), the frequency of the carrier wave is varied proportionally to the message signal, while the amplitude remains constant. This is in contrast to amplitude modulation (AM), where the amplitude of the carrier is varied instead.",
+      "explanation_incorrect": "The correct option is B) Frequency. In frequency modulation, the frequency of the carrier wave is varied in proportion to the message signal, while the amplitude of the carrier remains constant. Options A) Amplitude and C) Phase are incorrect because they describe the parameters that are varied in amplitude modulation and phase modulation, respectively, not frequency modulation."
+    },
+    {
+      "question_id": "T10.01.Q032",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Sky wave propagation is most effective for frequencies in the range:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Below 2 MHz"
+        },
+        {
+          "id": "B",
+          "text": "3 MHz to 30 MHz"
+        },
+        {
+          "id": "C",
+          "text": "30 MHz to 300 MHz"
+        },
+        {
+          "id": "D",
+          "text": "Above 1 GHz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Sky wave propagation is most effective for frequencies in the 3 MHz to 30 MHz range (high-frequency or HF band) because at these frequencies, the waves can be reflected by the ionosphere and reach distant receivers beyond the line of sight.",
+      "explanation_incorrect": "Sky wave propagation is not as effective for frequencies below 2 MHz (low-frequency or LF band) because the ionosphere does not effectively reflect these waves. Similarly, frequencies above 30 MHz (very high-frequency or VHF band) and above 1 GHz (ultra-high-frequency or UHF band) are not as suitable for sky wave propagation as the waves tend to pass through the ionosphere rather than being reflected."
+    },
+    {
+      "question_id": "T10.01.Q033",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "The bandwidth of music signals is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "300 Hz to 3400 Hz"
+        },
+        {
+          "id": "B",
+          "text": "20 Hz to 20 kHz"
+        },
+        {
+          "id": "C",
+          "text": "0 Hz to 5 MHz"
+        },
+        {
+          "id": "D",
+          "text": "10 kHz to 100 kHz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The bandwidth of music signals is approximately 20 Hz to 20 kHz, as the human ear can typically perceive sounds within this frequency range. This encompasses the full range of audible frequencies for music, which requires a wider bandwidth compared to speech or video signals.",
+      "explanation_incorrect": "The other options are incorrect. Option A (300 Hz to 3400 Hz) is the typical bandwidth for telephone speech signals, not music. Option C (0 Hz to 5 MHz) is much wider than the actual bandwidth required for music, which is around 20 kHz. Option D (10 kHz to 100 kHz) is also too narrow to accommodate the full range of audible frequencies for music."
+    },
+    {
+      "question_id": "T10.01.Q034",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "The role of a bandpass filter in a receiver is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amplify all frequencies equally"
+        },
+        {
+          "id": "B",
+          "text": "Select the desired frequency band and reject others"
+        },
+        {
+          "id": "C",
+          "text": "Convert AC to DC"
+        },
+        {
+          "id": "D",
+          "text": "Modulate the signal"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The role of a bandpass filter in a receiver is to select the desired frequency band and reject all other frequencies. This is necessary because the received signal contains many unwanted frequencies, and the bandpass filter isolates only the specific frequency band containing the desired information.",
+      "explanation_incorrect": "Option A is incorrect because a bandpass filter is designed to selectively amplify a specific frequency band, not all frequencies equally. Option C is incorrect because a bandpass filter does not convert AC to DC, it simply filters the signal. Option D is incorrect because a bandpass filter does not modulate the signal, it only selects the desired frequency range."
+    },
+    {
+      "question_id": "T10.01.Q035",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "The block diagram of an AM receiver includes the following stages in order:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antenna, IF stage, RF amplifier, detector, audio amplifier"
+        },
+        {
+          "id": "B",
+          "text": "Antenna, RF amplifier, IF stage, detector, audio amplifier, speaker"
+        },
+        {
+          "id": "C",
+          "text": "Antenna, detector, RF amplifier, audio amplifier"
+        },
+        {
+          "id": "D",
+          "text": "Antenna, audio amplifier, detector, RF amplifier"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B because the block diagram of an AM receiver must include the essential stages: antenna to receive the signal, RF amplifier to amplify the high-frequency carrier, IF stage to filter and amplify the intermediate frequency, detector to demodulate the message signal, audio amplifier to amplify the audio signal, and speaker to reproduce the sound.",
+      "explanation_incorrect": "The other options are incorrect because they do not follow the proper order of stages in an AM receiver. Option A is missing the critical IF stage, option C lacks the RF amplifier, and option D has the incorrect order of stages. The complete sequence of stages in an AM receiver is: antenna, RF amplifier, IF stage, detector, audio amplifier, and speaker."
+    },
+    {
+      "question_id": "T10.01.Q036",
+      "type": "true_false",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Modulation is the process of superimposing a low-frequency message signal onto a high-frequency carrier wave.",
+      "correct_answer": true,
+      "explanation_correct": "Modulation is the process of superimposing a low-frequency message signal onto a high-frequency carrier wave. This is necessary for efficient transmission of information over long distances, as high-frequency carrier waves can travel further than low-frequency message signals alone.",
+      "explanation_incorrect": "Modulation does not simply 'superimpose' the message signal onto the carrier wave. Instead, the amplitude, frequency, or phase of the high-frequency carrier is varied in proportion to the low-frequency message signal. This allows the message to be encoded onto the carrier for transmission."
+    },
+    {
+      "question_id": "T10.01.Q037",
+      "type": "true_false",
+      "concept_id": "T10.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Signals above 30 MHz can be reflected by the ionosphere for sky wave propagation.",
+      "correct_answer": false,
+      "explanation_correct": "Signals above 30 MHz cannot be reflected by the ionosphere for sky wave propagation. This is because the ionosphere is not dense enough at these higher frequencies to effectively reflect the signals back to the Earth's surface.",
+      "explanation_incorrect": "The ionosphere is a layer of the Earth's atmosphere that can reflect radio waves. However, the ionosphere is not able to reflect signals above 30 MHz. This is because the higher frequency signals have too much energy and simply pass through the ionosphere, rather than being reflected back to the Earth's surface. Therefore, signals above 30 MHz cannot be used for sky wave propagation."
+    },
+    {
+      "question_id": "T10.01.Q038",
+      "type": "true_false",
+      "concept_id": "T10.01.C01",
+      "difficulty": "application",
+      "question_text": "Increasing the height of a transmitting antenna increases the range of space wave communication.",
+      "correct_answer": true,
+      "explanation_correct": "Increasing the height of the transmitting antenna increases the line of sight distance for space wave communication. This is because the line of sight distance is directly proportional to the square root of the antenna height, as given by the formula d = sqrt(2Rh), where R is the Earth's radius and h is the antenna height.",
+      "explanation_incorrect": "A common misconception is that increasing the antenna height would decrease the range of space wave communication. This is incorrect because the line of sight distance for space waves is directly proportional to the square root of the antenna height. As the antenna height increases, the line of sight distance also increases, allowing the space waves to travel farther before reaching the horizon."
+    },
+    {
+      "question_id": "T10.01.Q039",
+      "type": "true_false",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "question_text": "In amplitude modulation, the modulation index can exceed 1 without causing any problems.",
+      "correct_answer": false,
+      "explanation_correct": "The modulation index m in amplitude modulation (AM) should be less than or equal to 1. If m exceeds 1, it will result in over-modulation, causing distortion and clipping of the signal, which is undesirable for efficient communication.",
+      "explanation_incorrect": "It is a common misconception that the modulation index in AM can exceed 1 without any problems. However, this is not the case. When the modulation index m is greater than 1, it leads to over-modulation, which causes the signal to become distorted and clipped, resulting in a loss of information and poor communication quality."
+    },
+    {
+      "question_id": "T10.01.Q040",
+      "type": "true_false",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "The bandwidth required for transmitting a TV signal is much larger than that for an audio signal.",
+      "correct_answer": true,
+      "explanation_correct": "The bandwidth required for transmitting a TV signal is much larger than that for an audio signal because a TV signal contains both video and audio information. Video signals require a much wider bandwidth (around 4.2 MHz) compared to audio signals (around 20 kHz) to encode the high-frequency visual details.",
+      "explanation_incorrect": "The statement is true because video signals require a much wider bandwidth to transmit the high-frequency visual information compared to low-frequency audio signals. A common misconception is that TV and audio signals require similar bandwidths, but in reality, the bandwidth needed for video is significantly higher to capture the full range of visual details."
+    },
+    {
+      "question_id": "T10.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The modulation index m for AM is given by m = ___.",
+      "correct_answer": "A_m/A_c",
+      "explanation_correct": "The modulation index m for AM is given by the formula m = A_m/A_c, where A_m is the amplitude of the message signal and A_c is the amplitude of the carrier signal. This formula represents the proportion of the carrier amplitude that is modulated by the message signal, which determines the efficiency of the AM transmission.",
+      "explanation_incorrect": "The modulation index for AM is not the message signal amplitude (A_m) alone, nor the carrier signal amplitude (A_c) alone. The correct formula is m = A_m/A_c, which represents the ratio of the message signal amplitude to the carrier signal amplitude. This ratio determines the extent of modulation and the efficiency of the AM transmission."
+    },
+    {
+      "question_id": "T10.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "The maximum line of sight distance for a transmitting antenna of height h above the Earth's surface is d = ___.",
+      "correct_answer": "sqrt(2Rh)",
+      "explanation_correct": "The maximum line of sight distance for a transmitting antenna of height h above the Earth's surface is given by the formula d = sqrt(2Rh), where R is the Earth's radius. This is because the Earth's curvature limits the distance over which a space wave can travel in a straight line before being obstructed by the horizon.",
+      "explanation_incorrect": "The correct answer is d = sqrt(2Rh), where R is the Earth's radius and h is the height of the transmitting antenna above the Earth's surface. This formula is derived from the geometry of the Earth's curvature and the line of sight distance. It is not correct to simply use the height h or the Earth's radius R alone in the formula, as both factors contribute to the maximum line of sight distance."
+    },
+    {
+      "question_id": "T10.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "question_text": "The bandwidth of an AM signal is ___ times the maximum frequency of the modulating signal.",
+      "correct_answer": "2",
+      "explanation_correct": "The bandwidth of an AM signal is 2 times the maximum frequency of the modulating signal because the AM signal occupies a frequency range from the carrier frequency minus the modulating frequency to the carrier frequency plus the modulating frequency, resulting in a total bandwidth of 2 times the modulating frequency.",
+      "explanation_incorrect": "The correct answer is 2. The bandwidth of an AM signal is 2 times the maximum frequency of the modulating signal, not 1 time or 4 times. This is because the AM signal occupies a frequency range from the carrier frequency minus the modulating frequency to the carrier frequency plus the modulating frequency, resulting in a total bandwidth of 2 times the modulating frequency."
+    },
+    {
+      "question_id": "T10.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The three modes of electromagnetic wave propagation are ground wave, ___, and space wave.",
+      "correct_answer": "sky wave",
+      "explanation_correct": "The three modes of electromagnetic wave propagation are ground wave, sky wave, and space wave. The sky wave refers to the propagation of electromagnetic waves that are reflected by the ionosphere, allowing them to travel long distances beyond the line of sight. This is the correct answer as per the information provided in the topic context.",
+      "explanation_incorrect": "The three modes of electromagnetic wave propagation are ground wave, sky wave, and space wave. The sky wave is the correct answer, as it describes the propagation of electromagnetic waves that are reflected by the ionosphere, allowing them to travel long distances beyond the line of sight. The other two modes, ground wave and space wave, are also important in communication systems, but they are not the missing term in the provided question."
+    },
+    {
+      "question_id": "T10.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The sideband frequencies in an AM wave with carrier frequency f_c and modulating frequency f_m are ___ and ___.",
+      "correct_answer": "f_c - f_m and f_c + f_m",
+      "explanation_correct": "In an amplitude modulated (AM) wave, the carrier frequency f_c is modulated by the message signal, resulting in the generation of two sideband frequencies: f_c - f_m and f_c + f_m. These sideband frequencies are the sum and difference of the carrier frequency and the modulating frequency, respectively.",
+      "explanation_incorrect": "The sideband frequencies in an AM wave are not the carrier frequency f_c alone. The correct answer is f_c - f_m and f_c + f_m, where f_m is the modulating frequency. This is because the message signal modulates the carrier frequency, creating these two sideband frequencies on either side of the carrier frequency."
+    },
+    {
+      "question_id": "T10.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The layer of the atmosphere responsible for reflecting HF radio waves back to Earth is the ___.",
+      "correct_answer": "ionosphere",
+      "explanation_correct": "The ionosphere is the layer of the atmosphere responsible for reflecting HF (high-frequency) radio waves back to Earth. This layer of the atmosphere contains ionized gas that can interact with and reflect these high-frequency radio waves, allowing them to propagate over long distances by bouncing between the Earth's surface and the ionosphere.",
+      "explanation_incorrect": "The accepted answer format for this question is 'ionosphere'. The ionosphere is the layer of the atmosphere that reflects HF radio waves, not the troposphere or stratosphere. The ionosphere contains charged particles that can interact with and reflect these high-frequency waves, allowing them to travel long distances by bouncing between the Earth's surface and the ionosphere."
+    },
+    {
+      "question_id": "T10.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T10.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The bandwidth required for speech (telephone quality) is approximately ___ kHz.",
+      "correct_answer": "4",
+      "explanation_correct": "The bandwidth required for speech (telephone quality) is approximately 4 kHz. This is because speech signals typically have frequency components up to around 4 kHz, which is the minimum bandwidth needed to faithfully transmit and reproduce the speech.",
+      "explanation_incorrect": "The accepted answer format is '4'. While the bandwidth requirement for music is around 20 kHz, and for video is around 4.2 MHz, the bandwidth required for speech (telephone quality) is significantly lower, at approximately 4 kHz. This is because speech signals have frequency components up to around 4 kHz, which is the minimum bandwidth needed to transmit and reproduce the speech effectively."
+    },
+    {
+      "question_id": "T10.01.Q048",
+      "type": "ordering",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the following modes of wave propagation in order of increasing frequency range they serve: (A) Ground wave (B) Space wave (C) Sky wave",
+      "ordering_items": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_answer": [
+        "A",
+        "C",
+        "B"
+      ],
+      "explanation_correct": "The correct order is ground wave, sky wave, and space wave, in increasing order of frequency range. Ground waves travel at lower frequencies and follow the curvature of the Earth, while sky waves use higher frequencies and are reflected by the ionosphere, and space waves use the highest frequencies and travel in a line-of-sight path.",
+      "explanation_incorrect": "The incorrect order would be ground wave, space wave, and sky wave. This is incorrect because space waves use higher frequencies than sky waves, which are reflected by the ionosphere. Ground waves travel at the lowest frequencies and follow the Earth's curvature, while sky waves and space waves use higher frequencies for different propagation modes."
+    },
+    {
+      "question_id": "T10.01.Q049",
+      "type": "ordering",
+      "concept_id": "T10.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following signals in order of increasing bandwidth requirement: (A) Speech/telephone (B) TV video signal (C) Music (D) Morse code/telegraph",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "explanation_correct": "The correct order from lowest to highest bandwidth requirement is: D, A, C, B. Morse code/telegraph signals have the lowest bandwidth requirement, followed by speech/telephone, music, and finally TV video signals which have the highest bandwidth requirement.",
+      "explanation_incorrect": "The incorrect order would be A, D, C, B. Speech/telephone signals actually have a lower bandwidth requirement than Morse code/telegraph signals, as speech only requires around 4 kHz of bandwidth compared to the very narrow bandwidth of Morse code. Music signals require more bandwidth than speech, around 20 kHz, while TV video signals have the highest bandwidth requirement of around 4.2 MHz."
+    },
+    {
+      "question_id": "T10.01.Q050",
+      "type": "ordering",
+      "concept_id": "T10.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following steps in the correct order for AM transmission and reception: (A) Message signal modulates the carrier (B) Modulated signal is transmitted via antenna (C) Receiver demodulates/detects the signal (D) Audio amplifier drives the speaker (E) Message signal is generated by microphone",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "correct_answer": [
+        "E",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation_correct": "The correct order is E, A, B, C, D because the message signal must first be generated by the microphone (E), then modulated onto the carrier wave (A), transmitted through the antenna (B), received and demodulated by the receiver (C), and finally amplified to drive the speaker (D).",
+      "explanation_incorrect": "The incorrect order would be something like B, A, C, D, E. This is incorrect because the message signal must be generated first (by the microphone) before it can be modulated onto the carrier wave. Additionally, the signal must be transmitted and received before it can be demodulated and amplified to drive the speaker."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 15,
+        "application": 20,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

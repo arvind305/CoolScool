@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T01.01",
+  "topic_name": "Physical World & Measurement",
+  "canonical_explanation": {
+    "text": "Physics is a quantitative science built on precise measurement of physical quantities. Every physical quantity is expressed as a number multiplied by a unit. The International System of Units (SI) defines seven base quantities — length (metre), mass (kilogram), time (second), electric current (ampere), temperature (kelvin), amount of substance (mole) and luminous intensity (candela) — from which all other derived quantities are obtained. Dimensional analysis uses the powers of base dimensions (M, L, T, etc.) to check the homogeneity of equations, derive relationships between quantities and convert units between systems. Measurements always carry uncertainty; errors are classified as systematic (instrument, personal, environmental) and random. The concepts of significant figures and rounding govern how precisely a result should be reported, while the rules for propagation of errors (absolute errors add in sums/differences; relative errors add in products/quotients) allow calculation of uncertainty in derived quantities.",
+    "rules": [
+      "Every physical quantity equals a numerical value multiplied by a unit; only quantities with the same dimensions can be added or equated (principle of homogeneity).",
+      "The dimensional formula of a quantity is written as [M^a L^b T^c ...]; if two sides of an equation have different dimensions, the equation is necessarily wrong.",
+      "In multiplication or division the result retains the number of significant figures equal to the least number of significant figures in any factor; in addition or subtraction the result retains decimal places equal to the fewest decimal places in any term.",
+      "Absolute error = |measured value − true value|; relative error = absolute error / true value; percentage error = relative error × 100.",
+      "For a quantity Z = A^p × B^q / C^r, the maximum fractional error is ΔZ/Z = p(ΔA/A) + q(ΔB/B) + r(ΔC/C)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.01.Q001",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is NOT a fundamental (base) quantity in the SI system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electric current"
+        },
+        {
+          "id": "B",
+          "text": "Temperature"
+        },
+        {
+          "id": "C",
+          "text": "Force"
+        },
+        {
+          "id": "D",
+          "text": "Luminous intensity"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The SI system defines 7 base quantities, and force is not one of them. Instead, force is a derived quantity, calculated from the base quantities of mass, length, and time.",
+      "explanation_incorrect": "Force is not a fundamental (base) quantity in the SI system. The 7 base quantities are length, mass, time, electric current, temperature, amount of substance, and luminous intensity. Force is a derived quantity that can be calculated from the base quantities, such as mass and acceleration."
+    },
+    {
+      "question_id": "T01.01.Q002",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of luminous intensity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "lumen"
+        },
+        {
+          "id": "B",
+          "text": "candela"
+        },
+        {
+          "id": "C",
+          "text": "lux"
+        },
+        {
+          "id": "D",
+          "text": "watt"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of luminous intensity is the candela (cd). Luminous intensity is a measure of the amount of light emitted in a particular direction, and the candela is the base unit in the SI system that defines this quantity.",
+      "explanation_incorrect": "The correct answer is candela (cd), which is the SI unit of luminous intensity. The other options are not the correct units - lumen (lm) is the unit of luminous flux, lux (lx) is the unit of illuminance, and watt (W) is the unit of power, which is not the same as luminous intensity."
+    },
+    {
+      "question_id": "T01.01.Q003",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The dimensional formula of velocity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[M L T⁻¹]"
+        },
+        {
+          "id": "B",
+          "text": "[M⁰ L T⁻¹]"
+        },
+        {
+          "id": "C",
+          "text": "[M⁰ L T⁻²]"
+        },
+        {
+          "id": "D",
+          "text": "[M L⁻¹ T⁻¹]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The dimensional formula of velocity is [M^0 L T^-1] because velocity is a derived quantity that depends on the base quantities of length (L) and time (T). It has no dependence on mass (M), so the exponent for M is 0.",
+      "explanation_incorrect": "The option B [M^0 L T^-1] is the correct dimensional formula for velocity. Option A [M L T^-1] is incorrect because velocity does not depend on mass. Option C [M^0 L T^-2] is incorrect because the exponent for time should be -1, not -2, as velocity is defined as the rate of change of position with respect to time. Option D [M L^-1 T^-1] is incorrect because the exponent for length should be 1, not -1, as velocity is directly proportional to the distance traveled."
+    },
+    {
+      "question_id": "T01.01.Q004",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following pairs has the same dimensional formula?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Work and torque"
+        },
+        {
+          "id": "B",
+          "text": "Force and pressure"
+        },
+        {
+          "id": "C",
+          "text": "Momentum and energy"
+        },
+        {
+          "id": "D",
+          "text": "Velocity and acceleration"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Work and torque have the same dimensional formula, which is ML^2T^-2. Both these quantities are derived from the base quantities of mass (M), length (L), and time (T).",
+      "explanation_incorrect": "The correct answer is option A, work and torque. They have the same dimensional formula because both are derived from the product of force and distance. Force has the dimension MLT^-2, and distance has the dimension L, so the dimension of work (force x distance) and torque (force x distance) is ML^2T^-2."
+    },
+    {
+      "question_id": "T01.01.Q005",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The dimensional formula of the universal gravitational constant G is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[M⁻¹ L³ T⁻²]"
+        },
+        {
+          "id": "B",
+          "text": "[M L³ T⁻²]"
+        },
+        {
+          "id": "C",
+          "text": "[M⁻¹ L² T⁻²]"
+        },
+        {
+          "id": "D",
+          "text": "[M⁻¹ L³ T⁻¹]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The dimensional formula of the universal gravitational constant G is [M⁻¹ L³ T⁻²] because G has the dimensions of force divided by the square of mass and the square of distance, which is the same as the dimensions of [M⁻¹ L³ T⁻²].",
+      "explanation_incorrect": "The correct dimensional formula of the universal gravitational constant G is [M⁻¹ L³ T⁻²], not [M L³ T⁻²], [M⁻¹ L² T⁻²] or [M⁻¹ L³ T⁻¹]. This is because G has the dimensions of force divided by the square of mass and the square of distance, which is the same as the dimensions of [M⁻¹ L³ T⁻²]."
+    },
+    {
+      "question_id": "T01.01.Q006",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Dimensional analysis can be used to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Derive the exact numerical value of a dimensionless constant"
+        },
+        {
+          "id": "B",
+          "text": "Check the dimensional consistency of a physical equation"
+        },
+        {
+          "id": "C",
+          "text": "Determine the direction of a vector quantity"
+        },
+        {
+          "id": "D",
+          "text": "Find the number of significant figures in a measurement"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Dimensional analysis can be used to check the dimensional consistency of a physical equation, ensuring that the units on both sides of the equation match. This helps verify the validity of the equation and ensures the equation is dimensionally homogeneous.",
+      "explanation_incorrect": "Dimensional analysis cannot be used to derive the exact numerical value of a dimensionless constant, as it only deals with the units and dimensions of quantities, not their specific numerical values. It also cannot determine the direction of a vector quantity, as that is a separate concept, and it cannot find the number of significant figures in a measurement, as that is a separate rule for representing measurement precision."
+    },
+    {
+      "question_id": "T01.01.Q007",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If force F, velocity v and time T are taken as fundamental quantities, what is the dimensional formula of mass in terms of F, v and T?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[F v⁻¹ T]"
+        },
+        {
+          "id": "B",
+          "text": "[F v T⁻¹]"
+        },
+        {
+          "id": "C",
+          "text": "[F v⁻¹ T⁰]"
+        },
+        {
+          "id": "D",
+          "text": "[F¹ v⁻¹ T¹]"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The dimensional formula of mass in terms of force (F), velocity (v) and time (T) is [F^1 v^-1 T^1], as mass has the dimension of force times time divided by velocity.",
+      "explanation_incorrect": "The correct answer is option D, [F^1 v^-1 T^1]. This is because mass has the dimension of force (F) multiplied by time (T) divided by velocity (v), following the fundamental relationship between these quantities. Options A, B and C do not correctly represent the dimensional formula for mass in terms of the given fundamental quantities."
+    },
+    {
+      "question_id": "T01.01.Q008",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "Using dimensional analysis, if the time period T of a simple pendulum depends on length l and acceleration due to gravity g, then T is proportional to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(l/g)"
+        },
+        {
+          "id": "B",
+          "text": "√(g/l)"
+        },
+        {
+          "id": "C",
+          "text": "l/g"
+        },
+        {
+          "id": "D",
+          "text": "g/l"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The time period T of a simple pendulum depends on the length l and acceleration due to gravity g. Using dimensional analysis, we can see that T is proportional to the square root of l/g, as this combination of dimensions (length/acceleration) gives the correct dimension of time.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the relationship between the time period T, length l, and acceleration due to gravity g. The correct option A, √(l/g), is the right proportionality because the dimensions of T are [T] = √([L]/[L/T^2]) = √(L/T^2), which simplifies to √(l/g)."
+    },
+    {
+      "question_id": "T01.01.Q009",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The velocity v of a wave depends on the tension T in the string and the mass per unit length μ. By dimensional analysis, v is proportional to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(T/μ)"
+        },
+        {
+          "id": "B",
+          "text": "√(μ/T)"
+        },
+        {
+          "id": "C",
+          "text": "T/μ"
+        },
+        {
+          "id": "D",
+          "text": "T²/μ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, which shows that the velocity v is proportional to the square root of the tension T divided by the mass per unit length μ. This is because velocity depends on the properties of the medium, and dimensional analysis shows that the only combination of T and μ that has the dimensions of velocity is √(T/μ).",
+      "explanation_incorrect": "The incorrect options B, C, and D do not correctly represent the dimensional relationship between velocity, tension, and mass per unit length. Option B has the wrong order of the variables, C has the wrong functional form, and D includes an extra squared term that does not match the dimensions of velocity. The correct option A is the only one that correctly expresses the velocity as proportional to the square root of the tension divided by the mass per unit length."
+    },
+    {
+      "question_id": "T01.01.Q010",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Convert 1 newton into dyne using dimensional analysis. 1 N equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10³ dyne"
+        },
+        {
+          "id": "B",
+          "text": "10⁵ dyne"
+        },
+        {
+          "id": "C",
+          "text": "10⁷ dyne"
+        },
+        {
+          "id": "D",
+          "text": "10⁹ dyne"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 10⁵ dyne. Using dimensional analysis, we know that 1 newton (N) is equivalent to 1 kg⋅m/s^2. Dyne is the unit of force in the CGS system, and 1 dyne = 1 g⋅cm/s^2. So converting 1 N to dyne, we get 1 N = 10^5 dyne.",
+      "explanation_incorrect": "The incorrect options A) 10^3 dyne, C) 10^7 dyne, and D) 10^9 dyne are not correct because they do not match the correct conversion factor of 1 N = 10^5 dyne. The correct dimensional analysis shows that 1 newton is equivalent to 10^5 dynes, which is option B)."
+    },
+    {
+      "question_id": "T01.01.Q011",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The number of significant figures in 0.00340 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of significant figures in 0.00340 is 3. Significant figures are the meaningful digits in a number, including the first non-zero digit and all the digits that follow. In this case, the three significant figures are 3, 4 and 0.",
+      "explanation_incorrect": "Option A (2 significant figures) is incorrect because the first non-zero digit is 3, followed by two more digits. Option C (4 significant figures) is incorrect because there are only 3 digits after the decimal point. Option D (5 significant figures) is incorrect because there are only 3 meaningful digits in the number 0.00340."
+    },
+    {
+      "question_id": "T01.01.Q012",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The number of significant figures in 6.022 × 10²³ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "23"
+        },
+        {
+          "id": "D",
+          "text": "27"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of significant figures in 6.022 × 10²³ is 4. The 6, 0, 2, and 2 are all significant figures, and the exponential term 10²³ does not count as a significant figure.",
+      "explanation_incorrect": "The correct answer is 4 significant figures, not 3, 23, or 27. The number 6.022 × 10²³ has 4 significant figures because the digits 6, 0, 2, and 2 are all counted as significant. The exponent 10²³ does not contribute to the number of significant figures."
+    },
+    {
+      "question_id": "T01.01.Q013",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "When 2.54 is multiplied by 1.2, the result to the correct number of significant figures is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.048"
+        },
+        {
+          "id": "B",
+          "text": "3.05"
+        },
+        {
+          "id": "C",
+          "text": "3.0"
+        },
+        {
+          "id": "D",
+          "text": "3.1"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is 3.0 because when a number is multiplied, the result should be rounded to the same number of significant figures as the number with the least significant figures. In this case, 2.54 has 3 significant figures, so the final result should also have 3 significant figures.",
+      "explanation_incorrect": "The other options are incorrect because they either have more or fewer significant figures than the original numbers. Option A has 4 significant figures, Option B has 3 significant figures, and Option D has 2 significant figures. The correct way to express the result of multiplying 2.54 and 1.2 is to round it to 3 significant figures, which is 3.0."
+    },
+    {
+      "question_id": "T01.01.Q014",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "The order of magnitude of 4999 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10³"
+        },
+        {
+          "id": "B",
+          "text": "10⁴"
+        },
+        {
+          "id": "C",
+          "text": "10⁵"
+        },
+        {
+          "id": "D",
+          "text": "10²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of magnitude of a number is the power of 10 that is closest to that number. Since 4999 is closest to 10^4, the order of magnitude of 4999 is 10^4 or 10,000.",
+      "explanation_incorrect": "The order of magnitude of a number is the power of 10 that is closest to that number. Option B, 10^4, is the correct answer because 4999 is much closer to 10,000 (10^4) than 1000 (10^3), 100,000 (10^5), or 100 (10^2)."
+    },
+    {
+      "question_id": "T01.01.Q015",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Which type of error can be reduced by taking the average of a large number of readings?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Systematic error"
+        },
+        {
+          "id": "B",
+          "text": "Instrumental error"
+        },
+        {
+          "id": "C",
+          "text": "Random error"
+        },
+        {
+          "id": "D",
+          "text": "Personal error"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Random errors are caused by uncontrollable fluctuations and variations in the measurement process. By taking the average of a large number of readings, the random errors will tend to cancel out, reducing their overall effect on the final result.",
+      "explanation_incorrect": "Systematic errors are caused by factors like instrument bias, personal bias, or environmental conditions that affect the measurement in a consistent way. Taking the average of many readings will not reduce systematic errors, as they are not random. Random errors, on the other hand, are caused by unpredictable variations in the measurement process, and can be reduced by averaging multiple readings."
+    },
+    {
+      "question_id": "T01.01.Q016",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The absolute error in a measurement is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The ratio of error to the true value"
+        },
+        {
+          "id": "B",
+          "text": "The magnitude of the difference between the measured value and the true (mean) value"
+        },
+        {
+          "id": "C",
+          "text": "The percentage of the measured value that is uncertain"
+        },
+        {
+          "id": "D",
+          "text": "The square of the difference between measured and true values"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The absolute error in a measurement is the magnitude of the difference between the measured value and the true (mean) value. This is because the absolute error represents the uncertainty in the measurement, without considering the size of the true value.",
+      "explanation_incorrect": "The absolute error is not the ratio of the error to the true value, as that would be the relative error. It is also not the percentage of the measured value that is uncertain, as that is a different way of expressing the relative error. Finally, the absolute error is not the square of the difference between the measured and true values, as that would not provide a meaningful measure of the uncertainty in the measurement."
+    },
+    {
+      "question_id": "T01.01.Q017",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "If Z = A × B / C and the percentage errors in A, B and C are 1%, 2% and 3% respectively, the maximum percentage error in Z is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2%"
+        },
+        {
+          "id": "B",
+          "text": "4%"
+        },
+        {
+          "id": "C",
+          "text": "6%"
+        },
+        {
+          "id": "D",
+          "text": "8%"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 6% because the formula for the maximum percentage error in a derived quantity Z = A × B / C is the sum of the percentage errors in A, B, and C. Since the percentage errors in A, B, and C are 1%, 2%, and 3% respectively, the maximum percentage error in Z is 1% + 2% + 3% = 6%.",
+      "explanation_incorrect": "The maximum percentage error in Z is not 2%, 4%, or 8%. This is because the formula for the maximum percentage error in a derived quantity Z = A × B / C is the sum of the percentage errors in A, B, and C. Since the percentage errors in A, B, and C are 1%, 2%, and 3% respectively, the maximum percentage error in Z is 1% + 2% + 3% = 6%, which is the correct answer."
+    },
+    {
+      "question_id": "T01.01.Q018",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "The period of oscillation of a pendulum is measured as T = 2.14 s with an absolute error of 0.02 s. The percentage error in T is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5%"
+        },
+        {
+          "id": "B",
+          "text": "0.93%"
+        },
+        {
+          "id": "C",
+          "text": "1.5%"
+        },
+        {
+          "id": "D",
+          "text": "2.0%"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The percentage error in the period T is calculated as the absolute error divided by the measured value, multiplied by 100. Since the absolute error in T is 0.02 s and the measured value is 2.14 s, the percentage error is (0.02 / 2.14) × 100 = 0.93%, which matches option B.",
+      "explanation_incorrect": "The correct answer is option B, 0.93%. The percentage error is calculated by dividing the absolute error by the measured value and multiplying by 100. The absolute error given is 0.02 s, and the measured value of the period T is 2.14 s. Plugging these values into the formula, we get (0.02 / 2.14) × 100 = 0.93%, which is closest to option B."
+    },
+    {
+      "question_id": "T01.01.Q019",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The density of a cube is calculated by measuring its mass m and side length a. If the percentage error in mass is 1% and in side length is 2%, the percentage error in density (ρ = m/a³) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3%"
+        },
+        {
+          "id": "B",
+          "text": "5%"
+        },
+        {
+          "id": "C",
+          "text": "7%"
+        },
+        {
+          "id": "D",
+          "text": "9%"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 7%. Density is calculated as mass/volume, and the volume of a cube is proportional to the cube of its side length. Since the percentage error in mass is 1% and in side length is 2%, the percentage error in density (which is proportional to mass/a^3) will be the sum of these, which is 7%.",
+      "explanation_incorrect": "The percentage error in density is not 3%, 5%, or 9%. This is because density is calculated as mass divided by volume, and the volume of a cube is proportional to the cube of its side length. Since the percentage error in mass is 1% and in side length is 2%, the percentage error in density will be the sum of these, which is 7%."
+    },
+    {
+      "question_id": "T01.01.Q020",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The dimensional formula of Planck's constant h is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[M L² T⁻¹]"
+        },
+        {
+          "id": "B",
+          "text": "[M L² T⁻²]"
+        },
+        {
+          "id": "C",
+          "text": "[M L T⁻¹]"
+        },
+        {
+          "id": "D",
+          "text": "[M L² T⁻³]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The dimensional formula of Planck's constant (h) is [M L² T⁻¹] because it has dimensions of energy × time, which is equivalent to mass × length² / time.",
+      "explanation_incorrect": "Option A is correct because Planck's constant has the dimensions of action, which is energy × time. This is equivalent to mass × length² / time. The other options do not correctly capture the dimensional formula of Planck's constant."
+    },
+    {
+      "question_id": "T01.01.Q021",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following quantities is dimensionless?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strain"
+        },
+        {
+          "id": "B",
+          "text": "Stress"
+        },
+        {
+          "id": "C",
+          "text": "Pressure"
+        },
+        {
+          "id": "D",
+          "text": "Force"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Strain is a dimensionless quantity as it represents the relative change in the size or shape of an object, without any units. It is the ratio of two lengths or distances, and therefore has no unit.",
+      "explanation_incorrect": "Stress, pressure, and force are not dimensionless quantities. Stress has the dimension of force per unit area (F/A), pressure has the dimension of force per unit area (F/A), and force has the dimension of mass times acceleration (M*L/T^2). Only strain is a dimensionless quantity, as it represents a pure ratio without any units."
+    },
+    {
+      "question_id": "T01.01.Q022",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A student writes the equation v = u + a²t where v is final velocity, u is initial velocity, a is acceleration and t is time. Dimensional analysis shows this equation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dimensionally correct and physically correct"
+        },
+        {
+          "id": "B",
+          "text": "Dimensionally correct but physically wrong"
+        },
+        {
+          "id": "C",
+          "text": "Dimensionally incorrect"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined by dimensional analysis"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The equation v = u + a²t is dimensionally incorrect because the dimension of a²t is [LT^-1], which does not match the dimensions of velocity [LT^-1]. Dimensional analysis shows that this equation is not homogeneous and therefore dimensionally incorrect.",
+      "explanation_incorrect": "The incorrect equation v = u + a²t suggests that the final velocity is the sum of the initial velocity and the square of the acceleration times the time. However, this does not make physical sense, as acceleration is the rate of change of velocity, not the square of the acceleration. The correct equation for final velocity should be v = u + at, where the final velocity is the sum of the initial velocity and the product of acceleration and time."
+    },
+    {
+      "question_id": "T01.01.Q023",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The least count of a vernier callipers with 10 vernier scale divisions equal to 9 main scale divisions (1 MSD = 1 mm) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.01 mm"
+        },
+        {
+          "id": "B",
+          "text": "0.1 mm"
+        },
+        {
+          "id": "C",
+          "text": "0.5 mm"
+        },
+        {
+          "id": "D",
+          "text": "1.0 mm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The least count of a vernier caliper is given by (1 MSD - 1 VSD) / number of VSD divisions. In this case, 1 MSD = 1 mm and 10 VSD = 9 MSD, so the least count is (1 mm - 0.9 mm) / 10 = 0.1 mm.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula for finding the least count of a vernier caliper. Option A (0.01 mm) is too small, as the vernier has 10 divisions and the main scale has 1 mm divisions. Option C (0.5 mm) and D (1.0 mm) are too large, as they do not match the calculation of (1 MSD - 1 VSD) / number of VSD divisions."
+    },
+    {
+      "question_id": "T01.01.Q024",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "A screw gauge has a pitch of 0.5 mm and 50 divisions on its circular scale. Its least count is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.001 mm"
+        },
+        {
+          "id": "B",
+          "text": "0.01 mm"
+        },
+        {
+          "id": "C",
+          "text": "0.05 mm"
+        },
+        {
+          "id": "D",
+          "text": "0.1 mm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 0.01 mm. In a screw gauge, the least count is determined by the pitch (distance between adjacent markings on the screw) and the number of divisions on the circular scale. With a pitch of 0.5 mm and 50 divisions, the least count would be 0.5 mm / 50 = 0.01 mm.",
+      "explanation_incorrect": "Option A) 0.001 mm is incorrect because the least count of the screw gauge cannot be smaller than the pitch divided by the number of divisions on the scale. Option C) 0.05 mm and D) 0.1 mm are also incorrect as they do not match the calculation of the least count. The correct answer is 0.01 mm, which is obtained by dividing the pitch (0.5 mm) by the number of divisions (50) on the circular scale."
+    },
+    {
+      "question_id": "T01.01.Q025",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "The dimensional formula of angular momentum is the same as that of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Work"
+        },
+        {
+          "id": "B",
+          "text": "Planck's constant"
+        },
+        {
+          "id": "C",
+          "text": "Momentum"
+        },
+        {
+          "id": "D",
+          "text": "Torque"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The dimensional formula of angular momentum (L = M*L^2/T) is the same as that of Planck's constant (h = M*L^2/T), since both are products of mass, length, and time. The dimensional analysis shows they have the same units and form.",
+      "explanation_incorrect": "The dimensional formula of torque (τ = F*L = M*L^2/T^2) is different from angular momentum, since torque involves force while angular momentum does not. Work (W = F*L = M*L^2/T^2) also has a different dimensional formula from angular momentum. Momentum (p = M*L/T) has a different dimensional formula as well, since it does not involve the product of length and length."
+    },
+    {
+      "question_id": "T01.01.Q026",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The result of adding 25.2 + 0.375 + 1.84, expressed with the correct number of significant figures (decimal places), is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "27.415"
+        },
+        {
+          "id": "B",
+          "text": "27.42"
+        },
+        {
+          "id": "C",
+          "text": "27.4"
+        },
+        {
+          "id": "D",
+          "text": "27"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 27.4. When adding numbers with different decimal places, the result should be reported to the same number of decimal places as the number with the fewest decimal places. In this case, the number with the fewest decimal places is 0.375, so the final answer should be rounded to 1 decimal place.",
+      "explanation_incorrect": "Option A) 27.415 is incorrect because it has too many decimal places. Option B) 27.42 is also incorrect because it has more decimal places than the number with the fewest decimal places (0.375). Option D) 27 is incorrect because it does not have enough decimal places to accurately represent the result of adding the given numbers."
+    },
+    {
+      "question_id": "T01.01.Q027",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If the resistance R is calculated using R = V/I, where V = 100 ± 5 V and I = 10 ± 0.2 A, the percentage error in R is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5%"
+        },
+        {
+          "id": "B",
+          "text": "2%"
+        },
+        {
+          "id": "C",
+          "text": "7%"
+        },
+        {
+          "id": "D",
+          "text": "3%"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The percentage error in R is 7% because the relative error in R is the sum of the relative errors in V and I, which are 5% and 2% respectively, adding up to 7%.",
+      "explanation_incorrect": "The correct answer is C) 7%. This is because the formula for resistance is R = V/I, and the relative error in R is the sum of the relative errors in V and I. The relative error in V is 5% and the relative error in I is 2%, so the total relative error in R is 5% + 2% = 7%."
+    },
+    {
+      "question_id": "T01.01.Q028",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of amount of substance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "kilogram"
+        },
+        {
+          "id": "B",
+          "text": "mole"
+        },
+        {
+          "id": "C",
+          "text": "gram"
+        },
+        {
+          "id": "D",
+          "text": "molecule"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of amount of substance is the mole (symbol: mol), which is defined as the amount of substance that contains as many fundamental entities (e.g. atoms, molecules, or ions) as there are atoms in 0.012 kg of carbon-12. This is the correct SI base unit for measuring the quantity of matter.",
+      "explanation_incorrect": "The other options are not the correct SI unit for amount of substance. Kilogram (kg) is the SI unit for mass, not amount of substance. Gram (g) is a smaller unit of mass, not the base SI unit. Molecule is a unit of counting particles, not a unit of measurement for the amount of substance."
+    },
+    {
+      "question_id": "T01.01.Q029",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The dimensional formula of pressure is [M L⁻¹ T⁻²]. A quantity with the same dimensional formula is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy density (energy per unit volume)"
+        },
+        {
+          "id": "B",
+          "text": "Force per unit length"
+        },
+        {
+          "id": "C",
+          "text": "Momentum per unit area"
+        },
+        {
+          "id": "D",
+          "text": "Power per unit area"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The dimensional formula of pressure is [M L⁻¹ T⁻²], which means it has the dimensions of mass per unit length per unit time squared. Energy density (energy per unit volume) also has the same dimensional formula, as energy divided by volume has the same dimensions as pressure.",
+      "explanation_incorrect": "Option A, energy density, is the correct answer because it has the same dimensional formula as pressure, [M L⁻¹ T⁻²]. Option B, force per unit length, has the dimensional formula [M L⁻¹ T⁻²]. Option C, momentum per unit area, has the dimensional formula [M L⁻¹ T⁻¹]. Option D, power per unit area, has the dimensional formula [M L² T⁻³]."
+    },
+    {
+      "question_id": "T01.01.Q030",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The time period T of a body executing SHM is given by T = 2π√(m/k). If the measured values are m = 0.50 ± 0.01 kg and k = 20 ± 1 N/m, the percentage error in T is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5%"
+        },
+        {
+          "id": "B",
+          "text": "2.0%"
+        },
+        {
+          "id": "C",
+          "text": "3.5%"
+        },
+        {
+          "id": "D",
+          "text": "7.0%"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 3.5%. This is because the formula for the time period T involves the square root of m/k, and the relative errors in m and k add up in this formula to give a total percentage error of around 3.5%.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly account for the propagation of errors in the formula for the time period T. The correct approach is to calculate the relative errors in m and k, and then add them up to get the total percentage error in T, which comes out to around 3.5%."
+    },
+    {
+      "question_id": "T01.01.Q031",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The dimensional formula of energy is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[M L T⁻²]"
+        },
+        {
+          "id": "B",
+          "text": "[M L² T⁻²]"
+        },
+        {
+          "id": "C",
+          "text": "[M L² T⁻³]"
+        },
+        {
+          "id": "D",
+          "text": "[M L² T⁻¹]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The dimensional formula of energy is [M L² T⁻²], which represents the dimensions of mass, length squared, and time to the power of negative two. This is because energy is defined as the ability to do work, which has the same dimensions as work, and work is defined as force multiplied by displacement, which has the dimensions of mass, length squared, and time to the power of negative two.",
+      "explanation_incorrect": "The dimensional formula of energy is not [M L T⁻²], [M L² T⁻³], or [M L² T⁻¹]. These options do not correctly represent the dimensions of energy, which is a combination of mass, length, and time. The correct dimensional formula, [M L² T⁻²], accurately captures the relationship between energy and the base quantities of mass, length, and time."
+    },
+    {
+      "question_id": "T01.01.Q032",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "How many significant figures are there in 1.00 × 10⁴?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The number 1.00 × 10⁴ has 3 significant figures, so the correct answer is C) 3.",
+      "explanation_incorrect": "The number 1.00 × 10⁴ has 3 significant figures because the first three digits (1.00) have non-zero values, which are considered significant figures. The exponent 4 does not contribute to the number of significant figures. Therefore, the correct answer is C) 3 significant figures."
+    },
+    {
+      "question_id": "T01.01.Q033",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A limitation of dimensional analysis is that it cannot determine:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Whether an equation is dimensionally homogeneous"
+        },
+        {
+          "id": "B",
+          "text": "The dimensions of a physical quantity"
+        },
+        {
+          "id": "C",
+          "text": "Dimensionless constants such as π or 1/2 in formulae"
+        },
+        {
+          "id": "D",
+          "text": "The conversion factor between SI and CGS units"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) Dimensionless constants such as π or 1/2 in formulae. Dimensional analysis only deals with the dimensions (M, L, T, etc.) of physical quantities, not with dimensionless numbers that appear in equations.",
+      "explanation_incorrect": "The incorrect answer is C. Dimensional analysis can indeed determine the dimensions of physical quantities and check the dimensional homogeneity of equations. It can also be used to convert between different unit systems like SI and CGS. However, dimensional analysis cannot determine the specific dimensionless constants like π or 1/2 that may appear in the final equations."
+    },
+    {
+      "question_id": "T01.01.Q034",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "Five readings of a length are 2.34 cm, 2.36 cm, 2.35 cm, 2.33 cm and 2.37 cm. The mean absolute error is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.01 cm"
+        },
+        {
+          "id": "B",
+          "text": "0.012 cm"
+        },
+        {
+          "id": "C",
+          "text": "0.02 cm"
+        },
+        {
+          "id": "D",
+          "text": "0.03 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The mean absolute error is calculated by taking the average of the absolute differences between each reading and the mean value. The mean of the five readings is (2.34 + 2.36 + 2.35 + 2.33 + 2.37) / 5 = 2.35 cm. The absolute differences are 0.01 cm, 0.01 cm, 0.00 cm, 0.02 cm, and 0.02 cm. The mean of these absolute differences is (0.01 + 0.01 + 0.00 + 0.02 + 0.02) / 5 = 0.012 cm, which matches option B.",
+      "explanation_incorrect": "Option A is incorrect because the mean absolute error should be the average of the absolute differences, not just a single difference. Option C is incorrect because the mean absolute error is calculated from all the readings, not just the range (difference between maximum and minimum). Option D is incorrect because the mean absolute error is a much smaller value than 0.03 cm for these measurements."
+    },
+    {
+      "question_id": "T01.01.Q035",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The dimensional formula of the coefficient of viscosity (η) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[M L⁻¹ T⁻¹]"
+        },
+        {
+          "id": "B",
+          "text": "[M L T⁻¹]"
+        },
+        {
+          "id": "C",
+          "text": "[M L⁻¹ T⁻²]"
+        },
+        {
+          "id": "D",
+          "text": "[M L² T⁻¹]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The dimensional formula of the coefficient of viscosity (η) is [M L^-1 T^-1] because viscosity has the dimensions of force per unit area divided by velocity gradient, which can be expressed as [M L^-1 T^-1].",
+      "explanation_incorrect": "The correct dimensional formula for the coefficient of viscosity (η) is [M L^-1 T^-1], not [M L T^-1], [M L^-1 T^-2], or [M L^2 T^-1]. This is because viscosity represents the internal friction within a fluid, which has the dimensions of force per unit area divided by velocity gradient."
+    },
+    {
+      "question_id": "T01.01.Q036",
+      "type": "true_false",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "There are seven fundamental (base) quantities in the SI system.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true. The International System of Units (SI) defines seven base quantities - length, mass, time, electric current, temperature, amount of substance, and luminous intensity - from which all other physical quantities are derived.",
+      "explanation_incorrect": "The statement is false. Some students may think there are fewer or more than seven base quantities in the SI system. However, the SI system specifically defines seven fundamental base quantities, and all other physical quantities are derived from these seven."
+    },
+    {
+      "question_id": "T01.01.Q037",
+      "type": "true_false",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "An equation that is dimensionally correct must also be physically correct.",
+      "correct_answer": false,
+      "explanation_correct": "An equation can be dimensionally correct but still be physically incorrect. Dimensional analysis only checks the homogeneity of the equation, not whether it accurately represents the physical relationship between the quantities. Physical correctness depends on experimental verification and theoretical understanding.",
+      "explanation_incorrect": "Some students may think that if an equation is dimensionally correct, it must also be physically correct. However, this is not necessarily true. Dimensional analysis is a useful tool to check the validity of an equation, but it does not guarantee that the equation accurately describes the physical phenomenon. There could be errors in the underlying theory or the experimental data used to derive the equation, even if the dimensions balance out. Physical correctness requires more than just dimensional consistency."
+    },
+    {
+      "question_id": "T01.01.Q038",
+      "type": "true_false",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "In the number 0.0500, there are three significant figures.",
+      "correct_answer": true,
+      "explanation_correct": "The number 0.0500 has three significant figures. Significant figures refer to the meaningful digits in a number, including the zeros that are not placeholders. In this case, the '0.0' and the '5' are all significant figures, so there are a total of three significant figures.",
+      "explanation_incorrect": "The number 0.0500 does not have two significant figures, as one might assume. The zeros before the '5' are not just placeholders, but are also considered significant figures. Therefore, the correct number of significant figures in 0.0500 is three, not two."
+    },
+    {
+      "question_id": "T01.01.Q039",
+      "type": "true_false",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "Systematic errors can be eliminated by taking the average of many measurements.",
+      "correct_answer": false,
+      "explanation_correct": "Systematic errors are caused by issues with the measuring instrument, environmental conditions, or personal bias. Taking the average of many measurements will not eliminate these consistent errors, as the same source of error will affect each reading in the same way.",
+      "explanation_incorrect": "Systematic errors are different from random errors, which can be reduced by taking the average of multiple measurements. However, systematic errors are inherent in the measurement process and cannot be eliminated simply by averaging. Factors like instrument calibration, environmental conditions, or personal bias will consistently affect each reading in the same way, so the average will still be inaccurate."
+    },
+    {
+      "question_id": "T01.01.Q040",
+      "type": "true_false",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "When two quantities are multiplied, the absolute errors in the individual quantities are added to get the absolute error in the result.",
+      "correct_answer": false,
+      "explanation_correct": "When two quantities are multiplied, the relative errors in the individual quantities are added to get the relative error in the result. This is because the absolute error depends on the size of the quantities, while the relative error is independent of the size.",
+      "explanation_incorrect": "The statement that 'when two quantities are multiplied, the absolute errors in the individual quantities are added to get the absolute error in the result' is incorrect. This is because the absolute error in the result is not simply the sum of the absolute errors in the individual quantities. Instead, the relative errors in the individual quantities are added to get the relative error in the result."
+    },
+    {
+      "question_id": "T01.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of electric current is ___.",
+      "correct_answer": "ampere",
+      "explanation_correct": "The SI unit of electric current is ampere. This is because the ampere is one of the seven base units in the International System of Units (SI), which defines the fundamental physical quantities used in physics.",
+      "explanation_incorrect": "The correct SI unit of electric current is ampere. The SI system defines seven base units, and the ampere is the unit for electric current. Other units like volt, ohm or watt are derived from the base units, but the ampere is the fundamental unit used to measure the flow of electric charge."
+    },
+    {
+      "question_id": "T01.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of fundamental (base) units in the SI system is ___.",
+      "correct_answer": "7",
+      "explanation_correct": "The SI system has 7 fundamental base units: length (metre), mass (kilogram), time (second), electric current (ampere), temperature (kelvin), amount of substance (mole), and luminous intensity (candela). These base units are used to define all other derived physical quantities.",
+      "explanation_incorrect": "The accepted answer format is a single number. Many students may think there are more or fewer than 7 base units in the SI system, but the correct number is 7. The 7 base units are the fundamental physical quantities that define the SI system, and all other derived quantities are built from these 7 base units."
+    },
+    {
+      "question_id": "T01.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "1 joule expressed in CGS units is ___ erg.",
+      "correct_answer": "10⁷",
+      "explanation_correct": "The International System of Units (SI) defines the joule as the unit of energy, while the CGS system uses the erg as the unit of energy. Since 1 joule = 10⁷ ergs, the correct answer is 10⁷ erg.",
+      "explanation_incorrect": "The incorrect answer would be to simply state '10' erg. This is wrong because the conversion factor between joules and ergs is 1 joule = 10⁷ ergs, not 1:1. The correct answer must be expressed in the exact format of 10⁷ erg to be accepted."
+    },
+    {
+      "question_id": "T01.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "The number of significant figures in 0.06900 is ___.",
+      "correct_answer": "4",
+      "explanation_correct": "The number of significant figures in 0.06900 is 4. This is because the number 0.06900 has 5 digits, and the first two zeros are not significant figures - they only indicate the decimal place. The remaining 3 digits (069) and the last zero are all significant figures, making a total of 4 significant figures.",
+      "explanation_incorrect": "The accepted answer format is 4. However, some students may think the number of significant figures in 0.06900 is 5, because they count all the digits. But the first two zeros are not significant figures, they just indicate the decimal place. The correct number of significant figures is 4, as explained in the correct explanation."
+    },
+    {
+      "question_id": "T01.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "If ΔA/A = 2% and ΔB/B = 3%, then for Z = A²B, the percentage error in Z is ___.",
+      "correct_answer": "7%",
+      "explanation_correct": "The percentage error in Z = A²B is 7% because the relative error in Z is the sum of the relative errors in A and B, i.e. (ΔA/A) + (ΔB/B) = 2% + 3% = 5%. Since Z = A²B, the relative error in Z is twice the sum of the relative errors in A and B, which is 7%.",
+      "explanation_incorrect": "The accepted answer format is a percentage value. The correct percentage error in Z = A²B is 7%, not the individual relative errors of 2% for A and 3% for B. This is because the relative error in Z is the sum of the relative errors in A and B, multiplied by 2 since Z is proportional to the square of A and the first power of B."
+    },
+    {
+      "question_id": "T01.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The least count of a screw gauge with pitch 1 mm and 100 circular divisions is ___ mm.",
+      "correct_answer": "0.01",
+      "explanation_correct": "The least count of a screw gauge is given by the pitch divided by the number of circular divisions. With a pitch of 1 mm and 100 circular divisions, the least count is 1 mm / 100 = 0.01 mm.",
+      "explanation_incorrect": "The incorrect answer would be 0.1 mm. This is because the pitch is 1 mm and there are 100 circular divisions. However, the least count is calculated by dividing the pitch by the number of divisions, which gives 0.01 mm. The accepted answer format for the least count is 0.01 mm."
+    },
+    {
+      "question_id": "T01.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If the measured values of two quantities are A = 5.0 ± 0.2 and B = 3.0 ± 0.1, then the absolute error in A + B is ___.",
+      "correct_answer": "0.3",
+      "explanation_correct": "The absolute error in A + B is 0.3 because the absolute errors of the two quantities add up. Since A = 5.0 ± 0.2 and B = 3.0 ± 0.1, the absolute error in A + B is 0.2 + 0.1 = 0.3.",
+      "explanation_incorrect": "The incorrect answer would be to multiply the relative errors instead of adding the absolute errors. The absolute error in A + B is not the product of the individual absolute errors (0.2 x 0.1 = 0.02), but the sum of the absolute errors (0.2 + 0.1 = 0.3). The correct answer in the fill-in-the-blank format is 0.3."
+    },
+    {
+      "question_id": "T01.01.Q048",
+      "type": "ordering",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the following measurements in order of increasing number of significant figures: (A) 0.005, (B) 5.00, (C) 50, (D) 5.000",
+      "ordering_items": [
+        "0.005",
+        "5.00",
+        "50",
+        "5.000"
+      ],
+      "correct_answer": [
+        "0.005",
+        "50",
+        "5.00",
+        "5.000"
+      ],
+      "explanation_correct": "The number of significant figures increases from left to right in the given measurements. 0.005 has 1 significant figure, 50 has 2 significant figures, 5.00 has 3 significant figures, and 5.000 has 4 significant figures. Therefore, the correct order is 0.005, 50, 5.00, 5.000.",
+      "explanation_incorrect": "The incorrect order would be to arrange the measurements based on their numerical values, rather than the number of significant figures. This is wrong because significant figures indicate the precision of the measurement, which is more important than the numerical value alone. The correct order is determined by the number of non-zero digits in each measurement, not just the numerical value."
+    },
+    {
+      "question_id": "T01.01.Q049",
+      "type": "ordering",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following instruments in order of increasing precision (least count from largest to smallest): (A) Metre scale, (B) Vernier callipers, (C) Screw gauge, (D) Measuring tape",
+      "ordering_items": [
+        "Metre scale",
+        "Vernier callipers",
+        "Screw gauge",
+        "Measuring tape"
+      ],
+      "correct_answer": [
+        "Measuring tape",
+        "Metre scale",
+        "Vernier callipers",
+        "Screw gauge"
+      ],
+      "explanation_correct": "The order of increasing precision is: Measuring tape, Metre scale, Vernier callipers, Screw gauge. This is because the least count (smallest division) of these instruments increases in the same order, from largest to smallest.",
+      "explanation_incorrect": "The incorrect order would be: Metre scale, Measuring tape, Vernier callipers, Screw gauge. While the metre scale and measuring tape are both linear measuring instruments, the metre scale has a smaller least count and is more precise than the measuring tape. The Vernier callipers and screw gauge have even smaller least counts, making them the most precise instruments in the list."
+    },
+    {
+      "question_id": "T01.01.Q050",
+      "type": "ordering",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following quantities in order of increasing dimensions of length [L]: (A) Velocity [L¹], (B) Acceleration [L¹], (C) Energy [L²], (D) Force [L¹]",
+      "ordering_items": [
+        "Velocity [L¹]",
+        "Acceleration [L¹]",
+        "Energy [L²]",
+        "Force [L¹]"
+      ],
+      "correct_answer": [
+        "Velocity [L¹]",
+        "Acceleration [L¹]",
+        "Force [L¹]",
+        "Energy [L²]"
+      ],
+      "explanation_correct": "The correct order is Velocity [L¹], Acceleration [L¹], Force [L¹], Energy [L²] because the dimensions of all these quantities are powers of length (L). Velocity, acceleration and force all have the dimension of length raised to the power 1, while energy has the dimension of length raised to the power 2, making it the quantity with the highest dimension of length.",
+      "explanation_incorrect": "The incorrect order would be Velocity [L¹], Acceleration [L¹], Energy [L²], Force [L¹]. This is wrong because while velocity, acceleration and force all have the same dimension of length (L¹), energy has a higher dimension of length (L²), so it should come after the other three quantities in the order."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 15,
+        "application": 19,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

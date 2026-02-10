@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T05.01",
+  "topic_name": "Probability",
+  "canonical_explanation": {
+    "text": "Probability at the Class 12 level extends to conditional probability, independent events, Bayes' theorem, and random variables. Conditional probability P(A|B) = P(A ∩ B)/P(B) gives the probability of event A given that B has occurred. The multiplication theorem states P(A ∩ B) = P(A)·P(B|A). Events A and B are independent if P(A ∩ B) = P(A)·P(B), which is distinct from mutually exclusive events. The total probability theorem gives P(B) = Σ P(B|Aᵢ)·P(Aᵢ) over a partition {A₁, A₂, ..., Aₙ}. Bayes' theorem reverses conditional probabilities: P(Aᵢ|B) = P(B|Aᵢ)·P(Aᵢ) / Σ P(B|Aⱼ)·P(Aⱼ). A discrete random variable X has a probability distribution where Σ P(X = xᵢ) = 1. The mean (expectation) is E(X) = Σ xᵢ·P(X = xᵢ) and the variance is Var(X) = E(X²) − [E(X)]². The binomial distribution models n independent Bernoulli trials: P(X = r) = ⁿCᵣ·pʳ·qⁿ⁻ʳ where q = 1 − p.",
+    "rules": [
+      "Conditional probability: P(A|B) = P(A ∩ B)/P(B), provided P(B) ≠ 0.",
+      "Bayes' theorem: P(Aᵢ|B) = P(B|Aᵢ)·P(Aᵢ) / Σⱼ P(B|Aⱼ)·P(Aⱼ).",
+      "For a binomial distribution with parameters n and p: mean = np, variance = npq where q = 1 − p."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.01.Q001",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The conditional probability P(A|B) is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A ∩ B)/P(A)"
+        },
+        {
+          "id": "B",
+          "text": "P(A ∩ B)/P(B)"
+        },
+        {
+          "id": "C",
+          "text": "P(A ∪ B)/P(B)"
+        },
+        {
+          "id": "D",
+          "text": "P(A)/P(B)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The conditional probability P(A|B) is defined as the probability of event A occurring, given that event B has already occurred. This is calculated as the probability of the intersection of A and B, divided by the probability of B alone, which is P(A ∩ B)/P(B).",
+      "explanation_incorrect": "Option A, P(A ∩ B)/P(A), is incorrect because it does not take into account the condition that B has occurred. Option C, P(A ∪ B)/P(B), is incorrect because it calculates the probability of the union of A and B, not the conditional probability of A given B. Option D, P(A)/P(B), is incorrect because it does not properly account for the relationship between the two events."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If P(A) = 0.4, P(B) = 0.5, and P(A ∩ B) = 0.2, then P(A|B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.4"
+        },
+        {
+          "id": "B",
+          "text": "0.5"
+        },
+        {
+          "id": "C",
+          "text": "0.2"
+        },
+        {
+          "id": "D",
+          "text": "0.8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.4. This can be calculated using the formula for conditional probability: P(A|B) = P(A ∩ B) / P(B). Given the values for P(A), P(B), and P(A ∩ B), the conditional probability P(A|B) = 0.2 / 0.5 = 0.4.",
+      "explanation_incorrect": "The incorrect answers are: B) 0.5, C) 0.2, and D) 0.8. These are not correct because the formula for conditional probability P(A|B) = P(A ∩ B) / P(B) must be used to calculate the probability. Using the given values, the correct answer is 0.4."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The multiplication rule states P(A ∩ B) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A) + P(B)"
+        },
+        {
+          "id": "B",
+          "text": "P(A) · P(B|A)"
+        },
+        {
+          "id": "C",
+          "text": "P(A) · P(B) always"
+        },
+        {
+          "id": "D",
+          "text": "P(A|B) + P(B|A)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The multiplication rule states that the probability of the intersection of two events A and B, P(A ∩ B), is equal to the probability of A, P(A), multiplied by the conditional probability of B given A, P(B|A). This makes the correct answer option B.",
+      "explanation_incorrect": "Option C, P(A) · P(B) always, is incorrect because the multiplication rule only applies when the events A and B are independent. If the events are not independent, then the conditional probability P(B|A) needs to be included in the calculation, as shown in the correct answer B."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "A box contains 3 red and 5 blue balls. Two balls are drawn without replacement. The probability that both are red is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/28"
+        },
+        {
+          "id": "B",
+          "text": "9/64"
+        },
+        {
+          "id": "C",
+          "text": "3/8"
+        },
+        {
+          "id": "D",
+          "text": "6/56 = 3/28"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3/28. The probability of drawing two red balls without replacement from a box with 3 red and 5 blue balls is calculated as the probability of drawing the first red ball (3/8) multiplied by the probability of drawing the second red ball (2/7), which gives 3/28.",
+      "explanation_incorrect": "The incorrect options B) 9/64, C) 3/8, and D) 6/56 = 3/28 are not correct. The probability of drawing two red balls without replacement is calculated by considering the number of ways to choose the two red balls from the 3 red balls, and the total number of ways to choose 2 balls from the 8 balls in the box. The correct calculation leads to the probability of 3/28."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Two events A and B are independent if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A ∩ B) = 0"
+        },
+        {
+          "id": "B",
+          "text": "P(A ∩ B) = P(A) · P(B)"
+        },
+        {
+          "id": "C",
+          "text": "P(A ∪ B) = P(A) · P(B)"
+        },
+        {
+          "id": "D",
+          "text": "P(A|B) = P(B)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two events A and B are independent if the probability of their intersection is equal to the product of their individual probabilities, i.e. P(A ∩ B) = P(A) · P(B). This means the occurrence of one event does not affect the probability of the other event.",
+      "explanation_incorrect": "The other options are incorrect because: A) P(A ∩ B) = 0 means the events are mutually exclusive, not independent. C) P(A ∪ B) = P(A) · P(B) is a property of independent events, but not the definition. D) P(A|B) = P(B) means the events are independent, but this is not the definition of independence."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A and B are independent events with P(A) = 0.3 and P(B) = 0.6, then P(A ∩ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.9"
+        },
+        {
+          "id": "B",
+          "text": "0.18"
+        },
+        {
+          "id": "C",
+          "text": "0.3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 0.18. This is because for independent events A and B, the probability of the intersection A ∩ B is the product of their individual probabilities: P(A ∩ B) = P(A) × P(B). Given P(A) = 0.3 and P(B) = 0.6, the probability of A ∩ B is 0.3 × 0.6 = 0.18.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the formula for independent events. Option A) 0.9 is incorrect because it is the sum of the individual probabilities, not the product. Option C) 0.3 is incorrect because it is just the probability of A, not the probability of A ∩ B. Option D) 0 is incorrect because it assumes the events are mutually exclusive, which is not the case here."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A coin and a die are thrown simultaneously. The probability of getting a head and an even number is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "1/6"
+        },
+        {
+          "id": "D",
+          "text": "1/12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting a head and an even number is 1/4 because there are 2 possible outcomes for the coin (head or tail) and 3 possible even outcomes for the die (2, 4, 6), so the total number of favourable outcomes is 2 × 3 = 6, and the total number of possible outcomes is 2 × 6 = 12, giving a probability of 6/12 = 1/4.",
+      "explanation_incorrect": "The probability of getting a head and an even number is not 1/2, as that would imply the events are independent, which is not the case here. The probability is also not 1/6, as that would assume only one favourable outcome (getting a head and a 6 on the die). The probability is also not 1/12, as that would assume only one favourable outcome (getting a head and a 6 on the die) out of a total of 12 possible outcomes."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "If A and B are mutually exclusive, then P(A ∩ B) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A) · P(B)"
+        },
+        {
+          "id": "B",
+          "text": "P(A) + P(B)"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If A and B are mutually exclusive events, then they cannot occur at the same time. This means that the probability of their intersection, P(A ∩ B), must be 0.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the relationship between mutually exclusive events. Option A, P(A) · P(B), is the probability of A and B occurring independently, which is not the case for mutually exclusive events. Option B, P(A) + P(B), is the probability of A or B occurring, but not their intersection. Option D, 1, would imply that A and B are certain to occur together, which is not true for mutually exclusive events."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Bayes' theorem gives P(Aᵢ|B) in terms of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(B|Aᵢ) and P(Aᵢ)"
+        },
+        {
+          "id": "B",
+          "text": "P(Aᵢ) only"
+        },
+        {
+          "id": "C",
+          "text": "P(B) only"
+        },
+        {
+          "id": "D",
+          "text": "P(Aᵢ ∩ B) only"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Bayes' theorem gives the conditional probability P(Aᵢ|B) in terms of the probability of the event B given Aᵢ, and the probability of Aᵢ itself. This is because Bayes' theorem is derived from the multiplication rule for conditional probabilities.",
+      "explanation_incorrect": "Option A is correct because Bayes' theorem states that P(Aᵢ|B) = [P(B|Aᵢ) * P(Aᵢ)] / P(B), where P(B|Aᵢ) is the conditional probability of B given Aᵢ, and P(Aᵢ) is the probability of Aᵢ. The theorem does not depend on P(Aᵢ ∩ B) or P(B) alone."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The total probability theorem states P(B) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Σ P(B|Aᵢ)"
+        },
+        {
+          "id": "B",
+          "text": "Σ P(B|Aᵢ) · P(Aᵢ)"
+        },
+        {
+          "id": "C",
+          "text": "Σ P(Aᵢ|B)"
+        },
+        {
+          "id": "D",
+          "text": "P(A₁) · P(A₂) · ... · P(Aₙ)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The total probability theorem states that the probability of event B is equal to the sum of the probabilities of B given each mutually exclusive event A₁, A₂, ..., Aₙ, multiplied by the probabilities of those events A₁, A₂, ..., Aₙ. This is expressed as P(B) = Σ P(B|Aᵢ) · P(Aᵢ), which matches option B.",
+      "explanation_incorrect": "Option A is incorrect because it only includes the conditional probabilities P(B|Aᵢ) without the probabilities P(Aᵢ) of the mutually exclusive events. Option C is incorrect because it reverses the conditional probability, asking for P(Aᵢ|B) instead of P(B|Aᵢ). Option D is incorrect because it represents the multiplication of the individual probabilities P(Aᵢ), which is not the correct expression for the total probability theorem."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "Bag I has 3 red and 4 black balls, Bag II has 5 red and 6 black balls. A bag is chosen at random and a ball is drawn. If the ball is red, the probability that it came from Bag I (using Bayes' theorem) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "33/68"
+        },
+        {
+          "id": "B",
+          "text": "35/68"
+        },
+        {
+          "id": "C",
+          "text": "3/7"
+        },
+        {
+          "id": "D",
+          "text": "5/11"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 33/68. This is because Bayes' theorem gives the probability that the ball came from Bag I, given that it is red. The formula for this is P(Bag I|Red) = (P(Red|Bag I) * P(Bag I)) / (P(Red|Bag I) * P(Bag I) + P(Red|Bag II) * P(Bag II)), which evaluates to 33/68.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly apply Bayes' theorem to this problem. Option B) 35/68 does not account for the relative probabilities of getting a red ball from each bag. Option C) 3/7 is the probability of getting a red ball from Bag I, but does not give the conditional probability of Bag I given a red ball. Option D) 5/11 is the probability of getting a red ball from Bag II, which is not what the question is asking for."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "For a discrete random variable X, the sum of all probabilities Σ P(X = xᵢ) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "The mean of X"
+        },
+        {
+          "id": "D",
+          "text": "It depends on the distribution"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a discrete random variable X, the sum of all probabilities P(X = xi) must equal 1 because the total probability of all possible outcomes is 100%. This is a fundamental property of probability distributions.",
+      "explanation_incorrect": "The sum of all probabilities for a discrete random variable X cannot be 0, because that would mean no outcome is possible. The mean of X is not the sum of all probabilities, but rather the average value of X weighted by those probabilities. The sum of probabilities depends on the specific probability distribution, but for any valid distribution, it must always equal 1."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The expected value (mean) of a random variable X is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Σ xᵢ · P(X = xᵢ)"
+        },
+        {
+          "id": "B",
+          "text": "Σ P(X = xᵢ)"
+        },
+        {
+          "id": "C",
+          "text": "Σ xᵢ²"
+        },
+        {
+          "id": "D",
+          "text": "The most probable value of X"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The expected value (mean) of a random variable X is the weighted average of the possible values of X, where the weights are the corresponding probabilities. This is given by the formula Σ xᵢ·P(X = xᵢ), which represents option A.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the expected value (mean) of the random variable X. Option B gives the sum of the probabilities, which is always equal to 1. Option C gives the sum of the squares of the possible values, which is not the mean. Option D refers to the most probable value, which is not the same as the expected value."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "If X takes values 0, 1, 2 with probabilities 0.3, 0.5, 0.2, then E(X) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.9"
+        },
+        {
+          "id": "B",
+          "text": "1.0"
+        },
+        {
+          "id": "C",
+          "text": "0.7"
+        },
+        {
+          "id": "D",
+          "text": "1.2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.9. To calculate the expected value E(X), we multiply each possible value of X by its corresponding probability and add them up. Here, X takes values 0, 1, 2 with probabilities 0.3, 0.5, 0.2 respectively. So, E(X) = 0 × 0.3 + 1 × 0.5 + 2 × 0.2 = 0 + 0.5 + 0.4 = 0.9.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly calculate the expected value E(X). The expected value is the sum of each possible value of X multiplied by its corresponding probability. In this case, the correct calculation gives E(X) = 0.9, not 1.0, 0.7, or 1.2."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The variance of a random variable X is given by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "E(X)²"
+        },
+        {
+          "id": "B",
+          "text": "E(X²) − [E(X)]²"
+        },
+        {
+          "id": "C",
+          "text": "E(X²) + [E(X)]²"
+        },
+        {
+          "id": "D",
+          "text": "[E(X)]² − E(X²)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The variance of a random variable X is defined as the expected value of the squared deviations from the mean, which is E(X²) - [E(X)]². Therefore, the correct answer is option B.",
+      "explanation_incorrect": "The variance of a random variable X is not given by E(X)² (option A), E(X²) + [E(X)]² (option C), or [E(X)]² - E(X²) (option D). The correct formula for the variance is E(X²) - [E(X)]², which is option B."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "In a binomial distribution with n = 5 and p = 1/2, P(X = 3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/16"
+        },
+        {
+          "id": "B",
+          "text": "10/32"
+        },
+        {
+          "id": "C",
+          "text": "5/32"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is both A) 5/16 and B) 10/32. This is because the binomial distribution formula for P(X = 3) with n = 5 and p = 1/2 gives 5C3 * (1/2)^3 * (1/2)^2 = 10/32 = 5/16.",
+      "explanation_incorrect": "The correct answer is D) Both A and B. Option A) 5/16 is correct because the binomial distribution formula for P(X = 3) with n = 5 and p = 1/2 gives 5C3 * (1/2)^3 * (1/2)^2 = 10/32 = 5/16. Option B) 10/32 is also correct as this is just another way to express the same probability. Options C) 5/32 and A) 5/16 are both incorrect as they do not match the binomial distribution calculation for this scenario."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.6, P(B) = 0.3, and P(A ∩ B) = 0.1, then P(B|A) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "2/3"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/6. This can be calculated using the formula for conditional probability: P(B|A) = P(A ∩ B) / P(A). Given that P(A) = 0.6 and P(A ∩ B) = 0.1, we can plug these values into the formula to get P(B|A) = 0.1 / 0.6 = 1/6.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly apply the formula for conditional probability. Option B) 1/3 is wrong because it does not take into account the given values of P(A) and P(A ∩ B). Option C) 2/3 is wrong because it is the opposite of the correct answer. Option D) 1/2 is wrong because it does not use the given probabilities correctly."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Machine A produces 60% of items and Machine B produces 40%. Defect rates are 2% and 5% respectively. If a randomly chosen item is defective, the probability it was produced by Machine A is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/7"
+        },
+        {
+          "id": "B",
+          "text": "3/8"
+        },
+        {
+          "id": "C",
+          "text": "6/19"
+        },
+        {
+          "id": "D",
+          "text": "12/32"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 6/19. This is because we can use Bayes' theorem to calculate the probability that the item was produced by Machine A, given that it is defective. The probability is calculated as P(A|B) = (P(B|A)P(A)) / P(B), which gives 6/19.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply Bayes' theorem. Option A) 3/7 and Option B) 3/8 do not correctly calculate the conditional probability P(A|B) using the given information. Option D) 12/32 is incorrect because it does not simplify the fraction to the correct answer of 6/19."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A test for a disease has 99% sensitivity (P(positive|disease) = 0.99) and 95% specificity (P(negative|no disease) = 0.95). If 1% of the population has the disease, the probability that a person who tests positive actually has the disease is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.17"
+        },
+        {
+          "id": "B",
+          "text": "0.50"
+        },
+        {
+          "id": "C",
+          "text": "0.95"
+        },
+        {
+          "id": "D",
+          "text": "0.99"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.17. This is based on Bayes' theorem, which gives the probability that a person has the disease given that they tested positive. With a disease prevalence of 1% and a test sensitivity of 99% and specificity of 95%, the probability of actually having the disease when testing positive is around 17%.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly apply Bayes' theorem to the given probabilities. Option B) 0.50 assumes that a positive test result means a 50-50 chance of having the disease, while options C) 0.95 and D) 0.99 overestimate the probability of having the disease given a positive test, not accounting for the specificity of the test and the low disease prevalence in the population."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The mean of a binomial distribution with n = 10 and p = 0.3 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "2.1"
+        },
+        {
+          "id": "D",
+          "text": "0.3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean of a binomial distribution with n = 10 and p = 0.3 is given by the formula n·p, which equals 10 × 0.3 = 3. This is because the mean of a binomial distribution is equal to the number of trials n multiplied by the probability of success p.",
+      "explanation_incorrect": "The correct answer is A) 3. The mean of a binomial distribution with n trials and probability of success p is given by the formula n·p. In this case, n = 10 and p = 0.3, so the mean is 10 × 0.3 = 3. Options B) 7 and D) 0.3 are incorrect because they do not match the formula for the mean of a binomial distribution. Option C) 2.1 is incorrect because it is a different value that does not match the calculated mean of 3."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The variance of a binomial distribution with n = 8 and p = 1/4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "1.5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "3/2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The variance of a binomial distribution with n = 8 and p = 1/4 is 1.5. This is because the formula for the variance of a binomial distribution is Var(X) = n·p·(1-p), and plugging in the given values gives Var(X) = 8 × 1/4 × (1 - 1/4) = 1.5.",
+      "explanation_incorrect": "The correct answer is option B, 1.5. The variance of a binomial distribution is given by the formula Var(X) = n·p·(1-p), where n is the number of trials and p is the probability of success in each trial. Plugging in the values of n = 8 and p = 1/4 gives Var(X) = 8 × 1/4 × (1 - 1/4) = 1.5. The other options do not correctly calculate the variance using this formula."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "If A and B are independent, then P(A' ∩ B') equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A') · P(B')"
+        },
+        {
+          "id": "B",
+          "text": "1 − P(A) − P(B)"
+        },
+        {
+          "id": "C",
+          "text": "P(A') + P(B')"
+        },
+        {
+          "id": "D",
+          "text": "1 − P(A ∪ B)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If A and B are independent events, then the probability of the complement of A and the complement of B, P(A' ∩ B'), is equal to the product of the individual probabilities, P(A') and P(B'). This is because the independence of A and B means that the events are unrelated, so the probability of their complements occurring together is simply the product of their individual probabilities.",
+      "explanation_incorrect": "The correct answer is option A, P(A') · P(B'). This is because when A and B are independent events, the probability of the complement of A and the complement of B occurring together is the product of their individual probabilities. Options B, C, and D are incorrect because they do not properly account for the independence of A and B, and the relationship between the probability of an event and the probability of its complement."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Two cards are drawn at random without replacement from a deck of 52 cards. The probability that both are aces is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/221"
+        },
+        {
+          "id": "B",
+          "text": "1/169"
+        },
+        {
+          "id": "C",
+          "text": "4/52"
+        },
+        {
+          "id": "D",
+          "text": "1/13"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/221. This is because the probability of drawing the first ace is 4/52 = 1/13, and the probability of drawing the second ace (out of the remaining 51 cards) is 3/51. Multiplying these two probabilities gives the probability of drawing two aces: 1/13 * 3/51 = 1/221.",
+      "explanation_incorrect": "The other options are incorrect. Option B) 1/169 is wrong because it does not account for the reduced number of cards after the first draw. Option C) 4/52 is incorrect because it only gives the probability of drawing one ace, not two. Option D) 1/13 is wrong because it only gives the probability of drawing one ace, not the probability of drawing two aces."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "Three urns contain 2W 3B, 4W 1B, and 1W 2B balls respectively. An urn is chosen at random and a ball drawn. The probability that the ball is white is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "23/45"
+        },
+        {
+          "id": "B",
+          "text": "2/5"
+        },
+        {
+          "id": "C",
+          "text": "23/45"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D, both A and C. The probability of drawing a white ball is the sum of the probabilities of drawing a white ball from each urn, weighted by the probability of choosing each urn. This is given by the total probability formula, which yields the probability of 23/45.",
+      "explanation_incorrect": "The other options are incorrect because they do not account for the probabilities of choosing each urn. Option B, 2/5, is incorrect because it does not consider the different compositions of the urns. Option C, 23/45, is also correct and is the same as option A, so D is the right answer."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "A random variable X has the probability distribution: P(X = 0) = 0.1, P(X = 1) = 0.3, P(X = 2) = 0.4, P(X = 3) = 0.2. Then E(X) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5"
+        },
+        {
+          "id": "B",
+          "text": "1.7"
+        },
+        {
+          "id": "C",
+          "text": "2.0"
+        },
+        {
+          "id": "D",
+          "text": "1.3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1.7. To calculate the expected value E(X), we take the sum of each possible value of X multiplied by its probability: E(X) = 0 × 0.1 + 1 × 0.3 + 2 × 0.4 + 3 × 0.2 = 1.7.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not correctly calculate the expected value E(X) from the given probability distribution. A) 1.5 is too low, C) 2.0 is too high, and D) 1.3 is too low. The correct calculation, as shown in the correct explanation, gives E(X) = 1.7."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Events A and B are independent. If P(A) = 1/3 and P(B) = 1/4, then P(A ∪ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "7/12"
+        },
+        {
+          "id": "C",
+          "text": "1/12"
+        },
+        {
+          "id": "D",
+          "text": "5/12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/2. Since the events A and B are independent, the probability of their union P(A ∪ B) is simply the sum of their individual probabilities: P(A ∪ B) = P(A) + P(B) = 1/3 + 1/4 = 7/12.",
+      "explanation_incorrect": "The incorrect answer is B) 7/12. This is incorrect because the probability of the union of two independent events A and B is not the sum of their individual probabilities, but rather the sum of their individual probabilities minus their intersection probability. Since A and B are independent, P(A ∩ B) = P(A) · P(B) = 1/3 · 1/4 = 1/12, so the correct probability is P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 1/3 + 1/4 - 1/12 = 1/2."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "A die is thrown twice. The probability of getting a number greater than 3 in the first throw and less than 4 in the second throw is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "1/6"
+        },
+        {
+          "id": "D",
+          "text": "1/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting a number greater than 3 in the first throw is 1/2 (4, 5, or 6). The probability of getting a number less than 4 in the second throw is also 1/2 (1, 2, or 3). Since these two events are independent, the probability of both happening is 1/2 × 1/2 = 1/4.",
+      "explanation_incorrect": "Option B is incorrect because the probability of getting a number greater than 3 in the first throw and less than 4 in the second throw is not 1/2. Option C is incorrect because the probability is not 1/6. Option D is incorrect because the probability is not 1/3. The correct answer is Option A, which is 1/4, because the two events (getting a number greater than 3 in the first throw and less than 4 in the second throw) are independent, so the probability is calculated by multiplying their individual probabilities."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a class, 5% of boys and 10% of girls have an IQ over 150. The class has 60% boys and 40% girls. If a randomly chosen student has IQ over 150, the probability the student is a boy is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/7"
+        },
+        {
+          "id": "B",
+          "text": "4/7"
+        },
+        {
+          "id": "C",
+          "text": "3/10"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3/7. This is because the probability of a randomly chosen student having an IQ over 150 is the sum of the probabilities of a boy and a girl having an IQ over 150, weighted by the proportion of boys and girls in the class. Since 5% of boys and 10% of girls have an IQ over 150, and the class is 60% boys and 40% girls, the probability of a randomly chosen student with an IQ over 150 being a boy is 3/7.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not take into account the proportions of boys and girls in the class, as well as the given probabilities of boys and girls having an IQ over 150. The correct answer of 3/7 is derived by using the total probability formula and Bayes' theorem to calculate the probability of a randomly chosen student with an IQ over 150 being a boy."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A coin is tossed 6 times. The probability of getting exactly 4 heads (binomial distribution) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "15/64"
+        },
+        {
+          "id": "B",
+          "text": "6/64"
+        },
+        {
+          "id": "C",
+          "text": "20/64"
+        },
+        {
+          "id": "D",
+          "text": "1/64"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 15/64. This is because the probability of getting exactly 4 heads in 6 coin tosses follows a binomial distribution with n = 6 and p = 0.5 (since the coin is fair). The formula for the binomial distribution is nCr * p^r * (1-p)^(n-r), where n is the number of trials, r is the number of successes, and p is the probability of success in each trial. Plugging in the values, we get 6C4 * (0.5)^4 * (0.5)^2 = 15/64.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the binomial distribution formula. Option B) 6/64 is incorrect because it does not consider the combination of getting 4 heads out of 6 tosses. Option C) 20/64 is incorrect because it does not account for the binomial probability calculation. Option D) 1/64 is incorrect because the probability of getting exactly 4 heads out of 6 tosses is much higher than 1/64."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "Two independent events cannot be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both occurring together"
+        },
+        {
+          "id": "B",
+          "text": "Mutually exclusive (if both have non-zero probability)"
+        },
+        {
+          "id": "C",
+          "text": "Complementary to each other"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Independent events cannot be mutually exclusive, because they can occur together. If two events are mutually exclusive, they cannot happen at the same time, which goes against the definition of independent events.",
+      "explanation_incorrect": "The correct answer is that independent events cannot be mutually exclusive. This is because independent events are events where the occurrence of one event does not affect the probability of the other event. Mutually exclusive events, on the other hand, are events that cannot occur together. Therefore, independent events cannot be mutually exclusive."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "P(A|A) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "P(A)"
+        },
+        {
+          "id": "D",
+          "text": "P(A)²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1. The probability of an event A given that A has occurred is always 1, since A is guaranteed to happen if we know that A has already occurred.",
+      "explanation_incorrect": "The other options are incorrect. Option A) 0 is wrong because the probability of an event given that the event has occurred cannot be 0. Option C) P(A) is incorrect because the probability of an event given that the event has occurred is not the same as the original probability of the event. Option D) P(A)² is also incorrect because the probability of an event given that the event has occurred is not the square of the original probability."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "In Bayes' theorem, the probabilities P(Aᵢ) are called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Posterior probabilities"
+        },
+        {
+          "id": "B",
+          "text": "Prior probabilities"
+        },
+        {
+          "id": "C",
+          "text": "Conditional probabilities"
+        },
+        {
+          "id": "D",
+          "text": "Joint probabilities"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The probabilities P(Aᵢ) in Bayes' theorem are called prior probabilities because they represent the initial or starting probabilities of the events Aᵢ before considering any additional information or evidence.",
+      "explanation_incorrect": "The correct answer is B) Prior probabilities. Bayes' theorem is used to update or reverse conditional probabilities based on new information. The probabilities P(Aᵢ) represent the initial or prior probabilities of the events Aᵢ, which are then combined with the conditional probabilities P(B|Aᵢ) to calculate the posterior probabilities P(Aᵢ|B)."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The probability distribution of X is: P(X = 1) = k, P(X = 2) = 2k, P(X = 3) = 3k. The value of k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "1/6"
+        },
+        {
+          "id": "C",
+          "text": "1/4"
+        },
+        {
+          "id": "D",
+          "text": "1/5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1/6. This is because the given probability distribution must satisfy the condition that the sum of all probabilities is 1. In this case, P(X = 1) + P(X = 2) + P(X = 3) = k + 2k + 3k = 6k = 1, so k = 1/6.",
+      "explanation_incorrect": "The correct answer is B) 1/6. Option A) 1/3 is incorrect because if k = 1/3, the sum of the probabilities would be 1 + 2(1/3) + 3(1/3) = 6/3 = 2, which is greater than 1. Options C) 1/4 and D) 1/5 are also incorrect because they do not satisfy the condition that the sum of all probabilities is 1."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 0.4 and P(B) = 0.5, and A and B are independent, then P(neither A nor B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.1"
+        },
+        {
+          "id": "B",
+          "text": "0.3"
+        },
+        {
+          "id": "C",
+          "text": "0.5"
+        },
+        {
+          "id": "D",
+          "text": "0.7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since A and B are independent events, the probability that neither A nor B occurs is the product of the probabilities that A does not occur (1 - 0.4 = 0.6) and that B does not occur (1 - 0.5 = 0.5), which is 0.6 × 0.5 = 0.3.",
+      "explanation_incorrect": "Option A is incorrect because the probability that neither A nor B occurs is not 0.1. Option C is incorrect because the probability that neither A nor B occurs is not 0.5. Option D is incorrect because the probability that neither A nor B occurs is not 0.7. The correct answer is option B, which is 0.3, as calculated by the product of the probabilities that A does not occur and that B does not occur."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If X follows a binomial distribution with n = 4 and p = 1/3, then P(X ≥ 1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 − (2/3)⁴"
+        },
+        {
+          "id": "B",
+          "text": "(2/3)⁴"
+        },
+        {
+          "id": "C",
+          "text": "1 − (1/3)⁴"
+        },
+        {
+          "id": "D",
+          "text": "65/81"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D) 65/81. This is because the probability of X being greater than or equal to 1 is the same as the probability of X being 1, 2, 3, or 4, which can be calculated using the binomial distribution formula with n = 4 and p = 1/3.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the probability of X being greater than or equal to 1 in a binomial distribution with n = 4 and p = 1/3. Option A) 1 - (2/3)⁴ is the probability of X being 0, not greater than or equal to 1. Option B) (2/3)⁴ is the probability of X being exactly 4, not greater than or equal to 1. Option C) 1 - (1/3)⁴ is the probability of X being greater than 0, not greater than or equal to 1."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "type": "true_false",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "P(A|B) is defined only when P(B) > 0.",
+      "correct_answer": true,
+      "explanation_correct": "The conditional probability P(A|B) is defined only when the probability P(B) is greater than 0. This is because P(A|B) = P(A ∩ B) / P(B), and if P(B) = 0, then the fraction is not defined.",
+      "explanation_incorrect": "The statement is not true. P(A|B) can be defined even when P(B) = 0, as long as P(A ∩ B) = 0 as well. In this case, P(A|B) = 0/0 = 0, which is a valid probability. However, the more common case is when P(B) > 0, which allows P(A|B) to be calculated as P(A ∩ B) / P(B)."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "type": "true_false",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Mutually exclusive events with non-zero probabilities are always independent.",
+      "correct_answer": false,
+      "explanation_correct": "Mutually exclusive events with non-zero probabilities are not always independent. For two events A and B to be independent, the probability of A occurring must not depend on whether B has occurred or not. However, for mutually exclusive events, the occurrence of one event means the other cannot occur, so they are not independent.",
+      "explanation_incorrect": "The statement is incorrect because mutually exclusive events with non-zero probabilities are not always independent. Mutually exclusive events mean that the occurrence of one event prevents the other from occurring. However, for events to be independent, the probability of one event must not depend on whether the other event has occurred or not. So, mutually exclusive events can have non-zero probabilities but they are not necessarily independent."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "type": "true_false",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "For a random variable X, the variance can never be negative.",
+      "correct_answer": true,
+      "explanation_correct": "The variance of a random variable X is always a non-negative value. This is because the variance is defined as the average of the squared differences from the mean, which can never be negative.",
+      "explanation_incorrect": "The variance of a random variable X cannot be negative. This is because variance is calculated by taking the average of the squared differences from the mean. Since squaring any number results in a non-negative value, the variance will always be a non-negative number. A negative variance would not make sense mathematically."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "type": "true_false",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "Bayes' theorem can only be applied when the events A₁, A₂, ..., Aₙ form a partition of the sample space.",
+      "correct_answer": true,
+      "explanation_correct": "Bayes' theorem can only be applied when the events A1, A2, ..., An form a partition of the sample space, meaning they are mutually exclusive and their union covers the entire sample space. This ensures that the probabilities of the events add up to 1, which is a requirement for Bayes' theorem to work correctly.",
+      "explanation_incorrect": "Bayes' theorem can be applied even when the events A1, A2, ..., An do not form a partition of the sample space. The key requirement is that the events must be mutually exclusive, meaning only one of them can occur at a time. As long as this condition is met, Bayes' theorem can be used to calculate conditional probabilities, regardless of whether the events cover the entire sample space or not."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "type": "true_false",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "In a binomial distribution with parameters n and p, the mean equals np and the variance equals np(1 − p).",
+      "correct_answer": true,
+      "explanation_correct": "The mean of a binomial distribution with parameters n and p is given by the formula np, and the variance is given by the formula np(1 - p). This is because in a binomial distribution, the random variable X represents the number of successes in n independent Bernoulli trials, each with probability of success p. The mean and variance formulas directly follow from the properties of the binomial distribution.",
+      "explanation_incorrect": "The statement is true. In a binomial distribution with parameters n (number of trials) and p (probability of success in each trial), the mean is equal to np and the variance is equal to np(1 - p). This is because the binomial distribution models the number of successes in n independent Bernoulli trials, each with a probability of success p. The mean and variance formulas are derived directly from the properties of the binomial distribution."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "P(A|B) = P(A ∩ B) / ___.",
+      "correct_answer": "P(B)",
+      "explanation_correct": "The formula for conditional probability P(A|B) is the probability of event A occurring, given that event B has already occurred. This is calculated as the probability of the intersection of A and B, divided by the probability of B alone. This makes sense because the occurrence of B affects the likelihood of A happening.",
+      "explanation_incorrect": "The incorrect answer would be to divide by P(A) instead of P(B). This is not correct because P(A|B) represents the probability of A given that B has occurred, not the other way around. The formula correctly shows that we need to divide the probability of the intersection of A and B by the total probability of B in order to get the conditional probability of A given B."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A and B are independent, then P(A ∩ B) = P(A) × ___.",
+      "correct_answer": "P(B)",
+      "explanation_correct": "If A and B are independent events, then the probability of both A and B occurring together (P(A ∩ B)) is equal to the probability of A (P(A)) multiplied by the probability of B (P(B)). This is because the occurrence of one event does not affect the occurrence of the other, so their probabilities are independent.",
+      "explanation_incorrect": "The correct answer is P(B). If A and B are independent events, then the probability of A and B occurring together (P(A ∩ B)) is equal to the probability of A (P(A)) multiplied by the probability of B (P(B)). This is because the occurrence of one event does not affect the occurrence of the other, so their probabilities are independent. The wrong answer would be to leave the blank empty, which would imply that P(A ∩ B) = P(A), but that is not the case for independent events."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The mean of a binomial distribution B(n, p) is ___.",
+      "correct_answer": "np",
+      "explanation_correct": "The mean of a binomial distribution B(n, p) is np because the binomial distribution models n independent Bernoulli trials, each with a probability of success p. The expected number of successes in n trials is the product of the number of trials n and the probability of success p.",
+      "explanation_incorrect": "The accepted answer format for the mean of a binomial distribution is np. Many students may confuse the mean with the variance, which is np(1-p). However, the mean is simply the number of trials n multiplied by the probability of success p, as the binomial distribution models the number of successes in n independent Bernoulli trials with probability of success p."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "If X takes values 1, 2, 3 with equal probabilities 1/3 each, then E(X) = ___.",
+      "correct_answer": "2",
+      "explanation_correct": "The mean (expectation) E(X) of a discrete random variable X is calculated as the sum of the products of each possible value of X and its corresponding probability. Since X takes values 1, 2, 3 with equal probabilities of 1/3 each, the mean is (1 * 1/3) + (2 * 1/3) + (3 * 1/3) = 2.",
+      "explanation_incorrect": "The accepted answer format is a single number, which should be the mean (expectation) E(X) of the random variable X. Since X takes values 1, 2, 3 with equal probabilities of 1/3 each, the mean is the average of these values, which is (1 + 2 + 3) / 3 = 2. Therefore, the correct answer is 2."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "In Bayes' theorem, the probability P(Aᵢ|B) is called the ___ probability.",
+      "correct_answer": "posterior",
+      "explanation_correct": "The probability P(Aᵢ|B) is called the 'posterior' probability because it represents the updated probability of event Aᵢ occurring, given the new information that event B has occurred. This is in contrast to the 'prior' probability P(Aᵢ), which is the probability of Aᵢ occurring without any additional information.",
+      "explanation_incorrect": "The 'posterior' probability refers to the updated probability of event Aᵢ occurring, given the new information that event B has occurred. This is the correct term used in Bayes' theorem, which is a formula for calculating conditional probabilities. The other options like 'conditional', 'marginal', or 'independent' do not accurately describe the type of probability represented by P(Aᵢ|B) in Bayes' theorem."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 0.7 and P(B|A) = 0.5, then P(A ∩ B) = ___.",
+      "correct_answer": "0.35",
+      "explanation_correct": "The correct answer is 0.35 because the probability of A and B occurring together, P(A ∩ B), is given by the formula P(A ∩ B) = P(A) * P(B|A). Since P(A) = 0.7 and P(B|A) = 0.5, we can calculate P(A ∩ B) = 0.7 * 0.5 = 0.35.",
+      "explanation_incorrect": "The incorrect answer would be to simply multiply P(A) and P(B), which is 0.7 * 0.5 = 0.35. However, this is not the correct answer, as P(A ∩ B) requires the use of the conditional probability P(B|A) in the formula P(A ∩ B) = P(A) * P(B|A). The accepted answer format is a decimal number to 2 decimal places, so the correct answer is 0.35."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A and B are independent with P(A) = 0.6 and P(B) = 0.5, then P(A ∪ B) = ___.",
+      "correct_answer": "0.8",
+      "explanation_correct": "Since A and B are independent events, the probability of their union is simply the sum of their individual probabilities: P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.6 + 0.5 - (0.6 × 0.5) = 0.8.",
+      "explanation_incorrect": "The correct answer is 0.8. For independent events A and B, the probability of their union is given by P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Since P(A) = 0.6 and P(B) = 0.5, and A and B are independent, P(A ∩ B) = P(A) × P(B) = 0.6 × 0.5 = 0.3. Plugging these values, we get P(A ∪ B) = 0.6 + 0.5 - 0.3 = 0.8."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "type": "ordering",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to apply Bayes' theorem:",
+      "ordering_items": [
+        "Identify the events A₁, A₂, ..., Aₙ that form a partition of the sample space",
+        "Determine prior probabilities P(Aᵢ) and likelihoods P(B|Aᵢ)",
+        "Compute total probability P(B) = Σ P(B|Aᵢ) · P(Aᵢ)",
+        "Apply Bayes' formula: P(Aᵢ|B) = P(B|Aᵢ) · P(Aᵢ) / P(B)"
+      ],
+      "correct_answer": [
+        "Identify the events A₁, A₂, ..., Aₙ that form a partition of the sample space",
+        "Determine prior probabilities P(Aᵢ) and likelihoods P(B|Aᵢ)",
+        "Compute total probability P(B) = Σ P(B|Aᵢ) · P(Aᵢ)",
+        "Apply Bayes' formula: P(Aᵢ|B) = P(B|Aᵢ) · P(Aᵢ) / P(B)"
+      ],
+      "explanation_correct": "The correct order of steps to apply Bayes' theorem is logical and follows the mathematical reasoning behind the theorem. First, you need to identify the events that form a partition of the sample space. Then, you determine the prior probabilities and likelihoods. Next, you compute the total probability, which is needed in the Bayes' formula. Finally, you apply the Bayes' formula to find the posterior probabilities.",
+      "explanation_incorrect": "The incorrect order does not follow the logical flow of Bayes' theorem. You cannot apply the Bayes' formula directly without first determining the prior probabilities, likelihoods, and total probability. The correct order ensures that you have all the necessary information to correctly compute the posterior probabilities using the Bayes' formula."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "type": "ordering",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to compute the variance of a discrete random variable X:",
+      "ordering_items": [
+        "Compute E(X) = Σ xᵢ · P(X = xᵢ)",
+        "Compute E(X²) = Σ xᵢ² · P(X = xᵢ)",
+        "Find [E(X)]²",
+        "Variance = E(X²) − [E(X)]²"
+      ],
+      "correct_answer": [
+        "Compute E(X) = Σ xᵢ · P(X = xᵢ)",
+        "Compute E(X²) = Σ xᵢ² · P(X = xᵢ)",
+        "Find [E(X)]²",
+        "Variance = E(X²) − [E(X)]²"
+      ],
+      "explanation_correct": "The correct order is to first compute the expected value E(X), then compute the expected value of the squared variable E(X²), then find the square of the expected value [E(X)]², and finally calculate the variance as E(X²) - [E(X)]². This is because the variance formula is Var(X) = E(X²) - [E(X)]².",
+      "explanation_incorrect": "The incorrect order would be to directly compute the variance without first calculating the expected values. The variance formula requires the expected value E(X) and the expected value of the squared variable E(X²), so those steps need to be done first before the final variance calculation. Simply plugging in the values without the intermediate steps would be incorrect."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "type": "ordering",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the probability P(X = r) in a binomial distribution:",
+      "ordering_items": [
+        "Identify n (number of trials) and p (probability of success in each trial)",
+        "Compute q = 1 − p",
+        "Calculate ⁿCᵣ = n! / (r!(n−r)!)",
+        "Apply the formula: P(X = r) = ⁿCᵣ · pʳ · qⁿ⁻ʳ"
+      ],
+      "correct_answer": [
+        "Identify n (number of trials) and p (probability of success in each trial)",
+        "Compute q = 1 − p",
+        "Calculate ⁿCᵣ = n! / (r!(n−r)!)",
+        "Apply the formula: P(X = r) = ⁿCᵣ · pʳ · qⁿ⁻ʳ"
+      ],
+      "explanation_correct": "The correct order of steps is the one listed, as it matches the formula for the binomial probability distribution. First, you need to know the number of trials (n) and the probability of success in each trial (p). Then, you can compute the probability of failure (q = 1 - p). Next, you calculate the binomial coefficient ⁿCᵣ. Finally, you plug all these values into the formula for the binomial probability P(X = r).",
+      "explanation_incorrect": "The incorrect order would be to first apply the formula for P(X = r) without first identifying the values of n, p, and q, or calculating the binomial coefficient ⁿCᵣ. This would not work, as all of these components are necessary to correctly compute the binomial probability. The steps must be followed in the right order to arrive at the final probability value."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 14,
+        "application": 20,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

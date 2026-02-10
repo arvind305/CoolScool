@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T05.01",
+  "topic_name": "Limits & Derivatives",
+  "canonical_explanation": {
+    "text": "The concept of a limit describes the value a function approaches as the input approaches a certain point. A limit lim(x→a) f(x) exists when both the left-hand limit and right-hand limit exist and are equal. Standard limits like lim(x→0) sin(x)/x = 1 and lim(x→a) (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹ are fundamental results. The derivative f'(x) = lim(h→0) [f(x+h) − f(x)]/h represents the instantaneous rate of change. Derivatives follow rules including the sum, difference, product, and quotient rules.",
+    "rules": [
+      "Limit exists if and only if LHL = RHL (left-hand limit equals right-hand limit).",
+      "Standard limits: lim(x→0) sin(x)/x = 1 and lim(x→a) (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹.",
+      "First principle: f'(x) = lim(h→0) [f(x+h) − f(x)]/h.",
+      "Product rule: d/dx[f·g] = f'g + fg'.",
+      "Quotient rule: d/dx[f/g] = (f'g − fg')/g²."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.01.Q001",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→2) (3x + 1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 7. To find the limit of (3x + 1) as x approaches 2, we simply plug in 2 for x, which gives us 3(2) + 1 = 7.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the correct limit of the expression (3x + 1) as x approaches 2. B) 5 is incorrect because it does not account for the fact that we need to plug in 2 for x. C) 6 is incorrect because 3(2) + 1 = 7, not 6. D) 8 is incorrect because 3(2) + 1 = 7, not 8."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A limit lim(x→a) f(x) = L means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(a) = L"
+        },
+        {
+          "id": "B",
+          "text": "As x approaches a, f(x) approaches L"
+        },
+        {
+          "id": "C",
+          "text": "f(x) = L for all x"
+        },
+        {
+          "id": "D",
+          "text": "f(x) is defined at x = a"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B because a limit describes the value that a function approaches as the input approaches a certain point. As x gets closer and closer to the value a, the function f(x) gets closer and closer to the limit L.",
+      "explanation_incorrect": "The incorrect answer A is not correct because the limit lim(x→a) f(x) = L does not mean that f(a) = L. The limit describes the value that the function approaches as x gets close to a, but the function may or may not be defined at x = a. The incorrect answer C is not correct because the limit does not mean that f(x) = L for all values of x, just as x approaches a. The incorrect answer D is not correct because the limit does not require that the function f(x) be defined at x = a, only that it approaches a certain value L as x gets close to a."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The limit exists at x = a when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "LHL > RHL"
+        },
+        {
+          "id": "B",
+          "text": "LHL < RHL"
+        },
+        {
+          "id": "C",
+          "text": "LHL = RHL"
+        },
+        {
+          "id": "D",
+          "text": "f(a) is defined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The limit of a function f(x) as x approaches a exists when the left-hand limit (LHL) and right-hand limit (RHL) are equal. This means that as x approaches a from the left and the right, the function f(x) approaches the same value. If LHL = RHL, then the limit exists at x = a.",
+      "explanation_incorrect": "The limit does not exist if LHL is greater than or less than RHL, as this would mean the function is approaching different values from the left and right. Similarly, the limit does not exist if f(a) is not defined, as the function value at the point x = a is not defined."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The value of lim(x→0) sin(x)/x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "∞"
+        },
+        {
+          "id": "D",
+          "text": "Does not exist"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of lim(x→0) sin(x)/x is 1. This is a standard limit result, where the sine function and the linear function x approach the same value of 1 as x approaches 0.",
+      "explanation_incorrect": "Option B is correct because as x approaches 0, the sine function sin(x) and the linear function x both approach the value of 1. This means the ratio sin(x)/x also approaches 1. The other options are incorrect because 0 is not the correct limit, infinity is not the correct limit, and the limit does in fact exist and is equal to 1."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→1) (x² − 1)/(x − 1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "Undefined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 2. This limit can be evaluated using the algebraic formula lim(x→a) (xⁿ - aⁿ)/(x - a) = naⁿ⁻¹. In this case, a = 1, n = 2, so the limit evaluates to 2(1)¹⁻¹ = 2.",
+      "explanation_incorrect": "The incorrect options are not correct because: A) 0 is incorrect because the limit does not equal 0. B) 1 is incorrect because the limit does not equal 1. D) Undefined is incorrect because the limit is defined and equal to 2, as shown in the correct explanation."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→3) (x² − 9)/(x − 3) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 6. This is because when we take the limit of (x^2 - 9)/(x - 3) as x approaches 3, we can use the standard limit formula lim(x->a) (x^n - a^n)/(x - a) = na^(n-1). Substituting a = 3 and n = 2, we get the limit as 2 * 3^1 = 6.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the standard limit formula. Option B) 0 is incorrect because the limit is not equal to 0. Option C) 3 is incorrect because the limit is not equal to 3. Option D) 9 is incorrect because the limit is not equal to 9. The correct answer A) 6 is obtained by applying the standard limit formula for (x^n - a^n)/(x - a)."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "lim(x→0) (1 − cos x)/x² equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The limit lim(x→0) (1 - cos x)/x² equals 1/2. This is because as x approaches 0, the numerator (1 - cos x) approaches 0, while the denominator (x²) approaches 0. Using the standard limit formula lim(x→a) (f(x) - f(a))/(x - a) = f'(a), we get the result 1/2.",
+      "explanation_incorrect": "The incorrect options are not correct. Option B) 1 is wrong because the limit is not equal to 1. Option C) 0 is wrong because the limit is not equal to 0. Option D) 2 is wrong because the limit is not equal to 2. The correct answer is A) 1/2, which can be verified by applying the standard limit formula for derivatives."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→0) tan(x)/x equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "∞"
+        },
+        {
+          "id": "D",
+          "text": "−1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The limit of tan(x)/x as x approaches 0 is 1. This is a standard limit result that we learn in calculus, as the tangent function and the linear function x have the same rate of change (or derivative) at x = 0.",
+      "explanation_incorrect": "The limit of tan(x)/x as x approaches 0 is not 0, infinity, or -1. When x is very close to 0, the tangent function tan(x) grows very rapidly, but the linear function x grows at the same rate. So the ratio tan(x)/x approaches the constant value of 1 as x gets closer and closer to 0."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "Using the standard limit, lim(x→2) (x³ − 8)/(x − 2) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The standard limit lim(x→a) (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹ can be applied here. Substituting n=3, a=2, we get lim(x→2) (x³ − 8)/(x − 2) = 3(2)² = 12.",
+      "explanation_incorrect": "The incorrect options do not match the result of the standard limit formula. Option A, 12, is the correct answer because the standard limit lim(x→a) (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹ gives 3(2)² = 12 when applied to this problem."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "lim(x→1) (√x − 1)/(x − 1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/2. This is because when we apply the limit formula lim(x→a) (xⁿ - aⁿ)/(x - a) = naⁿ⁻¹, with n = 1/2 and a = 1, we get lim(x→1) (√x - 1)/(x - 1) = 1/2.",
+      "explanation_incorrect": "The correct answer is A) 1/2. Option B) 1 is incorrect because the limit does not equal 1. Option C) 2 is incorrect because the limit does not equal 2. Option D) 0 is incorrect because the limit does not equal 0. The key is to apply the limit formula lim(x→a) (xⁿ - aⁿ)/(x - a) = naⁿ⁻¹ with the given values."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of f(x) from first principles is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "lim(h→0) [f(x+h) − f(x)]/h"
+        },
+        {
+          "id": "B",
+          "text": "[f(x+1) − f(x)]/1"
+        },
+        {
+          "id": "C",
+          "text": "f(x+h) − f(x)"
+        },
+        {
+          "id": "D",
+          "text": "lim(h→∞) [f(x+h) − f(x)]/h"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, as the derivative of a function f(x) from first principles is defined as the limit of the difference quotient [f(x+h) - f(x)]/h as h approaches 0. This represents the instantaneous rate of change of the function at the point x.",
+      "explanation_incorrect": "Option B, [f(x+1) - f(x)]/1, is incorrect because it only considers the change in the function between x and x+1, rather than the limiting behavior as h approaches 0. Option C, f(x+h) - f(x), is missing the division by h that is essential to the definition of the derivative. Option D, lim(h→∞) [f(x+h) - f(x)]/h, is incorrect because the limit is taken as h approaches infinity, not 0, which is the key aspect of the derivative definition."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of x³ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x²"
+        },
+        {
+          "id": "B",
+          "text": "x²"
+        },
+        {
+          "id": "C",
+          "text": "3x"
+        },
+        {
+          "id": "D",
+          "text": "x³"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of x³ is 3x², because the derivative of x^n is nx^(n-1). In this case, n=3, so the derivative is 3x².",
+      "explanation_incorrect": "The derivative of x³ is not x², x³, or 3x. The derivative of a function represents the instantaneous rate of change. To find the derivative of x³, we apply the power rule, which states that the derivative of x^n is nx^(n-1). Plugging in n=3, the derivative of x³ is 3x²."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of sin x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "cos x"
+        },
+        {
+          "id": "B",
+          "text": "−cos x"
+        },
+        {
+          "id": "C",
+          "text": "sin x"
+        },
+        {
+          "id": "D",
+          "text": "−sin x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of sin x is cos x because the rate of change of the sine function is the cosine function. This is a fundamental result in calculus and can be derived using the definition of the derivative.",
+      "explanation_incorrect": "The derivative of sin x is not −cos x, sin x, or −sin x. These options are incorrect because the derivative of a trigonometric function follows a specific rule, where the derivative of sin x is cos x. The cosine function represents the instantaneous rate of change of the sine function."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of x² + 3x − 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + 3"
+        },
+        {
+          "id": "B",
+          "text": "x² + 3"
+        },
+        {
+          "id": "C",
+          "text": "2x − 5"
+        },
+        {
+          "id": "D",
+          "text": "2x + 3x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of x² + 3x - 5 is 2x + 3, as this follows the power rule (the derivative of x² is 2x) and the constant rule (the derivative of 3x is 3).",
+      "explanation_incorrect": "The derivative of x² + 3x - 5 is not x² + 3, as that would only account for the derivative of the first term x², not the entire expression. The derivative is also not 2x - 5, as that would not include the derivative of the 3x term. The correct answer is A, 2x + 3."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "Using the product rule, d/dx[x² sin x] equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x sin x + x² cos x"
+        },
+        {
+          "id": "B",
+          "text": "2x cos x"
+        },
+        {
+          "id": "C",
+          "text": "x² cos x"
+        },
+        {
+          "id": "D",
+          "text": "2x sin x − x² cos x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. Using the product rule, the derivative of x² sin x is 2x sin x + x² cos x. This is because the derivative of x² is 2x, and the derivative of sin x is cos x, so the product rule gives us the expression 2x sin x + x² cos x.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not fully apply the product rule. Option B, 2x cos x, is missing the term x² cos x. Option C, x² cos x, is missing the term 2x sin x. Option D, 2x sin x - x² cos x, has the wrong sign on the second term."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "Using the quotient rule, d/dx[sin x/x] equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x cos x − sin x)/x²"
+        },
+        {
+          "id": "B",
+          "text": "cos x/x"
+        },
+        {
+          "id": "C",
+          "text": "(sin x − x cos x)/x²"
+        },
+        {
+          "id": "D",
+          "text": "−sin x/x²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is (A) (x cos x - sin x)/x^2. This is obtained by applying the quotient rule, which states that the derivative of f(x)/g(x) is [f'(x)g(x) - f(x)g'(x)]/[g(x)]^2. In this case, f(x) = sin(x) and g(x) = x, so the derivative is [(x cos(x) - sin(x))/x^2].",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the quotient rule properly. Option (B) cos(x)/x is incorrect because it is just the derivative of sin(x), not the derivative of sin(x)/x. Option (C) (sin(x) - x cos(x))/x^2 is incorrect because the numerator should be (x cos(x) - sin(x)), not (sin(x) - x cos(x)). Option (D) -sin(x)/x^2 is incorrect because it does not account for the quotient rule and is just the derivative of 1/x."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) sin(3x)/(5x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/5"
+        },
+        {
+          "id": "B",
+          "text": "5/3"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3/5. This is because the limit lim(x→0) sin(3x)/(5x) is equivalent to lim(x→0) (3sin(x))/(5x), which simplifies to 3/5 using the standard limit result lim(x→0) sin(x)/x = 1.",
+      "explanation_incorrect": "The correct answer is A) 3/5. The other options are incorrect because B) 5/3 is the reciprocal of the correct answer, C) 1 is the limit of sin(x)/x but not of sin(3x)/(5x), and D) 0 is incorrect as the limit does not approach 0."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "If lim(x→2⁻) f(x) = 3 and lim(x→2⁺) f(x) = 5, then lim(x→2) f(x):",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equals 3"
+        },
+        {
+          "id": "B",
+          "text": "Equals 5"
+        },
+        {
+          "id": "C",
+          "text": "Equals 4"
+        },
+        {
+          "id": "D",
+          "text": "Does not exist"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The limit lim(x→2) f(x) does not exist because the left-hand limit and right-hand limit are not equal. Since lim(x→2-) f(x) = 3 and lim(x→2+) f(x) = 5, the function is not continuous at x=2, and the overall limit does not exist.",
+      "explanation_incorrect": "The limit lim(x→2) f(x) does not exist even though lim(x→2-) f(x) = 3 and lim(x→2+) f(x) = 5. This is because for a limit to exist, the left-hand and right-hand limits must be equal. Since they are not equal in this case, the overall limit does not exist. The correct answer is option D."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The derivative of cos x from first principles gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−sin x"
+        },
+        {
+          "id": "B",
+          "text": "sin x"
+        },
+        {
+          "id": "C",
+          "text": "cos x"
+        },
+        {
+          "id": "D",
+          "text": "−cos x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of cos(x) from first principles is -sin(x). This is because the derivative of a function f(x) is given by the limit of the difference quotient [f(x+h) - f(x)]/h as h approaches 0. Applying this to cos(x), the limit gives -sin(x).",
+      "explanation_incorrect": "The correct answer is -sin(x), not the other options. This is because the derivative of cos(x) is the negative of the sine function, not the cosine function itself. The derivative formula comes from applying the limit definition of the derivative, not from directly differentiating the cosine function."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) (eˣ − 1)/x equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "e"
+        },
+        {
+          "id": "D",
+          "text": "∞"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The limit lim(x→0) (e^x - 1)/x equals 1. This is a standard limit result that can be derived using properties of exponential functions and limits. As x approaches 0, the numerator (e^x - 1) approaches 0, and the denominator x also approaches 0, but the ratio (e^x - 1)/x approaches the constant value of 1.",
+      "explanation_incorrect": "The incorrect options B, C, and D do not correctly represent the limit lim(x→0) (e^x - 1)/x. Option B, 0, is incorrect because the limit does not equal 0. Option C, e, is incorrect because the limit is not equal to the base of the exponential function. Option D, ∞, is incorrect because the limit is a finite constant value, not infinity."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "lim(x→4) (x² − 16)/(x − 4) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 8. The limit lim(x→4) (x² - 16)/(x - 4) can be evaluated using the formula lim(x→a) (xⁿ - aⁿ)/(x - a) = naⁿ⁻¹. In this case, a = 4 and n = 2, so the limit evaluates to 2 * 4¹⁻¹ = 8.",
+      "explanation_incorrect": "The incorrect options B) 4, C) 16, and D) 0 are not correct because they do not match the result of the limit calculation. The limit lim(x→4) (x² - 16)/(x - 4) simplifies to 8, not 4, 16, or 0."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "d/dx[5x⁴ − 3x² + 7] equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20x³ − 6x"
+        },
+        {
+          "id": "B",
+          "text": "5x³ − 3x"
+        },
+        {
+          "id": "C",
+          "text": "20x³ − 6x + 7"
+        },
+        {
+          "id": "D",
+          "text": "4x³ − 2x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 20x³ − 6x. This is because the derivative of a polynomial function is found by applying the power rule to each term. The derivative of 5x⁴ is 20x³, and the derivative of -3x² is -6x, so the final derivative is 20x³ - 6x.",
+      "explanation_incorrect": "The correct answer is A) 20x³ - 6x. Option B) 5x³ - 3x is incorrect because it does not correctly apply the power rule to the first term. Option C) 20x³ - 6x + 7 is incorrect because the constant term 7 should not be included in the derivative. Option D) 4x³ - 2x is incorrect because the power rule has not been applied correctly to the first term."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) sin(5x)/sin(3x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/3"
+        },
+        {
+          "id": "B",
+          "text": "3/5"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 5/3. This is because the limit of the ratio of sine functions is equal to the ratio of the coefficients, i.e. lim(x→0) sin(5x)/sin(3x) = 5/3.",
+      "explanation_incorrect": "The correct answer is A) 5/3. This is because the limit of the ratio of sine functions is equal to the ratio of the coefficients, as per the standard limit result lim(x→a) (sin(bx))/sin(cx)) = b/c. In this case, the coefficients are 5 and 3, so the limit simplifies to 5/3."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The derivative of tan x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sec²x"
+        },
+        {
+          "id": "B",
+          "text": "cos²x"
+        },
+        {
+          "id": "C",
+          "text": "cot x"
+        },
+        {
+          "id": "D",
+          "text": "sin x/cos²x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of tan x is sec²x. This is because the derivative of tan x is the derivative of sin x divided by the derivative of cos x, which is (cos x)/(-sin x) = sec²x.",
+      "explanation_incorrect": "The derivative of tan x is not cos²x, cot x, or sin x/cos²x. These are incorrect because the derivative of tan x is the ratio of the derivatives of sin x and cos x, which is sec²x. The other options do not correctly represent the derivative of the tangent function."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) (√(1+x) − 1)/x equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/2. This is because when we apply the limit formula lim(x→0) (√(1+x) - 1)/x, we get 1/2 as the final result.",
+      "explanation_incorrect": "The correct answer is A) 1/2. To solve this, we can first simplify the expression (√(1+x) - 1)/x by using the binomial theorem. This gives us (1 - 1)/(2x), which simplifies to 1/2 as x approaches 0. Option B) 1 and Option D) 2 are incorrect because they do not match the actual limit value."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "lim(x→∞) (3x² + 2)/(5x² − 1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/5"
+        },
+        {
+          "id": "B",
+          "text": "∞"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3/5. As x goes to infinity, the numerator (3x^2 + 2) grows much faster than the denominator (5x^2 - 1), so the fraction approaches 3/5.",
+      "explanation_incorrect": "The correct answer is A) 3/5. Option B) ∞ is incorrect because as x goes to infinity, the numerator and denominator both grow large, but the numerator grows faster, so the fraction approaches a finite limit. Option C) 0 is incorrect because the numerator does not approach 0 faster than the denominator. Option D) 1 is incorrect because the numerator and denominator do not approach the same value as x goes to infinity."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx[(x+1)(x+2)] equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + 3"
+        },
+        {
+          "id": "B",
+          "text": "x + 3"
+        },
+        {
+          "id": "C",
+          "text": "2x + 2"
+        },
+        {
+          "id": "D",
+          "text": "(x+1) + (x+2)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, 2x + 3. This is because the derivative of (x+1)(x+2) is found by using the product rule, which states that the derivative of the product of two functions is equal to the first function's derivative times the second function, plus the first function times the second function's derivative. Applying this rule gives 2x + 3.",
+      "explanation_incorrect": "The correct answer is option A, 2x + 3. The other options are incorrect because they do not correctly apply the product rule. Option B, x + 3, does not take into account the derivative of the second term. Option C, 2x + 2, is missing the +1 term that comes from the derivative of the first term. Option D, (x+1) + (x+2), does not properly combine the derivatives of the two terms."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "lim(x→2) (x³ − 2x² + x − 2)/(x − 2) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The limit lim(x→2) (x³ - 2x² + x - 2)/(x - 2) equals 5 because this is a classic limit form where the numerator and denominator both have a factor of (x - 2). By applying the algebraic rule for this limit, the result is 5.",
+      "explanation_incorrect": "Option A is correct because the numerator (x³ - 2x² + x - 2) and denominator (x - 2) have a common factor of (x - 2). Using the limit rule for this case, the limit simplifies to 5. Options B, C, and D are incorrect because they do not match the actual limit value of 5."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of eˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "eˣ"
+        },
+        {
+          "id": "B",
+          "text": "xeˣ⁻¹"
+        },
+        {
+          "id": "C",
+          "text": "eˣ/x"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of eˣ is eˣ, because the derivative of an exponential function f(x) = aˣ is f'(x) = a⋅aˣ. In this case, a = e, so the derivative of eˣ is e⋅eˣ = eˣ.",
+      "explanation_incorrect": "Option B, xeˣ⁻¹, is incorrect because the derivative of an exponential function is not the function multiplied by the exponent. Option C, eˣ/x, is incorrect because the derivative of eˣ is not eˣ divided by x. Option D, 1, is incorrect because the derivative of eˣ is not a constant."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For f(x) = |x|, lim(x→0) f(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "Does not exist"
+        },
+        {
+          "id": "D",
+          "text": "−1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0. For the absolute value function f(x) = |x|, the limit as x approaches 0 is 0 because the function is continuous and the value of |x| is 0 when x = 0.",
+      "explanation_incorrect": "The correct answer is A) 0. This is because the absolute value function f(x) = |x| is continuous at x = 0, and the value of |x| is 0 when x = 0. The other options are incorrect because B) 1 is the value of the function at x = 1, C) the limit does exist and is 0, and D) -1 is the value of the function at x = -1."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→a) (xⁿ − aⁿ)/(x − a) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "naⁿ⁻¹"
+        },
+        {
+          "id": "B",
+          "text": "naⁿ"
+        },
+        {
+          "id": "C",
+          "text": "aⁿ⁻¹"
+        },
+        {
+          "id": "D",
+          "text": "(n−1)aⁿ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A) naⁿ⁻¹. This is a standard limit result, where the limit of the expression (xⁿ - aⁿ)/(x - a) as x approaches a is equal to n times aⁿ⁻¹.",
+      "explanation_incorrect": "The correct answer is A) naⁿ⁻¹. This is because the limit of the expression (xⁿ - aⁿ)/(x - a) as x approaches a is equal to n times aⁿ⁻¹. This is a fundamental result in calculus and is not equal to naⁿ, aⁿ⁻¹, or (n-1)aⁿ."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx[x sin x] equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin x + x cos x"
+        },
+        {
+          "id": "B",
+          "text": "x cos x"
+        },
+        {
+          "id": "C",
+          "text": "sin x − x cos x"
+        },
+        {
+          "id": "D",
+          "text": "cos x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is (A) sin x + x cos x. This is because the derivative of x sin x is the product rule: the derivative of x is sin x, and the derivative of sin x is x cos x. Therefore, the derivative is the sum of these two terms.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not fully apply the product rule. Option (B) x cos x is missing the sin x term, option (C) sin x - x cos x has the wrong sign, and option (D) cos x is missing both the sin x and x cos x terms. The correct application of the product rule results in sin x + x cos x."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) x/tan(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "∞"
+        },
+        {
+          "id": "D",
+          "text": "−1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The limit lim(x→0) x/tan(x) equals 1 because as x approaches 0, the numerator x and denominator tan(x) both approach 0, and using L'Hôpital's rule, the limit becomes lim(x→0) 1/sec²(x) = 1.",
+      "explanation_incorrect": "The incorrect options are not correct because: B) 0 is incorrect because the limit does not approach 0 as x approaches 0; C) ∞ is incorrect because the limit does not approach infinity; and D) -1 is incorrect because the limit approaches 1, not -1."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of a constant function f(x) = 7 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "−7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The derivative of a constant function f(x) = 7 is 0. This is because a constant function has no slope or rate of change, so its derivative is always 0.",
+      "explanation_incorrect": "The correct answer is A) 0. A constant function like f(x) = 7 has the same value for any input x. This means the rate of change or slope of the function is always 0, so its derivative is 0. The other options are incorrect because they do not represent the true derivative of a constant function."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→5) 10 equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "50"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The limit lim(x→5) 10 is equal to 10 because the function f(x) = 10 is a constant function. As the input x approaches 5, the function value remains constant at 10, so the limit is 10.",
+      "explanation_incorrect": "Option B and C are incorrect because the limit of a constant function does not change as the input approaches a certain value. Option D is incorrect because multiplying the constant 10 by any number does not change the limit, which remains 10. The correct answer is Option A, as the limit of a constant function is the constant value itself."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "type": "true_false",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The limit of a function at a point can exist even if the function is not defined at that point.",
+      "correct_answer": true,
+      "explanation_correct": "The limit of a function at a point can exist even if the function is not defined at that point. This is because the limit refers to the value the function approaches as the input approaches that point, not necessarily the actual value of the function at that point.",
+      "explanation_incorrect": "The common misconception is that for the limit of a function to exist at a point, the function must be defined at that point. However, this is not the case. The limit is about the value the function approaches, not the actual value of the function. As long as the left-hand and right-hand limits exist and are equal, the limit can exist even if the function is not defined at that point."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "type": "true_false",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→0) cos(x)/x = 1.",
+      "correct_answer": false,
+      "explanation_correct": "The limit lim(x→0) cos(x)/x is not equal to 1. This is because as x approaches 0, the numerator cos(x) approaches 1, but the denominator x approaches 0, causing the ratio to approach an undefined value, not 1.",
+      "explanation_incorrect": "The common misconception is that lim(x→0) cos(x)/x = 1, since both the numerator and denominator approach 1 as x approaches 0. However, this is not correct because the denominator x is approaching 0, which causes the ratio to become undefined, not 1."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "type": "true_false",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of xⁿ is nxⁿ⁻¹ for any positive integer n.",
+      "correct_answer": true,
+      "explanation_correct": "The derivative of x^n is indeed nx^(n-1) for any positive integer n. This is a fundamental result in the differentiation of power functions, which follows from the power rule of differentiation.",
+      "explanation_incorrect": "The statement is true because the derivative of x^n is found by applying the power rule of differentiation, which states that the derivative of x^n is nx^(n-1). This means that for any positive integer n, the derivative of x^n will be nx^(n-1)."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "type": "true_false",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "d/dx[f(x) + g(x)] = f'(x) · g'(x).",
+      "correct_answer": false,
+      "explanation_correct": "The statement 'd/dx[f(x) + g(x)] = f'(x) · g'(x)' is false. The correct derivative rule is d/dx[f(x) + g(x)] = f'(x) + g'(x), which means the derivative of the sum of two functions is the sum of their individual derivatives.",
+      "explanation_incorrect": "The statement 'd/dx[f(x) + g(x)] = f'(x) · g'(x)' is incorrect because it does not follow the derivative rule for the sum of functions. The derivative of a sum is not the product of the individual derivatives. This is a common misconception, but the correct derivative rule is d/dx[f(x) + g(x)] = f'(x) + g'(x)."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "type": "true_false",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "lim(x→a) [f(x) + g(x)] = lim(x→a) f(x) + lim(x→a) g(x), provided both limits exist.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because the limit of a sum is equal to the sum of the limits, provided both limits exist. This is known as the 'sum rule' for limits, which allows you to split a limit into the sum of individual limits.",
+      "explanation_incorrect": "The statement may seem false at first, as it's not immediately obvious that the limit of a sum is equal to the sum of the limits. However, this is a fundamental property of limits known as the 'sum rule'. As long as both individual limits exist, the limit of the sum will be the sum of the individual limits."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→3) (x + 4) = ___.",
+      "correct_answer": "7",
+      "explanation_correct": "The limit lim(x→3) (x + 4) is 7 because when x approaches the value 3, the expression (x + 4) approaches the value 7.",
+      "explanation_incorrect": "The accepted answer format for this fill-in-the-blank question is a single number. The correct answer is 7 because when x approaches the value 3, the expression (x + 4) becomes 3 + 4 = 7. The limit represents the value the function approaches as the input x gets closer and closer to 3."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→0) sin(x)/x = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The limit lim(x→0) sin(x)/x is equal to 1 because as the value of x approaches 0, the numerator sin(x) approaches 0 and the denominator x also approaches 0. This results in the ratio sin(x)/x approaching the constant value of 1, which is a fundamental limit result.",
+      "explanation_incorrect": "The correct answer is 1. Many students may mistakenly think the limit is 0 because both the numerator sin(x) and denominator x approach 0 as x→0. However, this is not the case - the limit is 1, which is a standard limit result that needs to be memorized. The ratio sin(x)/x approaches 1 as x gets closer and closer to 0."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "d/dx(x⁵) = ___.",
+      "correct_answer": "5x⁴",
+      "explanation_correct": "The correct answer is 5x⁴. This is because the derivative of x⁵ is found by applying the power rule, which states that the derivative of x^n is nx^(n-1). In this case, n = 5, so the derivative is 5x⁴.",
+      "explanation_incorrect": "The accepted answer format is 5x⁴. However, the incorrect answer would be something like 'x⁴', which is not correct. The reason for this is that the power rule for derivatives states that the derivative of x^n is nx^(n-1). So, for the function x⁵, the correct derivative is 5x⁴."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "lim(x→2) (x² − 4)/(x − 2) = ___.",
+      "correct_answer": "4",
+      "explanation_correct": "The correct answer is 4 because the limit expression (x² - 4)/(x - 2) simplifies to 2x - 4, and when x approaches 2, the value of 2x - 4 approaches 4.",
+      "explanation_incorrect": "The accepted answer format is a single number, 4. The incorrect answer might be obtained by not simplifying the limit expression properly. The correct step-by-step solution is: lim(x→2) (x² - 4)/(x - 2) = lim(x→2) (x + 2) = 2x - 4, and when x approaches 2, the value of 2x - 4 approaches 4."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx(cos x) = ___.",
+      "correct_answer": "−sin x",
+      "explanation_correct": "The derivative of cosine with respect to x is -sin x. This is because the derivative of a function represents the instantaneous rate of change, and the rate of change of cosine is the negative of the sine function.",
+      "explanation_incorrect": "The incorrect answer would be 'sin x'. This is a common mistake, as students may think the derivative of cosine is just the sine function. However, the correct derivative is -sin x, as the rate of change of cosine is the negative of the sine function."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) sin(7x)/(7x) = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The limit lim(x→0) sin(7x)/(7x) is equal to 1 because the sine function divided by its argument approaches 1 as the argument approaches 0. This is a standard limit result that demonstrates the property of continuity of the sine function.",
+      "explanation_incorrect": "The accepted answer format is a single number, '1'. The incorrect answer might be obtained by not recognizing this standard limit result. However, the sine function divided by its argument does indeed approach 1 as the argument approaches 0, so the correct answer is 1."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The derivative of f(x) = x from first principles is f'(x) = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The derivative of f(x) = x from first principles is f'(x) = 1 because as the input x changes by a small amount h, the change in the output f(x) is also h. This shows the rate of change, or derivative, is constant and equal to 1.",
+      "explanation_incorrect": "The correct answer is 1, because the derivative of a linear function f(x) = x is the constant 1. This means the rate of change, or how quickly the function is changing, is always 1 no matter what value of x you look at. Some students may think the derivative could be 0 or x, but those would not be correct based on the definition of the derivative as the limit of the difference quotient."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "type": "ordering",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to evaluate lim(x→3) (x²−9)/(x−3): (A) Cancel (x−3), (B) Factor: (x+3)(x−3)/(x−3), (C) Substitute x=3: 3+3=6, (D) Recognize 0/0 indeterminate form",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation_correct": "The correct order is D, B, A, C because we first need to recognize that the limit is in an indeterminate 0/0 form. Then, we should factor the numerator to get a simpler expression, cancel the common factor (x-3), and finally substitute x=3 to evaluate the limit.",
+      "explanation_incorrect": "The incorrect order would be to first cancel (x-3) in the numerator and denominator, then factor the numerator, and finally substitute x=3. This is wrong because we need to first recognize the indeterminate form before proceeding with the algebraic simplifications. Directly canceling (x-3) would lead to a meaningless result of 0/0."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "type": "ordering",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find d/dx(x²) from first principles: (A) f'(x) = lim(h→0) (2x+h) = 2x, (B) f(x+h)−f(x) = (x+h)²−x² = 2xh+h², (C) Write f'(x) = lim(h→0) [f(x+h)−f(x)]/h, (D) Divide by h: (2xh+h²)/h = 2x+h",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "explanation_correct": "The correct order is C, B, D, A because this follows the logical steps to find the derivative of a function from first principles. The process starts by defining the derivative formula, then calculating the change in the function, dividing by the change in the input variable, and finally simplifying to get the final derivative expression.",
+      "explanation_incorrect": "The incorrect order would be A, B, D, C. This is incorrect because it does not follow the proper sequence - the derivative formula should be stated first (C), then the change in the function calculated (B), followed by dividing by the change in the input variable (D), and finally simplifying to get the final derivative expression (A). The steps must be in the correct order to properly derive the derivative from first principles."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "type": "ordering",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange these limit values in increasing order: (A) lim(x→0) sin(2x)/x = 2, (B) lim(x→0) sinx/x = 1, (C) lim(x→0) sin(x/2)/(x/2) = 1, (D) lim(x→0) sin(3x)/x = 3",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "explanation_correct": "The correct order of the limit values is B, C, A, D. This is because as the argument of the sine function approaches 0, the value of the sine function approaches the value of the argument. So the limit values increase in the order of the coefficients of x in the argument of the sine function.",
+      "explanation_incorrect": "The incorrect order would be to arrange the limit values as A, B, C, D. This is because the limit values do not increase in the order of the coefficients of x in the argument of the sine function. The correct order is B, C, A, D, which reflects the increasing values of the coefficients 1, 1/2, 2, 3."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

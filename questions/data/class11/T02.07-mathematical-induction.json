@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.07",
+  "topic_name": "Mathematical Induction",
+  "canonical_explanation": {
+    "text": "Mathematical induction is a method of proof used to establish that a statement P(n) is true for all natural numbers n ≥ 1. The proof has two steps: (1) Base case: verify P(1) is true, (2) Inductive step: assume P(k) is true for some arbitrary natural number k (inductive hypothesis), then prove that P(k+1) must also be true. If both steps are completed, then P(n) is true for all natural numbers. This method is commonly used to prove summation formulae, divisibility results, and inequalities.",
+    "rules": [
+      "Step 1 (Base case): Verify P(1) is true.",
+      "Step 2 (Inductive hypothesis): Assume P(k) is true for some k ≥ 1.",
+      "Step 3 (Inductive step): Prove P(k+1) using the assumption P(k).",
+      "Both the base case and inductive step are necessary for a valid proof.",
+      "The method works because it creates a chain: P(1) → P(2) → P(3) → ... for all n."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.07.Q001",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "The first step in a proof by mathematical induction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assume P(k) is true"
+        },
+        {
+          "id": "B",
+          "text": "Prove P(k+1)"
+        },
+        {
+          "id": "C",
+          "text": "Verify the base case P(1)"
+        },
+        {
+          "id": "D",
+          "text": "Write the general statement"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The first step in a proof by mathematical induction is to verify the base case P(1). This establishes that the statement holds true for the first natural number, which is the foundation for the inductive step.",
+      "explanation_incorrect": "The incorrect options are not the first step in a proof by mathematical induction. Option A assumes the statement P(k) is true, which is the inductive hypothesis used in the second step. Option B involves proving the statement P(k+1) is true, which is the inductive step. Option D is not a step in the proof, but rather the general statement that needs to be proven."
+    },
+    {
+      "question_id": "T02.07.Q002",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "In the inductive step, we assume P(k) is true and then prove:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(k−1) is true"
+        },
+        {
+          "id": "B",
+          "text": "P(k+1) is true"
+        },
+        {
+          "id": "C",
+          "text": "P(1) is true"
+        },
+        {
+          "id": "D",
+          "text": "P(2k) is true"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the inductive step, we assume that the statement P(k) is true for some arbitrary natural number k (the inductive hypothesis). We then need to prove that P(k+1) is also true. This is the key step to show that the statement P(n) holds for all natural numbers n ≥ 1.",
+      "explanation_incorrect": "The inductive step does not involve proving that P(k-1) or P(1) or P(2k) is true. The goal is to show that if P(k) is true, then P(k+1) must also be true. This allows us to conclude that the statement P(n) holds for all natural numbers n ≥ 1."
+    },
+    {
+      "question_id": "T02.07.Q003",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "Mathematical induction proves a statement for:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A specific value of n"
+        },
+        {
+          "id": "B",
+          "text": "All real numbers"
+        },
+        {
+          "id": "C",
+          "text": "All natural numbers n ≥ starting value"
+        },
+        {
+          "id": "D",
+          "text": "Only even numbers"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) All natural numbers n ≥ starting value. Mathematical induction is a method of proof that establishes a statement P(n) is true for all natural numbers n greater than or equal to a starting value, typically 1.",
+      "explanation_incorrect": "The other options are incorrect because: A) Mathematical induction does not prove a statement for a specific value of n, but for all natural numbers greater than or equal to 1. B) Mathematical induction does not apply to all real numbers, only to natural numbers. D) Mathematical induction is not limited to even numbers, but applies to all natural numbers."
+    },
+    {
+      "question_id": "T02.07.Q004",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is the inductive hypothesis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(1) is true"
+        },
+        {
+          "id": "B",
+          "text": "P(n) is true for all n"
+        },
+        {
+          "id": "C",
+          "text": "Assume P(k) is true for some natural number k"
+        },
+        {
+          "id": "D",
+          "text": "P(k+1) is true"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The inductive hypothesis is the assumption that the statement P(k) is true for some arbitrary natural number k. This is a key step in the inductive proof, as it allows you to show that the statement P(k+1) is also true, completing the inductive step.",
+      "explanation_incorrect": "The base case is when you verify that the statement P(1) is true, not the inductive hypothesis. The inductive hypothesis is the assumption that P(k) is true for some arbitrary natural number k, which is then used to prove that P(k+1) is also true. Options A and B are not the inductive hypothesis, while option D is the conclusion you are trying to prove, not the assumption."
+    },
+    {
+      "question_id": "T02.07.Q005",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "familiarity",
+      "question_text": "To prove by induction that 1 + 2 + 3 + ... + n = n(n+1)/2, the base case P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 = 1(2)/2 = 1, which is true"
+        },
+        {
+          "id": "B",
+          "text": "1 = 1(1)/2 = 1/2, which is false"
+        },
+        {
+          "id": "C",
+          "text": "0 = 0, which is true"
+        },
+        {
+          "id": "D",
+          "text": "2 = 2, which is true"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The base case P(1) gives 1 = 1(1+1)/2 = 1, which is true. This verifies that the formula holds for the first natural number, which is the first step in proving the statement by mathematical induction.",
+      "explanation_incorrect": "Option B is incorrect because 1 = 1(1)/2 = 0.5, which is not an integer. Option C is incorrect because 0 = 0 is not the expression given in the question. Option D is incorrect because 2 = 2 does not match the formula n(n+1)/2 for n=1."
+    },
+    {
+      "question_id": "T02.07.Q006",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "familiarity",
+      "question_text": "If P(k): 1 + 2 + ... + k = k(k+1)/2, then P(k+1) states that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 + 2 + ... + k + (k+1) = (k+1)(k+2)/2"
+        },
+        {
+          "id": "B",
+          "text": "1 + 2 + ... + k = k(k+2)/2"
+        },
+        {
+          "id": "C",
+          "text": "1 + 2 + ... + k + (k+1) = k(k+1)/2"
+        },
+        {
+          "id": "D",
+          "text": "k + (k+1) = (k+1)(k+2)/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the statement P(k+1) is the sum of the arithmetic sequence from 1 to k+1, which can be simplified to the formula (k+1)(k+2)/2.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the sum of the arithmetic sequence from 1 to k+1. Option B has the wrong formula, Option C is missing the term (k+1), and Option D is not the sum of the sequence but rather just the last two terms."
+    },
+    {
+      "question_id": "T02.07.Q007",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "In proving 1² + 2² + ... + n² = n(n+1)(2n+1)/6 by induction, after assuming P(k), we need to show:",
+      "options": [
+        {
+          "id": "A",
+          "text": "k(k+1)(2k+1)/6 + (k+1)² = (k+1)(k+2)(2k+3)/6"
+        },
+        {
+          "id": "B",
+          "text": "k(k+1)(2k+1)/6 + k² = k(k+1)(2k+3)/6"
+        },
+        {
+          "id": "C",
+          "text": "k² = k(k+1)/2"
+        },
+        {
+          "id": "D",
+          "text": "(k+1)² = (k+1)(k+2)/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the inductive step requires showing that the summation formula holds for n = k+1, given that it holds for n = k. This means we need to prove that the expression k(k+1)(2k+1)/6 + (k+1)² is equal to (k+1)(k+2)(2k+3)/6, which is the correct formula for the summation when n = k+1.",
+      "explanation_incorrect": "The other options are incorrect because they do not match the required inductive step. Option B simplifies the expression but does not show that it equals the formula for n = k+1. Options C and D are unrelated to the summation formula and do not represent the inductive step needed to prove the given formula by mathematical induction."
+    },
+    {
+      "question_id": "T02.07.Q008",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "Using induction to prove 1 + 3 + 5 + ... + (2n−1) = n², the base case P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 = 1², which is true"
+        },
+        {
+          "id": "B",
+          "text": "3 = 1², which is false"
+        },
+        {
+          "id": "C",
+          "text": "1 = 2, which is false"
+        },
+        {
+          "id": "D",
+          "text": "0 = 0, which is true"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The base case P(1) is 1 = 1², which is true. This verifies that the statement 1 + 3 + 5 + ... + (2n-1) = n² holds true for n = 1.",
+      "explanation_incorrect": "Option B is incorrect because 3 is not equal to 1². Option C is incorrect because 1 is not equal to 2. Option D is incorrect because 0 = 0 does not verify the statement 1 + 3 + 5 + ... + (2n-1) = n² for n = 1."
+    },
+    {
+      "question_id": "T02.07.Q009",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "In the inductive step for P(n): 1 + 3 + 5 + ... + (2n−1) = n², assuming P(k), we add the next term (2k+1) to get:",
+      "options": [
+        {
+          "id": "A",
+          "text": "k² + 2k + 1 = (k+1)²"
+        },
+        {
+          "id": "B",
+          "text": "k² + 2k = k(k+2)"
+        },
+        {
+          "id": "C",
+          "text": "k² + k + 1 = (k+1)²"
+        },
+        {
+          "id": "D",
+          "text": "k² + 2k − 1 = (k+1)² − 2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) k² + 2k + 1 = (k+1)². This is because the inductive step involves adding the next term (2k+1) to the previous sum (k²), which gives k² + 2k + 1 = (k+1)².",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the result of adding the next term (2k+1) to the previous sum (k²). Option B) k² + 2k = k(k+2) is incorrect as it does not include the +1 term. Option C) k² + k + 1 = (k+1)² is incorrect as it does not match the correct expression. Option D) k² + 2k - 1 = (k+1)² - 2 is incorrect as it subtracts 2 instead of adding 1."
+    },
+    {
+      "question_id": "T02.07.Q010",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "application",
+      "question_text": "To prove by induction that 4ⁿ − 1 is divisible by 3, the base case P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4¹ − 1 = 3, which is divisible by 3"
+        },
+        {
+          "id": "B",
+          "text": "4¹ − 1 = 4, which is not divisible by 3"
+        },
+        {
+          "id": "C",
+          "text": "4⁰ − 1 = 0, which is divisible by 3"
+        },
+        {
+          "id": "D",
+          "text": "4² − 1 = 15, which is divisible by 3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The base case P(1) for the statement '4^n - 1 is divisible by 3' is to verify that 4^1 - 1 = 3, which is divisible by 3. This is the correct base case because it establishes that the statement is true for n = 1.",
+      "explanation_incorrect": "Option B is incorrect because 4^1 - 1 = 3, which is divisible by 3. Option C is incorrect because 4^0 - 1 = -1, which is not divisible by 3. Option D is incorrect because 4^2 - 1 = 15, which is divisible by 3, but this is not the base case that needs to be verified for the inductive proof."
+    },
+    {
+      "question_id": "T02.07.Q011",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "application",
+      "question_text": "In proving 4ⁿ − 1 is divisible by 3 by induction, the inductive step uses 4^(k+1) − 1 =:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 · 4ᵏ − 1 = 4(4ᵏ − 1) + 3"
+        },
+        {
+          "id": "B",
+          "text": "4ᵏ + 3"
+        },
+        {
+          "id": "C",
+          "text": "4(4ᵏ + 1) − 3"
+        },
+        {
+          "id": "D",
+          "text": "4ᵏ⁺¹ + 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The inductive step in proving that 4^n - 1 is divisible by 3 uses the expression 4^(k+1) - 1 = 4(4^k - 1) + 3, which is option A. This allows us to show that if 4^k - 1 is divisible by 3, then 4^(k+1) - 1 is also divisible by 3, completing the inductive step.",
+      "explanation_incorrect": "Option A is correct because it represents the key step in the inductive proof. The other options do not correctly express 4^(k+1) - 1 in terms of 4^k - 1, which is necessary for the inductive step. Option B does not have the correct form, Option C does not have the right constants, and Option D does not properly use the inductive hypothesis."
+    },
+    {
+      "question_id": "T02.07.Q012",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following can be proved by mathematical induction for n ≥ 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "n² > 2n for all n ≥ 1"
+        },
+        {
+          "id": "B",
+          "text": "2ⁿ > n for all n ≥ 1"
+        },
+        {
+          "id": "C",
+          "text": "n! < 2ⁿ for all n ≥ 1"
+        },
+        {
+          "id": "D",
+          "text": "n > n² for all n ≥ 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The statement 2ⁿ > n for all n ≥ 1 can be proved using mathematical induction. The base case of n = 1 is true, and the inductive step can show that if the statement is true for n = k, then it is also true for n = k+1.",
+      "explanation_incorrect": "The statement n² > 2n for all n ≥ 1 is not true. As n increases, the difference between n² and 2n becomes larger, and eventually n² will be greater than 2n. Similarly, the statement n > n² for all n ≥ 1 is not true, as for large values of n, n² will be greater than n. The statement n! < 2ⁿ for all n ≥ 1 is a true statement that can be proved by induction."
+    },
+    {
+      "question_id": "T02.07.Q013",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "application",
+      "question_text": "If the base case fails but the inductive step works, then the proof by induction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Valid"
+        },
+        {
+          "id": "B",
+          "text": "Invalid"
+        },
+        {
+          "id": "C",
+          "text": "Partially valid"
+        },
+        {
+          "id": "D",
+          "text": "Valid for n ≥ 2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the base case fails, then the statement P(n) is not true for at least one natural number (n=1). In this case, the proof by induction is invalid, as it requires the base case to be true for the overall proof to hold.",
+      "explanation_incorrect": "The proof by induction requires both the base case (P(1) is true) and the inductive step (if P(k) is true, then P(k+1) is also true) to be satisfied. If the base case fails, then the statement P(n) is not true for at least one natural number, and the proof cannot be considered valid, even if the inductive step holds."
+    },
+    {
+      "question_id": "T02.07.Q014",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "exam_style",
+      "question_text": "In proving by induction that 1³ + 2³ + ... + n³ = [n(n+1)/2]², assuming P(k), we need to show that [k(k+1)/2]² + (k+1)³ equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[(k+1)(k+2)/2]²"
+        },
+        {
+          "id": "B",
+          "text": "[k(k+2)/2]²"
+        },
+        {
+          "id": "C",
+          "text": "[(k+1)²/2]²"
+        },
+        {
+          "id": "D",
+          "text": "[k(k+1)/2 + 1]²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [(k+1)(k+2)/2]². This is because when proving the inductive step, we need to show that the formula P(k+1) is true, given that P(k) is true. The inductive hypothesis is that 1³ + 2³ + ... + k³ = [k(k+1)/2]². Adding (k+1)³ to both sides, we get [k(k+1)/2]² + (k+1)³ = [(k+1)(k+2)/2]².",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the formula for the sum of the first (k+1) cubes, given the inductive hypothesis that the sum of the first k cubes is [k(k+1)/2]². Option B) [k(k+2)/2]² does not correctly represent the formula. Option C) [(k+1)²/2]² is not the correct formula either. Option D) [k(k+1)/2 + 1]² is also incorrect, as it does not represent the formula for the sum of the first (k+1) cubes."
+    },
+    {
+      "question_id": "T02.07.Q015",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "To prove 2ⁿ > n for all n ≥ 1 by induction, in the inductive step we show that 2^(k+1) > k + 1 using:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2^(k+1) = 2 · 2ᵏ > 2k ≥ k + 1 for k ≥ 1"
+        },
+        {
+          "id": "B",
+          "text": "2^(k+1) = 2ᵏ + 2ᵏ > k + k = 2k"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B are valid approaches"
+        },
+        {
+          "id": "D",
+          "text": "Neither A nor B"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Both approaches A and B are valid ways to show 2^(k+1) > k+1 in the inductive step of the proof. Approach A uses the fact that 2^(k+1) = 2 * 2^k > 2k ≥ k+1 for k ≥ 1. Approach B uses the fact that 2^(k+1) = 2^k + 2^k > k + k = 2k. Either of these valid steps can be used to complete the inductive proof.",
+      "explanation_incorrect": "The correct answer is C, as both approach A and approach B are valid ways to show 2^(k+1) > k+1 in the inductive step of the proof. Approach A uses the fact that 2^(k+1) is strictly greater than 2k, which is in turn greater than or equal to k+1 for k ≥ 1. Approach B shows that 2^(k+1) is the sum of two terms, each of which is greater than k, so their sum is strictly greater than k+1."
+    },
+    {
+      "question_id": "T02.07.Q016",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "application",
+      "question_text": "Mathematical induction is analogous to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Climbing an infinite ladder: if you can get on the first rung (base case) and from any rung go to the next (inductive step)"
+        },
+        {
+          "id": "B",
+          "text": "Jumping directly to any rung"
+        },
+        {
+          "id": "C",
+          "text": "Climbing down a ladder"
+        },
+        {
+          "id": "D",
+          "text": "Standing on a single rung"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mathematical induction is analogous to climbing an infinite ladder because you start at the base case (first rung) and then use the inductive step to move to the next rung (case). This stepwise approach allows you to prove that a statement is true for all natural numbers.",
+      "explanation_incorrect": "Mathematical induction is not about jumping directly to any rung, climbing down a ladder, or standing on a single rung. The key idea is to start at the base case and then use the inductive step to move to the next case, repeating this process to prove the statement is true for all natural numbers."
+    },
+    {
+      "question_id": "T02.07.Q017",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "To prove 2 + 4 + 6 + ... + 2n = n(n+1) by induction, in the inductive step we add 2(k+1) to n(n+1). We need to show that k(k+1) + 2(k+1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(k+1)(k+2)"
+        },
+        {
+          "id": "B",
+          "text": "k(k+3)"
+        },
+        {
+          "id": "C",
+          "text": "(k+2)²"
+        },
+        {
+          "id": "D",
+          "text": "2(k+1)²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) (k+1)(k+2). When we add 2(k+1) to n(n+1), we get k(k+1) + 2(k+1) = (k+1)(k+1) + 2(k+1) = (k+1)(k+2), which is the expression for the (k+1)th term in the sequence.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the result of adding 2(k+1) to n(n+1). Option B) k(k+3) does not consider the inductive step properly. Option C) (k+2)² is the square of the next term, not the sum of the terms. Option D) 2(k+1)² is the sum of the next two terms, not the sum of all the terms up to (k+1)."
+    },
+    {
+      "question_id": "T02.07.Q018",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "Prove by induction: n(n+1)(n+2) is divisible by 6 for all n ≥ 1. The base case P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 × 2 × 3 = 6, divisible by 6"
+        },
+        {
+          "id": "B",
+          "text": "1 × 2 = 2, divisible by 6"
+        },
+        {
+          "id": "C",
+          "text": "2 × 3 × 4 = 24, divisible by 6"
+        },
+        {
+          "id": "D",
+          "text": "1 = 1, divisible by 6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The base case P(1) is 1 × 2 × 3 = 6, which is divisible by 6. This verifies that the statement n(n+1)(n+2) is divisible by 6 for n = 1, the first natural number.",
+      "explanation_incorrect": "Option B is incorrect because 1 × 2 = 2, which is not divisible by 6. Option C is incorrect because 2 × 3 × 4 = 24, which is divisible by 6 but not the correct base case. Option D is incorrect because 1 is divisible by 6, but this does not verify the statement for the first natural number n = 1."
+    },
+    {
+      "question_id": "T02.07.Q019",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "exam_style",
+      "question_text": "Using induction to prove 1/(1·2) + 1/(2·3) + ... + 1/(n(n+1)) = n/(n+1), the base case P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/(1·2) = 1/2 = 1/(1+1), which is true"
+        },
+        {
+          "id": "B",
+          "text": "1/2 = 2/3, which is false"
+        },
+        {
+          "id": "C",
+          "text": "1 = 1, which is true"
+        },
+        {
+          "id": "D",
+          "text": "1/2 = 1, which is false"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The base case P(1) gives 1/(1·2) = 1/2 = 1/(1+1), which is true. This verifies that the statement is correct for the first natural number, satisfying the first step of the induction proof.",
+      "explanation_incorrect": "Option B is false because 1/2 is not equal to 2/3. Option C is true, but it is not the base case P(1) that is being verified. Option D is false because 1/2 is not equal to 1. The correct option A shows that the base case P(1) is true, which is the first essential step in proving the given statement using mathematical induction."
+    },
+    {
+      "question_id": "T02.07.Q020",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "exam_style",
+      "question_text": "Consider the statement P(n): n² + n is even for all n ∈ ℕ. The base case P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 + 1 = 2, which is even"
+        },
+        {
+          "id": "B",
+          "text": "1 + 1 = 2, which is odd"
+        },
+        {
+          "id": "C",
+          "text": "0, which is even"
+        },
+        {
+          "id": "D",
+          "text": "1, which is odd"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The statement P(n) is that n² + n is even for all natural numbers n. For the base case P(1), we have 1² + 1 = 2, which is an even number, so the base case is verified.",
+      "explanation_incorrect": "The incorrect options do not correctly verify the base case P(1) for the statement P(n): n² + n is even for all n ∈ ℕ. Option B is wrong because 1 + 1 = 2, which is even, not odd. Options C and D are also incorrect because the base case P(1) requires verifying that 1² + 1 is even, not 0 or 1 alone."
+    },
+    {
+      "question_id": "T02.07.Q021",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "In the proof by induction of 1 + 2 + ... + n = n(n+1)/2, after assuming P(k), we compute k(k+1)/2 + (k+1). This simplifies to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(k+1)(k+2)/2"
+        },
+        {
+          "id": "B",
+          "text": "k(k+1)/2 + 1"
+        },
+        {
+          "id": "C",
+          "text": "(k+1)²/2"
+        },
+        {
+          "id": "D",
+          "text": "k²/2 + k + 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, (k+1)(k+2)/2. This is because when we assume the inductive hypothesis P(k) is true, we need to show that P(k+1) is also true. To do this, we add (k+1) to the left-hand side, which becomes k(k+1)/2 + (k+1). Simplifying this expression gives us (k+1)(k+2)/2, which is the correct expression for the sum of the first (k+1) positive integers.",
+      "explanation_incorrect": "The other options are incorrect because they do not properly simplify the expression after assuming the inductive hypothesis P(k). Option B, k(k+1)/2 + 1, is incorrect because it does not account for the additional (k+1) term. Option C, (k+1)²/2, is incorrect because it does not properly distribute the (k+1) term. Option D, k²/2 + k + 1, is incorrect because it does not correctly combine the terms."
+    },
+    {
+      "question_id": "T02.07.Q022",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "application",
+      "question_text": "To prove 7ⁿ − 1 is divisible by 6 by induction, in the inductive step 7^(k+1) − 1 can be written as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7(7ᵏ − 1) + 6"
+        },
+        {
+          "id": "B",
+          "text": "7ᵏ + 6"
+        },
+        {
+          "id": "C",
+          "text": "6 · 7ᵏ + 1"
+        },
+        {
+          "id": "D",
+          "text": "7(7ᵏ + 1)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 7(7^k - 1) + 6. This expression can be derived by factoring 7^(k+1) - 1 as 7(7^k - 1) + 1, and then adding and subtracting 6 to get the desired form. This is a crucial step in the inductive proof to show that 7^(k+1) - 1 is divisible by 6, given that 7^k - 1 is divisible by 6.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly factor 7^(k+1) - 1 to show it is divisible by 6. Option B) 7^k + 6 does not have the necessary term 7(7^k - 1) to demonstrate the divisibility by 6. Option C) 6 * 7^k + 1 is also incorrect as it does not have the right form to show the divisibility. Option D) 7(7^k + 1) does not factor the expression in a way that demonstrates the divisibility by 6."
+    },
+    {
+      "question_id": "T02.07.Q023",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which part of a proof by induction is called the 'anchor'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The inductive step"
+        },
+        {
+          "id": "B",
+          "text": "The base case"
+        },
+        {
+          "id": "C",
+          "text": "The inductive hypothesis"
+        },
+        {
+          "id": "D",
+          "text": "The conclusion"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The base case is called the 'anchor' because it verifies that the statement P(n) is true for the first natural number n=1. This provides the starting point for the inductive proof to build upon.",
+      "explanation_incorrect": "The inductive step is not the 'anchor' because it assumes the statement P(k) is true for some arbitrary natural number k, and then proves that P(k+1) must also be true. The base case, where P(1) is verified to be true, is the 'anchor' that the inductive proof is based on."
+    },
+    {
+      "question_id": "T02.07.Q024",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "exam_style",
+      "question_text": "The formula for the sum 1 + r + r² + ... + rⁿ = (rⁿ⁺¹ − 1)/(r − 1) for r ≠ 1 can be proved by induction. In the inductive step, we add r^(k+1) to both sides. The RHS becomes:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(r^(k+1) − 1)/(r − 1) + r^(k+1) = (r^(k+2) − 1)/(r − 1)"
+        },
+        {
+          "id": "B",
+          "text": "(r^(k+2) − 1)/(r + 1)"
+        },
+        {
+          "id": "C",
+          "text": "(r^(k+1) + 1)/(r − 1)"
+        },
+        {
+          "id": "D",
+          "text": "r^(k+2)/(r − 1)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. In the inductive step, we need to add r^(k+1) to both sides of the formula (r^n - 1)/(r - 1) to prove it for n = k+1. When we do this, the right-hand side becomes (r^(k+2) - 1)/(r - 1), which simplifies to the expression in option A.",
+      "explanation_incorrect": "Option B is incorrect because the denominator should be (r - 1), not (r + 1). Option C is incorrect because the numerator should be (r^(k+2) - 1), not (r^(k+1) + 1). Option D is incorrect because the right-hand side should be a fraction, not just r^(k+2)/(r - 1)."
+    },
+    {
+      "question_id": "T02.07.Q025",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "To prove 3ⁿ ≥ 2n + 1 for all n ≥ 1 by induction, the inductive step assumes 3ᵏ ≥ 2k + 1 and shows 3^(k+1) ≥ 2(k+1) + 1. We use:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3^(k+1) = 3 · 3ᵏ ≥ 3(2k + 1) = 6k + 3 ≥ 2k + 3 for k ≥ 0"
+        },
+        {
+          "id": "B",
+          "text": "3^(k+1) = 3ᵏ + 3"
+        },
+        {
+          "id": "C",
+          "text": "3^(k+1) = 3ᵏ · 3 = 3ᵏ + 2 · 3ᵏ"
+        },
+        {
+          "id": "D",
+          "text": "3^(k+1) > 3ᵏ + 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because to prove 3^(k+1) ≥ 2(k+1) + 1, we can use the inductive hypothesis 3^k ≥ 2k + 1 and multiply both sides by 3 to get 3^(k+1) = 3 · 3^k ≥ 3(2k + 1) = 6k + 3 ≥ 2(k+1) + 1 for all k ≥ 0.",
+      "explanation_incorrect": "The other options are incorrect because they do not properly apply the inductive hypothesis to derive the desired inequality. Option B does not use the inductive hypothesis at all, Option C does not simplify the expression correctly, and Option D is not a valid step in the proof."
+    },
+    {
+      "question_id": "T02.07.Q026",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "application",
+      "question_text": "If a proof by induction successfully completes only the inductive step but not the base case, the conclusion is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(n) is true for all n ≥ 1"
+        },
+        {
+          "id": "B",
+          "text": "P(n) may not be true for any n"
+        },
+        {
+          "id": "C",
+          "text": "P(n) is true for n ≥ 2"
+        },
+        {
+          "id": "D",
+          "text": "P(n) is true for large n"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If a proof by induction completes only the inductive step but not the base case, then the statement P(n) may not be true for any value of n. This is because the inductive step alone cannot establish that P(1) is true, which is the starting point for the inductive argument.",
+      "explanation_incorrect": "Option B is correct because the inductive step alone does not guarantee that the statement P(n) is true for any value of n. The base case, where P(1) is verified to be true, is a crucial part of the induction proof. Without the base case, there is no starting point for the induction, and the truth of P(n) for all n ≥ 1 cannot be concluded."
+    },
+    {
+      "question_id": "T02.07.Q027",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "For the summation formula P(n): Σᵢ₌₁ⁿ i = n(n+1)/2, when we assume P(k) and add the (k+1)th term, we are computing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "S(k) + (k+1) where S(k) = k(k+1)/2"
+        },
+        {
+          "id": "B",
+          "text": "S(k) × (k+1)"
+        },
+        {
+          "id": "C",
+          "text": "S(k+1) − S(k)"
+        },
+        {
+          "id": "D",
+          "text": "S(k) − (k+1)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) S(k) + (k+1) where S(k) = k(k+1)/2. This is because when we assume P(k) is true, we have the summation formula Σᵢ₌₁ᵏ i = k(k+1)/2. To get the formula for P(k+1), we add the (k+1)th term to the existing summation, which gives us S(k) + (k+1).",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the step of adding the (k+1)th term to the existing summation formula. Option B) S(k) × (k+1) would be incorrect as it multiplies the existing summation by the (k+1)th term. Option C) S(k+1) - S(k) would be subtracting the existing summation from the new summation, which is not the correct step. Option D) S(k) - (k+1) would be subtracting the (k+1)th term from the existing summation, which is also not the correct step."
+    },
+    {
+      "question_id": "T02.07.Q028",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "Which statement is true for all n ≥ 5 and can be proved by induction (starting base case at n = 5)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2ⁿ > n²"
+        },
+        {
+          "id": "B",
+          "text": "n² > 2ⁿ"
+        },
+        {
+          "id": "C",
+          "text": "n > 2ⁿ"
+        },
+        {
+          "id": "D",
+          "text": "n! < 2ⁿ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The statement 2^n > n^2 for all n ≥ 5 is true and can be proved by mathematical induction. This is because as n increases, the exponential function 2^n grows much faster than the quadratic function n^2, making 2^n greater than n^2 for sufficiently large values of n.",
+      "explanation_incorrect": "Option A, 2^n > n^2, is the correct statement that can be proved by mathematical induction starting from n = 5. The other options, B) n^2 > 2^n, C) n > 2^n, and D) n! < 2^n, are not true for all n ≥ 5 and cannot be proved by induction from that base case."
+    },
+    {
+      "question_id": "T02.07.Q029",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "exam_style",
+      "question_text": "The statement 'n² − n + 41 is prime for all n ≥ 1' is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "True for all n ≥ 1"
+        },
+        {
+          "id": "B",
+          "text": "True for n = 1 to 40 but fails at n = 41"
+        },
+        {
+          "id": "C",
+          "text": "False for n = 1"
+        },
+        {
+          "id": "D",
+          "text": "Can be proved by induction"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The statement 'n² - n + 41 is prime for all n ≥ 1' is true for values of n from 1 to 40, but fails at n = 41, where the expression becomes 41², which is not a prime number. Therefore, option B is the correct answer.",
+      "explanation_incorrect": "Option A is incorrect because the statement is not true for all n ≥ 1. Option C is incorrect because the statement is true for n = 1. Option D is incorrect because the statement cannot be proved by induction, as it is not true for all values of n."
+    },
+    {
+      "question_id": "T02.07.Q030",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "exam_style",
+      "question_text": "To prove 1·2 + 2·3 + 3·4 + ... + n(n+1) = n(n+1)(n+2)/3 by induction, the (k+1)th term to add in the inductive step is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(k+1)(k+2)"
+        },
+        {
+          "id": "B",
+          "text": "k(k+1)"
+        },
+        {
+          "id": "C",
+          "text": "(k+1)²"
+        },
+        {
+          "id": "D",
+          "text": "k(k+2)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) (k+1)(k+2) because the inductive step requires adding the (k+1)th term to the previous sum, which is n(n+1)(n+2)/3. The (k+1)th term is (k+1)(k+2), so this is the expression that needs to be added.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the (k+1)th term in the summation formula. B) k(k+1) is the kth term, not the (k+1)th term. C) (k+1)² is the square of the (k+1)th term, not the term itself. D) k(k+2) is not the correct expression for the (k+1)th term."
+    },
+    {
+      "question_id": "T02.07.Q031",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "application",
+      "question_text": "To prove 5ⁿ − 1 is divisible by 4 for all n ≥ 1, which identity helps in the inductive step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5^(k+1) − 1 = 5(5ᵏ − 1) + 4"
+        },
+        {
+          "id": "B",
+          "text": "5^(k+1) − 1 = 5ᵏ + 4"
+        },
+        {
+          "id": "C",
+          "text": "5^(k+1) − 1 = 4 · 5ᵏ + 5"
+        },
+        {
+          "id": "D",
+          "text": "5^(k+1) − 1 = 5ᵏ · 4 + 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Option A helps in the inductive step because it shows that 5^(k+1) - 1 can be expressed as 5(5^k - 1) + 4. This means that if 5^k - 1 is divisible by 4 (the inductive hypothesis), then 5^(k+1) - 1 will also be divisible by 4.",
+      "explanation_incorrect": "The other options do not directly relate to proving that 5^n - 1 is divisible by 4 for all n ≥ 1. Option B does not show the connection to the previous term 5^k - 1. Option C introduces an unnecessary 4 factor. Option D does not simplify the expression in a way that helps the inductive step."
+    },
+    {
+      "question_id": "T02.07.Q032",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "The assumption 'P(k) is true' in mathematical induction is called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Base case"
+        },
+        {
+          "id": "B",
+          "text": "Inductive hypothesis"
+        },
+        {
+          "id": "C",
+          "text": "Conclusion"
+        },
+        {
+          "id": "D",
+          "text": "Contradiction"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The assumption 'P(k) is true' in mathematical induction is called the inductive hypothesis. This is the key step where you assume the statement is true for some arbitrary natural number k, and then use this to prove that the statement is also true for the next number, k+1.",
+      "explanation_incorrect": "The correct answer is B) Inductive hypothesis. The base case is the first step where you verify that the statement is true for n=1. The conclusion is the final result you are trying to prove. The contradiction is not part of the inductive proof method - it is a separate proof technique. The inductive hypothesis is the crucial assumption you make in the inductive step to prove the statement for the next number."
+    },
+    {
+      "question_id": "T02.07.Q033",
+      "type": "mcq",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "In the induction proof of 1 + 1/2 + 1/4 + ... + 1/2ⁿ⁻¹ = 2 − 1/2ⁿ⁻¹, P(1) gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 = 2 − 1 = 1, true"
+        },
+        {
+          "id": "B",
+          "text": "1/2 = 2 − 1 = 1, false"
+        },
+        {
+          "id": "C",
+          "text": "1 = 2, false"
+        },
+        {
+          "id": "D",
+          "text": "1/2 = 1/2, true"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the base case P(1) evaluates to 1 = 2 - 1/2^(1-1), which is true. This verifies that the summation formula holds for the first term of the sequence.",
+      "explanation_incorrect": "Option B is incorrect because 1/2 does not equal 2 - 1. Option C is incorrect because 1 does not equal 2. Option D is incorrect because 1/2 is not equal to 1/2 - the expression 1/2^(1-1) evaluates to 1, not 1/2."
+    },
+    {
+      "question_id": "T02.07.Q034",
+      "type": "mcq",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "To prove n! > 2ⁿ for all n ≥ 4, the base case at n = 4 gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4! = 24 > 2⁴ = 16, true"
+        },
+        {
+          "id": "B",
+          "text": "4! = 24 > 2⁴ = 8, true"
+        },
+        {
+          "id": "C",
+          "text": "3! = 6 > 2³ = 8, false"
+        },
+        {
+          "id": "D",
+          "text": "4! = 16 > 2⁴ = 16, false"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because 4! = 24 and 2^4 = 16, so 24 is greater than 16, proving the base case of n! > 2^n for n = 4.",
+      "explanation_incorrect": "The incorrect answer C is false because 3! = 6 is not greater than 2^3 = 8. The base case for proving n! > 2^n must be verified at n = 4, where 4! = 24 is indeed greater than 2^4 = 16, which is the correct answer A."
+    },
+    {
+      "question_id": "T02.07.Q035",
+      "type": "mcq",
+      "concept_id": "T02.07.C01",
+      "difficulty": "application",
+      "question_text": "Mathematical induction can be used to prove all of the following EXCEPT:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sum formulae for series"
+        },
+        {
+          "id": "B",
+          "text": "Divisibility results"
+        },
+        {
+          "id": "C",
+          "text": "Inequalities involving n"
+        },
+        {
+          "id": "D",
+          "text": "Existence of irrational numbers"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Mathematical induction is a proof method used to establish statements involving natural numbers, such as summation formulas, divisibility results, and inequalities. However, it cannot be used to prove the existence of irrational numbers, as the existence of irrational numbers is a more fundamental property that requires different mathematical tools and techniques to prove.",
+      "explanation_incorrect": "The correct answer is D, as mathematical induction cannot be used to prove the existence of irrational numbers. Irrational numbers, such as π and √2, are fundamentally different from natural numbers and require different mathematical methods to establish their existence. The other options, such as proving sum formulas, divisibility results, and inequalities, are all examples of statements that can be proven using the mathematical induction technique."
+    },
+    {
+      "question_id": "T02.07.Q036",
+      "type": "true_false",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "Mathematical induction requires both a base case and an inductive step.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because mathematical induction requires both a base case and an inductive step. The base case verifies that the statement is true for the first natural number (usually 1), and the inductive step proves that if the statement is true for a particular natural number, it is also true for the next number.",
+      "explanation_incorrect": "The statement is true because mathematical induction cannot be used without both a base case and an inductive step. The base case is necessary to start the proof, and the inductive step is required to extend the proof to all natural numbers. Without either of these steps, the proof would be incomplete and the statement could not be proven true using mathematical induction."
+    },
+    {
+      "question_id": "T02.07.Q037",
+      "type": "true_false",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "The base case must always be P(1).",
+      "correct_answer": false,
+      "explanation_correct": "The base case in mathematical induction can be any natural number, not just 1. As long as the base case is verified and the inductive step is proven, the statement P(n) will be true for all natural numbers n ≥ the base case.",
+      "explanation_incorrect": "The statement is incorrect. While 1 is a commonly used base case, the base case can be any natural number. The key requirement is to verify the base case, then prove the inductive step to show that the statement P(n) is true for all natural numbers n greater than or equal to the base case."
+    },
+    {
+      "question_id": "T02.07.Q038",
+      "type": "true_false",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "In the inductive step for sum formulae, we always add the (k+1)th term to both sides.",
+      "correct_answer": true,
+      "explanation_correct": "In the inductive step for sum formulae, we do indeed add the (k+1)th term to both sides of the equation. This is because the inductive hypothesis assumes the formula is true for k terms, and we need to show it is also true for k+1 terms. Adding the (k+1)th term is the key step to prove the formula holds for the next natural number.",
+      "explanation_incorrect": "The inductive step involves more than just adding the (k+1)th term to both sides. You also need to assume the formula holds for k terms (the inductive hypothesis) and then use logical reasoning to show the formula also holds for k+1 terms. Simply adding the (k+1)th term is not enough - you need to connect it back to the inductive hypothesis to complete the proof."
+    },
+    {
+      "question_id": "T02.07.Q039",
+      "type": "true_false",
+      "concept_id": "T02.07.C03",
+      "difficulty": "application",
+      "question_text": "The statement 2ⁿ > n² is true for all n ≥ 1.",
+      "correct_answer": false,
+      "explanation_correct": "The statement '2^n > n^2' is false for all n ≥ 1. This is because as n gets larger, the value of n^2 grows much faster than 2^n. For example, when n = 10, 2^10 = 1024 but 10^2 = 100, which is much greater than 1024.",
+      "explanation_incorrect": "The statement '2^n > n^2' is not true for all n ≥ 1. This is a common misconception, as the inequality is only true for very small values of n, like n = 1 or 2. However, as n gets larger, the value of n^2 grows much faster than 2^n, and the inequality becomes false. For example, when n = 10, 2^10 = 1024 but 10^2 = 100, which is much greater than 1024."
+    },
+    {
+      "question_id": "T02.07.Q040",
+      "type": "true_false",
+      "concept_id": "T02.07.C01",
+      "difficulty": "application",
+      "question_text": "If P(1) is true and P(k) being true implies P(k+1) is true, then P(n) is true for all natural numbers n.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because the two steps of mathematical induction (base case and inductive step) ensure that the statement P(n) is true for all natural numbers n. If P(1) is true and P(k) being true implies P(k+1) is true, then the statement must hold for all n ≥ 1.",
+      "explanation_incorrect": "The statement is not true if the inductive step is not completed. Just verifying the base case P(1) and assuming P(k) is true is not enough. You also need to prove that P(k+1) is true, using the inductive hypothesis, in order to conclude that P(n) is true for all natural numbers n."
+    },
+    {
+      "question_id": "T02.07.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C01",
+      "difficulty": "familiarity",
+      "question_text": "In mathematical induction, the two essential steps are the ___ case and the inductive step.",
+      "correct_answer": "base",
+      "explanation_correct": "The first step in a mathematical induction proof is the base case, which verifies that the given statement P(1) is true. This is the foundation for the rest of the proof, as it establishes the starting point from which the inductive step can be applied.",
+      "explanation_incorrect": "The two essential steps in mathematical induction are the base case and the inductive step. The base case involves verifying that the statement P(1) is true, while the inductive step involves assuming the statement P(k) is true for some arbitrary natural number k, and then proving that the statement P(k+1) is also true. Filling in the blank with 'base' correctly identifies the first step in this process."
+    },
+    {
+      "question_id": "T02.07.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C02",
+      "difficulty": "familiarity",
+      "question_text": "The base case P(1) for the formula 1 + 2 + 3 + ... + n = n(n+1)/2 gives 1 = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The base case P(1) for the formula 1 + 2 + 3 + ... + n = n(n+1)/2 gives 1 = 1 because the left-hand side of the equation is simply 1, which equals the right-hand side of 1(1+1)/2 = 1.",
+      "explanation_incorrect": "The accepted answer format is a single number, which is 1. The incorrect answer would be to write something like '1 = 1', which is not the correct format. The base case P(1) simply requires verifying that the formula holds true for n=1, which it does since 1 = 1(1+1)/2 = 1."
+    },
+    {
+      "question_id": "T02.07.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C02",
+      "difficulty": "application",
+      "question_text": "To prove P(n): 1² + 2² + ... + n² = n(n+1)(2n+1)/6, P(2) gives 1 + 4 = ___.",
+      "correct_answer": "5",
+      "explanation_correct": "The question is asking to evaluate the expression P(2), which is 1² + 2² = 1 + 4 = 5. This is the correct answer because the formula given for P(n) is the sum of the squares of the first n natural numbers, and when n=2, the expression simplifies to 1 + 4, which equals 5.",
+      "explanation_incorrect": "The incorrect answer would be to evaluate the expression for P(1) instead of P(2). P(1) would be just 1², which equals 1. However, the question specifically asks to evaluate P(2), which is the sum of the squares of the first 2 natural numbers, 1² and 2², which equals 5."
+    },
+    {
+      "question_id": "T02.07.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C03",
+      "difficulty": "application",
+      "question_text": "The base case for proving 3ⁿ − 1 is divisible by 2 at n = 1 gives 3 − 1 = ___.",
+      "correct_answer": "2",
+      "explanation_correct": "The base case for proving 3^n - 1 is divisible by 2 at n = 1 gives 3 - 1 = 2, which is divisible by 2. This confirms the base case and shows that the statement is true for the first natural number n = 1.",
+      "explanation_incorrect": "The correct answer is 2. When n = 1, we have 3^1 - 1 = 3 - 1 = 2, which is divisible by 2. This verifies the base case and shows that the statement 3^n - 1 is divisible by 2 for n = 1."
+    },
+    {
+      "question_id": "T02.07.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C02",
+      "difficulty": "exam_style",
+      "question_text": "In the inductive proof of 1 + 3 + 5 + ... + (2n−1) = n², when P(k) is assumed, the next term added is ___.",
+      "correct_answer": "2k + 1",
+      "explanation_correct": "The next term added in the inductive proof of the summation formula 1 + 3 + 5 + ... + (2n-1) = n^2 is 2k + 1, where k is the arbitrary natural number assumed in the inductive hypothesis P(k). This is because the formula represents the sum of the first n odd integers, and the (k+1)th odd integer is 2k + 1.",
+      "explanation_incorrect": "The incorrect answer would be 2(k+1) - 1. This is because the formula represents the sum of the first n odd integers, and the next odd integer after 2k - 1 is 2(k+1) - 1. However, the correct answer is 2k + 1, as this is the (k+1)th odd integer in the sequence."
+    },
+    {
+      "question_id": "T02.07.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "To prove 10ⁿ + 3·4ⁿ⁺² + 5 is divisible by 9, P(1) gives 10 + 192 + 5 = ___.",
+      "correct_answer": "207",
+      "explanation_correct": "The answer is correct because 10^1 + 3*4^(1+2) + 5 = 10 + 192 + 5 = 207, which is divisible by 9. This verifies the base case P(1) for the proof by mathematical induction.",
+      "explanation_incorrect": "The accepted answer format is a single number, but the question asks for the value of the expression 10^1 + 3*4^(1+2) + 5. To calculate this, we first evaluate 10^1 = 10, then 3*4^(1+2) = 3*4^3 = 192, and finally add 5 to get the total of 207, which is the correct answer."
+    },
+    {
+      "question_id": "T02.07.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.07.C01",
+      "difficulty": "exam_style",
+      "question_text": "The principle of mathematical induction is based on the ___ property of natural numbers.",
+      "correct_answer": "well-ordering",
+      "explanation_correct": "The principle of mathematical induction is based on the well-ordering property of natural numbers. This means that every non-empty set of natural numbers has a smallest element. This property allows us to start with a base case (n=1) and then inductively prove that the statement holds for all larger natural numbers.",
+      "explanation_incorrect": "The principle of mathematical induction is not based on the ordering property of natural numbers. The correct answer is the well-ordering property, which states that every non-empty set of natural numbers has a smallest element. This allows us to start with a base case and then use the inductive step to prove the statement holds for all natural numbers n≥1."
+    },
+    {
+      "question_id": "T02.07.Q048",
+      "type": "ordering",
+      "concept_id": "T02.07.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the steps of a proof by mathematical induction in correct order: (A) Prove P(k+1) using P(k), (B) State the proposition P(n), (C) Assume P(k) is true for some k, (D) Verify P(1) is true",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "explanation_correct": "The correct order of the steps in a proof by mathematical induction is B, D, C, A. First, you need to state the proposition P(n) that you want to prove. Then, you verify that the base case P(1) is true. Next, you assume that P(k) is true for some arbitrary natural number k (the inductive hypothesis). Finally, you use this assumption to prove that P(k+1) is also true, completing the inductive step.",
+      "explanation_incorrect": "The incorrect order is A, B, C, D. This would not be a valid proof by mathematical induction, as you cannot prove P(k+1) before establishing the base case P(1) and the inductive hypothesis P(k). The correct order is crucial to ensuring the logical flow of the proof and demonstrating that the statement P(n) is true for all natural numbers n ≥ 1."
+    },
+    {
+      "question_id": "T02.07.Q049",
+      "type": "ordering",
+      "concept_id": "T02.07.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to prove 1+2+...+n = n(n+1)/2 by induction: (A) Add (k+1) to both sides of P(k), (B) Show k(k+1)/2 + (k+1) = (k+1)(k+2)/2, (C) Verify P(1): 1 = 1(2)/2, (D) Assume P(k): 1+2+...+k = k(k+1)/2",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "explanation_correct": "The correct order is C, D, A, B because the proof starts by verifying the base case P(1), then assuming the inductive hypothesis P(k), then adding (k+1) to both sides to show P(k+1) is also true, and finally proving the inductive step by showing k(k+1)/2 + (k+1) = (k+1)(k+2)/2.",
+      "explanation_incorrect": "The incorrect order would be to start by adding (k+1) to both sides of P(k) before establishing the base case and inductive hypothesis. This would not make logical sense, as you need to first verify the statement is true for n=1 and assume it holds for some arbitrary k, before proving it is also true for n=k+1."
+    },
+    {
+      "question_id": "T02.07.Q050",
+      "type": "ordering",
+      "concept_id": "T02.07.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to prove 4ⁿ − 1 is divisible by 3: (A) Write 4^(k+1)−1 = 4(4ᵏ−1)+3, (B) Verify P(1): 4−1=3, divisible by 3, (C) Both 4(4ᵏ−1) and 3 are divisible by 3, so 4^(k+1)−1 is divisible by 3, (D) Assume 4ᵏ−1 is divisible by 3",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "explanation_correct": "The correct order is B, D, A, C because the proof by mathematical induction requires first verifying the base case (B), then assuming the inductive hypothesis (D), using that to prove the inductive step (A), and finally concluding that the statement is divisible by 3 (C).",
+      "explanation_incorrect": "The incorrect order would be to start with the inductive step (A) without first establishing the base case (B) and the inductive hypothesis (D). This would make the proof incomplete and invalid. The final step (C) correctly concludes the divisibility result, but it should come after the inductive step is proven."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

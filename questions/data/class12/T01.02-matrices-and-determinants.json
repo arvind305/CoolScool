@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.02",
+  "topic_name": "Matrices & Determinants",
+  "canonical_explanation": {
+    "text": "Matrices and Determinants at the Class 12 level encompass the classification of matrices (row, column, square, diagonal, scalar, identity, null, symmetric, skew-symmetric), matrix algebra (addition, scalar multiplication, multiplication with conformability rules), the transpose and its properties, determinants of 2×2 and 3×3 matrices using cofactor expansion, properties of determinants (row and column operations, effect of scalar multiplication, factor theorem), and the computation of the adjoint and inverse of a matrix. The inverse A⁻¹ = adj(A)/|A| exists only when |A| ≠ 0. Systems of linear equations in 2 or 3 variables are solved using the matrix method (AX = B gives X = A⁻¹B) and Cramer's rule.",
+    "rules": [
+      "Matrix multiplication is defined only when the number of columns of the first matrix equals the number of rows of the second matrix, and is associative but not commutative in general.",
+      "For a square matrix A, the inverse A⁻¹ = adj(A)/|A| exists if and only if |A| ≠ 0 (the matrix is non-singular).",
+      "Every square matrix can be uniquely expressed as the sum of a symmetric matrix ½(A + Aᵀ) and a skew-symmetric matrix ½(A − Aᵀ)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.02.Q001",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "A square matrix A is symmetric if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A = −Aᵀ"
+        },
+        {
+          "id": "B",
+          "text": "A = Aᵀ"
+        },
+        {
+          "id": "C",
+          "text": "A = A⁻¹"
+        },
+        {
+          "id": "D",
+          "text": "|A| = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A square matrix A is symmetric if A = A^T, where A^T is the transpose of matrix A. This means the elements of A are the same as the corresponding elements of A^T, so the matrix is symmetrical about the main diagonal.",
+      "explanation_incorrect": "Option A is incorrect because A = -A^T defines a skew-symmetric matrix, not a symmetric matrix. Option C is incorrect because A = A^-1 defines an orthogonal matrix, not necessarily a symmetric matrix. Option D is incorrect because the determinant |A| being zero does not define a symmetric matrix - it rather indicates that the matrix is singular and has no inverse."
+    },
+    {
+      "question_id": "T01.02.Q002",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A is a 3×3 skew-symmetric matrix, then the diagonal elements of A are all:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "−1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "Equal to each other but not necessarily zero"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The diagonal elements of a 3×3 skew-symmetric matrix are all zero. This is because a skew-symmetric matrix has the property that the elements above the main diagonal are the negatives of the elements below the main diagonal. Since the diagonal elements are the same as their negatives, they must be zero.",
+      "explanation_incorrect": "Option A, B, and D are incorrect because the diagonal elements of a 3×3 skew-symmetric matrix are always zero. A skew-symmetric matrix has the property that the elements above the main diagonal are the negatives of the elements below the main diagonal. Since the diagonal elements are the same as their negatives, they must be zero."
+    },
+    {
+      "question_id": "T01.02.Q003",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The transpose of a column matrix is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Column matrix"
+        },
+        {
+          "id": "B",
+          "text": "Row matrix"
+        },
+        {
+          "id": "C",
+          "text": "Diagonal matrix"
+        },
+        {
+          "id": "D",
+          "text": "Scalar matrix"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The transpose of a column matrix is a row matrix. This is because the transpose of a matrix is obtained by interchanging the rows and columns of the original matrix. Since a column matrix has only one column, its transpose will be a row matrix with one row.",
+      "explanation_incorrect": "The transpose of a column matrix is not a column matrix, a diagonal matrix, or a scalar matrix. The transpose of a matrix is obtained by interchanging the rows and columns, so the transpose of a column matrix (a matrix with only one column) will be a row matrix (a matrix with only one row)."
+    },
+    {
+      "question_id": "T01.02.Q004",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which property is true for the transpose of matrices A and B (of compatible orders)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(AB)ᵀ = AᵀBᵀ"
+        },
+        {
+          "id": "B",
+          "text": "(AB)ᵀ = BᵀAᵀ"
+        },
+        {
+          "id": "C",
+          "text": "(AB)ᵀ = BA"
+        },
+        {
+          "id": "D",
+          "text": "(AB)ᵀ = AᵀB"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B. The transpose of the product of two matrices AB is equal to the product of the transposes of the individual matrices, but in reverse order, i.e. (AB)ᵀ = BᵀAᵀ. This property holds true for the transpose of matrices.",
+      "explanation_incorrect": "The incorrect options are not correct. Option A, (AB)ᵀ = AᵀBᵀ, is not true. Option C, (AB)ᵀ = BA, is also not correct. Option D, (AB)ᵀ = AᵀB, is not the right property for the transpose of a matrix product."
+    },
+    {
+      "question_id": "T01.02.Q005",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A is a 2×3 matrix and B is a 3×4 matrix, then the order of AB is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2×4"
+        },
+        {
+          "id": "B",
+          "text": "3×3"
+        },
+        {
+          "id": "C",
+          "text": "2×3"
+        },
+        {
+          "id": "D",
+          "text": "4×2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2×4. When multiplying matrices, the number of columns in the first matrix must match the number of rows in the second matrix. Since matrix A has 2 rows and 3 columns, and matrix B has 3 rows and 4 columns, the resulting matrix AB will have 2 rows and 4 columns.",
+      "explanation_incorrect": "The other options are incorrect because they do not follow the rules of matrix multiplication. Option B) 3×3 is incorrect because the dimensions of the resulting matrix do not match the given information. Option C) 2×3 is incorrect because it is the same as the dimensions of the first matrix A, which is not the result of multiplying A and B. Option D) 4×2 is incorrect because the number of columns in the resulting matrix does not match the number of columns in matrix B."
+    },
+    {
+      "question_id": "T01.02.Q006",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]], then the element in the first row and first column of AB is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "19"
+        },
+        {
+          "id": "B",
+          "text": "22"
+        },
+        {
+          "id": "C",
+          "text": "23"
+        },
+        {
+          "id": "D",
+          "text": "26"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 19. To find the product of two matrices AB, we multiply each row of matrix A with each column of matrix B. The element in the first row and first column of AB is the dot product of the first row of A and the first column of B, which is (1 × 5) + (2 × 7) = 19.",
+      "explanation_incorrect": "The incorrect options B) 22, C) 23, and D) 26 are not correct because they do not represent the dot product of the first row of A and the first column of B. The matrix multiplication of A and B requires performing the dot product for each element in the resulting matrix, and the first row first column element is 19."
+    },
+    {
+      "question_id": "T01.02.Q007",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 0], [0, 1]], then A² equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[2, 0], [0, 2]]"
+        },
+        {
+          "id": "B",
+          "text": "[[1, 0], [0, 1]]"
+        },
+        {
+          "id": "C",
+          "text": "[[0, 0], [0, 0]]"
+        },
+        {
+          "id": "D",
+          "text": "[[1, 1], [1, 1]]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) [[1, 0], [0, 1]]. This is because the square of an identity matrix (a matrix with 1s on the diagonal and 0s everywhere else) is equal to the identity matrix itself.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the square of the given matrix A. Option A) [[2, 0], [0, 2]] is the result of multiplying A by a scalar 2, not squaring it. Option C) [[0, 0], [0, 0]] is the null matrix, which is not the same as the square of A. Option D) [[1, 1], [1, 1]] does not represent the square of A either."
+    },
+    {
+      "question_id": "T01.02.Q008",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The determinant of the matrix [[3, 1], [5, 2]] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The determinant of the 2x2 matrix [[3, 1], [5, 2]] is calculated as (3 x 2) - (1 x 5) = 6 - 5 = 1, which is the correct answer B.",
+      "explanation_incorrect": "The incorrect options are not correct. Option A (11) is wrong because the determinant is calculated using the formula (3 x 2) - (1 x 5) = 1, not 11. Option C (-1) is wrong because the determinant is a positive value, not negative. Option D (6) is wrong because the correct value of the determinant is 1, not 6."
+    },
+    {
+      "question_id": "T01.02.Q009",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "If two rows of a determinant are identical, then the value of the determinant is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "−1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If two rows (or columns) of a determinant are identical, then the determinant will be equal to 0. This is because a determinant measures the area/volume of a parallelogram/parallelepiped, and if two sides are the same, the area/volume becomes 0.",
+      "explanation_incorrect": "The value of the determinant cannot be 1 or -1 if two rows are identical, as that would mean the matrix has a non-zero determinant, which is not possible. The correct answer is that the determinant will be 0 in this case, as the matrix will have linearly dependent rows (or columns), resulting in a zero determinant."
+    },
+    {
+      "question_id": "T01.02.Q010",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The determinant of [[2, 0, 0], [0, 3, 0], [0, 0, 5]] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The determinant of a diagonal matrix is the product of the diagonal elements. Since the given matrix is a 3x3 diagonal matrix with diagonal elements 2, 3, and 5, the determinant is simply 2 x 3 x 5 = 30.",
+      "explanation_incorrect": "The determinant of a 3x3 matrix is calculated by the cofactor expansion method. However, in this case, since the matrix is diagonal, the determinant can be easily calculated as the product of the diagonal elements. The incorrect options do not represent the correct determinant value of 30."
+    },
+    {
+      "question_id": "T01.02.Q011",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If |A| = 5 and A is a 3×3 matrix, then |3A| equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "45"
+        },
+        {
+          "id": "C",
+          "text": "135"
+        },
+        {
+          "id": "D",
+          "text": "125"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 135. This is because the determinant of a matrix is multiplied by the scalar value when the matrix is multiplied by that scalar. Since the question states that |A| = 5, and the matrix A is 3x3, then |3A| = 3 * |A| = 3 * 5 = 135.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not account for the property that the determinant of a matrix is multiplied by the scalar value when the matrix is multiplied by that scalar. Option A) 15 is incorrect because it does not consider the scalar value of 3. Option B) 45 is incorrect because it does not correctly compute 3 * 5 = 15. Option D) 125 is incorrect because it does not consider the scalar value of 3 when computing the determinant."
+    },
+    {
+      "question_id": "T01.02.Q012",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The determinant of [[1, 2, 3], [4, 5, 6], [7, 8, 9]] equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "−3"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The determinant of the given 3x3 matrix is 0. This is because the matrix has two identical rows, and the determinant of a matrix with two identical rows is always 0.",
+      "explanation_incorrect": "The correct answer is option A) 0. This is because the determinant of a 3x3 matrix with two identical rows will always be 0. The rows of the given matrix are [1, 2, 3], [4, 5, 6], and [7, 8, 9], where the second row is identical to the first row multiplied by 3. Therefore, the determinant of this matrix is 0."
+    },
+    {
+      "question_id": "T01.02.Q013",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The adjoint of a 2×2 matrix A = [[a, b], [c, d]] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[d, −b], [−c, a]]"
+        },
+        {
+          "id": "B",
+          "text": "[[a, c], [b, d]]"
+        },
+        {
+          "id": "C",
+          "text": "[[d, c], [b, a]]"
+        },
+        {
+          "id": "D",
+          "text": "[[−a, −b], [−c, −d]]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[d, -b], [-c, a]]. The adjoint of a 2x2 matrix A = [[a, b], [c, d]] is the transpose of the matrix formed by swapping the positions of a and d, and changing the signs of b and c.",
+      "explanation_incorrect": "The incorrect options B, C, and D do not represent the correct adjoint of the 2x2 matrix A = [[a, b], [c, d]]. The adjoint is a matrix that is formed by swapping the positions of a and d, and changing the signs of b and c, and then taking the transpose of this resulting matrix."
+    },
+    {
+      "question_id": "T01.02.Q014",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "A matrix A is said to be singular if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "|A| = 1"
+        },
+        {
+          "id": "B",
+          "text": "|A| = −1"
+        },
+        {
+          "id": "C",
+          "text": "|A| = 0"
+        },
+        {
+          "id": "D",
+          "text": "A = Aᵀ"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A matrix A is said to be singular if its determinant |A| is equal to 0. This means that the matrix does not have an inverse, as the inverse of a matrix exists only when the determinant is non-zero.",
+      "explanation_incorrect": "The matrix A is not singular if its determinant |A| is equal to 1 or -1. A matrix is singular when its determinant is 0, which means it does not have an inverse. The statement 'A = Aᵀ' refers to a symmetric matrix, which is a different property and does not determine whether a matrix is singular or not."
+    },
+    {
+      "question_id": "T01.02.Q015",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The inverse of the matrix [[2, 1], [5, 3]] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[3, −1], [−5, 2]]"
+        },
+        {
+          "id": "B",
+          "text": "[[3, 1], [5, 2]]"
+        },
+        {
+          "id": "C",
+          "text": "[[2, −1], [−5, 3]]"
+        },
+        {
+          "id": "D",
+          "text": "The matrix is singular"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[3, -1], [-5, 2]]. This is the inverse of the given 2x2 matrix [[2, 1], [5, 3]], which can be calculated using the formula for the inverse of a 2x2 matrix.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the inverse of the given 2x2 matrix. To find the inverse, we need to calculate the determinant of the matrix, which is 2*3 - 1*5 = 1. Then, we can use the formula for the inverse, which involves swapping the positions of the elements, negating the off-diagonal elements, and dividing everything by the determinant."
+    },
+    {
+      "question_id": "T01.02.Q016",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "If A is a non-singular matrix, then A · adj(A) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "|A| · I"
+        },
+        {
+          "id": "B",
+          "text": "A²"
+        },
+        {
+          "id": "C",
+          "text": "|A| · A"
+        },
+        {
+          "id": "D",
+          "text": "I"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) |A| · I. This is because the product of a non-singular matrix A and its adjoint adj(A) is equal to the determinant |A| multiplied by the identity matrix I. This property is known as Cramer's rule, which is an important result in matrix theory.",
+      "explanation_incorrect": "The other options are incorrect. Option B) A² is not correct because the product of a matrix and its adjoint is not the same as the square of the matrix. Option C) |A| · A is not correct because the product of the determinant and the matrix itself is not the same as the product of the matrix and its adjoint. Option D) I is not correct because the product of a non-singular matrix and its adjoint is not simply the identity matrix."
+    },
+    {
+      "question_id": "T01.02.Q017",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "If A is a 3×3 matrix such that A + Aᵀ = O (zero matrix), then A is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Symmetric"
+        },
+        {
+          "id": "B",
+          "text": "Skew-symmetric"
+        },
+        {
+          "id": "C",
+          "text": "Diagonal"
+        },
+        {
+          "id": "D",
+          "text": "Identity"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If A + A^T = O (zero matrix), then A is a skew-symmetric matrix. This means that the elements of A are negative transposes of each other, i.e., a_ij = -a_ji. The condition A + A^T = O implies that A is a skew-symmetric matrix.",
+      "explanation_incorrect": "The condition A + A^T = O does not imply that A is a symmetric, diagonal, or identity matrix. A symmetric matrix satisfies A = A^T, while an identity matrix has 1's on the main diagonal and 0's elsewhere. A diagonal matrix has non-zero elements only on the main diagonal. The given condition A + A^T = O is specifically satisfied by a skew-symmetric matrix, where the elements are negatives of their transposes."
+    },
+    {
+      "question_id": "T01.02.Q018",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [3, 4]], then A² − 5A equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[2, 0], [0, 2]]"
+        },
+        {
+          "id": "B",
+          "text": "[[-2, 0], [0, -2]]"
+        },
+        {
+          "id": "C",
+          "text": "[[0, 0], [0, 0]]"
+        },
+        {
+          "id": "D",
+          "text": "[[-2, -2], [-2, -2]]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) [[-2, 0], [0, -2]]. This is because A² = [[7, 10], [21, 28]], and 5A = [[5, 10], [15, 20]]. Subtracting 5A from A² gives the final result of [[-2, 0], [0, -2]].",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the result of A² - 5A. Option A) is the result of a different matrix operation, option C) is the null matrix, and option D) is not the correct result of the given matrix operation."
+    },
+    {
+      "question_id": "T01.02.Q019",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A is a 3×3 matrix with |A| = 4, then |adj(A)| equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "64"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If the determinant of a 3x3 matrix A is 4, then the determinant of the adjoint of A is 16. This is because the formula for the inverse of a matrix A is A^-1 = adj(A)/|A|, and since |A| = 4, |adj(A)| = |A|^2 = 16.",
+      "explanation_incorrect": "The incorrect options are incorrect because the determinant of the adjoint of a matrix is not always equal to the determinant of the original matrix. The determinant of the adjoint is related to the determinant of the original matrix through the formula |adj(A)| = |A|^2. Since |A| = 4, the correct answer is |adj(A)| = 16."
+    },
+    {
+      "question_id": "T01.02.Q020",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The value of |A⁻¹| if |A| = 7 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "1/7"
+        },
+        {
+          "id": "C",
+          "text": "−7"
+        },
+        {
+          "id": "D",
+          "text": "49"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The value of the inverse of a matrix, |A⁻¹|, is equal to 1/|A|. Since |A| = 7, the value of |A⁻¹| must be 1/7.",
+      "explanation_incorrect": "Option A is incorrect because the value of |A⁻¹| is not the same as |A|. Option C is incorrect because the determinant of a matrix cannot be negative. Option D is incorrect because the determinant of the inverse of a matrix is the reciprocal of the original determinant, not its square."
+    },
+    {
+      "question_id": "T01.02.Q021",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Using Cramer's rule, the system 2x + 3y = 7, 3x + 5y = 11 has the solution:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 2, y = 1"
+        },
+        {
+          "id": "B",
+          "text": "x = 1, y = 2"
+        },
+        {
+          "id": "C",
+          "text": "x = −2, y = 1"
+        },
+        {
+          "id": "D",
+          "text": "x = 4, y = −1/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x = 2, y = 1. This solution satisfies both equations in the given system of linear equations, 2x + 3y = 7 and 3x + 5y = 11, when plugged in. Cramer's rule allows us to find the unique solution to a system of linear equations using the determinants of the coefficient matrix and the matrix formed by replacing the coefficients with the constants on the right side.",
+      "explanation_incorrect": "The incorrect options do not satisfy the given system of linear equations. Option B) x = 1, y = 2 does not satisfy the first equation 2x + 3y = 7. Option C) x = -2, y = 1 does not satisfy the second equation 3x + 5y = 11. Option D) x = 4, y = -1/3 also does not satisfy the given system of equations. The correct solution using Cramer's rule is x = 2 and y = 1."
+    },
+    {
+      "question_id": "T01.02.Q022",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "If the system of equations x + 2y + 3z = 6, 2x + 4y + 6z = 12, 3x + 6y + 9z = 18 is solved using the matrix method, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A unique solution exists"
+        },
+        {
+          "id": "B",
+          "text": "No solution exists"
+        },
+        {
+          "id": "C",
+          "text": "Infinitely many solutions exist"
+        },
+        {
+          "id": "D",
+          "text": "Exactly two solutions exist"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The system of equations given has a coefficient matrix with determinant equal to 0. This means that the system has infinitely many solutions, as the matrix method for solving linear systems requires the inverse of the coefficient matrix, which does not exist when the determinant is 0.",
+      "explanation_incorrect": "The given system of linear equations has a coefficient matrix with determinant equal to 0. This means that the matrix does not have an inverse, and the matrix method for solving the system cannot be applied. Therefore, the system has infinitely many solutions, not a unique solution, no solution, or exactly two solutions."
+    },
+    {
+      "question_id": "T01.02.Q023",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[3, 1], [1, 3]], then A can be expressed as the sum of a symmetric and a skew-symmetric matrix. The symmetric part is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[3, 1], [1, 3]]"
+        },
+        {
+          "id": "B",
+          "text": "[[3, 0], [0, 3]]"
+        },
+        {
+          "id": "C",
+          "text": "[[0, 1], [−1, 0]]"
+        },
+        {
+          "id": "D",
+          "text": "[[6, 2], [2, 6]]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The given matrix A = [[3, 1], [1, 3]] is a symmetric matrix, as it is equal to its transpose. Therefore, the symmetric part of A is simply A itself, which is the correct answer choice A.",
+      "explanation_incorrect": "The symmetric part of a matrix is obtained by taking the average of the matrix and its transpose. For the given matrix A = [[3, 1], [1, 3]], the symmetric part would be the matrix with elements as the average of the corresponding elements in A and its transpose, which is [[3, 1], [1, 3]]. This is the correct answer choice A."
+    },
+    {
+      "question_id": "T01.02.Q024",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[0, 1], [−1, 0]], then Aⁿ where n is a positive even integer equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "I if n/2 is even, −I if n/2 is odd"
+        },
+        {
+          "id": "C",
+          "text": "I always"
+        },
+        {
+          "id": "D",
+          "text": "−A"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B. When A is a 2x2 matrix where a^2 + b^2 = 1 (like in this case), then A^n = I if n/2 is even, and -I if n/2 is odd. This is because A^2 = I, so raising A to any positive even power will always result in I.",
+      "explanation_incorrect": "The incorrect options are not correct. Option A is wrong because raising the matrix A to any power does not equal A itself. Option C is wrong because A^n does not always equal I, it depends on whether n/2 is even or odd. Option D is wrong because A^n does not equal -A, it depends on the parity of n/2 as mentioned in the correct explanation."
+    },
+    {
+      "question_id": "T01.02.Q025",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If interchanging two rows of a determinant changes its sign, then interchanging two rows twice gives a determinant that is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero"
+        },
+        {
+          "id": "B",
+          "text": "The negative of the original"
+        },
+        {
+          "id": "C",
+          "text": "Equal to the original"
+        },
+        {
+          "id": "D",
+          "text": "Twice the original"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Interchanging two rows of a determinant changes its sign. If you interchange the rows twice, the net effect is to return the determinant to its original value, since the two sign changes cancel each other out.",
+      "explanation_incorrect": "The correct answer is C) Equal to the original. Interchanging two rows of a determinant changes its sign, but interchanging them twice undoes this change and returns the determinant to its original value. It does not result in a determinant that is zero, negative, or twice the original."
+    },
+    {
+      "question_id": "T01.02.Q026",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [3, 7]], then A⁻¹ equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[7, −2], [−3, 1]]"
+        },
+        {
+          "id": "B",
+          "text": "[[7, 2], [3, 1]]"
+        },
+        {
+          "id": "C",
+          "text": "[[1, −2], [−3, 7]]"
+        },
+        {
+          "id": "D",
+          "text": "[[-7, 2], [3, -1]]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. To find the inverse of a 2x2 matrix A = [[a, b], [c, d]], we use the formula A^-1 = (1/|A|) * [[d, -b], [-c, a]]. Applying this to the given matrix A = [[1, 2], [3, 7]], we get the inverse as [[7, -2], [-3, 1]].",
+      "explanation_incorrect": "The incorrect options B, C, and D are not the inverse of the given matrix A = [[1, 2], [3, 7]]. To find the inverse, we need to use the formula A^-1 = (1/|A|) * [[d, -b], [-c, a]], where |A| is the determinant of A. Calculating the determinant of A gives |A| = 7 - 6 = 1, and then applying the formula gives the inverse as [[7, -2], [-3, 1]]."
+    },
+    {
+      "question_id": "T01.02.Q027",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The cofactor of element a₂₃ in a 3×3 matrix A is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The minor of a₂₃"
+        },
+        {
+          "id": "B",
+          "text": "(−1)²⁺³ times the minor of a₂₃"
+        },
+        {
+          "id": "C",
+          "text": "(−1)³ times the minor of a₂₃"
+        },
+        {
+          "id": "D",
+          "text": "The determinant of A"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) (−1)²⁺³ times the minor of a₂₃. The cofactor of an element in a 3×3 matrix is defined as (−1)i+j times the minor of that element, where i and j are the row and column indices, respectively. In this case, the row index i = 2 and the column index j = 3, so the cofactor is (−1)²⁺³ times the minor of a₂₃.",
+      "explanation_incorrect": "Option A) The minor of a₂₃ is incorrect because the cofactor is not the same as the minor. Option C) (−1)³ times the minor of a₂₃ is also incorrect because the correct formula for the cofactor is (−1)i+j times the minor, not just (−1)³. Option D) The determinant of A is incorrect because the cofactor is a different concept from the determinant of the matrix."
+    },
+    {
+      "question_id": "T01.02.Q028",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A is a 3×3 skew-symmetric matrix, then |A| equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "−1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined without more information"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A 3x3 skew-symmetric matrix has all the elements on the main diagonal equal to 0. This means that the determinant of a 3x3 skew-symmetric matrix will always be 0, since the determinant of a matrix depends on its diagonal elements.",
+      "explanation_incorrect": "A common misconception is that the determinant of a skew-symmetric matrix is either 1 or -1. However, this is only true for 2x2 matrices. For a 3x3 skew-symmetric matrix, the determinant is always 0 because the diagonal elements are all 0. This is a fundamental property of skew-symmetric matrices."
+    },
+    {
+      "question_id": "T01.02.Q029",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If A and B are square matrices of the same order, then (A + B)(A − B) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A² − B²"
+        },
+        {
+          "id": "B",
+          "text": "A² − AB + BA − B²"
+        },
+        {
+          "id": "C",
+          "text": "A² − AB − BA + B²"
+        },
+        {
+          "id": "D",
+          "text": "A² + AB − BA − B²"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is option D, A² + AB - BA - B². This can be derived by expanding the expression (A + B)(A - B) using the rules of matrix multiplication. The result is A² + AB - BA - B².",
+      "explanation_incorrect": "The incorrect options do not correctly represent the result of (A + B)(A - B). Option A, A² - B², does not account for the cross terms AB and BA. Option B, A² - AB + BA - B², has the wrong sign for the cross terms. Option C, A² - AB - BA + B², also has the wrong sign for the cross terms."
+    },
+    {
+      "question_id": "T01.02.Q030",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "For the system of equations x − y + z = 4, 2x + y − 3z = 0, x + y + z = 2, the value of x using Cramer's rule is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2. Using Cramer's rule, the value of x is calculated by finding the determinant of the coefficient matrix and dividing it by the determinant of the augmented matrix. The determinant of the coefficient matrix is non-zero, so the system of equations has a unique solution, and Cramer's rule can be applied.",
+      "explanation_incorrect": "The correct value of x using Cramer's rule is 2. To solve this system of equations, you need to form the coefficient matrix and the augmented matrix, then calculate their determinants. The determinant of the coefficient matrix is non-zero, so the system has a unique solution, and Cramer's rule can be used to find the values of x, y, and z. The value of x is obtained by dividing the determinant of the augmented matrix by the determinant of the coefficient matrix."
+    },
+    {
+      "question_id": "T01.02.Q031",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A and B are square matrices of order 3 such that |A| = 2 and |B| = 3, then |AB| equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 6. This is because the determinant of the product of two square matrices is equal to the product of their determinants. Since |A| = 2 and |B| = 3, the determinant of AB will be |AB| = |A| * |B| = 2 * 3 = 6.",
+      "explanation_incorrect": "The incorrect options are not correct because the determinant of a matrix product is not simply the sum or difference of the individual determinants. The correct formula is |AB| = |A| * |B|, where |A| and |B| are the determinants of the individual matrices. So, the value of |AB| is 6, not 5, 8, or 1."
+    },
+    {
+      "question_id": "T01.02.Q032",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[2, −1], [3, 4]] and A² − 6A + kI = O, then k equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "−11"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 11. This is because if A² - 6A + kI = O, then k must be the constant term in the expansion of the determinant of (A² - 6A + kI), which is |A² - 6A + kI| = |A|² - 6|A| + k = 0. Substituting the given matrix A, we get |A|² - 6|A| + k = 0, which simplifies to 25 - 24 + k = 0, and therefore k = 11.",
+      "explanation_incorrect": "The other options are incorrect because they do not satisfy the given equation A² - 6A + kI = O. Option B) -11 would make the expression negative, option C) 5 does not cancel out the terms, and option D) 8 is also not the correct value of k. The key step is to find the determinant of the given matrix expression and set it equal to 0 to solve for k."
+    },
+    {
+      "question_id": "T01.02.Q033",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "If (A⁻¹)⁻¹ = A, and |A| = 3, then |A⁻¹| equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "−3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If (A⁻¹)⁻¹ = A, then A is the inverse of A⁻¹. Since |A| = 3, the determinant of A⁻¹ must be 1/3 according to the formula |A⁻¹| = 1/|A|.",
+      "explanation_incorrect": "Option A is incorrect because the determinant of A⁻¹ is not equal to the determinant of A. Option C is incorrect because the determinant of the inverse of a matrix is the reciprocal of the determinant of the original matrix. Option D is incorrect because the determinant of A⁻¹ cannot be negative."
+    },
+    {
+      "question_id": "T01.02.Q034",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[2, 3], [4, 5]], then ½(A + Aᵀ) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[[2, 3.5], [3.5, 5]]"
+        },
+        {
+          "id": "B",
+          "text": "[[2, 4], [3, 5]]"
+        },
+        {
+          "id": "C",
+          "text": "[[4, 7], [7, 10]]"
+        },
+        {
+          "id": "D",
+          "text": "[[0, −0.5], [0.5, 0]]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) [[2, 3.5], [3.5, 5]]. This is because the given matrix A = [[2, 3], [4, 5]] is a 2x2 matrix, and ½(A + A⁻¹) is the average of the matrix and its transpose.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the average of the matrix and its transpose. Option B) [[2, 4], [3, 5]] is just the original matrix A, option C) [[4, 7], [7, 10]] is the sum of A and its transpose, and option D) [[0, -0.5], [0.5, 0]] is not the correct expression for ½(A + A⁻¹)."
+    },
+    {
+      "question_id": "T01.02.Q035",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The determinant of [[a+b, a, a], [a, a+b, a], [a, a, a+b]] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "b²(3a + b)"
+        },
+        {
+          "id": "B",
+          "text": "b³ + 3ab²"
+        },
+        {
+          "id": "C",
+          "text": "a²(a + 3b)"
+        },
+        {
+          "id": "D",
+          "text": "3a²b + b³"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The given matrix is a 3x3 square matrix with all elements in the main diagonal being (a+b) and the rest being a. The determinant of such a matrix can be calculated using the formula (a+b)^3 - 3a^2(a+b), which simplifies to b^2(3a+b).",
+      "explanation_incorrect": "The incorrect options do not correctly represent the determinant of the given matrix. Option B assumes the determinant is a cubic expression in b, which is not the case. Options C and D also have incorrect expressions that do not match the actual determinant formula. The correct determinant is b^2(3a+b), as per the formula for a 3x3 matrix with the given structure."
+    },
+    {
+      "question_id": "T01.02.Q036",
+      "type": "true_false",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "Matrix multiplication is commutative, i.e., AB = BA for all matrices A and B of compatible orders.",
+      "correct_answer": false,
+      "explanation_correct": "Matrix multiplication is not commutative, meaning AB ≠ BA in general. The order of the matrices matters, as the number of columns in the first matrix must match the number of rows in the second matrix for the multiplication to be defined.",
+      "explanation_incorrect": "Many students mistakenly think that matrix multiplication is commutative, like regular number multiplication. However, this is not the case. Matrix multiplication follows a specific set of rules, and the order of the matrices is crucial. If the dimensions of the matrices do not match, the multiplication cannot even be performed."
+    },
+    {
+      "question_id": "T01.02.Q037",
+      "type": "true_false",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "If any row or column of a determinant consists entirely of zeros, then the value of the determinant is zero.",
+      "correct_answer": true,
+      "explanation_correct": "If any row or column of a determinant consists entirely of zeros, then the value of the determinant is automatically zero. This is because the determinant is calculated by multiplying elements along diagonals, and a row or column with all zeros means that at least one of those diagonal products will be zero, making the entire determinant zero.",
+      "explanation_incorrect": "The statement is incorrect because even if one row or column of a determinant has all zeros, the determinant can still have a non-zero value. This is because the determinant is calculated using all the elements in the matrix, not just one row or column. As long as the other rows and columns have non-zero elements, the determinant can still have a non-zero value."
+    },
+    {
+      "question_id": "T01.02.Q038",
+      "type": "true_false",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "A square matrix A is invertible if and only if |A| ≠ 0.",
+      "correct_answer": true,
+      "explanation_correct": "A square matrix A is invertible if and only if its determinant |A| is non-zero. This is because the inverse matrix A⁻¹ exists only when |A| ≠ 0, as the formula for the inverse is A⁻¹ = adj(A)/|A|.",
+      "explanation_incorrect": "The statement is true. A square matrix A is invertible if and only if its determinant |A| is non-zero. If |A| = 0, then the matrix is not invertible and does not have an inverse. This is because the formula for the inverse matrix A⁻¹ is given by A⁻¹ = adj(A)/|A|, and when |A| = 0, the division is not defined, and the inverse does not exist."
+    },
+    {
+      "question_id": "T01.02.Q039",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The determinant of a 3×3 skew-symmetric matrix is always zero.",
+      "correct_answer": true,
+      "explanation_correct": "The determinant of a 3x3 skew-symmetric matrix is always zero because the rows (or columns) of a skew-symmetric matrix are linearly dependent, meaning they can be expressed as a linear combination of the other rows (or columns).",
+      "explanation_incorrect": "The determinant of a 3x3 matrix represents the volume of the parallelepiped formed by the column vectors (or row vectors) of the matrix. For a skew-symmetric matrix, the columns (or rows) are orthogonal to each other, so the volume of the parallelepiped is zero, and the determinant is also zero."
+    },
+    {
+      "question_id": "T01.02.Q040",
+      "type": "true_false",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If |A| = k and A is an n×n matrix, then |cA| = cⁿ|A| for any scalar c.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because the determinant of a matrix is a scalar value, and when you multiply a matrix by a scalar c, each element of the matrix is multiplied by c. The properties of determinants show that |cA| = cⁿ|A|, where n is the dimension of the square matrix A.",
+      "explanation_incorrect": "The statement is not correct. The formula for the determinant of a scalar multiple of a matrix is |cA| = cⁿ|A|, where n is the dimension of the square matrix A. This means that if |A| = k, then |cA| = cⁿk, not cⁿ|A|. The key difference is that the determinant of A is a scalar value (k), while the determinant of cA depends on the scalar c as well as the dimension n of the matrix."
+    },
+    {
+      "question_id": "T01.02.Q041",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The determinant of the 2×2 matrix [[4, 3], [2, 1]] is ___.",
+      "correct_answer": "-2",
+      "explanation_correct": "The determinant of a 2x2 matrix [[a, b], [c, d]] is calculated as ad - bc. Plugging in the values from the given matrix [[4, 3], [2, 1]], the determinant is 4*1 - 3*2 = 4 - 6 = -2.",
+      "explanation_incorrect": "The incorrect answer would be 5. This is because the determinant formula for a 2x2 matrix [[a, b], [c, d]] is ad - bc. Plugging in the values from the given matrix [[4, 3], [2, 1]], the correct determinant is 4*1 - 3*2 = 4 - 6 = -2, not 5."
+    },
+    {
+      "question_id": "T01.02.Q042",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "A matrix in which all the off-diagonal elements are zero is called a ___ matrix.",
+      "correct_answer": "diagonal",
+      "explanation_correct": "A diagonal matrix is a square matrix in which all the off-diagonal elements (elements not on the main diagonal) are zero. This means that the only non-zero elements are on the main diagonal, running from the top-left to the bottom-right corner.",
+      "explanation_incorrect": "The accepted answer format is 'diagonal'. A diagonal matrix is a square matrix where all the elements outside the main diagonal (running from the top-left to the bottom-right corner) are zero. This means the only non-zero elements are on the main diagonal itself. This is in contrast to a general matrix where the elements can be non-zero anywhere in the matrix."
+    },
+    {
+      "question_id": "T01.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The inverse of the matrix A is given by A⁻¹ = (1/|A|) × ___.",
+      "correct_answer": "adj(A)",
+      "explanation_correct": "The inverse of a matrix A is given by the formula A⁻¹ = (1/|A|) × adj(A), where |A| is the determinant of A and adj(A) is the adjoint (or cofactor matrix) of A. This formula holds true whenever the determinant of A is non-zero, meaning the matrix is invertible.",
+      "explanation_incorrect": "The incorrect answer would be to leave the blank empty, or to write something other than 'adj(A)'. The reason this is incorrect is that the inverse of a matrix A is specifically defined as A⁻¹ = (1/|A|) × adj(A), where 'adj(A)' refers to the adjoint (or cofactor matrix) of A. This formula is a key result in matrix theory and must be used to correctly find the inverse of a matrix."
+    },
+    {
+      "question_id": "T01.02.Q044",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If A is a 2×3 matrix and B is a 3×2 matrix, then the order of AB is ___.",
+      "correct_answer": "2×2",
+      "explanation_correct": "The order of the product of two matrices is determined by the number of columns in the first matrix (A) and the number of rows in the second matrix (B). Since A is a 2x3 matrix and B is a 3x2 matrix, the order of AB is 2x2 as the number of columns in A (3) matches the number of rows in B (3).",
+      "explanation_incorrect": "The incorrect answer would be 3x3, as the order of a matrix product is determined by the number of columns in the first matrix (A) and the number of rows in the second matrix (B). Since A is a 2x3 matrix and B is a 3x2 matrix, the order of AB is 2x2, not 3x3."
+    },
+    {
+      "question_id": "T01.02.Q045",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If |A| = 5 for a 3×3 matrix A, then |adj(A)| = ___.",
+      "correct_answer": "25",
+      "explanation_correct": "If |A| = 5 for a 3×3 matrix A, then |adj(A)| = 25. This is because the determinant of the adjoint of a matrix is equal to the square of the determinant of the original matrix, as per the property of determinants.",
+      "explanation_incorrect": "The accepted answer format is a single number, 25. However, the incorrect reasoning would be that since |A| = 5, then |adj(A)| = 5. This is not correct because the property states that |adj(A)| = |A|^2, so |adj(A)| = 5^2 = 25."
+    },
+    {
+      "question_id": "T01.02.Q046",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "In Cramer's rule for the system ax + by = e, cx + dy = f, the value of x is given by x = Dₓ/D where Dₓ = |[[e, b], [f, d]]| and D = ___.",
+      "correct_answer": "|[[a, b], [c, d]]|",
+      "explanation_correct": "The value of x in the system of linear equations ax + by = e, cx + dy = f is given by x = Dₓ/D, where Dₓ = |[[e, b], [f, d]]| and D = |[[a, b], [c, d]]|. This is because Cramer's rule involves finding the determinants of the coefficient matrix and the matrix formed by replacing the coefficients of x with the constants on the right-hand side.",
+      "explanation_incorrect": "The value of x is not given by x = Dₓ/D where Dₓ = |[[e, b], [f, d]]| and D = |[[a, b], [c, d]]|. This is because the correct formula for Dₓ is the determinant of the matrix formed by replacing the coefficients of x with the constants on the right-hand side, which is |[[e, b], [f, d]]|. The correct value of D is the determinant of the coefficient matrix |[[a, b], [c, d]]|."
+    },
+    {
+      "question_id": "T01.02.Q047",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If A = [[2, 0], [0, 3]], then A³ = [[___, 0], [0, 27]].",
+      "correct_answer": "8",
+      "explanation_correct": "The given matrix A is a diagonal matrix with elements 2 and 3 on the diagonal. To find A³, we can simply cube each diagonal element, so the result is [[2³, 0], [0, 3³]], which simplifies to [[8, 0], [0, 27]].",
+      "explanation_incorrect": "The incorrect answer would be to think that A³ = A, since a diagonal matrix raised to a power simply means cubing each diagonal element. However, this is not the case here. The correct answer is [[8, 0], [0, 27]], which is obtained by cubing the diagonal elements 2 and 3 separately."
+    },
+    {
+      "question_id": "T01.02.Q048",
+      "type": "ordering",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to solve the system AX = B using the matrix method:",
+      "ordering_items": [
+        "Write the system in matrix form AX = B",
+        "Find |A| and verify |A| ≠ 0",
+        "Compute adj(A) and find A⁻¹ = adj(A)/|A|",
+        "Compute X = A⁻¹B to get the solution"
+      ],
+      "correct_answer": [
+        "Write the system in matrix form AX = B",
+        "Find |A| and verify |A| ≠ 0",
+        "Compute adj(A) and find A⁻¹ = adj(A)/|A|",
+        "Compute X = A⁻¹B to get the solution"
+      ],
+      "explanation_correct": "The steps are arranged correctly because to solve the system AX = B using the matrix method, you first need to write the system in matrix form, then find the determinant |A| and verify it is non-zero, then compute the adjoint of A to find the inverse A^-1, and finally use A^-1B to get the solution X.",
+      "explanation_incorrect": "The steps are not arranged correctly. You cannot compute X = A^-1B to get the solution unless you first find the inverse A^-1. To do that, you need to compute the adjoint of A and divide it by the determinant |A|, but you can only do that after verifying that |A| is non-zero. So the correct order of steps is: write the system in matrix form AX = B, find |A| and verify |A| ≠ 0, compute adj(A) and find A^-1 = adj(A)/|A|, and then compute X = A^-1B to get the solution."
+    },
+    {
+      "question_id": "T01.02.Q049",
+      "type": "ordering",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to evaluate a 3×3 determinant by expansion along the first row:",
+      "ordering_items": [
+        "Identify elements a₁₁, a₁₂, a₁₃ of the first row",
+        "Find the cofactors A₁₁, A₁₂, A₁₃ using 2×2 minors and signs",
+        "Compute a₁₁·A₁₁ + a₁₂·A₁₂ + a₁₃·A₁₃",
+        "Simplify to obtain the value of the determinant"
+      ],
+      "correct_answer": [
+        "Identify elements a₁₁, a₁₂, a₁₃ of the first row",
+        "Find the cofactors A₁₁, A₁₂, A₁₃ using 2×2 minors and signs",
+        "Compute a₁₁·A₁₁ + a₁₂·A₁₂ + a₁₃·A₁₃",
+        "Simplify to obtain the value of the determinant"
+      ],
+      "explanation_correct": "The given steps are in the correct order to evaluate a 3x3 determinant by expansion along the first row. First, we identify the elements of the first row, then find the corresponding cofactors using 2x2 minors and signs. Finally, we compute the sum of the products of the first row elements and their cofactors to obtain the value of the determinant.",
+      "explanation_incorrect": "The incorrect order would be to first compute the cofactors without identifying the first row elements, and then try to find the determinant without the necessary information. It is important to follow the step-by-step process of identifying the first row, finding the cofactors, and then computing the final determinant value."
+    },
+    {
+      "question_id": "T01.02.Q050",
+      "type": "ordering",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to express a square matrix A as the sum of a symmetric and a skew-symmetric matrix:",
+      "ordering_items": [
+        "Compute the transpose Aᵀ",
+        "Find the symmetric part P = ½(A + Aᵀ)",
+        "Find the skew-symmetric part Q = ½(A − Aᵀ)",
+        "Verify A = P + Q"
+      ],
+      "correct_answer": [
+        "Compute the transpose Aᵀ",
+        "Find the symmetric part P = ½(A + Aᵀ)",
+        "Find the skew-symmetric part Q = ½(A − Aᵀ)",
+        "Verify A = P + Q"
+      ],
+      "explanation_correct": "The steps are arranged correctly because to express a square matrix A as the sum of a symmetric and a skew-symmetric matrix, we first need to find the transpose of A, then use that to calculate the symmetric part P and the skew-symmetric part Q, and finally verify that A = P + Q.",
+      "explanation_incorrect": "The steps are not arranged correctly. First, we need to compute the transpose Aᵀ of the square matrix A. Then, we find the symmetric part P as ½(A + Aᵀ) and the skew-symmetric part Q as ½(A - Aᵀ). Finally, we verify that A = P + Q."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 14,
+        "application": 21,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

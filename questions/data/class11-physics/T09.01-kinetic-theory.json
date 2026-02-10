@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T09.01",
+  "topic_name": "Kinetic Theory",
+  "canonical_explanation": {
+    "text": "The kinetic theory of gases models a gas as a large number of identical molecules in random motion, interacting through perfectly elastic collisions. The ideal gas equation PV = nRT (where n is the number of moles, R = 8.314 J/mol·K) unifies Boyle's law (PV = constant at constant T), Charles's law (V/T = constant at constant P) and Gay-Lussac's law (P/T = constant at constant V). From kinetic theory, the pressure exerted by an ideal gas is P = (1/3)ρv²_rms, where v_rms = √(3RT/M) is the root-mean-square speed and M is the molar mass. The kinetic energy per molecule is (3/2)kT, where k = R/Nₐ = 1.38 × 10⁻²³ J/K is Boltzmann's constant, establishing a direct proportionality between molecular kinetic energy and absolute temperature. The law of equipartition of energy assigns (1/2)kT of energy to each degree of freedom: monoatomic gases have 3 translational degrees of freedom, diatomic gases at moderate temperatures have 5 (3 translational + 2 rotational), giving γ = 5/3 and 7/5 respectively. The three molecular speeds — RMS speed (v_rms = √(3RT/M)), mean speed (v_mean = √(8RT/πM)) and most probable speed (v_mp = √(2RT/M)) — are in the ratio v_mp : v_mean : v_rms = 1 : 1.128 : 1.225. The mean free path is the average distance a molecule travels between successive collisions.",
+    "rules": [
+      "Ideal gas equation: PV = nRT; for N molecules, PV = NkT where k = R/Nₐ.",
+      "Pressure from kinetic theory: P = (1/3)ρv²_rms = (1/3)(Nm/V)v²_rms.",
+      "Average kinetic energy per molecule: KE = (3/2)kT; per mole: KE = (3/2)RT.",
+      "Equipartition of energy: each degree of freedom contributes (1/2)kT per molecule; Cᵥ = (f/2)R where f is the number of degrees of freedom.",
+      "Molecular speeds: v_rms = √(3RT/M), v_mean = √(8RT/πM), v_mp = √(2RT/M); ratio v_mp : v_mean : v_rms = 1 : 1.128 : 1.225."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T09.01.Q001",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The ideal gas equation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "PV = nR"
+        },
+        {
+          "id": "B",
+          "text": "PV = nRT"
+        },
+        {
+          "id": "C",
+          "text": "PV = RT"
+        },
+        {
+          "id": "D",
+          "text": "P = nRT/V²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ideal gas equation is PV = nRT, where P is the pressure, V is the volume, n is the number of moles, R is the universal gas constant, and T is the absolute temperature. This equation combines Boyle's law, Charles's law, and Gay-Lussac's law, and is derived from the kinetic theory of gases.",
+      "explanation_incorrect": "Option B, PV = nRT, is the correct ideal gas equation. Option A, PV = nR, is missing the temperature term T, which is an essential part of the equation. Option C, PV = RT, is also missing the number of moles n, which determines the amount of gas present. Option D, P = nRT/V², does not have the correct form of the ideal gas equation."
+    },
+    {
+      "question_id": "T09.01.Q002",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Boyle's law, at constant temperature:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P ∝ V"
+        },
+        {
+          "id": "B",
+          "text": "PV = constant"
+        },
+        {
+          "id": "C",
+          "text": "P/V = constant"
+        },
+        {
+          "id": "D",
+          "text": "V/T = constant"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to Boyle's law, at constant temperature, the pressure (P) and volume (V) of a gas are inversely proportional, meaning their product is constant. This is represented as PV = constant, which is the correct option B.",
+      "explanation_incorrect": "Option A, P ∝ V, is incorrect because it states that pressure and volume are directly proportional, which is not Boyle's law. Option C, P/V = constant, is also incorrect because it represents Charles's law, not Boyle's law. Option D, V/T = constant, is the equation for Charles's law, which describes the relationship between volume and temperature at constant pressure, and is not the correct statement for Boyle's law."
+    },
+    {
+      "question_id": "T09.01.Q003",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Charles's law states that at constant pressure:",
+      "options": [
+        {
+          "id": "A",
+          "text": "V ∝ T (absolute temperature)"
+        },
+        {
+          "id": "B",
+          "text": "V ∝ 1/T"
+        },
+        {
+          "id": "C",
+          "text": "V ∝ P"
+        },
+        {
+          "id": "D",
+          "text": "P ∝ T"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "According to Charles's law, the volume of a gas is directly proportional to its absolute temperature when the pressure is kept constant. This means that as the temperature increases, the volume of the gas also increases proportionally, and vice versa.",
+      "explanation_incorrect": "Option A, 'V ∝ T (absolute temperature)', is the correct answer. This is because Charles's law states that the volume of a gas is directly proportional to its absolute temperature when the pressure is kept constant. The other options, B, C, and D, do not correctly describe Charles's law."
+    },
+    {
+      "question_id": "T09.01.Q004",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "2 moles of an ideal gas at 300 K occupy a volume of 0.05 m³. The pressure of the gas is (R = 8.314 J/mol·K):",
+      "options": [
+        {
+          "id": "A",
+          "text": "49884 Pa ≈ 5 × 10⁴ Pa"
+        },
+        {
+          "id": "B",
+          "text": "99768 Pa ≈ 10⁵ Pa"
+        },
+        {
+          "id": "C",
+          "text": "2 × 10⁵ Pa"
+        },
+        {
+          "id": "D",
+          "text": "5 × 10³ Pa"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 99768 Pa ≈ 10⁵ Pa. This can be calculated using the ideal gas equation PV = nRT, where P is the pressure, V is the volume, n is the number of moles, R is the universal gas constant, and T is the absolute temperature. Plugging in the given values, we get P = (2 mol)(8.314 J/mol·K)(300 K) / (0.05 m³) = 99,768 Pa.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculated value of the pressure. Option A) 49,884 Pa ≈ 5 × 10⁴ Pa is too low, and options C) 2 × 10⁵ Pa and D) 5 × 10³ Pa are also incorrect. The correct answer of 99,768 Pa ≈ 10⁵ Pa is the only one that matches the calculated value using the ideal gas equation."
+    },
+    {
+      "question_id": "T09.01.Q005",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "A gas at 27°C has its volume doubled at constant pressure. The final temperature is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "54°C"
+        },
+        {
+          "id": "B",
+          "text": "327°C"
+        },
+        {
+          "id": "C",
+          "text": "600°C"
+        },
+        {
+          "id": "D",
+          "text": "150°C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 327°C. According to Charles's law, the volume of a gas is directly proportional to its absolute temperature (V/T = constant). Since the volume is doubled and the pressure is constant, the final temperature must be four times the initial temperature of 27°C, which is 327°C.",
+      "explanation_incorrect": "The other options are incorrect because they do not account for the relationship between volume, pressure, and temperature as described by Charles's law. Option A) 54°C is only twice the initial temperature, Option C) 600°C is too high, and Option D) 150°C is not the correct final temperature when the volume is doubled at constant pressure."
+    },
+    {
+      "question_id": "T09.01.Q006",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The pressure of an ideal gas from kinetic theory is given by P = (1/3)ρv²_rms, where v_rms is the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean speed"
+        },
+        {
+          "id": "B",
+          "text": "Most probable speed"
+        },
+        {
+          "id": "C",
+          "text": "Root mean square speed"
+        },
+        {
+          "id": "D",
+          "text": "Average velocity"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C, the root mean square speed (v_rms). This is because the kinetic theory formula for the pressure of an ideal gas is P = (1/3)ρv²_rms, where v_rms is the root mean square speed of the gas molecules.",
+      "explanation_incorrect": "The pressure of an ideal gas from kinetic theory is not given by the mean speed (A), the most probable speed (B), or the average velocity (D). The formula is P = (1/3)ρv²_rms, where v_rms is the root mean square speed of the gas molecules, which is the correct answer."
+    },
+    {
+      "question_id": "T09.01.Q007",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The RMS speed of oxygen molecules (M = 32 × 10⁻³ kg/mol) at 300 K is (R = 8.314 J/mol·K):",
+      "options": [
+        {
+          "id": "A",
+          "text": "≈ 484 m/s"
+        },
+        {
+          "id": "B",
+          "text": "≈ 250 m/s"
+        },
+        {
+          "id": "C",
+          "text": "≈ 700 m/s"
+        },
+        {
+          "id": "D",
+          "text": "≈ 100 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) ≈ 484 m/s. This can be calculated using the formula for root-mean-square (RMS) speed, v_rms = √(3RT/M), where R is the gas constant, T is the absolute temperature, and M is the molar mass of the gas. Plugging in the values for oxygen (M = 32 g/mol, T = 300 K), we get v_rms ≈ 484 m/s.",
+      "explanation_incorrect": "The other options are incorrect because they do not match the calculated RMS speed for oxygen at 300 K. Option B) ≈ 250 m/s is too low, option C) ≈ 700 m/s is too high, and option D) ≈ 100 m/s is significantly lower than the actual RMS speed."
+    },
+    {
+      "question_id": "T09.01.Q008",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "If the temperature of an ideal gas is increased from 300 K to 1200 K, the RMS speed of its molecules:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Doubles"
+        },
+        {
+          "id": "B",
+          "text": "Quadruples"
+        },
+        {
+          "id": "C",
+          "text": "Increases by √2 times"
+        },
+        {
+          "id": "D",
+          "text": "Remains the same"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The root-mean-square (RMS) speed of the molecules in an ideal gas is given by the formula v_rms = √(3RT/M), where R is the universal gas constant, T is the absolute temperature, and M is the molar mass of the gas. Since the temperature increases from 300 K to 1200 K, which is a 4-fold increase, the RMS speed of the molecules will double according to the formula.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately reflect the relationship between temperature and RMS speed in an ideal gas. The RMS speed is directly proportional to the square root of the absolute temperature, so if the temperature increases by a factor of 4, the RMS speed will increase by a factor of 2, not 4 or √2."
+    },
+    {
+      "question_id": "T09.01.Q009",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The RMS speed of hydrogen molecules (M = 2 × 10⁻³ kg/mol) at 300 K compared to that of oxygen (M = 32 × 10⁻³ kg/mol) at the same temperature is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 times"
+        },
+        {
+          "id": "B",
+          "text": "16 times"
+        },
+        {
+          "id": "C",
+          "text": "1/4 times"
+        },
+        {
+          "id": "D",
+          "text": "Same"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The RMS speed of hydrogen molecules is 4 times that of oxygen molecules at the same temperature because the RMS speed is inversely proportional to the square root of the molar mass. Since hydrogen has a much lower molar mass than oxygen, its RMS speed is higher.",
+      "explanation_incorrect": "The RMS speed of hydrogen is not 16 times that of oxygen, as it is only inversely proportional to the square root of the molar mass, not the molar mass itself. Similarly, it is not 1/4 times that of oxygen, as the RMS speed is higher for the lighter hydrogen molecule. The correct answer is that the RMS speed of hydrogen is 4 times that of oxygen at the same temperature."
+    },
+    {
+      "question_id": "T09.01.Q010",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The average kinetic energy of a molecule of an ideal gas at absolute temperature T is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1/2)kT"
+        },
+        {
+          "id": "B",
+          "text": "(3/2)kT"
+        },
+        {
+          "id": "C",
+          "text": "kT"
+        },
+        {
+          "id": "D",
+          "text": "3kT"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The kinetic energy per molecule of an ideal gas is (3/2)kT, where k is Boltzmann's constant. This is because each degree of freedom (e.g. translation along x, y, z axes) contributes (1/2)kT to the total kinetic energy, and for a monoatomic gas there are 3 translational degrees of freedom.",
+      "explanation_incorrect": "The average kinetic energy of a molecule is not (1/2)kT, (kT), or 3kT. These expressions do not correctly represent the relationship between kinetic energy and absolute temperature established by the kinetic theory of gases. The correct expression is (3/2)kT, which accounts for the 3 translational degrees of freedom of a monoatomic gas molecule."
+    },
+    {
+      "question_id": "T09.01.Q011",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The number of degrees of freedom for a monoatomic ideal gas molecule is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of degrees of freedom for a monoatomic ideal gas molecule is 3, as it can move in three independent directions (x, y, z) with no internal degrees of freedom.",
+      "explanation_incorrect": "Monoatomic gases like helium and argon have only 3 translational degrees of freedom, not 2, 5, or 7. This is because a monoatomic molecule has no internal structures like rotational or vibrational modes, so it can only move in the three spatial dimensions."
+    },
+    {
+      "question_id": "T09.01.Q012",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "A diatomic gas at moderate temperatures has degrees of freedom f = 5. Its Cᵥ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(3/2)R"
+        },
+        {
+          "id": "B",
+          "text": "(5/2)R"
+        },
+        {
+          "id": "C",
+          "text": "(7/2)R"
+        },
+        {
+          "id": "D",
+          "text": "R"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A diatomic gas at moderate temperatures has 5 degrees of freedom (3 translational + 2 rotational), according to the law of equipartition of energy. Therefore, its molar heat capacity at constant volume (C_v) is (5/2)R, which is the correct answer.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for the 5 degrees of freedom of a diatomic gas at moderate temperatures. Option A, (3/2)R, represents the molar heat capacity of a monoatomic gas, which has 3 degrees of freedom. Options C and D are also incorrect as they do not match the 5 degrees of freedom of a diatomic gas at moderate temperatures."
+    },
+    {
+      "question_id": "T09.01.Q013",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "The ratio γ = Cₚ/Cᵥ for a diatomic gas at moderate temperatures (f = 5) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/3"
+        },
+        {
+          "id": "B",
+          "text": "7/5"
+        },
+        {
+          "id": "C",
+          "text": "4/3"
+        },
+        {
+          "id": "D",
+          "text": "9/7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ratio γ = Cₚ/Cᵥ for a diatomic gas at moderate temperatures is 7/5, because diatomic gases have 5 degrees of freedom (3 translational + 2 rotational) at these temperatures, according to the law of equipartition of energy.",
+      "explanation_incorrect": "The correct answer is B) 7/5. For a diatomic gas at moderate temperatures, the gas has 5 degrees of freedom (3 translational + 2 rotational), so the ratio γ = Cₚ/Cᵥ is 7/5. Options A) 5/3 and C) 4/3 are incorrect because they correspond to monoatomic gases and polyatomic gases, respectively, not diatomic gases at moderate temperatures. Option D) 9/7 is incorrect because it does not match the expected ratio for a diatomic gas."
+    },
+    {
+      "question_id": "T09.01.Q014",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The average kinetic energy per mole of an ideal gas at 600 K is (R = 8.314 J/mol·K):",
+      "options": [
+        {
+          "id": "A",
+          "text": "3741 J"
+        },
+        {
+          "id": "B",
+          "text": "7482 J"
+        },
+        {
+          "id": "C",
+          "text": "2494 J"
+        },
+        {
+          "id": "D",
+          "text": "4988 J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The average kinetic energy per mole of an ideal gas is given by (3/2)kT, where k is Boltzmann's constant and T is the absolute temperature. At 600 K, the average kinetic energy per mole would be (3/2) × 8.314 J/mol·K × 600 K = 7482 J, which matches option B.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula for average kinetic energy per mole. Option A uses an incorrect factor of 3 instead of 3/2, option C uses the incorrect value of R, and option D does not properly multiply the factors together. The correct answer is derived by simply plugging in the given values of R and T into the formula (3/2)kT."
+    },
+    {
+      "question_id": "T09.01.Q015",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The most probable speed of gas molecules is the speed at which:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All molecules move"
+        },
+        {
+          "id": "B",
+          "text": "The maximum number of molecules have their speed"
+        },
+        {
+          "id": "C",
+          "text": "The average kinetic energy is maximum"
+        },
+        {
+          "id": "D",
+          "text": "The pressure is maximum"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The most probable speed is the speed at which the maximum number of gas molecules have their speed. This is because the kinetic theory of gases models the gas as a large number of identical molecules in random motion, and the speed distribution of these molecules follows a certain statistical pattern known as the Maxwell-Boltzmann distribution.",
+      "explanation_incorrect": "The other options are incorrect because the most probable speed is not the speed at which all molecules move (option A), nor is it the speed at which the average kinetic energy is maximum (option C) or the pressure is maximum (option D). The most probable speed is the speed at which the maximum number of molecules have their speed, as explained in the correct explanation."
+    },
+    {
+      "question_id": "T09.01.Q016",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The ratio of RMS speed to most probable speed for an ideal gas is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(2/3)"
+        },
+        {
+          "id": "B",
+          "text": "√(3/2)"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ratio of RMS speed to most probable speed for an ideal gas is √(3/2). This is because the RMS speed is defined as √(3RT/M), while the most probable speed is defined as √(2RT/M). Taking the ratio of these two expressions gives √(3/2).",
+      "explanation_incorrect": "The correct answer is B) √(3/2). This is because the RMS speed (root-mean-square speed) is a measure of the average speed of the gas molecules, while the most probable speed is the speed at which the maximum number of molecules are traveling. The ratio of these two speeds is √(3/2), not √(2/3) or 1 or 2."
+    },
+    {
+      "question_id": "T09.01.Q017",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "Avogadro's number Nₐ is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.022 × 10²³ mol⁻¹"
+        },
+        {
+          "id": "B",
+          "text": "6.022 × 10²⁰ mol⁻¹"
+        },
+        {
+          "id": "C",
+          "text": "1.38 × 10⁻²³ mol⁻¹"
+        },
+        {
+          "id": "D",
+          "text": "8.314 mol⁻¹"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 6.022 × 10²³ mol⁻¹, which is the value of Avogadro's number. Avogadro's number represents the number of particles (atoms or molecules) present in one mole of any substance, and this value is a fundamental constant in chemistry and physics.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the value of Avogadro's number. Option B) 6.022 × 10²⁰ mol⁻¹ is too small, Option C) 1.38 × 10⁻²³ mol⁻¹ is the value of Boltzmann's constant, and Option D) 8.314 mol⁻¹ is the value of the universal gas constant, not Avogadro's number."
+    },
+    {
+      "question_id": "T09.01.Q018",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A container holds a mixture of gases: 2 moles of nitrogen and 1 mole of argon at 300 K. The total pressure is 3 × 10⁵ Pa. The partial pressure of nitrogen is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 × 10⁵ Pa"
+        },
+        {
+          "id": "B",
+          "text": "2 × 10⁵ Pa"
+        },
+        {
+          "id": "C",
+          "text": "3 × 10⁵ Pa"
+        },
+        {
+          "id": "D",
+          "text": "1.5 × 10⁵ Pa"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The partial pressure of a gas in a mixture is directly proportional to the number of moles of that gas. Since there are 2 moles of nitrogen and 1 mole of argon in the mixture, the partial pressure of nitrogen will be twice the partial pressure of argon, which is 2/3 of the total pressure of 3 × 10⁵ Pa, or 2 × 10⁵ Pa.",
+      "explanation_incorrect": "The incorrect options do not correctly reflect the relationship between the number of moles of each gas and their partial pressures. The partial pressure of nitrogen should be 2/3 of the total pressure, since there are 2 moles of nitrogen out of the total 3 moles of gas in the mixture."
+    },
+    {
+      "question_id": "T09.01.Q019",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The RMS speed of nitrogen molecules (M = 28 × 10⁻³ kg/mol) at 300 K is approximately (R = 8.314 J/mol·K):",
+      "options": [
+        {
+          "id": "A",
+          "text": "380 m/s"
+        },
+        {
+          "id": "B",
+          "text": "517 m/s"
+        },
+        {
+          "id": "C",
+          "text": "640 m/s"
+        },
+        {
+          "id": "D",
+          "text": "1000 m/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 517 m/s. This can be calculated using the formula for root-mean-square (RMS) speed, v_rms = √(3RT/M), where R is the universal gas constant, T is the absolute temperature, and M is the molar mass of the gas. Plugging in the values for nitrogen (M = 28 × 10⁻³ kg/mol, T = 300 K), we get v_rms = √(3 × 8.314 × 300 / (28 × 10⁻³)) = 517 m/s.",
+      "explanation_incorrect": "The incorrect answers are: A) 380 m/s, C) 640 m/s, and D) 1000 m/s. These values do not correctly apply the formula for RMS speed, as they do not account for the molar mass of nitrogen and the given temperature of 300 K. The correct answer of 517 m/s is the result of plugging the known values into the RMS speed formula and calculating the result."
+    },
+    {
+      "question_id": "T09.01.Q020",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "According to the law of equipartition of energy, the total internal energy of 1 mole of a diatomic gas (5 degrees of freedom) at temperature T is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(3/2)RT"
+        },
+        {
+          "id": "B",
+          "text": "(5/2)RT"
+        },
+        {
+          "id": "C",
+          "text": "(7/2)RT"
+        },
+        {
+          "id": "D",
+          "text": "RT"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to the law of equipartition of energy, each degree of freedom has (1/2)kT of energy. Since a diatomic gas has 5 degrees of freedom (3 translational and 2 rotational), the total internal energy is (5/2)RT, where R is the universal gas constant.",
+      "explanation_incorrect": "The incorrect options (A) and (D) do not account for the 5 degrees of freedom of a diatomic gas. Option (A) considers only 3 translational degrees of freedom, while option (D) is the energy per mole, not the total internal energy. The correct option (B) correctly calculates the total internal energy using the 5 degrees of freedom and the equipartition of energy principle."
+    },
+    {
+      "question_id": "T09.01.Q021",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "An ideal gas at 27°C and 1 atm is heated to 327°C at constant volume. The new pressure is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 atm"
+        },
+        {
+          "id": "B",
+          "text": "2 atm"
+        },
+        {
+          "id": "C",
+          "text": "12 atm"
+        },
+        {
+          "id": "D",
+          "text": "0.5 atm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2 atm. According to Charles's law, the volume of a gas is directly proportional to its absolute temperature at constant pressure. Since the volume is kept constant in this case, the pressure of the gas must increase in proportion to the absolute temperature. The increase in temperature from 27°C to 327°C corresponds to an increase in absolute temperature from 300 K to 600 K, which is a factor of 2. Therefore, the new pressure will be 2 atm.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not account for the change in temperature. Option A) 1 atm is incorrect because the pressure should increase when the temperature is increased at constant volume. Option C) 12 atm is incorrect because the pressure would not increase by a factor of 12. Option D) 0.5 atm is incorrect because the pressure should increase, not decrease, when the temperature is increased at constant volume."
+    },
+    {
+      "question_id": "T09.01.Q022",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The mean free path of a gas molecule is inversely proportional to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Temperature"
+        },
+        {
+          "id": "B",
+          "text": "Number density and cross-sectional area of molecules"
+        },
+        {
+          "id": "C",
+          "text": "Molecular speed"
+        },
+        {
+          "id": "D",
+          "text": "Molar mass"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The mean free path of a gas molecule is inversely proportional to the number density and cross-sectional area of the molecules. This is because the more molecules there are in a given volume, and the larger their cross-sectional area, the more frequent the collisions will be, reducing the average distance travelled between collisions (mean free path).",
+      "explanation_incorrect": "The mean free path is not inversely proportional to temperature, molecular speed, or molar mass. The mean free path depends on the number of molecules in a given volume and the size of the molecules, but not on their individual speeds or the overall temperature of the gas. The most relevant factor is the number density and cross-sectional area of the molecules, which determine how frequently they collide with each other."
+    },
+    {
+      "question_id": "T09.01.Q023",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "If the RMS speed of gas molecules at 27°C is 500 m/s, the RMS speed at 927°C is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "500 m/s"
+        },
+        {
+          "id": "B",
+          "text": "1000 m/s"
+        },
+        {
+          "id": "C",
+          "text": "2000 m/s"
+        },
+        {
+          "id": "D",
+          "text": "750 m/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The RMS speed of gas molecules is directly proportional to the square root of the absolute temperature (v_rms = √(3RT/M)). Since the temperature increases from 27°C (300 K) to 927°C (1200 K), the RMS speed will increase by a factor of √(1200/300) = 2, which is 1000 m/s.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the relationship between RMS speed and absolute temperature. Option A assumes the RMS speed remains constant, which is wrong. Option C doubles the RMS speed, but the correct factor is 2, not 4. Option D takes the square root of the temperature ratio, which is incorrect."
+    },
+    {
+      "question_id": "T09.01.Q024",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of the Boltzmann constant k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8.314 J/mol·K"
+        },
+        {
+          "id": "B",
+          "text": "1.38 × 10⁻²³ J/K"
+        },
+        {
+          "id": "C",
+          "text": "6.022 × 10²³ J/K"
+        },
+        {
+          "id": "D",
+          "text": "6.674 × 10⁻¹¹ J/K"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Boltzmann constant k is equal to 1.38 × 10^-23 J/K, which represents the relationship between the kinetic energy of gas molecules and their absolute temperature. This value is derived from fundamental physical constants and is a crucial parameter in the kinetic theory of gases.",
+      "explanation_incorrect": "Option A represents the universal gas constant R, which is different from the Boltzmann constant k. Option C is the Avogadro constant, which is the number of particles in one mole, not the Boltzmann constant. Option D is the gravitational constant, which is not related to the kinetic theory of gases. The correct value of the Boltzmann constant k is 1.38 × 10^-23 J/K."
+    },
+    {
+      "question_id": "T09.01.Q025",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "The average kinetic energy of a gas molecule at 300 K is (k = 1.38 × 10⁻²³ J/K):",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.07 × 10⁻²¹ J"
+        },
+        {
+          "id": "B",
+          "text": "6.21 × 10⁻²¹ J"
+        },
+        {
+          "id": "C",
+          "text": "4.14 × 10⁻²¹ J"
+        },
+        {
+          "id": "D",
+          "text": "1.38 × 10⁻²¹ J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 6.21 × 10⁻²¹ J. According to the kinetic theory, the average kinetic energy of a gas molecule is given by (3/2)kT, where k is the Boltzmann constant and T is the absolute temperature. Plugging in the values, we get (3/2) × 1.38 × 10⁻²³ J/K × 300 K = 6.21 × 10⁻²¹ J.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for the average kinetic energy of a gas molecule. Option A) 2.07 × 10⁻²¹ J is too low, Option C) 4.14 × 10⁻²¹ J is too high, and Option D) 1.38 × 10⁻²¹ J is also too low. The correct answer of 6.21 × 10⁻²¹ J is obtained by using the formula (3/2)kT, where k is the Boltzmann constant and T is the absolute temperature."
+    },
+    {
+      "question_id": "T09.01.Q026",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A tyre at 27°C and 2 atm pressure heats to 87°C while driving. The new pressure (assuming constant volume) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.2 atm"
+        },
+        {
+          "id": "B",
+          "text": "2.4 atm"
+        },
+        {
+          "id": "C",
+          "text": "3.0 atm"
+        },
+        {
+          "id": "D",
+          "text": "6.44 atm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 2.4 atm. According to Charles's law, the pressure of a gas is directly proportional to its absolute temperature. Since the temperature increased from 27°C to 87°C (from 300K to 360K), the new pressure will be (360/300) = 1.2 times the original pressure of 2 atm, which is 2.4 atm.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not properly apply Charles's law to calculate the new pressure when the temperature of the gas increases. Option A) 2.2 atm is too low, option C) 3.0 atm is too high, and option D) 6.44 atm is far too high and does not correctly account for the change in temperature."
+    },
+    {
+      "question_id": "T09.01.Q027",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "Among the three molecular speeds, the order from smallest to largest is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "v_rms < v_mean < v_mp"
+        },
+        {
+          "id": "B",
+          "text": "v_mp < v_mean < v_rms"
+        },
+        {
+          "id": "C",
+          "text": "v_mean < v_mp < v_rms"
+        },
+        {
+          "id": "D",
+          "text": "v_mp < v_rms < v_mean"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order from smallest to largest among the three molecular speeds is v_mp < v_mean < v_rms. This is because the most probable speed (v_mp) is the smallest, followed by the mean speed (v_mean), and the root-mean-square speed (v_rms) is the largest of the three.",
+      "explanation_incorrect": "The correct order from smallest to largest is v_mp < v_mean < v_rms. The most probable speed (v_mp) is the speed at which most molecules are moving, the mean speed (v_mean) is the average speed of all the molecules, and the root-mean-square speed (v_rms) is the square root of the average of the squares of the individual molecular speeds. Therefore, v_mp is the smallest, followed by v_mean, and v_rms is the largest."
+    },
+    {
+      "question_id": "T09.01.Q028",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The average kinetic energy of gas molecules depends on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The nature of the gas only"
+        },
+        {
+          "id": "B",
+          "text": "The temperature only"
+        },
+        {
+          "id": "C",
+          "text": "Both temperature and nature of the gas"
+        },
+        {
+          "id": "D",
+          "text": "The pressure only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The average kinetic energy of gas molecules depends on the temperature only, not the nature of the gas. According to the kinetic theory of gases, the average kinetic energy per molecule is (3/2)kT, where k is the Boltzmann constant and T is the absolute temperature. This shows that the average kinetic energy is directly proportional to the temperature.",
+      "explanation_incorrect": "The average kinetic energy of gas molecules does not depend on the nature of the gas or the pressure. The kinetic energy is determined solely by the temperature of the gas, as given by the formula (3/2)kT. The nature of the gas, such as whether it is monoatomic or diatomic, only affects the number of degrees of freedom and the specific heat ratio, not the average kinetic energy."
+    },
+    {
+      "question_id": "T09.01.Q029",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The density of an ideal gas at STP is 1.25 kg/m³. Its RMS speed at STP (P = 10⁵ Pa) is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "200 m/s"
+        },
+        {
+          "id": "B",
+          "text": "400 m/s"
+        },
+        {
+          "id": "C",
+          "text": "490 m/s"
+        },
+        {
+          "id": "D",
+          "text": "600 m/s"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 490 m/s. This can be calculated using the formula for RMS speed, v_rms = √(3RT/M), where R is the gas constant, T is the absolute temperature, and M is the molar mass of the gas. Plugging in the given values of density and pressure, we can find the RMS speed to be around 490 m/s.",
+      "explanation_incorrect": "The other options are incorrect because they do not match the calculated RMS speed of the gas under the given conditions. Option A) 200 m/s and Option B) 400 m/s are too low, while Option D) 600 m/s is too high. The RMS speed depends on the temperature, pressure, and molar mass of the gas, and the correct value can be determined using the formula provided in the question."
+    },
+    {
+      "question_id": "T09.01.Q030",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "A gas occupies 500 mL at 27°C and 700 mmHg. Its volume at STP (0°C, 760 mmHg) is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "418 mL"
+        },
+        {
+          "id": "B",
+          "text": "500 mL"
+        },
+        {
+          "id": "C",
+          "text": "550 mL"
+        },
+        {
+          "id": "D",
+          "text": "600 mL"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 418 mL. To find the volume at STP, we can use the ideal gas equation PV = nRT. Since the temperature and pressure are different from STP, we can use the given values to calculate the volume at STP.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not account for the change in temperature and pressure. The volume of the gas at STP will be different from the given volume at 27°C and 700 mmHg. To find the correct volume at STP, we need to use the ideal gas equation and the given information to calculate the new volume."
+    },
+    {
+      "question_id": "T09.01.Q031",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "At what temperature would the RMS speed of hydrogen molecules equal the RMS speed of nitrogen molecules at 300 K? (M_H₂ = 2, M_N₂ = 28):",
+      "options": [
+        {
+          "id": "A",
+          "text": "300/14 K ≈ 21.4 K"
+        },
+        {
+          "id": "B",
+          "text": "300 × 14 K = 4200 K"
+        },
+        {
+          "id": "C",
+          "text": "300 K"
+        },
+        {
+          "id": "D",
+          "text": "600 K"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, 300/14 K ≈ 21.4 K. This is because the RMS speed is inversely proportional to the square root of the molar mass, v_rms = √(3RT/M). Since the RMS speeds of hydrogen and nitrogen at 300 K are equal, the temperature at which hydrogen's RMS speed equals nitrogen's at 300 K is 300/√(28/2) = 300/√14 ≈ 21.4 K.",
+      "explanation_incorrect": "The other options are incorrect because B) 300 × 14 K = 4200 K is too high, C) 300 K would mean the RMS speeds are equal at the same temperature, which is not the case, and D) 600 K is also too high. The correct answer is A, 300/14 K ≈ 21.4 K, because this is the temperature at which the RMS speeds of hydrogen and nitrogen would be equal."
+    },
+    {
+      "question_id": "T09.01.Q032",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A triatomic linear gas molecule has how many degrees of freedom at moderate temperatures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "A triatomic linear gas molecule has 7 degrees of freedom at moderate temperatures. This is because it has 3 translational degrees of freedom, 2 rotational degrees of freedom, and 2 vibrational degrees of freedom, adding up to a total of 7 degrees of freedom.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for all the degrees of freedom of a triatomic linear gas molecule. Option A (3 degrees of freedom) is only for monoatomic gases, while options B (5 degrees of freedom) and C (6 degrees of freedom) do not include the 2 vibrational degrees of freedom that a triatomic linear gas molecule possesses at moderate temperatures."
+    },
+    {
+      "question_id": "T09.01.Q033",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which assumption is NOT part of the kinetic theory of ideal gases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Molecules are point particles with negligible volume"
+        },
+        {
+          "id": "B",
+          "text": "Intermolecular forces are negligible except during collisions"
+        },
+        {
+          "id": "C",
+          "text": "Collisions are perfectly elastic"
+        },
+        {
+          "id": "D",
+          "text": "All molecules move with the same speed"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The kinetic theory of gases assumes that all gas molecules are in random motion, with a wide range of different speeds. This is in contrast to the incorrect assumption that all molecules move with the same speed.",
+      "explanation_incorrect": "The kinetic theory of gases models gas molecules as point particles with negligible volume, where intermolecular forces are negligible except during collisions, and the collisions are perfectly elastic. However, the assumption that all molecules move with the same speed is not part of the kinetic theory, as the molecules actually have a wide range of different speeds."
+    },
+    {
+      "question_id": "T09.01.Q034",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The RMS speed of molecules of a gas is 400 m/s at 300 K. At 1200 K, the RMS speed is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "400 m/s"
+        },
+        {
+          "id": "B",
+          "text": "800 m/s"
+        },
+        {
+          "id": "C",
+          "text": "1600 m/s"
+        },
+        {
+          "id": "D",
+          "text": "200 m/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The RMS speed of gas molecules is directly proportional to the square root of the absolute temperature. Since the temperature increases from 300 K to 1200 K, the RMS speed will increase by a factor of √(1200/300) = 2, which is 800 m/s.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the relationship between RMS speed and temperature. Option A keeps the RMS speed constant at 400 m/s, which is incorrect. Option C doubles the RMS speed to 1600 m/s, which is too high. Option D halves the RMS speed to 200 m/s, which is too low. The correct option B, 800 m/s, is the right answer based on the square root relationship between RMS speed and temperature."
+    },
+    {
+      "question_id": "T09.01.Q035",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The mean free path of a gas molecule increases when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pressure increases at constant temperature"
+        },
+        {
+          "id": "B",
+          "text": "Temperature increases at constant pressure"
+        },
+        {
+          "id": "C",
+          "text": "Molecular size increases"
+        },
+        {
+          "id": "D",
+          "text": "Number density increases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When temperature increases at constant pressure, the average kinetic energy of the gas molecules increases. This leads to an increase in the average speed of the molecules, which in turn increases the mean free path between collisions.",
+      "explanation_incorrect": "The mean free path decreases when pressure increases at constant temperature because the number density of molecules increases, leading to more frequent collisions. The mean free path also decreases when molecular size increases, as the molecules occupy more space and collide more frequently. However, the mean free path increases when temperature increases at constant pressure, as the higher kinetic energy of the molecules leads to fewer collisions."
+    },
+    {
+      "question_id": "T09.01.Q036",
+      "type": "true_false",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "At absolute zero (0 K), all molecular motion of an ideal gas would cease.",
+      "correct_answer": true,
+      "explanation_correct": "At absolute zero (0 K), the kinetic energy of the gas molecules would be zero, meaning they would not have any random motion or collisions. This results in the complete cessation of all molecular motion in an ideal gas at 0 K.",
+      "explanation_incorrect": "It is a common misconception that at absolute zero, molecules in an ideal gas would still be moving, just at a very slow speed. However, the kinetic theory of gases states that the kinetic energy of the gas molecules is directly proportional to the absolute temperature. At 0 K, the kinetic energy of the molecules becomes zero, and they no longer have any random motion or collisions."
+    },
+    {
+      "question_id": "T09.01.Q037",
+      "type": "true_false",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Two different ideal gases at the same temperature have the same average kinetic energy per molecule.",
+      "correct_answer": true,
+      "explanation_correct": "According to the kinetic theory of gases, the average kinetic energy per molecule of an ideal gas is directly proportional to the absolute temperature of the gas, and is given by (3/2)kT, where k is Boltzmann's constant. Since the temperature is the same for both gases, their average kinetic energy per molecule will also be the same.",
+      "explanation_incorrect": "The incorrect response may be based on the assumption that different gases have different molecular masses, and therefore different average kinetic energies. However, the kinetic energy per molecule is determined solely by the absolute temperature, not the type of gas. The average kinetic energy is the same for all ideal gases at the same temperature, regardless of their molar mass."
+    },
+    {
+      "question_id": "T09.01.Q038",
+      "type": "true_false",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "Heavier gas molecules have higher RMS speeds at the same temperature compared to lighter ones.",
+      "correct_answer": false,
+      "explanation_correct": "Heavier gas molecules have lower root-mean-square (RMS) speeds at the same temperature compared to lighter ones. This is because the RMS speed is inversely proportional to the square root of the molar mass of the gas, as given by the formula v_rms = √(3RT/M).",
+      "explanation_incorrect": "It is a common misconception that heavier gas molecules would have higher RMS speeds. However, the kinetic theory shows that the RMS speed is actually inversely related to the square root of the molar mass. This means that lighter gas molecules will have higher RMS speeds than heavier ones at the same temperature."
+    },
+    {
+      "question_id": "T09.01.Q039",
+      "type": "true_false",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The most probable speed is always less than the mean speed, which is less than the RMS speed.",
+      "correct_answer": true,
+      "explanation_correct": "The most probable speed (v_mp) is always less than the mean speed (v_mean), which is less than the root-mean-square (RMS) speed (v_rms) because of the different ways these speeds are calculated. The most probable speed represents the speed at which most gas molecules are moving, while the mean speed and RMS speed are statistical averages that give a higher value.",
+      "explanation_incorrect": "The statement is incorrect because the relationship between the three molecular speeds is the opposite - the most probable speed (v_mp) is always less than the mean speed (v_mean), which is less than the root-mean-square (RMS) speed (v_rms). This is due to the way these speeds are mathematically defined, with the RMS speed being the highest and the most probable speed being the lowest."
+    },
+    {
+      "question_id": "T09.01.Q040",
+      "type": "true_false",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The ideal gas equation PV = nRT is exactly valid for all real gases at all conditions.",
+      "correct_answer": false,
+      "explanation_correct": "The ideal gas equation PV = nRT is an approximation that is valid only for gases under certain conditions, such as low pressure and high temperature. It does not accurately describe the behavior of real gases, especially at high pressures or low temperatures where intermolecular forces become significant.",
+      "explanation_incorrect": "The ideal gas equation is a simplified model that does not account for the complex interactions between gas molecules in real-world conditions. While it provides a good approximation for many gases under certain conditions, it is not universally valid for all real gases under all circumstances. Real gases can exhibit deviations from the ideal gas behavior due to factors such as intermolecular forces and the finite size of the molecules."
+    },
+    {
+      "question_id": "T09.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The universal gas constant R has a value of ___ J/mol·K.",
+      "correct_answer": "8.314",
+      "explanation_correct": "The universal gas constant R has a value of 8.314 J/mol·K because this is the accepted standard value for this fundamental physical constant, which relates the pressure, volume, amount of substance, and absolute temperature of an ideal gas.",
+      "explanation_incorrect": "The correct answer is 8.314 J/mol·K. This is the accepted standard value for the universal gas constant R, which appears in the ideal gas equation PV = nRT. The units of J/mol·K indicate the relationship between energy, amount of substance, and temperature for an ideal gas."
+    },
+    {
+      "question_id": "T09.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "A monoatomic ideal gas has γ = Cₚ/Cᵥ = ___.",
+      "correct_answer": "5/3",
+      "explanation_correct": "For a monoatomic ideal gas, the gas has 3 degrees of freedom (3 translational degrees of freedom) according to the law of equipartition of energy. This gives a ratio of specific heats γ = Cₚ/Cᵥ = 5/3 for a monoatomic ideal gas.",
+      "explanation_incorrect": "The correct answer is 5/3. This is because a monoatomic ideal gas has 3 degrees of freedom, which come from the 3 translational degrees of freedom. According to the law of equipartition of energy, each degree of freedom has (1/2)kT of energy. So for a monoatomic gas with 3 degrees of freedom, the ratio of specific heats γ = Cₚ/Cᵥ = 5/3."
+    },
+    {
+      "question_id": "T09.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The RMS speed of an ideal gas molecule is given by v_rms = √(3RT/___) where the blank is the molar mass.",
+      "correct_answer": "M",
+      "explanation_correct": "The RMS speed formula v_rms = √(3RT/M) shows that the RMS speed of an ideal gas molecule is inversely proportional to the molar mass M. This is because the kinetic energy of the molecules, which determines the RMS speed, depends on the temperature T and the mass of the individual molecules.",
+      "explanation_incorrect": "The blank should be filled with 'M' to represent the molar mass of the gas. This is because the RMS speed formula v_rms = √(3RT/M) directly includes the molar mass M in the denominator, indicating that the RMS speed is inversely proportional to the molar mass of the gas molecules."
+    },
+    {
+      "question_id": "T09.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A diatomic ideal gas (f = 5) has Cₚ = ___ R per mole.",
+      "correct_answer": "7/2",
+      "explanation_correct": "For a diatomic ideal gas, the number of degrees of freedom is 5 (3 translational + 2 rotational). According to the law of equipartition of energy, each degree of freedom gets (1/2)kT of energy. Therefore, the molar specific heat capacity Cp = (5/2)R for a diatomic ideal gas.",
+      "explanation_incorrect": "The incorrect answer would be Cp = 3/2 R per mole. This is because a monoatomic ideal gas has 3 degrees of freedom (only translational), so each degree of freedom gets (1/2)kT of energy, resulting in Cp = 3/2 R. However, for a diatomic ideal gas, the correct answer is Cp = 7/2 R per mole, as it has 5 degrees of freedom (3 translational + 2 rotational)."
+    },
+    {
+      "question_id": "T09.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The most probable speed of gas molecules is given by v_mp = √(2RT/M). For oxygen at 300 K (M = 32 g/mol), v_mp ≈ ___ m/s.",
+      "correct_answer": "395",
+      "explanation_correct": "The most probable speed of gas molecules is given by the formula v_mp = √(2RT/M), where R is the universal gas constant, T is the absolute temperature, and M is the molar mass of the gas. For oxygen (M = 32 g/mol) at 300 K, plugging in the values gives v_mp ≈ 395 m/s, which is the correct answer.",
+      "explanation_incorrect": "The incorrect answer would be to use a different formula for the speed of gas molecules, such as the root-mean-square (RMS) speed v_rms = √(3RT/M) or the mean speed v_mean = √(8RT/πM). However, the most probable speed v_mp is the correct formula to use in this case, and for oxygen at 300 K, the value of v_mp is approximately 395 m/s."
+    },
+    {
+      "question_id": "T09.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The relation between Boltzmann constant k and universal gas constant R is k = R/___.",
+      "correct_answer": "Nₐ",
+      "explanation_correct": "The relation between Boltzmann constant k and universal gas constant R is k = R/N_a, where N_a is Avogadro's number. This is because the universal gas constant R is defined as R = N_a * k, where N_a is the number of particles per mole (Avogadro's number).",
+      "explanation_incorrect": "The incorrect answer would be to say that k = R * N_a. This is because the Boltzmann constant k is related to the universal gas constant R by the formula k = R/N_a, not k = R * N_a. The Boltzmann constant is the gas constant per particle, while the universal gas constant R is the gas constant per mole of particles (where 1 mole = N_a particles)."
+    },
+    {
+      "question_id": "T09.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If the pressure of a gas of density 2 kg/m³ is 3 × 10⁵ Pa, the RMS speed of the molecules is ___ m/s.",
+      "correct_answer": "√(4.5 × 10⁵) ≈ 671",
+      "explanation_correct": "The RMS speed of the gas molecules is given by the formula v_rms = √(3RT/M), where R is the ideal gas constant, T is the absolute temperature, and M is the molar mass of the gas. Rearranging this formula, we get v_rms = √(3P/ρ), where P is the pressure and ρ is the density of the gas. Plugging in the given values of P = 3 × 10⁵ Pa and ρ = 2 kg/m³, we get v_rms = √(4.5 × 10⁵) ≈ 671 m/s.",
+      "explanation_incorrect": "The incorrect answer would be to simply plug in the given values of P and ρ into the formula v_rms = √(3RT/M) without rearranging it. This would give the wrong result, as the molar mass M is not given in the problem statement. The correct answer format is to express v_rms as √(3P/ρ), which gives the value of approximately 671 m/s."
+    },
+    {
+      "question_id": "T09.01.Q048",
+      "type": "ordering",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "Arrange the following molecular speeds in increasing order for a given gas at a given temperature: (A) Most probable speed v_mp, (B) Mean speed v_mean, (C) RMS speed v_rms, (D) Speed of sound in the gas v_s",
+      "ordering_items": [
+        "Most probable speed v_mp",
+        "Mean speed v_mean",
+        "RMS speed v_rms",
+        "Speed of sound in the gas v_s"
+      ],
+      "correct_answer": [
+        "Speed of sound in the gas v_s",
+        "Most probable speed v_mp",
+        "Mean speed v_mean",
+        "RMS speed v_rms"
+      ],
+      "explanation_correct": "The speed of sound in the gas (v_s) is the fastest, followed by the most probable speed (v_mp), mean speed (v_mean), and finally the root-mean-square speed (v_rms). This order is consistent with the ratios provided in the passage: v_mp : v_mean : v_rms = 1 : 1.128 : 1.225.",
+      "explanation_incorrect": "The incorrect order would be to place the RMS speed (v_rms) as the fastest, followed by the mean speed (v_mean), most probable speed (v_mp), and finally the speed of sound (v_s). This is incorrect because the speed of sound in the gas is the fastest, as it depends on the properties of the gas and the temperature, and is not directly related to the molecular speed distributions described in the kinetic theory."
+    },
+    {
+      "question_id": "T09.01.Q049",
+      "type": "ordering",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following gases in order of increasing RMS speed at the same temperature: (A) Oxygen (M=32), (B) Hydrogen (M=2), (C) Nitrogen (M=28), (D) Helium (M=4)",
+      "ordering_items": [
+        "Oxygen (M=32)",
+        "Hydrogen (M=2)",
+        "Nitrogen (M=28)",
+        "Helium (M=4)"
+      ],
+      "correct_answer": [
+        "Oxygen (M=32)",
+        "Nitrogen (M=28)",
+        "Helium (M=4)",
+        "Hydrogen (M=2)"
+      ],
+      "explanation_correct": "The RMS speed of gas molecules is inversely proportional to the square root of the molar mass (M). Therefore, the gases can be arranged in order of increasing RMS speed as: Oxygen (M=32), Nitrogen (M=28), Helium (M=4), Hydrogen (M=2).",
+      "explanation_incorrect": "The RMS speed depends on the molar mass (M) of the gas molecules. Gases with lower molar mass have higher RMS speed. So, the correct order from lowest to highest RMS speed is: Hydrogen (M=2), Helium (M=4), Nitrogen (M=28), Oxygen (M=32)."
+    },
+    {
+      "question_id": "T09.01.Q050",
+      "type": "ordering",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following gas types in order of increasing γ = Cₚ/Cᵥ: (A) Diatomic at high temperature (f=7), (B) Monoatomic (f=3), (C) Diatomic at moderate temperature (f=5), (D) Triatomic nonlinear (f=6)",
+      "ordering_items": [
+        "Diatomic at high temperature (f=7)",
+        "Monoatomic (f=3)",
+        "Diatomic at moderate temperature (f=5)",
+        "Triatomic nonlinear (f=6)"
+      ],
+      "correct_answer": [
+        "Diatomic at high temperature (f=7)",
+        "Triatomic nonlinear (f=6)",
+        "Diatomic at moderate temperature (f=5)",
+        "Monoatomic (f=3)"
+      ],
+      "explanation_correct": "The order of increasing γ = Cp/Cv is as follows: Monoatomic (f=3) has γ = 5/3, Diatomic at moderate temperature (f=5) has γ = 7/5, Triatomic nonlinear (f=6) has γ = 4/3, and Diatomic at high temperature (f=7) has γ = 9/7. This is because γ = (f+2)/f, where f is the number of degrees of freedom of the gas.",
+      "explanation_incorrect": "The incorrect order would be to place the Diatomic at moderate temperature (f=5) before the Triatomic nonlinear (f=6). This is because the number of degrees of freedom (f) is directly related to the value of γ = Cp/Cv, with a higher f leading to a lower γ. So the correct order from lowest to highest γ is: Monoatomic (f=3), Diatomic at moderate temperature (f=5), Triatomic nonlinear (f=6), and Diatomic at high temperature (f=7)."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 14,
+        "application": 20,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

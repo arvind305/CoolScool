@@ -1,0 +1,1198 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Chemical Kinetics",
+  "canonical_explanation": {
+    "text": "Chemical kinetics is the study of the rates of chemical reactions and the factors that affect them. The rate of a reaction is the change in concentration of a reactant or product per unit time. The rate law expression relates the rate to the concentrations of reactants raised to appropriate powers (orders). The molecularity refers to the number of reacting species in an elementary step, while the order is determined experimentally. Integrated rate equations for zero-order (linear decrease in concentration) and first-order (exponential decay) reactions are used to calculate rate constants and half-lives. The half-life for a first-order reaction is t1/2 = 0.693/k (independent of initial concentration). The Arrhenius equation k = Ae^(-Ea/RT) shows how the rate constant depends on temperature and activation energy. Collision theory provides a molecular-level explanation for chemical reactions.",
+    "rules": [
+      "For a first-order reaction: k = (2.303/t) log([A]0/[A]t) and t1/2 = 0.693/k, independent of initial concentration.",
+      "For a zero-order reaction: [A]t = [A]0 - kt and t1/2 = [A]0/(2k), dependent on initial concentration.",
+      "Arrhenius equation: k = Ae^(-Ea/RT); a plot of ln k vs 1/T gives a straight line with slope = -Ea/R."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The rate of a chemical reaction is defined as the change in concentration of a reactant or product per unit:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volume"
+        },
+        {
+          "id": "B",
+          "text": "Time"
+        },
+        {
+          "id": "C",
+          "text": "Mass"
+        },
+        {
+          "id": "D",
+          "text": "Temperature"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rate of a chemical reaction is defined as the change in concentration of a reactant or product per unit time. This is because the rate of a reaction is a measure of how fast the reaction is progressing, which is determined by the change in the amount of reactants or products over a given time period.",
+      "explanation_incorrect": "The rate of a chemical reaction is not defined as the change in concentration per unit volume, mass, or temperature. The rate of a reaction depends on the change in the amount of reactants or products, and this change is measured over a specific time interval, not per unit volume, mass, or temperature."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of a reaction is determined:",
+      "options": [
+        {
+          "id": "A",
+          "text": "From the balanced chemical equation"
+        },
+        {
+          "id": "B",
+          "text": "From the molecularity"
+        },
+        {
+          "id": "C",
+          "text": "Experimentally"
+        },
+        {
+          "id": "D",
+          "text": "From the activation energy"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The order of a reaction is determined experimentally by measuring the rate of the reaction at different concentrations of the reactants. The order tells us how the rate depends on the concentrations of reactants, and cannot be directly obtained from the balanced chemical equation or the molecularity.",
+      "explanation_incorrect": "The order of a reaction cannot be determined from the balanced chemical equation or the molecularity. The balanced equation only shows the stoichiometry, not the kinetics. The molecularity refers to the number of reactant molecules in an elementary step, but the overall order of the reaction is determined by experiments that measure how the rate changes with concentrations. The activation energy is related to the rate constant, but not the order itself."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "For a reaction A -> products, if the rate = k[A]^2, the reaction is of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero order"
+        },
+        {
+          "id": "B",
+          "text": "First order"
+        },
+        {
+          "id": "C",
+          "text": "Second order"
+        },
+        {
+          "id": "D",
+          "text": "Third order"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The reaction is of second order because the rate expression is proportional to the square of the concentration of the reactant A. This means that the reaction rate doubles when the concentration of A is doubled.",
+      "explanation_incorrect": "The reaction is not of zero order, because the rate is not independent of the concentration of A. It is also not of first order, because the rate is not proportional to the concentration of A. The reaction is of second order because the rate is proportional to the square of the concentration of A."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Molecularity of a reaction refers to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of products formed"
+        },
+        {
+          "id": "B",
+          "text": "The sum of the powers in the rate law"
+        },
+        {
+          "id": "C",
+          "text": "The number of reacting species in an elementary step"
+        },
+        {
+          "id": "D",
+          "text": "The number of steps in the mechanism"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The molecularity of a reaction refers to the number of reacting species (reactants) in an elementary step of the reaction mechanism. This is the correct answer because the question is specifically asking about the meaning of the term 'molecularity'.",
+      "explanation_incorrect": "The molecularity does not refer to the number of products formed, the sum of the powers in the rate law, or the number of steps in the mechanism. The molecularity is specifically about the number of reactant molecules that come together in the elementary step of the reaction. The correct answer is the number of reacting species in an elementary step."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "For the reaction 2NO + O2 -> 2NO2, if the rate = k[NO]^2[O2], the overall order of the reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The overall order of the reaction is 3, because the rate expression given is rate = k[NO]^2[O2]. This means the reaction is second-order with respect to NO and first-order with respect to O2, giving a total order of 3.",
+      "explanation_incorrect": "The correct answer is C) 3. The overall order of the reaction is determined by adding the individual orders for each reactant. In this case, the reaction is second-order with respect to NO (the exponent for [NO] is 2) and first-order with respect to O2 (the exponent for [O2] is 1), giving a total order of 3."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "For a zero-order reaction, a plot of [A] vs time gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An exponential curve"
+        },
+        {
+          "id": "B",
+          "text": "A straight line with negative slope"
+        },
+        {
+          "id": "C",
+          "text": "A straight line with positive slope"
+        },
+        {
+          "id": "D",
+          "text": "A parabola"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a zero-order reaction, the rate of the reaction is constant and independent of the concentration of the reactants. This means that the concentration of the reactants decreases linearly with time, resulting in a straight line with a negative slope when plotted as [A] vs time.",
+      "explanation_incorrect": "Option A is incorrect because an exponential curve is observed for a first-order reaction, not a zero-order reaction. Option C is incorrect because the concentration of reactants decreases over time for a zero-order reaction, resulting in a straight line with a negative slope, not a positive slope. Option D is incorrect because a parabolic curve is not the characteristic plot for a zero-order reaction."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The half-life of a first-order reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "t1/2 = [A]0 / (2k)"
+        },
+        {
+          "id": "B",
+          "text": "t1/2 = 0.693 / k"
+        },
+        {
+          "id": "C",
+          "text": "t1/2 = 1 / (k[A]0)"
+        },
+        {
+          "id": "D",
+          "text": "t1/2 = k / 0.693"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The half-life of a first-order reaction is given by the formula t1/2 = 0.693/k, where k is the rate constant. This formula is derived from the first-order rate equation, and it is independent of the initial concentration of the reactant.",
+      "explanation_incorrect": "Option A is incorrect because the half-life formula for a first-order reaction does not depend on the initial concentration [A]0. Option C is also incorrect because the half-life is inversely proportional to the rate constant k, not the initial concentration. Option D is incorrect because the half-life formula is t1/2 = 0.693/k, not the inverse."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The unit of rate constant for a first-order reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "mol L^-1 s^-1"
+        },
+        {
+          "id": "B",
+          "text": "L mol^-1 s^-1"
+        },
+        {
+          "id": "C",
+          "text": "s^-1"
+        },
+        {
+          "id": "D",
+          "text": "L^2 mol^-2 s^-1"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The unit of the rate constant for a first-order reaction is s^-1 (inverse seconds) because the rate of a first-order reaction is proportional to the concentration of the reactant, and the units of concentration are mol/L (molarity). The inverse of the time unit gives the units of the rate constant.",
+      "explanation_incorrect": "The other options are incorrect because they do not match the expected units of a first-order rate constant. Option A (mol L^-1 s^-1) represents the units of the rate of reaction, not the rate constant. Option B (L mol^-1 s^-1) represents the units of a second-order rate constant. Option D (L^2 mol^-2 s^-1) does not have the correct exponents for a first-order reaction."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "A first-order reaction has a rate constant of 0.0693 min^-1. The half-life of this reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 min"
+        },
+        {
+          "id": "B",
+          "text": "10 min"
+        },
+        {
+          "id": "C",
+          "text": "15 min"
+        },
+        {
+          "id": "D",
+          "text": "20 min"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a first-order reaction, the half-life (t1/2) is given by the formula t1/2 = 0.693/k, where k is the rate constant. With k = 0.0693 min^-1, the half-life is calculated to be t1/2 = 0.693/0.0693 = 10 min.",
+      "explanation_incorrect": "The incorrect options do not match the half-life formula for a first-order reaction. The correct answer is 10 minutes, since the half-life is calculated as t1/2 = 0.693/k, where k is the rate constant. With k = 0.0693 min^-1, the half-life works out to be 10 minutes, not 5, 15, or 20 minutes."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For a first-order reaction, if 75% of the reactant decomposes in 100 minutes, the rate constant is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.00693 min^-1"
+        },
+        {
+          "id": "B",
+          "text": "0.01386 min^-1"
+        },
+        {
+          "id": "C",
+          "text": "0.02303 min^-1"
+        },
+        {
+          "id": "D",
+          "text": "0.04606 min^-1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 0.01386 min^-1. For a first-order reaction, the half-life (t1/2) is related to the rate constant (k) by the equation t1/2 = 0.693/k. Since 75% of the reactant decomposes in 100 minutes, the half-life is 100 minutes, so k = 0.693/100 = 0.01386 min^-1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculation for the rate constant of a first-order reaction. Option A) 0.00693 min^-1 is incorrect because it is half the correct value. Option C) 0.02303 min^-1 is incorrect because it is too high, and Option D) 0.04606 min^-1 is incorrect because it is twice the correct value."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For a zero-order reaction with rate constant k = 0.01 mol L^-1 s^-1 and initial concentration 0.5 mol L^-1, the half-life is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 s"
+        },
+        {
+          "id": "B",
+          "text": "50 s"
+        },
+        {
+          "id": "C",
+          "text": "10 s"
+        },
+        {
+          "id": "D",
+          "text": "100 s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a zero-order reaction, the half-life (t1/2) is independent of the initial concentration and is given by the formula t1/2 = [A]0 / 2k. With k = 0.01 mol L^-1 s^-1 and [A]0 = 0.5 mol L^-1, the half-life is calculated as 0.5 / (2 x 0.01) = 25 s, which matches option A.",
+      "explanation_incorrect": "The half-life of a zero-order reaction does not depend on the initial concentration, so options B (50 s) and D (100 s) are incorrect. Option C (10 s) is also incorrect, as the half-life can be calculated using the formula t1/2 = [A]0 / 2k, which gives 25 s for the given values of k and [A]0."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The time required for a first-order reaction to be 99.9% complete is approximately how many times its half-life?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 10. For a first-order reaction, it takes approximately 10 half-lives for the reaction to be 99.9% complete. This is because the amount of reactant decreases exponentially with time, and after 10 half-lives, only 0.1% of the initial reactant remains.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the time required for a first-order reaction to be 99.9% complete. The time required is approximately 10 half-lives, not 5, 7, or 15 half-lives. This is because the amount of reactant in a first-order reaction decreases exponentially, and after 10 half-lives, only 0.1% of the initial reactant remains."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The Arrhenius equation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "k = A + Ea/RT"
+        },
+        {
+          "id": "B",
+          "text": "k = Ae^(-Ea/RT)"
+        },
+        {
+          "id": "C",
+          "text": "k = A/Ea x RT"
+        },
+        {
+          "id": "D",
+          "text": "k = Ae^(Ea/RT)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Arrhenius equation is k = Ae^(-Ea/RT), where k is the rate constant, A is the pre-exponential factor, Ea is the activation energy, R is the gas constant, and T is the absolute temperature. This equation accurately describes how the rate constant depends on temperature and activation energy.",
+      "explanation_incorrect": "The Arrhenius equation does not have the form k = A + Ea/RT, k = A/Ea x RT, or k = Ae^(Ea/RT). The correct form is k = Ae^(-Ea/RT), where the rate constant k decreases exponentially as the activation energy Ea increases, and increases exponentially as the temperature T increases."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "In the Arrhenius equation, 'A' is called the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activation energy"
+        },
+        {
+          "id": "B",
+          "text": "Frequency factor (pre-exponential factor)"
+        },
+        {
+          "id": "C",
+          "text": "Rate constant"
+        },
+        {
+          "id": "D",
+          "text": "Equilibrium constant"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The 'A' in the Arrhenius equation represents the frequency factor or pre-exponential factor, which is a constant that depends on the probability of effective collisions between reacting molecules. It is not the activation energy (Ea) or the rate constant (k) in the equation.",
+      "explanation_incorrect": "The Arrhenius equation is k = Ae^(-Ea/RT), where 'A' represents the frequency factor or pre-exponential factor, not the activation energy (Ea). The activation energy is the minimum energy required for the reaction to occur, while the frequency factor accounts for the probability of effective collisions between the reactants. The rate constant (k) and the equilibrium constant (K) are also not represented by 'A' in this equation."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A plot of ln k versus 1/T for an Arrhenius equation gives a straight line with slope equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ea/R"
+        },
+        {
+          "id": "B",
+          "text": "-Ea/R"
+        },
+        {
+          "id": "C",
+          "text": "Ea"
+        },
+        {
+          "id": "D",
+          "text": "-Ea"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The slope of the line in the plot of ln k versus 1/T for an Arrhenius equation is equal to -Ea/R, where Ea is the activation energy and R is the gas constant. This is because the Arrhenius equation, k = Ae^(-Ea/RT), can be rearranged to ln k = ln A - Ea/RT, resulting in a linear relationship with a slope of -Ea/R.",
+      "explanation_incorrect": "The correct answer is option B, -Ea/R. This is because the Arrhenius equation, k = Ae^(-Ea/RT), can be rearranged to ln k = ln A - Ea/RT, resulting in a linear relationship with a slope of -Ea/R. The other options, Ea/R, Ea, and -Ea, do not correctly represent the relationship between the rate constant and the activation energy in the Arrhenius equation."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The activation energy of a reaction can be lowered by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing the temperature"
+        },
+        {
+          "id": "B",
+          "text": "Adding a catalyst"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the concentration"
+        },
+        {
+          "id": "D",
+          "text": "Increasing the pressure"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding a catalyst lowers the activation energy of a reaction by providing an alternative pathway with a lower energy barrier for the reaction to occur. This allows the reaction to proceed faster at a given temperature.",
+      "explanation_incorrect": "Increasing the temperature, increasing the concentration, or increasing the pressure do not directly lower the activation energy of a reaction. While these factors can increase the reaction rate, they do not change the fundamental energy barrier that the reactants must overcome to form products. Only the addition of a catalyst can effectively lower the activation energy and facilitate the reaction."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A pseudo first-order reaction is one in which:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The reaction is truly first order"
+        },
+        {
+          "id": "B",
+          "text": "One reactant is in such large excess that its concentration is effectively constant"
+        },
+        {
+          "id": "C",
+          "text": "The catalyst makes it first order"
+        },
+        {
+          "id": "D",
+          "text": "The temperature is very high"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a pseudo first-order reaction, one of the reactants is present in such a large excess that its concentration remains effectively constant throughout the reaction. This means the reaction effectively follows first-order kinetics, even if the overall reaction is of a different order.",
+      "explanation_incorrect": "Option A is incorrect because a true first-order reaction follows first-order kinetics from the beginning. Option C is incorrect because the presence of a catalyst does not necessarily make the reaction first order - the order is determined by the rate law, not the presence of a catalyst. Option D is incorrect because temperature affects the rate constant, but does not automatically make a reaction pseudo first-order."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is an example of a pseudo first-order reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decomposition of N2O5"
+        },
+        {
+          "id": "B",
+          "text": "Acid-catalysed hydrolysis of an ester"
+        },
+        {
+          "id": "C",
+          "text": "Decomposition of H2O2"
+        },
+        {
+          "id": "D",
+          "text": "Thermal decomposition of CaCO3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The acid-catalysed hydrolysis of an ester is a pseudo first-order reaction because the concentration of the acid catalyst remains essentially constant compared to the ester concentration, making the reaction follow first-order kinetics.",
+      "explanation_incorrect": "The decomposition of N2O5, decomposition of H2O2, and thermal decomposition of CaCO3 are not pseudo first-order reactions. In these cases, the reaction order depends on the concentrations of multiple reactants, not just one. Pseudo first-order reactions involve a reaction with one variable reactant concentration and one constant reactant concentration, simplifying the rate law expression."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The rate constant of a reaction doubles when the temperature increases from 300 K to 310 K. The activation energy is approximately: (R = 8.314 J mol^-1 K^-1)",
+      "options": [
+        {
+          "id": "A",
+          "text": "53.6 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "107.2 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "26.8 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "80.4 kJ/mol"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 53.6 kJ/mol. This can be calculated using the Arrhenius equation, k = Ae^(-Ea/RT), which shows how the rate constant k depends on temperature T and activation energy Ea. Since the rate constant doubles when the temperature increases from 300 K to 310 K, we can use the Arrhenius equation to find the approximate activation energy.",
+      "explanation_incorrect": "The incorrect options are not correct. Option B) 107.2 kJ/mol is too high, option C) 26.8 kJ/mol is too low, and option D) 80.4 kJ/mol is also incorrect. The correct activation energy of 53.6 kJ/mol can be calculated from the Arrhenius equation using the given information that the rate constant doubles when the temperature increases from 300 K to 310 K."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "According to collision theory, a reaction occurs when molecules collide with:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any kinetic energy"
+        },
+        {
+          "id": "B",
+          "text": "Energy greater than or equal to the threshold energy and proper orientation"
+        },
+        {
+          "id": "C",
+          "text": "Zero activation energy"
+        },
+        {
+          "id": "D",
+          "text": "Only at high temperatures"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to collision theory, a reaction occurs when the colliding molecules have enough kinetic energy to overcome the activation energy barrier and also have the proper orientation for the reaction to take place. This means the energy of the collision must be greater than or equal to the threshold energy, and the orientation of the molecules must be correct for the reaction to proceed.",
+      "explanation_incorrect": "The other options are incorrect. Reactions do not occur with just any kinetic energy, as the energy must be greater than the activation energy. Reactions also do not occur with zero activation energy, as some energy is always required to break and form new bonds. Lastly, reactions can occur at a range of temperatures, not just high temperatures, as long as the colliding molecules have the necessary activation energy."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The integrated rate expression for a first-order reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[A]t = [A]0 - kt"
+        },
+        {
+          "id": "B",
+          "text": "ln[A]t = ln[A]0 - kt"
+        },
+        {
+          "id": "C",
+          "text": "1/[A]t = 1/[A]0 + kt"
+        },
+        {
+          "id": "D",
+          "text": "[A]t = [A]0 e^(kt)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct option is B, ln[A]t = ln[A]0 - kt. This is the integrated rate equation for a first-order reaction, which shows an exponential decay of reactant concentration over time. The natural log of the reactant concentration decreases linearly with time, where k is the first-order rate constant.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the integrated rate expression for a first-order reaction. Option A shows a linear decrease, option C shows a reciprocal relationship, and option D shows an exponential increase - these do not match the expected exponential decay pattern for a first-order reaction."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "The rate of a reaction increases by a factor of 4 when the concentration of a reactant is doubled. The order with respect to that reactant is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The order of a reaction with respect to a reactant is the power to which the concentration of that reactant is raised in the rate law expression. If the rate increases by a factor of 4 when the concentration of a reactant is doubled, the order with respect to that reactant is 2, since 2^2 = 4.",
+      "explanation_incorrect": "The order of a reaction is not 0, 1, or 3 in this case. Option C, with an order of 2, is correct because when the concentration of a reactant is doubled, the rate increases by a factor of 4, which corresponds to the concentration raised to the power of 2 in the rate law expression."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For a first-order reaction, the time taken for 87.5% completion is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "t1/2"
+        },
+        {
+          "id": "B",
+          "text": "2 x t1/2"
+        },
+        {
+          "id": "C",
+          "text": "3 x t1/2"
+        },
+        {
+          "id": "D",
+          "text": "4 x t1/2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a first-order reaction, the time taken for 87.5% completion is 3 x t1/2. This is because for a first-order reaction, the half-life (t1/2) is constant and independent of the initial concentration. The time taken to reach 87.5% completion is 3 times the half-life.",
+      "explanation_incorrect": "The correct answer is 3 x t1/2. This is because for a first-order reaction, the concentration decreases exponentially with time. To reach 87.5% completion, the concentration has to decrease by a factor of 8 (100% - 87.5% = 12.5%, which is 1/8th of the initial concentration). Since the half-life is the time taken for the concentration to decrease by a factor of 2, to decrease by a factor of 8, it will take 3 half-lives."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A catalyst increases the rate of a reaction by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing the temperature"
+        },
+        {
+          "id": "B",
+          "text": "Providing an alternative pathway with lower activation energy"
+        },
+        {
+          "id": "C",
+          "text": "Changing the equilibrium constant"
+        },
+        {
+          "id": "D",
+          "text": "Increasing the concentration of reactants"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A catalyst increases the rate of a reaction by providing an alternative pathway with lower activation energy, making it easier for the reaction to occur. This reduces the energy barrier that reactants need to overcome to form products.",
+      "explanation_incorrect": "A catalyst does not increase the temperature of the reaction. It also does not change the equilibrium constant, which is a measure of the relative amounts of products and reactants at equilibrium. The catalyst's role is to provide an alternative reaction pathway with lower activation energy, not to increase the concentration of reactants."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a reaction with rate = k[A][B]^2, if the concentration of A is doubled and B is halved, the rate becomes:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Half the original"
+        },
+        {
+          "id": "B",
+          "text": "Same as original"
+        },
+        {
+          "id": "C",
+          "text": "Double the original"
+        },
+        {
+          "id": "D",
+          "text": "One-fourth the original"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) Half the original. This is because the rate law has a second-order dependence on [B], so when [B] is halved, the rate decreases by a factor of 2^2 = 4. However, [A] is doubled, which increases the rate by a factor of 2. Thus, the overall rate is half the original rate.",
+      "explanation_incorrect": "The correct answer is not B) Same as original or C) Double the original, because the rate law has a second-order dependence on [B]. When [B] is halved, the rate decreases by a factor of 4, which outweighs the doubling of [A]. The correct answer is also not D) One-fourth the original, because the increase in [A] by a factor of 2 offsets the decrease in [B] by a factor of 2, resulting in the rate being half the original."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The rate constant at 300 K is 3.0 x 10^-3 s^-1 and at 320 K is 3.0 x 10^-2 s^-1. The activation energy is: (R = 8.314 J/mol K)",
+      "options": [
+        {
+          "id": "A",
+          "text": "55.3 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "73.8 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "92.1 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "110.5 kJ/mol"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 73.8 kJ/mol. This can be calculated using the Arrhenius equation, which relates the rate constant k to the activation energy Ea. Since the rate constant increases by a factor of 10 when the temperature increases from 300 K to 320 K, the activation energy can be determined from the Arrhenius equation.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not match the activation energy calculated from the given information. Option A) 55.3 kJ/mol is too low, Option C) 92.1 kJ/mol is too high, and Option D) 110.5 kJ/mol is also too high. The correct activation energy of 73.8 kJ/mol can be determined by plugging the rate constants and temperatures into the Arrhenius equation and solving for Ea."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The unit of rate constant for a zero-order reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "s^-1"
+        },
+        {
+          "id": "B",
+          "text": "mol L^-1 s^-1"
+        },
+        {
+          "id": "C",
+          "text": "L mol^-1 s^-1"
+        },
+        {
+          "id": "D",
+          "text": "L^2 mol^-2 s^-1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The unit of the rate constant for a zero-order reaction is mol L^-1 s^-1 because the rate of a zero-order reaction is directly proportional to the concentration of the reactant, and the unit of concentration is mol L^-1. The rate constant has the same unit as the rate, which is mol L^-1 s^-1.",
+      "explanation_incorrect": "The other options are incorrect because they do not match the expected unit for a zero-order reaction rate constant. Option A (s^-1) is the unit for a first-order reaction, Option C (L mol^-1 s^-1) is the unit for a second-order reaction, and Option D (L^2 mol^-2 s^-1) does not represent a valid unit for a rate constant."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The threshold energy is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activation energy only"
+        },
+        {
+          "id": "B",
+          "text": "Energy of products"
+        },
+        {
+          "id": "C",
+          "text": "Activation energy + average kinetic energy of reactants"
+        },
+        {
+          "id": "D",
+          "text": "Average kinetic energy of reactants"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The threshold energy is the activation energy plus the average kinetic energy of the reactants. This is because the reactants need enough total energy (activation energy + their own kinetic energy) to overcome the energy barrier and reach the transition state for the reaction to occur.",
+      "explanation_incorrect": "The threshold energy is not equal to the activation energy only, as the reactants also need a certain amount of kinetic energy to react. It is also not equal to the energy of the products, as the threshold energy is determined by the activation barrier, not the final energy of the products. The threshold energy is also not equal to just the average kinetic energy of the reactants, as the activation energy is an additional requirement for the reaction to occur."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The molecularity of an elementary reaction can never be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "0 or fractional"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The molecularity of an elementary reaction cannot be 0 or fractional, as it represents the number of reactant species taking part in a single, fundamental step of the reaction. By definition, an elementary reaction involves the collision and reaction of a specific number of atoms or molecules, which must be a whole number.",
+      "explanation_incorrect": "The molecularity of an elementary reaction cannot be 0 or fractional because a reaction must involve the collision and interaction of a specific number of reactant species. Molecularity is always a whole number, such as 1 (for a unimolecular reaction), 2 (for a bimolecular reaction), or 3 (for a termolecular reaction). A fractional or 0 molecularity does not make sense from a physical standpoint, as it would imply the reaction occurring without any reactants present."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For a first-order reaction, a plot of log[A]0/[A]t versus time gives a straight line with slope equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "k"
+        },
+        {
+          "id": "B",
+          "text": "-k"
+        },
+        {
+          "id": "C",
+          "text": "k/2.303"
+        },
+        {
+          "id": "D",
+          "text": "-k/2.303"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a first-order reaction, the integrated rate equation is ln[A]t = -kt + ln[A]0, where [A]0 is the initial concentration and [A]t is the concentration at time t. Plotting log([A]0/[A]t) versus t gives a straight line with slope equal to -k/2.303, since log(x) = ln(x)/2.303.",
+      "explanation_incorrect": "The slope of the plot of log([A]0/[A]t) versus time is not equal to the rate constant k directly, but rather -k/2.303. This is because the y-axis variable is the logarithm of the concentration ratio, and the relationship between the logarithm and the natural logarithm is given by the factor 1/2.303. Therefore, the correct option is C, which gives the slope as -k/2.303."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "The instantaneous rate of a reaction at time t is given by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "delta[A] / delta t"
+        },
+        {
+          "id": "B",
+          "text": "-d[A] / dt"
+        },
+        {
+          "id": "C",
+          "text": "[A]0 - [A]t"
+        },
+        {
+          "id": "D",
+          "text": "k[A]^n only at t = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The instantaneous rate of a reaction at time t is given by the derivative -d[A]/dt, which represents the change in concentration of the reactant A over a small time interval. This reflects the rate at which the reactant is being consumed during the reaction.",
+      "explanation_incorrect": "Option A, delta[A]/delta t, represents the average rate of reaction over a finite time interval, not the instantaneous rate at a specific time t. Option C, [A]0 - [A]t, gives the change in concentration of A between the initial and current time, but does not represent the rate. Option D, k[A]^n, is the rate law expression, which gives the rate based on the concentrations, but this is only applicable at the initial time t=0."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The steric factor (p) in collision theory accounts for:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The energy of activation"
+        },
+        {
+          "id": "B",
+          "text": "The proper orientation of colliding molecules"
+        },
+        {
+          "id": "C",
+          "text": "The frequency of collisions"
+        },
+        {
+          "id": "D",
+          "text": "The temperature dependence"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The steric factor (p) in collision theory accounts for the proper orientation of colliding molecules. For a reaction to occur, the molecules must collide in the correct orientation or configuration to overcome the activation energy barrier.",
+      "explanation_incorrect": "The steric factor (p) does not account for the energy of activation, the frequency of collisions, or the temperature dependence. These factors are represented by other terms in the Arrhenius equation. The steric factor specifically represents the fraction of collisions that occur with the proper orientation for the reaction to proceed."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following does NOT affect the rate of a reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Concentration of reactants"
+        },
+        {
+          "id": "B",
+          "text": "Temperature"
+        },
+        {
+          "id": "C",
+          "text": "Delta G of the reaction"
+        },
+        {
+          "id": "D",
+          "text": "Catalyst"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The change in Gibbs free energy (Delta G) of a reaction does not affect the rate of the reaction. The rate of a reaction is determined by factors such as the concentration of reactants, temperature, and the presence of a catalyst, but not by the overall thermodynamics of the reaction.",
+      "explanation_incorrect": "The rate of a reaction is affected by the concentration of reactants, temperature, and the presence of a catalyst. However, the change in Gibbs free energy (Delta G) of the reaction does not directly impact the rate. Delta G is a measure of the spontaneity and feasibility of the reaction, but it does not determine how fast the reaction will occur."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "Radioactive decay follows:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero-order kinetics"
+        },
+        {
+          "id": "B",
+          "text": "First-order kinetics"
+        },
+        {
+          "id": "C",
+          "text": "Second-order kinetics"
+        },
+        {
+          "id": "D",
+          "text": "Third-order kinetics"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Radioactive decay follows first-order kinetics because the rate of radioactive decay is directly proportional to the number of radioactive atoms present, and the concentration of radioactive atoms decreases exponentially with time.",
+      "explanation_incorrect": "Radioactive decay does not follow zero-order, second-order, or third-order kinetics because the rate of the reaction is not constant, proportional to the square of the concentration, or proportional to the cube of the concentration, respectively. The exponential decay observed in radioactive processes is characteristic of first-order kinetics."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the rate constant of a reaction at 298 K is 3.46 x 10^-5 s^-1 and the frequency factor is 4.0 x 10^13 s^-1, the activation energy is approximately: (R = 8.314 J/mol K)",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "75 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "104 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "150 kJ/mol"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 104 kJ/mol. This can be calculated using the Arrhenius equation, k = Ae^(-Ea/RT), where k is the rate constant, A is the frequency factor, Ea is the activation energy, R is the gas constant, and T is the absolute temperature. Plugging in the given values and solving for Ea gives the activation energy as approximately 104 kJ/mol.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the activation energy calculated from the given Arrhenius equation and rate constant. Option A (50 kJ/mol) and Option B (75 kJ/mol) are too low, while Option D (150 kJ/mol) is too high. The correct activation energy of 104 kJ/mol is obtained by rearranging the Arrhenius equation to solve for Ea using the provided rate constant and frequency factor."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "true_false",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of a reaction can be fractional.",
+      "correct_answer": true,
+      "explanation_correct": "The order of a reaction can indeed be fractional. This is because the reaction rate depends on the concentrations of the reactants, which can have non-integer exponents in the rate law expression.",
+      "explanation_incorrect": "The order of a reaction is usually a whole number, such as 0, 1, or 2. However, it is possible for the order to be fractional, which means the exponent in the rate law expression is not a whole number. This can happen when the reaction mechanism involves multiple steps, or when the rate-determining step has a complex dependence on reactant concentrations."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "true_false",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The half-life of a zero-order reaction is independent of initial concentration.",
+      "correct_answer": false,
+      "explanation_correct": "The half-life of a zero-order reaction is not independent of initial concentration. In a zero-order reaction, the rate is constant and independent of concentration. However, the time taken to reach a certain fraction of the initial concentration (the half-life) still depends on the initial concentration.",
+      "explanation_incorrect": "The statement is incorrect. The half-life of a zero-order reaction is not independent of initial concentration. In a zero-order reaction, the rate is constant and does not depend on the concentration of the reactants. However, the time taken to reach half the initial concentration (the half-life) is inversely proportional to the initial concentration. This means that the half-life will be shorter if the initial concentration is higher."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A catalyst changes both the rate and the equilibrium position of a reaction.",
+      "correct_answer": false,
+      "explanation_correct": "A catalyst only changes the rate of a reaction, not its equilibrium position. This is because a catalyst provides an alternative pathway with lower activation energy, allowing the reaction to proceed faster, but it does not affect the thermodynamics or the position of equilibrium.",
+      "explanation_incorrect": "The statement is incorrect because a catalyst does not change the equilibrium position of a reaction. The equilibrium position is determined by the relative stability of the reactants and products, which is a thermodynamic property. While a catalyst can increase the rate of a reaction, it does not affect the position of equilibrium, which is determined by the change in Gibbs free energy of the reaction."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "true_false",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "Molecularity of a reaction can never be zero or fractional.",
+      "correct_answer": true,
+      "explanation_correct": "The molecularity of a reaction refers to the number of reacting species involved in an elementary step of a reaction. Molecularity must be a whole number, as reactions involve discrete molecules interacting. Fractional or zero molecularity would not make physical sense, as that would imply a non-integer number of reacting species, which is not possible.",
+      "explanation_incorrect": "The molecularity of a reaction cannot be zero or fractional, as that would not represent a physical situation. Reactions involve the interactions of discrete molecules, so the number of reacting species in an elementary step must be a whole number, such as 1, 2, or 3. A molecularity of 0 or a fractional value would not be possible for a real chemical reaction."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "According to the Arrhenius equation, at very high temperatures (T -> infinity), the rate constant k approaches the frequency factor A.",
+      "correct_answer": true,
+      "explanation_correct": "According to the Arrhenius equation, k = Ae^(-Ea/RT), as the temperature T approaches infinity, the exponential term e^(-Ea/RT) approaches 0, leaving only the frequency factor A. This means that at very high temperatures, the rate constant k will approach the frequency factor A.",
+      "explanation_incorrect": "The Arrhenius equation shows that the rate constant k depends on both the frequency factor A and the activation energy Ea. Even at very high temperatures, the exponential term e^(-Ea/RT) will still have a significant effect on the value of k, and k will not simply approach the frequency factor A alone. The full Arrhenius equation must be considered to accurately describe the relationship between k, A, Ea, and temperature."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The half-life of a first-order reaction is given by t1/2 = ___.",
+      "correct_answer": "0.693/k",
+      "explanation_correct": "The half-life (t1/2) of a first-order reaction is given by the expression t1/2 = 0.693/k, where k is the rate constant of the reaction. This formula is derived from the integrated rate equation for a first-order reaction, which shows that the concentration decreases exponentially with time.",
+      "explanation_incorrect": "The correct answer format is t1/2 = 0.693/k. This formula is derived from the integrated rate equation for a first-order reaction, which shows that the concentration decreases exponentially with time. The half-life is the time taken for the concentration to decrease to half its initial value, and this time is inversely proportional to the rate constant k."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "If rate = k[A]^0, the reaction is of ___ order.",
+      "correct_answer": "zero",
+      "explanation_correct": "If the rate is independent of the reactant concentration, meaning rate = k[A]^0, then the reaction is of zero order. This means the reaction rate does not depend on the concentration of the reactant A.",
+      "explanation_incorrect": "The reaction is of zero order because the rate is not dependent on the concentration of the reactant A. The rate is simply equal to the rate constant 'k'. For a zero-order reaction, the concentration of the reactant decreases linearly with time, rather than exponentially as in a first-order reaction."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "In the Arrhenius equation k = Ae^(-Ea/RT), the term Ea represents the ___.",
+      "correct_answer": "activation energy",
+      "explanation_correct": "The term Ea in the Arrhenius equation represents the activation energy, which is the minimum energy required for the reactant molecules to overcome in order to undergo a successful collision and form the products of the reaction. This energy barrier must be crossed for the reaction to occur.",
+      "explanation_incorrect": "The term Ea in the Arrhenius equation does not represent the temperature, but rather the activation energy. The activation energy is the minimum energy required for the reactant molecules to overcome in order to undergo a successful collision and form the products of the reaction. The Arrhenius equation shows how the rate constant 'k' depends on both the activation energy and the temperature 'T'."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The integrated rate equation for a zero-order reaction is [A]t = ___.",
+      "correct_answer": "[A]0 - kt",
+      "explanation_correct": "The integrated rate equation for a zero-order reaction is [A]t = [A]0 - kt, where [A]t is the concentration of the reactant A at time t, [A]0 is the initial concentration, k is the rate constant, and t is the time. This is because in a zero-order reaction, the rate is independent of the concentration of the reactants, so the concentration decreases linearly with time.",
+      "explanation_incorrect": "The integrated rate equation for a zero-order reaction is not [A]t = [A]0 + kt, as this would indicate that the concentration of the reactant increases linearly with time, which is not the case for a zero-order reaction. The correct integrated rate equation is [A]t = [A]0 - kt, where the concentration decreases linearly with time."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The acid-catalysed hydrolysis of methyl acetate with excess water is an example of a ___ first-order reaction.",
+      "correct_answer": "pseudo",
+      "explanation_correct": "The acid-catalysed hydrolysis of methyl acetate is a pseudo-first-order reaction because the concentration of water is in large excess and remains essentially constant throughout the reaction, allowing the rate to be expressed in terms of just the concentration of the reactant methyl acetate.",
+      "explanation_incorrect": "This is not a true first-order reaction, but a pseudo-first-order reaction. In a true first-order reaction, the rate depends on the concentration of a single reactant raised to the power of 1. However, in the acid-catalysed hydrolysis of methyl acetate, the concentration of water is in large excess and remains essentially constant throughout the reaction, so the rate can be expressed in terms of just the concentration of methyl acetate, which follows pseudo-first-order kinetics."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The slope of a graph of ln k vs 1/T is equal to ___.",
+      "correct_answer": "-Ea/R",
+      "explanation_correct": "The slope of a graph of ln k vs 1/T is equal to -Ea/R because this relationship is given by the Arrhenius equation, k = Ae^(-Ea/RT), where Ea is the activation energy and R is the gas constant. Taking the natural logarithm of both sides gives ln k = -Ea/RT + ln A, so the slope of the ln k vs 1/T graph is -Ea/R.",
+      "explanation_incorrect": "The correct answer is -Ea/R, where Ea is the activation energy and R is the gas constant. This is because the Arrhenius equation, which describes the temperature dependence of the rate constant k, is given by k = Ae^(-Ea/RT). Taking the natural logarithm of both sides gives ln k = -Ea/RT + ln A, so the slope of the ln k vs 1/T graph is -Ea/R. The answer format should be -Ea/R, not just Ea/R."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For a first-order reaction, the rate constant k = (2.303/t) log(___/[A]t).",
+      "correct_answer": "[A]0",
+      "explanation_correct": "For a first-order reaction, the rate constant is calculated using the equation k = (2.303/t) log([A]0/[A]t), where [A]0 is the initial concentration of the reactant and [A]t is the concentration at time t. This shows that the rate constant depends on the initial concentration of the reactant, which is why the correct answer is [A]0.",
+      "explanation_incorrect": "The incorrect answer would be [A]t, which is the concentration of the reactant at time t. However, this is not the correct answer because the rate constant for a first-order reaction is calculated using the initial concentration of the reactant, [A]0, not the concentration at a specific time, [A]t."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "ordering",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the following factors in order of how directly they increase reaction rate (most direct first): (A) Increasing concentration, (B) Adding a catalyst, (C) Increasing surface area of solid reactant.",
+      "ordering_items": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_answer": [
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation_correct": "The most direct way to increase the reaction rate is by adding a catalyst (B), as catalysts provide an alternative pathway with lower activation energy, allowing the reaction to proceed faster. Increasing the concentration of reactants (A) also directly increases the rate, since there are more molecules available to collide and react. Increasing the surface area of solid reactants (C) has a less direct effect, as it only increases the number of surface sites available for collisions.",
+      "explanation_incorrect": "The incorrect order would be A, C, B. While increasing concentration (A) and surface area (C) can increase the reaction rate, they do not do so as directly as adding a catalyst (B). Catalysts provide an alternative reaction pathway with lower activation energy, allowing the reaction to proceed much faster than just increasing the number of reactant molecules or the surface area available for collisions."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "ordering",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For a first-order reaction, arrange the following in order of increasing time required: (A) 50% completion, (B) 75% completion, (C) 87.5% completion, (D) 93.75% completion.",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation_correct": "For a first-order reaction, the time required for a certain percentage of completion is determined by the half-life (t1/2) of the reaction, which is independent of the initial concentration. So the order of increasing time required is A (50% completion), B (75% completion), C (87.5% completion), and D (93.75% completion), since each subsequent step represents a higher percentage of completion.",
+      "explanation_incorrect": "The incorrect explanation would be that the time required increases linearly with the percentage of completion. This is not the case for a first-order reaction, where the time required increases exponentially as the reaction progresses towards completion. The correct order reflects the fact that the time required between each successive step (50%, 75%, 87.5%, 93.75%) increases at a greater rate due to the exponential nature of first-order kinetics."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "ordering",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following reactions in order of increasing rate, given the activation energies: (A) Ea = 100 kJ/mol, (B) Ea = 50 kJ/mol, (C) Ea = 20 kJ/mol (same frequency factor and temperature).",
+      "ordering_items": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation_correct": "The order of increasing rate is A, B, C because a higher activation energy (Ea = 100 kJ/mol for A) requires more energy for the reaction to proceed, resulting in a slower rate compared to reactions with lower activation energies (Ea = 50 kJ/mol for B and Ea = 20 kJ/mol for C).",
+      "explanation_incorrect": "The incorrect order would be C, B, A. This is wrong because the activation energy is inversely proportional to the rate of the reaction - the higher the activation energy, the slower the rate. So the reaction with the lowest activation energy (C) would have the highest rate, followed by B and then A."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

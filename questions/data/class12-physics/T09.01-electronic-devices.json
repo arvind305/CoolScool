@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T09.01",
+  "topic_name": "Electronic Devices",
+  "canonical_explanation": {
+    "text": "Electronic devices are based on semiconductor physics. Energy band theory classifies solids into conductors, semiconductors, and insulators based on the energy gap between valence and conduction bands. Intrinsic semiconductors (Si, Ge) have equal electron and hole concentrations, while extrinsic semiconductors are doped to create n-type (excess electrons) or p-type (excess holes). The p-n junction forms a depletion layer and exhibits rectifying behaviour. Applications include half-wave and full-wave rectifiers, Zener diode voltage regulators, LEDs, and photodiodes. Logic gates (OR, AND, NOT, NAND, NOR) form the basis of digital electronics, with NAND and NOR being universal gates.",
+    "rules": [
+      "Energy gap: conductors (~0 eV), semiconductors (~1 eV), insulators (>3 eV)",
+      "In n-type semiconductor: electrons are majority carriers; in p-type: holes are majority carriers",
+      "p-n junction: forward bias reduces depletion layer width; reverse bias increases it",
+      "Zener diode operates in reverse breakdown for voltage regulation",
+      "NAND and NOR are universal gates: any logic function can be built from either alone"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T09.01.Q001",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The energy band gap of silicon at room temperature is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.3 eV"
+        },
+        {
+          "id": "B",
+          "text": "0.7 eV"
+        },
+        {
+          "id": "C",
+          "text": "1.1 eV"
+        },
+        {
+          "id": "D",
+          "text": "3.0 eV"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The energy band gap of silicon, which is an intrinsic semiconductor, is approximately 1.1 eV at room temperature. This energy gap between the valence and conduction bands is responsible for silicon's semiconducting properties.",
+      "explanation_incorrect": "The energy band gap of 0.3 eV, 0.7 eV, or 3.0 eV does not correspond to the actual value for silicon at room temperature. Silicon is a widely used semiconductor material, and its energy band gap is around 1.1 eV, which allows for the creation of various electronic devices based on the p-n junction and other semiconductor principles."
+    },
+    {
+      "question_id": "T09.01.Q002",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In an intrinsic semiconductor at absolute zero temperature:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The valence band is partially filled"
+        },
+        {
+          "id": "B",
+          "text": "The conduction band is fully filled"
+        },
+        {
+          "id": "C",
+          "text": "The valence band is completely filled and the conduction band is empty"
+        },
+        {
+          "id": "D",
+          "text": "Both bands are empty"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At absolute zero temperature, the valence band is completely filled with electrons, and the conduction band is completely empty. This is because the electrons have the lowest possible energy at absolute zero, occupying the valence band and leaving the conduction band vacant.",
+      "explanation_incorrect": "Option A is incorrect because at absolute zero, the valence band is completely filled, not partially filled. Option B is incorrect because the conduction band is empty, not fully filled. Option D is incorrect because both the valence and conduction bands are not empty - the valence band is completely filled, while the conduction band is completely empty."
+    },
+    {
+      "question_id": "T09.01.Q003",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An n-type semiconductor is formed by doping silicon with:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boron (Group 13)"
+        },
+        {
+          "id": "B",
+          "text": "Phosphorus (Group 15)"
+        },
+        {
+          "id": "C",
+          "text": "Carbon (Group 14)"
+        },
+        {
+          "id": "D",
+          "text": "Oxygen (Group 16)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An n-type semiconductor is formed by doping silicon with group 15 elements like phosphorus, which have 5 valence electrons. This provides excess electrons in the silicon crystal structure, resulting in an n-type semiconductor with a high concentration of electrons.",
+      "explanation_incorrect": "Silicon is a group 14 element, and doping it with other group 14 elements like carbon would not create an n-type semiconductor. Similarly, doping with group 13 elements like boron or group 16 elements like oxygen would create p-type semiconductors, not n-type. The correct choice is to dope silicon with a group 15 element like phosphorus to create an n-type semiconductor."
+    },
+    {
+      "question_id": "T09.01.Q004",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "In a p-type semiconductor, the majority charge carriers are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrons"
+        },
+        {
+          "id": "B",
+          "text": "Holes"
+        },
+        {
+          "id": "C",
+          "text": "Protons"
+        },
+        {
+          "id": "D",
+          "text": "Neutrons"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a p-type semiconductor, the majority charge carriers are holes. This is because p-type semiconductors are created by doping an intrinsic semiconductor with acceptor impurities, which results in an excess of positively charged holes as the majority charge carriers.",
+      "explanation_incorrect": "The majority charge carriers in a p-type semiconductor are not electrons, protons, or neutrons. Electrons are the majority charge carriers in n-type semiconductors, while protons and neutrons are not involved in semiconductor physics. The correct answer is that holes are the majority charge carriers in a p-type semiconductor."
+    },
+    {
+      "question_id": "T09.01.Q005",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "The conductivity of a semiconductor increases with increase in temperature because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resistance of the material increases"
+        },
+        {
+          "id": "B",
+          "text": "More electron-hole pairs are generated"
+        },
+        {
+          "id": "C",
+          "text": "The band gap increases"
+        },
+        {
+          "id": "D",
+          "text": "The number of atoms increases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The conductivity of a semiconductor increases with increase in temperature because more electron-hole pairs are generated, leading to a higher number of charge carriers available for conduction.",
+      "explanation_incorrect": "The conductivity of a semiconductor increases with increase in temperature because the number of charge carriers (electrons and holes) increases. This happens due to the increased thermal energy, which allows more electrons to jump from the valence band to the conduction band, creating more electron-hole pairs. The other options are incorrect because resistance decreases with temperature, the band gap does not increase, and the number of atoms remains constant."
+    },
+    {
+      "question_id": "T09.01.Q006",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The Fermi level in an n-type semiconductor at room temperature lies:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exactly at the middle of the band gap"
+        },
+        {
+          "id": "B",
+          "text": "Close to the conduction band"
+        },
+        {
+          "id": "C",
+          "text": "Close to the valence band"
+        },
+        {
+          "id": "D",
+          "text": "Inside the conduction band"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an n-type semiconductor, the Fermi level lies close to the conduction band because of the excess electrons from the n-type dopant atoms. This is because the Fermi level represents the energy at which the probability of electron occupation is 50%, and in an n-type semiconductor, there are more electrons present in the conduction band.",
+      "explanation_incorrect": "The Fermi level does not lie exactly at the middle of the band gap, as it is affected by the presence of excess charge carriers (electrons) in an n-type semiconductor. It also does not lie close to the valence band or inside the conduction band, as these would indicate a p-type or degenerate semiconductor, respectively, which is not the case for a typical n-type semiconductor."
+    },
+    {
+      "question_id": "T09.01.Q007",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The depletion region in a p-n junction is formed due to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drift of majority carriers across the junction"
+        },
+        {
+          "id": "B",
+          "text": "Diffusion of majority carriers across the junction, leaving behind immobile ions"
+        },
+        {
+          "id": "C",
+          "text": "Application of external voltage"
+        },
+        {
+          "id": "D",
+          "text": "Heating of the junction"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The depletion region in a p-n junction is formed due to the diffusion of majority carriers across the junction, leaving behind immobile ions. This creates a region depleted of free charge carriers, forming the depletion layer.",
+      "explanation_incorrect": "The depletion region is not formed due to the drift of majority carriers across the junction or the application of an external voltage. It also does not form due to heating of the junction. The key reason is the diffusion of majority carriers, which leaves behind immobile ions and creates the depletion region."
+    },
+    {
+      "question_id": "T09.01.Q008",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "In forward bias of a p-n junction diode:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The positive terminal is connected to n-side"
+        },
+        {
+          "id": "B",
+          "text": "The positive terminal is connected to p-side"
+        },
+        {
+          "id": "C",
+          "text": "No current flows"
+        },
+        {
+          "id": "D",
+          "text": "The depletion layer width increases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In forward bias, the positive terminal of the power source is connected to the p-side of the p-n junction diode. This allows current to flow easily through the diode, as the applied voltage reduces the width of the depletion layer and allows charge carriers to cross the junction.",
+      "explanation_incorrect": "The incorrect options (A, C, and D) are not correct because: (A) The positive terminal should be connected to the p-side, not the n-side, for forward bias. (C) In forward bias, current does flow through the diode. (D) The depletion layer width actually decreases in forward bias, not increases."
+    },
+    {
+      "question_id": "T09.01.Q009",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The forward voltage drop across a silicon diode is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.3 V"
+        },
+        {
+          "id": "B",
+          "text": "0.7 V"
+        },
+        {
+          "id": "C",
+          "text": "1.1 V"
+        },
+        {
+          "id": "D",
+          "text": "5 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The forward voltage drop across a silicon diode is approximately 0.7 V. This is because the energy gap between the valence and conduction bands in silicon is around 1.1 eV, and a portion of this energy is required to overcome the potential barrier at the p-n junction for current to flow.",
+      "explanation_incorrect": "The forward voltage drop across a silicon diode is not 0.3 V, 1.1 V, or 5 V. These values are incorrect because the forward voltage drop in a silicon diode is determined by the energy gap between the valence and conduction bands, which is around 1.1 eV. The correct forward voltage drop is approximately 0.7 V, as this is the amount of energy required to overcome the potential barrier at the p-n junction for current to flow."
+    },
+    {
+      "question_id": "T09.01.Q010",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "In reverse bias, the current through a p-n junction diode is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Very large"
+        },
+        {
+          "id": "B",
+          "text": "Zero"
+        },
+        {
+          "id": "C",
+          "text": "Very small (reverse saturation current)"
+        },
+        {
+          "id": "D",
+          "text": "Equal to forward current"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In reverse bias, the current through a p-n junction diode is very small, known as the reverse saturation current. This is because the depletion region in the junction widens, making it difficult for charge carriers to cross the junction, resulting in a very low current flow.",
+      "explanation_incorrect": "Option A is incorrect because in reverse bias, the current is not very large. Instead, it is very small, just the reverse saturation current. Option B is incorrect because there is still a small current flowing even in reverse bias. Option D is incorrect because the forward and reverse currents are not equal - the reverse current is much smaller than the forward current."
+    },
+    {
+      "question_id": "T09.01.Q011",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The barrier potential of a p-n junction depends on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the doping concentration"
+        },
+        {
+          "id": "B",
+          "text": "Only the semiconductor material"
+        },
+        {
+          "id": "C",
+          "text": "Both the semiconductor material and the doping concentration"
+        },
+        {
+          "id": "D",
+          "text": "The applied voltage only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The barrier potential of a p-n junction depends on both the semiconductor material and the doping concentration. The energy gap between the valence and conduction bands, which determines the barrier potential, varies with the semiconductor material. Additionally, the doping levels affect the width of the depletion region and thus the barrier potential.",
+      "explanation_incorrect": "The barrier potential does not depend on the applied voltage alone. The applied voltage can change the width of the depletion region and the flow of current, but the inherent barrier potential at the p-n junction is determined by the semiconductor material and the doping concentrations on either side of the junction."
+    },
+    {
+      "question_id": "T09.01.Q012",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A half-wave rectifier converts:",
+      "options": [
+        {
+          "id": "A",
+          "text": "AC to pulsating DC using both half cycles"
+        },
+        {
+          "id": "B",
+          "text": "AC to pulsating DC using only one half cycle"
+        },
+        {
+          "id": "C",
+          "text": "DC to AC"
+        },
+        {
+          "id": "D",
+          "text": "AC to smooth DC directly"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A half-wave rectifier converts AC to pulsating DC by using only one half cycle (either the positive or negative half cycle) of the input AC signal. This is because the rectifier circuit only allows current to flow in one direction, effectively 'cutting off' the other half cycle of the AC waveform.",
+      "explanation_incorrect": "A full-wave rectifier converts AC to pulsating DC by using both half cycles of the input AC signal. It consists of four diodes arranged in a bridge configuration, which allows current to flow in the same direction during both half cycles. In contrast, a half-wave rectifier only uses one half cycle, resulting in a pulsating DC output."
+    },
+    {
+      "question_id": "T09.01.Q013",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "The output frequency of a full-wave rectifier for an input of 50 Hz AC is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 Hz"
+        },
+        {
+          "id": "B",
+          "text": "50 Hz"
+        },
+        {
+          "id": "C",
+          "text": "100 Hz"
+        },
+        {
+          "id": "D",
+          "text": "200 Hz"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In a full-wave rectifier, the AC input is converted to pulsating DC with a frequency double the input frequency. Therefore, for a 50 Hz AC input, the output frequency of the full-wave rectifier will be 100 Hz.",
+      "explanation_incorrect": "The output frequency of a full-wave rectifier is not equal to the input frequency. In a full-wave rectifier, both the positive and negative half-cycles of the AC input are utilized, resulting in an output frequency that is double the input frequency. Therefore, option C, 100 Hz, is the correct answer."
+    },
+    {
+      "question_id": "T09.01.Q014",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A Zener diode is used as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An amplifier"
+        },
+        {
+          "id": "B",
+          "text": "A voltage regulator"
+        },
+        {
+          "id": "C",
+          "text": "An oscillator"
+        },
+        {
+          "id": "D",
+          "text": "A switch"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A Zener diode is used as a voltage regulator because it can maintain a constant voltage drop across it even when the current through it changes. This is due to the Zener effect, where the diode operates in the reverse-bias breakdown region to provide a stable reference voltage.",
+      "explanation_incorrect": "A Zener diode is not used as an amplifier, oscillator, or switch. An amplifier increases the size of an input signal, an oscillator generates a periodic signal, and a switch controls the flow of current. A Zener diode is specifically designed to maintain a constant voltage, which makes it suitable for voltage regulation applications."
+    },
+    {
+      "question_id": "T09.01.Q015",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "A Zener diode operates in:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Forward bias only"
+        },
+        {
+          "id": "B",
+          "text": "Reverse breakdown region"
+        },
+        {
+          "id": "C",
+          "text": "Both forward and reverse bias equally"
+        },
+        {
+          "id": "D",
+          "text": "Zero bias"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A Zener diode operates in the reverse breakdown region, where the diode conducts a constant voltage even when the current through it changes. This voltage regulation property makes Zener diodes useful for regulating the voltage in electronic circuits.",
+      "explanation_incorrect": "The Zener diode does not operate in forward bias, where it would act as a regular diode. It also does not operate equally in both forward and reverse bias, nor does it operate at zero bias. The Zener diode is specifically designed to operate in the reverse breakdown region to provide stable voltage regulation."
+    },
+    {
+      "question_id": "T09.01.Q016",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "An LED (Light Emitting Diode) emits light when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is reverse biased"
+        },
+        {
+          "id": "B",
+          "text": "Electrons and holes recombine at the junction under forward bias"
+        },
+        {
+          "id": "C",
+          "text": "The diode breaks down"
+        },
+        {
+          "id": "D",
+          "text": "It is heated above a certain temperature"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An LED emits light when electrons and holes recombine at the junction under forward bias. This recombination releases energy in the form of photons, which we perceive as light.",
+      "explanation_incorrect": "When an LED is reverse biased, no current flows and no light is emitted. Similarly, LEDs do not emit light when they break down or when they are heated above a certain temperature. The key condition for an LED to emit light is when it is forward biased, which allows electrons and holes to recombine and release photons."
+    },
+    {
+      "question_id": "T09.01.Q017",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "A photodiode is operated in:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Forward bias"
+        },
+        {
+          "id": "B",
+          "text": "Reverse bias"
+        },
+        {
+          "id": "C",
+          "text": "Zero bias only"
+        },
+        {
+          "id": "D",
+          "text": "Breakdown region"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A photodiode is operated in reverse bias to maximize the electric field in the depletion region and optimize the photo-detection process. This allows the photodiode to efficiently convert light into an electrical signal.",
+      "explanation_incorrect": "Photodiodes are not operated in forward bias, as this would result in a high dark current and poor sensitivity to light. Similarly, zero bias is not used as it would reduce the electric field and collection of photo-generated charge carriers. Photodiodes are also not operated in the breakdown region, as this can damage the device."
+    },
+    {
+      "question_id": "T09.01.Q018",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A solar cell converts:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrical energy to light energy"
+        },
+        {
+          "id": "B",
+          "text": "Light energy to electrical energy"
+        },
+        {
+          "id": "C",
+          "text": "Heat energy to electrical energy"
+        },
+        {
+          "id": "D",
+          "text": "Chemical energy to electrical energy"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A solar cell converts light energy (from the sun) into electrical energy through the photovoltaic effect. The light energy absorbed by the solar cell's semiconductor material generates electron-hole pairs, which are then separated by the p-n junction to produce an electric current.",
+      "explanation_incorrect": "Option A is incorrect because a solar cell does not convert electrical energy to light energy. That would be the opposite of how a solar cell works. Option C is incorrect because a solar cell does not convert heat energy to electrical energy - it converts light energy. Option D is incorrect because a solar cell does not convert chemical energy to electrical energy; it is a device that generates electricity from light."
+    },
+    {
+      "question_id": "T09.01.Q019",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The output of an OR gate is 1 when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All inputs are 0"
+        },
+        {
+          "id": "B",
+          "text": "At least one input is 1"
+        },
+        {
+          "id": "C",
+          "text": "All inputs are 1"
+        },
+        {
+          "id": "D",
+          "text": "Only one input is 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The output of an OR gate is 1 when at least one of the inputs is 1. This is because the OR gate outputs a 1 if any of its inputs are 1, and a 0 only if all inputs are 0.",
+      "explanation_incorrect": "The output of an OR gate is not 1 when all inputs are 0, because the OR gate only outputs a 1 if at least one input is 1. Similarly, the output is not 1 when all inputs are 1, since the OR gate simply needs one input to be 1 to output a 1. The correct answer is that the output is 1 when at least one input is 1."
+    },
+    {
+      "question_id": "T09.01.Q020",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The output of an AND gate is 1 only when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "At least one input is 1"
+        },
+        {
+          "id": "B",
+          "text": "At least one input is 0"
+        },
+        {
+          "id": "C",
+          "text": "All inputs are 1"
+        },
+        {
+          "id": "D",
+          "text": "All inputs are 0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The output of an AND gate is 1 only when all the inputs are 1. This is because the AND gate outputs a 1 only when all the input conditions are true (i.e. all inputs are 1).",
+      "explanation_incorrect": "The output of an AND gate is 1 when all the inputs are 1, not when at least one input is 1 (option A) or when at least one input is 0 (option B). The AND gate is a logic operation that requires all inputs to be 1 in order to output a 1. If any of the inputs are 0, the output of the AND gate will be 0."
+    },
+    {
+      "question_id": "T09.01.Q021",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A NOT gate:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Has two inputs and one output"
+        },
+        {
+          "id": "B",
+          "text": "Inverts the input: if input is 0, output is 1 and vice versa"
+        },
+        {
+          "id": "C",
+          "text": "Has the same output as input"
+        },
+        {
+          "id": "D",
+          "text": "Always gives output 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct option is B because a NOT gate (also called an inverter) inverts the input signal - if the input is 0, the output becomes 1, and vice versa. This is the defining feature of a NOT gate.",
+      "explanation_incorrect": "The incorrect options are not correct. Option A is incorrect because a NOT gate has only one input and one output. Option C is incorrect because the output of a NOT gate is the inverse of the input, not the same. Option D is incorrect because the output of a NOT gate is not always 1 - it depends on the input, which is inverted at the output."
+    },
+    {
+      "question_id": "T09.01.Q022",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "NAND gate is called a universal gate because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is the most commonly used gate"
+        },
+        {
+          "id": "B",
+          "text": "Any logic gate can be constructed using only NAND gates"
+        },
+        {
+          "id": "C",
+          "text": "It uses the least power"
+        },
+        {
+          "id": "D",
+          "text": "It is the fastest gate"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The NAND gate is called a universal gate because any logic gate can be constructed using only NAND gates. This means that NAND gates can be used to build all the other logic gates, making it a fundamental building block of digital electronics.",
+      "explanation_incorrect": "Options A, C, and D are not the reasons why the NAND gate is a universal gate. While the NAND gate may be commonly used and have good power efficiency and speed, the key reason it is universal is that it can be used to construct all other logic gates, such as AND, OR, and NOT gates. This makes the NAND gate the most fundamental logic gate in digital electronics."
+    },
+    {
+      "question_id": "T09.01.Q023",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The truth table entry for a NAND gate with inputs A = 1 and B = 1 gives output:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "Undefined"
+        },
+        {
+          "id": "D",
+          "text": "High impedance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The NAND gate output is 0 when both inputs A and B are 1, as the output is 'not' the 'and' of the inputs. This means that the output is 0 when the inputs are both 1.",
+      "explanation_incorrect": "The other options are incorrect because: A) 1 is the output when at least one input is 0, not when both are 1. C) The output is well-defined and can only be 0 or 1, not 'undefined'. D) High impedance is not a valid output state for a basic logic gate like NAND."
+    },
+    {
+      "question_id": "T09.01.Q024",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The output of a NOR gate is 1 only when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All inputs are 1"
+        },
+        {
+          "id": "B",
+          "text": "At least one input is 1"
+        },
+        {
+          "id": "C",
+          "text": "All inputs are 0"
+        },
+        {
+          "id": "D",
+          "text": "At least one input is 0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The output of a NOR gate is 1 only when all inputs are 0. This is because a NOR gate performs the logical NOR operation, which means the output is 1 only when all the inputs are 0, and 0 otherwise.",
+      "explanation_incorrect": "The output of a NOR gate is not 1 when at least one input is 1. In fact, the NOR operation gives an output of 0 when at least one input is 1, as the NOR gate outputs the logical complement of the OR operation."
+    },
+    {
+      "question_id": "T09.01.Q025",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "To make an AND gate using NAND gates, the minimum number of NAND gates required is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "To make an AND gate using NAND gates, the minimum number of NAND gates required is 2. This is because an AND gate can be constructed by connecting two NAND gates in a specific configuration, where the output of one NAND gate is connected to the inputs of the other NAND gate.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the minimum number of NAND gates required to make an AND gate. Option A (1 NAND gate) is incorrect because a single NAND gate cannot form an AND gate on its own. Options C (3 NAND gates) and D (4 NAND gates) are also incorrect as they use more NAND gates than the minimum required to construct an AND gate."
+    },
+    {
+      "question_id": "T09.01.Q026",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The energy band gap of germanium at room temperature is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.67 eV"
+        },
+        {
+          "id": "B",
+          "text": "1.1 eV"
+        },
+        {
+          "id": "C",
+          "text": "3.0 eV"
+        },
+        {
+          "id": "D",
+          "text": "0.1 eV"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The energy band gap of germanium (Ge) at room temperature is approximately 0.67 eV. This value is characteristic of intrinsic semiconductor materials like Ge, which have a relatively small energy gap between the valence and conduction bands compared to insulators.",
+      "explanation_incorrect": "The energy band gap of silicon (Si) at room temperature is 1.1 eV, not germanium. Germanium has a smaller energy gap of around 0.67 eV, which is why option A is the correct answer. The other options, such as 3.0 eV and 0.1 eV, are not the typical energy band gap values for common semiconductor materials like Ge and Si."
+    },
+    {
+      "question_id": "T09.01.Q027",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The V-I characteristic of a p-n junction diode in forward bias shows that current increases:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linearly with voltage from 0 V"
+        },
+        {
+          "id": "B",
+          "text": "Exponentially after exceeding the knee voltage"
+        },
+        {
+          "id": "C",
+          "text": "Decreases with increasing voltage"
+        },
+        {
+          "id": "D",
+          "text": "Remains constant"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The current in a forward-biased p-n junction diode increases exponentially with increasing voltage after exceeding the knee voltage. This is due to the increased injection of majority carriers across the junction, which results in an exponential increase in the recombination current.",
+      "explanation_incorrect": "The current in a forward-biased p-n junction diode does not increase linearly with voltage from 0 V. Instead, the current increases exponentially after exceeding the knee voltage, which is typically around 0.7 V for silicon diodes. This is because the diode exhibits a rectifying behavior, where it allows current to flow easily in the forward-bias direction but blocks current in the reverse-bias direction."
+    },
+    {
+      "question_id": "T09.01.Q028",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "In an intrinsic semiconductor, the number of free electrons (n_e) and holes (n_h) are related as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "n_e > n_h"
+        },
+        {
+          "id": "B",
+          "text": "n_e < n_h"
+        },
+        {
+          "id": "C",
+          "text": "n_e = n_h"
+        },
+        {
+          "id": "D",
+          "text": "n_e = 0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an intrinsic semiconductor, the number of free electrons (n_e) and holes (n_h) are equal because the semiconductor material has an equal number of electrons and holes naturally. This is a fundamental property of intrinsic semiconductors.",
+      "explanation_incorrect": "The incorrect options are not correct because in an intrinsic semiconductor, the number of free electrons and holes are always equal. This is because the semiconductor material has an equal number of electrons and holes present naturally, with no external doping. Option A (n_e > n_h) and Option B (n_e < n_h) are incorrect, as they suggest an imbalance in the electron and hole concentrations, which is not the case for an intrinsic semiconductor."
+    },
+    {
+      "question_id": "T09.01.Q029",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A filter capacitor is used in a rectifier circuit to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increase the voltage"
+        },
+        {
+          "id": "B",
+          "text": "Convert DC to AC"
+        },
+        {
+          "id": "C",
+          "text": "Smooth the pulsating DC output"
+        },
+        {
+          "id": "D",
+          "text": "Protect the diode"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A filter capacitor is used in a rectifier circuit to smooth the pulsating DC output. It helps to reduce the ripple in the output voltage and convert the pulsating DC into a relatively steady DC supply.",
+      "explanation_incorrect": "The filter capacitor is not used to increase the voltage or convert DC to AC. Its primary function is to smooth out the ripple in the pulsating DC output of the rectifier circuit, providing a more steady and constant DC supply. The filter capacitor does not protect the diode either, as that is not its main purpose."
+    },
+    {
+      "question_id": "T09.01.Q030",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If both inputs of a NOR gate are connected together, it functions as a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "AND gate"
+        },
+        {
+          "id": "B",
+          "text": "OR gate"
+        },
+        {
+          "id": "C",
+          "text": "NOT gate"
+        },
+        {
+          "id": "D",
+          "text": "NAND gate"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If both inputs of a NOR gate are connected together, it functions as a NOT gate. This is because the NOR operation is 'true' only when both inputs are 'false'. With both inputs connected, the gate always sees 'true' inputs, so the output is always 'false', which is the opposite (NOT) of the input.",
+      "explanation_incorrect": "The NOR gate is not functioning as an AND gate, OR gate, or NAND gate when both inputs are connected together. In those cases, the output would depend on the specific logic operation defined for the gate. However, when both inputs are connected to the same signal, the NOR gate effectively becomes a NOT gate, inverting the input signal."
+    },
+    {
+      "question_id": "T09.01.Q031",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The width of the depletion region in a p-n junction:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increases in forward bias and decreases in reverse bias"
+        },
+        {
+          "id": "B",
+          "text": "Decreases in forward bias and increases in reverse bias"
+        },
+        {
+          "id": "C",
+          "text": "Remains constant in both biasing conditions"
+        },
+        {
+          "id": "D",
+          "text": "Becomes zero in forward bias"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The width of the depletion region in a p-n junction decreases in forward bias and increases in reverse bias. This is because forward bias reduces the potential barrier, allowing more charge carriers to cross the junction, while reverse bias increases the potential barrier, widening the depletion region.",
+      "explanation_incorrect": "The width of the depletion region does not increase in forward bias and decrease in reverse bias. This is because forward bias reduces the potential barrier, allowing more charge carriers to cross the junction, which decreases the depletion region width. Conversely, reverse bias increases the potential barrier, widening the depletion region."
+    },
+    {
+      "question_id": "T09.01.Q032",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A material with a very large band gap (> 3 eV) is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conductor"
+        },
+        {
+          "id": "B",
+          "text": "Semiconductor"
+        },
+        {
+          "id": "C",
+          "text": "Insulator"
+        },
+        {
+          "id": "D",
+          "text": "Superconductor"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A material with a very large band gap (> 3 eV) is classified as an insulator because it has a large energy separation between the valence and conduction bands, making it difficult for electrons to transition between the bands and conduct electricity.",
+      "explanation_incorrect": "A material with a very large band gap is not a conductor, semiconductor, or superconductor. Conductors have a partially filled conduction band, semiconductors have a small energy gap, and superconductors are a special type of conductor. An insulator, on the other hand, has a large energy gap between the valence and conduction bands, preventing the flow of electrons and making it an effective electrical insulator."
+    },
+    {
+      "question_id": "T09.01.Q033",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "The frequency of pulsating DC output of a half-wave rectifier for a 50 Hz AC input is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 Hz"
+        },
+        {
+          "id": "B",
+          "text": "50 Hz"
+        },
+        {
+          "id": "C",
+          "text": "100 Hz"
+        },
+        {
+          "id": "D",
+          "text": "200 Hz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The frequency of the pulsating DC output of a half-wave rectifier is equal to the input AC frequency, which is 50 Hz. This is because a half-wave rectifier only allows one-half of the AC cycle to pass through, resulting in an output that pulsates at the same frequency as the input AC.",
+      "explanation_incorrect": "Option A is incorrect because the frequency of the pulsating DC output should be the same as the input AC frequency, which is 50 Hz. Option C is incorrect because the output frequency is not double the input frequency. Option D is incorrect because the output frequency is not quadruple the input frequency."
+    },
+    {
+      "question_id": "T09.01.Q034",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "For a two-input OR gate, if input A = 0 and B = 0, the output Y is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "Undefined"
+        },
+        {
+          "id": "D",
+          "text": "Depends on the gate material"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a two-input OR gate, if both inputs A and B are 0, the output Y will be 0. This is because the OR gate outputs a 1 only if at least one of the inputs is 1, but if both inputs are 0, the output must be 0.",
+      "explanation_incorrect": "The correct answer is B) 0. In a two-input OR gate, the output is 1 if either or both of the inputs are 1. However, if both inputs A and B are 0, the output Y will be 0, since there is no 1 input to the OR gate. Options A) 1 and D) Depends on the gate material are incorrect, as the output is always 0 when both inputs are 0 for a two-input OR gate."
+    },
+    {
+      "question_id": "T09.01.Q035",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The forward voltage drop across a germanium diode is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.3 V"
+        },
+        {
+          "id": "B",
+          "text": "0.7 V"
+        },
+        {
+          "id": "C",
+          "text": "1.1 V"
+        },
+        {
+          "id": "D",
+          "text": "1.5 V"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The forward voltage drop across a germanium diode is approximately 0.3 V because the energy gap between the valence and conduction bands in germanium is smaller compared to silicon, resulting in a lower forward voltage required to turn on the diode.",
+      "explanation_incorrect": "The forward voltage drop across a germanium diode is not 0.7 V, 1.1 V, or 1.5 V, as these values are more typical of silicon diodes. Germanium diodes have a smaller energy gap between the valence and conduction bands, leading to a lower forward voltage drop of around 0.3 V."
+    },
+    {
+      "question_id": "T09.01.Q036",
+      "type": "true_false",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The resistance of a semiconductor decreases with increase in temperature.",
+      "correct_answer": true,
+      "explanation_correct": "The resistance of a semiconductor decreases with increase in temperature because the increased thermal energy helps more electrons move from the valence band to the conduction band, increasing the number of charge carriers and reducing the overall resistance.",
+      "explanation_incorrect": "The resistance of a semiconductor actually decreases with increase in temperature, not increases. This is because higher temperatures provide more thermal energy to the electrons, allowing more of them to transition from the valence band to the conduction band. This increases the number of charge carriers, lowering the overall resistance of the semiconductor material."
+    },
+    {
+      "question_id": "T09.01.Q037",
+      "type": "true_false",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "A p-n junction diode allows current to flow easily in both directions.",
+      "correct_answer": false,
+      "explanation_correct": "A p-n junction diode allows current to flow easily in only one direction, from the p-type to the n-type side. This is due to the rectifying behavior of the p-n junction, which creates a depletion layer that blocks current flow in the opposite direction.",
+      "explanation_incorrect": "Many students think a p-n junction diode allows current flow in both directions, but this is not the case. A p-n junction diode has a built-in potential barrier that only allows current to flow easily in one direction, from the p-type to the n-type side. Applying a voltage in the opposite direction increases the depletion layer and blocks current flow in that direction."
+    },
+    {
+      "question_id": "T09.01.Q038",
+      "type": "true_false",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A full-wave rectifier is more efficient than a half-wave rectifier.",
+      "correct_answer": true,
+      "explanation_correct": "A full-wave rectifier is more efficient than a half-wave rectifier because it utilizes both the positive and negative half-cycles of the AC input, effectively converting all the input power into DC output, whereas a half-wave rectifier only uses one half-cycle, resulting in a less efficient power conversion.",
+      "explanation_incorrect": "A common misconception is that a half-wave rectifier is more efficient since it has a simpler circuit design. However, a full-wave rectifier is more efficient because it uses both the positive and negative half-cycles of the AC input, ensuring that more of the input power is converted into usable DC output, leading to higher overall efficiency."
+    },
+    {
+      "question_id": "T09.01.Q039",
+      "type": "true_false",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "An AND gate can be made using only NOR gates.",
+      "correct_answer": true,
+      "explanation_correct": "An AND gate can indeed be constructed using only NOR gates. This is because the NOR gate is a universal logic gate, meaning that any other logic gate can be built using only NOR gates through appropriate combinations and connections.",
+      "explanation_incorrect": "A common misconception is that an AND gate requires both AND and OR gates to be constructed. However, the NOR gate is a universal gate, which means that it can be used to create any other logic gate, including the AND gate. By properly arranging and connecting NOR gates, an AND gate can be implemented."
+    },
+    {
+      "question_id": "T09.01.Q040",
+      "type": "true_false",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "Adding a pentavalent impurity to pure silicon creates a p-type semiconductor.",
+      "correct_answer": false,
+      "explanation_correct": "Adding a pentavalent impurity (such as arsenic or phosphorus) to pure silicon creates an n-type semiconductor, not a p-type. This is because pentavalent impurities have one extra electron compared to silicon, leading to an excess of free electrons in the material.",
+      "explanation_incorrect": "To create a p-type semiconductor, you need to add a trivalent impurity (such as boron or gallium) to pure silicon. These impurities have one less electron compared to silicon, leading to an excess of 'holes' (absence of electrons) in the material. The excess holes, rather than electrons, are the majority charge carriers in a p-type semiconductor."
+    },
+    {
+      "question_id": "T09.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Silicon and germanium are examples of ___ semiconductors (before doping).",
+      "correct_answer": "intrinsic",
+      "explanation_correct": "Silicon and germanium are examples of intrinsic semiconductors, meaning they have an equal concentration of electrons and holes before any doping is done. This is because the energy gap between the valence and conduction bands in intrinsic semiconductors is small, allowing some electrons to jump to the conduction band and leaving behind holes.",
+      "explanation_incorrect": "The accepted answer format is 'intrinsic'. Intrinsic semiconductors refer to pure semiconductor materials like silicon and germanium that have an equal number of electrons and holes before any doping is done. This is in contrast to extrinsic semiconductors, which are doped with impurities to create an excess of either electrons (n-type) or holes (p-type)."
+    },
+    {
+      "question_id": "T09.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The potential barrier across a silicon p-n junction at room temperature is approximately ___ V.",
+      "correct_answer": "0.7",
+      "explanation_correct": "The potential barrier across a silicon p-n junction at room temperature is approximately 0.7 V. This is because the energy gap between the valence and conduction bands in silicon is around 1.1 eV, and the potential barrier is roughly half of this energy gap.",
+      "explanation_incorrect": "The potential barrier across a silicon p-n junction at room temperature is not 0.5 V. The correct value is 0.7 V. This is because the energy gap between the valence and conduction bands in silicon is around 1.1 eV, and the potential barrier is roughly half of this energy gap, which gives a value of approximately 0.7 V."
+    },
+    {
+      "question_id": "T09.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "A Zener diode maintains a constant ___ across its terminals in the breakdown region.",
+      "correct_answer": "voltage",
+      "explanation_correct": "A Zener diode is designed to operate in the breakdown region, where the voltage across its terminals remains nearly constant as the current through it varies. This constant voltage is called the Zener voltage, which is a key property of the Zener diode that allows it to be used as a voltage regulator.",
+      "explanation_incorrect": "The incorrect answer would be 'current'. A Zener diode does not maintain a constant current across its terminals in the breakdown region. Instead, it maintains a constant voltage, which is the defining characteristic that allows it to be used as a voltage regulator in electronic circuits."
+    },
+    {
+      "question_id": "T09.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The Boolean expression for a NAND gate with inputs A and B is Y = ___.",
+      "correct_answer": "NOT(A AND B)",
+      "explanation_correct": "The Boolean expression for a NAND gate is 'NOT(A AND B)' because the NAND gate outputs a '0' only when both inputs A and B are '1', otherwise it outputs a '1'. This is the logical inverse of the AND gate, where the output is '1' only when both inputs are '1'.",
+      "explanation_incorrect": "The incorrect expression would be 'A AND B', which is the Boolean expression for an AND gate. The NAND gate is the logical inverse of the AND gate, meaning its output is '0' when both inputs are '1', and '1' for all other input combinations. Therefore, the correct expression is 'NOT(A AND B)', which follows the NAND gate truth table."
+    },
+    {
+      "question_id": "T09.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "In an n-type semiconductor, electrons are the majority carriers and ___ are the minority carriers.",
+      "correct_answer": "holes",
+      "explanation_correct": "In an n-type semiconductor, the majority charge carriers are electrons that have been donated by the dopant atoms. The minority carriers are the holes, which are the 'empty spaces' left behind when electrons are excited from the valence band to the conduction band.",
+      "explanation_incorrect": "The accepted answer format for this fill-in-the-blank question is 'holes'. In an n-type semiconductor, the majority carriers are electrons, not holes. Holes are the minority carriers, as they are the 'empty spaces' left behind when electrons are excited from the valence band to the conduction band in the semiconductor material."
+    },
+    {
+      "question_id": "T09.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The ripple factor of a full-wave rectifier is ___ than that of a half-wave rectifier.",
+      "correct_answer": "less",
+      "explanation_correct": "The ripple factor of a full-wave rectifier is less than that of a half-wave rectifier because a full-wave rectifier utilizes both the positive and negative half-cycles of the input AC waveform, resulting in a smoother DC output with lower ripple.",
+      "explanation_incorrect": "The ripple factor of a full-wave rectifier is more than that of a half-wave rectifier. This is because a half-wave rectifier only utilizes one half-cycle of the input AC waveform, leading to a more pulsating DC output with higher ripple. The correct answer is that the ripple factor of a full-wave rectifier is less than that of a half-wave rectifier."
+    },
+    {
+      "question_id": "T09.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The current in a p-n junction under forward bias is primarily due to ___ of majority carriers.",
+      "correct_answer": "diffusion",
+      "explanation_correct": "Under forward bias, the voltage applied across the p-n junction causes the depletion region to narrow. This allows the majority charge carriers (electrons in n-type and holes in p-type) to diffuse across the junction, resulting in the primary flow of current.",
+      "explanation_incorrect": "The correct answer is 'diffusion'. In a forward-biased p-n junction, the majority carriers (electrons in n-type and holes in p-type) are driven across the junction by the applied voltage, which reduces the width of the depletion region. This diffusion of majority carriers is the primary mechanism for the flow of current, rather than the drift of minority carriers."
+    },
+    {
+      "question_id": "T09.01.Q048",
+      "type": "ordering",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange the following materials in order of increasing band gap energy: (A) Germanium (0.67 eV) (B) Diamond (5.5 eV) (C) Silicon (1.1 eV) (D) Gallium arsenide (1.42 eV)",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "explanation_correct": "The materials are arranged in order of increasing band gap energy: Germanium (0.67 eV) < Silicon (1.1 eV) < Gallium arsenide (1.42 eV) < Diamond (5.5 eV). This is because the band gap energy is a measure of the energy difference between the valence and conduction bands, and a higher band gap indicates a more insulating material.",
+      "explanation_incorrect": "The incorrect order would be: Germanium (0.67 eV), Gallium arsenide (1.42 eV), Silicon (1.1 eV), Diamond (5.5 eV). This is incorrect because the band gap energy increases from Germanium to Silicon to Gallium arsenide to Diamond. The materials should be arranged in strictly increasing order of band gap energy."
+    },
+    {
+      "question_id": "T09.01.Q049",
+      "type": "ordering",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following in order of increasing rectification efficiency: (A) Half-wave rectifier without filter (B) Full-wave rectifier without filter (C) Full-wave rectifier with capacitor filter (D) Half-wave rectifier with capacitor filter",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "explanation_correct": "The rectification efficiency increases in the order A, D, B, C. A half-wave rectifier without a filter has the lowest efficiency, while a full-wave rectifier with a capacitor filter has the highest efficiency due to the complete conversion of AC to DC and the removal of ripple voltage.",
+      "explanation_incorrect": "The incorrect order would be A, B, D, C. A full-wave rectifier without a filter has a higher efficiency than a half-wave rectifier with a filter because it converts more of the AC input to DC. However, the full-wave rectifier with a capacitor filter has the highest efficiency, as it not only converts the AC to DC but also removes the ripple voltage, resulting in a smoother DC output."
+    },
+    {
+      "question_id": "T09.01.Q050",
+      "type": "ordering",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following steps to construct a NOT gate using a NAND gate: (A) Connect both inputs of the NAND gate together (B) Apply input signal to the connected inputs (C) Obtain inverted output at the NAND gate output (D) Verify using truth table",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanation_correct": "The correct answer is A, B, C, D because connecting the two inputs of a NAND gate together effectively turns it into a NOT gate. The input signal is then applied to the connected inputs, and the inverted output is obtained at the NAND gate output. Verifying the truth table confirms that this configuration implements a NOT gate.",
+      "explanation_incorrect": "The incorrect answer would be to not connect the two inputs together (step A). This would result in the NAND gate not functioning as a NOT gate, and the output would not be the inverse of the input. The correct steps are to first connect the inputs, then apply the input signal, obtain the inverted output, and verify the truth table to confirm the NOT gate operation."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 14,
+        "application": 20,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

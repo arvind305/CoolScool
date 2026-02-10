@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.02",
+  "topic_name": "Functions",
+  "canonical_explanation": {
+    "text": "A function f from set A to set B is a special relation that assigns to each element of A exactly one element of B. The set A is the domain, B is the co-domain, and the set of all images is the range. Functions are classified as one-one (injective) if distinct inputs give distinct outputs, onto (surjective) if every element of B is an image, and bijective if both. Real-valued functions include polynomial, rational, modulus, signum, and greatest integer functions, and algebra of functions allows combining them through addition, subtraction, multiplication, and division.",
+    "rules": [
+      "A relation f: A → B is a function if every element in A has exactly one image in B.",
+      "A function is one-one (injective) if f(a₁) = f(a₂) implies a₁ = a₂.",
+      "A function is onto (surjective) if for every b ∈ B, there exists a ∈ A such that f(a) = b.",
+      "Range ⊆ Co-domain always; Range = Co-domain for an onto function.",
+      "For (f/g)(x) = f(x)/g(x), the domain excludes points where g(x) = 0."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.02.Q001",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "A function f: A → B is defined if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Every element of A has at least one image in B"
+        },
+        {
+          "id": "B",
+          "text": "Every element of A has exactly one image in B"
+        },
+        {
+          "id": "C",
+          "text": "Some elements of A have images in B"
+        },
+        {
+          "id": "D",
+          "text": "Every element of B has an image in A"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) Every element of A has exactly one image in B. This is the definition of a function - each element in the domain (set A) must be assigned to exactly one element in the codomain (set B).",
+      "explanation_incorrect": "The incorrect options are not the correct definition of a function. Option A) implies a relation where each element in A may have one or more images in B, which is not a function. Option C) allows some elements in A to not have any images in B, which also does not define a function. Option D) is incorrect because the function definition only requires each element in A to have one image in B, not the other way around."
+    },
+    {
+      "question_id": "T01.02.Q002",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The domain of f(x) = 1/(x − 3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "ℝ − {3}"
+        },
+        {
+          "id": "C",
+          "text": "ℝ − {0}"
+        },
+        {
+          "id": "D",
+          "text": "{3}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of f(x) = 1/(x - 3) is the set of all real numbers except 3, because the denominator cannot be equal to 0. Therefore, the correct answer is option B: ℝ - {3}.",
+      "explanation_incorrect": "The domain of a function represents the set of all possible input values. In this case, the function f(x) = 1/(x - 3) has a denominator of (x - 3), which cannot be equal to 0. Therefore, the value of x cannot be 3, and the domain is the set of all real numbers excluding 3, which is the correct answer of option B: ℝ - {3}."
+    },
+    {
+      "question_id": "T01.02.Q003",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The range of f(x) = x² for x ∈ ℝ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "[0, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(0, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(−∞, 0]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = x^2 is a real-valued function where the input x can be any real number. The range of this function is the set of all possible output values, which is the non-negative real numbers (including 0), denoted as [0, ∞).",
+      "explanation_incorrect": "The incorrect options are not correct because: (A) the range of x^2 does not include negative real numbers, (C) the range does not exclude 0, and (D) the range does not include negative real numbers. The correct option (B) [0, ∞) accurately represents the set of all possible output values for the function f(x) = x^2."
+    },
+    {
+      "question_id": "T01.02.Q004",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The domain of f(x) = √(x − 2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "[2, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(2, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(−∞, 2]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of the function f(x) = √(x - 2) is [2, ∞) because the square root function is only defined for non-negative values, and x - 2 must be greater than or equal to 0 for the function to be real-valued.",
+      "explanation_incorrect": "The correct answer is option B, [2, ∞). This is because the square root function is only defined for non-negative values, and x - 2 must be greater than or equal to 0 for the function to be real-valued. Options A, C, and D do not satisfy this condition and are therefore incorrect."
+    },
+    {
+      "question_id": "T01.02.Q005",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "Which of the following relations is NOT a function from {1, 2, 3} to {a, b, c}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "{(1, a), (2, b), (3, c)}"
+        },
+        {
+          "id": "B",
+          "text": "{(1, a), (2, a), (3, a)}"
+        },
+        {
+          "id": "C",
+          "text": "{(1, a), (2, b), (1, c)}"
+        },
+        {
+          "id": "D",
+          "text": "{(1, b), (2, c), (3, a)}"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Option C is not a function because the same input (1) is assigned to two different outputs (a and c), which violates the requirement that a function must assign exactly one output to each input.",
+      "explanation_incorrect": "Option B is a function because each input (1, 2, 3) is assigned exactly one output (a). Option A and D are also functions because they satisfy the condition that each input is assigned exactly one output."
+    },
+    {
+      "question_id": "T01.02.Q006",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The domain of f(x) = √(4 − x²) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[−2, 2]"
+        },
+        {
+          "id": "B",
+          "text": "(−2, 2)"
+        },
+        {
+          "id": "C",
+          "text": "ℝ − [−2, 2]"
+        },
+        {
+          "id": "D",
+          "text": "[0, 2]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The domain of a function is the set of all possible input values. For the function f(x) = √(4 - x²), the input x can only take values between -2 and 2, because the square root of a negative number is not defined. Therefore, the domain of this function is the closed interval [-2, 2].",
+      "explanation_incorrect": "The domain of this function is not the entire real number line (ℝ) or the open interval (-2, 2), as those would include values of x that would make the square root of a negative number. Similarly, the domain is not just the non-negative real numbers [0, 2], as that would exclude the negative values of x that are part of the valid domain."
+    },
+    {
+      "question_id": "T01.02.Q007",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "If f(x) = |x|, then f(−5) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−5"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "25"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 5. The absolute value function |x| gives the distance of x from 0 on the number line, regardless of the sign of x. Since -5 is 5 units away from 0, the absolute value of -5 is 5.",
+      "explanation_incorrect": "The incorrect options are not correct because: A) -5 is the original value of x, not the absolute value; C) 0 is the absolute value of 0, not -5; D) 25 is the square of the absolute value of -5, not the absolute value itself. The absolute value function always gives a non-negative result."
+    },
+    {
+      "question_id": "T01.02.Q008",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "A function f: A → B is one-one (injective) if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Every element of B has a pre-image"
+        },
+        {
+          "id": "B",
+          "text": "f(a₁) = f(a₂) implies a₁ = a₂"
+        },
+        {
+          "id": "C",
+          "text": "Range = Co-domain"
+        },
+        {
+          "id": "D",
+          "text": "Domain = Co-domain"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A function f: A → B is one-one (injective) if distinct elements in the domain A are mapped to distinct elements in the co-domain B. In other words, if f(a₁) = f(a₂), then it must be that a₁ = a₂. This ensures that each element in the co-domain B has a unique pre-image in the domain A.",
+      "explanation_incorrect": "Option B is the correct answer because a one-one (injective) function ensures that every element in the co-domain B has a unique pre-image in the domain A. This is not the same as saying that every element of B has a pre-image (option A), or that the domain and co-domain are equal (option D). Additionally, a one-one function does not necessarily mean the range equals the co-domain (option C)."
+    },
+    {
+      "question_id": "T01.02.Q009",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "A function f: A → B is onto (surjective) if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Range of f = B"
+        },
+        {
+          "id": "B",
+          "text": "f is one-one"
+        },
+        {
+          "id": "C",
+          "text": "A = B"
+        },
+        {
+          "id": "D",
+          "text": "f(a) = a for all a ∈ A"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A function f from set A to set B is surjective (onto) if the range of f is equal to the co-domain B. This means that every element in B has at least one corresponding element in A that maps to it under the function f.",
+      "explanation_incorrect": "The other options are not correct. Option B (f is one-one) is a different property of functions, not related to being onto. Option C (A = B) does not necessarily mean the function is onto - the domain and co-domain can be different sets. Option D (f(a) = a for all a in A) describes the identity function, which is a special case of a bijective function, not just an onto function."
+    },
+    {
+      "question_id": "T01.02.Q010",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f: ℝ → ℝ defined by f(x) = 2x + 3 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "One-one only"
+        },
+        {
+          "id": "B",
+          "text": "Onto only"
+        },
+        {
+          "id": "C",
+          "text": "Bijective"
+        },
+        {
+          "id": "D",
+          "text": "Neither one-one nor onto"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function f(x) = 2x + 3 is bijective because it is both one-one (distinct inputs give distinct outputs) and onto (every real number in the co-domain can be obtained as an image of some input).",
+      "explanation_incorrect": "The function f(x) = 2x + 3 is not one-one only or onto only. It is bijective because for every real number y, there exists a unique real number x such that f(x) = y. This means the function is both one-one and onto."
+    },
+    {
+      "question_id": "T01.02.Q011",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "The function f: ℝ → ℝ defined by f(x) = x² is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "One-one and onto"
+        },
+        {
+          "id": "B",
+          "text": "One-one but not onto"
+        },
+        {
+          "id": "C",
+          "text": "Onto but not one-one"
+        },
+        {
+          "id": "D",
+          "text": "Neither one-one nor onto"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The function f(x) = x² is neither one-one nor onto. It is not one-one because there are distinct inputs that give the same output (e.g. f(2) = f(-2) = 4). It is also not onto because not all real numbers are perfect squares, so not every real number is an output of the function.",
+      "explanation_incorrect": "Option A is incorrect because the function f(x) = x² is not one-one. This means that distinct inputs can give the same output, which violates the one-one (injective) property. Option B is incorrect because the function is not onto, meaning not every real number is the output of the function. Option C is incorrect because the function is not onto, even though it is not one-one."
+    },
+    {
+      "question_id": "T01.02.Q012",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If f: {1, 2, 3} → {a, b, c, d} and f is one-one, then f can be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Onto"
+        },
+        {
+          "id": "B",
+          "text": "Bijective"
+        },
+        {
+          "id": "C",
+          "text": "Not onto"
+        },
+        {
+          "id": "D",
+          "text": "Both onto and bijective"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since the function f is one-to-one, each element in the domain {1, 2, 3} is assigned a unique element in the co-domain {a, b, c, d}. However, since the co-domain has more elements than the domain, the function cannot be onto (surjective) and cover all the elements in the co-domain.",
+      "explanation_incorrect": "The correct option is C) Not onto. Even though the function is one-to-one, it is not possible for it to be onto (surjective) because the co-domain has more elements than the domain. For the function to be onto, the number of elements in the domain and co-domain must be the same. Option A) Onto and Option D) Both onto and bijective are incorrect because the function cannot be onto in this case."
+    },
+    {
+      "question_id": "T01.02.Q013",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following functions from ℝ to ℝ is bijective?",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(x) = x²"
+        },
+        {
+          "id": "B",
+          "text": "f(x) = x³"
+        },
+        {
+          "id": "C",
+          "text": "f(x) = |x|"
+        },
+        {
+          "id": "D",
+          "text": "f(x) = sin x"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = x³ is bijective because it is both one-one (injective) and onto (surjective). Each input x gives a unique output x³, and the range of the function covers all real numbers, so every real number is the image of some input.",
+      "explanation_incorrect": "The function f(x) = x² is not bijective because it is not one-one. For example, both positive and negative square roots of a number will give the same output. The function f(x) = |x| is not bijective because it is not one-one - both positive and negative values of x will give the same output. The function f(x) = sin x is not bijective because it is not onto - the range of sine is limited to [-1, 1], so not all real numbers are covered."
+    },
+    {
+      "question_id": "T01.02.Q014",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = x + 1 and g(x) = 2x, then (f + g)(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x + 1"
+        },
+        {
+          "id": "B",
+          "text": "x + 3"
+        },
+        {
+          "id": "C",
+          "text": "2x² + x"
+        },
+        {
+          "id": "D",
+          "text": "3x − 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3x + 1. This is because the function (f + g)(x) means adding the outputs of the two functions f(x) = x + 1 and g(x) = 2x. So (f + g)(x) = (x + 1) + 2x = 3x + 1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the sum of the two functions f(x) = x + 1 and g(x) = 2x. Option B) x + 3 does not include the 2x term from g(x), option C) 2x² + x does not match the linear form of the sum, and option D) 3x - 1 subtracts 1 instead of adding it."
+    },
+    {
+      "question_id": "T01.02.Q015",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = x² and g(x) = x + 1, then (fg)(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x³ + x²"
+        },
+        {
+          "id": "B",
+          "text": "x² + x + 1"
+        },
+        {
+          "id": "C",
+          "text": "x³ + 1"
+        },
+        {
+          "id": "D",
+          "text": "x² + 2x + 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x³ + x². This is because the composition of two functions f(x) = x² and g(x) = x + 1 is (fg)(x) = f(g(x)) = (x + 1)² = x² + 2x + 1, which simplifies to x³ + x².",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the composition of the given functions f(x) = x² and g(x) = x + 1. Option B) x² + x + 1 is the result of simply adding the functions f(x) and g(x), while options C) x³ + 1 and D) x² + 2x + 1 do not correctly combine the two functions."
+    },
+    {
+      "question_id": "T01.02.Q016",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = x² − 1 and g(x) = x + 1, then (f/g)(x) equals (for g(x) ≠ 0):",
+      "options": [
+        {
+          "id": "A",
+          "text": "x − 1"
+        },
+        {
+          "id": "B",
+          "text": "x + 1"
+        },
+        {
+          "id": "C",
+          "text": "x² − 1"
+        },
+        {
+          "id": "D",
+          "text": "(x − 1)²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x - 1. This is because (f/g)(x) means we need to divide the function f(x) = x² - 1 by the function g(x) = x + 1. This results in the expression (x² - 1) / (x + 1), which simplifies to x - 1.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct result of dividing f(x) by g(x). Option B) x + 1 is incorrect because it does not take into account the division operation. Option C) x² - 1 is incorrect because it is simply the original function f(x) without any division. Option D) (x - 1)² is incorrect because it does not involve dividing the two functions."
+    },
+    {
+      "question_id": "T01.02.Q017",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The domain of (f/g)(x) where f(x) = x and g(x) = x − 2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "ℝ − {2}"
+        },
+        {
+          "id": "C",
+          "text": "ℝ − {0}"
+        },
+        {
+          "id": "D",
+          "text": "(2, ∞)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of (f/g)(x) is the set of all x for which g(x) is not equal to 0. Since g(x) = x - 2, the domain is all real numbers except x = 2, which is option B.",
+      "explanation_incorrect": "Option A is incorrect because the function (f/g)(x) is not defined for x = 2, since g(x) = 0 in that case. Option C is incorrect because the function is defined for all real numbers except x = 2, not just the non-zero real numbers. Option D is incorrect because the domain includes all real numbers greater than 2, but it also includes real numbers less than 2."
+    },
+    {
+      "question_id": "T01.02.Q018",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The signum function sgn(x) is defined as sgn(x) = 1 if x > 0, sgn(x) = 0 if x = 0, sgn(x) = −1 if x < 0. The range of sgn(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "{−1, 0, 1}"
+        },
+        {
+          "id": "C",
+          "text": "{0, 1}"
+        },
+        {
+          "id": "D",
+          "text": "{−1, 1}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The range of the signum function sgn(x) is {-1, 0, 1} because the function can only take three possible values: 1 if x is positive, 0 if x is zero, and -1 if x is negative. Therefore, option B is the correct answer.",
+      "explanation_incorrect": "The range of the signum function sgn(x) is not ℝ (all real numbers), {0, 1}, or {-1, 1} because the function can take three possible values: 1 if x is positive, 0 if x is zero, and -1 if x is negative. The correct answer is option B, {-1, 0, 1}."
+    },
+    {
+      "question_id": "T01.02.Q019",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The greatest integer function [x] at x = 3.7 gives:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "3.7"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The greatest integer function [x] returns the largest integer less than or equal to the input value x. Since 3.7 is between 3 and 4, the greatest integer function gives 3 as the output.",
+      "explanation_incorrect": "The greatest integer function [x] gives the largest whole number that is less than or equal to the input value x. So for x = 3.7, the function will return 3 as the output, not 4, 3.7, or 0."
+    },
+    {
+      "question_id": "T01.02.Q020",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The value of [−2.5] where [·] denotes the greatest integer function is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−2"
+        },
+        {
+          "id": "B",
+          "text": "−3"
+        },
+        {
+          "id": "C",
+          "text": "−2.5"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The greatest integer function [x] returns the largest integer less than or equal to x. Since -2.5 is between -3 and -2, the greatest integer less than or equal to -2.5 is -3, so the value of [-2.5] is -3.",
+      "explanation_incorrect": "Option A (-2) is incorrect because the greatest integer less than or equal to -2.5 is -3, not -2. Option C (-2.5) is incorrect because the greatest integer function always returns an integer value. Option D (3) is incorrect because it is not the greatest integer less than or equal to -2.5."
+    },
+    {
+      "question_id": "T01.02.Q021",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The domain of f(x) = 1/√(x − 1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[1, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "(1, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "ℝ − {1}"
+        },
+        {
+          "id": "D",
+          "text": "(−∞, 1)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of the function f(x) = 1/√(x - 1) is (1, ∞) because the square root operation is only defined for positive values, and the value of x - 1 must be positive for the function to be defined.",
+      "explanation_incorrect": "The domain is not [1, ∞) because the square root operation is not defined at x = 1. The domain is also not ℝ - {1} because the function is not defined for x = 1. The domain is not (−∞, 1) because the square root operation requires a positive value for x - 1."
+    },
+    {
+      "question_id": "T01.02.Q022",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = 3x − 2 and g(x) = x + 4, then (f − g)(2) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−2"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "−4"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. To find (f - g)(2), we first evaluate f(2) = 3(2) - 2 = 4 and g(2) = 2 + 4 = 6. Then, we subtract g(2) from f(2), which gives us 4 - 6 = -2.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the difference between the two functions at x = 2. Option B is incorrect because it does not take into account the difference between the two functions. Option C is incorrect because it simply subtracts the constant terms instead of evaluating the functions. Option D is incorrect because it does not properly calculate the difference between the two functions."
+    },
+    {
+      "question_id": "T01.02.Q023",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The function f: ℕ → ℕ defined by f(n) = 2n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "One-one and onto"
+        },
+        {
+          "id": "B",
+          "text": "One-one but not onto"
+        },
+        {
+          "id": "C",
+          "text": "Onto but not one-one"
+        },
+        {
+          "id": "D",
+          "text": "Neither one-one nor onto"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(n) = 2n is one-one (injective) because distinct inputs give distinct outputs, but it is not onto (surjective) because not every natural number is an image of some input. For example, the natural number 3 is not an image of any input, since 2n can only give even natural numbers as outputs.",
+      "explanation_incorrect": "Option A is incorrect because the function f(n) = 2n is not onto (surjective). While it is one-one (injective), meaning distinct inputs give distinct outputs, not every natural number is an image of some input. The function only outputs even natural numbers, so it does not cover the entire co-domain of natural numbers. Option C is also incorrect because the function is one-one, not just onto. Option D is wrong because the function is one-one, even though it is not onto."
+    },
+    {
+      "question_id": "T01.02.Q024",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The range of f(x) = |x − 3| is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "(0, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "[0, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "[3, ∞)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The absolute value function |x - 3| always gives a non-negative result, so the range of this function is the set of non-negative real numbers, which is [0, ∞).",
+      "explanation_incorrect": "The range of a function is the set of all possible output values. In this case, the absolute value function |x - 3| can take on any non-negative real number as its output, so the range is [0, ∞), not the entire real line ℝ or the positive real line (0, ∞)."
+    },
+    {
+      "question_id": "T01.02.Q025",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x² + 1 and g(x) = x − 1, then (fg)(2) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 5. To find (fg)(2), we first need to find f(x) = x^2 + 1 and g(x) = x - 1. Plugging in 2 for x, we get f(2) = 2^2 + 1 = 5 and g(2) = 2 - 1 = 1. Then, (fg)(2) = f(g(2)) = f(1) = 1^2 + 1 = 5.",
+      "explanation_incorrect": "The incorrect options B) 4, C) 3, and D) 6 are not correct because they do not match the result of evaluating (fg)(2). The function (fg)(x) is the composition of the functions f(x) = x^2 + 1 and g(x) = x - 1, so (fg)(2) is simply finding f(g(2)), which is 5."
+    },
+    {
+      "question_id": "T01.02.Q026",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "How many one-one functions exist from {1, 2, 3} to {a, b, c}?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "27"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "There are 3 elements in the domain {1, 2, 3} and 3 elements in the co-domain {a, b, c}. For each element in the domain, there is exactly one element in the co-domain that it can be assigned to. Therefore, the number of one-one functions from {1, 2, 3} to {a, b, c} is 3 x 2 x 1 = 6.",
+      "explanation_incorrect": "The incorrect answer of 3 functions is too few, as each element in the domain {1, 2, 3} can be assigned to any one of the 3 elements in the co-domain {a, b, c}. The incorrect answer of 9 functions is too many, as that would imply that each element in the domain can be assigned to more than one element in the co-domain, which is not the case for one-one functions. The incorrect answer of 27 functions is way too many, as that would be the total number of functions (including non one-one functions) from {1, 2, 3} to {a, b, c}."
+    },
+    {
+      "question_id": "T01.02.Q027",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The domain of f(x) = √(x) + 1/(x − 1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[0, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "[0, ∞) − {1}"
+        },
+        {
+          "id": "C",
+          "text": "(0, ∞) − {1}"
+        },
+        {
+          "id": "D",
+          "text": "ℝ − {1}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of the function f(x) = √(x) + 1/(x - 1) is [0, ∞) - {1}, as the square root function is only defined for non-negative real numbers, and the denominator (x - 1) cannot be zero, so the value 1 is excluded from the domain.",
+      "explanation_incorrect": "Option B is correct because the square root function √(x) is only defined for non-negative real numbers, so the domain starts from 0. Additionally, the denominator (x - 1) in the second term cannot be zero, so the value 1 is excluded from the domain. Therefore, the correct domain is [0, ∞) - {1}. Option A is incorrect because it includes the value 1, which is not in the domain. Option C is incorrect because it starts the domain from (0, ∞) instead of [0, ∞). Option D is incorrect because it includes the entire real line ℝ, which is not the correct domain."
+    },
+    {
+      "question_id": "T01.02.Q028",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x + 1 and g(x) = x² − 1, then (f/g)(x) equals (for x ≠ ±1):",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/(x − 1)"
+        },
+        {
+          "id": "B",
+          "text": "1/(x + 1)"
+        },
+        {
+          "id": "C",
+          "text": "x + 1"
+        },
+        {
+          "id": "D",
+          "text": "x − 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/(x - 1). This is because the function (f/g)(x) = (x + 1)/(x^2 - 1), and when x ≠ ±1, this simplifies to 1/(x - 1).",
+      "explanation_incorrect": "The correct answer is A) 1/(x - 1). Option B) 1/(x + 1) is incorrect because it does not simplify the function (f/g)(x) correctly when x ≠ ±1. Options C) x + 1 and D) x - 1 are also incorrect because they do not represent the quotient of the two given functions f(x) and g(x)."
+    },
+    {
+      "question_id": "T01.02.Q029",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "Which of the following is a bijective function from ℝ to ℝ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(x) = x²"
+        },
+        {
+          "id": "B",
+          "text": "f(x) = eˣ"
+        },
+        {
+          "id": "C",
+          "text": "f(x) = 5x − 7"
+        },
+        {
+          "id": "D",
+          "text": "f(x) = sin x"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function f(x) = 5x - 7 is a bijective (one-to-one and onto) function from the real numbers ℝ to ℝ. This is because every input x has a unique output, and every real number can be written as 5x - 7 for some real x.",
+      "explanation_incorrect": "The functions f(x) = x^2, f(x) = e^x, and f(x) = sin x are not bijective. The function f(x) = x^2 is not one-to-one because both positive and negative square roots of a number map to the same output. The function f(x) = e^x is not onto the real numbers, as it only takes on positive values. The function f(x) = sin x is not one-to-one, as angles differing by multiples of 2π have the same sine value."
+    },
+    {
+      "question_id": "T01.02.Q030",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "If f: ℝ → ℝ is defined by f(x) = 3x − 5, then f(2) + f(−1) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−7"
+        },
+        {
+          "id": "B",
+          "text": "−9"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) -7. This is because the function f(x) = 3x - 5 means that f(2) = 3(2) - 5 = 6 - 5 = 1, and f(-1) = 3(-1) - 5 = -3 - 5 = -8. Therefore, f(2) + f(-1) = 1 + (-8) = -7.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly calculate the sum of f(2) and f(-1). Option B) -9 is incorrect because f(2) + f(-1) is not equal to -9. Option C) -1 is incorrect because f(2) + f(-1) is not equal to -1. Option D) 1 is incorrect because f(2) + f(-1) is not equal to 1."
+    },
+    {
+      "question_id": "T01.02.Q031",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = 2x and g(x) = x + 3, then (f − g)(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x − 3"
+        },
+        {
+          "id": "B",
+          "text": "x + 3"
+        },
+        {
+          "id": "C",
+          "text": "3x + 3"
+        },
+        {
+          "id": "D",
+          "text": "−x + 3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x - 3. This is because the function (f - g)(x) means subtracting the function g(x) = x + 3 from the function f(x) = 2x, which gives 2x - (x + 3) = x - 3.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the result of subtracting the function g(x) = x + 3 from the function f(x) = 2x. Option B) x + 3 is incorrect since it does not involve any subtraction. Option C) 3x + 3 is incorrect since it does not simplify the expression correctly. Option D) -x + 3 is incorrect since it does not match the correct result of x - 3."
+    },
+    {
+      "question_id": "T01.02.Q032",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Let f: {1, 2, 3, 4} → {a, b, c, d, e}. The maximum number of elements in the range of f is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum number of elements in the range of a function is equal to the size of the co-domain. Since the co-domain here is {a, b, c, d, e}, which has 5 elements, the maximum number of elements in the range is 4.",
+      "explanation_incorrect": "The incorrect answer is A) 5. This is because the maximum number of elements in the range of a function is equal to the size of the co-domain, which is the set of possible output values. In this case, the co-domain is {a, b, c, d, e}, which has 5 elements. Therefore, the correct answer is B) 4."
+    },
+    {
+      "question_id": "T01.02.Q033",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The range of the function f(x) = 1/(1 + x²) for x ∈ ℝ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 1]"
+        },
+        {
+          "id": "B",
+          "text": "[0, 1]"
+        },
+        {
+          "id": "C",
+          "text": "(0, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "[1, ∞)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The range of the function f(x) = 1/(1 + x²) is (0, 1] because as x varies from negative to positive infinity, the function value approaches 0 from the positive side but never reaches 0, and the maximum value is 1 when x = 0.",
+      "explanation_incorrect": "The correct answer is option A, (0, 1]. This is because the function f(x) = 1/(1 + x²) is positive for all real values of x, and the values approach 0 as x approaches positive or negative infinity, but the maximum value is 1 when x = 0. Options B, C, and D are incorrect because they do not accurately represent the range of this function."
+    },
+    {
+      "question_id": "T01.02.Q034",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The number of onto functions from {1, 2, 3} to {a, b} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of onto functions from {1, 2, 3} to {a, b} is 6. This is because there are 3 possible assignments for the element 1 (to either a or b), 2 possible assignments for the element 2 (to the remaining element), and 1 possible assignment for the element 3 (to the remaining element). Multiplying these gives 3 × 2 × 1 = 6 total onto functions.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not account for the fact that the function must be onto, meaning every element in the co-domain {a, b} must be the image of at least one element in the domain {1, 2, 3}. Options A and D do not satisfy this requirement, while option C underestimates the number of possible assignments."
+    },
+    {
+      "question_id": "T01.02.Q035",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x² and g(x) = √x, the domain of (f + g)(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ℝ"
+        },
+        {
+          "id": "B",
+          "text": "[0, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(0, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "ℝ − {0}"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The domain of (f + g)(x) is the set of all real numbers x such that both f(x) and g(x) are defined. Since f(x) = x² and g(x) = √x, the domain of both functions is the non-negative real numbers [0, ∞), so the domain of (f + g)(x) is also [0, ∞).",
+      "explanation_incorrect": "The incorrect options are not the correct domain for (f + g)(x). Option A, ℝ, is wrong because the square root function is not defined for negative real numbers. Option C, (0, ∞), is wrong because the domain includes 0. Option D, ℝ - {0}, is wrong because the domain includes 0."
+    },
+    {
+      "question_id": "T01.02.Q036",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Every function is a relation, but not every relation is a function.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because every function is a relation, but not every relation is a function. A function is a special type of relation where each element in the domain is assigned exactly one element in the co-domain. However, a relation does not have this restriction - it can have multiple elements in the co-domain for a single element in the domain.",
+      "explanation_incorrect": "The statement is false because a relation is a more general concept that includes functions as a special case. While every function is a relation, not all relations are functions. A relation can have multiple elements in the co-domain for a single element in the domain, which goes against the defining property of a function where each element in the domain is assigned exactly one element in the co-domain."
+    },
+    {
+      "question_id": "T01.02.Q037",
+      "type": "true_false",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "A constant function f(x) = c is always one-one.",
+      "correct_answer": false,
+      "explanation_correct": "A constant function f(x) = c is not one-one because for any two distinct inputs x1 and x2, the function will always give the same output c. This violates the condition of a one-one function where distinct inputs must have distinct outputs.",
+      "explanation_incorrect": "The common misconception is that since a constant function f(x) = c always gives the same output c for any input x, it must be one-one. However, this is not the case. A one-one function requires that distinct inputs give distinct outputs, but a constant function does not satisfy this condition as it maps all inputs to the same output."
+    },
+    {
+      "question_id": "T01.02.Q038",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The range of a function is always a subset of its co-domain.",
+      "correct_answer": true,
+      "explanation_correct": "The range of a function is always a subset of its co-domain because the function can only assign elements from the domain to the co-domain. This means that the set of all outputs or images of the function (the range) must be contained within the larger set of the co-domain.",
+      "explanation_incorrect": "The common misconception is that the range can be larger than the co-domain. However, this is not true because the function can only map elements from the domain to the co-domain. The range is the set of all outputs or images of the function, and it must be a subset of the co-domain. The range cannot be larger than the co-domain."
+    },
+    {
+      "question_id": "T01.02.Q039",
+      "type": "true_false",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "The function f: ℝ → ℝ defined by f(x) = |x| is one-one.",
+      "correct_answer": false,
+      "explanation_correct": "The function f(x) = |x| is not one-one (injective) because there are distinct inputs that give the same output. For example, f(2) = f(-2) = 2, so the function is not one-one.",
+      "explanation_incorrect": "The function f(x) = |x| is not one-one (injective) because the absolute value function is an even function, meaning that f(x) = f(-x). This means that there are distinct inputs (positive and negative numbers) that give the same output, violating the one-one property."
+    },
+    {
+      "question_id": "T01.02.Q040",
+      "type": "true_false",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If f and g are two real-valued functions, then (f + g)(x) = f(x) + g(x) for all x in the domain of both f and g.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because the function (f + g)(x) = f(x) + g(x) holds for all real-valued functions f and g. This is a fundamental property of the algebra of real-valued functions, where the sum of two functions is defined as the function that assigns to each input the sum of the individual function values.",
+      "explanation_incorrect": "A common misconception is that the statement is false, but this is not correct. The property (f + g)(x) = f(x) + g(x) is a basic result in the algebra of real-valued functions, and it holds true for any two real-valued functions f and g, provided they are defined at the same input x. This property allows us to simplify and manipulate expressions involving sums of functions."
+    },
+    {
+      "question_id": "T01.02.Q041",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = 2x + 3, then f(4) = ___.",
+      "correct_answer": "11",
+      "explanation_correct": "The function f(x) = 2x + 3 means that for any input x, the output f(x) is calculated by multiplying x by 2 and then adding 3. When we plug in x = 4, the output becomes 2 × 4 + 3 = 11, which is the correct answer.",
+      "explanation_incorrect": "If you plug in x = 4 into the function f(x) = 2x + 3, you will get f(4) = 2 × 4 + 3 = 11. The accepted answer format for this fill-in-the-blank question is a single number, so the correct answer is 11."
+    },
+    {
+      "question_id": "T01.02.Q042",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The greatest integer function [4.9] = ___.",
+      "correct_answer": "4",
+      "explanation_correct": "The greatest integer function [x] returns the largest integer less than or equal to the input x. In this case, the input is 4.9, which is greater than 4 but less than 5. Therefore, the greatest integer function [4.9] returns the value 4.",
+      "explanation_incorrect": "The incorrect answer would be 5, which is a common mistake. However, the greatest integer function [x] always rounds down to the nearest integer, not up. Since 4.9 is between 4 and 5, the correct answer is 4 as the greatest integer that is less than or equal to 4.9."
+    },
+    {
+      "question_id": "T01.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "A function that is both one-one and onto is called ___.",
+      "correct_answer": "bijective",
+      "explanation_correct": "A function that is both one-one (injective) and onto (surjective) is called bijective. This means that each input in the domain corresponds to exactly one unique output in the range, and every element in the range has a corresponding input in the domain. This special property makes bijective functions very useful in mathematics.",
+      "explanation_incorrect": "The correct answer is 'bijective'. A bijective function is a function that is both one-one (each input has a unique output) and onto (every element in the range has a corresponding input). This is in contrast to a function that is only one-one or only onto, which would not be considered bijective. The accepted answer format for this fill-in-the-blank question is a single word: 'bijective'."
+    },
+    {
+      "question_id": "T01.02.Q044",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = x + 2 and g(x) = 3x, then (fg)(1) = ___.",
+      "correct_answer": "9",
+      "explanation_correct": "The correct answer is 9 because the function (fg)(x) = f(g(x)) = (x + 2) + 3(1) = 9.",
+      "explanation_incorrect": "The incorrect answer would be 5, as a student might think that (fg)(x) = f(x) + g(x) = (x + 2) + 3x = 5x + 2. However, the correct way to calculate (fg)(x) is to first apply the inner function g(x) = 3x, and then apply the outer function f(x) = x + 2 to the result."
+    },
+    {
+      "question_id": "T01.02.Q045",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The domain of f(x) = √(9 − x²) is [−a, a] where a = ___.",
+      "correct_answer": "3",
+      "explanation_correct": "The domain of the function f(x) = √(9 - x²) is the set of all real numbers x for which the expression under the square root is non-negative. This means x² must be less than or equal to 9, so the domain is the interval [-3, 3].",
+      "explanation_incorrect": "The incorrect answer would be a = 9. This is because the expression under the square root, 9 - x², must be non-negative for the function to be defined. However, the maximum value of x² is 9, so the domain is the interval [-3, 3], where a = 3."
+    },
+    {
+      "question_id": "T01.02.Q046",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The total number of functions from a set with 2 elements to a set with 3 elements is ___.",
+      "correct_answer": "9",
+      "explanation_correct": "The total number of functions from a set with 2 elements to a set with 3 elements is 9. This is because for each element in the set of 2 elements, there are 3 possible choices in the set of 3 elements. Since each element in the first set must be mapped to exactly one element in the second set, the total number of possible functions is 3 x 3 = 9.",
+      "explanation_incorrect": "The correct answer is 9. Some students may think the total number of functions is the sum of the elements in the two sets, which would be 2 + 3 = 5. However, this is incorrect because the question asks for the total number of functions, not the sum of the elements in the sets. The correct way to calculate the total number of functions is to multiply the number of choices for each element in the first set, which is 3 choices for each of the 2 elements, resulting in 3 x 3 = 9 possible functions."
+    },
+    {
+      "question_id": "T01.02.Q047",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x² and g(x) = x + 1, then (f − g)(3) = ___.",
+      "correct_answer": "5",
+      "explanation_correct": "The correct answer is 5 because (f - g)(3) means evaluating the function (f(x) - g(x)) at x = 3. Since f(x) = x^2 and g(x) = x + 1, (f - g)(3) = 3^2 - (3 + 1) = 9 - 4 = 5.",
+      "explanation_incorrect": "The accepted answer format is a number, but an incorrect answer could be 8. This is because someone may have incorrectly evaluated the function (f - g)(3) as f(3) - g(3) = 3^2 - (3 + 1) = 8, instead of correctly subtracting the two functions first and then evaluating at x = 3."
+    },
+    {
+      "question_id": "T01.02.Q048",
+      "type": "ordering",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "Arrange these steps in the correct order to determine the domain of f(x) = √(2x − 6): (A) Set 2x − 6 ≥ 0, (B) Identify the expression under the square root, (C) Write the domain as [3, ∞), (D) Solve to get x ≥ 3",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "explanation_correct": "The correct order is B, A, D, C because you first need to identify the expression under the square root (B), then set that expression greater than or equal to 0 to find the domain (A), solve to get the lower bound of the domain (D), and finally write the domain as the closed interval [3, ∞) (C).",
+      "explanation_incorrect": "The incorrect order would be to start by setting 2x - 6 ≥ 0 (A), which does not make sense without first knowing the expression under the square root. The correct order is to first identify the expression (B), then solve the inequality (A), find the lower bound (D), and finally write the domain (C)."
+    },
+    {
+      "question_id": "T01.02.Q049",
+      "type": "ordering",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange in order from most restrictive to least restrictive function type: (A) Bijective, (B) Onto, (C) One-one, (D) General function",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "explanation_correct": "The ordering from most restrictive to least restrictive function type is: A) Bijective, C) One-one, B) Onto, D) General function. This is because a bijective function has the most constraints, where each input maps to a unique output and every output has a corresponding input. A one-one function is less restrictive as it only requires unique outputs, while an onto function is less restrictive as it only requires that every output has at least one input. A general function has the least restrictions.",
+      "explanation_incorrect": "The incorrect ordering would be: A) Bijective, B) Onto, C) One-one, D) General function. This is incorrect because a one-one function is more restrictive than an onto function. In a one-one function, each input maps to a unique output, while an onto function only requires that every output has at least one input. The correct order is A, C, B, D, from most to least restrictive."
+    },
+    {
+      "question_id": "T01.02.Q050",
+      "type": "ordering",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the values of f(x) = |x − 2| for the given x-values in increasing order: (A) f(5) = 3, (B) f(2) = 0, (C) f(0) = 2, (D) f(−1) = 3",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "explanation_correct": "The values are arranged in increasing order because |x - 2| is smallest when x = 2, giving f(2) = 0, then increases to f(0) = 2, f(5) = 3, and f(-1) = 3.",
+      "explanation_incorrect": "The incorrect explanation would be to arrange the values in alphabetical order of the labels A, B, C, D. However, the question asks to arrange the values of f(x) in increasing order, which means ordering the actual numerical values from smallest to largest."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

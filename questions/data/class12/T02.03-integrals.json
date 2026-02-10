@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.03",
+  "topic_name": "Integrals",
+  "canonical_explanation": {
+    "text": "Integrals form the second fundamental operation of calculus, serving as the inverse of differentiation. An indefinite integral (anti-derivative) ∫f(x)dx = F(x) + C where F'(x) = f(x). Standard integrals include ∫xⁿdx = xⁿ⁺¹/(n+1) + C (n ≠ −1), ∫sin(x)dx = −cos(x) + C, ∫cos(x)dx = sin(x) + C, ∫eˣdx = eˣ + C, and ∫(1/x)dx = ln|x| + C. The three main methods of integration are: substitution (changing variable to simplify), partial fractions (decomposing rational functions), and integration by parts (∫u dv = uv − ∫v du). Definite integrals are evaluated using the Fundamental Theorem of Calculus: ∫ₐᵇ f(x)dx = F(b) − F(a). Key properties include: ∫ₐᵇ f(x)dx = −∫ᵇₐ f(x)dx, ∫₋ₐᵃ f(x)dx = 0 if f is odd and 2∫₀ᵃ f(x)dx if f is even, and ∫₀²ᵃ f(x)dx = 2∫₀ᵃ f(x)dx if f(2a−x) = f(x).",
+    "rules": [
+      "Integration is the inverse of differentiation: if F'(x) = f(x), then ∫f(x)dx = F(x) + C.",
+      "Integration by parts: ∫u dv = uv − ∫v du, where u and dv are chosen using the LIATE rule.",
+      "Fundamental Theorem of Calculus: ∫ₐᵇ f(x)dx = F(b) − F(a) where F is any anti-derivative of f."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.03.Q001",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫x⁴ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x⁵/5 + C"
+        },
+        {
+          "id": "B",
+          "text": "4x³ + C"
+        },
+        {
+          "id": "C",
+          "text": "x⁵ + C"
+        },
+        {
+          "id": "D",
+          "text": "x⁴/4 + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x⁵/5 + C. This is because the integral of x⁴ dx is the antiderivative, which is x⁵/5 + C, where C is the constant of integration.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the antiderivative of x⁴ dx. Option B) 4x³ + C is the integral of 4x³ dx, not x⁴ dx. Option C) x⁵ + C is the incorrect form of the antiderivative, as it should be x⁵/5 + C. Option D) x⁴/4 + C is the integral of x³ dx, not x⁴ dx."
+    },
+    {
+      "question_id": "T02.03.Q002",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫sec²(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sec(x)tan(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "tan(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "−cot(x) + C"
+        },
+        {
+          "id": "D",
+          "text": "2sec(x)tan(x) + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) tan(x) + C. This is because the integral of sec^2(x) is the same as the derivative of tan(x), which is the fundamental relationship between integrals and derivatives in calculus.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the integral of sec^2(x) accurately. Option A) sec(x)tan(x) + C is the integral of sec(x), not sec^2(x). Option C) -cot(x) + C is the integral of csc(x), not sec^2(x). Option D) 2sec(x)tan(x) + C is the integral of 2sec(x), not sec^2(x)."
+    },
+    {
+      "question_id": "T02.03.Q003",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫(1/x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x⁰ + C"
+        },
+        {
+          "id": "B",
+          "text": "ln(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "ln|x| + C"
+        },
+        {
+          "id": "D",
+          "text": "−1/x² + C"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) ln|x| + C. This is because the integral of 1/x, which is a common standard integral, is the natural logarithm of the absolute value of x, plus an arbitrary constant C.",
+      "explanation_incorrect": "Option A) x⁰ + C is incorrect because the integral of 1/x is not x⁰ (which would be 1 + C). Option B) ln(x) + C is incorrect because the natural logarithm function should be taken of the absolute value of x, not just x. Option D) -1/x² + C is incorrect because this is the integral of the derivative of 1/x, not the integral of 1/x itself."
+    },
+    {
+      "question_id": "T02.03.Q004",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫eˣ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "xeˣ + C"
+        },
+        {
+          "id": "B",
+          "text": "eˣ + C"
+        },
+        {
+          "id": "C",
+          "text": "eˣ/x + C"
+        },
+        {
+          "id": "D",
+          "text": "eˣ⁺¹/(x+1) + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) eˣ + C. The integral of eˣ with respect to x is simply the function itself, eˣ, plus an arbitrary constant C. This is because the derivative of eˣ is eˣ, so the integral is the inverse operation, which is just eˣ.",
+      "explanation_incorrect": "The other options are incorrect. Option A) xeˣ + C is wrong because the integral of eˣ is not multiplied by x. Option C) eˣ/x + C is incorrect because the integral of eˣ is not divided by x. Option D) eˣ⁺¹/(x+1) + C is wrong because the integral of eˣ is not raised to the power of (x+1)."
+    },
+    {
+      "question_id": "T02.03.Q005",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "question_text": "∫(3x² + 2x − 1) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x³ + x² − x + C"
+        },
+        {
+          "id": "B",
+          "text": "6x + 2 + C"
+        },
+        {
+          "id": "C",
+          "text": "x³ + 2x² − x + C"
+        },
+        {
+          "id": "D",
+          "text": "3x³/3 + 2x²/2 − x + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, x³ + x² - x + C. This is because the integral of 3x² + 2x - 1 is the antiderivative, which is the sum of the integrals of each term: ∫3x² dx = x³, ∫2x dx = 2x², and ∫-1 dx = -x.",
+      "explanation_incorrect": "The correct answer is A, x³ + x² - x + C. Option B, 6x + 2 + C, is incorrect because it does not include the cubic and quadratic terms. Option C, x³ + 2x² - x + C, is incorrect because it has the wrong coefficient for the quadratic term. Option D, 3x³/3 + 2x²/2 - x + C, is incorrect because the coefficients are not simplified."
+    },
+    {
+      "question_id": "T02.03.Q006",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "∫cos(3x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin(3x) + C"
+        },
+        {
+          "id": "B",
+          "text": "sin(3x)/3 + C"
+        },
+        {
+          "id": "C",
+          "text": "3sin(3x) + C"
+        },
+        {
+          "id": "D",
+          "text": "−sin(3x)/3 + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) sin(3x)/3 + C. This is because the integral of cos(3x) is -sin(3x)/3 + C, where C is the constant of integration.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the standard integral formula for cos(3x). Option A) sin(3x) + C is incorrect because it does not have the 1/3 factor. Option C) 3sin(3x) + C is incorrect because the coefficient of sin(3x) should be 1/3, not 3. Option D) -sin(3x)/3 + C is incorrect because the sign of the coefficient should be positive, not negative."
+    },
+    {
+      "question_id": "T02.03.Q007",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "Using the substitution u = x² + 1, ∫2x(x² + 1)³ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x² + 1)⁴/4 + C"
+        },
+        {
+          "id": "B",
+          "text": "(x² + 1)⁴ + C"
+        },
+        {
+          "id": "C",
+          "text": "2x(x² + 1)⁴/4 + C"
+        },
+        {
+          "id": "D",
+          "text": "(x² + 1)³/3 + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, (x² + 1)⁴/4 + C. Using the substitution u = x² + 1, we get du = 2x dx, and the integral becomes ∫(u⁴/4) du, which simplifies to (x² + 1)⁴/4 + C.",
+      "explanation_incorrect": "Option C, 2x(x² + 1)⁴/4 + C, is incorrect because the correct solution involves integrating (x² + 1)³, not multiplying it by 2x. Options B and D are also incorrect because they do not correctly apply the substitution method to simplify the integral."
+    },
+    {
+      "question_id": "T02.03.Q008",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫x·eˣ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "xeˣ − eˣ + C"
+        },
+        {
+          "id": "B",
+          "text": "xeˣ + eˣ + C"
+        },
+        {
+          "id": "C",
+          "text": "x²eˣ/2 + C"
+        },
+        {
+          "id": "D",
+          "text": "eˣ(x + 1) + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) xeˣ - eˣ + C. This is because the integral of x·eˣ is the product rule of integration, which is u = x and dv = eˣ dx. Therefore, the integral becomes xeˣ - ∫eˣ dx, which is xeˣ - eˣ + C.",
+      "explanation_incorrect": "The correct answer is A) xeˣ - eˣ + C. Option B) xeˣ + eˣ + C is incorrect because the integral of x·eˣ is not the sum of the integrals of x and eˣ. Option C) x²eˣ/2 + C is incorrect because it does not match the standard integral formula for x·eˣ. Option D) eˣ(x + 1) + C is incorrect because the integral of x·eˣ is not just the product of eˣ and (x + 1)."
+    },
+    {
+      "question_id": "T02.03.Q009",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫ln(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/x + C"
+        },
+        {
+          "id": "B",
+          "text": "x·ln(x) − x + C"
+        },
+        {
+          "id": "C",
+          "text": "x·ln(x) + x + C"
+        },
+        {
+          "id": "D",
+          "text": "x/ln(x) + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, x·ln(x) - x + C. This is because the integral of ln(x) is the antiderivative, which is x·ln(x) - x plus a constant of integration C.",
+      "explanation_incorrect": "Option A, 1/x + C, is incorrect because this is the integral of 1/x, not ln(x). Option C, x·ln(x) + x + C, is incorrect because the integral of ln(x) does not have an additional x term. Option D, x/ln(x) + C, is incorrect because this is not the proper antiderivative of ln(x)."
+    },
+    {
+      "question_id": "T02.03.Q010",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫1/(x² − 1) dx using partial fractions equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "½ ln|x − 1| − ½ ln|x + 1| + C"
+        },
+        {
+          "id": "B",
+          "text": "½ ln|(x − 1)/(x + 1)| + C"
+        },
+        {
+          "id": "C",
+          "text": "ln|x² − 1| + C"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D, which includes both options A and B. To integrate 1/(x^2 - 1) using partial fractions, we need to decompose the function into two terms involving ln(x - 1) and ln(x + 1), which is exactly what options A and B represent.",
+      "explanation_incorrect": "Option C, ln|x^2 - 1| + C, is incorrect because it does not properly account for the partial fraction decomposition of the original integrand 1/(x^2 - 1). The correct approach involves splitting the function into two terms, one with ln(x - 1) and the other with ln(x + 1), as shown in options A and B."
+    },
+    {
+      "question_id": "T02.03.Q011",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "question_text": "∫₀¹ x² dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "1/3"
+        },
+        {
+          "id": "D",
+          "text": "2/3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 1/3. This is because the integral of x² from 0 to 1 is the area under the curve y = x², which is a parabola. The formula for the integral of x^n dx is (x^(n+1))/(n+1), so in this case, with n = 2, the integral is (x^3)/3, evaluated from 0 to 1, which gives 1/3.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not properly apply the formula for integrating x^2 dx. Option A) 1 is incorrect because the integral of x^2 from 0 to 1 is not simply 1. Option B) 1/2 is incorrect because it does not account for the power of 3 in the formula. Option D) 2/3 is incorrect because it does not correctly evaluate the integral from 0 to 1."
+    },
+    {
+      "question_id": "T02.03.Q012",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "question_text": "∫₀^(π/2) sin(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1. This is because the integral of sin(x) from 0 to π/2 is equal to 1, as the sin(x) function goes from 0 to 1 over this interval.",
+      "explanation_incorrect": "The other options are incorrect because: A) 0 is incorrect as the integral of sin(x) over this interval is not zero. C) -1 is incorrect as the integral of sin(x) is always positive over this interval. D) 2 is incorrect as the integral of sin(x) from 0 to π/2 is equal to 1, not 2."
+    },
+    {
+      "question_id": "T02.03.Q013",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "question_text": "∫₁ᵉ (1/x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "e"
+        },
+        {
+          "id": "D",
+          "text": "e − 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1. The integral of 1/x from 1 to e is the natural logarithm of e, which equals 1. This is because the integral of 1/x is the natural logarithm of x, and when evaluated from 1 to e, the result is 1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the value of the integral. Option A) 0 is incorrect because the integral of 1/x from 1 to e is not 0. Option C) e is incorrect because the integral of 1/x from 1 to e is not e. Option D) e - 1 is incorrect because the integral of 1/x from 1 to e is not e - 1."
+    },
+    {
+      "question_id": "T02.03.Q014",
+      "type": "mcq",
+      "concept_id": "T02.03.C04",
+      "difficulty": "application",
+      "question_text": "∫₋₁¹ x³ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The function x³ is an odd function, meaning f(-x) = -f(x). Since the integral is taken from -1 to 1, the positive and negative areas under the curve cancel each other out, resulting in a total integral value of 0.",
+      "explanation_incorrect": "The correct answer is A) 0. To find the integral of x³ from -1 to 1, we can use the fundamental theorem of calculus: ∫₋₁¹ x³ dx = F(1) - F(-1), where F(x) = x⁴/4. Substituting the limits, we get F(1) - F(-1) = 1⁴/4 - (-1)⁴/4 = 1 - (-1) = 2. However, since x³ is an odd function, the positive and negative areas cancel each other out, resulting in a total integral value of 0."
+    },
+    {
+      "question_id": "T02.03.Q015",
+      "type": "mcq",
+      "concept_id": "T02.03.C04",
+      "difficulty": "application",
+      "question_text": "∫₋₂² x² dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "16/3"
+        },
+        {
+          "id": "C",
+          "text": "8/3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 16/3. This is because the integral of x² from -2 to 2 can be evaluated using the standard integral formula for x^n, where n = 2. The integral of x^2 from -2 to 2 is (x^3/3) evaluated from -2 to 2, which gives 8/3 - (-8/3) = 16/3.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not match the result of evaluating the integral of x² from -2 to 2. Option A) 0 is incorrect because the integral of an even function like x² from a symmetric interval around 0 is non-zero. Option C) 8/3 is incorrect because it only accounts for the positive part of the interval, not the negative part. Option D) 4 is incorrect because it does not match the correct result of 16/3."
+    },
+    {
+      "question_id": "T02.03.Q016",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫sin²(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x/2 − sin(2x)/4 + C"
+        },
+        {
+          "id": "B",
+          "text": "−cos²(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "sin(2x)/2 + C"
+        },
+        {
+          "id": "D",
+          "text": "x/2 + sin(2x)/4 + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x/2 - sin(2x)/4 + C. This is because the integral of sin^2(x) can be rewritten as (1 - cos(2x))/2 using the trigonometric identity sin^2(x) = (1 - cos(2x))/2, and integrating this expression gives the result in option A.",
+      "explanation_incorrect": "The correct answer is A) x/2 - sin(2x)/4 + C. Option B) -cos^2(x) + C is incorrect because it does not correctly integrate sin^2(x). Option C) sin(2x)/2 + C is also incorrect because it does not account for the full integral of sin^2(x). Option D) x/2 + sin(2x)/4 + C is incorrect because it has the wrong sign for the second term."
+    },
+    {
+      "question_id": "T02.03.Q017",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "question_text": "∫1/√(1 − x²) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "tan⁻¹(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "sin⁻¹(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "cos⁻¹(x) + C"
+        },
+        {
+          "id": "D",
+          "text": "−cos⁻¹(x) + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) sin⁻¹(x) + C. The integral of 1/√(1 - x²) is the inverse sine function sin⁻¹(x), which represents the angle whose sine is x. This is because the derivative of sin⁻¹(x) is 1/√(1 - x²), so the integral of this function is the anti-derivative, which is sin⁻¹(x).",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct anti-derivative of 1/√(1 - x²). The inverse tangent function tan⁻¹(x) and the inverse cosine function cos⁻¹(x) have different derivatives, so they cannot be the correct integral. Similarly, -cos⁻¹(x) + C is not the correct answer, as the negative sign would change the derivative."
+    },
+    {
+      "question_id": "T02.03.Q018",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "question_text": "∫1/(1 + x²) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin⁻¹(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "tan⁻¹(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "sec⁻¹(x) + C"
+        },
+        {
+          "id": "D",
+          "text": "ln(1 + x²) + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The integral ∫1/(1 + x²) dx is equal to tan⁻¹(x) + C because the derivative of tan⁻¹(x) is 1/(1 + x²). This makes tan⁻¹(x) the anti-derivative (indefinite integral) of 1/(1 + x²).",
+      "explanation_incorrect": "Option A (sin⁻¹(x) + C) is incorrect because the derivative of sin⁻¹(x) is 1/√(1 - x²), not 1/(1 + x²). Option C (sec⁻¹(x) + C) is incorrect because the derivative of sec⁻¹(x) is 1/|x√(x² - 1)|, not 1/(1 + x²). Option D (ln(1 + x²) + C) is incorrect because the derivative of ln(1 + x²) is 2x/(1 + x²), not 1/(1 + x²)."
+    },
+    {
+      "question_id": "T02.03.Q019",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "question_text": "∫x²·eˣ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "eˣ(x² − 2x + 2) + C"
+        },
+        {
+          "id": "B",
+          "text": "eˣ(x² + 2x + 2) + C"
+        },
+        {
+          "id": "C",
+          "text": "x²eˣ − 2xeˣ + C"
+        },
+        {
+          "id": "D",
+          "text": "eˣ(x² − 2x) + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) e^x(x^2 - 2x + 2) + C. This is the result of integrating the function x^2·e^x, which can be done using the power rule of integration and the property of integrating e^x.",
+      "explanation_incorrect": "The correct option A is right because it follows the standard integration formula for the function x^2·e^x. The other options do not correctly integrate this function. Option B has the wrong coefficients, Option C is missing the e^x term, and Option D is missing the +2 term."
+    },
+    {
+      "question_id": "T02.03.Q020",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "question_text": "∫(2x + 3)/(x² + 3x + 5) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ln|x² + 3x + 5| + C"
+        },
+        {
+          "id": "B",
+          "text": "½ ln|x² + 3x + 5| + C"
+        },
+        {
+          "id": "C",
+          "text": "(x² + 3x + 5)² + C"
+        },
+        {
+          "id": "D",
+          "text": "2 ln|x² + 3x + 5| + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, ln|x² + 3x + 5| + C. This is because the given integral is a standard form of integration, where the integrand is a rational function. The method of partial fractions can be used to integrate this function, which leads to the natural logarithm of the denominator plus a constant of integration.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct indefinite integral. Option B is incorrect as it is only half the correct solution. Option C is incorrect as it does not represent the integral of the given function. Option D is incorrect as it is twice the correct solution. The correct answer, option A, is the simplest form of the indefinite integral using the method of partial fractions."
+    },
+    {
+      "question_id": "T02.03.Q021",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "question_text": "∫1/(x(x² + 1)) dx using partial fractions equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ln|x| − ½ ln(x² + 1) + C"
+        },
+        {
+          "id": "B",
+          "text": "ln|x| + ½ ln(x² + 1) + C"
+        },
+        {
+          "id": "C",
+          "text": "tan⁻¹(x) + C"
+        },
+        {
+          "id": "D",
+          "text": "ln|x/(x² + 1)| + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, ln|x| - ½ ln(x² + 1) + C. This is obtained by using the method of partial fractions to integrate the given expression 1/(x(x² + 1)), which involves decomposing the rational function into simpler terms that can be integrated separately.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct integral using the partial fractions method. Option B, ln|x| + ½ ln(x² + 1) + C, is incorrect as the sign of the second term should be negative. Option C, tan⁻¹(x) + C, is incorrect as it does not involve the partial fractions method. Option D, ln|x/(x² + 1)| + C, is incorrect as it does not represent the correct integral obtained using the partial fractions method."
+    },
+    {
+      "question_id": "T02.03.Q022",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "question_text": "∫₀^π sin(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "−2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 2. This is because the integral of sin(x) from 0 to π is equal to 2, as the sine function is an odd function, and the area under the positive part of the curve is equal to the area under the negative part of the curve.",
+      "explanation_incorrect": "The incorrect answers are not correct because: A) 0 is incorrect as the integral of sin(x) from 0 to π is not equal to 0. B) 1 is incorrect as the integral of sin(x) from 0 to π is not equal to 1. D) -2 is incorrect as the integral of sin(x) from 0 to π is positive, not negative."
+    },
+    {
+      "question_id": "T02.03.Q023",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "∫₀¹ x·eˣ dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "e − 1"
+        },
+        {
+          "id": "C",
+          "text": "e − 2"
+        },
+        {
+          "id": "D",
+          "text": "2e − 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1. This is because the integral of x·e^x from 0 to 1 is the same as the integral of e^x from 0 to 1, which is equal to e - 1. Since e - 1 = 1, the final answer is 1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the actual value of the integral. Option B) e - 1 is incorrect because the integral of x·e^x is not the same as the integral of e^x. Option C) e - 2 is incorrect because it does not match the correct answer of 1. Option D) 2e - 1 is incorrect because it is a different expression that does not represent the value of the integral."
+    },
+    {
+      "question_id": "T02.03.Q024",
+      "type": "mcq",
+      "concept_id": "T02.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "∫₀^(π/2) sin²(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/2"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) π/4. This is because ∫₀^(π/2) sin²(x) dx can be evaluated using the trigonometric identity sin²(x) = (1 - cos(2x))/2. Integrating this expression from 0 to π/2 gives (x - sin(2x)/4) |₀^(π/2) = π/4.",
+      "explanation_incorrect": "The other options are incorrect. Option A) π/2 is too large, as the integral is evaluating sin²(x) over only half the period of the sine function. Option C) 1/2 is incorrect because it does not take into account the full range of integration from 0 to π/2. Option D) 1 is incorrect because it does not match the result of the integration."
+    },
+    {
+      "question_id": "T02.03.Q025",
+      "type": "mcq",
+      "concept_id": "T02.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) is an even function, then ∫₋ₐᵃ f(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "2∫₀ᵃ f(x) dx"
+        },
+        {
+          "id": "C",
+          "text": "∫₀ᵃ f(x) dx"
+        },
+        {
+          "id": "D",
+          "text": "a · f(0)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If f(x) is an even function, then f(-x) = f(x). Therefore, the integral from -a to a of f(x) dx is equal to 2 times the integral from 0 to a of f(x) dx, since the positive and negative parts cancel out.",
+      "explanation_incorrect": "The other options are incorrect because option A) assumes the integral of an even function from -a to a is 0, which is not true. Option C) only considers the integral from 0 to a, missing the negative part from -a to 0. Option D) relates the integral to the function value at 0, which is not the correct way to evaluate the integral of an even function."
+    },
+    {
+      "question_id": "T02.03.Q026",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫cos(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−sin(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "sin(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "cos(x) + C"
+        },
+        {
+          "id": "D",
+          "text": "−cos(x) + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, sin(x) + C. This is because the integral of cos(x) is the anti-derivative, which is the function that, when differentiated, gives cos(x). The anti-derivative of cos(x) is sin(x) plus an arbitrary constant C.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the anti-derivative of cos(x). Option A, -sin(x) + C, is the anti-derivative of -sin(x), not cos(x). Option C, cos(x) + C, is the anti-derivative of sin(x), not cos(x). Option D, -cos(x) + C, is the anti-derivative of -cos(x), not cos(x)."
+    },
+    {
+      "question_id": "T02.03.Q027",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫eˣ(sin(x) + cos(x)) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "eˣ sin(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "eˣ cos(x) + C"
+        },
+        {
+          "id": "C",
+          "text": "eˣ(sin(x) − cos(x)) + C"
+        },
+        {
+          "id": "D",
+          "text": "eˣ(sin(x) + cos(x)) + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) eˣ sin(x) + C. This is because the integral of e^x(sin(x) + cos(x)) can be evaluated using the method of integration by parts, where u = sin(x) + cos(x) and dv = e^x dx. This gives the result e^x sin(x) + C.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly integrate the given expression. Option B) e^x cos(x) + C is wrong as the integral of e^x cos(x) is not the same as e^x(sin(x) + cos(x)). Options C) and D) are also incorrect as they do not properly integrate the given expression."
+    },
+    {
+      "question_id": "T02.03.Q028",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "∫₀^(π/2) (sin(x))/(sin(x) + cos(x)) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/2"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) π/4. This is because the integral ∫₀^(π/2) (sin(x))/(sin(x) + cos(x)) dx can be evaluated using the substitution u = sin(x) + cos(x), which gives the value π/4.",
+      "explanation_incorrect": "The other options are incorrect. Option A) 0 is wrong because the integral has a positive value. Option C) π/2 is wrong because the integral does not evaluate to that value. Option D) 1 is wrong because the integral does not equal 1."
+    },
+    {
+      "question_id": "T02.03.Q029",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "question_text": "∫1/√(x² + a²) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ln|x + √(x² + a²)| + C"
+        },
+        {
+          "id": "B",
+          "text": "sin⁻¹(x/a) + C"
+        },
+        {
+          "id": "C",
+          "text": "tan⁻¹(x/a) + C"
+        },
+        {
+          "id": "D",
+          "text": "√(x² + a²) + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, ln|x + √(x² + a²)| + C. This is because the integral of 1/√(x² + a²) is the inverse hyperbolic sine function, which is equal to ln|x + √(x² + a²)| + C.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the correct antiderivative of 1/√(x² + a²). Option B, sin⁻¹(x/a) + C, is the integral of 1/√(a² - x²), not 1/√(x² + a²). Option C, tan⁻¹(x/a) + C, is the integral of 1/(a² + x²), not 1/√(x² + a²). Option D, √(x² + a²) + C, is not the correct antiderivative of 1/√(x² + a²)."
+    },
+    {
+      "question_id": "T02.03.Q030",
+      "type": "mcq",
+      "concept_id": "T02.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "∫₀^(2π) |sin(x)| dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 4. The absolute value of sin(x) is a periodic function with period 2π, and the integral of this function from 0 to 2π is equal to 4. This is because the area under the curve of |sin(x)| from 0 to π is the same as the area from π to 2π, and the total area is 4.",
+      "explanation_incorrect": "The incorrect answer A) 0 is not correct because the absolute value of sin(x) is always positive, and the integral of this function from 0 to 2π will be a non-zero positive value. The incorrect answer B) 2 is also not correct because the integral of |sin(x)| from 0 to 2π is equal to 4, not 2. The incorrect answer D) π is not correct because the integral of |sin(x)| from 0 to 2π is not equal to π."
+    },
+    {
+      "question_id": "T02.03.Q031",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "question_text": "∫(√x + 1/√x)² dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x²/2 + 2x + ln|x| + C"
+        },
+        {
+          "id": "B",
+          "text": "x + 2√x + ln|x| + C"
+        },
+        {
+          "id": "C",
+          "text": "x²/2 + x + ln|x| + C"
+        },
+        {
+          "id": "D",
+          "text": "x²/2 + 2x + 1/x + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the integral of (√x + 1/√x)² can be evaluated using the substitution method. Substituting u = √x, the integral simplifies to ∫(u² + 1/u²) du, which is equal to x²/2 + 2x + ln|x| + C.",
+      "explanation_incorrect": "The correct answer is A, not B, C, or D. Option B is incorrect because the integral does not simplify to just x + 2√x + ln|x| + C. Option C is incorrect because the integral does not simplify to just x²/2 + x + ln|x| + C. Option D is incorrect because the integral does not simplify to just x²/2 + 2x + 1/x + C."
+    },
+    {
+      "question_id": "T02.03.Q032",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "question_text": "∫₀² (x³ + 1) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 6. This is because the integral of (x³ + 1) from 0 to 2 is equal to (x⁴/4 + x)|₀² = (2⁴/4 + 2) - (0⁴/4 + 0) = 8/4 + 2 = 6.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the value of the integral. Option B) 8 is incorrect because it does not account for the constant term of 1 in the integrand. Option C) 4 is incorrect because it does not correctly evaluate the integral of the x³ term. Option D) 10 is incorrect because it is too high and does not match the correct result of 6."
+    },
+    {
+      "question_id": "T02.03.Q033",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫tan(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sec²(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "−ln|cos(x)| + C"
+        },
+        {
+          "id": "C",
+          "text": "ln|sin(x)| + C"
+        },
+        {
+          "id": "D",
+          "text": "ln|tan(x)| + C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) -ln|cos(x)| + C. This is because the derivative of -ln|cos(x)| is tan(x), which means that the integral of tan(x) is -ln|cos(x)| + C.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the integral of tan(x). Option A) sec²(x) + C is the integral of sec²(x), not tan(x). Options C) ln|sin(x)| + C and D) ln|tan(x)| + C are not the correct integrals of tan(x)."
+    },
+    {
+      "question_id": "T02.03.Q034",
+      "type": "mcq",
+      "concept_id": "T02.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "∫₀^π x·sin(x) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "2π"
+        },
+        {
+          "id": "D",
+          "text": "π/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) π. This is because the integrand x·sin(x) is an odd function, and the limits of integration are from 0 to π. As per the property of integrals of odd functions, the integral evaluates to 0 from -π to 0, and 2 times the integral from 0 to π, which equals π.",
+      "explanation_incorrect": "The incorrect options are not correct because: B) 0 is wrong since the integrand is not an even function; C) 2π is wrong since the integral of an odd function over a symmetric interval is 0; and D) π/2 is wrong since the integral does not evaluate to half the value of the integral from 0 to π."
+    },
+    {
+      "question_id": "T02.03.Q035",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "exam_style",
+      "question_text": "∫1/(a² + x²) dx equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1/a)tan⁻¹(x/a) + C"
+        },
+        {
+          "id": "B",
+          "text": "tan⁻¹(x/a) + C"
+        },
+        {
+          "id": "C",
+          "text": "(1/a)sin⁻¹(x/a) + C"
+        },
+        {
+          "id": "D",
+          "text": "ln(a² + x²) + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the integral of 1/(a^2 + x^2) is (1/a)tan^-1(x/a) + C, which can be verified by differentiating the expression to obtain the original function.",
+      "explanation_incorrect": "Option B, tan^-1(x/a) + C, is incorrect because the correct integral involves a factor of 1/a. Option C, (1/a)sin^-1(x/a) + C, is incorrect because the inverse trigonometric function should be tan^-1 instead of sin^-1. Option D, ln(a^2 + x^2) + C, is incorrect because it does not match the correct integral expression."
+    },
+    {
+      "question_id": "T02.03.Q036",
+      "type": "true_false",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "Integration is the inverse process of differentiation.",
+      "correct_answer": true,
+      "explanation_correct": "Integration is indeed the inverse process of differentiation. Differentiation takes a function and finds its rate of change, while integration takes the rate of change (derivative) and reconstructs the original function. This inverse relationship is fundamental to calculus and allows us to solve many types of problems.",
+      "explanation_incorrect": "Integration is not the same as differentiation, but rather the inverse process. Differentiation involves finding the rate of change or slope of a function, while integration reconstructs the original function from its rate of change. So integration is the step that undoes differentiation, allowing us to find the original function given its derivative."
+    },
+    {
+      "question_id": "T02.03.Q037",
+      "type": "true_false",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "question_text": "∫ₐᵇ f(x) dx = −∫ᵇₐ f(x) dx.",
+      "correct_answer": true,
+      "explanation_correct": "The statement is true because the definite integral from a to b is equal to the negative of the definite integral from b to a. This property is derived from the fundamental theorem of calculus, which states that the definite integral is the difference between the values of the antiderivative at the upper and lower limits of integration.",
+      "explanation_incorrect": "The statement is incorrect because the definite integral from a to b is not equal to the integral from b to a. The correct statement is that the definite integral from a to b is equal to the negative of the definite integral from b to a. This is a key property of definite integrals, which is derived from the fundamental theorem of calculus."
+    },
+    {
+      "question_id": "T02.03.Q038",
+      "type": "true_false",
+      "concept_id": "T02.03.C04",
+      "difficulty": "application",
+      "question_text": "If f(x) is an odd function, then ∫₋ₐᵃ f(x) dx = 0.",
+      "correct_answer": true,
+      "explanation_correct": "If f(x) is an odd function, then f(-x) = -f(x). Integrating an odd function from -a to a results in a value of 0, because the positive and negative parts of the function cancel each other out.",
+      "explanation_incorrect": "If f(x) is an even function, then f(-x) = f(x) and the integral from -a to a will be non-zero. However, for an odd function, the integral from -a to a will be zero because the positive and negative parts of the function cancel out."
+    },
+    {
+      "question_id": "T02.03.Q039",
+      "type": "true_false",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "In integration by parts, ∫u dv = uv + ∫v du.",
+      "correct_answer": false,
+      "explanation_correct": "The formula for integration by parts is ∫u dv = uv - ∫v du, not ∫u dv = uv + ∫v du. This is because the integration by parts formula is derived using the product rule of differentiation, which states that d/dx(uv) = u(dv/dx) + v(du/dx).",
+      "explanation_incorrect": "The correct formula for integration by parts is ∫u dv = uv - ∫v du, not ∫u dv = uv + ∫v du. The minus sign is important because it accounts for the product rule of differentiation, which states that d/dx(uv) = u(dv/dx) + v(du/dx). Forgetting the minus sign is a common mistake, but it is crucial to get the formula right."
+    },
+    {
+      "question_id": "T02.03.Q040",
+      "type": "true_false",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "The Fundamental Theorem of Calculus states that ∫ₐᵇ f(x) dx = F(b) − F(a) where F'(x) = f(x).",
+      "correct_answer": true,
+      "explanation_correct": "The Fundamental Theorem of Calculus states that the definite integral of a function f(x) from a to b is equal to the difference between the values of the antiderivative F(x) evaluated at the endpoints b and a. This is because the definite integral represents the net change in the antiderivative function over the interval [a, b].",
+      "explanation_incorrect": "The Fundamental Theorem of Calculus does not state that the definite integral is equal to the function itself. Rather, it relates the definite integral to the antiderivative of the function. The theorem says that if F(x) is the antiderivative of f(x), then the definite integral of f(x) from a to b is equal to the difference between the values of F(x) evaluated at b and a."
+    },
+    {
+      "question_id": "T02.03.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫sin(x) dx = ___ + C.",
+      "correct_answer": "−cos(x)",
+      "explanation_correct": "The integral of sin(x) is -cos(x) + C. This is because the derivative of -cos(x) is sin(x), so -cos(x) is the anti-derivative or indefinite integral of sin(x).",
+      "explanation_incorrect": "The incorrect answer would be sin(x) + C. This is because the derivative of sin(x) is cos(x), not sin(x). The correct answer, -cos(x) + C, is the anti-derivative or indefinite integral of sin(x) according to the standard integral formula."
+    },
+    {
+      "question_id": "T02.03.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "∫x³ dx = ___ + C.",
+      "correct_answer": "x⁴/4",
+      "explanation_correct": "The correct answer is x⁴/4 + C because the standard integral of x³ dx is ∫x³ dx = x⁴/4 + C. This is a direct application of the power rule for integration, where the integral of x^n dx is (x^(n+1))/(n+1) + C for any real number n except -1.",
+      "explanation_incorrect": "The incorrect answer would be x³/3 + C. This is a common mistake, as students may confuse the power rule for integration with the power rule for differentiation. However, the integral of x³ dx is not x³/3 + C, but rather x⁴/4 + C, as the power of the variable increases by 1 in the antiderivative."
+    },
+    {
+      "question_id": "T02.03.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "question_text": "∫₀^(π/2) cos(x) dx = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The integral of cosine from 0 to π/2 is equal to 1 because the cosine function is an even function, meaning that its value at x is the same as its value at -x. Since the integral from 0 to π/2 is the same as twice the integral from 0 to π/4, and the cosine function has a value of 1 at 0, the integral evaluates to 1.",
+      "explanation_incorrect": "The incorrect answer would be to assume that the integral of cosine from 0 to π/2 is 0. This is not correct because the cosine function is positive in the first and second quadrants, and the area under the curve from 0 to π/2 is therefore positive, not 0. The correct answer, 1, is obtained by evaluating the definite integral using the Fundamental Theorem of Calculus."
+    },
+    {
+      "question_id": "T02.03.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "Using integration by parts, ∫u dv = uv − ___.",
+      "correct_answer": "∫v du",
+      "explanation_correct": "The formula for integration by parts is ∫u dv = uv - ∫v du, where u and dv are the two functions being integrated. The missing part in the question is the integral of v with respect to du, which is ∫v du.",
+      "explanation_incorrect": "The incorrect answer would be ∫u dv, which is the starting point of the integration by parts formula. However, the full formula includes subtracting the integral of v with respect to du, which is ∫v du. The correct answer format is ∫v du."
+    },
+    {
+      "question_id": "T02.03.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "∫₁⁴ √x dx = ___.",
+      "correct_answer": "14/3",
+      "explanation_correct": "The correct answer is 14/3 because the integral of √x is (2/3)x^(3/2) + C. Evaluating this integral from x=1 to x=4 gives (2/3)(4^(3/2) - 1^(3/2)) = 14/3.",
+      "explanation_incorrect": "The incorrect answer would be to simply evaluate the integral using the power rule, ∫x^(1/2) dx = (2/3)x^(3/2) + C, and then plugging in the limits 1 and 4. However, this would give the wrong final answer of 8 - (2/3) = 14/3, which is the correct solution."
+    },
+    {
+      "question_id": "T02.03.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "∫₋₃³ x⁵ dx = ___ (use the property of odd functions).",
+      "correct_answer": "0",
+      "explanation_correct": "The integral ∫₋₃³ x⁵ dx is equal to 0 because the function x⁵ is an odd function. For odd functions, the integral over a symmetric interval around 0 (like [-3, 3] here) is always 0.",
+      "explanation_incorrect": "The incorrect answer would be to evaluate the integral directly using the power rule for integration: ∫x⁵dx = x⁶/6 + C. However, since the interval is [-3, 3], which is symmetric around 0, and the function x⁵ is an odd function, the integral evaluates to 0 due to the property of odd functions mentioned earlier."
+    },
+    {
+      "question_id": "T02.03.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "∫e^(2x) dx = ___ + C.",
+      "correct_answer": "e^(2x)/2",
+      "explanation_correct": "The correct answer is e^(2x)/2 + C because the integral of e^(2x) is the derivative of e^(2x) divided by the derivative of the integrand, which is 2 in this case. Therefore, the integral becomes e^(2x)/2 + C.",
+      "explanation_incorrect": "The incorrect answer would be e^(2x), which is not correct because the integral of e^(2x) is not just e^(2x). The correct answer is e^(2x)/2 + C, where the 2 in the exponent becomes the denominator of the final expression after integration."
+    },
+    {
+      "question_id": "T02.03.Q048",
+      "type": "ordering",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to evaluate ∫x·cos(x) dx by integration by parts:",
+      "ordering_items": [
+        "Choose u = x and dv = cos(x) dx",
+        "Compute du = dx and v = sin(x)",
+        "Apply formula: x·sin(x) − ∫sin(x) dx",
+        "Simplify: x·sin(x) + cos(x) + C"
+      ],
+      "correct_answer": [
+        "Choose u = x and dv = cos(x) dx",
+        "Compute du = dx and v = sin(x)",
+        "Apply formula: x·sin(x) − ∫sin(x) dx",
+        "Simplify: x·sin(x) + cos(x) + C"
+      ],
+      "explanation_correct": "The steps are arranged correctly because the integration by parts formula states that ∫u dv = uv - ∫v du. In this case, u = x and dv = cos(x) dx, so du = dx and v = sin(x). Applying the formula gives us x·sin(x) - ∫sin(x) dx, which simplifies to x·sin(x) + cos(x) + C.",
+      "explanation_incorrect": "The steps are not arranged correctly. The first step is to choose u = x and dv = cos(x) dx, which is correct. The next step is to compute du = dx and v = sin(x), also correct. Then, we apply the integration by parts formula: ∫u dv = uv - ∫v du, which gives us x·sin(x) - ∫sin(x) dx. Finally, we simplify this expression to get x·sin(x) + cos(x) + C, which is the correct final answer."
+    },
+    {
+      "question_id": "T02.03.Q049",
+      "type": "ordering",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to integrate ∫(3x + 5)/((x − 1)(x + 2)) dx using partial fractions:",
+      "ordering_items": [
+        "Decompose: (3x + 5)/((x − 1)(x + 2)) = A/(x − 1) + B/(x + 2)",
+        "Solve for A and B: A = 8/3, B = 1/3",
+        "Integrate: (8/3)∫1/(x − 1) dx + (1/3)∫1/(x + 2) dx",
+        "Result: (8/3)ln|x − 1| + (1/3)ln|x + 2| + C"
+      ],
+      "correct_answer": [
+        "Decompose: (3x + 5)/((x − 1)(x + 2)) = A/(x − 1) + B/(x + 2)",
+        "Solve for A and B: A = 8/3, B = 1/3",
+        "Integrate: (8/3)∫1/(x − 1) dx + (1/3)∫1/(x + 2) dx",
+        "Result: (8/3)ln|x − 1| + (1/3)ln|x + 2| + C"
+      ],
+      "explanation_correct": "The correct order of steps is to first decompose the given expression into partial fractions, then solve for the coefficients A and B, and finally integrate the resulting expressions. This approach allows you to simplify the integration by breaking down the original complex expression into simpler terms that can be integrated individually.",
+      "explanation_incorrect": "The incorrect order would be to try to directly integrate the given expression without first decomposing it into partial fractions. This would not work, as the expression (3x + 5)/((x - 1)(x + 2)) is a rational function that cannot be integrated directly using standard integration techniques. The step of decomposing the expression into partial fractions is essential to simplify the integration and arrive at the final result."
+    },
+    {
+      "question_id": "T02.03.Q050",
+      "type": "ordering",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to evaluate a definite integral ∫ₐᵇ f(x) dx:",
+      "ordering_items": [
+        "Find the indefinite integral F(x) = ∫f(x) dx",
+        "Apply the upper limit: compute F(b)",
+        "Apply the lower limit: compute F(a)",
+        "Compute the result: F(b) − F(a)"
+      ],
+      "correct_answer": [
+        "Find the indefinite integral F(x) = ∫f(x) dx",
+        "Apply the upper limit: compute F(b)",
+        "Apply the lower limit: compute F(a)",
+        "Compute the result: F(b) − F(a)"
+      ],
+      "explanation_correct": "The correct order of steps is to first find the indefinite integral F(x) = ∫f(x) dx, then apply the upper limit to get F(b), apply the lower limit to get F(a), and finally compute the result by subtracting F(a) from F(b). This is the standard procedure for evaluating a definite integral using the Fundamental Theorem of Calculus.",
+      "explanation_incorrect": "The incorrect order would be to first apply the upper and lower limits to get F(b) and F(a), and then try to compute the result. However, this is not possible without first finding the indefinite integral F(x) = ∫f(x) dx. The correct order is to first find the indefinite integral, then apply the upper and lower limits, and finally compute the result by subtracting the lower limit value from the upper limit value."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 13,
+        "application": 21,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

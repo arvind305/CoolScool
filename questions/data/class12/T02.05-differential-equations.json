@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.05",
+  "topic_name": "Differential Equations",
+  "canonical_explanation": {
+    "text": "A differential equation is an equation involving derivatives of an unknown function. The order of a differential equation is the highest order derivative present, and the degree is the power of the highest order derivative when the equation is polynomial in its derivatives. A differential equation can be formed by eliminating arbitrary constants from a given family of curves. The number of arbitrary constants determines the order. Methods of solving first-order ODEs include: (1) Variable separable method, where the equation can be written as f(x)dx = g(y)dy and solved by integrating both sides; (2) Homogeneous equations, where dy/dx = F(y/x), solved by substituting y = vx; (3) Linear first-order equations of the form dy/dx + P(x)y = Q(x), solved using the integrating factor e^(∫P(x)dx). The solution containing arbitrary constants is the general solution; a particular solution is obtained by using initial conditions.",
+    "rules": [
+      "The order of a differential equation is the order of the highest derivative present; the degree is the power of the highest order derivative (when polynomial in derivatives).",
+      "For variable separable equations, separate the variables and integrate both sides independently.",
+      "For linear ODE dy/dx + Py = Q, the integrating factor is e^(∫P dx), and the solution is y·(IF) = ∫Q·(IF) dx + C."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.05.Q001",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of the differential equation d²y/dx² + 3(dy/dx) + 2y = 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of a differential equation is the highest order derivative present. In this equation, the highest order derivative is d²y/dx², which is a second-order derivative. Therefore, the order of this differential equation is 2.",
+      "explanation_incorrect": "The order of a differential equation is not determined by the number of terms or the coefficients, but by the highest order derivative present. In this equation, the highest order derivative is the second-order derivative d²y/dx², so the order of the differential equation is 2, not 1, 3, or 0."
+    },
+    {
+      "question_id": "T02.05.Q002",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The degree of the differential equation (dy/dx)³ + y = x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Not defined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The degree of the differential equation (dy/dx)³ + y = x is 3, because the highest order derivative present is the third-order derivative dy/dx, raised to the power of 3.",
+      "explanation_incorrect": "The correct answer is C) 3. The degree of a differential equation is the power of the highest order derivative present, which in this case is (dy/dx)³. Therefore, the degree of this differential equation is 3."
+    },
+    {
+      "question_id": "T02.05.Q003",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The degree of the differential equation d²y/dx² = √(1 + (dy/dx)²) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Not defined"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The degree of a differential equation is the power of the highest order derivative. In this case, the highest order derivative is the second derivative d²y/dx², which has a power of 2. Therefore, the degree of this differential equation is 2.",
+      "explanation_incorrect": "The degree of a differential equation refers to the power of the highest order derivative. In this case, the highest order derivative is d²y/dx², which has a power of 2. So the degree of this differential equation is 2, not 1, 3, or undefined."
+    },
+    {
+      "question_id": "T02.05.Q004",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "The order and degree of the differential equation (d³y/dx³)² + (d²y/dx²)³ + dy/dx + 4y = 0 are respectively:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 and 2"
+        },
+        {
+          "id": "B",
+          "text": "2 and 3"
+        },
+        {
+          "id": "C",
+          "text": "3 and 3"
+        },
+        {
+          "id": "D",
+          "text": "2 and 2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The order of the differential equation is the highest order derivative present, which is 3 (d³y/dx³). The degree is the power of the highest order derivative, which is 2 for (d³y/dx³)². Therefore, the order and degree of the given differential equation are 3 and 2 respectively, matching option A.",
+      "explanation_incorrect": "The incorrect options do not match the order and degree of the given differential equation. Option B has the order and degree reversed, option C has both order and degree as 3, and option D has both order and degree as 2. The correct answer is option A, with the order as 3 and the degree as 2."
+    },
+    {
+      "question_id": "T02.05.Q005",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "The degree of the differential equation dy/dx + sin(dy/dx) = 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Not defined"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The degree of a differential equation refers to the highest power of the derivative present. In this equation, the derivative dy/dx appears with a sine function, which is not a polynomial. Therefore, the degree of this differential equation is not defined.",
+      "explanation_incorrect": "The incorrect options (A, B, C) assume that the degree of the differential equation is defined. However, the given equation contains the sine function of the derivative, which is not a polynomial. Therefore, the degree of this differential equation is not defined, and the correct answer is option D."
+    },
+    {
+      "question_id": "T02.05.Q006",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The differential equation formed by eliminating a from y = ax is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = x(dy/dx)"
+        },
+        {
+          "id": "B",
+          "text": "dy/dx = a"
+        },
+        {
+          "id": "C",
+          "text": "x(dy/dx) − y = 0"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D, because the differential equation formed by eliminating the arbitrary constant 'a' from the family of curves y = ax is x(dy/dx) - y = 0. This is the general differential equation representing straight lines passing through the origin.",
+      "explanation_incorrect": "Option A, y = x(dy/dx), is not the correct differential equation. Option B, dy/dx = a, is not the correct equation either, as 'a' is an arbitrary constant that has been eliminated. Option C, x(dy/dx) - y = 0, is the correct differential equation, so D is the right answer."
+    },
+    {
+      "question_id": "T02.05.Q007",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The number of arbitrary constants in the general solution of a first-order ODE is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "Depends on the equation"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The general solution of a first-order ordinary differential equation (ODE) contains 1 arbitrary constant, because the equation has only one independent variable. This is because integrating the ODE once yields a family of curves, each with a unique arbitrary constant that differentiates one curve from another.",
+      "explanation_incorrect": "The number of arbitrary constants in the general solution of a first-order ODE is not 0, 2, or dependent on the equation. A first-order ODE has only one independent variable, so its general solution will always contain 1 arbitrary constant. This is because integrating the ODE once yields a family of curves, each with a unique arbitrary constant that differentiates one curve from another."
+    },
+    {
+      "question_id": "T02.05.Q008",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The differential equation of the family of curves y = Ae²ˣ + Be⁻²ˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "d²y/dx² − 4y = 0"
+        },
+        {
+          "id": "B",
+          "text": "d²y/dx² + 4y = 0"
+        },
+        {
+          "id": "C",
+          "text": "dy/dx − 2y = 0"
+        },
+        {
+          "id": "D",
+          "text": "d²y/dx² − 2y = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, d²y/dx² - 4y = 0. This is because the given family of curves has the form y = Ae²ˣ + Be⁻²ˣ, and taking the second derivative of this expression gives the differential equation d²y/dx² - 4y = 0.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly represent the differential equation for the given family of curves. Option B has a positive sign instead of a negative sign, option C does not include the second derivative, and option D has the wrong coefficient for the y term. The correct differential equation is the one that arises from taking the second derivative of the given family of curves, which is d²y/dx² - 4y = 0."
+    },
+    {
+      "question_id": "T02.05.Q009",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "The general solution of dy/dx = x/y is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y² = x² + C"
+        },
+        {
+          "id": "B",
+          "text": "y² − x² = C"
+        },
+        {
+          "id": "C",
+          "text": "y = x + C"
+        },
+        {
+          "id": "D",
+          "text": "xy = C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is option B, y² - x² = C. This is because the given differential equation dy/dx = x/y can be rearranged to d(y²)/dx = 2x, which is a separable differential equation. Integrating both sides gives y² - x² = C, which is the general solution.",
+      "explanation_incorrect": "The other options are incorrect. Option A, y² = x² + C, is not the correct general solution as it does not satisfy the given differential equation. Option C, y = x + C, is also incorrect as it does not represent the general solution. Option D, xy = C, is incorrect as it does not represent the correct relationship between x and y as per the given differential equation."
+    },
+    {
+      "question_id": "T02.05.Q010",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "The solution of dy/dx = eˣ⁺ʸ is obtained by separating variables as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "e⁻ʸ dy = eˣ dx"
+        },
+        {
+          "id": "B",
+          "text": "eʸ dy = eˣ dx"
+        },
+        {
+          "id": "C",
+          "text": "e⁻ˣ dx = eʸ dy"
+        },
+        {
+          "id": "D",
+          "text": "e⁻ʸ dy = e⁻ˣ dx"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution of the given differential equation dy/dx = e^(x+y) is obtained by separating the variables as e^(-y) dy = e^x dx, which is option A. This is because we can rearrange the original equation to e^(-y) dy = e^x dx, where the left-hand side is a function of y and the right-hand side is a function of x, allowing us to separate the variables.",
+      "explanation_incorrect": "Option B, eˣ dy = e^(y) dx, is incorrect because it does not correctly separate the variables. Option C, e^(-x) dx = e^y dy, is also incorrect as it does not match the original equation. Option D, e^(-y) dy = e^(-x) dx, is incorrect because it does not properly isolate the variables on each side of the equation."
+    },
+    {
+      "question_id": "T02.05.Q011",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The general solution of dy/dx = y/x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = Cx"
+        },
+        {
+          "id": "B",
+          "text": "y = C/x"
+        },
+        {
+          "id": "C",
+          "text": "y = x + C"
+        },
+        {
+          "id": "D",
+          "text": "y² = Cx"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The general solution of the differential equation dy/dx = y/x is y = Cx, where C is an arbitrary constant. This is because when we separate the variables and integrate both sides, we get ∫(dy/y) = ∫(dx/x), which leads to the solution y = Cx.",
+      "explanation_incorrect": "Option B y = C/x is incorrect because the general solution of dy/dx = y/x is not a reciprocal function. Option C y = x + C is also incorrect because the solution is multiplicative, not additive. Option D y² = Cx is incorrect because the solution is linear, not quadratic."
+    },
+    {
+      "question_id": "T02.05.Q012",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "A homogeneous differential equation is of the form dy/dx = F(y/x). The substitution used to solve it is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = vx where v is a function of x"
+        },
+        {
+          "id": "B",
+          "text": "x = vy"
+        },
+        {
+          "id": "C",
+          "text": "y = v + x"
+        },
+        {
+          "id": "D",
+          "text": "y = eᵛˣ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) y = vx where v is a function of x. This is the substitution used to solve homogeneous differential equations of the form dy/dx = F(y/x), where the variables can be separated by this substitution.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct substitution for solving homogeneous differential equations. Option B) x = vy and Option C) y = v + x do not allow the variables to be separated. Option D) y = eᵛˣ is not the appropriate substitution for this type of differential equation."
+    },
+    {
+      "question_id": "T02.05.Q013",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The solution of the homogeneous equation dy/dx = (x + y)/x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = x ln|x| + Cx"
+        },
+        {
+          "id": "B",
+          "text": "y = x + C"
+        },
+        {
+          "id": "C",
+          "text": "ln|y/x| = x + C"
+        },
+        {
+          "id": "D",
+          "text": "y/x = ln|x| + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution is y = x ln|x| + Cx, which is obtained by using the substitution y = vx for the homogeneous equation dy/dx = (x + y)/x. This transforms the equation into a separable differential equation that can be solved by integration.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the correct solution to the homogeneous equation. Option B, y = x + C, is the solution to the linear first-order equation dy/dx + y/x = 0, not the given homogeneous equation. Option C, ln|y/x| = x + C, is not the solution, and Option D, y/x = ln|x| + C, is also not the correct solution."
+    },
+    {
+      "question_id": "T02.05.Q014",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "application",
+      "question_text": "The integrating factor of dy/dx + y/x = x² is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "eˣ"
+        },
+        {
+          "id": "B",
+          "text": "x"
+        },
+        {
+          "id": "C",
+          "text": "1/x"
+        },
+        {
+          "id": "D",
+          "text": "x²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The integrating factor of the linear first-order differential equation dy/dx + y/x = x² is x, because the coefficient of y in the equation is 1/x. Multiplying the equation by this integrating factor allows it to be solved using the standard method for linear first-order ODEs.",
+      "explanation_incorrect": "The incorrect options are not the correct integrating factor. The integrating factor is determined by the coefficient of y in the differential equation, which in this case is 1/x. Therefore, the integrating factor is x, not eˣ, 1/x, or x²."
+    },
+    {
+      "question_id": "T02.05.Q015",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "application",
+      "question_text": "The integrating factor of dy/dx + 2y = eˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "e²ˣ"
+        },
+        {
+          "id": "B",
+          "text": "e⁻²ˣ"
+        },
+        {
+          "id": "C",
+          "text": "eˣ"
+        },
+        {
+          "id": "D",
+          "text": "2eˣ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The integrating factor for the linear first-order differential equation dy/dx + 2y = e^x is e^(∫2 dx) = e^(2x), which is option A.",
+      "explanation_incorrect": "The integrating factor is used to solve linear first-order differential equations of the form dy/dx + P(x)y = Q(x). In this case, P(x) = 2 and Q(x) = e^x, so the integrating factor is e^(∫2 dx) = e^(2x), which is option A. The other options are incorrect because they do not represent the proper integrating factor for this differential equation."
+    },
+    {
+      "question_id": "T02.05.Q016",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "exam_style",
+      "question_text": "The solution of dy/dx + y = eˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = eˣ/2 + Ce⁻ˣ"
+        },
+        {
+          "id": "B",
+          "text": "y = eˣ + Ce⁻ˣ"
+        },
+        {
+          "id": "C",
+          "text": "y = e²ˣ/2 + C"
+        },
+        {
+          "id": "D",
+          "text": "y = xeˣ + Ce⁻ˣ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution is y = e^(x/2) + Ce^(-x), where C is the arbitrary constant. This is obtained by solving the linear first-order differential equation dy/dx + y = e^x using the integrating factor method.",
+      "explanation_incorrect": "The other options are incorrect because they do not satisfy the given differential equation. Option B does not have the correct solution form, Option C has the wrong exponent, and Option D has an additional term involving x that is not part of the solution."
+    },
+    {
+      "question_id": "T02.05.Q017",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The differential equation of all circles centred at the origin is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x + y(dy/dx) = 0"
+        },
+        {
+          "id": "B",
+          "text": "x(dy/dx) + y = 0"
+        },
+        {
+          "id": "C",
+          "text": "x − y(dy/dx) = 0"
+        },
+        {
+          "id": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the differential equation of circles centered at the origin is x + y(dy/dx) = 0, which represents the general equation of a circle in polar coordinates.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the differential equation of circles centered at the origin. Option B, x(dy/dx) + y = 0, is the differential equation of straight lines passing through the origin, while Option C, x - y(dy/dx) = 0, does not represent the equation of a circle."
+    },
+    {
+      "question_id": "T02.05.Q018",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The solution of dy/dx = (x² + y²)/(2xy) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x² − y² = Cx"
+        },
+        {
+          "id": "B",
+          "text": "x² + y² = Cx"
+        },
+        {
+          "id": "C",
+          "text": "x² − y² = Cy"
+        },
+        {
+          "id": "D",
+          "text": "xy = C(x² + y²)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution to the given differential equation dy/dx = (x² + y²)/(2xy) is x² - y² = Cx, where C is the arbitrary constant. This can be verified by substituting the solution back into the original differential equation and checking that it satisfies the equation.",
+      "explanation_incorrect": "The incorrect options do not correctly solve the given differential equation. Option B, x² + y² = Cx, is not the correct solution as it does not satisfy the original differential equation. Option C, x² - y² = Cy, is also incorrect as it does not contain the correct arbitrary constant. Option D, xy = C(x² + y²), is not the solution to the given differential equation."
+    },
+    {
+      "question_id": "T02.05.Q019",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The order of the differential equation of all parabolas whose axis is the x-axis is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of the differential equation of all parabolas whose axis is the x-axis is 2, because the equation of a parabola is y = ax^2 + bx + c, where the highest order derivative is the second derivative, d^2y/dx^2.",
+      "explanation_incorrect": "The differential equation of a parabola whose axis is the x-axis is a second-order equation, not first-order (option A), third-order (option C), or fourth-order (option D). This is because the equation of a parabola involves the second derivative, d^2y/dx^2, which is the highest order derivative in the equation."
+    },
+    {
+      "question_id": "T02.05.Q020",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "exam_style",
+      "question_text": "The solution of dy/dx − y/x = 2x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = x² + Cx"
+        },
+        {
+          "id": "B",
+          "text": "y = 2x² + Cx"
+        },
+        {
+          "id": "C",
+          "text": "y = x² + C/x"
+        },
+        {
+          "id": "D",
+          "text": "y = 2x + Cx²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution of the given first-order differential equation dy/dx - y/x = 2x is y = x^2 + Cx, where C is an arbitrary constant. This is because the equation can be solved using the variable separable method, where we can write the equation as dy/dx - y/x = 2x, and then integrate both sides to obtain the general solution.",
+      "explanation_incorrect": "The incorrect options B, C, and D do not represent the correct solution to the given differential equation. Option B, y = 2x^2 + Cx, is incorrect because the coefficient of x^2 should be 1, not 2. Option C, y = x^2 + C/x, is incorrect because the constant term should not be a fraction. Option D, y = 2x + Cx^2, is incorrect because the coefficient of x should be x^2, not a constant."
+    },
+    {
+      "question_id": "T02.05.Q021",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The general solution of dy/dx = (1 + y²)/(1 + x²) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "tan⁻¹(y) = tan⁻¹(x) + C"
+        },
+        {
+          "id": "B",
+          "text": "y = x + C"
+        },
+        {
+          "id": "C",
+          "text": "tan⁻¹(y) − tan⁻¹(x) = C"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D, as the general solution of the given differential equation dy/dx = (1 + y^2)/(1 + x^2) is tan^-1(y) = tan^-1(x) + C, where C is the arbitrary constant. This can be verified by solving the equation using the variable separable method.",
+      "explanation_incorrect": "The general solution is not y = x + C (option B), as this solution does not satisfy the given differential equation. Option A, tan^-1(y) = tan^-1(x) + C, is the correct general solution, as it can be obtained by integrating both sides of the differential equation using the variable separable method. Option C, tan^-1(y) - tan^-1(x) = C, is also a valid general solution, as it can be obtained from the solution in option A by rearranging the terms."
+    },
+    {
+      "question_id": "T02.05.Q022",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The differential equation of the family y = A cos(x) + B sin(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "d²y/dx² + y = 0"
+        },
+        {
+          "id": "B",
+          "text": "d²y/dx² − y = 0"
+        },
+        {
+          "id": "C",
+          "text": "dy/dx + y = 0"
+        },
+        {
+          "id": "D",
+          "text": "d²y/dx² + 2y = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The given family of curves is y = A cos(x) + B sin(x), which is a second-order linear differential equation. The corresponding differential equation would be d²y/dx² + y = 0, which is option A.",
+      "explanation_incorrect": "Options B, C, and D are incorrect because they do not correctly represent the differential equation for the given family of curves. Option B, d²y/dx² - y = 0, is a different differential equation. Option C, dy/dx + y = 0, is a first-order linear differential equation. Option D, d²y/dx² + 2y = 0, is a different second-order linear differential equation."
+    },
+    {
+      "question_id": "T02.05.Q023",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The particular solution of dy/dx = y·tan(x) with y(0) = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = sec(x)"
+        },
+        {
+          "id": "B",
+          "text": "y = cos(x)"
+        },
+        {
+          "id": "C",
+          "text": "y = sin(x)"
+        },
+        {
+          "id": "D",
+          "text": "y = tan(x)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) y = sec(x). This is because the given differential equation dy/dx = y·tan(x) is a homogeneous equation, which can be solved by substituting y = vx. The solution obtained is y = C·sec(x), where C is the constant of integration. Given the initial condition y(0) = 1, we can find that C = 1, giving the particular solution y = sec(x).",
+      "explanation_incorrect": "The incorrect options are not the correct particular solution. Option B) y = cos(x) is the general solution, not the particular solution. Option C) y = sin(x) is not the solution to the given differential equation. Option D) y = tan(x) is also not the correct particular solution, as it does not satisfy the initial condition y(0) = 1."
+    },
+    {
+      "question_id": "T02.05.Q024",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "exam_style",
+      "question_text": "The solution of x·dy/dx + y = x³ with y(1) = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = x³/4 + 3/(4x)"
+        },
+        {
+          "id": "B",
+          "text": "y = x³/3 + 2/(3x)"
+        },
+        {
+          "id": "C",
+          "text": "y = x³/4 + C/x"
+        },
+        {
+          "id": "D",
+          "text": "y = x²/3 + 2/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution is (A) y = x³/4 + 3/(4x) because this satisfies the given first-order linear differential equation x·dy/dx + y = x³ and the initial condition y(1) = 1.",
+      "explanation_incorrect": "The correct answer is (A) y = x³/4 + 3/(4x). This solution is obtained by using the integrating factor method to solve the first-order linear differential equation x·dy/dx + y = x³, and then applying the given initial condition y(1) = 1 to find the arbitrary constant. Options (B), (C), and (D) do not satisfy the given differential equation and initial condition."
+    },
+    {
+      "question_id": "T02.05.Q025",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "A particular solution of a differential equation is obtained by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Setting all constants to zero"
+        },
+        {
+          "id": "B",
+          "text": "Using initial or boundary conditions to determine the arbitrary constants"
+        },
+        {
+          "id": "C",
+          "text": "Ignoring the complementary function"
+        },
+        {
+          "id": "D",
+          "text": "Differentiating the general solution"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The particular solution of a differential equation is obtained by using initial or boundary conditions to determine the arbitrary constants in the general solution.",
+      "explanation_incorrect": "Option A is incorrect because the general solution of a differential equation contains arbitrary constants, which cannot be set to zero to obtain the particular solution. Option C is incorrect because the complementary function is an essential part of the general solution and cannot be ignored. Option D is incorrect because differentiating the general solution does not give the particular solution."
+    },
+    {
+      "question_id": "T02.05.Q026",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The general solution of dy/dx = eˣ⁻ʸ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "eʸ = eˣ + C"
+        },
+        {
+          "id": "B",
+          "text": "eʸ + eˣ = C"
+        },
+        {
+          "id": "C",
+          "text": "e⁻ʸ = eˣ + C"
+        },
+        {
+          "id": "D",
+          "text": "y = eˣ + C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The general solution of the given differential equation dy/dx = e^(x-y) is y = x + C, or equivalently, e^y = e^x + C, where C is the arbitrary constant. This is because the given equation can be rewritten as dy/dx = e^x/e^y, which is a separable equation that can be solved by integrating both sides.",
+      "explanation_incorrect": "Option A, e^y = e^x + C, is the correct general solution. Option B, e^y + e^x = C, is incorrect because it does not correctly capture the relationship between y and x. Option C, e^(-y) = e^x + C, is incorrect because the exponent of e should be positive, not negative. Option D, y = e^x + C, is incorrect because the solution should involve e^y, not just y."
+    },
+    {
+      "question_id": "T02.05.Q027",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "The number of arbitrary constants eliminated to form a differential equation from y = ax² + bx + c is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The equation y = ax² + bx + c contains 3 arbitrary constants (a, b, and c). By eliminating these constants, we can form a differential equation, which will have no arbitrary constants.",
+      "explanation_incorrect": "The equation y = ax² + bx + c contains 3 arbitrary constants (a, b, and c). When we form a differential equation from this family of curves, we eliminate all 3 of these constants. Therefore, the number of arbitrary constants eliminated is 3, which corresponds to option C."
+    },
+    {
+      "question_id": "T02.05.Q028",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "exam_style",
+      "question_text": "The integrating factor of cos(x)·dy/dx + y·sin(x) = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sec(x)"
+        },
+        {
+          "id": "B",
+          "text": "cos(x)"
+        },
+        {
+          "id": "C",
+          "text": "sin(x)"
+        },
+        {
+          "id": "D",
+          "text": "tan(x)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The integrating factor of cos(x)·dy/dx + y·sin(x) = 1 is sec(x) because the linear first-order differential equation can be solved using the method of the integrating factor, where the integrating factor is e^(∫P(x)dx) = e^(∫cot(x)dx) = sec(x).",
+      "explanation_incorrect": "The correct integrating factor is sec(x), not cos(x), sin(x), or tan(x). This is because the given differential equation is of the form dy/dx + P(x)y = Q(x), where P(x) = cot(x) and Q(x) = 1. The integrating factor is then e^(∫cot(x)dx) = sec(x), which is option A."
+    },
+    {
+      "question_id": "T02.05.Q029",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The solution of dy/dx = (y − x)/(y + x) is solved using the substitution y = vx. The resulting equation in v and x after simplification is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "((v + 1)/(v² + 1))dv = −dx/x"
+        },
+        {
+          "id": "B",
+          "text": "((v − 1)/(v² − 1))dv = dx/x"
+        },
+        {
+          "id": "C",
+          "text": "v dv = dx"
+        },
+        {
+          "id": "D",
+          "text": "((1 + v)/(1 + v²))dv = dx/x"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A. The given differential equation dy/dx = (y - x)/(y + x) is homogeneous, so we can substitute y = vx to simplify it. Doing this and simplifying the resulting equation gives us the expression ((v + 1)/(v^2 + 1))dv = -dx/x, which matches option A.",
+      "explanation_incorrect": "The correct solution is obtained by substituting y = vx into the given differential equation dy/dx = (y - x)/(y + x), which simplifies to ((v + 1)/(v^2 + 1))dv = -dx/x. Options B, C, and D do not represent the correct simplification of the equation after the substitution."
+    },
+    {
+      "question_id": "T02.05.Q030",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The differential equation representing the family of curves y² = 2c(x + √c), where c > 0, has order and degree respectively:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 and 3"
+        },
+        {
+          "id": "B",
+          "text": "1 and 1"
+        },
+        {
+          "id": "C",
+          "text": "2 and 2"
+        },
+        {
+          "id": "D",
+          "text": "1 and 2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The given family of curves is y² = 2c(x + √c), where c is a positive constant. To find the differential equation representing this family, we need to eliminate the arbitrary constant c. This results in a first-order differential equation, and the highest power of the derivative dy/dx is 2, so the order is 1 and the degree is 3.",
+      "explanation_incorrect": "Option B is incorrect because the given family of curves is not a linear first-order differential equation. Option C is incorrect because the order of the differential equation is 1, not 2. Option D is incorrect because the degree of the differential equation is 3, not 2."
+    },
+    {
+      "question_id": "T02.05.Q031",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The solution of dy/dx + y = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = 1 + Ce⁻ˣ"
+        },
+        {
+          "id": "B",
+          "text": "y = 1 − Ce⁻ˣ"
+        },
+        {
+          "id": "C",
+          "text": "y = Ce⁻ˣ"
+        },
+        {
+          "id": "D",
+          "text": "y = 1 + Ceˣ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The solution to the linear first-order differential equation dy/dx + y = 1 is y = 1 + Ce^(-x), where C is the arbitrary constant. This can be verified by solving the equation using the integrating factor method, where the integrating factor is e^(∫1 dx) = e^x.",
+      "explanation_incorrect": "The incorrect options do not correctly solve the given linear first-order differential equation. Option B, y = 1 - Ce^(-x), is incorrect because it does not satisfy the equation. Option C, y = Ce^(-x), is also incorrect as it does not include the constant term 1. Option D, y = 1 + Ce^x, is incorrect because the exponential term should be negative, not positive."
+    },
+    {
+      "question_id": "T02.05.Q032",
+      "type": "mcq",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The order of the differential equation formed by eliminating the constants from y = c₁e²ˣ + c₂e³ˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of the differential equation formed by eliminating the constants from y = c₁e²ˣ + c₂e³ˣ is 2 because there are two arbitrary constants, c₁ and c₂, in the equation.",
+      "explanation_incorrect": "The correct answer is option B, the order of the differential equation is 2. This is because the equation y = c₁e²ˣ + c₂e³ˣ has two arbitrary constants, c₁ and c₂, which means the order of the differential equation formed by eliminating these constants will be 2."
+    },
+    {
+      "question_id": "T02.05.Q033",
+      "type": "mcq",
+      "concept_id": "T02.05.C04",
+      "difficulty": "application",
+      "question_text": "For the linear ODE dy/dx + P(x)y = Q(x), the integrating factor is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "e^(∫Q dx)"
+        },
+        {
+          "id": "B",
+          "text": "e^(∫P dx)"
+        },
+        {
+          "id": "C",
+          "text": "e^(∫(P+Q) dx)"
+        },
+        {
+          "id": "D",
+          "text": "∫P dx"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) e^(∫P dx). This is because the integrating factor for a linear first-order ODE of the form dy/dx + P(x)y = Q(x) is e^(∫P(x) dx), which multiplies the equation to make it solvable by the method of integration.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the integrating factor for the given linear first-order ODE. Option A) e^(∫Q dx) is not the integrating factor, as it does not involve the coefficient P(x). Option C) e^(∫(P+Q) dx) is also not the integrating factor, as it incorrectly includes the term Q(x) in addition to P(x). Option D) ∫P dx is not the integrating factor, as it is not an exponential form."
+    },
+    {
+      "question_id": "T02.05.Q034",
+      "type": "mcq",
+      "concept_id": "T02.05.C01",
+      "difficulty": "application",
+      "question_text": "The degree of the differential equation [1 + (dy/dx)²]^(3/2) = d²y/dx² is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Not defined"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The degree of the differential equation [1 + (dy/dx)²]^(3/2) = d²y/dx² is 2 because the highest derivative present is the second derivative (d²y/dx²), which is raised to the power of 1.",
+      "explanation_incorrect": "The degree is not 1 because the highest derivative is not raised to the power of 1. It is also not 3 because the highest derivative is not raised to the power of 3. The degree is not 'not defined' because the differential equation is polynomial in its derivatives."
+    },
+    {
+      "question_id": "T02.05.Q035",
+      "type": "mcq",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The solution of (x + y) dy + (x − y) dx = 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x² + 2xy − y² = C"
+        },
+        {
+          "id": "B",
+          "text": "x² − 2xy − y² = C"
+        },
+        {
+          "id": "C",
+          "text": "x² + 2xy + y² = C"
+        },
+        {
+          "id": "D",
+          "text": "x² − 2xy + y² = C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The given differential equation (x + y) dy + (x - y) dx = 0 can be rearranged to get dy/dx = (y - x)/(x + y), which is in the form of a homogeneous differential equation. Using the substitution y = vx, the solution is x^2 + 2xy - y^2 = C, which is option A.",
+      "explanation_incorrect": "Option A is the correct solution. Option B is incorrect because the solution should have the term 2xy, not -2xy. Option C is incorrect because the solution should have the term -y^2, not +y^2. Option D is incorrect because the solution should have the term 2xy, not -2xy."
+    },
+    {
+      "question_id": "T02.05.Q036",
+      "type": "true_false",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of a differential equation is always a positive integer.",
+      "correct_answer": true,
+      "explanation_correct": "The order of a differential equation is always a positive integer because it represents the highest order of the derivative present in the equation. For example, a first-order differential equation contains a first derivative, a second-order differential equation contains a second derivative, and so on. The order can never be a negative number or a fraction.",
+      "explanation_incorrect": "It is a common misconception that the order of a differential equation could be a negative number or a fraction. However, the order is defined as the highest order of the derivative present in the equation, which must be a positive integer. For example, an equation involving a second derivative would have an order of 2, while an equation with just a first derivative would have an order of 1. The order cannot be a negative value or a non-integer."
+    },
+    {
+      "question_id": "T02.05.Q037",
+      "type": "true_false",
+      "concept_id": "T02.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "If the family of curves has two arbitrary constants, the corresponding differential equation is of order 2.",
+      "correct_answer": true,
+      "explanation_correct": "If a family of curves has two arbitrary constants, the corresponding differential equation is of order 2. This is because the order of a differential equation is determined by the number of arbitrary constants in the general solution, and a family with two constants will have a second-order differential equation.",
+      "explanation_incorrect": "The number of arbitrary constants in the general solution of a differential equation does not directly determine the order of the equation. The order is the highest order derivative present in the equation, which can be higher or lower than the number of arbitrary constants. For example, a first-order differential equation can have two arbitrary constants in its general solution."
+    },
+    {
+      "question_id": "T02.05.Q038",
+      "type": "true_false",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The equation dy/dx = (x + y)/(x − y) is a homogeneous differential equation.",
+      "correct_answer": true,
+      "explanation_correct": "The equation dy/dx = (x + y)/(x - y) is a homogeneous differential equation because it can be written in the form dy/dx = F(y/x), where F(y/x) = (x + y)/(x - y).",
+      "explanation_incorrect": "The most common misconception is that a homogeneous differential equation must be of the form dy/dx = f(y/x). However, the given equation can still be classified as homogeneous because it can be rearranged to the form dy/dx = F(y/x), where F(y/x) = (x + y)/(x - y)."
+    },
+    {
+      "question_id": "T02.05.Q039",
+      "type": "true_false",
+      "concept_id": "T02.05.C04",
+      "difficulty": "application",
+      "question_text": "The integrating factor of the linear ODE dy/dx + 3y = 6 is e³ˣ.",
+      "correct_answer": true,
+      "explanation_correct": "The integrating factor for a linear first-order differential equation of the form dy/dx + P(x)y = Q(x) is e^(∫P(x)dx). In this case, P(x) = 3, so the integrating factor is e^(∫3dx) = e^(3x), which is e³ˣ.",
+      "explanation_incorrect": "The incorrect answer would be to think that the integrating factor is just e³, without the variable x in the exponent. However, the integrating factor must be e raised to the integral of the coefficient P(x), which in this case is 3, so the correct integrating factor is e³ˣ."
+    },
+    {
+      "question_id": "T02.05.Q040",
+      "type": "true_false",
+      "concept_id": "T02.05.C01",
+      "difficulty": "exam_style",
+      "question_text": "The degree of a differential equation involving log(dy/dx) or sin(dy/dx) is not defined.",
+      "correct_answer": true,
+      "explanation_correct": "The degree of a differential equation is the power of the highest order derivative when the equation is polynomial in its derivatives. Differential equations involving trigonometric or logarithmic functions of the derivative, like sin(dy/dx) or log(dy/dx), are not polynomial in the derivative, so the degree is not defined for these types of equations.",
+      "explanation_incorrect": "The degree of a differential equation is the power of the highest order derivative when the equation is polynomial in its derivatives. Equations involving trigonometric or logarithmic functions of the derivative, like sin(dy/dx) or log(dy/dx), are not polynomial in the derivative, so the degree is not defined. This means the statement 'The degree of a differential equation involving log(dy/dx) or sin(dy/dx) is not defined' is true."
+    },
+    {
+      "question_id": "T02.05.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of dy/dx + 5y = 0 is ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The order of a differential equation is the highest order derivative present in the equation. In this case, the only derivative present is the first-order derivative dy/dx, so the order of the equation dy/dx + 5y = 0 is 1.",
+      "explanation_incorrect": "The accepted answer format for this fill-in-the-blank question is a single number. The order of the differential equation dy/dx + 5y = 0 is 1, because the highest order derivative present is the first-order derivative dy/dx. Incorrectly thinking that the order is higher than 1 would be a mistake, as the equation does not contain any higher-order derivatives."
+    },
+    {
+      "question_id": "T02.05.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The degree of (dy/dx)² + dy/dx − 6 = 0 is ___.",
+      "correct_answer": "2",
+      "explanation_correct": "The given differential equation is (dy/dx)² + dy/dx - 6 = 0, which is a polynomial equation in the derivative dy/dx. The highest power of the derivative is 2, so the degree of the differential equation is 2.",
+      "explanation_incorrect": "The incorrect answer would be 1. While the equation does contain the first derivative dy/dx, it also contains the square of the first derivative (dy/dx)². The degree of a differential equation is determined by the highest power of the derivative, which in this case is 2. Therefore, the correct degree of the given differential equation is 2."
+    },
+    {
+      "question_id": "T02.05.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "The general solution of dy/dx = 2x is y = ___.",
+      "correct_answer": "x² + C",
+      "explanation_correct": "The general solution of the differential equation dy/dx = 2x is y = x^2 + C, where C is an arbitrary constant. This is because integrating both sides of the equation gives ∫(dy/dx) = ∫2x dx, which simplifies to y = x^2 + C.",
+      "explanation_incorrect": "The incorrect answer would be y = 2x. While this may seem correct at first glance, it is not the general solution of the given differential equation. The general solution must contain an arbitrary constant C to represent the family of solutions. The correct general solution is y = x^2 + C, where C can take any real value."
+    },
+    {
+      "question_id": "T02.05.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C04",
+      "difficulty": "application",
+      "question_text": "The integrating factor of dy/dx + y = 0 is ___.",
+      "correct_answer": "eˣ",
+      "explanation_correct": "The integrating factor for the first-order linear differential equation dy/dx + y = 0 is e^x. This is because the equation can be rewritten as d(ye^x)/dx = 0, which means ye^x is a constant. Integrating both sides gives the general solution y = Ce^-x, where C is the arbitrary constant.",
+      "explanation_incorrect": "The incorrect answer would be e^-x. This is because the equation dy/dx + y = 0 is not a homogeneous differential equation, so the substitution y = vx does not apply. Instead, this is a first-order linear differential equation, which requires the use of the integrating factor method to solve, and the correct integrating factor is e^x."
+    },
+    {
+      "question_id": "T02.05.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C02",
+      "difficulty": "exam_style",
+      "question_text": "The differential equation of the family y = ceˣ (c is arbitrary) is dy/dx = ___.",
+      "correct_answer": "y",
+      "explanation_correct": "The differential equation of the family y = ceˣ (where c is an arbitrary constant) is dy/dx = y. This is because when we differentiate the given equation y = ceˣ with respect to x, we get dy/dx = ceˣ = y, since y = ceˣ.",
+      "explanation_incorrect": "The incorrect answer would be dy/dx = eˣ. This is not correct because the differential equation of the family y = ceˣ is dy/dx = y, not dy/dx = eˣ. The correct answer is 'y' as the blank to be filled, in the format specified."
+    },
+    {
+      "question_id": "T02.05.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The substitution used to solve a homogeneous differential equation dy/dx = f(y/x) is y = ___.",
+      "correct_answer": "vx",
+      "explanation_correct": "To solve a homogeneous differential equation of the form dy/dx = f(y/x), we can use the substitution y = vx. This allows us to transform the equation into a separable form that can be easily integrated.",
+      "explanation_incorrect": "The correct substitution to solve a homogeneous differential equation of the form dy/dx = f(y/x) is y = vx. This transforms the equation into a separable form that can be integrated. The wrong answer of just 'v' would not work, as it does not properly capture the relationship between y and x in the original equation."
+    },
+    {
+      "question_id": "T02.05.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.05.C04",
+      "difficulty": "exam_style",
+      "question_text": "For the ODE dy/dx − 2y/x = x², the integrating factor is ___.",
+      "correct_answer": "1/x²",
+      "explanation_correct": "The integrating factor for the given ODE dy/dx - 2y/x = x² is 1/x². This is because the coefficient of y in the ODE is -2/x, and the integrating factor is e^(∫(-2/x)dx) = 1/x².",
+      "explanation_incorrect": "The incorrect answer would be something other than 1/x². The integrating factor is used to solve first-order linear differential equations of the form dy/dx + P(x)y = Q(x). In this case, P(x) = -2/x, so the integrating factor is e^(∫(-2/x)dx) = 1/x²."
+    },
+    {
+      "question_id": "T02.05.Q048",
+      "type": "ordering",
+      "concept_id": "T02.05.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to solve a variable separable differential equation dy/dx = f(x)g(y):",
+      "ordering_items": [
+        "Separate variables: dy/g(y) = f(x) dx",
+        "Integrate both sides: ∫dy/g(y) = ∫f(x) dx",
+        "Evaluate the integrals",
+        "Add the constant of integration C to get the general solution"
+      ],
+      "correct_answer": [
+        "Separate variables: dy/g(y) = f(x) dx",
+        "Integrate both sides: ∫dy/g(y) = ∫f(x) dx",
+        "Evaluate the integrals",
+        "Add the constant of integration C to get the general solution"
+      ],
+      "explanation_correct": "The correct order of steps to solve a variable separable differential equation dy/dx = f(x)g(y) is accurate because it follows the logical progression of first separating the variables, then integrating both sides, evaluating the integrals, and finally adding the constant of integration to obtain the general solution.",
+      "explanation_incorrect": "The incorrect order of steps would not lead to the correct solution. The key steps are: 1) Separate the variables by writing the equation as dy/g(y) = f(x) dx, 2) Integrate both sides to get ∫dy/g(y) = ∫f(x) dx, 3) Evaluate the integrals, and 4) Add the constant of integration C to get the general solution."
+    },
+    {
+      "question_id": "T02.05.Q049",
+      "type": "ordering",
+      "concept_id": "T02.05.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to solve a linear first-order ODE dy/dx + P(x)y = Q(x):",
+      "ordering_items": [
+        "Identify P(x) and Q(x) from the standard form",
+        "Compute the integrating factor IF = e^(∫P(x) dx)",
+        "Multiply both sides by IF: d/dx[y · IF] = Q(x) · IF",
+        "Integrate: y · IF = ∫Q(x) · IF dx + C, then solve for y"
+      ],
+      "correct_answer": [
+        "Identify P(x) and Q(x) from the standard form",
+        "Compute the integrating factor IF = e^(∫P(x) dx)",
+        "Multiply both sides by IF: d/dx[y · IF] = Q(x) · IF",
+        "Integrate: y · IF = ∫Q(x) · IF dx + C, then solve for y"
+      ],
+      "explanation_correct": "The correct answer arranges the steps to solve a linear first-order ODE in the right order. First, we need to identify the coefficient functions P(x) and Q(x) from the standard form. Then, we compute the integrating factor IF. Next, we multiply both sides by IF to get the differential equation in the correct form. Finally, we integrate to find the general solution and solve for the unknown function y.",
+      "explanation_incorrect": "The incorrect answer does not follow the proper steps to solve a linear first-order ODE. The key steps are: 1) identify P(x) and Q(x), 2) compute the integrating factor, 3) multiply both sides by the integrating factor, 4) integrate to find the general solution, and 5) solve for y. Skipping or rearranging these steps would lead to an incorrect solution."
+    },
+    {
+      "question_id": "T02.05.Q050",
+      "type": "ordering",
+      "concept_id": "T02.05.C02",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to form the differential equation of a family y = Aeˣ + B:",
+      "ordering_items": [
+        "Differentiate once: dy/dx = Aeˣ",
+        "Differentiate again: d²y/dx² = Aeˣ",
+        "From the two derivatives: dy/dx = d²y/dx²",
+        "The differential equation is d²y/dx² − dy/dx = 0"
+      ],
+      "correct_answer": [
+        "Differentiate once: dy/dx = Aeˣ",
+        "Differentiate again: d²y/dx² = Aeˣ",
+        "From the two derivatives: dy/dx = d²y/dx²",
+        "The differential equation is d²y/dx² − dy/dx = 0"
+      ],
+      "explanation_correct": "The given steps are arranged correctly because the differential equation of the family of curves y = Ae^x + B can be formed by first differentiating the equation once to get dy/dx = Ae^x, and then differentiating again to get d²y/dx² = Ae^x. Equating the first and second derivatives gives the differential equation d²y/dx² - dy/dx = 0.",
+      "explanation_incorrect": "The steps are not arranged correctly. To form the differential equation, we first need to differentiate the given family of curves y = Ae^x + B once to get dy/dx = Ae^x. We then differentiate again to get d²y/dx² = Ae^x. Equating the first and second derivatives gives the differential equation d²y/dx² - dy/dx = 0, which is the correct final step."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 12,
+        "application": 21,
+        "exam_style": 17
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

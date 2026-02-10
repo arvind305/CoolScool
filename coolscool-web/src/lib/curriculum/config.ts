@@ -22,7 +22,7 @@ export const BOARDS = {
 
 export type BoardId = keyof typeof BOARDS;
 
-export const CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const;
+export const CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
 export type ClassLevel = (typeof CLASSES)[number];
 
 export const SUBJECTS = {
@@ -47,7 +47,7 @@ export const SUBJECTS = {
     icon: '⚛️',
     color: '#3b82f6',
     status: 'live' as const,
-    classRange: [6, 10] as const, // Physics for Classes 6-10
+    classRange: [6, 12] as const, // Physics for Classes 6-12
   },
   chemistry: {
     id: 'chemistry',
@@ -55,7 +55,7 @@ export const SUBJECTS = {
     icon: '🧪',
     color: '#10b981',
     status: 'live' as const,
-    classRange: [6, 10] as const, // Chemistry for Classes 6-10
+    classRange: [6, 12] as const, // Chemistry for Classes 6-12
   },
   biology: {
     id: 'biology',
@@ -63,7 +63,7 @@ export const SUBJECTS = {
     icon: '🧬',
     color: '#8b5cf6',
     status: 'live' as const,
-    classRange: [6, 10] as const, // Biology for Classes 6-10
+    classRange: [6, 12] as const, // Biology for Classes 6-12
   },
   english: {
     id: 'english',

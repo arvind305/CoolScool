@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Electromagnetic Induction & Alternating Current",
+  "canonical_explanation": {
+    "text": "Electromagnetic induction describes the generation of EMF due to changing magnetic flux, governed by Faraday's law: EMF = -d(phi_B)/dt. Lenz's law determines the direction of induced current, opposing the change in flux. Self-inductance (L) and mutual inductance (M) quantify the ability of coils to induce EMF in themselves or neighbouring coils. An AC generator produces sinusoidal EMF E = E0 sin(omega t). In AC circuits, impedance Z combines resistance and reactance, with resonance occurring when X_L = X_C at frequency f_r = 1/(2pi sqrt(LC)). Transformers use electromagnetic induction to step up or step down AC voltages according to the turns ratio V_s/V_p = N_s/N_p.",
+    "rules": [
+      "Faraday's law: EMF = -d(phi_B)/dt; the magnitude of induced EMF equals the rate of change of magnetic flux",
+      "Lenz's law: the induced current opposes the change producing it",
+      "Motional EMF: E = Blv for a conductor of length l moving with velocity v in field B",
+      "Impedance in LCR circuit: Z = sqrt(R^2 + (X_L - X_C)^2)",
+      "Resonance frequency: f_r = 1/(2pi sqrt(LC)) where X_L = X_C"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Faraday's law of electromagnetic induction states that the induced EMF is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The magnetic flux through the circuit"
+        },
+        {
+          "id": "B",
+          "text": "The rate of change of magnetic flux through the circuit"
+        },
+        {
+          "id": "C",
+          "text": "The negative of the rate of change of magnetic flux through the circuit"
+        },
+        {
+          "id": "D",
+          "text": "The square of the magnetic flux"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Faraday's law states that the induced EMF is equal to the negative of the rate of change of the magnetic flux through the circuit. This is because the induced EMF opposes the change in flux, as per Lenz's law.",
+      "explanation_incorrect": "The induced EMF is not equal to the magnetic flux itself, nor is it proportional to the square of the flux. The induced EMF is directly proportional to the rate of change of the magnetic flux, as stated in Faraday's law. The negative sign indicates that the induced EMF opposes the change in flux."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Lenz's law is a consequence of the law of conservation of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Charge"
+        },
+        {
+          "id": "B",
+          "text": "Momentum"
+        },
+        {
+          "id": "C",
+          "text": "Energy"
+        },
+        {
+          "id": "D",
+          "text": "Mass"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Lenz's law is a consequence of the law of conservation of energy. The induced current opposes the change in magnetic flux, as this oppositional current creates a magnetic field that in turn opposes the original change in flux, in accordance with the principle of conservation of energy.",
+      "explanation_incorrect": "Lenz's law is not a consequence of the conservation of charge, momentum, or mass. It is a consequence of the law of conservation of energy. The induced current creates a magnetic field that opposes the original change in magnetic flux, in order to conserve energy. This is the reason Lenz's law states that the direction of the induced current is such that it opposes the change in flux that created it."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A conducting rod of length 0.5 m moves with a velocity of 4 m/s perpendicular to a magnetic field of 0.2 T. The motional EMF induced in the rod is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2 V"
+        },
+        {
+          "id": "B",
+          "text": "0.4 V"
+        },
+        {
+          "id": "C",
+          "text": "0.1 V"
+        },
+        {
+          "id": "D",
+          "text": "2.0 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 0.4 V. This can be calculated using Faraday's law of electromagnetic induction, where the induced EMF is given by E = -BvL, where B is the magnetic field, v is the velocity of the rod, and L is the length of the rod. Plugging in the values given, we get E = -0.2 T * 4 m/s * 0.5 m = 0.4 V.",
+      "explanation_incorrect": "The incorrect answer is A) 0.2 V. This is incorrect because the formula for induced EMF is E = -BvL, and the given values of B = 0.2 T, v = 4 m/s, and L = 0.5 m result in a value of 0.4 V, not 0.2 V."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "The magnetic flux through a coil of 200 turns changes from 0.1 Wb to 0.04 Wb in 0.02 s. The induced EMF is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 V"
+        },
+        {
+          "id": "B",
+          "text": "600 V"
+        },
+        {
+          "id": "C",
+          "text": "6 V"
+        },
+        {
+          "id": "D",
+          "text": "0.6 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 600 V. This is because the induced EMF (E) is equal to the rate of change of magnetic flux (dΦ/dt) multiplied by the number of turns (N) in the coil, as given by Faraday's law of electromagnetic induction: E = -N(dΦ/dt). With the given values of Φ changing from 0.1 Wb to 0.04 Wb in 0.02 s, and the coil having 200 turns, the calculation gives E = -N(dΦ/dt) = -200(0.1 - 0.04)/0.02 = 600 V.",
+      "explanation_incorrect": "The incorrect answers (A, C, and D) do not correctly apply Faraday's law. Option A (60 V) is too low, option C (6 V) is too low, and option D (0.6 V) is much too low. The correct application of Faraday's law, using the given values, results in an induced EMF of 600 V in the coil."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A circular coil of radius 10 cm and 50 turns is rotated about its diameter at 300 rpm in a uniform magnetic field of 0.05 T. The maximum EMF induced is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.47 V"
+        },
+        {
+          "id": "B",
+          "text": "24.7 V"
+        },
+        {
+          "id": "C",
+          "text": "0.247 V"
+        },
+        {
+          "id": "D",
+          "text": "247 V"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2.47 V. This can be calculated using Faraday's law of electromagnetic induction, where the induced EMF is proportional to the rate of change of magnetic flux. With a circular coil of 50 turns rotating at 300 rpm in a 0.05 T magnetic field, the maximum EMF induced will be around 2.47 V.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately calculate the induced EMF based on the given information. Option B) 24.7 V is too high, option C) 0.247 V is too low, and option D) 247 V is much too high. The correct answer of 2.47 V is obtained by properly applying Faraday's law of electromagnetic induction to the specific parameters provided in the question."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of self-inductance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Farad"
+        },
+        {
+          "id": "B",
+          "text": "Weber"
+        },
+        {
+          "id": "C",
+          "text": "Henry"
+        },
+        {
+          "id": "D",
+          "text": "Tesla"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The SI unit of self-inductance is the Henry (H), which measures the induced EMF in a coil due to a changing current. This is because self-inductance quantifies the ability of a coil to induce EMF in itself, as described by Faraday's law of electromagnetic induction.",
+      "explanation_incorrect": "The other options are not the correct SI unit of self-inductance. Farads (F) measure capacitance, Webers (Wb) measure magnetic flux, and Teslas (T) measure magnetic field strength. Self-inductance is a measure of the induced EMF in a coil, which is properly quantified in the unit of Henry (H)."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Eddy currents are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Currents induced in bulk conductors due to changing magnetic flux"
+        },
+        {
+          "id": "B",
+          "text": "Currents flowing in a solenoid"
+        },
+        {
+          "id": "C",
+          "text": "Currents in a dielectric medium"
+        },
+        {
+          "id": "D",
+          "text": "Currents due to electrostatic induction"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Eddy currents are induced currents that flow in bulk conductive materials like metal plates or conductors when the magnetic flux through them changes. This is due to electromagnetic induction and is described by Faraday's law.",
+      "explanation_incorrect": "Eddy currents are not currents flowing in a solenoid, which is a type of electromagnetic coil. They also do not flow in dielectric (insulating) materials, as they require a conductive medium. Lastly, eddy currents are not due to electrostatic induction, which involves the build-up of electric charges rather than changing magnetic fields."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The self-inductance of a solenoid of 500 turns, length 0.5 m, and cross-sectional area 4 x 10^-4 m^2 is (mu_0 = 4pi x 10^-7 H/m):",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.51 x 10^-4 H"
+        },
+        {
+          "id": "B",
+          "text": "6.28 x 10^-5 H"
+        },
+        {
+          "id": "C",
+          "text": "1.26 x 10^-3 H"
+        },
+        {
+          "id": "D",
+          "text": "5.03 x 10^-4 H"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 2.51 x 10^-4 H. This is calculated using the formula for self-inductance of a solenoid: L = (mu_0 * N^2 * A) / l, where N is the number of turns, A is the cross-sectional area, l is the length, and mu_0 is the permeability of free space. Plugging in the given values, we get L = (4pi x 10^-7 H/m * 500^2 * 4 x 10^-4 m^2) / 0.5 m = 2.51 x 10^-4 H.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the value calculated using the formula. Option B) 6.28 x 10^-5 H is too low, option C) 1.26 x 10^-3 H is too high, and option D) 5.03 x 10^-4 H is also too high. The correct answer A) 2.51 x 10^-4 H is the only one that matches the value calculated from the given parameters of the solenoid."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The energy stored in an inductor of 2 H carrying a current of 3 A is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 J"
+        },
+        {
+          "id": "B",
+          "text": "6 J"
+        },
+        {
+          "id": "C",
+          "text": "9 J"
+        },
+        {
+          "id": "D",
+          "text": "18 J"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The energy stored in an inductor is given by the formula E = (1/2)LI^2, where L is the inductance and I is the current. In this case, L = 2 H and I = 3 A, so the energy stored is (1/2)×2×3^2 = 9 J.",
+      "explanation_incorrect": "Option A (3 J) is incorrect because the energy formula is E = (1/2)LI^2, not just LI. Option B (6 J) is incorrect because the current is squared, so the correct energy is 9 J. Option D (18 J) is incorrect because the energy is proportional to the square of the current, not directly to the current."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two coils have mutual inductance of 0.5 H. If the current in one coil changes from 2 A to 8 A in 0.1 s, the EMF induced in the other coil is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 V"
+        },
+        {
+          "id": "B",
+          "text": "30 V"
+        },
+        {
+          "id": "C",
+          "text": "3 V"
+        },
+        {
+          "id": "D",
+          "text": "60 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 30 V. This is because the mutual inductance between the two coils is 0.5 H, and the current in one coil changes from 2 A to 8 A in 0.1 s. Using Faraday's law of electromagnetic induction, the induced EMF in the other coil is given by E = -M * (dI/dt), which equals -0.5 H * (8 A - 2 A)/0.1 s = 30 V.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not correctly apply Faraday's law of electromagnetic induction. Option A) 10 V is too low, option C) 3 V is too low, and option D) 60 V is too high. The correct calculation, as shown in the correct explanation, gives the induced EMF as 30 V."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The peak value of AC voltage is V0. The RMS value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "V0"
+        },
+        {
+          "id": "B",
+          "text": "V0 / sqrt(2)"
+        },
+        {
+          "id": "C",
+          "text": "V0 / 2"
+        },
+        {
+          "id": "D",
+          "text": "V0 sqrt(2)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The RMS (Root Mean Square) value of an AC voltage is equal to the peak value (V0) divided by the square root of 2. This is because the RMS value represents the effective value of the AC voltage, which is the equivalent DC voltage that would produce the same power dissipation in a resistor.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the RMS value of an AC voltage. Option A (V0) is the peak value, not the RMS value. Option C (V0/2) is half the peak value, which is not the RMS value. Option D (V0√2) is the peak value multiplied by the square root of 2, which is not the RMS value."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The frequency of AC mains in India is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 Hz"
+        },
+        {
+          "id": "B",
+          "text": "50 Hz"
+        },
+        {
+          "id": "C",
+          "text": "60 Hz"
+        },
+        {
+          "id": "D",
+          "text": "100 Hz"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The frequency of AC mains in India is 50 Hz because this is the standard frequency used for power transmission and distribution in the Indian electrical grid. This frequency was chosen to match the grid frequency used in the United Kingdom, from whom India adopted much of its electrical infrastructure.",
+      "explanation_incorrect": "The frequency of AC mains in India is not 25 Hz, 60 Hz, or 100 Hz. These frequencies are used in some other countries, but in India the standard AC mains frequency is 50 Hz. This 50 Hz frequency allows for efficient power transmission and is compatible with the electrical appliances and equipment used in the country."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The peak voltage of a household AC supply of 220 V (RMS) is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "110 V"
+        },
+        {
+          "id": "B",
+          "text": "220 V"
+        },
+        {
+          "id": "C",
+          "text": "311 V"
+        },
+        {
+          "id": "D",
+          "text": "440 V"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The peak voltage of a household AC supply of 220 V (RMS) is approximately 311 V. This is because the peak value of a sinusoidal waveform is √2 times the RMS value, and 220 V RMS is equivalent to 311 V peak.",
+      "explanation_incorrect": "The peak voltage is not 110 V, 220 V, or 440 V. The peak voltage is calculated by multiplying the RMS voltage by √2, which gives us 311 V. This is because the peak value of a sinusoidal waveform is the maximum value it reaches, which is higher than the RMS value."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "In a pure inductive AC circuit, the current:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Leads the voltage by pi/2"
+        },
+        {
+          "id": "B",
+          "text": "Lags behind the voltage by pi/2"
+        },
+        {
+          "id": "C",
+          "text": "Is in phase with the voltage"
+        },
+        {
+          "id": "D",
+          "text": "Leads the voltage by pi"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a pure inductive AC circuit, the current lags behind the voltage by pi/2 (90 degrees). This is because the changing magnetic field in the inductor creates a back EMF that opposes the change in current, causing the current to reach its maximum value later than the voltage.",
+      "explanation_incorrect": "The current in a pure inductive AC circuit does not lead the voltage by pi/2 (Option A) or pi (Option D), as that would mean the current is either 90 or 180 degrees ahead of the voltage, which is not the case for a purely inductive circuit. The current also does not remain in phase with the voltage (Option C), as the back EMF in the inductor causes the current to lag behind the voltage."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The inductive reactance of a coil of inductance L at angular frequency omega is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "X_L = 1/(omega L)"
+        },
+        {
+          "id": "B",
+          "text": "X_L = omega L"
+        },
+        {
+          "id": "C",
+          "text": "X_L = omega / L"
+        },
+        {
+          "id": "D",
+          "text": "X_L = L / omega"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The inductive reactance of a coil is given by X_L = omega L, where omega is the angular frequency and L is the inductance of the coil. This formula directly relates the inductive reactance to the inductance and the angular frequency, which matches option B.",
+      "explanation_incorrect": "The inductive reactance of a coil is not equal to 1/(omega L), omega / L, or L / omega. These formulas do not correctly capture the relationship between inductive reactance, angular frequency, and inductance. The correct formula is X_L = omega L, which shows that the inductive reactance is directly proportional to the inductance and the angular frequency."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "At resonance in a series LCR circuit:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The impedance is maximum"
+        },
+        {
+          "id": "B",
+          "text": "The impedance is minimum and equals R"
+        },
+        {
+          "id": "C",
+          "text": "The current is minimum"
+        },
+        {
+          "id": "D",
+          "text": "The power factor is zero"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At resonance in a series LCR circuit, the impedance is minimum and equals the resistance R. This is because the inductive reactance (X_L) exactly cancels out the capacitive reactance (X_C), leaving only the resistance R as the circuit impedance.",
+      "explanation_incorrect": "The incorrect options are not correct because: (A) At resonance, the impedance is minimum, not maximum. (C) At resonance, the current is maximum, not minimum. (D) At resonance, the power factor is 1, not 0, since the circuit is purely resistive."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "A series LCR circuit has L = 0.1 H, C = 10 ÂµF, and R = 50 Î© connected to a 220 V, 50 Hz supply. The inductive reactance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "31.4 Î©"
+        },
+        {
+          "id": "B",
+          "text": "314 Î©"
+        },
+        {
+          "id": "C",
+          "text": "3.14 Î©"
+        },
+        {
+          "id": "D",
+          "text": "100 Î©"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The inductive reactance X_L is given by X_L = 2πfL, where f is the frequency of the AC supply. Plugging in the values, we get X_L = 2π × 50 × 0.1 = 31.4 Ω, which matches option A.",
+      "explanation_incorrect": "The correct answer is A, 31.4 Ω. The formula for inductive reactance is X_L = 2πfL, where f is the frequency and L is the inductance. Plugging in the given values of f = 50 Hz and L = 0.1 H, we get X_L = 2π × 50 × 0.1 = 31.4 Ω. The other options do not correctly calculate the inductive reactance."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The resonant frequency of a series LCR circuit with L = 0.5 H and C = 20 ÂµF is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "50.3 Hz"
+        },
+        {
+          "id": "B",
+          "text": "15.9 Hz"
+        },
+        {
+          "id": "C",
+          "text": "100 Hz"
+        },
+        {
+          "id": "D",
+          "text": "503 Hz"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The resonant frequency of a series LCR circuit is given by the formula f_r = 1/(2π√(LC)). Plugging in the given values of L = 0.5 H and C = 20 μF, the resonant frequency calculates to 50.3 Hz, which matches the correct answer option A.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula for resonant frequency. Option B (15.9 Hz) and Option D (503 Hz) are both incorrect values calculated with the given L and C. Option C (100 Hz) is not the correct resonant frequency for the specified circuit parameters."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "In a series LCR circuit at resonance, the voltage across the capacitor is 500 V while the source voltage is 100 V. The quality factor of the circuit is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "50"
+        },
+        {
+          "id": "D",
+          "text": "2.5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 5. At resonance in a series LCR circuit, the voltage across the capacitor is much larger than the source voltage due to the high quality factor Q of the circuit. The quality factor is defined as Q = V_C/V_source, so if V_C = 500 V and V_source = 100 V, then Q = 5.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the given values. Option A) 0.2 is too low for the quality factor, Option C) 50 is too high, and Option D) 2.5 is also incorrect. The correct answer is B) 5, as this matches the relationship between the capacitor voltage and the source voltage in a series LCR circuit at resonance."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The power factor of a circuit is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "R/Z"
+        },
+        {
+          "id": "B",
+          "text": "Z/R"
+        },
+        {
+          "id": "C",
+          "text": "X_L/R"
+        },
+        {
+          "id": "D",
+          "text": "R/X_C"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The power factor of a circuit is defined as the ratio of the resistance (R) to the impedance (Z). This is because the power consumed in a circuit is determined by the resistance, whereas the impedance determines the overall opposition to the flow of current.",
+      "explanation_incorrect": "The power factor is not defined as Z/R, X_L/R, or R/X_C. The power factor is the ratio of the resistance to the impedance, which represents the fraction of the apparent power that is consumed as real power in the circuit. The correct formula for power factor is R/Z."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "A transformer works on the principle of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrostatic induction"
+        },
+        {
+          "id": "B",
+          "text": "Mutual electromagnetic induction"
+        },
+        {
+          "id": "C",
+          "text": "Self-induction"
+        },
+        {
+          "id": "D",
+          "text": "Eddy current formation"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A transformer works on the principle of mutual electromagnetic induction, where the changing magnetic field in the primary coil induces an EMF in the secondary coil through magnetic coupling between the two coils.",
+      "explanation_incorrect": "A transformer does not work on the principle of electrostatic induction, which is the generation of an electric field and charge separation due to a changing electric field. Nor does it work on the principle of self-induction, which is the induction of an EMF in a coil due to the changing magnetic field produced by the same coil. Transformers also do not rely on eddy currents, which are electric currents induced in a conductor due to a changing magnetic field."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "A step-up transformer:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increases voltage and increases current"
+        },
+        {
+          "id": "B",
+          "text": "Increases voltage and decreases current"
+        },
+        {
+          "id": "C",
+          "text": "Decreases voltage and increases current"
+        },
+        {
+          "id": "D",
+          "text": "Decreases both voltage and current"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A step-up transformer increases the voltage of the input AC, but since power is conserved, the current must decrease accordingly. This is because the power input (V_p * I_p) must equal the power output (V_s * I_s), and V_s > V_p, so I_s < I_p.",
+      "explanation_incorrect": "Option A is incorrect because while a step-up transformer does increase the voltage, it also decreases the current, not increases it. This is because power is conserved, so the power input (V_p * I_p) must equal the power output (V_s * I_s), and since V_s > V_p, I_s must be less than I_p. Option C and D are also incorrect, as a step-up transformer does not decrease the voltage or both the voltage and current."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "A transformer has 200 turns in the primary and 1000 turns in the secondary. If the primary voltage is 220 V, the secondary voltage is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "44 V"
+        },
+        {
+          "id": "B",
+          "text": "1100 V"
+        },
+        {
+          "id": "C",
+          "text": "220 V"
+        },
+        {
+          "id": "D",
+          "text": "440 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1100 V. This is because the turns ratio of a transformer is directly proportional to the voltage ratio. The turns ratio of the primary to secondary coils is 200:1000, which simplifies to 1:5. Therefore, the secondary voltage will be 5 times the primary voltage of 220 V, which is 1100 V.",
+      "explanation_incorrect": "The incorrect options are: A) 44 V, C) 220 V, and D) 440 V. These are incorrect because they do not follow the relationship between the turns ratio and voltage ratio of a transformer. The turns ratio determines the voltage ratio, which is 1:5 in this case, so the secondary voltage must be 1100 V."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A transformer with 90% efficiency has a primary voltage of 200 V and primary current of 5 A. If the secondary voltage is 2000 V, the secondary current is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 A"
+        },
+        {
+          "id": "B",
+          "text": "0.45 A"
+        },
+        {
+          "id": "C",
+          "text": "0.9 A"
+        },
+        {
+          "id": "D",
+          "text": "50 A"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 0.45 A. This can be calculated using the transformer equation V_s/V_p = N_s/N_p, which states that the ratio of secondary to primary voltages is equal to the ratio of secondary to primary number of turns. Since the transformer has 90% efficiency, the power input is equal to 1.11 times the power output, and the secondary current can be calculated from this.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not follow the transformer equation correctly. Option A) 0.5 A is too high, option C) 0.9 A is also too high, and option D) 50 A is way too high. The correct secondary current of 0.45 A can be calculated by using the transformer equation and the given efficiency of the transformer."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of magnetic flux is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tesla"
+        },
+        {
+          "id": "B",
+          "text": "Weber"
+        },
+        {
+          "id": "C",
+          "text": "Henry"
+        },
+        {
+          "id": "D",
+          "text": "Volt second per metre"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of magnetic flux is the weber (Wb), because the magnetic flux is defined as the product of the magnetic field strength (in tesla, T) and the area (in square metres, m^2) over which the field is acting. Therefore, the unit of magnetic flux is T·m^2 = Wb.",
+      "explanation_incorrect": "The other options are not the correct units of magnetic flux. Tesla (T) is the unit of magnetic field strength, Henry (H) is the unit of inductance, and volt-second per metre (V·s/m) is not a standard SI unit."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The average value of AC voltage V = V0 sin(omega t) over a complete cycle is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "V0"
+        },
+        {
+          "id": "B",
+          "text": "V0/sqrt(2)"
+        },
+        {
+          "id": "C",
+          "text": "2V0/pi"
+        },
+        {
+          "id": "D",
+          "text": "Zero"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The average value of a sine wave over a complete cycle is zero. This is because the positive and negative areas under the sine curve exactly cancel out, resulting in a net average value of zero.",
+      "explanation_incorrect": "The incorrect options are misconceptions about the average value of a sine wave. Option A (V0) is the peak value, not the average. Option B (V0/sqrt(2)) is the RMS (root-mean-square) value, not the average. Option C (2V0/pi) is the average value of the absolute value of the sine wave, not the actual average. The correct answer is option D, zero, because the positive and negative areas under the sine curve cancel out exactly."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The capacitive reactance of a 50 ÂµF capacitor at 50 Hz is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "63.7 Î©"
+        },
+        {
+          "id": "B",
+          "text": "6.37 Î©"
+        },
+        {
+          "id": "C",
+          "text": "637 Î©"
+        },
+        {
+          "id": "D",
+          "text": "31.8 Î©"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 63.7 Ω. The formula for capacitive reactance is X_C = 1/(2πfC), where f is the frequency and C is the capacitance. Plugging in the values, we get X_C = 1/(2π × 50 × 50e-6) = 63.7 Ω.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculated value of capacitive reactance. Option B) 6.37 Ω is too low, option C) 637 Ω is too high, and option D) 31.8 Ω is also incorrect. The correct formula must be used to calculate the exact value of 63.7 Ω for the given capacitor and frequency."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "High voltage transmission of electrical power reduces:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The voltage drop"
+        },
+        {
+          "id": "B",
+          "text": "The power loss (I^2R) in transmission lines"
+        },
+        {
+          "id": "C",
+          "text": "The resistance of the wire"
+        },
+        {
+          "id": "D",
+          "text": "The frequency of AC"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "High voltage transmission reduces the power loss (I^2R) in transmission lines. This is because the current (I) decreases when the voltage (V) is increased, as power (P = IV) remains constant. Since power loss is proportional to the square of the current (I^2R), reducing the current significantly lowers the power loss in the transmission lines.",
+      "explanation_incorrect": "The other options are incorrect. Increasing the voltage does not reduce the voltage drop, as the voltage drop is still proportional to the current and the resistance of the wire. The resistance of the wire also remains the same and is not affected by the transmission voltage. Finally, the frequency of the AC supply is determined by the generator and is not affected by the transmission voltage."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A coil of area 0.04 m^2 and 100 turns is placed perpendicular to a magnetic field of 0.5 T. If the coil is removed from the field in 0.1 s, the average EMF induced is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 V"
+        },
+        {
+          "id": "B",
+          "text": "20 V"
+        },
+        {
+          "id": "C",
+          "text": "200 V"
+        },
+        {
+          "id": "D",
+          "text": "0.2 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 20 V. This is because the induced EMF is given by Faraday's law: EMF = -N * d(phi_B)/dt, where N is the number of turns in the coil, and d(phi_B)/dt is the rate of change of magnetic flux. With a 0.5 T field, 0.04 m^2 area, and 0.1 s removal time, the calculation gives an induced EMF of 20 V.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the calculated value of 20 V. Option A) 2 V is too low, option C) 200 V is too high, and option D) 0.2 V is also too low. The key is to properly apply Faraday's law using the given values of the magnetic field, coil area, and time of removal."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Eddy currents can be minimised by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Using solid metal cores"
+        },
+        {
+          "id": "B",
+          "text": "Using laminated cores"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the thickness of the core"
+        },
+        {
+          "id": "D",
+          "text": "Using highly conducting materials"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Eddy currents are unwanted electric currents that circulate within a metal core, induced by a changing magnetic field. Using a laminated core made of thin metal sheets insulated from each other minimizes the flow of these eddy currents, which reduces energy losses and overheating.",
+      "explanation_incorrect": "Solid metal cores allow eddy currents to flow freely, leading to energy losses and overheating. Increasing the thickness of the core or using highly conducting materials would actually increase the eddy currents, making the problem worse. The correct solution is to use a laminated core, which disrupts the flow of eddy currents and improves the efficiency of the device."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "In a pure capacitive AC circuit, the current:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lags behind the voltage by pi/2"
+        },
+        {
+          "id": "B",
+          "text": "Leads the voltage by pi/2"
+        },
+        {
+          "id": "C",
+          "text": "Is in phase with the voltage"
+        },
+        {
+          "id": "D",
+          "text": "Leads the voltage by pi"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a pure capacitive AC circuit, the current leads the voltage by 90 degrees or π/2 radians. This is because the current in a capacitor is proportional to the rate of change of voltage, and the voltage across a capacitor lags the current by 90 degrees.",
+      "explanation_incorrect": "The current in a pure capacitive AC circuit leads the voltage by π/2 radians, not lags it. This is because the current in a capacitor is proportional to the rate of change of voltage, which means it reaches its maximum value before the voltage does, leading the voltage by 90 degrees. Option A, where the current lags the voltage by π/2, is incorrect."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The power dissipated in a pure inductor or pure capacitor in an AC circuit is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "V_rms x I_rms"
+        },
+        {
+          "id": "B",
+          "text": "V_rms x I_rms x cos(phi)"
+        },
+        {
+          "id": "C",
+          "text": "Zero"
+        },
+        {
+          "id": "D",
+          "text": "V_rms^2 / X_L"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In a pure inductor or pure capacitor, the voltage and current are 90 degrees out of phase. This means the power dissipated, given by V_rms * I_rms * cos(phi), is zero since cos(phi) = 0 for a pure reactive component.",
+      "explanation_incorrect": "The power dissipated in an AC circuit is given by P = V_rms * I_rms * cos(phi), where cos(phi) is the power factor. For a pure inductor or capacitor, the voltage and current are 90 degrees out of phase, so cos(phi) = 0 and the power dissipated is zero. Options A and D are incorrect because they do not account for the phase difference between voltage and current in a reactive component."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A transformer cannot work with DC because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "DC has very high voltage"
+        },
+        {
+          "id": "B",
+          "text": "DC does not produce changing magnetic flux needed for induction"
+        },
+        {
+          "id": "C",
+          "text": "DC cannot flow through the primary coil"
+        },
+        {
+          "id": "D",
+          "text": "DC has too high frequency"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A transformer requires a changing magnetic flux to induce an EMF in the secondary coil according to Faraday's law. Direct current (DC) does not produce a changing magnetic flux, so a transformer cannot work with DC.",
+      "explanation_incorrect": "The other options are incorrect because: A) DC voltage level does not affect the working of a transformer, B) DC can flow through the primary coil, and D) DC does not have a frequency, so the frequency is not an issue for the transformer's operation. The key reason a transformer cannot work with DC is that it requires a changing magnetic field to induce an EMF in the secondary coil."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "When a north pole of a magnet is moved towards a coil, the induced current in the coil (as seen from the magnet side) flows:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clockwise"
+        },
+        {
+          "id": "B",
+          "text": "Anticlockwise"
+        },
+        {
+          "id": "C",
+          "text": "No current is induced"
+        },
+        {
+          "id": "D",
+          "text": "Alternating direction"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a north pole of a magnet is moved towards a coil, the magnetic flux through the coil increases. According to Lenz's law, the induced current in the coil will flow in the direction that opposes this increase in flux, which is in the anticlockwise direction as seen from the magnet side.",
+      "explanation_incorrect": "The correct option is B, anticlockwise. This is because when a north pole of a magnet is moved towards a coil, the magnetic flux through the coil increases. According to Lenz's law, the induced current in the coil will flow in the direction that opposes this increase in flux, which is in the anticlockwise direction as seen from the magnet side. Option A, clockwise, would be incorrect because the induced current would flow in the opposite direction to oppose the increase in flux. Option C, no current is induced, is also incorrect because a changing magnetic flux will always induce a current in the coil. Option D, alternating direction, is incorrect because the induced current will have a constant direction, not alternating, to oppose the change in flux."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The mutual inductance between two coils depends on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the number of turns"
+        },
+        {
+          "id": "B",
+          "text": "Only the current flowing"
+        },
+        {
+          "id": "C",
+          "text": "The geometry, number of turns, and relative orientation of the coils"
+        },
+        {
+          "id": "D",
+          "text": "Only the material of the coils"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The mutual inductance between two coils depends on their geometry (size, shape, and relative position), the number of turns in each coil, and their relative orientation. These factors determine how much the changing magnetic field in one coil can induce an EMF in the other, as described by Faraday's law of electromagnetic induction.",
+      "explanation_incorrect": "The mutual inductance between two coils does not depend only on the number of turns, the current flowing, or the material of the coils. It is a measure of how much the changing magnetic field in one coil can induce an EMF in the other coil, which depends on the physical arrangement and configuration of the two coils. The correct answer is that mutual inductance depends on the geometry, number of turns, and relative orientation of the two coils."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "true_false",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An EMF can be induced in a coil only by changing the magnetic field through it, not by changing its area or orientation.",
+      "correct_answer": false,
+      "explanation_correct": "The statement is false because Faraday's law of electromagnetic induction states that an EMF can be induced in a coil not only by changing the magnetic field through it, but also by changing the area or orientation of the coil relative to the magnetic field.",
+      "explanation_incorrect": "The incorrect statement suggests that an EMF can only be induced in a coil by changing the magnetic field through it, which is not true. Changing the area or orientation of the coil relative to the magnetic field can also induce an EMF, as described by Faraday's law. Therefore, the statement is false."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The RMS value of an AC voltage is always less than its peak value.",
+      "correct_answer": true,
+      "explanation_correct": "The RMS (root-mean-square) value of an AC voltage is always less than its peak value. This is because the RMS value represents the equivalent DC voltage that would produce the same average power as the AC voltage, and it is calculated as the square root of the average of the squares of the instantaneous values of the AC voltage. The peak value, on the other hand, is the maximum value reached by the AC voltage, which is always greater than the RMS value.",
+      "explanation_incorrect": "The statement that the RMS value of an AC voltage is always less than its peak value is incorrect. The RMS value is a measure of the effective value of the AC voltage, which is equal to the square root of the average of the squares of the instantaneous values. The RMS value is not always less than the peak value; in fact, for a sinusoidal AC voltage, the RMS value is equal to the peak value divided by the square root of 2, which means the RMS value is approximately 0.707 times the peak value."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "true_false",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "At resonance in a series LCR circuit, the power factor is unity.",
+      "correct_answer": true,
+      "explanation_correct": "At resonance in a series LCR circuit, the impedance Z is purely resistive, as the inductive and capacitive reactances cancel out. This means the power factor, which is the ratio of resistance to impedance, is unity (1), indicating maximum power transfer and in-phase relationship between voltage and current.",
+      "explanation_incorrect": "The incorrect statement is that at resonance, the power factor is not unity. This is because at resonance, the inductive and capacitive reactances cancel out, making the impedance purely resistive. When the impedance is purely resistive, the power factor becomes unity, meaning the voltage and current are in phase and the circuit is operating at maximum power transfer."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "true_false",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "An ideal transformer has 100% efficiency, meaning the input power equals the output power.",
+      "correct_answer": true,
+      "explanation_correct": "An ideal transformer has 100% efficiency because there are no losses in an ideal transformer. All the power supplied to the primary winding is transferred to the secondary winding without any losses such as heat or magnetic losses.",
+      "explanation_incorrect": "In a real-world transformer, there are always some energy losses due to factors like resistance in the windings, eddy currents in the core, and hysteresis losses. These losses mean the output power is slightly less than the input power, so a real transformer cannot have 100% efficiency. However, high-quality transformers can achieve efficiency levels close to 100%."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "true_false",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Self-inductance opposes any change in the current flowing through the coil.",
+      "correct_answer": true,
+      "explanation_correct": "Self-inductance opposes any change in the current flowing through the coil because a changing current induces an electromotive force (EMF) in the coil that opposes the change, as described by Lenz's law. This induced EMF generates a magnetic field that opposes the change in the original magnetic field, resulting in a current that opposes the change in the initial current.",
+      "explanation_incorrect": "The statement is true because self-inductance is the property of a coil that opposes any change in the current flowing through it. When the current in the coil changes, it induces an EMF in the coil itself, and this induced EMF opposes the change in the original current, as per Lenz's law. This is the fundamental principle behind self-inductance, which is a key concept in understanding electromagnetic induction."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The motional EMF induced in a rod of length l moving with velocity v perpendicular to a magnetic field B is E = ___.",
+      "correct_answer": "Blv",
+      "explanation_correct": "The correct answer is Blv, which is the formula for the motional EMF induced in a rod moving perpendicular to a magnetic field. This EMF is generated due to the motion of the rod through the magnetic field, as described by Faraday's law of electromagnetic induction.",
+      "explanation_incorrect": "The correct answer is Blv, which represents the formula for the motional EMF induced in a rod of length l moving with velocity v perpendicular to a magnetic field B. This formula is derived from Faraday's law of electromagnetic induction, which states that the induced EMF is proportional to the rate of change of the magnetic flux. The length of the rod, its velocity, and the strength of the magnetic field determine the magnitude of the induced EMF."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The energy stored in an inductor of inductance L carrying current I is U = ___.",
+      "correct_answer": "1/2 LI^2",
+      "explanation_correct": "The energy stored in an inductor is given by the formula U = 1/2 LI^2, where L is the inductance and I is the current flowing through the inductor. This formula is derived from the principle of conservation of energy, where the energy stored in the magnetic field of the inductor is proportional to the square of the current and the inductance.",
+      "explanation_incorrect": "The incorrect answer would be a different formula, such as just LI or I^2/2L. However, the correct formula is U = 1/2 LI^2, which takes into account both the inductance of the coil and the square of the current flowing through it. This formula is derived from the principles of electromagnetic induction and the relationship between the energy stored in a magnetic field and the current and inductance of the coil."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The RMS value of an alternating current I = I0 sin(omega t) is I_rms = ___.",
+      "correct_answer": "I0/sqrt(2)",
+      "explanation_correct": "The RMS (root mean square) value of a sinusoidal alternating current I = I0 sin(ωt) is given by I_rms = I0/√2. This is because the RMS value is defined as the square root of the average of the square of the instantaneous values over one complete cycle, and for a sine wave, this works out to I0/√2.",
+      "explanation_incorrect": "The incorrect answer would be I0, which is the peak or maximum value of the alternating current. However, the RMS value is lower than the peak value, as it represents the equivalent steady (DC) current that would produce the same average power as the AC. The correct formula to calculate the RMS value is I_rms = I0/√2, where I0 is the peak value."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The impedance of a series LCR circuit is Z = ___.",
+      "correct_answer": "sqrt(R^2 + (X_L - X_C)^2)",
+      "explanation_correct": "The impedance of a series LCR circuit is given by the formula Z = sqrt(R^2 + (X_L - X_C)^2), where R is the resistance, X_L is the inductive reactance, and X_C is the capacitive reactance. This formula takes into account both the resistive and reactive components of the circuit to determine the overall impedance.",
+      "explanation_incorrect": "The incorrect answer would be just the resistance R, or just the difference between the inductive and capacitive reactances (X_L - X_C). The correct formula includes both the resistance and the difference between the reactances, taking the square root of their sum of squares to calculate the total impedance Z. The accepted answer format is the square root of the expression R^2 + (X_L - X_C)^2."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The turns ratio of a transformer is defined as N_s/N_p = V_s/V_p = ___.",
+      "correct_answer": "I_p/I_s",
+      "explanation_correct": "The turns ratio of a transformer is defined as the ratio of the number of turns in the secondary coil (N_s) to the number of turns in the primary coil (N_p), which is also equal to the ratio of the secondary voltage (V_s) to the primary voltage (V_p). This is because the secondary current (I_s) is inversely proportional to the primary current (I_p) in the transformer, so the turns ratio is also equal to the ratio of primary current to secondary current (I_p/I_s).",
+      "explanation_incorrect": "The incorrect answer would be the ratio of the secondary voltage to the primary voltage (V_s/V_p). While this is also a correct expression for the turns ratio, the question specifically asks for the relationship between the primary and secondary currents. The correct answer is the ratio of the primary current to the secondary current (I_p/I_s), which is equal to the turns ratio N_s/N_p."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The average power in an AC circuit is P = V_rms I_rms cos(phi), where cos(phi) is called the ___.",
+      "correct_answer": "power factor",
+      "explanation_correct": "The power factor cos(phi) represents the ratio of the real power (W) to the apparent power (VA) in an AC circuit. It quantifies how much of the total power is actually being used to do work, as opposed to just being stored and returned to the source. This makes the power factor an important parameter in determining the efficiency of an AC circuit.",
+      "explanation_incorrect": "The accepted answer format is 'power factor'. The power factor is not the same as resistance or reactance in an AC circuit. Rather, it represents the phase difference between the voltage and current, and determines how much of the apparent power is actually being used for useful work. Misunderstanding the power factor and its role in AC circuits would lead to the wrong answer."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "According to Lenz's law, the direction of the induced current is such that it ___ the change in magnetic flux producing it.",
+      "correct_answer": "opposes",
+      "explanation_correct": "According to Lenz's law, the direction of the induced current is such that it opposes the change in magnetic flux producing it. This is because the induced current creates its own magnetic field that opposes the original change in magnetic flux, as per the law of electromagnetic induction.",
+      "explanation_incorrect": "The correct answer is 'opposes'. Lenz's law states that the direction of the induced current is such that it opposes the change in magnetic flux that is producing it. This is because the induced current creates its own magnetic field that acts to counter the original change in flux, in accordance with the principle of electromagnetic induction."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "ordering",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "Arrange the following AC circuit elements in order of increasing phase difference between voltage and current (taking magnitude): (A) Pure resistor (B) Pure inductor (C) Series LCR at resonance (D) Pure capacitor",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "explanation_correct": "The correct order of increasing phase difference between voltage and current is: (A) Pure resistor (0 degrees), (C) Series LCR at resonance (0 degrees), (B) Pure inductor (90 degrees), (D) Pure capacitor (90 degrees). This is because in a pure resistor, the voltage and current are in phase, while in a pure inductor or capacitor, the voltage and current are 90 degrees out of phase.",
+      "explanation_incorrect": "The incorrect order would be: (A) Pure resistor, (D) Pure capacitor, (B) Pure inductor, (C) Series LCR at resonance. This is incorrect because in a pure capacitor, the voltage and current are 90 degrees out of phase, while in a series LCR circuit at resonance, the voltage and current are in phase, just like in a pure resistor."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "ordering",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following steps in correct order for power transmission from a power station to homes: (A) Step-down transformer at substation (B) Power generation at power station (C) Step-up transformer at power station (D) Distribution to homes at 220 V",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "explanation_correct": "The correct order is B, C, A, D because power must first be generated at the power station (B), then stepped up to high voltage for efficient long-distance transmission (C), stepped down at the substation to lower voltages (A), and finally distributed to homes at 220 V (D).",
+      "explanation_incorrect": "The incorrect order would be A, B, C, D. This is wrong because the power must first be generated at the power station (B) before being stepped up (C) for transmission. Then it is stepped down at the substation (A) before being distributed to homes (D). Skipping the step of stepping up the voltage at the power station would result in very high transmission losses."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "ordering",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following values in increasing order for an AC voltage V = 311 sin(314t) V: (A) Average value over positive half cycle (B) RMS value (C) Peak value (D) Instantaneous value at t = 0",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation_correct": "The correct order is D, A, B, C because the instantaneous value at t = 0 (D) is the highest, followed by the average value over the positive half cycle (A), then the RMS value (B), and finally the peak value (C). This is because the peak value is the maximum amplitude, while the RMS value is the effective value that would produce the same power as a DC source, and the average value is the mean value over the positive half cycle.",
+      "explanation_incorrect": "The incorrect explanation would be to say that the order should be A, B, C, D. This is wrong because the instantaneous value at t = 0 (D) is the highest, not the average value over the positive half cycle (A). The RMS value (B) is always lower than the peak value (C), and the average value (A) is the lowest of the four values."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 15,
+        "application": 20,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T06.01",
+  "topic_name": "Statistics",
+  "canonical_explanation": {
+    "text": "Statistics involves the collection, analysis, and interpretation of data. Measures of dispersion describe the spread of data around a central value. Range is the simplest measure (maximum minus minimum). Mean deviation about the mean or median measures the average absolute difference from the central value. Variance σ² = (1/n)Σ(xᵢ − x̄)² and standard deviation σ = √(variance) quantify the spread more precisely. The coefficient of variation (CV = σ/x̄ × 100) enables comparison of variability between datasets with different means or units.",
+    "rules": [
+      "Range = Maximum value − Minimum value.",
+      "Mean deviation about mean: MD = (1/n)Σ|xᵢ − x̄|.",
+      "Variance: σ² = (1/n)Σ(xᵢ − x̄)² = (1/n)Σxᵢ² − x̄².",
+      "Standard deviation: σ = √(variance).",
+      "Coefficient of variation: CV = (σ/x̄) × 100; lower CV means more consistent data."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T06.01.Q001",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The range of the data set {3, 7, 2, 9, 5} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The range of a dataset is the difference between the maximum and minimum values. In the given dataset {3, 7, 2, 9, 5}, the maximum value is 9 and the minimum value is 2. Therefore, the range is 9 - 2 = 7, which is option A.",
+      "explanation_incorrect": "The correct answer is A) 7. To find the range, we need to subtract the minimum value from the maximum value in the dataset. The minimum value is 2 and the maximum value is 9, so the range is 9 - 2 = 7. Options B) 9, C) 2, and D) 5 are incorrect because they do not represent the difference between the maximum and minimum values."
+    },
+    {
+      "question_id": "T06.01.Q002",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Mean deviation is always measured about:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the mean"
+        },
+        {
+          "id": "B",
+          "text": "Only the median"
+        },
+        {
+          "id": "C",
+          "text": "Any central value, commonly the mean or median"
+        },
+        {
+          "id": "D",
+          "text": "The mode only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Mean deviation can be calculated about any central value, commonly the mean or median, as these represent the central tendency of the data. This allows the measure of dispersion to be tailored to the most relevant central value for the analysis.",
+      "explanation_incorrect": "Mean deviation is not restricted to being calculated only about the mean or median. It can be calculated about any central value that represents the typical or central tendency of the data, such as the mode. This allows the measure of dispersion to be calculated in relation to the most relevant central value for the analysis."
+    },
+    {
+      "question_id": "T06.01.Q003",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The mean deviation about the mean of {2, 4, 6, 8, 10} (mean = 6) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.4"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean deviation about the mean is the average of the absolute differences between each data point and the mean. To calculate this, we take the absolute value of the difference between each data point and the mean (6), then find the average. This gives us (|2-6| + |4-6| + |6-6| + |8-6| + |10-6|)/5 = 2.4.",
+      "explanation_incorrect": "The incorrect answer of 4 does not correctly calculate the mean deviation about the mean. The mean deviation is the average of the absolute differences from the mean, not the sum of the differences. The correct calculation, as shown in the explanation for the right answer, gives a mean deviation of 2.4."
+    },
+    {
+      "question_id": "T06.01.Q004",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "For the data 10, 20, 30, 40, 50 (mean = 30), the mean deviation about the mean is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean deviation about the mean is the average absolute difference between each data point and the mean. Since the mean is 30 and the data points are 10, 20, 30, 40, 50, the absolute differences are 20, 10, 0, 10, 20. The mean of these absolute differences is (20 + 10 + 0 + 10 + 20)/5 = 12, which is option A.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the mean deviation about the mean. Option B (10) is the average of the data points, not the mean deviation. Option C (15) and D (20) are not the correct mean deviation for this dataset."
+    },
+    {
+      "question_id": "T06.01.Q005",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "The mean deviation is minimum when measured about the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean"
+        },
+        {
+          "id": "B",
+          "text": "Median"
+        },
+        {
+          "id": "C",
+          "text": "Mode"
+        },
+        {
+          "id": "D",
+          "text": "Range"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The mean deviation is minimized when measured about the median because the median is the middle value that divides the data into two equal halves. This means the average distance of all data points from the median is the smallest compared to measuring from the mean or mode.",
+      "explanation_incorrect": "The mean deviation is not minimized when measured about the mean, mode, or range. The mean deviation is smallest when measured about the median because the median is the middle value that minimizes the total distance from all data points. Measuring from the mean, mode, or range would result in a larger average distance from the central value."
+    },
+    {
+      "question_id": "T06.01.Q006",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Variance is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1/n)Σ(xᵢ − x̄)²"
+        },
+        {
+          "id": "B",
+          "text": "(1/n)Σ|xᵢ − x̄|"
+        },
+        {
+          "id": "C",
+          "text": "Σ(xᵢ − x̄)²"
+        },
+        {
+          "id": "D",
+          "text": "√((1/n)Σ(xᵢ − x̄)²)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Variance is defined as the average squared deviation from the mean. The formula (1/n)Σ(xᵢ − x̄)² captures this by taking the sum of squared differences between each data point and the mean, and dividing by the number of data points n.",
+      "explanation_incorrect": "The other options are not the correct definition of variance. Option B measures the mean absolute deviation, which is a different statistic. Option C is the sum of squared deviations, but not divided by n to get the average. Option D is the square root of the variance, which is the standard deviation, not the variance itself."
+    },
+    {
+      "question_id": "T06.01.Q007",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Standard deviation is the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Square of variance"
+        },
+        {
+          "id": "B",
+          "text": "Square root of variance"
+        },
+        {
+          "id": "C",
+          "text": "Half of variance"
+        },
+        {
+          "id": "D",
+          "text": "Reciprocal of variance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Standard deviation is the square root of the variance, which is a measure of the spread or dispersion of data points around the mean. The formula for standard deviation is the square root of the variance, so option B is the correct answer.",
+      "explanation_incorrect": "The standard deviation is not the square of the variance, the half of the variance, or the reciprocal of the variance. The standard deviation is calculated by taking the square root of the variance, which is the average of the squared differences from the mean. This gives a measure of the spread of the data that is in the same units as the original data."
+    },
+    {
+      "question_id": "T06.01.Q008",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The variance of {1, 2, 3, 4, 5} (mean = 3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "√2"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The variance of the given set {1, 2, 3, 4, 5} with a mean of 3 is 2. This is because the formula for variance is (1/n)Σ(xᵢ − x̄)², and when we plug in the values, we get a variance of 2.",
+      "explanation_incorrect": "The correct answer is option A, which is 2. The variance is calculated by taking the average of the squared differences from the mean. In this case, the mean is 3, and the squared differences are (1-3)², (2-3)², (3-3)², (4-3)², and (5-3)². Adding these up and dividing by 5 gives a variance of 2."
+    },
+    {
+      "question_id": "T06.01.Q009",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The shortcut formula for variance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1/n)Σxᵢ² − x̄²"
+        },
+        {
+          "id": "B",
+          "text": "(1/n)Σxᵢ² + x̄²"
+        },
+        {
+          "id": "C",
+          "text": "x̄² − (1/n)Σxᵢ²"
+        },
+        {
+          "id": "D",
+          "text": "(Σxᵢ)²/n"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct formula for variance is (1/n)Σ(xᵢ − x̄)², which can be simplified to the shortcut formula (1/n)Σxᵢ² − x̄². This formula is efficient to calculate and provides the same result as the original formula for variance.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the formula for variance. Option B adds the mean square instead of subtracting it, Option C subtracts the mean square instead of the mean squared, and Option D divides the square of the sum instead of the sum of squares. The correct shortcut formula is the one in Option A, which simplifies the original variance formula."
+    },
+    {
+      "question_id": "T06.01.Q010",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "If the standard deviation of a data set is 5, then the variance is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "√5"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The variance is calculated as the square of the standard deviation. Since the standard deviation is given as 5, the variance is 5^2 = 25.",
+      "explanation_incorrect": "The variance is not equal to the standard deviation. The standard deviation is the square root of the variance, so if the standard deviation is 5, the variance must be the square of that, which is 25. The other options like 5, √5, and 10 are not correct because they do not represent the variance."
+    },
+    {
+      "question_id": "T06.01.Q011",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If each value in a data set is multiplied by 3, the standard deviation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Multiplied by 3"
+        },
+        {
+          "id": "B",
+          "text": "Multiplied by 9"
+        },
+        {
+          "id": "C",
+          "text": "Unchanged"
+        },
+        {
+          "id": "D",
+          "text": "Multiplied by √3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If each value in a data set is multiplied by 3, the standard deviation is also multiplied by 3. This is because the standard deviation measures the spread or variability of the data, and multiplying each data point by a constant factor of 3 will scale the spread of the data by the same factor.",
+      "explanation_incorrect": "The standard deviation is not multiplied by 9 or unchanged, as these options do not correctly account for how the standard deviation changes when each data point is multiplied by a constant. The correct option is that the standard deviation is multiplied by 3, as the spread of the data is scaled by the same factor as the data points themselves."
+    },
+    {
+      "question_id": "T06.01.Q012",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If a constant k is added to each observation, the variance:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increases by k"
+        },
+        {
+          "id": "B",
+          "text": "Increases by k²"
+        },
+        {
+          "id": "C",
+          "text": "Remains unchanged"
+        },
+        {
+          "id": "D",
+          "text": "Decreases by k"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The variance of a dataset is a measure of the spread of the data around the mean. Adding a constant k to each observation does not change the spread or variability of the data, so the variance remains unchanged.",
+      "explanation_incorrect": "Adding a constant k to each observation in a dataset will shift the entire distribution by k, but it does not affect the spread or variability of the data. The variance depends on the deviations from the mean, which are not affected by adding a constant. Therefore, the variance remains the same and is not increased by k or k²."
+    },
+    {
+      "question_id": "T06.01.Q013",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "The coefficient of variation (CV) is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(σ/x̄) × 100"
+        },
+        {
+          "id": "B",
+          "text": "(x̄/σ) × 100"
+        },
+        {
+          "id": "C",
+          "text": "σ × x̄"
+        },
+        {
+          "id": "D",
+          "text": "σ − x̄"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of variation (CV) is defined as the ratio of the standard deviation (σ) to the mean (x̄), multiplied by 100 to express it as a percentage. This measure of variability allows for comparison between datasets with different means or units.",
+      "explanation_incorrect": "The correct option is A, (σ/x̄) × 100. This formula represents the coefficient of variation, which is a standardized measure of dispersion that allows for comparison of variability between datasets. Options B, C, and D do not accurately define the coefficient of variation."
+    },
+    {
+      "question_id": "T06.01.Q014",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "If data set A has CV = 25% and data set B has CV = 40%, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A is more consistent than B"
+        },
+        {
+          "id": "B",
+          "text": "B is more consistent than A"
+        },
+        {
+          "id": "C",
+          "text": "Both are equally consistent"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be compared"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of variation (CV) is a measure of the relative spread of a dataset. A lower CV indicates less variability and higher consistency in the data. Since data set A has a CV of 25% and data set B has a CV of 40%, data set A is more consistent than data set B.",
+      "explanation_incorrect": "The correct answer is that data set A is more consistent than data set B. This is because a lower coefficient of variation (CV) indicates less variability in the data. Since data set A has a CV of 25% and data set B has a CV of 40%, data set A has a lower relative spread and is therefore more consistent than data set B."
+    },
+    {
+      "question_id": "T06.01.Q015",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If σ = 6 and x̄ = 40, the coefficient of variation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "15%"
+        },
+        {
+          "id": "B",
+          "text": "6.67%"
+        },
+        {
+          "id": "C",
+          "text": "25%"
+        },
+        {
+          "id": "D",
+          "text": "40%"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 15%. The coefficient of variation (CV) is calculated as the ratio of the standard deviation (σ) to the mean (x̄), expressed as a percentage. Given that σ = 6 and x̄ = 40, the CV can be calculated as (6/40) x 100 = 15%.",
+      "explanation_incorrect": "The correct answer is A) 15%. The formula for the coefficient of variation is CV = (σ/x̄) x 100, where σ is the standard deviation and x̄ is the mean. Plugging in the given values of σ = 6 and x̄ = 40, we get CV = (6/40) x 100 = 15%. The other options are incorrect because they do not correctly apply the formula to calculate the coefficient of variation."
+    },
+    {
+      "question_id": "T06.01.Q016",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which measure of dispersion uses absolute deviations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean deviation"
+        },
+        {
+          "id": "B",
+          "text": "Variance"
+        },
+        {
+          "id": "C",
+          "text": "Standard deviation"
+        },
+        {
+          "id": "D",
+          "text": "Range"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean deviation about the mean or median uses the absolute deviations from the central value, making it a measure of dispersion that uses absolute differences. The other measures like variance and standard deviation use the squared deviations, which gives more weight to larger differences.",
+      "explanation_incorrect": "Variance and standard deviation are also measures of dispersion, but they use the squared deviations from the mean rather than the absolute deviations. The range simply gives the difference between the maximum and minimum values, without considering the individual deviations from a central value. So the correct measure that uses absolute deviations is the mean deviation."
+    },
+    {
+      "question_id": "T06.01.Q017",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The standard deviation of {4, 4, 4, 4, 4} is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The standard deviation is a measure of how spread out the data points are from the mean. Since all the values in the given set are 4, the mean is also 4. The difference of each value from the mean is 0, so the variance (average of squared differences) is also 0. Taking the square root of the variance gives the standard deviation, which is therefore 0.",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly calculate the standard deviation of a set with all values equal. Option B gives the common value itself, option C would be the standard deviation if the values were 1, 2, 3, 4, 5, and option D is the variance rather than the standard deviation."
+    },
+    {
+      "question_id": "T06.01.Q018",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "For a frequency distribution, the mean deviation about the mean is MD = (1/N)Σfᵢ|xᵢ − x̄| where N is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Σfᵢ"
+        },
+        {
+          "id": "B",
+          "text": "Number of classes"
+        },
+        {
+          "id": "C",
+          "text": "Σxᵢ"
+        },
+        {
+          "id": "D",
+          "text": "Range"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) Σfᵢ, where fᵢ represents the frequency of each data value xᵢ. The mean deviation about the mean is calculated as the sum of the absolute differences between each data value and the mean, divided by the total number of observations (Σfᵢ).",
+      "explanation_incorrect": "The incorrect options are not correct because B) the number of classes is not used in the formula for mean deviation, C) the sum of the data values (Σxᵢ) is not the correct denominator, and D) the range (maximum - minimum) is also not the correct denominator for the mean deviation formula."
+    },
+    {
+      "question_id": "T06.01.Q019",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The variance of the first n natural numbers is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(n² − 1)/12"
+        },
+        {
+          "id": "B",
+          "text": "n(n+1)/12"
+        },
+        {
+          "id": "C",
+          "text": "(n+1)(2n+1)/6"
+        },
+        {
+          "id": "D",
+          "text": "n²/12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The variance of the first n natural numbers is (n^2 - 1)/12 because the formula for the variance of a set of numbers x₁, x₂, ..., xₙ is (1/n)Σ(xᵢ - x̄)², and for the first n natural numbers, x̄ = (n+1)/2 and xᵢ = i, so the variance simplifies to (n^2 - 1)/12.",
+      "explanation_incorrect": "Option B, n(n+1)/12, is incorrect because this is the formula for the sum of the first n natural numbers, not the variance. Option C, (n+1)(2n+1)/6, is also incorrect as this is the formula for the sum of the squares of the first n natural numbers. Option D, n^2/12, is incorrect because it does not account for the fact that the mean of the first n natural numbers is (n+1)/2, not n/2."
+    },
+    {
+      "question_id": "T06.01.Q020",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Batsman A has mean 50 and SD 10. Batsman B has mean 40 and SD 6. Who is more consistent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A (CV = 20%)"
+        },
+        {
+          "id": "B",
+          "text": "B (CV = 15%)"
+        },
+        {
+          "id": "C",
+          "text": "Both equal"
+        },
+        {
+          "id": "D",
+          "text": "Cannot determine"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Batsman B has a lower coefficient of variation (CV) of 15% compared to Batsman A's CV of 20%, indicating that Batsman B is more consistent in their performance.",
+      "explanation_incorrect": "The correct answer is B, as Batsman B has a lower coefficient of variation (CV) of 15% compared to Batsman A's CV of 20%. This means that Batsman B's performance is more consistent, as the standard deviation is a smaller percentage of the mean compared to Batsman A. The lower the CV, the more consistent the player's performance."
+    },
+    {
+      "question_id": "T06.01.Q021",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The range of a grouped frequency distribution with classes 10-20, 20-30, ..., 60-70 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "70"
+        },
+        {
+          "id": "C",
+          "text": "50"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The range of a grouped frequency distribution is the difference between the highest and lowest class limits. In this case, the highest class limit is 60-70 and the lowest class limit is 10-20, so the range is 70 - 10 = 60.",
+      "explanation_incorrect": "The range is not the highest class limit (70) or the difference between the class widths (10). It is the difference between the highest and lowest class limits, which in this case is 70 - 10 = 60. So the correct answer is option A."
+    },
+    {
+      "question_id": "T06.01.Q022",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The variance of {2, 4, 6, 8, 10} (mean = 6) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "2√2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The variance of a set of numbers is calculated as the average of the squared deviations from the mean. For the given set {2, 4, 6, 8, 10} with mean 6, the variance is (2-6)^2 + (4-6)^2 + (6-6)^2 + (8-6)^2 + (10-6)^2 = 16 + 4 + 0 + 4 + 16 = 40, which divided by the number of elements (5) gives the variance of 8.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the variance. Option B calculates the square root of the variance, which is the standard deviation, not the variance itself. Option C is the average deviation, not the variance. Option D is the sum of the squared deviations, not the average."
+    },
+    {
+      "question_id": "T06.01.Q023",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Range is considered a crude measure of dispersion because:",
+      "options": [
+        {
+          "id": "A",
+          "text": "It depends only on the two extreme values"
+        },
+        {
+          "id": "B",
+          "text": "It is always zero"
+        },
+        {
+          "id": "C",
+          "text": "It considers all values"
+        },
+        {
+          "id": "D",
+          "text": "It is difficult to calculate"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Range is considered a crude measure of dispersion because it depends only on the two extreme values (maximum and minimum) and does not consider all the values in the dataset. This makes range less sensitive to the overall spread of the data points.",
+      "explanation_incorrect": "The range is not always zero. It is calculated as the difference between the maximum and minimum values in the dataset. However, range is considered a crude measure of dispersion because it only uses the two extreme values and does not take into account the distribution of all the data points. More precise measures of dispersion, such as variance and standard deviation, provide a better understanding of the spread of the data."
+    },
+    {
+      "question_id": "T06.01.Q024",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The standard deviation of the data 6, 7, 8, 9, 10 (mean = 8) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√2"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "√10"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The standard deviation formula is √(variance), where variance = Σ(x - mean)^2 / n. For the given data, the variance is (6 - 8)^2 + (7 - 8)^2 + (8 - 8)^2 + (9 - 8)^2 + (10 - 8)^2 = 4 + 1 + 0 + 1 + 4 = 10, and the standard deviation is √10 = √2.",
+      "explanation_incorrect": "The standard deviation is not simply the mean of the absolute differences between each data point and the mean, which would be 2. The standard deviation takes into account the squared differences from the mean, which results in a value of √2. The other incorrect options, 2 and 10, do not correctly calculate the standard deviation for this dataset."
+    },
+    {
+      "question_id": "T06.01.Q025",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two batches have: Batch I: n₁=50, x̄₁=40, σ₁=8; Batch II: n₂=60, x̄₂=35, σ₂=5. Which batch shows more variability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Batch I (CV = 20%)"
+        },
+        {
+          "id": "B",
+          "text": "Batch II (CV ≈ 14.3%)"
+        },
+        {
+          "id": "C",
+          "text": "Both are equal"
+        },
+        {
+          "id": "D",
+          "text": "Cannot compare"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) Batch I (CV = 20%). The coefficient of variation (CV) is the ratio of the standard deviation to the mean, expressed as a percentage. A higher CV indicates greater variability. Since Batch I has a CV of 20% while Batch II has a CV of around 14.3%, Batch I shows more variability in the data.",
+      "explanation_incorrect": "The correct answer is A) Batch I (CV = 20%). While Batch II has a lower standard deviation of 5 compared to Batch I's 8, the coefficient of variation (CV) takes into account both the standard deviation and the mean. Batch I's higher CV of 20% indicates greater variability compared to Batch II's CV of around 14.3%, despite Batch II having a lower standard deviation."
+    },
+    {
+      "question_id": "T06.01.Q026",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "Variance is always:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Non-negative"
+        },
+        {
+          "id": "B",
+          "text": "Negative"
+        },
+        {
+          "id": "C",
+          "text": "Zero"
+        },
+        {
+          "id": "D",
+          "text": "Greater than 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Variance is always a non-negative value because it is the average of the squared differences from the mean. Since the differences are squared, the result is always positive, and the average of positive values is also positive.",
+      "explanation_incorrect": "Variance cannot be negative because it represents the average squared deviation from the mean. Negative values would imply that the data points are, on average, further from the mean in the opposite direction, which does not make sense for a measure of spread or dispersion. Variance is also not zero, as that would imply all data points are identical and there is no spread at all."
+    },
+    {
+      "question_id": "T06.01.Q027",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "Mean deviation about the median of {3, 5, 7, 9, 11} (median = 7) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.4"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean deviation about the median is the average of the absolute differences between each data point and the median. For the given set {3, 5, 7, 9, 11} with median 7, the mean deviation is calculated as (|3-7| + |5-7| + |7-7| + |9-7| + |11-7|) / 5 = 2.4.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the mean deviation about the median. Option B (3) is the average of the absolute differences, but it does not divide by the number of data points (5). Option C (4) and D (12) do not correctly calculate the absolute differences from the median."
+    },
+    {
+      "question_id": "T06.01.Q028",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If the mean of observations x₁, x₂, ..., xₙ is x̄ and their standard deviation is σ, the standard deviation of ax₁+b, ax₂+b, ..., axₙ+b is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "|a|σ"
+        },
+        {
+          "id": "B",
+          "text": "aσ + b"
+        },
+        {
+          "id": "C",
+          "text": "a²σ"
+        },
+        {
+          "id": "D",
+          "text": "σ + b"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The standard deviation of a linear transformation ax + b is |a| times the standard deviation of x. This is because the standard deviation measures the spread, and the spread is scaled by the factor a when transforming x to ax + b.",
+      "explanation_incorrect": "Option A is correct. The standard deviation of a linear transformation ax + b is |a| times the standard deviation of x. This is because the spread of the data is scaled by the factor a when transforming x to ax + b. Options B, C, and D do not correctly represent the relationship between the standard deviations."
+    },
+    {
+      "question_id": "T06.01.Q029",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a continuous frequency distribution with classes 0-10, 10-20, 20-30 (frequencies 5, 8, 7), the range is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "25"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The range is the difference between the maximum and minimum values in the data set. In this case, the classes are 0-10, 10-20, and 20-30, so the maximum value is 30 and the minimum value is 0, giving a range of 30.",
+      "explanation_incorrect": "The range is not 20 or 10, as those are the widths of the class intervals, not the difference between the maximum and minimum values. The range is also not 25, as that is not one of the values given in the class intervals."
+    },
+    {
+      "question_id": "T06.01.Q030",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "The coefficient of variation is useful when:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comparing variability of two data sets with different units or means"
+        },
+        {
+          "id": "B",
+          "text": "Finding the mean"
+        },
+        {
+          "id": "C",
+          "text": "The data is qualitative"
+        },
+        {
+          "id": "D",
+          "text": "Only one data set is available"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of variation (CV) is useful when comparing the variability between two data sets that have different units or means. It allows you to compare the spread of the data relative to the mean, which is important when the datasets have different scales.",
+      "explanation_incorrect": "The coefficient of variation is not useful for finding the mean, as it is a measure of spread rather than central tendency. It is also not useful when the data is qualitative, as the CV requires numerical data. Finally, the CV can be calculated for a single data set, so the availability of only one data set does not prevent its use."
+    },
+    {
+      "question_id": "T06.01.Q031",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The unit of standard deviation is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Same as the data"
+        },
+        {
+          "id": "B",
+          "text": "Square of data units"
+        },
+        {
+          "id": "C",
+          "text": "No unit"
+        },
+        {
+          "id": "D",
+          "text": "Square root of data units"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The standard deviation is a measure of the spread or dispersion of a dataset, and it has the same unit as the original data. This is because the standard deviation is calculated by taking the square root of the variance, which has the same unit as the data squared.",
+      "explanation_incorrect": "The standard deviation does not have the same unit as the square of the data or the square root of the data. It has the same unit as the original data because it is calculated by taking the square root of the variance, which is the average of the squared differences from the mean. Therefore, the correct unit for standard deviation is the same as the unit of the data."
+    },
+    {
+      "question_id": "T06.01.Q032",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The mean deviation about the mean uses which type of deviations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Absolute deviations"
+        },
+        {
+          "id": "B",
+          "text": "Squared deviations"
+        },
+        {
+          "id": "C",
+          "text": "Cubed deviations"
+        },
+        {
+          "id": "D",
+          "text": "Signed deviations"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean deviation about the mean uses absolute deviations, which are the absolute values of the differences between each data point and the mean. This measures the average distance of the data points from the mean, without considering the sign of the deviation.",
+      "explanation_incorrect": "The mean deviation about the mean does not use squared deviations, cubed deviations, or signed deviations. Squared and cubed deviations are used to calculate variance and standard deviation, which are more complex measures of dispersion. Signed deviations would cancel each other out when calculating the mean, so the absolute value of the deviations is used instead."
+    },
+    {
+      "question_id": "T06.01.Q033",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The variance of the first 5 natural numbers {1,2,3,4,5} using σ² = (n²−1)/12 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "24/12 = 2"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The variance of the first 5 natural numbers {1,2,3,4,5} can be calculated using the formula σ² = (n²-1)/12, where n is the number of data points. Plugging in n=5, we get σ² = (5²-1)/12 = 24/12 = 2. So both options A and B are correct.",
+      "explanation_incorrect": "The correct formula to calculate the variance of the first 5 natural numbers is σ² = (n²-1)/12, where n is the number of data points. Plugging in n=5, we get σ² = (5²-1)/12 = 24/12 = 2. Therefore, the correct answer is option C, which states that both options A (2) and B (24/12 = 2) are correct."
+    },
+    {
+      "question_id": "T06.01.Q034",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the CV of a data set is 0%, it means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All observations are equal"
+        },
+        {
+          "id": "B",
+          "text": "Mean is zero"
+        },
+        {
+          "id": "C",
+          "text": "Data has maximum variability"
+        },
+        {
+          "id": "D",
+          "text": "Standard deviation is infinite"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If the coefficient of variation (CV) of a data set is 0%, it means that all the observations in the data set are equal. This is because the CV is calculated as the ratio of the standard deviation to the mean, and if all the values are the same, the standard deviation will be zero, making the CV 0%.",
+      "explanation_incorrect": "The other options are not correct. If the mean is zero, the CV would be undefined, not 0%. Data having maximum variability would result in a high CV, not 0%. And if the standard deviation is infinite, the CV would also be infinite, not 0%. The correct explanation is that a CV of 0% indicates all observations in the data set are equal."
+    },
+    {
+      "question_id": "T06.01.Q035",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "If the range of a data set is 0, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All values are equal"
+        },
+        {
+          "id": "B",
+          "text": "The mean is 0"
+        },
+        {
+          "id": "C",
+          "text": "There are no observations"
+        },
+        {
+          "id": "D",
+          "text": "The data is negative"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If the range of a data set is 0, it means all the values in the data set are equal. This is because the range is the difference between the maximum and minimum values, and if this difference is 0, then all the values must be the same.",
+      "explanation_incorrect": "The options 'The mean is 0', 'There are no observations', and 'The data is negative' are incorrect because a range of 0 simply means that all the values in the data set are equal. The mean can be any value, there can be any number of observations, and the data can be positive or negative, as long as all the values are the same."
+    },
+    {
+      "question_id": "T06.01.Q036",
+      "type": "true_false",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Range is the difference between the maximum and minimum values.",
+      "correct_answer": true,
+      "explanation_correct": "The range is the difference between the maximum and minimum values in a dataset. This is the simplest measure of dispersion, as it tells you the spread of the data from the lowest to highest value.",
+      "explanation_incorrect": "The range is not just a random difference between any two values in the dataset. It specifically refers to the difference between the maximum (largest) and minimum (smallest) values. This quantifies the overall spread of the data, making it a useful measure of dispersion."
+    },
+    {
+      "question_id": "T06.01.Q037",
+      "type": "true_false",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Variance can be negative.",
+      "correct_answer": false,
+      "explanation_correct": "Variance cannot be negative because it is a measure of how spread out the data values are from the mean. Variance is calculated by squaring the differences between each data point and the mean, and then taking the average of those squared differences. Since the differences are squared, the result will always be a non-negative number.",
+      "explanation_incorrect": "Variance is a measure of the spread of data around the mean, and it is always a non-negative value. This is because variance is calculated by taking the average of the squared differences between each data point and the mean. Squaring the differences ensures that the result is always positive, even if some of the individual differences are negative."
+    },
+    {
+      "question_id": "T06.01.Q038",
+      "type": "true_false",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "If each observation is increased by a constant, the standard deviation changes.",
+      "correct_answer": false,
+      "explanation_correct": "If each observation is increased by a constant, the standard deviation remains the same. This is because the standard deviation measures the spread of data around the mean, and adding a constant to each observation does not change the spread or variability of the data.",
+      "explanation_incorrect": "A common misconception is that adding a constant to each observation would change the standard deviation. However, this is not the case. The standard deviation is a measure of how spread out the data is from the mean, and adding a constant to each observation does not affect the spread or variability of the data. The mean would increase by the same constant, but the standard deviation would remain the same."
+    },
+    {
+      "question_id": "T06.01.Q039",
+      "type": "true_false",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "A lower coefficient of variation indicates more consistency in the data.",
+      "correct_answer": true,
+      "explanation_correct": "A lower coefficient of variation (CV) indicates more consistency in the data because it means the standard deviation is smaller relative to the mean. This implies the data points are clustered more closely around the central value, showing less variability or spread in the dataset.",
+      "explanation_incorrect": "The coefficient of variation (CV) is calculated as the ratio of the standard deviation to the mean, expressed as a percentage. A higher CV indicates greater variability or dispersion in the data, as the standard deviation is larger compared to the mean. Therefore, a lower CV actually indicates more consistency and less spread in the dataset."
+    },
+    {
+      "question_id": "T06.01.Q040",
+      "type": "true_false",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "Mean deviation about the mean is always less than or equal to standard deviation.",
+      "correct_answer": true,
+      "explanation_correct": "The mean deviation about the mean is always less than or equal to the standard deviation because the mean deviation considers the absolute values of the deviations, while the standard deviation squares the deviations before averaging them. This makes the standard deviation a more sensitive measure of spread.",
+      "explanation_incorrect": "The incorrect explanation would be that the mean deviation about the mean is greater than the standard deviation. This is not true because the mean deviation considers the absolute values of the deviations, which are always less than or equal to the squared deviations used to calculate the standard deviation. The standard deviation is a more comprehensive measure of spread that gives more weight to larger deviations from the mean."
+    },
+    {
+      "question_id": "T06.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The range of {5, 12, 3, 8, 15} is ___.",
+      "correct_answer": "12",
+      "explanation_correct": "The range of a set of numbers is the difference between the largest and smallest values. In the given set {5, 12, 3, 8, 15}, the largest value is 15 and the smallest value is 3. Therefore, the range is 15 - 3 = 12.",
+      "explanation_incorrect": "The accepted answer format for this question is a single number. The incorrect answer may have been obtained by adding up all the values in the set, which is 43. However, this is not the range, which is the difference between the largest and smallest values. The correct range of the given set {5, 12, 3, 8, 15} is 12."
+    },
+    {
+      "question_id": "T06.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If variance = 16, then standard deviation = ___.",
+      "correct_answer": "4",
+      "explanation_correct": "If the variance is 16, then the standard deviation is the square root of the variance, which is 4. The formula for standard deviation is σ = √(variance), so in this case, σ = √(16) = 4.",
+      "explanation_incorrect": "The accepted answer format is a single number, 4. If the variance is 16, then the standard deviation is not 16, as the variance and standard deviation are related but different measures. The standard deviation is the square root of the variance, so in this case, the standard deviation would be 4."
+    },
+    {
+      "question_id": "T06.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "The variance of {3, 3, 3, 3} is ___.",
+      "correct_answer": "0",
+      "explanation_correct": "The variance of a dataset with all values equal is 0. This is because the difference between each data point and the mean (which is also equal to each data point) is 0. When we calculate the variance using the formula (1/n)Σ(xᵢ − x̄)², the squared differences are all 0, so the overall variance is 0.",
+      "explanation_incorrect": "The accepted answer format for this question is a single numerical value. However, the variance of the dataset {3, 3, 3, 3} is not 3, as one might initially think. Since all the values are the same, the difference between each data point and the mean (which is also 3) is 0. Plugging this into the variance formula, we get a variance of 0."
+    },
+    {
+      "question_id": "T06.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "If mean = 50 and standard deviation = 10, then CV = ___%.",
+      "correct_answer": "20",
+      "explanation_correct": "The formula for the coefficient of variation (CV) is CV = (standard deviation / mean) x 100. Given that the mean is 50 and the standard deviation is 10, the CV is (10 / 50) x 100 = 20%.",
+      "explanation_incorrect": "The correct answer is 20%. To calculate the CV, we divide the standard deviation by the mean and then multiply by 100. In this case, the standard deviation is 10 and the mean is 50, so the CV is (10 / 50) x 100 = 20%. The accepted answer format is a percentage, so the correct answer is 20%."
+    },
+    {
+      "question_id": "T06.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The mean deviation about the mean of {1, 3, 5, 7, 9} (mean = 5) is ___.",
+      "correct_answer": "2.4",
+      "explanation_correct": "The mean deviation about the mean is the average absolute difference between each data point and the mean. To calculate it, we take the absolute value of the difference between each data point and the mean (5), then add them up and divide by the total number of data points (5). This gives us a mean deviation of 2.4.",
+      "explanation_incorrect": "The incorrect answer would be to simply calculate the range, which is the difference between the maximum and minimum values (9 - 1 = 8). However, the mean deviation is a different measure of dispersion that looks at the average absolute difference from the mean, which in this case is 2.4. The correct answer format is a single numerical value, 2.4."
+    },
+    {
+      "question_id": "T06.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The standard deviation of {1, 2, 3, 4, 5} is √___.",
+      "correct_answer": "2",
+      "explanation_correct": "The standard deviation of the given set of numbers {1, 2, 3, 4, 5} is √2. This is because the variance of the set is the average of the squared deviations from the mean, which is 2.5. Taking the square root of the variance gives the standard deviation, which is √2.",
+      "explanation_incorrect": "The accepted answer format is a single number, √2. Some students may calculate the standard deviation incorrectly by adding up the numbers and dividing by the total count (which would give 3), or by finding the difference between the maximum and minimum values (which would give 4). The correct way is to calculate the variance first, and then take the square root to get the standard deviation of √2."
+    },
+    {
+      "question_id": "T06.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If CV₁ = 30% and CV₂ = 20%, the more consistent data set is ___.",
+      "correct_answer": "2",
+      "explanation_correct": "The data set with a lower coefficient of variation (CV) is more consistent, as it has less variability relative to its mean. Since CV2 = 20% is lower than CV1 = 30%, the data set with CV2 is more consistent.",
+      "explanation_incorrect": "The data set with a higher coefficient of variation (CV) is more consistent. This is incorrect because the CV is a measure of relative variability, and a lower CV indicates less variability compared to the mean. Since the question asks for the 'more consistent' data set, the correct answer is the one with CV2 = 20%, which is lower than CV1 = 30%."
+    },
+    {
+      "question_id": "T06.01.Q048",
+      "type": "ordering",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "Arrange these measures of dispersion from simplest to most informative: (A) Standard deviation, (B) Range, (C) Variance, (D) Mean deviation",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "explanation_correct": "The correct order from simplest to most informative is: (B) Range, (D) Mean deviation, (C) Variance, (A) Standard deviation. This is because the range is the simplest measure, the mean deviation gives the average absolute difference from the central value, variance quantifies the spread more precisely, and standard deviation is the square root of variance, providing the most detailed information about the spread of the data.",
+      "explanation_incorrect": "The incorrect order would be: (B) Range, (A) Standard deviation, (C) Variance, (D) Mean deviation. This is incorrect because while the range is the simplest measure, standard deviation is more informative than mean deviation, as it quantifies the spread of the data more precisely. Variance, being the square of standard deviation, provides even more detailed information about the spread."
+    },
+    {
+      "question_id": "T06.01.Q049",
+      "type": "ordering",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to compute variance: (A) Square each deviation, (B) Find the mean x̄, (C) Compute deviations xᵢ − x̄, (D) Average the squared deviations",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "explanation_correct": "The correct order is B, C, A, D because you first need to find the mean (B), then compute the deviations from the mean (C), square each deviation (A), and finally average the squared deviations to get the variance (D).",
+      "explanation_incorrect": "The incorrect order would be to first square each deviation (A), then find the mean (B), compute the deviations (C), and average the squared deviations (D). This is wrong because you need to first find the mean before you can compute the deviations from the mean, which is a necessary step to calculate the variance."
+    },
+    {
+      "question_id": "T06.01.Q050",
+      "type": "ordering",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange these data sets by increasing CV: (A) mean=100, σ=10 (CV=10%), (B) mean=50, σ=15 (CV=30%), (C) mean=80, σ=16 (CV=20%), (D) mean=200, σ=10 (CV=5%)",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "explanation_correct": "The correct order is D, A, C, B because the coefficient of variation (CV) is directly proportional to the standard deviation (σ) and inversely proportional to the mean (x̄). So, the data set with the lowest CV is D, followed by A, C, and B in increasing order of CV.",
+      "explanation_incorrect": "The incorrect explanation may be that the order is based on the standard deviation (σ) alone. However, the CV takes into account both the mean (x̄) and the standard deviation, so it provides a more accurate measure of the variability of the data set. The correct order is determined by calculating the CV for each data set and arranging them in increasing order."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

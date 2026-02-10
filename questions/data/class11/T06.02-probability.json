@@ -1,0 +1,1204 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T06.02",
+  "topic_name": "Probability",
+  "canonical_explanation": {
+    "text": "Probability measures the likelihood of an event occurring in a random experiment. The sample space S is the set of all possible outcomes, and an event is any subset of S. Under the axiomatic approach, P(A) is a real number between 0 and 1 for every event A, P(S) = 1, and for mutually exclusive events P(A ∪ B) = P(A) + P(B). For non-mutually exclusive events, the addition theorem gives P(A ∪ B) = P(A) + P(B) − P(A ∩ B). The complement rule states P(A') = 1 − P(A).",
+    "rules": [
+      "For any event A: 0 ≤ P(A) ≤ 1.",
+      "P(S) = 1 (certain event) and P(∅) = 0 (impossible event).",
+      "Complementary: P(A') = 1 − P(A).",
+      "Addition theorem: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).",
+      "For mutually exclusive events: P(A ∩ B) = 0, so P(A ∪ B) = P(A) + P(B)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T06.02.Q001",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The sample space when a coin is tossed twice is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "{HH, HT, TH, TT}"
+        },
+        {
+          "id": "B",
+          "text": "{H, T}"
+        },
+        {
+          "id": "C",
+          "text": "{HH, TT}"
+        },
+        {
+          "id": "D",
+          "text": "{HH, HT, TT}"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The sample space when a coin is tossed twice is the set of all possible outcomes, which are {HH, HT, TH, TT}. This is because each toss of the coin can result in either a Head (H) or a Tail (T), and the two tosses are independent events.",
+      "explanation_incorrect": "Option A {HH, HT, TH, TT} is the correct answer because it represents all the possible outcomes when a coin is tossed twice. Option B {H, T} is incorrect as it only shows the possible outcomes for a single coin toss, not two tosses. Option C {HH, TT} is incorrect as it does not include all the possible outcomes. Option D {HH, HT, TT} is incorrect as it is missing the outcome TH."
+    },
+    {
+      "question_id": "T06.02.Q002",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of elements in the sample space when a die is rolled once is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "36"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sample space for rolling a single die has 6 possible outcomes, since a die has 6 faces numbered 1 through 6. Therefore, the number of elements in the sample space is 6.",
+      "explanation_incorrect": "The sample space for rolling a single die does not have 2, 12, or 36 elements. This is because a die has 6 faces, and each face is a possible outcome when the die is rolled. So the sample space has 6 elements, which is option B."
+    },
+    {
+      "question_id": "T06.02.Q003",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Two events A and B are mutually exclusive if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ∪ B = S"
+        },
+        {
+          "id": "B",
+          "text": "A ∩ B = ∅"
+        },
+        {
+          "id": "C",
+          "text": "P(A) + P(B) > 1"
+        },
+        {
+          "id": "D",
+          "text": "A = B"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two events A and B are mutually exclusive if they cannot occur together, i.e., the intersection of A and B is an empty set. This means that A ∩ B = ∅, which is the correct definition of mutually exclusive events.",
+      "explanation_incorrect": "The correct answer is that two events A and B are mutually exclusive if their intersection is an empty set, A ∩ B = ∅. The other options are incorrect because: A) A ∪ B = S is the definition of the sample space, not mutually exclusive events; C) P(A) + P(B) > 1 is not a necessary condition for mutual exclusivity; and D) A = B means the events are identical, not mutually exclusive."
+    },
+    {
+      "question_id": "T06.02.Q004",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "A sure event has probability:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "0.5"
+        },
+        {
+          "id": "D",
+          "text": "−1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A sure event is an event that is guaranteed to occur, so it has a probability of 1. This is because the sample space S consists of all possible outcomes, and a sure event encompasses the entire sample space.",
+      "explanation_incorrect": "The probability of an event cannot be negative, as probability is a measure of likelihood and must be a non-negative real number between 0 and 1. An event with probability 0 is an impossible event, while an event with probability 1 is a sure event. The probability of 0.5 would represent an event that is equally likely to occur or not occur, which is not the case for a sure event."
+    },
+    {
+      "question_id": "T06.02.Q005",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of getting a head when a fair coin is tossed is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting a head when a fair coin is tossed is 1/2. This is because a fair coin has an equal chance of landing on either heads or tails, and there are only two possible outcomes for a single coin toss.",
+      "explanation_incorrect": "The probability of getting a head when a fair coin is tossed is not 1, 0, or 1/4. This is because a fair coin has an equal chance of landing on either heads or tails, and there are only two possible outcomes for a single coin toss. Therefore, the probability of getting a head is 1/2 or 0.5."
+    },
+    {
+      "question_id": "T06.02.Q006",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of getting an even number when a fair die is thrown is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "2/3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The probability of getting an even number when a fair die is thrown is 1/2 or 0.5. This is because a fair die has 6 sides, and 3 of those sides (2, 4, 6) are even numbers. Therefore, the probability of getting an even number is 3 out of the total 6 possible outcomes, which is 1/2.",
+      "explanation_incorrect": "The correct answer is 1/2 or 0.5, not 1/6, 1/3, or 2/3. A fair die has 6 sides, and 3 of those sides are even numbers (2, 4, 6). So, the probability of getting an even number is the number of favorable outcomes (3) divided by the total number of possible outcomes (6), which is 1/2."
+    },
+    {
+      "question_id": "T06.02.Q007",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "Two dice are thrown. The probability of getting a sum of 7 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "5/36"
+        },
+        {
+          "id": "C",
+          "text": "1/12"
+        },
+        {
+          "id": "D",
+          "text": "7/36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting a sum of 7 when two dice are thrown is 1/6. This is because there are 6 possible outcomes that give a sum of 7 (1+6, 2+5, 3+4, 4+3, 5+2, 6+1), and the total number of possible outcomes when two dice are thrown is 6 x 6 = 36.",
+      "explanation_incorrect": "Option B, 5/36, is incorrect because it does not consider all the possible outcomes that give a sum of 7. Option C, 1/12, is incorrect because it assumes that the two dice are not independent events. Option D, 7/36, is incorrect because it does not correctly calculate the probability of getting a sum of 7 when two dice are thrown."
+    },
+    {
+      "question_id": "T06.02.Q008",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.6, then P(A') is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.4"
+        },
+        {
+          "id": "B",
+          "text": "0.6"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "−0.6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If the probability of event A is 0.6, then the probability of the complement of A, or A', is 1 - P(A) = 1 - 0.6 = 0.4. This follows from the complement rule in probability theory, which states that the probability of an event and its complement must add up to 1.",
+      "explanation_incorrect": "Option B is incorrect because the probability of an event and its complement must add up to 1. Option C is incorrect because the probability of an event cannot be 1, as that would mean the event is certain to occur. Option D is incorrect because the probability of an event cannot be negative."
+    },
+    {
+      "question_id": "T06.02.Q009",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The addition theorem of probability states P(A ∪ B) =:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A) + P(B) − P(A ∩ B)"
+        },
+        {
+          "id": "B",
+          "text": "P(A) × P(B)"
+        },
+        {
+          "id": "C",
+          "text": "P(A) + P(B)"
+        },
+        {
+          "id": "D",
+          "text": "P(A) − P(B)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The addition theorem of probability states that for non-mutually exclusive events A and B, the probability of either A or B occurring is the sum of their individual probabilities minus the probability of their intersection, P(A ∪ B) = P(A) + P(B) - P(A ∩ B). This ensures that we don't double-count the events that are common to both A and B.",
+      "explanation_incorrect": "Option C, P(A) + P(B), is incorrect because it only gives the sum of the individual probabilities of A and B, without considering the overlap between them. The addition theorem is needed to account for the fact that some outcomes may belong to both A and B, and we need to subtract this intersection probability to avoid double-counting."
+    },
+    {
+      "question_id": "T06.02.Q010",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "For mutually exclusive events, P(A ∪ B) =:",
+      "options": [
+        {
+          "id": "A",
+          "text": "P(A) + P(B)"
+        },
+        {
+          "id": "B",
+          "text": "P(A) × P(B)"
+        },
+        {
+          "id": "C",
+          "text": "P(A) + P(B) − 1"
+        },
+        {
+          "id": "D",
+          "text": "P(A) − P(B)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For mutually exclusive events, the probability of either event A or event B occurring is the sum of their individual probabilities, P(A) + P(B). This is because when events are mutually exclusive, they cannot occur together, so the probabilities are simply added together.",
+      "explanation_incorrect": "Option B, P(A) × P(B), is incorrect because for mutually exclusive events, the probabilities are added, not multiplied. Option C, P(A) + P(B) - 1, is incorrect because the probabilities of mutually exclusive events are simply added together, without the need to subtract 1. Option D, P(A) - P(B), is incorrect because the probabilities of mutually exclusive events are added, not subtracted."
+    },
+    {
+      "question_id": "T06.02.Q011",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.5, P(B) = 0.3, and P(A ∩ B) = 0.1, then P(A ∪ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.7"
+        },
+        {
+          "id": "B",
+          "text": "0.8"
+        },
+        {
+          "id": "C",
+          "text": "0.9"
+        },
+        {
+          "id": "D",
+          "text": "0.6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.7. This is because the addition theorem for non-mutually exclusive events states that P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Plugging in the given values, we get P(A ∪ B) = 0.5 + 0.3 - 0.1 = 0.7.",
+      "explanation_incorrect": "The incorrect options B) 0.8, C) 0.9, and D) 0.6 are wrong because they do not correctly apply the addition theorem for non-mutually exclusive events. The correct answer A) 0.7 is obtained by adding the individual probabilities P(A) and P(B), and then subtracting the probability of the intersection P(A ∩ B)."
+    },
+    {
+      "question_id": "T06.02.Q012",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A) = 1/3, P(B) = 1/4, and A and B are mutually exclusive, then P(A ∪ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7/12"
+        },
+        {
+          "id": "B",
+          "text": "1/12"
+        },
+        {
+          "id": "C",
+          "text": "1/7"
+        },
+        {
+          "id": "D",
+          "text": "5/12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Since A and B are mutually exclusive events, the probability of their union is the sum of their individual probabilities. Therefore, P(A ∪ B) = P(A) + P(B) = 1/3 + 1/4 = 7/12.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula for the probability of the union of two mutually exclusive events. The correct option A, 7/12, is the sum of the individual probabilities of A and B, which is the correct calculation when the events are mutually exclusive."
+    },
+    {
+      "question_id": "T06.02.Q013",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "A card is drawn from a standard deck of 52 cards. The probability of drawing a king is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/13"
+        },
+        {
+          "id": "B",
+          "text": "1/52"
+        },
+        {
+          "id": "C",
+          "text": "4/13"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/13. There are 4 kings in a standard deck of 52 cards, so the probability of drawing a king is 4/52 which simplifies to 1/13.",
+      "explanation_incorrect": "The probability of drawing a king is not 1/52 (option B), as there are 4 kings in a standard deck of 52 cards. It is also not 4/13 (option C) or 1/4 (option D), as these do not correctly represent the ratio of kings to the total number of cards in the deck."
+    },
+    {
+      "question_id": "T06.02.Q014",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "The probability of drawing a red card from a standard deck is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "1/13"
+        },
+        {
+          "id": "D",
+          "text": "1/26"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of drawing a red card from a standard deck is 1/2 because there are 26 red cards (13 red hearts and 13 red diamonds) out of a total of 52 cards in a standard deck. Since the probability of an event is the number of favorable outcomes divided by the total number of possible outcomes, the probability of drawing a red card is 26/52 = 1/2.",
+      "explanation_incorrect": "The probability of drawing a red card from a standard deck is not 1/4, 1/13, or 1/26. These answers are incorrect because a standard deck has 52 cards, with 26 red cards (13 hearts and 13 diamonds) and 26 black cards (13 spades and 13 clubs). Therefore, the probability of drawing a red card is 26/52 = 1/2."
+    },
+    {
+      "question_id": "T06.02.Q015",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A card is drawn from a deck of 52 cards. The probability that it is a king or a spade is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/13"
+        },
+        {
+          "id": "B",
+          "text": "17/52"
+        },
+        {
+          "id": "C",
+          "text": "16/52"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 4/13. There are 4 kings and 13 spades in a deck of 52 cards, so the total probability of getting a king or a spade is the sum of their individual probabilities, which is 4/52 + 13/52 = 4/13.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately calculate the probability of getting a king or a spade. Option B) 17/52 is incorrect because it does not account for the fact that the kings and spades are not mutually exclusive events. Option C) 16/52 is incorrect because it only considers the 16 spades and does not include the 4 kings. Option D) 1/4 is incorrect because it does not correctly calculate the probability, which is 4/13 or approximately 0.31."
+    },
+    {
+      "question_id": "T06.02.Q016",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "question_text": "The sample space when two dice are thrown is of size:",
+      "options": [
+        {
+          "id": "A",
+          "text": "36"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "21"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The sample space when two dice are thrown is the set of all possible outcomes, which is 6 x 6 = 36 outcomes. This is because each die can show any of the 6 numbers (1, 2, 3, 4, 5, 6), and the two dice are independent, so the total number of possible outcomes is the product of the number of outcomes for each die.",
+      "explanation_incorrect": "The correct answer is A) 36. The sample space when two dice are thrown represents all the possible outcomes, which is the number of ways the two dice can land. Since each die can show any of the 6 numbers (1, 2, 3, 4, 5, 6), the total number of possible outcomes is 6 x 6 = 36. The other options are incorrect because they do not represent the complete sample space for throwing two dice."
+    },
+    {
+      "question_id": "T06.02.Q017",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Three coins are tossed simultaneously. The probability of getting at least two heads is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "3/8"
+        },
+        {
+          "id": "C",
+          "text": "4/8"
+        },
+        {
+          "id": "D",
+          "text": "5/8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting at least two heads when three coins are tossed is 1/2. This is because there are 8 possible outcomes when three coins are tossed (HHH, HHT, HTH, THH, HTT, THT, TTH, TTT), and 4 of these outcomes have at least two heads (HHH, HHT, HTH, THH).",
+      "explanation_incorrect": "Option A, 1/2, is the correct answer. The reason is that when three coins are tossed, there are 8 possible outcomes, and 4 of them have at least two heads (HHH, HHT, HTH, THH). So the probability of getting at least two heads is 4/8 = 1/2. The other options are incorrect because they do not accurately represent the probability of this event."
+    },
+    {
+      "question_id": "T06.02.Q018",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 0.4, P(B) = 0.5, and P(A ∪ B) = 0.7, then P(A ∩ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2"
+        },
+        {
+          "id": "B",
+          "text": "0.3"
+        },
+        {
+          "id": "C",
+          "text": "0.1"
+        },
+        {
+          "id": "D",
+          "text": "0.5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.2. This can be calculated using the addition theorem for non-mutually exclusive events, which states that P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Plugging in the given values, we get 0.7 = 0.4 + 0.5 - P(A ∩ B), so P(A ∩ B) = 0.2.",
+      "explanation_incorrect": "The incorrect answers do not correctly apply the addition theorem. Option B) 0.3 is incorrect because it does not account for the fact that P(A ∪ B) = 0.7. Option C) 0.1 is incorrect because it does not properly calculate P(A ∩ B) using the given probabilities. Option D) 0.5 is incorrect because it does not match the correct answer of 0.2 calculated using the addition theorem."
+    },
+    {
+      "question_id": "T06.02.Q019",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Two dice are thrown. The probability of getting a doublet (same number on both) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "1/36"
+        },
+        {
+          "id": "C",
+          "text": "1/3"
+        },
+        {
+          "id": "D",
+          "text": "5/36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When two dice are thrown, the probability of getting a doublet (same number on both) is 1/6. This is because there are 6 possible outcomes on each die, and only one of those outcomes (the same number on both dice) results in a doublet.",
+      "explanation_incorrect": "Option A, 1/6, is the correct answer. The reason is that there are 6 possible outcomes on each die (1, 2, 3, 4, 5, 6), and only one of those outcomes (the same number on both dice) results in a doublet. So the probability of getting a doublet is 1 out of the 6 possible outcomes on each die, which is 1/6."
+    },
+    {
+      "question_id": "T06.02.Q020",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "The probability of an impossible event is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "0.5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of an impossible event is 0 because it has no chance of occurring. Since the probability of an event must be between 0 and 1, the probability of an event that can never happen is 0.",
+      "explanation_incorrect": "The probability of an event cannot be negative, so option C is incorrect. The probability of an event must be between 0 and 1, so option D of 0.5 is also not the probability of an impossible event. The correct answer is option A, 0, because an impossible event has no chance of occurring and therefore its probability is 0."
+    },
+    {
+      "question_id": "T06.02.Q021",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "question_text": "A coin is tossed 3 times. The sample space has how many elements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The sample space for a coin tossed 3 times has 8 elements, because each toss can result in 2 possible outcomes (heads or tails), and there are 3 independent tosses. The total number of possible outcomes is 2 x 2 x 2 = 8.",
+      "explanation_incorrect": "The sample space does not have 6 elements, because that would only be the case if there were 2 possible outcomes for each toss (heads or tails). The correct answer is 8 elements, because with 3 independent coin tosses, each toss can result in 2 possible outcomes, leading to a total of 2 x 2 x 2 = 8 possible outcomes in the sample space."
+    },
+    {
+      "question_id": "T06.02.Q022",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "The probability of drawing a face card (J, Q, K) from a standard deck is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/13"
+        },
+        {
+          "id": "B",
+          "text": "4/13"
+        },
+        {
+          "id": "C",
+          "text": "1/4"
+        },
+        {
+          "id": "D",
+          "text": "12/13"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of drawing a face card (J, Q, K) from a standard deck of 52 cards is 3/13 because there are 12 face cards (4 Jacks, 4 Queens, 4 Kings) out of the total 52 cards in a standard deck.",
+      "explanation_incorrect": "Option A is correct because there are 12 face cards (4 Jacks, 4 Queens, 4 Kings) out of the total 52 cards in a standard deck. The probability of drawing a face card is therefore 12/52 = 3/13. Option B is incorrect because it includes the Ace, which is not a face card. Option C is incorrect because it represents the probability of drawing any one specific face card, not the overall probability of drawing any face card. Option D is incorrect because it represents the probability of not drawing a face card, which is the complement of the correct answer."
+    },
+    {
+      "question_id": "T06.02.Q023",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.6, P(B) = 0.4, and P(A ∩ B) = 0.2, then P(neither A nor B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2"
+        },
+        {
+          "id": "B",
+          "text": "0.4"
+        },
+        {
+          "id": "C",
+          "text": "0.8"
+        },
+        {
+          "id": "D",
+          "text": "0.6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.2. This is because the probability of neither A nor B occurring, which is the complement of the probability of A or B occurring, is 1 - P(A or B). Using the addition theorem, P(A or B) = P(A) + P(B) - P(A and B) = 0.6 + 0.4 - 0.2 = 0.8. Therefore, the probability of neither A nor B occurring is 1 - 0.8 = 0.2.",
+      "explanation_incorrect": "The incorrect options are not correct. Option B) 0.4 is wrong because the probability of neither A nor B occurring is the complement of the probability of A or B occurring, which is 1 - 0.8 = 0.2. Option C) 0.8 is wrong because the probability of neither A nor B occurring is the complement of the probability of A or B occurring, which is 1 - 0.8 = 0.2. Option D) 0.6 is wrong because the probability of neither A nor B occurring is the complement of the probability of A or B occurring, which is 1 - 0.8 = 0.2."
+    },
+    {
+      "question_id": "T06.02.Q024",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Two dice are thrown. The probability of getting a sum greater than 10 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/12"
+        },
+        {
+          "id": "B",
+          "text": "1/6"
+        },
+        {
+          "id": "C",
+          "text": "1/18"
+        },
+        {
+          "id": "D",
+          "text": "5/36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting a sum greater than 10 when two dice are thrown is 1/12. This is because the possible outcomes with a sum greater than 10 are (5,6), (6,5), which gives a total of 2 favorable outcomes out of the 36 possible outcomes when two dice are thrown.",
+      "explanation_incorrect": "Option B, 1/6, is incorrect because there are 6 possible outcomes with a sum greater than 10 (4,6), (5,5), (5,6), (6,4), (6,5), (6,6), but the total number of possible outcomes when two dice are thrown is 36, so the probability is 6/36 = 1/6."
+    },
+    {
+      "question_id": "T06.02.Q025",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "A die is thrown. Event A = {1, 2, 3} and Event B = {2, 4, 6}. P(A ∪ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/6"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2/3"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 5/6. This is because the event A = {1, 2, 3} and event B = {2, 4, 6} are not mutually exclusive, as they have the outcome 2 in common. Using the addition theorem for non-mutually exclusive events, we get P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 3/6 + 3/6 - 1/6 = 5/6.",
+      "explanation_incorrect": "The incorrect options are: B) 1, C) 2/3, and D) 1/2. These are incorrect because they do not consider the fact that the events A and B are not mutually exclusive. When events are not mutually exclusive, we need to use the addition theorem to calculate the probability of the union of the events, which gives the correct answer of 5/6."
+    },
+    {
+      "question_id": "T06.02.Q026",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a class, 60% study Maths, 40% study Science, and 20% study both. The probability that a randomly chosen student studies at least one subject is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.8"
+        },
+        {
+          "id": "B",
+          "text": "1.0"
+        },
+        {
+          "id": "C",
+          "text": "0.6"
+        },
+        {
+          "id": "D",
+          "text": "0.2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 0.8. This is because the probability that a randomly chosen student studies at least one subject is the complement of the probability that the student studies neither Maths nor Science, which is 1 - (0.6 + 0.4 - 0.2) = 0.8.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not properly account for the given information. Option B) 1.0 is incorrect because the probability that a student studies at least one subject cannot be 1, as there is a 20% chance that a student studies both Maths and Science. Option C) 0.6 is incorrect because it does not consider the fact that 20% of students study both subjects, and option D) 0.2 is incorrect because it is the probability that a student studies neither subject, not the probability that a student studies at least one subject."
+    },
+    {
+      "question_id": "T06.02.Q027",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Events A and A' are called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complementary events"
+        },
+        {
+          "id": "B",
+          "text": "Independent events"
+        },
+        {
+          "id": "C",
+          "text": "Exhaustive events only"
+        },
+        {
+          "id": "D",
+          "text": "Simple events"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Events A and A' are called complementary events because they represent all possible outcomes of the random experiment. A' is the event that is the opposite of A, so the two events together make up the entire sample space.",
+      "explanation_incorrect": "Events A and A' are not independent events, as they are related in that they represent all possible outcomes of the random experiment. They are also not simple events, as they are not the most basic building blocks of the sample space. Events A and A' are called complementary events because they represent the entire sample space, with A' being the opposite of A."
+    },
+    {
+      "question_id": "T06.02.Q028",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A card is drawn from a well-shuffled deck of 52 cards. The probability that it is neither a heart nor a king is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9/13"
+        },
+        {
+          "id": "B",
+          "text": "36/52"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B"
+        },
+        {
+          "id": "D",
+          "text": "3/4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) Both A and B. The probability that the drawn card is neither a heart nor a king is 36/52, which simplifies to 9/13. Both options A and B are correct representations of this probability.",
+      "explanation_incorrect": "The probability that the drawn card is neither a heart nor a king is calculated as follows: There are 52 cards in a deck, and 13 of them are hearts and 4 are kings. Therefore, the number of cards that are not hearts and not kings is 52 - 13 - 4 = 36. The probability of drawing such a card is 36/52, which simplifies to 9/13. Option D) 3/4 is incorrect because it does not represent the probability of drawing a card that is neither a heart nor a king."
+    },
+    {
+      "question_id": "T06.02.Q029",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "A die is thrown. The probability of getting a number greater than 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "2/3"
+        },
+        {
+          "id": "C",
+          "text": "1/6"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of getting a number greater than 4 on a die is 1/3, as there is only 1 outcome (6) out of the total 6 possible outcomes (1, 2, 3, 4, 5, 6) that is greater than 4.",
+      "explanation_incorrect": "The correct answer is A) 1/3. This is because a die has 6 possible outcomes (1, 2, 3, 4, 5, 6), and only 2 of those outcomes (5 and 6) are greater than 4. Therefore, the probability of getting a number greater than 4 is 2/6 or 1/3."
+    },
+    {
+      "question_id": "T06.02.Q030",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If P(A ∪ B) = 3/4, P(A) = 1/2, and P(B) = 2/5, then P(A ∩ B) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/20"
+        },
+        {
+          "id": "B",
+          "text": "1/4"
+        },
+        {
+          "id": "C",
+          "text": "7/20"
+        },
+        {
+          "id": "D",
+          "text": "1/5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3/20. This can be calculated using the addition theorem for non-mutually exclusive events: P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Rearranging this equation, we get P(A ∩ B) = P(A) + P(B) - P(A ∪ B) = 1/2 + 2/5 - 3/4 = 3/20.",
+      "explanation_incorrect": "The incorrect answers do not correctly apply the addition theorem. Option B) 1/4 is incorrect because it does not account for the given probabilities. Option C) 7/20 is incorrect because it does not properly subtract P(A ∪ B) from the sum of P(A) and P(B). Option D) 1/5 is incorrect because it does not use the given probabilities to calculate P(A ∩ B)."
+    },
+    {
+      "question_id": "T06.02.Q031",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "A bag contains 3 red and 5 blue balls. The probability of drawing a red ball is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/8"
+        },
+        {
+          "id": "B",
+          "text": "5/8"
+        },
+        {
+          "id": "C",
+          "text": "3/5"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of drawing a red ball is 3/8 because the bag contains 3 red balls out of a total of 8 balls (3 red + 5 blue).",
+      "explanation_incorrect": "The correct answer is A) 3/8. This is because the bag contains 3 red balls and 5 blue balls, so the total number of balls is 8. The probability of drawing a red ball is the number of red balls (3) divided by the total number of balls (8), which is 3/8."
+    },
+    {
+      "question_id": "T06.02.Q032",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "Events A and B are exhaustive if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ∪ B = S"
+        },
+        {
+          "id": "B",
+          "text": "A ∩ B = ∅"
+        },
+        {
+          "id": "C",
+          "text": "P(A) = P(B)"
+        },
+        {
+          "id": "D",
+          "text": "A ⊂ B"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Events A and B are exhaustive if their union covers the entire sample space, i.e., A ∪ B = S. This means that the occurrence of either event A or event B accounts for all the possible outcomes in the experiment.",
+      "explanation_incorrect": "The other options are not sufficient to define exhaustive events. Option B describes mutually exclusive events, option C describes events with equal probabilities, and option D describes one event being a subset of the other. However, for events to be exhaustive, their union must cover the entire sample space."
+    },
+    {
+      "question_id": "T06.02.Q033",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 0.7, the odds in favour of A are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7:3"
+        },
+        {
+          "id": "B",
+          "text": "3:7"
+        },
+        {
+          "id": "C",
+          "text": "7:10"
+        },
+        {
+          "id": "D",
+          "text": "10:3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If P(A) = 0.7, it means that the probability of event A occurring is 0.7 or 70%. The odds in favor of A are the ratio of the probability of A occurring to the probability of A not occurring. Since P(A) = 0.7, the odds in favor of A are 7:3.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the odds in favor of A. Option B (3:7) would represent the odds against A, not the odds in favor of A. Options C (7:10) and D (10:3) do not correctly express the ratio of the probability of A occurring to the probability of A not occurring."
+    },
+    {
+      "question_id": "T06.02.Q034",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "From a deck of 52 cards, 2 cards are drawn. The probability that both are aces (without replacement) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/221"
+        },
+        {
+          "id": "B",
+          "text": "4/52"
+        },
+        {
+          "id": "C",
+          "text": "1/169"
+        },
+        {
+          "id": "D",
+          "text": "2/52"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The probability of drawing two aces from a deck of 52 cards without replacement is 1/221. This is because there are 4 aces in a deck, and after drawing the first ace, there are 3 aces left out of the remaining 51 cards.",
+      "explanation_incorrect": "Option A, 1/221, is the correct answer. The reason is that there are 4 aces in a deck of 52 cards, and when you draw the first ace, there are 3 aces left out of the remaining 51 cards. The probability of drawing the second ace is 3/51, which simplifies to 1/221."
+    },
+    {
+      "question_id": "T06.02.Q035",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.3 and P(B) = 0.4, what is the minimum possible value of P(A ∪ B)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.4"
+        },
+        {
+          "id": "B",
+          "text": "0.3"
+        },
+        {
+          "id": "C",
+          "text": "0.7"
+        },
+        {
+          "id": "D",
+          "text": "0.1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The minimum possible value of P(A ∪ B) is 0.4, since the probability of the union of two events is at least the larger of the two individual probabilities. Since P(A) = 0.3 and P(B) = 0.4, the minimum value of P(A ∪ B) is 0.4.",
+      "explanation_incorrect": "Option A, 0.4, is the correct answer because the minimum possible value of P(A ∪ B) is the larger of the two individual probabilities, P(A) and P(B). Since P(A) = 0.3 and P(B) = 0.4, the minimum value of P(A ∪ B) is 0.4. Options B, C, and D are incorrect because they do not represent the minimum possible value of P(A ∪ B) given the individual probabilities of A and B."
+    },
+    {
+      "question_id": "T06.02.Q036",
+      "type": "true_false",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The sample space for tossing a fair coin is {H, T}.",
+      "correct_answer": true,
+      "explanation_correct": "The sample space for tossing a fair coin is {H, T} because the possible outcomes when tossing a fair coin are either Heads (H) or Tails (T), and these are the only two possible outcomes.",
+      "explanation_incorrect": "The sample space for tossing a fair coin is not {0, 1} or any other set. This is because the possible outcomes when tossing a fair coin are either Heads (H) or Tails (T), and these are the only two possible outcomes. The sample space must contain all possible outcomes of the random experiment, which in this case is {H, T}."
+    },
+    {
+      "question_id": "T06.02.Q037",
+      "type": "true_false",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of any event can be negative.",
+      "correct_answer": false,
+      "explanation_correct": "The probability of any event must be a non-negative real number between 0 and 1. This is one of the fundamental axioms of probability theory. Probability can never be negative, as it represents the likelihood or chance of an event occurring.",
+      "explanation_incorrect": "The probability of any event is a measure of how likely that event is to occur. Since probability is defined as a real number between 0 and 1, it cannot be negative. Negative probabilities do not make sense in the context of probability theory, as they would imply that the event is unlikely to occur in a way that defies the basic principles of probability."
+    },
+    {
+      "question_id": "T06.02.Q038",
+      "type": "true_false",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "For mutually exclusive events, P(A ∩ B) = 0.",
+      "correct_answer": true,
+      "explanation_correct": "For mutually exclusive events, the events cannot occur at the same time. If A and B are mutually exclusive, then the intersection of A and B, denoted as A ∩ B, must be an empty set. Therefore, the probability of the intersection of mutually exclusive events is 0.",
+      "explanation_incorrect": "If the events A and B are not mutually exclusive, then it is possible for both events to occur together. In that case, the probability of the intersection of A and B, denoted as P(A ∩ B), would be greater than 0. The statement is true only for mutually exclusive events, where the intersection of the events is an empty set, and hence the probability of the intersection is 0."
+    },
+    {
+      "question_id": "T06.02.Q039",
+      "type": "true_false",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "P(A) + P(A') = 1 for any event A.",
+      "correct_answer": true,
+      "explanation_correct": "The statement P(A) + P(A') = 1 is true because the event A and its complement A' are mutually exclusive, meaning they cannot happen at the same time. Since the total probability of all possible outcomes must be 1, the probability of an event and its complement must add up to 1.",
+      "explanation_incorrect": "The statement P(A) + P(A') = 1 is not true if the event A and its complement A' are not mutually exclusive. For example, if A is the event 'getting a head on a coin toss' and A' is the event 'getting a tail on a coin toss', then P(A) + P(A') would be greater than 1 because there is also a possibility of getting a coin landing on its edge, which is not covered by either A or A'."
+    },
+    {
+      "question_id": "T06.02.Q040",
+      "type": "true_false",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "In a standard deck of 52 cards, there are 12 face cards.",
+      "correct_answer": true,
+      "explanation_correct": "In a standard deck of 52 cards, there are 12 face cards (4 kings, 4 queens, and 4 jacks). This makes the statement true, as the question correctly states that there are 12 face cards in a standard deck of 52 cards.",
+      "explanation_incorrect": "A common misconception could be that there are only 10 face cards in a standard deck (2 each of kings, queens, and jacks). However, this is incorrect, as a standard deck of 52 cards contains 12 face cards - 4 kings, 4 queens, and 4 jacks."
+    },
+    {
+      "question_id": "T06.02.Q041",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of outcomes in the sample space when two coins are tossed is ___.",
+      "correct_answer": "4",
+      "explanation_correct": "When two coins are tossed, the sample space consists of all possible outcomes, which are 'head-head', 'head-tail', 'tail-head', and 'tail-tail'. Therefore, the number of outcomes in the sample space is 4.",
+      "explanation_incorrect": "The incorrect answer would be 2, as one might think that there are only two possible outcomes - either both coins show heads or both show tails. However, the correct answer is 4, as the sample space includes all possible combinations of heads and tails when two coins are tossed."
+    },
+    {
+      "question_id": "T06.02.Q042",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "If P(A) = 0.75, then P(A') = ___.",
+      "correct_answer": "0.25",
+      "explanation_correct": "If P(A) = 0.75, then the probability of the complement of A, denoted as P(A'), is 1 - P(A). Since P(A) = 0.75, P(A') = 1 - 0.75 = 0.25.",
+      "explanation_incorrect": "The accepted answer format is a decimal number, and the correct answer is 0.25. If P(A) = 0.75, then P(A') = 1 - P(A) = 1 - 0.75 = 0.25. The complement of an event A has a probability that is equal to 1 minus the probability of A."
+    },
+    {
+      "question_id": "T06.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.5, P(B) = 0.4, P(A ∩ B) = 0.2, then P(A ∪ B) = ___.",
+      "correct_answer": "0.7",
+      "explanation_correct": "The correct answer is 0.7 because the addition theorem for non-mutually exclusive events states that P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Plugging in the given values, we get P(A ∪ B) = 0.5 + 0.4 - 0.2 = 0.7.",
+      "explanation_incorrect": "The accepted answer format is a decimal number. The incorrect answer could be 0.6, which is the sum of P(A) and P(B) without subtracting the overlap P(A ∩ B). However, this is not correct because the addition theorem takes the overlap into account to avoid double-counting the shared probability."
+    },
+    {
+      "question_id": "T06.02.Q044",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "The probability of getting a sum of 12 when two dice are thrown is ___.",
+      "correct_answer": "1/36",
+      "explanation_correct": "The probability of getting a sum of 12 when two dice are thrown is 1/36 because there is only one possible outcome (6 and 6) out of the 36 total possible outcomes when throwing two dice.",
+      "explanation_incorrect": "The incorrect answer would be something like 1/12 or 1/6. This is wrong because when you throw two dice, there are 36 possible outcomes (6 options for each die), and only 1 of those outcomes results in a sum of 12 (6 and 6). Therefore, the correct probability is 1/36."
+    },
+    {
+      "question_id": "T06.02.Q045",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "A die is thrown. The probability of getting a prime number is ___.",
+      "correct_answer": "1/2",
+      "explanation_correct": "The probability of getting a prime number when rolling a die is 1/2 because there are 3 prime numbers (2, 3, 5) out of the 6 possible outcomes (1, 2, 3, 4, 5, 6) on a standard die.",
+      "explanation_incorrect": "The accepted answer format is a single number. The probability of getting a prime number when rolling a die is 1/2, not 0 or 1. This is because out of the 6 possible outcomes on a standard die, 3 of them are prime numbers (2, 3, 5)."
+    },
+    {
+      "question_id": "T06.02.Q046",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The probability of drawing a heart from a standard deck of 52 cards is ___.",
+      "correct_answer": "1/4",
+      "explanation_correct": "The probability of drawing a heart from a standard deck of 52 cards is 1/4 because there are 13 hearts in a standard deck, and the total number of cards is 52. Therefore, the probability of drawing a heart is 13/52 which simplifies to 1/4.",
+      "explanation_incorrect": "The incorrect answer could be something like 1/2 or 1/3, which is not correct. A standard deck of cards has 52 cards, and there are 13 hearts in the deck. The probability of drawing a heart is the number of favorable outcomes (hearts) divided by the total number of possible outcomes (52 cards), which is 13/52 or 1/4."
+    },
+    {
+      "question_id": "T06.02.Q047",
+      "type": "fill_blank",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A and B are mutually exclusive with P(A) = 1/3 and P(B) = 1/6, then P(A ∪ B) = ___.",
+      "correct_answer": "1/2",
+      "explanation_correct": "Since A and B are mutually exclusive, the probability of their union is the sum of their individual probabilities. With P(A) = 1/3 and P(B) = 1/6, the probability of A or B occurring is P(A ∪ B) = P(A) + P(B) = 1/3 + 1/6 = 1/2.",
+      "explanation_incorrect": "The accepted answer format is a decimal number. The correct answer is 1/2, which is 0.5. If A and B were not mutually exclusive, the probability of their union would be P(A ∪ B) = P(A) + P(B) - P(A ∩ B). However, since A and B are mutually exclusive, there is no overlap between them, so P(A ∩ B) = 0. Therefore, the probability of A or B occurring is simply the sum of their individual probabilities, which is 1/2."
+    },
+    {
+      "question_id": "T06.02.Q048",
+      "type": "ordering",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "question_text": "Arrange from smallest to largest sample space: (A) Tossing 3 coins (8), (B) Rolling 1 die (6), (C) Tossing 1 coin (2), (D) Rolling 2 dice (36)",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "explanation_correct": "The sample space size increases from tossing 1 coin (2 outcomes), to rolling 1 die (6 outcomes), to tossing 3 coins (8 outcomes), to rolling 2 dice (36 outcomes). This is because each additional coin or die added increases the number of possible outcomes exponentially.",
+      "explanation_incorrect": "The incorrect explanation would be that the sample space size increases linearly with the number of trials. For example, tossing 3 coins does not have 3 times the number of outcomes as tossing 1 coin. Instead, the number of outcomes increases exponentially with each additional coin or die added to the experiment."
+    },
+    {
+      "question_id": "T06.02.Q049",
+      "type": "ordering",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find P(A ∪ B): (A) Find P(A ∩ B), (B) Compute P(A) + P(B) − P(A ∩ B), (C) Identify events A and B, (D) Find P(A) and P(B)",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "explanation_correct": "The correct order is C, D, A, B because you first need to identify the events A and B, then find their individual probabilities P(A) and P(B), then find the probability of their intersection P(A ∩ B), and finally use the addition theorem to compute P(A ∪ B).",
+      "explanation_incorrect": "The incorrect order would be to first find P(A ∩ B) before identifying the events A and B, and finding their individual probabilities P(A) and P(B). This is not the correct order because you need to know the events and their individual probabilities before you can find their intersection probability."
+    },
+    {
+      "question_id": "T06.02.Q050",
+      "type": "ordering",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange these probabilities in increasing order: (A) P(King from deck) = 1/13, (B) P(Heart from deck) = 1/4, (C) P(Ace of spades from deck) = 1/52, (D) P(Red card from deck) = 1/2",
+      "ordering_items": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation_correct": "The probabilities are arranged in increasing order as C, A, B, D because the probability of getting the Ace of spades (1/52) is the smallest, followed by the probability of getting any King (1/13), then the probability of getting a Heart (1/4), and finally the probability of getting a Red card (1/2) which is the largest.",
+      "explanation_incorrect": "The probabilities are not arranged in increasing order. The correct order is C, A, B, D. The probability of getting the Ace of spades (1/52) is the smallest, followed by the probability of getting any King (1/13), then the probability of getting a Heart (1/4), and finally the probability of getting a Red card (1/2) which is the largest. The order provided in the question is incorrect."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 16,
+        "application": 19,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

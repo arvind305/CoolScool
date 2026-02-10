@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T03.02",
+  "topic_name": "Three-Dimensional Geometry",
+  "canonical_explanation": {
+    "text": "Three-Dimensional Geometry at the Class 12 level extends coordinate geometry into 3D space. A line in 3D is represented in vector form as r = a + λb (where a is a position vector of a point on the line and b is the direction vector) or in Cartesian form as (x − x₁)/l = (y − y₁)/m = (z − z₁)/n. Direction cosines l, m, n satisfy l² + m² + n² = 1. The angle between two lines is found using their direction ratios or vectors. A plane is represented in vector form as r · n = d or in Cartesian form as ax + by + cz = d, where (a, b, c) is the normal to the plane. The angle between two planes is the angle between their normals. The angle between a line and a plane uses sin θ = |b · n|/(|b||n|). The distance of a point (x₁, y₁, z₁) from a plane ax + by + cz + d = 0 is |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²). The shortest distance between two skew lines can be computed using the cross product of their direction vectors.",
+    "rules": [
+      "Direction cosines l, m, n of a line satisfy l² + m² + n² = 1, and the angle between two lines uses cos θ = l₁l₂ + m₁m₂ + n₁n₂.",
+      "Distance of a point (x₁, y₁, z₁) from a plane ax + by + cz + d = 0 is |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²).",
+      "Two lines are coplanar if (a₂ − a₁) · (b₁ × b₂) = 0, where a₁, a₂ are position vectors and b₁, b₂ are direction vectors."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.02.Q001",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The direction cosines of the x-axis are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 0, 0)"
+        },
+        {
+          "id": "B",
+          "text": "(0, 1, 0)"
+        },
+        {
+          "id": "C",
+          "text": "(0, 0, 1)"
+        },
+        {
+          "id": "D",
+          "text": "(1, 1, 1)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The direction cosines of the x-axis are (1, 0, 0) because the x-axis is parallel to the positive x-direction, and has no component in the y or z directions.",
+      "explanation_incorrect": "The direction cosines represent the direction of a line in 3D space. The x-axis is parallel to the positive x-direction, so its direction cosines are (1, 0, 0), not (0, 1, 0), (0, 0, 1) or (1, 1, 1). The direction cosines must satisfy the condition l² + m² + n² = 1, which is only true for option A."
+    },
+    {
+      "question_id": "T03.02.Q002",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If the direction ratios of a line are (2, 3, 6), the direction cosines are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(2/7, 3/7, 6/7)"
+        },
+        {
+          "id": "B",
+          "text": "(2/3, 1, 2)"
+        },
+        {
+          "id": "C",
+          "text": "(2/11, 3/11, 6/11)"
+        },
+        {
+          "id": "D",
+          "text": "(1/2, 1/3, 1/6)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The direction ratios of a line are (2, 3, 6), which means the direction vector is <2, 3, 6>. To find the direction cosines, we divide each component by the magnitude of the direction vector, which is √(2² + 3² + 6²) = √(4 + 9 + 36) = √49 = 7. So the direction cosines are (2/7, 3/7, 6/7).",
+      "explanation_incorrect": "Option B is incorrect because the direction cosines must satisfy the condition l² + m² + n² = 1, which is not the case for (2/3, 1, 2). Option C is incorrect because the direction cosines are obtained by dividing the direction ratios by the magnitude of the direction vector, not just dividing each component by 11. Option D is incorrect because the direction cosines must be proportional to the direction ratios, which is not the case for (1/2, 1/3, 1/6)."
+    },
+    {
+      "question_id": "T03.02.Q003",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The direction ratios of a line are proportional to its direction cosines. If direction ratios are (a, b, c), then direction cosines are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(a, b, c)"
+        },
+        {
+          "id": "B",
+          "text": "(a/√(a²+b²+c²), b/√(a²+b²+c²), c/√(a²+b²+c²))"
+        },
+        {
+          "id": "C",
+          "text": "(a², b², c²)"
+        },
+        {
+          "id": "D",
+          "text": "(1/a, 1/b, 1/c)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The direction cosines of a line are the ratios of the direction ratios to the magnitude of the direction vector. Therefore, if the direction ratios are (a, b, c), the direction cosines will be (a/√(a²+b²+c²), b/√(a²+b²+c²), c/√(a²+b²+c²)), which corresponds to option B.",
+      "explanation_incorrect": "The direction ratios (a, b, c) are not the same as the direction cosines. The direction cosines are the ratios of the direction ratios to the magnitude of the direction vector, so they will be smaller than the direction ratios. Option A is incorrect because it simply equates the direction ratios and direction cosines. Option C is incorrect because the direction cosines are not the squares of the direction ratios. Option D is incorrect because the reciprocals of the direction ratios do not give the correct direction cosines."
+    },
+    {
+      "question_id": "T03.02.Q004",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "question_text": "The angle between two lines with direction ratios (1, 1, 2) and (√3 − 1, −√3 − 1, 4) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/6"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "π/2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The angle between two lines with direction ratios (1, 1, 2) and (√3 - 1, -√3 - 1, 4) is π/3 (60 degrees) because the dot product of the direction vectors is 0, indicating the lines are perpendicular to each other.",
+      "explanation_incorrect": "The incorrect options are not correct because the angle between the two lines is 60 degrees, which is π/3 radians. The direction ratios of the two lines can be used to calculate the angle between them, and the result is π/3."
+    },
+    {
+      "question_id": "T03.02.Q005",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "question_text": "Two lines with direction ratios (a₁, b₁, c₁) and (a₂, b₂, c₂) are perpendicular if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "a₁a₂ + b₁b₂ + c₁c₂ = 0"
+        },
+        {
+          "id": "B",
+          "text": "a₁/a₂ = b₁/b₂ = c₁/c₂"
+        },
+        {
+          "id": "C",
+          "text": "a₁a₂ + b₁b₂ + c₁c₂ = 1"
+        },
+        {
+          "id": "D",
+          "text": "a₁ + a₂ = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The condition a₁a₂ + b₁b₂ + c₁c₂ = 0 is the criterion for two lines to be perpendicular in three-dimensional space. This is because the dot product of their direction ratios (a₁, b₁, c₁) and (a₂, b₂, c₂) is zero, indicating that the lines are perpendicular to each other.",
+      "explanation_incorrect": "The other options are not the correct criteria for two lines to be perpendicular in three-dimensional space. Option B represents the condition for the lines to be parallel, not perpendicular. Option C is not a valid condition, and Option D represents the condition for the lines to be opposite in direction, not perpendicular."
+    },
+    {
+      "question_id": "T03.02.Q006",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The vector equation of a line passing through a point with position vector a and parallel to vector b is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "r = a + λb"
+        },
+        {
+          "id": "B",
+          "text": "r = a × b"
+        },
+        {
+          "id": "C",
+          "text": "r · a = b"
+        },
+        {
+          "id": "D",
+          "text": "r = a · b + λ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The vector equation of a line in 3D space is r = a + λb, where a is a position vector of a point on the line and b is the direction vector. This represents the line passing through the point with position vector a and parallel to the direction vector b.",
+      "explanation_incorrect": "Option A, r = a + λb, is the correct vector equation of a line in 3D space. The other options are not the correct representation. Option B, r = a × b, is the vector equation of a plane, not a line. Option C, r · a = b, is not a valid vector equation for a line. Option D, r = a · b + λ, is not the correct vector equation for a line in 3D."
+    },
+    {
+      "question_id": "T03.02.Q007",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The Cartesian equation of a line through (1, 2, 3) with direction ratios (2, −1, 3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x − 1)/2 = (y − 2)/(−1) = (z − 3)/3"
+        },
+        {
+          "id": "B",
+          "text": "(x + 1)/2 = (y + 2)/(−1) = (z + 3)/3"
+        },
+        {
+          "id": "C",
+          "text": "2x − y + 3z = 12"
+        },
+        {
+          "id": "D",
+          "text": "x/1 = y/2 = z/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A because the given line passes through the point (1, 2, 3) and has direction ratios (2, -1, 3), which can be expressed in the Cartesian form as (x - 1)/2 = (y - 2)/(-1) = (z - 3)/3.",
+      "explanation_incorrect": "Option B is incorrect because the line does not pass through the point (-1, -2, -3). Option C is incorrect because the given equation is not in the Cartesian form of a line. Option D is incorrect because the direction ratios are not (1, 2, 3)."
+    },
+    {
+      "question_id": "T03.02.Q008",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "question_text": "The equation of the line through points (1, 0, −1) and (3, 4, 1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(x − 1)/2 = y/4 = (z + 1)/2"
+        },
+        {
+          "id": "B",
+          "text": "(x − 1)/3 = y/4 = (z + 1)/1"
+        },
+        {
+          "id": "C",
+          "text": "(x − 3)/2 = (y − 4)/4 = (z − 1)/2"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The equation of a line in 3D space can be written in vector form as r = a + λb, where a is a position vector of a point on the line and b is the direction vector. Using the given points, we can find the position vector a = (1, 0, -1) and the direction vector b = (3-1, 4-0, 1-(-1)) = (2, 4, 2). Therefore, the equation of the line is (x-1)/2 = y/4 = (z+1)/2, which matches option A. Option C is also correct, as it represents the same line in Cartesian form.",
+      "explanation_incorrect": "Option B is incorrect because the direction ratios of the line do not match the given points. Option C represents a different line that does not pass through the given points. The key is to find the position vector a and direction vector b, and then write the equation of the line in either vector or Cartesian form."
+    },
+    {
+      "question_id": "T03.02.Q009",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The general equation of a plane in Cartesian form is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ax + by + cz + d = 0"
+        },
+        {
+          "id": "B",
+          "text": "ax + by = cz"
+        },
+        {
+          "id": "C",
+          "text": "x² + y² + z² = r²"
+        },
+        {
+          "id": "D",
+          "text": "(x − a)/l = (y − b)/m = (z − c)/n"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The general equation of a plane in Cartesian form is ax + by + cz + d = 0, where (a, b, c) is the normal vector to the plane and d is a constant. This linear equation in x, y, and z represents all the points that lie on the plane.",
+      "explanation_incorrect": "Option B, ax + by = cz, is not the general equation of a plane in Cartesian form. That would represent a cylindrical surface, not a plane. Option C, x² + y² + z² = r², is the equation of a sphere, not a plane. Option D, (x - a)/l = (y - b)/m = (z - c)/n, is the Cartesian form of a line, not a plane."
+    },
+    {
+      "question_id": "T03.02.Q010",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The equation of a plane with intercepts a, b, c on the x, y, z axes respectively is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ax + by + cz = 1"
+        },
+        {
+          "id": "B",
+          "text": "x/a + y/b + z/c = 1"
+        },
+        {
+          "id": "C",
+          "text": "x/a + y/b + z/c = 0"
+        },
+        {
+          "id": "D",
+          "text": "xa + yb + zc = abc"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The equation of a plane with intercepts a, b, c on the x, y, z axes respectively is x/a + y/b + z/c = 1. This is because the equation of a plane can be written as (x/a) + (y/b) + (z/c) = 1, where a, b, c are the intercepts on the x, y, z axes respectively.",
+      "explanation_incorrect": "Option B is the correct answer. The equation of a plane with intercepts a, b, c on the x, y, z axes respectively is x/a + y/b + z/c = 1. This is because the plane passes through the points (a, 0, 0), (0, b, 0) and (0, 0, c), and the equation can be derived using the fact that the plane passes through these three points. Options A, C, and D are incorrect because they do not represent the correct equation of the plane with the given intercepts."
+    },
+    {
+      "question_id": "T03.02.Q011",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "question_text": "The equation of the plane passing through (1, 2, 3) and perpendicular to the vector 2i + 3j − k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + 3y − z = 5"
+        },
+        {
+          "id": "B",
+          "text": "2x + 3y − z = 8"
+        },
+        {
+          "id": "C",
+          "text": "2x + 3y − z = 11"
+        },
+        {
+          "id": "D",
+          "text": "2x + 3y − z = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, 2x + 3y - z = 5. This is because the plane passes through the point (1, 2, 3) and is perpendicular to the vector 2i + 3j - k, which means its normal vector is (2, 3, -1). The equation of the plane in Cartesian form is ax + by + cz = d, where (a, b, c) is the normal vector, and d is the constant term obtained by substituting the coordinates of the point (1, 2, 3) into the equation.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the equation of the plane passing through the given point (1, 2, 3) and perpendicular to the vector 2i + 3j - k. The correct equation is obtained by finding the normal vector (2, 3, -1) and substituting the coordinates of the point (1, 2, 3) into the plane equation ax + by + cz = d."
+    },
+    {
+      "question_id": "T03.02.Q012",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "The distance of the point (2, 3, −5) from the plane x + 2y − 2z = 9 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "9/3 = 3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The distance of a point (x₁, y₁, z₁) from a plane ax + by + cz + d = 0 is |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²). Plugging in the values, we get |1(2) + 2(3) - 2(-5) - 9|/√(1² + 2² + (-2)²) = 3.",
+      "explanation_incorrect": "Option B is incorrect because the distance formula gives a value of 3, not 9. Option C is incorrect because the distance is not 1. Option D is incorrect because 9/3 is not the correct distance of 3."
+    },
+    {
+      "question_id": "T03.02.Q013",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "The angle between the planes 2x − y + z = 5 and x + y + 2z = 7 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "cos⁻¹(3/√(36)) = cos⁻¹(1/2) = π/3"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/6"
+        },
+        {
+          "id": "D",
+          "text": "π/3"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The angle between two planes is the angle between their normals. The normal vectors of the two planes are (2, -1, 1) and (1, 1, 2). The angle between these normals is cos⁻¹((2*1 + (-1)*1 + 1*2)/sqrt(4 + 1 + 1) * sqrt(1 + 1 + 4)) = cos⁻¹(3/√(36)) = π/3, which is option D.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the angle between the normals of the two planes. Option A is incorrect because cos⁻¹(1/2) = π/3, not cos⁻¹(3/√(36)). Option B is incorrect because π/4 is not the angle between the normals. Option C is incorrect because π/6 is not the angle between the normals."
+    },
+    {
+      "question_id": "T03.02.Q014",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "question_text": "Two lines r = a₁ + λb₁ and r = a₂ + μb₂ are parallel if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "b₁ · b₂ = 0"
+        },
+        {
+          "id": "B",
+          "text": "b₁ × b₂ = 0"
+        },
+        {
+          "id": "C",
+          "text": "a₁ = a₂"
+        },
+        {
+          "id": "D",
+          "text": "b₁ + b₂ = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two lines are parallel if their direction vectors are collinear, which means their cross product is zero. Option B, b₁ × b₂ = 0, correctly represents this condition for the lines to be parallel.",
+      "explanation_incorrect": "The other options do not correctly identify when two lines are parallel. Option A, b₁ · b₂ = 0, indicates that the lines are perpendicular, not parallel. Option C, a₁ = a₂, requires the lines to have the same position vector, which is a stronger condition than just being parallel. Option D, b₁ + b₂ = 0, is incorrect because the direction vectors need to be collinear, not sum to zero."
+    },
+    {
+      "question_id": "T03.02.Q015",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The angle between the line (x − 1)/2 = (y + 1)/−1 = z/1 and the plane 2x + y − z = 4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin⁻¹(1/√6)"
+        },
+        {
+          "id": "B",
+          "text": "cos⁻¹(1/√6)"
+        },
+        {
+          "id": "C",
+          "text": "sin⁻¹(2/√6)"
+        },
+        {
+          "id": "D",
+          "text": "0°"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The angle between a line and a plane can be found using the formula sin θ = |b · n|/(|b||n|), where b is the direction vector of the line and n is the normal vector of the plane. In this case, the direction vector of the line is (2, -1, 1) and the normal vector of the plane is (2, 1, -1). Plugging these values into the formula gives sin θ = 1/√6, so the angle between the line and the plane is sin⁻¹(1/√6).",
+      "explanation_incorrect": "The incorrect options do not correctly apply the formula to find the angle between the line and the plane. Option B is the cosine of the angle, not the sine. Option C uses the incorrect vector (2, 1, -1) instead of the correct normal vector (2, 1, -1). Option D is incorrect because the line and plane are not perpendicular, so the angle between them is not 0°."
+    },
+    {
+      "question_id": "T03.02.Q016",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The shortest distance between the lines r = (i + j) + λ(2i − j + k) and r = (2i + j − k) + μ(3i − 5j + 2k) is found using:",
+      "options": [
+        {
+          "id": "A",
+          "text": "|(a₂ − a₁) · (b₁ × b₂)| / |b₁ × b₂|"
+        },
+        {
+          "id": "B",
+          "text": "|a₁ − a₂| / |b₁ + b₂|"
+        },
+        {
+          "id": "C",
+          "text": "|b₁ × b₂|"
+        },
+        {
+          "id": "D",
+          "text": "|a₁ · a₂| / |b₁ · b₂|"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The shortest distance between two skew lines is found using the formula |r₂ - r₁ · (b₁ × b₂)| / |b₁ × b₂|, where r₁ and r₂ are position vectors of points on the lines, and b₁ and b₂ are their direction vectors. Option A matches this formula, so it is the correct answer.",
+      "explanation_incorrect": "Option B is incorrect because it uses the formula for the distance between two points, not the shortest distance between two skew lines. Option C is incorrect because it only uses the cross product of the direction vectors, which does not give the shortest distance. Option D is incorrect because it uses the dot product of the position vectors, which is not the correct formula for the shortest distance between skew lines."
+    },
+    {
+      "question_id": "T03.02.Q017",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "question_text": "The equation of a plane through the point (2, −1, 3) parallel to the plane 3x − 2y + z = 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x − 2y + z = 5"
+        },
+        {
+          "id": "B",
+          "text": "3x − 2y + z = 11"
+        },
+        {
+          "id": "C",
+          "text": "3x − 2y + z = 0"
+        },
+        {
+          "id": "D",
+          "text": "3x − 2y + z = 8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The equation of a plane parallel to another plane has the same normal vector, so the coefficients of x, y, and z are the same. To find the constant term, we need to use the point (2, -1, 3) that lies on the new plane. Substituting this point into the equation 3x - 2y + z = 5 gives us 3(2) - 2(-1) + 3 = 11, so the equation of the new plane is 3x - 2y + z = 11.",
+      "explanation_incorrect": "The incorrect options do not correctly represent a plane parallel to the given plane 3x - 2y + z = 5. Option A has the same equation as the given plane, so it is not parallel. Option C has the coefficients equal to 0, which does not represent a valid plane. Option D has a different constant term, so it is not parallel to the given plane."
+    },
+    {
+      "question_id": "T03.02.Q018",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "If a line makes angles α, β, γ with the positive x, y, z axes, then cos²α + cos²β + cos²γ equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 1. This is because the direction cosines l, m, n of a line satisfy the relation l² + m² + n² = 1, which is the same as cos²α + cos²β + cos²γ = 1.",
+      "explanation_incorrect": "The incorrect options are not correct because the sum of the squares of the direction cosines must always add up to 1. This is a fundamental property of direction cosines in three-dimensional geometry. The correct option B) 1 reflects this property, while the other options do not."
+    },
+    {
+      "question_id": "T03.02.Q019",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The equation of the plane containing the line (x − 1)/2 = (y + 1)/−1 = z/3 and passing through the point (0, 1, −1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2x + y + z = 0"
+        },
+        {
+          "id": "B",
+          "text": "x − y + z = −2"
+        },
+        {
+          "id": "C",
+          "text": "x + 5y + 3z = 2"
+        },
+        {
+          "id": "D",
+          "text": "Requires calculation with the specific condition"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The equation of the plane is given by the normal vector (a, b, c) and a point (x0, y0, z0) on the plane, which satisfies the equation a(x-x0) + b(y-y0) + c(z-z0) = 0. In this case, the direction vector of the line is (2, -1, 3), and the point (0, 1, -1) lies on the plane. Plugging these values, we get the equation x + 5y + 3z = 2, which is option C.",
+      "explanation_incorrect": "The other options are incorrect because they do not satisfy the given conditions. Option A represents a plane that is perpendicular to the line, while Option B represents a plane that does not contain the point (0, 1, -1). Option D is not a valid answer, as the question asks for the equation of the plane, not a calculation."
+    },
+    {
+      "question_id": "T03.02.Q020",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The distance between the parallel planes 2x − y + 3z = 4 and 2x − y + 3z = 18 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "14/√14 = √14"
+        },
+        {
+          "id": "B",
+          "text": "14"
+        },
+        {
+          "id": "C",
+          "text": "√14"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The distance between two parallel planes is the perpendicular distance between them. Since the planes have the same normal vector (2, -1, 3), the distance between them is simply the absolute difference between their constant terms, which is 18 - 4 = 14. Thus, the correct answer is √14.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the actual distance between the parallel planes. Option A is incorrect because 14/√14 is not equal to √14. Option B is incorrect because the distance is not 14 units, but rather √14 units. Option D is incorrect because 7 units is not the distance between the parallel planes."
+    },
+    {
+      "question_id": "T03.02.Q021",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "question_text": "Two lines are parallel if their direction ratios are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal"
+        },
+        {
+          "id": "B",
+          "text": "Proportional"
+        },
+        {
+          "id": "C",
+          "text": "Their sum is zero"
+        },
+        {
+          "id": "D",
+          "text": "Perpendicular to each other"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two lines are parallel if their direction ratios are proportional. This means the ratios of the corresponding direction ratios (l, m, n) are equal. This ensures the lines have the same direction and are parallel.",
+      "explanation_incorrect": "The incorrect options are not correct ways to determine if two lines are parallel. Having equal direction ratios means the lines are the same line, not just parallel. Having a sum of direction ratios equal to zero would mean the lines are perpendicular, not parallel. And having direction ratios that are perpendicular to each other does not guarantee the lines are parallel."
+    },
+    {
+      "question_id": "T03.02.Q022",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "question_text": "The vector equation of a plane passing through a point with position vector a and normal to vector n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(r − a) · n = 0"
+        },
+        {
+          "id": "B",
+          "text": "r × n = a"
+        },
+        {
+          "id": "C",
+          "text": "r + a = n"
+        },
+        {
+          "id": "D",
+          "text": "(r + a) · n = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, (r - a) · n = 0. This represents the vector equation of a plane passing through a point with position vector a and having a normal vector n. The dot product between the position vector r and the normal vector n must be equal to the dot product of a and n, which is 0, as the position vector a lies on the plane.",
+      "explanation_incorrect": "The incorrect options are not the correct vector equation of a plane. Option B, r × n = a, is the vector equation of a line, not a plane. Option C, r + a = n, is not the correct vector equation, as the sum of the position vector and the normal vector does not represent a plane. Option D, (r + a) · n = 0, is also not the correct vector equation, as the dot product should be between the position vector r and the normal vector n, not the sum of r and a."
+    },
+    {
+      "question_id": "T03.02.Q023",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two lines r = a₁ + λb₁ and r = a₂ + μb₂ are coplanar if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(a₂ − a₁) · (b₁ × b₂) = 0"
+        },
+        {
+          "id": "B",
+          "text": "b₁ · b₂ = 0"
+        },
+        {
+          "id": "C",
+          "text": "|a₂ − a₁| = 0"
+        },
+        {
+          "id": "D",
+          "text": "b₁ × b₂ = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The lines are coplanar (i.e., they lie in the same plane) if the vector cross product of their direction vectors b₁ and b₂ is perpendicular to the vector difference of their position vectors a₂ - a₁. This means that (a₂ - a₁) · (b₁ × b₂) = 0, which is the correct option A.",
+      "explanation_incorrect": "Option B (b₁ · b₂ = 0) is incorrect because the lines being perpendicular does not necessarily mean they are coplanar. Option C (|a₂ - a₁| = 0) is incorrect because the distance between the position vectors does not determine if the lines are coplanar. Option D (b₁ × b₂ = 0) is incorrect because if the cross product is zero, it means the direction vectors are parallel, not necessarily that the lines are coplanar."
+    },
+    {
+      "question_id": "T03.02.Q024",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "The distance of the origin from the plane 3x − 4y + 12z = 26 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "26/13 = 2"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "26"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The distance of a point (x₁, y₁, z₁) from a plane ax + by + cz + d = 0 is given by |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²). In this case, a = 3, b = -4, c = 12, and d = 26. Plugging these values, the distance of the origin (0, 0, 0) from the plane is |0 + 0 + 0 + 26|/√(3² + (-4)² + 12²) = 2.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not follow the formula for the distance of a point from a plane. Option A calculates 26/13, which is not the correct formula. Option C and D are also incorrect as they do not use the formula for the distance. The correct formula is |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²), which gives the distance of 2 for the origin from the given plane."
+    },
+    {
+      "question_id": "T03.02.Q025",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two planes are perpendicular if the dot product of their normal vectors is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "−1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "Undefined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The dot product of two perpendicular vectors is 0. Since the normal vectors of two perpendicular planes are perpendicular to each other, their dot product will be 0.",
+      "explanation_incorrect": "The dot product of the normal vectors of two planes is 0 when the planes are perpendicular to each other. This is because the angle between the normal vectors is 90 degrees, and the dot product of two vectors is equal to the product of their magnitudes and the cosine of the angle between them. When the angle is 90 degrees, the cosine is 0, making the dot product 0."
+    },
+    {
+      "question_id": "T03.02.Q026",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If a line has direction ratios (3, −4, 12), the magnitude of the direction ratio vector is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "13"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "√169 = 13"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The magnitude of the direction ratio vector (3, -4, 12) is given by the formula √(3^2 + (-4)^2 + 12^2) = √(9 + 16 + 144) = √169 = 13, which is option D.",
+      "explanation_incorrect": "The magnitude of the direction ratio vector (3, -4, 12) is not 11 (option A) or 7 (option C) because these values do not satisfy the formula for the magnitude of a vector. The correct magnitude is 13 (option D) because the square root of the sum of the squares of the direction ratios is √(3^2 + (-4)^2 + 12^2) = √169 = 13."
+    },
+    {
+      "question_id": "T03.02.Q027",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "question_text": "The foot of the perpendicular from the origin to the plane 2x + y − 2z = 18 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(4, 2, −4)"
+        },
+        {
+          "id": "B",
+          "text": "(2, 1, −2)"
+        },
+        {
+          "id": "C",
+          "text": "(6, 3, −6)"
+        },
+        {
+          "id": "D",
+          "text": "(4, 2, 4)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) (4, 2, -4) because this point satisfies the equation of the plane 2x + y - 2z = 18. Substituting the coordinates (4, 2, -4) into the equation, we get 2(4) + 2 - 2(-4) = 18, which is true. Therefore, this point is the foot of the perpendicular from the origin to the given plane.",
+      "explanation_incorrect": "The incorrect options B) (2, 1, -2), C) (6, 3, -6), and D) (4, 2, 4) do not satisfy the equation of the plane 2x + y - 2z = 18. For example, if we substitute the coordinates (2, 1, -2) into the equation, we get 2(2) + 1 - 2(-2) = 7, which is not equal to 18. Therefore, these points are not the foot of the perpendicular from the origin to the given plane."
+    },
+    {
+      "question_id": "T03.02.Q028",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The shortest distance between the lines x/2 = y/−1 = z/2 and (x − 1)/4 = (y − 1)/−2 = (z − 1)/4 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "√6"
+        },
+        {
+          "id": "D",
+          "text": "The lines are parallel, so use a different formula"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The correct answer is D because the two lines are parallel, and there is no unique shortest distance between parallel lines. Instead, you would need to use a different formula to find the distance between the lines.",
+      "explanation_incorrect": "The other options are incorrect because they do not accurately represent the shortest distance between the two given lines. If the lines were not parallel, the shortest distance would be calculated using the cross product of their direction vectors. However, since the lines are parallel, there is no unique shortest distance, and a different formula would need to be used."
+    },
+    {
+      "question_id": "T03.02.Q029",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The direction cosines of the line equally inclined to all three coordinate axes are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 1, 1)"
+        },
+        {
+          "id": "B",
+          "text": "(1/√3, 1/√3, 1/√3)"
+        },
+        {
+          "id": "C",
+          "text": "(±1/√3, ±1/√3, ±1/√3)"
+        },
+        {
+          "id": "D",
+          "text": "(1/3, 1/3, 1/3)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The direction cosines of a line equally inclined to all three coordinate axes must satisfy the condition l² + m² + n² = 1, where l, m, n are the direction cosines. The only option that satisfies this condition is (±1/√3, ±1/√3, ±1/√3).",
+      "explanation_incorrect": "The direction cosines of a line equally inclined to all three coordinate axes must be equal in magnitude. Option B (1/√3, 1/√3, 1/√3) satisfies this condition, but the signs are not accounted for. Option C (±1/√3, ±1/√3, ±1/√3) is the correct answer as it includes both positive and negative values for the direction cosines."
+    },
+    {
+      "question_id": "T03.02.Q030",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The equation of the plane through the three points (1, 1, 1), (1, −1, 1), and (−7, −3, −5) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3x − 4z + 1 = 0"
+        },
+        {
+          "id": "B",
+          "text": "x + y + z = 3"
+        },
+        {
+          "id": "C",
+          "text": "3x + 4z = 7"
+        },
+        {
+          "id": "D",
+          "text": "Requires determinant calculation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, 3x - 4z + 1 = 0. This is because the equation of a plane in 3D space can be represented as ax + by + cz + d = 0, where (a, b, c) is the normal vector to the plane. By finding the normal vector using the given three points, we can obtain the coefficients of the plane equation.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the equation of the plane passing through the given three points. Option B, x + y + z = 3, is the equation of a different plane. Option C, 3x + 4z = 7, is not the correct equation of the plane. Option D, which requires determinant calculation, is not the most efficient way to find the equation of the plane in this case."
+    },
+    {
+      "question_id": "T03.02.Q031",
+      "type": "mcq",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "In the equation (x − x₁)/a = (y − y₁)/b = (z − z₁)/c, the quantities a, b, c represent:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Coordinates of a point on the line"
+        },
+        {
+          "id": "B",
+          "text": "Direction ratios of the line"
+        },
+        {
+          "id": "C",
+          "text": "Intercepts on the axes"
+        },
+        {
+          "id": "D",
+          "text": "Direction cosines of the line"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The quantities a, b, c in the given equation represent the direction ratios of the line, which define the direction of the line in 3D space. The direction ratios are proportional to the direction cosines l, m, n of the line, which satisfy the condition l^2 + m^2 + n^2 = 1.",
+      "explanation_incorrect": "The direction ratios a, b, c do not represent the coordinates of a point on the line (option A), the intercepts on the axes (option C), or the direction cosines of the line (option D). The direction ratios are the coefficients that define the direction of the line in 3D space, which is different from the position vector or the direction cosines."
+    },
+    {
+      "question_id": "T03.02.Q032",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "A line is perpendicular to a plane if the direction vector of the line is ___ to the normal of the plane:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perpendicular"
+        },
+        {
+          "id": "B",
+          "text": "Parallel"
+        },
+        {
+          "id": "C",
+          "text": "At 45°"
+        },
+        {
+          "id": "D",
+          "text": "Anti-parallel"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a line to be perpendicular to a plane, the direction vector of the line must be parallel to the normal vector of the plane. This ensures that the line is at a 90-degree angle to the plane.",
+      "explanation_incorrect": "The direction vector of the line must be parallel to the normal vector of the plane for the line to be perpendicular to the plane. The other options, such as the direction vector being perpendicular, at 45 degrees, or anti-parallel to the normal, would not result in the line being perpendicular to the plane."
+    },
+    {
+      "question_id": "T03.02.Q033",
+      "type": "mcq",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "question_text": "The plane x/2 + y/3 + z/4 = 1 has intercepts on the x, y, z axes respectively as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2, 3, 4"
+        },
+        {
+          "id": "B",
+          "text": "1/2, 1/3, 1/4"
+        },
+        {
+          "id": "C",
+          "text": "4, 3, 2"
+        },
+        {
+          "id": "D",
+          "text": "6, 4, 3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The plane x/2 + y/3 + z/4 = 1 has intercepts of 2, 3, and 4 on the x, y, and z axes respectively. This is because the coefficients of x, y, and z in the equation are 1/2, 1/3, and 1/4, so the reciprocals of these values give the intercepts.",
+      "explanation_incorrect": "Option B, 1/2, 1/3, 1/4, is incorrect because the intercepts on the x, y, and z axes are the reciprocals of the coefficients of x, y, and z in the equation of the plane. The correct intercepts are 2, 3, and 4, as given in option A."
+    },
+    {
+      "question_id": "T03.02.Q034",
+      "type": "mcq",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The angle between the line (x − 1)/1 = (y − 2)/2 = (z − 3)/2 and the plane x + y + z = 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin⁻¹(5/(3√3))"
+        },
+        {
+          "id": "B",
+          "text": "sin⁻¹(5/9)"
+        },
+        {
+          "id": "C",
+          "text": "sin⁻¹(1/√3)"
+        },
+        {
+          "id": "D",
+          "text": "cos⁻¹(5/9)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A, sin⁻¹(5/(3√3)). This is because the angle between a line and a plane is given by sin θ = |b · n|/(|b||n|), where b is the direction vector of the line and n is the normal vector of the plane. In this case, the direction vector of the line is (1, 2, 2) and the normal vector of the plane is (1, 1, 1), so the angle θ is sin⁻¹(5/(3√3)).",
+      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the angle between the given line and plane. Option B, sin⁻¹(5/9), and Option D, cos⁻¹(5/9), are incorrect because they do not use the formula for the angle between a line and a plane. Option C, sin⁻¹(1/√3), is incorrect because it does not take into account the direction vector of the line and the normal vector of the plane."
+    },
+    {
+      "question_id": "T03.02.Q035",
+      "type": "mcq",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "question_text": "If the direction cosines of two lines are (l₁, m₁, n₁) and (l₂, m₂, n₂), and the lines are parallel, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "l₁l₂ + m₁m₂ + n₁n₂ = 0"
+        },
+        {
+          "id": "B",
+          "text": "l₁/l₂ = m₁/m₂ = n₁/n₂"
+        },
+        {
+          "id": "C",
+          "text": "l₁ + l₂ = m₁ + m₂ = n₁ + n₂"
+        },
+        {
+          "id": "D",
+          "text": "l₁ − l₂ = m₁ − m₂ = n₁ − n₂ = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If two lines are parallel, their direction cosines must be proportional. This means the ratio of their direction cosines (l1/l2, m1/m2, n1/n2) must be the same, which is exactly what option B states.",
+      "explanation_incorrect": "The other options do not correctly represent the relationship between the direction cosines of parallel lines. Option A would be true for lines that are perpendicular, not parallel. Options C and D describe relationships that are not necessarily true for parallel lines."
+    },
+    {
+      "question_id": "T03.02.Q036",
+      "type": "true_false",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The sum of the squares of the direction cosines of any line is always 1.",
+      "correct_answer": true,
+      "explanation_correct": "The sum of the squares of the direction cosines of any line is always 1 because the direction cosines l, m, n satisfy the equation l² + m² + n² = 1. This is a fundamental property of direction cosines in 3D geometry.",
+      "explanation_incorrect": "The sum of the squares of the direction cosines of a line may not always be 1. This is true only if the direction cosines l, m, n satisfy the equation l² + m² + n² = 1, which is a key property of direction cosines in 3D geometry. If the direction ratios do not follow this property, then the sum of their squares will not be 1."
+    },
+    {
+      "question_id": "T03.02.Q037",
+      "type": "true_false",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The normal to a plane ax + by + cz + d = 0 has direction ratios (a, b, c).",
+      "correct_answer": true,
+      "explanation_correct": "The normal to a plane ax + by + cz + d = 0 has direction ratios (a, b, c) because the normal vector is perpendicular to all vectors lying on the plane, and its components are the coefficients of x, y, and z in the plane equation.",
+      "explanation_incorrect": "The incorrect explanation would be that the normal to the plane has direction ratios (x, y, z), which is not true. The normal vector is always perpendicular to the plane and its components are the coefficients a, b, and c in the plane equation ax + by + cz + d = 0."
+    },
+    {
+      "question_id": "T03.02.Q038",
+      "type": "true_false",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "question_text": "Two skew lines are lines that are neither parallel nor intersecting.",
+      "correct_answer": true,
+      "explanation_correct": "Two skew lines are lines in three-dimensional space that do not intersect and are not parallel to each other. This means they are neither intersecting nor parallel, which is the definition of 'skew' lines.",
+      "explanation_incorrect": "If two lines were parallel, they would be considered parallel lines, not skew lines. If two lines were intersecting, they would be considered intersecting lines, not skew lines. Skew lines are those that are neither parallel nor intersecting - they are simply lines that exist in 3D space without any other special relationship between them."
+    },
+    {
+      "question_id": "T03.02.Q039",
+      "type": "true_false",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "The angle between a line and a plane is always between 0° and 90° (inclusive).",
+      "correct_answer": true,
+      "explanation_correct": "The angle between a line and a plane is always between 0° and 90° (inclusive) because the line must intersect the plane or be parallel to it. If the line is perpendicular to the plane, the angle is 90°, and if the line is parallel to the plane, the angle is 0°.",
+      "explanation_incorrect": "The statement is incorrect because it is possible for the angle between a line and a plane to be greater than 90°. This can happen if the line is not in the same plane and intersects the plane at an angle greater than 90°. The angle between the line and the plane is determined by the relationship between the direction vector of the line and the normal vector of the plane."
+    },
+    {
+      "question_id": "T03.02.Q040",
+      "type": "true_false",
+      "concept_id": "T03.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If two lines in 3D are not parallel, they must intersect.",
+      "correct_answer": false,
+      "explanation_correct": "Two lines in 3D space can be skew, meaning they do not intersect. Even if the lines are not parallel, they can still be skew and never meet. For two lines to intersect, they must lie in the same plane.",
+      "explanation_incorrect": "It is a common misconception that if two lines in 3D space are not parallel, they must intersect. However, this is not always the case. Two lines can be skew, meaning they do not lie in the same plane and do not intersect, even if they are not parallel. For the lines to intersect, they must lie in the same plane."
+    },
+    {
+      "question_id": "T03.02.Q041",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The direction cosines of the y-axis are (0, ___, 0).",
+      "correct_answer": "1",
+      "explanation_correct": "The direction cosines of the y-axis are (0, 1, 0) because the y-axis is parallel to the y-direction, so the direction cosine in the y-direction is 1, while the direction cosines in the x and z directions are 0.",
+      "explanation_incorrect": "The correct answer is (0, 1, 0) because the y-axis is parallel to the y-direction, so the direction cosine in the y-direction is 1. The direction cosines in the x and z directions are 0 since the y-axis does not have any component in those directions. Incorrect answers like (0, 0, 0) or (1, 0, 0) do not correctly represent the direction cosines of the y-axis."
+    },
+    {
+      "question_id": "T03.02.Q042",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The equation of the xy-plane is z = ___.",
+      "correct_answer": "0",
+      "explanation_correct": "The equation of the xy-plane is z = 0 because the xy-plane is a flat plane that lies on the x-y coordinate plane, where the z-coordinate is always 0.",
+      "explanation_incorrect": "The equation of a plane in 3D space is given as ax + by + cz + d = 0, where (a, b, c) is the normal vector to the plane. For the xy-plane, the normal vector is (0, 0, 1), so the equation becomes 0x + 0y + 1z + 0 = 0, which simplifies to z = 0. The accepted answer format for this fill-in-the-blank question is just '0'."
+    },
+    {
+      "question_id": "T03.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "The distance of the point (1, 1, 1) from the plane x + y + z = 6 is ___.",
+      "correct_answer": "√3",
+      "explanation_correct": "The distance of the point (1, 1, 1) from the plane x + y + z = 6 is √3 because the distance formula for a point from a plane is |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²), and in this case, a = 1, b = 1, c = 1, d = -6, and the point is (1, 1, 1), so the distance is |1 + 1 + 1 - 6|/√(1² + 1² + 1²) = √3.",
+      "explanation_incorrect": "The incorrect answer would be to simply plug in the coordinates of the point (1, 1, 1) into the plane equation x + y + z = 6, which would give 1 + 1 + 1 = 6, and then conclude that the distance is 0. However, this is not the correct way to find the distance of a point from a plane. The correct formula must be used, which takes into account the normal vector of the plane and the coordinates of the point."
+    },
+    {
+      "question_id": "T03.02.Q044",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "question_text": "The line r = (2i + j) + λ(i − j + k) passes through the point (2, ___, 0).",
+      "correct_answer": "1",
+      "explanation_correct": "The line r = (2i + j) + λ(i - j + k) passes through the point (2, 1, 0) because the y-coordinate of the point on the line with λ = 0 is 1, which matches the given y-coordinate of the point.",
+      "explanation_incorrect": "The incorrect answer would be to think the y-coordinate of the point is 2. This is because the position vector (2i + j) has a y-component of 1, but the direction vector (i - j + k) has a y-component of -1. So the y-coordinate of the point on the line with λ = 0 is 1, not 2."
+    },
+    {
+      "question_id": "T03.02.Q045",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two parallel planes differ only in their constant term. The distance between the planes x + 2y − 2z = 1 and x + 2y − 2z = 4 is ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The distance between two parallel planes is simply the difference between their constant terms. Since the planes x + 2y - 2z = 1 and x + 2y - 2z = 4 differ by a constant of 3, the distance between them is 3 units.",
+      "explanation_incorrect": "The incorrect answer would be to think that the distance between the planes is not 1 unit. This is because the planes are parallel, meaning they have the same normal vector (1, 2, -2), and the only difference between them is the constant term. So the distance between the planes is simply the difference between their constant terms, which is 4 - 1 = 3 units."
+    },
+    {
+      "question_id": "T03.02.Q046",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The angle between the lines with direction ratios (1, 0, 0) and (0, 1, 0) is ___ degrees.",
+      "correct_answer": "90",
+      "explanation_correct": "The angle between two lines with direction ratios (1, 0, 0) and (0, 1, 0) is 90 degrees because they are perpendicular to each other. The direction ratios represent the directions of the lines, and since they are at right angles, the angle between them is 90 degrees.",
+      "explanation_incorrect": "The correct answer is 90 degrees. The angle between two lines is determined by their direction ratios. The direction ratios (1, 0, 0) and (0, 1, 0) are perpendicular to each other, so the angle between the lines is 90 degrees. This is the accepted answer format for this fill-in-the-blank question."
+    },
+    {
+      "question_id": "T03.02.Q047",
+      "type": "fill_blank",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "The formula for the distance of a point (x₁, y₁, z₁) from the plane ax + by + cz + d = 0 is |ax₁ + by₁ + cz₁ + d| / ___.",
+      "correct_answer": "√(a² + b² + c²)",
+      "explanation_correct": "The formula for the distance of a point from a plane is the absolute value of the perpendicular distance from the point to the plane, which is given by |ax₁ + by₁ + cz₁ + d| divided by the length of the normal vector to the plane, which is √(a² + b² + c²). This ensures that the distance is always positive, regardless of the position of the point relative to the plane.",
+      "explanation_incorrect": "The incorrect formula would be to just divide |ax₁ + by₁ + cz₁ + d| by a, b, or c alone. However, this would not account for the length of the normal vector to the plane, which is needed to get the true perpendicular distance. The correct formula is to divide by the square root of the sum of the squares of a, b, and c, which gives the length of the normal vector."
+    },
+    {
+      "question_id": "T03.02.Q048",
+      "type": "ordering",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to find the distance of a point from a plane:",
+      "ordering_items": [
+        "Write the plane equation in the form ax + by + cz + d = 0",
+        "Substitute the point coordinates (x₁, y₁, z₁) into ax₁ + by₁ + cz₁ + d",
+        "Take the absolute value of the result",
+        "Divide by √(a² + b² + c²)"
+      ],
+      "correct_answer": [
+        "Write the plane equation in the form ax + by + cz + d = 0",
+        "Substitute the point coordinates (x₁, y₁, z₁) into ax₁ + by₁ + cz₁ + d",
+        "Take the absolute value of the result",
+        "Divide by √(a² + b² + c²)"
+      ],
+      "explanation_correct": "The correct order of steps is to first write the plane equation in the standard form ax + by + cz + d = 0, then substitute the point coordinates (x₁, y₁, z₁) into this equation to get the numerator, take the absolute value of the result, and finally divide by the square root of a² + b² + c² to get the distance of the point from the plane.",
+      "explanation_incorrect": "The incorrect order would be to first substitute the point coordinates, then take the absolute value, and finally divide by the square root. This is incorrect because you need to start by writing the plane equation in the standard form ax + by + cz + d = 0 before you can substitute the point coordinates into it."
+    },
+    {
+      "question_id": "T03.02.Q049",
+      "type": "ordering",
+      "concept_id": "T03.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the shortest distance between two skew lines:",
+      "ordering_items": [
+        "Identify position vectors a₁, a₂ and direction vectors b₁, b₂ of the two lines",
+        "Compute b₁ × b₂",
+        "Compute (a₂ − a₁) · (b₁ × b₂)",
+        "Shortest distance = |(a₂ − a₁) · (b₁ × b₂)| / |b₁ × b₂|"
+      ],
+      "correct_answer": [
+        "Identify position vectors a₁, a₂ and direction vectors b₁, b₂ of the two lines",
+        "Compute b₁ × b₂",
+        "Compute (a₂ − a₁) · (b₁ × b₂)",
+        "Shortest distance = |(a₂ − a₁) · (b₁ × b₂)| / |b₁ × b₂|"
+      ],
+      "explanation_correct": "The correct order of steps is logical because it follows the formula for finding the shortest distance between two skew lines. First, we need to identify the position and direction vectors of the two lines. Then, we compute the cross product of the direction vectors to get the vector perpendicular to both lines. Finally, we take the dot product of this vector with the vector between the two lines, and divide by the magnitude of the cross product to get the shortest distance.",
+      "explanation_incorrect": "The incorrect order of steps does not follow the correct formula. The steps should be: 1) Identify the position vectors a₁, a₂ and direction vectors b₁, b₂ of the two lines, 2) Compute the cross product b₁ × b₂, 3) Compute the dot product (a₂ - a₁) · (b₁ × b₂), and 4) Divide the dot product by the magnitude of the cross product to get the shortest distance. Skipping any of these steps or rearranging them would lead to an incorrect result."
+    },
+    {
+      "question_id": "T03.02.Q050",
+      "type": "ordering",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to find the equation of a plane through three non-collinear points A, B, C:",
+      "ordering_items": [
+        "Find vectors AB and AC",
+        "Compute the normal vector n = AB × AC",
+        "Use the point-normal form: (r − OA) · n = 0",
+        "Expand to get the Cartesian equation ax + by + cz = d"
+      ],
+      "correct_answer": [
+        "Find vectors AB and AC",
+        "Compute the normal vector n = AB × AC",
+        "Use the point-normal form: (r − OA) · n = 0",
+        "Expand to get the Cartesian equation ax + by + cz = d"
+      ],
+      "explanation_correct": "The correct order of steps is the logical progression to find the equation of a plane given three non-collinear points. First, we need to find the vectors AB and AC to compute the normal vector n. Then, we use the point-normal form to write the equation, and finally expand it to the Cartesian form.",
+      "explanation_incorrect": "The incorrect order would be to directly try to expand the equation to the Cartesian form without first finding the normal vector. This is not possible, as the normal vector is a key ingredient in writing the equation of the plane. The correct steps are to first find the vectors AB and AC, then compute their cross product to get the normal vector, and only then use the point-normal form and expand it to the final Cartesian equation."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 13,
+        "application": 21,
+        "exam_style": 16
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

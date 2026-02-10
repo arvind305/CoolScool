@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.02",
+  "topic_name": "Applications of Derivatives",
+  "canonical_explanation": {
+    "text": "Applications of Derivatives use the concepts of differentiation to solve practical problems. The derivative dy/dx represents the rate of change of y with respect to x. Related rates problems apply the chain rule to find how one quantity changes with respect to time when another related quantity is changing. A function f is increasing on an interval where f'(x) > 0 and decreasing where f'(x) < 0. Critical points occur where f'(x) = 0 or f'(x) is undefined. The first derivative test examines the sign change of f'(x) around a critical point to classify local maxima and minima. The second derivative test states: if f'(c) = 0 and f''(c) > 0, then c is a local minimum; if f''(c) < 0, then c is a local maximum. For absolute extrema on a closed interval, evaluate f at critical points and endpoints. Applied optimisation problems involve translating real-world constraints into mathematical functions and finding their extreme values. The slope of the tangent to y = f(x) at (x₁, y₁) is f'(x₁), and the normal has slope −1/f'(x₁).",
+    "rules": [
+      "A function f is increasing on an interval where f'(x) > 0 and decreasing where f'(x) < 0.",
+      "Second derivative test: if f'(c) = 0, then f''(c) > 0 implies local minimum and f''(c) < 0 implies local maximum.",
+      "The slope of the tangent to the curve y = f(x) at the point (x₁, y₁) is f'(x₁), and the slope of the normal is −1/f'(x₁)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.02.Q001",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The rate of change of the area of a circle with respect to its radius r is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "πr"
+        },
+        {
+          "id": "B",
+          "text": "2πr"
+        },
+        {
+          "id": "C",
+          "text": "πr²"
+        },
+        {
+          "id": "D",
+          "text": "2πr²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rate of change of the area of a circle with respect to its radius r is 2πr. This is because the area of a circle is given by the formula A = πr², and the derivative of the area with respect to the radius is dA/dr = 2πr.",
+      "explanation_incorrect": "Option B (2πr) is the correct answer. The area of a circle is given by the formula A = πr², and the derivative of the area with respect to the radius is dA/dr = 2πr. This represents the rate of change of the area with respect to the radius. Options A, C, and D do not correctly represent this rate of change."
+    },
+    {
+      "question_id": "T02.02.Q002",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If y = x³ − 3x, then the rate of change of y at x = 2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 9. This is because the derivative of y = x³ - 3x is dy/dx = 3x² - 3, and when x = 2, the rate of change of y is 3(2)² - 3 = 9.",
+      "explanation_incorrect": "The correct answer is A) 9. To find the rate of change of y at x = 2, we need to calculate the derivative of y = x³ - 3x. The derivative is dy/dx = 3x² - 3, and when x = 2, the rate of change is 3(2)² - 3 = 9. The other options are incorrect because they do not correctly calculate the derivative at x = 2."
+    },
+    {
+      "question_id": "T02.02.Q003",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "question_text": "The radius of a circle is increasing at the rate of 3 cm/s. The rate of increase of the area when the radius is 10 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30π cm²/s"
+        },
+        {
+          "id": "B",
+          "text": "60π cm²/s"
+        },
+        {
+          "id": "C",
+          "text": "100π cm²/s"
+        },
+        {
+          "id": "D",
+          "text": "6π cm²/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 60π cm²/s. This is because the rate of change of the area of a circle with radius r is given by the formula dA/dr = 2πr, and when the radius is 10 cm, the rate of change of the area is 2π × 10 = 60π cm²/s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the formula for the rate of change of the area of a circle. Option A) 30π cm²/s is half the correct value, option C) 100π cm²/s is too high, and option D) 6π cm²/s is too low. The correct answer of 60π cm²/s is obtained by using the formula dA/dr = 2πr and plugging in the given radius of 10 cm and the rate of change of the radius of 3 cm/s."
+    },
+    {
+      "question_id": "T02.02.Q004",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "question_text": "A balloon is being inflated such that its volume increases at a rate of 100 cm³/s. When the radius is 5 cm, the rate of increase of the radius is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/π cm/s"
+        },
+        {
+          "id": "B",
+          "text": "4/(5π) cm/s"
+        },
+        {
+          "id": "C",
+          "text": "1/(π) cm/s"
+        },
+        {
+          "id": "D",
+          "text": "5/π cm/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1/π cm/s. This is because the volume of a sphere is given by the formula V = (4/3)πr³, where r is the radius. The rate of change of the volume is dV/dt = 4πr²(dr/dt). Since the volume is increasing at a rate of 100 cm³/s, and the radius is 5 cm, we can solve for dr/dt, which gives 1/π cm/s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly use the given information to solve for the rate of change of the radius. Option B) 4/(5π) cm/s is incorrect because it does not take into account the given rate of change of the volume. Option C) 1/(π) cm/s is incorrect because it does not consider the fact that the radius is 5 cm. Option D) 5/π cm/s is incorrect because it does not correctly use the formula for the rate of change of the volume."
+    },
+    {
+      "question_id": "T02.02.Q005",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f(x) = x² − 4x + 5 is decreasing on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(−∞, 2)"
+        },
+        {
+          "id": "B",
+          "text": "(2, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(−∞, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 4)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The function f(x) = x² - 4x + 5 is decreasing on the interval (-∞, 2) because the derivative f'(x) = 2x - 4 is negative for all x less than 2. This means the function is decreasing to the left of the critical point x = 2.",
+      "explanation_incorrect": "Option A is correct because the function f(x) = x² - 4x + 5 has a critical point at x = 2, where the derivative f'(x) = 0. To the left of x = 2, the derivative is negative, so the function is decreasing on the interval (-∞, 2). The other options are incorrect because the function is not decreasing on the entire real line (option C), nor is it decreasing on the interval (0, 4) (option D)."
+    },
+    {
+      "question_id": "T02.02.Q006",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "A function f(x) is increasing on an interval if for all x in that interval:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f'(x) < 0"
+        },
+        {
+          "id": "B",
+          "text": "f'(x) > 0"
+        },
+        {
+          "id": "C",
+          "text": "f'(x) = 0"
+        },
+        {
+          "id": "D",
+          "text": "f''(x) > 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A function f(x) is increasing on an interval if the derivative f'(x) is positive for all x in that interval. This means the function is growing or rising in that interval.",
+      "explanation_incorrect": "The function is decreasing when f'(x) < 0, and constant when f'(x) = 0. For the function to be increasing, its derivative f'(x) must be positive throughout the interval. Therefore, option B, f'(x) > 0, is the correct answer."
+    },
+    {
+      "question_id": "T02.02.Q007",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "question_text": "The function f(x) = x³ − 3x² + 3x + 7 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing on ℝ"
+        },
+        {
+          "id": "B",
+          "text": "Decreasing on ℝ"
+        },
+        {
+          "id": "C",
+          "text": "Increasing on (0, ∞) only"
+        },
+        {
+          "id": "D",
+          "text": "Neither increasing nor decreasing on ℝ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The function f(x) = x³ - 3x² + 3x + 7 is increasing on the entire real line (ℝ) because its first derivative f'(x) = 3x² - 6x + 3 is positive for all real values of x.",
+      "explanation_incorrect": "The function f(x) = x³ - 3x² + 3x + 7 is not decreasing, nor is it increasing only on the positive real line (0, ∞). The first derivative f'(x) = 3x² - 6x + 3 is positive for all real values of x, so the function is increasing on the entire real line (ℝ)."
+    },
+    {
+      "question_id": "T02.02.Q008",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "question_text": "The interval on which f(x) = 2x³ − 9x² + 12x − 5 is increasing is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1, 2)"
+        },
+        {
+          "id": "B",
+          "text": "(−∞, 1) ∪ (2, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(−∞, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(0, 3)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B, (−∞, 1) ∪ (2, ∞). To determine the interval where the function is increasing, we need to find the critical points where the first derivative is zero or undefined. Differentiating the function, we get f'(x) = 6x² - 18x + 12. Setting this equal to zero and solving, we get x = 1 and x = 2. Since f'(x) > 0 for x < 1 and x > 2, the function is increasing on these intervals.",
+      "explanation_incorrect": "The function f(x) = 2x³ - 9x² + 12x - 5 is increasing on the interval (−∞, 1) ∪ (2, ∞), not on the intervals given in the other options. Option A, (1, 2), is incorrect because the function is decreasing on this interval. Option C, (−∞, ∞), is incorrect because the function is not increasing on the entire real line. Option D, (0, 3), is incorrect because the function is decreasing on the interval (1, 2) within this range."
+    },
+    {
+      "question_id": "T02.02.Q009",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "A critical point of f(x) is a point where:",
+      "options": [
+        {
+          "id": "A",
+          "text": "f(x) = 0"
+        },
+        {
+          "id": "B",
+          "text": "f'(x) = 0 or f'(x) does not exist"
+        },
+        {
+          "id": "C",
+          "text": "f''(x) = 0"
+        },
+        {
+          "id": "D",
+          "text": "f(x) is maximum"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A critical point of a function f(x) is a point where the derivative f'(x) is either equal to 0 or does not exist. This is because the derivative represents the rate of change, and a critical point is where the function changes its behavior, such as transitioning from increasing to decreasing or vice versa.",
+      "explanation_incorrect": "Option A is incorrect because f(x) = 0 simply means the function is equal to 0 at that point, not necessarily that it is a critical point. Option C is incorrect because f''(x) = 0 is a sufficient but not necessary condition for a critical point. Option D is incorrect because a critical point does not necessarily mean the function is at a maximum, it could also be a minimum or a point where the function changes its behavior."
+    },
+    {
+      "question_id": "T02.02.Q010",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "By the second derivative test, if f'(c) = 0 and f''(c) > 0, then x = c is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Local maximum"
+        },
+        {
+          "id": "B",
+          "text": "Local minimum"
+        },
+        {
+          "id": "C",
+          "text": "Point of inflection"
+        },
+        {
+          "id": "D",
+          "text": "Saddle point"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If f'(c) = 0 and f''(c) > 0, then x = c is a local minimum according to the second derivative test. This is because the positive second derivative indicates the function is concave upwards at that point, and the function changes from decreasing to increasing at the critical point, forming a local minimum.",
+      "explanation_incorrect": "The second derivative test states that if f'(c) = 0 and f''(c) < 0, then x = c is a local maximum. If f''(c) > 0, it indicates the function is concave upwards at that point, meaning x = c is a local minimum, not a local maximum or a point of inflection. A saddle point occurs when the second derivative changes sign at a critical point, which is not the case here."
+    },
+    {
+      "question_id": "T02.02.Q011",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The maximum value of f(x) = −x² + 6x − 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum value of the function f(x) = -x^2 + 6x - 5 can be found by finding the critical points of the function and evaluating the function at those points. Differentiating the function, we get f'(x) = -2x + 6. Setting f'(x) = 0, we get x = 3. Evaluating the function at x = 3, we get f(3) = 4, which is the maximum value of the function.",
+      "explanation_incorrect": "The incorrect answers may be obtained by not correctly finding the critical point of the function or by not evaluating the function at the critical point. For example, option B (5) could be obtained by not realizing that the function is decreasing after the critical point, and option C (6) could be obtained by incorrectly finding the critical point as x = 2 instead of x = 3."
+    },
+    {
+      "question_id": "T02.02.Q012",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The function f(x) = x³ − 6x² + 9x + 15 has a local maximum at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 1"
+        },
+        {
+          "id": "B",
+          "text": "x = 3"
+        },
+        {
+          "id": "C",
+          "text": "x = 0"
+        },
+        {
+          "id": "D",
+          "text": "x = −1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x = 1. The function f(x) = x³ - 6x² + 9x + 15 has a local maximum at x = 1 because the derivative f'(x) = 3x² - 12x + 9 is 0 at x = 1, indicating a critical point, and the second derivative f''(x) = 6x - 12 is negative at x = 1, which means the critical point is a local maximum.",
+      "explanation_incorrect": "The correct answer is A) x = 1. The function f(x) = x³ - 6x² + 9x + 15 does not have a local maximum at x = 3, x = 0, or x = -1. These are not critical points where the first derivative is equal to 0 or undefined. The local maximum occurs at x = 1 where the first derivative is 0 and the second derivative is negative, indicating a local maximum."
+    },
+    {
+      "question_id": "T02.02.Q013",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The absolute maximum of f(x) = x³ − 3x on [−2, 2] is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "−2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The absolute maximum of f(x) = x^3 - 3x on the closed interval [-2, 2] occurs at x = 2, where f(2) = 2^3 - 3(2) = 8 - 6 = 2. This is the largest value the function attains within the given interval.",
+      "explanation_incorrect": "Option A is correct because the function f(x) = x^3 - 3x has a critical point at x = 0, where the derivative f'(x) = 3x^2 - 3 = 0. However, evaluating the function at this critical point gives f(0) = 0, which is not the absolute maximum. The absolute maximum occurs at the endpoint x = 2, where f(2) = 2^3 - 3(2) = 8 - 6 = 2."
+    },
+    {
+      "question_id": "T02.02.Q014",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "A ladder 5 m long leans against a wall. The bottom slides away at 2 m/s. When the bottom is 4 m from the wall, the rate at which the top slides down is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8/3 m/s"
+        },
+        {
+          "id": "B",
+          "text": "3/8 m/s"
+        },
+        {
+          "id": "C",
+          "text": "2 m/s"
+        },
+        {
+          "id": "D",
+          "text": "4/3 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 8/3 m/s. This can be calculated using the related rates concept, where we apply the chain rule to find how the rate of change of the top of the ladder is related to the rate of change of the bottom sliding away from the wall.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the related rates concept. Option B) 3/8 m/s is incorrect because it does not correctly use the given information about the ladder length and sliding rate. Option C) 2 m/s is incorrect because it does not account for the changing relationship between the top and bottom of the ladder. Option D) 4/3 m/s is incorrect because it does not properly apply the chain rule to find the rate of change of the top of the ladder."
+    },
+    {
+      "question_id": "T02.02.Q015",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The slope of the tangent to y = x² at x = 3 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The slope of the tangent line to the function y = x^2 at the point (3, 9) is given by the derivative of the function at x = 3, which is 2x = 2(3) = 6. Therefore, the correct answer is B) 6.",
+      "explanation_incorrect": "The incorrect options do not correctly represent the slope of the tangent line. Option A) 3 is the value of the function at x = 3, not the slope. Option C) 9 is the value of the function, not the slope. Option D) 2 is the incorrect derivative, as the derivative of y = x^2 is 2x, which is 6 when evaluated at x = 3."
+    },
+    {
+      "question_id": "T02.02.Q016",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The equation of the tangent to the curve y = x³ − 3x + 1 at x = 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = −1"
+        },
+        {
+          "id": "B",
+          "text": "y = 0"
+        },
+        {
+          "id": "C",
+          "text": "y = −1 (horizontal line)"
+        },
+        {
+          "id": "D",
+          "text": "y + 1 = 0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The equation of the tangent to the curve y = x³ - 3x + 1 at x = 1 is y = -1. This is because the slope of the tangent line is the derivative of the function at x = 1, which is f'(1) = -1. Therefore, the equation of the tangent line is y = -1(x - 1) + 1 = -1.",
+      "explanation_incorrect": "The correct answer is option A) y = -1. This is because the slope of the tangent line is the derivative of the function at x = 1, which is f'(1) = -1. The equation of a straight line with slope m and passing through the point (x1, y1) is y = m(x - x1) + y1. Substituting the values, we get the equation of the tangent as y = -1(x - 1) + 1 = -1."
+    },
+    {
+      "question_id": "T02.02.Q017",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "question_text": "The sum of two positive numbers is 20. Their product is maximum when each number is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 and 15"
+        },
+        {
+          "id": "B",
+          "text": "10 and 10"
+        },
+        {
+          "id": "C",
+          "text": "8 and 12"
+        },
+        {
+          "id": "D",
+          "text": "1 and 19"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of two positive numbers is 20, and their product is maximum when the two numbers are equal, i.e., 10 and 10. This is because the product of two positive numbers is maximized when they are equal, based on the properties of derivatives and optimisation.",
+      "explanation_incorrect": "The correct answer is B) 10 and 10. This is because the product of two positive numbers is maximized when they are equal, as shown by the application of calculus. The other options do not satisfy this condition, as the numbers are not equal."
+    },
+    {
+      "question_id": "T02.02.Q018",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "question_text": "A rectangular plot is to be fenced on three sides using 100 m of fencing (the fourth side is a wall). The dimensions that maximise the area are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 m × 50 m"
+        },
+        {
+          "id": "B",
+          "text": "50 m × 25 m"
+        },
+        {
+          "id": "C",
+          "text": "25 m × 25 m"
+        },
+        {
+          "id": "D",
+          "text": "The answer depends on which side is along the wall; if width is along the wall, then 50 m × 25 m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The dimensions that maximize the area of a rectangular plot with 100 m of fencing on three sides are 25 m × 50 m. This is because the area of the rectangle is given by the formula A = lw, and with a fixed perimeter of 100 m, the maximum area occurs when the length is twice the width.",
+      "explanation_incorrect": "The correct answer is option A, 25 m × 50 m. This is because the area of the rectangle is maximized when the length is twice the width, given a fixed perimeter of 100 m. Option B, 50 m × 25 m, would result in a smaller area compared to option A. Option C, 25 m × 25 m, is not the correct answer as it does not maximize the area. Option D is incorrect because the dimensions that maximize the area do not depend on which side is along the wall; the optimal dimensions are 25 m × 50 m."
+    },
+    {
+      "question_id": "T02.02.Q019",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "An open-top box is made from a square sheet of side 24 cm by cutting equal squares of side x from each corner and folding. The value of x that maximises the volume is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 cm"
+        },
+        {
+          "id": "B",
+          "text": "4 cm"
+        },
+        {
+          "id": "C",
+          "text": "6 cm"
+        },
+        {
+          "id": "D",
+          "text": "8 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is option B) 4 cm. This is because the volume of the box is maximized when the length of the side of the square cut from each corner is 4 cm, which allows for the largest possible box to be formed from the given square sheet.",
+      "explanation_incorrect": "The incorrect options are not the correct answer because they do not represent the side length that maximizes the volume of the box. For example, if the side length of the square cut from each corner is 3 cm (option A), the box will be smaller in size compared to the 4 cm case. Similarly, options C and D would result in a box that is not the largest possible size."
+    },
+    {
+      "question_id": "T02.02.Q020",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A cylinder is inscribed in a sphere of radius R. The maximum volume of the cylinder is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4πR³/(3√3)"
+        },
+        {
+          "id": "B",
+          "text": "2πR³/3"
+        },
+        {
+          "id": "C",
+          "text": "πR³/√3"
+        },
+        {
+          "id": "D",
+          "text": "4πR³/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The maximum volume of the cylinder occurs when its base touches the surface of the sphere at the equator. This maximizes the height of the cylinder, which is the diameter of the sphere. The volume of the cylinder is given by V = πr²h, where r is the radius of the base and h is the height. Since h = 2R and r = R/√3, the maximum volume is 4πR³/(3√3).",
+      "explanation_incorrect": "Option B is incorrect because the volume of a cylinder is given by V = πr²h, where r is the radius of the base and h is the height. The maximum volume occurs when the cylinder's base touches the equator of the sphere, giving h = 2R and r = R/√3, resulting in the correct answer of 4πR³/(3√3). Option C is incorrect because the volume is not πR³/√3, as the height of the cylinder is 2R, not R. Option D is incorrect because the maximum volume is not 4πR³/3, as the radius of the base is R/√3, not R."
+    },
+    {
+      "question_id": "T02.02.Q021",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The volume of a cube is increasing at a rate of 9 cm³/s. When the edge is 10 cm, the rate of increase of the surface area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.6 cm²/s"
+        },
+        {
+          "id": "B",
+          "text": "1.8 cm²/s"
+        },
+        {
+          "id": "C",
+          "text": "0.9 cm²/s"
+        },
+        {
+          "id": "D",
+          "text": "7.2 cm²/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The volume of a cube is given by the formula V = s^3, where s is the edge length. Since the volume is increasing at a rate of 9 cm³/s, the rate of change of the edge length ds/dt can be found using the chain rule, giving ds/dt = 3 cm/s. The surface area of a cube is given by the formula S = 6s^2. Taking the derivative, the rate of change of the surface area is dS/dt = 36s ds/dt = 36(10) 3 = 3.6 cm²/s.",
+      "explanation_incorrect": "The incorrect options B) 1.8 cm²/s, C) 0.9 cm²/s, and D) 7.2 cm²/s do not correctly apply the chain rule to find the rate of change of the surface area. The correct answer A) 3.6 cm²/s is obtained by differentiating the formula for the surface area of a cube with respect to time, using the given rate of change of the volume."
+    },
+    {
+      "question_id": "T02.02.Q022",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The function f(x) = sin(x) − cos(x) is strictly increasing on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, π/4)"
+        },
+        {
+          "id": "B",
+          "text": "(−π/4, 3π/4)"
+        },
+        {
+          "id": "C",
+          "text": "(0, π)"
+        },
+        {
+          "id": "D",
+          "text": "(π/4, 5π/4)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = sin(x) - cos(x) is strictly increasing on the interval (-π/4, 3π/4) because its derivative f'(x) = cos(x) + sin(x) is positive on this interval, meaning the function is increasing.",
+      "explanation_incorrect": "The function f(x) = sin(x) - cos(x) is not strictly increasing on the other intervals provided. On the interval (0, π/4), the derivative f'(x) = cos(x) + sin(x) is negative, so the function is decreasing. On the interval (0, π), the function is not strictly increasing as it has a local maximum at x = π/2. On the interval (π/4, 5π/4), the function is not strictly increasing as it has a local minimum at x = 3π/4."
+    },
+    {
+      "question_id": "T02.02.Q023",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The equation of the normal to the curve y = x² at the point (1, 1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "x + 2y = 3"
+        },
+        {
+          "id": "B",
+          "text": "2x + y = 3"
+        },
+        {
+          "id": "C",
+          "text": "x − 2y = −1"
+        },
+        {
+          "id": "D",
+          "text": "2x − y = 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) x + 2y = 3. This is because the slope of the normal line is the negative reciprocal of the derivative of the function at the point (1, 1), which is -1/2. Therefore, the equation of the normal line is in the form x + 2y = 3.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not represent the equation of the normal line at the point (1, 1). The slope of the normal line is the negative reciprocal of the derivative, which is -1/2. Using this slope, the equation of the normal line can be derived as x + 2y = 3."
+    },
+    {
+      "question_id": "T02.02.Q024",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Among all rectangles of given perimeter P, the one with maximum area is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rectangle with length twice the width"
+        },
+        {
+          "id": "B",
+          "text": "Square"
+        },
+        {
+          "id": "C",
+          "text": "Rectangle with length three times the width"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rectangle with maximum area for a given perimeter is a square. This is because for a fixed perimeter, the length and width of a rectangle are inversely related, and the maximum area occurs when the length and width are equal, i.e., a square.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the rectangle with maximum area. A rectangle with length twice the width or three times the width will not have the maximum area for a given perimeter. The area of a rectangle is maximized when it is a square, not when the length and width have a specific ratio."
+    },
+    {
+      "question_id": "T02.02.Q025",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "question_text": "f(x) = eˣ is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing for x > 0 only"
+        },
+        {
+          "id": "B",
+          "text": "Decreasing for all x"
+        },
+        {
+          "id": "C",
+          "text": "Increasing for all x ∈ ℝ"
+        },
+        {
+          "id": "D",
+          "text": "Neither increasing nor decreasing"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function f(x) = e^x is increasing for all real numbers x. This is because the derivative f'(x) = e^x is positive for all x, so the function is increasing everywhere.",
+      "explanation_incorrect": "Option C is the correct answer. The function f(x) = e^x is an exponential function, and the derivative f'(x) = e^x is positive for all real numbers x. This means the function is increasing for all x, so option C is the correct choice."
+    },
+    {
+      "question_id": "T02.02.Q026",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "question_text": "A stone is thrown vertically upward with s(t) = 40t − 5t² metres. The velocity at t = 3 seconds is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 m/s"
+        },
+        {
+          "id": "B",
+          "text": "−10 m/s"
+        },
+        {
+          "id": "C",
+          "text": "25 m/s"
+        },
+        {
+          "id": "D",
+          "text": "−30 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 10 m/s. The given function s(t) = 40t - 5t^2 represents the position of the stone at time t. The velocity at any time t is given by the derivative of this function, which is v(t) = 40 - 10t. Substituting t = 3 seconds, we get v(3) = 40 - 10(3) = 10 m/s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the velocity calculated from the given function. Option B) -10 m/s is incorrect because the velocity is positive (upwards) at t = 3 seconds. Option C) 25 m/s is incorrect because it does not match the calculated velocity of 10 m/s. Option D) -30 m/s is incorrect because the velocity cannot be negative at t = 3 seconds, as the stone is still moving upwards at that time."
+    },
+    {
+      "question_id": "T02.02.Q027",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The minimum value of f(x) = x + 1/x for x > 0 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1/2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The minimum value of f(x) = x + 1/x occurs when the derivative f'(x) = 1 - 1/x^2 is equal to 0. Solving this, we get x = 1, which gives the minimum value of 2.",
+      "explanation_incorrect": "Option B is the correct answer. To find the minimum value of the function f(x) = x + 1/x, we need to find the critical points where the derivative is equal to 0. Differentiating the function, we get f'(x) = 1 - 1/x^2. Setting this equal to 0 and solving, we get x = 1. Substituting this value back into the original function gives the minimum value of 2."
+    },
+    {
+      "question_id": "T02.02.Q028",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "question_text": "The function f(x) = ln(x) is increasing on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(−∞, ∞)"
+        },
+        {
+          "id": "B",
+          "text": "(0, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(1, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(−∞, 0)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The function f(x) = ln(x) is increasing on the interval (0, ∞) because its derivative f'(x) = 1/x is positive for all x > 0, meaning the function is increasing in that domain.",
+      "explanation_incorrect": "The function f(x) = ln(x) is not increasing on the entire real line (−∞, ∞) because it is defined only for positive values of x, i.e., x > 0. It is also not increasing on the interval (−∞, 0) or (1, ∞) as the derivative f'(x) = 1/x is positive only for x > 0, meaning the function is increasing only on the interval (0, ∞)."
+    },
+    {
+      "question_id": "T02.02.Q029",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The point on the curve y = x² nearest to the point (0, 5) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(0, 0)"
+        },
+        {
+          "id": "B",
+          "text": "(√2, 2)"
+        },
+        {
+          "id": "C",
+          "text": "(3, 9)"
+        },
+        {
+          "id": "D",
+          "text": "(√(9/2), 9/2)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The point on the curve y = x² nearest to the point (0, 5) is (√(9/2), 9/2) because this is the point on the parabola that minimizes the distance from (0, 5). The derivative f'(x) = 2x helps us find the critical point, which is the point of minimum distance.",
+      "explanation_incorrect": "Option D is correct because the point on the curve y = x² that is closest to (0, 5) can be found by minimizing the distance function d = √[(x-0)² + (y-5)²]. Using calculus, we can find the critical point of this distance function, which is (√(9/2), 9/2). The other options do not represent the point of minimum distance."
+    },
+    {
+      "question_id": "T02.02.Q030",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The side of an equilateral triangle is increasing at 2 cm/s. The rate of increase of the area when the side is 10 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10√3 cm²/s"
+        },
+        {
+          "id": "B",
+          "text": "5√3 cm²/s"
+        },
+        {
+          "id": "C",
+          "text": "20√3 cm²/s"
+        },
+        {
+          "id": "D",
+          "text": "√3 cm²/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 10√3 cm²/s. The area A of an equilateral triangle is given by A = (√3/4) × s^2, where s is the side length. Taking the derivative with respect to time, we get dA/dt = (√3/2) × s × ds/dt, where ds/dt = 2 cm/s. Substituting s = 10 cm, we get the rate of increase of the area as 10√3 cm²/s.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not correctly apply the formula for the rate of change of the area of an equilateral triangle. The correct formula involves the derivative of the area with respect to the side length, as well as the given rate of change of the side length."
+    },
+    {
+      "question_id": "T02.02.Q031",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A wire of length 36 cm is cut into two pieces. One piece is bent into a square and the other into a circle. For the total area to be minimum, the length of wire for the square should be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "36/(π + 4) × 4"
+        },
+        {
+          "id": "B",
+          "text": "36π/(π + 4)"
+        },
+        {
+          "id": "C",
+          "text": "144/(π + 4)"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 144/(π + 4). This is because the total area is minimized when the length of wire for the square is 144/(π + 4), which gives the optimal split of the wire between the square and the circle.",
+      "explanation_incorrect": "The other options are incorrect because they do not represent the optimal split of the wire. Option A) 36/(π + 4) × 4 would result in a larger total area, Option B) 36π/(π + 4) would not give the minimum total area, and Option D) 18 would not be a valid solution since the total length of wire is 36 cm."
+    },
+    {
+      "question_id": "T02.02.Q032",
+      "type": "mcq",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The tangent to the curve y = eˣ at the point (0, 1) has equation:",
+      "options": [
+        {
+          "id": "A",
+          "text": "y = x + 1"
+        },
+        {
+          "id": "B",
+          "text": "y = x"
+        },
+        {
+          "id": "C",
+          "text": "y = 1"
+        },
+        {
+          "id": "D",
+          "text": "y = eˣ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) y = x + 1. This is because the derivative of the function y = e^x is f'(x) = e^x. At the point (0, 1), the value of the derivative is f'(0) = 1, which gives the slope of the tangent line. The equation of the tangent line is therefore y = 1 + 1(x - 0) = x + 1.",
+      "explanation_incorrect": "The other options are incorrect. Option B) y = x is the equation of the line passing through the origin with slope 1, which is not the tangent line. Option C) y = 1 is the horizontal line passing through the point (0, 1), which is also not the tangent line. Option D) y = e^x is the equation of the curve itself, not the tangent line."
+    },
+    {
+      "question_id": "T02.02.Q033",
+      "type": "mcq",
+      "concept_id": "T02.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The function f(x) = x/(1 + x·tan(x)) at x = 0 has a local:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maximum"
+        },
+        {
+          "id": "B",
+          "text": "Minimum"
+        },
+        {
+          "id": "C",
+          "text": "Neither maximum nor minimum"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The function f(x) = x/(1 + x·tan(x)) has a critical point at x = 0, where the derivative f'(x) is undefined. Since the derivative is not continuous at x = 0, the function does not have a local maximum or minimum at this point.",
+      "explanation_incorrect": "The correct answer is that the function does not have a local maximum or minimum at x = 0. This is because the derivative f'(x) is undefined at x = 0, indicating that the function is not differentiable at that point. When a function is not differentiable at a critical point, it cannot be classified as having a local maximum or minimum there."
+    },
+    {
+      "question_id": "T02.02.Q034",
+      "type": "mcq",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "question_text": "A particle moves along y = x² + 1. The x-coordinate increases at 3 units/s. When x = 1, the rate of change of y is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 units/s"
+        },
+        {
+          "id": "B",
+          "text": "6 units/s"
+        },
+        {
+          "id": "C",
+          "text": "9 units/s"
+        },
+        {
+          "id": "D",
+          "text": "2 units/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 6 units/s. This is because the rate of change of y is the derivative dy/dx, which is equal to 2x. When x = 1, dy/dx = 2(1) = 2 units/s. Since the x-coordinate is increasing at 3 units/s, the rate of change of y is 2 × 3 = 6 units/s.",
+      "explanation_incorrect": "The incorrect answer is A) 3 units/s. This is wrong because the rate of change of y is the derivative dy/dx, which depends on the value of x. When x = 1, the function is y = x^2 + 1, so dy/dx = 2x = 2(1) = 2 units/s. To find the overall rate of change of y, we need to multiply this by the rate of change of x, which is 3 units/s, giving 2 × 3 = 6 units/s."
+    },
+    {
+      "question_id": "T02.02.Q035",
+      "type": "mcq",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "question_text": "The maximum area of a rectangle inscribed in a circle of radius r is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "r²"
+        },
+        {
+          "id": "B",
+          "text": "2r²"
+        },
+        {
+          "id": "C",
+          "text": "πr²"
+        },
+        {
+          "id": "D",
+          "text": "4r²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum area of a rectangle inscribed in a circle of radius r is 2r², because the dimensions of the rectangle must be r and r to maximize the area while fitting within the circle.",
+      "explanation_incorrect": "The correct answer is B) 2r². The maximum area of an inscribed rectangle is achieved when its sides are equal, i.e., the rectangle is a square. The side length of the square is equal to the radius r, so the area is 2r². Option A) r² would be the area of the inscribed square, which is not the maximum. Option C) πr² is the area of the entire circle, and Option D) 4r² is too large to be the area of the inscribed rectangle."
+    },
+    {
+      "question_id": "T02.02.Q036",
+      "type": "true_false",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "If f'(x) > 0 for all x in an interval, then f is increasing on that interval.",
+      "correct_answer": true,
+      "explanation_correct": "If the derivative f'(x) is positive for all values of x in an interval, then the function f(x) is increasing on that interval. This is because a positive derivative means the function is increasing at every point in the interval.",
+      "explanation_incorrect": "If f'(x) > 0 for all x in an interval, it does not necessarily mean that f is decreasing on that interval. In fact, the correct statement is that f is increasing on that interval. A positive derivative indicates the function is increasing, not decreasing, at every point in the given interval."
+    },
+    {
+      "question_id": "T02.02.Q037",
+      "type": "true_false",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "Every critical point of a function is either a local maximum or a local minimum.",
+      "correct_answer": false,
+      "explanation_correct": "Not every critical point of a function is necessarily a local maximum or local minimum. A critical point occurs where the first derivative is equal to zero or undefined. However, there are also critical points known as points of inflection, where the function changes from concave up to concave down (or vice versa), and the first derivative test cannot classify them as local maxima or minima.",
+      "explanation_incorrect": "The statement is false because there are critical points that are not local maxima or minima. At a critical point, the first derivative is equal to zero or undefined. However, some critical points are points of inflection, where the function changes from increasing to decreasing (or vice versa), and the first derivative test cannot classify them as local maxima or minima. In such cases, the second derivative test is needed to determine the nature of the critical point."
+    },
+    {
+      "question_id": "T02.02.Q038",
+      "type": "true_false",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The tangent line and the normal line at any point on a curve are perpendicular to each other.",
+      "correct_answer": true,
+      "explanation_correct": "The tangent line and the normal line at any point on a curve are perpendicular to each other because the tangent line has slope f'(x), while the normal line has slope -1/f'(x), and the product of these two slopes is -1, indicating perpendicular lines.",
+      "explanation_incorrect": "The tangent line and the normal line at a point on a curve are not always parallel. The tangent line has slope f'(x), and the normal line has slope -1/f'(x), which means they are perpendicular to each other. This is because the product of the slopes of perpendicular lines is -1."
+    },
+    {
+      "question_id": "T02.02.Q039",
+      "type": "true_false",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "question_text": "The derivative dy/dx represents the instantaneous rate of change of y with respect to x.",
+      "correct_answer": true,
+      "explanation_correct": "The derivative dy/dx represents the instantaneous rate of change of y with respect to x, meaning it shows how quickly y is changing at a particular point in time as x changes. This is the definition of the derivative, which captures the local slope of the function.",
+      "explanation_incorrect": "The statement is true. The derivative dy/dx represents the instantaneous rate of change of y with respect to x, not the average rate of change. The derivative gives the exact slope of the tangent line at a point, whereas the average rate of change over an interval would be the slope of the secant line connecting two points. The derivative is the more precise and useful quantity for analyzing how a function is changing."
+    },
+    {
+      "question_id": "T02.02.Q040",
+      "type": "true_false",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "On a closed interval [a, b], the absolute maximum of a continuous function always occurs at a critical point and never at an endpoint.",
+      "correct_answer": false,
+      "explanation_correct": "The statement is false because the absolute maximum of a continuous function on a closed interval [a, b] can occur either at a critical point or at one of the endpoints, a or b. The absolute maximum does not necessarily have to occur at a critical point.",
+      "explanation_incorrect": "The statement is incorrect because the absolute maximum of a continuous function on a closed interval [a, b] can occur at a critical point or at an endpoint. The absolute maximum is not restricted to only critical points. It is possible for the absolute maximum to occur at an endpoint of the interval, especially if the function is increasing or decreasing on the entire interval."
+    },
+    {
+      "question_id": "T02.02.Q041",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The rate of change of y = x² + 3x at x = 2 is ___.",
+      "correct_answer": "7",
+      "explanation_correct": "To find the rate of change of y = x² + 3x at x = 2, we need to take the derivative. The derivative of x² is 2x, and the derivative of 3x is 3. Substituting x = 2, we get the rate of change as 2(2) + 3 = 7.",
+      "explanation_incorrect": "The accepted answer format is a single number. The incorrect answer might be obtained by not applying the chain rule correctly to find the derivative. The correct steps are: y = x² + 3x, so dy/dx = 2x + 3. Substituting x = 2, we get dy/dx = 2(2) + 3 = 7."
+    },
+    {
+      "question_id": "T02.02.Q042",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f(x) = 3x + 5 is ___ (increasing/decreasing) on all of ℝ.",
+      "correct_answer": "increasing",
+      "explanation_correct": "The function f(x) = 3x + 5 is increasing on all of ℝ because its derivative f'(x) = 3 is positive for all real numbers x. This means the function is increasing everywhere, as the rate of change is always positive.",
+      "explanation_incorrect": "The function f(x) = 3x + 5 is not decreasing on all of ℝ. This is because the derivative f'(x) = 3 is positive for all real numbers x, which means the function is increasing everywhere. For a function to be decreasing, its derivative must be negative, but this is not the case for the given function."
+    },
+    {
+      "question_id": "T02.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The local minimum value of f(x) = x² − 4x + 7 is ___.",
+      "correct_answer": "3",
+      "explanation_correct": "The function f(x) = x^2 - 4x + 7 is a quadratic function. To find the local minimum, we need to find the critical point by taking the derivative f'(x) = 2x - 4 and setting it equal to 0. Solving this gives x = 2, which is the critical point. Evaluating the function at this point, we get f(2) = 3, which is the local minimum value.",
+      "explanation_incorrect": "The incorrect answer would be to think that the local minimum occurs at x = 0. This is not correct because the derivative f'(x) = 2x - 4 is not equal to 0 at x = 0. The correct local minimum value is 3, which occurs at the critical point x = 2 where the derivative is equal to 0."
+    },
+    {
+      "question_id": "T02.02.Q044",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "The slope of the normal to y = x³ at x = 1 is ___.",
+      "correct_answer": "−1/3",
+      "explanation_correct": "The slope of the normal to the curve y = x³ at x = 1 is −1/f'(x), where f'(x) is the derivative of the function. Since the derivative of x³ is 3x², the derivative at x = 1 is 3(1)² = 3. Therefore, the slope of the normal is −1/3.",
+      "explanation_incorrect": "The correct answer is −1/3. To find the slope of the normal, we need to find the slope of the tangent line first. The slope of the tangent line is given by the derivative of the function, f'(x). In this case, the function is y = x³, so the derivative is f'(x) = 3x². Evaluating the derivative at x = 1 gives f'(1) = 3. The slope of the normal is the negative reciprocal of the slope of the tangent, which is −1/3."
+    },
+    {
+      "question_id": "T02.02.Q045",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The maximum value of the function f(x) = sin(x) + cos(x) is ___.",
+      "correct_answer": "√2",
+      "explanation_correct": "The maximum value of the function f(x) = sin(x) + cos(x) is √2 because the sum of the squares of the coefficients of sin(x) and cos(x) is 1, which means the function has a maximum value of √(1^2 + 1^2) = √2.",
+      "explanation_incorrect": "The incorrect answer would be to say the maximum value is 2. This is wrong because the function f(x) = sin(x) + cos(x) has a maximum value when sin(x) = 1 and cos(x) = 1, which gives a maximum value of 1 + 1 = 2. However, the correct maximum value is √2 since the sum of the squares of the coefficients is 1."
+    },
+    {
+      "question_id": "T02.02.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The function f(x) = x³ − 12x is increasing on the intervals (−∞, ___) ∪ (___, ∞).",
+      "correct_answer": "−2, 2",
+      "explanation_correct": "The function f(x) = x³ - 12x is increasing on the intervals (-∞, -2) and (2, ∞) because its derivative f'(x) = 3x² - 12 is positive on these intervals, indicating the function is increasing.",
+      "explanation_incorrect": "The correct answer is (-∞, -2) ∪ (2, ∞). This is because the derivative f'(x) = 3x² - 12 is positive for x < -2 and x > 2, indicating the function is increasing on those intervals. The function is decreasing on the interval [-2, 2] where the derivative is negative."
+    },
+    {
+      "question_id": "T02.02.Q047",
+      "type": "fill_blank",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "question_text": "If the area of a circle is increasing at 10 cm²/s, then when the radius is 5 cm, the rate of increase of the radius is ___ cm/s.",
+      "correct_answer": "1/π",
+      "explanation_correct": "The correct answer is 1/π because the rate of change of the radius is equal to the rate of change of the area divided by the circumference of the circle. Since the area is increasing at 10 cm²/s and the radius is 5 cm, the circumference is 2πr = 10π cm. Therefore, the rate of change of the radius is 10 cm²/s divided by 10π cm, which equals 1/π cm/s.",
+      "explanation_incorrect": "The incorrect answer would be to simply divide the rate of change of the area (10 cm²/s) by the radius (5 cm), which would give 2 cm/s. However, this is not correct because the rate of change of the radius is not directly proportional to the rate of change of the area. The correct formula involves dividing the rate of change of the area by the circumference of the circle, which is 2πr, to get the rate of change of the radius."
+    },
+    {
+      "question_id": "T02.02.Q048",
+      "type": "ordering",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to find the local maxima and minima of f(x) using the second derivative test:",
+      "ordering_items": [
+        "Find f'(x) and set f'(x) = 0 to get critical points",
+        "Compute f''(x)",
+        "Evaluate f''(c) at each critical point c",
+        "If f''(c) > 0 then local min; if f''(c) < 0 then local max"
+      ],
+      "correct_answer": [
+        "Find f'(x) and set f'(x) = 0 to get critical points",
+        "Compute f''(x)",
+        "Evaluate f''(c) at each critical point c",
+        "If f''(c) > 0 then local min; if f''(c) < 0 then local max"
+      ],
+      "explanation_correct": "The correct order of steps is crucial because the second derivative test relies on evaluating the second derivative at the critical points found in the previous step. This allows us to classify the critical points as local maxima or minima based on the sign of the second derivative.",
+      "explanation_incorrect": "The steps should be in the order given in the correct answer. Finding the critical points by setting the first derivative equal to zero is the first step, followed by computing the second derivative. Only then can we evaluate the second derivative at each critical point to determine if it is a local maximum or minimum. Skipping any of these steps would lead to an incomplete or incorrect analysis of the function's critical points."
+    },
+    {
+      "question_id": "T02.02.Q049",
+      "type": "ordering",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to solve an applied optimisation problem:",
+      "ordering_items": [
+        "Define the variables and draw a diagram if applicable",
+        "Write the quantity to be optimised as a function of one variable using given constraints",
+        "Find the derivative and set it to zero to find critical points",
+        "Use the second derivative test to confirm maximum/minimum and compute the optimal value"
+      ],
+      "correct_answer": [
+        "Define the variables and draw a diagram if applicable",
+        "Write the quantity to be optimised as a function of one variable using given constraints",
+        "Find the derivative and set it to zero to find critical points",
+        "Use the second derivative test to confirm maximum/minimum and compute the optimal value"
+      ],
+      "explanation_correct": "The correct order of steps is logical because it follows the natural progression of solving an applied optimization problem. First, you need to define the variables and understand the problem setup. Then, you can write the objective function in terms of one variable using the given constraints. The next step is to find the critical points by taking the derivative and setting it to zero. Finally, you can use the second derivative test to confirm if the critical points are local maxima or minima, and compute the optimal value.",
+      "explanation_incorrect": "The incorrect order would be less effective because it skips the crucial first step of defining the variables and understanding the problem setup. Without this foundation, the later steps of writing the objective function, finding the critical points, and confirming the extrema would be more challenging. It's important to establish the problem context before proceeding with the mathematical analysis."
+    },
+    {
+      "question_id": "T02.02.Q050",
+      "type": "ordering",
+      "concept_id": "T02.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to solve a related rates problem:",
+      "ordering_items": [
+        "Identify all given rates and the rate to find",
+        "Write an equation relating the relevant variables",
+        "Differentiate both sides with respect to time t",
+        "Substitute known values and solve for the unknown rate"
+      ],
+      "correct_answer": [
+        "Identify all given rates and the rate to find",
+        "Write an equation relating the relevant variables",
+        "Differentiate both sides with respect to time t",
+        "Substitute known values and solve for the unknown rate"
+      ],
+      "explanation_correct": "The correct order of steps to solve a related rates problem is logical - first identify the given rates and the unknown rate to find, then set up an equation relating the relevant variables, differentiate both sides with respect to time to find the rate of change, and finally substitute the known values to solve for the unknown rate. This systematic approach ensures all necessary information is used to solve the problem.",
+      "explanation_incorrect": "The incorrect order would be to start by differentiating the equation without first identifying the given and unknown rates, or to substitute values before differentiating the equation. This approach is not logical as it skips crucial steps in the problem-solving process. The correct order ensures that the relationship between the variables is properly established and differentiated to find the unknown rate."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 11,
+        "application": 22,
+        "exam_style": 17
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

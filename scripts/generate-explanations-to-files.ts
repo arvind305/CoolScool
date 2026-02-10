@@ -58,6 +58,8 @@ const CLASS_AGE_MAP: Record<number, string> = {
   8: '12-13 year old',
   9: '13-14 year old',
   10: '14-15 year old',
+  11: '15-16 year old',
+  12: '16-17 year old',
 };
 
 const DATA_DIR = path.join(__dirname, '..', 'questions', 'data');

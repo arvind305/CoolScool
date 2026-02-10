@@ -1,0 +1,1202 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "ICSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T03.01",
+  "topic_name": "Vectors",
+  "canonical_explanation": {
+    "text": "Vectors are quantities that have both magnitude and direction, represented as directed line segments. In 3D, a vector is expressed in component form as a = a₁i + a₂j + a₃k, where i, j, k are unit vectors along the x, y, z axes. The magnitude is |a| = √(a₁² + a₂² + a₃²). Direction cosines cos α, cos β, cos γ satisfy l² + m² + n² = 1. Vector addition follows the triangle and parallelogram laws. The scalar (dot) product a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a||b|cos θ, giving the angle between vectors and projections (projection of a on b = a · b / |b|). The vector (cross) product a × b = |a||b|sin θ n̂, computed using the determinant form with i, j, k, gives a vector perpendicular to both a and b. The magnitude |a × b| equals the area of the parallelogram with sides a and b, and (1/2)|a × b| is the area of the triangle. The scalar triple product a · (b × c) gives the volume of the parallelepiped; three vectors are coplanar if and only if their scalar triple product is zero.",
+    "rules": [
+      "The dot product a · b = |a||b|cos θ; vectors are perpendicular if and only if a · b = 0.",
+      "The cross product a × b = |a||b|sin θ n̂ and |a × b| gives the area of the parallelogram formed by a and b.",
+      "Three vectors a, b, c are coplanar if and only if their scalar triple product a · (b × c) = 0."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.01.Q001",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The magnitude of the vector a = 2i + 3j + 6k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "11"
+        },
+        {
+          "id": "C",
+          "text": "√49 = 7"
+        },
+        {
+          "id": "D",
+          "text": "49"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The magnitude of a vector is calculated as the square root of the sum of the squares of its components. For the given vector a = 2i + 3j + 6k, the magnitude is |a| = √(2² + 3² + 6²) = √49 = 7. Therefore, the correct answer is option A.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the magnitude of the given vector. Option B incorrectly takes the sum of the absolute values of the components, while option D incorrectly squares the sum of the components. Option C correctly calculates the square root, but does not consider the actual values of the components. To find the magnitude, you need to find the square root of the sum of the squares of the components, which results in the correct answer of 7."
+    },
+    {
+      "question_id": "T03.01.Q002",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A unit vector is a vector whose magnitude is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "Any value"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A unit vector is a vector with a magnitude of exactly 1. This means the length or size of the vector is 1 unit. The correct answer is therefore option B, which states that the magnitude of a unit vector is 1.",
+      "explanation_incorrect": "The other options are not correct because a unit vector cannot have a magnitude of 0 (option A), -1 (option C), or any other arbitrary value. A unit vector, by definition, has a magnitude of exactly 1, which corresponds to option B."
+    },
+    {
+      "question_id": "T03.01.Q003",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The position vector of the point (3, −2, 5) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3i + 2j + 5k"
+        },
+        {
+          "id": "B",
+          "text": "3i − 2j + 5k"
+        },
+        {
+          "id": "C",
+          "text": "−3i + 2j − 5k"
+        },
+        {
+          "id": "D",
+          "text": "3i − 2j − 5k"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The position vector of a point (x, y, z) is represented as xi + yj + zk, where i, j, k are the unit vectors along the x, y, z axes. For the given point (3, -2, 5), the position vector is 3i - 2j + 5k, which matches option B.",
+      "explanation_incorrect": "Option A (3i + 2j + 5k) is incorrect because the y-coordinate of the point is -2, not 2. Option C (-3i + 2j - 5k) and D (3i - 2j - 5k) are also incorrect as they do not correctly represent the given point's coordinates."
+    },
+    {
+      "question_id": "T03.01.Q004",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "The unit vector in the direction of a = 3i + 4k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(3i + 4k)/5"
+        },
+        {
+          "id": "B",
+          "text": "(3i + 4k)/7"
+        },
+        {
+          "id": "C",
+          "text": "(3i + 4j)/5"
+        },
+        {
+          "id": "D",
+          "text": "(3i + 4k)/√7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The unit vector in the direction of a = 3i + 4k has magnitude |a| = √(3² + 0² + 4²) = 5. The unit vector is obtained by dividing the vector by its magnitude, which gives (3i + 4k)/5.",
+      "explanation_incorrect": "Option B (3i + 4k)/7 is incorrect because the magnitude of a = 3i + 4k is 5, not 7. Option C (3i + 4j)/5 is incorrect because the vector a does not have a j component. Option D (3i + 4k)/√7 is incorrect because the magnitude of a is 5, not √7."
+    },
+    {
+      "question_id": "T03.01.Q005",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If a = 2i + j − k and b = i − 3j + 2k, then a + b equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3i − 2j + k"
+        },
+        {
+          "id": "B",
+          "text": "3i + 4j − 3k"
+        },
+        {
+          "id": "C",
+          "text": "i + 4j − 3k"
+        },
+        {
+          "id": "D",
+          "text": "3i − 2j − k"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 3i - 2j + k. To find a + b, we simply add the corresponding components of the two vectors: (2i + j - k) + (i - 3j + 2k) = 3i - 2j + k.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not represent the vector sum of a and b. Option B) 3i + 4j - 3k is incorrect because it has the wrong signs for the j and k components. Option C) i + 4j - 3k is incorrect because it has the wrong signs for the i and k components. Option D) 3i - 2j - k is incorrect because it has the wrong sign for the k component."
+    },
+    {
+      "question_id": "T03.01.Q006",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If a = i + 2j + 3k, then 3a equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "i + 2j + 9k"
+        },
+        {
+          "id": "B",
+          "text": "3i + 6j + 9k"
+        },
+        {
+          "id": "C",
+          "text": "3i + 2j + 3k"
+        },
+        {
+          "id": "D",
+          "text": "i + 6j + 3k"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 3i + 6j + 9k. This is because when we multiply a vector a = i + 2j + 3k by a scalar 3, each component of the vector is multiplied by 3, giving us 3a = 3i + 6j + 9k.",
+      "explanation_incorrect": "Option A) i + 2j + 9k is incorrect because when we multiply a vector by a scalar, all the components of the vector are multiplied by that scalar. Option C) 3i + 2j + 3k is incorrect because the third component should be 9k, not 3k. Option D) i + 6j + 3k is incorrect because the first component should be 3i, not i."
+    },
+    {
+      "question_id": "T03.01.Q007",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "If the direction cosines of a vector are l = 1/3, m = 2/3, n = 2/3, the magnitude of the vector whose components are 1, 2, 2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "√5"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 3. The direction cosines of a vector are the cosines of the angles between the vector and the x, y, z axes. Given that l = 1/3, m = 2/3, n = 2/3, we can use the formula |a| = √(a₁² + a₂² + a₃²) to calculate the magnitude of the vector with components 1, 2, 2. Plugging in the values, we get |a| = √(1² + 2² + 2²) = √9 = 3.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for calculating the magnitude of a vector given its components. Option A) 1 is incorrect because the magnitude of a vector with components 1, 2, 2 is not 1. Option C) √5 is incorrect because the magnitude is not equal to the square root of 5. Option D) 9 is incorrect because the magnitude is not equal to 9."
+    },
+    {
+      "question_id": "T03.01.Q008",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The dot product of a = 2i + 3j + k and b = i − j + 2k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "−1"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 1. To calculate the dot product of two vectors a = 2i + 3j + k and b = i - j + 2k, we use the formula a · b = a₁b₁ + a₂b₂ + a₃b₃. Plugging in the values, we get (2 × 1) + (3 × -1) + (1 × 2) = 2 - 3 + 2 = 1.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the actual dot product calculation. Option B) -1 is incorrect because the dot product of the given vectors is positive. Option C) 3 is incorrect because it does not consider the correct sign and magnitude of the individual components. Option D) 7 is incorrect because it does not match the result of the dot product calculation."
+    },
+    {
+      "question_id": "T03.01.Q009",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Two vectors a and b are perpendicular if and only if:",
+      "options": [
+        {
+          "id": "A",
+          "text": "a · b = 1"
+        },
+        {
+          "id": "B",
+          "text": "a · b = 0"
+        },
+        {
+          "id": "C",
+          "text": "a × b = 0"
+        },
+        {
+          "id": "D",
+          "text": "|a| = |b|"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two vectors are perpendicular if their dot product is zero, because the dot product of two vectors gives the cosine of the angle between them. When the vectors are perpendicular, the angle between them is 90 degrees, and the cosine of 90 degrees is 0.",
+      "explanation_incorrect": "Option A is incorrect because a dot product of 1 means the vectors are parallel, not perpendicular. Option C is incorrect because a cross product of 0 means the vectors are parallel, not perpendicular. Option D is incorrect because the magnitudes of the vectors being equal does not necessarily mean they are perpendicular."
+    },
+    {
+      "question_id": "T03.01.Q010",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "The angle between a = i + j + k and b = i − j + k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "cos⁻¹(1/3)"
+        },
+        {
+          "id": "B",
+          "text": "cos⁻¹(2/3)"
+        },
+        {
+          "id": "C",
+          "text": "60°"
+        },
+        {
+          "id": "D",
+          "text": "90°"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The angle between the two vectors a = i + j + k and b = i - j + k is cos⁻¹(1/3) because the dot product of the two vectors is (1 + (-1) + 1) = 1, and the magnitudes of the vectors are both √3. The angle between them is then given by cos⁻¹(1/√3) = cos⁻¹(1/3).",
+      "explanation_incorrect": "The correct answer is A) cos⁻¹(1/3), not B) cos⁻¹(2/3) or C) 60°. The angle between the vectors a = i + j + k and b = i - j + k can be found using the formula a · b = |a||b|cos(θ), where θ is the angle between the vectors. Substituting the values, we get 1 = √3 × √3 × cos(θ), which gives cos(θ) = 1/3, and hence the angle θ = cos⁻¹(1/3)."
+    },
+    {
+      "question_id": "T03.01.Q011",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "The projection of a = 3i + j − 2k on b = i + 2j + 2k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/3"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "5/3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The projection of vector a on vector b is given by the formula a · b / |b|. Plugging in the values, we get (3i + j - 2k) · (i + 2j + 2k) / |i + 2j + 2k| = 1/3. This is the correct answer.",
+      "explanation_incorrect": "The incorrect answers do not correctly apply the formula for vector projection. Option B (1) is incorrect because it does not account for the magnitudes of the vectors. Option C (3) is incorrect because it does not consider the angle between the vectors. Option D (5/3) is incorrect because it does not correctly compute the projection using the formula."
+    },
+    {
+      "question_id": "T03.01.Q012",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The cross product i × j equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "i"
+        },
+        {
+          "id": "B",
+          "text": "j"
+        },
+        {
+          "id": "C",
+          "text": "k"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The cross product of the unit vectors i and j gives the unit vector k, which is perpendicular to both i and j. This is because the cross product produces a vector that is orthogonal to the two input vectors, following the right-hand rule.",
+      "explanation_incorrect": "The cross product of two vectors represents a new vector that is perpendicular to both of the original vectors. Since i, j, and k are the unit vectors along the x, y, and z axes respectively, the cross product of i and j will result in the unit vector k, which points in the positive z-direction."
+    },
+    {
+      "question_id": "T03.01.Q013",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The cross product of any vector with itself (a × a) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "|a|²"
+        },
+        {
+          "id": "B",
+          "text": "a"
+        },
+        {
+          "id": "C",
+          "text": "0 (zero vector)"
+        },
+        {
+          "id": "D",
+          "text": "2a"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The cross product of a vector with itself (a × a) is always equal to the zero vector (0). This is because the cross product produces a vector that is perpendicular to both the original vectors, and when the vectors are the same, the result is a vector of zero magnitude.",
+      "explanation_incorrect": "The cross product of a vector with itself (a × a) is not equal to |a|², a, or 2a. The cross product of two identical vectors is always the zero vector (0) because the vectors are pointing in the same direction, so the resulting vector has zero magnitude. Therefore, the correct answer is option C."
+    },
+    {
+      "question_id": "T03.01.Q014",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "The cross product of a = i + 2j + 3k and b = 2i + j − k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−5i + 7j − 3k"
+        },
+        {
+          "id": "B",
+          "text": "5i − 7j + 3k"
+        },
+        {
+          "id": "C",
+          "text": "−5i − 7j − 3k"
+        },
+        {
+          "id": "D",
+          "text": "5i + 7j − 3k"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is option A, -5i + 7j - 3k. This is because the cross product a × b can be computed using the determinant formula with the vector components, which gives the result -5i + 7j - 3k.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the result of computing the cross product a × b using the determinant formula. The correct formula is a × b = (a₂b₃ - a₃b₂)i - (a₁b₃ - a₃b₁)j + (a₁b₂ - a₂b₁)k, which simplifies to -5i + 7j - 3k."
+    },
+    {
+      "question_id": "T03.01.Q015",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "The area of the parallelogram with adjacent sides a = i + 2j + 3k and b = 3i − 2j + k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(64 + 64 + 64) = 8√3"
+        },
+        {
+          "id": "B",
+          "text": "|a × b|"
+        },
+        {
+          "id": "C",
+          "text": "8√3"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The area of the parallelogram with adjacent sides a and b is given by the magnitude of the vector cross product |a × b|. This represents the area of the parallelogram, and is the correct answer according to the question.",
+      "explanation_incorrect": "The area of the parallelogram is not √(64 + 64 + 64) = 8√3, as this only represents the magnitude of the vector a and not the area. The scalar triple product a · (b × c) would give the volume of the parallelepiped, not the area of the parallelogram."
+    },
+    {
+      "question_id": "T03.01.Q016",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "If the position vectors of points A and B are 2i + 3j − k and 5i + j + 2k, the vector AB is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3i − 2j + 3k"
+        },
+        {
+          "id": "B",
+          "text": "−3i + 2j − 3k"
+        },
+        {
+          "id": "C",
+          "text": "7i + 4j + k"
+        },
+        {
+          "id": "D",
+          "text": "3i + 2j − 3k"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The vector AB is the difference between the position vectors of B and A. To find the vector AB, we simply subtract the vector of A from the vector of B, which gives us 3i - 2j + 3k.",
+      "explanation_incorrect": "The vector AB is not 7i + 4j + k, as this would be the sum of the position vectors of A and B, not their difference. The vector AB is also not -3i + 2j - 3k, as this is the negative of the correct answer. The correct answer is 3i - 2j + 3k, which is the vector obtained by subtracting the position vector of A from the position vector of B."
+    },
+    {
+      "question_id": "T03.01.Q017",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If |a| = 3, |b| = 4, and a · b = 6, then the angle between a and b is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30°"
+        },
+        {
+          "id": "B",
+          "text": "60°"
+        },
+        {
+          "id": "C",
+          "text": "45°"
+        },
+        {
+          "id": "D",
+          "text": "90°"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 60°. This can be calculated using the formula for the dot product: a · b = |a||b|cos θ. Rearranging this, we get cos θ = (a · b) / (|a||b|). Plugging in the given values, we get cos θ = 6 / (3 * 4) = 0.5, which gives θ = 60°.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not match the given information. Option A) 30° is incorrect because the angle between a and b cannot be 30° if their dot product is 6. Option C) 45° is also incorrect for the same reason. Option D) 90° is incorrect because the angle between a and b cannot be 90° if their dot product is positive (6)."
+    },
+    {
+      "question_id": "T03.01.Q018",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The area of the triangle with vertices A(1, 1, 1), B(1, 2, 3), and C(2, 3, 1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√21/2"
+        },
+        {
+          "id": "B",
+          "text": "√21"
+        },
+        {
+          "id": "C",
+          "text": "√42/2"
+        },
+        {
+          "id": "D",
+          "text": "√42"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The area of a triangle can be calculated using the vector cross product formula: A = (1/2)|a x b|, where a and b are the vectors representing two sides of the triangle. In this case, the vectors are AB = (0, 1, 2) and AC = (1, 2, 0), so the area is (1/2)|(0, 1, 2) x (1, 2, 0)| = √42/2.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the area of the triangle. Option A calculates the magnitude of the vector AB, not the area. Option B calculates the magnitude of the vector AB, which is not the area. Option D calculates the magnitude of the vector AB, which is also not the area of the triangle. The correct option C calculates the area using the vector cross product formula."
+    },
+    {
+      "question_id": "T03.01.Q019",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The scalar triple product a · (b × c) for a = i, b = j, c = k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "−1"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The scalar triple product a · (b × c) is equal to the volume of the parallelepiped formed by the three vectors a, b, and c. Since the vectors i, j, and k are orthogonal unit vectors, their scalar triple product is 1, which represents the unit volume of the parallelepiped.",
+      "explanation_incorrect": "The incorrect options are not correct because the scalar triple product of i, j, and k is not 0, -1, or 3. The correct answer is 1 because the volume of the parallelepiped formed by three orthogonal unit vectors is 1. The scalar triple product gives the signed volume of the parallelepiped, and since the vectors i, j, and k are orthogonal and have unit magnitude, their scalar triple product is 1."
+    },
+    {
+      "question_id": "T03.01.Q020",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If a · (b × c) = 0, then the vectors a, b, c are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mutually perpendicular"
+        },
+        {
+          "id": "B",
+          "text": "Coplanar"
+        },
+        {
+          "id": "C",
+          "text": "Parallel"
+        },
+        {
+          "id": "D",
+          "text": "Unit vectors"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the scalar triple product a · (b × c) is zero, then the vectors a, b, and c are coplanar, meaning they lie in the same plane. This is because the scalar triple product represents the volume of the parallelepiped formed by the three vectors, and if the volume is zero, the vectors are coplanar.",
+      "explanation_incorrect": "The scalar triple product a · (b × c) being zero does not mean the vectors are mutually perpendicular (option A) or parallel (option C). Mutual perpendicularity or parallelism would require additional conditions on the vectors. The scalar triple product being zero simply indicates that the vectors are coplanar, meaning they lie in the same plane. Option D, 'unit vectors', is also incorrect, as the condition a · (b × c) = 0 does not depend on the vectors being unit vectors."
+    },
+    {
+      "question_id": "T03.01.Q021",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "If a = i + j and b = j + k, then |a − b| equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√2"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "√3"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) √2. This is because the vector a - b = (i + j) - (j + k) = i - k, which has a magnitude of √(1² + 0² + (-1)²) = √2.",
+      "explanation_incorrect": "The correct answer is A) √2. The vector a - b can be calculated as (i + j) - (j + k) = i - k, which has a magnitude of √(1² + 0² + (-1)²) = √2. The other options are incorrect because B) 2 is the magnitude of the vector a + b, C) √3 is the magnitude of the vector a, and D) 1 is not the correct magnitude of a - b."
+    },
+    {
+      "question_id": "T03.01.Q022",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If a vector makes equal angles with i, j, and k, then each direction cosine equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/√2"
+        },
+        {
+          "id": "B",
+          "text": "1/√3"
+        },
+        {
+          "id": "C",
+          "text": "1/3"
+        },
+        {
+          "id": "D",
+          "text": "±1/√3"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The direction cosines of a vector that makes equal angles with the i, j, and k unit vectors are given by cos α = cos β = cos γ = ±1/√3. This is because the vector has equal components along the x, y, and z axes, so the magnitude of each component is the same and equal to 1/√3.",
+      "explanation_incorrect": "The correct answer is D) ±1/√3. This is because when a vector makes equal angles with the i, j, and k unit vectors, the direction cosines (cos α, cos β, cos γ) are all equal. The magnitude of each direction cosine is 1/√3 since the vector has equal components along the x, y, and z axes. The sign can be either positive or negative depending on the orientation of the vector."
+    },
+    {
+      "question_id": "T03.01.Q023",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "If a = 2i − j + k and b = i + j − 2k, then a · b equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−1"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) -1. To calculate the dot product of two vectors a and b, we use the formula a · b = a₁b₁ + a₂b₂ + a₃b₃. Substituting the given values, we get a · b = (2)(1) + (-1)(1) + (1)(-2) = 2 - 1 - 2 = -1.",
+      "explanation_incorrect": "The incorrect options are not correct because: B) 0 is wrong since the dot product of the given vectors is not zero. C) 1 is wrong since the dot product is not equal to 1. D) 3 is wrong since the dot product is not equal to 3. The correct answer is A) -1, which is obtained by directly calculating the dot product of the given vectors using the formula."
+    },
+    {
+      "question_id": "T03.01.Q024",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The position vector of the midpoint of the line segment joining points with position vectors a and b is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "(a + b)/2"
+        },
+        {
+          "id": "B",
+          "text": "a + b"
+        },
+        {
+          "id": "C",
+          "text": "(a − b)/2"
+        },
+        {
+          "id": "D",
+          "text": "a − b"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The midpoint of a line segment is the average of the position vectors of the two endpoints. Since the position vectors are a and b, the midpoint is (a + b)/2, which is the correct option A.",
+      "explanation_incorrect": "Option B, a + b, is incorrect because it represents the vector from the origin to the point that is the sum of the position vectors a and b, not the midpoint. Option C, (a - b)/2, is incorrect because it represents half the difference between the position vectors, not the average. Option D, a - b, is incorrect because it represents the vector from the point with position vector b to the point with position vector a, not the midpoint."
+    },
+    {
+      "question_id": "T03.01.Q025",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If |a + b|² = |a|² + |b|², then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "a and b are parallel"
+        },
+        {
+          "id": "B",
+          "text": "a and b are perpendicular"
+        },
+        {
+          "id": "C",
+          "text": "a = b"
+        },
+        {
+          "id": "D",
+          "text": "a = −b"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If |a + b|² = |a|² + |b|², then a and b are perpendicular vectors. This is because the cosine of the angle between two vectors is zero when they are perpendicular, and |a + b|² = |a|² + |b|² + 2|a||b|cos θ, where θ is the angle between a and b.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the given condition. Option A (a and b are parallel) is incorrect because if a and b are parallel, then |a + b|² = (|a| + |b|)² ≠ |a|² + |b|². Option C (a = b) is incorrect because if a = b, then |a + b|² = 4|a|², which is not equal to |a|² + |b|². Option D (a = -b) is incorrect because if a = -b, then |a + b|² = 0, which is not equal to |a|² + |b|²."
+    },
+    {
+      "question_id": "T03.01.Q026",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "If a × b = 0 (zero vector) and a ≠ 0, b ≠ 0, then a and b are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perpendicular"
+        },
+        {
+          "id": "B",
+          "text": "Parallel (or anti-parallel)"
+        },
+        {
+          "id": "C",
+          "text": "Equal"
+        },
+        {
+          "id": "D",
+          "text": "Of equal magnitude"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the cross product of two non-zero vectors a and b is zero, it means the vectors are parallel (or anti-parallel), since the cross product gives a vector perpendicular to both a and b.",
+      "explanation_incorrect": "If a × b = 0, it does not mean a and b are perpendicular, equal, or of equal magnitude. The cross product being zero simply indicates that the vectors are parallel or anti-parallel, meaning they point in the same or opposite directions respectively. The magnitude and direction of the individual vectors do not necessarily have to be the same."
+    },
+    {
+      "question_id": "T03.01.Q027",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The direction cosines l, m, n of a vector satisfy:",
+      "options": [
+        {
+          "id": "A",
+          "text": "l + m + n = 1"
+        },
+        {
+          "id": "B",
+          "text": "l² + m² + n² = 1"
+        },
+        {
+          "id": "C",
+          "text": "l² + m² + n² = 0"
+        },
+        {
+          "id": "D",
+          "text": "|l| + |m| + |n| = 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The direction cosines l, m, n of a vector satisfy the condition l² + m² + n² = 1 because the vector magnitude is defined as √(l² + m² + n²), and for a unit vector, the magnitude is 1.",
+      "explanation_incorrect": "Option B, l² + m² + n² = 1, is the correct answer because the direction cosines represent the projections of the unit vector along the x, y, and z axes. These projections must sum to 1 since the vector has a magnitude of 1. Options A, C, and D do not correctly describe the relationship between the direction cosines."
+    },
+    {
+      "question_id": "T03.01.Q028",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The volume of the parallelepiped with edges a = i + j, b = j + k, c = k + i is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The volume of a parallelepiped is given by the absolute value of the scalar triple product of its three edge vectors. With the given vectors a = i + j, b = j + k, and c = k + i, the scalar triple product is |a · (b × c)| = |1| = 2, so the volume of the parallelepiped is 2 cubic units.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the volume of the parallelepiped. Option A gives the volume as 1, which is incorrect as the scalar triple product is not equal to 1. Option C gives the volume as 4, which is also incorrect as the scalar triple product is not equal to 4. Option D gives the volume as 0, which is incorrect as the scalar triple product is not equal to 0. The correct option B, giving the volume as 2, is the right answer based on the calculation of the scalar triple product of the given edge vectors."
+    },
+    {
+      "question_id": "T03.01.Q029",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If a = i − 2j + 3k and b = 2i + j − k, then the value of λ for which a + λb is perpendicular to a is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "14/3"
+        },
+        {
+          "id": "B",
+          "text": "7/3"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 7/3. This is because for the vector a + λb to be perpendicular to the vector a, their dot product must be zero. So we need to find the value of λ that satisfies a · (a + λb) = 0.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the condition for the vector a + λb to be perpendicular to the vector a. The correct value of λ is 7/3, which makes the dot product a · (a + λb) equal to zero, ensuring that the resultant vector is perpendicular to the original vector a."
+    },
+    {
+      "question_id": "T03.01.Q030",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If |a| = 2, |b| = 3, and |a × b| = 3, then a · b equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "3√3"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "√3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct answer is B) 3√3. This can be derived from the given information using the vector cross product formula: |a × b| = |a||b|sin(θ), where θ is the angle between vectors a and b. Since |a × b| = 3, and |a| = 2 and |b| = 3, we can solve for cos(θ) and then use the dot product formula a · b = |a||b|cos(θ) to find the value of a · b.",
+      "explanation_incorrect": "The other options are incorrect because: A) 3 does not satisfy the given information, C) 6 is too large since |a × b| = 3, and D) √3 is the magnitude of a or b, not their dot product. The key is to use the vector cross product and dot product formulas together to find the correct value of a · b."
+    },
+    {
+      "question_id": "T03.01.Q031",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "Two vectors are collinear if one is a ___ of the other:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sum"
+        },
+        {
+          "id": "B",
+          "text": "Dot product"
+        },
+        {
+          "id": "C",
+          "text": "Scalar multiple"
+        },
+        {
+          "id": "D",
+          "text": "Cross product"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Two vectors are collinear if one is a scalar multiple of the other, meaning that one vector can be obtained by multiplying the other vector by a constant (scalar). This implies that the two vectors point in the same direction, which is the defining property of collinear vectors.",
+      "explanation_incorrect": "The other options are not the correct way to define collinear vectors. Summing two vectors (option A) or taking their dot product (option B) does not necessarily result in collinear vectors. The cross product (option D) gives a vector that is perpendicular to both input vectors, which is the opposite of collinearity."
+    },
+    {
+      "question_id": "T03.01.Q032",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "The work done by a force F = 3i + 4j − 2k in moving an object along displacement d = 2i − j + 3k is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "−4"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "−2"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The work done by a force F = 3i + 4j - 2k in moving an object along displacement d = 2i - j + 3k is -4. This is because the work done is given by the scalar (dot) product of the force and displacement vectors, which equals -4 in this case.",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the work done. The work done is the scalar (dot) product of the force and displacement vectors, which is (3 * 2) + (4 * (-1)) + (-2 * 3) = -4. The correct answer is option A."
+    },
+    {
+      "question_id": "T03.01.Q033",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "The torque (moment of force) is computed using:",
+      "options": [
+        {
+          "id": "A",
+          "text": "r · F (dot product)"
+        },
+        {
+          "id": "B",
+          "text": "r × F (cross product)"
+        },
+        {
+          "id": "C",
+          "text": "|r| + |F|"
+        },
+        {
+          "id": "D",
+          "text": "|r| · |F|"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The torque (moment of force) is computed using the cross product of the position vector r and the force vector F, denoted as r × F. This cross product gives a vector that is perpendicular to both r and F, which represents the rotational effect or torque.",
+      "explanation_incorrect": "The dot product r · F does not give the torque. The torque depends on the magnitude of the force, the distance from the point of application to the axis of rotation, and the angle between the force and the line connecting the axis to the point of application. The cross product r × F captures all these factors to correctly compute the torque."
+    },
+    {
+      "question_id": "T03.01.Q034",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The zero vector has:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Magnitude 0 and a fixed direction"
+        },
+        {
+          "id": "B",
+          "text": "Magnitude 0 and no specific direction"
+        },
+        {
+          "id": "C",
+          "text": "Magnitude 1 and no direction"
+        },
+        {
+          "id": "D",
+          "text": "No magnitude and no direction"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The zero vector has magnitude 0 and no specific direction. Since it has a magnitude of 0, the zero vector does not point in any particular direction.",
+      "explanation_incorrect": "The zero vector does not have a fixed direction, as it is a vector with no length or magnitude. The correct answer is that the zero vector has magnitude 0 and no specific direction. Options A and C are incorrect because the zero vector has no direction, and option D is incorrect because the zero vector does have a magnitude of 0."
+    },
+    {
+      "question_id": "T03.01.Q035",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If a = 2i − j + k, b = i + j − 2k, c = i + 3j − k, then a · (b × c) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "−10"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "−5"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) 10. This is because the scalar triple product a · (b × c) gives the volume of the parallelepiped formed by the three vectors a, b, and c. By calculating the vector cross product b × c and then taking the dot product with a, we get the volume of the 3D shape.",
+      "explanation_incorrect": "The incorrect answers are not correct because they do not represent the volume of the parallelepiped formed by the three vectors a, b, and c. Option A) 0 would mean the three vectors are coplanar, which is not the case here. Option B) -10 and D) -5 are incorrect values for the volume, which should be a positive number."
+    },
+    {
+      "question_id": "T03.01.Q036",
+      "type": "true_false",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The dot product of two perpendicular vectors is always zero.",
+      "correct_answer": true,
+      "explanation_correct": "The dot product of two perpendicular vectors is always zero because the angle between them is 90 degrees. In the formula for dot product, a·b = |a||b|cos(θ), when θ = 90°, cos(90°) = 0, resulting in the dot product being zero.",
+      "explanation_incorrect": "If the vectors are not perpendicular, then the dot product can be non-zero. The dot product formula a·b = |a||b|cos(θ) shows that the dot product depends on the angle θ between the vectors. When the vectors are perpendicular, θ = 90° and cos(90°) = 0, making the dot product zero. However, if the vectors are not perpendicular, the dot product can have a non-zero value."
+    },
+    {
+      "question_id": "T03.01.Q037",
+      "type": "true_false",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The cross product of two vectors is a scalar quantity.",
+      "correct_answer": false,
+      "explanation_correct": "The cross product of two vectors is a vector quantity, not a scalar. The cross product a × b gives a vector that is perpendicular to both a and b, with magnitude |a × b| equal to the area of the parallelogram with sides a and b.",
+      "explanation_incorrect": "The cross product of two vectors is not a scalar quantity. It is a vector quantity that is perpendicular to both the original vectors. The cross product is calculated using the determinant form with the unit vectors i, j, and k, and it gives a vector with a magnitude equal to the area of the parallelogram formed by the two vectors."
+    },
+    {
+      "question_id": "T03.01.Q038",
+      "type": "true_false",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "The dot product is commutative: a · b = b · a.",
+      "correct_answer": true,
+      "explanation_correct": "The dot product is commutative because the order of the vectors does not affect the result. Mathematically, the dot product is defined as a₁b₁ + a₂b₂ + a₃b₃, and this expression is the same regardless of whether we write a · b or b · a.",
+      "explanation_incorrect": "The dot product is not commutative, meaning a · b is not equal to b · a. The dot product is a scalar quantity that depends on both the magnitudes of the vectors and the angle between them. Reversing the order of the vectors would change the angle, and therefore the result of the dot product calculation."
+    },
+    {
+      "question_id": "T03.01.Q039",
+      "type": "true_false",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "The cross product is commutative: a × b = b × a.",
+      "correct_answer": false,
+      "explanation_correct": "The cross product is not commutative. This means that a × b is not equal to b × a. The cross product gives a vector that is perpendicular to both the input vectors, and the direction of this vector depends on the order of the vectors.",
+      "explanation_incorrect": "The cross product is not commutative. This is because the cross product involves the use of the determinant, which changes sign when the order of the vectors is reversed. Specifically, the formula for the cross product is a × b = (a₂b₃ - a₃b₂)i - (a₁b₃ - a₃b₁)j + (a₁b₂ - a₂b₁)k, which clearly shows that the order of the vectors matters."
+    },
+    {
+      "question_id": "T03.01.Q040",
+      "type": "true_false",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For any vector a, the sum of the squares of its direction cosines equals 1.",
+      "correct_answer": true,
+      "explanation_correct": "The sum of the squares of the direction cosines of any vector a equals 1 because the direction cosines represent the projections of the unit vector of the vector a onto the coordinate axes, and the sum of the squares of these projections must be 1 according to the Pythagorean theorem.",
+      "explanation_incorrect": "The statement that the sum of the squares of the direction cosines of any vector a equals 1 is not true. This is because the direction cosines represent the projections of the unit vector of the vector a onto the coordinate axes, and the sum of the squares of these projections must be 1 according to the Pythagorean theorem. If the statement were false, it would imply that the vector a does not have a well-defined direction, which is not the case for any vector."
+    },
+    {
+      "question_id": "T03.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The magnitude of the vector 3i − 4j is ___.",
+      "correct_answer": "5",
+      "explanation_correct": "The magnitude of a vector is calculated using the formula |a| = √(a₁² + a₂² + a₃²), where a₁, a₂, a₃ are the vector's components. In this case, the vector is 3i - 4j, so a₁ = 3, a₂ = -4, and a₃ = 0. Plugging these values into the formula gives |a| = √(3² + (-4)² + 0²) = √(9 + 16 + 0) = √25 = 5.",
+      "explanation_incorrect": "The accepted answer format for this question is a single number, 5. An incorrect explanation would be to say the magnitude is 3 + (-4) = -1. This is wrong because the magnitude of a vector is always a positive number, calculated using the formula |a| = √(a₁² + a₂² + a₃²), not by simply adding the vector components."
+    },
+    {
+      "question_id": "T03.01.Q042",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "i · i = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "The unit vector i points along the positive x-axis, so the dot product of i with itself is 1. This is because any vector dotted with itself gives its magnitude squared, and the magnitude of the unit vector i is 1.",
+      "explanation_incorrect": "The incorrect answer would be 0. However, this is not correct because the unit vector i represents the positive x-axis direction, and the dot product of any vector with itself gives the square of its magnitude. Since the magnitude of the unit vector i is 1, the correct answer is 1."
+    },
+    {
+      "question_id": "T03.01.Q043",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "j × i = ___.",
+      "correct_answer": "−k",
+      "explanation_correct": "The correct answer is -k because the cross product of two vectors is defined as a vector that is perpendicular to both of the original vectors. Since the unit vectors i and j are perpendicular to each other, their cross product will be a vector in the direction of the third unit vector k, but with a negative sign to indicate the opposite direction.",
+      "explanation_incorrect": "The incorrect answer would be k, as some students may mistakenly think that the cross product of i and j should give the unit vector k. However, the cross product rule states that the result is a vector perpendicular to both i and j, which is -k, not k. The key is understanding that the cross product is defined to give a vector in the direction perpendicular to the two original vectors."
+    },
+    {
+      "question_id": "T03.01.Q044",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "The projection of a = 4i + 3j on b = i is ___.",
+      "correct_answer": "4",
+      "explanation_correct": "The projection of a vector a = 4i + 3j on a vector b = i is the dot product of a and the unit vector i, which is equal to the x-component of a, which is 4.",
+      "explanation_incorrect": "The accepted answer format is a single number, which should be the x-component of the vector a = 4i + 3j when projected onto the vector b = i. The projection of a onto b is the dot product of a and the unit vector i, which gives the x-component of a, which is 4."
+    },
+    {
+      "question_id": "T03.01.Q045",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If a + b + c = 0, then a × b = b × c = ___.",
+      "correct_answer": "c × a",
+      "explanation_correct": "If a + b + c = 0, then a, b, and c are three vectors that form a closed triangle. In this case, the vector cross product a × b is equal to the vector cross product c × a, as the directions of the vectors are related by the triangle constraint.",
+      "explanation_incorrect": "The accepted answer format is 'c × a'. However, this is incorrect. If a + b + c = 0, then the three vectors form a closed triangle. In this case, the vector cross product a × b is equal to the vector cross product c × a, as the directions of the vectors are related by the triangle constraint. The vector cross product gives a vector perpendicular to both input vectors, so c × a is the correct answer."
+    },
+    {
+      "question_id": "T03.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The area of a triangle with sides a and b is ___ × |a × b|.",
+      "correct_answer": "1/2",
+      "explanation_correct": "The area of a triangle with sides a and b is given by (1/2) × |a × b|, where |a × b| is the magnitude of the vector cross product of a and b. This is because the vector cross product a × b gives a vector perpendicular to both a and b, and its magnitude |a × b| represents the area of the parallelogram formed by a and b. Since the triangle is half the parallelogram, the formula for the triangle area is (1/2) × |a × b|.",
+      "explanation_incorrect": "The incorrect answer would be simply |a × b|, which represents the area of the parallelogram formed by the vectors a and b. However, the area of the triangle with sides a and b is actually (1/2) × |a × b|, since the triangle is half the size of the parallelogram. The correct answer is 1/2, as the formula for the triangle area involves a scaling factor of 1/2 applied to the parallelogram area."
+    },
+    {
+      "question_id": "T03.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "If a = 6i + 2j − 3k, then |a| = ___.",
+      "correct_answer": "7",
+      "explanation_correct": "The magnitude of a vector a = 6i + 2j - 3k is calculated using the formula |a| = √(a₁² + a₂² + a₃²). Substituting the given values, we get |a| = √(6² + 2² + (-3)²) = √(36 + 4 + 9) = √49 = 7.",
+      "explanation_incorrect": "The accepted answer format is a single number. However, if you calculated the magnitude of the vector a = 6i + 2j - 3k incorrectly, you may have gotten a different value. Remember that the magnitude is the square root of the sum of the squares of the vector components, so the correct magnitude is 7."
+    },
+    {
+      "question_id": "T03.01.Q048",
+      "type": "ordering",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "Arrange the steps to find the angle between two vectors a and b using the dot product:",
+      "ordering_items": [
+        "Compute a · b = a₁b₁ + a₂b₂ + a₃b₃",
+        "Compute |a| and |b|",
+        "Use cos θ = (a · b)/(|a| · |b|)",
+        "Find θ = cos⁻¹((a · b)/(|a| · |b|))"
+      ],
+      "correct_answer": [
+        "Compute a · b = a₁b₁ + a₂b₂ + a₃b₃",
+        "Compute |a| and |b|",
+        "Use cos θ = (a · b)/(|a| · |b|)",
+        "Find θ = cos⁻¹((a · b)/(|a| · |b|))"
+      ],
+      "explanation_correct": "The correct order of steps is: Compute the dot product a · b, compute the magnitudes |a| and |b|, use the formula cos θ = (a · b)/(|a| · |b|) to find the cosine of the angle, and then take the inverse cosine to find the angle θ. This step-by-step process follows the definition of the dot product and its relationship to the angle between two vectors.",
+      "explanation_incorrect": "The incorrect order would be to first find the angle θ and then try to compute the dot product. The dot product formula a · b = |a||b|cos θ requires us to first compute the dot product a · b, then the magnitudes |a| and |b|, and finally use these to find the angle θ = cos⁻¹((a · b)/(|a| · |b|)). Skipping the intermediate steps of computing the dot product and magnitudes would prevent us from correctly determining the angle between the two vectors."
+    },
+    {
+      "question_id": "T03.01.Q049",
+      "type": "ordering",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to compute the cross product a × b using the determinant method:",
+      "ordering_items": [
+        "Write the 3×3 determinant with i, j, k in the first row",
+        "Place components of a in the second row and b in the third row",
+        "Expand along the first row using cofactors",
+        "Simplify to get the resulting vector"
+      ],
+      "correct_answer": [
+        "Write the 3×3 determinant with i, j, k in the first row",
+        "Place components of a in the second row and b in the third row",
+        "Expand along the first row using cofactors",
+        "Simplify to get the resulting vector"
+      ],
+      "explanation_correct": "The correct steps to compute the cross product a × b using the determinant method are arranged in the given order. This is because the determinant method involves writing the 3x3 determinant with the unit vectors i, j, k in the first row, placing the vector components of a in the second row and b in the third row, then expanding along the first row using cofactors to get the resulting vector.",
+      "explanation_incorrect": "The incorrect explanation would be to skip the step of writing the 3x3 determinant with the unit vectors i, j, k in the first row. This is a crucial step in the determinant method, as it sets up the structure to properly compute the cross product. Without the unit vectors in the first row, the determinant cannot be expanded correctly to obtain the final vector result."
+    },
+    {
+      "question_id": "T03.01.Q050",
+      "type": "ordering",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the steps to check if three vectors a, b, c are coplanar:",
+      "ordering_items": [
+        "Compute the cross product b × c",
+        "Compute the scalar triple product a · (b × c)",
+        "If the result is zero, the vectors are coplanar",
+        "If non-zero, the vectors form a parallelepiped of that volume"
+      ],
+      "correct_answer": [
+        "Compute the cross product b × c",
+        "Compute the scalar triple product a · (b × c)",
+        "If the result is zero, the vectors are coplanar",
+        "If non-zero, the vectors form a parallelepiped of that volume"
+      ],
+      "explanation_correct": "The steps to check if three vectors a, b, c are coplanar are correct because the scalar triple product a · (b × c) will be zero if and only if the vectors a, b, c are coplanar, i.e., they lie in the same plane. If the scalar triple product is non-zero, then the vectors form a parallelepiped, and its volume is given by the magnitude of the scalar triple product.",
+      "explanation_incorrect": "The incorrect explanation would be to skip the step of computing the cross product b × c. The cross product is necessary to compute the scalar triple product a · (b × c), which is the key step to determine if the vectors are coplanar. Without first finding the cross product, the scalar triple product cannot be computed, and the coplanarity of the vectors cannot be determined."
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-10",
+    "status": "draft",
+    "question_count": {
+      "total": 50,
+      "by_difficulty": {
+        "familiarity": 15,
+        "application": 20,
+        "exam_style": 15
+      },
+      "by_type": {
+        "mcq": 35,
+        "true_false": 5,
+        "fill_blank": 7,
+        "ordering": 3
+      }
+    }
+  }
+}

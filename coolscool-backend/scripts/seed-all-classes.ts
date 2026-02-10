@@ -16,7 +16,7 @@ import { pool } from '../src/config/database.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ALL_CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const ALL_CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 interface Concept {
   concept_id: string;

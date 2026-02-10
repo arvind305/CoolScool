@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import type { ProfileData, UpdateProfileData } from '@/services/profile-api';
 import { updateProfile } from '@/services/profile-api';
@@ -10,10 +10,32 @@ interface ProfileFormProps {
   accessToken: string;
 }
 
-const GENDER_OPTIONS = ['', 'Male', 'Female', 'Other', 'Prefer not to say'];
-const GRADE_OPTIONS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const RELATIONSHIP_OPTIONS = ['', 'Mother', 'Father', 'Guardian', 'Other'];
-const LEARNING_STYLE_OPTIONS = ['', 'Visual', 'Auditory', 'Reading/Writing', 'Kinesthetic'];
+const GENDER_OPTIONS = [
+  { value: '', label: 'Select gender' },
+  { value: 'male', label: 'Male' },
+  { value: 'female', label: 'Female' },
+  { value: 'other', label: 'Other' },
+  { value: 'prefer_not_to_say', label: 'Prefer not to say' },
+];
+
+const GRADE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+const RELATIONSHIP_OPTIONS = [
+  { value: '', label: 'Select relationship' },
+  { value: 'mother', label: 'Mother' },
+  { value: 'father', label: 'Father' },
+  { value: 'guardian', label: 'Guardian' },
+  { value: 'other', label: 'Other' },
+];
+
+const LEARNING_STYLE_OPTIONS = [
+  { value: '', label: 'Select learning style' },
+  { value: 'visual', label: 'Visual' },
+  { value: 'auditory', label: 'Auditory' },
+  { value: 'reading', label: 'Reading/Writing' },
+  { value: 'kinesthetic', label: 'Kinesthetic' },
+];
+
 const SUBJECT_OPTIONS = [
   'Mathematics',
   'Science',
@@ -25,6 +47,83 @@ const SUBJECT_OPTIONS = [
   'Chemistry',
   'Biology',
 ];
+
+// Fields that count toward profile completion
+const COMPLETION_FIELDS: { key: keyof UpdateProfileData; label: string }[] = [
+  { key: 'firstName', label: 'First Name' },
+  { key: 'lastName', label: 'Last Name' },
+  { key: 'dateOfBirth', label: 'Date of Birth' },
+  { key: 'gender', label: 'Gender' },
+  { key: 'phoneNumber', label: 'Phone Number' },
+  { key: 'grade', label: 'Grade' },
+  { key: 'schoolName', label: 'School Name' },
+  { key: 'city', label: 'City' },
+  { key: 'state', label: 'State' },
+  { key: 'country', label: 'Country' },
+  { key: 'parentGuardianName', label: 'Guardian Name' },
+  { key: 'parentGuardianPhone', label: 'Guardian Phone' },
+  { key: 'parentGuardianEmail', label: 'Guardian Email' },
+  { key: 'parentGuardianRelationship', label: 'Relationship' },
+  { key: 'preferredLanguage', label: 'Preferred Language' },
+  { key: 'learningStyle', label: 'Learning Style' },
+  { key: 'bio', label: 'Bio' },
+];
+
+// Required fields
+const REQUIRED_FIELDS = new Set<keyof UpdateProfileData>([
+  'firstName',
+  'lastName',
+  'dateOfBirth',
+  'gender',
+  'grade',
+  'parentGuardianName',
+  'parentGuardianEmail',
+]);
+
+function isFilled(value: unknown): boolean {
+  if (value === null || value === undefined || value === '') return false;
+  if (Array.isArray(value)) return value.length > 0;
+  return true;
+}
+
+function ProfileCompletionCircle({ percentage }: { percentage: number }) {
+  const radius = 40;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (percentage / 100) * circumference;
+  const color = percentage === 100 ? 'var(--color-correct)' : percentage >= 60 ? 'var(--color-primary)' : 'var(--color-text-muted)';
+
+  return (
+    <div className="profile-completion">
+      <div className="profile-completion-circle">
+        <svg width="96" height="96" viewBox="0 0 96 96">
+          <circle
+            cx="48" cy="48" r={radius}
+            fill="none"
+            stroke="var(--color-border)"
+            strokeWidth="6"
+          />
+          <circle
+            cx="48" cy="48" r={radius}
+            fill="none"
+            stroke={color}
+            strokeWidth="6"
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            strokeDashoffset={strokeDashoffset}
+            transform="rotate(-90 48 48)"
+            style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+          />
+        </svg>
+        <span className="profile-completion-text" style={{ color }}>
+          {percentage}%
+        </span>
+      </div>
+      <p className="profile-completion-label">
+        {percentage === 100 ? 'Profile complete!' : 'Profile completion'}
+      </p>
+    </div>
+  );
+}
 
 export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
   const [formData, setFormData] = useState<UpdateProfileData>({
@@ -51,6 +150,13 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
   const [isSaving, setIsSaving] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [validationErrors, setValidationErrors] = useState<Set<string>>(new Set());
+
+  // Compute completion percentage
+  const completionPercentage = useMemo(() => {
+    const filled = COMPLETION_FIELDS.filter(f => isFilled(formData[f.key])).length;
+    return Math.round((filled / COMPLETION_FIELDS.length) * 100);
+  }, [formData]);
 
   // Clear messages after a delay
   useEffect(() => {
@@ -75,6 +181,14 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
       ...prev,
       [name]: name === 'grade' ? (value === '' ? null : Number(value)) : value,
     }));
+    // Clear validation error for this field on change
+    if (validationErrors.has(name)) {
+      setValidationErrors(prev => {
+        const next = new Set(prev);
+        next.delete(name);
+        return next;
+      });
+    }
   };
 
   const handleSubjectToggle = (subject: string) => {
@@ -87,14 +201,38 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
     });
   };
 
+  const validate = (): boolean => {
+    const errors = new Set<string>();
+    for (const field of REQUIRED_FIELDS) {
+      if (!isFilled(formData[field])) {
+        errors.add(field as string);
+      }
+    }
+    setValidationErrors(errors);
+    return errors.size === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSaving(true);
     setSuccessMessage('');
     setErrorMessage('');
 
+    if (!validate()) {
+      setErrorMessage('Please fill in all required fields');
+      return;
+    }
+
+    setIsSaving(true);
+
     try {
-      await updateProfile(accessToken, formData);
+      // Clean empty strings to null for optional fields before sending
+      const cleanData = { ...formData };
+      if (cleanData.dateOfBirth === '') cleanData.dateOfBirth = null;
+      if (cleanData.gender === '') cleanData.gender = null;
+      if (cleanData.parentGuardianRelationship === '') cleanData.parentGuardianRelationship = null;
+      if (cleanData.learningStyle === '') cleanData.learningStyle = null;
+
+      await updateProfile(accessToken, cleanData);
       setSuccessMessage('Profile updated successfully');
     } catch (err) {
       setErrorMessage(
@@ -106,9 +244,14 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
   };
 
   const bioLength = (formData.bio || '').length;
+  const isRequired = (field: string) => REQUIRED_FIELDS.has(field as keyof UpdateProfileData);
+  const hasError = (field: string) => validationErrors.has(field);
 
   return (
     <form className="profile-form" onSubmit={handleSubmit}>
+      {/* Profile Completion */}
+      <ProfileCompletionCircle percentage={completionPercentage} />
+
       {/* Status Messages */}
       {successMessage && (
         <div className="profile-message profile-message-success">
@@ -127,10 +270,10 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
         <div className="profile-field-grid">
           <div className="profile-field">
             <label className="profile-label" htmlFor="firstName">
-              First Name
+              First Name {isRequired('firstName') && <span className="profile-required">*</span>}
             </label>
             <input
-              className="profile-input"
+              className={`profile-input ${hasError('firstName') ? 'profile-input-error' : ''}`}
               type="text"
               id="firstName"
               name="firstName"
@@ -141,10 +284,10 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
           </div>
           <div className="profile-field">
             <label className="profile-label" htmlFor="lastName">
-              Last Name
+              Last Name {isRequired('lastName') && <span className="profile-required">*</span>}
             </label>
             <input
-              className="profile-input"
+              className={`profile-input ${hasError('lastName') ? 'profile-input-error' : ''}`}
               type="text"
               id="lastName"
               name="lastName"
@@ -155,10 +298,10 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
           </div>
           <div className="profile-field">
             <label className="profile-label" htmlFor="dateOfBirth">
-              Date of Birth
+              Date of Birth {isRequired('dateOfBirth') && <span className="profile-required">*</span>}
             </label>
             <input
-              className="profile-input"
+              className={`profile-input ${hasError('dateOfBirth') ? 'profile-input-error' : ''}`}
               type="date"
               id="dateOfBirth"
               name="dateOfBirth"
@@ -168,18 +311,18 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
           </div>
           <div className="profile-field">
             <label className="profile-label" htmlFor="gender">
-              Gender
+              Gender {isRequired('gender') && <span className="profile-required">*</span>}
             </label>
             <select
-              className="profile-input"
+              className={`profile-input ${hasError('gender') ? 'profile-input-error' : ''}`}
               id="gender"
               name="gender"
               value={formData.gender || ''}
               onChange={handleChange}
             >
               {GENDER_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt || 'Select gender'}
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
                 </option>
               ))}
             </select>
@@ -226,17 +369,17 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
         <div className="profile-field-grid">
           <div className="profile-field">
             <label className="profile-label" htmlFor="grade">
-              Grade / Class
+              Grade / Class {isRequired('grade') && <span className="profile-required">*</span>}
             </label>
             <select
-              className="profile-input"
+              className={`profile-input ${hasError('grade') ? 'profile-input-error' : ''}`}
               id="grade"
               name="grade"
               value={formData.grade ?? ''}
               onChange={handleChange}
             >
               <option value="">Select grade</option>
-              {GRADE_OPTIONS.filter((g) => g > 0).map((g) => (
+              {GRADE_OPTIONS.map((g) => (
                 <option key={g} value={g}>
                   Class {g}
                 </option>
@@ -315,10 +458,10 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
         <div className="profile-field-grid">
           <div className="profile-field">
             <label className="profile-label" htmlFor="parentGuardianName">
-              Guardian Name
+              Guardian Name {isRequired('parentGuardianName') && <span className="profile-required">*</span>}
             </label>
             <input
-              className="profile-input"
+              className={`profile-input ${hasError('parentGuardianName') ? 'profile-input-error' : ''}`}
               type="text"
               id="parentGuardianName"
               name="parentGuardianName"
@@ -343,10 +486,10 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
           </div>
           <div className="profile-field">
             <label className="profile-label" htmlFor="parentGuardianEmail">
-              Guardian Email
+              Guardian Email {isRequired('parentGuardianEmail') && <span className="profile-required">*</span>}
             </label>
             <input
-              className="profile-input"
+              className={`profile-input ${hasError('parentGuardianEmail') ? 'profile-input-error' : ''}`}
               type="email"
               id="parentGuardianEmail"
               name="parentGuardianEmail"
@@ -367,8 +510,8 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
               onChange={handleChange}
             >
               {RELATIONSHIP_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt || 'Select relationship'}
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
                 </option>
               ))}
             </select>
@@ -406,8 +549,8 @@ export function ProfileForm({ profile, accessToken }: ProfileFormProps) {
               onChange={handleChange}
             >
               {LEARNING_STYLE_OPTIONS.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt || 'Select learning style'}
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
                 </option>
               ))}
             </select>

@@ -6,19 +6,20 @@ const updateProfileSchema = Joi.object({
   firstName: Joi.string().max(100).allow('', null),
   lastName: Joi.string().max(100).allow('', null),
   phoneNumber: Joi.string().max(20).allow('', null),
-  dateOfBirth: Joi.date().iso().max('now').allow(null),
-  gender: Joi.string().valid('male', 'female', 'other', 'prefer_not_to_say').allow(null),
+  dateOfBirth: Joi.date().iso().max('now').allow(null, ''),
+  gender: Joi.string().valid('male', 'female', 'other', 'prefer_not_to_say').allow(null, ''),
   grade: Joi.number().integer().min(1).max(12).allow(null),
   schoolName: Joi.string().max(255).allow('', null),
   city: Joi.string().max(100).allow('', null),
   state: Joi.string().max(100).allow('', null),
+  country: Joi.string().max(100).allow('', null),
   bio: Joi.string().max(500).allow('', null),
   parentGuardianName: Joi.string().max(200).allow('', null),
   parentGuardianPhone: Joi.string().max(20).allow('', null),
   parentGuardianEmail: Joi.string().email().max(255).allow('', null),
-  parentGuardianRelationship: Joi.string().valid('father', 'mother', 'guardian', 'other').allow(null),
+  parentGuardianRelationship: Joi.string().valid('father', 'mother', 'guardian', 'other').allow(null, ''),
   preferredLanguage: Joi.string().max(50).allow('', null),
-  learningStyle: Joi.string().valid('visual', 'auditory', 'reading', 'kinesthetic').allow(null),
+  learningStyle: Joi.string().valid('visual', 'auditory', 'reading', 'kinesthetic').allow(null, ''),
   subjectsOfInterest: Joi.array().items(Joi.string()).max(10).allow(null),
 }).min(1);
 
@@ -95,6 +96,7 @@ export async function updateProfile(
     if (value.schoolName !== undefined) updateFields.school_name = value.schoolName;
     if (value.city !== undefined) updateFields.city = value.city;
     if (value.state !== undefined) updateFields.state = value.state;
+    if (value.country !== undefined) updateFields.country = value.country;
     if (value.bio !== undefined) updateFields.bio = value.bio;
     if (value.parentGuardianName !== undefined) updateFields.parent_guardian_name = value.parentGuardianName;
     if (value.parentGuardianPhone !== undefined) updateFields.parent_guardian_phone = value.parentGuardianPhone;

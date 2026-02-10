@@ -4531,6 +4531,45 @@ h4 { font-size: var(--font-size-lg); }
   padding-top: var(--spacing-md);
 }
 
+/* Profile Completion Circle */
+.profile-completion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.profile-completion-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-completion-text {
+  position: absolute;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.profile-completion-label {
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Required Field Indicator */
+.profile-required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+/* Input Error State */
+.profile-input-error {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.2);
+}
+
 /* Profile Page Responsive */
 @media (max-width: 480px) {
   .profile-page {

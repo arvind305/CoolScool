@@ -70,14 +70,14 @@ export const SUBJECTS = {
     name: 'English',
     icon: '✏',
     color: '#f97316',
-    status: 'coming_soon' as const,
+    status: 'live' as const,
   },
   social_studies: {
     id: 'social_studies',
     name: 'Social Studies',
     icon: '🗺',
     color: '#ec4899',
-    status: 'coming_soon' as const,
+    status: 'live' as const,
   },
 } as const;
 

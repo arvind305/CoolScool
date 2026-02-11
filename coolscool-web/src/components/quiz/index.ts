@@ -36,3 +36,11 @@ export type { TimeModeModalProps, TimeModeOption } from './time-mode-modal';
 // Quiz summary display
 export { QuizSummary } from './quiz-summary';
 export type { QuizSummaryProps } from './quiz-summary';
+
+// Flag button for reporting question issues
+export { FlagButton } from './flag-button';
+export type { FlagButtonProps } from './flag-button';
+
+// Flag modal for submitting flag details
+export { FlagModal } from './flag-modal';
+export type { FlagModalProps } from './flag-modal';

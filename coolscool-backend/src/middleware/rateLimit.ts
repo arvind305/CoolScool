@@ -54,6 +54,18 @@ export const questionLimiter = rateLimit({
   },
 });
 
+// Flag limiter - moderate
+export const flagLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 10, // 10 flags per hour
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: {
+    error: 'Too many flag submissions. Please try again later.',
+    retryAfter: 3600,
+  },
+});
+
 // Export limiter - very strict
 export const exportLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour

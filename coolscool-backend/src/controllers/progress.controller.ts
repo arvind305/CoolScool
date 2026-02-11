@@ -7,6 +7,7 @@
 
 import { Request, Response, NextFunction } from 'express';
 import * as progressService from '../services/progress.service.js';
+import * as analyticsService from '../services/analytics.service.js';
 
 // GET /progress - Get full user progress
 export async function getUserProgress(
@@ -172,6 +173,88 @@ export async function importProgress(
         skipped: result.skipped,
         message: `Imported ${result.imported} concept progress entries, skipped ${result.skipped}`,
       },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /progress/trends - Get daily activity trends
+export async function getTrends(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const userId = req.user!.id;
+    const days = req.query.days ? Number(req.query.days) : undefined;
+
+    const trends = await analyticsService.getDailyTrends(userId, days);
+
+    res.status(200).json({
+      success: true,
+      data: { trends },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /progress/subjects - Get subject breakdown
+export async function getSubjects(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const userId = req.user!.id;
+
+    const subjects = await analyticsService.getSubjectBreakdown(userId);
+
+    res.status(200).json({
+      success: true,
+      data: { subjects },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /progress/streak - Get user streak info
+export async function getStreak(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const userId = req.user!.id;
+
+    const streak = await analyticsService.getStreak(userId);
+
+    res.status(200).json({
+      success: true,
+      data: { streak },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /progress/weak-areas - Get weak areas
+export async function getWeakAreas(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const userId = req.user!.id;
+    const limit = req.query.limit ? Number(req.query.limit) : undefined;
+
+    const weakAreas = await analyticsService.getWeakAreas(userId, limit);
+
+    res.status(200).json({
+      success: true,
+      data: { weakAreas },
     });
   } catch (error) {
     next(error);

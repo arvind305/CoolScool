@@ -10,9 +10,10 @@ import {
   AnswerOptions,
   Feedback,
   QuizSummary,
+  FlagModal,
 } from '@/components/quiz';
-import { Button, LoginPrompt } from '@/components/ui';
-import { useQuizEngine, useAccessControl } from '@/hooks';
+import { Button, LoginPrompt, useToast } from '@/components/ui';
+import { useQuizEngine, useAccessControl, useFlags } from '@/hooks';
 import type { TimeMode, ProficiencyBand, SessionSummary } from '@/lib/quiz-engine/types';
 
 type QuizState = 'loading' | 'ready' | 'answering' | 'feedback' | 'summary' | 'error' | 'sample_exhausted';
@@ -51,6 +52,11 @@ function QuizPageContent() {
 
   // Access control for sample tracking
   const access = useAccessControl();
+
+  // Flag hook and toast
+  const flags = useFlags();
+  const { success: toastSuccess } = useToast();
+  const [flagModalOpen, setFlagModalOpen] = useState(false);
 
   // Quiz engine hook
   const engine = useQuizEngine({
@@ -388,6 +394,21 @@ function QuizPageContent() {
     );
   }
 
+  // Handle flag submission
+  const handleFlagSubmit = useCallback(async (reason: import('@/hooks/use-flags').FlagReason, comment?: string) => {
+    if (!currentQuestion) return;
+    const result = await flags.submitFlag({
+      questionId: currentQuestion.question_id,
+      curriculumId,
+      flagReason: reason,
+      userComment: comment,
+    });
+    if (result.success) {
+      toastSuccess('Thanks for reporting! We will review this question.');
+      setFlagModalOpen(false);
+    }
+  }, [currentQuestion, flags, curriculumId, toastSuccess]);
+
   // Helper to extract answer texts for speech
   function getAnswerTextsForSpeech(question: typeof currentQuestion): string[] {
     if (!question) return [];
@@ -436,6 +457,8 @@ function QuizPageContent() {
               totalQuestions={totalQuestions}
               questionText={currentQuestion.question_text}
               answerTexts={getAnswerTextsForSpeech(currentQuestion)}
+              onFlagClick={() => setFlagModalOpen(true)}
+              isFlagged={flags.hasFlagged(currentQuestion.question_id)}
             />
 
             {/* Answer Options */}
@@ -515,6 +538,17 @@ function QuizPageContent() {
           )}
         </div>
       </div>
+
+      {/* Flag Modal */}
+      {currentQuestion && (
+        <FlagModal
+          open={flagModalOpen}
+          onClose={() => setFlagModalOpen(false)}
+          onSubmit={handleFlagSubmit}
+          isSubmitting={flags.isSubmitting}
+          questionText={currentQuestion.question_text}
+        />
+      )}
     </div>
   );
 }

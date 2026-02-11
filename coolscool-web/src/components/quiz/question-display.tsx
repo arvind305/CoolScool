@@ -2,6 +2,7 @@
 
 import { forwardRef } from 'react';
 import { SpeakerButton } from './speaker-button';
+import { FlagButton } from './flag-button';
 
 // ============================================================
 // QuestionDisplay Component
@@ -18,6 +19,10 @@ export interface QuestionDisplayProps {
   answerTexts?: string[];
   /** Optional className for the container */
   className?: string;
+  /** Callback when flag button is clicked */
+  onFlagClick?: () => void;
+  /** Whether this question has already been flagged */
+  isFlagged?: boolean;
 }
 
 /**
@@ -26,7 +31,7 @@ export interface QuestionDisplayProps {
  */
 export const QuestionDisplay = forwardRef<HTMLDivElement, QuestionDisplayProps>(
   function QuestionDisplay(
-    { questionNumber, totalQuestions, questionText, answerTexts, className = '' },
+    { questionNumber, totalQuestions, questionText, answerTexts, className = '', onFlagClick, isFlagged },
     ref
   ) {
     return (
@@ -44,6 +49,12 @@ export const QuestionDisplay = forwardRef<HTMLDivElement, QuestionDisplayProps>(
             questionText={questionText}
             answerTexts={answerTexts}
           />
+          {onFlagClick && (
+            <FlagButton
+              onClick={onFlagClick}
+              isFlagged={isFlagged || false}
+            />
+          )}
         </div>
         <p className="question-text" id="question-text">
           {questionText}

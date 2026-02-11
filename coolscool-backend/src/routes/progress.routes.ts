@@ -41,6 +41,30 @@ router.get(
   progressController.getTopicProgress
 );
 
+// GET /progress/trends - Get daily activity trends
+router.get(
+  '/trends',
+  progressController.getTrends
+);
+
+// GET /progress/subjects - Get subject breakdown
+router.get(
+  '/subjects',
+  progressController.getSubjects
+);
+
+// GET /progress/streak - Get user streak info
+router.get(
+  '/streak',
+  progressController.getStreak
+);
+
+// GET /progress/weak-areas - Get weak areas
+router.get(
+  '/weak-areas',
+  progressController.getWeakAreas
+);
+
 // POST /progress/export - Export progress as JSON
 router.post(
   '/export',

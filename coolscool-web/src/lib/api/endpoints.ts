@@ -20,6 +20,17 @@ export const ENDPOINTS = {
   PROGRESS_EXPORT: '/api/v1/progress/export',
   PROGRESS_IMPORT: '/api/v1/progress/import',
 
+  // Analytics
+  PROGRESS_TRENDS: '/api/v1/progress/trends',
+  PROGRESS_SUBJECTS: '/api/v1/progress/subjects',
+  PROGRESS_STREAK: '/api/v1/progress/streak',
+  PROGRESS_WEAK_AREAS: '/api/v1/progress/weak-areas',
+
+  // Flags
+  FLAGS: '/api/v1/flags',
+  FLAGS_STATS: '/api/v1/flags/stats',
+  FLAG: (flagId: string) => `/api/v1/flags/${flagId}`,
+
   // Sessions
   SESSIONS: '/api/v1/sessions',
   SESSION: (sessionId: string) => `/api/v1/sessions/${sessionId}`,

@@ -26,6 +26,8 @@ export interface Question {
   tags: string[];
   explanation_correct: string | null;
   explanation_incorrect: string | null;
+  image_url: string | null;
+  option_images: Record<string, string> | null;
   created_at: Date;
   updated_at: Date;
 }
@@ -46,6 +48,8 @@ export interface QuestionForClient {
   // For ordering questions: shuffled items
   ordering_items_shuffled: string[] | null;
   hint: string | null;
+  image_url: string | null;
+  option_images: Record<string, string> | null;
 }
 
 // Find question by UUID
@@ -180,6 +184,8 @@ export function stripAnswerData(question: Question): QuestionForClient {
     match_right_shuffled: null,
     ordering_items_shuffled: null,
     hint: question.hint,
+    image_url: question.image_url || null,
+    option_images: question.option_images || null,
   };
 
   // For match questions: separate left and right, shuffle right side

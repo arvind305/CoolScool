@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef } from 'react';
+import { forwardRef, useState, useCallback } from 'react';
 import { SpeakerButton } from './speaker-button';
 import { FlagButton } from './flag-button';
 
@@ -23,6 +23,8 @@ export interface QuestionDisplayProps {
   onFlagClick?: () => void;
   /** Whether this question has already been flagged */
   isFlagged?: boolean;
+  /** Optional image URL for the question */
+  imageUrl?: string;
 }
 
 /**
@@ -31,9 +33,19 @@ export interface QuestionDisplayProps {
  */
 export const QuestionDisplay = forwardRef<HTMLDivElement, QuestionDisplayProps>(
   function QuestionDisplay(
-    { questionNumber, totalQuestions, questionText, answerTexts, className = '', onFlagClick, isFlagged },
+    { questionNumber, totalQuestions, questionText, answerTexts, className = '', onFlagClick, isFlagged, imageUrl },
     ref
   ) {
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
+    const [zoomOpen, setZoomOpen] = useState(false);
+
+    const handleImageLoad = useCallback(() => setImageLoaded(true), []);
+    const handleImageError = useCallback(() => {
+      setImageError(true);
+      setImageLoaded(true);
+    }, []);
+
     return (
       <div
         ref={ref}
@@ -56,9 +68,49 @@ export const QuestionDisplay = forwardRef<HTMLDivElement, QuestionDisplayProps>(
             />
           )}
         </div>
+
+        {/* Question Image (between header and text) */}
+        {imageUrl && !imageError && (
+          <div className="question-image">
+            {!imageLoaded && (
+              <div className="question-image-loading" aria-label="Loading image" />
+            )}
+            <img
+              src={imageUrl}
+              alt="Question diagram"
+              onLoad={handleImageLoad}
+              onError={handleImageError}
+              onClick={() => setZoomOpen(true)}
+              style={{ display: imageLoaded ? 'block' : 'none', cursor: 'zoom-in' }}
+            />
+          </div>
+        )}
+
         <p className="question-text" id="question-text">
           {questionText}
         </p>
+
+        {/* Zoom Modal */}
+        {zoomOpen && imageUrl && (
+          <div
+            className="question-image-zoom"
+            onClick={() => setZoomOpen(false)}
+            role="dialog"
+            aria-label="Enlarged question image"
+          >
+            <button
+              className="question-image-zoom-close"
+              onClick={() => setZoomOpen(false)}
+              aria-label="Close enlarged image"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            <img src={imageUrl} alt="Question diagram (enlarged)" />
+          </div>
+        )}
       </div>
     );
   }

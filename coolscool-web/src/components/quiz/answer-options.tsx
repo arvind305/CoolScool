@@ -12,6 +12,7 @@ export type AnswerState = 'default' | 'selected' | 'correct' | 'incorrect' | 'di
 export interface MCQOption {
   id: string;
   text: string;
+  image_url?: string;
 }
 
 export interface AnswerOptionsProps {
@@ -183,10 +184,16 @@ const MCQOptions = forwardRef<HTMLDivElement, MCQOptionsProps>(
       return () => document.removeEventListener('keydown', handleKeyDown);
     }, [options, onSelect, disabled]);
 
+    // Use grid layout when all options have images
+    const allHaveImages = options.length > 0 && options.every((opt) => opt.image_url);
+    const containerClass = allHaveImages
+      ? `answer-options options-grid-images ${className}`.trim()
+      : `answer-options ${className}`.trim();
+
     return (
       <div
         ref={ref}
-        className={`answer-options ${className}`.trim()}
+        className={containerClass}
         role="radiogroup"
         aria-label="Answer options"
       >
@@ -212,6 +219,13 @@ const MCQOptions = forwardRef<HTMLDivElement, MCQOptionsProps>(
               }}
             >
               <span className="answer-option-marker">{option.id}</span>
+              {option.image_url && (
+                <img
+                  src={option.image_url}
+                  alt={`Option ${option.id}`}
+                  className="option-image"
+                />
+              )}
               <span className="answer-option-text">{option.text}</span>
             </div>
           );

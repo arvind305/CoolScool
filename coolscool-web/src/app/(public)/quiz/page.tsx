@@ -459,16 +459,21 @@ function QuizPageContent() {
               answerTexts={getAnswerTextsForSpeech(currentQuestion)}
               onFlagClick={() => setFlagModalOpen(true)}
               isFlagged={flags.hasFlagged(currentQuestion.question_id)}
+              imageUrl={currentQuestion.image_url}
             />
 
             {/* Answer Options */}
             <AnswerOptions
               type={currentQuestion.type}
               options={
-                currentQuestion.options?.map((opt, idx) => ({
-                  id: String.fromCharCode(65 + idx), // A, B, C, D
-                  text: typeof opt === 'string' ? opt : (opt as { id: string; text: string }).text,
-                })) || []
+                currentQuestion.options?.map((opt, idx) => {
+                  const optId = String.fromCharCode(65 + idx); // A, B, C, D
+                  return {
+                    id: optId,
+                    text: typeof opt === 'string' ? opt : (opt as { id: string; text: string }).text,
+                    image_url: currentQuestion.option_images?.[optId] || undefined,
+                  };
+                }) || []
               }
               orderingItems={
                 (currentQuestion as unknown as { ordering_items?: string[] }).ordering_items || []

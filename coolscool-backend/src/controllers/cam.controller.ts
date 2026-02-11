@@ -479,6 +479,8 @@ export async function getTopicQuestions(
           tags: q.tags,
           explanation_correct: q.explanation_correct,
           explanation_incorrect: q.explanation_incorrect,
+          image_url: q.image_url || null,
+          option_images: q.option_images || null,
         })),
         question_count: questions.length,
       },

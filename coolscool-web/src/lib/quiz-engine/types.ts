@@ -145,6 +145,8 @@ export interface Question {
   ordering_items?: string[];
   explanation_correct?: string;
   explanation_incorrect?: string;
+  image_url?: string;
+  option_images?: Record<string, string>;
 }
 
 export interface EnrichedQuestion extends Question {

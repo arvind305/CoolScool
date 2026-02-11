@@ -25,6 +25,8 @@ interface Question {
   tags?: string[];
   explanation_correct?: string;
   explanation_incorrect?: string;
+  image_url?: string;
+  option_images?: Record<string, string>;
 }
 
 interface CanonicalExplanation {
@@ -223,9 +225,10 @@ async function seedQuestions(questionsDir?: string): Promise<void> {
              curriculum_id, question_id, concept_id, concept_id_str, topic_id_str,
              difficulty, question_type, question_text, options,
              correct_answer, match_pairs, ordering_items, hint, tags,
-             explanation_correct, explanation_incorrect
+             explanation_correct, explanation_incorrect,
+             image_url, option_images
            )
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
            ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
              concept_id = EXCLUDED.concept_id,
              concept_id_str = EXCLUDED.concept_id_str,
@@ -238,7 +241,9 @@ async function seedQuestions(questionsDir?: string): Promise<void> {
              hint = EXCLUDED.hint,
              tags = EXCLUDED.tags,
              explanation_correct = COALESCE(EXCLUDED.explanation_correct, questions.explanation_correct),
-             explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect)`,
+             explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect),
+             image_url = COALESCE(EXCLUDED.image_url, questions.image_url),
+             option_images = COALESCE(EXCLUDED.option_images, questions.option_images)`,
           [
             curriculumId,
             q.question_id,
@@ -256,6 +261,8 @@ async function seedQuestions(questionsDir?: string): Promise<void> {
             q.tags || [],
             q.explanation_correct || null,
             q.explanation_incorrect || null,
+            q.image_url || null,
+            q.option_images ? JSON.stringify(q.option_images) : null,
           ]
         );
         questionCount++;

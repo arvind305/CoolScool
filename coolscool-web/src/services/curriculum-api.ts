@@ -230,6 +230,8 @@ export async function fetchQuestionBankByCurriculumId(
         ordering_items: q.ordering_items,
         explanation_correct: q.explanation_correct,
         explanation_incorrect: q.explanation_incorrect,
+        image_url: q.image_url || undefined,
+        option_images: q.option_images || undefined,
       })),
       canonical_explanation: data.data.canonical_explanation?.text,
     };

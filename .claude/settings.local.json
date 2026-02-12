@@ -101,7 +101,28 @@
       "Bash(git -C D:/CoolSCool add -A)",
       "Bash(git -C D:/CoolSCool reset HEAD:*)",
       "Bash(git -C D:/CoolSCool commit -m \"$\\(cat <<''EOF''\nAdd explanations to all questions, user profile system, and Science subjects for classes 6-10\n\n- Generate and embed explanations into 29,757/29,780 JSON question files \\(99.9% coverage\\)\n- Export existing DB explanations to JSON files, then fill gaps via Claude API\n- JSON files are now the single source of truth for questions + explanations\n- Update all 3 seed scripts to read explanation fields with COALESCE upsert\n- Add user profile system: migration, model, controller, routes \\(backend\\)\n- Add profile page with form, API service, navigation link \\(frontend\\)\n- Capture Google OAuth names into user_profiles on login\n- Filter subjects by classRange: Science \\(1-5\\), Physics/Chemistry/Biology \\(6-10\\)\n- Move Class 5 Maths files to class5/ directory\n- Add export-explanations-from-db.ts and generate-explanations-to-files.ts scripts\n- Clean up old generate-explanations.ts and debug validation files\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git -C D:/CoolSCool commit -m \"$\\(cat <<''EOF''\nRemove temp files accidentally included\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git -C D:/CoolSCool commit -m \"$\\(cat <<''EOF''\nRemove temp files accidentally included\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C D:/CoolSCool push)",
+      "Bash(render --help:*)",
+      "WebFetch(domain:render.com)",
+      "Bash(sh:*)",
+      "Bash(D:/CoolSCool/render_cli/cli_v2.7.1.exe:*)",
+      "Bash(RENDER_API_KEY=rnd_Ka06bPEJl2Nm8ad4g2CfVqmYKTl9 D:/CoolSCool/render_cli/cli_v2.7.1.exe services list:*)",
+      "Bash(RENDER_API_KEY=rnd_Ka06bPEJl2Nm8ad4g2CfVqmYKTl9 D:/CoolSCool/render_cli/cli_v2.7.1.exe workspace list:*)",
+      "Bash(npx next build:*)",
+      "Bash(git -C D:/CoolSCool add:*)",
+      "Bash(git -C D:/CoolSCool commit -m \"$\\(cat <<''EOF''\nFix type errors blocking Vercel deployment by removing unused Record<string, string> match type\n\nMatch question type was removed previously but Record<string, string> remained in answer\ntype signatures, causing TypeScript build failures on Vercel.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C D:/CoolSCool log --oneline -3)",
+      "Bash(git -C D:/CoolSCool commit -m \"$\\(cat <<''EOF''\nFix profile validation errors and add required fields with completion progress circle\n\nBackend:\n- Fix Joi validation to accept lowercase enum values matching frontend selects\n- Add country field to validation schema and model mapping\n- Allow empty strings for date, gender, relationship, learning style fields\n\nFrontend:\n- Fix select options to send lowercase values \\(male, female, father, etc.\\)\n- Add required field indicators \\(*\\) for: first name, last name, DOB, gender, grade, guardian name, guardian email\n- Add client-side validation preventing save without required fields\n- Add profile completion circle showing percentage of all fields filled\n- Add red border styling for fields with validation errors\n- Clean empty strings to null before sending to backend\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "WebFetch(domain:www.coolscool.in)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:coolscool.onrender.com)",
+      "Bash(git revert:*)",
+      "mcp__claude_ai_Excalidraw__read_me",
+      "mcp__claude_ai_Excalidraw__create_view",
+      "Bash(npx jest:*)",
+      "Bash(npx vitest run)",
+      "Bash(xargs:*)"
     ]
   }
 }

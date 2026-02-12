@@ -33,12 +33,16 @@ export default async function BoardPage({ params }: Props) {
   if (board.status !== 'live') {
     return (
       <div className="px-4 py-8 max-w-4xl mx-auto">
-        <nav className="mb-6 text-sm">
-          <Link href="/browse" className="text-[var(--color-text-muted)] hover:text-[var(--color-text)]">
+        <nav className="breadcrumb" aria-label="Breadcrumb">
+          <Link href="/browse" className="breadcrumb-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
             Browse
           </Link>
-          <span className="mx-2 text-[var(--color-text-muted)]">/</span>
-          <span className="text-[var(--color-text)]">{board.name}</span>
+          <span className="breadcrumb-sep">/</span>
+          <span className="breadcrumb-current">{board.name}</span>
         </nav>
 
         <div className="text-center py-16">
@@ -61,7 +65,7 @@ export default async function BoardPage({ params }: Props) {
   }
 
   return (
-    <div className="px-4 py-8 max-w-4xl mx-auto">
+    <div className="px-4 py-8 max-w-4xl mx-auto page-enter">
       <header className="mb-8">
         <h1 className="mb-2">{board.name}</h1>
         <p className="font-semibold text-[var(--color-text-secondary)]">

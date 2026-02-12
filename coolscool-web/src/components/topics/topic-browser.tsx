@@ -212,14 +212,24 @@ export function TopicBrowser({ board, classLevel, subject, curriculumId: propCur
     [selectedTopic, board, classLevel, subject, curriculumId, router]
   );
 
-  // Loading state
+  // Loading state — skeleton loading
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center py-16">
-        <div className="text-center">
-          <div className="animate-spin w-8 h-8 border-4 border-[var(--color-primary)] border-t-transparent rounded-full mx-auto mb-4" />
-          <p className="text-[var(--color-text-muted)]">Loading topics...</p>
-        </div>
+      <div className="skeleton-topic-browser">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="skeleton-theme-section">
+            <div className="skeleton skeleton-text" style={{ width: '40%', height: 24, marginBottom: 16 }} />
+            <div className="skeleton-topic-grid">
+              {[1, 2, 3, 4].map((j) => (
+                <div key={j} className="skeleton-topic-card">
+                  <div className="skeleton skeleton-text" style={{ width: '80%', marginBottom: 8 }} />
+                  <div className="skeleton skeleton-text" style={{ width: '50%', height: 12 }} />
+                  <div className="skeleton skeleton-text" style={{ width: '30%', height: 12, marginTop: 8 }} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
@@ -237,11 +247,18 @@ export function TopicBrowser({ board, classLevel, subject, curriculumId: propCur
     );
   }
 
-  // No themes
+  // No themes — empty state
   if (themes.length === 0) {
     return (
-      <div className="text-center py-16">
-        <p className="text-[var(--color-text-muted)]">No topics available for this subject.</p>
+      <div className="empty-state">
+        <div className="empty-state-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+        </div>
+        <h3 className="empty-state-title">No Topics Yet</h3>
+        <p className="empty-state-message">Topics for this subject are coming soon. Check back later!</p>
       </div>
     );
   }

@@ -10,7 +10,7 @@ export default function BrowsePage() {
   const boards = Object.values(BOARDS);
 
   return (
-    <div className="px-4 py-8 max-w-4xl mx-auto">
+    <div className="px-4 py-8 max-w-4xl mx-auto page-enter">
       <header className="mb-8">
         <h1 className="mb-2">Browse Boards</h1>
         <p className="text-[var(--color-text-secondary)]">

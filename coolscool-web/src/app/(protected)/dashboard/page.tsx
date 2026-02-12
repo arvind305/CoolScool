@@ -69,9 +69,21 @@ export default function DashboardPage() {
     return (
       <main className="dashboard-page">
         <div className="dashboard-container">
-          <div className="dashboard-loading">
-            <div className="dashboard-loading-spinner" />
-            <p>Loading your progress...</p>
+          <div className="dashboard-skeleton-header">
+            <div className="skeleton skeleton-text" style={{ width: '50%', height: 32, marginBottom: 8 }} />
+            <div className="skeleton skeleton-text" style={{ width: '30%', height: 16 }} />
+          </div>
+          <div className="progress-overview-grid" style={{ marginTop: 'var(--spacing-lg)' }}>
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="skeleton-stat-card">
+                <div className="skeleton skeleton-circle" style={{ width: 40, height: 40, marginBottom: 8 }} />
+                <div className="skeleton skeleton-text" style={{ width: '60%', height: 20, marginBottom: 4 }} />
+                <div className="skeleton skeleton-text" style={{ width: '40%', height: 12 }} />
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 'var(--spacing-xl)' }}>
+            <div className="skeleton skeleton-text" style={{ width: '100%', height: 200, borderRadius: 'var(--radius-xl)' }} />
           </div>
         </div>
       </main>
@@ -130,7 +142,7 @@ export default function DashboardPage() {
   const questionsToday = todayTrend?.questions || 0;
 
   return (
-    <main className="dashboard-page">
+    <main className="dashboard-page page-enter">
       <div className="dashboard-container">
         {/* Header */}
         <header className="dashboard-header">
@@ -253,12 +265,15 @@ export default function DashboardPage() {
                 ))}
               </div>
             ) : (
-              <div className="dashboard-topics-empty">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                </svg>
-                <p>No topics started yet</p>
+              <div className="empty-state">
+                <div className="empty-state-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                </div>
+                <h3 className="empty-state-title">No Topics Started</h3>
+                <p className="empty-state-message">Pick a subject and topic to begin your learning journey!</p>
                 <Link href="/browse" className="btn btn-primary">
                   Explore Topics
                 </Link>

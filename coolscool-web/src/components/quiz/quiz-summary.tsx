@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import type { SessionSummary, ProficiencyBand } from '@/lib/quiz-engine/types';
@@ -114,10 +115,7 @@ export function QuizSummary({
       </div>
 
       {canonicalExplanation && (
-        <div className="summary-key-concepts">
-          <div className="summary-key-concepts-title">Key Concepts</div>
-          <p className="summary-key-concepts-text">{canonicalExplanation}</p>
-        </div>
+        <CollapsibleConcepts explanation={canonicalExplanation} />
       )}
 
       <div className="summary-actions">
@@ -136,6 +134,40 @@ export function QuizSummary({
           Choose Topic
         </Button>
       </div>
+    </div>
+  );
+}
+
+function CollapsibleConcepts({ explanation }: { explanation: string }) {
+  const [isOpen, setIsOpen] = useState(true);
+
+  return (
+    <div className="summary-key-concepts">
+      <button
+        type="button"
+        className="summary-key-concepts-toggle"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+      >
+        <span className="summary-key-concepts-title">Key Concepts</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          style={{
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            transition: 'transform var(--transition-fast)',
+          }}
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+      {isOpen && (
+        <p className="summary-key-concepts-text">{explanation}</p>
+      )}
     </div>
   );
 }

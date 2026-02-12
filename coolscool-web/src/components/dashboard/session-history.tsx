@@ -52,12 +52,15 @@ export function SessionHistory({
     return (
       <div className="session-history">
         <h2 className="session-history-title">Recent Sessions</h2>
-        <div className="session-history-empty">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-          <p>No practice sessions yet</p>
+        <div className="empty-state">
+          <div className="empty-state-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3 className="empty-state-title">No Sessions Yet</h3>
+          <p className="empty-state-message">Complete a quiz to see your session history here.</p>
           <Link href="/browse" className="btn btn-primary">
             Start Practicing
           </Link>

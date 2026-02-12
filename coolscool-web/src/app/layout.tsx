@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Header } from '@/components/layout';
-import { Footer } from '@/components/layout';
+import { Header, Footer, BottomNav } from '@/components/layout';
 import { SessionProvider } from '@/components/providers/session-provider';
 import { QueryProvider } from '@/components/providers/query-provider';
 import { ToastProvider } from '@/components/ui/toast';
@@ -48,6 +47,7 @@ export default function RootLayout({
                   {children}
                 </main>
                 <Footer />
+                <BottomNav />
               </ToastProvider>
             </CurriculumProvider>
           </QueryProvider>

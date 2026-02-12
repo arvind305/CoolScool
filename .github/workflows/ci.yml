@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend:
+    name: Backend
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: coolscool-backend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: coolscool-backend
+        run: npm ci
+
+      - name: Lint
+        working-directory: coolscool-backend
+        run: npm run lint
+
+      - name: Type check
+        working-directory: coolscool-backend
+        run: npx tsc --noEmit
+
+      - name: Run tests
+        working-directory: coolscool-backend
+        run: npm test -- --ci --coverage
+
+      - name: Build
+        working-directory: coolscool-backend
+        run: npm run build
+
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: coolscool-web/package-lock.json
+
+      - name: Install dependencies
+        working-directory: coolscool-web
+        run: npm ci
+
+      - name: Lint
+        working-directory: coolscool-web
+        run: npm run lint
+
+      - name: Type check
+        working-directory: coolscool-web
+        run: npx tsc --noEmit
+
+      - name: Run Jest tests
+        working-directory: coolscool-web
+        run: npm test -- --ci --coverage
+
+      - name: Run Vitest tests
+        working-directory: coolscool-web
+        run: npx vitest run
+
+      - name: Build
+        working-directory: coolscool-web
+        run: npm run build

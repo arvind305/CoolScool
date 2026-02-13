@@ -283,6 +283,26 @@ function QuizPageContent() {
     });
   }, [engine, topicId, timeMode, startTimer, access]);
 
+  // Get session info (needed by callbacks below)
+  const session = engine.session;
+  const currentQuestion = engine.currentQuestion;
+  const lastResult = engine.lastAnswerResult;
+
+  // Handle flag submission
+  const handleFlagSubmit = useCallback(async (reason: import('@/hooks/use-flags').FlagReason, comment?: string) => {
+    if (!currentQuestion) return;
+    const result = await flags.submitFlag({
+      questionId: currentQuestion.question_id,
+      curriculumId,
+      flagReason: reason,
+      userComment: comment,
+    });
+    if (result.success) {
+      toastSuccess('Thanks for reporting! We will review this question.');
+      setFlagModalOpen(false);
+    }
+  }, [currentQuestion, flags, curriculumId, toastSuccess]);
+
   // Handle choose topic
   const handleChooseTopic = useCallback(() => {
     router.push(`/browse/${board}/class-${classLevel}/${subject}`);
@@ -304,11 +324,6 @@ function QuizPageContent() {
       window.dispatchEvent(new Event('quiz:stop-speech'));
     };
   }, []);
-
-  // Get session info
-  const session = engine.session;
-  const currentQuestion = engine.currentQuestion;
-  const lastResult = engine.lastAnswerResult;
 
   // Calculate time limit and remaining
   const timeLimit =
@@ -393,21 +408,6 @@ function QuizPageContent() {
       </div>
     );
   }
-
-  // Handle flag submission
-  const handleFlagSubmit = useCallback(async (reason: import('@/hooks/use-flags').FlagReason, comment?: string) => {
-    if (!currentQuestion) return;
-    const result = await flags.submitFlag({
-      questionId: currentQuestion.question_id,
-      curriculumId,
-      flagReason: reason,
-      userComment: comment,
-    });
-    if (result.success) {
-      toastSuccess('Thanks for reporting! We will review this question.');
-      setFlagModalOpen(false);
-    }
-  }, [currentQuestion, flags, curriculumId, toastSuccess]);
 
   // Helper to extract answer texts for speech
   function getAnswerTextsForSpeech(question: typeof currentQuestion): string[] {

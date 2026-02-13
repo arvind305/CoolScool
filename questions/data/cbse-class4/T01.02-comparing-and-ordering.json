@@ -1,0 +1,820 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 4,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.02",
+  "topic_name": "Comparing and Ordering",
+  "canonical_explanation": {
+    "text": "To compare numbers, start from the leftmost digit and compare digit by digit. The number with a greater digit at the first differing place is the larger number. Ascending order means smallest to largest; descending order means largest to smallest. Rounding means replacing a number with the nearest 10, 100, or 1000.",
+    "rules": [
+      "To compare, first check the number of digits — more digits means a larger number",
+      "If digits are the same count, compare from the leftmost digit",
+      "Ascending order: smallest first, largest last",
+      "Descending order: largest first, smallest last",
+      "For rounding to nearest 10: look at the ones digit — if 5 or more, round up; if less than 5, round down",
+      "For rounding to nearest 100: look at the tens digit — if 5 or more, round up; if less than 5, round down"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.02.Q001",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which symbol goes in the blank? 4523 ___ 4532",
+      "options": [
+        { "id": "A", "text": ">" },
+        { "id": "B", "text": "<" },
+        { "id": "C", "text": "=" },
+        { "id": "D", "text": "None of these" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Comparing 4523 and 4532: thousands are same (4), hundreds are same (5), but tens differ: 2 < 3. So 4523 < 4532.",
+      "explanation_incorrect": "Compare digit by digit from the left. Thousands (4=4), hundreds (5=5), tens (2<3). Since 2 < 3, 4523 < 4532. Option B."
+    },
+    {
+      "question_id": "T01.02.Q002",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which number is greater: 6789 or 6798?",
+      "options": [
+        { "id": "A", "text": "6789" },
+        { "id": "B", "text": "6798" },
+        { "id": "C", "text": "Both are equal" },
+        { "id": "D", "text": "Cannot tell" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Comparing 6789 and 6798: thousands (6=6), hundreds (7=7), tens (8<9). Since 8 < 9, 6798 is greater.",
+      "explanation_incorrect": "Compare from left: thousands same, hundreds same, tens: 8 < 9. So 6798 > 6789. Option B."
+    },
+    {
+      "question_id": "T01.02.Q003",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which of these is the smallest number?",
+      "options": [
+        { "id": "A", "text": "3210" },
+        { "id": "B", "text": "2310" },
+        { "id": "C", "text": "2130" },
+        { "id": "D", "text": "2301" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "3210 starts with 3, so it is the largest. Among 2310, 2130, 2301: they all start with 2, compare hundreds: 1 < 3, so 2130 is the smallest.",
+      "explanation_incorrect": "First eliminate 3210 (starts with 3). Among the rest, compare hundreds: 2130 has 1, 2310 has 3, 2301 has 3. 2130 has the smallest hundreds digit, so it is the smallest. Option C."
+    },
+    {
+      "question_id": "T01.02.Q004",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Arrange in ascending order: 4500, 4050, 4005, 4550",
+      "options": [
+        { "id": "A", "text": "4005, 4050, 4500, 4550" },
+        { "id": "B", "text": "4550, 4500, 4050, 4005" },
+        { "id": "C", "text": "4050, 4005, 4500, 4550" },
+        { "id": "D", "text": "4005, 4500, 4050, 4550" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Ascending order (smallest to largest): 4005 < 4050 < 4500 < 4550.",
+      "explanation_incorrect": "Ascending means smallest first. All start with 4. Compare: 4005 (smallest), then 4050, then 4500, then 4550. Option A."
+    },
+    {
+      "question_id": "T01.02.Q005",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Arrange in descending order: 1234, 4321, 2143, 3412",
+      "options": [
+        { "id": "A", "text": "1234, 2143, 3412, 4321" },
+        { "id": "B", "text": "4321, 3412, 2143, 1234" },
+        { "id": "C", "text": "4321, 2143, 3412, 1234" },
+        { "id": "D", "text": "3412, 4321, 1234, 2143" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Descending order (largest to smallest): 4321 > 3412 > 2143 > 1234.",
+      "explanation_incorrect": "Descending means largest first. Compare thousands digits: 4321 (4), 3412 (3), 2143 (2), 1234 (1). So 4321, 3412, 2143, 1234. Option B."
+    },
+    {
+      "question_id": "T01.02.Q006",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using the digits 5, 1, 8, 3 (each once), what is the greatest 4-digit number you can form?",
+      "options": [
+        { "id": "A", "text": "8531" },
+        { "id": "B", "text": "8513" },
+        { "id": "C", "text": "8351" },
+        { "id": "D", "text": "5831" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To form the greatest number, arrange digits in descending order: 8, 5, 3, 1 = 8531.",
+      "explanation_incorrect": "For the greatest number, place the largest digit first: 8, then 5, then 3, then 1 = 8531. Option A."
+    },
+    {
+      "question_id": "T01.02.Q007",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using the digits 7, 2, 9, 4 (each once), what is the smallest 4-digit number you can form?",
+      "options": [
+        { "id": "A", "text": "2479" },
+        { "id": "B", "text": "2497" },
+        { "id": "C", "text": "2749" },
+        { "id": "D", "text": "4279" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To form the smallest number, arrange digits in ascending order: 2, 4, 7, 9 = 2479.",
+      "explanation_incorrect": "For the smallest number, place the smallest digit first: 2, then 4, then 7, then 9 = 2479. Option A."
+    },
+    {
+      "question_id": "T01.02.Q008",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Round 3847 to the nearest 10.",
+      "options": [
+        { "id": "A", "text": "3840" },
+        { "id": "B", "text": "3850" },
+        { "id": "C", "text": "3800" },
+        { "id": "D", "text": "3900" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ones digit is 7 (5 or more), so round up. 3847 rounded to the nearest 10 is 3850.",
+      "explanation_incorrect": "Look at the ones digit: 7. Since 7 >= 5, round up the tens digit from 4 to 5 and make ones 0. So 3847 rounds to 3850. Option B."
+    },
+    {
+      "question_id": "T01.02.Q009",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Round 5623 to the nearest 100.",
+      "options": [
+        { "id": "A", "text": "5600" },
+        { "id": "B", "text": "5700" },
+        { "id": "C", "text": "5620" },
+        { "id": "D", "text": "5630" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The tens digit is 2 (less than 5), so round down. 5623 rounded to the nearest 100 is 5600.",
+      "explanation_incorrect": "Look at the tens digit: 2. Since 2 < 5, round down. The hundreds stay at 6, and tens and ones become 0. So 5600. Option A."
+    },
+    {
+      "question_id": "T01.02.Q010",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Round 7500 to the nearest 1000.",
+      "options": [
+        { "id": "A", "text": "7000" },
+        { "id": "B", "text": "8000" },
+        { "id": "C", "text": "7500" },
+        { "id": "D", "text": "7100" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The hundreds digit is 5 (5 or more), so round up. 7500 rounded to the nearest 1000 is 8000.",
+      "explanation_incorrect": "Look at the hundreds digit: 5. Since 5 >= 5, round up the thousands from 7 to 8. So 7500 rounds to 8000. Option B."
+    },
+    {
+      "question_id": "T01.02.Q011",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Meera has Rs 4750 and Sita has Rs 4570. Who has more money?",
+      "options": [
+        { "id": "A", "text": "Meera" },
+        { "id": "B", "text": "Sita" },
+        { "id": "C", "text": "Both have the same" },
+        { "id": "D", "text": "Cannot tell" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Comparing 4750 and 4570: thousands same (4), hundreds: 7 > 5. So 4750 > 4570. Meera has more money.",
+      "explanation_incorrect": "Compare digit by digit: thousands (4=4), hundreds (7>5). 4750 > 4570, so Meera has more money. Option A."
+    },
+    {
+      "question_id": "T01.02.Q012",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Four cities have populations: Delhi Corner: 8920, Lake Town: 8290, Hill View: 9280, River Side: 8092. Arrange in ascending order.",
+      "options": [
+        { "id": "A", "text": "8092, 8290, 8920, 9280" },
+        { "id": "B", "text": "9280, 8920, 8290, 8092" },
+        { "id": "C", "text": "8092, 8920, 8290, 9280" },
+        { "id": "D", "text": "8290, 8092, 8920, 9280" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Ascending: 8092 < 8290 < 8920 < 9280. So River Side, Lake Town, Delhi Corner, Hill View.",
+      "explanation_incorrect": "Sort from smallest to largest: 8092 (River Side), 8290 (Lake Town), 8920 (Delhi Corner), 9280 (Hill View). Option A."
+    },
+    {
+      "question_id": "T01.02.Q013",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Rohan has digit cards 6, 0, 3, 9. He wants to make the smallest 4-digit number (no leading zero). What number should he make?",
+      "options": [
+        { "id": "A", "text": "0369" },
+        { "id": "B", "text": "3069" },
+        { "id": "C", "text": "3096" },
+        { "id": "D", "text": "3609" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A 4-digit number cannot start with 0. The smallest non-zero digit is 3. Then arrange remaining (0, 6, 9) in ascending order: 0, 6, 9. The number is 3069.",
+      "explanation_incorrect": "We cannot start with 0. The next smallest digit is 3. Put 0 right after 3, then 6, then 9: 3069. Option B is the smallest possible."
+    },
+    {
+      "question_id": "T01.02.Q014",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A school trip costs Rs 2865 per student. The teacher rounds this to the nearest hundred for estimation. What amount does she use?",
+      "options": [
+        { "id": "A", "text": "Rs 2800" },
+        { "id": "B", "text": "Rs 2900" },
+        { "id": "C", "text": "Rs 2870" },
+        { "id": "D", "text": "Rs 3000" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rounding 2865 to nearest 100: tens digit is 6 (>= 5), so round up. 2865 rounds to 2900.",
+      "explanation_incorrect": "Look at tens digit: 6. Since 6 >= 5, round up hundreds from 8 to 9. So 2865 rounds to 2900. Option B."
+    },
+    {
+      "question_id": "T01.02.Q015",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "type": "true_false",
+      "question_text": "A 4-digit number is always greater than a 3-digit number. True or false?",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. The smallest 4-digit number is 1000, and the largest 3-digit number is 999. Since 1000 > 999, every 4-digit number is greater than every 3-digit number.",
+      "explanation_incorrect": "This is true. The smallest 4-digit number (1000) is already greater than the largest 3-digit number (999)."
+    },
+    {
+      "question_id": "T01.02.Q016",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Which is the correct descending order? 5000, 5500, 5050, 5505",
+      "options": [
+        { "id": "A", "text": "5505, 5500, 5050, 5000" },
+        { "id": "B", "text": "5000, 5050, 5500, 5505" },
+        { "id": "C", "text": "5500, 5505, 5050, 5000" },
+        { "id": "D", "text": "5505, 5050, 5500, 5000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Descending order: 5505 > 5500 > 5050 > 5000.",
+      "explanation_incorrect": "Compare: 5505 is the largest (5 in hundreds), 5500 next, then 5050, then 5000. Option A."
+    },
+    {
+      "question_id": "T01.02.Q017",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Round 4445 to the nearest 10.",
+      "options": [
+        { "id": "A", "text": "4440" },
+        { "id": "B", "text": "4450" },
+        { "id": "C", "text": "4400" },
+        { "id": "D", "text": "4500" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ones digit is 5 (>= 5), so round up. 4445 rounds to 4450.",
+      "explanation_incorrect": "The ones digit is 5. Since 5 >= 5, round up. 4445 becomes 4450. Option B."
+    },
+    {
+      "question_id": "T01.02.Q018",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Using digits 1, 5, 0, 8 (each once), what is the difference between the greatest and smallest 4-digit numbers you can form?",
+      "options": [
+        { "id": "A", "text": "6993" },
+        { "id": "B", "text": "7533" },
+        { "id": "C", "text": "7452" },
+        { "id": "D", "text": "6552" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Greatest: 8510 (digits in descending order). Smallest 4-digit (no leading 0): 1058. Difference: 8510 - 1058 = 7452.",
+      "explanation_incorrect": "Greatest = 8510 (descending: 8,5,1,0). Smallest = 1058 (can't start with 0, so start with 1, then 0,5,8). 8510 - 1058 = 7452. Option C."
+    },
+    {
+      "question_id": "T01.02.Q019",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "How many 4-digit numbers are greater than 7000 but less than 7010?",
+      "options": [
+        { "id": "A", "text": "9" },
+        { "id": "B", "text": "10" },
+        { "id": "C", "text": "8" },
+        { "id": "D", "text": "11" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Numbers greater than 7000 but less than 7010: 7001, 7002, 7003, 7004, 7005, 7006, 7007, 7008, 7009. That is 9 numbers.",
+      "explanation_incorrect": "The numbers are 7001, 7002, 7003, 7004, 7005, 7006, 7007, 7008, 7009. Count = 9. Option A."
+    },
+    {
+      "question_id": "T01.02.Q020",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Using digits 2, 2, 5, 5 (with repetition as given), how many different 4-digit numbers can you form? Which is the greatest?",
+      "options": [
+        { "id": "A", "text": "Greatest is 5522" },
+        { "id": "B", "text": "Greatest is 5252" },
+        { "id": "C", "text": "Greatest is 5225" },
+        { "id": "D", "text": "Greatest is 2555" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To form the greatest number with digits 2, 2, 5, 5, arrange in descending order: 5, 5, 2, 2 = 5522.",
+      "explanation_incorrect": "For the greatest number, put the largest digits first: 5, 5, 2, 2 = 5522. Option A."
+    },
+    {
+      "question_id": "T01.02.Q021",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "When 6350 is rounded to the nearest 1000, the result is:",
+      "options": [
+        { "id": "A", "text": "6000" },
+        { "id": "B", "text": "7000" },
+        { "id": "C", "text": "6400" },
+        { "id": "D", "text": "6300" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To round to nearest 1000, look at hundreds digit: 3. Since 3 < 5, round down. 6350 rounds to 6000.",
+      "explanation_incorrect": "Hundreds digit is 3 (< 5), so round down. 6350 rounds to 6000. Option A."
+    },
+    {
+      "question_id": "T01.02.Q022",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which is greater: 999 or 1001?",
+      "options": [
+        { "id": "A", "text": "999" },
+        { "id": "B", "text": "1001" },
+        { "id": "C", "text": "Both are equal" },
+        { "id": "D", "text": "Cannot compare" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1001 has 4 digits while 999 has 3 digits. A number with more digits is always greater (among positive numbers). So 1001 > 999.",
+      "explanation_incorrect": "1001 has 4 digits, 999 has 3. More digits means greater number. 1001 > 999. Option B."
+    },
+    {
+      "question_id": "T01.02.Q023",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The weights (in grams) of 4 fruits are: Mango 345, Apple 289, Banana 118, Orange 310. Arrange in descending order of weight.",
+      "options": [
+        { "id": "A", "text": "345, 310, 289, 118" },
+        { "id": "B", "text": "118, 289, 310, 345" },
+        { "id": "C", "text": "345, 289, 310, 118" },
+        { "id": "D", "text": "310, 345, 289, 118" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Descending: 345 > 310 > 289 > 118. So Mango, Orange, Apple, Banana.",
+      "explanation_incorrect": "Largest to smallest: 345 (Mango), 310 (Orange), 289 (Apple), 118 (Banana). Option A."
+    },
+    {
+      "question_id": "T01.02.Q024",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Round 1234 to the nearest 10.",
+      "options": [
+        { "id": "A", "text": "1230" },
+        { "id": "B", "text": "1240" },
+        { "id": "C", "text": "1200" },
+        { "id": "D", "text": "1300" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Ones digit is 4 (< 5), so round down. 1234 rounds to 1230.",
+      "explanation_incorrect": "Ones digit 4 < 5, so round down. 1234 becomes 1230. Option A."
+    },
+    {
+      "question_id": "T01.02.Q025",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A shop sold 3478 items in January and 3487 items in February. In which month did the shop sell more items?",
+      "options": [
+        { "id": "A", "text": "January" },
+        { "id": "B", "text": "February" },
+        { "id": "C", "text": "Same in both" },
+        { "id": "D", "text": "Cannot tell" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "3478 vs 3487: thousands same (3), hundreds same (4), tens: 7 < 8. So 3487 > 3478. February had more sales.",
+      "explanation_incorrect": "Compare: 3478 vs 3487. First three digits from left: 3, 4, 7 = 3, 4, 8. Tens differ: 7 < 8. So 3487 (February) > 3478 (January). Option B."
+    },
+    {
+      "question_id": "T01.02.Q026",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Using digits 0, 3, 7, 5 (each once), the difference between the greatest and smallest 4-digit numbers is:",
+      "options": [
+        { "id": "A", "text": "4527" },
+        { "id": "B", "text": "4473" },
+        { "id": "C", "text": "4698" },
+        { "id": "D", "text": "4530" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Greatest: 7530 (descending: 7,5,3,0). Smallest (no leading 0): 3057 (start with 3, then 0,5,7). Difference = 7530 - 3057 = 4473.",
+      "explanation_incorrect": "Greatest = 7530 (digits in descending order). Smallest = 3057 (can't start with 0, so start with 3, then 0,5,7). 7530 - 3057 = 4473. Option B."
+    },
+    {
+      "question_id": "T01.02.Q027",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A number when rounded to the nearest 100 gives 4500. Which of these could be the original number?",
+      "options": [
+        { "id": "A", "text": "4440" },
+        { "id": "B", "text": "4462" },
+        { "id": "C", "text": "4551" },
+        { "id": "D", "text": "4449" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Numbers that round to 4500 are from 4450 to 4549. 4462 is in this range, so it rounds to 4500.",
+      "explanation_incorrect": "For a number to round to 4500, it must be between 4450 and 4549. Check: 4440 (rounds to 4400), 4462 (rounds to 4500), 4551 (rounds to 4600), 4449 (rounds to 4400). Option B."
+    },
+    {
+      "question_id": "T01.02.Q028",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What comes just before 5000 (predecessor)?",
+      "options": [
+        { "id": "A", "text": "4999" },
+        { "id": "B", "text": "5001" },
+        { "id": "C", "text": "4900" },
+        { "id": "D", "text": "4990" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The predecessor of 5000 is 5000 - 1 = 4999.",
+      "explanation_incorrect": "Predecessor means the number just before. 5000 - 1 = 4999. Option A."
+    },
+    {
+      "question_id": "T01.02.Q029",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What comes just after 9999 (successor)?",
+      "options": [
+        { "id": "A", "text": "9998" },
+        { "id": "B", "text": "10000" },
+        { "id": "C", "text": "9990" },
+        { "id": "D", "text": "99910" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The successor of 9999 is 9999 + 1 = 10000.",
+      "explanation_incorrect": "Successor means the number just after. 9999 + 1 = 10000. Option B."
+    },
+    {
+      "question_id": "T01.02.Q030",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Which is the greatest 3-digit number?",
+      "options": [
+        { "id": "A", "text": "990" },
+        { "id": "B", "text": "909" },
+        { "id": "C", "text": "999" },
+        { "id": "D", "text": "1000" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The greatest 3-digit number is 999. 1000 is a 4-digit number.",
+      "explanation_incorrect": "The greatest 3-digit number has 9 in all three places: 999. 1000 has 4 digits so it doesn't count. Option C."
+    },
+    {
+      "question_id": "T01.02.Q031",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Round 8765 to the nearest 1000.",
+      "options": [
+        { "id": "A", "text": "8000" },
+        { "id": "B", "text": "9000" },
+        { "id": "C", "text": "8800" },
+        { "id": "D", "text": "8700" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hundreds digit is 7 (>= 5), so round up. 8765 rounds to 9000.",
+      "explanation_incorrect": "Look at hundreds digit: 7. Since 7 >= 5, round up thousands from 8 to 9. So 8765 rounds to 9000. Option B."
+    },
+    {
+      "question_id": "T01.02.Q032",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Using the digits 4, 0, 0, 7 (each used as given), what is the greatest 4-digit number?",
+      "options": [
+        { "id": "A", "text": "7400" },
+        { "id": "B", "text": "7040" },
+        { "id": "C", "text": "7004" },
+        { "id": "D", "text": "4700" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Arrange in descending order: 7, 4, 0, 0 = 7400.",
+      "explanation_incorrect": "Place largest digit first: 7, then 4, then 0, 0 = 7400. Option A."
+    },
+    {
+      "question_id": "T01.02.Q033",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Rahul says 3599 > 3601. Is he correct?",
+      "options": [
+        { "id": "A", "text": "Yes, because 99 > 01" },
+        { "id": "B", "text": "No, because 3601 > 3599" },
+        { "id": "C", "text": "Yes, because 5 > 6 is wrong so 3599 > 3601" },
+        { "id": "D", "text": "They are equal" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Comparing: thousands same (3), hundreds: 5 < 6. So 3599 < 3601. Rahul is incorrect.",
+      "explanation_incorrect": "Compare from left: thousands (3=3), hundreds (5<6). Since 5 < 6, 3599 < 3601. Rahul is wrong. Option B."
+    },
+    {
+      "question_id": "T01.02.Q034",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Which of these numbers stays the same when rounded to the nearest 10?",
+      "options": [
+        { "id": "A", "text": "4563" },
+        { "id": "B", "text": "4567" },
+        { "id": "C", "text": "4560" },
+        { "id": "D", "text": "4565" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "4560 already ends in 0, so rounding to the nearest 10 does not change it. It stays 4560.",
+      "explanation_incorrect": "A number ending in 0 is already a multiple of 10. 4560 rounds to 4560 (no change). Option C."
+    },
+    {
+      "question_id": "T01.02.Q035",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Arrange these distances in ascending order: Delhi to Agra: 233 km, Delhi to Jaipur: 281 km, Delhi to Lucknow: 556 km, Delhi to Chandigarh: 243 km",
+      "options": [
+        { "id": "A", "text": "233, 243, 281, 556" },
+        { "id": "B", "text": "556, 281, 243, 233" },
+        { "id": "C", "text": "233, 281, 243, 556" },
+        { "id": "D", "text": "243, 233, 281, 556" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Ascending: 233 < 243 < 281 < 556. So Agra, Chandigarh, Jaipur, Lucknow.",
+      "explanation_incorrect": "Sort smallest to largest: 233, 243, 281, 556. Option A."
+    },
+    {
+      "question_id": "T01.02.Q036",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using digits 1, 2, 3 (each once), what is the greatest 3-digit number?",
+      "options": [
+        { "id": "A", "text": "123" },
+        { "id": "B", "text": "321" },
+        { "id": "C", "text": "312" },
+        { "id": "D", "text": "231" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Arrange in descending order: 3, 2, 1 = 321.",
+      "explanation_incorrect": "For greatest number, place largest digit first: 3, 2, 1 = 321. Option B."
+    },
+    {
+      "question_id": "T01.02.Q037",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Round 450 to the nearest 100.",
+      "options": [
+        { "id": "A", "text": "400" },
+        { "id": "B", "text": "500" },
+        { "id": "C", "text": "450" },
+        { "id": "D", "text": "460" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Tens digit is 5 (>= 5), so round up. 450 rounds to 500.",
+      "explanation_incorrect": "Tens digit is 5. Since 5 >= 5, round up. 450 becomes 500. Option B."
+    },
+    {
+      "question_id": "T01.02.Q038",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "How many numbers are there between 4500 and 4510 (not including 4500 and 4510)?",
+      "options": [
+        { "id": "A", "text": "10" },
+        { "id": "B", "text": "9" },
+        { "id": "C", "text": "8" },
+        { "id": "D", "text": "11" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Numbers between 4500 and 4510 (not including either): 4501, 4502, 4503, 4504, 4505, 4506, 4507, 4508, 4509. That is 9 numbers.",
+      "explanation_incorrect": "Count: 4501, 4502, ..., 4509. That is 4509 - 4501 + 1 = 9 numbers. Option B."
+    },
+    {
+      "question_id": "T01.02.Q039",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Five friends scored in a game: Anil 4520, Bina 4502, Charu 4052, Deepak 4250, Esha 4205. Who came third when arranged in descending order?",
+      "options": [
+        { "id": "A", "text": "Bina" },
+        { "id": "B", "text": "Deepak" },
+        { "id": "C", "text": "Esha" },
+        { "id": "D", "text": "Charu" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Descending: 4520 (Anil), 4502 (Bina), 4250 (Deepak), 4205 (Esha), 4052 (Charu). Third is Deepak.",
+      "explanation_incorrect": "Rank from highest: Anil (4520), Bina (4502), Deepak (4250), Esha (4205), Charu (4052). Third place: Deepak. Option B."
+    },
+    {
+      "question_id": "T01.02.Q040",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Round 3555 to the nearest 100.",
+      "options": [
+        { "id": "A", "text": "3500" },
+        { "id": "B", "text": "3600" },
+        { "id": "C", "text": "3560" },
+        { "id": "D", "text": "4000" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Tens digit is 5 (>= 5), so round up. 3555 rounds to 3600.",
+      "explanation_incorrect": "Look at tens digit: 5. Since 5 >= 5, round up hundreds from 5 to 6. So 3555 rounds to 3600. Option B."
+    },
+    {
+      "question_id": "T01.02.Q041",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "What is the smallest 4-digit number with all different digits?",
+      "options": [
+        { "id": "A", "text": "1023" },
+        { "id": "B", "text": "1234" },
+        { "id": "C", "text": "1000" },
+        { "id": "D", "text": "1012" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "We need all different digits. 1000 has repeated 0s. The smallest is 1023 (digits 1, 0, 2, 3 - all different).",
+      "explanation_incorrect": "1000 repeats 0. We need all different digits. Start with 1 (smallest non-zero), then 0, then 2, then 3 = 1023. Option A."
+    },
+    {
+      "question_id": "T01.02.Q042",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "Fill in the correct symbol: 2750 ___ 2750",
+      "options": [
+        { "id": "A", "text": ">" },
+        { "id": "B", "text": "<" },
+        { "id": "C", "text": "=" },
+        { "id": "D", "text": "None" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Both numbers are the same: 2750 = 2750.",
+      "explanation_incorrect": "The two numbers are identical, so they are equal. The correct symbol is =, option C."
+    },
+    {
+      "question_id": "T01.02.Q043",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Round 9950 to the nearest 100.",
+      "options": [
+        { "id": "A", "text": "9900" },
+        { "id": "B", "text": "10000" },
+        { "id": "C", "text": "9950" },
+        { "id": "D", "text": "9000" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Tens digit is 5 (>= 5), so round up. 9950 rounds to 10000.",
+      "explanation_incorrect": "Tens digit 5 >= 5, so round up hundreds 9 to 10. But hundreds become 10, so it carries over: 9950 rounds to 10000. Option B."
+    },
+    {
+      "question_id": "T01.02.Q044",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Arrange in ascending order: 100, 1000, 10, 10000",
+      "options": [
+        { "id": "A", "text": "10, 100, 1000, 10000" },
+        { "id": "B", "text": "10000, 1000, 100, 10" },
+        { "id": "C", "text": "100, 10, 1000, 10000" },
+        { "id": "D", "text": "10, 1000, 100, 10000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Ascending: 10 < 100 < 1000 < 10000.",
+      "explanation_incorrect": "Smallest to largest: 10, 100, 1000, 10000. Option A."
+    },
+    {
+      "question_id": "T01.02.Q045",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The greatest 4-digit number using digits 3, 0, 5, 0 (using all) is:",
+      "options": [
+        { "id": "A", "text": "5300" },
+        { "id": "B", "text": "5030" },
+        { "id": "C", "text": "5003" },
+        { "id": "D", "text": "3500" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Arrange in descending order: 5, 3, 0, 0 = 5300.",
+      "explanation_incorrect": "Descending order of digits 5, 3, 0, 0 gives 5300. Option A."
+    },
+    {
+      "question_id": "T01.02.Q046",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "type": "true_false",
+      "question_text": "5099 is greater than 5100. True or false?",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "False. Thousands are same (5). Hundreds: 0 < 1. So 5099 < 5100.",
+      "explanation_incorrect": "Compare: thousands (5=5), hundreds (0<1). So 5099 < 5100. The statement is false. Option B."
+    },
+    {
+      "question_id": "T01.02.Q047",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A factory produces 6748 toys. For a report, this is rounded to the nearest 1000. What number is reported?",
+      "options": [
+        { "id": "A", "text": "6000" },
+        { "id": "B", "text": "7000" },
+        { "id": "C", "text": "6700" },
+        { "id": "D", "text": "6800" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hundreds digit is 7 (>= 5), so round up. 6748 rounds to 7000.",
+      "explanation_incorrect": "Hundreds digit 7 >= 5, round up. 6748 becomes 7000. Option B."
+    },
+    {
+      "question_id": "T01.02.Q048",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "What is the successor of 9999?",
+      "options": [
+        { "id": "A", "text": "10000" },
+        { "id": "B", "text": "9998" },
+        { "id": "C", "text": "99910" },
+        { "id": "D", "text": "9990" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Successor of 9999 = 9999 + 1 = 10000.",
+      "explanation_incorrect": "The successor (next number) of 9999 is 10000. Option A."
+    },
+    {
+      "question_id": "T01.02.Q049",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using digits 6, 2, 8, 4 (each once), the smallest 4-digit number is:",
+      "options": [
+        { "id": "A", "text": "2468" },
+        { "id": "B", "text": "2486" },
+        { "id": "C", "text": "2648" },
+        { "id": "D", "text": "4268" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Arrange in ascending order: 2, 4, 6, 8 = 2468.",
+      "explanation_incorrect": "For the smallest number, place digits in ascending order: 2, 4, 6, 8 = 2468. Option A."
+    },
+    {
+      "question_id": "T01.02.Q050",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "When a number is rounded to the nearest 10, the result is 4580. Which of these could be the original number?",
+      "options": [
+        { "id": "A", "text": "4573" },
+        { "id": "B", "text": "4584" },
+        { "id": "C", "text": "4586" },
+        { "id": "D", "text": "4589" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Numbers that round to 4580 (nearest 10) range from 4575 to 4584. 4584 is in this range.",
+      "explanation_incorrect": "For rounding to 4580, the number must be between 4575 and 4584. Check: 4573 rounds to 4570, 4584 rounds to 4580, 4586 rounds to 4590, 4589 rounds to 4590. Option B."
+    }
+  ]
+}

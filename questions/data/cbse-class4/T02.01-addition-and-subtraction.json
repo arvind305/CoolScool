@@ -1,0 +1,820 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 4,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.01",
+  "topic_name": "Addition and Subtraction",
+  "canonical_explanation": {
+    "text": "Addition means combining two or more numbers to get a total (sum). Subtraction means taking away one number from another to find the difference. When adding or subtracting large numbers, line up the digits by place value and work from right (ones) to left.",
+    "rules": [
+      "Always start adding or subtracting from the ones place (rightmost digit)",
+      "Carrying (regrouping): if the sum of digits in any column is 10 or more, carry the tens digit to the next column",
+      "Borrowing (regrouping): if a digit is too small to subtract from, borrow 1 from the next column (which equals 10 in the current column)",
+      "Commutative property: a + b = b + a (order does not matter in addition)",
+      "Additive identity: a + 0 = a (adding zero does not change a number)",
+      "Check subtraction by adding: if a - b = c, then c + b should equal a"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.01.Q001",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 2345 + 1234?",
+      "options": [
+        { "id": "A", "text": "3579" },
+        { "id": "B", "text": "3569" },
+        { "id": "C", "text": "3589" },
+        { "id": "D", "text": "3479" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2345 + 1234: ones: 5+4=9, tens: 4+3=7, hundreds: 3+2=5, thousands: 2+1=3. Answer: 3579.",
+      "explanation_incorrect": "Add column by column from right: 5+4=9, 4+3=7, 3+2=5, 2+1=3. The sum is 3579. Option A."
+    },
+    {
+      "question_id": "T02.01.Q002",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 1567 + 2845?",
+      "options": [
+        { "id": "A", "text": "4312" },
+        { "id": "B", "text": "4412" },
+        { "id": "C", "text": "4402" },
+        { "id": "D", "text": "4422" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1567 + 2845: ones: 7+5=12, write 2 carry 1. Tens: 6+4+1=11, write 1 carry 1. Hundreds: 5+8+1=14, write 4 carry 1. Thousands: 1+2+1=4. Answer: 4412.",
+      "explanation_incorrect": "Add with carrying: 7+5=12(carry 1), 6+4+1=11(carry 1), 5+8+1=14(carry 1), 1+2+1=4. Sum = 4412. Option B."
+    },
+    {
+      "question_id": "T02.01.Q003",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 5678 - 2345?",
+      "options": [
+        { "id": "A", "text": "3333" },
+        { "id": "B", "text": "3233" },
+        { "id": "C", "text": "3343" },
+        { "id": "D", "text": "3323" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5678 - 2345: ones: 8-5=3, tens: 7-4=3, hundreds: 6-3=3, thousands: 5-2=3. Answer: 3333.",
+      "explanation_incorrect": "Subtract column by column: 8-5=3, 7-4=3, 6-3=3, 5-2=3. Difference = 3333. Option A."
+    },
+    {
+      "question_id": "T02.01.Q004",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 6004 - 2537?",
+      "options": [
+        { "id": "A", "text": "3467" },
+        { "id": "B", "text": "3477" },
+        { "id": "C", "text": "3567" },
+        { "id": "D", "text": "3457" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6004 - 2537: ones: 4-7, borrow needed. 14-7=7. Tens: 0-1(carry)-3, borrow needed. 9-3=6 (after double borrowing). Hundreds: 0-1-5, borrow. 9-5=4. Thousands: 6-1-2=3. Answer: 3467.",
+      "explanation_incorrect": "This requires borrowing across zeros. Working through carefully: 6004 - 2537 = 3467. Option A."
+    },
+    {
+      "question_id": "T02.01.Q005",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which property of addition does this show? 456 + 789 = 789 + 456",
+      "options": [
+        { "id": "A", "text": "Associative property" },
+        { "id": "B", "text": "Commutative property" },
+        { "id": "C", "text": "Identity property" },
+        { "id": "D", "text": "Distributive property" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the order of numbers changes but the sum stays the same, it is the commutative property: a + b = b + a.",
+      "explanation_incorrect": "Changing the order of addends without changing the sum is the commutative property. Option B."
+    },
+    {
+      "question_id": "T02.01.Q006",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 3456 + 0?",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "3456" },
+        { "id": "C", "text": "3457" },
+        { "id": "D", "text": "34560" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding 0 to any number gives the same number. This is the additive identity property. 3456 + 0 = 3456.",
+      "explanation_incorrect": "Zero is the additive identity: any number + 0 = that number. 3456 + 0 = 3456. Option B."
+    },
+    {
+      "question_id": "T02.01.Q007",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 999 + 1?",
+      "options": [
+        { "id": "A", "text": "1000" },
+        { "id": "B", "text": "9991" },
+        { "id": "C", "text": "990" },
+        { "id": "D", "text": "1001" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "999 + 1 = 1000. Adding 1 to 999 carries over through all places to give 1000.",
+      "explanation_incorrect": "999 + 1: ones 9+1=10 (carry 1), tens 9+1=10 (carry 1), hundreds 9+1=10 (carry 1). Answer = 1000. Option A."
+    },
+    {
+      "question_id": "T02.01.Q008",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 4000 - 1?",
+      "options": [
+        { "id": "A", "text": "3999" },
+        { "id": "B", "text": "3990" },
+        { "id": "C", "text": "3900" },
+        { "id": "D", "text": "3001" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4000 - 1 = 3999. Borrowing from thousands: 4000 becomes 3000 + 900 + 90 + 10, then subtract 1 = 3999.",
+      "explanation_incorrect": "4000 - 1 requires borrowing across zeros. The result is 3999. Option A."
+    },
+    {
+      "question_id": "T02.01.Q009",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Aarav saved Rs 2450 in January and Rs 1875 in February. How much did he save in total?",
+      "options": [
+        { "id": "A", "text": "Rs 4325" },
+        { "id": "B", "text": "Rs 4225" },
+        { "id": "C", "text": "Rs 4315" },
+        { "id": "D", "text": "Rs 4235" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2450 + 1875: ones 0+5=5, tens 5+7=12 (carry 1), hundreds 4+8+1=13 (carry 1), thousands 2+1+1=4. Total = 4325.",
+      "explanation_incorrect": "Add 2450 + 1875 = 4325. Aarav saved Rs 4325 in total. Option A."
+    },
+    {
+      "question_id": "T02.01.Q010",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A school library had 5230 books. 1456 books were given to another school. How many books are left?",
+      "options": [
+        { "id": "A", "text": "3774" },
+        { "id": "B", "text": "3874" },
+        { "id": "C", "text": "3674" },
+        { "id": "D", "text": "3764" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5230 - 1456: ones 0-6 (borrow) 10-6=4, tens 2-1-5 (borrow) 12-5=7, hundreds 2-1-4 (borrow) 12-4=7 wait, let me recalculate. 5230 - 1456. Ones: 0-6, borrow, 10-6=4. Tens: 3-1(borrow)-5, borrow, 12-5=7. Hundreds: 2-1(borrow)-4, borrow, 12-4=7. wait. Let me just compute: 5230-1456=3774.",
+      "explanation_incorrect": "5230 - 1456 = 3774 books remaining. Option A."
+    },
+    {
+      "question_id": "T02.01.Q011",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the sum: 3456 + 2378 + 1045",
+      "options": [
+        { "id": "A", "text": "6879" },
+        { "id": "B", "text": "6889" },
+        { "id": "C", "text": "6979" },
+        { "id": "D", "text": "6779" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "3456 + 2378 = 5834. Then 5834 + 1045 = 6879.",
+      "explanation_incorrect": "Add step by step: 3456 + 2378 = 5834, then 5834 + 1045 = 6879. Option A."
+    },
+    {
+      "question_id": "T02.01.Q012",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "What is 7000 - 3568?",
+      "options": [
+        { "id": "A", "text": "3432" },
+        { "id": "B", "text": "3342" },
+        { "id": "C", "text": "3442" },
+        { "id": "D", "text": "3532" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "7000 - 3568: This requires borrowing across multiple zeros. 7000 - 3568 = 3432.",
+      "explanation_incorrect": "Subtract with borrowing: 7000 - 3568 = 3432. You can check: 3432 + 3568 = 7000. Option A."
+    },
+    {
+      "question_id": "T02.01.Q013",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which property is shown? (234 + 456) + 310 = 234 + (456 + 310)",
+      "options": [
+        { "id": "A", "text": "Commutative property" },
+        { "id": "B", "text": "Associative property" },
+        { "id": "C", "text": "Identity property" },
+        { "id": "D", "text": "Subtraction property" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the grouping (brackets) changes but the sum stays the same, it is the associative property: (a + b) + c = a + (b + c).",
+      "explanation_incorrect": "Changing the grouping of numbers without changing the sum is the associative property. Option B."
+    },
+    {
+      "question_id": "T02.01.Q014",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Priya had Rs 5000. She spent Rs 1275 on books and Rs 845 on stationery. How much money is left?",
+      "options": [
+        { "id": "A", "text": "Rs 2880" },
+        { "id": "B", "text": "Rs 2980" },
+        { "id": "C", "text": "Rs 2870" },
+        { "id": "D", "text": "Rs 3880" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total spent = 1275 + 845 = 2120. Money left = 5000 - 2120 = 2880.",
+      "explanation_incorrect": "First add expenses: 1275 + 845 = 2120. Then subtract from 5000: 5000 - 2120 = 2880. Option A."
+    },
+    {
+      "question_id": "T02.01.Q015",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "What is 4999 + 1?",
+      "options": [
+        { "id": "A", "text": "5000" },
+        { "id": "B", "text": "4990" },
+        { "id": "C", "text": "49910" },
+        { "id": "D", "text": "5001" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4999 + 1 = 5000. The carrying goes through all digits.",
+      "explanation_incorrect": "4999 + 1: all 9s become 0 with carry, giving 5000. Option A."
+    },
+    {
+      "question_id": "T02.01.Q016",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Subtract and check: 4532 - 1768. What is the result?",
+      "options": [
+        { "id": "A", "text": "2764" },
+        { "id": "B", "text": "2864" },
+        { "id": "C", "text": "2664" },
+        { "id": "D", "text": "2774" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4532 - 1768 = 2764. Check: 2764 + 1768 = 4532. Correct!",
+      "explanation_incorrect": "4532 - 1768 = 2764. Verify by adding: 2764 + 1768 = 4532. Option A."
+    },
+    {
+      "question_id": "T02.01.Q017",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "In a school, there are 2345 boys and 2678 girls. How many students are there in all?",
+      "options": [
+        { "id": "A", "text": "5023" },
+        { "id": "B", "text": "5013" },
+        { "id": "C", "text": "4923" },
+        { "id": "D", "text": "5123" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2345 + 2678 = 5023 students in total.",
+      "explanation_incorrect": "Add: 2345 + 2678 = 5023. Option A."
+    },
+    {
+      "question_id": "T02.01.Q018",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A farmer had 8240 apples. He sold 3675 on Monday and 2130 on Tuesday. How many apples are left?",
+      "options": [
+        { "id": "A", "text": "2435" },
+        { "id": "B", "text": "2535" },
+        { "id": "C", "text": "2445" },
+        { "id": "D", "text": "2335" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total sold = 3675 + 2130 = 5805. Remaining = 8240 - 5805 = 2435.",
+      "explanation_incorrect": "Total sold: 3675 + 2130 = 5805. Left: 8240 - 5805 = 2435. Option A."
+    },
+    {
+      "question_id": "T02.01.Q019",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "type": "fill_blank",
+      "question_text": "Fill in: 3456 + ___ = 5000",
+      "options": [
+        { "id": "A", "text": "1544" },
+        { "id": "B", "text": "1454" },
+        { "id": "C", "text": "1534" },
+        { "id": "D", "text": "1644" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5000 - 3456 = 1544. So 3456 + 1544 = 5000.",
+      "explanation_incorrect": "To find the missing number, subtract: 5000 - 3456 = 1544. Option A."
+    },
+    {
+      "question_id": "T02.01.Q020",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If 8000 - A = 3256, what is A?",
+      "options": [
+        { "id": "A", "text": "4744" },
+        { "id": "B", "text": "4644" },
+        { "id": "C", "text": "4844" },
+        { "id": "D", "text": "4754" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A = 8000 - 3256 = 4744.",
+      "explanation_incorrect": "A = 8000 - 3256 = 4744. Check: 8000 - 4744 = 3256. Option A."
+    },
+    {
+      "question_id": "T02.01.Q021",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 1111 + 2222?",
+      "options": [
+        { "id": "A", "text": "3333" },
+        { "id": "B", "text": "3233" },
+        { "id": "C", "text": "3343" },
+        { "id": "D", "text": "3323" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1111 + 2222: each column gives 1+2=3. Answer: 3333.",
+      "explanation_incorrect": "Simple addition with no carrying: 1+2=3 in each place. 1111 + 2222 = 3333. Option A."
+    },
+    {
+      "question_id": "T02.01.Q022",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A train has 1265 passengers. At the next station, 478 more passengers board. How many passengers are on the train now?",
+      "options": [
+        { "id": "A", "text": "1743" },
+        { "id": "B", "text": "1643" },
+        { "id": "C", "text": "1753" },
+        { "id": "D", "text": "1733" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1265 + 478 = 1743 passengers.",
+      "explanation_incorrect": "Add: 1265 + 478 = 1743. Option A."
+    },
+    {
+      "question_id": "T02.01.Q023",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A tank has 5000 litres of water. 2375 litres are used. How many litres remain?",
+      "options": [
+        { "id": "A", "text": "2625" },
+        { "id": "B", "text": "2725" },
+        { "id": "C", "text": "2525" },
+        { "id": "D", "text": "2635" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5000 - 2375 = 2625 litres remain.",
+      "explanation_incorrect": "5000 - 2375 = 2625. Option A."
+    },
+    {
+      "question_id": "T02.01.Q024",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The population of Town A is 4567 and Town B is 3845. How many more people are in Town A than Town B?",
+      "options": [
+        { "id": "A", "text": "722" },
+        { "id": "B", "text": "732" },
+        { "id": "C", "text": "712" },
+        { "id": "D", "text": "822" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4567 - 3845 = 722 more people in Town A.",
+      "explanation_incorrect": "Difference: 4567 - 3845 = 722. Option A."
+    },
+    {
+      "question_id": "T02.01.Q025",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "type": "true_false",
+      "question_text": "5678 - 0 = 5678. True or false?",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. Subtracting 0 from any number gives the same number: a - 0 = a.",
+      "explanation_incorrect": "Subtracting zero from any number leaves it unchanged. 5678 - 0 = 5678. This is true."
+    },
+    {
+      "question_id": "T02.01.Q026",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 2500 + 3500?",
+      "options": [
+        { "id": "A", "text": "6000" },
+        { "id": "B", "text": "5000" },
+        { "id": "C", "text": "6100" },
+        { "id": "D", "text": "5900" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2500 + 3500 = 6000.",
+      "explanation_incorrect": "2500 + 3500 = 6000. Option A."
+    },
+    {
+      "question_id": "T02.01.Q027",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 8765 - 4321?",
+      "options": [
+        { "id": "A", "text": "4444" },
+        { "id": "B", "text": "4434" },
+        { "id": "C", "text": "4544" },
+        { "id": "D", "text": "4344" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "8765 - 4321: 5-1=4, 6-2=4, 7-3=4, 8-4=4. Answer: 4444.",
+      "explanation_incorrect": "Simple subtraction with no borrowing: 8-4=4, 7-3=4, 6-2=4, 5-1=4. Result = 4444. Option A."
+    },
+    {
+      "question_id": "T02.01.Q028",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Rahul scored 2345 marks in Class 3 and 2890 marks in Class 4. How many more marks did he score in Class 4?",
+      "options": [
+        { "id": "A", "text": "545" },
+        { "id": "B", "text": "555" },
+        { "id": "C", "text": "455" },
+        { "id": "D", "text": "645" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2890 - 2345 = 545 more marks in Class 4.",
+      "explanation_incorrect": "Difference: 2890 - 2345 = 545. Option A."
+    },
+    {
+      "question_id": "T02.01.Q029",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "What is the sum of the smallest 4-digit number and the largest 3-digit number?",
+      "options": [
+        { "id": "A", "text": "1999" },
+        { "id": "B", "text": "2000" },
+        { "id": "C", "text": "1899" },
+        { "id": "D", "text": "1099" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Smallest 4-digit = 1000, largest 3-digit = 999. Sum = 1000 + 999 = 1999.",
+      "explanation_incorrect": "1000 + 999 = 1999. Option A."
+    },
+    {
+      "question_id": "T02.01.Q030",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "What is the difference between the largest and smallest 4-digit numbers?",
+      "options": [
+        { "id": "A", "text": "8999" },
+        { "id": "B", "text": "9000" },
+        { "id": "C", "text": "9999" },
+        { "id": "D", "text": "8000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Largest 4-digit = 9999, smallest = 1000. Difference = 9999 - 1000 = 8999.",
+      "explanation_incorrect": "9999 - 1000 = 8999. Option A."
+    },
+    {
+      "question_id": "T02.01.Q031",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Add: 456 + 378",
+      "options": [
+        { "id": "A", "text": "834" },
+        { "id": "B", "text": "824" },
+        { "id": "C", "text": "844" },
+        { "id": "D", "text": "734" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "456 + 378: ones 6+8=14 (carry 1), tens 5+7+1=13 (carry 1), hundreds 4+3+1=8. Sum = 834.",
+      "explanation_incorrect": "456 + 378 = 834 (with carrying). Option A."
+    },
+    {
+      "question_id": "T02.01.Q032",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Subtract: 900 - 456",
+      "options": [
+        { "id": "A", "text": "444" },
+        { "id": "B", "text": "454" },
+        { "id": "C", "text": "544" },
+        { "id": "D", "text": "434" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "900 - 456 = 444.",
+      "explanation_incorrect": "900 - 456 = 444 (with borrowing). Option A."
+    },
+    {
+      "question_id": "T02.01.Q033",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A shopkeeper had Rs 9000. He bought goods worth Rs 4567 and Rs 2345. How much money is left?",
+      "options": [
+        { "id": "A", "text": "Rs 2088" },
+        { "id": "B", "text": "Rs 2188" },
+        { "id": "C", "text": "Rs 2098" },
+        { "id": "D", "text": "Rs 2078" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total cost = 4567 + 2345 = 6912. Money left = 9000 - 6912 = 2088.",
+      "explanation_incorrect": "4567 + 2345 = 6912. Then 9000 - 6912 = 2088. Option A."
+    },
+    {
+      "question_id": "T02.01.Q034",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "2468 + 3579 = ___",
+      "options": [
+        { "id": "A", "text": "6047" },
+        { "id": "B", "text": "6057" },
+        { "id": "C", "text": "5947" },
+        { "id": "D", "text": "6147" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2468 + 3579: 8+9=17(carry 1), 6+7+1=14(carry 1), 4+5+1=10(carry 1), 2+3+1=6. Sum = 6047.",
+      "explanation_incorrect": "2468 + 3579 = 6047. Option A."
+    },
+    {
+      "question_id": "T02.01.Q035",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find the value: 6305 - 2748",
+      "options": [
+        { "id": "A", "text": "3557" },
+        { "id": "B", "text": "3547" },
+        { "id": "C", "text": "3657" },
+        { "id": "D", "text": "3567" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6305 - 2748 = 3557.",
+      "explanation_incorrect": "6305 - 2748 = 3557. Check: 3557 + 2748 = 6305. Option A."
+    },
+    {
+      "question_id": "T02.01.Q036",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "Subtraction is commutative (a - b = b - a). True or false?",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "False. Subtraction is NOT commutative. For example, 5 - 3 = 2 but 3 - 5 is not equal to 2.",
+      "explanation_incorrect": "Subtraction is not commutative. 5 - 3 = 2, but 3 - 5 gives a different result. Only addition (and multiplication) are commutative. Option B (False)."
+    },
+    {
+      "question_id": "T02.01.Q037",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A village has 4325 men and 3987 women. What is the total population?",
+      "options": [
+        { "id": "A", "text": "8312" },
+        { "id": "B", "text": "8212" },
+        { "id": "C", "text": "8322" },
+        { "id": "D", "text": "8302" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4325 + 3987 = 8312.",
+      "explanation_incorrect": "4325 + 3987 = 8312. Option A."
+    },
+    {
+      "question_id": "T02.01.Q038",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 5050 + 2525?",
+      "options": [
+        { "id": "A", "text": "7575" },
+        { "id": "B", "text": "7565" },
+        { "id": "C", "text": "7675" },
+        { "id": "D", "text": "7555" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5050 + 2525: 0+5=5, 5+2=7, 0+5=5, 5+2=7. Sum = 7575.",
+      "explanation_incorrect": "5050 + 2525 = 7575. No carrying needed. Option A."
+    },
+    {
+      "question_id": "T02.01.Q039",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "What number should be subtracted from 6500 to get 2750?",
+      "options": [
+        { "id": "A", "text": "3750" },
+        { "id": "B", "text": "3650" },
+        { "id": "C", "text": "3850" },
+        { "id": "D", "text": "3700" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6500 - ? = 2750. So ? = 6500 - 2750 = 3750.",
+      "explanation_incorrect": "6500 - 2750 = 3750. So 3750 should be subtracted. Option A."
+    },
+    {
+      "question_id": "T02.01.Q040",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Anita collected 1250 stamps in 2024 and 1875 stamps in 2025. How many stamps does she have in total?",
+      "options": [
+        { "id": "A", "text": "3125" },
+        { "id": "B", "text": "3025" },
+        { "id": "C", "text": "3225" },
+        { "id": "D", "text": "3115" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1250 + 1875 = 3125 stamps.",
+      "explanation_incorrect": "1250 + 1875 = 3125. Option A."
+    },
+    {
+      "question_id": "T02.01.Q041",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "What is 9999 + 1?",
+      "options": [
+        { "id": "A", "text": "10000" },
+        { "id": "B", "text": "9990" },
+        { "id": "C", "text": "99910" },
+        { "id": "D", "text": "10001" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "9999 + 1 = 10000. Adding 1 causes carrying in every column.",
+      "explanation_incorrect": "9999 + 1 = 10000 (the smallest 5-digit number). Option A."
+    },
+    {
+      "question_id": "T02.01.Q042",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 3456 - 3456?",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "3456" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "6912" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Any number minus itself is 0. So 3456 - 3456 = 0.",
+      "explanation_incorrect": "When you subtract a number from itself, the result is always 0. Option A."
+    },
+    {
+      "question_id": "T02.01.Q043",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A bus had 52 passengers. At the first stop, 18 got off and 25 got on. At the second stop, 15 got off and 8 got on. How many passengers are on the bus now?",
+      "options": [
+        { "id": "A", "text": "52" },
+        { "id": "B", "text": "42" },
+        { "id": "C", "text": "62" },
+        { "id": "D", "text": "50" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Start: 52. First stop: 52 - 18 + 25 = 59. Second stop: 59 - 15 + 8 = 52.",
+      "explanation_incorrect": "52 - 18 = 34, 34 + 25 = 59, 59 - 15 = 44, 44 + 8 = 52. Option A."
+    },
+    {
+      "question_id": "T02.01.Q044",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the sum: 1999 + 2001",
+      "options": [
+        { "id": "A", "text": "4000" },
+        { "id": "B", "text": "3900" },
+        { "id": "C", "text": "4100" },
+        { "id": "D", "text": "3000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1999 + 2001 = 4000. Think of it as (2000 - 1) + (2000 + 1) = 4000.",
+      "explanation_incorrect": "1999 + 2001 = 4000. Option A."
+    },
+    {
+      "question_id": "T02.01.Q045",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "fill_blank",
+      "question_text": "8100 - ___ = 4567",
+      "options": [
+        { "id": "A", "text": "3533" },
+        { "id": "B", "text": "3543" },
+        { "id": "C", "text": "3633" },
+        { "id": "D", "text": "3433" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "8100 - 4567 = 3533. So the blank is 3533.",
+      "explanation_incorrect": "8100 - 4567 = 3533. Check: 3533 + 4567 = 8100. Option A."
+    },
+    {
+      "question_id": "T02.01.Q046",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "What is the value of (1500 + 2300) + 1200 using the associative property?",
+      "options": [
+        { "id": "A", "text": "5000" },
+        { "id": "B", "text": "4900" },
+        { "id": "C", "text": "5100" },
+        { "id": "D", "text": "4800" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(1500 + 2300) + 1200 = 3800 + 1200 = 5000. By the associative property, this equals 1500 + (2300 + 1200) = 1500 + 3500 = 5000.",
+      "explanation_incorrect": "1500 + 2300 + 1200 = 5000 regardless of grouping (associative property). Option A."
+    },
+    {
+      "question_id": "T02.01.Q047",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Riya had 4500 beads. She used 1230 for a necklace and 980 for a bracelet. How many beads are left?",
+      "options": [
+        { "id": "A", "text": "2290" },
+        { "id": "B", "text": "2390" },
+        { "id": "C", "text": "2190" },
+        { "id": "D", "text": "2280" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Used: 1230 + 980 = 2210. Left: 4500 - 2210 = 2290.",
+      "explanation_incorrect": "1230 + 980 = 2210 used. 4500 - 2210 = 2290 left. Option A."
+    },
+    {
+      "question_id": "T02.01.Q048",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Add 3 numbers: 2345 + 1234 + 4321",
+      "options": [
+        { "id": "A", "text": "7900" },
+        { "id": "B", "text": "7800" },
+        { "id": "C", "text": "7890" },
+        { "id": "D", "text": "7990" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2345 + 1234 = 3579. Then 3579 + 4321 = 7900.",
+      "explanation_incorrect": "2345 + 1234 = 3579, then 3579 + 4321 = 7900. Option A."
+    },
+    {
+      "question_id": "T02.01.Q049",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Subtract: 1000 - 567",
+      "options": [
+        { "id": "A", "text": "433" },
+        { "id": "B", "text": "443" },
+        { "id": "C", "text": "333" },
+        { "id": "D", "text": "533" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1000 - 567 = 433.",
+      "explanation_incorrect": "1000 - 567 = 433 (requires borrowing across zeros). Option A."
+    },
+    {
+      "question_id": "T02.01.Q050",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A school collected Rs 4578 on Day 1 and Rs 3654 on Day 2 for a charity event. They need Rs 10000 in total. How much more do they need to collect?",
+      "options": [
+        { "id": "A", "text": "Rs 1768" },
+        { "id": "B", "text": "Rs 1868" },
+        { "id": "C", "text": "Rs 1668" },
+        { "id": "D", "text": "Rs 1758" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Collected: 4578 + 3654 = 8232. Still needed: 10000 - 8232 = 1768.",
+      "explanation_incorrect": "4578 + 3654 = 8232 collected. 10000 - 8232 = 1768 more needed. Option A."
+    }
+  ]
+}

@@ -25,8 +25,10 @@ const rootDir = path.join(__dirname, '../..');
 const args = process.argv.slice(2);
 const classFlag = args.indexOf('--class');
 const subjectFlag = args.indexOf('--subject');
+const boardFlag = args.indexOf('--board');
 const targetClass = classFlag !== -1 ? parseInt(args[classFlag + 1], 10) : null;
 const targetSubject = subjectFlag !== -1 ? args[subjectFlag + 1]?.toLowerCase() : null;
+const BOARD = boardFlag !== -1 && args[boardFlag + 1] ? args[boardFlag + 1].toLowerCase() : 'icse';
 
 // Science subject configuration
 interface SubjectConfig {
@@ -42,29 +44,36 @@ const SCIENCE_SUBJECTS: SubjectConfig[] = [
     subject: 'science',
     subjectName: 'Science',
     classRange: [1, 5],
-    topicFilePattern: (cls) => `cam/data/topics/icse-class${cls}-science-topics.json`,
-    questionDirPattern: (cls) => `class${cls}-science`,
+    topicFilePattern: (cls) => `cam/data/topics/${BOARD}-class${cls}-science-topics.json`,
+    questionDirPattern: (cls) => `${BOARD === 'icse' ? '' : BOARD + '-'}class${cls}-science`,
+  },
+  {
+    subject: 'evs',
+    subjectName: 'EVS',
+    classRange: [1, 5],
+    topicFilePattern: (cls) => `cam/data/topics/${BOARD}-class${cls}-evs-topics.json`,
+    questionDirPattern: (cls) => `${BOARD === 'icse' ? '' : BOARD + '-'}class${cls}-evs`,
   },
   {
     subject: 'physics',
     subjectName: 'Physics',
     classRange: [6, 12],
-    topicFilePattern: (cls) => `cam/data/topics/icse-class${cls}-physics-topics.json`,
-    questionDirPattern: (cls) => `class${cls}-physics`,
+    topicFilePattern: (cls) => `cam/data/topics/${BOARD}-class${cls}-physics-topics.json`,
+    questionDirPattern: (cls) => `${BOARD === 'icse' ? '' : BOARD + '-'}class${cls}-physics`,
   },
   {
     subject: 'chemistry',
     subjectName: 'Chemistry',
     classRange: [6, 12],
-    topicFilePattern: (cls) => `cam/data/topics/icse-class${cls}-chemistry-topics.json`,
-    questionDirPattern: (cls) => `class${cls}-chemistry`,
+    topicFilePattern: (cls) => `cam/data/topics/${BOARD}-class${cls}-chemistry-topics.json`,
+    questionDirPattern: (cls) => `${BOARD === 'icse' ? '' : BOARD + '-'}class${cls}-chemistry`,
   },
   {
     subject: 'biology',
     subjectName: 'Biology',
     classRange: [6, 12],
-    topicFilePattern: (cls) => `cam/data/topics/icse-class${cls}-biology-topics.json`,
-    questionDirPattern: (cls) => `class${cls}-biology`,
+    topicFilePattern: (cls) => `cam/data/topics/${BOARD}-class${cls}-biology-topics.json`,
+    questionDirPattern: (cls) => `${BOARD === 'icse' ? '' : BOARD + '-'}class${cls}-biology`,
   },
 ];
 
@@ -149,7 +158,7 @@ async function seedSubjectClass(
     await client.query('BEGIN');
 
     // 1. Upsert curriculum
-    const displayName = `ICSE Class ${classLevel} ${subjectConfig.subjectName}`;
+    const displayName = `${BOARD.toUpperCase()} Class ${classLevel} ${subjectConfig.subjectName}`;
     const curriculumResult = await client.query(
       `INSERT INTO curricula (board, class_level, subject, academic_year, cam_version, display_name, is_active)
        VALUES ($1, $2, $3, $4, $5, $6, true)
@@ -159,7 +168,7 @@ async function seedSubjectClass(
          is_active = true,
          updated_at = NOW()
        RETURNING id`,
-      ['ICSE', classLevel, subjectConfig.subjectName, '2025-2026', '1.0.0', displayName]
+      [BOARD.toUpperCase(), classLevel, subjectConfig.subjectName, '2025-2026', '1.0.0', displayName]
     );
     const curriculumId = curriculumResult.rows[0].id;
 
@@ -330,7 +339,7 @@ async function seedSubjectClass(
 
 async function main(): Promise<void> {
   console.log('='.repeat(70));
-  console.log('Seeding ICSE Science Curriculum');
+  console.log(`Seeding ${BOARD.toUpperCase()} Science Curriculum`);
   console.log('='.repeat(70));
 
   if (targetClass) console.log(`Filtering to class: ${targetClass}`);

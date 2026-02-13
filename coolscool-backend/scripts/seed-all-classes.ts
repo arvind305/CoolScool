@@ -18,6 +18,12 @@ const __dirname = path.dirname(__filename);
 
 const ALL_CLASSES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+// Parse --board flag (default: icse)
+const boardFlagIndex = process.argv.indexOf('--board');
+const BOARD = boardFlagIndex !== -1 && process.argv[boardFlagIndex + 1]
+  ? process.argv[boardFlagIndex + 1].toLowerCase()
+  : 'icse';
+
 interface Concept {
   concept_id: string;
   concept_name: string;
@@ -99,8 +105,8 @@ async function seedClass(classLevel: number): Promise<{
   questions: number;
   explanations: number;
 }> {
-  const camFile = path.join(__dirname, `../../cam/data/icse-class${classLevel}-mathematics-cam.json`);
-  const questionsDir = path.join(__dirname, `../../questions/data/class${classLevel}`);
+  const camFile = path.join(__dirname, `../../cam/data/${BOARD}-class${classLevel}-mathematics-cam.json`);
+  const questionsDir = path.join(__dirname, `../../questions/data/${BOARD === 'icse' ? '' : BOARD + '-'}class${classLevel}`);
 
   if (!fs.existsSync(camFile)) {
     throw new Error(`CAM file not found: ${camFile}`);
@@ -308,10 +314,12 @@ async function seedClass(classLevel: number): Promise<{
 }
 
 async function main(): Promise<void> {
-  const singleClass = process.argv[2] ? parseInt(process.argv[2], 10) : null;
+  // Support positional arg for single class (skip --board and its value)
+  const positionalArgs = process.argv.slice(2).filter((arg, i, arr) => arg !== '--board' && (i === 0 || arr[i - 1] !== '--board'));
+  const singleClass = positionalArgs[0] ? parseInt(positionalArgs[0], 10) : null;
   const classesToSeed = singleClass ? [singleClass] : ALL_CLASSES;
 
-  console.log(`Seeding ICSE Mathematics classes: ${classesToSeed.join(', ')}`);
+  console.log(`Seeding ${BOARD.toUpperCase()} Mathematics classes: ${classesToSeed.join(', ')}`);
 
   const results: Record<number, { themes: number; topics: number; concepts: number; questions: number; explanations: number }> = {};
   let hasErrors = false;

@@ -1,0 +1,789 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 6,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.01",
+  "topic_name": "Knowing Our Numbers",
+  "canonical_explanation": {
+    "text": "Numbers can be very large and we use place value systems to read and write them. In the Indian system, commas are placed after the first three digits from the right, then every two digits (lakhs, crores). In the international system, commas are placed every three digits from the right (thousands, millions). Estimation helps us quickly approximate answers by rounding numbers before computing.",
+    "rules": [
+      "Rule 1: Indian system places: ones, tens, hundreds, thousands, ten thousands, lakhs, ten lakhs, crores",
+      "Rule 2: International system places: ones, tens, hundreds, thousands, ten thousands, hundred thousands, millions, ten millions",
+      "Rule 3: 1 lakh = 100 thousand; 1 crore = 10 million",
+      "Rule 4: To compare numbers, first check the number of digits — more digits means larger number; if equal digits, compare from leftmost digit",
+      "Rule 5: BODMAS: Brackets, Of, Division, Multiplication, Addition, Subtraction — this is the order of operations"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.01.Q001",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which of the following numbers is the greatest: 8,54,321 or 85,432 or 8,54,312 or 85,431?",
+      "options": [
+        { "id": "A", "text": "85,432" },
+        { "id": "B", "text": "85,431" },
+        { "id": "C", "text": "8,54,321" },
+        { "id": "D", "text": "8,54,312" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "8,54,321 is a 6-digit number (854321), which is greater than the 5-digit numbers 85,432 and 85,431. Comparing with 8,54,312 (also 6 digits), the last two digits differ: 21 > 12. So 8,54,321 is the greatest.",
+      "explanation_incorrect": "When comparing numbers, first count the digits. 6-digit numbers are always greater than 5-digit numbers. Among the two 6-digit numbers, compare digit by digit from the left."
+    },
+    {
+      "question_id": "T01.01.Q002",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "How many 7-digit numbers are there in all?",
+      "options": [
+        { "id": "A", "text": "9,00,000" },
+        { "id": "B", "text": "90,00,000" },
+        { "id": "C", "text": "89,99,999" },
+        { "id": "D", "text": "9,99,999" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The smallest 7-digit number is 10,00,000 and the largest is 99,99,999. Total 7-digit numbers = 99,99,999 - 10,00,000 + 1 = 90,00,000.",
+      "explanation_incorrect": "The count of 7-digit numbers is not 9,00,000 or 9,99,999. We calculate it as (largest 7-digit) - (smallest 7-digit) + 1 = 99,99,999 - 10,00,000 + 1 = 90,00,000."
+    },
+    {
+      "question_id": "T01.01.Q003",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is the smallest 8-digit number?",
+      "options": [
+        { "id": "A", "text": "99,99,999" },
+        { "id": "B", "text": "1,00,00,000" },
+        { "id": "C", "text": "10,00,000" },
+        { "id": "D", "text": "10,00,00,000" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The largest 7-digit number is 99,99,999. The next number after it is 1,00,00,000 (one crore), which is the smallest 8-digit number.",
+      "explanation_incorrect": "99,99,999 is a 7-digit number, not 8-digit. 10,00,000 is a 7-digit number. The smallest 8-digit number is 1,00,00,000."
+    },
+    {
+      "question_id": "T01.01.Q004",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Arrange in ascending order: 34,56,789; 34,65,789; 34,56,798; 34,65,897.",
+      "options": [
+        { "id": "A", "text": "34,56,789 < 34,56,798 < 34,65,789 < 34,65,897" },
+        { "id": "B", "text": "34,56,798 < 34,56,789 < 34,65,897 < 34,65,789" },
+        { "id": "C", "text": "34,65,897 < 34,65,789 < 34,56,798 < 34,56,789" },
+        { "id": "D", "text": "34,56,789 < 34,65,789 < 34,56,798 < 34,65,897" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "All are 7-digit numbers starting with 34. Comparing the fourth digit (ten thousands place): 5 < 6. Among 34,5x,xxx: 34,56,789 < 34,56,798. Among 34,6x,xxx: 34,65,789 < 34,65,897. So ascending: 34,56,789 < 34,56,798 < 34,65,789 < 34,65,897.",
+      "explanation_incorrect": "To arrange in ascending order, compare digit by digit from the left. All start with 34, so compare the next digit: 5 comes before 6, then compare further digits within each group."
+    },
+    {
+      "question_id": "T01.01.Q005",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "How is 45,23,678 written in the international number system?",
+      "options": [
+        { "id": "A", "text": "4,52,3678" },
+        { "id": "B", "text": "4,523,678" },
+        { "id": "C", "text": "45,236,78" },
+        { "id": "D", "text": "452,3,678" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the international system, commas are placed every 3 digits from the right. 45,23,678 = 4523678, which is written as 4,523,678 (four million, five hundred twenty-three thousand, six hundred seventy-eight).",
+      "explanation_incorrect": "The international system groups digits in threes from the right: 678 (hundreds), 523 (thousands), 4 (millions). So it is written as 4,523,678."
+    },
+    {
+      "question_id": "T01.01.Q006",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "1 crore equals how many millions?",
+      "options": [
+        { "id": "A", "text": "1 million" },
+        { "id": "B", "text": "10 millions" },
+        { "id": "C", "text": "100 millions" },
+        { "id": "D", "text": "1000 millions" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 crore = 1,00,00,000 = 10,000,000 = 10 million.",
+      "explanation_incorrect": "1 crore is not 1 million (which is 10 lakh). 1 crore = 100 lakh = 10,000,000 = 10 million."
+    },
+    {
+      "question_id": "T01.01.Q007",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "1 million = ___ lakhs.",
+      "correct_answer": "10",
+      "explanation_correct": "1 million = 1,000,000 = 10,00,000 = 10 lakhs.",
+      "explanation_incorrect": "1 million is not 1 lakh or 100 lakhs. Since 1 million = 10,00,000, and 1 lakh = 1,00,000, we get 1 million = 10 lakhs."
+    },
+    {
+      "question_id": "T01.01.Q008",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "In the Indian place value system, what comes after ten lakhs?",
+      "options": [
+        { "id": "A", "text": "Hundred lakhs" },
+        { "id": "B", "text": "One crore" },
+        { "id": "C", "text": "One million" },
+        { "id": "D", "text": "Ten crores" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the Indian system, the place values are: ones, tens, hundreds, thousands, ten thousands, lakhs, ten lakhs, crores. So after ten lakhs comes one crore (1,00,00,000).",
+      "explanation_incorrect": "The Indian system does not use 'hundred lakhs'. After ten lakhs, the next place value is crores. One crore = 100 lakhs."
+    },
+    {
+      "question_id": "T01.01.Q009",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Estimate 7,842 + 2,156 by rounding each to the nearest thousand.",
+      "options": [
+        { "id": "A", "text": "9,000" },
+        { "id": "B", "text": "10,000" },
+        { "id": "C", "text": "9,998" },
+        { "id": "D", "text": "11,000" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "7,842 rounded to the nearest thousand = 8,000. 2,156 rounded to the nearest thousand = 2,000. Estimated sum = 8,000 + 2,000 = 10,000.",
+      "explanation_incorrect": "When rounding to the nearest thousand, 7,842 becomes 8,000 (since 842 >= 500) and 2,156 becomes 2,000 (since 156 < 500). The estimate is 10,000."
+    },
+    {
+      "question_id": "T01.01.Q010",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Round 5,64,835 to the nearest ten thousand.",
+      "options": [
+        { "id": "A", "text": "5,60,000" },
+        { "id": "B", "text": "5,70,000" },
+        { "id": "C", "text": "5,65,000" },
+        { "id": "D", "text": "6,00,000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To round 5,64,835 to the nearest ten thousand, look at the thousands digit: 4. Since 4 < 5, round down. The ten thousands place stays at 6, and everything below becomes 0. So 5,64,835 rounds to 5,60,000.",
+      "explanation_incorrect": "Rounding to the nearest ten thousand means checking the thousands digit. In 5,64,835, the thousands digit is 4 (< 5), so we round down to 5,60,000, not up to 5,70,000."
+    },
+    {
+      "question_id": "T01.01.Q011",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Estimate the product 198 x 24 by rounding to the nearest ten.",
+      "options": [
+        { "id": "A", "text": "5,000" },
+        { "id": "B", "text": "4,000" },
+        { "id": "C", "text": "4,800" },
+        { "id": "D", "text": "5,200" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "198 rounded to the nearest ten = 200. 24 rounded to the nearest ten = 20. Estimated product = 200 x 20 = 4,000.",
+      "explanation_incorrect": "Round each number to the nearest ten first: 198 becomes 200 and 24 becomes 20. Multiply the rounded values: 200 x 20 = 4,000."
+    },
+    {
+      "question_id": "T01.01.Q012",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Simplify using BODMAS: 12 + 8 x 3",
+      "options": [
+        { "id": "A", "text": "60" },
+        { "id": "B", "text": "36" },
+        { "id": "C", "text": "44" },
+        { "id": "D", "text": "33" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By BODMAS, multiplication comes before addition. So 8 x 3 = 24, then 12 + 24 = 36.",
+      "explanation_incorrect": "We cannot simply add first. BODMAS says multiplication before addition. First compute 8 x 3 = 24, then 12 + 24 = 36."
+    },
+    {
+      "question_id": "T01.01.Q013",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is the value of (15 + 5) x 2?",
+      "options": [
+        { "id": "A", "text": "25" },
+        { "id": "B", "text": "40" },
+        { "id": "C", "text": "35" },
+        { "id": "D", "text": "30" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By BODMAS, solve brackets first: 15 + 5 = 20. Then multiply: 20 x 2 = 40.",
+      "explanation_incorrect": "Brackets must be solved first. 15 + 5 = 20, then 20 x 2 = 40. Not 15 + 10 = 25."
+    },
+    {
+      "question_id": "T01.01.Q014",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is the value of the Roman numeral XLIV?",
+      "options": [
+        { "id": "A", "text": "44" },
+        { "id": "B", "text": "46" },
+        { "id": "C", "text": "54" },
+        { "id": "D", "text": "36" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "XL = 40 (50 - 10) and IV = 4 (5 - 1). So XLIV = 40 + 4 = 44.",
+      "explanation_incorrect": "In Roman numerals, when a smaller value appears before a larger one, we subtract. XL = 40 and IV = 4, giving XLIV = 44."
+    },
+    {
+      "question_id": "T01.01.Q015",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which Roman numeral represents 90?",
+      "options": [
+        { "id": "A", "text": "LXXXX" },
+        { "id": "B", "text": "XC" },
+        { "id": "C", "text": "IC" },
+        { "id": "D", "text": "VXL" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "90 = 100 - 10 = XC. We place X (10) before C (100) to mean subtraction.",
+      "explanation_incorrect": "LXXXX is incorrect because no Roman numeral symbol can be repeated more than 3 times. IC is not a valid combination. The correct representation is XC (100 - 10 = 90)."
+    },
+    {
+      "question_id": "T01.01.Q016",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "The Roman numeral for 400 is ___.",
+      "correct_answer": "CD",
+      "explanation_correct": "400 = 500 - 100. In Roman numerals, C (100) placed before D (500) means subtraction, so 400 = CD.",
+      "explanation_incorrect": "400 cannot be written as CCCC because no symbol should repeat more than 3 times. The correct way is CD (500 - 100 = 400)."
+    },
+    {
+      "question_id": "T01.01.Q017",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A library has 23,45,678 books. Another library has 23,54,678 books. How many more books does the second library have?",
+      "options": [
+        { "id": "A", "text": "9,000" },
+        { "id": "B", "text": "90,000" },
+        { "id": "C", "text": "11,000" },
+        { "id": "D", "text": "1,00,000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "23,54,678 - 23,45,678 = 9,000. The second library has 9,000 more books.",
+      "explanation_incorrect": "Subtract the two numbers: 23,54,678 - 23,45,678. The first four digits from left are 2,3 — identical. Then 54 - 45 = 9 in the thousands positions. The difference is 9,000."
+    },
+    {
+      "question_id": "T01.01.Q018",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Using the digits 5, 0, 3, 8, 1, 7 (each used once), what is the largest 6-digit number that can be formed?",
+      "options": [
+        { "id": "A", "text": "8,75,310" },
+        { "id": "B", "text": "8,75,301" },
+        { "id": "C", "text": "8,73,510" },
+        { "id": "D", "text": "8,71,530" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To form the largest number, arrange the digits in descending order: 8, 7, 5, 3, 1, 0. The number is 8,75,310.",
+      "explanation_incorrect": "For the largest number, place the biggest digit first and continue in descending order. The digits sorted descending are 8, 7, 5, 3, 1, 0, giving 8,75,310."
+    },
+    {
+      "question_id": "T01.01.Q019",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Using the digits 5, 0, 3, 8, 1, 7 (each used once), what is the smallest 6-digit number that can be formed?",
+      "options": [
+        { "id": "A", "text": "0,13,578" },
+        { "id": "B", "text": "1,03,578" },
+        { "id": "C", "text": "1,03,587" },
+        { "id": "D", "text": "1,30,578" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For the smallest 6-digit number, the leading digit cannot be 0. The smallest non-zero digit is 1. Then arrange remaining digits (0, 3, 5, 7, 8) in ascending order: 1,03,578.",
+      "explanation_incorrect": "A 6-digit number cannot start with 0. Place the smallest non-zero digit (1) first, then the rest in ascending order: 0, 3, 5, 7, 8. This gives 1,03,578."
+    },
+    {
+      "question_id": "T01.01.Q020",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The distance between two cities is 2,35,00,000 metres. Express this in the international system.",
+      "options": [
+        { "id": "A", "text": "23,500,000 metres" },
+        { "id": "B", "text": "2,350,000 metres" },
+        { "id": "C", "text": "235,000,000 metres" },
+        { "id": "D", "text": "2,350,0000 metres" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2,35,00,000 in the Indian system = 23500000. In the international system with commas every 3 digits from the right: 23,500,000.",
+      "explanation_incorrect": "First remove the Indian commas to get 23500000, then place commas every 3 digits from the right: 23,500,000."
+    },
+    {
+      "question_id": "T01.01.Q021",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "5,00,00,000 in the international system is written as ___.",
+      "correct_answer": "50,000,000",
+      "explanation_correct": "5,00,00,000 = 50000000. Placing commas in the international system (every 3 digits from right): 50,000,000 (fifty million).",
+      "explanation_incorrect": "Remove Indian commas first: 50000000. Then place international commas every 3 digits from right: 50,000,000."
+    },
+    {
+      "question_id": "T01.01.Q022",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A factory produces 78,592 toys in a month. Estimate this to the nearest ten thousand.",
+      "options": [
+        { "id": "A", "text": "70,000" },
+        { "id": "B", "text": "78,000" },
+        { "id": "C", "text": "79,000" },
+        { "id": "D", "text": "80,000" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "To round 78,592 to the nearest ten thousand, look at the thousands digit: 8. Since 8 >= 5, round up. 78,592 rounds to 80,000.",
+      "explanation_incorrect": "Rounding to the nearest ten thousand means looking at the thousands digit. In 78,592, the thousands digit is 8 (>= 5), so we round up from 70,000 to 80,000."
+    },
+    {
+      "question_id": "T01.01.Q023",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Estimate the difference 8,46,239 - 3,21,785 by rounding each to the nearest lakh.",
+      "options": [
+        { "id": "A", "text": "5,00,000" },
+        { "id": "B", "text": "6,00,000" },
+        { "id": "C", "text": "4,00,000" },
+        { "id": "D", "text": "5,24,454" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To round to the nearest lakh, check the ten-thousands digit. 8,46,239: ten-thousands digit is 4 (< 5), round down to 8,00,000. 3,21,785: ten-thousands digit is 2 (< 5), round down to 3,00,000. Estimated difference = 8,00,000 - 3,00,000 = 5,00,000.",
+      "explanation_incorrect": "Round each to the nearest lakh by checking the ten-thousands digit. 8,46,239 rounds to 8,00,000 and 3,21,785 rounds to 3,00,000. The estimated difference is 5,00,000."
+    },
+    {
+      "question_id": "T01.01.Q024",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Simplify: 48 / (6 + 2) x 3",
+      "options": [
+        { "id": "A", "text": "18" },
+        { "id": "B", "text": "27" },
+        { "id": "C", "text": "24" },
+        { "id": "D", "text": "10" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By BODMAS, solve brackets first: 6 + 2 = 8. Then left to right: 48 / 8 = 6, then 6 x 3 = 18.",
+      "explanation_incorrect": "First solve brackets: 6 + 2 = 8. Then perform division and multiplication left to right: 48 / 8 = 6, then 6 x 3 = 18."
+    },
+    {
+      "question_id": "T01.01.Q025",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Simplify: 100 - 3 x (5 + 7) + 8",
+      "options": [
+        { "id": "A", "text": "72" },
+        { "id": "B", "text": "1,172" },
+        { "id": "C", "text": "96" },
+        { "id": "D", "text": "60" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets first: 5 + 7 = 12. Multiplication: 3 x 12 = 36. Then left to right: 100 - 36 + 8 = 64 + 8 = 72.",
+      "explanation_incorrect": "By BODMAS: brackets (5 + 7 = 12), then multiplication (3 x 12 = 36), then addition and subtraction left to right: 100 - 36 + 8 = 72."
+    },
+    {
+      "question_id": "T01.01.Q026",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "The value of 25 - 5 x 3 + 2 is ___.",
+      "correct_answer": "12",
+      "explanation_correct": "By BODMAS, multiply first: 5 x 3 = 15. Then left to right: 25 - 15 + 2 = 10 + 2 = 12.",
+      "explanation_incorrect": "BODMAS requires multiplication before addition and subtraction. 5 x 3 = 15, then 25 - 15 + 2 = 12."
+    },
+    {
+      "question_id": "T01.01.Q027",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "What is 789 in Roman numerals?",
+      "options": [
+        { "id": "A", "text": "DCCLXXXIX" },
+        { "id": "B", "text": "DCCLXXIX" },
+        { "id": "C", "text": "DCCLXXXIV" },
+        { "id": "D", "text": "DCCCXI" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "789 = 700 + 80 + 9 = DCC + LXXX + IX = DCCLXXXIX.",
+      "explanation_incorrect": "Break 789 into parts: 700 = DCC, 80 = LXXX, 9 = IX. Combined: DCCLXXXIX."
+    },
+    {
+      "question_id": "T01.01.Q028",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Which of these is NOT a valid Roman numeral?",
+      "options": [
+        { "id": "A", "text": "MCMXCIV" },
+        { "id": "B", "text": "XLIX" },
+        { "id": "C", "text": "IIII" },
+        { "id": "D", "text": "CDXL" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "IIII is not valid because no Roman numeral symbol should be repeated more than 3 times. The correct representation of 4 is IV.",
+      "explanation_incorrect": "In Roman numerals, a symbol can repeat at most 3 times. IIII has I repeated 4 times, making it invalid. The number 4 should be written as IV."
+    },
+    {
+      "question_id": "T01.01.Q029",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The population of a city increased from 56,34,892 to 62,18,305 in one year. What was the increase in population?",
+      "options": [
+        { "id": "A", "text": "5,83,413" },
+        { "id": "B", "text": "6,83,413" },
+        { "id": "C", "text": "5,84,413" },
+        { "id": "D", "text": "5,83,513" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Increase = 62,18,305 - 56,34,892 = 5,83,413.",
+      "explanation_incorrect": "Subtract: 62,18,305 - 56,34,892. Working from right: 5 - 2 = 3, 0 - 9 (borrow) = 1 - 9... The result is 5,83,413."
+    },
+    {
+      "question_id": "T01.01.Q030",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "How many lakhs make 1 crore?",
+      "options": [
+        { "id": "A", "text": "10" },
+        { "id": "B", "text": "100" },
+        { "id": "C", "text": "1000" },
+        { "id": "D", "text": "50" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 crore = 1,00,00,000 and 1 lakh = 1,00,000. So 1 crore / 1 lakh = 1,00,00,000 / 1,00,000 = 100. Therefore, 100 lakhs = 1 crore.",
+      "explanation_incorrect": "1 crore = 1,00,00,000 = 100 x 1,00,000 = 100 lakhs, not 10 or 1000 lakhs."
+    },
+    {
+      "question_id": "T01.01.Q031",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "type": "true_false",
+      "question_text": "When estimating 4,567 + 3,289 by rounding to the nearest hundred, the estimated sum is 7,900.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4,567 rounded to the nearest hundred = 4,600. 3,289 rounded to the nearest hundred = 3,300. Estimated sum = 4,600 + 3,300 = 7,900. So the statement is true.",
+      "explanation_incorrect": "Round each number: 4,567 -> 4,600 and 3,289 -> 3,300. Sum = 7,900. The statement is true."
+    },
+    {
+      "question_id": "T01.01.Q032",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A school collected Rs 12,35,680 in Term 1, Rs 15,42,350 in Term 2, and Rs 11,87,920 in Term 3. What is the total collection for the year?",
+      "options": [
+        { "id": "A", "text": "Rs 39,65,950" },
+        { "id": "B", "text": "Rs 38,65,950" },
+        { "id": "C", "text": "Rs 39,55,950" },
+        { "id": "D", "text": "Rs 40,65,950" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total = 12,35,680 + 15,42,350 + 11,87,920 = 39,65,950.",
+      "explanation_incorrect": "Add the three amounts: 12,35,680 + 15,42,350 = 27,78,030, then 27,78,030 + 11,87,920 = 39,65,950."
+    },
+    {
+      "question_id": "T01.01.Q033",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The digit in the ten lakhs place of the number 4,32,15,678 is:",
+      "options": [
+        { "id": "A", "text": "4" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "2" },
+        { "id": "D", "text": "1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In 4,32,15,678: 8 is ones, 7 is tens, 6 is hundreds, 5 is thousands, 1 is ten thousands, 2 is lakhs, 3 is ten lakhs, 4 is crores. So the ten lakhs digit is 3.",
+      "explanation_incorrect": "Count positions from right: ones(8), tens(7), hundreds(6), thousands(5), ten-thousands(1), lakhs(2), ten-lakhs(3), crores(4). The ten lakhs digit is 3."
+    },
+    {
+      "question_id": "T01.01.Q034",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The number 7,25,00,000 in the international system is:",
+      "options": [
+        { "id": "A", "text": "72,500,000 (seventy-two million five hundred thousand)" },
+        { "id": "B", "text": "725,000,000 (seven hundred twenty-five million)" },
+        { "id": "C", "text": "7,250,000 (seven million two hundred fifty thousand)" },
+        { "id": "D", "text": "72,500 (seventy-two thousand five hundred)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "7,25,00,000 = 72500000. In the international system: 72,500,000 = seventy-two million five hundred thousand.",
+      "explanation_incorrect": "Remove Indian commas to get 72500000. Place international commas every 3 digits from right: 72,500,000. This is seventy-two million five hundred thousand."
+    },
+    {
+      "question_id": "T01.01.Q035",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Express 65,950,000 (international system) in the Indian system.",
+      "options": [
+        { "id": "A", "text": "6,59,50,000" },
+        { "id": "B", "text": "65,95,000" },
+        { "id": "C", "text": "6,59,500" },
+        { "id": "D", "text": "6,59,05,000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "65,950,000 = 65950000. In the Indian system: first comma after 3 digits from right (000), then every 2 digits: 6,59,50,000 (six crore fifty-nine lakh fifty thousand).",
+      "explanation_incorrect": "Remove international commas: 65950000. Apply Indian comma rules (3 digits from right, then every 2): 6,59,50,000."
+    },
+    {
+      "question_id": "T01.01.Q036",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A charity needs to raise Rs 50,00,000. They have collected Rs 32,78,456 so far. Estimate the remaining amount needed by rounding to the nearest lakh.",
+      "options": [
+        { "id": "A", "text": "Rs 17,00,000" },
+        { "id": "B", "text": "Rs 18,00,000" },
+        { "id": "C", "text": "Rs 17,21,544" },
+        { "id": "D", "text": "Rs 16,00,000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rs 50,00,000 is already rounded. Rs 32,78,456 rounded to the nearest lakh: ten-thousands digit is 7 (>= 5), so round up to Rs 33,00,000. Estimated remaining = Rs 50,00,000 - Rs 33,00,000 = Rs 17,00,000.",
+      "explanation_incorrect": "Round 32,78,456 to nearest lakh: the ten-thousands digit is 7 >= 5, so it rounds to 33,00,000. Then 50,00,000 - 33,00,000 = 17,00,000."
+    },
+    {
+      "question_id": "T01.01.Q037",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Simplify: {20 - (8 + 2)} x 5 + 10 / 2",
+      "options": [
+        { "id": "A", "text": "55" },
+        { "id": "B", "text": "50" },
+        { "id": "C", "text": "45" },
+        { "id": "D", "text": "60" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Innermost bracket: 8 + 2 = 10. Then curly bracket: 20 - 10 = 10. Multiply: 10 x 5 = 50. Divide: 10 / 2 = 5. Add: 50 + 5 = 55.",
+      "explanation_incorrect": "Solve brackets inside out: (8+2)=10, then {20-10}=10. Then multiplication and division: 10x5=50 and 10/2=5. Finally addition: 50+5=55."
+    },
+    {
+      "question_id": "T01.01.Q038",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "What should replace the ? in: 36 / ? + 4 x 3 = 16?",
+      "options": [
+        { "id": "A", "text": "6" },
+        { "id": "B", "text": "9" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "12" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By BODMAS: 4 x 3 = 12. So the equation becomes 36 / ? + 12 = 16, meaning 36 / ? = 4, so ? = 9.",
+      "explanation_incorrect": "First simplify what we can: 4 x 3 = 12. The equation becomes 36/? + 12 = 16. So 36/? = 4, giving ? = 36/4 = 9."
+    },
+    {
+      "question_id": "T01.01.Q039",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The Roman numeral CMXCIX represents which number?",
+      "options": [
+        { "id": "A", "text": "999" },
+        { "id": "B", "text": "989" },
+        { "id": "C", "text": "1099" },
+        { "id": "D", "text": "899" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "CM = 900 (1000 - 100), XC = 90 (100 - 10), IX = 9 (10 - 1). Total = 900 + 90 + 9 = 999.",
+      "explanation_incorrect": "Break it down: CM = 900, XC = 90, IX = 9. Adding them: 900 + 90 + 9 = 999."
+    },
+    {
+      "question_id": "T01.01.Q040",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "type": "fill_blank",
+      "question_text": "DCCXLVII in Hindu-Arabic numerals is ___.",
+      "correct_answer": "747",
+      "explanation_correct": "D = 500, CC = 200, XL = 40, V = 5, II = 2. Total = 500 + 200 + 40 + 5 + 2 = 747.",
+      "explanation_incorrect": "Break down: DCC = 700, XL = 40, VII = 7. So DCCXLVII = 700 + 40 + 7 = 747."
+    },
+    {
+      "question_id": "T01.01.Q041",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "India's population is approximately 1,40,00,00,000. How many digits does this number have?",
+      "options": [
+        { "id": "A", "text": "9" },
+        { "id": "B", "text": "10" },
+        { "id": "C", "text": "11" },
+        { "id": "D", "text": "12" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1,40,00,00,000 without commas is 1400000000. Counting the digits: 1-4-0-0-0-0-0-0-0-0 = 10 digits.",
+      "explanation_incorrect": "Remove the commas: 1400000000. Count each digit: 1,4,0,0,0,0,0,0,0,0 — that is 10 digits."
+    },
+    {
+      "question_id": "T01.01.Q042",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Meena estimated 3,789 x 21 by rounding each to the nearest ten. Her estimated product is:",
+      "options": [
+        { "id": "A", "text": "79,800" },
+        { "id": "B", "text": "76,000" },
+        { "id": "C", "text": "80,000" },
+        { "id": "D", "text": "75,800" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "3,789 rounded to the nearest ten = 3,790. 21 rounded to the nearest ten = 20. Estimated product = 3,790 x 20 = 75,800.",
+      "explanation_incorrect": "Round each number to nearest ten: 3,789 becomes 3,790 and 21 becomes 20. Multiply the rounded values: 3,790 x 20 = 75,800."
+    },
+    {
+      "question_id": "T01.01.Q043",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Which of the following numbers is between 43,00,000 and 44,00,000?",
+      "options": [
+        { "id": "A", "text": "42,99,999" },
+        { "id": "B", "text": "43,50,200" },
+        { "id": "C", "text": "44,00,001" },
+        { "id": "D", "text": "44,50,000" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "43,50,200 is greater than 43,00,000 and less than 44,00,000, so it falls between them.",
+      "explanation_incorrect": "42,99,999 is less than 43,00,000 and 44,00,001 and 44,50,000 are greater than 44,00,000. Only 43,50,200 is between 43,00,000 and 44,00,000."
+    },
+    {
+      "question_id": "T01.01.Q044",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "1 lakh is the same as 100 thousand.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1 lakh = 1,00,000 = 100,000 = 100 thousand. The statement is true.",
+      "explanation_incorrect": "1 lakh = 1,00,000. In the international system, this is 100,000, which is one hundred thousand. So the statement is indeed true."
+    },
+    {
+      "question_id": "T01.01.Q045",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is the full form of BODMAS?",
+      "options": [
+        { "id": "A", "text": "Brackets, Of, Division, Multiplication, Addition, Subtraction" },
+        { "id": "B", "text": "Brackets, Order, Division, Multiplication, Addition, Subtraction" },
+        { "id": "C", "text": "Both A and B are acceptable" },
+        { "id": "D", "text": "Brackets, Of, Decimal, Multiplication, Addition, Subtraction" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "BODMAS stands for Brackets, Of (or Order), Division, Multiplication, Addition, Subtraction. Both interpretations of 'O' are commonly accepted.",
+      "explanation_incorrect": "In BODMAS, the O can stand for 'Of' or 'Order' (exponents). Both are accepted meanings, so both A and B are correct."
+    },
+    {
+      "question_id": "T01.01.Q046",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 6,47,251 rounded to the nearest thousand?",
+      "options": [
+        { "id": "A", "text": "6,47,000" },
+        { "id": "B", "text": "6,48,000" },
+        { "id": "C", "text": "6,50,000" },
+        { "id": "D", "text": "6,47,300" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "To round 6,47,251 to the nearest thousand, check the hundreds digit: 2. Since 2 < 5, round down to 6,47,000.",
+      "explanation_incorrect": "Rounding to the nearest thousand: look at the hundreds digit (2). Since 2 < 5, round down. 6,47,251 rounds to 6,47,000."
+    },
+    {
+      "question_id": "T01.01.Q047",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is the Roman numeral for 17?",
+      "options": [
+        { "id": "A", "text": "XIIV" },
+        { "id": "B", "text": "XVII" },
+        { "id": "C", "text": "XIVI" },
+        { "id": "D", "text": "IXX" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "17 = 10 + 7 = X + VII = XVII.",
+      "explanation_incorrect": "17 = 10 + 5 + 1 + 1 = X + V + I + I = XVII. The other options use invalid Roman numeral combinations."
+    },
+    {
+      "question_id": "T01.01.Q048",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The predecessor of 1,00,00,000 is:",
+      "options": [
+        { "id": "A", "text": "99,99,998" },
+        { "id": "B", "text": "99,99,999" },
+        { "id": "C", "text": "1,00,00,001" },
+        { "id": "D", "text": "9,99,999" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The predecessor of a number is 1 less than it. 1,00,00,000 - 1 = 99,99,999.",
+      "explanation_incorrect": "Predecessor means one less. 1,00,00,000 - 1 = 99,99,999, which is the largest 7-digit number."
+    },
+    {
+      "question_id": "T01.01.Q049",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Which expression gives the value 20? (a) 4 + 8 x 2 (b) (4 + 8) x 2 (c) 4 x 8 + 2 (d) 4 x (8 + 2)",
+      "options": [
+        { "id": "A", "text": "Only (a)" },
+        { "id": "B", "text": "Only (a) and (d)" },
+        { "id": "C", "text": "Only (d)" },
+        { "id": "D", "text": "Only (a) and (c)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(a) 4 + 8 x 2 = 4 + 16 = 20. (b) (4 + 8) x 2 = 12 x 2 = 24. (c) 4 x 8 + 2 = 32 + 2 = 34. (d) 4 x (8 + 2) = 4 x 10 = 40. Only expression (a) equals 20.",
+      "explanation_incorrect": "Evaluate each using BODMAS: (a) 4+8x2 = 4+16 = 20. (b) (4+8)x2 = 24. (c) 4x8+2 = 34. (d) 4x(8+2) = 40. Only expression (a) gives 20."
+    },
+    {
+      "question_id": "T01.01.Q050",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The actual value of 4,81,265 + 2,36,842 is 7,18,107. Renu estimated the sum by rounding each to the nearest ten thousand. What is Renu's estimate?",
+      "options": [
+        { "id": "A", "text": "7,20,000" },
+        { "id": "B", "text": "7,10,000" },
+        { "id": "C", "text": "7,00,000" },
+        { "id": "D", "text": "7,30,000" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4,81,265 rounded to nearest ten thousand: thousands digit is 1 (< 5), round down to 4,80,000. 2,36,842 rounded to nearest ten thousand: thousands digit is 6 (>= 5), round up to 2,40,000. Estimate = 4,80,000 + 2,40,000 = 7,20,000.",
+      "explanation_incorrect": "Round 4,81,265 to nearest ten thousand = 4,80,000 (thousands digit 1 < 5). Round 2,36,842 to nearest ten thousand = 2,40,000 (thousands digit 6 >= 5). Sum = 7,20,000."
+    }
+  ]
+}

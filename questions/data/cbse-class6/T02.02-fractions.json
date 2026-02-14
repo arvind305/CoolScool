@@ -1,0 +1,787 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 6,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.02",
+  "topic_name": "Fractions",
+  "canonical_explanation": {
+    "text": "A fraction represents a part of a whole. It is written as p/q where p is the numerator (parts taken) and q is the denominator (total equal parts). Fractions can be proper (numerator < denominator), improper (numerator >= denominator), or mixed numbers. To add or subtract unlike fractions, we first find the LCM of denominators.",
+    "rules": [
+      "Rule 1: Proper fraction: numerator < denominator (e.g., 3/5). Improper fraction: numerator >= denominator (e.g., 7/4)",
+      "Rule 2: Mixed number = whole part + proper fraction (e.g., 1 3/4). Convert to improper: (whole x denominator + numerator)/denominator",
+      "Rule 3: Equivalent fractions: multiply or divide both numerator and denominator by the same non-zero number",
+      "Rule 4: Simplest form: divide numerator and denominator by their HCF",
+      "Rule 5: To add/subtract unlike fractions, find the LCM of denominators, convert to like fractions, then add/subtract numerators"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.02.Q001",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which of the following is a proper fraction?",
+      "options": [
+        { "id": "A", "text": "7/5" },
+        { "id": "B", "text": "3/8" },
+        { "id": "C", "text": "9/9" },
+        { "id": "D", "text": "11/4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a proper fraction, the numerator is less than the denominator. 3 < 8, so 3/8 is a proper fraction.",
+      "explanation_incorrect": "7/5 and 11/4 are improper (numerator > denominator). 9/9 = 1 (numerator = denominator). Only 3/8 has numerator < denominator."
+    },
+    {
+      "question_id": "T02.02.Q002",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Convert the mixed number 2 3/4 to an improper fraction.",
+      "options": [
+        { "id": "A", "text": "8/4" },
+        { "id": "B", "text": "11/4" },
+        { "id": "C", "text": "9/4" },
+        { "id": "D", "text": "7/4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2 3/4 = (2 x 4 + 3)/4 = (8 + 3)/4 = 11/4.",
+      "explanation_incorrect": "To convert: multiply whole number by denominator, add numerator. 2 x 4 + 3 = 11. Keep the denominator: 11/4."
+    },
+    {
+      "question_id": "T02.02.Q003",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Convert 17/5 to a mixed number.",
+      "options": [
+        { "id": "A", "text": "3 1/5" },
+        { "id": "B", "text": "3 2/5" },
+        { "id": "C", "text": "2 7/5" },
+        { "id": "D", "text": "4 2/5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "17 / 5 = 3 remainder 2. So 17/5 = 3 2/5.",
+      "explanation_incorrect": "Divide: 17 / 5 = 3 with remainder 2. Mixed number = 3 2/5."
+    },
+    {
+      "question_id": "T02.02.Q004",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "Every improper fraction is greater than 1.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An improper fraction has numerator >= denominator. When numerator = denominator (like 5/5), the fraction equals exactly 1, not greater than 1. So the statement is false.",
+      "explanation_incorrect": "Improper fractions have numerator >= denominator. 5/5 = 1 (equal to 1, not greater). So not every improper fraction is greater than 1."
+    },
+    {
+      "question_id": "T02.02.Q005",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which fraction is equivalent to 2/3?",
+      "options": [
+        { "id": "A", "text": "4/9" },
+        { "id": "B", "text": "6/9" },
+        { "id": "C", "text": "4/5" },
+        { "id": "D", "text": "3/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Multiply numerator and denominator of 2/3 by 3: (2x3)/(3x3) = 6/9. So 6/9 is equivalent to 2/3.",
+      "explanation_incorrect": "Equivalent fractions are obtained by multiplying both parts by the same number. 2/3 = 6/9 (multiplied by 3)."
+    },
+    {
+      "question_id": "T02.02.Q006",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Reduce 18/24 to its simplest form.",
+      "options": [
+        { "id": "A", "text": "9/12" },
+        { "id": "B", "text": "6/8" },
+        { "id": "C", "text": "3/4" },
+        { "id": "D", "text": "2/3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "HCF of 18 and 24 is 6. 18/6 = 3 and 24/6 = 4. So 18/24 = 3/4 in simplest form.",
+      "explanation_incorrect": "Divide both by their HCF (6): 18/6 = 3, 24/6 = 4. Simplest form = 3/4."
+    },
+    {
+      "question_id": "T02.02.Q007",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "3/5 = ___/20.",
+      "correct_answer": "12",
+      "explanation_correct": "To get denominator 20 from 5, multiply by 4. So multiply numerator by 4 too: 3 x 4 = 12. So 3/5 = 12/20.",
+      "explanation_incorrect": "5 x 4 = 20, so multiply numerator by 4 as well: 3 x 4 = 12."
+    },
+    {
+      "question_id": "T02.02.Q008",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which is greater: 3/7 or 5/7?",
+      "options": [
+        { "id": "A", "text": "3/7" },
+        { "id": "B", "text": "5/7" },
+        { "id": "C", "text": "They are equal" },
+        { "id": "D", "text": "Cannot be compared" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "With the same denominator (like fractions), the fraction with the larger numerator is greater. 5 > 3, so 5/7 > 3/7.",
+      "explanation_incorrect": "For like fractions (same denominator), compare numerators directly. 5 > 3, so 5/7 > 3/7."
+    },
+    {
+      "question_id": "T02.02.Q009",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which is greater: 3/4 or 5/8?",
+      "options": [
+        { "id": "A", "text": "3/4" },
+        { "id": "B", "text": "5/8" },
+        { "id": "C", "text": "They are equal" },
+        { "id": "D", "text": "Cannot be compared" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Convert to like fractions: 3/4 = 6/8. Compare 6/8 and 5/8. Since 6 > 5, 3/4 > 5/8.",
+      "explanation_incorrect": "LCM of 4 and 8 is 8. 3/4 = 6/8. Compare: 6/8 > 5/8, so 3/4 > 5/8."
+    },
+    {
+      "question_id": "T02.02.Q010",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 2/7 + 3/7?",
+      "options": [
+        { "id": "A", "text": "5/7" },
+        { "id": "B", "text": "5/14" },
+        { "id": "C", "text": "6/7" },
+        { "id": "D", "text": "1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For like fractions, add numerators and keep the denominator: 2/7 + 3/7 = (2+3)/7 = 5/7.",
+      "explanation_incorrect": "Same denominator: add numerators. 2+3 = 5. Result: 5/7. Do NOT add denominators."
+    },
+    {
+      "question_id": "T02.02.Q011",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What is 5/6 - 1/6?",
+      "options": [
+        { "id": "A", "text": "4/6" },
+        { "id": "B", "text": "2/3" },
+        { "id": "C", "text": "Both A and B" },
+        { "id": "D", "text": "4/0" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "5/6 - 1/6 = 4/6. Simplifying: 4/6 = 2/3. Both A and B represent the same value.",
+      "explanation_incorrect": "5/6 - 1/6 = 4/6 = 2/3 (simplified). Both 4/6 and 2/3 are correct."
+    },
+    {
+      "question_id": "T02.02.Q012",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Add: 1/4 + 1/6.",
+      "options": [
+        { "id": "A", "text": "2/10" },
+        { "id": "B", "text": "5/12" },
+        { "id": "C", "text": "7/12" },
+        { "id": "D", "text": "1/5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "LCM of 4 and 6 = 12. 1/4 = 3/12 and 1/6 = 2/12. Sum = 3/12 + 2/12 = 5/12.",
+      "explanation_incorrect": "Find LCM(4,6)=12. Convert: 1/4=3/12, 1/6=2/12. Add: 3/12+2/12=5/12."
+    },
+    {
+      "question_id": "T02.02.Q013",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which of the following is an improper fraction?",
+      "options": [
+        { "id": "A", "text": "2/5" },
+        { "id": "B", "text": "1/3" },
+        { "id": "C", "text": "8/3" },
+        { "id": "D", "text": "4/7" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an improper fraction, the numerator is greater than or equal to the denominator. 8 > 3, so 8/3 is improper.",
+      "explanation_incorrect": "2/5, 1/3, and 4/7 all have numerator < denominator (proper). Only 8/3 has numerator > denominator (improper)."
+    },
+    {
+      "question_id": "T02.02.Q014",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Which of these fractions is NOT equivalent to 4/6?",
+      "options": [
+        { "id": "A", "text": "2/3" },
+        { "id": "B", "text": "8/12" },
+        { "id": "C", "text": "12/18" },
+        { "id": "D", "text": "6/8" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "4/6 = 2/3 (simplest form). 8/12 = 2/3, 12/18 = 2/3. But 6/8 = 3/4, which is not equal to 2/3.",
+      "explanation_incorrect": "4/6 simplifies to 2/3. Check each: 8/12=2/3, 12/18=2/3, but 6/8=3/4 which is different."
+    },
+    {
+      "question_id": "T02.02.Q015",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Arrange in ascending order: 2/3, 3/5, 7/10.",
+      "options": [
+        { "id": "A", "text": "3/5, 2/3, 7/10" },
+        { "id": "B", "text": "2/3, 3/5, 7/10" },
+        { "id": "C", "text": "3/5, 7/10, 2/3" },
+        { "id": "D", "text": "7/10, 2/3, 3/5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 3, 5, 10 = 30. 2/3 = 20/30, 3/5 = 18/30, 7/10 = 21/30. Ascending: 18/30 < 20/30 < 21/30, i.e., 3/5 < 2/3 < 7/10.",
+      "explanation_incorrect": "Convert to common denominator 30: 2/3=20/30, 3/5=18/30, 7/10=21/30. Order: 18 < 20 < 21, so 3/5 < 2/3 < 7/10."
+    },
+    {
+      "question_id": "T02.02.Q016",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Subtract: 3/4 - 2/5.",
+      "options": [
+        { "id": "A", "text": "1/1" },
+        { "id": "B", "text": "7/20" },
+        { "id": "C", "text": "1/20" },
+        { "id": "D", "text": "11/20" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "LCM of 4 and 5 = 20. 3/4 = 15/20 and 2/5 = 8/20. Difference = 15/20 - 8/20 = 7/20.",
+      "explanation_incorrect": "LCM(4,5)=20. Convert: 3/4=15/20, 2/5=8/20. Subtract: 15/20-8/20=7/20."
+    },
+    {
+      "question_id": "T02.02.Q017",
+      "concept_id": "T02.02.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Riya ate 1/4 of a pizza and her brother ate 1/3 of it. What fraction of the pizza did they eat together?",
+      "options": [
+        { "id": "A", "text": "2/7" },
+        { "id": "B", "text": "7/12" },
+        { "id": "C", "text": "1/2" },
+        { "id": "D", "text": "5/12" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1/4 + 1/3. LCM of 4 and 3 = 12. 1/4 = 3/12, 1/3 = 4/12. Total = 3/12 + 4/12 = 7/12.",
+      "explanation_incorrect": "Add: 1/4 + 1/3 = 3/12 + 4/12 = 7/12. They ate 7/12 of the pizza together."
+    },
+    {
+      "question_id": "T02.02.Q018",
+      "concept_id": "T02.02.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A tank is 3/5 full. If 1/4 of the tank's capacity is used, what fraction remains?",
+      "options": [
+        { "id": "A", "text": "2/5" },
+        { "id": "B", "text": "7/20" },
+        { "id": "C", "text": "11/20" },
+        { "id": "D", "text": "1/5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Remaining = 3/5 - 1/4. LCM of 5 and 4 = 20. 3/5 = 12/20, 1/4 = 5/20. Remaining = 12/20 - 5/20 = 7/20.",
+      "explanation_incorrect": "3/5 - 1/4 = 12/20 - 5/20 = 7/20."
+    },
+    {
+      "question_id": "T02.02.Q019",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "The mixed number 4 2/7 as an improper fraction is ___.",
+      "correct_answer": "30/7",
+      "explanation_correct": "4 2/7 = (4 x 7 + 2)/7 = (28 + 2)/7 = 30/7.",
+      "explanation_incorrect": "Multiply whole by denominator and add numerator: 4 x 7 + 2 = 30. Put over 7: 30/7."
+    },
+    {
+      "question_id": "T02.02.Q020",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the simplest form of 45/60.",
+      "options": [
+        { "id": "A", "text": "3/4" },
+        { "id": "B", "text": "9/12" },
+        { "id": "C", "text": "15/20" },
+        { "id": "D", "text": "4/3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF of 45 and 60 is 15. 45/15 = 3, 60/15 = 4. Simplest form = 3/4.",
+      "explanation_incorrect": "Divide both by HCF(45,60)=15: 45/15=3, 60/15=4. Simplest form is 3/4."
+    },
+    {
+      "question_id": "T02.02.Q021",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Which fraction is the smallest: 1/2, 2/5, 3/10?",
+      "options": [
+        { "id": "A", "text": "1/2" },
+        { "id": "B", "text": "2/5" },
+        { "id": "C", "text": "3/10" },
+        { "id": "D", "text": "All are equal" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "LCM of 2, 5, 10 = 10. 1/2 = 5/10, 2/5 = 4/10, 3/10 = 3/10. Smallest = 3/10.",
+      "explanation_incorrect": "Convert to common denominator 10: 5/10, 4/10, 3/10. Smallest numerator = 3, so 3/10 is smallest."
+    },
+    {
+      "question_id": "T02.02.Q022",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Add: 2 1/3 + 1 1/4.",
+      "options": [
+        { "id": "A", "text": "3 2/7" },
+        { "id": "B", "text": "3 7/12" },
+        { "id": "C", "text": "4 1/12" },
+        { "id": "D", "text": "3 1/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Add whole numbers: 2 + 1 = 3. Add fractions: 1/3 + 1/4 = 4/12 + 3/12 = 7/12. Total = 3 7/12.",
+      "explanation_incorrect": "Whole parts: 2+1=3. Fractions: 1/3+1/4 = 4/12+3/12 = 7/12. Answer: 3 7/12."
+    },
+    {
+      "question_id": "T02.02.Q023",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Subtract: 5/6 - 1/3.",
+      "options": [
+        { "id": "A", "text": "4/3" },
+        { "id": "B", "text": "1/2" },
+        { "id": "C", "text": "2/3" },
+        { "id": "D", "text": "1/3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "LCM of 6 and 3 = 6. 1/3 = 2/6. So 5/6 - 2/6 = 3/6 = 1/2.",
+      "explanation_incorrect": "Convert: 1/3 = 2/6. Subtract: 5/6 - 2/6 = 3/6 = 1/2."
+    },
+    {
+      "question_id": "T02.02.Q024",
+      "concept_id": "T02.02.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Sita read 2/5 of a book on Monday and 1/3 of the book on Tuesday. What fraction of the book has she read in total?",
+      "options": [
+        { "id": "A", "text": "3/8" },
+        { "id": "B", "text": "11/15" },
+        { "id": "C", "text": "7/15" },
+        { "id": "D", "text": "1/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2/5 + 1/3. LCM of 5 and 3 = 15. 2/5 = 6/15, 1/3 = 5/15. Total = 6/15 + 5/15 = 11/15.",
+      "explanation_incorrect": "Add: 2/5 + 1/3 = 6/15 + 5/15 = 11/15."
+    },
+    {
+      "question_id": "T02.02.Q025",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "4/8 and 1/2 are equivalent fractions.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4/8 = (4/4)/(8/4) = 1/2. They are equivalent fractions.",
+      "explanation_incorrect": "Divide 4/8 by 4: 4/8 = 1/2. They represent the same value."
+    },
+    {
+      "question_id": "T02.02.Q026",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Convert 23/6 to a mixed number.",
+      "options": [
+        { "id": "A", "text": "3 5/6" },
+        { "id": "B", "text": "4 1/6" },
+        { "id": "C", "text": "3 2/6" },
+        { "id": "D", "text": "4 5/6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "23 / 6 = 3 remainder 5. So 23/6 = 3 5/6.",
+      "explanation_incorrect": "Divide: 23/6 = 3 with remainder 5. Mixed number = 3 5/6."
+    },
+    {
+      "question_id": "T02.02.Q027",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Using cross multiplication, compare 3/7 and 4/9. Which is greater?",
+      "options": [
+        { "id": "A", "text": "3/7" },
+        { "id": "B", "text": "4/9" },
+        { "id": "C", "text": "They are equal" },
+        { "id": "D", "text": "Cannot compare" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Cross multiply: 3 x 9 = 27 and 4 x 7 = 28. Since 28 > 27, the fraction 4/9 > 3/7.",
+      "explanation_incorrect": "Cross multiply: 3x9=27 vs 4x7=28. The side with the larger product has the larger fraction: 4/9 > 3/7."
+    },
+    {
+      "question_id": "T02.02.Q028",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Subtract: 3 1/2 - 1 3/4.",
+      "options": [
+        { "id": "A", "text": "1 3/4" },
+        { "id": "B", "text": "2 1/4" },
+        { "id": "C", "text": "1 1/4" },
+        { "id": "D", "text": "2 3/4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Convert to improper: 3 1/2 = 7/2, 1 3/4 = 7/4. LCM = 4. 7/2 = 14/4. 14/4 - 7/4 = 7/4 = 1 3/4.",
+      "explanation_incorrect": "7/2 - 7/4 = 14/4 - 7/4 = 7/4 = 1 3/4."
+    },
+    {
+      "question_id": "T02.02.Q029",
+      "concept_id": "T02.02.C05",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A rope is 5/6 m long. A piece of 1/4 m is cut off. What is the length of the remaining rope?",
+      "options": [
+        { "id": "A", "text": "4/2 m" },
+        { "id": "B", "text": "7/12 m" },
+        { "id": "C", "text": "11/12 m" },
+        { "id": "D", "text": "1/2 m" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5/6 - 1/4. LCM of 6 and 4 = 12. 5/6 = 10/12, 1/4 = 3/12. Remaining = 10/12 - 3/12 = 7/12 m.",
+      "explanation_incorrect": "5/6 - 1/4 = 10/12 - 3/12 = 7/12 m."
+    },
+    {
+      "question_id": "T02.02.Q030",
+      "concept_id": "T02.02.C02",
+      "difficulty": "exam_style",
+      "type": "fill_blank",
+      "question_text": "The fraction 36/48 in simplest form is ___.",
+      "correct_answer": "3/4",
+      "explanation_correct": "HCF of 36 and 48 = 12. 36/12 = 3, 48/12 = 4. Simplest form = 3/4.",
+      "explanation_incorrect": "Divide both by HCF(36,48) = 12: 36/12 = 3, 48/12 = 4. Answer: 3/4."
+    },
+    {
+      "question_id": "T02.02.Q031",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Arrange in descending order: 5/6, 7/9, 2/3.",
+      "options": [
+        { "id": "A", "text": "5/6, 7/9, 2/3" },
+        { "id": "B", "text": "7/9, 5/6, 2/3" },
+        { "id": "C", "text": "5/6, 2/3, 7/9" },
+        { "id": "D", "text": "2/3, 7/9, 5/6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 6, 9, 3 = 18. 5/6 = 15/18, 7/9 = 14/18, 2/3 = 12/18. Descending: 15/18 > 14/18 > 12/18, so 5/6 > 7/9 > 2/3.",
+      "explanation_incorrect": "Convert to denominator 18: 15/18, 14/18, 12/18. Descending order: 5/6, 7/9, 2/3."
+    },
+    {
+      "question_id": "T02.02.Q032",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find: 1/2 + 2/3 + 1/6.",
+      "options": [
+        { "id": "A", "text": "4/11" },
+        { "id": "B", "text": "4/6" },
+        { "id": "C", "text": "1 1/3" },
+        { "id": "D", "text": "1 1/6" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "LCM of 2, 3, 6 = 6. 1/2 = 3/6, 2/3 = 4/6, 1/6 = 1/6. Sum = 3/6 + 4/6 + 1/6 = 8/6 = 4/3 = 1 1/3.",
+      "explanation_incorrect": "Convert to sixths: 3/6 + 4/6 + 1/6 = 8/6 = 1 2/6 = 1 1/3."
+    },
+    {
+      "question_id": "T02.02.Q033",
+      "concept_id": "T02.02.C05",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "In a class, 1/5 of students like cricket, 2/5 like football, and the rest like badminton. What fraction likes badminton?",
+      "options": [
+        { "id": "A", "text": "3/5" },
+        { "id": "B", "text": "2/5" },
+        { "id": "C", "text": "1/5" },
+        { "id": "D", "text": "4/5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Cricket + Football = 1/5 + 2/5 = 3/5. Badminton = 1 - 3/5 = 5/5 - 3/5 = 2/5.",
+      "explanation_incorrect": "Total = 1. Cricket + Football = 3/5. Remaining = 1 - 3/5 = 2/5."
+    },
+    {
+      "question_id": "T02.02.Q034",
+      "concept_id": "T02.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "How many halves are there in 5?",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "10" },
+        { "id": "C", "text": "2.5" },
+        { "id": "D", "text": "15" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5 / (1/2) = 5 x 2 = 10. There are 10 halves in 5.",
+      "explanation_incorrect": "Each whole has 2 halves, so 5 wholes have 5 x 2 = 10 halves."
+    },
+    {
+      "question_id": "T02.02.Q035",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "1/3 is greater than 1/5.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When numerators are equal, the fraction with the smaller denominator is greater. 3 < 5, so 1/3 > 1/5.",
+      "explanation_incorrect": "For unit fractions (numerator = 1), smaller denominator means larger fraction. 1/3 > 1/5."
+    },
+    {
+      "question_id": "T02.02.Q036",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Subtract: 4 1/5 - 2 3/5.",
+      "options": [
+        { "id": "A", "text": "1 3/5" },
+        { "id": "B", "text": "2 2/5" },
+        { "id": "C", "text": "1 2/5" },
+        { "id": "D", "text": "2 3/5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Convert: 4 1/5 = 21/5, 2 3/5 = 13/5. Subtract: 21/5 - 13/5 = 8/5 = 1 3/5.",
+      "explanation_incorrect": "21/5 - 13/5 = 8/5 = 1 3/5."
+    },
+    {
+      "question_id": "T02.02.Q037",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "How many fractions equivalent to 3/5 have a denominator less than 30?",
+      "options": [
+        { "id": "A", "text": "4" },
+        { "id": "B", "text": "5" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Equivalent fractions of 3/5: 3/5, 6/10, 9/15, 12/20, 15/25. The next would be 18/30, but 30 is not less than 30. So there are 5 such fractions.",
+      "explanation_incorrect": "Multiply by 1,2,3,4,5: 3/5, 6/10, 9/15, 12/20, 15/25. Next is 18/30 (not < 30). Total: 5."
+    },
+    {
+      "question_id": "T02.02.Q038",
+      "concept_id": "T02.02.C05",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Ram spends 1/4 of his salary on rent, 1/3 on food, and saves the rest. What fraction does he save?",
+      "options": [
+        { "id": "A", "text": "5/12" },
+        { "id": "B", "text": "7/12" },
+        { "id": "C", "text": "1/12" },
+        { "id": "D", "text": "1/2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rent + Food = 1/4 + 1/3 = 3/12 + 4/12 = 7/12. Savings = 1 - 7/12 = 12/12 - 7/12 = 5/12.",
+      "explanation_incorrect": "Total spent = 1/4 + 1/3 = 7/12. Saved = 1 - 7/12 = 5/12."
+    },
+    {
+      "question_id": "T02.02.Q039",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "fill_blank",
+      "question_text": "The fraction exactly halfway between 1/4 and 1/2 is ___.",
+      "correct_answer": "3/8",
+      "explanation_correct": "Average of 1/4 and 1/2 = (1/4 + 1/2) / 2 = (1/4 + 2/4) / 2 = (3/4) / 2 = 3/8.",
+      "explanation_incorrect": "Halfway = average. (1/4 + 1/2)/2 = (3/4)/2 = 3/8."
+    },
+    {
+      "question_id": "T02.02.Q040",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What fraction of an hour is 20 minutes?",
+      "options": [
+        { "id": "A", "text": "1/4" },
+        { "id": "B", "text": "1/3" },
+        { "id": "C", "text": "2/5" },
+        { "id": "D", "text": "1/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 hour = 60 minutes. 20/60 = 1/3. So 20 minutes is 1/3 of an hour.",
+      "explanation_incorrect": "20 out of 60 minutes = 20/60 = 1/3."
+    },
+    {
+      "question_id": "T02.02.Q041",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Add: 3/8 + 1/8 + 2/8.",
+      "options": [
+        { "id": "A", "text": "6/24" },
+        { "id": "B", "text": "6/8" },
+        { "id": "C", "text": "3/4" },
+        { "id": "D", "text": "Both B and C" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "3/8 + 1/8 + 2/8 = 6/8. Simplified: 6/8 = 3/4. Both B and C are correct.",
+      "explanation_incorrect": "Like fractions: add numerators. 3+1+2=6. Result: 6/8 = 3/4."
+    },
+    {
+      "question_id": "T02.02.Q042",
+      "concept_id": "T02.02.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A water bottle holds 3/4 litre. Arjun drinks 1/3 litre from it. How much water is left?",
+      "options": [
+        { "id": "A", "text": "5/12 litre" },
+        { "id": "B", "text": "2/1 litre" },
+        { "id": "C", "text": "1/4 litre" },
+        { "id": "D", "text": "7/12 litre" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "3/4 - 1/3 = 9/12 - 4/12 = 5/12 litre.",
+      "explanation_incorrect": "LCM(4,3)=12. 3/4=9/12, 1/3=4/12. Remaining: 9/12-4/12=5/12 litre."
+    },
+    {
+      "question_id": "T02.02.Q043",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which of these is in simplest form?",
+      "options": [
+        { "id": "A", "text": "6/15" },
+        { "id": "B", "text": "8/12" },
+        { "id": "C", "text": "7/11" },
+        { "id": "D", "text": "10/25" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A fraction is in simplest form when HCF of numerator and denominator is 1. HCF(7,11) = 1 (both are prime, or coprime). So 7/11 is in simplest form.",
+      "explanation_incorrect": "6/15=2/5, 8/12=2/3, 10/25=2/5 can all be simplified. Only 7/11 has HCF(7,11)=1."
+    },
+    {
+      "question_id": "T02.02.Q044",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Which of these fractions is closest to 1?",
+      "options": [
+        { "id": "A", "text": "4/5" },
+        { "id": "B", "text": "7/8" },
+        { "id": "C", "text": "5/6" },
+        { "id": "D", "text": "9/10" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Distance from 1: 4/5 is 1/5=0.2 away, 7/8 is 1/8=0.125 away, 5/6 is 1/6=0.167 away, 9/10 is 1/10=0.1 away. 9/10 is closest to 1.",
+      "explanation_incorrect": "Check how far each is from 1: 1-4/5=1/5, 1-7/8=1/8, 1-5/6=1/6, 1-9/10=1/10. Smallest gap is 1/10."
+    },
+    {
+      "question_id": "T02.02.Q045",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find: 2/3 + 3/4 - 1/6.",
+      "options": [
+        { "id": "A", "text": "5/4" },
+        { "id": "B", "text": "15/12" },
+        { "id": "C", "text": "1 1/4" },
+        { "id": "D", "text": "All of the above" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "LCM of 3, 4, 6 = 12. 2/3=8/12, 3/4=9/12, 1/6=2/12. Result = 8/12+9/12-2/12 = 15/12 = 5/4 = 1 1/4. All three represent the same value.",
+      "explanation_incorrect": "8/12 + 9/12 - 2/12 = 15/12 = 5/4 = 1 1/4. All three options are the same value."
+    },
+    {
+      "question_id": "T02.02.Q046",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Which mixed number represents the fraction 19/4?",
+      "options": [
+        { "id": "A", "text": "4 3/4" },
+        { "id": "B", "text": "5 1/4" },
+        { "id": "C", "text": "3 7/4" },
+        { "id": "D", "text": "4 1/4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "19 / 4 = 4 remainder 3. So 19/4 = 4 3/4.",
+      "explanation_incorrect": "Divide: 4 x 4 = 16, remainder = 19-16 = 3. Mixed number = 4 3/4."
+    },
+    {
+      "question_id": "T02.02.Q047",
+      "concept_id": "T02.02.C05",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A piece of land has 3/8 planted with rice and 1/4 with wheat. What fraction is planted with crops?",
+      "options": [
+        { "id": "A", "text": "4/12" },
+        { "id": "B", "text": "5/8" },
+        { "id": "C", "text": "1/2" },
+        { "id": "D", "text": "7/8" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "3/8 + 1/4 = 3/8 + 2/8 = 5/8.",
+      "explanation_incorrect": "LCM(8,4)=8. 1/4=2/8. Total = 3/8+2/8 = 5/8."
+    },
+    {
+      "question_id": "T02.02.Q048",
+      "concept_id": "T02.02.C04",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "7/9 - 4/9 = ___.",
+      "correct_answer": "1/3",
+      "explanation_correct": "7/9 - 4/9 = 3/9 = 1/3 (simplified by dividing by 3).",
+      "explanation_incorrect": "Like fractions: 7-4=3, denominator stays 9. 3/9 = 1/3."
+    },
+    {
+      "question_id": "T02.02.Q049",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Between 1/3 and 2/3, which of the following fractions lies?",
+      "options": [
+        { "id": "A", "text": "1/4" },
+        { "id": "B", "text": "3/4" },
+        { "id": "C", "text": "1/2" },
+        { "id": "D", "text": "5/6" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "1/3 = 0.333... and 2/3 = 0.666... 1/2 = 0.5, which lies between them. 1/4 = 0.25 (too small), 3/4 = 0.75 and 5/6 = 0.833... (too large).",
+      "explanation_incorrect": "Convert to sixths: 1/3=2/6, 2/3=4/6, 1/2=3/6. Since 2/6 < 3/6 < 4/6, 1/2 lies between 1/3 and 2/3."
+    },
+    {
+      "question_id": "T02.02.Q050",
+      "concept_id": "T02.02.C05",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Meera had 2 1/2 litres of milk. She used 3/4 litre for tea and 1/2 litre for coffee. How much milk is left?",
+      "options": [
+        { "id": "A", "text": "1 1/4 litres" },
+        { "id": "B", "text": "1 3/4 litres" },
+        { "id": "C", "text": "1 1/2 litres" },
+        { "id": "D", "text": "3/4 litre" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Used = 3/4 + 1/2 = 3/4 + 2/4 = 5/4. Remaining = 2 1/2 - 5/4 = 5/2 - 5/4 = 10/4 - 5/4 = 5/4 = 1 1/4 litres.",
+      "explanation_incorrect": "Total used: 3/4 + 1/2 = 5/4. Remaining: 5/2 - 5/4 = 10/4 - 5/4 = 5/4 = 1 1/4 litres."
+    }
+  ]
+}

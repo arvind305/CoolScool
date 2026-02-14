@@ -1,0 +1,775 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 10,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.01",
+  "topic_name": "Polynomials",
+  "canonical_explanation": {
+    "text": "A polynomial p(x) of degree n has at most n zeroes. The zeroes of a polynomial are the x-values where p(x) = 0. For a quadratic polynomial ax^2 + bx + c, if alpha and beta are the zeroes, then sum of zeroes = -b/a and product of zeroes = c/a. The division algorithm states p(x) = g(x) x q(x) + r(x), where degree of r(x) < degree of g(x).",
+    "rules": [
+      "A polynomial of degree n has at most n zeroes",
+      "For ax^2 + bx + c: sum of zeroes (alpha + beta) = -b/a",
+      "For ax^2 + bx + c: product of zeroes (alpha x beta) = c/a",
+      "Division algorithm: p(x) = g(x) x q(x) + r(x), deg(r) < deg(g)",
+      "Given zeroes alpha and beta, quadratic polynomial = x^2 - (alpha + beta)x + (alpha x beta)"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.01.Q001",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The number of zeroes of a cubic polynomial is at most:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "4" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A polynomial of degree n has at most n zeroes. A cubic polynomial has degree 3, so it has at most 3 zeroes.",
+      "explanation_incorrect": "The maximum number of zeroes of a polynomial equals its degree. A cubic polynomial (degree 3) has at most 3 zeroes."
+    },
+    {
+      "question_id": "T02.01.Q002",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "If the graph of a polynomial intersects the x-axis at 2 points, how many zeroes does it have?",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "2" },
+        { "id": "D", "text": "Cannot be determined" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The zeroes of a polynomial are the x-coordinates of the points where the graph intersects the x-axis. 2 intersection points means 2 zeroes.",
+      "explanation_incorrect": "Each intersection with the x-axis represents one zero of the polynomial. Two intersections give exactly 2 zeroes."
+    },
+    {
+      "question_id": "T02.01.Q003",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The zeroes of the polynomial p(x) = x^2 - 9 are:",
+      "options": [
+        { "id": "A", "text": "3 and -3" },
+        { "id": "B", "text": "9 and -9" },
+        { "id": "C", "text": "3 only" },
+        { "id": "D", "text": "0 and 9" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "x^2 - 9 = (x - 3)(x + 3) = 0 gives x = 3 or x = -3. The zeroes are 3 and -3.",
+      "explanation_incorrect": "Factor x^2 - 9 as a difference of squares: (x-3)(x+3) = 0. The zeroes are x = 3 and x = -3."
+    },
+    {
+      "question_id": "T02.01.Q004",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "A linear polynomial has exactly one zero.",
+      "correct_answer": "True",
+      "explanation_correct": "A linear polynomial ax + b (where a is not 0) has degree 1, so it has exactly one zero: x = -b/a.",
+      "explanation_incorrect": "A linear polynomial is of the form ax + b. Setting ax + b = 0 gives exactly one solution x = -b/a."
+    },
+    {
+      "question_id": "T02.01.Q005",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If the graph of a polynomial does not intersect the x-axis at all, then the number of its zeroes is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "0" },
+        { "id": "D", "text": "3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If the graph does not intersect the x-axis, there are no real x-values where p(x) = 0. So the polynomial has 0 (real) zeroes.",
+      "explanation_incorrect": "Zeroes correspond to x-axis intersections. No intersection means 0 zeroes."
+    },
+    {
+      "question_id": "T02.01.Q006",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the zeroes of p(x) = x^2 - 2x - 8.",
+      "options": [
+        { "id": "A", "text": "2 and -4" },
+        { "id": "B", "text": "-2 and 4" },
+        { "id": "C", "text": "2 and 4" },
+        { "id": "D", "text": "-2 and -4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "x^2 - 2x - 8 = (x - 4)(x + 2) = 0. So x = 4 or x = -2. The zeroes are -2 and 4.",
+      "explanation_incorrect": "Factor: x^2 - 2x - 8 = (x - 4)(x + 2). Setting each factor to zero: x = 4 or x = -2."
+    },
+    {
+      "question_id": "T02.01.Q007",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "For the polynomial 2x^2 + 5x + 3, the sum of zeroes is:",
+      "options": [
+        { "id": "A", "text": "5/2" },
+        { "id": "B", "text": "-5/2" },
+        { "id": "C", "text": "3/2" },
+        { "id": "D", "text": "-3/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For ax^2 + bx + c, sum of zeroes = -b/a = -5/2.",
+      "explanation_incorrect": "Sum of zeroes = -b/a. Here a = 2, b = 5, so sum = -5/2."
+    },
+    {
+      "question_id": "T02.01.Q008",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "For the polynomial 2x^2 + 5x + 3, the product of zeroes is:",
+      "options": [
+        { "id": "A", "text": "5/2" },
+        { "id": "B", "text": "-5/2" },
+        { "id": "C", "text": "3/2" },
+        { "id": "D", "text": "-3/2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For ax^2 + bx + c, product of zeroes = c/a = 3/2.",
+      "explanation_incorrect": "Product of zeroes = c/a. Here a = 2, c = 3, so product = 3/2."
+    },
+    {
+      "question_id": "T02.01.Q009",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "If the zeroes of x^2 - 7x + 10 are alpha and beta, then alpha + beta = ___.",
+      "correct_answer": "7",
+      "explanation_correct": "Sum of zeroes = -b/a = -(-7)/1 = 7.",
+      "explanation_incorrect": "For x^2 - 7x + 10, a = 1, b = -7. Sum of zeroes = -b/a = 7."
+    },
+    {
+      "question_id": "T02.01.Q010",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "If the zeroes of x^2 - 7x + 10 are alpha and beta, then alpha x beta = ?",
+      "options": [
+        { "id": "A", "text": "7" },
+        { "id": "B", "text": "-7" },
+        { "id": "C", "text": "10" },
+        { "id": "D", "text": "-10" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Product of zeroes = c/a = 10/1 = 10.",
+      "explanation_incorrect": "For x^2 - 7x + 10, a = 1, c = 10. Product of zeroes = c/a = 10."
+    },
+    {
+      "question_id": "T02.01.Q011",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the zeroes of p(x) = 6x^2 - 3 - 7x and verify the relationship between zeroes and coefficients.",
+      "options": [
+        { "id": "A", "text": "3/2 and -1/3" },
+        { "id": "B", "text": "-3/2 and 1/3" },
+        { "id": "C", "text": "3 and -1" },
+        { "id": "D", "text": "1/2 and -1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rewrite as 6x^2 - 7x - 3 = 0. Factor: 6x^2 - 9x + 2x - 3 = 3x(2x - 3) + 1(2x - 3) = (3x + 1)(2x - 3). Zeroes: x = -1/3, x = 3/2. Sum = -1/3 + 3/2 = 7/6 = -(-7)/6. Product = (-1/3)(3/2) = -1/2 = -3/6.",
+      "explanation_incorrect": "Rearrange to 6x^2 - 7x - 3 and factor to get (3x + 1)(2x - 3) = 0. Zeroes are x = 3/2 and x = -1/3."
+    },
+    {
+      "question_id": "T02.01.Q012",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of x^2 - 6x + k, and 3alpha + 2beta = 20, find the value of k.",
+      "options": [
+        { "id": "A", "text": "-16" },
+        { "id": "B", "text": "16" },
+        { "id": "C", "text": "-36" },
+        { "id": "D", "text": "36" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "alpha + beta = 6, alpha x beta = k. From 3alpha + 2beta = 20 and alpha + beta = 6: alpha = 20 - 2(6) = 8, beta = 6 - 8 = -2. k = alpha x beta = 8 x (-2) = -16.",
+      "explanation_incorrect": "From alpha + beta = 6 and 3alpha + 2beta = 20, solve to get alpha = 8, beta = -2. Then k = alpha x beta = -16."
+    },
+    {
+      "question_id": "T02.01.Q013",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If one zero of the polynomial 2x^2 + 3x + k is 1/2, find the other zero.",
+      "options": [
+        { "id": "A", "text": "-2" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "-1" },
+        { "id": "D", "text": "1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of zeroes = -b/a = -3/2. If one zero is 1/2, other zero = -3/2 - 1/2 = -4/2 = -2.",
+      "explanation_incorrect": "Sum of zeroes = -3/2. Other zero = -3/2 - 1/2 = -2."
+    },
+    {
+      "question_id": "T02.01.Q014",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of p(x) = x^2 - 5x + 6, find the value of alpha^2 + beta^2.",
+      "options": [
+        { "id": "A", "text": "13" },
+        { "id": "B", "text": "25" },
+        { "id": "C", "text": "11" },
+        { "id": "D", "text": "37" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "alpha + beta = 5, alpha x beta = 6. alpha^2 + beta^2 = (alpha + beta)^2 - 2(alpha x beta) = 25 - 12 = 13.",
+      "explanation_incorrect": "Use the identity alpha^2 + beta^2 = (alpha + beta)^2 - 2(alpha)(beta) = 5^2 - 2(6) = 25 - 12 = 13."
+    },
+    {
+      "question_id": "T02.01.Q015",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of 2x^2 - 5x - 3, find the value of 1/alpha + 1/beta.",
+      "options": [
+        { "id": "A", "text": "5/3" },
+        { "id": "B", "text": "-5/3" },
+        { "id": "C", "text": "3/5" },
+        { "id": "D", "text": "-3/5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1/alpha + 1/beta = (alpha + beta)/(alpha x beta). Sum = 5/2, product = -3/2. So 1/alpha + 1/beta = (5/2)/(-3/2) = -5/3.",
+      "explanation_incorrect": "1/alpha + 1/beta = (alpha + beta)/(alpha x beta) = (5/2) / (-3/2) = -5/3."
+    },
+    {
+      "question_id": "T02.01.Q016",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "When p(x) = x^3 - 3x^2 + 5x - 3 is divided by g(x) = x^2 - 2, the remainder is:",
+      "options": [
+        { "id": "A", "text": "7x - 9" },
+        { "id": "B", "text": "7x + 9" },
+        { "id": "C", "text": "x - 3" },
+        { "id": "D", "text": "5x - 3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Dividing x^3 - 3x^2 + 5x - 3 by x^2 - 2: quotient = x - 3, remainder = 7x - 9. Verify: (x^2 - 2)(x - 3) + (7x - 9) = x^3 - 3x^2 - 2x + 6 + 7x - 9 = x^3 - 3x^2 + 5x - 3.",
+      "explanation_incorrect": "Perform polynomial long division: p(x) = (x^2 - 2)(x - 3) + (7x - 9). The remainder is 7x - 9."
+    },
+    {
+      "question_id": "T02.01.Q017",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "In the division algorithm p(x) = g(x) x q(x) + r(x), if p(x) = x^2 + 4x + 5, g(x) = x + 1, and q(x) = x + 3, what is r(x)?",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "r(x) = p(x) - g(x) x q(x) = (x^2 + 4x + 5) - (x + 1)(x + 3) = x^2 + 4x + 5 - (x^2 + 4x + 3) = 2.",
+      "explanation_incorrect": "r(x) = p(x) - g(x) x q(x). Compute (x+1)(x+3) = x^2 + 4x + 3. Then r(x) = x^2 + 4x + 5 - x^2 - 4x - 3 = 2."
+    },
+    {
+      "question_id": "T02.01.Q018",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Divide 3x^2 - x^3 - 3x + 5 by x - 1 - x^2. The quotient is:",
+      "options": [
+        { "id": "A", "text": "x - 2" },
+        { "id": "B", "text": "x + 2" },
+        { "id": "C", "text": "x - 1" },
+        { "id": "D", "text": "x + 1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rearrange: divide -x^3 + 3x^2 - 3x + 5 by -x^2 + x - 1. Quotient = x - 2, remainder = 3. Verify: (-x^2 + x - 1)(x - 2) + 3 = -x^3 + 2x^2 + x^2 - 2x - x + 2 + 3 = -x^3 + 3x^2 - 3x + 5.",
+      "explanation_incorrect": "Rearranging in standard form and dividing: quotient = x - 2, remainder = 3."
+    },
+    {
+      "question_id": "T02.01.Q019",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "type": "true_false",
+      "question_text": "If the remainder on dividing p(x) by g(x) is zero, then g(x) is a factor of p(x).",
+      "correct_answer": "True",
+      "explanation_correct": "If r(x) = 0, then p(x) = g(x) x q(x), meaning g(x) divides p(x) exactly. So g(x) is a factor of p(x).",
+      "explanation_incorrect": "When the remainder is zero, p(x) = g(x) x q(x), which by definition means g(x) is a factor of p(x)."
+    },
+    {
+      "question_id": "T02.01.Q020",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "What must be subtracted from x^4 + 2x^3 - 13x^2 - 12x + 21 so that the result is exactly divisible by x^2 - 4x + 3?",
+      "options": [
+        { "id": "A", "text": "2x - 3" },
+        { "id": "B", "text": "2x + 3" },
+        { "id": "C", "text": "x - 3" },
+        { "id": "D", "text": "3x - 2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Divide x^4 + 2x^3 - 13x^2 - 12x + 21 by x^2 - 4x + 3. The remainder is 2x - 3. Subtracting this remainder makes it exactly divisible.",
+      "explanation_incorrect": "Perform the division and find the remainder. The remainder 2x - 3 must be subtracted for exact divisibility."
+    },
+    {
+      "question_id": "T02.01.Q021",
+      "concept_id": "T02.01.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Find a quadratic polynomial whose zeroes are 2 and -3.",
+      "options": [
+        { "id": "A", "text": "x^2 + x - 6" },
+        { "id": "B", "text": "x^2 - x - 6" },
+        { "id": "C", "text": "x^2 + x + 6" },
+        { "id": "D", "text": "x^2 - x + 6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of zeroes = 2 + (-3) = -1. Product = 2 x (-3) = -6. Polynomial = x^2 - (sum)x + product = x^2 - (-1)x + (-6) = x^2 + x - 6.",
+      "explanation_incorrect": "Quadratic polynomial = x^2 - (sum of zeroes)x + (product of zeroes) = x^2 - (-1)x + (-6) = x^2 + x - 6."
+    },
+    {
+      "question_id": "T02.01.Q022",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find a quadratic polynomial whose zeroes are 3 + sqrt(2) and 3 - sqrt(2).",
+      "options": [
+        { "id": "A", "text": "x^2 - 6x + 7" },
+        { "id": "B", "text": "x^2 + 6x + 7" },
+        { "id": "C", "text": "x^2 - 6x + 9" },
+        { "id": "D", "text": "x^2 - 6x - 7" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum = (3 + sqrt(2)) + (3 - sqrt(2)) = 6. Product = (3 + sqrt(2))(3 - sqrt(2)) = 9 - 2 = 7. Polynomial = x^2 - 6x + 7.",
+      "explanation_incorrect": "Sum of zeroes = 6, product = 9 - 2 = 7. Polynomial = x^2 - 6x + 7."
+    },
+    {
+      "question_id": "T02.01.Q023",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "A quadratic polynomial with sum of zeroes = 0 and product of zeroes = -1 is ___.",
+      "correct_answer": "x^2 - 1",
+      "explanation_correct": "Polynomial = x^2 - (sum)x + product = x^2 - 0x + (-1) = x^2 - 1.",
+      "explanation_incorrect": "Using the formula x^2 - (sum of zeroes)x + (product of zeroes) = x^2 - 0 - 1 = x^2 - 1."
+    },
+    {
+      "question_id": "T02.01.Q024",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find a quadratic polynomial whose zeroes are 1/4 and -1.",
+      "options": [
+        { "id": "A", "text": "4x^2 + 3x - 1" },
+        { "id": "B", "text": "4x^2 - 3x - 1" },
+        { "id": "C", "text": "4x^2 + 3x + 1" },
+        { "id": "D", "text": "x^2 + 3x - 4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum = 1/4 + (-1) = -3/4. Product = (1/4)(-1) = -1/4. Polynomial = x^2 - (-3/4)x + (-1/4) = x^2 + 3x/4 - 1/4. Multiply by 4: 4x^2 + 3x - 1.",
+      "explanation_incorrect": "Sum = -3/4, product = -1/4. Polynomial = x^2 + (3/4)x - 1/4. Clearing fractions by multiplying by 4: 4x^2 + 3x - 1."
+    },
+    {
+      "question_id": "T02.01.Q025",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "How many zeroes does the polynomial p(x) = x^2 + 1 have?",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "0" },
+        { "id": "D", "text": "3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "x^2 + 1 = 0 gives x^2 = -1, which has no real solutions. So the polynomial has 0 real zeroes.",
+      "explanation_incorrect": "Setting x^2 + 1 = 0 gives x^2 = -1. No real number has a negative square, so there are 0 real zeroes."
+    },
+    {
+      "question_id": "T02.01.Q026",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the zeroes of p(x) = 4x^2 - 4x + 1.",
+      "options": [
+        { "id": "A", "text": "1/2 and 1/2" },
+        { "id": "B", "text": "1 and 1" },
+        { "id": "C", "text": "-1/2 and -1/2" },
+        { "id": "D", "text": "1/4 and 1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4x^2 - 4x + 1 = (2x - 1)^2 = 0. So x = 1/2 is a repeated (double) zero.",
+      "explanation_incorrect": "Factor: 4x^2 - 4x + 1 = (2x - 1)^2. Setting (2x - 1)^2 = 0 gives x = 1/2 (repeated zero)."
+    },
+    {
+      "question_id": "T02.01.Q027",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of 3x^2 + 5x - 2, find alpha^2 x beta + alpha x beta^2.",
+      "options": [
+        { "id": "A", "text": "10/9" },
+        { "id": "B", "text": "-10/9" },
+        { "id": "C", "text": "10/3" },
+        { "id": "D", "text": "-10/3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "alpha^2 x beta + alpha x beta^2 = alpha x beta(alpha + beta). Sum = -5/3, product = -2/3. Result = (-2/3)(-5/3) = 10/9.",
+      "explanation_incorrect": "Factor: alpha x beta(alpha + beta). With sum = -5/3 and product = -2/3: (-2/3)(-5/3) = 10/9."
+    },
+    {
+      "question_id": "T02.01.Q028",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of x^2 - x - 2, find a polynomial whose zeroes are 2alpha + 1 and 2beta + 1.",
+      "options": [
+        { "id": "A", "text": "x^2 - 4x - 5" },
+        { "id": "B", "text": "x^2 + 4x - 5" },
+        { "id": "C", "text": "x^2 - 4x + 5" },
+        { "id": "D", "text": "x^2 - 2x - 5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "alpha + beta = 1, alpha x beta = -2. New sum = (2alpha + 1) + (2beta + 1) = 2(alpha + beta) + 2 = 2(1) + 2 = 4. New product = (2alpha + 1)(2beta + 1) = 4(alpha x beta) + 2(alpha + beta) + 1 = 4(-2) + 2(1) + 1 = -5. Polynomial = x^2 - 4x - 5.",
+      "explanation_incorrect": "Sum of new zeroes = 2(1) + 2 = 4. Product = 4(-2) + 2(1) + 1 = -5. Polynomial = x^2 - 4x - 5."
+    },
+    {
+      "question_id": "T02.01.Q029",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Divide 2x^2 + 3x + 1 by x + 2. The quotient and remainder are:",
+      "options": [
+        { "id": "A", "text": "Quotient: 2x - 1, Remainder: 3" },
+        { "id": "B", "text": "Quotient: 2x + 1, Remainder: -1" },
+        { "id": "C", "text": "Quotient: 2x - 1, Remainder: -1" },
+        { "id": "D", "text": "Quotient: 2x + 7, Remainder: -13" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(x + 2)(2x - 1) = 2x^2 - x + 4x - 2 = 2x^2 + 3x - 2. Then 2x^2 + 3x + 1 - (2x^2 + 3x - 2) = 3. Quotient = 2x - 1, Remainder = 3.",
+      "explanation_incorrect": "Divide: 2x^2 + 3x + 1 = (x + 2)(2x - 1) + 3. Quotient = 2x - 1, remainder = 3."
+    },
+    {
+      "question_id": "T02.01.Q030",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "On dividing x^3 - 3x^2 + x + 2 by a polynomial g(x), the quotient and remainder are x - 2 and -2x + 4 respectively. Find g(x).",
+      "options": [
+        { "id": "A", "text": "x^2 - x + 1" },
+        { "id": "B", "text": "x^2 + x + 1" },
+        { "id": "C", "text": "x^2 - x - 1" },
+        { "id": "D", "text": "x^2 + x - 1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "p(x) = g(x) x q(x) + r(x). So g(x) = (p(x) - r(x))/q(x) = (x^3 - 3x^2 + x + 2 - (-2x + 4))/(x - 2) = (x^3 - 3x^2 + 3x - 2)/(x - 2). Dividing: g(x) = x^2 - x + 1.",
+      "explanation_incorrect": "g(x) = (p(x) - r(x)) / q(x) = (x^3 - 3x^2 + 3x - 2) / (x - 2) = x^2 - x + 1."
+    },
+    {
+      "question_id": "T02.01.Q031",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The zeroes of p(x) = 3x^2 - x - 4 are:",
+      "options": [
+        { "id": "A", "text": "4/3 and -1" },
+        { "id": "B", "text": "-4/3 and 1" },
+        { "id": "C", "text": "4 and -1" },
+        { "id": "D", "text": "-4 and 1/3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "3x^2 - x - 4 = 3x^2 - 4x + 3x - 4 = x(3x - 4) + 1(3x - 4) = (x + 1)(3x - 4). Zeroes: x = -1 and x = 4/3.",
+      "explanation_incorrect": "Factor 3x^2 - x - 4 = (x + 1)(3x - 4). Setting each factor to zero: x = -1 or x = 4/3."
+    },
+    {
+      "question_id": "T02.01.Q032",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "The zeroes of p(x) = x^2 - 3 are ___ and ___.",
+      "correct_answer": "sqrt(3) and -sqrt(3)",
+      "explanation_correct": "x^2 - 3 = 0 gives x^2 = 3, so x = sqrt(3) or x = -sqrt(3).",
+      "explanation_incorrect": "Setting x^2 - 3 = 0, we get x = +/-sqrt(3). The zeroes are sqrt(3) and -sqrt(3)."
+    },
+    {
+      "question_id": "T02.01.Q033",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The sum of zeroes of 4s^2 - 4s + 1 is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "-1" },
+        { "id": "C", "text": "1/4" },
+        { "id": "D", "text": "4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of zeroes = -b/a = -(-4)/4 = 4/4 = 1.",
+      "explanation_incorrect": "For 4s^2 - 4s + 1, a = 4, b = -4. Sum = -(-4)/4 = 1."
+    },
+    {
+      "question_id": "T02.01.Q034",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of x^2 + 7x + 12, find 1/alpha + 1/beta.",
+      "options": [
+        { "id": "A", "text": "-7/12" },
+        { "id": "B", "text": "7/12" },
+        { "id": "C", "text": "-12/7" },
+        { "id": "D", "text": "12/7" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1/alpha + 1/beta = (alpha + beta)/(alpha x beta) = (-7)/12 = -7/12.",
+      "explanation_incorrect": "Sum = -7, product = 12. So 1/alpha + 1/beta = (sum)/(product) = -7/12."
+    },
+    {
+      "question_id": "T02.01.Q035",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find a quadratic polynomial with zeroes -2 and -5.",
+      "options": [
+        { "id": "A", "text": "x^2 + 7x + 10" },
+        { "id": "B", "text": "x^2 - 7x + 10" },
+        { "id": "C", "text": "x^2 + 7x - 10" },
+        { "id": "D", "text": "x^2 - 7x - 10" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum = -2 + (-5) = -7. Product = (-2)(-5) = 10. Polynomial = x^2 - (-7)x + 10 = x^2 + 7x + 10.",
+      "explanation_incorrect": "Sum of zeroes = -7, product = 10. Polynomial = x^2 + 7x + 10."
+    },
+    {
+      "question_id": "T02.01.Q036",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If p(x) = x^3 - 4x^2 + x + 6 and two of its zeroes are 3 and -1, find the third zero.",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "-2" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For cubic x^3 - 4x^2 + x + 6, sum of zeroes = -(-4)/1 = 4. If two zeroes are 3 and -1, third zero = 4 - 3 - (-1) = 4 - 3 + 1 = 2.",
+      "explanation_incorrect": "Sum of all three zeroes = 4 (from -coefficient of x^2). Third zero = 4 - 3 - (-1) = 2."
+    },
+    {
+      "question_id": "T02.01.Q037",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "For the polynomial 5x^2 - 3x + 7, the product of zeroes is 7/5.",
+      "correct_answer": "True",
+      "explanation_correct": "Product of zeroes = c/a = 7/5. This is correct.",
+      "explanation_incorrect": "For ax^2 + bx + c, product of zeroes = c/a = 7/5."
+    },
+    {
+      "question_id": "T02.01.Q038",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Check whether g(x) = x^2 - 3 is a factor of p(x) = 2x^4 + 3x^3 - 2x^2 - 9x - 12.",
+      "options": [
+        { "id": "A", "text": "Yes, it is a factor" },
+        { "id": "B", "text": "No, remainder is 2x" },
+        { "id": "C", "text": "No, remainder is x + 1" },
+        { "id": "D", "text": "No, remainder is -3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Dividing 2x^4 + 3x^3 - 2x^2 - 9x - 12 by x^2 - 3 gives quotient 2x^2 + 3x + 4 and remainder 0. So x^2 - 3 is a factor.",
+      "explanation_incorrect": "Perform the division: (2x^4 + 3x^3 - 2x^2 - 9x - 12) / (x^2 - 3) = 2x^2 + 3x + 4 with remainder 0. It is a factor."
+    },
+    {
+      "question_id": "T02.01.Q039",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of x^2 - p(x + 1) - c, and (alpha + 1)(beta + 1) = 1 - c, then p equals:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "-1" },
+        { "id": "D", "text": "Any value" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "x^2 - p(x+1) - c = x^2 - px - p - c. Sum = p, product = -(p+c). (alpha+1)(beta+1) = alpha*beta + alpha + beta + 1 = -(p+c) + p + 1 = 1 - c. This is always true regardless of p.",
+      "explanation_incorrect": "(alpha+1)(beta+1) = product + sum + 1 = -(p+c) + p + 1 = 1 - c. This holds for any value of p."
+    },
+    {
+      "question_id": "T02.01.Q040",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the zeroes of p(x) = x^2 - 4x - 5.",
+      "options": [
+        { "id": "A", "text": "5 and -1" },
+        { "id": "B", "text": "-5 and 1" },
+        { "id": "C", "text": "5 and 1" },
+        { "id": "D", "text": "-5 and -1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "x^2 - 4x - 5 = (x - 5)(x + 1) = 0. Zeroes are x = 5 and x = -1.",
+      "explanation_incorrect": "Factor: x^2 - 4x - 5 = (x - 5)(x + 1). Setting each factor to zero gives x = 5 and x = -1."
+    },
+    {
+      "question_id": "T02.01.Q041",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If alpha, beta are zeroes of x^2 - 6x + a, find 'a' if 3alpha + 2beta = 20.",
+      "options": [
+        { "id": "A", "text": "-16" },
+        { "id": "B", "text": "16" },
+        { "id": "C", "text": "-8" },
+        { "id": "D", "text": "8" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "alpha + beta = 6. From 3alpha + 2beta = 20: alpha + (2alpha + 2beta) = 20, alpha + 2(6) = 20 - 2beta + 2beta... Better: From alpha + beta = 6, beta = 6 - alpha. Substituting: 3alpha + 2(6 - alpha) = 20, alpha + 12 = 20, alpha = 8. beta = -2. a = alpha x beta = -16.",
+      "explanation_incorrect": "From alpha + beta = 6 and 3alpha + 2beta = 20, solve: alpha = 8, beta = -2. Then a = alpha x beta = -16."
+    },
+    {
+      "question_id": "T02.01.Q042",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The zeroes of p(x) = t^2 - 15 are:",
+      "options": [
+        { "id": "A", "text": "sqrt(15) and -sqrt(15)" },
+        { "id": "B", "text": "15 and -15" },
+        { "id": "C", "text": "sqrt(15) only" },
+        { "id": "D", "text": "3sqrt(5) and -3sqrt(5)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "t^2 - 15 = 0 gives t^2 = 15, so t = sqrt(15) or t = -sqrt(15).",
+      "explanation_incorrect": "Setting t^2 = 15, we get t = +/-sqrt(15). Note that sqrt(15) is not the same as 3sqrt(5)."
+    },
+    {
+      "question_id": "T02.01.Q043",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "A quadratic polynomial whose sum of zeroes is 8 and product of zeroes is 12 is ___.",
+      "correct_answer": "x^2 - 8x + 12",
+      "explanation_correct": "Polynomial = x^2 - (sum)x + product = x^2 - 8x + 12.",
+      "explanation_incorrect": "Using the formula: quadratic polynomial = x^2 - (sum of zeroes)x + (product of zeroes) = x^2 - 8x + 12."
+    },
+    {
+      "question_id": "T02.01.Q044",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of p(x) = x^2 - 4x + 3, find alpha^4 x beta^3 + alpha^3 x beta^4.",
+      "options": [
+        { "id": "A", "text": "108" },
+        { "id": "B", "text": "36" },
+        { "id": "C", "text": "432" },
+        { "id": "D", "text": "756" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "alpha + beta = 4, alpha x beta = 3. alpha^4 x beta^3 + alpha^3 x beta^4 = (alpha x beta)^3(alpha + beta) = 27 x 4 = 108.",
+      "explanation_incorrect": "Factor: alpha^3 x beta^3(alpha + beta) = (alpha x beta)^3 x (alpha + beta) = 3^3 x 4 = 108."
+    },
+    {
+      "question_id": "T02.01.Q045",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Give examples of polynomials p(x), g(x), q(x) and r(x) which satisfy the division algorithm where degree of p(x) = 4, degree of g(x) = 2, q(x) = x^2 - x + 1, and r(x) = x + 1. If g(x) = x^2 + 1, find p(x).",
+      "options": [
+        { "id": "A", "text": "x^4 - x^3 + 2x^2 + 1" },
+        { "id": "B", "text": "x^4 - x^3 + 2x^2 + 2" },
+        { "id": "C", "text": "x^4 - x^3 + x^2 + x + 2" },
+        { "id": "D", "text": "x^4 - x^3 + 2x^2 + x + 2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "p(x) = g(x) x q(x) + r(x) = (x^2 + 1)(x^2 - x + 1) + (x + 1) = x^4 - x^3 + x^2 + x^2 - x + 1 + x + 1 = x^4 - x^3 + 2x^2 + 2.",
+      "explanation_incorrect": "p(x) = (x^2 + 1)(x^2 - x + 1) + (x + 1). Expanding: x^4 - x^3 + x^2 + x^2 - x + 1 + x + 1 = x^4 - x^3 + 2x^2 + 2."
+    },
+    {
+      "question_id": "T02.01.Q046",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "type": "true_false",
+      "question_text": "The polynomial p(x) = x^2 - 4x + 4 has two distinct zeroes.",
+      "correct_answer": "False",
+      "explanation_correct": "x^2 - 4x + 4 = (x - 2)^2 = 0 gives x = 2 as a repeated zero. The zeroes are equal (both are 2), not distinct.",
+      "explanation_incorrect": "(x - 2)^2 = 0 has only one distinct zero, x = 2 (repeated). The zeroes are not distinct."
+    },
+    {
+      "question_id": "T02.01.Q047",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find a quadratic polynomial whose zeroes are 5 + sqrt(3) and 5 - sqrt(3).",
+      "options": [
+        { "id": "A", "text": "x^2 - 10x + 22" },
+        { "id": "B", "text": "x^2 + 10x + 22" },
+        { "id": "C", "text": "x^2 - 10x + 28" },
+        { "id": "D", "text": "x^2 - 10x + 25" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum = 10. Product = (5 + sqrt(3))(5 - sqrt(3)) = 25 - 3 = 22. Polynomial = x^2 - 10x + 22.",
+      "explanation_incorrect": "Sum = 10, product = 25 - 3 = 22. Polynomial = x^2 - 10x + 22."
+    },
+    {
+      "question_id": "T02.01.Q048",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If alpha and beta are zeroes of 2x^2 + x - 6, find alpha/beta + beta/alpha.",
+      "options": [
+        { "id": "A", "text": "-25/12" },
+        { "id": "B", "text": "25/12" },
+        { "id": "C", "text": "-37/12" },
+        { "id": "D", "text": "37/12" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "alpha/beta + beta/alpha = (alpha^2 + beta^2)/(alpha x beta) = ((alpha + beta)^2 - 2(alpha x beta))/(alpha x beta). Sum = -1/2, product = -3. Numerator = 1/4 - 2(-3) = 1/4 + 6 = 25/4. Result = (25/4)/(-3) = -25/12.",
+      "explanation_incorrect": "alpha/beta + beta/alpha = (alpha^2 + beta^2)/(alpha*beta). With sum = -1/2, product = -3: (1/4 + 6)/(-3) = (25/4)/(-3) = -25/12."
+    },
+    {
+      "question_id": "T02.01.Q049",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Divide x^3 + x^2 + x + 1 by x^2 + 1. The quotient and remainder are:",
+      "options": [
+        { "id": "A", "text": "Quotient: x + 1, Remainder: 0" },
+        { "id": "B", "text": "Quotient: x - 1, Remainder: 2x + 2" },
+        { "id": "C", "text": "Quotient: x + 1, Remainder: 2" },
+        { "id": "D", "text": "Quotient: x, Remainder: x + 1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(x^2 + 1)(x + 1) = x^3 + x^2 + x + 1. So the quotient is x + 1 and the remainder is 0.",
+      "explanation_incorrect": "Divide: x^3 + x^2 + x + 1 = (x^2 + 1)(x + 1) + 0. Quotient = x + 1, remainder = 0."
+    },
+    {
+      "question_id": "T02.01.Q050",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find a quadratic polynomial whose zeroes are the reciprocals of the zeroes of x^2 - 5x + 6.",
+      "options": [
+        { "id": "A", "text": "6x^2 - 5x + 1" },
+        { "id": "B", "text": "x^2 - 5x + 6" },
+        { "id": "C", "text": "6x^2 + 5x + 1" },
+        { "id": "D", "text": "x^2 + 5x + 6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Zeroes of x^2 - 5x + 6 are 2 and 3. Reciprocals are 1/2 and 1/3. Sum = 5/6, product = 1/6. Polynomial = x^2 - (5/6)x + 1/6. Multiply by 6: 6x^2 - 5x + 1.",
+      "explanation_incorrect": "Original zeroes: 2, 3. Reciprocal zeroes: 1/2, 1/3. Sum = 5/6, product = 1/6. Polynomial = 6x^2 - 5x + 1."
+    }
+  ]
+}

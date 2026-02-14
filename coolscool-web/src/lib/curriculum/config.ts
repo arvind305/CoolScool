@@ -16,7 +16,7 @@ export const BOARDS = {
     name: 'CBSE',
     fullName: 'Central Board of Secondary Education',
     description: 'National curriculum with NCERT-aligned content',
-    status: 'coming_soon' as const,
+    status: 'live' as const,
   },
 } as const;
 

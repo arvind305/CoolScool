@@ -1,0 +1,811 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.02",
+  "topic_name": "Relations and Functions",
+  "canonical_explanation": {
+    "text": "The Cartesian product A × B of two sets A and B is the set of all ordered pairs (a, b) where a ∈ A and b ∈ B. A relation R from A to B is a subset of A × B. A function f from A to B is a special relation where every element of A has exactly one image in B. Functions can be classified as one-one (injective), onto (surjective), or bijective (both).",
+    "rules": [
+      "n(A × B) = n(A) × n(B)",
+      "A × B ≠ B × A in general",
+      "A function assigns exactly one output to each input",
+      "Domain = set of all first elements, Range = set of all second elements",
+      "Co-domain ⊇ Range"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.02.Q001",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2} and B = {a, b, c}, then n(A × B) is:",
+      "options": [
+        {"id": "A", "text": "5"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "8"},
+        {"id": "D", "text": "3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "n(A × B) = n(A) × n(B) = 2 × 3 = 6.",
+      "explanation_incorrect": "Option A adds cardinalities. Option C is 2³. Option D uses only n(B)."
+    },
+    {
+      "question_id": "T01.02.Q002",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "A × B = B × A for all sets A and B.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A × B ≠ B × A in general. For example, if A = {1} and B = {2}, then A×B = {(1,2)} but B×A = {(2,1)}. The ordered pairs are different.",
+      "explanation_incorrect": "Cartesian product is NOT commutative. The order in ordered pairs matters."
+    },
+    {
+      "question_id": "T01.02.Q003",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A × B = {(1,a), (1,b), (2,a), (2,b)}, then A and B are:",
+      "options": [
+        {"id": "A", "text": "A = {1, 2}, B = {a, b}"},
+        {"id": "B", "text": "A = {a, b}, B = {1, 2}"},
+        {"id": "C", "text": "A = {1, a}, B = {2, b}"},
+        {"id": "D", "text": "A = {1, 2, a, b}, B = {1, 2, a, b}"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In A × B, the first elements form A = {1, 2} and the second elements form B = {a, b}.",
+      "explanation_incorrect": "Option B reverses A and B. Options C and D incorrectly split or combine the elements."
+    },
+    {
+      "question_id": "T01.02.Q004",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "A relation R from set A to set B is:",
+      "options": [
+        {"id": "A", "text": "A subset of A × B"},
+        {"id": "B", "text": "A subset of A ∪ B"},
+        {"id": "C", "text": "A subset of A ∩ B"},
+        {"id": "D", "text": "Equal to A × B"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A relation R from A to B is any subset of the Cartesian product A × B.",
+      "explanation_incorrect": "Option B is incorrect as R consists of ordered pairs, not individual elements. Option C is wrong. Option D would mean every pair is related."
+    },
+    {
+      "question_id": "T01.02.Q005",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If A = {1, 2, 3} and R = {(1,1), (2,2), (3,3), (1,2)}, what is the range of R?",
+      "options": [
+        {"id": "A", "text": "{1, 2, 3}"},
+        {"id": "B", "text": "{1, 2}"},
+        {"id": "C", "text": "{1, 3}"},
+        {"id": "D", "text": "{2, 3}"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Range = set of all second elements = {1, 2, 3}. From (1,1)→1, (2,2)→2, (3,3)→3, (1,2)→2.",
+      "explanation_incorrect": "Option B misses 3. Options C and D miss elements from the second coordinates."
+    },
+    {
+      "question_id": "T01.02.Q006",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "The total number of relations from a set A with 2 elements to a set B with 3 elements is:",
+      "options": [
+        {"id": "A", "text": "32"},
+        {"id": "B", "text": "64"},
+        {"id": "C", "text": "8"},
+        {"id": "D", "text": "6"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A × B has 2 × 3 = 6 elements. Each relation is a subset of A × B, so total relations = 2⁶ = 64.",
+      "explanation_incorrect": "Option A is 2⁵. Option C is 2³. Option D is n(A×B), not the number of subsets."
+    },
+    {
+      "question_id": "T01.02.Q007",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is NOT a function from {1, 2, 3} to {a, b, c}?",
+      "options": [
+        {"id": "A", "text": "{(1,a), (2,b), (3,c)}"},
+        {"id": "B", "text": "{(1,a), (2,a), (3,a)}"},
+        {"id": "C", "text": "{(1,a), (2,b), (1,c)}"},
+        {"id": "D", "text": "{(1,b), (2,c), (3,a)}"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In option C, element 1 maps to both 'a' and 'c'. A function cannot assign two different values to the same input.",
+      "explanation_incorrect": "Options A and D are valid one-one functions. Option B is a valid constant-like function (many-to-one)."
+    },
+    {
+      "question_id": "T01.02.Q008",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The domain of f(x) = √(x − 3) is:",
+      "options": [
+        {"id": "A", "text": "x ≥ 3 or [3, ∞)"},
+        {"id": "B", "text": "x > 3 or (3, ∞)"},
+        {"id": "C", "text": "All real numbers"},
+        {"id": "D", "text": "x ≤ 3 or (−∞, 3]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For √(x−3) to be defined, we need x − 3 ≥ 0, so x ≥ 3. Domain = [3, ∞).",
+      "explanation_incorrect": "Option B excludes x = 3 but √0 = 0 is defined. Option C ignores the restriction. Option D gives the wrong direction."
+    },
+    {
+      "question_id": "T01.02.Q009",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The range of f(x) = x² for x ∈ R is:",
+      "options": [
+        {"id": "A", "text": "R"},
+        {"id": "B", "text": "[0, ∞)"},
+        {"id": "C", "text": "(0, ∞)"},
+        {"id": "D", "text": "(−∞, 0]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "x² ≥ 0 for all real x, and x² = 0 when x = 0. So the range is [0, ∞).",
+      "explanation_incorrect": "Option A includes negative values. Option C excludes 0. Option D gives only non-positive values."
+    },
+    {
+      "question_id": "T01.02.Q010",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = 2x + 3 and g(x) = x², then (f + g)(2) is:",
+      "options": [
+        {"id": "A", "text": "9"},
+        {"id": "B", "text": "11"},
+        {"id": "C", "text": "7"},
+        {"id": "D", "text": "13"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(f+g)(2) = f(2) + g(2) = (2×2+3) + (2²) = 7 + 4 = 11.",
+      "explanation_incorrect": "Option A is f(2) + 2. Option C is only f(2). Option D adds incorrectly."
+    },
+    {
+      "question_id": "T01.02.Q011",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The domain of f(x) = 1/(x − 2) is:",
+      "options": [
+        {"id": "A", "text": "R"},
+        {"id": "B", "text": "R − {2}"},
+        {"id": "C", "text": "R − {0}"},
+        {"id": "D", "text": "{2}"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f(x) = 1/(x−2) is undefined when x = 2 (division by zero). Domain = R − {2}.",
+      "explanation_incorrect": "Option A ignores the restriction. Option C removes 0 instead of 2. Option D is just the excluded point."
+    },
+    {
+      "question_id": "T01.02.Q012",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The modulus function f(x) = |x| is:",
+      "options": [
+        {"id": "A", "text": "One-one and onto"},
+        {"id": "B", "text": "One-one but not onto"},
+        {"id": "C", "text": "Not one-one but onto [0,∞)"},
+        {"id": "D", "text": "Neither one-one nor onto R"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "f(x) = |x| from R to R is not one-one (|2| = |−2| = 2) and not onto R (negative values are never in the range).",
+      "explanation_incorrect": "Option A is false on both counts. Option B is false since it's not one-one. Option C: while its range is [0,∞), it's not onto R."
+    },
+    {
+      "question_id": "T01.02.Q013",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = x² − 4x + 3, then f(1) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "−1"},
+        {"id": "D", "text": "3"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f(1) = 1² − 4(1) + 3 = 1 − 4 + 3 = 0.",
+      "explanation_incorrect": "Options B, C, D result from arithmetic errors in substitution."
+    },
+    {
+      "question_id": "T01.02.Q014",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The signum function sgn(x) for x = −5 is:",
+      "options": [
+        {"id": "A", "text": "−5"},
+        {"id": "B", "text": "−1"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The signum function: sgn(x) = −1 when x < 0, 0 when x = 0, 1 when x > 0. Since −5 < 0, sgn(−5) = −1.",
+      "explanation_incorrect": "Option A confuses sgn with identity. Option C is sgn(0). Option D is for positive x."
+    },
+    {
+      "question_id": "T01.02.Q015",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The greatest integer function [3.7] equals:",
+      "options": [
+        {"id": "A", "text": "4"},
+        {"id": "B", "text": "3"},
+        {"id": "C", "text": "3.7"},
+        {"id": "D", "text": "0"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "[3.7] = 3. The greatest integer function gives the greatest integer less than or equal to x.",
+      "explanation_incorrect": "Option A rounds up (ceiling). Option C is the identity. Option D is wrong."
+    },
+    {
+      "question_id": "T01.02.Q016",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The greatest integer function [−2.3] equals:",
+      "options": [
+        {"id": "A", "text": "−2"},
+        {"id": "B", "text": "−3"},
+        {"id": "C", "text": "−2.3"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "[−2.3] = −3. The greatest integer ≤ −2.3 is −3 (not −2, since −2 > −2.3).",
+      "explanation_incorrect": "Option A incorrectly truncates toward zero. Options C and D are wrong."
+    },
+    {
+      "question_id": "T01.02.Q017",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "If (x + 1, y − 2) = (3, 1), then x and y are:",
+      "options": [
+        {"id": "A", "text": "x = 2, y = 3"},
+        {"id": "B", "text": "x = 3, y = 1"},
+        {"id": "C", "text": "x = 4, y = −1"},
+        {"id": "D", "text": "x = 2, y = −1"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Equal ordered pairs have equal corresponding components: x + 1 = 3 → x = 2, and y − 2 = 1 → y = 3.",
+      "explanation_incorrect": "Options B, C, D don't satisfy both equations simultaneously."
+    },
+    {
+      "question_id": "T01.02.Q018",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The domain of f(x) = √(4 − x²) is:",
+      "options": [
+        {"id": "A", "text": "[−2, 2]"},
+        {"id": "B", "text": "(−2, 2)"},
+        {"id": "C", "text": "[0, 2]"},
+        {"id": "D", "text": "R"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "We need 4 − x² ≥ 0, i.e., x² ≤ 4, i.e., −2 ≤ x ≤ 2. Domain = [−2, 2].",
+      "explanation_incorrect": "Option B excludes endpoints where f(±2) = 0 (defined). Option C excludes negative x. Option D ignores the restriction."
+    },
+    {
+      "question_id": "T01.02.Q019",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "If f(x) = x and g(x) = |x|, then (f − g)(−3) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "−6"},
+        {"id": "C", "text": "6"},
+        {"id": "D", "text": "−3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(f−g)(−3) = f(−3) − g(−3) = (−3) − |−3| = −3 − 3 = −6.",
+      "explanation_incorrect": "Option A would require f = g. Option C reverses the sign. Option D is only f(−3)."
+    },
+    {
+      "question_id": "T01.02.Q020",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A function f: A → B is onto if:",
+      "options": [
+        {"id": "A", "text": "Every element of A has a unique image"},
+        {"id": "B", "text": "Every element of B has a pre-image in A"},
+        {"id": "C", "text": "f(a₁) = f(a₂) implies a₁ = a₂"},
+        {"id": "D", "text": "Domain of f equals co-domain of f"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A function is onto (surjective) if every element in the co-domain B has at least one pre-image in A. Range = Co-domain.",
+      "explanation_incorrect": "Option A describes a function (not specifically onto). Option C describes one-one. Option D is a different condition."
+    },
+    {
+      "question_id": "T01.02.Q021",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = {1, 2}, then A × A × A has how many elements?",
+      "options": [
+        {"id": "A", "text": "4"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "8"},
+        {"id": "D", "text": "16"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "n(A × A × A) = n(A)³ = 2³ = 8. These are ordered triples.",
+      "explanation_incorrect": "Option A is 2². Option B is 3! . Option D is 2⁴."
+    },
+    {
+      "question_id": "T01.02.Q022",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If R = {(x, y) : x + y = 5, x, y ∈ N}, then R is:",
+      "options": [
+        {"id": "A", "text": "{(1,4), (2,3), (3,2), (4,1)}"},
+        {"id": "B", "text": "{(0,5), (1,4), (2,3), (3,2), (4,1), (5,0)}"},
+        {"id": "C", "text": "{(1,4), (2,3)}"},
+        {"id": "D", "text": "{(5,0), (4,1), (3,2)}"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Natural numbers start from 1. Pairs with x + y = 5: (1,4), (2,3), (3,2), (4,1). Note x=5,y=0 excluded since 0 ∉ N.",
+      "explanation_incorrect": "Option B includes 0 which is not a natural number. Option C is incomplete. Option D includes (5,0) with 0 ∉ N."
+    },
+    {
+      "question_id": "T01.02.Q023",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The number of functions from a set with 3 elements to a set with 4 elements is:",
+      "options": [
+        {"id": "A", "text": "12"},
+        {"id": "B", "text": "64"},
+        {"id": "C", "text": "81"},
+        {"id": "D", "text": "24"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Each of the 3 elements can map to any of the 4 elements. Total functions = 4³ = 64.",
+      "explanation_incorrect": "Option A is 3×4. Option C is 3⁴. Option D is 4!."
+    },
+    {
+      "question_id": "T01.02.Q024",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The range of f(x) = |x − 3| is:",
+      "options": [
+        {"id": "A", "text": "R"},
+        {"id": "B", "text": "[0, ∞)"},
+        {"id": "C", "text": "(0, ∞)"},
+        {"id": "D", "text": "[3, ∞)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "|x − 3| ≥ 0 for all x, and |3 − 3| = 0. So the minimum value is 0 and range = [0, ∞).",
+      "explanation_incorrect": "Option A includes negatives. Option C excludes 0. Option D confuses range with domain restriction."
+    },
+    {
+      "question_id": "T01.02.Q025",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A × B has 6 elements and A = {1, 2, 3}, then B has:",
+      "options": [
+        {"id": "A", "text": "2 elements"},
+        {"id": "B", "text": "3 elements"},
+        {"id": "C", "text": "6 elements"},
+        {"id": "D", "text": "9 elements"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "n(A × B) = n(A) × n(B). 6 = 3 × n(B). So n(B) = 2.",
+      "explanation_incorrect": "Options B, C, D don't satisfy 3 × n(B) = 6."
+    },
+    {
+      "question_id": "T01.02.Q026",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The identity function f: R → R is defined as:",
+      "options": [
+        {"id": "A", "text": "f(x) = 0 for all x"},
+        {"id": "B", "text": "f(x) = 1 for all x"},
+        {"id": "C", "text": "f(x) = x for all x"},
+        {"id": "D", "text": "f(x) = |x| for all x"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The identity function maps every element to itself: f(x) = x.",
+      "explanation_incorrect": "Option A is the zero function. Option B is a constant function. Option D is the modulus function."
+    },
+    {
+      "question_id": "T01.02.Q027",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "f: R → R defined by f(x) = x³ is:",
+      "options": [
+        {"id": "A", "text": "One-one but not onto"},
+        {"id": "B", "text": "Onto but not one-one"},
+        {"id": "C", "text": "One-one and onto (bijective)"},
+        {"id": "D", "text": "Neither one-one nor onto"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f(x) = x³ is strictly increasing, so one-one. For any y ∈ R, x = ∛y exists in R, so onto. Hence bijective.",
+      "explanation_incorrect": "Options A, B, D incorrectly classify this strictly monotonic function."
+    },
+    {
+      "question_id": "T01.02.Q028",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If R = {(1,1), (1,2), (2,1)} on A = {1, 2, 3}, the domain of R is:",
+      "options": [
+        {"id": "A", "text": "{1, 2, 3}"},
+        {"id": "B", "text": "{1, 2}"},
+        {"id": "C", "text": "{1}"},
+        {"id": "D", "text": "{2, 3}"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Domain of R = set of all first elements = {1, 2}.",
+      "explanation_incorrect": "Option A includes 3 which doesn't appear as a first element. Option C misses 2. Option D is incorrect."
+    },
+    {
+      "question_id": "T01.02.Q029",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "If f(x) = 2x − 1 and g(x) = x + 3, then (fg)(x) is:",
+      "options": [
+        {"id": "A", "text": "2x² + 5x − 3"},
+        {"id": "B", "text": "2x² + 5x + 3"},
+        {"id": "C", "text": "2x² − x − 3"},
+        {"id": "D", "text": "2x + 2"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(fg)(x) = f(x)·g(x) = (2x−1)(x+3) = 2x² + 6x − x − 3 = 2x² + 5x − 3.",
+      "explanation_incorrect": "Option B has wrong sign on constant. Option C has wrong middle term. Option D is f+g evaluated differently."
+    },
+    {
+      "question_id": "T01.02.Q030",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The domain of f(x) = 1/√(x² − 5x + 6) is:",
+      "options": [
+        {"id": "A", "text": "(−∞, 2) ∪ (3, ∞)"},
+        {"id": "B", "text": "[2, 3]"},
+        {"id": "C", "text": "(2, 3)"},
+        {"id": "D", "text": "R − {2, 3}"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Need x² − 5x + 6 > 0 (strictly, since in denominator). x² − 5x + 6 = (x−2)(x−3) > 0 when x < 2 or x > 3.",
+      "explanation_incorrect": "Option B is where the expression ≤ 0. Option C is where it's < 0. Option D allows x=2,3 boundary which gives 0."
+    },
+    {
+      "question_id": "T01.02.Q031",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = ∅ and B = {1, 2}, then A × B is:",
+      "options": [
+        {"id": "A", "text": "{1, 2}"},
+        {"id": "B", "text": "{(∅, 1), (∅, 2)}"},
+        {"id": "C", "text": "∅"},
+        {"id": "D", "text": "{{1}, {2}}"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If either A or B is empty, then A × B = ∅. No ordered pairs can be formed.",
+      "explanation_incorrect": "Options A, B, D assume pairs can be formed, but A has no elements to pair with B."
+    },
+    {
+      "question_id": "T01.02.Q032",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The range of f(x) = 1/(1 + x²) for x ∈ R is:",
+      "options": [
+        {"id": "A", "text": "(0, 1]"},
+        {"id": "B", "text": "[0, 1]"},
+        {"id": "C", "text": "(0, ∞)"},
+        {"id": "D", "text": "[1, ∞)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1+x² ≥ 1, so 0 < 1/(1+x²) ≤ 1. Maximum is 1 (at x=0). As x→±∞, f→0 but never equals 0. Range = (0, 1].",
+      "explanation_incorrect": "Option B includes 0 but f never equals 0. Options C, D give wrong intervals."
+    },
+    {
+      "question_id": "T01.02.Q033",
+      "type": "true_false",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "Every function is a relation but every relation is not necessarily a function.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A function is a special type of relation where each element of the domain has exactly one image. Not all relations satisfy this property.",
+      "explanation_incorrect": "This is a fundamental fact about the relationship between functions and relations."
+    },
+    {
+      "question_id": "T01.02.Q034",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = x² and g(x) = 2x + 1, then (f/g)(x) is undefined at:",
+      "options": [
+        {"id": "A", "text": "x = 0"},
+        {"id": "B", "text": "x = −1/2"},
+        {"id": "C", "text": "x = 1"},
+        {"id": "D", "text": "x = −1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(f/g)(x) = x²/(2x+1) is undefined when 2x+1 = 0, i.e., x = −1/2.",
+      "explanation_incorrect": "Options A, C, D don't make the denominator zero."
+    },
+    {
+      "question_id": "T01.02.Q035",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The number of relations on a set A with 2 elements is:",
+      "options": [
+        {"id": "A", "text": "4"},
+        {"id": "B", "text": "8"},
+        {"id": "C", "text": "16"},
+        {"id": "D", "text": "32"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Relations on A are subsets of A×A. n(A×A) = 2² = 4. Number of subsets = 2⁴ = 16.",
+      "explanation_incorrect": "Option A is n(A×A). Option B is 2³. Option D is 2⁵."
+    },
+    {
+      "question_id": "T01.02.Q036",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "f: N → N defined by f(n) = 2n is:",
+      "options": [
+        {"id": "A", "text": "One-one and onto"},
+        {"id": "B", "text": "One-one but not onto"},
+        {"id": "C", "text": "Onto but not one-one"},
+        {"id": "D", "text": "Neither one-one nor onto"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "One-one: 2n₁ = 2n₂ ⟹ n₁ = n₂ ✓. Not onto: odd natural numbers (like 3) have no preimage since f gives only even numbers.",
+      "explanation_incorrect": "Option A is wrong since f is not onto N. Options C, D incorrectly classify injectivity."
+    },
+    {
+      "question_id": "T01.02.Q037",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The constant function f: R → R, f(x) = 5, has range:",
+      "options": [
+        {"id": "A", "text": "R"},
+        {"id": "B", "text": "{5}"},
+        {"id": "C", "text": "[5, ∞)"},
+        {"id": "D", "text": "{0, 5}"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A constant function outputs only one value. f(x) = 5 for all x, so range = {5}.",
+      "explanation_incorrect": "Option A is the co-domain. Options C, D include extra values."
+    },
+    {
+      "question_id": "T01.02.Q038",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A = {1, 2, 3} and B = {3, 4}, then (A × B) ∩ (B × A) is:",
+      "options": [
+        {"id": "A", "text": "{(3, 3)}"},
+        {"id": "B", "text": "∅"},
+        {"id": "C", "text": "{(3, 4), (4, 3)}"},
+        {"id": "D", "text": "{(3, 3), (3, 4)}"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A×B has first elements from {1,2,3}, second from {3,4}. B×A has first elements from {3,4}, second from {1,2,3}. Common: first ∈ {3} (A∩B for first), second ∈ {3} (B∩A for second). So (3,3).",
+      "explanation_incorrect": "Options B, C, D don't correctly compute the intersection of the two Cartesian products."
+    },
+    {
+      "question_id": "T01.02.Q039",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The domain of f(x) = √(x) + 1/√(1−x) is:",
+      "options": [
+        {"id": "A", "text": "[0, 1)"},
+        {"id": "B", "text": "[0, 1]"},
+        {"id": "C", "text": "(0, 1)"},
+        {"id": "D", "text": "(−∞, 1)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "√x requires x ≥ 0. 1/√(1−x) requires 1−x > 0, i.e., x < 1. Combining: 0 ≤ x < 1, i.e., [0, 1).",
+      "explanation_incorrect": "Option B includes x=1 where 1/√(1−1) is undefined. Option C excludes 0 but √0 = 0 is defined. Option D allows negative x."
+    },
+    {
+      "question_id": "T01.02.Q040",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "If R = {(x, y) : y = 2x + 1, x ∈ {0, 1, 2, 3}}, the range of R is:",
+      "options": [
+        {"id": "A", "text": "{0, 1, 2, 3}"},
+        {"id": "B", "text": "{1, 3, 5, 7}"},
+        {"id": "C", "text": "{1, 2, 3, 4}"},
+        {"id": "D", "text": "{2, 4, 6, 8}"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "y = 2(0)+1=1, 2(1)+1=3, 2(2)+1=5, 2(3)+1=7. Range = {1, 3, 5, 7}.",
+      "explanation_incorrect": "Option A is the domain. Option C adds 1 to each x. Option D doubles each x."
+    },
+    {
+      "question_id": "T01.02.Q041",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The graph of f(x) = [x] (greatest integer function) is:",
+      "options": [
+        {"id": "A", "text": "A straight line"},
+        {"id": "B", "text": "A parabola"},
+        {"id": "C", "text": "A step function (staircase)"},
+        {"id": "D", "text": "A V-shape"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The greatest integer function produces horizontal line segments at each integer value, creating a staircase pattern.",
+      "explanation_incorrect": "Option A describes f(x) = x. Option B describes x². Option D describes |x|."
+    },
+    {
+      "question_id": "T01.02.Q042",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f: {1,2,3} → {a,b,c} is a bijection and f(1) = b, f(2) = a, then f(3) is:",
+      "options": [
+        {"id": "A", "text": "a"},
+        {"id": "B", "text": "b"},
+        {"id": "C", "text": "c"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since f is a bijection, every element of {a,b,c} must be mapped to exactly once. f(1)=b and f(2)=a are used, so f(3)=c.",
+      "explanation_incorrect": "Options A and B are already used. Option D is wrong because bijection uniquely determines f(3)."
+    },
+    {
+      "question_id": "T01.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If n(A) = 4 and n(B) = 3, then n(A × B) = ___.",
+      "correct_answer": "12",
+      "explanation_correct": "n(A × B) = n(A) × n(B) = 4 × 3 = 12.",
+      "explanation_incorrect": "The Cartesian product cardinality is the product of the individual cardinalities."
+    },
+    {
+      "question_id": "T01.02.Q044",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The polynomial function f(x) = x³ − 3x + 2 evaluated at x = −1 gives:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "4"},
+        {"id": "C", "text": "6"},
+        {"id": "D", "text": "−2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f(−1) = (−1)³ − 3(−1) + 2 = −1 + 3 + 2 = 4.",
+      "explanation_incorrect": "Options A, C, D result from sign errors in the computation."
+    },
+    {
+      "question_id": "T01.02.Q045",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If R is a relation on A = {1,2,3} defined by R = {(a,b) : |a−b| ≤ 1}, then R is:",
+      "options": [
+        {"id": "A", "text": "{(1,1), (1,2), (2,1), (2,2), (2,3), (3,2), (3,3)}"},
+        {"id": "B", "text": "{(1,1), (2,2), (3,3)}"},
+        {"id": "C", "text": "{(1,2), (2,3)}"},
+        {"id": "D", "text": "{(1,1), (1,2), (2,2), (2,3), (3,3)}"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "|a−b| ≤ 1 means a and b differ by at most 1. Checking all pairs: (1,1)✓, (1,2)✓, (2,1)✓, (2,2)✓, (2,3)✓, (3,2)✓, (3,3)✓. (1,3) and (3,1) have |diff|=2.",
+      "explanation_incorrect": "Option B only has diagonal elements. Option C only has consecutive ascending pairs. Option D misses symmetric pairs."
+    },
+    {
+      "question_id": "T01.02.Q046",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "The number of onto functions from {1,2,3} to {a,b} is:",
+      "options": [
+        {"id": "A", "text": "8"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Total functions = 2³ = 8. Non-onto functions map everything to 'a' or everything to 'b' = 2. Onto = 8 − 2 = 6.",
+      "explanation_incorrect": "Option A is total functions. Option C is the number of non-onto functions. Option D is incorrect."
+    },
+    {
+      "question_id": "T01.02.Q047",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The value of [π] where [.] is the greatest integer function is:",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "4"},
+        {"id": "C", "text": "3.14"},
+        {"id": "D", "text": "π"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "π ≈ 3.14159... The greatest integer less than or equal to π is 3. So [π] = 3.",
+      "explanation_incorrect": "Option B is the ceiling. Option C is an approximation, not the floor. Option D doesn't apply the function."
+    },
+    {
+      "question_id": "T01.02.Q048",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If f(x) = (x−1)/(x+1), x ≠ −1, then f(f(x)) equals:",
+      "options": [
+        {"id": "A", "text": "x"},
+        {"id": "B", "text": "−1/x"},
+        {"id": "C", "text": "1/x"},
+        {"id": "D", "text": "−x"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f(f(x)) = f((x−1)/(x+1)) = ((x−1)/(x+1) − 1)/((x−1)/(x+1) + 1) = ((x−1−x−1)/(x+1))/((x−1+x+1)/(x+1)) = (−2)/(2x) = −1/x.",
+      "explanation_incorrect": "Options A, C, D don't match the correct algebraic simplification."
+    },
+    {
+      "question_id": "T01.02.Q049",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "A × (B ∪ C) = (A × B) ∪ (A × C).",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The Cartesian product distributes over union. (a, x) ∈ A×(B∪C) iff a∈A and x∈B∪C iff (a,x)∈A×B or (a,x)∈A×C.",
+      "explanation_incorrect": "This distributive property of Cartesian product over union is always true."
+    },
+    {
+      "question_id": "T01.02.Q050",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The domain of the rational function f(x) = (x² + 1)/(x² − 4) is:",
+      "options": [
+        {"id": "A", "text": "R − {4}"},
+        {"id": "B", "text": "R − {−2, 2}"},
+        {"id": "C", "text": "R − {2}"},
+        {"id": "D", "text": "R"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Denominator = x² − 4 = (x−2)(x+2). This equals 0 at x = 2 and x = −2. Domain = R − {−2, 2}.",
+      "explanation_incorrect": "Option A confuses x²=4 with x=4. Option C excludes only one root. Option D ignores the restriction."
+    }
+  ]
+}

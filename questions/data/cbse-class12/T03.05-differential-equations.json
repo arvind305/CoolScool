@@ -1,0 +1,815 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T03.05",
+  "topic_name": "Differential Equations",
+  "canonical_explanation": {
+    "text": "A differential equation is an equation involving derivatives. The order is the highest order derivative, and the degree is the power of the highest order derivative (when polynomial in derivatives). Variable separable: if dy/dx=f(x)g(y), separate as dy/g(y)=f(x)dx. Homogeneous: if dy/dx=F(y/x), substitute y=vx. Linear: dy/dx+Py=Q where P,Q are functions of x; solution is y\u00b7(IF)=\u222bQ\u00b7(IF)dx+C where IF=e^(\u222bPdx).",
+    "rules": [
+      "Order = highest order derivative present in the equation",
+      "Degree = power of highest order derivative (when DE is polynomial in derivatives)",
+      "Variable separable: separate variables and integrate both sides",
+      "Homogeneous DE: substitute y = vx, dy/dx = v + x(dv/dx)",
+      "Linear DE: IF = e^(\u222bPdx), solution: y\u00b7IF = \u222b(Q\u00b7IF)dx + C"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.05.Q001",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "What is the order of the differential equation d\u00b2y/dx\u00b2 + 3(dy/dx) + 2y = 0?",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The highest order derivative present is d\u00b2y/dx\u00b2, which is of order 2. Therefore the order of the DE is 2.",
+      "explanation_incorrect": "The order of a DE is determined by the highest order derivative. Here d\u00b2y/dx\u00b2 is the highest, so the order is 2."
+    },
+    {
+      "question_id": "T03.05.Q002",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "What is the degree of the differential equation (d\u00b2y/dx\u00b2)\u00b3 + (dy/dx)\u00b2 + y = 0?",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The highest order derivative is d\u00b2y/dx\u00b2, and its power is 3. Since the DE is polynomial in its derivatives, the degree is 3.",
+      "explanation_incorrect": "Degree = power of the highest order derivative. The highest order derivative is d\u00b2y/dx\u00b2 and it is raised to the power 3, so the degree is 3."
+    },
+    {
+      "question_id": "T03.05.Q003",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "What is the order of the differential equation dy/dx + y = e^x?",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "2" },
+        { "id": "D", "text": "e" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The highest order derivative is dy/dx, which is of order 1. So the order of the DE is 1.",
+      "explanation_incorrect": "Look for the highest order derivative in the equation. dy/dx is a first-order derivative, so the order is 1."
+    },
+    {
+      "question_id": "T03.05.Q004",
+      "type": "true_false",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The degree of the differential equation dy/dx + sin(dy/dx) = 0 is defined.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The degree of a DE is defined only when the equation is polynomial in its derivatives. Since sin(dy/dx) involves a transcendental function of the derivative, the degree is not defined.",
+      "explanation_incorrect": "For the degree to be defined, the DE must be expressible as a polynomial in its derivatives. The term sin(dy/dx) makes it non-polynomial, so the degree is not defined."
+    },
+    {
+      "question_id": "T03.05.Q005",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "What is the degree of the differential equation (dy/dx)\u00b2 + dy/dx - sin\u00b2y = 0?",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "Not defined" },
+        { "id": "D", "text": "3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The DE is polynomial in dy/dx (the sin\u00b2y term involves y, not a derivative). The highest order derivative is dy/dx and its highest power is 2. So the degree is 2.",
+      "explanation_incorrect": "sin\u00b2y is a function of y (not of dy/dx), so the DE is still polynomial in its derivatives. The highest power of dy/dx is 2, giving degree 2."
+    },
+    {
+      "question_id": "T03.05.Q006",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order and degree of the differential equation d\u00b2y/dx\u00b2 = (dy/dx)\u00b3 are respectively:",
+      "options": [
+        { "id": "A", "text": "2 and 3" },
+        { "id": "B", "text": "2 and 1" },
+        { "id": "C", "text": "3 and 2" },
+        { "id": "D", "text": "1 and 3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The highest order derivative is d\u00b2y/dx\u00b2 (order 2). Its power is 1 (it appears as d\u00b2y/dx\u00b2 to the first power). The DE is polynomial in derivatives, so degree = 1.",
+      "explanation_incorrect": "Order is determined by d\u00b2y/dx\u00b2 (order 2). The degree is the power of the highest order derivative: (d\u00b2y/dx\u00b2)\u00b9, so degree = 1. Don't confuse with the power of dy/dx."
+    },
+    {
+      "question_id": "T03.05.Q007",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "question_text": "What is the order and degree of the DE: [1 + (dy/dx)\u00b2]\u00b3 = (d\u00b2y/dx\u00b2)\u00b2?",
+      "options": [
+        { "id": "A", "text": "Order 2, Degree 2" },
+        { "id": "B", "text": "Order 2, Degree 3" },
+        { "id": "C", "text": "Order 1, Degree 6" },
+        { "id": "D", "text": "Order 2, Degree 6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The highest order derivative is d\u00b2y/dx\u00b2, so order = 2. The DE is polynomial in derivatives. The power of d\u00b2y/dx\u00b2 is 2, so degree = 2.",
+      "explanation_incorrect": "First identify the highest order derivative: d\u00b2y/dx\u00b2 gives order 2. The degree is the power of d\u00b2y/dx\u00b2 which is 2 (on the RHS). The LHS involves dy/dx but degree refers to the highest order derivative."
+    },
+    {
+      "question_id": "T03.05.Q008",
+      "type": "true_false",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The degree of the differential equation d\u00b2y/dx\u00b2 + e^(dy/dx) = 0 is not defined.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The term e^(dy/dx) is a transcendental function of the derivative dy/dx, so the DE is not polynomial in its derivatives. Therefore the degree is not defined.",
+      "explanation_incorrect": "For degree to be defined, the DE must be polynomial in all its derivatives. e^(dy/dx) is not a polynomial expression in dy/dx, so the degree is not defined."
+    },
+    {
+      "question_id": "T03.05.Q009",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "question_text": "The number of arbitrary constants in the general solution of a differential equation of order 3 is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The general solution of a DE of order n contains exactly n arbitrary constants. For order 3, there are 3 arbitrary constants.",
+      "explanation_incorrect": "A fundamental result: the general solution of an nth order DE has exactly n arbitrary constants. Order 3 means 3 constants."
+    },
+    {
+      "question_id": "T03.05.Q010",
+      "type": "fill_blank",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of the differential equation x\u00b2(d\u00b3y/dx\u00b3) + x(d\u00b2y/dx\u00b2) + dy/dx = 0 is ___.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "6" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The highest order derivative present is d\u00b3y/dx\u00b3, so the order is 3. The coefficients x\u00b2 and x do not affect the order.",
+      "explanation_incorrect": "Order = highest order derivative. d\u00b3y/dx\u00b3 is the third derivative, so the order is 3."
+    },
+    {
+      "question_id": "T03.05.Q011",
+      "type": "mcq",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "question_text": "A particular solution of a differential equation is obtained by:",
+      "options": [
+        { "id": "A", "text": "Eliminating the arbitrary constants" },
+        { "id": "B", "text": "Assigning specific values to the arbitrary constants" },
+        { "id": "C", "text": "Increasing the order of the DE" },
+        { "id": "D", "text": "Differentiating the general solution" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A particular solution is obtained from the general solution by substituting specific values for the arbitrary constants, usually determined by initial or boundary conditions.",
+      "explanation_incorrect": "The general solution contains arbitrary constants. Substituting specific values (from given conditions) into these constants gives a particular solution."
+    },
+    {
+      "question_id": "T03.05.Q012",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The differential equation formed by eliminating the constant c from y = cx + c\u00b2 is:",
+      "options": [
+        { "id": "A", "text": "y = x(dy/dx) + (dy/dx)\u00b2" },
+        { "id": "B", "text": "y = x(dy/dx) - (dy/dx)\u00b2" },
+        { "id": "C", "text": "y = (dy/dx) + x\u00b2" },
+        { "id": "D", "text": "dy/dx = 2cx" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Differentiating y = cx + c\u00b2: dy/dx = c. Substituting c = dy/dx back: y = x(dy/dx) + (dy/dx)\u00b2.",
+      "explanation_incorrect": "Step 1: Differentiate y = cx + c\u00b2 to get dy/dx = c. Step 2: Replace c by dy/dx in the original equation: y = x(dy/dx) + (dy/dx)\u00b2."
+    },
+    {
+      "question_id": "T03.05.Q013",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The differential equation representing the family of lines y = mx (where m is a parameter) is:",
+      "options": [
+        { "id": "A", "text": "y = x(dy/dx)" },
+        { "id": "B", "text": "dy/dx = y" },
+        { "id": "C", "text": "x(dy/dx) + y = 0" },
+        { "id": "D", "text": "dy/dx = x/y" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Differentiate y = mx: dy/dx = m. Substitute m = dy/dx into y = mx to get y = x(dy/dx).",
+      "explanation_incorrect": "From y = mx, differentiate to get dy/dx = m. Eliminate m by substituting back: y = x(dy/dx)."
+    },
+    {
+      "question_id": "T03.05.Q014",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "How many times must we differentiate to form a DE from the equation y = ae^x + be^(-x)?",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "There are 2 arbitrary constants (a and b), so we need to differentiate 2 times to get enough equations to eliminate both constants.",
+      "explanation_incorrect": "The number of differentiations needed equals the number of arbitrary constants. Here a and b are 2 constants, so we differentiate 2 times."
+    },
+    {
+      "question_id": "T03.05.Q015",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "question_text": "The differential equation of the family of curves y = ae^x + be^(-x) is:",
+      "options": [
+        { "id": "A", "text": "d\u00b2y/dx\u00b2 - y = 0" },
+        { "id": "B", "text": "d\u00b2y/dx\u00b2 + y = 0" },
+        { "id": "C", "text": "d\u00b2y/dx\u00b2 = 2y" },
+        { "id": "D", "text": "(dy/dx)\u00b2 = y" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "y = ae^x + be^(-x). Differentiate: y' = ae^x - be^(-x). Differentiate again: y'' = ae^x + be^(-x) = y. So d\u00b2y/dx\u00b2 - y = 0.",
+      "explanation_incorrect": "y' = ae^x - be^(-x) and y'' = ae^x + be^(-x). Notice y'' = y, so the DE is d\u00b2y/dx\u00b2 - y = 0."
+    },
+    {
+      "question_id": "T03.05.Q016",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "question_text": "Form the DE by eliminating the constant c from x\u00b2 + y\u00b2 = c\u00b2.",
+      "options": [
+        { "id": "A", "text": "x + y(dy/dx) = 0" },
+        { "id": "B", "text": "x - y(dy/dx) = 0" },
+        { "id": "C", "text": "x\u00b2 + y\u00b2(dy/dx) = 0" },
+        { "id": "D", "text": "2x + (dy/dx) = 0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Differentiating x\u00b2 + y\u00b2 = c\u00b2 with respect to x: 2x + 2y(dy/dx) = 0, which simplifies to x + y(dy/dx) = 0. The constant c is already eliminated.",
+      "explanation_incorrect": "Differentiate both sides: d/dx(x\u00b2) + d/dx(y\u00b2) = 0 (since c\u00b2 is constant). This gives 2x + 2y(dy/dx) = 0, i.e., x + y(dy/dx) = 0."
+    },
+    {
+      "question_id": "T03.05.Q017",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "question_text": "The differential equation of the family y = A cos x + B sin x is:",
+      "options": [
+        { "id": "A", "text": "d\u00b2y/dx\u00b2 + y = 0" },
+        { "id": "B", "text": "d\u00b2y/dx\u00b2 - y = 0" },
+        { "id": "C", "text": "dy/dx + y = 0" },
+        { "id": "D", "text": "(dy/dx)\u00b2 + y\u00b2 = 0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "y = A cos x + B sin x. y' = -A sin x + B cos x. y'' = -A cos x - B sin x = -(A cos x + B sin x) = -y. So y'' + y = 0.",
+      "explanation_incorrect": "Differentiate twice: y' = -A sin x + B cos x, y'' = -A cos x - B sin x = -y. Therefore d\u00b2y/dx\u00b2 + y = 0."
+    },
+    {
+      "question_id": "T03.05.Q018",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The differential equation formed by eliminating a from y = a/x is:",
+      "options": [
+        { "id": "A", "text": "x(dy/dx) + y = 0" },
+        { "id": "B", "text": "x(dy/dx) - y = 0" },
+        { "id": "C", "text": "dy/dx = -y" },
+        { "id": "D", "text": "dy/dx + x = 0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "y = a/x, so a = xy. Differentiate y = a/x: dy/dx = -a/x\u00b2. Since a = xy, dy/dx = -xy/x\u00b2 = -y/x. So x(dy/dx) + y = 0.",
+      "explanation_incorrect": "From y = a/x, differentiate: dy/dx = -a/x\u00b2. Since a = xy: dy/dx = -y/x, giving x(dy/dx) + y = 0."
+    },
+    {
+      "question_id": "T03.05.Q019",
+      "type": "mcq",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "question_text": "Form the DE of the family of circles x\u00b2 + y\u00b2 = 2ax (a is the parameter).",
+      "options": [
+        { "id": "A", "text": "2xy(dy/dx) = y\u00b2 - x\u00b2" },
+        { "id": "B", "text": "2xy(dy/dx) = x\u00b2 - y\u00b2" },
+        { "id": "C", "text": "(dy/dx) = (x\u00b2 + y\u00b2)/(2xy)" },
+        { "id": "D", "text": "(dy/dx) = x/y" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "x\u00b2 + y\u00b2 = 2ax ... (i). Differentiate: 2x + 2y(dy/dx) = 2a, so a = x + y(dy/dx). Substitute into (i): x\u00b2 + y\u00b2 = 2x[x + y(dy/dx)] = 2x\u00b2 + 2xy(dy/dx). So y\u00b2 - x\u00b2 = 2xy(dy/dx), i.e., 2xy(dy/dx) = y\u00b2 - x\u00b2.",
+      "explanation_incorrect": "Differentiate x\u00b2 + y\u00b2 = 2ax to get a = x + y(dy/dx). Substitute back: x\u00b2 + y\u00b2 = 2x(x + yy') = 2x\u00b2 + 2xyy'. Rearranging: y\u00b2 - x\u00b2 = 2xyy'."
+    },
+    {
+      "question_id": "T03.05.Q020",
+      "type": "fill_blank",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "question_text": "The order of the DE formed from y = c\u2081e^(2x) + c\u2082e^(3x) is ___.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "There are 2 arbitrary constants (c\u2081 and c\u2082), so the resulting DE will be of order 2.",
+      "explanation_incorrect": "The order of the DE equals the number of arbitrary constants to be eliminated. Two constants (c\u2081, c\u2082) means the DE has order 2."
+    },
+    {
+      "question_id": "T03.05.Q021",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a variable separable DE?",
+      "options": [
+        { "id": "A", "text": "dy/dx = x\u00b2y" },
+        { "id": "B", "text": "dy/dx = x + y" },
+        { "id": "C", "text": "dy/dx = (x + y)/(x - y)" },
+        { "id": "D", "text": "dy/dx + 2y = x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = x\u00b2y can be written as dy/y = x\u00b2 dx, where y-terms and x-terms are separated. This is variable separable form.",
+      "explanation_incorrect": "A DE is variable separable if it can be written as f(y)dy = g(x)dx. Only dy/dx = x\u00b2y gives dy/y = x\u00b2dx."
+    },
+    {
+      "question_id": "T03.05.Q022",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "Solve the DE: dy/dx = x/y.",
+      "options": [
+        { "id": "A", "text": "y\u00b2 = x\u00b2 + C" },
+        { "id": "B", "text": "y\u00b2 = 2x + C" },
+        { "id": "C", "text": "y = x\u00b2/2 + C" },
+        { "id": "D", "text": "y\u00b2 = 2x\u00b2 + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Separate variables: y dy = x dx. Integrate: y\u00b2/2 = x\u00b2/2 + C\u2081. Multiply by 2: y\u00b2 = x\u00b2 + C (where C = 2C\u2081).",
+      "explanation_incorrect": "Write y dy = x dx and integrate both sides: \u222by dy = \u222bx dx gives y\u00b2/2 = x\u00b2/2 + constant, so y\u00b2 = x\u00b2 + C."
+    },
+    {
+      "question_id": "T03.05.Q023",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "Solve: dy/dx = e^(x-y).",
+      "options": [
+        { "id": "A", "text": "e^y = e^x + C" },
+        { "id": "B", "text": "e^y = -e^x + C" },
+        { "id": "C", "text": "e^(-y) = e^x + C" },
+        { "id": "D", "text": "y = e^x + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = e^x \u00b7 e^(-y). Separate: e^y dy = e^x dx. Integrate: e^y = e^x + C.",
+      "explanation_incorrect": "Rewrite as dy/dx = e^x / e^y. Then e^y dy = e^x dx. Integrating both sides: e^y = e^x + C."
+    },
+    {
+      "question_id": "T03.05.Q024",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve: dy/dx = (1 + y\u00b2)/(1 + x\u00b2).",
+      "options": [
+        { "id": "A", "text": "tan\u207b\u00b9y = tan\u207b\u00b9x + C" },
+        { "id": "B", "text": "y = x + C" },
+        { "id": "C", "text": "tan\u207b\u00b9y = x + C" },
+        { "id": "D", "text": "y\u00b2 = x\u00b2 + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Separate: dy/(1 + y\u00b2) = dx/(1 + x\u00b2). Integrate both sides: tan\u207b\u00b9y = tan\u207b\u00b9x + C.",
+      "explanation_incorrect": "Variables separate as dy/(1+y\u00b2) = dx/(1+x\u00b2). The integral of 1/(1+t\u00b2) is tan\u207b\u00b9t, giving tan\u207b\u00b9y = tan\u207b\u00b9x + C."
+    },
+    {
+      "question_id": "T03.05.Q025",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve: dy/dx = y sin x, given y(0) = 1.",
+      "options": [
+        { "id": "A", "text": "y = e^(1 - cos x)" },
+        { "id": "B", "text": "y = e^(sin x)" },
+        { "id": "C", "text": "y = e^(-cos x)" },
+        { "id": "D", "text": "y = e^(cos x - 1)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Separate: dy/y = sin x dx. Integrate: ln|y| = -cos x + C. At x=0, y=1: ln 1 = -1 + C, so C = 1. Thus ln y = 1 - cos x, giving y = e^(1 - cos x).",
+      "explanation_incorrect": "dy/y = sin x dx integrates to ln|y| = -cos x + C. Using y(0)=1: 0 = -1 + C, C = 1. So ln y = 1 - cos x, y = e^(1-cos x)."
+    },
+    {
+      "question_id": "T03.05.Q026",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve: dy/dx = 1 + y\u00b2.",
+      "options": [
+        { "id": "A", "text": "y = sin x + C" },
+        { "id": "B", "text": "y = tan(x + C)" },
+        { "id": "C", "text": "tan\u207b\u00b9y = x\u00b2/2 + C" },
+        { "id": "D", "text": "y = x + C" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Separate: dy/(1 + y\u00b2) = dx. Integrate: tan\u207b\u00b9y = x + C. So y = tan(x + C).",
+      "explanation_incorrect": "Write dy/(1+y\u00b2) = dx and integrate: tan\u207b\u00b9y = x + C, therefore y = tan(x + C)."
+    },
+    {
+      "question_id": "T03.05.Q027",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve: x dy - y dx = 0.",
+      "options": [
+        { "id": "A", "text": "y = Cx" },
+        { "id": "B", "text": "xy = C" },
+        { "id": "C", "text": "y = C/x" },
+        { "id": "D", "text": "y = Cx\u00b2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rewrite: dy/y = dx/x. Integrate: ln|y| = ln|x| + ln|C|. So ln|y| = ln|Cx|, giving y = Cx.",
+      "explanation_incorrect": "Separate as dy/y = dx/x. Integrating: ln|y| = ln|x| + constant, i.e., y = Cx."
+    },
+    {
+      "question_id": "T03.05.Q028",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "A homogeneous differential equation is of the form dy/dx = f(y/x). Which substitution is used to solve it?",
+      "options": [
+        { "id": "A", "text": "y = x + v" },
+        { "id": "B", "text": "y = vx" },
+        { "id": "C", "text": "v = x/y" },
+        { "id": "D", "text": "y = v/x" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For homogeneous DEs, substitute y = vx where v is a function of x. Then dy/dx = v + x(dv/dx), which reduces the DE to a variable separable form in v and x.",
+      "explanation_incorrect": "The standard substitution for homogeneous DEs is y = vx, giving dy/dx = v + x(dv/dx). This converts the equation into a separable form."
+    },
+    {
+      "question_id": "T03.05.Q029",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve the homogeneous DE: dy/dx = (x + y)/x.",
+      "options": [
+        { "id": "A", "text": "y = x ln|x| + Cx" },
+        { "id": "B", "text": "y = x\u00b2 + Cx" },
+        { "id": "C", "text": "y = ln|x| + C" },
+        { "id": "D", "text": "y = x + Ce^x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = 1 + y/x. Put y = vx, dy/dx = v + x(dv/dx). Then v + x(dv/dx) = 1 + v, so x(dv/dx) = 1. Separate: dv = dx/x. Integrate: v = ln|x| + C. Since v = y/x: y/x = ln|x| + C, so y = x ln|x| + Cx.",
+      "explanation_incorrect": "Substitute y = vx: v + xv' = 1 + v, so xv' = 1, dv = dx/x. Integrating: v = ln|x| + C. Back-substitute: y = x ln|x| + Cx."
+    },
+    {
+      "question_id": "T03.05.Q030",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx = (x\u00b2 + y\u00b2)/(2xy).",
+      "options": [
+        { "id": "A", "text": "x\u00b2 - y\u00b2 = Cx" },
+        { "id": "B", "text": "x\u00b2 + y\u00b2 = Cx" },
+        { "id": "C", "text": "x\u00b2 - y\u00b2 = Cy" },
+        { "id": "D", "text": "y\u00b2 = x\u00b2 + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is homogeneous. Put y = vx: v + xv' = (1 + v\u00b2)/(2v). So xv' = (1 + v\u00b2)/(2v) - v = (1 + v\u00b2 - 2v\u00b2)/(2v) = (1 - v\u00b2)/(2v). Separate: 2v dv/(1 - v\u00b2) = dx/x. Integrate: -ln|1 - v\u00b2| = ln|x| + ln|C\u2081|. So 1/(1 - v\u00b2) = C\u2081x, i.e., x\u00b2/(x\u00b2 - y\u00b2) = C\u2081x, giving x\u00b2 - y\u00b2 = x/C\u2081 = Cx.",
+      "explanation_incorrect": "Use y = vx. After substitution: xv' = (1-v\u00b2)/(2v). Separating and integrating: -ln|1-v\u00b2| = ln|x| + const. This simplifies to x\u00b2 - y\u00b2 = Cx."
+    },
+    {
+      "question_id": "T03.05.Q031",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a linear differential equation in y?",
+      "options": [
+        { "id": "A", "text": "dy/dx + y\u00b2 = x" },
+        { "id": "B", "text": "dy/dx + y = x\u00b2" },
+        { "id": "C", "text": "dy/dx = xy\u00b2" },
+        { "id": "D", "text": "(dy/dx)\u00b2 + y = x" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A linear DE in y has the form dy/dx + P(x)y = Q(x), where y and dy/dx appear to the first power only. dy/dx + y = x\u00b2 fits this form with P(x) = 1 and Q(x) = x\u00b2.",
+      "explanation_incorrect": "In a linear DE, y and dy/dx appear only to the first degree and are not multiplied together. Only dy/dx + y = x\u00b2 satisfies this."
+    },
+    {
+      "question_id": "T03.05.Q032",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "The integrating factor of dy/dx + 2y = e^x is:",
+      "options": [
+        { "id": "A", "text": "e^x" },
+        { "id": "B", "text": "e^(2x)" },
+        { "id": "C", "text": "e^(-2x)" },
+        { "id": "D", "text": "2e^x" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Here P = 2. IF = e^(\u222bP dx) = e^(\u222b2 dx) = e^(2x).",
+      "explanation_incorrect": "In dy/dx + Py = Q, P = 2. The integrating factor is e^(\u222bP dx) = e^(\u222b2 dx) = e^(2x)."
+    },
+    {
+      "question_id": "T03.05.Q033",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve: dy/dx + y = e^(-x).",
+      "options": [
+        { "id": "A", "text": "y = (x + C)e^(-x)" },
+        { "id": "B", "text": "y = xe^x + Ce^(-x)" },
+        { "id": "C", "text": "y = (x + C)e^x" },
+        { "id": "D", "text": "y = e^(-x) + Ce^x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = 1, Q = e^(-x). IF = e^(\u222b1 dx) = e^x. Multiply: e^x(dy/dx) + e^x y = 1, i.e., d/dx(ye^x) = 1. Integrate: ye^x = x + C. So y = (x + C)e^(-x).",
+      "explanation_incorrect": "IF = e^x. The solution is ye^x = \u222be^(-x)\u00b7e^x dx = \u222b1 dx = x + C. Therefore y = (x + C)e^(-x)."
+    },
+    {
+      "question_id": "T03.05.Q034",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "The integrating factor of dy/dx + (2/x)y = x\u00b2 is:",
+      "options": [
+        { "id": "A", "text": "x" },
+        { "id": "B", "text": "x\u00b2" },
+        { "id": "C", "text": "1/x\u00b2" },
+        { "id": "D", "text": "e^(2x)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P = 2/x. IF = e^(\u222b(2/x)dx) = e^(2 ln|x|) = e^(ln(x\u00b2)) = x\u00b2.",
+      "explanation_incorrect": "P = 2/x, so \u222bP dx = 2 ln|x| = ln(x\u00b2). Therefore IF = e^(ln x\u00b2) = x\u00b2."
+    },
+    {
+      "question_id": "T03.05.Q035",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "Solve: dy/dx + (2/x)y = x\u00b2.",
+      "options": [
+        { "id": "A", "text": "y = x\u00b2/4 + C/x\u00b2" },
+        { "id": "B", "text": "y = x\u00b3/5 + C/x\u00b2" },
+        { "id": "C", "text": "y = x\u00b2/5 + C/x\u00b2" },
+        { "id": "D", "text": "y = x\u00b2 + C/x" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "IF = x\u00b2 (from P = 2/x). Multiply: x\u00b2(dy/dx) + 2xy = x\u2074, i.e., d/dx(x\u00b2y) = x\u2074. Integrate: x\u00b2y = x\u2075/5 + C. So y = x\u00b3/5 + C/x\u00b2.",
+      "explanation_incorrect": "With IF = x\u00b2, the solution is x\u00b2y = \u222bx\u00b2\u00b7x\u00b2 dx = \u222bx\u2074 dx = x\u2075/5 + C. Therefore y = x\u00b3/5 + C/x\u00b2."
+    },
+    {
+      "question_id": "T03.05.Q036",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx - y/x = 2x\u00b2.",
+      "options": [
+        { "id": "A", "text": "y = x\u00b3 + Cx" },
+        { "id": "B", "text": "y = 2x\u00b3/3 + Cx" },
+        { "id": "C", "text": "y = x\u00b2 + Cx" },
+        { "id": "D", "text": "y = x\u00b3 + C/x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = -1/x, Q = 2x\u00b2. IF = e^(\u222b(-1/x)dx) = e^(-ln|x|) = 1/x. Multiply: (1/x)(dy/dx) - y/x\u00b2 = 2x, i.e., d/dx(y/x) = 2x. Integrate: y/x = x\u00b2 + C. So y = x\u00b3 + Cx.",
+      "explanation_incorrect": "IF = e^(-ln x) = 1/x. Solution: y/x = \u222b(2x\u00b2)(1/x)dx = \u222b2x dx = x\u00b2 + C. Therefore y = x\u00b3 + Cx."
+    },
+    {
+      "question_id": "T03.05.Q037",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx + y tan x = sec x.",
+      "options": [
+        { "id": "A", "text": "y = sin x + C cos x" },
+        { "id": "B", "text": "y sec x = tan x + C" },
+        { "id": "C", "text": "y cos x = x + C" },
+        { "id": "D", "text": "y = tan x + C sec x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = tan x, Q = sec x. IF = e^(\u222btan x dx) = e^(ln|sec x|) = sec x. Multiply: sec x(dy/dx) + y sec x tan x = sec\u00b2x, i.e., d/dx(y sec x) = sec\u00b2x. Integrate: y sec x = tan x + C. So y = sin x + C cos x.",
+      "explanation_incorrect": "IF = sec x. Then y sec x = \u222bsec\u00b2x dx = tan x + C. So y = (tan x + C)/sec x = sin x + C cos x."
+    },
+    {
+      "question_id": "T03.05.Q038",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: x(dy/dx) + y = x\u00b3.",
+      "options": [
+        { "id": "A", "text": "y = x\u00b3/4 + C/x" },
+        { "id": "B", "text": "y = x\u00b2/3 + C/x" },
+        { "id": "C", "text": "y = x\u00b3/3 + Cx" },
+        { "id": "D", "text": "y = x\u00b2/4 + C/x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rewrite: dy/dx + y/x = x\u00b2. P = 1/x, IF = e^(\u222b(1/x)dx) = e^(ln x) = x. Multiply: x(dy/dx) + y = x\u00b3, i.e., d/dx(xy) = x\u00b3. Integrate: xy = x\u2074/4 + C. So y = x\u00b3/4 + C/x.",
+      "explanation_incorrect": "Dividing by x: dy/dx + y/x = x\u00b2. IF = x. Then d/dx(xy) = x\u00b3. Integrate: xy = x\u2074/4 + C, y = x\u00b3/4 + C/x."
+    },
+    {
+      "question_id": "T03.05.Q039",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: cos\u00b2x (dy/dx) + y = tan x.",
+      "options": [
+        { "id": "A", "text": "ye^(tan x) = e^(tan x)(tan x - 1) + C" },
+        { "id": "B", "text": "y = tan x + Ce^(-tan x)" },
+        { "id": "C", "text": "y = sin x + Ce^(-tan x)" },
+        { "id": "D", "text": "ye^(tan x) = tan x + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Divide by cos\u00b2x: dy/dx + y sec\u00b2x = tan x sec\u00b2x. P = sec\u00b2x, IF = e^(\u222bsec\u00b2x dx) = e^(tan x). Solution: ye^(tan x) = \u222btan x \u00b7 sec\u00b2x \u00b7 e^(tan x) dx. Let t = tan x, dt = sec\u00b2x dx: \u222bt e^t dt = e^t(t - 1) + C. So ye^(tan x) = e^(tan x)(tan x - 1) + C.",
+      "explanation_incorrect": "After dividing by cos\u00b2x, IF = e^(tan x). Then ye^(tan x) = \u222btan x sec\u00b2x e^(tan x) dx. Substituting t = tan x and integrating by parts: \u222bt e^t dt = e^t(t-1)+C."
+    },
+    {
+      "question_id": "T03.05.Q040",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx + y cot x = 2 cos x.",
+      "options": [
+        { "id": "A", "text": "y sin x = sin\u00b2x + C" },
+        { "id": "B", "text": "y = 2 sin x + C/sin x" },
+        { "id": "C", "text": "y sin x = cos\u00b2x + C" },
+        { "id": "D", "text": "y cos x = sin x + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = cot x, Q = 2 cos x. IF = e^(\u222bcot x dx) = e^(ln|sin x|) = sin x. Solution: y sin x = \u222b2 cos x \u00b7 sin x dx = \u222bsin 2x dx = -cos 2x/2 + C\u2081. But \u222b2 sin x cos x dx = sin\u00b2x + C. So y sin x = sin\u00b2x + C.",
+      "explanation_incorrect": "IF = sin x. Then y sin x = \u222b2 cos x sin x dx = sin\u00b2x + C. Using \u222b2 sin x cos x dx = sin\u00b2x."
+    },
+    {
+      "question_id": "T03.05.Q041",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve the homogeneous DE: (x\u00b2 - y\u00b2)dx + 2xy dy = 0.",
+      "options": [
+        { "id": "A", "text": "x\u00b2 + y\u00b2 = Cx" },
+        { "id": "B", "text": "x\u00b2 - y\u00b2 = Cx" },
+        { "id": "C", "text": "x(x\u00b2 + y\u00b2) = C" },
+        { "id": "D", "text": "x\u00b2 + y\u00b2 = Cy" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rewrite: dy/dx = -(x\u00b2 - y\u00b2)/(2xy) = (y\u00b2 - x\u00b2)/(2xy). Put y = vx: v + xv' = (v\u00b2x\u00b2 - x\u00b2)/(2x\u00b2v) = (v\u00b2 - 1)/(2v). So xv' = (v\u00b2 - 1)/(2v) - v = (v\u00b2 - 1 - 2v\u00b2)/(2v) = -(1 + v\u00b2)/(2v). Separate: 2v dv/(1 + v\u00b2) = -dx/x. Integrate: ln(1 + v\u00b2) = -ln|x| + ln|C|. So x(1 + v\u00b2) = C, i.e., x(1 + y\u00b2/x\u00b2) = C, giving x\u00b2 + y\u00b2 = Cx.",
+      "explanation_incorrect": "Put y = vx. After substitution, separating, and integrating: ln(1+v\u00b2) = -ln x + const. This gives x(1+v\u00b2) = C, so (x\u00b2+y\u00b2)/x = C, i.e., x\u00b2+y\u00b2 = Cx."
+    },
+    {
+      "question_id": "T03.05.Q042",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx = y/x + tan(y/x).",
+      "options": [
+        { "id": "A", "text": "sin(y/x) = Cx" },
+        { "id": "B", "text": "cos(y/x) = Cx" },
+        { "id": "C", "text": "tan(y/x) = ln|x| + C" },
+        { "id": "D", "text": "y/x = sin(Cx)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is homogeneous with f(y/x) = y/x + tan(y/x). Put y = vx: v + xv' = v + tan v, so xv' = tan v. Separate: dv/tan v = dx/x, i.e., cos v dv/sin v = dx/x. Integrate: ln|sin v| = ln|x| + ln|C|. So sin v = Cx, i.e., sin(y/x) = Cx.",
+      "explanation_incorrect": "Substitute y = vx: xv' = tan v. Then cos v dv / sin v = dx/x. Integrating: ln|sin v| = ln|Cx|, so sin(y/x) = Cx."
+    },
+    {
+      "question_id": "T03.05.Q043",
+      "type": "true_false",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "question_text": "The integrating factor of a linear DE dy/dx + Py = Q is always e^(\u222bP dx).",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Yes, for a first-order linear DE in the standard form dy/dx + P(x)y = Q(x), the integrating factor is always IF = e^(\u222bP dx).",
+      "explanation_incorrect": "This is the standard result for first-order linear DEs. When multiplied by e^(\u222bP dx), the left side becomes the derivative of y\u00b7e^(\u222bP dx)."
+    },
+    {
+      "question_id": "T03.05.Q044",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx + 2y/x = sin x / x\u00b2, given y(1) = 0.",
+      "options": [
+        { "id": "A", "text": "x\u00b2y = -cos x + cos 1" },
+        { "id": "B", "text": "x\u00b2y = sin x - sin 1" },
+        { "id": "C", "text": "x\u00b2y = cos x - cos 1" },
+        { "id": "D", "text": "x\u00b2y = -sin x + sin 1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = 2/x, IF = x\u00b2. Multiply: d/dx(x\u00b2y) = sin x. Integrate: x\u00b2y = -cos x + C. At x = 1, y = 0: 0 = -cos 1 + C, so C = cos 1. Solution: x\u00b2y = -cos x + cos 1.",
+      "explanation_incorrect": "IF = x\u00b2. Then x\u00b2y = \u222bsin x dx = -cos x + C. Using y(1) = 0: 0 = -cos 1 + C, C = cos 1. Answer: x\u00b2y = -cos x + cos 1."
+    },
+    {
+      "question_id": "T03.05.Q045",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: (1 + x\u00b2)dy/dx + 2xy = 1/(1 + x\u00b2).",
+      "options": [
+        { "id": "A", "text": "y(1 + x\u00b2) = tan\u207b\u00b9x + C" },
+        { "id": "B", "text": "y(1 + x\u00b2) = x + C" },
+        { "id": "C", "text": "y = tan\u207b\u00b9x + C" },
+        { "id": "D", "text": "y(1 + x\u00b2)\u00b2 = tan\u207b\u00b9x + C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Divide by (1+x\u00b2): dy/dx + 2x/(1+x\u00b2) \u00b7 y = 1/(1+x\u00b2)\u00b2. P = 2x/(1+x\u00b2), IF = e^(\u222b2x/(1+x\u00b2)dx) = e^(ln(1+x\u00b2)) = 1+x\u00b2. Solution: y(1+x\u00b2) = \u222b(1+x\u00b2)\u00b7(1/(1+x\u00b2)\u00b2)dx = \u222bdx/(1+x\u00b2) = tan\u207b\u00b9x + C.",
+      "explanation_incorrect": "IF = 1+x\u00b2. Then y(1+x\u00b2) = \u222b1/(1+x\u00b2) dx = tan\u207b\u00b9x + C."
+    },
+    {
+      "question_id": "T03.05.Q046",
+      "type": "fill_blank",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "The integrating factor of dy/dx - 3y/x = x\u00b3 is ___.",
+      "options": [
+        { "id": "A", "text": "x\u00b3" },
+        { "id": "B", "text": "1/x\u00b3" },
+        { "id": "C", "text": "e^(3x)" },
+        { "id": "D", "text": "e^(-3x)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P = -3/x. IF = e^(\u222b(-3/x)dx) = e^(-3 ln|x|) = e^(ln(x^(-3))) = 1/x\u00b3.",
+      "explanation_incorrect": "P = -3/x, so \u222bP dx = -3 ln|x| = ln(x^(-3)). IF = e^(ln(1/x\u00b3)) = 1/x\u00b3."
+    },
+    {
+      "question_id": "T03.05.Q047",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx - 3y/x = x\u00b3, given y(1) = 1.",
+      "options": [
+        { "id": "A", "text": "y = x\u2074" },
+        { "id": "B", "text": "y = x\u2074 + x\u00b3" },
+        { "id": "C", "text": "y = x\u00b3 ln x + x\u00b3" },
+        { "id": "D", "text": "y = x\u2074/4 + 3x\u00b3/4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = -3/x, IF = e^(\u222b(-3/x)dx) = 1/x\u00b3. Multiply both sides by IF: d/dx(y/x\u00b3) = x\u00b3 \u00b7 (1/x\u00b3) = 1. Integrate: y/x\u00b3 = x + C, so y = x\u2074 + Cx\u00b3. At x = 1, y = 1: 1 = 1 + C, so C = 0. Therefore y = x\u2074.",
+      "explanation_incorrect": "IF = 1/x\u00b3. Then y/x\u00b3 = \u222b1 dx = x + C, giving y = x\u2074 + Cx\u00b3. With y(1) = 1: 1 = 1 + C, C = 0. Answer: y = x\u2074."
+    },
+    {
+      "question_id": "T03.05.Q048",
+      "type": "mcq",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "Solve: dy/dx + y/x = x\u00b2, given y(1) = 1.",
+      "options": [
+        { "id": "A", "text": "y = x\u00b3/4 + 3/(4x)" },
+        { "id": "B", "text": "y = x\u00b2/3 + 2/(3x)" },
+        { "id": "C", "text": "y = x\u00b3/3 + 1/x" },
+        { "id": "D", "text": "y = x\u00b2/4 + 3/(4x)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = 1/x, IF = e^(\u222b(1/x)dx) = x. Multiply: d/dx(xy) = x\u00b3. Integrate: xy = x\u2074/4 + C. At x=1, y=1: 1 = 1/4 + C, C = 3/4. So xy = x\u2074/4 + 3/4, y = x\u00b3/4 + 3/(4x).",
+      "explanation_incorrect": "IF = x. Then xy = \u222bx\u00b3 dx = x\u2074/4 + C. With y(1)=1: 1 = 1/4 + C, so C = 3/4. Therefore y = x\u00b3/4 + 3/(4x)."
+    },
+    {
+      "question_id": "T03.05.Q049",
+      "type": "true_false",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "question_text": "The differential equation dy/dx = (x + 2y)/(3x) is a homogeneous equation.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = (x + 2y)/(3x) = 1/3 + 2y/(3x) = f(y/x). Each term on the RHS can be written as a function of y/x (or constants), making it homogeneous. Equivalently, replace x by tx and y by ty: f(tx,ty) = (tx + 2ty)/(3tx) = (x + 2y)/(3x) = f(x,y). Same degree (1) in numerator and denominator.",
+      "explanation_incorrect": "A DE is homogeneous if dy/dx = g(y/x). Here (x + 2y)/(3x) = 1/3 + (2/3)(y/x), which depends only on y/x. So it is homogeneous."
+    },
+    {
+      "question_id": "T03.05.Q050",
+      "type": "fill_blank",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "question_text": "The general solution of dy/dx + y = 1 is y = 1 + Ce^(___x).",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "-1" },
+        { "id": "C", "text": "2" },
+        { "id": "D", "text": "-2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P = 1, Q = 1. IF = e^x. Multiply: d/dx(ye^x) = e^x. Integrate: ye^x = e^x + C. So y = 1 + Ce^(-x). The blank is -1.",
+      "explanation_incorrect": "IF = e^x. Then ye^x = \u222be^x dx = e^x + C, so y = 1 + Ce^(-x). The exponent is -1."
+    }
+  ]
+}

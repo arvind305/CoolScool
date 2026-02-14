@@ -1,0 +1,815 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.01",
+  "topic_name": "Matrices",
+  "canonical_explanation": {
+    "text": "A matrix is a rectangular array of numbers arranged in rows and columns. A matrix with m rows and n columns has order m×n. Two matrices can be added only if they have the same order. Matrix multiplication AB is defined when the number of columns of A equals the number of rows of B, giving a matrix of order (rows of A)×(columns of B). Matrix multiplication is not commutative in general. The transpose A' is obtained by interchanging rows and columns.",
+    "rules": [
+      "Matrix multiplication is associative: A(BC) = (AB)C",
+      "Matrix multiplication is distributive: A(B+C) = AB + AC",
+      "(AB)' = B'A'",
+      "Every square matrix A can be written as ½(A+A') + ½(A-A') where ½(A+A') is symmetric and ½(A-A') is skew-symmetric",
+      "AI = IA = A where I is the identity matrix"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.01.Q001",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A matrix having 3 rows and 2 columns is of order:",
+      "options": [
+        {"id": "A", "text": "2×3"},
+        {"id": "B", "text": "3×2"},
+        {"id": "C", "text": "6"},
+        {"id": "D", "text": "3×3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of a matrix is written as m×n where m is the number of rows and n is the number of columns. With 3 rows and 2 columns, the order is 3×2.",
+      "explanation_incorrect": "Option A reverses the convention (rows×columns). Option C gives the total number of elements, not the order. Option D would require equal rows and columns."
+    },
+    {
+      "question_id": "T02.01.Q002",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a scalar matrix?",
+      "options": [
+        {"id": "A", "text": "[[1, 0], [0, 2]]"},
+        {"id": "B", "text": "[[3, 0], [0, 3]]"},
+        {"id": "C", "text": "[[1, 1], [1, 1]]"},
+        {"id": "D", "text": "[[0, 3], [3, 0]]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A scalar matrix is a diagonal matrix in which all diagonal elements are equal. In [[3, 0], [0, 3]], all diagonal elements are 3 and all non-diagonal elements are 0.",
+      "explanation_incorrect": "Option A is diagonal but not scalar since diagonal elements 1 and 2 are different. Option C is not even diagonal. Option D has zeros on the diagonal and non-zeros off the diagonal."
+    },
+    {
+      "question_id": "T02.01.Q003",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The number of elements in a matrix of order 3×2 is:",
+      "options": [
+        {"id": "A", "text": "5"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "9"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A matrix of order m×n has m×n elements. So a 3×2 matrix has 3×2 = 6 elements.",
+      "explanation_incorrect": "Option A gives the sum 3+2, not the product. Option C gives only the number of rows. Option D would be for a 3×3 matrix."
+    },
+    {
+      "question_id": "T02.01.Q004",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A matrix with only one row is called a:",
+      "options": [
+        {"id": "A", "text": "Column matrix"},
+        {"id": "B", "text": "Square matrix"},
+        {"id": "C", "text": "Row matrix"},
+        {"id": "D", "text": "Diagonal matrix"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A matrix having only one row (order 1×n) is called a row matrix or row vector.",
+      "explanation_incorrect": "A column matrix has only one column. A square matrix has equal rows and columns. A diagonal matrix is a square matrix with non-zero entries only on the main diagonal."
+    },
+    {
+      "question_id": "T02.01.Q005",
+      "type": "true_false",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Two matrices A and B can be added only if they have the same order.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Matrix addition is defined only for matrices of the same order. Corresponding elements are added, which requires both matrices to have the same number of rows and columns.",
+      "explanation_incorrect": "The statement is true. Matrices of different orders cannot be added because there would be no corresponding element for some entries."
+    },
+    {
+      "question_id": "T02.01.Q006",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = [[2, 3], [4, 5]] and B = [[1, 0], [−1, 2]], then A + B is:",
+      "options": [
+        {"id": "A", "text": "[[3, 3], [3, 7]]"},
+        {"id": "B", "text": "[[3, 3], [5, 7]]"},
+        {"id": "C", "text": "[[1, 3], [5, 3]]"},
+        {"id": "D", "text": "[[3, 3], [3, 3]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A + B is found by adding corresponding elements: [[2+1, 3+0], [4+(−1), 5+2]] = [[3, 3], [3, 7]].",
+      "explanation_incorrect": "Option B has an incorrect (2,1) entry: 4+(−1) = 3, not 5. Option C subtracts instead of adding in some entries. Option D has incorrect entries."
+    },
+    {
+      "question_id": "T02.01.Q007",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = [[1, 2], [3, 4]], then 3A equals:",
+      "options": [
+        {"id": "A", "text": "[[3, 6], [9, 12]]"},
+        {"id": "B", "text": "[[3, 2], [3, 4]]"},
+        {"id": "C", "text": "[[4, 5], [6, 7]]"},
+        {"id": "D", "text": "[[1, 6], [9, 4]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Scalar multiplication multiplies every element by the scalar: 3A = [[3×1, 3×2], [3×3, 3×4]] = [[3, 6], [9, 12]].",
+      "explanation_incorrect": "Option B only multiplied the first column. Option C adds 3 to each element instead of multiplying. Option D only multiplied some elements."
+    },
+    {
+      "question_id": "T02.01.Q008",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The identity matrix of order 2 is:",
+      "options": [
+        {"id": "A", "text": "[[1, 1], [1, 1]]"},
+        {"id": "B", "text": "[[1, 0], [0, 1]]"},
+        {"id": "C", "text": "[[0, 1], [1, 0]]"},
+        {"id": "D", "text": "[[1, 0], [0, 0]]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The identity matrix I of order 2 has 1s on the main diagonal and 0s elsewhere: I₂ = [[1, 0], [0, 1]]. It satisfies AI = IA = A for any 2×2 matrix A.",
+      "explanation_incorrect": "Option A has all entries as 1. Option C has 1s on the anti-diagonal, not the main diagonal. Option D has a 0 on the diagonal."
+    },
+    {
+      "question_id": "T02.01.Q009",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A is a matrix of order 2×3 and B is a matrix of order 3×4, then the order of AB is:",
+      "options": [
+        {"id": "A", "text": "2×4"},
+        {"id": "B", "text": "3×3"},
+        {"id": "C", "text": "2×3"},
+        {"id": "D", "text": "4×2"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If A is m×p and B is p×n, then AB is m×n. Here A is 2×3 and B is 3×4, so AB is 2×4. The inner dimensions (3) must match, and the outer dimensions (2 and 4) give the order of the product.",
+      "explanation_incorrect": "Option B uses the inner dimensions. Option C gives the order of A, not AB. Option D reverses the outer dimensions."
+    },
+    {
+      "question_id": "T02.01.Q010",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "For which of the following pairs is the product AB defined? A is 3×2 and B is:",
+      "options": [
+        {"id": "A", "text": "3×2"},
+        {"id": "B", "text": "2×3"},
+        {"id": "C", "text": "3×3"},
+        {"id": "D", "text": "1×3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "AB is defined when the number of columns of A equals the number of rows of B. A has 2 columns, so B must have 2 rows. Only the 2×3 matrix has 2 rows.",
+      "explanation_incorrect": "Options A and C have 3 rows, and Option D has 1 row. None of these match the 2 columns of A."
+    },
+    {
+      "question_id": "T02.01.Q011",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [3, 4]] and B = [[0, 1], [1, 0]], then AB equals:",
+      "options": [
+        {"id": "A", "text": "[[2, 1], [4, 3]]"},
+        {"id": "B", "text": "[[1, 2], [3, 4]]"},
+        {"id": "C", "text": "[[0, 2], [3, 0]]"},
+        {"id": "D", "text": "[[2, 1], [3, 4]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "AB: Row 1: [1×0+2×1, 1×1+2×0] = [2, 1]. Row 2: [3×0+4×1, 3×1+4×0] = [4, 3]. So AB = [[2, 1], [4, 3]].",
+      "explanation_incorrect": "Option B is just A itself. Option C is the element-wise product (Hadamard product), not matrix multiplication. Option D has an incorrect (2,1) entry."
+    },
+    {
+      "question_id": "T02.01.Q012",
+      "type": "true_false",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Matrix multiplication is commutative, i.e., AB = BA for all matrices A and B.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Matrix multiplication is NOT commutative in general. AB ≠ BA in most cases. For example, with A = [[1, 0], [0, 0]] and B = [[0, 1], [0, 0]], AB = [[0, 1], [0, 0]] but BA = [[0, 0], [0, 0]].",
+      "explanation_incorrect": "The statement is false. Matrix multiplication does not satisfy the commutative property in general, unlike addition of matrices or multiplication of real numbers."
+    },
+    {
+      "question_id": "T02.01.Q013",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A zero matrix of order 2×3 has:",
+      "options": [
+        {"id": "A", "text": "All elements as 1"},
+        {"id": "B", "text": "All elements as 0"},
+        {"id": "C", "text": "Diagonal elements as 0"},
+        {"id": "D", "text": "No elements"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A zero matrix (also called null matrix) is a matrix in which all elements are zero. A 2×3 zero matrix is [[0, 0, 0], [0, 0, 0]].",
+      "explanation_incorrect": "Option A describes a matrix of all ones. Option C only mentions diagonal elements. Option D is incorrect as the matrix has 6 elements, all equal to zero."
+    },
+    {
+      "question_id": "T02.01.Q014",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If A = [[2, 1], [−1, 3]] and B = [[4, −1], [2, 1]], then the (1,1) entry of A − B is ___.",
+      "options": [
+        {"id": "A", "text": "−2"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "−1"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The (1,1) entry of A − B is the (1,1) entry of A minus the (1,1) entry of B: 2 − 4 = −2.",
+      "explanation_incorrect": "Option B gives the sum 2+4. Option C gives the entry of A. Option D is incorrect arithmetic."
+    },
+    {
+      "question_id": "T02.01.Q015",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "Two matrices A = [[a, b], [c, d]] and B = [[1, 2], [3, 4]] are equal. What is the value of a + d?",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "5"},
+        {"id": "C", "text": "4"},
+        {"id": "D", "text": "7"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two matrices are equal if and only if their corresponding elements are equal. So a = 1, b = 2, c = 3, d = 4. Therefore a + d = 1 + 4 = 5.",
+      "explanation_incorrect": "Option A gives a + b (wrong pair). Option C gives d alone. Option D gives a + b + d incorrectly."
+    },
+    {
+      "question_id": "T02.01.Q016",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "Which of the following is a diagonal matrix?",
+      "options": [
+        {"id": "A", "text": "[[1, 2], [3, 4]]"},
+        {"id": "B", "text": "[[5, 0], [0, −3]]"},
+        {"id": "C", "text": "[[0, 1], [0, 0]]"},
+        {"id": "D", "text": "[[1, 0], [1, 0]]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A diagonal matrix is a square matrix where all non-diagonal elements are zero. In [[5, 0], [0, −3]], the off-diagonal entries are both 0, so it is diagonal.",
+      "explanation_incorrect": "Option A has non-zero off-diagonal elements 2 and 3. Option C has a non-zero entry at position (1,2). Option D has a non-zero entry at position (2,1)."
+    },
+    {
+      "question_id": "T02.01.Q017",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 3]], then AB − BA equals:",
+      "options": [
+        {"id": "A", "text": "[[0, 0], [0, 0]]"},
+        {"id": "B", "text": "[[2, 2], [0, −2]]"},
+        {"id": "C", "text": "[[−2, −2], [0, 2]]"},
+        {"id": "D", "text": "[[2, −2], [0, 2]]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "AB: (1,1)=1×2+2×1=4, (1,2)=1×0+2×3=6, (2,1)=3×2+4×1=10, (2,2)=3×0+4×3=12. So AB = [[4, 6], [10, 12]]. BA: (1,1)=2×1+0×3=2, (1,2)=2×2+0×4=4, (2,1)=1×1+3×3=10, (2,2)=1×2+3×4=14. So BA = [[2, 4], [10, 14]]. AB − BA = [[4−2, 6−4], [10−10, 12−14]] = [[2, 2], [0, −2]].",
+      "explanation_incorrect": "Option A would mean AB = BA, which is not the case here. Option C is BA − AB (signs reversed). Option D has incorrect signs."
+    },
+    {
+      "question_id": "T02.01.Q018",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The transpose of the matrix A = [[1, 2, 3], [4, 5, 6]] is:",
+      "options": [
+        {"id": "A", "text": "[[1, 4], [2, 5], [3, 6]]"},
+        {"id": "B", "text": "[[6, 5, 4], [3, 2, 1]]"},
+        {"id": "C", "text": "[[1, 2], [3, 4], [5, 6]]"},
+        {"id": "D", "text": "[[4, 5, 6], [1, 2, 3]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The transpose A' is obtained by interchanging rows and columns. Row 1 of A becomes column 1 of A', and row 2 of A becomes column 2 of A'. So A' = [[1, 4], [2, 5], [3, 6]].",
+      "explanation_incorrect": "Option B reverses the elements. Option C rearranges elements incorrectly. Option D simply swaps the two rows without transposing."
+    },
+    {
+      "question_id": "T02.01.Q019",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If A is a matrix of order 3×2, then the order of A' (transpose of A) is:",
+      "options": [
+        {"id": "A", "text": "3×2"},
+        {"id": "B", "text": "2×3"},
+        {"id": "C", "text": "3×3"},
+        {"id": "D", "text": "2×2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The transpose of an m×n matrix is an n×m matrix. So the transpose of a 3×2 matrix is a 2×3 matrix.",
+      "explanation_incorrect": "Option A gives the same order as A. Options C and D give square matrix orders that don't follow from transposing a 3×2 matrix."
+    },
+    {
+      "question_id": "T02.01.Q020",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A square matrix A is symmetric if:",
+      "options": [
+        {"id": "A", "text": "A' = −A"},
+        {"id": "B", "text": "A' = A"},
+        {"id": "C", "text": "A² = A"},
+        {"id": "D", "text": "A' = A⁻¹"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A square matrix A is symmetric if its transpose equals itself, i.e., A' = A. This means aᵢⱼ = aⱼᵢ for all i and j.",
+      "explanation_incorrect": "Option A defines a skew-symmetric matrix. Option C defines an idempotent matrix. Option D defines an orthogonal matrix."
+    },
+    {
+      "question_id": "T02.01.Q021",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "question_text": "Which of the following matrices is skew-symmetric?",
+      "options": [
+        {"id": "A", "text": "[[0, 2], [2, 0]]"},
+        {"id": "B", "text": "[[0, 2], [−2, 0]]"},
+        {"id": "C", "text": "[[1, 2], [2, 1]]"},
+        {"id": "D", "text": "[[1, −1], [1, −1]]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A matrix is skew-symmetric if A' = −A. For [[0, 2], [−2, 0]], its transpose is [[0, −2], [2, 0]] = −[[0, 2], [−2, 0]]. Also, the diagonal elements of a skew-symmetric matrix must be 0.",
+      "explanation_incorrect": "Option A is symmetric (A' = A). Option C is also symmetric. Option D is neither symmetric nor skew-symmetric."
+    },
+    {
+      "question_id": "T02.01.Q022",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 0, 2], [0, 1, 3]] and B = [[1], [2], [1]], then AB equals:",
+      "options": [
+        {"id": "A", "text": "[[3], [5]]"},
+        {"id": "B", "text": "[[4], [5]]"},
+        {"id": "C", "text": "[[3], [4]]"},
+        {"id": "D", "text": "[[5], [3]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A is 2×3 and B is 3×1, so AB is 2×1. Row 1: 1×1 + 0×2 + 2×1 = 1 + 0 + 2 = 3. Row 2: 0×1 + 1×2 + 3×1 = 0 + 2 + 3 = 5. So AB = [[3], [5]].",
+      "explanation_incorrect": "Option B has an incorrect first entry (should be 3, not 4). Option C has an incorrect second entry (should be 5, not 4). Option D reverses the entries."
+    },
+    {
+      "question_id": "T02.01.Q023",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[2, −1], [3, 4]] and I is the 2×2 identity matrix, then A − 2I equals:",
+      "options": [
+        {"id": "A", "text": "[[0, −1], [3, 2]]"},
+        {"id": "B", "text": "[[0, −1], [3, 4]]"},
+        {"id": "C", "text": "[[0, −3], [1, 2]]"},
+        {"id": "D", "text": "[[4, −1], [3, 6]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2I = [[2, 0], [0, 2]]. A − 2I = [[2−2, −1−0], [3−0, 4−2]] = [[0, −1], [3, 2]].",
+      "explanation_incorrect": "Option B did not subtract 2 from the (2,2) entry. Option C subtracts 2 from all entries incorrectly. Option D adds 2I instead of subtracting."
+    },
+    {
+      "question_id": "T02.01.Q024",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [3, 4]], then A + A' equals:",
+      "options": [
+        {"id": "A", "text": "[[2, 5], [5, 8]]"},
+        {"id": "B", "text": "[[2, 4], [6, 8]]"},
+        {"id": "C", "text": "[[0, −1], [1, 0]]"},
+        {"id": "D", "text": "[[1, 5], [5, 4]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A' = [[1, 3], [2, 4]]. A + A' = [[1+1, 2+3], [3+2, 4+4]] = [[2, 5], [5, 8]]. Note that A + A' is always symmetric.",
+      "explanation_incorrect": "Option B simply doubles A (which is 2A, not A+A'). Option C is A − A'. Option D has wrong diagonal entries."
+    },
+    {
+      "question_id": "T02.01.Q025",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "question_text": "If A = [[3, 1], [−1, 2]], then A − A' equals:",
+      "options": [
+        {"id": "A", "text": "[[0, 2], [−2, 0]]"},
+        {"id": "B", "text": "[[6, 0], [0, 4]]"},
+        {"id": "C", "text": "[[0, −2], [2, 0]]"},
+        {"id": "D", "text": "[[0, 0], [0, 0]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A' = [[3, −1], [1, 2]]. A − A' = [[3−3, 1−(−1)], [−1−1, 2−2]] = [[0, 2], [−2, 0]]. Note that A − A' is always skew-symmetric.",
+      "explanation_incorrect": "Option B is A + A'. Option C has the signs reversed (it is A' − A). Option D would mean A is symmetric, which it is not."
+    },
+    {
+      "question_id": "T02.01.Q026",
+      "type": "true_false",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The diagonal elements of a skew-symmetric matrix are always zero.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a skew-symmetric matrix, A' = −A, which means aᵢⱼ = −aⱼᵢ. For diagonal elements, i = j, so aᵢᵢ = −aᵢᵢ, giving 2aᵢᵢ = 0, hence aᵢᵢ = 0.",
+      "explanation_incorrect": "The statement is true. Since aᵢᵢ = −aᵢᵢ implies aᵢᵢ = 0, all diagonal elements must be zero."
+    },
+    {
+      "question_id": "T02.01.Q027",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "For any two square matrices A and B of the same order, (A+B)(A−B) equals:",
+      "options": [
+        {"id": "A", "text": "A² − B²"},
+        {"id": "B", "text": "A² − AB + BA − B²"},
+        {"id": "C", "text": "A² + AB − BA − B²"},
+        {"id": "D", "text": "A² − AB − BA + B²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the distributive property: (A+B)(A−B) = A(A−B) + B(A−B) = A² − AB + BA − B². Since matrix multiplication is not commutative, AB ≠ BA in general, so the middle terms do not cancel.",
+      "explanation_incorrect": "Option A incorrectly assumes AB = BA (commutativity). Option C has the wrong signs on the middle terms. Option D has both middle terms negative, which is incorrect."
+    },
+    {
+      "question_id": "T02.01.Q028",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[2, 1], [1, 3]] and B = [[1, −1], [0, 2]], compute AB.",
+      "options": [
+        {"id": "A", "text": "[[2, 0], [1, 5]]"},
+        {"id": "B", "text": "[[2, −1], [0, 6]]"},
+        {"id": "C", "text": "[[3, 0], [1, 5]]"},
+        {"id": "D", "text": "[[2, 0], [1, 7]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "AB: (1,1) = 2×1+1×0 = 2. (1,2) = 2×(−1)+1×2 = −2+2 = 0. (2,1) = 1×1+3×0 = 1. (2,2) = 1×(−1)+3×2 = −1+6 = 5. So AB = [[2, 0], [1, 5]].",
+      "explanation_incorrect": "Option B has incorrect off-diagonal entries. Option C has wrong (1,1) entry. Option D has wrong (2,2) entry."
+    },
+    {
+      "question_id": "T02.01.Q029",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Express the matrix A = [[4, 2], [6, 8]] as the sum of a symmetric and a skew-symmetric matrix. The symmetric part is:",
+      "options": [
+        {"id": "A", "text": "[[4, 4], [4, 8]]"},
+        {"id": "B", "text": "[[4, 2], [6, 8]]"},
+        {"id": "C", "text": "[[0, −2], [2, 0]]"},
+        {"id": "D", "text": "[[2, 1], [3, 4]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The symmetric part is ½(A + A'). A' = [[4, 6], [2, 8]]. A + A' = [[8, 8], [8, 16]]. ½(A + A') = [[4, 4], [4, 8]], which is symmetric since (1,2) = (2,1) = 4.",
+      "explanation_incorrect": "Option B is the original matrix A. Option C is the skew-symmetric part ½(A − A'). Option D is half of A, not the symmetric part."
+    },
+    {
+      "question_id": "T02.01.Q030",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[4, 2], [6, 8]], the skew-symmetric part ½(A − A') equals [[0, k], [−k, 0]]. The value of k is ___.",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "−2"},
+        {"id": "C", "text": "4"},
+        {"id": "D", "text": "−4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A' = [[4, 6], [2, 8]]. A − A' = [[0, −4], [4, 0]]. ½(A − A') = [[0, −2], [2, 0]]. So k = −2.",
+      "explanation_incorrect": "Option A has the wrong sign. Option C uses A − A' without the factor ½. Option D uses A − A' without ½ and wrong sign."
+    },
+    {
+      "question_id": "T02.01.Q031",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 0, 0], [0, 2, 0], [0, 0, 3]], then A² equals:",
+      "options": [
+        {"id": "A", "text": "[[1, 0, 0], [0, 4, 0], [0, 0, 9]]"},
+        {"id": "B", "text": "[[2, 0, 0], [0, 4, 0], [0, 0, 6]]"},
+        {"id": "C", "text": "[[1, 0, 0], [0, 4, 0], [0, 0, 6]]"},
+        {"id": "D", "text": "[[1, 0, 0], [0, 2, 0], [0, 0, 3]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a diagonal matrix, A² is obtained by squaring each diagonal element. A² = diag(1², 2², 3²) = [[1, 0, 0], [0, 4, 0], [0, 0, 9]].",
+      "explanation_incorrect": "Option B doubles diagonal entries instead of squaring. Option C has a wrong (3,3) entry (6 instead of 9). Option D is A itself, not A²."
+    },
+    {
+      "question_id": "T02.01.Q032",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [0, 1]], find A².",
+      "options": [
+        {"id": "A", "text": "[[1, 4], [0, 1]]"},
+        {"id": "B", "text": "[[1, 2], [0, 1]]"},
+        {"id": "C", "text": "[[1, 4], [0, 2]]"},
+        {"id": "D", "text": "[[2, 4], [0, 2]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A² = A·A. (1,1) = 1×1+2×0 = 1. (1,2) = 1×2+2×1 = 4. (2,1) = 0×1+1×0 = 0. (2,2) = 0×2+1×1 = 1. So A² = [[1, 4], [0, 1]].",
+      "explanation_incorrect": "Option B is A itself. Option C has wrong (2,2) entry. Option D has wrong diagonal entries."
+    },
+    {
+      "question_id": "T02.01.Q033",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2], [0, 3]] and B = [[2, 0], [1, 1]], what is (AB)'?",
+      "options": [
+        {"id": "A", "text": "[[4, 3], [2, 3]]"},
+        {"id": "B", "text": "[[4, 2], [3, 3]]"},
+        {"id": "C", "text": "[[2, 1], [4, 3]]"},
+        {"id": "D", "text": "[[4, 2], [2, 3]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "AB: (1,1)=1×2+2×1=4, (1,2)=1×0+2×1=2, (2,1)=0×2+3×1=3, (2,2)=0×0+3×1=3. So AB = [[4, 2], [3, 3]]. Transposing: (AB)' = [[4, 3], [2, 3]]. One can verify (AB)' = B'A': B' = [[2, 1], [0, 1]], A' = [[1, 0], [2, 3]]. B'A' = [[2×1+1×2, 2×0+1×3], [0×1+1×2, 0×0+1×3]] = [[4, 3], [2, 3]], which matches.",
+      "explanation_incorrect": "Option B is AB itself, not its transpose. Option C rearranges entries incorrectly. Option D has an incorrect (2,1) entry."
+    },
+    {
+      "question_id": "T02.01.Q034",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A square matrix A is invertible if there exists a matrix B such that:",
+      "options": [
+        {"id": "A", "text": "AB = A"},
+        {"id": "B", "text": "AB = B"},
+        {"id": "C", "text": "AB = BA = I"},
+        {"id": "D", "text": "A + B = I"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A square matrix A is invertible (or non-singular) if there exists a matrix B such that AB = BA = I, where I is the identity matrix. The matrix B is called the inverse of A, denoted A⁻¹.",
+      "explanation_incorrect": "Option A means B acts as a right identity for A, not an inverse. Option B is also not the definition. Option D describes an additive relationship, not a multiplicative inverse."
+    },
+    {
+      "question_id": "T02.01.Q035",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following elementary row operations is valid?",
+      "options": [
+        {"id": "A", "text": "Rᵢ ↔ Rⱼ (interchange two rows)"},
+        {"id": "B", "text": "Rᵢ → kRᵢ where k = 0"},
+        {"id": "C", "text": "Multiply all elements by zero"},
+        {"id": "D", "text": "Delete a row"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Interchanging two rows (Rᵢ ↔ Rⱼ) is a valid elementary row operation. The three elementary row operations are: (1) interchange two rows, (2) multiply a row by a non-zero scalar, (3) add a scalar multiple of one row to another row.",
+      "explanation_incorrect": "Option B uses k = 0, but the scalar must be non-zero for row scaling. Option C would destroy information and is not an elementary operation. Option D changes the size of the matrix and is not an elementary operation."
+    },
+    {
+      "question_id": "T02.01.Q036",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The inverse of the identity matrix I is:",
+      "options": [
+        {"id": "A", "text": "The zero matrix"},
+        {"id": "B", "text": "2I"},
+        {"id": "C", "text": "I itself"},
+        {"id": "D", "text": "−I"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since I·I = I, the identity matrix is its own inverse: I⁻¹ = I.",
+      "explanation_incorrect": "Option A: the zero matrix has no inverse. Option B: I·(2I) = 2I ≠ I. Option D: I·(−I) = −I ≠ I."
+    },
+    {
+      "question_id": "T02.01.Q037",
+      "type": "true_false",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If A is an invertible matrix, then (A⁻¹)⁻¹ = A.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Since AA⁻¹ = I, by definition of inverse, A is the inverse of A⁻¹. Therefore (A⁻¹)⁻¹ = A.",
+      "explanation_incorrect": "The statement is true. From the relation AA⁻¹ = A⁻¹A = I, we see that A is the inverse of A⁻¹."
+    },
+    {
+      "question_id": "T02.01.Q038",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "question_text": "Using elementary row operations, if we apply R₂ → R₂ − 2R₁ to the matrix [[1, 3], [2, 7]], we get:",
+      "options": [
+        {"id": "A", "text": "[[1, 3], [0, 1]]"},
+        {"id": "B", "text": "[[1, 3], [0, 4]]"},
+        {"id": "C", "text": "[[1, 3], [4, 13]]"},
+        {"id": "D", "text": "[[1, 3], [2, 1]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "R₂ → R₂ − 2R₁: New R₂ = [2−2×1, 7−2×3] = [0, 1]. The matrix becomes [[1, 3], [0, 1]].",
+      "explanation_incorrect": "Option B has wrong (2,2) entry (7−6=1, not 4). Option C adds 2R₁ instead of subtracting. Option D only modifies the (2,2) entry."
+    },
+    {
+      "question_id": "T02.01.Q039",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Find the inverse of A = [[2, 1], [5, 3]] using the formula A⁻¹ = (1/det A) × adj(A).",
+      "options": [
+        {"id": "A", "text": "[[3, −1], [−5, 2]]"},
+        {"id": "B", "text": "[[3, 1], [5, 2]]"},
+        {"id": "C", "text": "[[2, −1], [−5, 3]]"},
+        {"id": "D", "text": "[[-3, 1], [5, -2]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "det(A) = 2×3 − 1×5 = 6−5 = 1. adj(A) = [[3, −1], [−5, 2]]. A⁻¹ = (1/1)×[[3, −1], [−5, 2]] = [[3, −1], [−5, 2]]. Verification: AA⁻¹ = [[2×3+1×(−5), 2×(−1)+1×2], [5×3+3×(−5), 5×(−1)+3×2]] = [[1, 0], [0, 1]] = I.",
+      "explanation_incorrect": "Option B doesn't negate the off-diagonal terms correctly. Option C swaps the diagonal without negating off-diagonal. Option D negates incorrectly."
+    },
+    {
+      "question_id": "T02.01.Q040",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "question_text": "If A = [[1, 2, 0], [−1, 0, 3], [2, 1, −1]] and B = [[1, 0, 0], [0, 1, 0], [0, 0, 1]], then AB equals:",
+      "options": [
+        {"id": "A", "text": "B"},
+        {"id": "B", "text": "A"},
+        {"id": "C", "text": "A + B"},
+        {"id": "D", "text": "2A"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "B is the 3×3 identity matrix I₃. For any matrix A, AI = A. So AB = AI₃ = A.",
+      "explanation_incorrect": "Option A would be correct if A were the identity. Option C and D do not follow from any property of identity matrix multiplication."
+    },
+    {
+      "question_id": "T02.01.Q041",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A is a 3×3 symmetric matrix and B is a 3×3 skew-symmetric matrix, then the matrix AB − BA is:",
+      "options": [
+        {"id": "A", "text": "Always symmetric"},
+        {"id": "B", "text": "Always skew-symmetric"},
+        {"id": "C", "text": "Always zero"},
+        {"id": "D", "text": "Neither symmetric nor skew-symmetric in general"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(AB − BA)' = (AB)' − (BA)' = B'A' − A'B' = (−B)(A) − (A)(−B) = −BA + AB = AB − BA. Since (AB − BA)' = AB − BA, the matrix is symmetric.",
+      "explanation_incorrect": "Option B is incorrect because the transpose equals itself, not its negative. Option C is incorrect; AB − BA is not necessarily zero. Option D is incorrect; we proved it is always symmetric."
+    },
+    {
+      "question_id": "T02.01.Q042",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[1, 1], [0, 1]], then A¹⁰ equals:",
+      "options": [
+        {"id": "A", "text": "[[1, 10], [0, 1]]"},
+        {"id": "B", "text": "[[1, 1], [0, 1]]"},
+        {"id": "C", "text": "[[10, 10], [0, 10]]"},
+        {"id": "D", "text": "[[1, 1024], [0, 1]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A = I + N where N = [[0, 1], [0, 0]]. N² = [[0,0],[0,0]] = O. By induction (or binomial theorem for matrices since IN = NI), Aⁿ = I + nN = [[1, n], [0, 1]]. So A¹⁰ = [[1, 10], [0, 1]]. Verify: A² = [[1,2],[0,1]], A³ = [[1,3],[0,1]], confirming the pattern.",
+      "explanation_incorrect": "Option B is A¹, not A¹⁰. Option C scales diagonal entries. Option D uses 2¹⁰ = 1024, confusing exponentiation of entries with matrix power."
+    },
+    {
+      "question_id": "T02.01.Q043",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A is a square matrix such that A² = A, then (I + A)³ − 7A equals:",
+      "options": [
+        {"id": "A", "text": "A"},
+        {"id": "B", "text": "I − A"},
+        {"id": "C", "text": "I"},
+        {"id": "D", "text": "3A"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since A² = A (idempotent), we also get A³ = A²·A = A·A = A² = A. Expand (I+A)³ = I³ + 3I²A + 3IA² + A³ = I + 3A + 3A + A = I + 7A. (We can use the binomial expansion since I and A commute.) So (I+A)³ − 7A = I + 7A − 7A = I.",
+      "explanation_incorrect": "Option A, B, and D result from errors in expansion or not using the property A² = A correctly."
+    },
+    {
+      "question_id": "T02.01.Q044",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[1, 2], [3, 7]], find A⁻¹ using elementary row operations.",
+      "options": [
+        {"id": "A", "text": "[[7, −2], [−3, 1]]"},
+        {"id": "B", "text": "[[7, 2], [3, 1]]"},
+        {"id": "C", "text": "[[1, −2], [−3, 7]]"},
+        {"id": "D", "text": "[[-7, 2], [3, -1]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "det(A) = 1×7 − 2×3 = 7−6 = 1. Since det(A) = 1, A⁻¹ = adj(A) = [[7, −2], [−3, 1]]. Verification: [[1,2],[3,7]]·[[7,−2],[−3,1]] = [[7−6, −2+2],[21−21, −6+7]] = [[1,0],[0,1]] = I.",
+      "explanation_incorrect": "Option B doesn't negate the off-diagonal elements. Option C swaps diagonal incorrectly. Option D negates everything incorrectly."
+    },
+    {
+      "question_id": "T02.01.Q045",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A and B are invertible matrices of the same order, then (AB)⁻¹ equals:",
+      "options": [
+        {"id": "A", "text": "A⁻¹B⁻¹"},
+        {"id": "B", "text": "B⁻¹A⁻¹"},
+        {"id": "C", "text": "AB⁻¹"},
+        {"id": "D", "text": "A⁻¹B"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(AB)(B⁻¹A⁻¹) = A(BB⁻¹)A⁻¹ = AIA⁻¹ = AA⁻¹ = I. Similarly (B⁻¹A⁻¹)(AB) = I. Therefore (AB)⁻¹ = B⁻¹A⁻¹. Note the reversal of order.",
+      "explanation_incorrect": "Option A does not reverse the order. Options C and D mix inverse and non-inverse incorrectly."
+    },
+    {
+      "question_id": "T02.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[1, 2], [3, 4]] and B = [[0, 1], [1, 0]], then the (2,1) entry of AB is ___.",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "3"},
+        {"id": "C", "text": "4"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The (2,1) entry of AB = (row 2 of A)·(column 1 of B) = 3×0 + 4×1 = 0 + 4 = 4.",
+      "explanation_incorrect": "Option A is the (1,1) entry of AB. Option B is the (2,1) entry of A, not AB. Option D is incorrect arithmetic."
+    },
+    {
+      "question_id": "T02.01.Q047",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[0, a, −b], [−a, 0, c], [b, −c, 0]], then A is:",
+      "options": [
+        {"id": "A", "text": "Symmetric"},
+        {"id": "B", "text": "Skew-symmetric"},
+        {"id": "C", "text": "Diagonal"},
+        {"id": "D", "text": "Scalar"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Check A' = A or A' = −A. A' = [[0, −a, b], [a, 0, −c], [−b, c, 0]]. And −A = [[0, −a, b], [a, 0, −c], [−b, c, 0]]. Since A' = −A, the matrix is skew-symmetric. Note all diagonal elements are 0.",
+      "explanation_incorrect": "Option A: A' ≠ A. Option C: the matrix has non-zero off-diagonal entries. Option D: a scalar matrix has equal diagonal entries and zero off-diagonal entries."
+    },
+    {
+      "question_id": "T02.01.Q048",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[1, −1], [2, 3]], what is A⁻¹?",
+      "options": [
+        {"id": "A", "text": "[[3/5, 1/5], [−2/5, 1/5]]"},
+        {"id": "B", "text": "[[3, 1], [−2, 1]]"},
+        {"id": "C", "text": "[[1/5, 1/5], [2/5, 3/5]]"},
+        {"id": "D", "text": "[[3/5, −1/5], [2/5, 1/5]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "det(A) = 1×3 − (−1)×2 = 3+2 = 5. adj(A) = [[3, 1], [−2, 1]] (swap diagonal, negate off-diagonal). A⁻¹ = (1/5)[[3, 1], [−2, 1]] = [[3/5, 1/5], [−2/5, 1/5]]. Verify: [[1,−1],[2,3]]·[[3/5,1/5],[−2/5,1/5]] = [[(3+2)/5, (1−1)/5], [(6−6)/5, (2+3)/5]] = [[1,0],[0,1]].",
+      "explanation_incorrect": "Option B is adj(A) without dividing by det(A). Option C has entries arranged incorrectly. Option D has sign errors."
+    },
+    {
+      "question_id": "T02.01.Q049",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If A = [[2, 0, 0], [0, 3, 0], [0, 0, 5]] and B = [[1, 0, 0], [0, 4, 0], [0, 0, 2]], then AB equals:",
+      "options": [
+        {"id": "A", "text": "[[2, 0, 0], [0, 12, 0], [0, 0, 10]]"},
+        {"id": "B", "text": "[[3, 0, 0], [0, 7, 0], [0, 0, 7]]"},
+        {"id": "C", "text": "[[2, 0, 0], [0, 7, 0], [0, 0, 10]]"},
+        {"id": "D", "text": "[[2, 0, 0], [0, 12, 0], [0, 0, 7]]"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For diagonal matrices, the product is also diagonal with entries being the products of corresponding diagonal entries: diag(2×1, 3×4, 5×2) = diag(2, 12, 10) = [[2, 0, 0], [0, 12, 0], [0, 0, 10]].",
+      "explanation_incorrect": "Option B adds diagonal entries instead of multiplying. Option C mixes addition and multiplication. Option D has wrong (3,3) entry."
+    },
+    {
+      "question_id": "T02.01.Q050",
+      "type": "fill_blank",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If A is an invertible matrix and A² = I (the identity matrix), then A⁻¹ equals ___.",
+      "options": [
+        {"id": "A", "text": "I"},
+        {"id": "B", "text": "A"},
+        {"id": "C", "text": "−A"},
+        {"id": "D", "text": "A²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Given A² = I, multiply both sides on the right by A⁻¹: A²A⁻¹ = IA⁻¹, which gives A(AA⁻¹) = A⁻¹, so A·I = A⁻¹, hence A⁻¹ = A.",
+      "explanation_incorrect": "Option A: A⁻¹ = I would mean A = I, which is not necessarily true. Option C: (−A) is not the inverse unless A = −I. Option D: A² = I, so A⁻¹ = A, not A²."
+    }
+  ]
+}

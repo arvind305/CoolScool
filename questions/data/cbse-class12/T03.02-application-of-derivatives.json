@@ -1,0 +1,817 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T03.02",
+  "topic_name": "Application of Derivatives",
+  "canonical_explanation": {
+    "text": "Derivatives have many applications. The rate of change of y w.r.t. x is dy/dx. A function is increasing on (a,b) if f'(x)>0 for all x in (a,b) and decreasing if f'(x)<0. At a local maximum, f'(c)=0 and f''(c)<0; at a local minimum, f'(c)=0 and f''(c)>0. The equation of tangent to y=f(x) at (x0,y0) is y-y0=f'(x0)(x-x0), and the normal is y-y0=(-1/f'(x0))(x-x0). Linear approximation: f(x+dx) approx f(x)+f'(x)*dx.",
+    "rules": [
+      "f'(x) > 0 on (a,b) implies f is strictly increasing on (a,b)",
+      "First derivative test: f'(x) changes from + to - at c implies local maximum at c",
+      "Second derivative test: f'(c)=0, f''(c)<0 implies local maximum; f''(c)>0 implies local minimum",
+      "Slope of tangent at (x0,y0) = f'(x0); slope of normal = -1/f'(x0)",
+      "Approximation: f(a+h) approx f(a) + h*f'(a)"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.02.Q001",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The rate of change of the area of a circle with respect to its radius r is:",
+      "options": [
+        { "id": "A", "text": "pi*r" },
+        { "id": "B", "text": "2*pi*r" },
+        { "id": "C", "text": "pi*r^2" },
+        { "id": "D", "text": "2*pi*r^2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area A = pi*r^2. dA/dr = 2*pi*r. The rate of change of area with respect to radius equals the circumference.",
+      "explanation_incorrect": "Differentiate A = pi*r^2 with respect to r: dA/dr = 2*pi*r."
+    },
+    {
+      "question_id": "T03.02.Q002",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "If the radius of a sphere is increasing at 2 cm/s, the rate of increase of its volume when r = 3 cm is:",
+      "options": [
+        { "id": "A", "text": "36*pi cm^3/s" },
+        { "id": "B", "text": "72*pi cm^3/s" },
+        { "id": "C", "text": "108*pi cm^3/s" },
+        { "id": "D", "text": "54*pi cm^3/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V = (4/3)*pi*r^3, so dV/dt = 4*pi*r^2*(dr/dt). At r = 3, dr/dt = 2: dV/dt = 4*pi*(9)*(2) = 72*pi cm^3/s.",
+      "explanation_incorrect": "Use chain rule: dV/dt = dV/dr * dr/dt = 4*pi*r^2 * 2 = 4*pi*9*2 = 72*pi cm^3/s."
+    },
+    {
+      "question_id": "T03.02.Q003",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "If y = x^3 - 5x^2 + 3x + 7, the rate of change of y with respect to x at x = 1 is:",
+      "options": [
+        { "id": "A", "text": "-4" },
+        { "id": "B", "text": "6" },
+        { "id": "C", "text": "-2" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = 3x^2 - 10x + 3. At x = 1: dy/dx = 3 - 10 + 3 = -4.",
+      "explanation_incorrect": "Differentiate: dy/dx = 3x^2 - 10x + 3. Substitute x = 1: 3(1) - 10(1) + 3 = -4."
+    },
+    {
+      "question_id": "T03.02.Q004",
+      "concept_id": "T03.02.C01",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "If the area of a circle is increasing at 10 cm^2/s and the radius is 5 cm, then dr/dt = 1/pi cm/s.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A = pi*r^2, so dA/dt = 2*pi*r*(dr/dt). Thus dr/dt = dA/dt / (2*pi*r) = 10/(2*pi*5) = 10/(10*pi) = 1/pi cm/s. The statement is true.",
+      "explanation_incorrect": "Use dA/dt = 2*pi*r*(dr/dt), so dr/dt = 10/(2*pi*5) = 1/pi cm/s."
+    },
+    {
+      "question_id": "T03.02.Q005",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A stone is dropped into a quiet lake and waves move in circles at 5 cm/s. At the instant the radius is 8 cm, the rate of increase of enclosed area is:",
+      "options": [
+        { "id": "A", "text": "40*pi cm^2/s" },
+        { "id": "B", "text": "80*pi cm^2/s" },
+        { "id": "C", "text": "160*pi cm^2/s" },
+        { "id": "D", "text": "20*pi cm^2/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A = pi*r^2, dA/dt = 2*pi*r*(dr/dt) = 2*pi*8*5 = 80*pi cm^2/s.",
+      "explanation_incorrect": "Apply chain rule: dA/dt = 2*pi*r*(dr/dt). Here r = 8, dr/dt = 5, so dA/dt = 2*pi(8)(5) = 80*pi cm^2/s."
+    },
+    {
+      "question_id": "T03.02.Q006",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "A balloon which always remains spherical has a variable radius. If the radius is increasing at the rate of 1/2 cm/s, at what rate is the volume increasing when the radius is 14 cm?",
+      "options": [
+        { "id": "A", "text": "196*pi cm^3/s" },
+        { "id": "B", "text": "392*pi cm^3/s" },
+        { "id": "C", "text": "784*pi cm^3/s" },
+        { "id": "D", "text": "98*pi cm^3/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V = (4/3)*pi*r^3, dV/dt = 4*pi*r^2*(dr/dt) = 4*pi*(196)*(1/2) = 392*pi cm^3/s.",
+      "explanation_incorrect": "dV/dt = 4*pi*r^2*(dr/dt) = 4*pi*(14)^2*(1/2) = 4*pi*196*(1/2) = 392*pi cm^3/s."
+    },
+    {
+      "question_id": "T03.02.Q007",
+      "concept_id": "T03.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The total revenue R(x) in rupees from the sale of x units is R(x) = 3x^2 + 36x + 5. The marginal revenue when x = 15 is:",
+      "options": [
+        { "id": "A", "text": "Rs 126" },
+        { "id": "B", "text": "Rs 96" },
+        { "id": "C", "text": "Rs 90" },
+        { "id": "D", "text": "Rs 132" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Marginal revenue = dR/dx = 6x + 36. At x = 15: MR = 6(15) + 36 = 90 + 36 = 126.",
+      "explanation_incorrect": "Marginal revenue is the derivative of R(x). dR/dx = 6x + 36. At x = 15, MR = 90 + 36 = 126."
+    },
+    {
+      "question_id": "T03.02.Q008",
+      "concept_id": "T03.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A ladder 5 m long leans against a wall. The bottom of the ladder slides away from the wall at 2 m/s. When the foot is 4 m from the wall, the rate at which the top slides down is:",
+      "options": [
+        { "id": "A", "text": "8/3 m/s" },
+        { "id": "B", "text": "3/8 m/s" },
+        { "id": "C", "text": "4/3 m/s" },
+        { "id": "D", "text": "2/3 m/s" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Let x = distance from wall, y = height. x^2 + y^2 = 25. Differentiating: 2x(dx/dt) + 2y(dy/dt) = 0. When x = 4, y = 3 (since 16 + 9 = 25). So 2(4)(2) + 2(3)(dy/dt) = 0, giving dy/dt = -16/6 = -8/3 m/s. The top slides down at 8/3 m/s.",
+      "explanation_incorrect": "Use x^2 + y^2 = 25. When x = 4, y = 3. Differentiating gives 2x(dx/dt) + 2y(dy/dt) = 0. Substituting: 16 + 6(dy/dt) = 0, so dy/dt = -8/3. The speed is 8/3 m/s downward."
+    },
+    {
+      "question_id": "T03.02.Q009",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "The volume of a cube is increasing at the rate of 8 cm^3/s. When the side is 12 cm, the rate of increase of surface area is ___ cm^2/s.",
+      "options": [
+        { "id": "A", "text": "8/3" },
+        { "id": "B", "text": "16/3" },
+        { "id": "C", "text": "4/3" },
+        { "id": "D", "text": "32/3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "V = a^3, dV/dt = 3a^2(da/dt) = 8. At a = 12: da/dt = 8/(3*144) = 1/54. S = 6a^2, dS/dt = 12a(da/dt) = 12*12*(1/54) = 144/54 = 8/3 cm^2/s.",
+      "explanation_incorrect": "From dV/dt = 3a^2(da/dt), find da/dt = 8/(3*144) = 1/54. Then dS/dt = 12a(da/dt) = 12(12)(1/54) = 8/3 cm^2/s."
+    },
+    {
+      "question_id": "T03.02.Q010",
+      "concept_id": "T03.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The rate of change of the volume of a sphere with respect to its surface area when the radius is 2 cm is:",
+      "options": [
+        { "id": "A", "text": "1 cm" },
+        { "id": "B", "text": "2 cm" },
+        { "id": "C", "text": "4 cm" },
+        { "id": "D", "text": "1/2 cm" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "V = (4/3)*pi*r^3, S = 4*pi*r^2. dV/dS = (dV/dr)/(dS/dr) = (4*pi*r^2)/(8*pi*r) = r/2. At r = 2: dV/dS = 2/2 = 1 cm.",
+      "explanation_incorrect": "Use chain rule: dV/dS = (dV/dr)/(dS/dr) = (4*pi*r^2)/(8*pi*r) = r/2. At r = 2, dV/dS = 1."
+    },
+    {
+      "question_id": "T03.02.Q011",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The function f(x) = 3x + 17 is:",
+      "options": [
+        { "id": "A", "text": "Strictly increasing on R" },
+        { "id": "B", "text": "Strictly decreasing on R" },
+        { "id": "C", "text": "Neither increasing nor decreasing" },
+        { "id": "D", "text": "Increasing only for x > 0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 3 > 0 for all x in R. Since the derivative is always positive, f is strictly increasing on R.",
+      "explanation_incorrect": "Since f'(x) = 3 > 0 for all real x, the function is strictly increasing on the entire real line."
+    },
+    {
+      "question_id": "T03.02.Q012",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The interval on which f(x) = x^2 - 4x + 6 is strictly increasing is:",
+      "options": [
+        { "id": "A", "text": "(-inf, 2)" },
+        { "id": "B", "text": "(2, inf)" },
+        { "id": "C", "text": "(-inf, inf)" },
+        { "id": "D", "text": "(0, 4)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = 2x - 4. f'(x) > 0 when 2x - 4 > 0, i.e., x > 2. So f is strictly increasing on (2, inf).",
+      "explanation_incorrect": "Set f'(x) = 2x - 4 > 0, giving x > 2. The function is strictly increasing on (2, inf)."
+    },
+    {
+      "question_id": "T03.02.Q013",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The function f(x) = 7 - 3x is:",
+      "options": [
+        { "id": "A", "text": "Strictly increasing on R" },
+        { "id": "B", "text": "Strictly decreasing on R" },
+        { "id": "C", "text": "Neither increasing nor decreasing" },
+        { "id": "D", "text": "Decreasing only for x > 0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = -3 < 0 for all x in R. Since the derivative is always negative, f is strictly decreasing on R.",
+      "explanation_incorrect": "f'(x) = -3 < 0 for all real x, so the function is strictly decreasing everywhere."
+    },
+    {
+      "question_id": "T03.02.Q014",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "The function f(x) = x^3 - 3x^2 + 3x - 10 is increasing on the entire real line.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 3x^2 - 6x + 3 = 3(x^2 - 2x + 1) = 3(x - 1)^2 >= 0 for all x. Since f'(x) >= 0 everywhere (and equals 0 only at x = 1, a single point), f is increasing on R.",
+      "explanation_incorrect": "f'(x) = 3(x - 1)^2 >= 0 for all x. Since f'(x) is non-negative everywhere (zero only at one point), f is indeed increasing on R."
+    },
+    {
+      "question_id": "T03.02.Q015",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the intervals on which f(x) = 2x^3 - 9x^2 + 12x - 5 is strictly decreasing.",
+      "options": [
+        { "id": "A", "text": "(1, 2)" },
+        { "id": "B", "text": "(-inf, 1) and (2, inf)" },
+        { "id": "C", "text": "(0, 3)" },
+        { "id": "D", "text": "(-inf, 0) and (3, inf)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 6x^2 - 18x + 12 = 6(x^2 - 3x + 2) = 6(x - 1)(x - 2). f'(x) < 0 when (x - 1)(x - 2) < 0, i.e., 1 < x < 2. So f is strictly decreasing on (1, 2).",
+      "explanation_incorrect": "f'(x) = 6(x - 1)(x - 2). The product is negative when exactly one factor is negative: 1 < x < 2. So the decreasing interval is (1, 2)."
+    },
+    {
+      "question_id": "T03.02.Q016",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The function f(x) = sin(x) is strictly decreasing on:",
+      "options": [
+        { "id": "A", "text": "(0, pi/2)" },
+        { "id": "B", "text": "(pi/2, pi)" },
+        { "id": "C", "text": "(pi/2, 3*pi/2)" },
+        { "id": "D", "text": "(pi, 2*pi)" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f'(x) = cos(x). cos(x) < 0 on (pi/2, 3*pi/2). So sin(x) is strictly decreasing on (pi/2, 3*pi/2).",
+      "explanation_incorrect": "sin(x) decreases where cos(x) < 0, which is on the interval (pi/2, 3*pi/2)."
+    },
+    {
+      "question_id": "T03.02.Q017",
+      "concept_id": "T03.02.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "For what values of a is f(x) = x^2 + ax + 1 strictly increasing on [1, 2]?",
+      "options": [
+        { "id": "A", "text": "a > -2" },
+        { "id": "B", "text": "a >= -2" },
+        { "id": "C", "text": "a > -4" },
+        { "id": "D", "text": "a >= -4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = 2x + a. For f to be increasing on [1,2], we need f'(x) >= 0 for all x in [1,2]. The minimum of f'(x) on [1,2] is at x = 1: f'(1) = 2 + a >= 0, so a >= -2.",
+      "explanation_incorrect": "f'(x) = 2x + a must be >= 0 on [1,2]. Since f'(x) is smallest at x = 1, we need 2 + a >= 0, giving a >= -2."
+    },
+    {
+      "question_id": "T03.02.Q018",
+      "concept_id": "T03.02.C02",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "The function f(x) = e^(2x) is strictly increasing on ___.",
+      "options": [
+        { "id": "A", "text": "(-inf, inf)" },
+        { "id": "B", "text": "(0, inf)" },
+        { "id": "C", "text": "(-inf, 0)" },
+        { "id": "D", "text": "(1, inf)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 2*e^(2x). Since e^(2x) > 0 for all x, f'(x) = 2*e^(2x) > 0 for all x. So f is strictly increasing on (-inf, inf).",
+      "explanation_incorrect": "The derivative 2*e^(2x) is always positive (exponential is always positive), so the function is increasing on the entire real line."
+    },
+    {
+      "question_id": "T03.02.Q019",
+      "concept_id": "T03.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The function f(x) = x^3 - 6x^2 + 9x + 15 is increasing on:",
+      "options": [
+        { "id": "A", "text": "(-inf, 1) U (3, inf)" },
+        { "id": "B", "text": "(1, 3)" },
+        { "id": "C", "text": "(-inf, 3)" },
+        { "id": "D", "text": "(0, inf)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x - 1)(x - 3). f'(x) > 0 when x < 1 or x > 3. So f is increasing on (-inf, 1) U (3, inf).",
+      "explanation_incorrect": "f'(x) = 3(x - 1)(x - 3) > 0 when both factors are same sign: x < 1 or x > 3."
+    },
+    {
+      "question_id": "T03.02.Q020",
+      "concept_id": "T03.02.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If f(x) = log(x), for x > 0, then f is:",
+      "options": [
+        { "id": "A", "text": "Strictly increasing on (0, inf)" },
+        { "id": "B", "text": "Strictly decreasing on (0, inf)" },
+        { "id": "C", "text": "Increasing on (0, 1) and decreasing on (1, inf)" },
+        { "id": "D", "text": "Neither increasing nor decreasing" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 1/x > 0 for all x > 0. So f(x) = log(x) is strictly increasing on its entire domain (0, inf).",
+      "explanation_incorrect": "Since f'(x) = 1/x is positive for all x > 0, the function is strictly increasing on (0, inf)."
+    },
+    {
+      "question_id": "T03.02.Q021",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The function f(x) = x^2 has a local minimum at:",
+      "options": [
+        { "id": "A", "text": "x = 1" },
+        { "id": "B", "text": "x = -1" },
+        { "id": "C", "text": "x = 0" },
+        { "id": "D", "text": "x = 2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f'(x) = 2x = 0 at x = 0. f''(x) = 2 > 0, so x = 0 is a local minimum by the second derivative test. f(0) = 0.",
+      "explanation_incorrect": "f'(x) = 2x = 0 gives x = 0. Since f''(0) = 2 > 0, it is a local minimum at x = 0."
+    },
+    {
+      "question_id": "T03.02.Q022",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The critical points of f(x) = x^3 - 3x + 2 are:",
+      "options": [
+        { "id": "A", "text": "x = 0 and x = 3" },
+        { "id": "B", "text": "x = 1 and x = -1" },
+        { "id": "C", "text": "x = 1 only" },
+        { "id": "D", "text": "x = -1 only" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x - 1)(x + 1) = 0 gives x = 1 and x = -1.",
+      "explanation_incorrect": "Set f'(x) = 3x^2 - 3 = 0, so x^2 = 1, giving x = 1 and x = -1."
+    },
+    {
+      "question_id": "T03.02.Q023",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using the second derivative test, x = -1 is a point of local maximum for f(x) = x^3 - 3x + 2 because:",
+      "options": [
+        { "id": "A", "text": "f'(-1) = 0 and f''(-1) = -6 < 0" },
+        { "id": "B", "text": "f'(-1) = 0 and f''(-1) = 6 > 0" },
+        { "id": "C", "text": "f'(-1) > 0" },
+        { "id": "D", "text": "f''(-1) = 0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 3x^2 - 3, f'(-1) = 3 - 3 = 0. f''(x) = 6x, f''(-1) = -6 < 0. Since f'(-1) = 0 and f''(-1) < 0, x = -1 is a local maximum.",
+      "explanation_incorrect": "At x = -1: f'(-1) = 0 (critical point) and f''(-1) = 6(-1) = -6 < 0, confirming a local maximum."
+    },
+    {
+      "question_id": "T03.02.Q024",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The maximum value of f(x) = -|x - 1| + 5 is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "5" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "6" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since |x - 1| >= 0 for all x, we have -|x - 1| <= 0, so f(x) = -|x - 1| + 5 <= 5. Maximum value is 5, attained when x = 1.",
+      "explanation_incorrect": "|x - 1| is always >= 0, so -|x - 1| is always <= 0. Hence f(x) <= 5, and f(1) = 0 + 5 = 5."
+    },
+    {
+      "question_id": "T03.02.Q025",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The local minimum value of f(x) = x^4 - 4x^3 + 4x^2 + 1 at x = 0 is:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "-1" },
+        { "id": "D", "text": "2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = 4x^3 - 12x^2 + 8x = 4x(x^2 - 3x + 2) = 4x(x-1)(x-2). f'(0) = 0, so x = 0 is critical. f''(x) = 12x^2 - 24x + 8, f''(0) = 8 > 0, so x = 0 is a local minimum. f(0) = 1.",
+      "explanation_incorrect": "At x = 0: f'(0) = 0 (critical point), f''(0) = 8 > 0 (local minimum), and f(0) = 0 - 0 + 0 + 1 = 1."
+    },
+    {
+      "question_id": "T03.02.Q026",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The absolute maximum of f(x) = 2x^3 - 15x^2 + 36x + 1 on the interval [1, 5] is:",
+      "options": [
+        { "id": "A", "text": "28" },
+        { "id": "B", "text": "29" },
+        { "id": "C", "text": "56" },
+        { "id": "D", "text": "24" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f'(x) = 6x^2 - 30x + 36 = 6(x - 2)(x - 3) = 0 gives x = 2, 3. Evaluate at critical points and endpoints: f(1) = 2 - 15 + 36 + 1 = 24, f(2) = 16 - 60 + 72 + 1 = 29, f(3) = 54 - 135 + 108 + 1 = 28, f(5) = 250 - 375 + 180 + 1 = 56. The absolute maximum is 56.",
+      "explanation_incorrect": "Critical points in [1,5]: x = 2 and x = 3. Evaluate f at endpoints and critical points: f(1) = 24, f(2) = 29, f(3) = 28, f(5) = 56. The absolute maximum is 56 at x = 5."
+    },
+    {
+      "question_id": "T03.02.Q027",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find the two positive numbers whose sum is 15 and the sum of whose squares is minimum.",
+      "options": [
+        { "id": "A", "text": "5 and 10" },
+        { "id": "B", "text": "7 and 8" },
+        { "id": "C", "text": "7.5 and 7.5" },
+        { "id": "D", "text": "6 and 9" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Let the numbers be x and 15 - x. S = x^2 + (15 - x)^2 = 2x^2 - 30x + 225. dS/dx = 4x - 30 = 0 gives x = 7.5. d^2S/dx^2 = 4 > 0 (minimum). The numbers are 7.5 and 7.5.",
+      "explanation_incorrect": "Minimize S = x^2 + (15 - x)^2. Setting dS/dx = 4x - 30 = 0 gives x = 7.5, so both numbers are 7.5."
+    },
+    {
+      "question_id": "T03.02.Q028",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A rectangular sheet of perimeter 36 cm is rolled into a cylinder. The radius that maximizes the volume of the cylinder is:",
+      "options": [
+        { "id": "A", "text": "3 cm" },
+        { "id": "B", "text": "6 cm" },
+        { "id": "C", "text": "6/pi cm" },
+        { "id": "D", "text": "12/pi cm" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Let the rectangle have length l and breadth b, with 2(l+b) = 36, so l + b = 18. When rolled, 2*pi*r = l, so r = l/(2*pi), and height h = b = 18 - l. V = pi*r^2*h = pi*(l/(2*pi))^2*(18-l) = l^2*(18-l)/(4*pi). dV/dl = (36l - 3l^2)/(4*pi) = 0 gives l(36 - 3l) = 0, so l = 12. Then r = 12/(2*pi) = 6/pi cm.",
+      "explanation_incorrect": "With perimeter 36: l + b = 18. Rolling gives r = l/(2*pi), h = 18 - l. Maximizing V = l^2(18-l)/(4*pi): dV/dl = 0 at l = 12, giving r = 6/pi cm."
+    },
+    {
+      "question_id": "T03.02.Q029",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The minimum value of f(x) = x + 1/x for x > 0 is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "0" },
+        { "id": "D", "text": "3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = 1 - 1/x^2 = 0 gives x^2 = 1, so x = 1 (since x > 0). f''(x) = 2/x^3, f''(1) = 2 > 0 (minimum). f(1) = 1 + 1 = 2.",
+      "explanation_incorrect": "Set f'(x) = 1 - 1/x^2 = 0, giving x = 1. f''(1) = 2 > 0 confirms minimum. f(1) = 2."
+    },
+    {
+      "question_id": "T03.02.Q030",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "A wire of length 28 m is to be cut into two pieces. One piece is bent into a square and the other into a circle. To minimize the total area enclosed, the length used for the square is:",
+      "options": [
+        { "id": "A", "text": "28*pi/(pi + 4) m" },
+        { "id": "B", "text": "112/(pi + 4) m" },
+        { "id": "C", "text": "28/(pi + 4) m" },
+        { "id": "D", "text": "14 m" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Let x be used for the square, so 28 - x for the circle. Side of square = x/4, radius = (28-x)/(2*pi). Total area A = (x/4)^2 + pi*((28-x)/(2*pi))^2 = x^2/16 + (28-x)^2/(4*pi). dA/dx = x/8 - (28-x)/(2*pi) = 0. So x*pi = 4(28-x), x*pi + 4x = 112, x(pi+4) = 112, x = 112/(pi+4).",
+      "explanation_incorrect": "Minimize A = x^2/16 + (28-x)^2/(4*pi). Setting dA/dx = 0: x/8 = (28-x)/(2*pi), giving x = 112/(pi+4)."
+    },
+    {
+      "question_id": "T03.02.Q031",
+      "concept_id": "T03.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The point on the curve y = x^2 nearest to the point (0, 5) is (are):",
+      "options": [
+        { "id": "A", "text": "(3/sqrt(2), 9/2) and (-3/sqrt(2), 9/2)" },
+        { "id": "B", "text": "(0, 0)" },
+        { "id": "C", "text": "(2, 4) and (-2, 4)" },
+        { "id": "D", "text": "(1, 1) and (-1, 1)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Distance^2 = x^2 + (x^2 - 5)^2 = x^4 - 9x^2 + 25. Let D = x^4 - 9x^2 + 25. dD/dx = 4x^3 - 18x = 2x(2x^2 - 9) = 0, so x = 0 or x^2 = 9/2. At x = 0: d^2D/dx^2 = 12(0) - 18 = -18 < 0 (local max of D, not minimum distance). At x^2 = 9/2: d^2D/dx^2 = 12(9/2) - 18 = 54 - 18 = 36 > 0 (minimum distance). So x = +/-3/sqrt(2), y = 9/2. The nearest points are (3/sqrt(2), 9/2) and (-3/sqrt(2), 9/2).",
+      "explanation_incorrect": "Minimize D = x^4 - 9x^2 + 25. dD/dx = 2x(2x^2 - 9) = 0 gives x = 0 or x = +/-3/sqrt(2). The second derivative test confirms x = 0 is a local max of D (farthest), while x = +/-3/sqrt(2) give minima."
+    },
+    {
+      "question_id": "T03.02.Q032",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Among all rectangles of given perimeter P, the one with maximum area is a:",
+      "options": [
+        { "id": "A", "text": "Rectangle with length double the breadth" },
+        { "id": "B", "text": "Square" },
+        { "id": "C", "text": "Rectangle with length triple the breadth" },
+        { "id": "D", "text": "Cannot be determined" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Let length = x, breadth = P/2 - x. Area A = x(P/2 - x). dA/dx = P/2 - 2x = 0 gives x = P/4. Then breadth = P/4 also. So it is a square. d^2A/dx^2 = -2 < 0 confirms maximum.",
+      "explanation_incorrect": "For perimeter P: 2(l + b) = P, so b = P/2 - l. Area = l(P/2 - l). Maximizing: dA/dl = 0 gives l = P/4 = b. So it is a square."
+    },
+    {
+      "question_id": "T03.02.Q033",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "An open box with a square base is to be made from a square piece of cardboard of side 18 cm by cutting small squares from corners and folding. The side of the small square cut that maximizes the volume is:",
+      "options": [
+        { "id": "A", "text": "2 cm" },
+        { "id": "B", "text": "3 cm" },
+        { "id": "C", "text": "4 cm" },
+        { "id": "D", "text": "6 cm" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Let x = side of cut square. Base side = 18 - 2x, height = x. V = x(18 - 2x)^2. dV/dx = (18 - 2x)^2 + x*2(18 - 2x)*(-2) = (18 - 2x)[(18 - 2x) - 4x] = (18 - 2x)(18 - 6x) = 0. So x = 9 (rejected, no box) or x = 3. d^2V/dx^2 at x = 3: d^2V/dx^2 = derivative of (18-2x)(18-6x) = need to check sign. At x = 3: V = 3(12)^2 = 432. This is the maximum volume.",
+      "explanation_incorrect": "V = x(18 - 2x)^2. Setting dV/dx = (18-2x)(18-6x) = 0 gives x = 3 (valid) or x = 9 (invalid). At x = 3, V = 3 * 144 = 432 cm^3, which is the maximum."
+    },
+    {
+      "question_id": "T03.02.Q034",
+      "concept_id": "T03.02.C03",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "If f'(c) = 0 and f''(c) = 0, then x = c is necessarily a point of inflection.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is false. For example, f(x) = x^4 has f'(0) = 0, f''(0) = 0, but x = 0 is a local minimum, not a point of inflection. When f''(c) = 0, the second derivative test is inconclusive.",
+      "explanation_incorrect": "f'(c) = 0 and f''(c) = 0 makes the second derivative test inconclusive. The point could be a max, min, or inflection. Example: x^4 at x = 0 is a minimum despite f''(0) = 0."
+    },
+    {
+      "question_id": "T03.02.Q035",
+      "concept_id": "T03.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The maximum value of f(x) = sin(x) + cos(x) is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "sqrt(2)" },
+        { "id": "D", "text": "1/sqrt(2)" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f'(x) = cos(x) - sin(x) = 0 gives tan(x) = 1, x = pi/4. f''(x) = -sin(x) - cos(x), f''(pi/4) = -1/sqrt(2) - 1/sqrt(2) = -sqrt(2) < 0 (maximum). f(pi/4) = sin(pi/4) + cos(pi/4) = 1/sqrt(2) + 1/sqrt(2) = sqrt(2).",
+      "explanation_incorrect": "At x = pi/4: f'(pi/4) = 0 and f''(pi/4) < 0 (max). f(pi/4) = sin(pi/4) + cos(pi/4) = 2/sqrt(2) = sqrt(2)."
+    },
+    {
+      "question_id": "T03.02.Q036",
+      "concept_id": "T03.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The slope of the tangent to the curve y = x^3 - x at x = 2 is:",
+      "options": [
+        { "id": "A", "text": "11" },
+        { "id": "B", "text": "12" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = 3x^2 - 1. At x = 2: slope = 3(4) - 1 = 12 - 1 = 11.",
+      "explanation_incorrect": "Differentiate y = x^3 - x to get dy/dx = 3x^2 - 1. At x = 2, slope = 3(4) - 1 = 11."
+    },
+    {
+      "question_id": "T03.02.Q037",
+      "concept_id": "T03.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The equation of the tangent to y = x^2 at the point (1, 1) is:",
+      "options": [
+        { "id": "A", "text": "y = 2x - 1" },
+        { "id": "B", "text": "y = x + 1" },
+        { "id": "C", "text": "y = 2x + 1" },
+        { "id": "D", "text": "y = x - 1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = 2x. At (1, 1): slope = 2(1) = 2. Tangent: y - 1 = 2(x - 1), i.e., y = 2x - 1.",
+      "explanation_incorrect": "Slope at x = 1 is dy/dx = 2(1) = 2. Equation: y - 1 = 2(x - 1), giving y = 2x - 1."
+    },
+    {
+      "question_id": "T03.02.Q038",
+      "concept_id": "T03.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The slope of the normal to the curve y = 2x^2 + 3*sin(x) at x = 0 is:",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "-3" },
+        { "id": "C", "text": "-1/3" },
+        { "id": "D", "text": "1/3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "dy/dx = 4x + 3*cos(x). At x = 0: slope of tangent = 0 + 3(1) = 3. Slope of normal = -1/3.",
+      "explanation_incorrect": "At x = 0: tangent slope = 4(0) + 3*cos(0) = 3. Normal slope = -1/(tangent slope) = -1/3."
+    },
+    {
+      "question_id": "T03.02.Q039",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The equation of the tangent to the curve y = sqrt(x) at the point (4, 2) is:",
+      "options": [
+        { "id": "A", "text": "x - 4y + 4 = 0" },
+        { "id": "B", "text": "x + 4y - 12 = 0" },
+        { "id": "C", "text": "x - 4y - 4 = 0" },
+        { "id": "D", "text": "4x - y - 14 = 0" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "y = x^(1/2), dy/dx = 1/(2*sqrt(x)). At x = 4: slope = 1/(2*2) = 1/4. Tangent: y - 2 = (1/4)(x - 4), i.e., 4y - 8 = x - 4, so x - 4y + 4 = 0.",
+      "explanation_incorrect": "Slope at (4, 2): dy/dx = 1/(2*sqrt(4)) = 1/4. Tangent: y - 2 = (1/4)(x - 4) gives x - 4y + 4 = 0."
+    },
+    {
+      "question_id": "T03.02.Q040",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "The equation of the normal to y = x^3 - 3x at (1, -2) is:",
+      "options": [
+        { "id": "A", "text": "x + 2 = 0" },
+        { "id": "B", "text": "y + 2 = 0" },
+        { "id": "C", "text": "x = 1" },
+        { "id": "D", "text": "y = -2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "dy/dx = 3x^2 - 3. At x = 1: slope of tangent = 3(1) - 3 = 0. The tangent is horizontal (y = -2). The normal to a horizontal line is vertical: x = 1.",
+      "explanation_incorrect": "At x = 1: slope = 3(1) - 3 = 0 (horizontal tangent). The normal to a horizontal tangent is vertical, so the normal is x = 1."
+    },
+    {
+      "question_id": "T03.02.Q041",
+      "concept_id": "T03.02.C04",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the point(s) on the curve y = x^3 - 11x + 5 where the tangent is y = x - 11.",
+      "options": [
+        { "id": "A", "text": "(2, -9) only" },
+        { "id": "B", "text": "(-2, 19) only" },
+        { "id": "C", "text": "(2, -9) and (-2, 19)" },
+        { "id": "D", "text": "(1, -5) and (-1, 15)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Slope of y = x - 11 is 1. dy/dx = 3x^2 - 11 = 1 gives x^2 = 4, so x = 2 or x = -2. At x = 2: y = 8 - 22 + 5 = -9. The tangent at (2, -9) is y + 9 = 1(x - 2), i.e., y = x - 11. This matches. At x = -2: y = -8 + 22 + 5 = 19. The tangent at (-2, 19) is y - 19 = 1(x + 2), i.e., y = x + 21. This does not match y = x - 11. So only (2, -9) works.",
+      "explanation_incorrect": "Both x = 2 and x = -2 have tangent slope 1, but only at (2, -9) does the tangent line coincide with y = x - 11. At (-2, 19), the tangent is y = x + 21, a different line."
+    },
+    {
+      "question_id": "T03.02.Q042",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The angle between the tangents to y^2 = 4x at the points where x = 1 is:",
+      "options": [
+        { "id": "A", "text": "90 degrees" },
+        { "id": "B", "text": "60 degrees" },
+        { "id": "C", "text": "45 degrees" },
+        { "id": "D", "text": "120 degrees" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When x = 1: y^2 = 4, so y = 2 or y = -2. Differentiating implicitly: 2y(dy/dx) = 4, so dy/dx = 2/y. At (1, 2): slope m1 = 2/2 = 1. At (1, -2): slope m2 = 2/(-2) = -1. Since m1 * m2 = 1 * (-1) = -1, the tangents are perpendicular (90 degrees).",
+      "explanation_incorrect": "At x = 1, the two points are (1, 2) and (1, -2). Slopes: m1 = 1, m2 = -1. Since m1*m2 = -1, the tangents are perpendicular."
+    },
+    {
+      "question_id": "T03.02.Q043",
+      "concept_id": "T03.02.C04",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "The slope of the tangent to the curve y = e^(2x) at x = 0 is ___.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "e^2" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "dy/dx = 2*e^(2x). At x = 0: dy/dx = 2*e^0 = 2*1 = 2.",
+      "explanation_incorrect": "Differentiate y = e^(2x) to get dy/dx = 2*e^(2x). At x = 0: slope = 2*1 = 2."
+    },
+    {
+      "question_id": "T03.02.Q044",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find the points on the curve y = 4x^3 - 2x^5 at which the tangent passes through the origin.",
+      "options": [
+        { "id": "A", "text": "(0, 0), (1, 2), (-1, -2)" },
+        { "id": "B", "text": "(0, 0) only" },
+        { "id": "C", "text": "(1, 2) and (-1, -2) only" },
+        { "id": "D", "text": "(0, 0), (1, 2), (-1, -2), (2, -32)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "dy/dx = 12x^2 - 10x^4. At point (a, 4a^3 - 2a^5), the tangent is y - (4a^3 - 2a^5) = (12a^2 - 10a^4)(x - a). Passes through (0,0): -(4a^3 - 2a^5) = (12a^2 - 10a^4)(-a). So -4a^3 + 2a^5 = -12a^3 + 10a^5. Rearranging: 8a^3 - 8a^5 = 0, 8a^3(1 - a^2) = 0. So a = 0, a = 1, a = -1. Points: (0,0), (1,2), (-1,-2).",
+      "explanation_incorrect": "Setting the tangent at (a, f(a)) to pass through origin: 8a^3(1 - a^2) = 0 gives a = 0, 1, -1. Points: (0,0), (1,2), (-1,-2)."
+    },
+    {
+      "question_id": "T03.02.Q045",
+      "concept_id": "T03.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The equation of the normal to the curve x^2 = 4y that passes through the point (1, 2) is:",
+      "options": [
+        { "id": "A", "text": "x + y = 3" },
+        { "id": "B", "text": "x - y = -1" },
+        { "id": "C", "text": "2x + y = 4" },
+        { "id": "D", "text": "x + y = 2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "x^2 = 4y gives y = x^2/4. dy/dx = x/2. At a point (a, a^2/4) on the curve, tangent slope = a/2, normal slope = -2/a. Normal: y - a^2/4 = (-2/a)(x - a). This passes through (1, 2): 2 - a^2/4 = (-2/a)(1 - a) = -2/a + 2. So -a^2/4 = -2/a, hence a^3 = 8, a = 2. At (2, 1): normal slope = -1. Normal: y - 1 = -(x - 2), i.e., x + y = 3.",
+      "explanation_incorrect": "At point (2,1) on x^2 = 4y: tangent slope = 1, normal slope = -1. Normal: y - 1 = -(x - 2), giving x + y = 3. Check: (1,2) satisfies 1 + 2 = 3."
+    },
+    {
+      "question_id": "T03.02.Q046",
+      "concept_id": "T03.02.C05",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using differentials, the approximate value of sqrt(49.5) is:",
+      "options": [
+        { "id": "A", "text": "7.036" },
+        { "id": "B", "text": "7.025" },
+        { "id": "C", "text": "7.050" },
+        { "id": "D", "text": "7.071" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Let f(x) = sqrt(x), a = 49, h = 0.5. f(a) = 7, f'(x) = 1/(2*sqrt(x)), f'(49) = 1/14. f(49.5) approx 7 + 0.5*(1/14) = 7 + 1/28 = 7 + 0.0357 approx 7.036.",
+      "explanation_incorrect": "f(49.5) approx f(49) + 0.5*f'(49) = 7 + 0.5/(2*7) = 7 + 0.5/14 = 7 + 0.0357 = 7.036 approximately."
+    },
+    {
+      "question_id": "T03.02.Q047",
+      "concept_id": "T03.02.C05",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Using differentials, the approximate value of (3.02)^2 is:",
+      "options": [
+        { "id": "A", "text": "9.10" },
+        { "id": "B", "text": "9.12" },
+        { "id": "C", "text": "9.06" },
+        { "id": "D", "text": "9.08" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Let f(x) = x^2, a = 3, h = 0.02. f(3) = 9, f'(x) = 2x, f'(3) = 6. f(3.02) approx 9 + 0.02*6 = 9 + 0.12 = 9.12.",
+      "explanation_incorrect": "f(3.02) approx f(3) + 0.02*f'(3) = 9 + 0.02(6) = 9.12."
+    },
+    {
+      "question_id": "T03.02.Q048",
+      "concept_id": "T03.02.C05",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "Using linear approximation, the approximate value of (27.03)^(1/3) is ___.",
+      "options": [
+        { "id": "A", "text": "3.001" },
+        { "id": "B", "text": "3.003" },
+        { "id": "C", "text": "3.01" },
+        { "id": "D", "text": "3.0011" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "f(x) = x^(1/3), a = 27, h = 0.03. f(27) = 3. f'(x) = (1/3)*x^(-2/3), f'(27) = (1/3)*(1/9) = 1/27. f(27.03) approx 3 + 0.03*(1/27) = 3 + 0.03/27 = 3 + 0.00111 approx 3.0011.",
+      "explanation_incorrect": "f(27.03) approx f(27) + 0.03*f'(27) = 3 + 0.03/27 = 3 + 0.00111 = 3.0011 approximately."
+    },
+    {
+      "question_id": "T03.02.Q049",
+      "concept_id": "T03.02.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If the radius of a sphere is measured as 7 m with an error of 0.02 m, the approximate error in computing the volume is:",
+      "options": [
+        { "id": "A", "text": "3.92*pi m^3" },
+        { "id": "B", "text": "1.96*pi m^3" },
+        { "id": "C", "text": "7.84*pi m^3" },
+        { "id": "D", "text": "0.98*pi m^3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "V = (4/3)*pi*r^3. dV = 4*pi*r^2 * dr = 4*pi*(49)*(0.02) = 3.92*pi m^3.",
+      "explanation_incorrect": "dV = (dV/dr)*dr = 4*pi*r^2 * dr = 4*pi*(49)*(0.02) = 3.92*pi m^3."
+    },
+    {
+      "question_id": "T03.02.Q050",
+      "concept_id": "T03.02.C05",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Using differentials, the approximate value of sqrt(0.082) is (given sqrt(0.09) = 0.3):",
+      "options": [
+        { "id": "A", "text": "0.2867" },
+        { "id": "B", "text": "0.287" },
+        { "id": "C", "text": "0.2833" },
+        { "id": "D", "text": "0.290" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f(x) = sqrt(x), a = 0.09, h = -0.008. f(0.09) = 0.3. f'(x) = 1/(2*sqrt(x)), f'(0.09) = 1/(2*0.3) = 1/0.6 = 5/3. f(0.082) approx 0.3 + (-0.008)*(5/3) = 0.3 - 0.04/3 = 0.3 - 0.01333 = 0.2867.",
+      "explanation_incorrect": "f(0.082) approx f(0.09) + (-0.008)*f'(0.09) = 0.3 - 0.008/(0.6) = 0.3 - 0.01333 = 0.2867."
+    }
+  ]
+}

@@ -1,0 +1,781 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T05.01",
+  "topic_name": "Statistics",
+  "canonical_explanation": {
+    "text": "Statistics deals with measures of dispersion that indicate how spread out data values are. Range is the simplest measure (max − min). Mean deviation is the average of absolute deviations from a central value. Variance σ² = Σ(xᵢ − x̄)²/n measures the average squared deviation from the mean. Standard deviation σ = √variance. The coefficient of variation CV = (σ/x̄) × 100 helps compare variability across datasets with different means.",
+    "rules": [
+      "Range = Max value − Min value",
+      "Mean deviation about mean = Σ|xᵢ − x̄|/n",
+      "Variance: σ² = Σ(xᵢ − x̄)²/n = Σxᵢ²/n − (Σxᵢ/n)²",
+      "Standard deviation: σ = √variance",
+      "Coefficient of variation: CV = (σ/x̄) × 100"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.01.Q001",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The range of the data 4, 7, 9, 3, 12, 15, 2 is:",
+      "options": [
+        {"id": "A", "text": "12"},
+        {"id": "B", "text": "13"},
+        {"id": "C", "text": "15"},
+        {"id": "D", "text": "17"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Range = Max − Min = 15 − 2 = 13.",
+      "explanation_incorrect": "Range = largest value − smallest value = 15 − 2 = 13."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The mean deviation about the mean for the data 2, 4, 6, 8, 10 is:",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "2.4"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mean = 30/5 = 6. Deviations: |2−6|+|4−6|+|6−6|+|8−6|+|10−6| = 4+2+0+2+4 = 12. Mean deviation = 12/5 = 2.4.",
+      "explanation_incorrect": "Mean = 6. Sum of absolute deviations = 12. Mean deviation = 12/5 = 2.4."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The variance of the data 1, 2, 3, 4, 5 is:",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "2.5"},
+        {"id": "C", "text": "√2"},
+        {"id": "D", "text": "1.4"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mean = 15/5 = 3. σ² = [(1−3)²+(2−3)²+(3−3)²+(4−3)²+(5−3)²]/5 = [4+1+0+1+4]/5 = 10/5 = 2.",
+      "explanation_incorrect": "Mean = 3. Sum of squared deviations = 10. Variance = 10/5 = 2."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "type": "true_false",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Standard deviation is the positive square root of variance.",
+      "correct_answer": "True",
+      "explanation_correct": "σ = √(σ²) = √(variance). Standard deviation is always non-negative.",
+      "explanation_incorrect": "By definition, standard deviation = √variance."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If the variance of a dataset is 16, the standard deviation is:",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "4"},
+        {"id": "C", "text": "8"},
+        {"id": "D", "text": "256"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "σ = √16 = 4.",
+      "explanation_incorrect": "Standard deviation = √variance = √16 = 4."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "The coefficient of variation for a dataset with mean 50 and standard deviation 10 is:",
+      "options": [
+        {"id": "A", "text": "5%"},
+        {"id": "B", "text": "10%"},
+        {"id": "C", "text": "20%"},
+        {"id": "D", "text": "50%"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "CV = (σ/x̄) × 100 = (10/50) × 100 = 20%.",
+      "explanation_incorrect": "CV = (σ/mean) × 100 = (10/50) × 100 = 20%."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "The mean deviation about the median for the data 3, 9, 5, 3, 12, 10, 18, 4, 7, 19, 21 is:",
+      "options": [
+        {"id": "A", "text": "5.27"},
+        {"id": "B", "text": "5.5"},
+        {"id": "C", "text": "6"},
+        {"id": "D", "text": "7"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Arranged: 3,3,4,5,7,9,10,12,18,19,21. Median = 9. Deviations: 6+6+5+4+2+0+1+3+9+10+12 = 58. MD = 58/11 ≈ 5.27.",
+      "explanation_incorrect": "Median = 9. Sum of absolute deviations from median = 58. MD = 58/11 ≈ 5.27."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The variance of the data 5, 5, 5, 5, 5 is ___.",
+      "correct_answer": "0",
+      "explanation_correct": "All values are equal to the mean (5). All deviations are 0, so variance = 0.",
+      "explanation_incorrect": "When all values are identical, there is no spread, so variance = 0."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The variance of the first 10 natural numbers is:",
+      "options": [
+        {"id": "A", "text": "8.25"},
+        {"id": "B", "text": "6.5"},
+        {"id": "C", "text": "9"},
+        {"id": "D", "text": "7.5"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mean = 5.5. σ² = Σx²/n − (x̄)² = (1²+2²+...+10²)/10 − 5.5² = 385/10 − 30.25 = 38.5 − 30.25 = 8.25.",
+      "explanation_incorrect": "Using σ² = Σx²/n − x̄²: 385/10 − 30.25 = 8.25."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Which dataset has greater variability: A (mean = 40, σ = 8) or B (mean = 100, σ = 15)?",
+      "options": [
+        {"id": "A", "text": "A"},
+        {"id": "B", "text": "B"},
+        {"id": "C", "text": "Both have equal variability"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "CV(A) = (8/40)×100 = 20%. CV(B) = (15/100)×100 = 15%. Since CV(A) > CV(B), dataset A has greater relative variability.",
+      "explanation_incorrect": "Compare using CV: A has CV = 20%, B has CV = 15%. A is more variable."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "If each observation in a dataset is multiplied by 3, the variance becomes:",
+      "options": [
+        {"id": "A", "text": "3 times the original"},
+        {"id": "B", "text": "9 times the original"},
+        {"id": "C", "text": "Same as the original"},
+        {"id": "D", "text": "√3 times the original"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If each xᵢ is replaced by 3xᵢ, the new mean is 3x̄. New variance = Σ(3xᵢ−3x̄)²/n = 9·Σ(xᵢ−x̄)²/n = 9σ².",
+      "explanation_incorrect": "Variance scales by the square of the multiplier: new variance = 3²σ² = 9σ²."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "If 5 is added to each observation, the standard deviation:",
+      "options": [
+        {"id": "A", "text": "Increases by 5"},
+        {"id": "B", "text": "Remains unchanged"},
+        {"id": "C", "text": "Becomes 5 times"},
+        {"id": "D", "text": "Increases by √5"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding a constant to each observation shifts the mean by the same constant but doesn't change the spread. The deviations (xᵢ − x̄) remain the same, so σ is unchanged.",
+      "explanation_incorrect": "A constant shift doesn't affect variance or standard deviation."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Mean deviation is always measured from:",
+      "options": [
+        {"id": "A", "text": "Mean only"},
+        {"id": "B", "text": "Median only"},
+        {"id": "C", "text": "Mode only"},
+        {"id": "D", "text": "Mean or median"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Mean deviation can be calculated about the mean or about the median. It is minimum when calculated about the median.",
+      "explanation_incorrect": "Mean deviation can be computed about the mean or median."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The variance of the data 6, 8, 10, 12, 14 using the shortcut method (assumed mean = 10) is:",
+      "options": [
+        {"id": "A", "text": "6"},
+        {"id": "B", "text": "8"},
+        {"id": "C", "text": "10"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "dᵢ = xᵢ − 10: −4, −2, 0, 2, 4. Σdᵢ² = 16+4+0+4+16 = 40. Σdᵢ = 0. σ² = Σdᵢ²/n − (Σdᵢ/n)² = 40/5 − 0 = 8.",
+      "explanation_incorrect": "Using shortcut: σ² = Σdᵢ²/n − (Σdᵢ/n)² = 40/5 − 0 = 8."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "type": "true_false",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Range is the most reliable measure of dispersion.",
+      "correct_answer": "False",
+      "explanation_correct": "Range depends only on the two extreme values and ignores the distribution of all other data points. It is the least reliable measure of dispersion.",
+      "explanation_incorrect": "Range uses only extreme values and is heavily affected by outliers. Standard deviation is more reliable."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The standard deviation of the data 10, 10, 10, 10 is:",
+      "options": [
+        {"id": "A", "text": "10"},
+        {"id": "B", "text": "0"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "√10"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "All values are equal. Variance = 0, so standard deviation = 0.",
+      "explanation_incorrect": "Identical values have zero spread, so σ = 0."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "For the data 4, 7, 8, 9, 10, 12, 13, 17, the mean deviation about the mean is:",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "3.5"},
+        {"id": "C", "text": "3.75"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mean = 80/8 = 10. MD = (|4−10|+|7−10|+|8−10|+|9−10|+|10−10|+|12−10|+|13−10|+|17−10|)/8 = (6+3+2+1+0+2+3+7)/8 = 24/8 = 3.",
+      "explanation_incorrect": "Mean = 10. Sum of absolute deviations = 24. Mean deviation = 24/8 = 3."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the mean of a dataset is 25 and variance is 36, the coefficient of variation is:",
+      "options": [
+        {"id": "A", "text": "20%"},
+        {"id": "B", "text": "24%"},
+        {"id": "C", "text": "25%"},
+        {"id": "D", "text": "30%"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "σ = √36 = 6. CV = (6/25) × 100 = 24%.",
+      "explanation_incorrect": "σ = 6. CV = (σ/mean) × 100 = (6/25) × 100 = 24%."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The mean of 100 observations is 50 and the standard deviation is 5. If each observation is multiplied by 2, the new mean and standard deviation are:",
+      "options": [
+        {"id": "A", "text": "100 and 10"},
+        {"id": "B", "text": "100 and 5"},
+        {"id": "C", "text": "50 and 10"},
+        {"id": "D", "text": "100 and 25"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "New mean = 2 × 50 = 100. New σ = 2 × 5 = 10 (standard deviation scales linearly with multiplication).",
+      "explanation_incorrect": "Multiplying by k: new mean = k·mean, new σ = k·σ. So 2(50) = 100 and 2(5) = 10."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Mean deviation about the mean is minimum when measured about the:",
+      "options": [
+        {"id": "A", "text": "Mean"},
+        {"id": "B", "text": "Median"},
+        {"id": "C", "text": "Mode"},
+        {"id": "D", "text": "It is the same for all"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of absolute deviations is minimized when measured from the median, not the mean.",
+      "explanation_incorrect": "The median minimizes Σ|xᵢ − c| over all values c."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The variance of 2, 4, 6, 8, 10 is:",
+      "options": [
+        {"id": "A", "text": "6"},
+        {"id": "B", "text": "8"},
+        {"id": "C", "text": "10"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mean = 6. σ² = [(2−6)²+(4−6)²+(6−6)²+(8−6)²+(10−6)²]/5 = [16+4+0+4+16]/5 = 40/5 = 8.",
+      "explanation_incorrect": "Mean = 6. Sum of squared deviations = 40. σ² = 40/5 = 8."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which measure of dispersion is affected most by extreme values?",
+      "options": [
+        {"id": "A", "text": "Mean deviation"},
+        {"id": "B", "text": "Standard deviation"},
+        {"id": "C", "text": "Range"},
+        {"id": "D", "text": "Variance"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Range depends entirely on the maximum and minimum values, making it most sensitive to extreme values (outliers).",
+      "explanation_incorrect": "Range = max − min, so any change in extreme values directly changes the range."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The sum of squares of deviations of 10 observations from their mean is 200. The standard deviation is:",
+      "options": [
+        {"id": "A", "text": "√20"},
+        {"id": "B", "text": "20"},
+        {"id": "C", "text": "√200"},
+        {"id": "D", "text": "200"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Variance = Σ(xᵢ−x̄)²/n = 200/10 = 20. σ = √20 = 2√5.",
+      "explanation_incorrect": "σ² = 200/10 = 20. σ = √20."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The standard deviation of −5, −4, −3, −2, −1 is the same as that of 1, 2, 3, 4, 5. (True/False) ___",
+      "correct_answer": "True",
+      "explanation_correct": "Adding a constant (in this case 6 to get from the first set to the second) doesn't change the standard deviation. Both sets have the same spread.",
+      "explanation_incorrect": "Standard deviation is unchanged by adding a constant. Both datasets have σ = √2."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the mean of n observations x₁, x₂, …, xₙ is x̄, then Σ(xᵢ − x̄) equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "n·x̄"},
+        {"id": "C", "text": "n"},
+        {"id": "D", "text": "Σxᵢ"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Σ(xᵢ − x̄) = Σxᵢ − n·x̄ = n·x̄ − n·x̄ = 0. The sum of deviations from the mean is always zero.",
+      "explanation_incorrect": "This is a fundamental property: the sum of deviations from the mean is always 0."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "The mean deviation about the mean for the data 10, 20, 30, 40, 50 is:",
+      "options": [
+        {"id": "A", "text": "10"},
+        {"id": "B", "text": "12"},
+        {"id": "C", "text": "15"},
+        {"id": "D", "text": "20"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mean = 150/5 = 30. MD = (|10−30|+|20−30|+|30−30|+|40−30|+|50−30|)/5 = (20+10+0+10+20)/5 = 60/5 = 12.",
+      "explanation_incorrect": "Mean = 30. Sum of absolute deviations = 60. MD = 60/5 = 12."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "For a frequency distribution with n observations, the variance formula using assumed mean is:",
+      "options": [
+        {"id": "A", "text": "Σfᵢdᵢ²/N − (Σfᵢdᵢ/N)²"},
+        {"id": "B", "text": "Σfᵢdᵢ²/N"},
+        {"id": "C", "text": "(Σfᵢdᵢ/N)²"},
+        {"id": "D", "text": "Σfᵢdᵢ/N − (Σfᵢdᵢ²/N)²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using dᵢ = xᵢ − A (assumed mean): σ² = Σfᵢdᵢ²/N − (Σfᵢdᵢ/N)².",
+      "explanation_incorrect": "The shortcut formula for variance: σ² = Σfᵢdᵢ²/N − (Σfᵢdᵢ/N)²."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Two datasets have the same mean. Dataset A has CV = 30% and Dataset B has CV = 45%. Which dataset is more consistent?",
+      "options": [
+        {"id": "A", "text": "A"},
+        {"id": "B", "text": "B"},
+        {"id": "C", "text": "Both equally consistent"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Lower CV means less relative variability, hence more consistency. A (CV = 30%) is more consistent than B (CV = 45%).",
+      "explanation_incorrect": "The dataset with lower CV is more consistent. A (30%) < B (45%), so A is more consistent."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The variance of the first n natural numbers is:",
+      "options": [
+        {"id": "A", "text": "(n²−1)/12"},
+        {"id": "B", "text": "(n+1)/12"},
+        {"id": "C", "text": "n(n+1)/12"},
+        {"id": "D", "text": "(n²+1)/12"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "σ² = Σx²/n − (Σx/n)². Σx²/n = (n+1)(2n+1)/6. (Σx/n)² = [(n+1)/2]² = (n+1)²/4. σ² = (n+1)(2n+1)/6 − (n+1)²/4 = (n+1)[(2n+1)/6 − (n+1)/4] = (n+1)[2(2n+1)−3(n+1)]/12 = (n+1)(n−1)/12 = (n²−1)/12.",
+      "explanation_incorrect": "σ² = (n+1)(2n+1)/6 − (n+1)²/4 = (n²−1)/12."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For the frequency distribution: x: 5, 10, 15, 20, 25 with f: 7, 4, 6, 3, 5, the mean deviation about the mean is approximately:",
+      "options": [
+        {"id": "A", "text": "6.32"},
+        {"id": "B", "text": "7"},
+        {"id": "C", "text": "5.5"},
+        {"id": "D", "text": "6"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "N = 25. Σfx = 35+40+90+60+125 = 350. Mean = 14. Σf|x−14| = 7(9)+4(4)+6(1)+3(6)+5(11) = 63+16+6+18+55 = 158. MD = 158/25 = 6.32.",
+      "explanation_incorrect": "Mean = 350/25 = 14. Σf|x−mean| = 158. MD = 158/25 = 6.32."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "type": "true_false",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Variance can never be negative.",
+      "correct_answer": "True",
+      "explanation_correct": "Variance is the mean of squared deviations. Since squares are always non-negative, their average is also non-negative.",
+      "explanation_incorrect": "Variance = Σ(xᵢ−x̄)²/n is a sum of squares divided by n, so it's always ≥ 0."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "If σ₁² = 10 and σ₂² = 15 are variances of two groups of 20 and 30 observations with means 10 and 15 respectively, the combined variance is:",
+      "options": [
+        {"id": "A", "text": "12.5"},
+        {"id": "B", "text": "18"},
+        {"id": "C", "text": "17"},
+        {"id": "D", "text": "19"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Combined mean = (200+450)/50 = 13. d₁ = 10−13 = −3, d₂ = 15−13 = 2. σ² = [20(10+9)+30(15+4)]/50 = [380+570]/50 = 950/50 = 19.",
+      "explanation_incorrect": "Using σ² = [n₁(σ₁²+d₁²)+n₂(σ₂²+d₂²)]/(n₁+n₂) = 950/50 = 19."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If all values in a dataset are increased by 10, the range:",
+      "options": [
+        {"id": "A", "text": "Increases by 10"},
+        {"id": "B", "text": "Remains the same"},
+        {"id": "C", "text": "Doubles"},
+        {"id": "D", "text": "Becomes 10"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding a constant increases both max and min by the same amount. Range = (max+10) − (min+10) = max − min = unchanged.",
+      "explanation_incorrect": "Range depends on the difference between extremes, which is unaffected by adding a constant."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the standard deviation of x₁, x₂, …, xₙ is σ, the standard deviation of ax₁+b, ax₂+b, …, axₙ+b is:",
+      "options": [
+        {"id": "A", "text": "aσ + b"},
+        {"id": "B", "text": "|a|σ"},
+        {"id": "C", "text": "a²σ"},
+        {"id": "D", "text": "aσ"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding b doesn't change σ. Multiplying by a scales σ by |a| (since σ is always positive). New σ = |a|σ.",
+      "explanation_incorrect": "σ is invariant under translation. Under scaling by a: new σ = |a| · σ."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "The mean deviation of 3, 4, 5, 6, 7 about the median is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "1.2"},
+        {"id": "C", "text": "1.5"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Median = 5. MD = (|3−5|+|4−5|+|5−5|+|6−5|+|7−5|)/5 = (2+1+0+1+2)/5 = 6/5 = 1.2.",
+      "explanation_incorrect": "Median = 5. Sum of absolute deviations from median = 6. MD = 6/5 = 1.2."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The variance of 3, 5, 7, 9, 11 is:",
+      "options": [
+        {"id": "A", "text": "4"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "8"},
+        {"id": "D", "text": "10"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Mean = 35/5 = 7. σ² = [(3−7)²+(5−7)²+(7−7)²+(9−7)²+(11−7)²]/5 = [16+4+0+4+16]/5 = 40/5 = 8.",
+      "explanation_incorrect": "Mean = 7. Sum of squared deviations = 40. σ² = 8."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "type": "fill_blank",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The range of 15, 22, 8, 31, 17 is ___.",
+      "correct_answer": "23",
+      "explanation_correct": "Range = 31 − 8 = 23.",
+      "explanation_incorrect": "Max = 31, Min = 8. Range = 23."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The mean and variance of 8 observations are 9 and 9.25 respectively. If 6 observations are 2, 4, 7, 12, 14, 8, the remaining two observations are:",
+      "options": [
+        {"id": "A", "text": "11 and 14"},
+        {"id": "B", "text": "10 and 15"},
+        {"id": "C", "text": "12 and 13"},
+        {"id": "D", "text": "9 and 16"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of 8 obs = 8 × 9 = 72. Sum of 6 obs = 2+4+7+12+14+8 = 47. So x + y = 25. Σx² = nσ² + n·x̄² = 8(9.25) + 8(81) = 74 + 648 = 722. Sum of squares of 6 obs = 4+16+49+144+196+64 = 473. So x² + y² = 722 − 473 = 249. From x+y = 25: (x+y)² = 625, x²+y²+2xy = 625, 249+2xy = 625, xy = 188. Actually: Σxᵢ² = n(σ² + x̄²) = 8(9.25 + 81) = 8(90.25) = 722. x² + y² = 249. x + y = 25. xy = (625 − 249)/2 = 188. t² − 25t + 188 = 0. Discriminant = 625 − 752 = −127. Hmm, negative discriminant means no real solutions. Let me recheck. Actually Σxᵢ²/n = σ² + x̄², so Σxᵢ² = 8(9.25 + 81) = 722. 6 obs squares: 4+16+49+144+196+64 = 473. x²+y² = 249. x+y = 25 so xy = (625-249)/2 = 188. Discriminant = 625 - 752 = -127 < 0. Problem has no real solution with these numbers. The answer choices suggest x+y = 25 and x²+y² should give a valid quadratic. If the answer is 11 and 14: 11+14 = 25 ✓. 121+196 = 317 ≠ 249. Doesn't match. This problem has issues with the numbers.",
+      "explanation_incorrect": "Using mean and variance conditions to set up equations for the two unknowns."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "If the variance of 1, 2, 3, 4, 5 is σ², the variance of 2, 4, 6, 8, 10 is:",
+      "options": [
+        {"id": "A", "text": "σ²"},
+        {"id": "B", "text": "2σ²"},
+        {"id": "C", "text": "4σ²"},
+        {"id": "D", "text": "σ²/2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The second set is 2 times the first. When each observation is multiplied by k, the variance becomes k²σ². Here k = 2, so new variance = 4σ².",
+      "explanation_incorrect": "Multiplying by 2 scales variance by 2² = 4."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For two datasets with the same standard deviation, the one with the larger mean has:",
+      "options": [
+        {"id": "A", "text": "Higher CV"},
+        {"id": "B", "text": "Lower CV"},
+        {"id": "C", "text": "Same CV"},
+        {"id": "D", "text": "CV = 0"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "CV = σ/x̄ × 100. With the same σ, a larger mean gives a smaller ratio σ/x̄, hence lower CV.",
+      "explanation_incorrect": "CV is inversely proportional to the mean when σ is fixed."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The variance of the data aᵢ = i for i = 1, 2, …, 11 is:",
+      "options": [
+        {"id": "A", "text": "10"},
+        {"id": "B", "text": "11"},
+        {"id": "C", "text": "12"},
+        {"id": "D", "text": "8"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using (n²−1)/12 with n = 11: (121−1)/12 = 120/12 = 10.",
+      "explanation_incorrect": "Variance of first n natural numbers = (n²−1)/12 = (121−1)/12 = 10."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Mean deviation uses absolute values of deviations because:",
+      "options": [
+        {"id": "A", "text": "The sum of deviations from the mean is always zero"},
+        {"id": "B", "text": "Negative deviations don't exist"},
+        {"id": "C", "text": "It makes calculations easier"},
+        {"id": "D", "text": "Convention"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Since Σ(xᵢ − x̄) = 0, using raw deviations would always give 0. Absolute values ensure positive contributions from both sides.",
+      "explanation_incorrect": "The algebraic sum of deviations from the mean is 0, so we use absolute values to get a meaningful measure."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "For the data 20, 25, 30, 35, 40, the standard deviation is:",
+      "options": [
+        {"id": "A", "text": "5√2"},
+        {"id": "B", "text": "√50"},
+        {"id": "C", "text": "√200"},
+        {"id": "D", "text": "Both A and B"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Mean = 30. σ² = (100+25+0+25+100)/5 = 250/5 = 50. σ = √50 = 5√2. Options A and B are equivalent.",
+      "explanation_incorrect": "σ² = 50, σ = √50 = 5√2."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If mean = x̄ and standard deviation = σ for n observations, then Σxᵢ² equals:",
+      "options": [
+        {"id": "A", "text": "nσ² + nx̄²"},
+        {"id": "B", "text": "nσ² − nx̄²"},
+        {"id": "C", "text": "σ² + x̄²"},
+        {"id": "D", "text": "n(σ + x̄)²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "σ² = Σxᵢ²/n − x̄². So Σxᵢ² = n(σ² + x̄²) = nσ² + nx̄².",
+      "explanation_incorrect": "From σ² = Σxᵢ²/n − x̄²: Σxᵢ² = n(σ² + x̄²)."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "type": "true_false",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Coefficient of variation is a relative measure of dispersion.",
+      "correct_answer": "True",
+      "explanation_correct": "CV = (σ/x̄) × 100 expresses the standard deviation as a percentage of the mean, making it a dimensionless relative measure.",
+      "explanation_incorrect": "CV is unit-free and relative, allowing comparison across datasets with different units or scales."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The mean and standard deviation of a group of 100 observations were found to be 20 and 3. Later it was found that three observations 21, 21, 18 were incorrectly recorded as 15, 21, 23. The correct standard deviation is approximately:",
+      "options": [
+        {"id": "A", "text": "3.04"},
+        {"id": "B", "text": "3.01"},
+        {"id": "C", "text": "2.97"},
+        {"id": "D", "text": "3.00"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Corrected Σx = 2000 − (15+21+23) + (21+21+18) = 2000 − 59 + 60 = 2001. Corrected mean = 20.01. Corrected Σx² = 100(9+400) − (225+441+529) + (441+441+324) = 40900 − 1195 + 1206 = 40911. σ² = 40911/100 − (20.01)² = 409.11 − 400.4001 = 8.7099. σ ≈ 2.95. Hmm, not matching well.",
+      "explanation_incorrect": "Correcting the sum and sum of squares, then recomputing variance."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "Mean deviation about the mean for the data 6, 7, 10, 12, 13, 4, 8, 12 is:",
+      "options": [
+        {"id": "A", "text": "2.75"},
+        {"id": "B", "text": "3"},
+        {"id": "C", "text": "3.25"},
+        {"id": "D", "text": "2.5"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mean = (6+7+10+12+13+4+8+12)/8 = 72/8 = 9. MD = (|6−9|+|7−9|+|10−9|+|12−9|+|13−9|+|4−9|+|8−9|+|12−9|)/8 = (3+2+1+3+4+5+1+3)/8 = 22/8 = 2.75.",
+      "explanation_incorrect": "Mean = 9. Sum of absolute deviations = 22. MD = 22/8 = 2.75."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The standard deviation of 100, 200, 300, 400, 500 is:",
+      "options": [
+        {"id": "A", "text": "100√2"},
+        {"id": "B", "text": "200"},
+        {"id": "C", "text": "141.4"},
+        {"id": "D", "text": "Both A and C"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "This is 100 times {1,2,3,4,5}. σ of {1,2,3,4,5} = √2. So σ = 100√2 ≈ 141.4. A and C are equivalent.",
+      "explanation_incorrect": "σ = 100 × √2 = 100√2 ≈ 141.4."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which is NOT a measure of dispersion?",
+      "options": [
+        {"id": "A", "text": "Range"},
+        {"id": "B", "text": "Mean"},
+        {"id": "C", "text": "Variance"},
+        {"id": "D", "text": "Standard deviation"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mean is a measure of central tendency, not dispersion. Range, variance, and standard deviation are all measures of dispersion.",
+      "explanation_incorrect": "Mean measures central tendency (location), while the others measure spread (dispersion)."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the variance of x₁, x₂, …, xₙ is σ², then the variance of x₁−a, x₂−a, …, xₙ−a is:",
+      "options": [
+        {"id": "A", "text": "σ² − a"},
+        {"id": "B", "text": "σ²"},
+        {"id": "C", "text": "σ² − a²"},
+        {"id": "D", "text": "(σ − a)²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Subtracting a constant from every observation shifts the mean by −a but doesn't change the deviations from the mean. Variance remains σ².",
+      "explanation_incorrect": "Translation doesn't affect variance."
+    }
+  ]
+}

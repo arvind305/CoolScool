@@ -1,0 +1,787 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T05.02",
+  "topic_name": "Probability",
+  "canonical_explanation": {
+    "text": "Probability is a measure of the likelihood of an event occurring. The sample space S is the set of all possible outcomes. An event is a subset of S. The axiomatic approach defines P(E) satisfying 0 ≤ P(E) ≤ 1, P(S) = 1, and P(∅) = 0. For mutually exclusive events, P(A∪B) = P(A) + P(B). The general addition theorem gives P(A∪B) = P(A) + P(B) − P(A∩B). The complement rule states P(A') = 1 − P(A).",
+    "rules": [
+      "0 ≤ P(E) ≤ 1 for any event E",
+      "P(S) = 1, P(∅) = 0",
+      "P(A') = 1 − P(A)",
+      "P(A∪B) = P(A) + P(B) − P(A∩B)",
+      "For mutually exclusive events: P(A∪B) = P(A) + P(B)"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.02.Q001",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "A coin is tossed. The number of elements in the sample space is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "S = {H, T}. There are 2 possible outcomes.",
+      "explanation_incorrect": "A coin has two sides: Head and Tail. |S| = 2."
+    },
+    {
+      "question_id": "T05.02.Q002",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "When two dice are thrown, the number of elements in the sample space is:",
+      "options": [
+        {"id": "A", "text": "6"},
+        {"id": "B", "text": "12"},
+        {"id": "C", "text": "36"},
+        {"id": "D", "text": "216"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Each die has 6 outcomes. Total outcomes = 6 × 6 = 36.",
+      "explanation_incorrect": "|S| = 6 × 6 = 36 for two dice."
+    },
+    {
+      "question_id": "T05.02.Q003",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of getting a head when a fair coin is tossed is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1/4"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "P(H) = 1/2 for a fair coin (equally likely outcomes).",
+      "explanation_incorrect": "A fair coin has two equally likely outcomes, so P(H) = 1/2."
+    },
+    {
+      "question_id": "T05.02.Q004",
+      "type": "true_false",
+      "concept_id": "T05.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of an impossible event is 0.",
+      "correct_answer": "True",
+      "explanation_correct": "An impossible event is the empty set ∅, and P(∅) = 0 by axiom.",
+      "explanation_incorrect": "By the axioms of probability, P(∅) = 0."
+    },
+    {
+      "question_id": "T05.02.Q005",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "If P(A) = 0.3 and P(B) = 0.5 and A, B are mutually exclusive, then P(A∪B) is:",
+      "options": [
+        {"id": "A", "text": "0.15"},
+        {"id": "B", "text": "0.65"},
+        {"id": "C", "text": "0.8"},
+        {"id": "D", "text": "0.2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For mutually exclusive events: P(A∪B) = P(A) + P(B) = 0.3 + 0.5 = 0.8.",
+      "explanation_incorrect": "Mutually exclusive means P(A∩B) = 0, so P(A∪B) = P(A) + P(B) = 0.8."
+    },
+    {
+      "question_id": "T05.02.Q006",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "P(A) + P(A') equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1/2"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "Depends on A"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "P(A) + P(A') = 1 always. This is the complement rule.",
+      "explanation_incorrect": "The complement rule: P(A) + P(not A) = 1."
+    },
+    {
+      "question_id": "T05.02.Q007",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "application",
+      "question_text": "Three coins are tossed simultaneously. The number of elements in the sample space is:",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "8"},
+        {"id": "D", "text": "12"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Each coin has 2 outcomes. Total = 2³ = 8.",
+      "explanation_incorrect": "|S| = 2 × 2 × 2 = 8."
+    },
+    {
+      "question_id": "T05.02.Q008",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "A die is thrown. The probability of getting an even number is:",
+      "options": [
+        {"id": "A", "text": "1/6"},
+        {"id": "B", "text": "1/3"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "2/3"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Even numbers: {2, 4, 6}. P = 3/6 = 1/2.",
+      "explanation_incorrect": "3 even outcomes out of 6 total: P = 3/6 = 1/2."
+    },
+    {
+      "question_id": "T05.02.Q009",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A) = 0.4, P(B) = 0.5, and P(A∩B) = 0.2, then P(A∪B) is:",
+      "options": [
+        {"id": "A", "text": "0.5"},
+        {"id": "B", "text": "0.7"},
+        {"id": "C", "text": "0.8"},
+        {"id": "D", "text": "0.9"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P(A∪B) = P(A) + P(B) − P(A∩B) = 0.4 + 0.5 − 0.2 = 0.7.",
+      "explanation_incorrect": "Addition theorem: P(A∪B) = 0.4 + 0.5 − 0.2 = 0.7."
+    },
+    {
+      "question_id": "T05.02.Q010",
+      "type": "fill_blank",
+      "concept_id": "T05.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "If P(A) = 0.7, then P(A') = ___.",
+      "correct_answer": "0.3",
+      "explanation_correct": "P(A') = 1 − P(A) = 1 − 0.7 = 0.3.",
+      "explanation_incorrect": "Complement: P(A') = 1 − 0.7 = 0.3."
+    },
+    {
+      "question_id": "T05.02.Q011",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "A card is drawn from a well-shuffled pack of 52 cards. The probability that it is a king is:",
+      "options": [
+        {"id": "A", "text": "1/52"},
+        {"id": "B", "text": "1/26"},
+        {"id": "C", "text": "1/13"},
+        {"id": "D", "text": "4/13"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "There are 4 kings in 52 cards. P = 4/52 = 1/13.",
+      "explanation_incorrect": "4 kings out of 52 cards: P = 4/52 = 1/13."
+    },
+    {
+      "question_id": "T05.02.Q012",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "application",
+      "question_text": "A card is drawn. The probability that it is a heart or a king is:",
+      "options": [
+        {"id": "A", "text": "4/13"},
+        {"id": "B", "text": "16/52"},
+        {"id": "C", "text": "17/52"},
+        {"id": "D", "text": "Both A and B"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(Heart) = 13/52, P(King) = 4/52, P(Heart ∩ King) = 1/52. P(Heart ∪ King) = 13/52 + 4/52 − 1/52 = 16/52 = 4/13.",
+      "explanation_incorrect": "Using addition theorem: 13 + 4 − 1 = 16 favorable outcomes. P = 16/52 = 4/13."
+    },
+    {
+      "question_id": "T05.02.Q013",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "application",
+      "question_text": "A die is thrown twice. The sample space has how many elements?",
+      "options": [
+        {"id": "A", "text": "6"},
+        {"id": "B", "text": "12"},
+        {"id": "C", "text": "36"},
+        {"id": "D", "text": "72"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Two throws of a die: |S| = 6 × 6 = 36.",
+      "explanation_incorrect": "Each throw has 6 outcomes: total = 36."
+    },
+    {
+      "question_id": "T05.02.Q014",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "Two dice are thrown. The probability that the sum is 7 is:",
+      "options": [
+        {"id": "A", "text": "1/12"},
+        {"id": "B", "text": "1/6"},
+        {"id": "C", "text": "5/36"},
+        {"id": "D", "text": "7/36"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Favorable outcomes for sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 outcomes. P = 6/36 = 1/6.",
+      "explanation_incorrect": "6 ways to get sum 7 out of 36 outcomes: P = 6/36 = 1/6."
+    },
+    {
+      "question_id": "T05.02.Q015",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 1/3, P(B) = 1/4, and P(A∩B) = 1/12, then P(A'∩B') is:",
+      "options": [
+        {"id": "A", "text": "1/2"},
+        {"id": "B", "text": "1/3"},
+        {"id": "C", "text": "5/12"},
+        {"id": "D", "text": "7/12"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(A∪B) = 1/3 + 1/4 − 1/12 = 4/12 + 3/12 − 1/12 = 6/12 = 1/2. P(A'∩B') = P((A∪B)') = 1 − P(A∪B) = 1 − 1/2 = 1/2.",
+      "explanation_incorrect": "By De Morgan's law: P(A'∩B') = 1 − P(A∪B) = 1 − 1/2 = 1/2."
+    },
+    {
+      "question_id": "T05.02.Q016",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "A card is drawn from a pack of 52 cards. The probability that it is a face card is:",
+      "options": [
+        {"id": "A", "text": "1/13"},
+        {"id": "B", "text": "3/13"},
+        {"id": "C", "text": "4/13"},
+        {"id": "D", "text": "1/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Face cards: J, Q, K of each suit = 4 × 3 = 12. P = 12/52 = 3/13.",
+      "explanation_incorrect": "12 face cards out of 52: P = 12/52 = 3/13."
+    },
+    {
+      "question_id": "T05.02.Q017",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following cannot be the probability of an event?",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "0.5"},
+        {"id": "C", "text": "1.2"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Probability must be between 0 and 1 (inclusive). 1.2 > 1, so it cannot be a probability.",
+      "explanation_incorrect": "0 ≤ P(E) ≤ 1. Since 1.2 > 1, it's not a valid probability."
+    },
+    {
+      "question_id": "T05.02.Q018",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "application",
+      "question_text": "If A and B are mutually exclusive and exhaustive events with P(A) = 2P(B), then P(A) is:",
+      "options": [
+        {"id": "A", "text": "1/3"},
+        {"id": "B", "text": "2/3"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "3/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Exhaustive: P(A) + P(B) = 1. Given P(A) = 2P(B): 2P(B) + P(B) = 1, P(B) = 1/3, P(A) = 2/3.",
+      "explanation_incorrect": "3P(B) = 1, P(B) = 1/3, P(A) = 2/3."
+    },
+    {
+      "question_id": "T05.02.Q019",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "From the letters of the word 'MATHEMATICS', a letter is chosen at random. The probability that it is a vowel is:",
+      "options": [
+        {"id": "A", "text": "3/11"},
+        {"id": "B", "text": "4/11"},
+        {"id": "C", "text": "5/11"},
+        {"id": "D", "text": "6/11"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "MATHEMATICS has 11 letters: M,A,T,H,E,M,A,T,I,C,S. Vowels: A, E, A, I = 4. P = 4/11.",
+      "explanation_incorrect": "There are 4 vowels (A, E, A, I) out of 11 letters: P = 4/11."
+    },
+    {
+      "question_id": "T05.02.Q020",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two dice are thrown. The probability of getting a doublet (both dice show the same number) is:",
+      "options": [
+        {"id": "A", "text": "1/36"},
+        {"id": "B", "text": "1/6"},
+        {"id": "C", "text": "1/3"},
+        {"id": "D", "text": "5/36"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Doublets: (1,1),(2,2),(3,3),(4,4),(5,5),(6,6) = 6 outcomes. P = 6/36 = 1/6.",
+      "explanation_incorrect": "6 doublets out of 36 outcomes: P = 1/6."
+    },
+    {
+      "question_id": "T05.02.Q021",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 0.6, P(B) = 0.3, and P(A∩B) = 0.2, then P(A'∩B) is:",
+      "options": [
+        {"id": "A", "text": "0.1"},
+        {"id": "B", "text": "0.2"},
+        {"id": "C", "text": "0.3"},
+        {"id": "D", "text": "0.4"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(A'∩B) = P(B) − P(A∩B) = 0.3 − 0.2 = 0.1.",
+      "explanation_incorrect": "P(A'∩B) = P(B) − P(A∩B) = 0.3 − 0.2 = 0.1."
+    },
+    {
+      "question_id": "T05.02.Q022",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "application",
+      "question_text": "A coin is tossed 3 times. The probability of getting at least one head is:",
+      "options": [
+        {"id": "A", "text": "1/8"},
+        {"id": "B", "text": "3/8"},
+        {"id": "C", "text": "7/8"},
+        {"id": "D", "text": "1/2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "P(at least 1 head) = 1 − P(no heads) = 1 − P(TTT) = 1 − 1/8 = 7/8.",
+      "explanation_incorrect": "P(at least 1 head) = 1 − (1/2)³ = 7/8."
+    },
+    {
+      "question_id": "T05.02.Q023",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "A card is drawn from a pack of 52 cards. The probability that it is neither a heart nor a king is:",
+      "options": [
+        {"id": "A", "text": "9/13"},
+        {"id": "B", "text": "36/52"},
+        {"id": "C", "text": "35/52"},
+        {"id": "D", "text": "Both A and B"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "P(Heart or King) = 16/52 = 4/13. P(neither) = 1 − 4/13 = 9/13 = 36/52. A and B are equivalent.",
+      "explanation_incorrect": "P(neither Heart nor King) = 1 − 16/52 = 36/52 = 9/13."
+    },
+    {
+      "question_id": "T05.02.Q024",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a class, 60% of students pass in Hindi and 45% pass in English. If 25% pass in both, the probability that a randomly selected student passes in at least one subject is:",
+      "options": [
+        {"id": "A", "text": "0.60"},
+        {"id": "B", "text": "0.70"},
+        {"id": "C", "text": "0.80"},
+        {"id": "D", "text": "0.85"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "P(H∪E) = P(H) + P(E) − P(H∩E) = 0.60 + 0.45 − 0.25 = 0.80.",
+      "explanation_incorrect": "P(at least one) = 0.60 + 0.45 − 0.25 = 0.80."
+    },
+    {
+      "question_id": "T05.02.Q025",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "Two dice are thrown. The probability of getting a sum greater than 10 is:",
+      "options": [
+        {"id": "A", "text": "1/12"},
+        {"id": "B", "text": "1/6"},
+        {"id": "C", "text": "1/18"},
+        {"id": "D", "text": "5/36"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum > 10: sum 11 → (5,6),(6,5); sum 12 → (6,6). Total = 3. P = 3/36 = 1/12.",
+      "explanation_incorrect": "3 favorable outcomes (sum 11 or 12) out of 36: P = 1/12."
+    },
+    {
+      "question_id": "T05.02.Q026",
+      "type": "fill_blank",
+      "concept_id": "T05.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of a certain event is ___.",
+      "correct_answer": "1",
+      "explanation_correct": "A certain event is the sample space S itself. P(S) = 1.",
+      "explanation_incorrect": "P(S) = 1 by the axioms of probability."
+    },
+    {
+      "question_id": "T05.02.Q027",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "A box contains 5 red, 3 blue, and 2 green balls. A ball is drawn at random. The probability that it is not blue is:",
+      "options": [
+        {"id": "A", "text": "3/10"},
+        {"id": "B", "text": "7/10"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "5/10"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Total = 10. P(blue) = 3/10. P(not blue) = 1 − 3/10 = 7/10.",
+      "explanation_incorrect": "P(not blue) = 1 − P(blue) = 1 − 3/10 = 7/10."
+    },
+    {
+      "question_id": "T05.02.Q028",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Events A and B are such that P(A) = 0.42, P(B) = 0.48, and P(A∩B) = 0.16. P(neither A nor B) is:",
+      "options": [
+        {"id": "A", "text": "0.26"},
+        {"id": "B", "text": "0.74"},
+        {"id": "C", "text": "0.16"},
+        {"id": "D", "text": "0.84"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(A∪B) = 0.42 + 0.48 − 0.16 = 0.74. P(neither) = 1 − 0.74 = 0.26.",
+      "explanation_incorrect": "P(A'∩B') = 1 − P(A∪B) = 1 − 0.74 = 0.26."
+    },
+    {
+      "question_id": "T05.02.Q029",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "If a letter is chosen at random from the English alphabet, the probability of choosing a consonant is:",
+      "options": [
+        {"id": "A", "text": "5/26"},
+        {"id": "B", "text": "21/26"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "11/26"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "There are 5 vowels (a,e,i,o,u) and 21 consonants. P(consonant) = 21/26.",
+      "explanation_incorrect": "26 letters − 5 vowels = 21 consonants. P = 21/26."
+    },
+    {
+      "question_id": "T05.02.Q030",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "A number is selected at random from 1 to 20. The probability that it is a prime number is:",
+      "options": [
+        {"id": "A", "text": "2/5"},
+        {"id": "B", "text": "7/20"},
+        {"id": "C", "text": "8/20"},
+        {"id": "D", "text": "9/20"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Primes from 1 to 20: 2,3,5,7,11,13,17,19 = 8 primes. P = 8/20 = 2/5.",
+      "explanation_incorrect": "There are 8 primes between 1 and 20. P = 8/20 = 2/5. Note A and C are equivalent."
+    },
+    {
+      "question_id": "T05.02.Q031",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "application",
+      "question_text": "If P(A∪B) = 0.8, P(A) = 0.5, and P(B) = 0.4, then P(A∩B) is:",
+      "options": [
+        {"id": "A", "text": "0.1"},
+        {"id": "B", "text": "0.2"},
+        {"id": "C", "text": "0.3"},
+        {"id": "D", "text": "0.4"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(A∩B) = P(A) + P(B) − P(A∪B) = 0.5 + 0.4 − 0.8 = 0.1.",
+      "explanation_incorrect": "From the addition theorem: P(A∩B) = 0.5 + 0.4 − 0.8 = 0.1."
+    },
+    {
+      "question_id": "T05.02.Q032",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "From a bag containing 4 white and 6 black balls, 2 balls are drawn simultaneously. The probability that both are white is:",
+      "options": [
+        {"id": "A", "text": "2/15"},
+        {"id": "B", "text": "1/15"},
+        {"id": "C", "text": "4/15"},
+        {"id": "D", "text": "6/45"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total ways = C(10,2) = 45. Favorable = C(4,2) = 6. P = 6/45 = 2/15.",
+      "explanation_incorrect": "C(4,2)/C(10,2) = 6/45 = 2/15."
+    },
+    {
+      "question_id": "T05.02.Q033",
+      "type": "true_false",
+      "concept_id": "T05.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "If A and B are mutually exclusive events, then P(A∩B) = 0.",
+      "correct_answer": "True",
+      "explanation_correct": "Mutually exclusive means A and B cannot occur simultaneously, so A∩B = ∅ and P(A∩B) = 0.",
+      "explanation_incorrect": "By definition, mutually exclusive events have empty intersection."
+    },
+    {
+      "question_id": "T05.02.Q034",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "A card is drawn from a pack. The probability that it is a black card or a queen is:",
+      "options": [
+        {"id": "A", "text": "26/52"},
+        {"id": "B", "text": "28/52"},
+        {"id": "C", "text": "7/13"},
+        {"id": "D", "text": "Both B and C"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Black cards = 26. Queens = 4. Black queens = 2. P = (26+4−2)/52 = 28/52 = 7/13. B and C are equivalent.",
+      "explanation_incorrect": "P(black or queen) = 26/52 + 4/52 − 2/52 = 28/52 = 7/13."
+    },
+    {
+      "question_id": "T05.02.Q035",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "application",
+      "question_text": "The sample space when a coin and a die are tossed simultaneously has how many elements?",
+      "options": [
+        {"id": "A", "text": "6"},
+        {"id": "B", "text": "8"},
+        {"id": "C", "text": "12"},
+        {"id": "D", "text": "36"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Coin: 2 outcomes, Die: 6 outcomes. |S| = 2 × 6 = 12.",
+      "explanation_incorrect": "|S| = 2 × 6 = 12."
+    },
+    {
+      "question_id": "T05.02.Q036",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "A die is thrown. The probability of getting a number divisible by 3 is:",
+      "options": [
+        {"id": "A", "text": "1/6"},
+        {"id": "B", "text": "1/3"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "2/3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Numbers divisible by 3: {3, 6}. P = 2/6 = 1/3.",
+      "explanation_incorrect": "2 favorable outcomes (3 and 6) out of 6: P = 1/3."
+    },
+    {
+      "question_id": "T05.02.Q037",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The probability that a student passes in Mathematics is 2/3 and in Physics is 4/9. The probability of passing in at least one is 4/5. The probability of passing in both is:",
+      "options": [
+        {"id": "A", "text": "22/45"},
+        {"id": "B", "text": "2/9"},
+        {"id": "C", "text": "14/45"},
+        {"id": "D", "text": "1/3"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "P(M∩P) = P(M) + P(P) − P(M∪P) = 2/3 + 4/9 − 4/5 = 30/45 + 20/45 − 36/45 = 14/45.",
+      "explanation_incorrect": "P(M∩P) = 2/3 + 4/9 − 4/5 = (30+20−36)/45 = 14/45."
+    },
+    {
+      "question_id": "T05.02.Q038",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "In a lottery of 50 tickets numbered 1 to 50, one ticket is drawn. The probability that the number on it is a perfect square is:",
+      "options": [
+        {"id": "A", "text": "7/50"},
+        {"id": "B", "text": "5/50"},
+        {"id": "C", "text": "6/50"},
+        {"id": "D", "text": "8/50"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Perfect squares from 1 to 50: 1, 4, 9, 16, 25, 36, 49 = 7 numbers. P = 7/50.",
+      "explanation_incorrect": "Perfect squares ≤ 50: {1,4,9,16,25,36,49}. P = 7/50."
+    },
+    {
+      "question_id": "T05.02.Q039",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The sample space for the experiment 'tossing a coin until a head appears' is:",
+      "options": [
+        {"id": "A", "text": "{H, TH}"},
+        {"id": "B", "text": "{H, T}"},
+        {"id": "C", "text": "{H, TH, TTH, TTTH, …}"},
+        {"id": "D", "text": "{T, TT, TTT, …}"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The experiment ends when a head appears: S = {H, TH, TTH, TTTH, …}. It's a countably infinite sample space.",
+      "explanation_incorrect": "The outcomes are sequences of tails followed by a head: {H, TH, TTH, …}."
+    },
+    {
+      "question_id": "T05.02.Q040",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "application",
+      "question_text": "If A, B, C are mutually exclusive and exhaustive events with P(A) = P(B)/2 = P(C)/3, then P(C) is:",
+      "options": [
+        {"id": "A", "text": "1/6"},
+        {"id": "B", "text": "1/3"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "2/3"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Let P(A) = k. Then P(B) = 2k, P(C) = 3k. k + 2k + 3k = 1 → 6k = 1, k = 1/6. P(C) = 3k = 1/2.",
+      "explanation_incorrect": "P(A) = k, P(B) = 2k, P(C) = 3k. Exhaustive: 6k = 1, k = 1/6. P(C) = 1/2."
+    },
+    {
+      "question_id": "T05.02.Q041",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "The probability of drawing a red card from a standard deck of 52 cards is:",
+      "options": [
+        {"id": "A", "text": "1/4"},
+        {"id": "B", "text": "1/2"},
+        {"id": "C", "text": "13/52"},
+        {"id": "D", "text": "3/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "26 red cards (hearts + diamonds) out of 52. P = 26/52 = 1/2.",
+      "explanation_incorrect": "Half the deck is red: P = 26/52 = 1/2."
+    },
+    {
+      "question_id": "T05.02.Q042",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a group of 200 students, 100 study Maths, 70 study Physics, and 40 study both. The probability that a randomly chosen student studies neither is:",
+      "options": [
+        {"id": "A", "text": "7/20"},
+        {"id": "B", "text": "13/20"},
+        {"id": "C", "text": "3/20"},
+        {"id": "D", "text": "1/4"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "n(M∪P) = 100 + 70 − 40 = 130. n(neither) = 200 − 130 = 70. P = 70/200 = 7/20.",
+      "explanation_incorrect": "n(M∪P) = 130. P(neither) = 70/200 = 7/20."
+    },
+    {
+      "question_id": "T05.02.Q043",
+      "type": "fill_blank",
+      "concept_id": "T05.02.C01",
+      "difficulty": "application",
+      "question_text": "The number of elements in the sample space when 4 coins are tossed is ___.",
+      "correct_answer": "16",
+      "explanation_correct": "|S| = 2⁴ = 16.",
+      "explanation_incorrect": "Each coin has 2 outcomes. Total = 2⁴ = 16."
+    },
+    {
+      "question_id": "T05.02.Q044",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two dice are thrown. The probability of getting a sum of 4 or less is:",
+      "options": [
+        {"id": "A", "text": "1/12"},
+        {"id": "B", "text": "1/6"},
+        {"id": "C", "text": "5/36"},
+        {"id": "D", "text": "1/36"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Sum 2: (1,1) → 1. Sum 3: (1,2),(2,1) → 2. Sum 4: (1,3),(2,2),(3,1) → 3. Total = 6. P = 6/36 = 1/6.",
+      "explanation_incorrect": "6 outcomes with sum ≤ 4 out of 36: P = 1/6."
+    },
+    {
+      "question_id": "T05.02.Q045",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "If P(A) = 0.5, P(B) = 0.6, and P(A∪B) = 0.8, then P(A∩B') is:",
+      "options": [
+        {"id": "A", "text": "0.1"},
+        {"id": "B", "text": "0.2"},
+        {"id": "C", "text": "0.3"},
+        {"id": "D", "text": "0.4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P(A∩B) = 0.5 + 0.6 − 0.8 = 0.3. P(A∩B') = P(A) − P(A∩B) = 0.5 − 0.3 = 0.2.",
+      "explanation_incorrect": "First find P(A∩B) = 0.3. Then P(A∩B') = P(A) − P(A∩B) = 0.2."
+    },
+    {
+      "question_id": "T05.02.Q046",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "application",
+      "question_text": "The probability of selecting an ace from a deck of cards is:",
+      "options": [
+        {"id": "A", "text": "1/52"},
+        {"id": "B", "text": "1/13"},
+        {"id": "C", "text": "4/13"},
+        {"id": "D", "text": "1/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "4 aces in 52 cards: P = 4/52 = 1/13.",
+      "explanation_incorrect": "P = 4/52 = 1/13."
+    },
+    {
+      "question_id": "T05.02.Q047",
+      "type": "mcq",
+      "concept_id": "T05.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "A bag contains 6 white and 4 black balls. Two balls are drawn without replacement. The probability that both are white is:",
+      "options": [
+        {"id": "A", "text": "1/3"},
+        {"id": "B", "text": "2/5"},
+        {"id": "C", "text": "6/15"},
+        {"id": "D", "text": "Both A and C"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = C(6,2)/C(10,2) = 15/45 = 1/3.",
+      "explanation_incorrect": "C(6,2)/C(10,2) = 15/45 = 1/3."
+    },
+    {
+      "question_id": "T05.02.Q048",
+      "type": "mcq",
+      "concept_id": "T05.02.C03",
+      "difficulty": "application",
+      "question_text": "If A and B are two events such that P(A) = 1/4, P(B) = 1/2, and P(A∪B) = 5/8, then P(A∩B) is:",
+      "options": [
+        {"id": "A", "text": "1/8"},
+        {"id": "B", "text": "1/4"},
+        {"id": "C", "text": "3/8"},
+        {"id": "D", "text": "1/2"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(A∩B) = P(A) + P(B) − P(A∪B) = 1/4 + 1/2 − 5/8 = 2/8 + 4/8 − 5/8 = 1/8.",
+      "explanation_incorrect": "P(A∩B) = 1/4 + 1/2 − 5/8 = 1/8."
+    },
+    {
+      "question_id": "T05.02.Q049",
+      "type": "true_false",
+      "concept_id": "T05.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The probability of any event is always between 0 and 1 inclusive.",
+      "correct_answer": "True",
+      "explanation_correct": "By the axioms of probability, 0 ≤ P(E) ≤ 1 for any event E.",
+      "explanation_incorrect": "This is one of the fundamental axioms of probability."
+    },
+    {
+      "question_id": "T05.02.Q050",
+      "type": "mcq",
+      "concept_id": "T05.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Three unbiased coins are tossed. The probability of getting exactly 2 heads is:",
+      "options": [
+        {"id": "A", "text": "1/8"},
+        {"id": "B", "text": "3/8"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "1/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Outcomes with exactly 2 heads: HHT, HTH, THH = 3 outcomes out of 8. P = 3/8.",
+      "explanation_incorrect": "C(3,2) = 3 favorable outcomes. P = 3/8."
+    }
+  ]
+}

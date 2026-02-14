@@ -1,0 +1,813 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.03",
+  "topic_name": "Trigonometric Functions",
+  "canonical_explanation": {
+    "text": "Trigonometric functions are defined for all real numbers using the unit circle. An angle can be measured in degrees or radians (π radians = 180°). The six trigonometric functions — sin, cos, tan, cot, sec, cosec — have specific domains, ranges, and periodic properties. Compound angle formulas like sin(A±B) and cos(A±B), along with double and triple angle formulas, are essential tools for simplification. General solutions of trigonometric equations involve adding integer multiples of the period.",
+    "rules": [
+      "sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, 1 + cot²θ = cosec²θ",
+      "sin(A + B) = sinA·cosB + cosA·sinB",
+      "cos(A + B) = cosA·cosB − sinA·sinB",
+      "sin2A = 2sinA·cosA, cos2A = cos²A − sin²A",
+      "General solution: sinx = sinα ⟹ x = nπ + (−1)ⁿα, cosx = cosα ⟹ x = 2nπ ± α"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.03.Q001",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "Convert 120° to radians.",
+      "options": [
+        {"id": "A", "text": "π/3"},
+        {"id": "B", "text": "2π/3"},
+        {"id": "C", "text": "3π/4"},
+        {"id": "D", "text": "π/6"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "120° × (π/180°) = 120π/180 = 2π/3 radians.",
+      "explanation_incorrect": "Option A is 60°. Option C is 135°. Option D is 30°."
+    },
+    {
+      "question_id": "T01.03.Q002",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "Convert 5π/6 radians to degrees.",
+      "options": [
+        {"id": "A", "text": "120°"},
+        {"id": "B", "text": "150°"},
+        {"id": "C", "text": "135°"},
+        {"id": "D", "text": "210°"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5π/6 × (180°/π) = 5 × 30° = 150°.",
+      "explanation_incorrect": "Option A is 2π/3. Option C is 3π/4. Option D is 7π/6."
+    },
+    {
+      "question_id": "T01.03.Q003",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of sin(30°) is:",
+      "options": [
+        {"id": "A", "text": "1/√2"},
+        {"id": "B", "text": "√3/2"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "sin(30°) = 1/2 is a standard trigonometric value.",
+      "explanation_incorrect": "Option A is sin(45°). Option B is sin(60°). Option D is sin(90°)."
+    },
+    {
+      "question_id": "T01.03.Q004",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of cos(π/3) is:",
+      "options": [
+        {"id": "A", "text": "1/2"},
+        {"id": "B", "text": "√3/2"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "cos(π/3) = cos(60°) = 1/2.",
+      "explanation_incorrect": "Option B is cos(30°). Option C is cos(90°). Option D is cos(0°)."
+    },
+    {
+      "question_id": "T01.03.Q005",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "The range of sin(x) is:",
+      "options": [
+        {"id": "A", "text": "[0, 1]"},
+        {"id": "B", "text": "[-1, 1]"},
+        {"id": "C", "text": "R"},
+        {"id": "D", "text": "(-1, 1)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "sin(x) takes all values from -1 to 1, inclusive. Range = [-1, 1].",
+      "explanation_incorrect": "Option A excludes negative values. Option C is unbounded. Option D excludes endpoints."
+    },
+    {
+      "question_id": "T01.03.Q006",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "The period of tan(x) is:",
+      "options": [
+        {"id": "A", "text": "2π"},
+        {"id": "B", "text": "π"},
+        {"id": "C", "text": "π/2"},
+        {"id": "D", "text": "4π"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan(x) has period π, meaning tan(x + π) = tan(x) for all x in the domain.",
+      "explanation_incorrect": "Option A is the period of sin and cos. Options C and D are incorrect periods."
+    },
+    {
+      "question_id": "T01.03.Q007",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "application",
+      "question_text": "In which quadrant is sin(x) positive and cos(x) negative?",
+      "options": [
+        {"id": "A", "text": "First quadrant"},
+        {"id": "B", "text": "Second quadrant"},
+        {"id": "C", "text": "Third quadrant"},
+        {"id": "D", "text": "Fourth quadrant"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the second quadrant (90° < x < 180°), sin is positive and cos is negative.",
+      "explanation_incorrect": "In Q1 both are positive. In Q3 both are negative. In Q4 sin is negative and cos is positive."
+    },
+    {
+      "question_id": "T01.03.Q008",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "familiarity",
+      "question_text": "sin(A + B) equals:",
+      "options": [
+        {"id": "A", "text": "sinA·sinB + cosA·cosB"},
+        {"id": "B", "text": "sinA·cosB + cosA·sinB"},
+        {"id": "C", "text": "sinA·cosB − cosA·sinB"},
+        {"id": "D", "text": "cosA·cosB − sinA·sinB"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The compound angle formula: sin(A+B) = sinA·cosB + cosA·sinB.",
+      "explanation_incorrect": "Option A is cos(A−B). Option C is sin(A−B). Option D is cos(A+B)."
+    },
+    {
+      "question_id": "T01.03.Q009",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "The value of sin(75°) is:",
+      "options": [
+        {"id": "A", "text": "(√6 + √2)/4"},
+        {"id": "B", "text": "(√6 − √2)/4"},
+        {"id": "C", "text": "(√3 + 1)/2"},
+        {"id": "D", "text": "√3/2"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sin(75°) = sin(45°+30°) = sin45°cos30° + cos45°sin30° = (1/√2)(√3/2) + (1/√2)(1/2) = (√3+1)/(2√2) = (√6+√2)/4.",
+      "explanation_incorrect": "Option B is cos(75°). Option C is not rationalized. Option D is sin(60°)."
+    },
+    {
+      "question_id": "T01.03.Q010",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "The value of cos(2A) when sinA = 3/5 is:",
+      "options": [
+        {"id": "A", "text": "7/25"},
+        {"id": "B", "text": "−7/25"},
+        {"id": "C", "text": "24/25"},
+        {"id": "D", "text": "−24/25"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "cos(2A) = 1 − 2sin²A = 1 − 2(9/25) = 1 − 18/25 = 7/25.",
+      "explanation_incorrect": "Option B has wrong sign. Option C uses sin2A formula. Option D is incorrect."
+    },
+    {
+      "question_id": "T01.03.Q011",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "sin2A equals:",
+      "options": [
+        {"id": "A", "text": "2sinA"},
+        {"id": "B", "text": "sin²A"},
+        {"id": "C", "text": "2sinA·cosA"},
+        {"id": "D", "text": "cos²A − sin²A"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The double angle formula: sin2A = 2sinA·cosA.",
+      "explanation_incorrect": "Option A is incorrect. Option B is sin²A. Option D is cos2A."
+    },
+    {
+      "question_id": "T01.03.Q012",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "The domain of sec(x) is:",
+      "options": [
+        {"id": "A", "text": "R"},
+        {"id": "B", "text": "R − {nπ, n ∈ Z}"},
+        {"id": "C", "text": "R − {(2n+1)π/2, n ∈ Z}"},
+        {"id": "D", "text": "[-1, 1]"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "sec(x) = 1/cos(x) is undefined where cos(x) = 0, which is at x = (2n+1)π/2.",
+      "explanation_incorrect": "Option A ignores restrictions. Option B removes sin zeros. Option D is the range of cos, not domain of sec."
+    },
+    {
+      "question_id": "T01.03.Q013",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "tan(A + B) equals:",
+      "options": [
+        {"id": "A", "text": "tanA + tanB"},
+        {"id": "B", "text": "(tanA + tanB)/(1 − tanA·tanB)"},
+        {"id": "C", "text": "(tanA − tanB)/(1 + tanA·tanB)"},
+        {"id": "D", "text": "tanA·tanB/(tanA + tanB)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan(A+B) = (tanA + tanB)/(1 − tanA·tanB).",
+      "explanation_incorrect": "Option A omits the denominator. Option C is tan(A−B). Option D is an invented formula."
+    },
+    {
+      "question_id": "T01.03.Q014",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "application",
+      "question_text": "The general solution of sin(x) = 0 is:",
+      "options": [
+        {"id": "A", "text": "x = nπ, n ∈ Z"},
+        {"id": "B", "text": "x = 2nπ, n ∈ Z"},
+        {"id": "C", "text": "x = (2n+1)π/2, n ∈ Z"},
+        {"id": "D", "text": "x = nπ/2, n ∈ Z"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sin(x) = 0 at x = 0, ±π, ±2π, ... So x = nπ where n is any integer.",
+      "explanation_incorrect": "Option B gives only even multiples. Option C is where cos=0. Option D includes where sin=±1."
+    },
+    {
+      "question_id": "T01.03.Q015",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "application",
+      "question_text": "The general solution of cos(x) = 1/2 is:",
+      "options": [
+        {"id": "A", "text": "x = 2nπ + π/3, n ∈ Z"},
+        {"id": "B", "text": "x = 2nπ ± π/3, n ∈ Z"},
+        {"id": "C", "text": "x = nπ ± π/3, n ∈ Z"},
+        {"id": "D", "text": "x = nπ + (−1)ⁿπ/3, n ∈ Z"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "cos(x) = cos(α) ⟹ x = 2nπ ± α. Here α = π/3, so x = 2nπ ± π/3.",
+      "explanation_incorrect": "Option A gives only one branch. Option C uses nπ instead of 2nπ. Option D is the sine formula."
+    },
+    {
+      "question_id": "T01.03.Q016",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of tan(45°) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "√3"},
+        {"id": "D", "text": "1/√3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan(45°) = sin(45°)/cos(45°) = (1/√2)/(1/√2) = 1.",
+      "explanation_incorrect": "Option A is tan(0°). Option C is tan(60°). Option D is tan(30°)."
+    },
+    {
+      "question_id": "T01.03.Q017",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "cos²A − sin²A equals:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "sin2A"},
+        {"id": "C", "text": "cos2A"},
+        {"id": "D", "text": "tan2A"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "cos2A = cos²A − sin²A is one of the three forms of the double angle formula for cosine.",
+      "explanation_incorrect": "Option A is cos²A + sin²A. Option B is 2sinAcosA. Option D is sin2A/cos2A."
+    },
+    {
+      "question_id": "T01.03.Q018",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "application",
+      "question_text": "If sec(θ) = 2, then cos(θ) is:",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "1/2"},
+        {"id": "C", "text": "−1/2"},
+        {"id": "D", "text": "√2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "sec(θ) = 1/cos(θ). So cos(θ) = 1/sec(θ) = 1/2.",
+      "explanation_incorrect": "Option A is sec itself. Option C is negative which isn't implied. Option D is wrong."
+    },
+    {
+      "question_id": "T01.03.Q019",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "The value of sin(15°) is:",
+      "options": [
+        {"id": "A", "text": "(√6 − √2)/4"},
+        {"id": "B", "text": "(√6 + √2)/4"},
+        {"id": "C", "text": "(√3 − 1)/(2√2)"},
+        {"id": "D", "text": "Both A and C"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "sin(15°) = sin(45°−30°) = sin45°cos30° − cos45°sin30° = (√3−1)/(2√2) = (√6−√2)/4. Both forms are equal.",
+      "explanation_incorrect": "Option B is sin(75°). Options A and C are individually correct but D acknowledges both are equal."
+    },
+    {
+      "question_id": "T01.03.Q020",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "application",
+      "question_text": "The period of sin(2x) is:",
+      "options": [
+        {"id": "A", "text": "2π"},
+        {"id": "B", "text": "π"},
+        {"id": "C", "text": "π/2"},
+        {"id": "D", "text": "4π"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Period of sin(kx) = 2π/k. For k=2, period = 2π/2 = π.",
+      "explanation_incorrect": "Option A is the period of sin(x). Option C is for sin(4x). Option D is for sin(x/2)."
+    },
+    {
+      "question_id": "T01.03.Q021",
+      "type": "true_false",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "sin²θ + cos²θ = 1 for all values of θ.",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is the fundamental Pythagorean identity, valid for all real values of θ.",
+      "explanation_incorrect": "The identity sin²θ + cos²θ = 1 holds universally."
+    },
+    {
+      "question_id": "T01.03.Q022",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "If tan(A) = 1/2 and tan(B) = 1/3, then tan(A + B) is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "5/6"},
+        {"id": "C", "text": "5/5 = 1"},
+        {"id": "D", "text": "1/6"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "tan(A+B) = (tanA+tanB)/(1−tanA·tanB) = (1/2+1/3)/(1−1/6) = (5/6)/(5/6) = 1. So A+B = 45°.",
+      "explanation_incorrect": "Option B is the numerator only. Option D is the product tanA·tanB."
+    },
+    {
+      "question_id": "T01.03.Q023",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "cos(3A) in terms of cosA is:",
+      "options": [
+        {"id": "A", "text": "3cosA − 4cos³A"},
+        {"id": "B", "text": "4cos³A − 3cosA"},
+        {"id": "C", "text": "3cos³A − cosA"},
+        {"id": "D", "text": "cos³A − 3cosA"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The triple angle formula: cos(3A) = 4cos³A − 3cosA.",
+      "explanation_incorrect": "Option A is the incorrect sign pattern. Options C and D are wrong formulas."
+    },
+    {
+      "question_id": "T01.03.Q024",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "The general solution of tan(x) = 1 is:",
+      "options": [
+        {"id": "A", "text": "x = π/4"},
+        {"id": "B", "text": "x = nπ + π/4, n ∈ Z"},
+        {"id": "C", "text": "x = 2nπ + π/4, n ∈ Z"},
+        {"id": "D", "text": "x = nπ − π/4, n ∈ Z"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan(x) = tan(α) ⟹ x = nπ + α. Here α = π/4, so x = nπ + π/4.",
+      "explanation_incorrect": "Option A is only one solution. Option C misses odd multiples of π. Option D has wrong sign."
+    },
+    {
+      "question_id": "T01.03.Q025",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "sinA·cosB + cosA·sinB − sinA·cosB + cosA·sinB simplifies to:",
+      "options": [
+        {"id": "A", "text": "2cosA·sinB"},
+        {"id": "B", "text": "2sinA·cosB"},
+        {"id": "C", "text": "sin(A+B) + sin(A−B)"},
+        {"id": "D", "text": "0"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sinAcosB + cosAsinB − sinAcosB + cosAsinB = 2cosAsinB. The sinAcosB terms cancel.",
+      "explanation_incorrect": "Options B, C, D don't account for the cancellation correctly."
+    },
+    {
+      "question_id": "T01.03.Q026",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of sin(270°) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "−1"},
+        {"id": "D", "text": "undefined"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "sin(270°) = sin(360° − 90°) = −sin(90°) = −1.",
+      "explanation_incorrect": "Option A is sin(180°). Option B is sin(90°). Option D: sin is defined everywhere."
+    },
+    {
+      "question_id": "T01.03.Q027",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "sinA + sinB equals:",
+      "options": [
+        {"id": "A", "text": "2sin((A+B)/2)·cos((A−B)/2)"},
+        {"id": "B", "text": "2cos((A+B)/2)·sin((A−B)/2)"},
+        {"id": "C", "text": "2sin((A+B)/2)·sin((A−B)/2)"},
+        {"id": "D", "text": "2cos((A+B)/2)·cos((A−B)/2)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum-to-product formula: sinA + sinB = 2sin((A+B)/2)·cos((A−B)/2).",
+      "explanation_incorrect": "Option B is sinA − sinB. Option C is cosB − cosA. Option D is cosA + cosB."
+    },
+    {
+      "question_id": "T01.03.Q028",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "application",
+      "question_text": "The range of cosec(x) is:",
+      "options": [
+        {"id": "A", "text": "[-1, 1]"},
+        {"id": "B", "text": "(−∞, −1] ∪ [1, ∞)"},
+        {"id": "C", "text": "R"},
+        {"id": "D", "text": "(0, ∞)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "cosec(x) = 1/sin(x). Since |sin(x)| ≤ 1, |cosec(x)| ≥ 1. Range = (−∞, −1] ∪ [1, ∞).",
+      "explanation_incorrect": "Option A is the range of sin. Option C includes values between -1 and 1. Option D excludes negatives."
+    },
+    {
+      "question_id": "T01.03.Q029",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "The general solution of sin(x) = 1/2 is:",
+      "options": [
+        {"id": "A", "text": "x = nπ + (−1)ⁿ(π/6), n ∈ Z"},
+        {"id": "B", "text": "x = 2nπ + π/6, n ∈ Z"},
+        {"id": "C", "text": "x = nπ + π/6, n ∈ Z"},
+        {"id": "D", "text": "x = 2nπ ± π/6, n ∈ Z"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sin(x) = sin(α) ⟹ x = nπ + (−1)ⁿα. Here α = π/6, so x = nπ + (−1)ⁿ(π/6).",
+      "explanation_incorrect": "Option B gives only one family. Option C is for tangent. Option D is for cosine."
+    },
+    {
+      "question_id": "T01.03.Q030",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "If sin(A) = 4/5 and cos(B) = 5/13, where A and B are in the first quadrant, then sin(A + B) is:",
+      "options": [
+        {"id": "A", "text": "56/65"},
+        {"id": "B", "text": "63/65"},
+        {"id": "C", "text": "33/65"},
+        {"id": "D", "text": "16/65"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "cosA = 3/5, sinB = 12/13. sin(A+B) = sinAcosB + cosAsinB = (4/5)(5/13) + (3/5)(12/13) = 20/65 + 36/65 = 56/65.",
+      "explanation_incorrect": "Options B, C, D result from arithmetic errors or using wrong formula."
+    },
+    {
+      "question_id": "T01.03.Q031",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "1 radian equals approximately:",
+      "options": [
+        {"id": "A", "text": "45°"},
+        {"id": "B", "text": "57.3°"},
+        {"id": "C", "text": "90°"},
+        {"id": "D", "text": "180°"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 radian = 180°/π ≈ 57.296° ≈ 57.3°.",
+      "explanation_incorrect": "Option A is π/4 radians. Option C is π/2 radians. Option D is π radians."
+    },
+    {
+      "question_id": "T01.03.Q032",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "The value of 2cos²(π/8) − 1 is:",
+      "options": [
+        {"id": "A", "text": "1/√2"},
+        {"id": "B", "text": "√3/2"},
+        {"id": "C", "text": "1/2"},
+        {"id": "D", "text": "0"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2cos²θ − 1 = cos(2θ). Here 2θ = π/4. So cos(π/4) = 1/√2.",
+      "explanation_incorrect": "Option B is cos(π/6). Option C is cos(π/3). Option D is cos(π/2)."
+    },
+    {
+      "question_id": "T01.03.Q033",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "cos(x) is an even function, meaning cos(−x) equals:",
+      "options": [
+        {"id": "A", "text": "−cos(x)"},
+        {"id": "B", "text": "cos(x)"},
+        {"id": "C", "text": "sin(x)"},
+        {"id": "D", "text": "−sin(x)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Cosine is an even function: cos(−x) = cos(x) for all x.",
+      "explanation_incorrect": "Option A would make it odd. Options C, D are different functions."
+    },
+    {
+      "question_id": "T01.03.Q034",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "The general solution of cos(x) = 0 is:",
+      "options": [
+        {"id": "A", "text": "x = nπ, n ∈ Z"},
+        {"id": "B", "text": "x = (2n+1)π/2, n ∈ Z"},
+        {"id": "C", "text": "x = 2nπ, n ∈ Z"},
+        {"id": "D", "text": "x = nπ/2, n ∈ Z"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "cos(x) = 0 at x = ±π/2, ±3π/2, ... i.e., x = (2n+1)π/2 for integer n.",
+      "explanation_incorrect": "Option A is where sin=0. Option C gives only cos=1 points. Option D includes both sin=0 and cos=0."
+    },
+    {
+      "question_id": "T01.03.Q035",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "sin(3A) in terms of sinA is:",
+      "options": [
+        {"id": "A", "text": "3sinA − 4sin³A"},
+        {"id": "B", "text": "4sin³A − 3sinA"},
+        {"id": "C", "text": "3sin³A − sinA"},
+        {"id": "D", "text": "4sinA − 3sin³A"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The triple angle formula: sin(3A) = 3sinA − 4sin³A.",
+      "explanation_incorrect": "Option B has reversed signs. Options C, D have wrong coefficients."
+    },
+    {
+      "question_id": "T01.03.Q036",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "application",
+      "question_text": "If sinθ = −1/2 and θ is in the third quadrant, then θ is:",
+      "options": [
+        {"id": "A", "text": "210°"},
+        {"id": "B", "text": "150°"},
+        {"id": "C", "text": "330°"},
+        {"id": "D", "text": "240°"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In Q3 (180°-270°), sinθ = −1/2. Reference angle = 30°. θ = 180° + 30° = 210°.",
+      "explanation_incorrect": "Option B is Q2. Option C is Q4. Option D has sinθ = −√3/2."
+    },
+    {
+      "question_id": "T01.03.Q037",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "The value of cos(A)·cos(B) − sin(A)·sin(B) is:",
+      "options": [
+        {"id": "A", "text": "cos(A − B)"},
+        {"id": "B", "text": "cos(A + B)"},
+        {"id": "C", "text": "sin(A + B)"},
+        {"id": "D", "text": "sin(A − B)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "cos(A+B) = cosA·cosB − sinA·sinB. This is the compound angle formula for cosine.",
+      "explanation_incorrect": "Option A has a + sign between terms. Options C, D are sine formulas."
+    },
+    {
+      "question_id": "T01.03.Q038",
+      "type": "fill_blank",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "π/4 radians = ___ degrees.",
+      "correct_answer": "45",
+      "explanation_correct": "π/4 × (180/π) = 45°.",
+      "explanation_incorrect": "Multiply by 180/π to convert radians to degrees."
+    },
+    {
+      "question_id": "T01.03.Q039",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "The number of solutions of sin(x) = 1/2 in [0, 2π) is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "sin(x) = 1/2 at x = π/6 and x = 5π/6 in [0, 2π). Two solutions.",
+      "explanation_incorrect": "Option A misses the second quadrant solution. Options C, D count too many."
+    },
+    {
+      "question_id": "T01.03.Q040",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "cos²A can be written as:",
+      "options": [
+        {"id": "A", "text": "(1 + cos2A)/2"},
+        {"id": "B", "text": "(1 − cos2A)/2"},
+        {"id": "C", "text": "(cos2A − 1)/2"},
+        {"id": "D", "text": "1 + cos2A"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From cos2A = 2cos²A − 1, we get cos²A = (1 + cos2A)/2. This is the power reduction formula.",
+      "explanation_incorrect": "Option B is sin²A. Option C is negative of sin²A. Option D is not divided by 2."
+    },
+    {
+      "question_id": "T01.03.Q041",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "application",
+      "question_text": "The maximum value of 3sin(x) + 4cos(x) is:",
+      "options": [
+        {"id": "A", "text": "5"},
+        {"id": "B", "text": "7"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Maximum of asinx + bcosx = √(a² + b²) = √(9 + 16) = √25 = 5.",
+      "explanation_incorrect": "Option B adds 3+4. Options C, D are individual coefficients."
+    },
+    {
+      "question_id": "T01.03.Q042",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "question_text": "The value of cos(0°) + cos(90°) + cos(180°) + cos(270°) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "−1"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "cos(0°) + cos(90°) + cos(180°) + cos(270°) = 1 + 0 + (−1) + 0 = 0.",
+      "explanation_incorrect": "Options B, C, D result from incorrect standard values."
+    },
+    {
+      "question_id": "T01.03.Q043",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "2sin(A)·cos(B) equals:",
+      "options": [
+        {"id": "A", "text": "sin(A+B) + sin(A−B)"},
+        {"id": "B", "text": "sin(A+B) − sin(A−B)"},
+        {"id": "C", "text": "cos(A−B) − cos(A+B)"},
+        {"id": "D", "text": "cos(A−B) + cos(A+B)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Product-to-sum: 2sinA·cosB = sin(A+B) + sin(A−B).",
+      "explanation_incorrect": "Option B is 2cosA·sinB. Option C is 2sinA·sinB. Option D is 2cosA·cosB."
+    },
+    {
+      "question_id": "T01.03.Q044",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "application",
+      "question_text": "If 1 + tan²θ = 2, then tan(θ) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "±1"},
+        {"id": "C", "text": "±√2"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 + tan²θ = 2 ⟹ tan²θ = 1 ⟹ tanθ = ±1.",
+      "explanation_incorrect": "Option A gives 1+0=1≠2. Option C gives 1+2=3≠2. Option D gives 1+4=5≠2."
+    },
+    {
+      "question_id": "T01.03.Q045",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "The principal solution(s) of √3·tan(x) = 1 in [0, 2π) is/are:",
+      "options": [
+        {"id": "A", "text": "π/6 only"},
+        {"id": "B", "text": "π/6 and 7π/6"},
+        {"id": "C", "text": "π/3 and 4π/3"},
+        {"id": "D", "text": "5π/6 and 11π/6"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan(x) = 1/√3. Principal solution: x = π/6. Since tan has period π, second solution in [0,2π): x = π/6 + π = 7π/6.",
+      "explanation_incorrect": "Option A misses the second solution. Options C, D use wrong reference angle."
+    },
+    {
+      "question_id": "T01.03.Q046",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "question_text": "tan(2A) in terms of tanA is:",
+      "options": [
+        {"id": "A", "text": "2tanA"},
+        {"id": "B", "text": "2tanA/(1 − tan²A)"},
+        {"id": "C", "text": "2tanA/(1 + tan²A)"},
+        {"id": "D", "text": "tan²A/(1 − tanA)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan(2A) = 2tanA/(1 − tan²A). This follows from tan(A+A) formula.",
+      "explanation_incorrect": "Option A omits the denominator. Option C has wrong sign. Option D is made up."
+    },
+    {
+      "question_id": "T01.03.Q047",
+      "type": "true_false",
+      "concept_id": "T01.03.C02",
+      "difficulty": "familiarity",
+      "question_text": "sin(x) is an odd function, meaning sin(−x) = −sin(x).",
+      "options": [
+        {"id": "A", "text": "True"},
+        {"id": "B", "text": "False"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sine is an odd function: sin(−x) = −sin(x) for all x.",
+      "explanation_incorrect": "This is a well-known property of the sine function."
+    },
+    {
+      "question_id": "T01.03.Q048",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "question_text": "If cos(x) + cos(y) = 1 and cos(x) − cos(y) = 1/3, then cos(x) and cos(y) are:",
+      "options": [
+        {"id": "A", "text": "cos(x) = 2/3, cos(y) = 1/3"},
+        {"id": "B", "text": "cos(x) = 1/2, cos(y) = 1/2"},
+        {"id": "C", "text": "cos(x) = 3/4, cos(y) = 1/4"},
+        {"id": "D", "text": "cos(x) = 1, cos(y) = 0"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Adding: 2cos(x) = 4/3, cos(x) = 2/3. Subtracting: 2cos(y) = 2/3, cos(y) = 1/3.",
+      "explanation_incorrect": "Options B, C, D don't satisfy both equations simultaneously."
+    },
+    {
+      "question_id": "T01.03.Q049",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "application",
+      "question_text": "In a triangle, if A + B + C = π, then sin(A + B) equals:",
+      "options": [
+        {"id": "A", "text": "sin(C)"},
+        {"id": "B", "text": "−sin(C)"},
+        {"id": "C", "text": "cos(C)"},
+        {"id": "D", "text": "−cos(C)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A + B = π − C. So sin(A+B) = sin(π−C) = sin(C).",
+      "explanation_incorrect": "Option B has wrong sign. Options C, D give cosine instead of sine."
+    },
+    {
+      "question_id": "T01.03.Q050",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "question_text": "The general solution of sin²(x) = 1/4 is:",
+      "options": [
+        {"id": "A", "text": "x = nπ ± π/6, n ∈ Z"},
+        {"id": "B", "text": "x = nπ + (−1)ⁿπ/6, n ∈ Z"},
+        {"id": "C", "text": "x = 2nπ ± π/6, n ∈ Z"},
+        {"id": "D", "text": "x = nπ/2 + π/6, n ∈ Z"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sin²x = 1/4 ⟹ sinx = ±1/2. This gives (1−cos2x)/2 = 1/4 ⟹ cos2x = 1/2 ⟹ 2x = 2nπ ± π/3 ⟹ x = nπ ± π/6.",
+      "explanation_incorrect": "Option B is for sinx = 1/2 only. Option C misses solutions. Option D is wrong."
+    }
+  ]
+}

@@ -1,0 +1,817 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T02.02",
+  "topic_name": "Determinants",
+  "canonical_explanation": {
+    "text": "The determinant of a square matrix is a scalar value that encodes certain properties. For a 2x2 matrix [[a,b],[c,d]], det = ad - bc. For 3x3 matrices, expand along any row or column using cofactors. Key properties: det(AB) = det(A) * det(B), det(A') = det(A), interchanging rows/columns changes sign, if two rows are identical det = 0. The adjoint adj(A) is the transpose of the cofactor matrix. A^(-1) = adj(A)/|A| when |A| != 0.",
+    "rules": [
+      "det(kA) = k^n * det(A) for an n x n matrix A",
+      "det(AB) = det(A) * det(B)",
+      "A^(-1) = (1/|A|) * adj(A), provided |A| != 0",
+      "System AX = B: unique solution if |A| != 0; X = A^(-1) * B",
+      "Area of triangle = (1/2)|x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)|"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T02.02.Q001",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Find the determinant of the matrix [[3, 2], [1, 4]].",
+      "options": [
+        { "id": "A", "text": "14" },
+        { "id": "B", "text": "10" },
+        { "id": "C", "text": "5" },
+        { "id": "D", "text": "11" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "det = (3)(4) - (2)(1) = 12 - 2 = 10.",
+      "explanation_incorrect": "For a 2x2 matrix [[a,b],[c,d]], det = ad - bc. Here det = 3*4 - 2*1 = 12 - 2 = 10."
+    },
+    {
+      "question_id": "T02.02.Q002",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Find the determinant of the matrix [[5, -3], [2, 7]].",
+      "options": [
+        { "id": "A", "text": "41" },
+        { "id": "B", "text": "29" },
+        { "id": "C", "text": "35" },
+        { "id": "D", "text": "31" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "det = (5)(7) - (-3)(2) = 35 + 6 = 41.",
+      "explanation_incorrect": "For [[a,b],[c,d]], det = ad - bc. Here det = 5*7 - (-3)*2 = 35 - (-6) = 35 + 6 = 41."
+    },
+    {
+      "question_id": "T02.02.Q003",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "If A = [[1, 0], [0, 1]] (the 2x2 identity matrix), what is |A|?",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "-1" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "det(I) = (1)(1) - (0)(0) = 1. The determinant of any identity matrix is always 1.",
+      "explanation_incorrect": "For the identity matrix [[1,0],[0,1]], det = 1*1 - 0*0 = 1."
+    },
+    {
+      "question_id": "T02.02.Q004",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "If two rows of a determinant are identical, then the value of the determinant is 0.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is a standard property of determinants. If two rows (or columns) are identical, the determinant equals 0.",
+      "explanation_incorrect": "Recall the property: if any two rows or columns of a determinant are identical, its value is 0."
+    },
+    {
+      "question_id": "T02.02.Q005",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "What happens to the value of a determinant if two of its rows are interchanged?",
+      "options": [
+        { "id": "A", "text": "It doubles" },
+        { "id": "B", "text": "It remains the same" },
+        { "id": "C", "text": "It changes sign" },
+        { "id": "D", "text": "It becomes zero" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Interchanging any two rows (or columns) of a determinant changes its sign. If |A| = d, then after one row swap the determinant becomes -d.",
+      "explanation_incorrect": "By the property of determinants, swapping two rows multiplies the determinant by -1, i.e., it changes sign."
+    },
+    {
+      "question_id": "T02.02.Q006",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If A is a 3x3 matrix and |A| = 5, what is |3A|?",
+      "options": [
+        { "id": "A", "text": "15" },
+        { "id": "B", "text": "45" },
+        { "id": "C", "text": "135" },
+        { "id": "D", "text": "125" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an n x n matrix, det(kA) = k^n * det(A). Here n = 3, k = 3, so |3A| = 3^3 * 5 = 27 * 5 = 135.",
+      "explanation_incorrect": "Use det(kA) = k^n * det(A). For a 3x3 matrix with k = 3: |3A| = 27 * 5 = 135, not simply 3 * 5."
+    },
+    {
+      "question_id": "T02.02.Q007",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "If A is a 2x2 matrix with |A| = 4, then |2A| = ___.",
+      "options": [
+        { "id": "A", "text": "8" },
+        { "id": "B", "text": "16" },
+        { "id": "C", "text": "32" },
+        { "id": "D", "text": "4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "det(kA) = k^n * det(A). For n = 2, k = 2: |2A| = 2^2 * 4 = 4 * 4 = 16.",
+      "explanation_incorrect": "Use det(kA) = k^n * det(A). Here n = 2 and k = 2, so |2A| = 2^2 * 4 = 16."
+    },
+    {
+      "question_id": "T02.02.Q008",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Evaluate the determinant: |[[1, 2, 3], [0, 1, 4], [0, 0, 2]]|.",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "8" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is an upper triangular matrix. The determinant of a triangular matrix is the product of its diagonal elements: 1 * 1 * 2 = 2.",
+      "explanation_incorrect": "For a triangular matrix (all entries below or above the diagonal are 0), the determinant equals the product of the diagonal entries: 1 * 1 * 2 = 2."
+    },
+    {
+      "question_id": "T02.02.Q009",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If |A| = 3 and |B| = 7 (both 3x3 matrices), find |AB|.",
+      "options": [
+        { "id": "A", "text": "10" },
+        { "id": "B", "text": "21" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "-4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By the product property, det(AB) = det(A) * det(B) = 3 * 7 = 21.",
+      "explanation_incorrect": "The determinant of a product equals the product of determinants: |AB| = |A| * |B| = 3 * 7 = 21."
+    },
+    {
+      "question_id": "T02.02.Q010",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "det(A') = det(A), where A' is the transpose of matrix A.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is a standard property. The determinant of a matrix and the determinant of its transpose are always equal.",
+      "explanation_incorrect": "The property det(A') = det(A) holds for all square matrices. The transpose does not change the determinant."
+    },
+    {
+      "question_id": "T02.02.Q011",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Evaluate: |[[2, 4], [1, 2]]|.",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "8" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "-4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "det = 2*2 - 4*1 = 4 - 4 = 0. Note that R1 = 2*R2, so the rows are proportional and the determinant is 0.",
+      "explanation_incorrect": "det = ad - bc = 2*2 - 4*1 = 4 - 4 = 0. When rows are proportional, the determinant is always 0."
+    },
+    {
+      "question_id": "T02.02.Q012",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Evaluate: |[[1, -1, 2], [3, 0, -1], [2, 1, 3]]|.",
+      "options": [
+        { "id": "A", "text": "18" },
+        { "id": "B", "text": "12" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "-6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Expanding along R1: 1(0*3 - (-1)*1) - (-1)(3*3 - (-1)*2) + 2(3*1 - 0*2) = 1(0+1) + 1(9+2) + 2(3-0) = 1 + 11 + 6 = 18.",
+      "explanation_incorrect": "Expand along R1: 1(0+1) + 1(9+2) + 2(3-0) = 1 + 11 + 6 = 18."
+    },
+    {
+      "question_id": "T02.02.Q013",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If one row of a 3x3 determinant is multiplied by 5, the determinant is multiplied by:",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "15" },
+        { "id": "C", "text": "25" },
+        { "id": "D", "text": "125" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If a single row (or column) of a determinant is multiplied by a scalar k, the determinant is multiplied by k. Here k = 5.",
+      "explanation_incorrect": "Multiplying one row by a scalar k multiplies the determinant by k (not k^n). So the answer is 5."
+    },
+    {
+      "question_id": "T02.02.Q014",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Evaluate: |[[2, 3, 1], [0, 1, -2], [0, 0, 4]]|.",
+      "options": [
+        { "id": "A", "text": "4" },
+        { "id": "B", "text": "8" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is an upper triangular matrix. The determinant equals the product of diagonal entries: 2 * 1 * 4 = 8.",
+      "explanation_incorrect": "For a triangular matrix, det = product of diagonal elements = 2 * 1 * 4 = 8."
+    },
+    {
+      "question_id": "T02.02.Q015",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the value of x if |[[x, 2], [3, x]]| = 0.",
+      "options": [
+        { "id": "A", "text": "x = +/-6" },
+        { "id": "B", "text": "x = +/-sqrt(6)" },
+        { "id": "C", "text": "x = 6" },
+        { "id": "D", "text": "x = 3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "det = x^2 - 6 = 0, so x^2 = 6, giving x = +/-sqrt(6).",
+      "explanation_incorrect": "Setting det = 0: x*x - 2*3 = 0, i.e., x^2 - 6 = 0, so x = +/-sqrt(6)."
+    },
+    {
+      "question_id": "T02.02.Q016",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Evaluate: |[[1, 2, 3], [4, 5, 6], [7, 8, 9]]|.",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "-3" },
+        { "id": "D", "text": "6" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "R3 = 2*R2 - R1, so the rows are linearly dependent and the determinant is 0. Alternatively: 1(45-48) - 2(36-42) + 3(32-35) = -3 + 12 - 9 = 0.",
+      "explanation_incorrect": "Expanding: 1(45-48) - 2(36-42) + 3(32-35) = -3 + 12 - 9 = 0. The rows are in AP, making them linearly dependent."
+    },
+    {
+      "question_id": "T02.02.Q017",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "fill_blank",
+      "question_text": "The determinant of a diagonal matrix diag(2, 3, 5) is ___.",
+      "options": [
+        { "id": "A", "text": "10" },
+        { "id": "B", "text": "15" },
+        { "id": "C", "text": "30" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a diagonal matrix, the determinant is the product of the diagonal entries: 2 * 3 * 5 = 30.",
+      "explanation_incorrect": "A diagonal matrix's determinant equals the product of its diagonal elements: 2 * 3 * 5 = 30."
+    },
+    {
+      "question_id": "T02.02.Q018",
+      "concept_id": "T02.02.C01",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If A is a 3x3 matrix with |A| = -2, find |A^2|.",
+      "options": [
+        { "id": "A", "text": "-4" },
+        { "id": "B", "text": "4" },
+        { "id": "C", "text": "-8" },
+        { "id": "D", "text": "8" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "|A^2| = |A*A| = |A|*|A| = (-2)(-2) = 4.",
+      "explanation_incorrect": "Using det(AB) = det(A)*det(B), we get |A^2| = |A|^2 = (-2)^2 = 4."
+    },
+    {
+      "question_id": "T02.02.Q019",
+      "concept_id": "T02.02.C01",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Evaluate: |[[2, -1, 3], [0, 5, -2], [1, 0, 4]]|.",
+      "options": [
+        { "id": "A", "text": "29" },
+        { "id": "B", "text": "27" },
+        { "id": "C", "text": "25" },
+        { "id": "D", "text": "31" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Expanding along R1: 2(5*4 - (-2)*0) - (-1)(0*4 - (-2)*1) + 3(0*0 - 5*1) = 2(20) + 1(2) + 3(-5) = 40 + 2 - 15 = 27.",
+      "explanation_incorrect": "Expand along R1: 2(20 - 0) + 1(0 + 2) + 3(0 - 5) = 40 + 2 - 15 = 27."
+    },
+    {
+      "question_id": "T02.02.Q020",
+      "concept_id": "T02.02.C01",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "If all elements of one row of a determinant are zero, then the value of the determinant is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "The sum of other rows" },
+        { "id": "C", "text": "0" },
+        { "id": "D", "text": "Cannot be determined" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If all elements of any row (or column) are zero, expanding along that row gives 0 for every term, so the determinant is 0.",
+      "explanation_incorrect": "If an entire row is zero, expanding along that row produces all zero terms. Hence the determinant is 0."
+    },
+    {
+      "question_id": "T02.02.Q021",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "In the matrix [[3, 1, 2], [0, 4, -1], [5, 2, 6]], what is the minor M12 (minor of element in row 1, column 2)?",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "-5" },
+        { "id": "C", "text": "24" },
+        { "id": "D", "text": "10" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "M12 is the determinant of the 2x2 matrix obtained by deleting row 1 and column 2: |[[0,-1],[5,6]]| = 0*6 - (-1)*5 = 0 + 5 = 5.",
+      "explanation_incorrect": "Delete row 1 and column 2 to get [[0,-1],[5,6]]. Its determinant = 0*6 - (-1)*5 = 5."
+    },
+    {
+      "question_id": "T02.02.Q022",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The cofactor A12 of an element a12 is related to the minor M12 by:",
+      "options": [
+        { "id": "A", "text": "A12 = M12" },
+        { "id": "B", "text": "A12 = -M12" },
+        { "id": "C", "text": "A12 = (-1)^(1+2) * M12 = -M12" },
+        { "id": "D", "text": "A12 = (-1)^(1*2) * M12" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Cofactor Aij = (-1)^(i+j) * Mij. For i=1, j=2: A12 = (-1)^3 * M12 = -M12.",
+      "explanation_incorrect": "The cofactor is Aij = (-1)^(i+j) * Mij. Since 1+2 = 3 is odd, A12 = -M12."
+    },
+    {
+      "question_id": "T02.02.Q023",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "For the matrix A = [[1, 2], [3, 4]], find adj(A).",
+      "options": [
+        { "id": "A", "text": "[[4, -2], [-3, 1]]" },
+        { "id": "B", "text": "[[4, -3], [-2, 1]]" },
+        { "id": "C", "text": "[[-4, 2], [3, -1]]" },
+        { "id": "D", "text": "[[1, -2], [-3, 4]]" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a 2x2 matrix [[a,b],[c,d]], adj(A) = [[d,-b],[-c,a]]. So adj(A) = [[4,-2],[-3,1]].",
+      "explanation_incorrect": "For 2x2 matrices, adj(A) is obtained by swapping diagonal elements and changing signs of off-diagonal elements: [[4,-2],[-3,1]]."
+    },
+    {
+      "question_id": "T02.02.Q024",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "For A = [[2, 1], [5, 3]], what is |A|?",
+      "options": [
+        { "id": "A", "text": "11" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "-1" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "|A| = 2*3 - 1*5 = 6 - 5 = 1. Also, A * adj(A) = |A| * I = 1 * I = I, which can be verified.",
+      "explanation_incorrect": "|A| = ad - bc = 2*3 - 1*5 = 6 - 5 = 1."
+    },
+    {
+      "question_id": "T02.02.Q025",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Find the cofactor of element a21 (= 4) in the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]].",
+      "options": [
+        { "id": "A", "text": "6" },
+        { "id": "B", "text": "-6" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "-3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "M21 = |[[2,3],[8,9]]| = 2*9 - 3*8 = 18 - 24 = -6. Cofactor A21 = (-1)^(2+1) * (-6) = (-1)(-6) = 6.",
+      "explanation_incorrect": "Delete row 2 and column 1: M21 = |[[2,3],[8,9]]| = 18 - 24 = -6. Then A21 = (-1)^3 * (-6) = 6."
+    },
+    {
+      "question_id": "T02.02.Q026",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If A is a 3x3 matrix with |A| = 4, then |adj(A)| equals:",
+      "options": [
+        { "id": "A", "text": "4" },
+        { "id": "B", "text": "8" },
+        { "id": "C", "text": "16" },
+        { "id": "D", "text": "64" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an n x n matrix, |adj(A)| = |A|^(n-1). Here n = 3, so |adj(A)| = 4^(3-1) = 4^2 = 16.",
+      "explanation_incorrect": "The formula is |adj(A)| = |A|^(n-1). For a 3x3 matrix: |adj(A)| = 4^2 = 16."
+    },
+    {
+      "question_id": "T02.02.Q027",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "For the matrix A = [[1, 3], [2, 7]], what is |A| * I (where I is the 2x2 identity)?",
+      "options": [
+        { "id": "A", "text": "[[1, 0], [0, 1]]" },
+        { "id": "B", "text": "[[2, 0], [0, 2]]" },
+        { "id": "C", "text": "[[7, 0], [0, 7]]" },
+        { "id": "D", "text": "[[3, 0], [0, 3]]" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "|A| = 1*7 - 3*2 = 7 - 6 = 1. So |A| * I = 1 * I = [[1,0],[0,1]].",
+      "explanation_incorrect": "|A| = 7 - 6 = 1, so |A| * I = 1 * [[1,0],[0,1]] = [[1,0],[0,1]]."
+    },
+    {
+      "question_id": "T02.02.Q028",
+      "concept_id": "T02.02.C02",
+      "difficulty": "familiarity",
+      "type": "true_false",
+      "question_text": "The adjoint of a 2x2 matrix [[a,b],[c,d]] is [[d, -c], [-b, a]].",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The correct adjoint of [[a,b],[c,d]] is [[d,-b],[-c,a]]. The statement incorrectly places -c in position (1,2) and -b in position (2,1); their positions should be swapped.",
+      "explanation_incorrect": "adj([[a,b],[c,d]]) = [[d,-b],[-c,a]]. The off-diagonal signs are correct but the statement has -c and -b in the wrong positions."
+    },
+    {
+      "question_id": "T02.02.Q029",
+      "concept_id": "T02.02.C02",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "In the matrix [[2, 0, 1], [3, 1, 2], [1, 0, 3]], find the minor M32.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "7" },
+        { "id": "C", "text": "-1" },
+        { "id": "D", "text": "4" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "M32 is obtained by deleting row 3 and column 2: |[[2,1],[3,2]]| = 2*2 - 1*3 = 4 - 3 = 1.",
+      "explanation_incorrect": "Delete row 3 and column 2 to get [[2,1],[3,2]]. det = 2*2 - 1*3 = 4 - 3 = 1."
+    },
+    {
+      "question_id": "T02.02.Q030",
+      "concept_id": "T02.02.C02",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If A is a non-singular matrix of order 3, then adj(adj(A)) equals:",
+      "options": [
+        { "id": "A", "text": "|A| * A" },
+        { "id": "B", "text": "|A|^2 * A" },
+        { "id": "C", "text": "A" },
+        { "id": "D", "text": "|A|^3 * A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For an n x n matrix, adj(adj(A)) = |A|^(n-2) * A. For n = 3: adj(adj(A)) = |A|^1 * A = |A| * A.",
+      "explanation_incorrect": "Using the identity adj(adj(A)) = |A|^(n-2) * A with n = 3, we get adj(adj(A)) = |A| * A."
+    },
+    {
+      "question_id": "T02.02.Q031",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Find the inverse of the matrix A = [[2, 1], [5, 3]].",
+      "options": [
+        { "id": "A", "text": "[[3, -1], [-5, 2]]" },
+        { "id": "B", "text": "[[3, 1], [5, 2]]" },
+        { "id": "C", "text": "[[-3, 1], [5, -2]]" },
+        { "id": "D", "text": "[[2, -1], [-5, 3]]" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "|A| = 2*3 - 1*5 = 1. adj(A) = [[3,-1],[-5,2]]. A^(-1) = (1/1) * adj(A) = [[3,-1],[-5,2]].",
+      "explanation_incorrect": "First compute |A| = 6 - 5 = 1. adj(A) = [[3,-1],[-5,2]]. Since |A| = 1, A^(-1) = adj(A) = [[3,-1],[-5,2]]."
+    },
+    {
+      "question_id": "T02.02.Q032",
+      "concept_id": "T02.02.C03",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "A matrix A is invertible if and only if:",
+      "options": [
+        { "id": "A", "text": "|A| = 1" },
+        { "id": "B", "text": "|A| > 0" },
+        { "id": "C", "text": "|A| != 0" },
+        { "id": "D", "text": "A is symmetric" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A square matrix A is invertible (non-singular) if and only if its determinant is non-zero, i.e., |A| != 0.",
+      "explanation_incorrect": "The necessary and sufficient condition for a matrix to have an inverse is that its determinant is non-zero."
+    },
+    {
+      "question_id": "T02.02.Q033",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "If A = [[4, 7], [2, 6]], find A^(-1).",
+      "options": [
+        { "id": "A", "text": "(1/10)[[6, -7], [-2, 4]]" },
+        { "id": "B", "text": "(1/10)[[6, 7], [2, 4]]" },
+        { "id": "C", "text": "[[6, -7], [-2, 4]]" },
+        { "id": "D", "text": "(1/38)[[6, -7], [-2, 4]]" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "|A| = 4*6 - 7*2 = 24 - 14 = 10. adj(A) = [[6,-7],[-2,4]]. A^(-1) = (1/10)[[6,-7],[-2,4]].",
+      "explanation_incorrect": "|A| = 24 - 14 = 10, adj(A) = [[6,-7],[-2,4]], so A^(-1) = (1/10)[[6,-7],[-2,4]]."
+    },
+    {
+      "question_id": "T02.02.Q034",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "Solve using Cramer's rule: 2x + 3y = 7 and 3x + 5y = 11. Find x.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "-2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "D = |[[2,3],[3,5]]| = 10 - 9 = 1. Dx = |[[7,3],[11,5]]| = 35 - 33 = 2. x = Dx/D = 2/1 = 2.",
+      "explanation_incorrect": "By Cramer's rule: D = 2*5 - 3*3 = 1, Dx = 7*5 - 3*11 = 35 - 33 = 2. So x = 2/1 = 2."
+    },
+    {
+      "question_id": "T02.02.Q035",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "mcq",
+      "question_text": "For the system 2x + 3y = 7 and 3x + 5y = 11, find y using Cramer's rule.",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "-1" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "D = 1 (from previous). Dy = |[[2,7],[3,11]]| = 22 - 21 = 1. y = Dy/D = 1/1 = 1.",
+      "explanation_incorrect": "Dy = |[[2,7],[3,11]]| = 2*11 - 7*3 = 22 - 21 = 1. y = 1/1 = 1."
+    },
+    {
+      "question_id": "T02.02.Q036",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Using Cramer's rule, solve: x + y + z = 6, x + 2y + 3z = 14, x + 4y + 9z = 36. Find z.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "4" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "D = |[[1,1,1],[1,2,3],[1,4,9]]|. Expanding along R1: 1(18-12) - 1(9-3) + 1(4-2) = 6 - 6 + 2 = 2. Dz = |[[1,1,6],[1,2,14],[1,4,36]]|. Expanding: 1(72-56) - 1(36-14) + 6(4-2) = 16 - 22 + 12 = 6. z = Dz/D = 6/2 = 3.",
+      "explanation_incorrect": "Compute D = 2 and Dz = 6 by cofactor expansion. z = Dz/D = 6/2 = 3."
+    },
+    {
+      "question_id": "T02.02.Q037",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The system of equations x + 2y = 5 and 2x + 4y = 10 has:",
+      "options": [
+        { "id": "A", "text": "A unique solution" },
+        { "id": "B", "text": "No solution" },
+        { "id": "C", "text": "Infinitely many solutions" },
+        { "id": "D", "text": "Exactly two solutions" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "D = |[[1,2],[2,4]]| = 4 - 4 = 0. Since D = 0 and the second equation is exactly 2 times the first, the system is consistent with infinitely many solutions.",
+      "explanation_incorrect": "The determinant D = 0 and both equations are proportional (2nd = 2 * 1st), so there are infinitely many solutions."
+    },
+    {
+      "question_id": "T02.02.Q038",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The system x + 2y = 5 and 2x + 4y = 7 has:",
+      "options": [
+        { "id": "A", "text": "A unique solution" },
+        { "id": "B", "text": "No solution" },
+        { "id": "C", "text": "Infinitely many solutions" },
+        { "id": "D", "text": "Two solutions" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "D = |[[1,2],[2,4]]| = 0. Dx = |[[5,2],[7,4]]| = 20 - 14 = 6 != 0. Since D = 0 but Dx != 0, the system is inconsistent and has no solution.",
+      "explanation_incorrect": "D = 0 and Dx = 6 != 0, so the system is inconsistent (no solution). The lines are parallel but not coincident."
+    },
+    {
+      "question_id": "T02.02.Q039",
+      "concept_id": "T02.02.C03",
+      "difficulty": "application",
+      "type": "fill_blank",
+      "question_text": "If A^(-1) exists and |A| = 5 for a 3x3 matrix, then |A^(-1)| = ___.",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "-5" },
+        { "id": "C", "text": "1/5" },
+        { "id": "D", "text": "25" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since A * A^(-1) = I, taking determinants: |A| * |A^(-1)| = 1, so |A^(-1)| = 1/|A| = 1/5.",
+      "explanation_incorrect": "From |A * A^(-1)| = |I| = 1, we get |A| * |A^(-1)| = 1, so |A^(-1)| = 1/5."
+    },
+    {
+      "question_id": "T02.02.Q040",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Solve using matrices: x + y = 5 and 2x - y = 4. Find x + 2y.",
+      "options": [
+        { "id": "A", "text": "6" },
+        { "id": "B", "text": "7" },
+        { "id": "C", "text": "8" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A = [[1,1],[2,-1]], |A| = -1-2 = -3. adj(A) = [[-1,-1],[-2,1]]. A^(-1) = (1/-3)[[-1,-1],[-2,1]]. X = A^(-1) * B = (-1/3)[[-1,-1],[-2,1]][[5],[4]] = (-1/3)[[-5-4],[-10+4]] = (-1/3)[[-9],[-6]] = [[3],[2]]. So x = 3, y = 2, and x + 2y = 3 + 4 = 7.",
+      "explanation_incorrect": "|A| = -3. Solving gives x = 3, y = 2. Verify: 3+2=5, 2(3)-2=4. So x + 2y = 3 + 4 = 7."
+    },
+    {
+      "question_id": "T02.02.Q041",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Using Cramer's rule, solve: x + y + z = 6, y + z = 4, x + z = 5. Find x.",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Write as: x+y+z=6, 0x+y+z=4, x+0y+z=5. D = |[[1,1,1],[0,1,1],[1,0,1]]|. Expanding along R1: 1(1-0) - 1(0-1) + 1(0-1) = 1 + 1 - 1 = 1. Dx = |[[6,1,1],[4,1,1],[5,0,1]]|. Expanding: 6(1-0) - 1(4-5) + 1(0-5) = 6 + 1 - 5 = 2. x = Dx/D = 2/1 = 2.",
+      "explanation_incorrect": "D = 1, Dx = 2. So x = 2. Check: from y+z=4 and x+y+z=6, x=2. From x+z=5, z=3, so y=1. Verify: 2+1+3=6, 1+3=4, 2+3=5."
+    },
+    {
+      "question_id": "T02.02.Q042",
+      "concept_id": "T02.02.C03",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "If A = [[1, 1, 1], [1, 2, 3], [2, 1, 3]], find |A| and determine if A is invertible.",
+      "options": [
+        { "id": "A", "text": "|A| = 0, not invertible" },
+        { "id": "B", "text": "|A| = 3, invertible" },
+        { "id": "C", "text": "|A| = -1, invertible" },
+        { "id": "D", "text": "|A| = 1, invertible" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Expanding along R1: 1(2*3-3*1) - 1(1*3-3*2) + 1(1*1-2*2) = 1(6-3) - 1(3-6) + 1(1-4) = 3 + 3 - 3 = 3. Since |A| = 3 != 0, A is invertible.",
+      "explanation_incorrect": "Expand along R1: 1(6-3) - 1(3-6) + 1(1-4) = 3 - (-3) + (-3) = 3 + 3 - 3 = 3. Since 3 != 0, A is invertible."
+    },
+    {
+      "question_id": "T02.02.Q043",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Find the area of the triangle with vertices (1, 0), (6, 0), and (4, 3) using the determinant formula.",
+      "options": [
+        { "id": "A", "text": "9 sq. units" },
+        { "id": "B", "text": "7.5 sq. units" },
+        { "id": "C", "text": "15 sq. units" },
+        { "id": "D", "text": "6 sq. units" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area = (1/2)|x1(y2-y3) + x2(y3-y1) + x3(y1-y2)| = (1/2)|1(0-3) + 6(3-0) + 4(0-0)| = (1/2)|(-3) + 18 + 0| = (1/2)(15) = 7.5 sq. units.",
+      "explanation_incorrect": "Use Area = (1/2)|1(0-3) + 6(3-0) + 4(0-0)| = (1/2)|(-3+18+0)| = (1/2)(15) = 7.5."
+    },
+    {
+      "question_id": "T02.02.Q044",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "Find the area of the triangle with vertices (0, 0), (3, 0), and (0, 4) using determinants.",
+      "options": [
+        { "id": "A", "text": "12 sq. units" },
+        { "id": "B", "text": "7 sq. units" },
+        { "id": "C", "text": "6 sq. units" },
+        { "id": "D", "text": "5 sq. units" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Area = (1/2)|0(0-4) + 3(4-0) + 0(0-0)| = (1/2)|0 + 12 + 0| = 6 sq. units.",
+      "explanation_incorrect": "Area = (1/2)|x1(y2-y3) + x2(y3-y1) + x3(y1-y2)| = (1/2)(12) = 6. This is a right triangle with legs 3 and 4, so area = (1/2)(3)(4) = 6."
+    },
+    {
+      "question_id": "T02.02.Q045",
+      "concept_id": "T02.02.C04",
+      "difficulty": "familiarity",
+      "type": "mcq",
+      "question_text": "The points (1, 5), (2, 3), and (3, 1) are:",
+      "options": [
+        { "id": "A", "text": "Vertices of a right triangle" },
+        { "id": "B", "text": "Collinear" },
+        { "id": "C", "text": "Vertices of an equilateral triangle" },
+        { "id": "D", "text": "Vertices of an isosceles triangle" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area = (1/2)|1(3-1) + 2(1-5) + 3(5-3)| = (1/2)|2 - 8 + 6| = (1/2)|0| = 0. Since the area is 0, the points are collinear.",
+      "explanation_incorrect": "When the determinant-based area formula gives 0, the three points lie on the same line (are collinear)."
+    },
+    {
+      "question_id": "T02.02.Q046",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find the value of k such that the points (1, 2), (4, 6), and (k, 10) are collinear.",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "6" },
+        { "id": "C", "text": "7" },
+        { "id": "D", "text": "8" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For collinearity, area = 0: 1(6-10) + 4(10-2) + k(2-6) = 0. That gives -4 + 32 - 4k = 0, so 28 - 4k = 0, hence k = 7.",
+      "explanation_incorrect": "Set the area expression to 0: 1(6-10) + 4(10-2) + k(2-6) = -4 + 32 - 4k = 28 - 4k = 0, so k = 7."
+    },
+    {
+      "question_id": "T02.02.Q047",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Find the area of the triangle with vertices (2, 7), (1, 1), and (10, 8) using determinants.",
+      "options": [
+        { "id": "A", "text": "47/2 sq. units" },
+        { "id": "B", "text": "24 sq. units" },
+        { "id": "C", "text": "23 sq. units" },
+        { "id": "D", "text": "25 sq. units" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Area = (1/2)|2(1-8) + 1(8-7) + 10(7-1)| = (1/2)|2(-7) + 1(1) + 10(6)| = (1/2)|-14 + 1 + 60| = (1/2)(47) = 47/2 sq. units.",
+      "explanation_incorrect": "Area = (1/2)|2(1-8) + 1(8-7) + 10(7-1)| = (1/2)|-14 + 1 + 60| = 47/2 sq. units."
+    },
+    {
+      "question_id": "T02.02.Q048",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "fill_blank",
+      "question_text": "If the area of a triangle with vertices (2, 0), (8, 0), and (5, k) is 9 sq. units and k > 0, then k = ___.",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "6" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area = (1/2)|2(0-k) + 8(k-0) + 5(0-0)| = 9. |-2k + 8k| = 18. |6k| = 18. Since k > 0, 6k = 18, so k = 3.",
+      "explanation_incorrect": "Compute: (1/2)|2(0-k) + 8(k-0) + 5(0-0)| = (1/2)|6k| = 9. So 6k = 18, giving k = 3."
+    },
+    {
+      "question_id": "T02.02.Q049",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "The points (a, b+c), (b, c+a), and (c, a+b) are always:",
+      "options": [
+        { "id": "A", "text": "Collinear only when a + b + c = 0" },
+        { "id": "B", "text": "Collinear for all values of a, b, c" },
+        { "id": "C", "text": "Non-collinear" },
+        { "id": "D", "text": "Collinear only when a = b = c" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the area formula: a((c+a)-(a+b)) + b((a+b)-(b+c)) + c((b+c)-(c+a)) = a(c-b) + b(a-c) + c(b-a) = ac - ab + ab - bc + bc - ac = 0. Since the expression is always 0, the points are always collinear.",
+      "explanation_incorrect": "Computing: a(c-b) + b(a-c) + c(b-a) = ac - ab + ba - bc + cb - ca = 0. The area is 0 for all values of a, b, c, so the points are always collinear."
+    },
+    {
+      "question_id": "T02.02.Q050",
+      "concept_id": "T02.02.C04",
+      "difficulty": "exam_style",
+      "type": "mcq",
+      "question_text": "Using the determinant method, find the area of the triangle formed by the lines y = 0, x = 4, and y = x.",
+      "options": [
+        { "id": "A", "text": "4 sq. units" },
+        { "id": "B", "text": "8 sq. units" },
+        { "id": "C", "text": "16 sq. units" },
+        { "id": "D", "text": "2 sq. units" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The vertices are: intersection of y=0 and x=4 gives (4,0); intersection of y=0 and y=x gives (0,0); intersection of x=4 and y=x gives (4,4). Area = (1/2)|0(0-4) + 4(4-0) + 4(0-0)| = (1/2)|0 + 16 + 0| = 8 sq. units.",
+      "explanation_incorrect": "Vertices: (0,0), (4,0), (4,4). Area = (1/2)|0(0-4) + 4(4-0) + 4(0-0)| = (1/2)(16) = 8 sq. units."
+    }
+  ]
+}

@@ -1,0 +1,815 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T01.01",
+  "topic_name": "Relations and Functions",
+  "canonical_explanation": {
+    "text": "A relation R on set A is reflexive if (a,a)\u2208R for all a\u2208A, symmetric if (a,b)\u2208R implies (b,a)\u2208R, and transitive if (a,b)\u2208R and (b,c)\u2208R implies (a,c)\u2208R. A relation that is reflexive, symmetric, and transitive is called an equivalence relation. A function f:A\u2192B is one-one (injective) if f(a\u2081)=f(a\u2082) implies a\u2081=a\u2082, onto (surjective) if every element in B has a pre-image, and bijective if it is both. The composition (fog)(x) = f(g(x)). A function is invertible if and only if it is bijective.",
+    "rules": [
+      "A relation R on set A with n elements: total relations = 2^(n\u00b2)",
+      "Equivalence relation partitions the set into disjoint equivalence classes",
+      "For bijective f: A\u2192B, f\u207b\u00b9 exists and f\u207b\u00b9of = I\u2090, fof\u207b\u00b9 = I_B",
+      "Composition of functions is associative: fo(goh) = (fog)oh",
+      "A binary operation * on A is commutative if a*b = b*a for all a,b \u2208 A"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.01.Q001",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A relation R on set A is called reflexive if:",
+      "options": [
+        { "id": "A", "text": "(a, b) \u2208 R implies (b, a) \u2208 R" },
+        { "id": "B", "text": "(a, a) \u2208 R for every a \u2208 A" },
+        { "id": "C", "text": "(a, b) \u2208 R and (b, c) \u2208 R implies (a, c) \u2208 R" },
+        { "id": "D", "text": "R = A \u00d7 A" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A relation R on set A is reflexive if (a, a) \u2208 R for every element a in A. Every element must be related to itself.",
+      "explanation_incorrect": "Option A defines symmetric, option C defines transitive, and option D defines the universal relation. Reflexive means every element is related to itself: (a, a) \u2208 R for all a \u2208 A."
+    },
+    {
+      "question_id": "T01.01.Q002",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Let A = {1, 2, 3} and R = {(1,1), (2,2), (3,3), (1,2), (2,1)}. Which properties does R satisfy?",
+      "options": [
+        { "id": "A", "text": "Reflexive and symmetric only" },
+        { "id": "B", "text": "Reflexive and transitive only" },
+        { "id": "C", "text": "Reflexive, symmetric, and transitive" },
+        { "id": "D", "text": "Symmetric and transitive only" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "R is reflexive: (1,1), (2,2), (3,3) are all present. R is symmetric: (1,2) and (2,1) are both present. R is transitive: (1,2) and (2,1) gives (1,1) which is present; (2,1) and (1,2) gives (2,2) which is present. So R is an equivalence relation.",
+      "explanation_incorrect": "Check all three properties: reflexive (all diagonal pairs present), symmetric (if (a,b) then (b,a) present), and transitive (if (a,b) and (b,c) then (a,c) present). All three hold here."
+    },
+    {
+      "question_id": "T01.01.Q003",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The relation R on the set of integers Z defined by R = {(a, b) : a \u2212 b is divisible by 3} is:",
+      "options": [
+        { "id": "A", "text": "Reflexive only" },
+        { "id": "B", "text": "Symmetric only" },
+        { "id": "C", "text": "Transitive only" },
+        { "id": "D", "text": "An equivalence relation" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Reflexive: a \u2212 a = 0 is divisible by 3. Symmetric: if 3|(a\u2212b), then 3|(b\u2212a) since b\u2212a = \u2212(a\u2212b). Transitive: if 3|(a\u2212b) and 3|(b\u2212c), then 3|(a\u2212b+b\u2212c) = 3|(a\u2212c). Hence R is an equivalence relation.",
+      "explanation_incorrect": "Verify all three properties. Since a\u2212a=0 is divisible by 3 (reflexive), if a\u2212b is divisible by 3 then so is b\u2212a (symmetric), and if a\u2212b and b\u2212c are divisible by 3 then a\u2212c = (a\u2212b)+(b\u2212c) is also divisible by 3 (transitive)."
+    },
+    {
+      "question_id": "T01.01.Q004",
+      "type": "true_false",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The relation R = {(1,1), (2,2)} on the set A = {1, 2, 3} is reflexive.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The relation is not reflexive because (3, 3) is not in R. For reflexivity, (a, a) must be in R for every element a in A, including 3.",
+      "explanation_incorrect": "Reflexive requires (a, a) \u2208 R for ALL a \u2208 A. Here A = {1, 2, 3} but (3, 3) \u2209 R, so R is not reflexive."
+    },
+    {
+      "question_id": "T01.01.Q005",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A relation which is reflexive, symmetric, and transitive is called:",
+      "options": [
+        { "id": "A", "text": "A partial order relation" },
+        { "id": "B", "text": "An equivalence relation" },
+        { "id": "C", "text": "A universal relation" },
+        { "id": "D", "text": "An empty relation" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A relation that satisfies all three properties \u2014 reflexive, symmetric, and transitive \u2014 is called an equivalence relation.",
+      "explanation_incorrect": "A partial order is reflexive, antisymmetric, and transitive. Universal and empty relations are specific types. The combination of reflexive + symmetric + transitive defines an equivalence relation."
+    },
+    {
+      "question_id": "T01.01.Q006",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "Let R be the relation on A = {1, 2, 3, 4} defined by R = {(1,2), (2,1), (1,1), (2,2), (3,3), (4,4), (3,4), (4,3)}. The equivalence classes are:",
+      "options": [
+        { "id": "A", "text": "{1, 2} and {3, 4}" },
+        { "id": "B", "text": "{1}, {2}, {3}, {4}" },
+        { "id": "C", "text": "{1, 2, 3, 4}" },
+        { "id": "D", "text": "{1, 2, 3} and {4}" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "R is an equivalence relation. Elements 1 and 2 are related to each other (and to themselves), forming equivalence class {1, 2}. Elements 3 and 4 are related to each other (and to themselves), forming equivalence class {3, 4}.",
+      "explanation_incorrect": "An equivalence relation partitions the set into equivalence classes. Since 1~2 and 3~4 (but 1 is not related to 3 or 4), the partition is {1, 2} and {3, 4}."
+    },
+    {
+      "question_id": "T01.01.Q007",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The number of equivalence relations on the set {1, 2, 3} containing (1, 2) is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If (1,2) \u2208 R, then by symmetry (2,1) \u2208 R, and by reflexivity (1,1), (2,2), (3,3) \u2208 R. Now either 3 is in its own class giving partition {{1,2},{3}}, or 3 is in the same class as 1 and 2 giving partition {{1,2,3}}. So there are exactly 2 equivalence relations.",
+      "explanation_incorrect": "Since (1,2) must be in R, elements 1 and 2 must be in the same equivalence class. The only question is whether 3 is in a separate class or the same class. This gives exactly 2 possibilities."
+    },
+    {
+      "question_id": "T01.01.Q008",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "The relation R on Z defined by R = {(a, b) : a \u2265 b} is:",
+      "options": [
+        { "id": "A", "text": "Reflexive and transitive but not symmetric" },
+        { "id": "B", "text": "Reflexive and symmetric but not transitive" },
+        { "id": "C", "text": "Symmetric and transitive but not reflexive" },
+        { "id": "D", "text": "An equivalence relation" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Reflexive: a \u2265 a is true for all a. Transitive: if a \u2265 b and b \u2265 c, then a \u2265 c. Not symmetric: 3 \u2265 2 but 2 is not \u2265 3. So R is reflexive and transitive but not symmetric.",
+      "explanation_incorrect": "Check each property. a \u2265 a always holds (reflexive). a \u2265 b does NOT imply b \u2265 a (not symmetric, e.g., 5 \u2265 3 but 3 < 5). If a \u2265 b and b \u2265 c then a \u2265 c (transitive)."
+    },
+    {
+      "question_id": "T01.01.Q009",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let R be the relation on the set N \u00d7 N defined by (a, b) R (c, d) if and only if ad = bc. Which equivalence class does (1, 2) belong to?",
+      "options": [
+        { "id": "A", "text": "{(1,2), (2,4), (3,6), ...}" },
+        { "id": "B", "text": "{(1,2), (2,3), (3,4), ...}" },
+        { "id": "C", "text": "{(2,1), (4,2), (6,3), ...}" },
+        { "id": "D", "text": "{(1,2), (1,3), (1,4), ...}" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(a,b) R (1,2) means a\u00b72 = b\u00b71, i.e., 2a = b. So the equivalence class of (1,2) = {(a, 2a) : a \u2208 N} = {(1,2), (2,4), (3,6), ...}. These are all pairs representing the fraction 1/2.",
+      "explanation_incorrect": "The relation ad = bc captures the idea of equal fractions: a/b = c/d. The equivalence class of (1,2) consists of all (a,b) with a/b = 1/2, i.e., b = 2a: {(1,2), (2,4), (3,6), ...}."
+    },
+    {
+      "question_id": "T01.01.Q010",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let R be a relation on the set A = {1, 2, 3, 4, 5} defined by R = {(a, b) : |a \u2212 b| is even}. How many equivalence classes does R have?",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "|a \u2212 b| is even when a and b have the same parity. The equivalence classes are: odd numbers {1, 3, 5} and even numbers {2, 4}. So there are 2 equivalence classes.",
+      "explanation_incorrect": "|a \u2212 b| is even exactly when a and b are both even or both odd. This partitions A into {1, 3, 5} (odd) and {2, 4} (even), giving 2 equivalence classes."
+    },
+    {
+      "question_id": "T01.01.Q011",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let A = {1, 2, 3, ..., 9} and R be the relation on A defined by (a, b) \u2208 R if and only if a \u2261 b (mod 3). The equivalence class [7] is:",
+      "options": [
+        { "id": "A", "text": "{1, 4, 7}" },
+        { "id": "B", "text": "{7, 8, 9}" },
+        { "id": "C", "text": "{3, 6, 9}" },
+        { "id": "D", "text": "{2, 5, 8}" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "7 mod 3 = 1. The equivalence class [7] consists of all elements in A that give remainder 1 when divided by 3. These are: 1, 4, 7. So [7] = {1, 4, 7}.",
+      "explanation_incorrect": "a \u2261 7 (mod 3) means a \u2261 1 (mod 3) since 7 = 3\u00d72 + 1. From A = {1,...,9}, elements with remainder 1 on division by 3 are: 1, 4, 7."
+    },
+    {
+      "question_id": "T01.01.Q012",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The total number of relations that can be defined on a set with 2 elements is ___.",
+      "options": [
+        { "id": "A", "text": "4" },
+        { "id": "B", "text": "8" },
+        { "id": "C", "text": "16" },
+        { "id": "D", "text": "32" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A relation on a set with n elements is a subset of A \u00d7 A, which has n\u00b2 elements. Total relations = 2^(n\u00b2) = 2^(2\u00b2) = 2^4 = 16.",
+      "explanation_incorrect": "A \u00d7 A has n\u00b2 = 4 elements when n = 2. Each element either belongs or does not belong to the relation, giving 2^4 = 16 possible relations."
+    },
+    {
+      "question_id": "T01.01.Q013",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A function f: A \u2192 B is called one-one (injective) if:",
+      "options": [
+        { "id": "A", "text": "Every element of B has a pre-image in A" },
+        { "id": "B", "text": "f(a\u2081) = f(a\u2082) implies a\u2081 = a\u2082 for all a\u2081, a\u2082 \u2208 A" },
+        { "id": "C", "text": "f is both one-one and onto" },
+        { "id": "D", "text": "f(a) = a for all a \u2208 A" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A function is one-one (injective) if distinct elements of A map to distinct elements of B, i.e., f(a\u2081) = f(a\u2082) implies a\u2081 = a\u2082.",
+      "explanation_incorrect": "Option A defines onto (surjective), option C defines bijective, and option D defines the identity function. One-one means no two distinct elements map to the same image."
+    },
+    {
+      "question_id": "T01.01.Q014",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f: R \u2192 R defined by f(x) = x\u00b2 is:",
+      "options": [
+        { "id": "A", "text": "One-one but not onto" },
+        { "id": "B", "text": "Onto but not one-one" },
+        { "id": "C", "text": "Neither one-one nor onto" },
+        { "id": "D", "text": "Both one-one and onto" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Not one-one: f(2) = f(\u22122) = 4 but 2 \u2260 \u22122. Not onto: negative numbers like \u22121 have no pre-image since x\u00b2 \u2265 0 for all x \u2208 R. So f is neither one-one nor onto.",
+      "explanation_incorrect": "f(x) = x\u00b2 fails one-one because f(2) = f(\u22122) = 4. It fails onto because no real x satisfies x\u00b2 = \u22121. Hence it is neither one-one nor onto."
+    },
+    {
+      "question_id": "T01.01.Q015",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f: R \u2192 R defined by f(x) = 3x + 5 is:",
+      "options": [
+        { "id": "A", "text": "One-one only" },
+        { "id": "B", "text": "Onto only" },
+        { "id": "C", "text": "Bijective" },
+        { "id": "D", "text": "Neither one-one nor onto" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "One-one: if 3x\u2081 + 5 = 3x\u2082 + 5, then x\u2081 = x\u2082. Onto: for any y \u2208 R, x = (y \u2212 5)/3 \u2208 R gives f(x) = y. Hence f is bijective.",
+      "explanation_incorrect": "A linear function f(x) = ax + b with a \u2260 0 from R to R is always bijective. It is one-one (different inputs give different outputs) and onto (every real number is achieved)."
+    },
+    {
+      "question_id": "T01.01.Q016",
+      "type": "true_false",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The function f: N \u2192 N defined by f(n) = 2n is onto.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f is not onto because odd natural numbers (like 1, 3, 5, ...) have no pre-image. For example, there is no n \u2208 N such that 2n = 3.",
+      "explanation_incorrect": "For f to be onto N, every natural number must be in the range. But f(n) = 2n only produces even numbers (2, 4, 6, ...), so odd numbers have no pre-image."
+    },
+    {
+      "question_id": "T01.01.Q017",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "If f: {1, 2, 3} \u2192 {a, b, c} is a bijection, how many such bijections are possible?",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "6" },
+        { "id": "C", "text": "9" },
+        { "id": "D", "text": "27" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A bijection from a set of 3 elements to a set of 3 elements is a permutation. The number of bijections = 3! = 3 \u00d7 2 \u00d7 1 = 6.",
+      "explanation_incorrect": "The number of bijections from a set of n elements to a set of n elements equals n! (n factorial). Here n = 3, so the answer is 3! = 6."
+    },
+    {
+      "question_id": "T01.01.Q018",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "Let A = {1, 2, 3} and B = {4, 5}. The number of onto functions from A to B is:",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "4" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "8" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Total functions from A to B = 2\u00b3 = 8. Non-onto functions map all 3 elements to a single element in B: there are 2 such functions. Onto functions = 8 \u2212 2 = 6.",
+      "explanation_incorrect": "Using inclusion-exclusion: total functions = 2\u00b3 = 8. Functions missing 4 from range = 1 (all map to 5). Functions missing 5 from range = 1 (all map to 4). Functions missing both = 0. So onto = 8 \u2212 1 \u2212 1 + 0 = 6."
+    },
+    {
+      "question_id": "T01.01.Q019",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "The function f: R \u2192 R defined by f(x) = x\u00b3 is:",
+      "options": [
+        { "id": "A", "text": "One-one but not onto" },
+        { "id": "B", "text": "Onto but not one-one" },
+        { "id": "C", "text": "Bijective" },
+        { "id": "D", "text": "Neither one-one nor onto" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "One-one: if x\u2081\u00b3 = x\u2082\u00b3, then x\u2081 = x\u2082 (cube root is unique for reals). Onto: for any y \u2208 R, x = y^(1/3) \u2208 R satisfies f(x) = y. Hence f is bijective.",
+      "explanation_incorrect": "Unlike x\u00b2, the function x\u00b3 is strictly increasing over all of R, making it one-one. Every real number has a real cube root, so it is onto. Therefore f(x) = x\u00b3 is bijective."
+    },
+    {
+      "question_id": "T01.01.Q020",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Let f: N \u2192 N be defined by f(n) = n + 1 for odd n and f(n) = n \u2212 1 for even n. Then f is:",
+      "options": [
+        { "id": "A", "text": "One-one but not onto" },
+        { "id": "B", "text": "Onto but not one-one" },
+        { "id": "C", "text": "Bijective" },
+        { "id": "D", "text": "Neither one-one nor onto" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f swaps consecutive pairs: f(1)=2, f(2)=1, f(3)=4, f(4)=3, f(5)=6, f(6)=5, ... Each pair {2k\u22121, 2k} is swapped. This is a bijection since every natural number appears exactly once as an image, and distinct inputs give distinct outputs.",
+      "explanation_incorrect": "The function pairs odd and even consecutive numbers and swaps them. Since every natural number is either odd or even, and each swap is a bijection within each pair, f is bijective on N."
+    },
+    {
+      "question_id": "T01.01.Q021",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Let f: R \u2212 {3} \u2192 R \u2212 {1} be defined by f(x) = (x \u2212 2)/(x \u2212 3). Then f is:",
+      "options": [
+        { "id": "A", "text": "One-one but not onto" },
+        { "id": "B", "text": "Onto but not one-one" },
+        { "id": "C", "text": "Bijective" },
+        { "id": "D", "text": "Neither one-one nor onto" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "One-one: if (x\u2081\u22122)/(x\u2081\u22123) = (x\u2082\u22122)/(x\u2082\u22123), cross-multiplying gives (x\u2081\u22122)(x\u2082\u22123) = (x\u2082\u22122)(x\u2081\u22123). Expanding: x\u2081x\u2082 \u2212 3x\u2081 \u2212 2x\u2082 + 6 = x\u2081x\u2082 \u2212 3x\u2082 \u2212 2x\u2081 + 6, which simplifies to \u2212x\u2081 = \u2212x\u2082, so x\u2081 = x\u2082. Onto: for any y \u2260 1, solving y = (x\u22122)/(x\u22123) gives x = (3y\u22122)/(y\u22121) which is in the domain. Hence f is bijective.",
+      "explanation_incorrect": "Cross-multiply to prove one-one. For onto, solve for x in terms of y: x = (3y \u2212 2)/(y \u2212 1), which is defined for y \u2260 1 and gives x \u2260 3. So the codomain R \u2212 {1} is fully covered."
+    },
+    {
+      "question_id": "T01.01.Q022",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If f: A \u2192 B is a bijection and A has 5 elements, then B must have ___ elements.",
+      "options": [
+        { "id": "A", "text": "At least 5" },
+        { "id": "B", "text": "At most 5" },
+        { "id": "C", "text": "Exactly 5" },
+        { "id": "D", "text": "More than 5" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A bijection is both one-one and onto. One-one requires |A| \u2264 |B|, and onto requires |A| \u2265 |B|. Together, |A| = |B| = 5.",
+      "explanation_incorrect": "For a bijection to exist between finite sets A and B, they must have the same number of elements. Since |A| = 5, we need |B| = 5."
+    },
+    {
+      "question_id": "T01.01.Q023",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "Let f: {1, 2, 3, 4} \u2192 {1, 2, 3, 4} be defined by f = {(1,2), (2,3), (3,4), (4,1)}. The function f is:",
+      "options": [
+        { "id": "A", "text": "One-one but not onto" },
+        { "id": "B", "text": "Onto but not one-one" },
+        { "id": "C", "text": "Bijective" },
+        { "id": "D", "text": "Not a function" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Every element maps to a unique element (one-one): f(1)=2, f(2)=3, f(3)=4, f(4)=1. The range = {1, 2, 3, 4} = codomain (onto). So f is bijective.",
+      "explanation_incorrect": "Check: all images are distinct (one-one), and the range {2,3,4,1} = {1,2,3,4} = codomain (onto). Hence f is bijective \u2014 it is a cyclic permutation."
+    },
+    {
+      "question_id": "T01.01.Q024",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = 2x + 3 and g(x) = x\u00b2, then (fog)(x) is:",
+      "options": [
+        { "id": "A", "text": "2x\u00b2 + 3" },
+        { "id": "B", "text": "(2x + 3)\u00b2" },
+        { "id": "C", "text": "4x\u00b2 + 12x + 9" },
+        { "id": "D", "text": "2x\u00b2 + 6x" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(fog)(x) = f(g(x)) = f(x\u00b2) = 2(x\u00b2) + 3 = 2x\u00b2 + 3.",
+      "explanation_incorrect": "fog means apply g first, then f. So (fog)(x) = f(g(x)). First g(x) = x\u00b2, then f(x\u00b2) = 2x\u00b2 + 3. Option B would be (gof)(x)."
+    },
+    {
+      "question_id": "T01.01.Q025",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f(x) = 2x + 3 and g(x) = x\u00b2, then (gof)(x) is:",
+      "options": [
+        { "id": "A", "text": "2x\u00b2 + 3" },
+        { "id": "B", "text": "4x\u00b2 + 12x + 9" },
+        { "id": "C", "text": "x\u00b2 + 2x + 3" },
+        { "id": "D", "text": "2x\u00b2 + 6x + 9" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(gof)(x) = g(f(x)) = g(2x + 3) = (2x + 3)\u00b2 = 4x\u00b2 + 12x + 9.",
+      "explanation_incorrect": "gof means apply f first, then g. So (gof)(x) = g(f(x)) = g(2x+3) = (2x+3)\u00b2. Expanding: 4x\u00b2 + 12x + 9."
+    },
+    {
+      "question_id": "T01.01.Q026",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "If f: R \u2192 R is defined by f(x) = 3x \u2212 4, then f\u207b\u00b9(x) is:",
+      "options": [
+        { "id": "A", "text": "(x + 4)/3" },
+        { "id": "B", "text": "(x \u2212 4)/3" },
+        { "id": "C", "text": "3x + 4" },
+        { "id": "D", "text": "1/(3x \u2212 4)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Let y = 3x \u2212 4. Solving for x: x = (y + 4)/3. So f\u207b\u00b9(x) = (x + 4)/3.",
+      "explanation_incorrect": "To find f\u207b\u00b9, set y = f(x) = 3x \u2212 4, then solve for x in terms of y: 3x = y + 4, so x = (y + 4)/3. Replace y with x to get f\u207b\u00b9(x) = (x + 4)/3."
+    },
+    {
+      "question_id": "T01.01.Q027",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A function f is invertible if and only if f is:",
+      "options": [
+        { "id": "A", "text": "One-one" },
+        { "id": "B", "text": "Onto" },
+        { "id": "C", "text": "Bijective" },
+        { "id": "D", "text": "Continuous" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A function is invertible if and only if it is bijective (both one-one and onto). One-one ensures the inverse is well-defined (single-valued), and onto ensures the inverse is defined on the entire codomain.",
+      "explanation_incorrect": "Being one-one alone is not sufficient (the inverse would not cover the entire codomain). Being onto alone is not sufficient (the inverse might not be single-valued). Both conditions are needed, i.e., bijective."
+    },
+    {
+      "question_id": "T01.01.Q028",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = x + 1 and g(x) = 2x \u2212 1, then (fog)(3) is:",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "6" },
+        { "id": "C", "text": "7" },
+        { "id": "D", "text": "8" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(fog)(3) = f(g(3)) = f(2\u00d73 \u2212 1) = f(5) = 5 + 1 = 6.",
+      "explanation_incorrect": "First compute g(3) = 2(3) \u2212 1 = 5. Then f(5) = 5 + 1 = 6. So (fog)(3) = 6."
+    },
+    {
+      "question_id": "T01.01.Q029",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = 2x + 1 and g(x) = 3x \u2212 2, then (fog)(2) \u2212 (gof)(2) equals:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "\u22124" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "\u22122" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(fog)(2) = f(g(2)) = f(3\u00b72 \u2212 2) = f(4) = 2\u00b74 + 1 = 9. (gof)(2) = g(f(2)) = g(2\u00b72 + 1) = g(5) = 3\u00b75 \u2212 2 = 13. Difference: 9 \u2212 13 = \u22124.",
+      "explanation_incorrect": "First: g(2) = 3(2) \u2212 2 = 4, then f(4) = 2(4) + 1 = 9, so (fog)(2) = 9. Next: f(2) = 2(2) + 1 = 5, then g(5) = 3(5) \u2212 2 = 13, so (gof)(2) = 13. Difference = 9 \u2212 13 = \u22124."
+    },
+    {
+      "question_id": "T01.01.Q030",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f: R \u2192 R is defined by f(x) = 5x + 2, then f\u207b\u00b9(17) is:",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "87" },
+        { "id": "C", "text": "15" },
+        { "id": "D", "text": "5" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f\u207b\u00b9(x) = (x \u2212 2)/5. So f\u207b\u00b9(17) = (17 \u2212 2)/5 = 15/5 = 3.",
+      "explanation_incorrect": "First find f\u207b\u00b9(x): from y = 5x + 2, we get x = (y\u22122)/5. So f\u207b\u00b9(x) = (x\u22122)/5. Then f\u207b\u00b9(17) = 15/5 = 3."
+    },
+    {
+      "question_id": "T01.01.Q031",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Let f: R \u2192 R be defined by f(x) = (4x + 3)/(6x \u2212 4), x \u2260 2/3. Then (fof)(x) equals:",
+      "options": [
+        { "id": "A", "text": "x" },
+        { "id": "B", "text": "1/x" },
+        { "id": "C", "text": "(4x+3)/(6x\u22124)" },
+        { "id": "D", "text": "(16x + 9)/(36x \u2212 16)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(fof)(x) = f(f(x)) = f((4x+3)/(6x\u22124)). Let t = (4x+3)/(6x\u22124). Then f(t) = (4t+3)/(6t\u22124) = (4\u00b7(4x+3)/(6x\u22124) + 3)/(6\u00b7(4x+3)/(6x\u22124) \u2212 4). Numerator = (16x+12+18x\u221212)/(6x\u22124) = 34x/(6x\u22124). Denominator = (24x+18\u221224x+16)/(6x\u22124) = 34/(6x\u22124). So f(t) = 34x/34 = x. Hence f is its own inverse.",
+      "explanation_incorrect": "Substitute f(x) into f again. After simplification, the numerator becomes 34x and denominator becomes 34, giving (fof)(x) = x. This means f = f\u207b\u00b9, i.e., f is self-inverse (an involution)."
+    },
+    {
+      "question_id": "T01.01.Q032",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Let f(x) = x\u00b3 and g(x) = x^(1/3). Then (gof)(x) is:",
+      "options": [
+        { "id": "A", "text": "x" },
+        { "id": "B", "text": "x\u00b3" },
+        { "id": "C", "text": "x^(1/3)" },
+        { "id": "D", "text": "|x|" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(gof)(x) = g(f(x)) = g(x\u00b3) = (x\u00b3)^(1/3) = x. Since g is the inverse of f, their composition gives the identity function.",
+      "explanation_incorrect": "g(f(x)) = (x\u00b3)^(1/3) = x^(3\u00b71/3) = x\u00b9 = x. This is the identity function, confirming g = f\u207b\u00b9."
+    },
+    {
+      "question_id": "T01.01.Q033",
+      "type": "true_false",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Composition of functions is commutative, i.e., fog = gof always.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Composition is NOT commutative in general. For example, if f(x) = 2x and g(x) = x + 1, then (fog)(x) = 2(x+1) = 2x+2, but (gof)(x) = 2x+1. Since 2x+2 \u2260 2x+1, fog \u2260 gof.",
+      "explanation_incorrect": "A counterexample disproves commutativity: let f(x) = 2x and g(x) = x+1. Then fog(x) = 2x+2 but gof(x) = 2x+1. However, composition IS associative: fo(goh) = (fog)oh."
+    },
+    {
+      "question_id": "T01.01.Q034",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f: {1,2,3} \u2192 {a,b,c} is given by f(1) = a, f(2) = b, f(3) = c, then f\u207b\u00b9(b) is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "3" },
+        { "id": "D", "text": "a" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since f(2) = b and f is a bijection, f\u207b\u00b9(b) = 2.",
+      "explanation_incorrect": "f\u207b\u00b9(b) asks: which element maps to b under f? Since f(2) = b, the answer is 2."
+    },
+    {
+      "question_id": "T01.01.Q035",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Let f(x) = 2x \u2212 1 and g(x) = (x + 1)/2. Then f\u207b\u00b9 is:",
+      "options": [
+        { "id": "A", "text": "g" },
+        { "id": "B", "text": "f" },
+        { "id": "C", "text": "fog" },
+        { "id": "D", "text": "gof" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f\u207b\u00b9(x) = (x+1)/2 = g(x). Verify: (fog)(x) = f((x+1)/2) = 2\u00b7(x+1)/2 \u2212 1 = x+1\u22121 = x. Also (gof)(x) = g(2x\u22121) = (2x\u22121+1)/2 = x. So g = f\u207b\u00b9.",
+      "explanation_incorrect": "To find f\u207b\u00b9, solve y = 2x\u22121 for x: x = (y+1)/2. So f\u207b\u00b9(x) = (x+1)/2, which is exactly g(x). One can verify fog = gof = identity."
+    },
+    {
+      "question_id": "T01.01.Q036",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A binary operation * on a set A is a function from:",
+      "options": [
+        { "id": "A", "text": "A to A" },
+        { "id": "B", "text": "A \u00d7 A to A" },
+        { "id": "C", "text": "A to A \u00d7 A" },
+        { "id": "D", "text": "A \u00d7 A to A \u00d7 A" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A binary operation * on A takes two elements of A and produces an element of A. Formally, it is a function *: A \u00d7 A \u2192 A.",
+      "explanation_incorrect": "A binary operation takes an ordered pair of elements from A and assigns a single element in A. So it maps from A \u00d7 A to A."
+    },
+    {
+      "question_id": "T01.01.Q037",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The binary operation * defined on Z by a * b = a + b \u2212 1 is:",
+      "options": [
+        { "id": "A", "text": "Commutative but not associative" },
+        { "id": "B", "text": "Associative but not commutative" },
+        { "id": "C", "text": "Both commutative and associative" },
+        { "id": "D", "text": "Neither commutative nor associative" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Commutative: a*b = a+b\u22121 = b+a\u22121 = b*a. Associative: (a*b)*c = (a+b\u22121)*c = a+b\u22121+c\u22121 = a+b+c\u22122. Also a*(b*c) = a*(b+c\u22121) = a+b+c\u22121\u22121 = a+b+c\u22122. Since both equal a+b+c\u22122, it is associative.",
+      "explanation_incorrect": "Check commutativity: a+b\u22121 = b+a\u22121 (yes, addition is commutative). Check associativity: (a*b)*c = a+b+c\u22122 = a*(b*c). Both properties hold."
+    },
+    {
+      "question_id": "T01.01.Q038",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The identity element for the binary operation * defined on Q by a * b = a + b \u2212 ab is:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "\u22121" },
+        { "id": "D", "text": "Does not exist" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Let e be the identity element. Then a * e = a for all a, i.e., a + e \u2212 ae = a, which gives e(1 \u2212 a) = 0. For this to hold for all a, we need e = 0. Verify: a * 0 = a + 0 \u2212 0 = a and 0 * a = 0 + a \u2212 0 = a. So e = 0.",
+      "explanation_incorrect": "For identity e: a + e \u2212 ae = a implies e \u2212 ae = 0, so e(1\u2212a) = 0. Since this must hold for all a (including a \u2260 1), we need e = 0."
+    },
+    {
+      "question_id": "T01.01.Q039",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is NOT a binary operation on N (natural numbers)?",
+      "options": [
+        { "id": "A", "text": "a * b = a + b" },
+        { "id": "B", "text": "a * b = a \u00d7 b" },
+        { "id": "C", "text": "a * b = a \u2212 b" },
+        { "id": "D", "text": "a * b = GCD(a, b)" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Subtraction is not a binary operation on N because a \u2212 b may not be a natural number when a < b. For example, 2 \u2212 5 = \u22123 \u2209 N. A binary operation must always produce a result in the same set.",
+      "explanation_incorrect": "A binary operation on N must map N \u00d7 N into N (closure). Addition, multiplication, and GCD of natural numbers always give natural numbers, but subtraction can give negative results (e.g., 1 \u2212 3 = \u22122 \u2209 N)."
+    },
+    {
+      "question_id": "T01.01.Q040",
+      "type": "true_false",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The binary operation * defined on R by a * b = a + b is associative.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Since a * b = a + b, we have (a*b)*c = (a+b)+c = a+(b+c) = a*(b*c) by associativity of addition. So * is associative.",
+      "explanation_incorrect": "The operation is just addition, and addition of real numbers is associative: (a+b)+c = a+(b+c). Hence the binary operation is associative."
+    },
+    {
+      "question_id": "T01.01.Q041",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "The binary operation * on Z defined by a * b = a + b + 1 has identity element:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "\u22121" },
+        { "id": "D", "text": "No identity exists" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Let e be the identity. Then a * e = a, i.e., a + e + 1 = a, giving e = \u22121. Verify: a * (\u22121) = a + (\u22121) + 1 = a, and (\u22121) * a = \u22121 + a + 1 = a. So e = \u22121.",
+      "explanation_incorrect": "Solve a + e + 1 = a for e: e + 1 = 0, so e = \u22121. Check both sides: a*(\u22121) = a\u22121+1 = a and (\u22121)*a = \u22121+a+1 = a. Identity is \u22121."
+    },
+    {
+      "question_id": "T01.01.Q042",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "For the binary operation * on Z defined by a * b = a + b + 1, the inverse of element 3 is:",
+      "options": [
+        { "id": "A", "text": "\u22123" },
+        { "id": "B", "text": "\u22124" },
+        { "id": "C", "text": "\u22125" },
+        { "id": "D", "text": "3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The identity element is e = \u22121 (from a + e + 1 = a). For the inverse of 3, we need 3 * b = \u22121, i.e., 3 + b + 1 = \u22121, giving b = \u22125. Verify: 3 * (\u22125) = 3 + (\u22125) + 1 = \u22121 = e.",
+      "explanation_incorrect": "First find identity: e = \u22121. Then solve 3 * b = e: 3 + b + 1 = \u22121, so b = \u22125. Check: (\u22125) * 3 = \u22125 + 3 + 1 = \u22121 = e. So the inverse of 3 is \u22125."
+    },
+    {
+      "question_id": "T01.01.Q043",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "The binary operation * on R \u2212 {\u22121} defined by a * b = a + b + ab is:",
+      "options": [
+        { "id": "A", "text": "Commutative and associative with identity 0" },
+        { "id": "B", "text": "Commutative but not associative" },
+        { "id": "C", "text": "Associative but not commutative" },
+        { "id": "D", "text": "Neither commutative nor associative" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Commutative: a + b + ab = b + a + ba (yes). Identity: a*e = a+e+ae = a, so e(1+a) = 0, giving e = 0. Associative: (a*b)*c = (a+b+ab)*c = a+b+ab+c+ac+bc+abc. Also a*(b*c) = a*(b+c+bc) = a+b+c+bc+ab+ac+abc = a+b+c+ab+ac+bc+abc. Both are equal. So all three properties hold.",
+      "explanation_incorrect": "Note that a*b = a+b+ab = (1+a)(1+b)\u22121. This makes checking properties easier. The identity is 0 and the inverse of a is \u2212a/(1+a)."
+    },
+    {
+      "question_id": "T01.01.Q044",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The binary operation * on {0, 1, 2, 3, 4} defined by a * b = (a + b) mod 5 has the inverse of 3 as:",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "2" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The identity element is 0 (since a + 0 mod 5 = a). For the inverse of 3, we need 3 * b = 0, i.e., (3 + b) mod 5 = 0. So b = 2 since (3 + 2) mod 5 = 0.",
+      "explanation_incorrect": "Under addition mod 5, the identity is 0. The inverse of 3 is the element b such that 3 + b \u2261 0 (mod 5), which gives b = 2."
+    },
+    {
+      "question_id": "T01.01.Q045",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The binary operation * defined on Q \u2212 {0} by a * b = ab/2 has identity element:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "1" },
+        { "id": "C", "text": "2" },
+        { "id": "D", "text": "1/2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "a * e = a implies ae/2 = a, so e/2 = 1, giving e = 2. Verify: a * 2 = a\u00b72/2 = a and 2 * a = 2a/2 = a. So the identity is 2.",
+      "explanation_incorrect": "Solve ae/2 = a for e: e = 2. Check: a*2 = 2a/2 = a and 2*a = 2a/2 = a. The identity element is 2."
+    },
+    {
+      "question_id": "T01.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "For the binary operation * on Q \u2212 {0} defined by a * b = ab/2, the inverse of element 5 is ___.",
+      "options": [
+        { "id": "A", "text": "1/5" },
+        { "id": "B", "text": "2/5" },
+        { "id": "C", "text": "4/5" },
+        { "id": "D", "text": "5/2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The identity is 2 (since ae/2 = a gives e = 2). For the inverse of 5: 5 * b = 2, i.e., 5b/2 = 2, giving b = 4/5. Verify: 5 * (4/5) = 5\u00b7(4/5)/2 = 4/2 = 2 = e.",
+      "explanation_incorrect": "Identity is 2. Solve 5b/2 = 2: 5b = 4, b = 4/5. Check: (4/5)*5 = (4/5)(5)/2 = 4/2 = 2. The inverse of 5 is 4/5."
+    },
+    {
+      "question_id": "T01.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "If f(x) = (x \u2212 1)/(x + 1) for x \u2260 \u22121, then (fof)(x) = ___.",
+      "options": [
+        { "id": "A", "text": "x" },
+        { "id": "B", "text": "\u22121/x" },
+        { "id": "C", "text": "1/x" },
+        { "id": "D", "text": "\u2212x" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(fof)(x) = f(f(x)) = f((x\u22121)/(x+1)). Let t = (x\u22121)/(x+1). Then f(t) = (t\u22121)/(t+1) = ((x\u22121)/(x+1) \u2212 1)/((x\u22121)/(x+1) + 1) = ((x\u22121\u2212x\u22121)/(x+1))/((x\u22121+x+1)/(x+1)) = (\u22122)/(2x) = \u22121/x.",
+      "explanation_incorrect": "Substitute f(x) into f: numerator = (x\u22121)/(x+1) \u2212 1 = (x\u22121\u2212x\u22121)/(x+1) = \u22122/(x+1). Denominator = (x\u22121)/(x+1) + 1 = (x\u22121+x+1)/(x+1) = 2x/(x+1). So (fof)(x) = (\u22122)/(2x) = \u22121/x."
+    },
+    {
+      "question_id": "T01.01.Q048",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Let R be the relation on Z defined by (a, b) \u2208 R if a\u00b2 \u2261 b\u00b2 (mod 4). The number of equivalence classes is:",
+      "options": [
+        { "id": "A", "text": "2" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "4" },
+        { "id": "D", "text": "Infinite" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "a\u00b2 mod 4 is either 0 (when a is even, since (2k)\u00b2 = 4k\u00b2) or 1 (when a is odd, since (2k+1)\u00b2 = 4k\u00b2+4k+1). So a\u00b2 \u2261 b\u00b2 (mod 4) iff a and b have the same parity. This gives 2 equivalence classes: even integers and odd integers.",
+      "explanation_incorrect": "Even numbers: a\u00b2 \u2261 0 (mod 4). Odd numbers: a\u00b2 \u2261 1 (mod 4). So a\u00b2 \u2261 b\u00b2 (mod 4) iff both are even or both are odd. Two equivalence classes."
+    },
+    {
+      "question_id": "T01.01.Q049",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The binary operation * on R defined by a * b = (a + b)/2 is:",
+      "options": [
+        { "id": "A", "text": "Commutative and associative" },
+        { "id": "B", "text": "Commutative but not associative" },
+        { "id": "C", "text": "Associative but not commutative" },
+        { "id": "D", "text": "Neither commutative nor associative" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Commutative: (a+b)/2 = (b+a)/2 (yes). Associative: (a*b)*c = ((a+b)/2 + c)/2 = (a+b+2c)/4. But a*(b*c) = (a + (b+c)/2)/2 = (2a+b+c)/4. Since (a+b+2c)/4 \u2260 (2a+b+c)/4 in general (try a=0, b=0, c=4: 8/4=2 vs 4/4=1), * is not associative.",
+      "explanation_incorrect": "(a+b)/2 = (b+a)/2, so commutative. But (a*b)*c = (a+b+2c)/4 while a*(b*c) = (2a+b+c)/4. These are unequal when a \u2260 c, so not associative."
+    },
+    {
+      "question_id": "T01.01.Q050",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The total number of one-one functions from {1, 2, 3} to {a, b, c, d} is:",
+      "options": [
+        { "id": "A", "text": "12" },
+        { "id": "B", "text": "24" },
+        { "id": "C", "text": "64" },
+        { "id": "D", "text": "81" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a one-one function from a 3-element set to a 4-element set: first element has 4 choices, second has 3, third has 2. Total = 4 \u00d7 3 \u00d7 2 = 24. This is P(4,3) = 4!/(4\u22123)! = 24.",
+      "explanation_incorrect": "The number of one-one functions from an m-element set to an n-element set (m \u2264 n) is P(n,m) = n!/(n\u2212m)!. Here P(4,3) = 4!/1! = 24."
+    }
+  ]
+}

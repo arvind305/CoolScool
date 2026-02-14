@@ -1,0 +1,793 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Limits and Derivatives",
+  "canonical_explanation": {
+    "text": "A limit describes the value that a function approaches as the input approaches a given value. lim(x→a) f(x) = L means f(x) gets arbitrarily close to L as x approaches a. The derivative of f at x is f'(x) = lim(h→0) [f(x+h)−f(x)]/h. Key derivative rules: d/dx(xⁿ) = nxⁿ⁻¹, d/dx(sin x) = cos x, d/dx(cos x) = −sin x, product rule (uv)' = u'v + uv', quotient rule (u/v)' = (u'v−uv')/v².",
+    "rules": [
+      "lim(x→0) sin x/x = 1",
+      "lim(x→a) (xⁿ−aⁿ)/(x−a) = naⁿ⁻¹",
+      "d/dx(xⁿ) = nxⁿ⁻¹",
+      "Product rule: (uv)' = u'v + uv'",
+      "Quotient rule: (u/v)' = (u'v − uv')/v²"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→2) (3x + 1) equals:",
+      "options": [
+        {"id": "A", "text": "5"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "7"},
+        {"id": "D", "text": "8"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a polynomial, direct substitution works: 3(2) + 1 = 7.",
+      "explanation_incorrect": "Since 3x + 1 is continuous, lim(x→2) = 3(2) + 1 = 7."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→1) (x² − 1)/(x − 1) equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "Does not exist"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "(x²−1)/(x−1) = (x+1)(x−1)/(x−1) = x+1 for x ≠ 1. lim(x→1) (x+1) = 2.",
+      "explanation_incorrect": "Factor: (x²−1)/(x−1) = x+1. Limit = 1+1 = 2."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→0) sin x/x equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "∞"},
+        {"id": "D", "text": "Does not exist"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is a standard limit: lim(x→0) sin x/x = 1.",
+      "explanation_incorrect": "This fundamental trigonometric limit equals 1."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→0) tan x/x equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "−1"},
+        {"id": "D", "text": "∞"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan x/x = (sin x/x) · (1/cos x). As x→0: (sin x/x)→1 and (1/cos x)→1. So the limit is 1.",
+      "explanation_incorrect": "lim(x→0) tan x/x = lim sin x/(x cos x) = 1 · 1 = 1."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of x³ is:",
+      "options": [
+        {"id": "A", "text": "x²"},
+        {"id": "B", "text": "3x"},
+        {"id": "C", "text": "3x²"},
+        {"id": "D", "text": "x³"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "d/dx(xⁿ) = nxⁿ⁻¹. d/dx(x³) = 3x².",
+      "explanation_incorrect": "Using the power rule with n = 3: d/dx(x³) = 3x²."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of sin x is:",
+      "options": [
+        {"id": "A", "text": "−cos x"},
+        {"id": "B", "text": "cos x"},
+        {"id": "C", "text": "tan x"},
+        {"id": "D", "text": "−sin x"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "d/dx(sin x) = cos x. This is a standard derivative.",
+      "explanation_incorrect": "The derivative of sin x is cos x."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of cos x is −sin x.",
+      "correct_answer": "True",
+      "explanation_correct": "d/dx(cos x) = −sin x. This is a standard result.",
+      "explanation_incorrect": "The derivative of cos x is indeed −sin x (note the negative sign)."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "lim(x→3) (x² − 9)/(x − 3) equals:",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "6"},
+        {"id": "C", "text": "9"},
+        {"id": "D", "text": "0"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(x²−9)/(x−3) = (x+3)(x−3)/(x−3) = x+3. lim(x→3) (x+3) = 6.",
+      "explanation_incorrect": "Factor and cancel: (x+3)(x−3)/(x−3) = x+3 → 6."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→0) sin 5x/x equals:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "5"},
+        {"id": "C", "text": "1/5"},
+        {"id": "D", "text": "0"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "lim(x→0) sin 5x/x = lim(x→0) 5 · sin 5x/(5x) = 5 · 1 = 5.",
+      "explanation_incorrect": "Multiply and divide by 5: 5 · sin(5x)/(5x) → 5 · 1 = 5."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→0) sin 3x/sin 5x equals:",
+      "options": [
+        {"id": "A", "text": "3/5"},
+        {"id": "B", "text": "5/3"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "0"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sin 3x/sin 5x = (sin 3x/(3x)) · (5x/sin 5x) · (3x/5x) → 1 · 1 · 3/5 = 3/5.",
+      "explanation_incorrect": "Using lim sin(kx)/(kx) = 1: the limit simplifies to 3/5."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The derivative of x² sin x is:",
+      "options": [
+        {"id": "A", "text": "2x sin x + x² cos x"},
+        {"id": "B", "text": "2x cos x"},
+        {"id": "C", "text": "x² cos x"},
+        {"id": "D", "text": "2x sin x − x² cos x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Product rule: d/dx(x² sin x) = (2x)(sin x) + (x²)(cos x) = 2x sin x + x² cos x.",
+      "explanation_incorrect": "By the product rule (uv)' = u'v + uv': 2x sin x + x² cos x."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of (x + 1)/(x − 1) is:",
+      "options": [
+        {"id": "A", "text": "−2/(x−1)²"},
+        {"id": "B", "text": "2/(x−1)²"},
+        {"id": "C", "text": "1/(x−1)²"},
+        {"id": "D", "text": "−1/(x−1)²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Quotient rule: [(1)(x−1)−(x+1)(1)]/(x−1)² = (x−1−x−1)/(x−1)² = −2/(x−1)².",
+      "explanation_incorrect": "Using (u/v)' = (u'v−uv')/v²: (x−1−x−1)/(x−1)² = −2/(x−1)²."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The derivative of a constant function is ___.",
+      "correct_answer": "0",
+      "explanation_correct": "If f(x) = c (constant), then f'(x) = 0.",
+      "explanation_incorrect": "Constants don't change, so their rate of change (derivative) is 0."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "lim(x→2) (x³ − 8)/(x − 2) equals:",
+      "options": [
+        {"id": "A", "text": "4"},
+        {"id": "B", "text": "8"},
+        {"id": "C", "text": "12"},
+        {"id": "D", "text": "16"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using lim(x→a) (xⁿ−aⁿ)/(x−a) = naⁿ⁻¹: 3(2²) = 12.",
+      "explanation_incorrect": "By the standard limit formula with n = 3, a = 2: 3 × 4 = 12."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "d/dx(5x⁴ − 3x² + 7x − 2) equals:",
+      "options": [
+        {"id": "A", "text": "20x³ − 6x + 7"},
+        {"id": "B", "text": "20x³ − 6x² + 7"},
+        {"id": "C", "text": "5x³ − 3x + 7"},
+        {"id": "D", "text": "20x⁴ − 6x + 7"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "d/dx(5x⁴) = 20x³, d/dx(−3x²) = −6x, d/dx(7x) = 7, d/dx(−2) = 0. Sum: 20x³ − 6x + 7.",
+      "explanation_incorrect": "Differentiating term by term using the power rule: 20x³ − 6x + 7."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→0) (1 − cos x)/x² equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1/2"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(1−cos x)/x² = 2sin²(x/2)/x² = 2sin²(x/2)/(4·(x/2)²) · (4/4) ... Actually: (1−cos x)/x² = 2sin²(x/2)/x². Let t = x/2: = 2sin²t/(4t²) = (1/2)(sin t/t)² → (1/2)(1)² = 1/2.",
+      "explanation_incorrect": "Using 1−cos x = 2sin²(x/2) and the standard limit sin t/t → 1 gives 1/2."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of sin x/x is:",
+      "options": [
+        {"id": "A", "text": "(x cos x − sin x)/x²"},
+        {"id": "B", "text": "(cos x − sin x)/x"},
+        {"id": "C", "text": "cos x/x"},
+        {"id": "D", "text": "(x cos x + sin x)/x²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Quotient rule: (cos x · x − sin x · 1)/x² = (x cos x − sin x)/x².",
+      "explanation_incorrect": "d/dx(sin x/x) = (x cos x − sin x)/x² by the quotient rule."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The derivative of x⁻³ is:",
+      "options": [
+        {"id": "A", "text": "−3x⁻⁴"},
+        {"id": "B", "text": "3x⁻⁴"},
+        {"id": "C", "text": "−3x⁻²"},
+        {"id": "D", "text": "3x⁻²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "d/dx(x⁻³) = −3x⁻⁴ using the power rule with n = −3.",
+      "explanation_incorrect": "Power rule: nxⁿ⁻¹ = −3x⁻⁴."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "lim(x→0) (eˣ − 1)/x equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "e"},
+        {"id": "D", "text": "∞"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is a standard limit: lim(x→0) (eˣ − 1)/x = 1.",
+      "explanation_incorrect": "This fundamental limit equals 1. It can be derived from the definition of e."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "d/dx(eˣ) equals:",
+      "options": [
+        {"id": "A", "text": "eˣ"},
+        {"id": "B", "text": "xeˣ⁻¹"},
+        {"id": "C", "text": "eˣ/x"},
+        {"id": "D", "text": "1/eˣ"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The exponential function eˣ is its own derivative: d/dx(eˣ) = eˣ.",
+      "explanation_incorrect": "The function eˣ is unique in being equal to its own derivative."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The derivative of x cos x is:",
+      "options": [
+        {"id": "A", "text": "cos x − x sin x"},
+        {"id": "B", "text": "−x sin x"},
+        {"id": "C", "text": "cos x + x sin x"},
+        {"id": "D", "text": "−sin x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Product rule: (1)(cos x) + (x)(−sin x) = cos x − x sin x.",
+      "explanation_incorrect": "By the product rule: d/dx(x cos x) = cos x − x sin x."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) sin(ax)/sin(bx) equals (a, b ≠ 0):",
+      "options": [
+        {"id": "A", "text": "a/b"},
+        {"id": "B", "text": "b/a"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "ab"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sin(ax)/sin(bx) = [sin(ax)/(ax)] · [bx/sin(bx)] · (ax/bx) → 1 · 1 · a/b = a/b.",
+      "explanation_incorrect": "Using the standard limit sin(kx)/(kx) → 1: the result is a/b."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "Using first principles, the derivative of x² is:",
+      "options": [
+        {"id": "A", "text": "x"},
+        {"id": "B", "text": "2x"},
+        {"id": "C", "text": "x²"},
+        {"id": "D", "text": "2x + h"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "f'(x) = lim(h→0) [(x+h)²−x²]/h = lim(h→0) [2xh+h²]/h = lim(h→0) (2x+h) = 2x.",
+      "explanation_incorrect": "From first principles: [(x+h)²−x²]/h = (2xh+h²)/h = 2x+h → 2x as h→0."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→1) (x⁷ − 1)/(x − 1) equals:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "5"},
+        {"id": "C", "text": "6"},
+        {"id": "D", "text": "7"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Using lim(x→a) (xⁿ−aⁿ)/(x−a) = naⁿ⁻¹ with n = 7, a = 1: 7(1)⁶ = 7.",
+      "explanation_incorrect": "Standard limit: naⁿ⁻¹ = 7(1)⁶ = 7."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The derivative of (x² + 1)(x − 1) is:",
+      "options": [
+        {"id": "A", "text": "3x² − 2x + 1"},
+        {"id": "B", "text": "2x(x−1) + x²+1"},
+        {"id": "C", "text": "Both A and B"},
+        {"id": "D", "text": "3x² + 2x − 1"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Product rule: 2x(x−1) + (x²+1)(1) = 2x²−2x+x²+1 = 3x²−2x+1. Or expand first: x³−x²+x−1, derivative = 3x²−2x+1. Both give the same answer.",
+      "explanation_incorrect": "Both methods (product rule and expanding first) give 3x² − 2x + 1."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) (sin x − x)/x³ equals:",
+      "options": [
+        {"id": "A", "text": "−1/6"},
+        {"id": "B", "text": "1/6"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "−1/3"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using the expansion sin x = x − x³/6 + …: (sin x − x)/x³ = (−x³/6 + …)/x³ → −1/6.",
+      "explanation_incorrect": "Using the Taylor expansion of sin x: the limit evaluates to −1/6."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "d/dx(√x) = ___.",
+      "correct_answer": "1/(2√x)",
+      "explanation_correct": "√x = x^(1/2). d/dx = (1/2)x^(−1/2) = 1/(2√x).",
+      "explanation_incorrect": "Using power rule: d/dx(x^(1/2)) = (1/2)x^(−1/2) = 1/(2√x)."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "d/dx(x²/cos x) equals:",
+      "options": [
+        {"id": "A", "text": "(2x cos x + x² sin x)/cos²x"},
+        {"id": "B", "text": "(2x cos x − x² sin x)/cos²x"},
+        {"id": "C", "text": "2x/cos x"},
+        {"id": "D", "text": "−x² sin x/cos²x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Quotient rule: [2x·cos x − x²·(−sin x)]/cos²x = (2x cos x + x² sin x)/cos²x.",
+      "explanation_incorrect": "d/dx(x²/cos x) = (2x cos x + x² sin x)/cos²x by the quotient rule."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→0) (x² + 3x)/x equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "3"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "Does not exist"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "(x² + 3x)/x = x + 3 for x ≠ 0. lim(x→0) (x + 3) = 3.",
+      "explanation_incorrect": "Simplify: (x²+3x)/x = x+3 → 3 as x→0."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "d/dx(tan x) equals:",
+      "options": [
+        {"id": "A", "text": "sec x"},
+        {"id": "B", "text": "sec²x"},
+        {"id": "C", "text": "cot x"},
+        {"id": "D", "text": "cosec²x"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "d/dx(tan x) = d/dx(sin x/cos x) = (cos x · cos x − sin x · (−sin x))/cos²x = (cos²x + sin²x)/cos²x = 1/cos²x = sec²x.",
+      "explanation_incorrect": "Using the quotient rule on sin x/cos x: d/dx(tan x) = sec²x."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "lim(x→−1) (x¹⁰ + x⁵ + 1)/(x − 1) equals:",
+      "options": [
+        {"id": "A", "text": "−3/2"},
+        {"id": "B", "text": "3/2"},
+        {"id": "C", "text": "−1/2"},
+        {"id": "D", "text": "1/2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Direct substitution (no 0/0 form): f(−1) = (1−1+1)/(−1−1) = 1/(−2) = −1/2.",
+      "explanation_incorrect": "Since x = −1 doesn't make the denominator zero, substitute directly: 1/(−2) = −1/2."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→π/2) (1 − sin x)/(π/2 − x)² equals:",
+      "options": [
+        {"id": "A", "text": "1/2"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "∞"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Let t = π/2 − x, so x = π/2 − t and t → 0. 1 − sin(π/2−t) = 1 − cos t. Limit = lim(t→0)(1−cos t)/t² = 1/2.",
+      "explanation_incorrect": "Substituting t = π/2 − x: (1−cos t)/t² → 1/2."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The derivative of (3x + 1)² is:",
+      "options": [
+        {"id": "A", "text": "6(3x + 1)"},
+        {"id": "B", "text": "2(3x + 1)"},
+        {"id": "C", "text": "18x + 6"},
+        {"id": "D", "text": "Both A and C"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Expand: (3x+1)² = 9x²+6x+1. d/dx = 18x+6 = 6(3x+1). Both A and C are the same expression.",
+      "explanation_incorrect": "Expanding first: d/dx(9x²+6x+1) = 18x+6 = 6(3x+1)."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "d/dx(1/x²) equals:",
+      "options": [
+        {"id": "A", "text": "−2/x³"},
+        {"id": "B", "text": "2/x³"},
+        {"id": "C", "text": "−1/x³"},
+        {"id": "D", "text": "−2/x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1/x² = x⁻². d/dx = −2x⁻³ = −2/x³.",
+      "explanation_incorrect": "Using power rule: d/dx(x⁻²) = −2x⁻³ = −2/x³."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) (aˣ − 1)/x equals (a > 0):",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "log a"},
+        {"id": "C", "text": "ln a"},
+        {"id": "D", "text": "Both B and C"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "lim(x→0) (aˣ−1)/x = ln a. This is a standard limit (natural logarithm).",
+      "explanation_incorrect": "This standard limit equals ln a (= logₑ a)."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx(sin x · cos x) equals:",
+      "options": [
+        {"id": "A", "text": "cos²x − sin²x"},
+        {"id": "B", "text": "cos 2x"},
+        {"id": "C", "text": "−sin 2x"},
+        {"id": "D", "text": "Both A and B"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Product rule: cos x · cos x + sin x · (−sin x) = cos²x − sin²x = cos 2x. Both A and B are equivalent.",
+      "explanation_incorrect": "d/dx(sin x cos x) = cos²x − sin²x = cos 2x."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→0) (sin 2x + sin 6x)/(sin 5x − sin 3x) equals:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "4"},
+        {"id": "D", "text": "8"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using sin kx ≈ kx for small x: (2x + 6x)/(5x − 3x) = 8x/2x = 4.",
+      "explanation_incorrect": "For small x, sin kx ≈ kx: (2x+6x)/(5x−3x) = 8/2 = 4."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "true_false",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "If lim(x→a) f(x) exists and lim(x→a) g(x) exists, then lim(x→a) [f(x) + g(x)] = lim(x→a) f(x) + lim(x→a) g(x).",
+      "correct_answer": "True",
+      "explanation_correct": "This is the sum rule for limits: the limit of a sum equals the sum of the limits (when both individual limits exist).",
+      "explanation_incorrect": "The algebra of limits guarantees this property when both limits exist."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "d/dx(x³ − 3x² + 4x − 7) at x = 1 equals:",
+      "options": [
+        {"id": "A", "text": "−5"},
+        {"id": "B", "text": "−1"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "5"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f'(x) = 3x² − 6x + 4. f'(1) = 3 − 6 + 4 = 1.",
+      "explanation_incorrect": "f'(x) = 3x² − 6x + 4. At x = 1: 3 − 6 + 4 = 1."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "lim(x→3) 5 equals:",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "5"},
+        {"id": "C", "text": "15"},
+        {"id": "D", "text": "Does not exist"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The limit of a constant function is the constant itself: lim(x→3) 5 = 5.",
+      "explanation_incorrect": "A constant function has the same value everywhere, so the limit is 5."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx[(x+1)(x+2)(x+3)] equals:",
+      "options": [
+        {"id": "A", "text": "3x² + 12x + 11"},
+        {"id": "B", "text": "3x² + 12x + 6"},
+        {"id": "C", "text": "x³ + 6x² + 11x + 6"},
+        {"id": "D", "text": "3x² + 6x + 11"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Expand: (x+1)(x+2)(x+3) = x³ + 6x² + 11x + 6. d/dx = 3x² + 12x + 11.",
+      "explanation_incorrect": "Expanding and differentiating: d/dx(x³+6x²+11x+6) = 3x²+12x+11."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "lim(x→0) (1 − cos 2x)/x² equals:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "4"},
+        {"id": "D", "text": "1/2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 − cos 2x = 2sin²x. So (2sin²x)/x² = 2(sin x/x)² → 2(1)² = 2.",
+      "explanation_incorrect": "Using 1−cos 2x = 2sin²x: 2(sin x/x)² → 2."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "d/dx(log x) equals (natural log):",
+      "options": [
+        {"id": "A", "text": "1/x"},
+        {"id": "B", "text": "x"},
+        {"id": "C", "text": "1/x²"},
+        {"id": "D", "text": "log x / x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "d/dx(ln x) = 1/x. This is a standard derivative.",
+      "explanation_incorrect": "The derivative of the natural logarithm is 1/x."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx(eˣ sin x) equals:",
+      "options": [
+        {"id": "A", "text": "eˣ(sin x + cos x)"},
+        {"id": "B", "text": "eˣ(sin x − cos x)"},
+        {"id": "C", "text": "eˣ cos x"},
+        {"id": "D", "text": "eˣ sin x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Product rule: eˣ sin x + eˣ cos x = eˣ(sin x + cos x).",
+      "explanation_incorrect": "By the product rule: eˣ sin x + eˣ cos x = eˣ(sin x + cos x)."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) x/|x| :",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "−1"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "Does not exist"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Left-hand limit: x→0⁻, x/|x| = x/(−x) = −1. Right-hand limit: x→0⁺, x/|x| = x/x = 1. Since LHL ≠ RHL, the limit does not exist.",
+      "explanation_incorrect": "The left-hand limit (−1) ≠ right-hand limit (1), so the limit does not exist."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "d/dx(x) = ___.",
+      "correct_answer": "1",
+      "explanation_correct": "d/dx(x) = d/dx(x¹) = 1·x⁰ = 1.",
+      "explanation_incorrect": "The derivative of x with respect to x is 1."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "d/dx(x² eˣ) at x = 0 equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "e"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f'(x) = 2xeˣ + x²eˣ = eˣ(2x + x²). f'(0) = e⁰(0 + 0) = 0.",
+      "explanation_incorrect": "f'(x) = eˣ(x² + 2x). At x = 0: 1 · 0 = 0."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "lim(x→0) (tan x − sin x)/x³ equals:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1/2"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "−1/2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan x − sin x = sin x(1/cos x − 1) = sin x(1−cos x)/cos x. So (tan x−sin x)/x³ = [sin x/x]·[(1−cos x)/x²]·[1/cos x] → 1·(1/2)·1 = 1/2.",
+      "explanation_incorrect": "Factoring: sin x(1−cos x)/(x³ cos x) = (sin x/x)·(1−cos x)/x²·(1/cos x) → 1/2."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "d/dx(sec x) equals:",
+      "options": [
+        {"id": "A", "text": "sec x tan x"},
+        {"id": "B", "text": "−sec x tan x"},
+        {"id": "C", "text": "sec²x"},
+        {"id": "D", "text": "tan²x"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "sec x = 1/cos x. d/dx = −(−sin x)/cos²x = sin x/cos²x = (1/cos x)(sin x/cos x) = sec x tan x.",
+      "explanation_incorrect": "d/dx(1/cos x) = sin x/cos²x = sec x tan x."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "lim(x→∞) (3x² + 2x)/(5x² − 1) equals:",
+      "options": [
+        {"id": "A", "text": "3/5"},
+        {"id": "B", "text": "2/5"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "∞"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Divide numerator and denominator by x²: (3 + 2/x)/(5 − 1/x²) → 3/5 as x → ∞.",
+      "explanation_incorrect": "For rational functions at infinity, the limit is the ratio of leading coefficients: 3/5."
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T07.01",
+  "topic_name": "Mechanical Properties of Solids",
+  "canonical_explanation": {
+    "text": "When an external force (called a deforming force) is applied to a solid body, the body changes its shape or size. The restoring force per unit area set up inside the body is called stress (σ = F/A), measured in pascals (Pa). The fractional change in dimension is called strain (ε = ΔL/L for longitudinal strain). Hooke's law states that, within the elastic limit, stress is directly proportional to strain: σ = Eε, where E is the modulus of elasticity. A stress-strain curve for a material shows distinct regions: the proportional limit (where Hooke's law holds), the elastic limit (beyond which permanent deformation begins), the yield point, and the breaking point. Young's modulus Y = longitudinal stress / longitudinal strain = (F/A)/(ΔL/L). Bulk modulus B = volumetric stress / volumetric strain = −VΔP/ΔV, where the negative sign ensures B is positive since volume decreases when pressure increases. Shear modulus (modulus of rigidity) G = shearing stress / shearing strain = (F/A)/θ, where θ is the angular displacement. Poisson's ratio σₚ = lateral strain / longitudinal strain = −(Δd/d)/(ΔL/L), and for most materials lies between 0 and 0.5. The elastic potential energy stored per unit volume in a deformed body is u = ½ × stress × strain, and the total elastic PE is U = ½ × stress × strain × volume.",
+    "rules": [
+      "Stress = Force / Area (σ = F/A), SI unit is pascal (Pa or N/m²).",
+      "Strain = Change in dimension / Original dimension (dimensionless).",
+      "Hooke's law: Within the elastic limit, stress ∝ strain.",
+      "Young's modulus Y = (F/A) / (ΔL/L) = FL / AΔL.",
+      "Bulk modulus B = −V(ΔP) / ΔV.",
+      "Shear modulus G = (F/A) / θ, where θ is shearing strain.",
+      "Poisson's ratio σₚ = lateral strain / longitudinal strain; range 0 to 0.5.",
+      "Elastic potential energy per unit volume = ½ × stress × strain.",
+      "Total elastic PE = ½ × stress × strain × volume = ½ × (F/A) × (ΔL/L) × AL = ½ × F × ΔL.",
+      "On a stress-strain curve: proportional limit → elastic limit → yield point → ultimate stress → breaking point."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T07.01.Q001",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Stress is defined as:",
+      "options": [
+        { "id": "A", "text": "Applied force multiplied by area" },
+        { "id": "B", "text": "Restoring force per unit area" },
+        { "id": "C", "text": "Change in length per unit length" },
+        { "id": "D", "text": "Force per unit volume" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Stress is defined as the restoring force per unit area developed inside a body when a deforming force is applied. Mathematically, σ = F/A, and its SI unit is pascal (Pa or N/m²).",
+      "explanation_incorrect": "Stress is not force times area (that has no standard physical meaning), nor is it change in length per unit length (that is strain), nor force per unit volume (that is body force density). Stress is the internal restoring force per unit area: σ = F/A."
+    },
+    {
+      "question_id": "T07.01.Q002",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of stress is:",
+      "options": [
+        { "id": "A", "text": "N/m" },
+        { "id": "B", "text": "Pa" },
+        { "id": "C", "text": "J" },
+        { "id": "D", "text": "N·m" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of stress is the pascal (Pa), which equals N/m². Since stress = force / area, the unit is newton per square metre.",
+      "explanation_incorrect": "N/m is the unit of surface tension, J is energy, and N·m is torque. Stress has dimensions of force per area, so its SI unit is the pascal (Pa = N/m²)."
+    },
+    {
+      "question_id": "T07.01.Q003",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Longitudinal strain is defined as:",
+      "options": [
+        { "id": "A", "text": "Change in volume / Original volume" },
+        { "id": "B", "text": "Change in length / Original length" },
+        { "id": "C", "text": "Force / Area" },
+        { "id": "D", "text": "Applied force / Change in length" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Longitudinal strain (tensile or compressive strain) is the ratio of the change in length (ΔL) to the original length (L). It is a dimensionless quantity: ε = ΔL/L.",
+      "explanation_incorrect": "Change in volume / original volume is volumetric strain, force / area is stress, and force / change in length is not a standard physical quantity. Longitudinal strain = ΔL/L."
+    },
+    {
+      "question_id": "T07.01.Q004",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Strain is a:",
+      "options": [
+        { "id": "A", "text": "Vector quantity" },
+        { "id": "B", "text": "Scalar quantity with no dimensions" },
+        { "id": "C", "text": "Scalar quantity with dimensions of length" },
+        { "id": "D", "text": "Tensor quantity with dimensions of force" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Strain is the ratio of change in dimension to the original dimension. Since it is a ratio of two quantities with the same units, strain is dimensionless and has no unit. It is a scalar quantity (though rigorously a component of a tensor, at this level it is treated as a dimensionless scalar).",
+      "explanation_incorrect": "Strain is not a vector — it has no direction in the ordinary vector sense. It is not measured in units of length or force. Strain is the dimensionless ratio ΔL/L (or ΔV/V etc.), making it a unitless scalar."
+    },
+    {
+      "question_id": "T07.01.Q005",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Hooke's law, within the elastic limit:",
+      "options": [
+        { "id": "A", "text": "Stress is inversely proportional to strain" },
+        { "id": "B", "text": "Stress is directly proportional to strain" },
+        { "id": "C", "text": "Stress is proportional to the square of strain" },
+        { "id": "D", "text": "Strain is independent of stress" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hooke's law states that within the elastic limit, stress is directly proportional to strain: σ ∝ ε, or σ = Eε, where E is the modulus of elasticity. The stress-strain graph is a straight line in this region.",
+      "explanation_incorrect": "Hooke's law does not describe an inverse or squared relationship between stress and strain. Nor is strain independent of stress. Within the elastic limit, stress is directly proportional to strain."
+    },
+    {
+      "question_id": "T07.01.Q006",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which type of stress is developed when a force is applied perpendicular to the cross-sectional area of a rod, stretching it?",
+      "options": [
+        { "id": "A", "text": "Shearing stress" },
+        { "id": "B", "text": "Volumetric stress" },
+        { "id": "C", "text": "Tensile stress" },
+        { "id": "D", "text": "Hydraulic stress" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When a force acts perpendicular to the cross-sectional area and tends to elongate (stretch) the body, the stress developed is called tensile stress. It is a type of longitudinal (normal) stress.",
+      "explanation_incorrect": "Shearing stress arises when force is applied tangentially (parallel to the surface). Volumetric or hydraulic stress occurs when uniform pressure acts on all surfaces. A force stretching a rod along its length produces tensile stress."
+    },
+    {
+      "question_id": "T07.01.Q007",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "A wire of cross-sectional area 2 × 10⁻⁶ m² is stretched by a force of 100 N. The stress in the wire is:",
+      "options": [
+        { "id": "A", "text": "5 × 10⁷ Pa" },
+        { "id": "B", "text": "2 × 10⁻⁴ Pa" },
+        { "id": "C", "text": "200 Pa" },
+        { "id": "D", "text": "5 × 10⁴ Pa" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Stress = Force / Area = 100 / (2 × 10⁻⁶) = 5 × 10⁷ Pa. This is a straightforward application of the stress formula σ = F/A.",
+      "explanation_incorrect": "Using σ = F/A = 100 N / (2 × 10⁻⁶ m²) = 50 × 10⁶ = 5 × 10⁷ Pa. The other options result from arithmetic errors such as multiplying instead of dividing, or misplacing powers of ten."
+    },
+    {
+      "question_id": "T07.01.Q008",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "A metal wire of original length 2 m is stretched and its length becomes 2.004 m. The longitudinal strain is:",
+      "options": [
+        { "id": "A", "text": "0.004" },
+        { "id": "B", "text": "0.002" },
+        { "id": "C", "text": "0.04" },
+        { "id": "D", "text": "0.2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Longitudinal strain = ΔL/L = (2.004 − 2)/2 = 0.004/2 = 0.002. The strain is the ratio of the extension to the original length.",
+      "explanation_incorrect": "The change in length is ΔL = 2.004 − 2 = 0.004 m. Strain = ΔL / L = 0.004 / 2 = 0.002. Option A (0.004) is just the extension in metres, not the strain."
+    },
+    {
+      "question_id": "T07.01.Q009",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "A rubber band obeys Hooke's law up to a stress of 4 × 10⁶ Pa. If its modulus of elasticity is 2 × 10⁸ Pa, the maximum elastic strain is:",
+      "options": [
+        { "id": "A", "text": "0.02" },
+        { "id": "B", "text": "0.2" },
+        { "id": "C", "text": "50" },
+        { "id": "D", "text": "0.002" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From Hooke's law, σ = Eε, so ε = σ/E = (4 × 10⁶) / (2 × 10⁸) = 0.02. This is the maximum strain within the proportional limit.",
+      "explanation_incorrect": "Using ε = σ / E = 4 × 10⁶ / 2 × 10⁸ = 2 × 10⁻² = 0.02. Option B (0.2) results from a factor-of-ten error, option C (50) from inverting the formula, and option D (0.002) from an extra power-of-ten error."
+    },
+    {
+      "question_id": "T07.01.Q010",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "Compressive stress in a body is produced when the applied forces tend to:",
+      "options": [
+        { "id": "A", "text": "Elongate the body" },
+        { "id": "B", "text": "Compress the body" },
+        { "id": "C", "text": "Twist the body" },
+        { "id": "D", "text": "Shear the body" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Compressive stress arises when equal and opposite forces push inward on a body, tending to decrease its length. The body resists this compression through internal restoring forces.",
+      "explanation_incorrect": "Forces that elongate produce tensile stress, forces that twist produce torsional stress, and tangential forces produce shearing stress. Compressive stress specifically results from forces that tend to compress (shorten) the body."
+    },
+    {
+      "question_id": "T07.01.Q011",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "On a stress-strain curve, the region where Hooke's law is strictly obeyed is up to the:",
+      "options": [
+        { "id": "A", "text": "Elastic limit" },
+        { "id": "B", "text": "Proportional limit" },
+        { "id": "C", "text": "Yield point" },
+        { "id": "D", "text": "Breaking point" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hooke's law (stress ∝ strain) is strictly valid only up to the proportional limit, where the stress-strain curve is a straight line. Beyond this point, the curve deviates from linearity even though the material may still be elastic up to the elastic limit.",
+      "explanation_incorrect": "The elastic limit is the point beyond which permanent deformation occurs, but the stress-strain curve may not be perfectly linear between the proportional limit and the elastic limit. Hooke's law holds strictly only up to the proportional limit."
+    },
+    {
+      "question_id": "T07.01.Q012",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Beyond the elastic limit, if the load is removed, the body:",
+      "options": [
+        { "id": "A", "text": "Returns exactly to its original shape" },
+        { "id": "B", "text": "Retains some permanent deformation" },
+        { "id": "C", "text": "Breaks immediately" },
+        { "id": "D", "text": "Continues to deform on its own" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The elastic limit is the maximum stress up to which a body completely regains its original shape when the deforming force is removed. Beyond this limit, the body undergoes permanent (plastic) deformation and does not fully recover its original dimensions.",
+      "explanation_incorrect": "The body does not return to its exact original shape once stressed beyond the elastic limit — that defines the elastic limit itself. It does not necessarily break immediately either; breaking occurs at the fracture/breaking point, which is well beyond the elastic limit."
+    },
+    {
+      "question_id": "T07.01.Q013",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The yield point on a stress-strain curve is the point where:",
+      "options": [
+        { "id": "A", "text": "The wire snaps" },
+        { "id": "B", "text": "Stress is zero" },
+        { "id": "C", "text": "The material begins to deform plastically with little or no increase in stress" },
+        { "id": "D", "text": "The material first starts to stretch" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At the yield point, the material starts to deform plastically — the strain increases significantly with little or no increase in applied stress. This marks the transition from elastic to predominantly plastic behaviour.",
+      "explanation_incorrect": "The wire snaps at the breaking (fracture) point, not the yield point. Stress is not zero at the yield point. The material starts to stretch as soon as any force is applied. The yield point specifically marks where large plastic deformation begins with minimal stress increase."
+    },
+    {
+      "question_id": "T07.01.Q014",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "A material has an elastic limit of 3 × 10⁸ Pa and a proportional limit of 2.5 × 10⁸ Pa. If a stress of 2.7 × 10⁸ Pa is applied and then removed, the material will:",
+      "options": [
+        { "id": "A", "text": "Return to its original shape — Hooke's law still applies" },
+        { "id": "B", "text": "Return to its original shape — but the stress-strain relation is not linear" },
+        { "id": "C", "text": "Retain some permanent deformation" },
+        { "id": "D", "text": "Break" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The applied stress (2.7 × 10⁸ Pa) is between the proportional limit (2.5 × 10⁸ Pa) and the elastic limit (3 × 10⁸ Pa). In this range, the material is still elastic (it returns to its original shape on unloading), but the stress-strain relationship is no longer perfectly linear, so Hooke's law does not strictly hold.",
+      "explanation_incorrect": "Since 2.7 × 10⁸ Pa exceeds the proportional limit, Hooke's law is no longer strictly valid (ruling out A). But since it is below the elastic limit, the body still recovers fully on unloading (ruling out C). The material is far from its breaking point (ruling out D)."
+    },
+    {
+      "question_id": "T07.01.Q015",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "On a stress-strain curve for a ductile material, the maximum stress the material can withstand before fracture is called the:",
+      "options": [
+        { "id": "A", "text": "Proportional limit" },
+        { "id": "B", "text": "Elastic limit" },
+        { "id": "C", "text": "Ultimate tensile strength" },
+        { "id": "D", "text": "Yield strength" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The ultimate tensile strength (UTS) is the maximum stress that a material can withstand before it starts to neck and eventually fracture. On the stress-strain curve, it corresponds to the highest point of the curve.",
+      "explanation_incorrect": "The proportional limit is where linearity ends, the elastic limit is where elastic recovery ends, and the yield strength is where significant plastic deformation begins. The ultimate tensile strength is the highest stress the material can sustain."
+    },
+    {
+      "question_id": "T07.01.Q016",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "An elastomer like rubber has a stress-strain curve that is:",
+      "options": [
+        { "id": "A", "text": "A straight line up to the breaking point" },
+        { "id": "B", "text": "Linear with a very small elastic region" },
+        { "id": "C", "text": "Not a straight line even within the elastic region, but it can stretch to large strains" },
+        { "id": "D", "text": "Identical to that of steel" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Elastomers like rubber do not obey Hooke's law — their stress-strain curve is not linear. However, they can undergo very large elastic strains (several times their original length) and still return to their original shape when the deforming force is removed.",
+      "explanation_incorrect": "Rubber's stress-strain curve is distinctly non-linear, unlike steel's initial linear region. Rubber can be stretched enormously while remaining elastic, which is very different from most metals."
+    },
+    {
+      "question_id": "T07.01.Q017",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The correct order of points on a typical stress-strain curve for a ductile metal is:",
+      "options": [
+        { "id": "A", "text": "Elastic limit → Proportional limit → Yield point → Breaking point" },
+        { "id": "B", "text": "Proportional limit → Elastic limit → Yield point → Breaking point" },
+        { "id": "C", "text": "Yield point → Proportional limit → Elastic limit → Breaking point" },
+        { "id": "D", "text": "Proportional limit → Yield point → Elastic limit → Breaking point" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "On a stress-strain curve for a ductile material, the order is: (1) Proportional limit (Hooke's law holds), (2) Elastic limit (body still recovers fully), (3) Yield point (large plastic deformation begins), and finally (4) Breaking/fracture point.",
+      "explanation_incorrect": "The proportional limit always comes before the elastic limit because Hooke's law ceases to hold before the material loses its ability to recover fully. The yield point follows the elastic limit, and the breaking point comes last."
+    },
+    {
+      "question_id": "T07.01.Q018",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Young's modulus is defined as the ratio of:",
+      "options": [
+        { "id": "A", "text": "Volumetric stress to volumetric strain" },
+        { "id": "B", "text": "Shearing stress to shearing strain" },
+        { "id": "C", "text": "Longitudinal stress to longitudinal strain" },
+        { "id": "D", "text": "Lateral strain to longitudinal strain" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Young's modulus (Y) is defined as the ratio of longitudinal stress to longitudinal strain: Y = (F/A) / (ΔL/L). It measures the stiffness of a material when stretched or compressed along its length.",
+      "explanation_incorrect": "Volumetric stress / volumetric strain defines the bulk modulus (B). Shearing stress / shearing strain defines the shear modulus (G). Lateral strain / longitudinal strain defines Poisson's ratio. Young's modulus = longitudinal stress / longitudinal strain."
+    },
+    {
+      "question_id": "T07.01.Q019",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The bulk modulus of a material is defined as:",
+      "options": [
+        { "id": "A", "text": "B = −V(ΔP/ΔV)" },
+        { "id": "B", "text": "B = ΔV/(VΔP)" },
+        { "id": "C", "text": "B = (F/A)/(ΔL/L)" },
+        { "id": "D", "text": "B = (F/A)/θ" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The bulk modulus is B = −V(ΔP/ΔV) = −VΔP/ΔV. The negative sign ensures B is positive because an increase in pressure (ΔP > 0) causes a decrease in volume (ΔV < 0). It measures the material's resistance to uniform compression.",
+      "explanation_incorrect": "Option B is the reciprocal of the bulk modulus (compressibility). Option C defines Young's modulus. Option D defines the shear modulus. Bulk modulus B = −VΔP/ΔV."
+    },
+    {
+      "question_id": "T07.01.Q020",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The shear modulus (modulus of rigidity) relates:",
+      "options": [
+        { "id": "A", "text": "Tensile stress to tensile strain" },
+        { "id": "B", "text": "Volumetric stress to volumetric strain" },
+        { "id": "C", "text": "Shearing stress to the angle of shear (shearing strain)" },
+        { "id": "D", "text": "Lateral strain to longitudinal strain" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The shear modulus (G) is the ratio of shearing stress to shearing strain: G = (F/A)/θ, where F/A is the tangential force per unit area and θ is the angular displacement (shearing strain) in radians.",
+      "explanation_incorrect": "Tensile stress / tensile strain gives Young's modulus. Volumetric stress / volumetric strain gives the bulk modulus. Lateral strain / longitudinal strain gives Poisson's ratio. The shear modulus relates shearing stress to shearing strain."
+    },
+    {
+      "question_id": "T07.01.Q021",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "A steel wire of length 2 m and cross-sectional area 1 × 10⁻⁶ m² is stretched by 1 mm under a load of 100 N. The Young's modulus of the steel wire is:",
+      "options": [
+        { "id": "A", "text": "2 × 10¹¹ Pa" },
+        { "id": "B", "text": "1 × 10¹¹ Pa" },
+        { "id": "C", "text": "2 × 10⁹ Pa" },
+        { "id": "D", "text": "5 × 10¹⁰ Pa" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Y = FL / (AΔL) = (100 × 2) / (1 × 10⁻⁶ × 1 × 10⁻³) = 200 / (10⁻⁹) = 2 × 10¹¹ Pa. This is close to the standard value of Young's modulus for steel.",
+      "explanation_incorrect": "Y = FL / (AΔL) where F = 100 N, L = 2 m, A = 1 × 10⁻⁶ m², ΔL = 1 mm = 10⁻³ m. So Y = (100 × 2) / (10⁻⁶ × 10⁻³) = 200 / 10⁻⁹ = 2 × 10¹¹ Pa. Errors in the other options arise from incorrect unit conversions or formula applications."
+    },
+    {
+      "question_id": "T07.01.Q022",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "A copper wire and a steel wire of the same length and same cross-sectional area are stretched by the same force. If Young's modulus of steel is about twice that of copper, the extension in the copper wire compared to the steel wire is:",
+      "options": [
+        { "id": "A", "text": "Half" },
+        { "id": "B", "text": "Equal" },
+        { "id": "C", "text": "Double" },
+        { "id": "D", "text": "Four times" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "From Y = FL/(AΔL), we get ΔL = FL/(AY). Since F, L, and A are the same for both wires, ΔL ∝ 1/Y. If Y_steel = 2Y_copper, then ΔL_copper = 2 × ΔL_steel. The copper wire extends twice as much as the steel wire.",
+      "explanation_incorrect": "Since extension is inversely proportional to Young's modulus (ΔL = FL/AY), a lower Young's modulus means a greater extension. Copper, with half the Young's modulus of steel, stretches twice as much under the same conditions."
+    },
+    {
+      "question_id": "T07.01.Q023",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "A solid sphere of volume 0.5 m³ is placed in the ocean where the pressure is 2 × 10⁷ Pa above atmospheric pressure. If the bulk modulus of the sphere material is 1 × 10¹⁰ Pa, the decrease in volume is:",
+      "options": [
+        { "id": "A", "text": "1 × 10⁻³ m³" },
+        { "id": "B", "text": "1 × 10⁻⁴ m³" },
+        { "id": "C", "text": "2.5 × 10⁻² m³" },
+        { "id": "D", "text": "4 × 10⁻⁴ m³" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From B = −VΔP/ΔV, we get |ΔV| = VΔP/B = (0.5 × 2 × 10⁷) / (1 × 10¹⁰) = 10⁷ / 10¹⁰ = 10⁻³ m³ = 1 × 10⁻³ m³.",
+      "explanation_incorrect": "|ΔV| = VΔP/B = (0.5)(2 × 10⁷) / (10¹⁰) = 10⁷/10¹⁰ = 10⁻³ m³. The other options result from errors in arithmetic or incorrect manipulation of the bulk modulus formula."
+    },
+    {
+      "question_id": "T07.01.Q024",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A wire of length L and radius r is stretched by a load W. If the same load is applied to a wire of the same material but of length 2L and radius 2r, the extension produced in the second wire is:",
+      "options": [
+        { "id": "A", "text": "Same as the first" },
+        { "id": "B", "text": "Half of the first" },
+        { "id": "C", "text": "Double the first" },
+        { "id": "D", "text": "One-fourth of the first" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔL = FL/(AY) = WL/(πr²Y). For the second wire: ΔL₂ = W(2L) / (π(2r)²Y) = 2WL / (4πr²Y) = (1/2) × WL/(πr²Y) = ΔL₁/2. The extension is halved because doubling the radius quadruples the area, which more than compensates for the doubled length.",
+      "explanation_incorrect": "Using ΔL = WL/(πr²Y): for the second wire, L is doubled (×2) but r is doubled making area 4 times (÷4). Net effect: ΔL₂ = (2/4) × ΔL₁ = ΔL₁/2. The second wire has half the extension of the first."
+    },
+    {
+      "question_id": "T07.01.Q025",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two wires A and B are made of the same material. Wire A has length L and diameter d, while wire B has length 2L and diameter 2d. If both are subjected to the same stretching force, the ratio of their extensions (ΔL_A / ΔL_B) is:",
+      "options": [
+        { "id": "A", "text": "1 : 1" },
+        { "id": "B", "text": "2 : 1" },
+        { "id": "C", "text": "1 : 2" },
+        { "id": "D", "text": "4 : 1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔL = FL/(AY). For wire A: ΔL_A = FL/(π(d/2)²Y). For wire B: ΔL_B = F(2L)/(π(2d/2)²Y) = 2FL/(πd²Y). So ΔL_A = FL/(π(d²/4)Y) = 4FL/(πd²Y) and ΔL_B = 2FL/(πd²Y). Ratio = ΔL_A/ΔL_B = 4/2 = 2/1, i.e., 2 : 1.",
+      "explanation_incorrect": "Using ΔL = FL/(AY) = 4FL/(πd²Y): ΔL_A = 4FL/(πd²Y), ΔL_B = 4F(2L)/(π(2d)²Y) = 8FL/(4πd²Y) = 2FL/(πd²Y). So ΔL_A/ΔL_B = [4FL/(πd²Y)] / [2FL/(πd²Y)] = 2. The ratio is 2:1."
+    },
+    {
+      "question_id": "T07.01.Q026",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The compressibility of a material is:",
+      "options": [
+        { "id": "A", "text": "Equal to the bulk modulus" },
+        { "id": "B", "text": "The reciprocal of the bulk modulus" },
+        { "id": "C", "text": "The reciprocal of Young's modulus" },
+        { "id": "D", "text": "The product of stress and strain" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Compressibility (k) is defined as the reciprocal of the bulk modulus: k = 1/B. It measures how easily a material can be compressed. Materials with high bulk modulus have low compressibility and vice versa.",
+      "explanation_incorrect": "Compressibility is not the bulk modulus itself, nor the reciprocal of Young's modulus, nor the product of stress and strain. It is specifically defined as k = 1/B, the reciprocal of the bulk modulus."
+    },
+    {
+      "question_id": "T07.01.Q027",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "A metal cube of side 10 cm has its upper face displaced by 0.5 mm with respect to the lower face when a tangential force of 5000 N is applied on the upper face. The shear modulus of the metal is:",
+      "options": [
+        { "id": "A", "text": "1 × 10⁹ Pa" },
+        { "id": "B", "text": "1 × 10⁸ Pa" },
+        { "id": "C", "text": "5 × 10⁸ Pa" },
+        { "id": "D", "text": "5 × 10⁷ Pa" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area of the face A = (0.1)² = 0.01 m². Shearing stress = F/A = 5000/0.01 = 5 × 10⁵ Pa. Shearing strain θ = lateral displacement / height = 0.5 × 10⁻³ / 0.1 = 5 × 10⁻³. Shear modulus G = stress/strain = (5 × 10⁵) / (5 × 10⁻³) = 1 × 10⁸ Pa.",
+      "explanation_incorrect": "Shearing stress = F/A = 5000/(0.1)² = 5 × 10⁵ Pa. Shearing strain = lateral displacement / height = 0.5 × 10⁻³ / 0.1 = 5 × 10⁻³. G = stress/strain = 5 × 10⁵ / 5 × 10⁻³ = 1 × 10⁸ Pa. Common errors include using the wrong area or forgetting to convert mm to m."
+    },
+    {
+      "question_id": "T07.01.Q028",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Poisson's ratio is defined as the ratio of:",
+      "options": [
+        { "id": "A", "text": "Longitudinal stress to lateral stress" },
+        { "id": "B", "text": "Lateral strain to longitudinal strain" },
+        { "id": "C", "text": "Longitudinal strain to lateral strain" },
+        { "id": "D", "text": "Shearing strain to longitudinal strain" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Poisson's ratio (σ) is defined as the ratio of lateral strain to longitudinal strain: σ = −(Δd/d)/(ΔL/L). The negative sign accounts for the fact that when a body is stretched longitudinally, it contracts laterally, and vice versa.",
+      "explanation_incorrect": "Poisson's ratio is not a ratio of stresses or of shearing strain to longitudinal strain. It specifically relates how much a body contracts (or expands) laterally when it is stretched (or compressed) longitudinally: σ = lateral strain / longitudinal strain."
+    },
+    {
+      "question_id": "T07.01.Q029",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The theoretical range of Poisson's ratio for a stable, isotropic material is:",
+      "options": [
+        { "id": "A", "text": "−1 to 0" },
+        { "id": "B", "text": "0 to 1" },
+        { "id": "C", "text": "−1 to 0.5" },
+        { "id": "D", "text": "0 to 0.5" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a stable, isotropic, linear elastic material, the theoretical range of Poisson's ratio is −1 to 0.5. Most common engineering materials have Poisson's ratio between 0 and 0.5. A value of 0.5 corresponds to an incompressible material (like rubber), and negative values occur in special auxetic materials.",
+      "explanation_incorrect": "The theoretical bounds for Poisson's ratio in a stable isotropic material are −1 ≤ σ ≤ 0.5, derived from thermodynamic stability requirements. Most practical materials fall between 0 and 0.5, but the theoretical range extends to −1."
+    },
+    {
+      "question_id": "T07.01.Q030",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The elastic potential energy stored per unit volume in a strained body is:",
+      "options": [
+        { "id": "A", "text": "stress × strain" },
+        { "id": "B", "text": "½ × stress × strain" },
+        { "id": "C", "text": "2 × stress × strain" },
+        { "id": "D", "text": "stress / strain" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The elastic potential energy stored per unit volume (energy density) is u = ½ × stress × strain. This follows from the work done in stretching the material, analogous to the energy stored in a spring (½kx²).",
+      "explanation_incorrect": "The factor of ½ is essential — it arises because the force increases linearly from 0 to its maximum value as the body is deformed (within the proportional limit). The energy density is ½ × stress × strain, not stress × strain or 2 × stress × strain."
+    },
+    {
+      "question_id": "T07.01.Q031",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "A wire of volume 2 × 10⁻⁵ m³ is stretched. The stress in the wire is 4 × 10⁷ Pa and the strain is 0.002. The total elastic potential energy stored in the wire is:",
+      "options": [
+        { "id": "A", "text": "0.8 J" },
+        { "id": "B", "text": "1.6 J" },
+        { "id": "C", "text": "0.4 J" },
+        { "id": "D", "text": "4.0 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "U = ½ × stress × strain × volume = ½ × (4 × 10⁷) × (0.002) × (2 × 10⁻⁵) = ½ × 4 × 10⁷ × 2 × 10⁻³ × 2 × 10⁻⁵ = ½ × 16 × 10⁻¹ = ½ × 1.6 = 0.8 J.",
+      "explanation_incorrect": "U = ½ × σ × ε × V = 0.5 × 4 × 10⁷ × 0.002 × 2 × 10⁻⁵ = 0.5 × 1.6 = 0.8 J. Option B (1.6 J) omits the factor of ½. Option C (0.4 J) and option D (4.0 J) arise from arithmetic errors."
+    },
+    {
+      "question_id": "T07.01.Q032",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "A wire is stretched by a force F and extends by ΔL. The work done in stretching the wire (within elastic limit) is:",
+      "options": [
+        { "id": "A", "text": "F × ΔL" },
+        { "id": "B", "text": "½ × F × ΔL" },
+        { "id": "C", "text": "2 × F × ΔL" },
+        { "id": "D", "text": "F × ΔL²" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Within the elastic limit, the restoring force increases linearly from 0 to F as the wire stretches from 0 to ΔL. The work done equals the area under the force-extension graph, which is a triangle: W = ½ × F × ΔL. This equals the elastic potential energy stored.",
+      "explanation_incorrect": "F × ΔL would be the work done if the force were constant throughout the stretching, but the force increases gradually from 0 to F. The average force is F/2, so work = ½ × F × ΔL."
+    },
+    {
+      "question_id": "T07.01.Q033",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A wire of length L, area of cross-section A, and Young's modulus Y is stretched by a force F. The elastic potential energy stored per unit volume is:",
+      "options": [
+        { "id": "A", "text": "F²/(2A²Y)" },
+        { "id": "B", "text": "F²L/(2AY)" },
+        { "id": "C", "text": "F²/(AY)" },
+        { "id": "D", "text": "FY/(2A)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Energy per unit volume u = ½ × stress × strain. Stress σ = F/A. Strain ε = σ/Y = F/(AY). Therefore u = ½ × (F/A) × F/(AY) = F²/(2A²Y).",
+      "explanation_incorrect": "Using u = ½σε = ½(F/A)(F/AY) = F²/(2A²Y). Option B has an extra factor of L. Option C is missing the factor of ½. Option D uses an incorrect formula."
+    },
+    {
+      "question_id": "T07.01.Q034",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "A wire of diameter d is stretched to a strain of 0.01. If the same material wire of diameter 2d is stretched by the same force, the strain in the second wire is:",
+      "options": [
+        { "id": "A", "text": "0.01" },
+        { "id": "B", "text": "0.04" },
+        { "id": "C", "text": "0.0025" },
+        { "id": "D", "text": "0.005" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Strain = stress / Y = F/(AY). Since A = πd²/4, for wire 1: ε₁ = F/(π(d²/4)Y) = 0.01. For wire 2: ε₂ = F/(π((2d)²/4)Y) = F/(4 × πd²/4 × Y) = ε₁/4 = 0.01/4 = 0.0025. Doubling the diameter quadruples the area, reducing the strain by a factor of 4.",
+      "explanation_incorrect": "Since strain = F/(AY) and A ∝ d², doubling d quadruples A. With the same force and material (same Y), strain is inversely proportional to area, so the new strain = 0.01/4 = 0.0025."
+    },
+    {
+      "question_id": "T07.01.Q035",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the length of a wire is doubled and the radius is halved, and the same stretching force is applied, the extension of the wire becomes:",
+      "options": [
+        { "id": "A", "text": "4 times" },
+        { "id": "B", "text": "8 times" },
+        { "id": "C", "text": "16 times" },
+        { "id": "D", "text": "2 times" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔL = FL/(AY) = FL/(πr²Y). New ΔL' = F(2L)/(π(r/2)²Y) = 2FL/(πr²Y/4) = 2FL × 4/(πr²Y) = 8FL/(πr²Y) = 8ΔL. Doubling length doubles ΔL, and halving radius quarters the area which quadruples ΔL; combined effect is ×8.",
+      "explanation_incorrect": "ΔL = FL/(πr²Y). When L → 2L, ΔL doubles. When r → r/2, area becomes r²/4 of original, so ΔL becomes 4× of that value. Combined: 2 × 4 = 8 times the original extension."
+    },
+    {
+      "question_id": "T07.01.Q036",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "For a given material, if Young's modulus is Y, bulk modulus is B, and shear modulus is G, which of the following is true for most metals?",
+      "options": [
+        { "id": "A", "text": "Y > B > G" },
+        { "id": "B", "text": "Y > G > B" },
+        { "id": "C", "text": "B > Y > G" },
+        { "id": "D", "text": "G > Y > B" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For most metals, the bulk modulus is greater than Young's modulus, which in turn is greater than the shear modulus: B > Y > G. This is consistent with the relation Y = 9BG/(3B + G) and the typical Poisson's ratio values (0.25–0.35) for metals.",
+      "explanation_incorrect": "For typical metals with Poisson's ratio between 0.25 and 0.35, the relation between elastic constants gives B > Y > G. The bulk modulus is the largest because metals strongly resist volume change, while shearing deformation is comparatively easier."
+    },
+    {
+      "question_id": "T07.01.Q037",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Two wires of the same material and length have radii r₁ and r₂ (r₂ = 2r₁). If they are stretched by the same force, the ratio of their stresses (σ₁/σ₂) is:",
+      "options": [
+        { "id": "A", "text": "1 : 4" },
+        { "id": "B", "text": "4 : 1" },
+        { "id": "C", "text": "1 : 2" },
+        { "id": "D", "text": "2 : 1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Stress = F/A = F/(πr²). σ₁ = F/(πr₁²) and σ₂ = F/(πr₂²) = F/(π(2r₁)²) = F/(4πr₁²). Therefore σ₁/σ₂ = [F/(πr₁²)] / [F/(4πr₁²)] = 4. The ratio is 4 : 1.",
+      "explanation_incorrect": "Since stress = F/A and A = πr², stress is inversely proportional to r². With r₂ = 2r₁, the area of wire 2 is 4 times that of wire 1. So σ₁ is 4 times σ₂, giving a ratio of 4:1."
+    },
+    {
+      "question_id": "T07.01.Q038",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Two wires made of the same material have the same length but different radii r and 2r. If the same stretching force is applied to both, the ratio of elastic potential energy stored in them (U₁/U₂) is:",
+      "options": [
+        { "id": "A", "text": "1 : 4" },
+        { "id": "B", "text": "4 : 1" },
+        { "id": "C", "text": "1 : 1" },
+        { "id": "D", "text": "2 : 1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "U = ½FΔL = ½F × FL/(AY) = F²L/(2AY) = F²L/(2πr²Y). So U ∝ 1/r². U₁/U₂ = r₂²/r₁² = (2r)²/r² = 4. The ratio is 4 : 1. The thinner wire stores more elastic energy because it stretches more.",
+      "explanation_incorrect": "Elastic PE = F²L/(2AY). Since A = πr², U ∝ 1/r². For wires with radii r and 2r: U₁/U₂ = (2r)²/r² = 4/1. The thinner wire stores 4 times more elastic energy because it undergoes a much larger extension."
+    },
+    {
+      "question_id": "T07.01.Q039",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "A material with a large Young's modulus compared to another material of the same dimensions will, under the same applied force:",
+      "options": [
+        { "id": "A", "text": "Stretch more" },
+        { "id": "B", "text": "Stretch less" },
+        { "id": "C", "text": "Stretch by the same amount" },
+        { "id": "D", "text": "Not stretch at all" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Young's modulus measures a material's stiffness — its resistance to longitudinal deformation. A larger Y means the material is stiffer and requires more stress to produce the same strain. Hence, under the same force and identical dimensions, it stretches less.",
+      "explanation_incorrect": "ΔL = FL/(AY): extension is inversely proportional to Y. A larger Young's modulus means the material is stiffer and deforms less under the same load. Steel (Y ≈ 2 × 10¹¹ Pa) stretches far less than rubber (Y ≈ 10⁶ Pa) under the same conditions."
+    },
+    {
+      "question_id": "T07.01.Q040",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A wire of length 1 m and cross-sectional area 2 × 10⁻⁶ m² has a Young's modulus of 2 × 10¹¹ Pa. The force required to produce an extension of 1 mm in this wire is:",
+      "options": [
+        { "id": "A", "text": "200 N" },
+        { "id": "B", "text": "400 N" },
+        { "id": "C", "text": "100 N" },
+        { "id": "D", "text": "800 N" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Y = FL/(AΔL), so F = YAΔL/L = (2 × 10¹¹)(2 × 10⁻⁶)(1 × 10⁻³) / 1 = 4 × 10² = 400 N. This is a direct application of the Young's modulus formula rearranged to find the required force.",
+      "explanation_incorrect": "F = YAΔL/L = (2 × 10¹¹)(2 × 10⁻⁶)(10⁻³) / 1 = 2 × 10¹¹ × 2 × 10⁻⁹ = 4 × 10² = 400 N. Errors in the other options arise from incorrect substitution or unit conversion mistakes."
+    },
+    {
+      "question_id": "T07.01.Q041",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The elastic potential energy per unit volume of a wire under stress σ, with Young's modulus Y, is:",
+      "options": [
+        { "id": "A", "text": "σ²/(2Y)" },
+        { "id": "B", "text": "σY/2" },
+        { "id": "C", "text": "2σ²/Y" },
+        { "id": "D", "text": "σ²Y/2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Energy density u = ½ × stress × strain. Since strain = stress/Y, we get u = ½ × σ × σ/Y = σ²/(2Y). This is the elastic PE stored per unit volume.",
+      "explanation_incorrect": "Using u = ½σε and ε = σ/Y: u = ½ × σ × (σ/Y) = σ²/(2Y). Option B multiplies σ and Y instead of dividing. Option C has an incorrect factor of 2. Option D has Y in the numerator instead of the denominator."
+    },
+    {
+      "question_id": "T07.01.Q042",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "A hydraulic press compresses a block of metal. The volume decreases by 0.1% when the pressure increases by 100 atm (1 atm = 10⁵ Pa). The bulk modulus of the metal is:",
+      "options": [
+        { "id": "A", "text": "10¹⁰ Pa" },
+        { "id": "B", "text": "10⁹ Pa" },
+        { "id": "C", "text": "10⁸ Pa" },
+        { "id": "D", "text": "10¹¹ Pa" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "B = ΔP / (ΔV/V) = (100 × 10⁵) / (0.1/100) = 10⁷ / 10⁻³ = 10¹⁰ Pa. The bulk modulus is the pressure change divided by the fractional volume change.",
+      "explanation_incorrect": "ΔP = 100 atm = 100 × 10⁵ Pa = 10⁷ Pa. Volumetric strain = ΔV/V = 0.1% = 0.001 = 10⁻³. B = ΔP/(ΔV/V) = 10⁷/10⁻³ = 10¹⁰ Pa."
+    },
+    {
+      "question_id": "T07.01.Q043",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "A wire has a Poisson's ratio of 0.3. When it is stretched and its length increases by 1%, the percentage decrease in its diameter is:",
+      "options": [
+        { "id": "A", "text": "0.1%" },
+        { "id": "B", "text": "0.3%" },
+        { "id": "C", "text": "1%" },
+        { "id": "D", "text": "3%" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Poisson's ratio = lateral strain / longitudinal strain. Lateral strain = Poisson's ratio × longitudinal strain = 0.3 × 0.01 = 0.003 = 0.3%. The diameter decreases by 0.3% when the length increases by 1%.",
+      "explanation_incorrect": "Lateral strain = σₚ × longitudinal strain = 0.3 × 1% = 0.3%. This follows directly from the definition of Poisson's ratio. The diameter decreases because when a wire is stretched, it becomes thinner."
+    },
+    {
+      "question_id": "T07.01.Q044",
+      "type": "true_false",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Stress is a vector quantity because it depends on the direction of the applied force.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This statement is false. Although stress involves force (a vector), stress itself is defined as force per unit area and is technically a tensor quantity, not a vector. It describes the internal state of a body and depends on both the magnitude of force and the orientation of the surface on which it acts.",
+      "explanation_incorrect": "Stress is not a vector quantity. While force is a vector, stress is defined as force per unit area and is a second-rank tensor, because it depends on both the direction of the force and the orientation of the area. In simple cases it is treated as a scalar (magnitude of normal or shear stress)."
+    },
+    {
+      "question_id": "T07.01.Q045",
+      "type": "true_false",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A material can be elastic even if it does not obey Hooke's law.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This statement is true. Elasticity means a body returns to its original shape when the deforming force is removed. Hooke's law (stress ∝ strain) describes linear elasticity. A material like rubber is highly elastic — it returns to its original shape even after large deformations — but its stress-strain curve is not linear, so it does not obey Hooke's law.",
+      "explanation_incorrect": "Elasticity and Hooke's law are different concepts. Elasticity means the body recovers its shape, while Hooke's law requires a linear relationship between stress and strain. Rubber is elastic but does not obey Hooke's law. So the statement is true."
+    },
+    {
+      "question_id": "T07.01.Q046",
+      "type": "true_false",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "Young's modulus of a material depends on the dimensions (length and area) of the specimen.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This statement is false. Young's modulus is a material property — it depends on the nature of the material and temperature, not on the dimensions of the specimen. Two wires of the same material but different lengths and cross-sectional areas will have the same Young's modulus.",
+      "explanation_incorrect": "Young's modulus is an intrinsic property of the material itself. Changing the length or cross-sectional area of a wire does not change its Young's modulus, though these dimensions affect the extension produced under a given load."
+    },
+    {
+      "question_id": "T07.01.Q047",
+      "type": "true_false",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The elastic potential energy stored in a stretched wire is equal to ½ × F × ΔL, where F is the stretching force and ΔL is the extension.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This statement is true. Within the elastic limit, the force increases linearly from 0 to F as the extension increases from 0 to ΔL. The work done (and hence the elastic PE stored) is the area of the triangle under the force-extension graph: U = ½ × F × ΔL.",
+      "explanation_incorrect": "The elastic PE stored in a stretched wire is indeed ½FΔL, which follows from the fact that the force increases linearly from zero to F during stretching (Hooke's law). This is analogous to energy stored in a spring: ½kx²."
+    },
+    {
+      "question_id": "T07.01.Q048",
+      "type": "fill_blank",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of stress is ___, which is the same as N/m².",
+      "correct_answer": "pascal",
+      "explanation_correct": "The SI unit of stress is the pascal (Pa). Since stress = force/area, its unit is N/m², which is defined as one pascal. 1 Pa = 1 N/m².",
+      "explanation_incorrect": "The correct answer is 'pascal' (Pa). Stress = F/A has units of N/m², and 1 N/m² is defined as 1 pascal. Do not confuse with units of force (newton) or energy (joule)."
+    },
+    {
+      "question_id": "T07.01.Q049",
+      "type": "fill_blank",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Hooke's law, stress is directly proportional to ___ within the elastic limit.",
+      "correct_answer": "strain",
+      "explanation_correct": "Hooke's law states that within the elastic limit, stress is directly proportional to strain: σ ∝ ε, or equivalently σ = Eε where E is the modulus of elasticity.",
+      "explanation_incorrect": "The correct answer is 'strain'. Hooke's law is the fundamental relationship σ = Eε, establishing the linear proportionality between stress and strain within the elastic limit."
+    },
+    {
+      "question_id": "T07.01.Q050",
+      "type": "fill_blank",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The ratio of longitudinal stress to longitudinal strain is called ___.",
+      "correct_answer": "Young's modulus",
+      "explanation_correct": "Young's modulus (Y) is defined as the ratio of longitudinal stress to longitudinal strain: Y = (F/A)/(ΔL/L). It is a measure of the stiffness of a solid material.",
+      "explanation_incorrect": "The correct answer is 'Young's modulus'. It is one of the three elastic moduli (along with bulk modulus and shear modulus). Young's modulus specifically relates longitudinal stress to longitudinal strain."
+    }
+  ]
+}

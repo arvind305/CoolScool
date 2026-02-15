@@ -1,0 +1,828 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T05.01",
+  "topic_name": "System of Particles and Rotational Motion",
+  "canonical_explanation": {
+    "text": "The centre of mass (COM) of a system is the point where the entire mass can be considered concentrated. For discrete particles: x_cm = Σmᵢxᵢ/Σmᵢ. For continuous bodies, use integration. The COM of a uniform body lies at the geometric centre. Torque (τ) is the rotational analogue of force: τ = r × F, with magnitude τ = rF sin θ. Angular momentum L = r × p = Iω. Newton's second law for rotation: τ = Iα = dL/dt. The moment of inertia I = Σmᵢrᵢ² measures resistance to angular acceleration. For common bodies: solid sphere I = 2MR²/5, hollow sphere I = 2MR²/3, solid cylinder I = MR²/2, ring I = MR², rod about centre I = ML²/12, rod about end I = ML²/3. The radius of gyration k satisfies I = Mk². The parallel axis theorem: I = I_cm + Md², where d is the distance from the COM axis. The perpendicular axis theorem (for planar bodies): I_z = I_x + I_y. Rolling motion combines translation and rotation. For pure rolling, v_cm = Rω and the contact point has zero velocity. KE of rolling = ½mv² + ½Iω² = ½mv²(1 + k²/R²). On an incline, a rolling body has acceleration a = g sin θ/(1 + k²/R²). Conservation of angular momentum: if τ_ext = 0, L = Iω = constant.",
+    "rules": [
+      "Centre of mass: x_cm = Σmᵢxᵢ / Σmᵢ.",
+      "Torque: τ = r × F; |τ| = rF sin θ.",
+      "Angular momentum: L = Iω; τ = dL/dt.",
+      "Moment of inertia: I = Σmᵢrᵢ²; I = Mk².",
+      "Parallel axis theorem: I = I_cm + Md².",
+      "Perpendicular axis theorem (planar): I_z = I_x + I_y.",
+      "Common I values: ring MR², disc MR²/2, solid sphere 2MR²/5, hollow sphere 2MR²/3.",
+      "Rolling condition: v = Rω; KE = ½mv²(1 + k²/R²).",
+      "Rolling on incline: a = g sin θ/(1 + k²/R²).",
+      "Conservation of angular momentum: L = Iω = constant (if τ_ext = 0)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.01.Q001",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of a uniform rod lies at:",
+      "options": [
+        {"id": "A", "text": "One end"},
+        {"id": "B", "text": "Its geometric centre (midpoint)"},
+        {"id": "C", "text": "One-third from one end"},
+        {"id": "D", "text": "It depends on the mass"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a uniform rod, the mass is distributed symmetrically, so the COM is at the midpoint.",
+      "explanation_incorrect": "A uniform body's COM lies at its geometric centre due to symmetry."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Two particles of masses 1 kg and 3 kg are placed at x = 0 and x = 4 m. The centre of mass is at:",
+      "options": [
+        {"id": "A", "text": "x = 2 m"},
+        {"id": "B", "text": "x = 3 m"},
+        {"id": "C", "text": "x = 1 m"},
+        {"id": "D", "text": "x = 4 m"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "x_cm = (1×0 + 3×4)/(1+3) = 12/4 = 3 m.",
+      "explanation_incorrect": "x_cm = Σmᵢxᵢ/Σmᵢ = (0 + 12)/4 = 3 m. COM is closer to the heavier mass."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of a uniform circular disc lies at:",
+      "options": [
+        {"id": "A", "text": "Its circumference"},
+        {"id": "B", "text": "Its centre"},
+        {"id": "C", "text": "Outside the disc"},
+        {"id": "D", "text": "On its rim"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A uniform circular disc has axial symmetry, so its COM is at the geometric centre.",
+      "explanation_incorrect": "By symmetry, the COM of any uniform symmetric body is at the geometric centre."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Three particles of equal mass are placed at the vertices of an equilateral triangle of side a. The COM is at:",
+      "options": [
+        {"id": "A", "text": "One of the vertices"},
+        {"id": "B", "text": "The midpoint of one side"},
+        {"id": "C", "text": "The centroid of the triangle"},
+        {"id": "D", "text": "Outside the triangle"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For equal masses at vertices of a triangle, the COM is at the centroid (intersection of medians).",
+      "explanation_incorrect": "Equal masses → COM is at the geometric centre of the configuration, i.e., the centroid."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Two particles of masses 2 kg and 3 kg are at (1, 2) and (4, 6) m. The x-coordinate of COM is:",
+      "options": [
+        {"id": "A", "text": "2.5 m"},
+        {"id": "B", "text": "2.8 m"},
+        {"id": "C", "text": "3 m"},
+        {"id": "D", "text": "3.2 m"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "x_cm = (2×1 + 3×4)/(2+3) = (2+12)/5 = 14/5 = 2.8 m.",
+      "explanation_incorrect": "x_cm = (2×1 + 3×4)/5 = 14/5 = 2.8 m."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A circular disc of radius R has a circular hole of radius R/2 cut from it touching the edge. The COM shifts from the original centre by:",
+      "options": [
+        {"id": "A", "text": "R/6"},
+        {"id": "B", "text": "R/4"},
+        {"id": "C", "text": "R/3"},
+        {"id": "D", "text": "R/8"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mass of full disc ∝ R². Mass of hole ∝ (R/2)² = R²/4. Remaining mass ∝ 3R²/4. Hole centre at R/2 from centre. Shift = (R²/4 × R/2)/(3R²/4) = R/6 (opposite to hole).",
+      "explanation_incorrect": "Treat the hole as negative mass. Shift = m_hole × d/(m_disc − m_hole) = (M/4)(R/2)/(3M/4) = R/6."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The COM of a uniform semicircular wire of radius R from the centre is:",
+      "options": [
+        {"id": "A", "text": "2R/π"},
+        {"id": "B", "text": "4R/(3π)"},
+        {"id": "C", "text": "R/2"},
+        {"id": "D", "text": "R/π"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a semicircular wire, y_cm = 2R/π from the centre along the axis of symmetry.",
+      "explanation_incorrect": "By integration, y_cm = 2R/π for a semicircular wire. For a semicircular disc, it's 4R/(3π)."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "If no external force acts on a system, its centre of mass:",
+      "options": [
+        {"id": "A", "text": "Accelerates"},
+        {"id": "B", "text": "Moves with constant velocity (or remains at rest)"},
+        {"id": "C", "text": "Moves in a circle"},
+        {"id": "D", "text": "Oscillates"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F_ext = Ma_cm. If F_ext = 0, a_cm = 0, so COM moves with constant velocity or stays at rest.",
+      "explanation_incorrect": "With no external force, the COM velocity doesn't change — it moves uniformly or remains stationary."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Particles of masses 1 kg, 2 kg, and 3 kg are at positions (0,0), (1,0), and (0,1) m. The y-coordinate of COM is:",
+      "options": [
+        {"id": "A", "text": "0.5 m"},
+        {"id": "B", "text": "0.33 m"},
+        {"id": "C", "text": "1 m"},
+        {"id": "D", "text": "0.17 m"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "y_cm = (1×0 + 2×0 + 3×1)/(1+2+3) = 3/6 = 0.5 m.",
+      "explanation_incorrect": "y_cm = Σmᵢyᵢ/Σmᵢ = (0+0+3)/6 = 0.5 m."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The centre of mass of a uniform ring lies at:",
+      "options": [
+        {"id": "A", "text": "On the ring"},
+        {"id": "B", "text": "At the centre of the ring"},
+        {"id": "C", "text": "Outside the ring"},
+        {"id": "D", "text": "Depends on thickness"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Due to symmetry, the COM of a uniform ring is at its geometric centre, which is actually empty space.",
+      "explanation_incorrect": "The COM doesn't have to be inside the material. For a ring, it's at the centre of the ring."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Torque is defined as:",
+      "options": [
+        {"id": "A", "text": "F × r (scalar product)"},
+        {"id": "B", "text": "r × F (cross product)"},
+        {"id": "C", "text": "F / r"},
+        {"id": "D", "text": "r / F"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Torque τ = r × F (vector cross product of position vector and force).",
+      "explanation_incorrect": "Torque is the cross product r × F, not the dot product. Its magnitude is rF sin θ."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of torque is:",
+      "options": [
+        {"id": "A", "text": "N/m"},
+        {"id": "B", "text": "N·m"},
+        {"id": "C", "text": "J/s"},
+        {"id": "D", "text": "kg·m/s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Torque = force × distance = N·m. Although dimensionally same as joule, torque is measured in N·m.",
+      "explanation_incorrect": "Torque has units of newton-metre (N·m)."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A force of 5 N acts at the end of a spanner 0.4 m long, perpendicular to it. The torque is:",
+      "options": [
+        {"id": "A", "text": "2 N·m"},
+        {"id": "B", "text": "12.5 N·m"},
+        {"id": "C", "text": "1.25 N·m"},
+        {"id": "D", "text": "20 N·m"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "τ = rF sin 90° = 0.4 × 5 × 1 = 2 N·m.",
+      "explanation_incorrect": "τ = rF = 0.4 × 5 = 2 N·m (since force is perpendicular)."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "Angular momentum L is related to moment of inertia I and angular velocity ω by:",
+      "options": [
+        {"id": "A", "text": "L = I/ω"},
+        {"id": "B", "text": "L = Iω"},
+        {"id": "C", "text": "L = Iω²"},
+        {"id": "D", "text": "L = I²ω"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "L = Iω is the rotational analogue of p = mv.",
+      "explanation_incorrect": "Angular momentum = moment of inertia × angular velocity. L = Iω."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "If no external torque acts on a system, the angular momentum is:",
+      "options": [
+        {"id": "A", "text": "Zero"},
+        {"id": "B", "text": "Increasing"},
+        {"id": "C", "text": "Conserved (constant)"},
+        {"id": "D", "text": "Decreasing"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "τ = dL/dt. If τ = 0, then dL/dt = 0 and L is constant. This is conservation of angular momentum.",
+      "explanation_incorrect": "Conservation of angular momentum: L = Iω = constant when net external torque is zero."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A ballet dancer spins faster when she folds her arms because:",
+      "options": [
+        {"id": "A", "text": "Her mass decreases"},
+        {"id": "B", "text": "Her angular momentum increases"},
+        {"id": "C", "text": "Her moment of inertia decreases, so ω increases (L = Iω = const)"},
+        {"id": "D", "text": "External torque acts on her"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Folding arms reduces I. Since L is conserved (no external torque), ω increases to keep Iω constant.",
+      "explanation_incorrect": "L = Iω = constant. Reducing I (folding arms) means ω must increase."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The rotational analogue of Newton's second law is:",
+      "options": [
+        {"id": "A", "text": "τ = Iα"},
+        {"id": "B", "text": "F = ma"},
+        {"id": "C", "text": "L = Iω"},
+        {"id": "D", "text": "τ = Fv"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Just as F = ma for linear motion, τ = Iα for rotational motion (τ = torque, I = moment of inertia, α = angular acceleration).",
+      "explanation_incorrect": "The rotational second law: net torque = moment of inertia × angular acceleration."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A disc of moment of inertia 2 kg·m² has angular velocity 10 rad/s. The torque needed to stop it in 5 s is:",
+      "options": [
+        {"id": "A", "text": "4 N·m"},
+        {"id": "B", "text": "2 N·m"},
+        {"id": "C", "text": "10 N·m"},
+        {"id": "D", "text": "1 N·m"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "α = Δω/Δt = 10/5 = 2 rad/s². τ = Iα = 2 × 2 = 4 N·m.",
+      "explanation_incorrect": "Angular deceleration α = 10/5 = 2 rad/s². τ = Iα = 2 × 2 = 4 N·m."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of angular momentum is:",
+      "options": [
+        {"id": "A", "text": "kg·m²/s"},
+        {"id": "B", "text": "kg·m/s²"},
+        {"id": "C", "text": "N·s"},
+        {"id": "D", "text": "J·s/m"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "L = Iω has units kg·m² × rad/s = kg·m²/s (also equivalent to J·s).",
+      "explanation_incorrect": "Angular momentum has SI unit kg·m²/s."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "The angular momentum of a particle of mass 2 kg moving with velocity 3 m/s at a perpendicular distance of 4 m from the axis is:",
+      "options": [
+        {"id": "A", "text": "6 kg·m²/s"},
+        {"id": "B", "text": "24 kg·m²/s"},
+        {"id": "C", "text": "12 kg·m²/s"},
+        {"id": "D", "text": "8 kg·m²/s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "L = mvr = 2 × 3 × 4 = 24 kg·m²/s (r is the perpendicular distance).",
+      "explanation_incorrect": "L = mvr⊥ = 2 × 3 × 4 = 24 kg·m²/s."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a ring of mass M and radius R about an axis through its centre and perpendicular to its plane is:",
+      "options": [
+        {"id": "A", "text": "MR²/2"},
+        {"id": "B", "text": "MR²"},
+        {"id": "C", "text": "2MR²/5"},
+        {"id": "D", "text": "MR²/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a ring, all mass is at distance R from the axis, so I = MR².",
+      "explanation_incorrect": "All mass of a ring is at the same distance R from the central axis, giving I = MR²."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a uniform disc about an axis through its centre perpendicular to its plane is:",
+      "options": [
+        {"id": "A", "text": "MR²"},
+        {"id": "B", "text": "MR²/2"},
+        {"id": "C", "text": "MR²/4"},
+        {"id": "D", "text": "2MR²/5"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a uniform disc, I = MR²/2 about the central perpendicular axis.",
+      "explanation_incorrect": "A disc has mass distributed from 0 to R, giving I = MR²/2 (half that of a ring)."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The moment of inertia of a solid sphere about its diameter is:",
+      "options": [
+        {"id": "A", "text": "MR²"},
+        {"id": "B", "text": "2MR²/3"},
+        {"id": "C", "text": "2MR²/5"},
+        {"id": "D", "text": "MR²/2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a solid sphere about a diameter, I = 2MR²/5.",
+      "explanation_incorrect": "I = 2MR²/5 for solid sphere. 2MR²/3 is for a hollow sphere."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The radius of gyration of a disc about its central axis is:",
+      "options": [
+        {"id": "A", "text": "R"},
+        {"id": "B", "text": "R/√2"},
+        {"id": "C", "text": "R/2"},
+        {"id": "D", "text": "R√2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I = Mk² = MR²/2. So k² = R²/2, k = R/√2.",
+      "explanation_incorrect": "From I = Mk²: k = √(I/M) = √(R²/2) = R/√2."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The rotational kinetic energy of a body is given by:",
+      "options": [
+        {"id": "A", "text": "½Iω"},
+        {"id": "B", "text": "½Iω²"},
+        {"id": "C", "text": "Iω²"},
+        {"id": "D", "text": "½I²ω"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rotational KE = ½Iω², analogous to ½mv² for translational KE.",
+      "explanation_incorrect": "KE_rot = ½Iω² (half × moment of inertia × angular velocity squared)."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A uniform rod of mass 6 kg and length 2 m has moment of inertia about its centre equal to:",
+      "options": [
+        {"id": "A", "text": "2 kg·m²"},
+        {"id": "B", "text": "4 kg·m²"},
+        {"id": "C", "text": "8 kg·m²"},
+        {"id": "D", "text": "1 kg·m²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "I = ML²/12 = 6 × 4/12 = 24/12 = 2 kg·m².",
+      "explanation_incorrect": "For a rod about its centre: I = ML²/12 = 6 × 4/12 = 2 kg·m²."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia depends on:",
+      "options": [
+        {"id": "A", "text": "Mass only"},
+        {"id": "B", "text": "Mass distribution and axis of rotation"},
+        {"id": "C", "text": "Angular velocity"},
+        {"id": "D", "text": "Linear velocity"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I depends on the mass of the body, how that mass is distributed, and the axis about which rotation occurs.",
+      "explanation_incorrect": "I = Σmᵢrᵢ² depends on both the masses and their distances from the axis."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "The radius of gyration of a solid sphere about its diameter is:",
+      "options": [
+        {"id": "A", "text": "R√(2/5)"},
+        {"id": "B", "text": "R√(2/3)"},
+        {"id": "C", "text": "R/√2"},
+        {"id": "D", "text": "R"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "I = 2MR²/5 = Mk². So k = R√(2/5).",
+      "explanation_incorrect": "k = √(I/M) = √(2R²/5) = R√(2/5)."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a hollow sphere about its diameter is:",
+      "options": [
+        {"id": "A", "text": "MR²/2"},
+        {"id": "B", "text": "2MR²/5"},
+        {"id": "C", "text": "2MR²/3"},
+        {"id": "D", "text": "MR²"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a thin hollow sphere (spherical shell), I = 2MR²/3 about a diameter.",
+      "explanation_incorrect": "Hollow sphere: I = 2MR²/3. Solid sphere: I = 2MR²/5."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Moment of inertia is the rotational analogue of:",
+      "options": [
+        {"id": "A", "text": "Force"},
+        {"id": "B", "text": "Velocity"},
+        {"id": "C", "text": "Mass"},
+        {"id": "D", "text": "Momentum"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Just as mass resists change in linear motion, moment of inertia resists change in rotational motion.",
+      "explanation_incorrect": "I is the rotational analogue of m. τ is analogue of F. L is analogue of p."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The parallel axis theorem states:",
+      "options": [
+        {"id": "A", "text": "I = I_cm − Md²"},
+        {"id": "B", "text": "I = I_cm + Md²"},
+        {"id": "C", "text": "I = I_cm × Md²"},
+        {"id": "D", "text": "I = I_cm / Md²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The parallel axis theorem: I = I_cm + Md², where d is the distance between the parallel axes.",
+      "explanation_incorrect": "I about any axis = I about parallel COM axis + Md². The moment always increases."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The perpendicular axis theorem is applicable to:",
+      "options": [
+        {"id": "A", "text": "Any 3D body"},
+        {"id": "B", "text": "Only spheres"},
+        {"id": "C", "text": "Planar (2D) bodies only"},
+        {"id": "D", "text": "Only rods"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The perpendicular axis theorem (I_z = I_x + I_y) applies only to planar (2D) bodies like rings, discs, and plates.",
+      "explanation_incorrect": "This theorem works only for flat, planar bodies. For 3D bodies, use the parallel axis theorem."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The moment of inertia of a ring of mass M and radius R about a tangent in its plane is:",
+      "options": [
+        {"id": "A", "text": "MR²"},
+        {"id": "B", "text": "3MR²/2"},
+        {"id": "C", "text": "2MR²"},
+        {"id": "D", "text": "MR²/2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I_diameter = MR²/2 (perpendicular axis theorem: I_z = 2I_d, so I_d = MR²/2). By parallel axis: I_tangent = MR²/2 + MR² = 3MR²/2.",
+      "explanation_incorrect": "I about diameter = MR²/2. By parallel axis theorem: I_tangent = MR²/2 + MR² = 3MR²/2."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The moment of inertia of a disc about a tangent perpendicular to its plane is:",
+      "options": [
+        {"id": "A", "text": "MR²/2"},
+        {"id": "B", "text": "MR²"},
+        {"id": "C", "text": "3MR²/2"},
+        {"id": "D", "text": "2MR²"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "I_centre = MR²/2. By parallel axis: I_tangent = MR²/2 + MR² = 3MR²/2.",
+      "explanation_incorrect": "By parallel axis theorem: I = I_cm + Md² = MR²/2 + MR² = 3MR²/2."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The moment of inertia of a uniform rod about one end is:",
+      "options": [
+        {"id": "A", "text": "ML²/12"},
+        {"id": "B", "text": "ML²/3"},
+        {"id": "C", "text": "ML²/4"},
+        {"id": "D", "text": "ML²/2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I_centre = ML²/12. By parallel axis: I_end = ML²/12 + M(L/2)² = ML²/12 + ML²/4 = ML²/3.",
+      "explanation_incorrect": "I_end = I_centre + M(L/2)² = ML²/12 + ML²/4 = (ML² + 3ML²)/12 = ML²/3."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "For a ring, I about a diameter is:",
+      "options": [
+        {"id": "A", "text": "MR²"},
+        {"id": "B", "text": "MR²/2"},
+        {"id": "C", "text": "MR²/4"},
+        {"id": "D", "text": "2MR²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By perpendicular axis theorem: I_z = I_x + I_y. By symmetry I_x = I_y. MR² = 2I_d. I_d = MR²/2.",
+      "explanation_incorrect": "Perpendicular axis theorem: MR² = I_d + I_d = 2I_d. So I_diameter = MR²/2."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a disc about a diameter is:",
+      "options": [
+        {"id": "A", "text": "MR²/2"},
+        {"id": "B", "text": "MR²/4"},
+        {"id": "C", "text": "MR²"},
+        {"id": "D", "text": "3MR²/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By perpendicular axis theorem: I_z = I_x + I_y. MR²/2 = 2I_d. I_d = MR²/4.",
+      "explanation_incorrect": "MR²/2 = I_d + I_d (by symmetry). So I_diameter = MR²/4."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The moment of inertia of a solid sphere about a tangent is:",
+      "options": [
+        {"id": "A", "text": "2MR²/5"},
+        {"id": "B", "text": "7MR²/5"},
+        {"id": "C", "text": "MR²"},
+        {"id": "D", "text": "5MR²/3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I_tangent = I_diameter + MR² = 2MR²/5 + MR² = 7MR²/5.",
+      "explanation_incorrect": "By parallel axis theorem: I = 2MR²/5 + MR² = (2MR² + 5MR²)/5 = 7MR²/5."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The parallel axis theorem always gives a moment of inertia that is:",
+      "options": [
+        {"id": "A", "text": "Less than I_cm"},
+        {"id": "B", "text": "Equal to I_cm"},
+        {"id": "C", "text": "Greater than I_cm"},
+        {"id": "D", "text": "Can be less or greater"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since I = I_cm + Md² and Md² > 0, the moment of inertia about any other parallel axis is always greater than about the COM axis.",
+      "explanation_incorrect": "Md² is always positive, so I about any shifted axis > I_cm. The COM axis gives the minimum I."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The perpendicular axis theorem states I_z =",
+      "options": [
+        {"id": "A", "text": "I_x − I_y"},
+        {"id": "B", "text": "I_x + I_y"},
+        {"id": "C", "text": "I_x × I_y"},
+        {"id": "D", "text": "√(I_x² + I_y²)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a planar body in the xy-plane: I_z = I_x + I_y, where z is perpendicular to the plane.",
+      "explanation_incorrect": "The perpendicular axis theorem: I_z = I_x + I_y for laminar (flat) bodies."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The condition for pure rolling (without slipping) is:",
+      "options": [
+        {"id": "A", "text": "v = Rω"},
+        {"id": "B", "text": "v = R/ω"},
+        {"id": "C", "text": "v = Rω²"},
+        {"id": "D", "text": "v = ω/R"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For pure rolling, the velocity of the centre of mass v_cm = Rω. The contact point has zero velocity.",
+      "explanation_incorrect": "In pure rolling, v = Rω. This ensures the contact point is instantaneously at rest."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The total kinetic energy of a rolling body is:",
+      "options": [
+        {"id": "A", "text": "½mv²"},
+        {"id": "B", "text": "½Iω²"},
+        {"id": "C", "text": "½mv² + ½Iω²"},
+        {"id": "D", "text": "½mv² − ½Iω²"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "KE_total = KE_translational + KE_rotational = ½mv² + ½Iω².",
+      "explanation_incorrect": "Rolling involves both translation and rotation, so total KE = ½mv² + ½Iω²."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "A disc rolls down an incline of angle θ. Its acceleration is:",
+      "options": [
+        {"id": "A", "text": "g sin θ"},
+        {"id": "B", "text": "g sin θ / 2"},
+        {"id": "C", "text": "2g sin θ / 3"},
+        {"id": "D", "text": "g cos θ"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "a = g sin θ/(1 + k²/R²). For disc, k²/R² = 1/2. a = g sin θ/(1 + 1/2) = g sin θ/(3/2) = 2g sin θ/3.",
+      "explanation_incorrect": "For a disc (I = MR²/2): a = g sin θ/(1 + 1/2) = 2g sin θ/3."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "A ring rolls down an incline. Its acceleration is:",
+      "options": [
+        {"id": "A", "text": "g sin θ"},
+        {"id": "B", "text": "g sin θ / 2"},
+        {"id": "C", "text": "2g sin θ / 3"},
+        {"id": "D", "text": "g cos θ / 2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For ring, k²/R² = 1. a = g sin θ/(1 + 1) = g sin θ/2.",
+      "explanation_incorrect": "For a ring (I = MR²): a = g sin θ/(1 + 1) = g sin θ/2."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "Among ring, disc, and solid sphere of same mass and radius rolling down the same incline, which reaches the bottom first?",
+      "options": [
+        {"id": "A", "text": "Ring"},
+        {"id": "B", "text": "Disc"},
+        {"id": "C", "text": "Solid sphere"},
+        {"id": "D", "text": "All reach simultaneously"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Acceleration a = g sin θ/(1 + k²/R²). The solid sphere has the smallest k²/R² = 2/5, giving the largest acceleration.",
+      "explanation_incorrect": "Sphere (k²/R² = 2/5) > disc (1/2) > ring (1). Smallest k²/R² = highest acceleration, so sphere wins."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The ratio of translational to rotational KE for a rolling disc is:",
+      "options": [
+        {"id": "A", "text": "1:1"},
+        {"id": "B", "text": "2:1"},
+        {"id": "C", "text": "1:2"},
+        {"id": "D", "text": "3:1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "KE_trans/KE_rot = (½mv²)/(½Iω²) = (½mv²)/(½ × MR²/2 × v²/R²) = (½mv²)/(mv²/4) = 2:1.",
+      "explanation_incorrect": "For disc: KE_rot = ½(MR²/2)(v/R)² = Mv²/4. KE_trans = Mv²/2. Ratio = 2:1."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A solid sphere rolls without slipping down an incline of height h. Its speed at the bottom is:",
+      "options": [
+        {"id": "A", "text": "√(2gh)"},
+        {"id": "B", "text": "√(10gh/7)"},
+        {"id": "C", "text": "√(5gh/3)"},
+        {"id": "D", "text": "√(gh)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "mgh = ½mv²(1 + k²/R²) = ½mv²(1 + 2/5) = ½mv²(7/5). v = √(10gh/7).",
+      "explanation_incorrect": "Energy conservation: mgh = ½mv²(7/5). v² = 10gh/7. v = √(10gh/7)."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "In pure rolling, the velocity of the topmost point of the body is:",
+      "options": [
+        {"id": "A", "text": "v"},
+        {"id": "B", "text": "2v"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "v/2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The topmost point has translational velocity v (of COM) + rotational velocity Rω = v. Total = 2v.",
+      "explanation_incorrect": "Top point velocity = v_cm + Rω = v + v = 2v (both in same direction)."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "In pure rolling, the velocity of the contact point with the ground is:",
+      "options": [
+        {"id": "A", "text": "v"},
+        {"id": "B", "text": "2v"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "v/2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At the contact point, translational velocity v forward and rotational velocity Rω = v backward cancel out, giving zero.",
+      "explanation_incorrect": "Contact point: v_cm − Rω = v − v = 0. This is the condition for pure rolling."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A cylinder of mass M rolls without slipping. The fraction of its total KE that is rotational is:",
+      "options": [
+        {"id": "A", "text": "1/2"},
+        {"id": "B", "text": "1/3"},
+        {"id": "C", "text": "2/3"},
+        {"id": "D", "text": "1/4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "KE_rot = Mv²/4. KE_total = Mv²/2 + Mv²/4 = 3Mv²/4. Fraction = (Mv²/4)/(3Mv²/4) = 1/3.",
+      "explanation_incorrect": "For cylinder: KE_rot/KE_total = (½ × MR²/2 × ω²)/(½mv² + ½ × MR²/2 × ω²) = 1/3."
+    }
+  ]
+}

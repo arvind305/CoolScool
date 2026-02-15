@@ -1,0 +1,827 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T06.02",
+  "topic_name": "Wave Optics",
+  "canonical_explanation": {
+    "text": "Wave optics treats light as a wave and explains phenomena such as interference, diffraction, and polarisation. Huygens' principle states that every point on a wavefront acts as a source of secondary wavelets, and the new wavefront is the forward envelope of these secondary wavelets. Using this principle, Huygens explained the laws of reflection and refraction. In Young's double-slit experiment, two coherent sources produce an interference pattern of bright and dark fringes on a screen. The condition for constructive interference (bright fringe) is d sin θ = nλ, and for destructive interference (dark fringe) is d sin θ = (n + ½)λ, where d is the slit separation, θ is the angle, and n is an integer. The fringe width is β = λD/d, where D is the distance from slits to screen. Single-slit diffraction produces a central bright maximum of angular width 2λ/a, where a is the slit width. The condition for minima in single-slit diffraction is a sin θ = nλ (n = 1, 2, 3...). Polarisation demonstrates that light is a transverse wave. Unpolarised light has vibrations in all directions perpendicular to propagation; a polariser transmits vibrations in only one direction. Malus's law states that the intensity of polarised light after passing through an analyser is I = I₀ cos² θ, where θ is the angle between the polariser and analyser transmission axes. Brewster's angle θ_B is the angle of incidence at which reflected light is completely polarised: tan θ_B = n₂/n₁. At Brewster's angle, the reflected and refracted rays are perpendicular.",
+    "rules": [
+      "Huygens' principle: every point on a wavefront is a source of secondary wavelets",
+      "Constructive interference: d sin θ = nλ (n = 0, 1, 2, ...)",
+      "Destructive interference: d sin θ = (n + ½)λ",
+      "Fringe width in YDSE: β = λD/d",
+      "Single-slit diffraction minima: a sin θ = nλ (n = 1, 2, 3, ...)",
+      "Central maximum width in single-slit: angular width = 2λ/a",
+      "Malus's law: I = I₀ cos² θ",
+      "Brewster's law: tan θ_B = n (refractive index)",
+      "At Brewster's angle, reflected and refracted rays are perpendicular (θ_B + θ_r = 90°)"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T06.02.Q001",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Huygens' principle, every point on a wavefront acts as a source of:",
+      "options": [
+        { "id": "A", "text": "reflected waves" },
+        { "id": "B", "text": "secondary wavelets" },
+        { "id": "C", "text": "longitudinal waves" },
+        { "id": "D", "text": "standing waves" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Huygens' principle states that every point on a wavefront is a source of secondary spherical wavelets that spread out with the speed of the wave in that medium. The new wavefront at a later time is the forward envelope (tangent surface) of all these secondary wavelets.",
+      "explanation_incorrect": "Huygens' principle specifically describes secondary wavelets, not reflected waves, longitudinal waves, or standing waves. These wavelets collectively form the new wavefront by their envelope."
+    },
+    {
+      "question_id": "T06.02.Q002",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Using Huygens' principle, when light travels from a rarer to a denser medium, the wavefront:",
+      "options": [
+        { "id": "A", "text": "bends away from the normal" },
+        { "id": "B", "text": "bends towards the normal" },
+        { "id": "C", "text": "remains unchanged" },
+        { "id": "D", "text": "disappears" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using Huygens' construction, when light enters a denser medium, its speed decreases. The secondary wavelets in the denser medium have a smaller radius, causing the new wavefront to tilt towards the normal (the refracted ray bends towards the normal). This correctly predicts Snell's law.",
+      "explanation_incorrect": "In a denser medium, light slows down. By Huygens' construction, the wavefront in the denser medium is closer to the interface, so the new wavefront tilts towards the normal. This is consistent with Snell's law: n₁ sin i = n₂ sin r, with r < i when n₂ > n₁."
+    },
+    {
+      "question_id": "T06.02.Q003",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Huygens' principle can be used to explain:",
+      "options": [
+        { "id": "A", "text": "only reflection" },
+        { "id": "B", "text": "only refraction" },
+        { "id": "C", "text": "both reflection and refraction" },
+        { "id": "D", "text": "neither reflection nor refraction" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Huygens' principle can successfully explain both the laws of reflection and refraction. By constructing secondary wavelets at an interface, we can derive that the angle of incidence equals the angle of reflection, and also derive Snell's law of refraction.",
+      "explanation_incorrect": "Huygens' wave construction explains both phenomena. For reflection, the wavelets reflect from the surface maintaining the angle relationship. For refraction, the change in wave speed in a different medium causes the wavefront to bend."
+    },
+    {
+      "question_id": "T06.02.Q004",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "question_text": "A plane wavefront approaches a convex lens. After passing through the lens, the wavefront becomes:",
+      "options": [
+        { "id": "A", "text": "a plane wavefront" },
+        { "id": "B", "text": "a spherical converging wavefront" },
+        { "id": "C", "text": "a spherical diverging wavefront" },
+        { "id": "D", "text": "a cylindrical wavefront" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A convex lens is thicker at the centre and thinner at the edges. By Huygens' construction, the central part of the wavefront is delayed more (travels slower through more glass), while the edges pass through less glass. This converts the plane wavefront into a spherical converging wavefront focused at the focal point.",
+      "explanation_incorrect": "A convex lens converges parallel rays to its focus. In wave terms, it converts an incoming plane wavefront into a spherical converging wavefront. A concave lens would produce a diverging wavefront."
+    },
+    {
+      "question_id": "T06.02.Q005",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "question_text": "The shape of the wavefront from a point source at a very large distance is approximately:",
+      "options": [
+        { "id": "A", "text": "spherical" },
+        { "id": "B", "text": "cylindrical" },
+        { "id": "C", "text": "plane" },
+        { "id": "D", "text": "elliptical" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A point source emits spherical wavefronts. At very large distances from the source, the radius of the sphere is so large that a small portion of the wavefront can be considered flat, i.e., a plane wavefront. This is why distant stars produce effectively plane wavefronts at the Earth.",
+      "explanation_incorrect": "While the actual wavefront from a point source is spherical, at very large distances (far field), the curvature becomes negligible and the wavefront is effectively plane. Cylindrical wavefronts come from line sources."
+    },
+    {
+      "question_id": "T06.02.Q006",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "question_text": "In Huygens' construction for refraction, if light passes from medium 1 (speed v₁) to medium 2 (speed v₂), the refractive index n₂₁ is:",
+      "options": [
+        { "id": "A", "text": "n₂₁ = v₂/v₁" },
+        { "id": "B", "text": "n₂₁ = v₁/v₂" },
+        { "id": "C", "text": "n₂₁ = v₁ × v₂" },
+        { "id": "D", "text": "n₂₁ = v₁ + v₂" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The refractive index of medium 2 with respect to medium 1 is n₂₁ = v₁/v₂ = c/v₂ ÷ c/v₁ = n₂/n₁. When light enters a denser medium, v₂ < v₁, so n₂₁ > 1. This is consistent with Snell's law: sin i/sin r = v₁/v₂ = n₂₁.",
+      "explanation_incorrect": "n₂₁ = v₁/v₂ (speed in medium 1 divided by speed in medium 2). A denser medium has lower speed, making n₂₁ > 1. This is derived from Huygens' construction and matches Snell's law."
+    },
+    {
+      "question_id": "T06.02.Q007",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "According to Huygens' principle, the backward secondary wavelets are not observed because:",
+      "options": [
+        { "id": "A", "text": "they cancel out by destructive interference" },
+        { "id": "B", "text": "they have zero amplitude in the backward direction" },
+        { "id": "C", "text": "they are absorbed by the medium" },
+        { "id": "D", "text": "they violate the law of conservation of energy" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In Huygens' original formulation, backward wavelets are ignored because the amplitude of secondary wavelets is maximum in the forward direction and zero in the backward direction. This is formally justified by the Kirchhoff-Fresnel diffraction theory, which shows that the obliquity factor reduces the amplitude to zero in the backward direction.",
+      "explanation_incorrect": "Huygens assumed (and Kirchhoff later proved mathematically) that the secondary wavelets have zero amplitude in the backward direction due to the obliquity factor. This prevents the formation of a backward-propagating wave."
+    },
+    {
+      "question_id": "T06.02.Q008",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "When a wavefront passes through a narrow slit, it spreads out. This is because according to Huygens' principle:",
+      "options": [
+        { "id": "A", "text": "the slit acts as a new source of secondary wavelets" },
+        { "id": "B", "text": "the slit reflects the wavefront" },
+        { "id": "C", "text": "the slit absorbs part of the wavefront" },
+        { "id": "D", "text": "the speed of light increases in the slit" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When a wavefront encounters a narrow slit, only the portion of the wavefront at the slit passes through. Each point on this portion acts as a source of secondary wavelets (by Huygens' principle). Since the slit is narrow, these wavelets spread out in all forward directions, causing diffraction — the bending of light around obstacles.",
+      "explanation_incorrect": "Diffraction through a slit is explained by Huygens' principle: the slit acts as a source of secondary wavelets that spread out. The slit doesn't reflect or change the speed; it simply limits the wavefront, and the resulting wavelets produce a spread-out pattern."
+    },
+    {
+      "question_id": "T06.02.Q009",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The wavefront from a linear source (like a long slit illuminated uniformly) is:",
+      "options": [
+        { "id": "A", "text": "spherical" },
+        { "id": "B", "text": "plane" },
+        { "id": "C", "text": "cylindrical" },
+        { "id": "D", "text": "conical" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A linear (line) source emits cylindrical wavefronts. Each point on the line source emits spherical wavelets, but the locus of points equidistant from the entire line forms a cylinder. A point source gives spherical wavefronts, and a very distant source gives plane wavefronts.",
+      "explanation_incorrect": "Spherical wavefronts come from point sources. Plane wavefronts come from sources at infinity. Cylindrical wavefronts specifically come from line sources, where the wavefront expands radially outward from the line."
+    },
+    {
+      "question_id": "T06.02.Q010",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "In Young's double-slit experiment, the condition for a bright fringe (constructive interference) at angle θ is:",
+      "options": [
+        { "id": "A", "text": "d sin θ = nλ" },
+        { "id": "B", "text": "d sin θ = (2n + 1)λ/2" },
+        { "id": "C", "text": "d cos θ = nλ" },
+        { "id": "D", "text": "d sin θ = nλ/2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Constructive interference (bright fringe) occurs when the path difference between light from the two slits is a whole number of wavelengths: d sin θ = nλ, where d is the slit separation, θ is the angle, n is the order (0, 1, 2, ...), and λ is the wavelength.",
+      "explanation_incorrect": "Bright fringes require path difference = nλ (integer multiples of wavelength). Dark fringes require path difference = (2n + 1)λ/2 (odd half-wavelengths). The formula involves sin θ (not cos θ)."
+    },
+    {
+      "question_id": "T06.02.Q011",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The fringe width in Young's double-slit experiment is given by:",
+      "options": [
+        { "id": "A", "text": "β = λd/D" },
+        { "id": "B", "text": "β = λD/d" },
+        { "id": "C", "text": "β = dD/λ" },
+        { "id": "D", "text": "β = D/(λd)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The fringe width (distance between consecutive bright or dark fringes) is β = λD/d, where λ is the wavelength, D is the distance from the slits to the screen, and d is the separation between the two slits. Fringe width is directly proportional to wavelength and screen distance, and inversely proportional to slit separation.",
+      "explanation_incorrect": "β = λD/d. The fringe width increases with wavelength λ and screen distance D, and decreases with slit separation d. Confusing d and D in the formula is a common error."
+    },
+    {
+      "question_id": "T06.02.Q012",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "Two sources must be coherent to produce a sustained interference pattern. Coherent sources have:",
+      "options": [
+        { "id": "A", "text": "different frequencies and random phase difference" },
+        { "id": "B", "text": "same frequency and a constant phase difference" },
+        { "id": "C", "text": "same amplitude but different wavelengths" },
+        { "id": "D", "text": "different frequencies but same amplitude" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Coherent sources have the same frequency (or wavelength) and maintain a constant phase difference over time. This is essential for producing a stable, observable interference pattern. If the phase difference varies randomly, the fringes shift rapidly and no sustained pattern is seen.",
+      "explanation_incorrect": "Coherence requires same frequency and constant phase relationship. Different frequencies produce beats, not stable interference. Random phase differences produce no sustained pattern. Equal amplitude is not required (though it gives best contrast)."
+    },
+    {
+      "question_id": "T06.02.Q013",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "In Young's double-slit experiment, the central fringe is always:",
+      "options": [
+        { "id": "A", "text": "dark" },
+        { "id": "B", "text": "bright" },
+        { "id": "C", "text": "partially bright" },
+        { "id": "D", "text": "absent" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The central fringe (at θ = 0) is always bright because the path difference between the two slits is zero (both waves travel equal distances). Zero path difference means the waves arrive in phase, giving maximum constructive interference.",
+      "explanation_incorrect": "At the central position, both slits are equidistant from the point, so path difference = 0 = 0 × λ, which satisfies the condition for constructive interference. The central fringe is always the brightest."
+    },
+    {
+      "question_id": "T06.02.Q014",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "In Young's double-slit experiment with slit separation 0.5 mm, wavelength 500 nm, and screen distance 1 m, the fringe width is:",
+      "options": [
+        { "id": "A", "text": "0.1 mm" },
+        { "id": "B", "text": "1 mm" },
+        { "id": "C", "text": "0.5 mm" },
+        { "id": "D", "text": "2 mm" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "β = λD/d = (500 × 10⁻⁹ × 1)/(0.5 × 10⁻³) = (5 × 10⁻⁷)/(5 × 10⁻⁴) = 10⁻³ m = 1 mm.",
+      "explanation_incorrect": "β = λD/d = (500 × 10⁻⁹ × 1)/(0.5 × 10⁻³) = 10⁻³ m = 1 mm. Careful unit conversion is essential. λ in nm, d in mm, and D in m must all be converted to metres."
+    },
+    {
+      "question_id": "T06.02.Q015",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "If the slit separation in Young's experiment is halved, the fringe width:",
+      "options": [
+        { "id": "A", "text": "is halved" },
+        { "id": "B", "text": "is doubled" },
+        { "id": "C", "text": "remains the same" },
+        { "id": "D", "text": "is quadrupled" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since β = λD/d, fringe width is inversely proportional to slit separation d. If d is halved, β doubles. The fringes become wider and more spread out.",
+      "explanation_incorrect": "β ∝ 1/d. Halving d doubles β. This makes sense physically: bringing the slits closer together reduces the angle subtended and spreads the fringe pattern out."
+    },
+    {
+      "question_id": "T06.02.Q016",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "In Young's double-slit experiment, if white light is used instead of monochromatic light:",
+      "options": [
+        { "id": "A", "text": "no fringes are formed" },
+        { "id": "B", "text": "the central fringe is white and higher-order fringes are coloured" },
+        { "id": "C", "text": "all fringes are white" },
+        { "id": "D", "text": "only dark fringes appear" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "With white light, the central fringe is white because all colours have zero path difference there and interfere constructively. For higher-order fringes, different wavelengths produce maxima at slightly different positions (since β ∝ λ), creating coloured fringes with violet closest to the centre and red farthest.",
+      "explanation_incorrect": "White light produces a white central fringe (all colours constructive at zero path difference). Higher-order fringes are coloured because β = λD/d depends on λ. Eventually, the colours overlap too much and the pattern fades."
+    },
+    {
+      "question_id": "T06.02.Q017",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "In Young's experiment, if the entire setup is immersed in water (n = 4/3), the fringe width:",
+      "options": [
+        { "id": "A", "text": "increases by factor 4/3" },
+        { "id": "B", "text": "decreases by factor 4/3 (becomes 3/4 of original)" },
+        { "id": "C", "text": "remains unchanged" },
+        { "id": "D", "text": "doubles" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In water, the wavelength becomes λ' = λ/n = λ/(4/3) = 3λ/4. Since β = λD/d, the new fringe width β' = λ'D/d = (3/4)λD/d = (3/4)β. The fringe width decreases to 3/4 of its value in air.",
+      "explanation_incorrect": "Wavelength in water = λ/n = 3λ/4 (shorter). Since fringe width β ∝ λ, it also decreases to 3/4 of its original value. The fringes become narrower in water."
+    },
+    {
+      "question_id": "T06.02.Q018",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "In Young's double-slit experiment, the intensity at a point where the path difference is λ/2 is (I₀ is the intensity of each slit):",
+      "options": [
+        { "id": "A", "text": "4I₀" },
+        { "id": "B", "text": "2I₀" },
+        { "id": "C", "text": "I₀" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Path difference λ/2 corresponds to a phase difference of π (180°). The two waves are exactly out of phase and cancel completely: I = I₀ + I₀ + 2√(I₀I₀)cos π = 2I₀ − 2I₀ = 0. This is a dark fringe (destructive interference).",
+      "explanation_incorrect": "A path difference of λ/2 gives a phase difference of π. I = 4I₀cos²(φ/2) = 4I₀cos²(π/2) = 0 (since cos(π/2) = 0). Complete destructive interference produces zero intensity."
+    },
+    {
+      "question_id": "T06.02.Q019",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "In Young's experiment, two slits of equal width produce bright fringes. If one slit is covered, the pattern will show:",
+      "options": [
+        { "id": "A", "text": "wider interference fringes" },
+        { "id": "B", "text": "a single-slit diffraction pattern" },
+        { "id": "C", "text": "no pattern at all" },
+        { "id": "D", "text": "the same interference pattern at half intensity" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If one slit is covered, there is only one slit remaining. This produces a single-slit diffraction pattern (not interference fringes), with a broad central maximum and narrower secondary maxima. Interference requires two coherent sources.",
+      "explanation_incorrect": "Interference requires two coherent sources. With one slit, you get diffraction (not interference). The single-slit pattern has a wide central maximum and weaker side maxima. The pattern is fundamentally different from the double-slit interference pattern."
+    },
+    {
+      "question_id": "T06.02.Q020",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "In Young's double-slit experiment with λ = 600 nm, d = 1 mm, and D = 1.5 m, the distance between the central bright fringe and the 5th bright fringe is:",
+      "options": [
+        { "id": "A", "text": "4.5 mm" },
+        { "id": "B", "text": "3.0 mm" },
+        { "id": "C", "text": "0.9 mm" },
+        { "id": "D", "text": "9.0 mm" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Fringe width β = λD/d = (600 × 10⁻⁹ × 1.5)/(1 × 10⁻³) = 9 × 10⁻⁴ m = 0.9 mm. Distance to 5th bright fringe = 5β = 5 × 0.9 = 4.5 mm.",
+      "explanation_incorrect": "β = λD/d = 0.9 mm. The position of the nth bright fringe = nβ. So the 5th bright fringe is at 5 × 0.9 = 4.5 mm from the centre."
+    },
+    {
+      "question_id": "T06.02.Q021",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two coherent sources of intensity I₁ and I₂ produce interference. The maximum and minimum intensities are:",
+      "options": [
+        { "id": "A", "text": "I_max = (√I₁ + √I₂)², I_min = (√I₁ − √I₂)²" },
+        { "id": "B", "text": "I_max = I₁ + I₂, I_min = I₁ − I₂" },
+        { "id": "C", "text": "I_max = 2(I₁ + I₂), I_min = 0" },
+        { "id": "D", "text": "I_max = I₁I₂, I_min = I₁/I₂" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "I_max = (√I₁ + √I₂)² occurs when the waves are in phase (constructive), and I_min = (√I₁ − √I₂)² occurs when they are out of phase (destructive). Since amplitude ∝ √I, maximum amplitude = a₁ + a₂ and minimum = |a₁ − a₂|.",
+      "explanation_incorrect": "Intensities don't add directly for coherent sources. Since amplitude ∝ √I, maximum intensity = (√I₁ + √I₂)² and minimum = (√I₁ − √I₂)². For equal intensities, I_max = 4I and I_min = 0."
+    },
+    {
+      "question_id": "T06.02.Q022",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "In single-slit diffraction, the condition for the first minimum is:",
+      "options": [
+        { "id": "A", "text": "a sin θ = λ/2" },
+        { "id": "B", "text": "a sin θ = λ" },
+        { "id": "C", "text": "a sin θ = 2λ" },
+        { "id": "D", "text": "a sin θ = 3λ/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For single-slit diffraction, minima occur at a sin θ = nλ (n = 1, 2, 3, ...), where a is the slit width. The first minimum (n = 1) occurs at a sin θ = λ. Note: this is different from the double-slit interference formula where d sin θ = nλ gives maxima.",
+      "explanation_incorrect": "Single-slit minima: a sin θ = nλ. First minimum (n = 1): a sin θ = λ. Be careful: this formula gives minima for single-slit diffraction, while d sin θ = nλ gives maxima for double-slit interference."
+    },
+    {
+      "question_id": "T06.02.Q023",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The angular width of the central maximum in single-slit diffraction is:",
+      "options": [
+        { "id": "A", "text": "λ/a" },
+        { "id": "B", "text": "2λ/a" },
+        { "id": "C", "text": "a/λ" },
+        { "id": "D", "text": "λ/(2a)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The first minimum on either side of the central maximum occurs at sin θ ≈ θ = λ/a (for small angles). The angular width of the central maximum is 2θ = 2λ/a. The central maximum is twice as wide as the secondary maxima.",
+      "explanation_incorrect": "The first minimum is at θ = λ/a on each side. Total angular width of central maximum = 2 × λ/a = 2λ/a. The central maximum is the brightest and widest feature of the diffraction pattern."
+    },
+    {
+      "question_id": "T06.02.Q024",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "In single-slit diffraction, the central maximum is:",
+      "options": [
+        { "id": "A", "text": "narrower than secondary maxima" },
+        { "id": "B", "text": "same width as secondary maxima" },
+        { "id": "C", "text": "twice as wide as secondary maxima" },
+        { "id": "D", "text": "half as wide as secondary maxima" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The central maximum extends from θ = −λ/a to θ = +λ/a, so its angular width is 2λ/a. Secondary maxima have angular width λ/a (the spacing between consecutive minima). So the central maximum is twice as wide as the secondary maxima and much brighter.",
+      "explanation_incorrect": "The central maximum has angular width 2λ/a, while each secondary maximum has width λ/a. The central maximum is therefore twice as wide and contains most of the diffracted light intensity (about 84%)."
+    },
+    {
+      "question_id": "T06.02.Q025",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "Light of wavelength 600 nm passes through a slit of width 0.3 mm. The angular width of the central diffraction maximum is:",
+      "options": [
+        { "id": "A", "text": "4 × 10⁻³ rad" },
+        { "id": "B", "text": "2 × 10⁻³ rad" },
+        { "id": "C", "text": "1 × 10⁻³ rad" },
+        { "id": "D", "text": "8 × 10⁻³ rad" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Angular width = 2λ/a = 2 × 600 × 10⁻⁹/(0.3 × 10⁻³) = 2 × 600/0.3 × 10⁻⁶ = 2 × 2 × 10⁻³ = 4 × 10⁻³ rad.",
+      "explanation_incorrect": "Angular width = 2λ/a = 2 × (600 × 10⁻⁹)/(0.3 × 10⁻³) = 2 × 2 × 10⁻³ = 4 × 10⁻³ rad ≈ 0.23°. Using λ/a gives only half the central maximum width."
+    },
+    {
+      "question_id": "T06.02.Q026",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "If the slit width in a single-slit diffraction experiment is increased, the central maximum becomes:",
+      "options": [
+        { "id": "A", "text": "wider and brighter" },
+        { "id": "B", "text": "narrower and brighter" },
+        { "id": "C", "text": "wider and dimmer" },
+        { "id": "D", "text": "narrower and dimmer" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Angular width of central maximum = 2λ/a. Increasing slit width a makes the central maximum narrower. At the same time, a wider slit allows more light through, making the central maximum brighter. In the limit of a very wide slit, the diffraction pattern approaches a sharp bright line.",
+      "explanation_incorrect": "Width ∝ 1/a (narrower with wider slit). Brightness ∝ a² (more light through wider slit). So increasing slit width makes the pattern narrower and brighter, approaching geometric optics."
+    },
+    {
+      "question_id": "T06.02.Q027",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "In single-slit diffraction, the positions of secondary maxima are approximately at:",
+      "options": [
+        { "id": "A", "text": "a sin θ = nλ (n = 1, 2, 3, ...)" },
+        { "id": "B", "text": "a sin θ = (2n + 1)λ/2 (n = 1, 2, 3, ...)" },
+        { "id": "C", "text": "a sin θ = nλ/2 (n = 1, 2, 3, ...)" },
+        { "id": "D", "text": "a sin θ = 2nλ (n = 1, 2, 3, ...)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Secondary maxima in single-slit diffraction are approximately located at a sin θ = (2n + 1)λ/2, i.e., at half-integer multiples of wavelength from the centre: 3λ/2, 5λ/2, 7λ/2, etc. (Note: a sin θ = nλ gives the positions of minima, not maxima.)",
+      "explanation_incorrect": "Minima: a sin θ = nλ. Secondary maxima fall approximately midway between consecutive minima, at a sin θ ≈ (2n + 1)λ/2 = 3λ/2, 5λ/2, 7λ/2, ..."
+    },
+    {
+      "question_id": "T06.02.Q028",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A beam of light of wavelength 500 nm passes through a slit of width 0.5 mm and falls on a screen 2 m away. The linear width of the central maximum on the screen is:",
+      "options": [
+        { "id": "A", "text": "4 mm" },
+        { "id": "B", "text": "2 mm" },
+        { "id": "C", "text": "1 mm" },
+        { "id": "D", "text": "8 mm" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Angular half-width of central max = λ/a = 500 × 10⁻⁹/(0.5 × 10⁻³) = 10⁻³ rad. Linear half-width on screen = D × λ/a = 2 × 10⁻³ m = 2 mm. Total linear width = 2 × 2 = 4 mm.",
+      "explanation_incorrect": "Linear width = 2Dλ/a = 2 × 2 × 500 × 10⁻⁹/(0.5 × 10⁻³) = 2 × 2 × 10⁻³ = 4 × 10⁻³ m = 4 mm."
+    },
+    {
+      "question_id": "T06.02.Q029",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "Diffraction effects become significant when the size of the obstacle or aperture is:",
+      "options": [
+        { "id": "A", "text": "much larger than the wavelength" },
+        { "id": "B", "text": "comparable to the wavelength" },
+        { "id": "C", "text": "much smaller than the wavelength" },
+        { "id": "D", "text": "exactly equal to the wavelength" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Diffraction is most pronounced when the size of the obstacle or aperture is comparable to (of the same order as) the wavelength of light. When the aperture is much larger than λ, light travels in straight lines (ray optics). When much smaller, very little light passes through.",
+      "explanation_incorrect": "Diffraction is significant when aperture size ~ wavelength. For apertures >> λ, geometric optics applies. For apertures << λ, the wave is mostly blocked. The diffraction pattern is most observable when the sizes are comparable."
+    },
+    {
+      "question_id": "T06.02.Q030",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "In single-slit diffraction with red light, if red light is replaced by blue light (shorter wavelength), the central maximum becomes:",
+      "options": [
+        { "id": "A", "text": "wider" },
+        { "id": "B", "text": "narrower" },
+        { "id": "C", "text": "same width" },
+        { "id": "D", "text": "disappears" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Angular width of central maximum = 2λ/a. Blue light has a shorter wavelength than red light. Since width ∝ λ, the central maximum with blue light is narrower than with red light. The entire diffraction pattern contracts.",
+      "explanation_incorrect": "Since the width of the central maximum ∝ λ, and blue light has a shorter wavelength than red, the central maximum becomes narrower. The pattern is more compact for shorter wavelengths."
+    },
+    {
+      "question_id": "T06.02.Q031",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "Polarisation of light proves that light is a:",
+      "options": [
+        { "id": "A", "text": "longitudinal wave" },
+        { "id": "B", "text": "transverse wave" },
+        { "id": "C", "text": "mechanical wave" },
+        { "id": "D", "text": "sound wave" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Polarisation is a phenomenon that occurs only with transverse waves. The fact that light can be polarised proves that light is a transverse wave. Longitudinal waves (like sound) cannot be polarised because their oscillations are along the direction of propagation.",
+      "explanation_incorrect": "Polarisation restricts the vibration of the wave to a single plane. This is only possible for transverse waves, where the oscillation is perpendicular to the propagation. Longitudinal waves vibrate along the propagation direction and cannot be polarised."
+    },
+    {
+      "question_id": "T06.02.Q032",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "Malus's law states that the intensity of polarised light passing through an analyser is:",
+      "options": [
+        { "id": "A", "text": "I = I₀ sin θ" },
+        { "id": "B", "text": "I = I₀ cos θ" },
+        { "id": "C", "text": "I = I₀ cos² θ" },
+        { "id": "D", "text": "I = I₀ sin² θ" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Malus's law: I = I₀ cos² θ, where I₀ is the intensity of the polarised light incident on the analyser and θ is the angle between the transmission axes of the polariser and analyser. When θ = 0°, I = I₀ (full transmission). When θ = 90°, I = 0 (no transmission).",
+      "explanation_incorrect": "Malus's law involves cos² θ (not cos θ, sin θ, or sin² θ). The cos² dependence comes from the fact that only the component of the electric field along the analyser's axis is transmitted, and intensity ∝ E²."
+    },
+    {
+      "question_id": "T06.02.Q033",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "Brewster's angle θ_B is related to the refractive index n by:",
+      "options": [
+        { "id": "A", "text": "sin θ_B = n" },
+        { "id": "B", "text": "cos θ_B = n" },
+        { "id": "C", "text": "tan θ_B = n" },
+        { "id": "D", "text": "cot θ_B = n" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Brewster's law states tan θ_B = n, where n is the refractive index of the reflecting medium. At Brewster's angle, the reflected light is completely plane polarised, and the reflected and refracted rays are perpendicular to each other (θ_B + θ_r = 90°).",
+      "explanation_incorrect": "Brewster's law: tan θ_B = n. At this angle, the reflected ray is completely polarised with its electric field parallel to the reflecting surface. The condition θ_B + θ_r = 90° is equivalent to tan θ_B = n."
+    },
+    {
+      "question_id": "T06.02.Q034",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "When unpolarised light of intensity I₀ passes through a single polariser, the intensity of the transmitted light is:",
+      "options": [
+        { "id": "A", "text": "I₀" },
+        { "id": "B", "text": "I₀/2" },
+        { "id": "C", "text": "I₀/4" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Unpolarised light has electric field vibrations equally distributed in all directions perpendicular to propagation. A polariser transmits only the component along its transmission axis. On average, this transmits half the incident intensity: I = I₀/2.",
+      "explanation_incorrect": "A single polariser transmits exactly half the intensity of unpolarised light: I = I₀/2. The other half, vibrating perpendicular to the transmission axis, is absorbed. The transmitted light is now plane polarised."
+    },
+    {
+      "question_id": "T06.02.Q035",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "Plane polarised light of intensity I₀ passes through an analyser whose axis is at 60° to the polariser. The transmitted intensity is:",
+      "options": [
+        { "id": "A", "text": "I₀/2" },
+        { "id": "B", "text": "I₀/4" },
+        { "id": "C", "text": "3I₀/4" },
+        { "id": "D", "text": "I₀/√2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Malus's law: I = I₀ cos² θ = I₀ cos² 60° = I₀ × (1/2)² = I₀/4. The intensity is reduced to one-quarter of the incident polarised light.",
+      "explanation_incorrect": "I = I₀ cos² 60° = I₀ × (0.5)² = I₀/4. Note: I₀/2 would be for θ = 45° (cos² 45° = 1/2). 3I₀/4 would be for θ = 30° (cos² 30° = 3/4)."
+    },
+    {
+      "question_id": "T06.02.Q036",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "The Brewster angle for glass of refractive index 1.5 is approximately:",
+      "options": [
+        { "id": "A", "text": "33.7°" },
+        { "id": "B", "text": "56.3°" },
+        { "id": "C", "text": "45°" },
+        { "id": "D", "text": "48.6°" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan θ_B = n = 1.5. θ_B = tan⁻¹(1.5) ≈ 56.3°. At this angle of incidence, the reflected light from the glass surface is completely plane polarised.",
+      "explanation_incorrect": "θ_B = tan⁻¹(n) = tan⁻¹(1.5) ≈ 56.3°. 33.7° is the angle of refraction at Brewster's angle (since θ_B + θ_r = 90°: θ_r = 90° − 56.3° = 33.7°). 45° would be for n = 1."
+    },
+    {
+      "question_id": "T06.02.Q037",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "At Brewster's angle, the reflected and refracted rays are:",
+      "options": [
+        { "id": "A", "text": "parallel to each other" },
+        { "id": "B", "text": "perpendicular to each other" },
+        { "id": "C", "text": "at 45° to each other" },
+        { "id": "D", "text": "coincident" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At Brewster's angle, the reflected and refracted rays are perpendicular to each other: θ_B + θ_r = 90°. This is the condition that leads to complete polarisation of the reflected light. The reflected ray contains only the component of the electric field parallel to the surface.",
+      "explanation_incorrect": "The defining geometric condition at Brewster's angle is that the reflected and refracted rays are at 90° to each other. From this condition and Snell's law, tan θ_B = n₂/n₁ is derived."
+    },
+    {
+      "question_id": "T06.02.Q038",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "Polaroid sunglasses reduce glare from horizontal surfaces because:",
+      "options": [
+        { "id": "A", "text": "they absorb all light equally" },
+        { "id": "B", "text": "they transmit only horizontally polarised light" },
+        { "id": "C", "text": "they transmit only vertically polarised light and glare is mostly horizontally polarised" },
+        { "id": "D", "text": "they increase the wavelength of light" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Light reflected from horizontal surfaces (roads, water) near Brewster's angle is partially polarised with a predominantly horizontal electric field. Polaroid sunglasses have their transmission axis vertical, so they block most of this horizontally polarised glare while transmitting vertically polarised light.",
+      "explanation_incorrect": "Glare from flat surfaces like roads and lakes is partially horizontally polarised. Polaroid sunglasses have a vertical transmission axis, blocking the horizontal component and reducing glare while still transmitting useful light."
+    },
+    {
+      "question_id": "T06.02.Q039",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Unpolarised light of intensity I₀ passes through two polarisers with their axes at 45° to each other. The intensity of light emerging from the second polariser is:",
+      "options": [
+        { "id": "A", "text": "I₀/2" },
+        { "id": "B", "text": "I₀/4" },
+        { "id": "C", "text": "I₀/8" },
+        { "id": "D", "text": "0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "After the first polariser: I₁ = I₀/2 (unpolarised → polarised). After the second polariser (at 45° to the first): I₂ = I₁ cos² 45° = (I₀/2) × (1/√2)² = (I₀/2)(1/2) = I₀/4.",
+      "explanation_incorrect": "Step 1: First polariser reduces unpolarised I₀ to I₀/2. Step 2: Malus's law with θ = 45°: I = (I₀/2)cos² 45° = I₀/4. If θ were 90°, the final intensity would be 0."
+    },
+    {
+      "question_id": "T06.02.Q040",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Unpolarised light passes through two crossed polarisers (90° apart). A third polariser is inserted between them at 45° to both. The final intensity is:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "I₀/8" },
+        { "id": "C", "text": "I₀/4" },
+        { "id": "D", "text": "I₀/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "After polariser 1: I₁ = I₀/2. After the middle polariser (45° to first): I₂ = (I₀/2)cos² 45° = I₀/4. After the last polariser (45° to middle, since the middle is at 45° and the last is at 90° to the first): I₃ = (I₀/4)cos² 45° = I₀/8. Without the middle polariser, crossed polarisers give zero, but inserting one at 45° allows some light through.",
+      "explanation_incorrect": "Without the middle polariser: two crossed polarisers give I = 0. With the middle polariser at 45°: I₀/2 → I₀/4 → I₀/8. Each passage through a polariser at 45° halves the intensity. The final result is I₀/8."
+    },
+    {
+      "question_id": "T06.02.Q041",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "If Brewster's angle for a medium is 60°, the refractive index of the medium is:",
+      "options": [
+        { "id": "A", "text": "1.5" },
+        { "id": "B", "text": "√3" },
+        { "id": "C", "text": "√2" },
+        { "id": "D", "text": "2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "n = tan θ_B = tan 60° = √3 ≈ 1.732. The refractive index is determined directly from Brewster's angle using the tangent function.",
+      "explanation_incorrect": "By Brewster's law: n = tan θ_B = tan 60° = √3. The critical angle for this medium would be sin⁻¹(1/√3) ≈ 33.6°."
+    },
+    {
+      "question_id": "T06.02.Q042",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "In Young's double-slit experiment, if the wavelength of light used is increased from 500 nm to 700 nm (keeping other parameters same), the fringe width:",
+      "options": [
+        { "id": "A", "text": "decreases by 40%" },
+        { "id": "B", "text": "increases by 40%" },
+        { "id": "C", "text": "remains the same" },
+        { "id": "D", "text": "doubles" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "β ∝ λ. New β/old β = 700/500 = 1.4. The fringe width increases by 40%. Longer wavelength produces wider fringes.",
+      "explanation_incorrect": "Since β = λD/d, and β ∝ λ, increasing λ from 500 to 700 nm (a factor of 7/5 = 1.4) increases the fringe width by 40%."
+    },
+    {
+      "question_id": "T06.02.Q043",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "In Young's experiment, if one slit is wider than the other, which of the following is true?",
+      "options": [
+        { "id": "A", "text": "The interference pattern disappears completely" },
+        { "id": "B", "text": "The fringe pattern remains but the dark fringes are not perfectly dark" },
+        { "id": "C", "text": "The fringe width changes" },
+        { "id": "D", "text": "Only bright fringes appear" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the slits have different widths, they produce waves of different amplitudes (I₁ ≠ I₂). The interference pattern still forms but the minimum intensity I_min = (√I₁ − √I₂)² ≠ 0, so the dark fringes are not completely dark. The contrast (visibility) of the fringes is reduced.",
+      "explanation_incorrect": "Unequal slit widths mean unequal amplitudes. I_min = (√I₁ − √I₂)² > 0, so dark fringes are not perfectly dark. The fringe pattern still exists but with reduced contrast. Fringe width β = λD/d is independent of slit widths."
+    },
+    {
+      "question_id": "T06.02.Q044",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "question_text": "The resolving power of a microscope can be increased by:",
+      "options": [
+        { "id": "A", "text": "using light of longer wavelength" },
+        { "id": "B", "text": "using light of shorter wavelength" },
+        { "id": "C", "text": "decreasing the aperture" },
+        { "id": "D", "text": "increasing the focal length of the objective" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The resolving power of a microscope is inversely proportional to the wavelength (R.P. ∝ 1/λ). Using light of shorter wavelength (e.g., blue or UV) improves resolution. This is why electron microscopes (with very short de Broglie wavelengths) have much higher resolving power than optical microscopes.",
+      "explanation_incorrect": "Resolving power ∝ 1/λ. Shorter wavelength means higher resolving power (finer details can be resolved). Longer wavelength reduces resolution. A larger aperture (not smaller) also helps."
+    },
+    {
+      "question_id": "T06.02.Q045",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "question_text": "Which of the following waves CANNOT be polarised?",
+      "options": [
+        { "id": "A", "text": "Light waves" },
+        { "id": "B", "text": "Radio waves" },
+        { "id": "C", "text": "Sound waves" },
+        { "id": "D", "text": "X-rays" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Sound waves are longitudinal waves — the particles oscillate along the direction of wave propagation. Polarisation is a property exclusive to transverse waves. Light, radio waves, and X-rays are all electromagnetic (transverse) waves and can be polarised.",
+      "explanation_incorrect": "Polarisation occurs only in transverse waves. Sound is a longitudinal wave (compression and rarefaction) and cannot be polarised. All EM waves (light, radio, X-rays, etc.) are transverse and can be polarised."
+    },
+    {
+      "question_id": "T06.02.Q046",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The phenomenon of interference demonstrates the:",
+      "options": [
+        { "id": "A", "text": "particle nature of light" },
+        { "id": "B", "text": "wave nature of light" },
+        { "id": "C", "text": "electromagnetic nature of light" },
+        { "id": "D", "text": "quantum nature of light" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Interference (constructive and destructive superposition of waves) is a characteristic wave phenomenon. It demonstrates the wave nature of light, as particles cannot cancel each other out. Young's double-slit experiment was historically the most convincing evidence for the wave theory of light.",
+      "explanation_incorrect": "Interference is explained by the superposition principle, which applies to waves. Particles cannot interfere. The photoelectric effect demonstrates particle nature, and the electromagnetic nature is shown by polarisation. Interference is purely a wave phenomenon."
+    },
+    {
+      "question_id": "T06.02.Q047",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The intensity ratio of the central maximum to the first secondary maximum in single-slit diffraction is approximately:",
+      "options": [
+        { "id": "A", "text": "1:1" },
+        { "id": "B", "text": "4:1" },
+        { "id": "C", "text": "9:1" },
+        { "id": "D", "text": "21:1" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The intensity of the nth secondary maximum is approximately I_n = I₀/(n + ½)²π², relative to the central maximum I₀. For n = 1: I₁ = I₀/(3π/2)² = I₀ × 4/(9π²) ≈ I₀/22.2. So the ratio is approximately 22:1 ≈ 21:1.",
+      "explanation_incorrect": "The first secondary maximum has intensity ≈ I₀ × 4/(9π²) ≈ I₀/22. The ratio of central to first secondary maximum intensity is approximately 22:1 or roughly 21:1. The secondary maxima are much dimmer than the central maximum."
+    },
+    {
+      "question_id": "T06.02.Q048",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Plane polarised light of intensity I₀ is incident on an analyser. As the analyser is rotated through 360°, the intensity varies as:",
+      "options": [
+        { "id": "A", "text": "remains constant at I₀" },
+        { "id": "B", "text": "varies from I₀ to 0 twice" },
+        { "id": "C", "text": "varies from I₀ to 0 once" },
+        { "id": "D", "text": "remains zero throughout" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Malus's law, I = I₀ cos² θ. As θ goes from 0° to 360°, cos² θ = I₀ at θ = 0° and 180° (maxima), and = 0 at θ = 90° and 270° (minima). So the intensity varies from maximum to zero twice in a full rotation.",
+      "explanation_incorrect": "cos² θ has two maxima (at 0° and 180°) and two minima (at 90° and 270°) in one complete rotation. So the intensity reaches I₀ twice and falls to 0 twice in 360°."
+    },
+    {
+      "question_id": "T06.02.Q049",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "question_text": "Young's double-slit experiment proves that light:",
+      "options": [
+        { "id": "A", "text": "travels in straight lines" },
+        { "id": "B", "text": "is a form of electromagnetic radiation" },
+        { "id": "C", "text": "exhibits wave-like behaviour through interference" },
+        { "id": "D", "text": "consists of photons" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Young's double-slit experiment demonstrates the wave nature of light through interference. The bright and dark fringes result from constructive and destructive superposition of waves from the two slits — a phenomenon that cannot be explained by the particle model of light.",
+      "explanation_incorrect": "Straight-line propagation supports the ray model. The electromagnetic nature is shown by polarisation and Maxwell's equations. Photon behaviour is quantum. Young's experiment specifically demonstrates wave behaviour through the interference pattern."
+    },
+    {
+      "question_id": "T06.02.Q050",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "The Brewster angle for a glass surface (n = √3) is θ_B. The angle of refraction of light at Brewster's incidence is:",
+      "options": [
+        { "id": "A", "text": "60°" },
+        { "id": "B", "text": "30°" },
+        { "id": "C", "text": "45°" },
+        { "id": "D", "text": "90° − θ_B" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "tan θ_B = n = √3, so θ_B = 60°. At Brewster's angle, the reflected and refracted rays are perpendicular: θ_B + θ_r = 90°, so θ_r = 90° − 60° = 30°. Both A (60°) and D (90° − θ_B = 30°) are technically correct, but A gives θ_B itself, not θ_r. The angle of refraction is 30°.",
+      "explanation_incorrect": "θ_B = tan⁻¹(√3) = 60°. At Brewster's angle, θ_r = 90° − θ_B = 90° − 60° = 30°. The reflected and refracted rays are perpendicular, which is the defining property of Brewster's angle."
+    }
+  ]
+}

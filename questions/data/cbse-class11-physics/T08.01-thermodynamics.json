@@ -1,0 +1,805 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T08.01",
+  "topic_name": "Thermodynamics",
+  "canonical_explanation": {
+    "text": "Thermodynamics deals with the concepts of heat and temperature and the interconversion of heat and other forms of energy. The zeroth law of thermodynamics states that if two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other — this is the basis for temperature measurement. The first law of thermodynamics is a statement of conservation of energy: ΔU = Q − W, where ΔU is the change in internal energy, Q is the heat supplied to the system, and W is the work done by the system. For an ideal gas, work done at constant pressure is W = PΔV. Thermodynamic processes include isothermal (constant temperature, PV = constant, W = nRT ln(V₂/V₁)), adiabatic (no heat exchange, PV^γ = constant), isobaric (constant pressure), and isochoric (constant volume). The specific heat capacity at constant pressure (Cp) and constant volume (Cv) are related by Cp − Cv = R, and γ = Cp/Cv. A heat engine converts heat into work, and a refrigerator transfers heat from a cold body to a hot body using external work. The Carnot engine is an ideal reversible engine operating between two temperatures with maximum efficiency η = 1 − T₂/T₁. The second law of thermodynamics has two equivalent statements: the Kelvin–Planck statement (no process can convert heat entirely into work in a cycle) and the Clausius statement (heat cannot spontaneously flow from a colder to a hotter body).",
+    "rules": [
+      "Zeroth law: If A is in thermal equilibrium with C, and B is in thermal equilibrium with C, then A is in thermal equilibrium with B.",
+      "First law: ΔU = Q − W (change in internal energy = heat added − work done by system).",
+      "Work done by gas at constant pressure: W = PΔV.",
+      "For an ideal gas: Cp − Cv = R.",
+      "Heat capacity ratio: γ = Cp/Cv.",
+      "Isothermal process (constant T): PV = constant; W = nRT ln(V₂/V₁).",
+      "Adiabatic process (Q = 0): PV^γ = constant; TV^(γ−1) = constant.",
+      "Isobaric process (constant P): W = PΔV; Q = nCpΔT.",
+      "Isochoric process (constant V): W = 0; Q = nCvΔT = ΔU.",
+      "Carnot engine efficiency: η = 1 − T₂/T₁ (T in kelvin).",
+      "Coefficient of performance of refrigerator: COP = Q₂/W = T₂/(T₁ − T₂).",
+      "Kelvin–Planck statement: No engine can convert all heat from a source into work without rejecting some heat to a sink.",
+      "Clausius statement: Heat cannot flow spontaneously from a colder body to a hotter body without external work."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T08.01.Q001",
+      "type": "mcq",
+      "concept_id": "T08.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The zeroth law of thermodynamics is the basis for the concept of:",
+      "options": [
+        { "id": "A", "text": "Pressure" },
+        { "id": "B", "text": "Temperature" },
+        { "id": "C", "text": "Entropy" },
+        { "id": "D", "text": "Internal energy" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The zeroth law of thermodynamics establishes that if two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other. This transitive property of thermal equilibrium is the foundation for the concept of temperature and for the use of thermometers.",
+      "explanation_incorrect": "The zeroth law of thermodynamics provides the basis for the concept of temperature, not pressure, entropy, or internal energy. It establishes that thermal equilibrium is a transitive relation, which allows temperature to be defined and measured using a thermometer."
+    },
+    {
+      "question_id": "T08.01.Q002",
+      "type": "mcq",
+      "concept_id": "T08.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Two bodies are said to be in thermal equilibrium when they have the same:",
+      "options": [
+        { "id": "A", "text": "Heat content" },
+        { "id": "B", "text": "Internal energy" },
+        { "id": "C", "text": "Temperature" },
+        { "id": "D", "text": "Specific heat" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Two bodies are in thermal equilibrium when they are at the same temperature. When placed in contact, there is no net flow of heat between them. They need not have the same heat content, internal energy, or specific heat — only the temperature must be equal.",
+      "explanation_incorrect": "Thermal equilibrium requires equality of temperature, not heat content, internal energy, or specific heat. Two bodies can have vastly different sizes and materials (and hence different internal energies), but if their temperatures are equal, they are in thermal equilibrium."
+    },
+    {
+      "question_id": "T08.01.Q003",
+      "type": "mcq",
+      "concept_id": "T08.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A thermometer works on the principle of the:",
+      "options": [
+        { "id": "A", "text": "First law of thermodynamics" },
+        { "id": "B", "text": "Second law of thermodynamics" },
+        { "id": "C", "text": "Zeroth law of thermodynamics" },
+        { "id": "D", "text": "Newton's law of cooling" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A thermometer works on the zeroth law of thermodynamics. When a thermometer is placed in contact with a body, it reaches thermal equilibrium with that body. The zeroth law guarantees that if the thermometer reads the same value for two bodies, those two bodies are also in thermal equilibrium with each other.",
+      "explanation_incorrect": "A thermometer relies on the zeroth law, which defines the concept of temperature through the transitivity of thermal equilibrium. The first law deals with energy conservation and the second law with the direction of heat flow."
+    },
+    {
+      "question_id": "T08.01.Q004",
+      "type": "mcq",
+      "concept_id": "T08.01.C01",
+      "difficulty": "application",
+      "question_text": "System A is in thermal equilibrium with system C, and system B is also in thermal equilibrium with system C. According to the zeroth law, which of the following is true?",
+      "options": [
+        { "id": "A", "text": "A and B are not in thermal equilibrium" },
+        { "id": "B", "text": "A and B are in thermal equilibrium with each other" },
+        { "id": "C", "text": "A and B have different temperatures" },
+        { "id": "D", "text": "Heat flows from A to B" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The zeroth law states that if system A is in thermal equilibrium with system C, and system B is in thermal equilibrium with system C, then A and B must also be in thermal equilibrium with each other. This means A, B, and C are all at the same temperature.",
+      "explanation_incorrect": "By the zeroth law of thermodynamics, thermal equilibrium is transitive. If A is in equilibrium with C, and B is in equilibrium with C, then A must be in equilibrium with B — they all share the same temperature."
+    },
+    {
+      "question_id": "T08.01.Q005",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The first law of thermodynamics is a statement of:",
+      "options": [
+        { "id": "A", "text": "Conservation of momentum" },
+        { "id": "B", "text": "Conservation of energy" },
+        { "id": "C", "text": "Conservation of charge" },
+        { "id": "D", "text": "Conservation of mass" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The first law of thermodynamics (ΔU = Q − W) is essentially the law of conservation of energy applied to thermodynamic systems. It states that the energy supplied as heat to a system equals the increase in internal energy plus the work done by the system.",
+      "explanation_incorrect": "The first law of thermodynamics, ΔU = Q − W, is a statement of conservation of energy. It accounts for all energy entering and leaving a system as heat and work, ensuring that energy is neither created nor destroyed."
+    },
+    {
+      "question_id": "T08.01.Q006",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to the first law of thermodynamics, ΔU = Q − W. Here W represents:",
+      "options": [
+        { "id": "A", "text": "Work done on the system" },
+        { "id": "B", "text": "Work done by the system" },
+        { "id": "C", "text": "Total energy of the system" },
+        { "id": "D", "text": "Heat absorbed by the surroundings" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the equation ΔU = Q − W, W represents the work done by the system on the surroundings. When the system does positive work (e.g., a gas expands), W is positive and the internal energy decreases (for the same Q). Q is the heat supplied to the system.",
+      "explanation_incorrect": "In the sign convention ΔU = Q − W, W is the work done by the system. If we used work done on the system, the equation would be ΔU = Q + W. The CBSE convention uses W as work done by the system."
+    },
+    {
+      "question_id": "T08.01.Q007",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Internal energy of an ideal gas depends only on:",
+      "options": [
+        { "id": "A", "text": "Pressure" },
+        { "id": "B", "text": "Volume" },
+        { "id": "C", "text": "Temperature" },
+        { "id": "D", "text": "Pressure and volume" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The internal energy of an ideal gas is a function of temperature only. It does not depend on pressure or volume independently. This is because ideal gas molecules have no intermolecular forces, so their energy is purely kinetic, which depends only on temperature.",
+      "explanation_incorrect": "For an ideal gas, internal energy depends solely on temperature (U = nCvT for an ideal gas). There are no intermolecular interactions, so changing volume or pressure at constant temperature does not change the internal energy."
+    },
+    {
+      "question_id": "T08.01.Q008",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The work done by a gas at constant pressure is given by:",
+      "options": [
+        { "id": "A", "text": "W = VΔP" },
+        { "id": "B", "text": "W = PΔV" },
+        { "id": "C", "text": "W = P/V" },
+        { "id": "D", "text": "W = nRT" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At constant pressure, the work done by a gas during expansion or compression is W = PΔV = P(V₂ − V₁). This is the area under the P-V curve for an isobaric process. If the gas expands (ΔV > 0), the work done by the gas is positive.",
+      "explanation_incorrect": "The work done by a gas at constant pressure is W = PΔV. In general, W = ∫P dV, and when P is constant, this integral simplifies to PΔV. Option D (nRT) is not a general work formula but equals PV for an ideal gas."
+    },
+    {
+      "question_id": "T08.01.Q009",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "application",
+      "question_text": "A gas absorbs 200 J of heat and does 50 J of work on the surroundings. The change in internal energy of the gas is:",
+      "options": [
+        { "id": "A", "text": "250 J" },
+        { "id": "B", "text": "150 J" },
+        { "id": "C", "text": "−150 J" },
+        { "id": "D", "text": "−250 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the first law: ΔU = Q − W = 200 − 50 = 150 J. The gas absorbed 200 J of heat (Q = +200 J) and did 50 J of work on the surroundings (W = +50 J), so 150 J went into increasing the internal energy.",
+      "explanation_incorrect": "By the first law ΔU = Q − W, with Q = 200 J (heat absorbed) and W = 50 J (work done by gas), we get ΔU = 200 − 50 = 150 J. Option A incorrectly adds Q and W."
+    },
+    {
+      "question_id": "T08.01.Q010",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "application",
+      "question_text": "In a process, 500 J of work is done on a gas and the internal energy increases by 300 J. The heat exchanged by the gas is:",
+      "options": [
+        { "id": "A", "text": "Gas absorbs 800 J" },
+        { "id": "B", "text": "Gas releases 200 J" },
+        { "id": "C", "text": "Gas absorbs 200 J" },
+        { "id": "D", "text": "Gas releases 800 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Work is done on the gas, so W = −500 J (work done by gas is negative). Using ΔU = Q − W: 300 = Q − (−500) = Q + 500. Therefore Q = 300 − 500 = −200 J. The negative sign means the gas releases 200 J of heat.",
+      "explanation_incorrect": "When work is done on the gas, W (by system) = −500 J. Using ΔU = Q − W: 300 = Q − (−500), so Q = 300 − 500 = −200 J. The gas releases 200 J. Option A incorrectly adds the magnitudes."
+    },
+    {
+      "question_id": "T08.01.Q011",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "application",
+      "question_text": "For an ideal gas, the relation between molar specific heats at constant pressure and constant volume is:",
+      "options": [
+        { "id": "A", "text": "Cp − Cv = R" },
+        { "id": "B", "text": "Cp + Cv = R" },
+        { "id": "C", "text": "Cp × Cv = R" },
+        { "id": "D", "text": "Cp / Cv = R" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For an ideal gas, the molar specific heats are related by Cp − Cv = R, where R is the universal gas constant (8.314 J mol⁻¹ K⁻¹). This relation, known as Mayer's relation, arises because at constant pressure, extra heat is needed for the gas to do expansion work (PΔV = nRΔT).",
+      "explanation_incorrect": "Mayer's relation states Cp − Cv = R for an ideal gas. The extra heat needed at constant pressure (compared to constant volume) accounts for the work done during expansion. Hence Cp is always greater than Cv."
+    },
+    {
+      "question_id": "T08.01.Q012",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "An ideal gas is compressed at constant temperature. The work done by the gas is:",
+      "options": [
+        { "id": "A", "text": "Positive" },
+        { "id": "B", "text": "Zero" },
+        { "id": "C", "text": "Negative" },
+        { "id": "D", "text": "Cannot be determined" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When a gas is compressed, its volume decreases (V₂ < V₁), so ΔV is negative. The work done by the gas W = ∫P dV is negative during compression. This means work is done on the gas by the surroundings.",
+      "explanation_incorrect": "Compression means the volume decreases, so the work done by the gas is negative (W < 0). In isothermal compression, W = nRT ln(V₂/V₁), and since V₂ < V₁, the logarithm is negative, making W negative."
+    },
+    {
+      "question_id": "T08.01.Q013",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "In an isothermal process, which quantity remains constant?",
+      "options": [
+        { "id": "A", "text": "Pressure" },
+        { "id": "B", "text": "Volume" },
+        { "id": "C", "text": "Temperature" },
+        { "id": "D", "text": "Entropy" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an isothermal process, the temperature of the system remains constant throughout. For an ideal gas undergoing an isothermal process, PV = nRT = constant, so PV = constant. Both pressure and volume change, but their product stays the same.",
+      "explanation_incorrect": "Isothermal means 'iso' (same) + 'thermal' (temperature). Temperature remains constant. An isobaric process has constant pressure, and an isochoric process has constant volume."
+    },
+    {
+      "question_id": "T08.01.Q014",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "In an adiabatic process:",
+      "options": [
+        { "id": "A", "text": "Temperature remains constant" },
+        { "id": "B", "text": "No heat is exchanged with the surroundings" },
+        { "id": "C", "text": "Pressure remains constant" },
+        { "id": "D", "text": "Volume remains constant" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an adiabatic process, no heat is exchanged between the system and the surroundings (Q = 0). By the first law, ΔU = −W. If the gas expands adiabatically, it does work at the expense of its internal energy, causing the temperature to drop.",
+      "explanation_incorrect": "An adiabatic process is defined by Q = 0 (no heat exchange). The temperature changes during an adiabatic process — it decreases during expansion and increases during compression. The system is thermally insulated from its surroundings."
+    },
+    {
+      "question_id": "T08.01.Q015",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "For an ideal gas undergoing an isothermal process, the equation governing the process is:",
+      "options": [
+        { "id": "A", "text": "PV^γ = constant" },
+        { "id": "B", "text": "PV = constant" },
+        { "id": "C", "text": "P/V = constant" },
+        { "id": "D", "text": "TV^(γ−1) = constant" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an isothermal process of an ideal gas, the temperature T is constant. From the ideal gas law PV = nRT, if T is constant, then PV = constant. This is also known as Boyle's law. Option A is the adiabatic equation, and option D is another form of the adiabatic relation.",
+      "explanation_incorrect": "In an isothermal process, T is constant, so PV = nRT reduces to PV = constant (Boyle's law). PV^γ = constant applies to adiabatic processes. TV^(γ−1) = constant is an alternative form of the adiabatic equation."
+    },
+    {
+      "question_id": "T08.01.Q016",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The work done by an ideal gas during an isothermal expansion from volume V₁ to V₂ is:",
+      "options": [
+        { "id": "A", "text": "nRT(V₂ − V₁)" },
+        { "id": "B", "text": "nRT ln(V₂/V₁)" },
+        { "id": "C", "text": "P(V₂ − V₁)" },
+        { "id": "D", "text": "nCvΔT" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an isothermal process, W = ∫P dV. Using PV = nRT (so P = nRT/V), we get W = nRT ∫(dV/V) = nRT ln(V₂/V₁). Since the gas expands (V₂ > V₁), the work done is positive. Option C applies only to isobaric processes.",
+      "explanation_incorrect": "The work done in an isothermal process is W = nRT ln(V₂/V₁). This is derived by integrating P dV with P = nRT/V. Option C (PΔV) is for isobaric processes only. Option D is zero since ΔT = 0 in an isothermal process."
+    },
+    {
+      "question_id": "T08.01.Q017",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "question_text": "In an isochoric (constant volume) process on an ideal gas, the work done is:",
+      "options": [
+        { "id": "A", "text": "PΔV" },
+        { "id": "B", "text": "nRT ln(V₂/V₁)" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "nCpΔT" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an isochoric process, the volume remains constant (ΔV = 0). Since work done by the gas is W = ∫P dV, and ΔV = 0, the work done is zero. All the heat added in an isochoric process goes entirely into increasing the internal energy: Q = ΔU = nCvΔT.",
+      "explanation_incorrect": "At constant volume, ΔV = 0, so W = PΔV = 0. No work is done because the gas does not expand or compress. The heat added equals the change in internal energy: Q = ΔU = nCvΔT."
+    },
+    {
+      "question_id": "T08.01.Q018",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "question_text": "During an adiabatic expansion of an ideal gas, the temperature of the gas:",
+      "options": [
+        { "id": "A", "text": "Increases" },
+        { "id": "B", "text": "Decreases" },
+        { "id": "C", "text": "Remains the same" },
+        { "id": "D", "text": "First increases then decreases" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an adiabatic expansion, Q = 0, so ΔU = −W. Since the gas does positive work during expansion (W > 0), ΔU is negative, meaning the internal energy decreases. For an ideal gas, internal energy depends only on temperature, so the temperature decreases.",
+      "explanation_incorrect": "In adiabatic expansion, no heat enters the gas (Q = 0), yet the gas does work on the surroundings. The energy for this work comes from the internal energy of the gas, causing the temperature to drop. This is why gas cools when it expands rapidly."
+    },
+    {
+      "question_id": "T08.01.Q019",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "question_text": "For an ideal gas, in which process does all the heat supplied go into changing the internal energy?",
+      "options": [
+        { "id": "A", "text": "Isothermal" },
+        { "id": "B", "text": "Adiabatic" },
+        { "id": "C", "text": "Isobaric" },
+        { "id": "D", "text": "Isochoric" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "In an isochoric (constant volume) process, W = 0 because the volume does not change. By the first law, ΔU = Q − W = Q − 0 = Q. All the heat supplied goes entirely into increasing the internal energy of the gas.",
+      "explanation_incorrect": "In an isochoric process, volume is constant so no work is done (W = 0). By the first law ΔU = Q − W = Q. In an isothermal process, ΔU = 0 and Q = W. In an adiabatic process, Q = 0 and ΔU = −W."
+    },
+    {
+      "question_id": "T08.01.Q020",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "question_text": "The change in internal energy of an ideal gas during an isothermal process is:",
+      "options": [
+        { "id": "A", "text": "Positive" },
+        { "id": "B", "text": "Negative" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Depends on the gas" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal gas, the internal energy depends only on temperature. In an isothermal process, the temperature remains constant, so ΔU = 0. By the first law, Q = W — all the heat supplied is used to do work.",
+      "explanation_incorrect": "Since the internal energy of an ideal gas is a function of temperature alone, and temperature does not change in an isothermal process, ΔU = 0. The first law then gives Q = W."
+    },
+    {
+      "question_id": "T08.01.Q021",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "question_text": "An ideal gas expands isothermally to twice its original volume. The work done by the gas is:",
+      "options": [
+        { "id": "A", "text": "nRT ln 2" },
+        { "id": "B", "text": "nRT ln 0.5" },
+        { "id": "C", "text": "2nRT" },
+        { "id": "D", "text": "nRT" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For isothermal expansion, W = nRT ln(V₂/V₁). Here V₂ = 2V₁, so W = nRT ln(2V₁/V₁) = nRT ln 2. Since ln 2 ≈ 0.693, the work done is positive (gas expands and does work on surroundings).",
+      "explanation_incorrect": "Using W = nRT ln(V₂/V₁) with V₂ = 2V₁ gives W = nRT ln 2. Option B gives a negative value (compression). Options C and D do not follow from the isothermal work formula."
+    },
+    {
+      "question_id": "T08.01.Q022",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "question_text": "The slope of an adiabatic curve on a P-V diagram compared to an isothermal curve at the same point is:",
+      "options": [
+        { "id": "A", "text": "Less steep" },
+        { "id": "B", "text": "Steeper" },
+        { "id": "C", "text": "Same" },
+        { "id": "D", "text": "Cannot be compared" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an isothermal process, PV = constant, so dP/dV = −P/V. For an adiabatic process, PV^γ = constant, so dP/dV = −γP/V. Since γ > 1 for all gases, the adiabatic curve is steeper (has a larger magnitude of slope) than the isothermal curve at any given point.",
+      "explanation_incorrect": "The adiabatic curve is steeper because its slope magnitude is γ times the isothermal slope (γP/V vs P/V). Since γ = Cp/Cv > 1 for all gases, the adiabatic curve falls off more steeply on the P-V diagram."
+    },
+    {
+      "question_id": "T08.01.Q023",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "An ideal monatomic gas (γ = 5/3) at pressure P and volume V is compressed adiabatically to volume V/8. The final pressure is:",
+      "options": [
+        { "id": "A", "text": "8P" },
+        { "id": "B", "text": "32P" },
+        { "id": "C", "text": "16P" },
+        { "id": "D", "text": "64P" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an adiabatic process, P₁V₁^γ = P₂V₂^γ. So P₂ = P₁(V₁/V₂)^γ = P(V/(V/8))^(5/3) = P(8)^(5/3). Since 8 = 2³, we get 8^(5/3) = 2^(3×5/3) = 2⁵ = 32. Therefore P₂ = 32P.",
+      "explanation_incorrect": "Using PV^γ = constant with γ = 5/3: P₂ = P(V₁/V₂)^γ = P × 8^(5/3) = P × (2³)^(5/3) = P × 2⁵ = 32P. The answer is 32P, not 8P (which ignores the exponent γ)."
+    },
+    {
+      "question_id": "T08.01.Q024",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two moles of an ideal gas at 300 K are heated at constant pressure until the temperature reaches 400 K. If Cp = 5R/2, the heat absorbed is (R = 8.314 J mol⁻¹ K⁻¹):",
+      "options": [
+        { "id": "A", "text": "4157 J" },
+        { "id": "B", "text": "2493 J" },
+        { "id": "C", "text": "831 J" },
+        { "id": "D", "text": "1662 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At constant pressure, Q = nCpΔT = 2 × (5/2 × 8.314) × (400 − 300) = 2 × 20.785 × 100 = 4157 J. Two moles of gas absorb 4157 J of heat when heated by 100 K at constant pressure.",
+      "explanation_incorrect": "Q = nCpΔT = 2 × (5R/2) × 100 = 2 × 2.5 × 8.314 × 100 = 4157 J. Option B uses Cv instead of Cp. Option D uses one mole instead of two. Always use Cp for constant-pressure heating."
+    },
+    {
+      "question_id": "T08.01.Q025",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For a monatomic ideal gas, the value of γ (= Cp/Cv) is:",
+      "options": [
+        { "id": "A", "text": "7/5" },
+        { "id": "B", "text": "5/3" },
+        { "id": "C", "text": "4/3" },
+        { "id": "D", "text": "3/2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a monatomic ideal gas, Cv = 3R/2 and Cp = Cv + R = 5R/2. Therefore γ = Cp/Cv = (5R/2)/(3R/2) = 5/3 ≈ 1.67. For diatomic gases (at moderate temperatures), γ = 7/5 = 1.4.",
+      "explanation_incorrect": "A monatomic gas has 3 degrees of freedom, giving Cv = 3R/2 and Cp = 5R/2. So γ = 5/3. Option A (7/5) is for diatomic gases. Option C (4/3) applies to polyatomic gases. The value of γ depends on the atomicity of the gas."
+    },
+    {
+      "question_id": "T08.01.Q026",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A heat engine converts:",
+      "options": [
+        { "id": "A", "text": "Mechanical energy entirely into heat" },
+        { "id": "B", "text": "Heat entirely into work" },
+        { "id": "C", "text": "Heat partly into work" },
+        { "id": "D", "text": "Work entirely into internal energy" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A heat engine absorbs heat from a hot reservoir, converts part of it into work, and rejects the remaining heat to a cold reservoir. It cannot convert all the absorbed heat into work (this would violate the second law). The efficiency is always less than 100%.",
+      "explanation_incorrect": "A heat engine converts heat partly into work — it must always reject some heat to a cold reservoir. Complete conversion of heat to work in a cyclic process is forbidden by the Kelvin–Planck statement of the second law."
+    },
+    {
+      "question_id": "T08.01.Q027",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The efficiency of a Carnot engine operating between temperatures T₁ (hot reservoir) and T₂ (cold reservoir) is:",
+      "options": [
+        { "id": "A", "text": "η = 1 − T₁/T₂" },
+        { "id": "B", "text": "η = 1 − T₂/T₁" },
+        { "id": "C", "text": "η = T₂/T₁" },
+        { "id": "D", "text": "η = (T₁ + T₂)/T₁" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The efficiency of a Carnot engine is η = 1 − T₂/T₁, where T₁ is the absolute temperature of the hot reservoir and T₂ is the absolute temperature of the cold reservoir (both in kelvin). This is the maximum possible efficiency for any engine operating between these two temperatures.",
+      "explanation_incorrect": "Carnot efficiency is η = 1 − T₂/T₁ (temperatures must be in kelvin). Option A inverts the ratio and would give a negative efficiency when T₁ > T₂. The Carnot efficiency sets the upper limit for all real engines."
+    },
+    {
+      "question_id": "T08.01.Q028",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "question_text": "A Carnot engine operates between a hot reservoir at 600 K and a cold reservoir at 300 K. Its efficiency is:",
+      "options": [
+        { "id": "A", "text": "25%" },
+        { "id": "B", "text": "50%" },
+        { "id": "C", "text": "75%" },
+        { "id": "D", "text": "100%" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the Carnot efficiency formula: η = 1 − T₂/T₁ = 1 − 300/600 = 1 − 0.5 = 0.5 = 50%. This means half the heat absorbed from the hot reservoir is converted into work, and the other half is rejected to the cold reservoir.",
+      "explanation_incorrect": "η = 1 − T₂/T₁ = 1 − 300/600 = 0.5 = 50%. The Carnot engine converts 50% of the absorbed heat into work. 100% efficiency is impossible as it would require T₂ = 0 K (absolute zero), which is unattainable."
+    },
+    {
+      "question_id": "T08.01.Q029",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "question_text": "A Carnot engine has an efficiency of 40%. If the temperature of the hot reservoir is 500 K, the temperature of the cold reservoir is:",
+      "options": [
+        { "id": "A", "text": "200 K" },
+        { "id": "B", "text": "300 K" },
+        { "id": "C", "text": "350 K" },
+        { "id": "D", "text": "100 K" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "η = 1 − T₂/T₁, so 0.4 = 1 − T₂/500. Rearranging: T₂/500 = 0.6, giving T₂ = 0.6 × 500 = 300 K. The cold reservoir is at 300 K.",
+      "explanation_incorrect": "From η = 1 − T₂/T₁: 0.4 = 1 − T₂/500, so T₂ = 500 × (1 − 0.4) = 500 × 0.6 = 300 K. Option A (200 K) would correspond to 60% efficiency, not 40%."
+    },
+    {
+      "question_id": "T08.01.Q030",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "question_text": "The coefficient of performance (COP) of a Carnot refrigerator working between temperatures T₁ (hot) and T₂ (cold) is:",
+      "options": [
+        { "id": "A", "text": "T₁/(T₁ − T₂)" },
+        { "id": "B", "text": "T₂/(T₁ − T₂)" },
+        { "id": "C", "text": "(T₁ − T₂)/T₂" },
+        { "id": "D", "text": "(T₁ − T₂)/T₁" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The COP of a Carnot refrigerator is COP = Q₂/W = T₂/(T₁ − T₂), where T₂ is the temperature of the cold reservoir and T₁ is the temperature of the hot reservoir. A higher COP means better performance — more heat is extracted from the cold body per unit of work input.",
+      "explanation_incorrect": "COP = T₂/(T₁ − T₂) for a Carnot refrigerator. Option A is T₁/(T₁ − T₂), which equals COP + 1 and represents something different. Option D is the Carnot engine efficiency. The COP can be greater than 1."
+    },
+    {
+      "question_id": "T08.01.Q031",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "question_text": "A Carnot engine absorbs 1000 J of heat from a hot reservoir at 500 K and rejects heat to a cold reservoir at 300 K. The work done by the engine is:",
+      "options": [
+        { "id": "A", "text": "200 J" },
+        { "id": "B", "text": "400 J" },
+        { "id": "C", "text": "600 J" },
+        { "id": "D", "text": "500 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Efficiency η = 1 − T₂/T₁ = 1 − 300/500 = 1 − 0.6 = 0.4 = 40%. Work done W = η × Q₁ = 0.4 × 1000 = 400 J. The engine converts 400 J of the 1000 J absorbed heat into useful work.",
+      "explanation_incorrect": "η = 1 − 300/500 = 0.4. Work = η × Q₁ = 0.4 × 1000 = 400 J. The remaining 600 J is rejected to the cold reservoir (Q₂ = Q₁ − W = 1000 − 400 = 600 J)."
+    },
+    {
+      "question_id": "T08.01.Q032",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "To increase the efficiency of a Carnot engine, one should:",
+      "options": [
+        { "id": "A", "text": "Increase T₂ and decrease T₁" },
+        { "id": "B", "text": "Increase both T₁ and T₂" },
+        { "id": "C", "text": "Increase T₁ and decrease T₂" },
+        { "id": "D", "text": "Decrease both T₁ and T₂" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The Carnot efficiency η = 1 − T₂/T₁ increases when the ratio T₂/T₁ decreases. This can be achieved by increasing T₁ (hot reservoir temperature) or decreasing T₂ (cold reservoir temperature), or both. The most effective way is to do both simultaneously.",
+      "explanation_incorrect": "Since η = 1 − T₂/T₁, to maximize η we need to minimize T₂/T₁. This means increasing T₁ and/or decreasing T₂. Option A would decrease efficiency. Options B and D have mixed effects depending on the magnitudes."
+    },
+    {
+      "question_id": "T08.01.Q033",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A refrigerator has a COP of 5. If it does 200 J of work, the heat extracted from the cold reservoir is:",
+      "options": [
+        { "id": "A", "text": "40 J" },
+        { "id": "B", "text": "1000 J" },
+        { "id": "C", "text": "1200 J" },
+        { "id": "D", "text": "800 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "COP = Q₂/W, where Q₂ is the heat extracted from the cold reservoir and W is the work input. So Q₂ = COP × W = 5 × 200 = 1000 J. The refrigerator extracts 1000 J from the cold body using 200 J of work.",
+      "explanation_incorrect": "COP = Q₂/W gives Q₂ = COP × W = 5 × 200 = 1000 J. The heat rejected to the hot reservoir is Q₁ = Q₂ + W = 1000 + 200 = 1200 J. Option C confuses Q₁ (heat rejected) with Q₂ (heat extracted)."
+    },
+    {
+      "question_id": "T08.01.Q034",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The Kelvin–Planck statement of the second law of thermodynamics states that:",
+      "options": [
+        { "id": "A", "text": "Heat flows from hot to cold body spontaneously" },
+        { "id": "B", "text": "No process can convert heat completely into work in a cyclic process" },
+        { "id": "C", "text": "Energy is conserved in all processes" },
+        { "id": "D", "text": "Entropy always decreases" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Kelvin–Planck statement says it is impossible to construct an engine that, operating in a cycle, produces no effect other than extracting heat from a single reservoir and performing an equivalent amount of work. In other words, some heat must always be rejected to a cold reservoir.",
+      "explanation_incorrect": "The Kelvin–Planck statement forbids the complete conversion of heat into work in a cyclic process. Option A is a consequence of the Clausius statement. Option C is the first law. Entropy of an isolated system never decreases (it increases or stays the same)."
+    },
+    {
+      "question_id": "T08.01.Q035",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "According to the Clausius statement of the second law of thermodynamics:",
+      "options": [
+        { "id": "A", "text": "Heat can flow from a cold body to a hot body without any work" },
+        { "id": "B", "text": "Heat cannot flow from a cold body to a hot body under any circumstances" },
+        { "id": "C", "text": "Heat cannot flow spontaneously from a cold body to a hot body without external work" },
+        { "id": "D", "text": "All processes in nature are reversible" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The Clausius statement says it is impossible to construct a device that, operating in a cycle, transfers heat from a cold body to a hot body without any external work being done. A refrigerator does transfer heat from cold to hot, but it requires work input to do so.",
+      "explanation_incorrect": "The Clausius statement says heat cannot flow spontaneously (without work input) from cold to hot. It does not say it is impossible under all circumstances — a refrigerator achieves this by using external work. The key word is 'spontaneously' or 'without external work'."
+    },
+    {
+      "question_id": "T08.01.Q036",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The Kelvin–Planck and Clausius statements of the second law of thermodynamics are:",
+      "options": [
+        { "id": "A", "text": "Contradictory" },
+        { "id": "B", "text": "Independent" },
+        { "id": "C", "text": "Equivalent" },
+        { "id": "D", "text": "Unrelated" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The Kelvin–Planck and Clausius statements are equivalent. It can be shown that a violation of one statement necessarily implies a violation of the other. They are two different ways of expressing the same fundamental truth about the direction of natural processes.",
+      "explanation_incorrect": "The two statements are equivalent — violating one automatically violates the other. The Kelvin–Planck statement deals with heat engines (cannot convert all heat to work), while the Clausius statement deals with refrigerators (cannot transfer heat from cold to hot without work)."
+    },
+    {
+      "question_id": "T08.01.Q037",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "application",
+      "question_text": "A perpetual motion machine of the second kind violates the:",
+      "options": [
+        { "id": "A", "text": "First law of thermodynamics" },
+        { "id": "B", "text": "Second law of thermodynamics" },
+        { "id": "C", "text": "Zeroth law of thermodynamics" },
+        { "id": "D", "text": "Newton's third law" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A perpetual motion machine of the second kind is a hypothetical engine that would convert heat entirely into work with 100% efficiency, violating the second law of thermodynamics (Kelvin–Planck statement). A perpetual motion machine of the first kind violates the first law (energy conservation).",
+      "explanation_incorrect": "A machine of the second kind would extract heat from a single reservoir and convert it entirely into work — this violates the second law. A machine of the first kind (creating energy from nothing) violates the first law. Neither type is possible."
+    },
+    {
+      "question_id": "T08.01.Q038",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The efficiency of a Carnot engine can be 100% only when:",
+      "options": [
+        { "id": "A", "text": "The source temperature is infinite" },
+        { "id": "B", "text": "The sink temperature is 0 K" },
+        { "id": "C", "text": "Either the source temperature is infinite or the sink temperature is 0 K" },
+        { "id": "D", "text": "The source and sink are at the same temperature" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "From η = 1 − T₂/T₁, η = 100% (i.e., η = 1) requires T₂/T₁ = 0. This is possible only if T₂ = 0 K (absolute zero) or T₁ = ∞ (infinite temperature). Neither condition is achievable in practice, so 100% efficiency is impossible.",
+      "explanation_incorrect": "η = 1 requires T₂/T₁ = 0, which means either T₂ = 0 K or T₁ → ∞. Both are physically unattainable. Option D (same temperature) gives η = 0, not 100%. This reinforces that no real engine can be 100% efficient."
+    },
+    {
+      "question_id": "T08.01.Q039",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "One mole of an ideal gas at 300 K expands isothermally from 10 L to 20 L. The work done by the gas is approximately (R = 8.314 J mol⁻¹ K⁻¹, ln 2 = 0.693):",
+      "options": [
+        { "id": "A", "text": "1729 J" },
+        { "id": "B", "text": "2494 J" },
+        { "id": "C", "text": "3458 J" },
+        { "id": "D", "text": "864 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "W = nRT ln(V₂/V₁) = 1 × 8.314 × 300 × ln(20/10) = 2494.2 × 0.693 = 1728.5 ≈ 1729 J. The gas does approximately 1729 J of work during this isothermal expansion.",
+      "explanation_incorrect": "W = nRT ln(V₂/V₁) = 1 × 8.314 × 300 × ln 2 = 2494.2 × 0.693 ≈ 1729 J. Option B (2494 J) omits the ln 2 factor. Option C doubles the correct answer. Always remember to include the logarithmic term."
+    },
+    {
+      "question_id": "T08.01.Q040",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A Carnot engine operates between 800 K and 400 K. If it absorbs 2000 J per cycle from the hot reservoir, the heat rejected to the cold reservoir per cycle is:",
+      "options": [
+        { "id": "A", "text": "500 J" },
+        { "id": "B", "text": "1000 J" },
+        { "id": "C", "text": "1500 J" },
+        { "id": "D", "text": "2000 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "η = 1 − T₂/T₁ = 1 − 400/800 = 0.5. Work done W = ηQ₁ = 0.5 × 2000 = 1000 J. Heat rejected Q₂ = Q₁ − W = 2000 − 1000 = 1000 J. Alternatively, Q₂/Q₁ = T₂/T₁, so Q₂ = 2000 × 400/800 = 1000 J.",
+      "explanation_incorrect": "η = 1 − 400/800 = 0.5. For a Carnot engine, Q₂/Q₁ = T₂/T₁, so Q₂ = Q₁ × T₂/T₁ = 2000 × 400/800 = 1000 J. The engine rejects exactly half the absorbed heat at this temperature ratio."
+    },
+    {
+      "question_id": "T08.01.Q041",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A gas undergoes an isobaric expansion at 2 × 10⁵ Pa. If the volume changes from 0.01 m³ to 0.03 m³, the work done by the gas is:",
+      "options": [
+        { "id": "A", "text": "2000 J" },
+        { "id": "B", "text": "4000 J" },
+        { "id": "C", "text": "6000 J" },
+        { "id": "D", "text": "8000 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an isobaric process, W = PΔV = P(V₂ − V₁) = 2 × 10⁵ × (0.03 − 0.01) = 2 × 10⁵ × 0.02 = 4000 J. The gas does 4000 J of work during this expansion at constant pressure.",
+      "explanation_incorrect": "W = PΔV = 2 × 10⁵ × (0.03 − 0.01) = 2 × 10⁵ × 0.02 = 4000 J. Option A uses only one volume value. Option C multiplies by the total final volume rather than the change in volume."
+    },
+    {
+      "question_id": "T08.01.Q042",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following processes is an example of the Clausius statement of the second law?",
+      "options": [
+        { "id": "A", "text": "Water flows downhill spontaneously" },
+        { "id": "B", "text": "A hot cup of coffee cools to room temperature" },
+        { "id": "C", "text": "A refrigerator transfers heat from inside to outside using electric power" },
+        { "id": "D", "text": "Heat flows from a cold body to a hot body without any work input" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The Clausius statement says heat cannot flow spontaneously from a cold body to a hot body without external work. Option D describes exactly what the Clausius statement forbids — it is a violation of the second law. Option C is allowed because work is being done (electric power).",
+      "explanation_incorrect": "Option D describes what is forbidden by the Clausius statement — spontaneous heat flow from cold to hot without work. The refrigerator (option C) does transfer heat from cold to hot, but it uses external work (electricity), which is permitted by the second law."
+    },
+    {
+      "question_id": "T08.01.Q043",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A Carnot engine with efficiency 25% operates with a cold reservoir at 300 K. If the cold reservoir temperature is decreased to 200 K while keeping the hot reservoir unchanged, the new efficiency is:",
+      "options": [
+        { "id": "A", "text": "33.3%" },
+        { "id": "B", "text": "50%" },
+        { "id": "C", "text": "40%" },
+        { "id": "D", "text": "66.7%" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Original: η₁ = 0.25 = 1 − 300/T₁, so 300/T₁ = 0.75, giving T₁ = 400 K. New efficiency: η₂ = 1 − 200/400 = 1 − 0.5 = 0.5 = 50%. Decreasing the cold reservoir temperature from 300 K to 200 K increases the efficiency from 25% to 50%.",
+      "explanation_incorrect": "First find T₁: 0.25 = 1 − 300/T₁ → T₁ = 400 K. Then η₂ = 1 − 200/400 = 0.5 = 50%. Lowering the cold reservoir temperature significantly improves the Carnot efficiency."
+    },
+    {
+      "question_id": "T08.01.Q044",
+      "type": "true_false",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The internal energy of an ideal gas changes during an isothermal process.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This statement is false. For an ideal gas, internal energy is a function of temperature only (U = nCvT). In an isothermal process, the temperature remains constant, so the internal energy does not change (ΔU = 0). All heat added is converted into work.",
+      "explanation_incorrect": "For an ideal gas, U depends only on T. Since T is constant in an isothermal process, ΔU = 0. The first law then gives Q = W — all heat supplied equals the work done by the gas."
+    },
+    {
+      "question_id": "T08.01.Q045",
+      "type": "true_false",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "In an adiabatic process, no heat is exchanged between the system and the surroundings.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This statement is true. An adiabatic process is defined as one in which no heat enters or leaves the system (Q = 0). The system is thermally insulated from its surroundings. By the first law, ΔU = −W, so any work done comes at the expense of internal energy.",
+      "explanation_incorrect": "This is true. Adiabatic means Q = 0. The system is thermally insulated, so all energy changes come from work done by or on the gas, directly changing the internal energy and hence the temperature."
+    },
+    {
+      "question_id": "T08.01.Q046",
+      "type": "true_false",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "question_text": "The efficiency of a Carnot engine depends on the working substance used in the engine.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This statement is false. The efficiency of a Carnot engine η = 1 − T₂/T₁ depends only on the temperatures of the hot and cold reservoirs. It is independent of the nature of the working substance. This is a key result of Carnot's theorem.",
+      "explanation_incorrect": "The Carnot efficiency depends solely on the reservoir temperatures (η = 1 − T₂/T₁) and not on the working substance. Whether the engine uses an ideal gas, steam, or any other substance, the maximum efficiency between the same two temperatures is the same."
+    },
+    {
+      "question_id": "T08.01.Q047",
+      "type": "true_false",
+      "concept_id": "T08.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "It is possible to construct a heat engine that operates in a cycle and converts all the heat absorbed from the source into work.",
+      "options": [
+        { "id": "A", "text": "True" },
+        { "id": "B", "text": "False" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This statement is false. According to the Kelvin–Planck statement of the second law, it is impossible to construct an engine operating in a cycle that converts all absorbed heat entirely into work without rejecting some heat to a cold reservoir. Some heat must always be wasted.",
+      "explanation_incorrect": "The Kelvin–Planck statement of the second law explicitly forbids this. A cyclic engine must always reject some heat to a cold reservoir. 100% conversion of heat to work in a cycle violates the second law."
+    },
+    {
+      "question_id": "T08.01.Q048",
+      "type": "fill_blank",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The first law of thermodynamics is expressed as ΔU = Q − W, where ΔU represents the change in ___ of the system.",
+      "correct_answer": "internal energy",
+      "explanation_correct": "In the first law equation ΔU = Q − W, ΔU represents the change in internal energy of the system. Internal energy is the total microscopic kinetic and potential energy of the molecules of the system.",
+      "explanation_incorrect": "The correct answer is 'internal energy'. ΔU is the change in internal energy, Q is the heat added to the system, and W is the work done by the system. The first law is essentially conservation of energy for thermodynamic systems."
+    },
+    {
+      "question_id": "T08.01.Q049",
+      "type": "fill_blank",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A process in which no heat enters or leaves the system is called an ___ process.",
+      "correct_answer": "adiabatic",
+      "explanation_correct": "A process in which Q = 0 (no heat exchange) is called an adiabatic process. During an adiabatic process, the change in internal energy equals the negative of the work done by the system: ΔU = −W.",
+      "explanation_incorrect": "The correct answer is 'adiabatic'. The word comes from the Greek 'adiabatos' meaning impassable. In an adiabatic process, the system is thermally insulated from the surroundings, so Q = 0."
+    },
+    {
+      "question_id": "T08.01.Q050",
+      "type": "fill_blank",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "question_text": "The maximum efficiency of any heat engine operating between two given temperatures is achieved by the ___ engine.",
+      "correct_answer": "Carnot",
+      "explanation_correct": "The Carnot engine is an ideal reversible engine that achieves the maximum possible efficiency η = 1 − T₂/T₁ for any engine operating between temperatures T₁ and T₂. No real engine can exceed the Carnot efficiency for the same reservoir temperatures.",
+      "explanation_incorrect": "The correct answer is 'Carnot'. Carnot's theorem states that no engine operating between two heat reservoirs can be more efficient than a Carnot engine operating between the same reservoirs. The Carnot engine is reversible and represents the theoretical upper limit."
+    }
+  ]
+}

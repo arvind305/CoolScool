@@ -1,0 +1,829 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T04.02",
+  "topic_name": "Alternating Current",
+  "canonical_explanation": {
+    "text": "An alternating current (AC) varies sinusoidally with time as I = I₀ sin ωt, where I₀ is the peak (maximum) value and ω = 2πf is the angular frequency. The root-mean-square (RMS) value of AC is I_rms = I₀/√2, and the RMS voltage is V_rms = V₀/√2. The average value of AC over a half cycle is I_avg = 2I₀/π. In a purely resistive circuit, voltage and current are in phase. In a purely inductive circuit, voltage leads the current by π/2 (90°), and the inductive reactance is X_L = ωL. In a purely capacitive circuit, current leads the voltage by π/2, and the capacitive reactance is X_C = 1/(ωC). In a series LCR circuit, the impedance is Z = √(R² + (X_L − X_C)²) and the phase angle is tan φ = (X_L − X_C)/R. Resonance occurs when X_L = X_C, i.e., at frequency f₀ = 1/(2π√(LC)), where impedance is minimum and equals R, and the current is maximum. The quality factor Q = ω₀L/R = 1/(ω₀CR) measures the sharpness of resonance. The average power dissipated in an AC circuit is P = V_rms I_rms cos φ, where cos φ is the power factor. A transformer works on the principle of mutual induction: V_s/V_p = N_s/N_p = I_p/I_s for an ideal transformer. Step-up transformers increase voltage (N_s > N_p), step-down transformers decrease voltage (N_s < N_p). Energy losses in real transformers arise from copper losses, eddy current losses, flux leakage, and hysteresis.",
+    "rules": [
+      "AC current: I = I₀ sin ωt; AC voltage: V = V₀ sin ωt",
+      "RMS values: I_rms = I₀/√2; V_rms = V₀/√2",
+      "Average value over half cycle: I_avg = 2I₀/π",
+      "Inductive reactance: X_L = ωL; voltage leads current by π/2",
+      "Capacitive reactance: X_C = 1/(ωC); current leads voltage by π/2",
+      "Impedance of series LCR circuit: Z = √(R² + (X_L − X_C)²)",
+      "Phase angle: tan φ = (X_L − X_C)/R",
+      "Resonant frequency: f₀ = 1/(2π√(LC)); at resonance Z = R and current is maximum",
+      "Quality factor: Q = ω₀L/R measures sharpness of resonance",
+      "Average power: P = V_rms I_rms cos φ; cos φ is the power factor",
+      "Transformer: V_s/V_p = N_s/N_p; for ideal transformer V_p I_p = V_s I_s"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.02.Q001",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The RMS value of an alternating current I = I₀ sin ωt is:",
+      "options": [
+        { "id": "A", "text": "I₀" },
+        { "id": "B", "text": "I₀/√2" },
+        { "id": "C", "text": "I₀/2" },
+        { "id": "D", "text": "2I₀/π" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The RMS (root-mean-square) value of a sinusoidal alternating current I = I₀ sin ωt is I_rms = I₀/√2 ≈ 0.707 I₀. This is the effective value of AC that produces the same heating effect as an equivalent DC current.",
+      "explanation_incorrect": "I₀ is the peak value, not the RMS value. I₀/2 is not a standard AC parameter. 2I₀/π is the average value of AC over a half cycle, not the RMS value. The RMS value is I₀/√2."
+    },
+    {
+      "question_id": "T04.02.Q002",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The average value of alternating current over one complete cycle is:",
+      "options": [
+        { "id": "A", "text": "I₀/√2" },
+        { "id": "B", "text": "2I₀/π" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "I₀/π" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The average value of a sinusoidal alternating current over one complete cycle is zero because the positive half cycle is exactly symmetric to the negative half cycle. The average over a half cycle is 2I₀/π.",
+      "explanation_incorrect": "I₀/√2 is the RMS value. 2I₀/π is the average value over a half cycle, not a full cycle. Over a complete cycle, the positive and negative halves cancel out, giving an average of zero."
+    },
+    {
+      "question_id": "T04.02.Q003",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "If the peak voltage of an AC source is 340 V, the RMS voltage is approximately:",
+      "options": [
+        { "id": "A", "text": "170 V" },
+        { "id": "B", "text": "240 V" },
+        { "id": "C", "text": "340 V" },
+        { "id": "D", "text": "480 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V_rms = V₀/√2 = 340/√2 = 340/1.414 ≈ 240 V. This is why Indian household supply is rated at 220-240 V RMS, corresponding to a peak voltage of about 311-340 V.",
+      "explanation_incorrect": "170 V would be V₀/2, which is not a standard AC quantity. 340 V is the peak value, not the RMS value. 480 V would be V₀ × √2, which is incorrect. The RMS voltage is V₀/√2 ≈ 240 V."
+    },
+    {
+      "question_id": "T04.02.Q004",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "question_text": "An alternating current is given by I = 10 sin(100πt) A. The frequency and RMS value of the current are:",
+      "options": [
+        { "id": "A", "text": "50 Hz, 5√2 A" },
+        { "id": "B", "text": "100 Hz, 10 A" },
+        { "id": "C", "text": "50 Hz, 10 A" },
+        { "id": "D", "text": "100π Hz, 5√2 A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Comparing I = 10 sin(100πt) with I = I₀ sin(ωt), we get I₀ = 10 A and ω = 100π rad/s. Frequency f = ω/(2π) = 100π/(2π) = 50 Hz. RMS value I_rms = I₀/√2 = 10/√2 = 5√2 A ≈ 7.07 A.",
+      "explanation_incorrect": "The angular frequency ω = 100π rad/s gives f = ω/(2π) = 50 Hz, not 100 Hz or 100π Hz. The RMS value is I₀/√2 = 10/√2 = 5√2 A, not 10 A."
+    },
+    {
+      "question_id": "T04.02.Q005",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "question_text": "The ratio of the peak value to the RMS value of an alternating current is called the form factor. Its value for a sinusoidal wave is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "√2" },
+        { "id": "C", "text": "π/√2" },
+        { "id": "D", "text": "π/(2√2)" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The form factor is defined as the ratio of RMS value to the average value (over half cycle): Form factor = (I₀/√2)/(2I₀/π) = π/(2√2) ≈ 1.11. Note: the ratio of peak to RMS is called the crest factor = √2. However, the standard definition of form factor = RMS/average = π/(2√2).",
+      "explanation_incorrect": "The form factor for a sinusoidal AC = RMS value / Average value = (I₀/√2) / (2I₀/π) = π/(2√2) ≈ 1.11. The value √2 is the crest factor (peak/RMS), not the form factor."
+    },
+    {
+      "question_id": "T04.02.Q006",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "question_text": "An AC ammeter connected to a circuit reads 5 A. The peak value of the current is:",
+      "options": [
+        { "id": "A", "text": "5 A" },
+        { "id": "B", "text": "5√2 A" },
+        { "id": "C", "text": "5/√2 A" },
+        { "id": "D", "text": "10π A" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An AC ammeter reads the RMS value of current. Given I_rms = 5 A, the peak value I₀ = I_rms × √2 = 5√2 A ≈ 7.07 A.",
+      "explanation_incorrect": "AC meters read RMS values, not peak values. So 5 A is the RMS value. The peak value is I₀ = I_rms × √2 = 5√2 A. The option 5/√2 A would be the RMS of a current with peak value 5 A."
+    },
+    {
+      "question_id": "T04.02.Q007",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "An alternating voltage V = 200 sin(300t) is applied across a resistor of 100 Ω. The power dissipated in the resistor is:",
+      "options": [
+        { "id": "A", "text": "400 W" },
+        { "id": "B", "text": "200 W" },
+        { "id": "C", "text": "100 W" },
+        { "id": "D", "text": "800 W" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V₀ = 200 V, R = 100 Ω. V_rms = V₀/√2 = 200/√2 V. Power P = V_rms²/R = (200/√2)²/100 = 40000/(2 × 100) = 200 W. Alternatively, P = V₀²/(2R) = 200²/(2 × 100) = 200 W.",
+      "explanation_incorrect": "Using the peak voltage directly gives P = V₀²/R = 400 W, which is incorrect because power must be calculated using RMS values. The correct power is P = V₀²/(2R) = 200 W."
+    },
+    {
+      "question_id": "T04.02.Q008",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "A 60 W light bulb is connected to a 220 V, 50 Hz AC supply. The peak voltage and peak current are approximately:",
+      "options": [
+        { "id": "A", "text": "220 V and 0.27 A" },
+        { "id": "B", "text": "311 V and 0.39 A" },
+        { "id": "C", "text": "311 V and 0.27 A" },
+        { "id": "D", "text": "220 V and 0.39 A" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rated voltage 220 V is the RMS voltage. Peak voltage V₀ = V_rms × √2 = 220 × 1.414 ≈ 311 V. RMS current I_rms = P/V_rms = 60/220 ≈ 0.273 A. Peak current I₀ = I_rms × √2 ≈ 0.273 × 1.414 ≈ 0.39 A.",
+      "explanation_incorrect": "The supply voltage 220 V is the RMS value, not the peak value. Peak voltage is V₀ = 220√2 ≈ 311 V. The peak current is also √2 times the RMS current, giving I₀ ≈ 0.39 A."
+    },
+    {
+      "question_id": "T04.02.Q009",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The voltage across an AC source is V = 200√2 sin(100πt) V. The RMS voltage and the time period of the signal are:",
+      "options": [
+        { "id": "A", "text": "200 V, 0.02 s" },
+        { "id": "B", "text": "200√2 V, 0.01 s" },
+        { "id": "C", "text": "200 V, 0.01 s" },
+        { "id": "D", "text": "100 V, 0.02 s" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Peak voltage V₀ = 200√2 V. RMS voltage V_rms = V₀/√2 = 200√2/√2 = 200 V. Angular frequency ω = 100π rad/s. Frequency f = ω/(2π) = 50 Hz. Time period T = 1/f = 0.02 s.",
+      "explanation_incorrect": "200√2 V is the peak voltage, not the RMS voltage. The RMS voltage is V₀/√2 = 200 V. The frequency f = 100π/(2π) = 50 Hz, giving T = 1/50 = 0.02 s, not 0.01 s."
+    },
+    {
+      "question_id": "T04.02.Q010",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "In a purely inductive AC circuit, the voltage:",
+      "options": [
+        { "id": "A", "text": "leads the current by π/2" },
+        { "id": "B", "text": "lags behind the current by π/2" },
+        { "id": "C", "text": "is in phase with the current" },
+        { "id": "D", "text": "leads the current by π" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In a purely inductive circuit, the voltage leads the current by π/2 (90°). This is because the inductor opposes changes in current, so the current reaches its maximum after the voltage does. The mnemonic 'ELI' (EMF leads I in an inductor L) helps remember this.",
+      "explanation_incorrect": "In an inductor, voltage leads current by π/2 (not lags, not in phase, not by π). The mnemonic ELI helps: E (voltage) leads I (current) in L (inductor)."
+    },
+    {
+      "question_id": "T04.02.Q011",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The inductive reactance of a coil of inductance L at angular frequency ω is:",
+      "options": [
+        { "id": "A", "text": "X_L = 1/(ωL)" },
+        { "id": "B", "text": "X_L = ωL" },
+        { "id": "C", "text": "X_L = ω²L" },
+        { "id": "D", "text": "X_L = L/ω" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The inductive reactance is X_L = ωL = 2πfL. It is directly proportional to both the inductance and the frequency. Its SI unit is ohm (Ω). At higher frequencies, an inductor offers greater opposition to AC.",
+      "explanation_incorrect": "X_L = 1/(ωL) is not correct; that form resembles capacitive reactance X_C = 1/(ωC). The inductive reactance is X_L = ωL, directly proportional to frequency and inductance."
+    },
+    {
+      "question_id": "T04.02.Q012",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "In a purely capacitive AC circuit, the current:",
+      "options": [
+        { "id": "A", "text": "lags behind the voltage by π/2" },
+        { "id": "B", "text": "leads the voltage by π/2" },
+        { "id": "C", "text": "is in phase with the voltage" },
+        { "id": "D", "text": "leads the voltage by π" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a purely capacitive circuit, the current leads the voltage by π/2 (90°). The capacitor allows current to flow as it charges before the voltage across it builds up. The mnemonic 'ICE' (I leads E in a capacitor C) helps remember this.",
+      "explanation_incorrect": "In a capacitor, current leads voltage by π/2. The mnemonic ICE helps: I (current) leads E (voltage) in C (capacitor). It does not lag, nor is it in phase with the voltage."
+    },
+    {
+      "question_id": "T04.02.Q013",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The capacitive reactance of a capacitor of capacitance C at angular frequency ω is:",
+      "options": [
+        { "id": "A", "text": "X_C = ωC" },
+        { "id": "B", "text": "X_C = 1/(ωC)" },
+        { "id": "C", "text": "X_C = ω/C" },
+        { "id": "D", "text": "X_C = C/ω" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The capacitive reactance is X_C = 1/(ωC) = 1/(2πfC). It is inversely proportional to both the capacitance and the frequency. At higher frequencies, a capacitor offers less opposition to AC. Its SI unit is ohm (Ω).",
+      "explanation_incorrect": "X_C = ωC is incorrect; that form resembles inductive reactance. The capacitive reactance is X_C = 1/(ωC), inversely proportional to both frequency and capacitance."
+    },
+    {
+      "question_id": "T04.02.Q014",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "question_text": "A 0.1 H inductor is connected to an AC source of frequency 50 Hz. The inductive reactance is:",
+      "options": [
+        { "id": "A", "text": "5π Ω" },
+        { "id": "B", "text": "10π Ω" },
+        { "id": "C", "text": "50π Ω" },
+        { "id": "D", "text": "100π Ω" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "X_L = ωL = 2πfL = 2π × 50 × 0.1 = 10π Ω ≈ 31.4 Ω. The inductive reactance is directly proportional to both the frequency and the inductance.",
+      "explanation_incorrect": "X_L = 2πfL = 2π × 50 × 0.1 = 10π Ω. Options like 5π or 50π arise from incorrectly using πfL or 2πf without multiplying by L properly."
+    },
+    {
+      "question_id": "T04.02.Q015",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "question_text": "A capacitor of 10 μF is connected to an AC source of 50 Hz. The capacitive reactance is approximately:",
+      "options": [
+        { "id": "A", "text": "318 Ω" },
+        { "id": "B", "text": "31.8 Ω" },
+        { "id": "C", "text": "3180 Ω" },
+        { "id": "D", "text": "100 Ω" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "X_C = 1/(ωC) = 1/(2πfC) = 1/(2π × 50 × 10 × 10⁻⁶) = 1/(π × 10⁻³) = 1000/π ≈ 318 Ω.",
+      "explanation_incorrect": "The calculation requires X_C = 1/(2πfC). Using 2π × 50 × 10 × 10⁻⁶ = π × 10⁻³, so X_C = 1000/π ≈ 318 Ω. Other values arise from errors in unit conversion or formula."
+    },
+    {
+      "question_id": "T04.02.Q016",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "question_text": "In a purely resistive AC circuit with resistance R = 100 Ω and RMS voltage 220 V, the average power dissipated is:",
+      "options": [
+        { "id": "A", "text": "484 W" },
+        { "id": "B", "text": "220 W" },
+        { "id": "C", "text": "242 W" },
+        { "id": "D", "text": "968 W" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In a purely resistive circuit, power factor cos φ = 1. Power P = V_rms²/R = (220)²/100 = 48400/100 = 484 W.",
+      "explanation_incorrect": "In a purely resistive circuit, cos φ = 1, so all the apparent power is dissipated. P = V²/R = 220²/100 = 484 W. Values like 242 W or 220 W arise from incorrect formulas."
+    },
+    {
+      "question_id": "T04.02.Q017",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "A phasor diagram of a series RL circuit shows the voltage phasor V_L perpendicular to V_R. If V_R = 40 V and V_L = 30 V, the supply voltage is:",
+      "options": [
+        { "id": "A", "text": "70 V" },
+        { "id": "B", "text": "50 V" },
+        { "id": "C", "text": "35 V" },
+        { "id": "D", "text": "10 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series RL circuit, V_R and V_L are perpendicular in the phasor diagram. The resultant supply voltage V = √(V_R² + V_L²) = √(40² + 30²) = √(1600 + 900) = √2500 = 50 V.",
+      "explanation_incorrect": "The voltages in an RL circuit are not in phase, so they cannot be added algebraically (V ≠ 70 V). Since V_R and V_L are at 90° to each other, the Pythagorean theorem gives V = √(40² + 30²) = 50 V."
+    },
+    {
+      "question_id": "T04.02.Q018",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The power consumed in a purely inductive or purely capacitive AC circuit is:",
+      "options": [
+        { "id": "A", "text": "P = V_rms × I_rms" },
+        { "id": "B", "text": "P = V_rms × I_rms / 2" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "P = V_rms² / X" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In a purely inductive or purely capacitive circuit, the phase difference between voltage and current is π/2, so cos φ = cos(π/2) = 0. Hence, average power P = V_rms I_rms cos φ = 0. This is called wattless current. Energy is alternately stored and released but not dissipated.",
+      "explanation_incorrect": "Although V and I are non-zero, the power factor cos(90°) = 0, making the average power zero. The current in such circuits is called wattless current because no net energy is dissipated."
+    },
+    {
+      "question_id": "T04.02.Q019",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If the frequency of AC applied to an inductor is doubled, the inductive reactance becomes:",
+      "options": [
+        { "id": "A", "text": "half" },
+        { "id": "B", "text": "double" },
+        { "id": "C", "text": "four times" },
+        { "id": "D", "text": "unchanged" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Inductive reactance X_L = ωL = 2πfL. Since X_L is directly proportional to frequency f, doubling the frequency doubles the inductive reactance.",
+      "explanation_incorrect": "X_L = 2πfL is directly proportional to f. Doubling f doubles X_L. It does not halve (that would apply to capacitive reactance), quadruple, or remain unchanged."
+    },
+    {
+      "question_id": "T04.02.Q020",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The impedance of a series LCR circuit is given by:",
+      "options": [
+        { "id": "A", "text": "Z = R + X_L + X_C" },
+        { "id": "B", "text": "Z = √(R² + (X_L − X_C)²)" },
+        { "id": "C", "text": "Z = √(R² + (X_L + X_C)²)" },
+        { "id": "D", "text": "Z = R + (X_L − X_C)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series LCR circuit, the resistive and reactive components are perpendicular in the phasor diagram. The net reactance is (X_L − X_C), and the impedance is Z = √(R² + (X_L − X_C)²).",
+      "explanation_incorrect": "Impedances do not add algebraically because the voltage drops across R, L, and C have different phase relationships. X_L and X_C are opposite in effect, so the net reactance is their difference, giving Z = √(R² + (X_L − X_C)²)."
+    },
+    {
+      "question_id": "T04.02.Q021",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "At resonance in a series LCR circuit:",
+      "options": [
+        { "id": "A", "text": "impedance is maximum" },
+        { "id": "B", "text": "current is minimum" },
+        { "id": "C", "text": "X_L = X_C and impedance equals R" },
+        { "id": "D", "text": "power factor is zero" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At resonance in a series LCR circuit, the inductive reactance equals the capacitive reactance (X_L = X_C). The net reactance is zero, so impedance Z = R (minimum value). Current is maximum, and the power factor cos φ = R/Z = 1.",
+      "explanation_incorrect": "At resonance, impedance is minimum (not maximum), current is maximum (not minimum), and the power factor is 1 (not zero). The key condition is X_L = X_C, making Z = R."
+    },
+    {
+      "question_id": "T04.02.Q022",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The resonant frequency of a series LCR circuit is:",
+      "options": [
+        { "id": "A", "text": "f₀ = 1/(2π√(LC))" },
+        { "id": "B", "text": "f₀ = 2π√(LC)" },
+        { "id": "C", "text": "f₀ = 1/(2πLC)" },
+        { "id": "D", "text": "f₀ = √(LC)/(2π)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At resonance, X_L = X_C, i.e., ω₀L = 1/(ω₀C). Solving: ω₀² = 1/(LC), so ω₀ = 1/√(LC). Since f₀ = ω₀/(2π), we get f₀ = 1/(2π√(LC)).",
+      "explanation_incorrect": "Setting X_L = X_C at resonance gives ω₀ = 1/√(LC), and converting to frequency: f₀ = ω₀/(2π) = 1/(2π√(LC)). The other options have incorrect algebraic forms."
+    },
+    {
+      "question_id": "T04.02.Q023",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The power factor of an AC circuit is defined as:",
+      "options": [
+        { "id": "A", "text": "cos φ = R/Z" },
+        { "id": "B", "text": "cos φ = Z/R" },
+        { "id": "C", "text": "cos φ = X_L/Z" },
+        { "id": "D", "text": "cos φ = X_C/R" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The power factor cos φ = R/Z, where R is the resistance and Z is the impedance of the circuit. It represents the fraction of the apparent power that is actually dissipated. In a purely resistive circuit, cos φ = 1; in a purely reactive circuit, cos φ = 0.",
+      "explanation_incorrect": "The power factor is cos φ = R/Z, not Z/R or any other combination. It equals the ratio of true power to apparent power and ranges from 0 to 1."
+    },
+    {
+      "question_id": "T04.02.Q024",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "question_text": "In a series LCR circuit, R = 30 Ω, X_L = 70 Ω, and X_C = 30 Ω. The impedance and power factor are:",
+      "options": [
+        { "id": "A", "text": "Z = 50 Ω, cos φ = 0.6" },
+        { "id": "B", "text": "Z = 50 Ω, cos φ = 0.8" },
+        { "id": "C", "text": "Z = 70 Ω, cos φ = 0.43" },
+        { "id": "D", "text": "Z = 100 Ω, cos φ = 0.3" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Z = √(R² + (X_L − X_C)²) = √(30² + (70 − 30)²) = √(900 + 1600) = √2500 = 50 Ω. Power factor cos φ = R/Z = 30/50 = 0.6.",
+      "explanation_incorrect": "The net reactance is X_L − X_C = 70 − 30 = 40 Ω. Impedance Z = √(30² + 40²) = √2500 = 50 Ω. Power factor = R/Z = 30/50 = 0.6, not 0.8."
+    },
+    {
+      "question_id": "T04.02.Q025",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "question_text": "A series LCR circuit has L = 1 H and C = 1 μF. The resonant frequency is:",
+      "options": [
+        { "id": "A", "text": "1000/(2π) Hz" },
+        { "id": "B", "text": "100/(2π) Hz" },
+        { "id": "C", "text": "10000/(2π) Hz" },
+        { "id": "D", "text": "500/π Hz" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "f₀ = 1/(2π√(LC)) = 1/(2π√(1 × 10⁻⁶)) = 1/(2π × 10⁻³) = 1000/(2π) Hz ≈ 159 Hz.",
+      "explanation_incorrect": "f₀ = 1/(2π√(LC)) = 1/(2π × √(1 × 10⁻⁶)) = 1/(2π × 10⁻³) = 10³/(2π) = 1000/(2π) Hz. The other options arise from computational errors with the square root."
+    },
+    {
+      "question_id": "T04.02.Q026",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "question_text": "The quality factor (Q-factor) of a series LCR resonant circuit is given by:",
+      "options": [
+        { "id": "A", "text": "Q = R/(ω₀L)" },
+        { "id": "B", "text": "Q = ω₀L/R" },
+        { "id": "C", "text": "Q = ω₀RC" },
+        { "id": "D", "text": "Q = R√(L/C)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The quality factor Q = ω₀L/R = 1/(ω₀CR) = (1/R)√(L/C). A higher Q indicates a sharper resonance peak and better selectivity. Q is a dimensionless quantity.",
+      "explanation_incorrect": "The Q-factor is Q = ω₀L/R, which can also be written as 1/(ω₀CR) or (1/R)√(L/C). Option A has R and ω₀L inverted. Q is inversely proportional to R."
+    },
+    {
+      "question_id": "T04.02.Q027",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "question_text": "In a series LCR circuit at resonance, the voltage across the inductor is 200 V and the voltage across the capacitor is 200 V. The source voltage is 40 V. The Q-factor of the circuit is:",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "10" },
+        { "id": "C", "text": "400" },
+        { "id": "D", "text": "0.2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At resonance, V_L = V_C = 200 V (they cancel each other). The Q-factor is the voltage magnification factor: Q = V_L/V_source = 200/40 = 5. This also equals ω₀L/R.",
+      "explanation_incorrect": "The Q-factor at resonance equals the ratio of voltage across the inductor (or capacitor) to the source voltage: Q = V_L/V = 200/40 = 5. It is not the sum or product of the voltages."
+    },
+    {
+      "question_id": "T04.02.Q028",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A series LCR circuit with R = 10 Ω, L = 0.1 H, and C = 10 μF is connected to a 220 V, variable frequency AC source. The maximum current at resonance is:",
+      "options": [
+        { "id": "A", "text": "2.2 A" },
+        { "id": "B", "text": "22 A" },
+        { "id": "C", "text": "11 A" },
+        { "id": "D", "text": "220 A" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At resonance, impedance Z = R = 10 Ω (since X_L = X_C and they cancel). Maximum current I_max = V/R = 220/10 = 22 A.",
+      "explanation_incorrect": "At resonance, the impedance is purely resistive and equals R. So the maximum current is simply I = V/R = 220/10 = 22 A. The inductance and capacitance determine the resonant frequency but do not affect the maximum current magnitude."
+    },
+    {
+      "question_id": "T04.02.Q029",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a series LCR circuit, if the resistance R is increased while L and C remain unchanged, the resonant frequency:",
+      "options": [
+        { "id": "A", "text": "increases" },
+        { "id": "B", "text": "decreases" },
+        { "id": "C", "text": "remains unchanged" },
+        { "id": "D", "text": "becomes zero" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The resonant frequency f₀ = 1/(2π√(LC)) depends only on L and C, not on R. Changing R affects the sharpness of the resonance peak (Q-factor) and the maximum current at resonance, but not the resonant frequency itself.",
+      "explanation_incorrect": "The resonant frequency f₀ = 1/(2π√(LC)) is independent of R. Increasing R reduces the peak current at resonance and makes the resonance curve broader (lower Q-factor), but the frequency at which resonance occurs does not change."
+    },
+    {
+      "question_id": "T04.02.Q030",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "An AC circuit has impedance Z = 50 Ω and power factor 0.8. The average power consumed when 4 A RMS current flows through it is:",
+      "options": [
+        { "id": "A", "text": "800 W" },
+        { "id": "B", "text": "640 W" },
+        { "id": "C", "text": "400 W" },
+        { "id": "D", "text": "1000 W" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P = I_rms² × Z × cos φ = I_rms² × R (since R = Z cos φ). V_rms = I_rms × Z = 4 × 50 = 200 V. P = V_rms × I_rms × cos φ = 200 × 4 × 0.8 = 640 W. Alternatively, R = Z cos φ = 50 × 0.8 = 40 Ω, P = I² R = 16 × 40 = 640 W.",
+      "explanation_incorrect": "The average power is P = V_rms I_rms cos φ = I²Z cos φ = 4² × 50 × 0.8 = 640 W. Using P = I²Z without the power factor would give 800 W, which is the apparent power, not the true power."
+    },
+    {
+      "question_id": "T04.02.Q031",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "A transformer works on the principle of:",
+      "options": [
+        { "id": "A", "text": "self-induction" },
+        { "id": "B", "text": "mutual induction" },
+        { "id": "C", "text": "electrostatic induction" },
+        { "id": "D", "text": "electromagnetic radiation" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A transformer works on the principle of mutual induction. A changing current in the primary coil creates a changing magnetic flux, which induces an EMF in the secondary coil through the shared magnetic core.",
+      "explanation_incorrect": "Self-induction is the phenomenon in a single coil, not between two coils. Electrostatic induction involves static charges. Electromagnetic radiation involves wave propagation. A transformer specifically uses mutual induction between two coils sharing a magnetic core."
+    },
+    {
+      "question_id": "T04.02.Q032",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "In an ideal transformer, the ratio of secondary voltage to primary voltage equals:",
+      "options": [
+        { "id": "A", "text": "N_p/N_s" },
+        { "id": "B", "text": "N_s/N_p" },
+        { "id": "C", "text": "(N_s/N_p)²" },
+        { "id": "D", "text": "√(N_s/N_p)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an ideal transformer, V_s/V_p = N_s/N_p, where N_s and N_p are the number of turns in the secondary and primary coils, respectively. This is called the turns ratio or transformation ratio.",
+      "explanation_incorrect": "The voltage ratio equals the turns ratio: V_s/V_p = N_s/N_p. The option N_p/N_s would be the inverse. The squared or square-root forms are incorrect for the voltage transformation ratio."
+    },
+    {
+      "question_id": "T04.02.Q033",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "A step-up transformer:",
+      "options": [
+        { "id": "A", "text": "increases current and decreases voltage" },
+        { "id": "B", "text": "increases both voltage and current" },
+        { "id": "C", "text": "increases voltage and decreases current" },
+        { "id": "D", "text": "increases frequency and voltage" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A step-up transformer increases voltage (N_s > N_p, so V_s > V_p). For an ideal transformer, power is conserved (V_p I_p = V_s I_s), so when voltage increases, current decreases proportionally. A transformer does not change frequency.",
+      "explanation_incorrect": "In a step-up transformer, V_s > V_p. By energy conservation, V_p I_p = V_s I_s, so the secondary current is less than the primary current. A transformer cannot change the frequency of AC."
+    },
+    {
+      "question_id": "T04.02.Q034",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "A transformer cannot work with:",
+      "options": [
+        { "id": "A", "text": "50 Hz AC" },
+        { "id": "B", "text": "direct current (DC)" },
+        { "id": "C", "text": "200 Hz AC" },
+        { "id": "D", "text": "sinusoidal AC of any frequency" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A transformer requires a changing magnetic flux to induce EMF in the secondary coil. DC provides a steady current and constant flux, so no EMF is induced in the secondary (except during switching on/off). Therefore, a transformer cannot work with steady DC.",
+      "explanation_incorrect": "A transformer works with any AC frequency because AC produces a continuously changing magnetic flux. It cannot work with steady DC because a constant current produces a constant flux, and by Faraday's law, no EMF is induced when the flux is not changing."
+    },
+    {
+      "question_id": "T04.02.Q035",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "question_text": "A transformer has 500 turns in the primary and 5000 turns in the secondary. If the primary voltage is 220 V, the secondary voltage is:",
+      "options": [
+        { "id": "A", "text": "22 V" },
+        { "id": "B", "text": "2200 V" },
+        { "id": "C", "text": "440 V" },
+        { "id": "D", "text": "1100 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V_s/V_p = N_s/N_p. So V_s = V_p × (N_s/N_p) = 220 × (5000/500) = 220 × 10 = 2200 V. This is a step-up transformer with a turns ratio of 10.",
+      "explanation_incorrect": "Using the transformer equation: V_s = V_p × (N_s/N_p) = 220 × (5000/500) = 220 × 10 = 2200 V. The option 22 V would result from dividing instead of multiplying."
+    },
+    {
+      "question_id": "T04.02.Q036",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "question_text": "An ideal step-down transformer has a turns ratio of 1:10 (secondary:primary). If the primary current is 2 A, the secondary current is:",
+      "options": [
+        { "id": "A", "text": "0.2 A" },
+        { "id": "B", "text": "2 A" },
+        { "id": "C", "text": "20 A" },
+        { "id": "D", "text": "200 A" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal transformer, V_p I_p = V_s I_s. Since N_s/N_p = 1/10, we have V_s = V_p/10. Therefore I_s = I_p × (N_p/N_s) = 2 × 10 = 20 A. In a step-down transformer, voltage decreases and current increases.",
+      "explanation_incorrect": "In a step-down transformer (N_s < N_p), the current increases. I_s = I_p × (N_p/N_s) = 2 × (10/1) = 20 A. The voltage is stepped down by a factor of 10, so the current is stepped up by the same factor."
+    },
+    {
+      "question_id": "T04.02.Q037",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "question_text": "Which of the following is NOT a source of energy loss in a real transformer?",
+      "options": [
+        { "id": "A", "text": "Copper losses due to resistance of windings" },
+        { "id": "B", "text": "Eddy current losses in the core" },
+        { "id": "C", "text": "Hysteresis losses in the core" },
+        { "id": "D", "text": "Radiation of electromagnetic waves" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The main energy losses in a real transformer are: (1) copper losses (I²R heating in windings), (2) eddy current losses in the iron core, (3) hysteresis losses due to repeated magnetisation and demagnetisation of the core, and (4) flux leakage. Radiation of electromagnetic waves is not a significant source of loss in a transformer operating at power line frequencies.",
+      "explanation_incorrect": "Copper losses, eddy current losses, and hysteresis losses are all real sources of energy loss in transformers. Electromagnetic wave radiation is negligible at the low frequencies (50-60 Hz) used in power transformers."
+    },
+    {
+      "question_id": "T04.02.Q038",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Electric power is transmitted at high voltage from a power station because:",
+      "options": [
+        { "id": "A", "text": "high voltage is safer" },
+        { "id": "B", "text": "it reduces the current for the same power, reducing I²R losses" },
+        { "id": "C", "text": "it increases the resistance of transmission lines" },
+        { "id": "D", "text": "it increases the speed of current flow" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Power P = VI. For a given power P, increasing the voltage V reduces the current I. Since power loss in transmission lines is P_loss = I²R, a lower current dramatically reduces transmission losses. This is why step-up transformers are used at power stations and step-down transformers at distribution points.",
+      "explanation_incorrect": "High voltage is actually more dangerous, not safer. The resistance of the line depends on the wire, not the voltage. Current does not travel faster at higher voltage. The real reason is that P_loss = I²R, and higher voltage means lower current for the same transmitted power, reducing losses."
+    },
+    {
+      "question_id": "T04.02.Q039",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A transformer with 90% efficiency has a primary input of 220 V and 5 A. The power delivered to the secondary is:",
+      "options": [
+        { "id": "A", "text": "1100 W" },
+        { "id": "B", "text": "990 W" },
+        { "id": "C", "text": "880 W" },
+        { "id": "D", "text": "1000 W" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Input power P_in = V_p × I_p = 220 × 5 = 1100 W. Efficiency η = P_out/P_in = 0.90. So P_out = η × P_in = 0.90 × 1100 = 990 W.",
+      "explanation_incorrect": "The input power is 220 × 5 = 1100 W. With 90% efficiency, output power = 0.9 × 1100 = 990 W. The remaining 110 W is lost as heat in the transformer."
+    },
+    {
+      "question_id": "T04.02.Q040",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A step-up transformer is used to transmit 11 kW of power at 220 V over a line of resistance 4 Ω. If the voltage is stepped up to 22000 V, the power loss in the line is:",
+      "options": [
+        { "id": "A", "text": "1 W" },
+        { "id": "B", "text": "4 W" },
+        { "id": "C", "text": "100 W" },
+        { "id": "D", "text": "2500 W" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At 22000 V, the transmission current I = P/V = 11000/22000 = 0.5 A. Power loss = I²R = (0.5)² × 4 = 0.25 × 4 = 1 W. Without the step-up, at 220 V: I = 11000/220 = 50 A, and loss = 50² × 4 = 10000 W. The step-up reduces losses by a factor of (V_high/V_low)² = 10000.",
+      "explanation_incorrect": "The current at the stepped-up voltage is I = P/V = 11000/22000 = 0.5 A. Power loss = I²R = 0.25 × 4 = 1 W. This dramatically demonstrates why power is transmitted at high voltage."
+    },
+    {
+      "question_id": "T04.02.Q041",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "question_text": "The current in a series LCR circuit at a frequency below the resonant frequency is:",
+      "options": [
+        { "id": "A", "text": "in phase with the voltage" },
+        { "id": "B", "text": "leading the voltage (capacitive nature)" },
+        { "id": "C", "text": "lagging the voltage (inductive nature)" },
+        { "id": "D", "text": "at 90° to the voltage" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Below resonant frequency, X_C > X_L (since X_C = 1/(ωC) increases as ω decreases and X_L = ωL decreases). The net reactance is capacitive, so the current leads the voltage. The circuit behaves as if it were predominantly capacitive.",
+      "explanation_incorrect": "Below resonance, X_C > X_L, making the circuit capacitive in nature. In a capacitive circuit, current leads voltage. Above resonance, X_L > X_C, and the circuit is inductive (current lags voltage). At resonance, they are in phase."
+    },
+    {
+      "question_id": "T04.02.Q042",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "question_text": "A coil has resistance 20 Ω and inductance 0.5 H. When connected to a 220 V, 50 Hz AC supply, the current flowing through it is approximately:",
+      "options": [
+        { "id": "A", "text": "1.4 A" },
+        { "id": "B", "text": "11 A" },
+        { "id": "C", "text": "2.2 A" },
+        { "id": "D", "text": "0.7 A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "X_L = 2πfL = 2π × 50 × 0.5 = 50π ≈ 157 Ω. Impedance Z = √(R² + X_L²) = √(400 + 24649) ≈ √25049 ≈ 158.3 Ω. Current I = V/Z = 220/158.3 ≈ 1.4 A.",
+      "explanation_incorrect": "The impedance of the coil is Z = √(R² + X_L²). With X_L = 2π × 50 × 0.5 ≈ 157 Ω and R = 20 Ω, Z ≈ 158 Ω. So I = 220/158 ≈ 1.4 A. Using just R (I = 220/20 = 11 A) ignores the inductive reactance."
+    },
+    {
+      "question_id": "T04.02.Q043",
+      "type": "mcq",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "question_text": "The ratio of RMS value to average value (over half cycle) of a sinusoidal AC is:",
+      "options": [
+        { "id": "A", "text": "π/√2 ≈ 2.22" },
+        { "id": "B", "text": "√2 ≈ 1.41" },
+        { "id": "C", "text": "π/(2√2) ≈ 1.11" },
+        { "id": "D", "text": "2/π ≈ 0.64" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "RMS value = I₀/√2. Average value (half cycle) = 2I₀/π. Ratio = (I₀/√2)/(2I₀/π) = π/(2√2) ≈ 1.11. This ratio is called the form factor of a sinusoidal wave.",
+      "explanation_incorrect": "The form factor = RMS/Average = (I₀/√2)/(2I₀/π) = π/(2√2) ≈ 1.11. The value √2 is the crest factor (peak/RMS). 2/π is the reciprocal of the peak-to-average ratio."
+    },
+    {
+      "question_id": "T04.02.Q044",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "If the frequency of AC is doubled, the capacitive reactance becomes:",
+      "options": [
+        { "id": "A", "text": "double" },
+        { "id": "B", "text": "half" },
+        { "id": "C", "text": "four times" },
+        { "id": "D", "text": "one-fourth" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Capacitive reactance X_C = 1/(ωC) = 1/(2πfC) is inversely proportional to frequency. If frequency is doubled, X_C becomes half. This is opposite to inductive reactance, which doubles when frequency doubles.",
+      "explanation_incorrect": "X_C = 1/(2πfC) ∝ 1/f. Doubling f makes X_C half. Inductive reactance X_L ∝ f doubles when f doubles, but capacitive reactance behaves inversely."
+    },
+    {
+      "question_id": "T04.02.Q045",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "In a series LCR circuit at resonance, the voltages across L and C are each 500 V while the applied voltage is 100 V. If the resistance is halved, the new voltage across L at resonance with the same source is:",
+      "options": [
+        { "id": "A", "text": "250 V" },
+        { "id": "B", "text": "500 V" },
+        { "id": "C", "text": "1000 V" },
+        { "id": "D", "text": "2000 V" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At resonance, V_L = I × X_L = (V/R) × ω₀L = V × Q, where Q = ω₀L/R. If R is halved, Q doubles, and V_L doubles. Original V_L = 500 V, so new V_L = 1000 V. (The resonant frequency doesn't change since it depends only on L and C.)",
+      "explanation_incorrect": "At resonance, current I = V/R. Halving R doubles the current. Since V_L = I × X_L and X_L hasn't changed (same resonant frequency), V_L doubles from 500 V to 1000 V."
+    },
+    {
+      "question_id": "T04.02.Q046",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "question_text": "Eddy current losses in a transformer core are minimised by:",
+      "options": [
+        { "id": "A", "text": "using thick solid iron cores" },
+        { "id": "B", "text": "using laminated iron cores insulated from each other" },
+        { "id": "C", "text": "increasing the core temperature" },
+        { "id": "D", "text": "using copper cores instead of iron" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Eddy currents are reduced by using a laminated core — thin sheets of iron insulated from each other by varnish or oxide layers. The laminations increase the resistance to eddy current flow, confining them to small loops within each lamination and reducing I²R losses.",
+      "explanation_incorrect": "Thick solid cores would allow large eddy current loops, increasing losses. Copper is not ferromagnetic and cannot be used as a transformer core. Laminated cores break up eddy current paths and are the standard solution."
+    },
+    {
+      "question_id": "T04.02.Q047",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The average power dissipated in an AC circuit is given by:",
+      "options": [
+        { "id": "A", "text": "P = V_rms × I_rms" },
+        { "id": "B", "text": "P = V_rms × I_rms × cos φ" },
+        { "id": "C", "text": "P = V_rms × I_rms × sin φ" },
+        { "id": "D", "text": "P = V₀ × I₀" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The average power in an AC circuit is P = V_rms × I_rms × cos φ, where cos φ is the power factor. Only the component of current in phase with the voltage contributes to power dissipation. V_rms × I_rms is the apparent power.",
+      "explanation_incorrect": "V_rms × I_rms gives the apparent power, not the true (average) power. The true power includes the power factor cos φ: P = V_rms I_rms cos φ. The sin φ component represents reactive (wattless) power."
+    },
+    {
+      "question_id": "T04.02.Q048",
+      "type": "mcq",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "A capacitor blocks DC but allows AC to pass because:",
+      "options": [
+        { "id": "A", "text": "X_C = 1/(ωC); for DC, ω = 0, so X_C → ∞" },
+        { "id": "B", "text": "the capacitor plates are not connected" },
+        { "id": "C", "text": "DC has higher frequency than AC" },
+        { "id": "D", "text": "capacitors only store positive charges" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For DC, frequency f = 0, so ω = 2πf = 0. Capacitive reactance X_C = 1/(ωC) → ∞, which means infinite opposition to DC (blocking it). For AC, ω ≠ 0, so X_C is finite, allowing AC to pass. Higher frequency means lower X_C and easier passage.",
+      "explanation_incorrect": "The physical reason is that X_C = 1/(ωC). DC has ω = 0, making X_C infinite — the capacitor acts as an open circuit for DC. For AC, the finite frequency gives finite reactance, allowing current to flow through alternating charging and discharging."
+    },
+    {
+      "question_id": "T04.02.Q049",
+      "type": "mcq",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A series LCR circuit has R = 5 Ω, L = 50 mH, and C = 500 μF. The bandwidth (Δω) of the resonance curve is:",
+      "options": [
+        { "id": "A", "text": "100 rad/s" },
+        { "id": "B", "text": "200 rad/s" },
+        { "id": "C", "text": "50 rad/s" },
+        { "id": "D", "text": "10 rad/s" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The bandwidth of a series LCR resonance curve is Δω = R/L = 5/(50 × 10⁻³) = 5/0.05 = 100 rad/s. This is the full width at half-maximum power (3 dB bandwidth). A smaller bandwidth means sharper resonance (higher Q-factor).",
+      "explanation_incorrect": "Bandwidth Δω = R/L = 5/0.05 = 100 rad/s. This can also be expressed as Δω = ω₀/Q. The capacitance does not directly appear in the bandwidth formula, but it affects ω₀ and hence Q."
+    },
+    {
+      "question_id": "T04.02.Q050",
+      "type": "mcq",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A 100% efficient transformer has a turns ratio (N_s:N_p) of 20:1. If 240 V and 0.5 A are fed into the primary, the secondary voltage and current are:",
+      "options": [
+        { "id": "A", "text": "4800 V, 0.025 A" },
+        { "id": "B", "text": "12 V, 10 A" },
+        { "id": "C", "text": "4800 V, 10 A" },
+        { "id": "D", "text": "12 V, 0.025 A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "V_s = V_p × (N_s/N_p) = 240 × 20 = 4800 V. For an ideal transformer, V_p I_p = V_s I_s, so I_s = V_p I_p / V_s = (240 × 0.5)/4800 = 120/4800 = 0.025 A. This is a step-up transformer: voltage increases 20-fold and current decreases 20-fold.",
+      "explanation_incorrect": "With turns ratio 20:1, V_s = 20 × 240 = 4800 V. By power conservation, I_s = I_p × (N_p/N_s) = 0.5/20 = 0.025 A. The product V × I remains constant: 240 × 0.5 = 4800 × 0.025 = 120 W."
+    }
+  ]
+}

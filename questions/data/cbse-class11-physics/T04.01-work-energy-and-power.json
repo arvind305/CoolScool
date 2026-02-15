@@ -1,0 +1,828 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Work, Energy, and Power",
+  "canonical_explanation": {
+    "text": "Work done by a constant force is W = F·d = Fd cos θ, where θ is the angle between force and displacement. Work is positive when force and displacement are in the same direction, negative when opposite, and zero when perpendicular (like centripetal force). For a variable force, W = ∫F·dx. The SI unit of work is joule (1 J = 1 N·m). Kinetic energy is KE = ½mv². The work-energy theorem states that the net work done on a body equals the change in its kinetic energy: W_net = ΔKE = ½mv² − ½mu². Potential energy is the energy stored by virtue of position or configuration. Gravitational PE = mgh (near Earth's surface). Elastic PE of a spring = ½kx² (Hooke's law: F = −kx). A conservative force is one for which work done is path-independent (gravity, spring force); a non-conservative force is path-dependent (friction). The total mechanical energy E = KE + PE is conserved when only conservative forces do work. Power is the rate of doing work: P = dW/dt = F·v. Average power = W/t. The SI unit is watt (1 W = 1 J/s). In elastic collisions, both momentum and kinetic energy are conserved. In perfectly inelastic collisions, the bodies stick together and only momentum is conserved. The coefficient of restitution e = (v₂ − v₁)/(u₁ − u₂); e = 1 for elastic, e = 0 for perfectly inelastic collisions.",
+    "rules": [
+      "Work: W = Fd cos θ; positive if θ < 90°, negative if θ > 90°, zero if θ = 90°.",
+      "Work by variable force: W = ∫F·dx.",
+      "Kinetic energy: KE = ½mv² = p²/(2m).",
+      "Work-energy theorem: W_net = ΔKE = ½mv² − ½mu².",
+      "Gravitational PE: U = mgh; Elastic PE: U = ½kx².",
+      "Conservation of energy: KE + PE = constant (if only conservative forces act).",
+      "Power: P = dW/dt = F·v; unit is watt (W).",
+      "Elastic collision (1D): v₁ = [(m₁−m₂)u₁ + 2m₂u₂]/(m₁+m₂).",
+      "Perfectly inelastic: bodies stick, v = (m₁u₁ + m₂u₂)/(m₁ + m₂).",
+      "Coefficient of restitution: e = relative speed of separation / relative speed of approach."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Work done is defined as:",
+      "options": [
+        {"id": "A", "text": "Force × velocity"},
+        {"id": "B", "text": "Force × displacement × cos θ"},
+        {"id": "C", "text": "Force × time"},
+        {"id": "D", "text": "Force / displacement"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Work W = F·d = Fd cos θ, where θ is the angle between force and displacement vectors.",
+      "explanation_incorrect": "Force × velocity is power. Force × time is impulse. Work = Fd cos θ."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of work is:",
+      "options": [
+        {"id": "A", "text": "Newton"},
+        {"id": "B", "text": "Watt"},
+        {"id": "C", "text": "Joule"},
+        {"id": "D", "text": "Pascal"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The SI unit of work is the joule (J), where 1 J = 1 N·m.",
+      "explanation_incorrect": "Newton is force, watt is power, pascal is pressure. Work is measured in joules."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Work done by a force perpendicular to the displacement is:",
+      "options": [
+        {"id": "A", "text": "Positive"},
+        {"id": "B", "text": "Negative"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Maximum"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "W = Fd cos 90° = 0. A force perpendicular to displacement does no work.",
+      "explanation_incorrect": "cos 90° = 0, so work = 0. This is why centripetal force does no work."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A force of 10 N displaces a body by 5 m along its direction. The work done is:",
+      "options": [
+        {"id": "A", "text": "2 J"},
+        {"id": "B", "text": "50 J"},
+        {"id": "C", "text": "15 J"},
+        {"id": "D", "text": "0.5 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "W = Fd cos 0° = 10 × 5 × 1 = 50 J.",
+      "explanation_incorrect": "When force and displacement are in the same direction, W = Fd = 10 × 5 = 50 J."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A coolie carries a load on his head and walks horizontally. The work done by the load against gravity is:",
+      "options": [
+        {"id": "A", "text": "mgh"},
+        {"id": "B", "text": "mgd"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Fd"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The displacement is horizontal while gravity acts vertically. θ = 90°, so W = mg × d × cos 90° = 0.",
+      "explanation_incorrect": "Since the load moves horizontally, the displacement is perpendicular to gravity, making work against gravity zero."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A force F = (3î + 4ĵ) N acts on a body producing a displacement d = (4î − 3ĵ) m. The work done is:",
+      "options": [
+        {"id": "A", "text": "25 J"},
+        {"id": "B", "text": "0 J"},
+        {"id": "C", "text": "12 J"},
+        {"id": "D", "text": "7 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "W = F·d = (3)(4) + (4)(−3) = 12 − 12 = 0 J.",
+      "explanation_incorrect": "W = F·d = 3×4 + 4×(−3) = 0 J. The force is perpendicular to the displacement."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A body is displaced from (0, 0) to (3, 4) m under a force F = (2î + 5ĵ) N. The work done is:",
+      "options": [
+        {"id": "A", "text": "26 J"},
+        {"id": "B", "text": "23 J"},
+        {"id": "C", "text": "20 J"},
+        {"id": "D", "text": "10 J"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Displacement = 3î + 4ĵ. W = F·d = 2(3) + 5(4) = 6 + 20 = 26 J.",
+      "explanation_incorrect": "W = F·d = (2)(3) + (5)(4) = 6 + 20 = 26 J."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The work done by the gravitational force on a body of mass 2 kg falling freely through 10 m is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "−200 J"},
+        {"id": "B", "text": "200 J"},
+        {"id": "C", "text": "20 J"},
+        {"id": "D", "text": "100 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "W = mgh = 2 × 10 × 10 = 200 J. Positive because gravity and displacement are in the same direction (downward).",
+      "explanation_incorrect": "Force (mg) and displacement are both downward, so work is positive: W = 2 × 10 × 10 = 200 J."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The kinetic energy of a body of mass 4 kg moving at 3 m/s is:",
+      "options": [
+        {"id": "A", "text": "12 J"},
+        {"id": "B", "text": "18 J"},
+        {"id": "C", "text": "36 J"},
+        {"id": "D", "text": "6 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "KE = ½mv² = ½ × 4 × 9 = 18 J.",
+      "explanation_incorrect": "KE = ½mv² = 0.5 × 4 × 9 = 18 J."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The work-energy theorem states that:",
+      "options": [
+        {"id": "A", "text": "Work = change in potential energy"},
+        {"id": "B", "text": "Net work = change in kinetic energy"},
+        {"id": "C", "text": "Work = total energy"},
+        {"id": "D", "text": "Net work = change in total energy"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The work-energy theorem: the net work done by all forces equals the change in kinetic energy of the body.",
+      "explanation_incorrect": "W_net = ΔKE = ½mv² − ½mu². This is the work-energy theorem."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "A body of mass 2 kg has its velocity increased from 5 m/s to 10 m/s. The work done on the body is:",
+      "options": [
+        {"id": "A", "text": "50 J"},
+        {"id": "B", "text": "75 J"},
+        {"id": "C", "text": "100 J"},
+        {"id": "D", "text": "25 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "W = ΔKE = ½m(v²−u²) = ½×2×(100−25) = 75 J.",
+      "explanation_incorrect": "W = ½ × 2 × (10² − 5²) = 1 × 75 = 75 J."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "If the kinetic energy of a body is doubled, its momentum becomes:",
+      "options": [
+        {"id": "A", "text": "Double"},
+        {"id": "B", "text": "√2 times"},
+        {"id": "C", "text": "4 times"},
+        {"id": "D", "text": "Half"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "KE = p²/(2m). If KE doubles, p² doubles, so p becomes √2 times.",
+      "explanation_incorrect": "Since p = √(2mKE), doubling KE gives p' = √(2m × 2KE) = √2 × p."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A bullet of mass 10 g moving at 400 m/s penetrates a wall and emerges at 100 m/s. The work done by the wall on the bullet is:",
+      "options": [
+        {"id": "A", "text": "−750 J"},
+        {"id": "B", "text": "750 J"},
+        {"id": "C", "text": "−800 J"},
+        {"id": "D", "text": "−50 J"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "W = ΔKE = ½ × 0.01 × (100² − 400²) = 0.005 × (10000 − 160000) = 0.005 × (−150000) = −750 J.",
+      "explanation_incorrect": "W = ½m(v²−u²) = ½×0.01×(10000−160000) = −750 J. Negative because the wall decelerates the bullet."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two bodies of masses m and 4m have equal kinetic energies. The ratio of their momenta is:",
+      "options": [
+        {"id": "A", "text": "1:4"},
+        {"id": "B", "text": "1:2"},
+        {"id": "C", "text": "1:√2"},
+        {"id": "D", "text": "4:1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "p = √(2mKE). For equal KE: p₁/p₂ = √(m/4m) = √(1/4) = 1/2.",
+      "explanation_incorrect": "Since p = √(2mKE) and KE is the same, p₁/p₂ = √(m₁/m₂) = √(m/4m) = 1/2."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The gravitational potential energy of a body of mass 5 kg at a height of 10 m is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "50 J"},
+        {"id": "B", "text": "500 J"},
+        {"id": "C", "text": "100 J"},
+        {"id": "D", "text": "5 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "PE = mgh = 5 × 10 × 10 = 500 J.",
+      "explanation_incorrect": "Gravitational PE = mgh = 5 × 10 × 10 = 500 J."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The elastic potential energy stored in a spring of spring constant 200 N/m compressed by 0.1 m is:",
+      "options": [
+        {"id": "A", "text": "1 J"},
+        {"id": "B", "text": "2 J"},
+        {"id": "C", "text": "10 J"},
+        {"id": "D", "text": "20 J"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "PE = ½kx² = ½ × 200 × (0.1)² = ½ × 200 × 0.01 = 1 J.",
+      "explanation_incorrect": "Elastic PE = ½kx² = 0.5 × 200 × 0.01 = 1 J."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A spring with k = 100 N/m is stretched from its natural length by 0.2 m. If it is further stretched to 0.4 m from natural length, the additional work done is:",
+      "options": [
+        {"id": "A", "text": "2 J"},
+        {"id": "B", "text": "4 J"},
+        {"id": "C", "text": "6 J"},
+        {"id": "D", "text": "8 J"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "W = ½k(x₂² − x₁²) = ½ × 100 × (0.16 − 0.04) = 50 × 0.12 = 6 J.",
+      "explanation_incorrect": "Additional work = ½k(x₂² − x₁²) = 50(0.16 − 0.04) = 6 J. Not ½k(Δx)²."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A body of mass 1 kg is thrown vertically upward with velocity 20 m/s. Its potential energy at the highest point is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "100 J"},
+        {"id": "B", "text": "200 J"},
+        {"id": "C", "text": "400 J"},
+        {"id": "D", "text": "50 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At highest point, all KE converts to PE. PE = ½mu² = ½ × 1 × 400 = 200 J. Or: H = u²/(2g) = 20 m, PE = mgh = 1 × 10 × 20 = 200 J.",
+      "explanation_incorrect": "By energy conservation, PE at top = KE at bottom = ½mv² = ½ × 1 × 400 = 200 J."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The force constant of a spring is 500 N/m. The work required to stretch it from 0.05 m to 0.1 m beyond natural length is:",
+      "options": [
+        {"id": "A", "text": "1.875 J"},
+        {"id": "B", "text": "0.625 J"},
+        {"id": "C", "text": "2.5 J"},
+        {"id": "D", "text": "3.125 J"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "W = ½k(x₂² − x₁²) = ½ × 500 × (0.01 − 0.0025) = 250 × 0.0075 = 1.875 J.",
+      "explanation_incorrect": "W = ½ × 500 × (0.1² − 0.05²) = 250 × 0.0075 = 1.875 J."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The potential energy of a spring when compressed by x is U. If it is compressed by 2x, the potential energy becomes:",
+      "options": [
+        {"id": "A", "text": "2U"},
+        {"id": "B", "text": "4U"},
+        {"id": "C", "text": "U/2"},
+        {"id": "D", "text": "8U"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "PE = ½kx². If x doubles, PE = ½k(2x)² = 4 × ½kx² = 4U.",
+      "explanation_incorrect": "Since PE ∝ x², doubling the compression gives 4 times the PE."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a conservative force?",
+      "options": [
+        {"id": "A", "text": "Friction"},
+        {"id": "B", "text": "Air resistance"},
+        {"id": "C", "text": "Gravitational force"},
+        {"id": "D", "text": "Viscous drag"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Gravitational force is conservative — work done depends only on initial and final positions, not the path taken.",
+      "explanation_incorrect": "Friction, air resistance, and viscous drag are non-conservative. Only gravity (and spring force) are conservative."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The total mechanical energy of a system is conserved when:",
+      "options": [
+        {"id": "A", "text": "Only gravitational force acts"},
+        {"id": "B", "text": "Only conservative forces do work"},
+        {"id": "C", "text": "Any force acts"},
+        {"id": "D", "text": "Only non-conservative forces act"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mechanical energy (KE + PE) is conserved when only conservative forces do work on the system.",
+      "explanation_incorrect": "Non-conservative forces (friction) convert mechanical energy to heat, so energy is not conserved in that form."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "A ball is dropped from 20 m. Its speed just before hitting the ground is (g = 10 m/s², no air resistance):",
+      "options": [
+        {"id": "A", "text": "10 m/s"},
+        {"id": "B", "text": "20 m/s"},
+        {"id": "C", "text": "14.1 m/s"},
+        {"id": "D", "text": "40 m/s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By energy conservation: mgh = ½mv². v = √(2gh) = √(2 × 10 × 20) = √400 = 20 m/s.",
+      "explanation_incorrect": "PE converts to KE: v = √(2gh) = √(400) = 20 m/s."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "A pendulum bob is released from height h. Its speed at the lowest point is:",
+      "options": [
+        {"id": "A", "text": "√(gh)"},
+        {"id": "B", "text": "√(2gh)"},
+        {"id": "C", "text": "2gh"},
+        {"id": "D", "text": "gh"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By conservation of energy: mgh = ½mv². v = √(2gh).",
+      "explanation_incorrect": "All PE at height h converts to KE at the lowest point: v = √(2gh)."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A block slides down a rough inclined plane of height 5 m. If 50% of the initial PE is lost to friction, the speed at the bottom is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "5 m/s"},
+        {"id": "B", "text": "10 m/s"},
+        {"id": "C", "text": "√50 m/s"},
+        {"id": "D", "text": "√100 m/s"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "50% of mgh goes to KE: ½mgh = ½mv². v = √(gh) = √(10 × 5) = √50 m/s ≈ 7.07 m/s.",
+      "explanation_incorrect": "Half the PE converts to KE: ½mv² = ½mgh → v = √(gh) = √50 m/s."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A body of mass 2 kg slides down a frictionless incline of height 5 m starting from rest. The KE at the bottom is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "50 J"},
+        {"id": "B", "text": "100 J"},
+        {"id": "C", "text": "200 J"},
+        {"id": "D", "text": "25 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By conservation: KE = mgh = 2 × 10 × 5 = 100 J.",
+      "explanation_incorrect": "All PE converts to KE on a frictionless surface: KE = mgh = 100 J."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The work done by friction on a body sliding on a surface is:",
+      "options": [
+        {"id": "A", "text": "Always positive"},
+        {"id": "B", "text": "Always negative"},
+        {"id": "C", "text": "Always zero"},
+        {"id": "D", "text": "Can be positive or negative"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kinetic friction always opposes the direction of motion, so the angle between friction and displacement is 180°, making work negative.",
+      "explanation_incorrect": "Since friction acts opposite to displacement, W = Fd cos 180° = −Fd, which is always negative."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Power is defined as:",
+      "options": [
+        {"id": "A", "text": "Force × displacement"},
+        {"id": "B", "text": "Work done per unit time"},
+        {"id": "C", "text": "Energy × time"},
+        {"id": "D", "text": "Force × time"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Power is the rate of doing work: P = W/t (average) or P = dW/dt (instantaneous).",
+      "explanation_incorrect": "Power = work/time. Force × displacement is work. Force × time is impulse."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "One horsepower (HP) is approximately equal to:",
+      "options": [
+        {"id": "A", "text": "500 W"},
+        {"id": "B", "text": "746 W"},
+        {"id": "C", "text": "1000 W"},
+        {"id": "D", "text": "100 W"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 HP = 746 W (approximately).",
+      "explanation_incorrect": "By definition, 1 horsepower = 746 watts, not 500 or 1000 W."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "A machine does 1000 J of work in 5 s. Its power is:",
+      "options": [
+        {"id": "A", "text": "5000 W"},
+        {"id": "B", "text": "200 W"},
+        {"id": "C", "text": "0.005 W"},
+        {"id": "D", "text": "500 W"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P = W/t = 1000/5 = 200 W.",
+      "explanation_incorrect": "Power = work/time = 1000/5 = 200 W."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "The instantaneous power delivered by a force F to a body moving with velocity v is:",
+      "options": [
+        {"id": "A", "text": "F × v"},
+        {"id": "B", "text": "F / v"},
+        {"id": "C", "text": "F × v²"},
+        {"id": "D", "text": "½Fv"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Instantaneous power P = F·v = Fv cos θ, where θ is the angle between force and velocity.",
+      "explanation_incorrect": "P = dW/dt = F·(dx/dt) = F·v."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "A car of mass 1000 kg accelerates from rest to 20 m/s in 10 s. The average power delivered by the engine is:",
+      "options": [
+        {"id": "A", "text": "20 kW"},
+        {"id": "B", "text": "40 kW"},
+        {"id": "C", "text": "10 kW"},
+        {"id": "D", "text": "200 kW"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Work = ΔKE = ½ × 1000 × 400 = 200000 J. P = W/t = 200000/10 = 20000 W = 20 kW.",
+      "explanation_incorrect": "Average power = ΔKE/t = (½ × 1000 × 20²)/10 = 200000/10 = 20 kW."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A pump lifts 100 kg of water per minute to a height of 30 m. The power of the pump is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "500 W"},
+        {"id": "B", "text": "3000 W"},
+        {"id": "C", "text": "30000 W"},
+        {"id": "D", "text": "50 W"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Work per minute = mgh = 100 × 10 × 30 = 30000 J. P = 30000/60 = 500 W.",
+      "explanation_incorrect": "P = mgh/t = 100 × 10 × 30/60 = 500 W."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A vehicle of mass 500 kg moves at constant velocity 72 km/h against a resistive force of 500 N. The power of the engine is:",
+      "options": [
+        {"id": "A", "text": "36 kW"},
+        {"id": "B", "text": "10 kW"},
+        {"id": "C", "text": "36000 kW"},
+        {"id": "D", "text": "500 kW"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "72 km/h = 20 m/s. At constant velocity, driving force = resistive force = 500 N. P = Fv = 500 × 20 = 10000 W = 10 kW.",
+      "explanation_incorrect": "P = Fv = 500 × 20 = 10000 W = 10 kW."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "familiarity",
+      "question_text": "In a perfectly elastic collision:",
+      "options": [
+        {"id": "A", "text": "Only momentum is conserved"},
+        {"id": "B", "text": "Only kinetic energy is conserved"},
+        {"id": "C", "text": "Both momentum and kinetic energy are conserved"},
+        {"id": "D", "text": "Neither is conserved"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In elastic collisions, both total momentum and total kinetic energy of the system are conserved.",
+      "explanation_incorrect": "Elastic collisions conserve both momentum and KE. Inelastic conserve only momentum."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "familiarity",
+      "question_text": "In a perfectly inelastic collision, the colliding bodies:",
+      "options": [
+        {"id": "A", "text": "Bounce off each other"},
+        {"id": "B", "text": "Stick together and move as one"},
+        {"id": "C", "text": "Come to rest"},
+        {"id": "D", "text": "Move in opposite directions"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a perfectly inelastic collision, the two bodies stick together and move with a common velocity.",
+      "explanation_incorrect": "Maximum KE loss occurs when bodies stick together. They move with combined mass."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "application",
+      "question_text": "A ball of mass 1 kg moving at 10 m/s collides head-on elastically with a stationary ball of mass 1 kg. After collision, the first ball:",
+      "options": [
+        {"id": "A", "text": "Moves at 10 m/s"},
+        {"id": "B", "text": "Moves at 5 m/s"},
+        {"id": "C", "text": "Comes to rest"},
+        {"id": "D", "text": "Moves at −10 m/s"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In elastic collision between equal masses, the first ball stops and the second moves with the velocity of the first.",
+      "explanation_incorrect": "For equal masses in elastic collision: v₁ = 0, v₂ = u₁ = 10 m/s. The velocities exchange."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "application",
+      "question_text": "A body of mass 2 kg moving at 6 m/s collides with a stationary body of mass 4 kg. If the collision is perfectly inelastic, the common velocity is:",
+      "options": [
+        {"id": "A", "text": "2 m/s"},
+        {"id": "B", "text": "3 m/s"},
+        {"id": "C", "text": "4 m/s"},
+        {"id": "D", "text": "6 m/s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "v = m₁u₁/(m₁+m₂) = 2×6/(2+4) = 12/6 = 2 m/s.",
+      "explanation_incorrect": "For perfectly inelastic collision: v = (2×6 + 4×0)/(2+4) = 12/6 = 2 m/s."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "application",
+      "question_text": "In the above perfectly inelastic collision (2 kg at 6 m/s hitting stationary 4 kg), the loss in kinetic energy is:",
+      "options": [
+        {"id": "A", "text": "12 J"},
+        {"id": "B", "text": "24 J"},
+        {"id": "C", "text": "36 J"},
+        {"id": "D", "text": "48 J"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "KE_initial = ½×2×36 = 36 J. KE_final = ½×6×4 = 12 J. Loss = 36 − 12 = 24 J.",
+      "explanation_incorrect": "Loss = ½ × m₁m₂/(m₁+m₂) × (u₁−u₂)² = ½ × 8/6 × 36 = 24 J."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "exam_style",
+      "question_text": "A body of mass m collides elastically with another body of mass 2m at rest. The fraction of KE transferred to the second body is:",
+      "options": [
+        {"id": "A", "text": "8/9"},
+        {"id": "B", "text": "1/9"},
+        {"id": "C", "text": "4/9"},
+        {"id": "D", "text": "2/3"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Fraction transferred = 4m₁m₂/(m₁+m₂)² = 4×m×2m/(3m)² = 8m²/9m² = 8/9.",
+      "explanation_incorrect": "For elastic collision, fraction of KE transferred = 4m₁m₂/(m₁+m₂)² = 8/9."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "exam_style",
+      "question_text": "The coefficient of restitution for a perfectly elastic collision is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "∞"},
+        {"id": "D", "text": "0.5"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "e = 1 for perfectly elastic collision. e = 0 for perfectly inelastic. For real collisions, 0 < e < 1.",
+      "explanation_incorrect": "Coefficient of restitution e = (relative speed of separation)/(relative speed of approach) = 1 for elastic."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "exam_style",
+      "question_text": "A ball is dropped from height h onto a floor with coefficient of restitution e. The height to which it rebounds is:",
+      "options": [
+        {"id": "A", "text": "eh"},
+        {"id": "B", "text": "e²h"},
+        {"id": "C", "text": "h/e"},
+        {"id": "D", "text": "h/e²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Speed before impact = √(2gh). Speed after = e√(2gh). Rebound height = (e√(2gh))²/(2g) = e²h.",
+      "explanation_incorrect": "v_rebound = e × v_impact. h_rebound = v²_rebound/(2g) = e²v²_impact/(2g) = e²h."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Work done by the centripetal force on a body moving in a circle is:",
+      "options": [
+        {"id": "A", "text": "Positive"},
+        {"id": "B", "text": "Negative"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Depends on speed"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Centripetal force is always perpendicular to the velocity (displacement direction), so work = Fd cos 90° = 0.",
+      "explanation_incorrect": "Since centripetal force ⊥ velocity at all times, it does no work. It only changes direction."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The relationship between conservative force and potential energy is:",
+      "options": [
+        {"id": "A", "text": "F = dU/dx"},
+        {"id": "B", "text": "F = −dU/dx"},
+        {"id": "C", "text": "F = U/x"},
+        {"id": "D", "text": "F = −U × x"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a conservative force, F = −dU/dx. The force is the negative gradient of potential energy.",
+      "explanation_incorrect": "The negative sign indicates that force acts in the direction of decreasing potential energy."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "application",
+      "question_text": "A heavy body moving at 2 m/s collides head-on with a light body at rest. In elastic collision, the light body moves at approximately:",
+      "options": [
+        {"id": "A", "text": "2 m/s"},
+        {"id": "B", "text": "4 m/s"},
+        {"id": "C", "text": "0 m/s"},
+        {"id": "D", "text": "1 m/s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a very heavy body hits a very light one elastically, the light body moves at approximately twice the heavy body's velocity: v₂ ≈ 2u₁ = 4 m/s.",
+      "explanation_incorrect": "For M >> m in elastic collision: v₂ = 2Mu₁/(M+m) ≈ 2u₁ = 4 m/s."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The power of a motor that can lift 200 kg of water per minute to a height of 15 m is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "500 W"},
+        {"id": "B", "text": "250 W"},
+        {"id": "C", "text": "3000 W"},
+        {"id": "D", "text": "30000 W"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P = mgh/t = 200 × 10 × 15/60 = 30000/60 = 500 W.",
+      "explanation_incorrect": "P = mgh/t = 200 × 10 × 15/60 = 500 W."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Kinetic energy is always:",
+      "options": [
+        {"id": "A", "text": "Negative"},
+        {"id": "B", "text": "Zero"},
+        {"id": "C", "text": "Positive or zero"},
+        {"id": "D", "text": "Can be negative"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "KE = ½mv² is always ≥ 0 because mass is positive and v² is always non-negative.",
+      "explanation_incorrect": "Since both m > 0 and v² ≥ 0, kinetic energy can never be negative."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "mcq",
+      "concept_id": "T04.01.C06",
+      "difficulty": "familiarity",
+      "question_text": "Momentum is conserved in:",
+      "options": [
+        {"id": "A", "text": "Only elastic collisions"},
+        {"id": "B", "text": "Only inelastic collisions"},
+        {"id": "C", "text": "All collisions (when no external force acts)"},
+        {"id": "D", "text": "No collisions"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Momentum is conserved in all types of collisions as long as no net external force acts on the system.",
+      "explanation_incorrect": "Conservation of momentum applies to elastic, inelastic, and perfectly inelastic collisions alike."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The restoring force in a spring obeying Hooke's law is:",
+      "options": [
+        {"id": "A", "text": "F = kx"},
+        {"id": "B", "text": "F = −kx"},
+        {"id": "C", "text": "F = kx²"},
+        {"id": "D", "text": "F = −kx²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hooke's law: F = −kx, where the negative sign indicates the force opposes the displacement.",
+      "explanation_incorrect": "The restoring force is proportional to displacement and opposite in direction: F = −kx."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A ball of mass 1 kg is thrown upward with 10 m/s. At a height of 3 m its kinetic energy is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "50 J"},
+        {"id": "B", "text": "30 J"},
+        {"id": "C", "text": "20 J"},
+        {"id": "D", "text": "80 J"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Total energy = ½mv² = 50 J. PE at 3 m = mgh = 30 J. KE = 50 − 30 = 20 J.",
+      "explanation_incorrect": "By conservation: KE = Total − PE = 50 − 30 = 20 J."
+    }
+  ]
+}

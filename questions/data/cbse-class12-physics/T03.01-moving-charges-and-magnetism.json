@@ -1,0 +1,826 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T03.01",
+  "topic_name": "Moving Charges and Magnetism",
+  "canonical_explanation": {
+    "text": "Moving charges produce magnetic fields and experience forces in magnetic fields. The Biot-Savart law gives the magnetic field dB due to a small current element Idl at a distance r as dB = (mu_0/4*pi) (Idl x r_hat)/r^2, where mu_0 = 4*pi x 10^-7 T.m/A. Using this law, the magnetic field at the centre of a circular coil of N turns carrying current I is B = mu_0 NI/(2R). Ampere's circuital law states that the line integral of B around a closed loop equals mu_0 times the current enclosed: integral(B.dl) = mu_0 I_enclosed. This is used to find the field inside a long solenoid (B = mu_0 nI) and toroid (B = mu_0 NI/(2*pi*r)). A charge q moving with velocity v in a magnetic field B experiences the Lorentz force F = q(v x B). This force is always perpendicular to the velocity and does no work, so it only changes the direction of motion. A charged particle in a uniform magnetic field moves in a circle of radius r = mv/(qB) with period T = 2*pi*m/(qB), independent of velocity. This principle is used in the cyclotron to accelerate charged particles. A current-carrying conductor of length l in a magnetic field experiences a force F = Il x B. Two parallel conductors carrying currents in the same direction attract each other with force per unit length F/l = mu_0 I1 I2/(2*pi*d). This defines the ampere: 1 ampere is that current which, flowing in each of two infinitely long parallel wires 1 m apart, produces a force of 2 x 10^-7 N per metre of length. A current loop in a magnetic field experiences a torque tau = NIAB sin(theta) = m x B, where m = NIA is the magnetic moment. The moving coil galvanometer uses this principle, with a restoring torque from a spring giving deflection theta = NBIA/(k), where k is the torsional spring constant.",
+    "rules": [
+      "Biot-Savart law: dB = (mu_0/4*pi) (Idl x r_hat)/r^2",
+      "Magnetic field at centre of circular coil: B = mu_0 NI/(2R)",
+      "Ampere's law: integral(B.dl) = mu_0 I_enclosed",
+      "Field inside solenoid: B = mu_0 nI; inside toroid: B = mu_0 NI/(2*pi*r)",
+      "Lorentz force on moving charge: F = q(v x B); force is perpendicular to v, does no work",
+      "Radius of circular motion in magnetic field: r = mv/(qB); period T = 2*pi*m/(qB)",
+      "Force on current conductor: F = Il x B; force between parallel currents: F/l = mu_0 I1 I2/(2*pi*d)",
+      "Torque on current loop: tau = NIAB sin(theta); magnetic moment m = NIA"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.01.Q001",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The Biot-Savart law gives the magnetic field due to:",
+      "options": [
+        { "id": "A", "text": "A stationary charge" },
+        { "id": "B", "text": "A current-carrying element" },
+        { "id": "C", "text": "A magnetic dipole" },
+        { "id": "D", "text": "A changing electric field" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Biot-Savart law gives the magnetic field dB produced by a small current element Idl. It states dB = (mu_0/4*pi)(Idl x r_hat)/r^2. This is the fundamental law for computing magnetic fields due to current distributions.",
+      "explanation_incorrect": "A stationary charge produces only an electric field, not a magnetic field. The Biot-Savart law specifically describes the magnetic field produced by a current-carrying conductor element, not by magnetic dipoles or changing electric fields."
+    },
+    {
+      "question_id": "T03.01.Q002",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The magnetic field at the centre of a circular loop of radius R carrying current I is:",
+      "options": [
+        { "id": "A", "text": "mu_0 I/(2R)" },
+        { "id": "B", "text": "mu_0 I/(2*pi*R)" },
+        { "id": "C", "text": "mu_0 I*R/2" },
+        { "id": "D", "text": "mu_0 I/(4*pi*R)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using the Biot-Savart law and integrating over the entire circular loop, the magnetic field at the centre is B = mu_0 I/(2R). For N turns, this becomes B = mu_0 NI/(2R). This is directed along the axis of the loop.",
+      "explanation_incorrect": "mu_0 I/(2*pi*R) is the field due to an infinite straight conductor at distance R, not a circular loop. The correct formula for the centre of a circular loop is B = mu_0 I/(2R), derived by integrating the Biot-Savart law."
+    },
+    {
+      "question_id": "T03.01.Q003",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The magnetic field due to an infinitely long straight conductor carrying current I at a perpendicular distance r is:",
+      "options": [
+        { "id": "A", "text": "mu_0 I/(4*pi*r)" },
+        { "id": "B", "text": "mu_0 I/(2*pi*r)" },
+        { "id": "C", "text": "mu_0 I/(2r)" },
+        { "id": "D", "text": "mu_0 I*r/(2*pi)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The magnetic field at a perpendicular distance r from an infinitely long straight conductor carrying current I is B = mu_0 I/(2*pi*r). This can be derived using either the Biot-Savart law or Ampere's circuital law.",
+      "explanation_incorrect": "B = mu_0 I/(2*pi*r) is the correct expression. mu_0 I/(2r) is the field at the centre of a circular loop, not a straight conductor. The field due to a straight wire decreases inversely with distance r."
+    },
+    {
+      "question_id": "T03.01.Q004",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "A circular coil of 100 turns and radius 10 cm carries a current of 1 A. The magnetic field at the centre is (given mu_0 = 4*pi x 10^-7 T.m/A):",
+      "options": [
+        { "id": "A", "text": "6.28 x 10^-4 T" },
+        { "id": "B", "text": "6.28 x 10^-5 T" },
+        { "id": "C", "text": "3.14 x 10^-4 T" },
+        { "id": "D", "text": "3.14 x 10^-5 T" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "B = mu_0 NI/(2R) = (4*pi x 10^-7 x 100 x 1)/(2 x 0.1) = (4*pi x 10^-5)/0.2 = 2*pi x 10^-4 = 6.28 x 10^-4 T.",
+      "explanation_incorrect": "Using B = mu_0 NI/(2R) with N = 100, I = 1 A, R = 0.1 m gives B = 6.28 x 10^-4 T. Common errors include forgetting to convert cm to m, using the wrong formula, or dividing by 2*pi instead of 2."
+    },
+    {
+      "question_id": "T03.01.Q005",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "The direction of the magnetic field at the centre of a current-carrying circular loop is determined by:",
+      "options": [
+        { "id": "A", "text": "Fleming's left-hand rule" },
+        { "id": "B", "text": "Right-hand thumb rule" },
+        { "id": "C", "text": "Lenz's law" },
+        { "id": "D", "text": "Left-hand thumb rule" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The right-hand thumb rule: if you curl the fingers of the right hand in the direction of current flow in the loop, the thumb points in the direction of the magnetic field at the centre (along the axis of the loop).",
+      "explanation_incorrect": "Fleming's left-hand rule is for the force on a current-carrying conductor in a magnetic field. Lenz's law is about the direction of induced current. The right-hand thumb rule gives the direction of the magnetic field due to a current loop."
+    },
+    {
+      "question_id": "T03.01.Q006",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "If the radius of a circular coil is doubled while keeping the current and number of turns same, the magnetic field at the centre becomes:",
+      "options": [
+        { "id": "A", "text": "Double" },
+        { "id": "B", "text": "Half" },
+        { "id": "C", "text": "One-fourth" },
+        { "id": "D", "text": "Four times" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "B = mu_0 NI/(2R). If R is doubled, B' = mu_0 NI/(2 x 2R) = B/2. The magnetic field at the centre is inversely proportional to the radius, so doubling the radius halves the field.",
+      "explanation_incorrect": "Since B is proportional to 1/R (not 1/R^2), doubling the radius gives B' = B/2. The field becomes half, not one-fourth. The inverse-square law does not apply here; it's a simple inverse relationship with radius."
+    },
+    {
+      "question_id": "T03.01.Q007",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A wire of length L carrying current I is bent into a circle. The magnetic field at the centre is:",
+      "options": [
+        { "id": "A", "text": "mu_0*I/(2L)" },
+        { "id": "B", "text": "mu_0*pi*I/L" },
+        { "id": "C", "text": "mu_0*pi*I/(2L)" },
+        { "id": "D", "text": "mu_0*I*pi^2/L" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a wire of length L is bent into a circle, 2*pi*R = L, so R = L/(2*pi). The field at the centre B = mu_0*I/(2R) = mu_0*I*2*pi/(2L) = mu_0*pi*I/L.",
+      "explanation_incorrect": "R = L/(2*pi). Substituting into B = mu_0*I/(2R) gives B = mu_0*pi*I/L. Common errors include using R = L/pi (which is for a semicircle) or forgetting to simplify the 2s correctly."
+    },
+    {
+      "question_id": "T03.01.Q008",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The magnetic field on the axis of a circular loop at a large distance x from the centre (x >> R) varies as:",
+      "options": [
+        { "id": "A", "text": "1/x" },
+        { "id": "B", "text": "1/x^2" },
+        { "id": "C", "text": "1/x^3" },
+        { "id": "D", "text": "1/x^4" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The magnetic field on the axis of a circular loop is B = mu_0*I*R^2 / (2*(R^2 + x^2)^(3/2)). For x >> R, this becomes B = mu_0*I*R^2 / (2*x^3), which varies as 1/x^3. This is characteristic of a magnetic dipole field.",
+      "explanation_incorrect": "At large distances, the circular loop behaves like a magnetic dipole. The axial field of a magnetic dipole falls off as 1/x^3, not 1/x^2 (which is for a monopole) or 1/x. This 1/x^3 dependence is analogous to the electric dipole field."
+    },
+    {
+      "question_id": "T03.01.Q009",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Two concentric circular coils of radii R and 2R lie in the same plane and carry currents I and 2I respectively in opposite directions. The ratio of the magnetic field at the common centre due to the inner coil to that due to the outer coil is:",
+      "options": [
+        { "id": "A", "text": "1:1" },
+        { "id": "B", "text": "2:1" },
+        { "id": "C", "text": "1:2" },
+        { "id": "D", "text": "4:1" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "B_inner = mu_0*I/(2R). B_outer = mu_0*2I/(2*2R) = mu_0*I/(2R). So B_inner/B_outer = 1:1. Although the currents and radii differ, the fields happen to be equal in magnitude. Since the currents are in opposite directions, the net field at the centre is zero.",
+      "explanation_incorrect": "B_inner = mu_0*I/(2R) and B_outer = mu_0*(2I)/(2*2R) = mu_0*I/(2R). The ratio is 1:1. The doubling of current in the outer coil is exactly compensated by its doubled radius."
+    },
+    {
+      "question_id": "T03.01.Q010",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Ampere's circuital law states that:",
+      "options": [
+        { "id": "A", "text": "The magnetic field around a current is always uniform" },
+        { "id": "B", "text": "The line integral of B around a closed loop equals mu_0 times the enclosed current" },
+        { "id": "C", "text": "The magnetic flux through a closed surface is always zero" },
+        { "id": "D", "text": "Moving charges always produce circular magnetic fields" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ampere's circuital law states that the closed line integral of the magnetic field B around any closed loop (Amperian loop) equals mu_0 times the total current passing through the surface bounded by the loop: integral(B.dl) = mu_0*I_enclosed.",
+      "explanation_incorrect": "Option C describes Gauss's law for magnetism, not Ampere's law. Ampere's law specifically relates the circulation of B around a closed path to the enclosed current. It is particularly useful for calculating B in situations with high symmetry."
+    },
+    {
+      "question_id": "T03.01.Q011",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The magnetic field inside a long solenoid having n turns per unit length and carrying current I is:",
+      "options": [
+        { "id": "A", "text": "mu_0*nI" },
+        { "id": "B", "text": "mu_0*nI/(2*pi)" },
+        { "id": "C", "text": "mu_0*I/(2*pi*n)" },
+        { "id": "D", "text": "mu_0*n^2*I" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using Ampere's law with a rectangular Amperian loop partly inside and partly outside the solenoid: B*l = mu_0*n*l*I (where n*l is the number of turns enclosed). This gives B = mu_0*nI, which is uniform inside and zero outside (ideal solenoid).",
+      "explanation_incorrect": "For an ideal long solenoid, B = mu_0*nI inside. The field is uniform throughout the interior and parallel to the axis. Outside the solenoid, the field is zero. The 2*pi factor does not appear here; it appears in the field of a straight wire."
+    },
+    {
+      "question_id": "T03.01.Q012",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The magnetic field inside a toroid at a distance r from its centre (within the turns) is:",
+      "options": [
+        { "id": "A", "text": "mu_0*NI/(2*pi*r)" },
+        { "id": "B", "text": "mu_0*nI" },
+        { "id": "C", "text": "mu_0*NI/r" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Applying Ampere's law to a circular path of radius r inside the toroid: B*(2*pi*r) = mu_0*NI, where N is the total number of turns. This gives B = mu_0*NI/(2*pi*r). The field is confined within the toroid.",
+      "explanation_incorrect": "For a toroid, B = mu_0*NI/(2*pi*r) inside the coils. The field is zero both inside the central hole and outside the toroid. This differs from a solenoid because the path length varies with r in a toroid."
+    },
+    {
+      "question_id": "T03.01.Q013",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "A solenoid of length 50 cm has 500 turns and carries a current of 2 A. The magnetic field inside the solenoid is:",
+      "options": [
+        { "id": "A", "text": "2.51 x 10^-3 T" },
+        { "id": "B", "text": "1.26 x 10^-3 T" },
+        { "id": "C", "text": "6.28 x 10^-3 T" },
+        { "id": "D", "text": "1.26 x 10^-2 T" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "n = N/L = 500/0.5 = 1000 turns/m. B = mu_0*nI = 4*pi x 10^-7 x 1000 x 2 = 8*pi x 10^-4 = 2.51 x 10^-3 T.",
+      "explanation_incorrect": "n = 500/0.5 = 1000 turns/m. B = mu_0*nI = 4*pi x 10^-7 x 1000 x 2 = 2.51 x 10^-3 T. Errors occur from not converting cm to m (giving n = 10 instead of 1000) or using the wrong formula."
+    },
+    {
+      "question_id": "T03.01.Q014",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "Ampere's circuital law is most useful for calculating the magnetic field when:",
+      "options": [
+        { "id": "A", "text": "The current distribution has no symmetry" },
+        { "id": "B", "text": "The current distribution has high symmetry" },
+        { "id": "C", "text": "Only point charges are present" },
+        { "id": "D", "text": "The field is time-varying" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ampere's law is most useful when the current distribution has sufficient symmetry (cylindrical, planar, or toroidal) so that B can be taken out of the integral, allowing direct calculation. Examples include solenoids, toroids, and long straight wires.",
+      "explanation_incorrect": "Without symmetry, Ampere's law is still valid but not easily solvable because B cannot be factored out of the integral. The Biot-Savart law is more general and can handle arbitrary geometries. Ampere's law is most powerful with high symmetry."
+    },
+    {
+      "question_id": "T03.01.Q015",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The magnetic field outside an ideal long solenoid is:",
+      "options": [
+        { "id": "A", "text": "mu_0*nI" },
+        { "id": "B", "text": "mu_0*nI/2" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Depends on the distance from the solenoid" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal infinitely long solenoid, the magnetic field outside is zero. This is because the field lines are confined entirely within the solenoid, forming closed loops inside. Ampere's law applied to a loop outside encloses zero net current.",
+      "explanation_incorrect": "An ideal solenoid has a uniform field mu_0*nI inside and zero field outside. This can be verified using Ampere's law: any closed path outside the solenoid encloses zero net current (contributions from adjacent turns cancel), giving B = 0 outside."
+    },
+    {
+      "question_id": "T03.01.Q016",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A solenoid has its axis along the x-direction. If the current as seen from the right end flows clockwise, the magnetic field inside the solenoid is directed:",
+      "options": [
+        { "id": "A", "text": "Along the positive x-direction" },
+        { "id": "B", "text": "Along the negative x-direction" },
+        { "id": "C", "text": "Along the positive y-direction" },
+        { "id": "D", "text": "Radially outward" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the right-hand rule: when viewed from the right, current flows clockwise. The magnetic field points away from you at that end, meaning it points towards the left (negative x-direction). The end from which current appears clockwise acts as the south pole.",
+      "explanation_incorrect": "The end of a solenoid from which current appears clockwise acts as a south pole (field lines enter). Using the right-hand thumb rule, the field inside points from the right end (south) to the left end (north), which is along the negative x-direction."
+    },
+    {
+      "question_id": "T03.01.Q017",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The magnetic field at the centre of the open end of a semi-infinite solenoid (long solenoid cut in half) with n turns per unit length carrying current I is:",
+      "options": [
+        { "id": "A", "text": "mu_0*nI" },
+        { "id": "B", "text": "mu_0*nI/2" },
+        { "id": "C", "text": "2*mu_0*nI" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At the centre of the open end of a semi-infinite solenoid, the field is exactly half of the field deep inside: B = mu_0*nI/2. This is because the solenoid extends to infinity in only one direction, contributing half the field.",
+      "explanation_incorrect": "The field inside an infinitely long solenoid is mu_0*nI. At the open end of a semi-infinite solenoid, by symmetry arguments, the field is exactly half: mu_0*nI/2. This result can be understood as two semi-infinite solenoids joining to make a full solenoid."
+    },
+    {
+      "question_id": "T03.01.Q018",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The magnetic field in the open space inside a toroid (the central hole) is:",
+      "options": [
+        { "id": "A", "text": "mu_0*NI/(2*pi*r)" },
+        { "id": "B", "text": "mu_0*nI" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Non-zero and uniform" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "By Ampere's law, for a circular Amperian loop of radius r inside the central hole of the toroid, no current is enclosed (the loop does not thread through any turns). Therefore, B*(2*pi*r) = 0, giving B = 0.",
+      "explanation_incorrect": "The magnetic field is confined only within the winding region of the toroid. In the central hole and outside the toroid, the field is zero because no net current is enclosed by Amperian loops in these regions."
+    },
+    {
+      "question_id": "T03.01.Q019",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The Lorentz force on a charge q moving with velocity v in a magnetic field B is:",
+      "options": [
+        { "id": "A", "text": "F = qvB (always)" },
+        { "id": "B", "text": "F = q(v x B)" },
+        { "id": "C", "text": "F = q(v . B)" },
+        { "id": "D", "text": "F = qB/v" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The magnetic Lorentz force on a charge q moving with velocity v in a magnetic field B is F = q(v x B). The magnitude is F = qvB sin(theta), where theta is the angle between v and B. The force is perpendicular to both v and B.",
+      "explanation_incorrect": "F = qvB is only the magnitude when v is perpendicular to B (sin 90 = 1). The general expression is the cross product F = q(v x B), which accounts for direction and the angle between v and B. The dot product v.B gives a scalar, not a force."
+    },
+    {
+      "question_id": "T03.01.Q020",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A charged particle moving parallel to a magnetic field experiences:",
+      "options": [
+        { "id": "A", "text": "Maximum force" },
+        { "id": "B", "text": "A force perpendicular to both v and B" },
+        { "id": "C", "text": "Zero force" },
+        { "id": "D", "text": "A force along the magnetic field" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The magnetic force F = qvB sin(theta). When v is parallel to B, theta = 0 and sin(0) = 0, so F = 0. The magnetic force acts only when there is a component of velocity perpendicular to the field.",
+      "explanation_incorrect": "When a charged particle moves parallel (or anti-parallel) to the magnetic field, the angle theta = 0 (or 180), and sin(theta) = 0. The force F = qvB sin(theta) = 0. The force is maximum only when v is perpendicular to B."
+    },
+    {
+      "question_id": "T03.01.Q021",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The work done by the magnetic Lorentz force on a charged particle is:",
+      "options": [
+        { "id": "A", "text": "Positive" },
+        { "id": "B", "text": "Negative" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Depends on the sign of the charge" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The magnetic Lorentz force F = q(v x B) is always perpendicular to the velocity v. Since work W = F.v and F is perpendicular to v, the work done is always zero. The magnetic force changes only the direction of motion, not the speed or kinetic energy.",
+      "explanation_incorrect": "The magnetic force is always perpendicular to the velocity of the particle. Since work = force x displacement x cos(angle), and the angle is always 90 degrees (cos 90 = 0), no work is done by the magnetic force regardless of the sign of the charge."
+    },
+    {
+      "question_id": "T03.01.Q022",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "A proton moving with velocity 10^6 m/s enters a magnetic field of 0.1 T perpendicular to its velocity. The radius of the circular path is (mass of proton = 1.67 x 10^-27 kg):",
+      "options": [
+        { "id": "A", "text": "0.104 m" },
+        { "id": "B", "text": "0.052 m" },
+        { "id": "C", "text": "1.04 m" },
+        { "id": "D", "text": "0.01 m" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "r = mv/(qB) = (1.67 x 10^-27 x 10^6)/(1.6 x 10^-19 x 0.1) = 1.67 x 10^-21 / 1.6 x 10^-20 = 0.104 m. The proton moves in a circle of radius about 10.4 cm.",
+      "explanation_incorrect": "Using r = mv/(qB) with m = 1.67 x 10^-27 kg, v = 10^6 m/s, q = 1.6 x 10^-19 C, B = 0.1 T gives r = 0.104 m. Common errors include using electron mass instead of proton mass, or forgetting to account for the field strength."
+    },
+    {
+      "question_id": "T03.01.Q023",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "In a cyclotron, the time period of revolution of a charged particle is independent of:",
+      "options": [
+        { "id": "A", "text": "Mass of the particle" },
+        { "id": "B", "text": "Charge of the particle" },
+        { "id": "C", "text": "Speed and radius" },
+        { "id": "D", "text": "Magnetic field strength" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The time period T = 2*pi*m/(qB) depends on mass m, charge q, and magnetic field B, but is independent of the speed v and radius r of the orbit. This is the key principle behind the cyclotron: the frequency of revolution remains constant as the particle accelerates.",
+      "explanation_incorrect": "T = 2*pi*m/(qB) shows that the period depends on m, q, and B. As the particle gains energy and speed in a cyclotron, both v and r increase proportionally (r = mv/qB), keeping T constant. This allows a fixed-frequency oscillating electric field to accelerate the particle repeatedly."
+    },
+    {
+      "question_id": "T03.01.Q024",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "A charged particle enters a uniform magnetic field at an angle of 45 degrees to the field direction. The path of the particle is:",
+      "options": [
+        { "id": "A", "text": "A circle" },
+        { "id": "B", "text": "A straight line" },
+        { "id": "C", "text": "A helix" },
+        { "id": "D", "text": "A parabola" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When a charged particle enters at an angle to the magnetic field, its velocity has two components: parallel to B (unchanged, no force) and perpendicular to B (circular motion due to Lorentz force). The combination of linear and circular motion produces a helical path.",
+      "explanation_incorrect": "Only when the velocity is exactly perpendicular to B does the particle move in a circle. When velocity is parallel to B, it moves in a straight line. At any other angle, the particle follows a helical (spiral) path combining circular motion and linear motion along B."
+    },
+    {
+      "question_id": "T03.01.Q025",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The kinetic energy of a charged particle moving in a uniform magnetic field:",
+      "options": [
+        { "id": "A", "text": "Increases continuously" },
+        { "id": "B", "text": "Decreases continuously" },
+        { "id": "C", "text": "Remains constant" },
+        { "id": "D", "text": "Oscillates periodically" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The magnetic force is always perpendicular to the velocity, so it does no work. By the work-energy theorem, the kinetic energy remains constant. The speed of the particle does not change; only the direction of motion changes.",
+      "explanation_incorrect": "Since the magnetic force is perpendicular to velocity, W = F.ds = 0. No work means no change in kinetic energy. The particle maintains constant speed while its direction changes, keeping KE = (1/2)mv^2 unchanged."
+    },
+    {
+      "question_id": "T03.01.Q026",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A cyclotron cannot be used to accelerate:",
+      "options": [
+        { "id": "A", "text": "Protons" },
+        { "id": "B", "text": "Alpha particles" },
+        { "id": "C", "text": "Electrons" },
+        { "id": "D", "text": "Deuterons" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Electrons have very small mass (9.1 x 10^-31 kg) and quickly reach relativistic speeds where their effective mass increases significantly. This changes the cyclotron frequency T = 2*pi*m/(qB), destroying the resonance condition. Hence cyclotrons cannot effectively accelerate electrons.",
+      "explanation_incorrect": "The cyclotron works on the principle that T = 2*pi*m/(qB) is constant. For electrons, due to their very small mass, they quickly reach relativistic speeds where the mass increases, changing the period and breaking synchronisation with the oscillating electric field."
+    },
+    {
+      "question_id": "T03.01.Q027",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "An electron and a proton enter a uniform magnetic field perpendicularly with the same momentum. The ratio of the radii of their circular paths (r_e/r_p) is:",
+      "options": [
+        { "id": "A", "text": "m_e/m_p" },
+        { "id": "B", "text": "m_p/m_e" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "sqrt(m_e/m_p)" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The radius r = mv/(qB) = p/(qB), where p is the momentum. Since both have the same momentum p and the same magnitude of charge q = e, r_e = p/(eB) = r_p. The ratio r_e/r_p = 1.",
+      "explanation_incorrect": "Since r = p/(qB) and both particles have the same momentum p and the same charge magnitude e, their radii are equal: r_e/r_p = 1. The mass does not appear separately when radius is expressed in terms of momentum rather than velocity."
+    },
+    {
+      "question_id": "T03.01.Q028",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The force on a straight conductor of length l carrying current I in a magnetic field B at angle theta to the field is:",
+      "options": [
+        { "id": "A", "text": "F = BIl" },
+        { "id": "B", "text": "F = BIl sin(theta)" },
+        { "id": "C", "text": "F = BIl cos(theta)" },
+        { "id": "D", "text": "F = BIl tan(theta)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The force on a current-carrying conductor in a magnetic field is F = Il x B, with magnitude F = BIl sin(theta), where theta is the angle between the current direction and the magnetic field. The direction is given by the right-hand rule or Fleming's left-hand rule.",
+      "explanation_incorrect": "F = BIl is only correct when the conductor is perpendicular to the field (theta = 90 degrees, sin 90 = 1). The general expression is F = BIl sin(theta). When the conductor is parallel to B, theta = 0 and F = 0."
+    },
+    {
+      "question_id": "T03.01.Q029",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Two long parallel wires carry currents in the same direction. They:",
+      "options": [
+        { "id": "A", "text": "Repel each other" },
+        { "id": "B", "text": "Attract each other" },
+        { "id": "C", "text": "Exert no force on each other" },
+        { "id": "D", "text": "First attract then repel" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two parallel wires carrying currents in the same direction attract each other. The magnetic field of one wire exerts a force on the current in the other wire directed towards the first wire. This can be verified using the right-hand rule and F = Il x B.",
+      "explanation_incorrect": "Parallel currents (same direction) attract; anti-parallel currents (opposite directions) repel. This is a fundamental result that can be derived using the force between a current-carrying conductor and the magnetic field of another conductor."
+    },
+    {
+      "question_id": "T03.01.Q030",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The force per unit length between two parallel wires separated by distance d, carrying currents I1 and I2, is:",
+      "options": [
+        { "id": "A", "text": "mu_0*I1*I2/(4*pi*d)" },
+        { "id": "B", "text": "mu_0*I1*I2/(2*pi*d)" },
+        { "id": "C", "text": "mu_0*I1*I2*d/(2*pi)" },
+        { "id": "D", "text": "mu_0*I1*I2/(2*pi*d^2)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The magnetic field due to wire 1 at the location of wire 2 is B = mu_0*I1/(2*pi*d). The force per unit length on wire 2 is F/l = B*I2 = mu_0*I1*I2/(2*pi*d).",
+      "explanation_incorrect": "F/l = mu_0*I1*I2/(2*pi*d). This formula combines the field of one wire B = mu_0*I/(2*pi*d) with the force on the other F = BIl. The factor 4*pi would incorrectly mix Biot-Savart and force formulas."
+    },
+    {
+      "question_id": "T03.01.Q031",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "A wire of length 0.5 m carrying a current of 2 A is placed perpendicular to a magnetic field of 0.4 T. The force on the wire is:",
+      "options": [
+        { "id": "A", "text": "0.2 N" },
+        { "id": "B", "text": "0.4 N" },
+        { "id": "C", "text": "0.8 N" },
+        { "id": "D", "text": "1.0 N" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F = BIl sin(theta) = 0.4 x 2 x 0.5 x sin(90) = 0.4 N. Since the wire is perpendicular to the field, sin(90) = 1.",
+      "explanation_incorrect": "F = BIl sin(theta) = 0.4 x 2 x 0.5 x 1 = 0.4 N. The wire is perpendicular to B, so theta = 90 degrees and sin(theta) = 1. If you get 0.2 N, you may have used cos instead of sin."
+    },
+    {
+      "question_id": "T03.01.Q032",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "The SI definition of one ampere is based on the force between two parallel wires. One ampere is that current which, when flowing through two infinitely long parallel conductors 1 m apart in vacuum, produces a force per unit length of:",
+      "options": [
+        { "id": "A", "text": "1 N/m" },
+        { "id": "B", "text": "2 x 10^-7 N/m" },
+        { "id": "C", "text": "4*pi x 10^-7 N/m" },
+        { "id": "D", "text": "9 x 10^9 N/m" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "One ampere is defined as that steady current which, when flowing through each of two infinitely long straight parallel conductors placed 1 m apart in vacuum, produces a force of 2 x 10^-7 N per metre of length between them.",
+      "explanation_incorrect": "Using F/l = mu_0*I1*I2/(2*pi*d) with I1 = I2 = 1 A and d = 1 m: F/l = 4*pi x 10^-7 x 1 x 1/(2*pi x 1) = 2 x 10^-7 N/m. This value defines the ampere."
+    },
+    {
+      "question_id": "T03.01.Q033",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "Two parallel wires 0.1 m apart carry currents of 10 A and 20 A in opposite directions. The force per metre between them is:",
+      "options": [
+        { "id": "A", "text": "4 x 10^-4 N/m, attractive" },
+        { "id": "B", "text": "4 x 10^-4 N/m, repulsive" },
+        { "id": "C", "text": "2 x 10^-4 N/m, repulsive" },
+        { "id": "D", "text": "2 x 10^-4 N/m, attractive" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F/l = mu_0*I1*I2/(2*pi*d) = 4*pi x 10^-7 x 10 x 20/(2*pi x 0.1) = 4 x 10^-4 N/m. Since the currents are in opposite directions (anti-parallel), the force is repulsive.",
+      "explanation_incorrect": "F/l = mu_0*I1*I2/(2*pi*d) = 4*pi x 10^-7 x 200/(2*pi x 0.1) = 4 x 10^-4 N/m. Anti-parallel currents repel each other. Parallel currents would attract."
+    },
+    {
+      "question_id": "T03.01.Q034",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A rectangular loop of wire carrying current I is placed in a non-uniform magnetic field. The net force on the loop is:",
+      "options": [
+        { "id": "A", "text": "Always zero" },
+        { "id": "B", "text": "Zero only if the field is uniform" },
+        { "id": "C", "text": "Non-zero and directed towards the stronger field region" },
+        { "id": "D", "text": "Non-zero and depends on the field gradient" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "In a non-uniform magnetic field, the forces on opposite sides of the loop are unequal because the field strength differs at their locations. The net force is non-zero and depends on the gradient (rate of change) of the magnetic field.",
+      "explanation_incorrect": "In a uniform field, forces on opposite sides of a current loop are equal and opposite, giving zero net force. In a non-uniform field, these forces differ, resulting in a net force that depends on how the field varies in space (the field gradient)."
+    },
+    {
+      "question_id": "T03.01.Q035",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A current-carrying conductor is placed in a magnetic field. The direction of the force on it is given by:",
+      "options": [
+        { "id": "A", "text": "Right-hand thumb rule" },
+        { "id": "B", "text": "Fleming's left-hand rule" },
+        { "id": "C", "text": "Lenz's law" },
+        { "id": "D", "text": "Fleming's right-hand rule" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Fleming's left-hand rule gives the direction of force on a current-carrying conductor in a magnetic field. The forefinger points in the direction of the field (B), the middle finger in the direction of current (I), and the thumb gives the force direction (F).",
+      "explanation_incorrect": "Fleming's right-hand rule is for generators (gives direction of induced current). The right-hand thumb rule gives the direction of the magnetic field due to a current. For the force on a current in a magnetic field, Fleming's left-hand rule is used."
+    },
+    {
+      "question_id": "T03.01.Q036",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A straight wire of length 20 cm carrying a current of 5 A is placed in a uniform magnetic field of 0.2 T at 30 degrees to the field. The force on the wire is:",
+      "options": [
+        { "id": "A", "text": "0.2 N" },
+        { "id": "B", "text": "0.1 N" },
+        { "id": "C", "text": "0.05 N" },
+        { "id": "D", "text": "0.15 N" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F = BIl sin(theta) = 0.2 x 5 x 0.2 x sin(30) = 0.2 x 0.5 = 0.1 N. The factor sin(30) = 0.5 reduces the force because the wire is not perpendicular to the field.",
+      "explanation_incorrect": "F = BIl sin(theta) = 0.2 x 5 x 0.2 x sin(30) = 0.2 x 0.5 = 0.1 N. If you forgot sin(30) and used sin(90) = 1, you would get 0.2 N. If you used cos(30), you would get a different value."
+    },
+    {
+      "question_id": "T03.01.Q037",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The magnetic moment of a current loop of area A carrying current I with N turns is:",
+      "options": [
+        { "id": "A", "text": "m = NIA" },
+        { "id": "B", "text": "m = IA/N" },
+        { "id": "C", "text": "m = NI/A" },
+        { "id": "D", "text": "m = NA/I" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The magnetic moment (or magnetic dipole moment) of a current loop is m = NIA, where N is the number of turns, I is the current, and A is the area of the loop. Its SI unit is A.m^2. The direction is along the normal to the loop given by the right-hand rule.",
+      "explanation_incorrect": "The magnetic moment m = NIA has dimensions of current x area = A.m^2. It is proportional to N, I, and A. Dividing by any of these quantities is incorrect."
+    },
+    {
+      "question_id": "T03.01.Q038",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The torque on a current loop of magnetic moment m in a uniform magnetic field B is:",
+      "options": [
+        { "id": "A", "text": "tau = m.B" },
+        { "id": "B", "text": "tau = m x B" },
+        { "id": "C", "text": "tau = m/B" },
+        { "id": "D", "text": "tau = B/m" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The torque on a current loop (or magnetic dipole) in a uniform magnetic field is tau = m x B, with magnitude tau = mB sin(theta), where theta is the angle between m and B. This is analogous to the torque on an electric dipole: tau = p x E.",
+      "explanation_incorrect": "The torque is the cross product m x B, not the dot product m.B. The cross product gives a vector perpendicular to both m and B, with magnitude mB sin(theta). The dot product m.B = mB cos(theta) is related to potential energy, not torque."
+    },
+    {
+      "question_id": "T03.01.Q039",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The torque on a rectangular current loop in a magnetic field is maximum when the plane of the loop is:",
+      "options": [
+        { "id": "A", "text": "Parallel to the magnetic field" },
+        { "id": "B", "text": "Perpendicular to the magnetic field" },
+        { "id": "C", "text": "At 45 degrees to the magnetic field" },
+        { "id": "D", "text": "At 60 degrees to the magnetic field" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Torque tau = NIAB sin(theta), where theta is the angle between the area vector (normal to the loop) and B. When the plane of the loop is parallel to B, the normal to the plane is perpendicular to B (theta = 90 degrees), giving maximum torque tau = NIAB.",
+      "explanation_incorrect": "The angle theta in tau = NIAB sin(theta) is between the area vector (perpendicular to the plane) and B. When the loop plane is parallel to B, theta = 90 degrees and sin(90) = 1, giving maximum torque. When the plane is perpendicular to B, theta = 0 and torque is zero."
+    },
+    {
+      "question_id": "T03.01.Q040",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "A moving coil galvanometer uses:",
+      "options": [
+        { "id": "A", "text": "A radial magnetic field to ensure linear deflection" },
+        { "id": "B", "text": "A uniform electric field" },
+        { "id": "C", "text": "Only a solenoid" },
+        { "id": "D", "text": "An electromagnet with no iron core" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A moving coil galvanometer uses a radial magnetic field (achieved using a cylindrical soft iron core between concave pole pieces). In a radial field, the plane of the coil is always parallel to the field, so sin(theta) = 1 and torque = NBIA, giving linear deflection proportional to current.",
+      "explanation_incorrect": "The radial magnetic field ensures that the magnetic field is always in the plane of the coil regardless of the coil's orientation. This makes the torque NBIA (without the sin theta factor), resulting in a linear relationship between deflection and current."
+    },
+    {
+      "question_id": "T03.01.Q041",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "A circular coil of 20 turns and radius 5 cm carries a current of 0.1 A. Its magnetic moment is:",
+      "options": [
+        { "id": "A", "text": "1.57 x 10^-2 A.m^2" },
+        { "id": "B", "text": "1.57 x 10^-3 A.m^2" },
+        { "id": "C", "text": "3.14 x 10^-2 A.m^2" },
+        { "id": "D", "text": "3.14 x 10^-3 A.m^2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "m = NIA = 20 x 0.1 x pi x (0.05)^2 = 20 x 0.1 x pi x 0.0025 = 20 x 0.1 x 7.854 x 10^-3 = 1.57 x 10^-2 A.m^2.",
+      "explanation_incorrect": "m = NIA = 20 x 0.1 x pi x (0.05)^2 = 20 x 0.1 x 7.854 x 10^-3 = 1.57 x 10^-2 A.m^2. Remember to convert radius to metres (5 cm = 0.05 m) and use A = pi*r^2 for the area of the circular coil."
+    },
+    {
+      "question_id": "T03.01.Q042",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "The current sensitivity of a galvanometer is defined as:",
+      "options": [
+        { "id": "A", "text": "Current per unit deflection" },
+        { "id": "B", "text": "Deflection per unit current" },
+        { "id": "C", "text": "Voltage per unit deflection" },
+        { "id": "D", "text": "Deflection per unit voltage" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The current sensitivity of a galvanometer is the deflection per unit current: theta/I = NBA/k, where k is the torsional constant of the spring. Higher sensitivity means larger deflection for a given current.",
+      "explanation_incorrect": "Current sensitivity = theta/I = NBA/k. It tells us how much the coil deflects for each unit of current. Voltage sensitivity = theta/V is the deflection per unit voltage. Both are measures of how sensitive the galvanometer is."
+    },
+    {
+      "question_id": "T03.01.Q043",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "To convert a galvanometer into an ammeter, we connect:",
+      "options": [
+        { "id": "A", "text": "A high resistance in series" },
+        { "id": "B", "text": "A low resistance in parallel (shunt)" },
+        { "id": "C", "text": "A high resistance in parallel" },
+        { "id": "D", "text": "A capacitor in series" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "To convert a galvanometer into an ammeter, a low resistance called a shunt is connected in parallel. The shunt diverts most of the current, allowing only a small fraction (up to the galvanometer's full-scale deflection current) to pass through the galvanometer.",
+      "explanation_incorrect": "A high resistance in series would make it a voltmeter, not an ammeter. For an ammeter, a low shunt resistance in parallel is used so that the ammeter has very low overall resistance and does not significantly affect the circuit current."
+    },
+    {
+      "question_id": "T03.01.Q044",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "To convert a galvanometer into a voltmeter, we connect:",
+      "options": [
+        { "id": "A", "text": "A low resistance in parallel" },
+        { "id": "B", "text": "A high resistance in series" },
+        { "id": "C", "text": "A low resistance in series" },
+        { "id": "D", "text": "A high resistance in parallel" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "To convert a galvanometer into a voltmeter, a high resistance is connected in series. This ensures that the voltmeter has a very high resistance, draws negligible current from the circuit, and the voltage across it is proportional to the deflection.",
+      "explanation_incorrect": "A low resistance in parallel makes it an ammeter. For a voltmeter, a high series resistance R is needed so that V = I_g(R + G), where I_g is the full-scale current and G is the galvanometer resistance. The high resistance limits the current."
+    },
+    {
+      "question_id": "T03.01.Q045",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A galvanometer of resistance 50 ohms gives full-scale deflection for a current of 1 mA. To convert it into a voltmeter of range 0-10 V, the resistance to be connected in series is:",
+      "options": [
+        { "id": "A", "text": "9950 ohms" },
+        { "id": "B", "text": "10000 ohms" },
+        { "id": "C", "text": "950 ohms" },
+        { "id": "D", "text": "5000 ohms" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "V = I_g(R + G), so R = V/I_g - G = 10/(1 x 10^-3) - 50 = 10000 - 50 = 9950 ohms. The high series resistance ensures the voltmeter draws minimal current from the circuit.",
+      "explanation_incorrect": "R = V/I_g - G = 10/0.001 - 50 = 10000 - 50 = 9950 ohms. If you forget to subtract G, you get 10000 ohms. If you use the wrong units for I_g, you get a very different answer."
+    },
+    {
+      "question_id": "T03.01.Q046",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A galvanometer of resistance 100 ohms gives full-scale deflection for 10 mA. To convert it into an ammeter of range 0-1 A, the shunt resistance required is:",
+      "options": [
+        { "id": "A", "text": "100/99 ohms" },
+        { "id": "B", "text": "1 ohm" },
+        { "id": "C", "text": "10/99 ohms" },
+        { "id": "D", "text": "100/9 ohms" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The shunt S = I_g*G/(I - I_g) = 0.01 x 100/(1 - 0.01) = 1/0.99 = 100/99 ohms (approximately 1.01 ohms). Most of the current (0.99 A) flows through the shunt.",
+      "explanation_incorrect": "S = I_g*G/(I - I_g) = 10 x 10^-3 x 100/(1 - 0.01) = 1/0.99 = 100/99 ohms. This is slightly more than 1 ohm. The shunt must have very low resistance to divert the excess current away from the galvanometer."
+    },
+    {
+      "question_id": "T03.01.Q047",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The sensitivity of a moving coil galvanometer can be increased by:",
+      "options": [
+        { "id": "A", "text": "Increasing the spring constant k" },
+        { "id": "B", "text": "Decreasing the number of turns N" },
+        { "id": "C", "text": "Increasing the magnetic field B and area A, and decreasing k" },
+        { "id": "D", "text": "Decreasing both B and A" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Current sensitivity = NBA/k. To increase sensitivity, we need to increase N, B, A and decrease k (use a weaker spring). However, decreasing k too much makes the galvanometer sluggish. Increasing B using strong permanent magnets is the most practical approach.",
+      "explanation_incorrect": "Since sensitivity = NBA/k, increasing N, B, or A or decreasing k will increase sensitivity. Increasing k or decreasing N, B, A would decrease sensitivity. Option C correctly identifies that increasing B, A and decreasing k enhances sensitivity."
+    },
+    {
+      "question_id": "T03.01.Q048",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "In a moving coil galvanometer, the soft iron cylindrical core is used to:",
+      "options": [
+        { "id": "A", "text": "Increase the weight of the coil" },
+        { "id": "B", "text": "Make the magnetic field radial and stronger" },
+        { "id": "C", "text": "Reduce the resistance of the coil" },
+        { "id": "D", "text": "Provide electrical contact" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The soft iron core serves two purposes: (1) it concentrates the magnetic field, making it stronger, and (2) along with the curved pole pieces, it makes the field radial so that the torque remains NIAB for all orientations of the coil, ensuring a linear scale.",
+      "explanation_incorrect": "The soft iron core is not for weight, resistance, or electrical contact. Its primary role is to make the magnetic field radial (ensuring sin theta = 1 always) and to strengthen the field by concentrating the magnetic flux lines."
+    },
+    {
+      "question_id": "T03.01.Q049",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "A rectangular coil of 50 turns, area 20 cm^2, carries 0.5 A and is placed in a uniform magnetic field of 2 T with the plane of the coil perpendicular to the field. The torque on the coil is:",
+      "options": [
+        { "id": "A", "text": "1 N.m" },
+        { "id": "B", "text": "0.1 N.m" },
+        { "id": "C", "text": "0 N.m" },
+        { "id": "D", "text": "0.5 N.m" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When the plane of the coil is perpendicular to B, the area vector (normal to the plane) is parallel to B, so theta = 0. Torque = NIAB sin(0) = 0. The coil is in stable equilibrium at this position.",
+      "explanation_incorrect": "When the coil plane is perpendicular to B, the normal to the coil is parallel to B (theta = 0). Since tau = NIAB sin(theta) = NIAB sin(0) = 0. The torque is zero because the coil is in its equilibrium position. Maximum torque occurs when the coil plane is parallel to B."
+    },
+    {
+      "question_id": "T03.01.Q050",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "An ideal ammeter has:",
+      "options": [
+        { "id": "A", "text": "Very high resistance" },
+        { "id": "B", "text": "Zero resistance" },
+        { "id": "C", "text": "Moderate resistance" },
+        { "id": "D", "text": "Infinite resistance" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An ideal ammeter has zero resistance so that it does not change the current being measured when connected in series with the circuit. In practice, ammeters have very low (but non-zero) resistance achieved by using a low-resistance shunt.",
+      "explanation_incorrect": "An ideal ammeter should not disturb the circuit current, so it must have zero resistance. An ideal voltmeter, on the other hand, must have infinite resistance. High or moderate resistance ammeters would reduce the circuit current and give incorrect readings."
+    }
+  ]
+}

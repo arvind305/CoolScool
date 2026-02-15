@@ -1,0 +1,826 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T01.01",
+  "topic_name": "Electric Charges and Fields",
+  "canonical_explanation": {
+    "text": "Electric charge is a fundamental property of matter. There are two types of charges: positive and negative. Like charges repel and unlike charges attract. Charge is conserved (the total charge of an isolated system remains constant) and quantised (charge exists in discrete multiples of e = 1.6 x 10^-19 C). Coulomb's law states that the force between two point charges q1 and q2 separated by distance r is F = kq1q2/r^2 where k = 1/(4*pi*epsilon_0) = 9 x 10^9 N m^2 C^-2. The principle of superposition states that the force on a charge due to multiple charges is the vector sum of forces due to individual charges. The electric field E at a point is the force per unit positive test charge: E = F/q0. The field due to a point charge is E = kq/r^2 directed radially outward for positive charges. An electric dipole consists of two equal and opposite charges separated by distance 2a; its dipole moment p = q(2a) directed from negative to positive charge. The field on the axial line of a dipole is E = 2kp/r^3 and on the equatorial line is E = kp/r^3 (for r >> a). Torque on a dipole in a uniform field is tau = p x E. Gauss's theorem states that the total electric flux through a closed surface is phi = q_enclosed/epsilon_0. It is used to derive fields for symmetric charge distributions: infinite line charge (E = lambda/(2*pi*epsilon_0*r)), infinite plane sheet (E = sigma/(2*epsilon_0)), and uniformly charged spherical shell.",
+    "rules": [
+      "Charge is conserved: total charge of an isolated system remains constant",
+      "Charge is quantised: q = ne, where n is an integer and e = 1.6 x 10^-19 C",
+      "Coulomb's law: F = kq1q2/r^2, where k = 1/(4*pi*epsilon_0) = 9 x 10^9 N m^2 C^-2",
+      "Principle of superposition: net force is the vector sum of individual Coulomb forces",
+      "Electric field due to point charge: E = kq/r^2, directed radially outward for positive charge",
+      "Electric dipole moment: p = q(2a), directed from negative to positive charge",
+      "Torque on dipole in uniform field: tau = pE sin(theta)",
+      "Gauss's theorem: total flux phi = q_enclosed/epsilon_0"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.01.Q001",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The minimum charge that can exist in nature is:",
+      "options": [
+        { "id": "A", "text": "1 coulomb" },
+        { "id": "B", "text": "1.6 x 10^-19 C" },
+        { "id": "C", "text": "1.6 x 10^-20 C" },
+        { "id": "D", "text": "4.8 x 10^-10 esu" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The minimum charge that can exist freely in nature is the charge on an electron (or proton), which is e = 1.6 x 10^-19 C. This is the elementary charge, and all observable charges are integral multiples of this value.",
+      "explanation_incorrect": "1 coulomb is a very large unit of charge. 1.6 x 10^-20 C is not the elementary charge. While 4.8 x 10^-10 esu is the charge of an electron in CGS units, the question asks in SI units where the answer is 1.6 x 10^-19 C."
+    },
+    {
+      "question_id": "T01.01.Q002",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following statements about electric charge is correct?",
+      "options": [
+        { "id": "A", "text": "Charge is not conserved in nuclear reactions" },
+        { "id": "B", "text": "A body can have a charge of 0.5e" },
+        { "id": "C", "text": "Charge is always quantised and conserved" },
+        { "id": "D", "text": "Charge can be created or destroyed freely" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Electric charge is both quantised (exists only in integral multiples of e = 1.6 x 10^-19 C) and conserved (total charge of an isolated system remains constant). These are two fundamental properties of charge.",
+      "explanation_incorrect": "Charge is conserved in all processes, including nuclear reactions. A body cannot have a fractional elementary charge like 0.5e because charge is quantised. Charge can neither be created nor destroyed; it can only be transferred from one body to another."
+    },
+    {
+      "question_id": "T01.01.Q003",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "When a glass rod is rubbed with silk, the rod acquires positive charge. This is because:",
+      "options": [
+        { "id": "A", "text": "Protons are transferred from silk to the rod" },
+        { "id": "B", "text": "Electrons are transferred from the rod to silk" },
+        { "id": "C", "text": "Protons are created on the rod" },
+        { "id": "D", "text": "Positive charges move from silk to the rod" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a glass rod is rubbed with silk, electrons are transferred from the glass rod to the silk. The rod loses electrons and hence becomes positively charged, while the silk gains electrons and becomes negatively charged. Only electrons are transferred during charging by friction.",
+      "explanation_incorrect": "Protons are tightly bound in the nucleus and cannot be transferred by rubbing. Charges are not created; they are only transferred. During charging by friction, electrons (not protons or positive charges) transfer from one body to another."
+    },
+    {
+      "question_id": "T01.01.Q004",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "A body has a charge of -3.2 x 10^-18 C. The number of excess electrons on the body is:",
+      "options": [
+        { "id": "A", "text": "10" },
+        { "id": "B", "text": "20" },
+        { "id": "C", "text": "30" },
+        { "id": "D", "text": "15" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using q = ne, the number of excess electrons n = q/e = 3.2 x 10^-18 / 1.6 x 10^-19 = 20. The negative sign indicates excess electrons on the body.",
+      "explanation_incorrect": "The number of excess electrons is found using n = q/e. Here n = 3.2 x 10^-18 / 1.6 x 10^-19 = 20. Options 10, 30, and 15 result from incorrect division or using the wrong value of elementary charge."
+    },
+    {
+      "question_id": "T01.01.Q005",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "Which of the following charges is NOT possible on a body?",
+      "options": [
+        { "id": "A", "text": "3.2 x 10^-19 C" },
+        { "id": "B", "text": "4.8 x 10^-19 C" },
+        { "id": "C", "text": "2.4 x 10^-19 C" },
+        { "id": "D", "text": "6.4 x 10^-19 C" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Charge must be an integral multiple of e = 1.6 x 10^-19 C. Option C gives 2.4 x 10^-19 / 1.6 x 10^-19 = 1.5, which is not an integer. The other options give n = 2, 3, and 4 respectively, all valid integers.",
+      "explanation_incorrect": "3.2 x 10^-19 C = 2e, 4.8 x 10^-19 C = 3e, and 6.4 x 10^-19 C = 4e are all integral multiples of e. But 2.4 x 10^-19 C = 1.5e, which is not an integral multiple of e, so this charge is not possible."
+    },
+    {
+      "question_id": "T01.01.Q006",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "question_text": "A metallic sphere has a charge of +5 microcoulombs. It is touched with an identical uncharged sphere. The charge on each sphere after separation is:",
+      "options": [
+        { "id": "A", "text": "+5 microcoulombs each" },
+        { "id": "B", "text": "+2.5 microcoulombs each" },
+        { "id": "C", "text": "0 and +5 microcoulombs" },
+        { "id": "D", "text": "+10 microcoulombs each" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When two identical conducting spheres are touched, the total charge distributes equally between them. Total charge = +5 microcoulombs, so each gets +5/2 = +2.5 microcoulombs. This follows from conservation of charge and symmetry.",
+      "explanation_incorrect": "By conservation of charge, the total charge (+5 microcoulombs) remains the same but redistributes equally between two identical spheres. Each sphere gets half, i.e., +2.5 microcoulombs. The charge does not double or remain on one sphere."
+    },
+    {
+      "question_id": "T01.01.Q007",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A certain charge Q is divided into two parts q and (Q - q). For maximum electrostatic force between them at a fixed separation, the ratio q/Q should be:",
+      "options": [
+        { "id": "A", "text": "1/4" },
+        { "id": "B", "text": "1/2" },
+        { "id": "C", "text": "1/3" },
+        { "id": "D", "text": "2/3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The force F = kq(Q-q)/r^2. To maximise, dF/dq = 0 gives Q - 2q = 0, so q = Q/2. Thus q/Q = 1/2. Both parts must be equal for maximum force.",
+      "explanation_incorrect": "Using calculus, F = kq(Q-q)/r^2 is maximised when dF/dq = k(Q - 2q)/r^2 = 0, giving q = Q/2. Ratios of 1/4, 1/3, or 2/3 do not satisfy this condition and give a smaller force."
+    },
+    {
+      "question_id": "T01.01.Q008",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "In a hydrogen atom, the electron revolves around the proton at a distance of 0.53 A. The electric force between them is approximately (given k = 9 x 10^9 N m^2 C^-2):",
+      "options": [
+        { "id": "A", "text": "8.2 x 10^-8 N" },
+        { "id": "B", "text": "8.2 x 10^-10 N" },
+        { "id": "C", "text": "3.6 x 10^-8 N" },
+        { "id": "D", "text": "3.6 x 10^-10 N" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "F = ke^2/r^2 = 9 x 10^9 x (1.6 x 10^-19)^2 / (0.53 x 10^-10)^2 = 9 x 10^9 x 2.56 x 10^-38 / 2.809 x 10^-21 = 8.2 x 10^-8 N. This is the Coulomb force of attraction between the electron and proton.",
+      "explanation_incorrect": "The calculation requires F = ke^2/r^2 with e = 1.6 x 10^-19 C and r = 0.53 x 10^-10 m. Careful substitution gives F = 8.2 x 10^-8 N. Other values arise from errors in converting angstroms to metres or squaring incorrectly."
+    },
+    {
+      "question_id": "T01.01.Q009",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If a charge of 1 C is placed at a distance of 1 m from another charge of 1 C, the force between them is:",
+      "options": [
+        { "id": "A", "text": "9 x 10^9 N" },
+        { "id": "B", "text": "1 N" },
+        { "id": "C", "text": "9 x 10^-9 N" },
+        { "id": "D", "text": "1/(4*pi*epsilon_0) N/C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "F = kq1q2/r^2 = 9 x 10^9 x 1 x 1 / 1^2 = 9 x 10^9 N. This enormous force shows that 1 coulomb is a very large unit of charge. In practice, charges encountered are in microcoulombs or nanocoulombs.",
+      "explanation_incorrect": "By Coulomb's law, F = kq1q2/r^2. Substituting k = 9 x 10^9 N m^2 C^-2, q1 = q2 = 1 C, and r = 1 m gives F = 9 x 10^9 N. This is a very large force, illustrating why 1 C is an extremely large charge."
+    },
+    {
+      "question_id": "T01.01.Q010",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Coulomb's law is valid for:",
+      "options": [
+        { "id": "A", "text": "All types of charges at any separation" },
+        { "id": "B", "text": "Point charges only" },
+        { "id": "C", "text": "Large charged bodies only" },
+        { "id": "D", "text": "Charges in motion only" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Coulomb's law in its basic form F = kq1q2/r^2 is strictly valid only for point charges (or charged bodies whose sizes are very small compared to the distance between them). For extended charge distributions, integration is needed.",
+      "explanation_incorrect": "Coulomb's law applies strictly to point charges or charges whose sizes are negligible compared to their separation. It does not directly apply to extended charged bodies; for such cases, the force must be computed by integrating over the charge distribution."
+    },
+    {
+      "question_id": "T01.01.Q011",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If the distance between two point charges is doubled, the electrostatic force between them becomes:",
+      "options": [
+        { "id": "A", "text": "Half" },
+        { "id": "B", "text": "Double" },
+        { "id": "C", "text": "One-fourth" },
+        { "id": "D", "text": "Four times" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "By Coulomb's law, F = kq1q2/r^2. If r is doubled, F' = kq1q2/(2r)^2 = kq1q2/4r^2 = F/4. The force becomes one-fourth because it follows an inverse-square law.",
+      "explanation_incorrect": "Coulomb's law follows an inverse-square law, meaning force is inversely proportional to the square of the distance. Doubling the distance reduces the force by a factor of 2^2 = 4, not 2. So the force becomes one-fourth, not half."
+    },
+    {
+      "question_id": "T01.01.Q012",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The principle of superposition in electrostatics states that:",
+      "options": [
+        { "id": "A", "text": "Electric charges always cancel out" },
+        { "id": "B", "text": "The net force on a charge is the vector sum of forces due to all other charges" },
+        { "id": "C", "text": "Two charges always exert equal forces" },
+        { "id": "D", "text": "Electric field lines always originate from positive charges" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The principle of superposition states that the force on any charge due to a number of other charges is the vector sum of all the forces on that charge due to each of the other charges, taken one at a time. The individual forces are unaffected by the presence of other charges.",
+      "explanation_incorrect": "The superposition principle is about the additivity of forces. It says that the total force on a charge is the vector sum of individual Coulomb forces from all other charges. It does not say charges cancel, nor is it about equal forces or field line directions."
+    },
+    {
+      "question_id": "T01.01.Q013",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "Two point charges +2 microcoulombs and +8 microcoulombs are separated by 12 cm. The point on the line joining them where the net electric field is zero lies:",
+      "options": [
+        { "id": "A", "text": "4 cm from the +2 microcoulomb charge" },
+        { "id": "B", "text": "8 cm from the +2 microcoulomb charge" },
+        { "id": "C", "text": "6 cm from each charge" },
+        { "id": "D", "text": "4 cm from the +8 microcoulomb charge" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The null point lies between the charges, closer to the smaller charge. Let it be at distance x from +2 microcoulombs. Then k(2)/(x^2) = k(8)/(12-x)^2. This gives (12-x)/x = 2, so 12 - x = 2x, giving x = 4 cm from the +2 microcoulomb charge.",
+      "explanation_incorrect": "For two like charges, the null point lies between them, closer to the smaller charge. Setting the fields equal: 2/x^2 = 8/(12-x)^2 gives (12-x)/x = 2 (taking the positive root), so x = 4 cm from the smaller charge, not at the midpoint or 8 cm."
+    },
+    {
+      "question_id": "T01.01.Q014",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "Three point charges +q, +q, and +q are placed at the three vertices of an equilateral triangle of side a. The magnitude of the net force on any one charge is:",
+      "options": [
+        { "id": "A", "text": "kq^2/a^2" },
+        { "id": "B", "text": "2kq^2/a^2" },
+        { "id": "C", "text": "sqrt(3) kq^2/a^2" },
+        { "id": "D", "text": "3kq^2/a^2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Each charge experiences two repulsive forces of magnitude F = kq^2/a^2, each from the other two charges. The angle between these two force vectors is 60 degrees. The resultant force = sqrt(F^2 + F^2 + 2F^2 cos 60) = sqrt(3F^2) = sqrt(3) kq^2/a^2.",
+      "explanation_incorrect": "By superposition, each charge experiences two forces of equal magnitude F = kq^2/a^2 at 60 degrees to each other. Using the parallelogram law, the resultant is sqrt(F^2 + F^2 + 2F^2 cos 60) = F sqrt(3) = sqrt(3) kq^2/a^2, not simply 2F or 3F."
+    },
+    {
+      "question_id": "T01.01.Q015",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "question_text": "The force between two charges in a medium of dielectric constant K is:",
+      "options": [
+        { "id": "A", "text": "K times the force in vacuum" },
+        { "id": "B", "text": "1/K times the force in vacuum" },
+        { "id": "C", "text": "K^2 times the force in vacuum" },
+        { "id": "D", "text": "Same as the force in vacuum" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a medium with dielectric constant K, the force becomes F = kq1q2/(Kr^2) = F_vacuum/K. The dielectric reduces the force by a factor of K because the medium partially shields the charges from each other.",
+      "explanation_incorrect": "A dielectric medium reduces the electrostatic force by a factor of K, where K is the dielectric constant. So F_medium = F_vacuum/K, not K times or K^2 times the vacuum force."
+    },
+    {
+      "question_id": "T01.01.Q016",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two identical metallic spheres A and B carrying charges +4Q and -2Q are brought into contact and then separated. If a third identical uncharged sphere C is first touched with A and then with B, the final charge on B is:",
+      "options": [
+        { "id": "A", "text": "3Q/2" },
+        { "id": "B", "text": "Q" },
+        { "id": "C", "text": "3Q/4" },
+        { "id": "D", "text": "Q/2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When A (+4Q) and B (-2Q) are touched: each gets (+4Q - 2Q)/2 = +Q. Now C (0) touches A (+Q): each gets Q/2. Then C (Q/2) touches B (+Q): each gets (Q/2 + Q)/2 = 3Q/4. So final charge on B is 3Q/4.",
+      "explanation_incorrect": "Step-by-step: A and B touch: each becomes +Q. C touches A: A and C each become Q/2. C (now Q/2) touches B (still +Q): B and C each become (Q/2 + Q)/2 = 3Q/4. The key is tracking charge at each contact carefully."
+    },
+    {
+      "question_id": "T01.01.Q017",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Five equal charges q are placed at the five vertices of a regular pentagon. The net force on a charge Q placed at the centre is:",
+      "options": [
+        { "id": "A", "text": "5kqQ/r^2, directed outward" },
+        { "id": "B", "text": "Zero" },
+        { "id": "C", "text": "kqQ/r^2, directed outward" },
+        { "id": "D", "text": "5kqQ/r^2, directed inward" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By symmetry, the forces on the central charge Q due to each vertex charge are equal in magnitude and uniformly distributed at 72-degree intervals around the centre. The vector sum of five equal vectors separated by 72 degrees is zero. Hence the net force is zero.",
+      "explanation_incorrect": "Due to the perfect symmetry of a regular pentagon, the five equal forces on the central charge cancel out vectorially. The forces are equal in magnitude but their directions are symmetric, summing to zero. This result holds for any regular polygon with equal charges at the vertices."
+    },
+    {
+      "question_id": "T01.01.Q018",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Two point charges +q and +4q are separated by distance d. A third charge Q is placed on the line joining them such that the system is in equilibrium. The value and position of Q are:",
+      "options": [
+        { "id": "A", "text": "Q = -4q/9, at d/3 from +q" },
+        { "id": "B", "text": "Q = -4q/9, at 2d/3 from +q" },
+        { "id": "C", "text": "Q = +4q/9, at d/3 from +q" },
+        { "id": "D", "text": "Q = -q/4, at d/2 from +q" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For equilibrium of Q: kqQ/x^2 + k(4q)Q/(d-x)^2 = 0 doesn't apply since both forces are in different directions. For the null point: kq/x^2 = k(4q)/(d-x)^2 gives (d-x)/x = 2, so x = d/3. For equilibrium of +q: kq(4q)/d^2 = kqQ/(d/3)^2, giving Q = -4q/9.",
+      "explanation_incorrect": "The equilibrium position must be between the two charges and closer to the smaller charge. Setting fields equal gives x = d/3. For the system to be in equilibrium, Q must be negative to attract both positive charges. Equating forces on +q gives Q = -4q/9."
+    },
+    {
+      "question_id": "T01.01.Q019",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of electric field is:",
+      "options": [
+        { "id": "A", "text": "N/C or V/m" },
+        { "id": "B", "text": "C/N" },
+        { "id": "C", "text": "J/C" },
+        { "id": "D", "text": "N/m" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The electric field E = F/q, so its SI unit is newton per coulomb (N/C). Since V = J/C and J = N.m, we have V/m = (N.m/C)/m = N/C. Both N/C and V/m are equivalent and correct units for electric field.",
+      "explanation_incorrect": "J/C is the unit of electric potential (volt), not electric field. C/N and N/m are not units of electric field. The electric field has units of force per charge (N/C) or equivalently potential per unit length (V/m)."
+    },
+    {
+      "question_id": "T01.01.Q020",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Electric field lines due to a positive point charge are:",
+      "options": [
+        { "id": "A", "text": "Closed loops" },
+        { "id": "B", "text": "Straight lines directed radially inward" },
+        { "id": "C", "text": "Straight lines directed radially outward" },
+        { "id": "D", "text": "Concentric circles" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Electric field lines due to a positive point charge are straight lines directed radially outward from the charge. They originate from positive charges and extend to infinity (or terminate on negative charges). They are never closed loops.",
+      "explanation_incorrect": "Electric field lines originate from positive charges and point outward. They are not closed loops (that is a property of magnetic field lines). They are not directed inward for positive charges (inward direction applies to negative charges). They are not circular."
+    },
+    {
+      "question_id": "T01.01.Q021",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The electric field at a distance r from an infinite line charge with linear charge density lambda is:",
+      "options": [
+        { "id": "A", "text": "lambda/(2*pi*epsilon_0*r)" },
+        { "id": "B", "text": "lambda/(4*pi*epsilon_0*r^2)" },
+        { "id": "C", "text": "lambda/(2*pi*epsilon_0*r^2)" },
+        { "id": "D", "text": "lambda/(4*pi*epsilon_0*r)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using Gauss's theorem with a cylindrical Gaussian surface of radius r and length l, the flux is E(2*pi*r*l) = lambda*l/epsilon_0. This gives E = lambda/(2*pi*epsilon_0*r). The field varies inversely as the first power of the distance.",
+      "explanation_incorrect": "The field due to an infinite line charge is derived using Gauss's law with a cylindrical surface. The result is E = lambda/(2*pi*epsilon_0*r), which varies as 1/r, not 1/r^2. The 1/r^2 dependence is for a point charge."
+    },
+    {
+      "question_id": "T01.01.Q022",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "The electric field at a point on the axial line of a short electric dipole at distance r from the centre (r >> 2a) is:",
+      "options": [
+        { "id": "A", "text": "kp/r^3, along the dipole moment direction" },
+        { "id": "B", "text": "2kp/r^3, along the dipole moment direction" },
+        { "id": "C", "text": "kp/r^2, opposite to the dipole moment" },
+        { "id": "D", "text": "2kp/r^3, opposite to the dipole moment" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The electric field on the axial line of a short dipole at distance r from its centre is E_axial = 2kp/r^3, directed along the dipole moment (from -q to +q). This is twice the equatorial field at the same distance.",
+      "explanation_incorrect": "On the axial line, E = 2kp/r^3, not kp/r^3 (which is the equatorial field). The factor of 2 arises because the fields due to the two charges of the dipole add up (both components are in the same direction along the axis). The direction is along the dipole moment."
+    },
+    {
+      "question_id": "T01.01.Q023",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "Two electric field lines:",
+      "options": [
+        { "id": "A", "text": "Can cross each other at any point" },
+        { "id": "B", "text": "Can cross only at the location of a charge" },
+        { "id": "C", "text": "Never cross each other" },
+        { "id": "D", "text": "Cross each other at right angles only" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Two electric field lines never cross each other. If they did, there would be two directions of the electric field at the point of intersection, which is not possible since the electric field at a point has a unique direction.",
+      "explanation_incorrect": "Electric field lines never cross each other because at each point in space the electric field has a unique direction. If two lines crossed, there would be two different field directions at the intersection point, which is physically impossible."
+    },
+    {
+      "question_id": "T01.01.Q024",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "question_text": "The ratio of the electric field on the axial line to the equatorial line of a short dipole at the same distance r is:",
+      "options": [
+        { "id": "A", "text": "1:1" },
+        { "id": "B", "text": "2:1" },
+        { "id": "C", "text": "1:2" },
+        { "id": "D", "text": "4:1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a short dipole (r >> a), the axial field E_axial = 2kp/r^3 and the equatorial field E_equatorial = kp/r^3. Therefore, E_axial/E_equatorial = 2:1.",
+      "explanation_incorrect": "The axial field of a dipole is 2kp/r^3 while the equatorial field is kp/r^3. The ratio is 2:1, not 1:1 or 4:1. This factor of 2 is a fundamental result for dipole fields."
+    },
+    {
+      "question_id": "T01.01.Q025",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "An electron is released from rest in a uniform electric field of magnitude 2 x 10^4 N/C. The acceleration of the electron is approximately (mass of electron = 9.1 x 10^-31 kg):",
+      "options": [
+        { "id": "A", "text": "3.5 x 10^15 m/s^2" },
+        { "id": "B", "text": "3.5 x 10^12 m/s^2" },
+        { "id": "C", "text": "1.6 x 10^15 m/s^2" },
+        { "id": "D", "text": "1.6 x 10^12 m/s^2" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Force on electron F = eE = 1.6 x 10^-19 x 2 x 10^4 = 3.2 x 10^-15 N. Acceleration a = F/m = 3.2 x 10^-15 / 9.1 x 10^-31 = 3.5 x 10^15 m/s^2. The acceleration is in the direction opposite to the electric field.",
+      "explanation_incorrect": "Using F = eE and a = F/m: a = eE/m = (1.6 x 10^-19 x 2 x 10^4)/(9.1 x 10^-31) = 3.5 x 10^15 m/s^2. Other values result from arithmetic errors. Note the extremely high acceleration due to the tiny mass of the electron."
+    },
+    {
+      "question_id": "T01.01.Q026",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The electric field due to an infinite plane sheet of charge with surface charge density sigma is:",
+      "options": [
+        { "id": "A", "text": "sigma/epsilon_0, independent of distance" },
+        { "id": "B", "text": "sigma/(2*epsilon_0), independent of distance" },
+        { "id": "C", "text": "sigma/(2*epsilon_0*r)" },
+        { "id": "D", "text": "sigma/(epsilon_0*r^2)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using Gauss's law with a cylindrical Gaussian surface (pillbox) with flat faces parallel to the sheet, 2EA = sigma*A/epsilon_0, giving E = sigma/(2*epsilon_0). This field is uniform and independent of distance from the sheet.",
+      "explanation_incorrect": "For an infinite plane sheet, E = sigma/(2*epsilon_0). The factor of 2 in the denominator arises because flux passes through both flat faces of the Gaussian pillbox. Note: sigma/epsilon_0 is the field between two parallel plates of a capacitor, not a single infinite sheet."
+    },
+    {
+      "question_id": "T01.01.Q027",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A charged particle of mass m and charge q enters a uniform electric field E with velocity v perpendicular to the field. The path of the particle is:",
+      "options": [
+        { "id": "A", "text": "A straight line" },
+        { "id": "B", "text": "A circle" },
+        { "id": "C", "text": "A parabola" },
+        { "id": "D", "text": "An ellipse" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The particle has constant velocity v in one direction (no force along this direction) and constant acceleration a = qE/m in the perpendicular direction (due to the electric force). This is analogous to projectile motion, and the trajectory is a parabola.",
+      "explanation_incorrect": "With constant velocity in one direction and constant acceleration perpendicular to it, the motion is exactly like projectile motion, resulting in a parabolic path. A circle requires a centripetal force (perpendicular to velocity at all times), which is not the case here."
+    },
+    {
+      "question_id": "T01.01.Q028",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The direction of the electric dipole moment is:",
+      "options": [
+        { "id": "A", "text": "From positive charge to negative charge" },
+        { "id": "B", "text": "From negative charge to positive charge" },
+        { "id": "C", "text": "Perpendicular to the line joining the charges" },
+        { "id": "D", "text": "Along the electric field direction" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The electric dipole moment vector p is directed from the negative charge to the positive charge. Its magnitude is p = q(2a), where q is the magnitude of each charge and 2a is the separation between them.",
+      "explanation_incorrect": "By convention, the dipole moment vector points from the negative charge towards the positive charge. This is opposite to the direction of the electric field between the charges of the dipole. It is not perpendicular to the line joining the charges."
+    },
+    {
+      "question_id": "T01.01.Q029",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of electric dipole moment is:",
+      "options": [
+        { "id": "A", "text": "C/m" },
+        { "id": "B", "text": "C.m" },
+        { "id": "C", "text": "C.m^2" },
+        { "id": "D", "text": "N.m/C" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The electric dipole moment p = q x 2a, where q is in coulombs and 2a is in metres. Therefore, the SI unit is coulomb-metre (C.m).",
+      "explanation_incorrect": "Since p = charge x distance, the unit is C.m (coulomb-metre), not C/m or C.m^2. N.m/C has different dimensions. The debye (D) is a non-SI unit sometimes used for molecular dipole moments."
+    },
+    {
+      "question_id": "T01.01.Q030",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The torque on an electric dipole placed in a uniform electric field E is maximum when the angle between p and E is:",
+      "options": [
+        { "id": "A", "text": "0 degrees" },
+        { "id": "B", "text": "45 degrees" },
+        { "id": "C", "text": "90 degrees" },
+        { "id": "D", "text": "180 degrees" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The torque on a dipole is tau = pE sin(theta). The torque is maximum when sin(theta) = 1, i.e., theta = 90 degrees. At this angle, the dipole moment is perpendicular to the electric field.",
+      "explanation_incorrect": "Torque tau = pE sin(theta) is maximum when sin(theta) is maximum, which occurs at theta = 90 degrees. At 0 and 180 degrees, sin(theta) = 0 and the torque is zero (stable and unstable equilibrium respectively)."
+    },
+    {
+      "question_id": "T01.01.Q031",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "An electric dipole is in stable equilibrium when the dipole moment p is:",
+      "options": [
+        { "id": "A", "text": "Perpendicular to the electric field" },
+        { "id": "B", "text": "Anti-parallel to the electric field" },
+        { "id": "C", "text": "Parallel to the electric field" },
+        { "id": "D", "text": "At 45 degrees to the electric field" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Stable equilibrium occurs when potential energy U = -pE cos(theta) is minimum, i.e., when theta = 0 (p is parallel to E). At this position, the torque is zero and any small displacement results in a restoring torque.",
+      "explanation_incorrect": "When p is parallel to E (theta = 0), U = -pE (minimum energy) and tau = 0. This is stable equilibrium. When p is anti-parallel to E (theta = 180 degrees), U = +pE (maximum energy) and tau = 0, but this is unstable equilibrium."
+    },
+    {
+      "question_id": "T01.01.Q032",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "An electric dipole of moment p = 2 x 10^-6 C.m is placed in a uniform electric field E = 3 x 10^5 N/C at an angle of 30 degrees. The torque acting on the dipole is:",
+      "options": [
+        { "id": "A", "text": "0.3 N.m" },
+        { "id": "B", "text": "0.6 N.m" },
+        { "id": "C", "text": "0.1 N.m" },
+        { "id": "D", "text": "0.15 N.m" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Torque tau = pE sin(theta) = 2 x 10^-6 x 3 x 10^5 x sin(30) = 0.6 x 0.5 = 0.3 N.m. The torque acts to align the dipole with the electric field.",
+      "explanation_incorrect": "tau = pE sin(theta) = 2 x 10^-6 x 3 x 10^5 x sin(30) = 0.6 x 0.5 = 0.3 N.m. Using cos instead of sin, or forgetting to multiply by sin(30) = 0.5, would give wrong values like 0.6 N.m."
+    },
+    {
+      "question_id": "T01.01.Q033",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "The work done in rotating an electric dipole from the position of stable equilibrium to the position where p is perpendicular to E is:",
+      "options": [
+        { "id": "A", "text": "pE" },
+        { "id": "B", "text": "2pE" },
+        { "id": "C", "text": "pE/2" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Work done W = U_final - U_initial = (-pE cos 90) - (-pE cos 0) = 0 - (-pE) = pE. The work is done against the restoring torque of the field.",
+      "explanation_incorrect": "The potential energy of a dipole in a uniform field is U = -pE cos(theta). From stable equilibrium (theta = 0) to perpendicular position (theta = 90): W = -pE cos 90 - (-pE cos 0) = 0 + pE = pE. The answer 2pE would correspond to rotation from 0 to 180 degrees."
+    },
+    {
+      "question_id": "T01.01.Q034",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "question_text": "The net force on an electric dipole placed in a non-uniform electric field is:",
+      "options": [
+        { "id": "A", "text": "Always zero" },
+        { "id": "B", "text": "Non-zero and depends on the field gradient" },
+        { "id": "C", "text": "Always equal to qE" },
+        { "id": "D", "text": "Non-zero only if the dipole is not aligned with the field" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a non-uniform electric field, the forces on the two charges of the dipole are different in magnitude (since E differs at the two locations). The net force is non-zero and depends on the rate of change (gradient) of the electric field.",
+      "explanation_incorrect": "In a uniform field, the net force on a dipole is zero (equal and opposite forces). In a non-uniform field, the forces on +q and -q differ because E is different at the two positions, resulting in a net force that depends on the field gradient dE/dr."
+    },
+    {
+      "question_id": "T01.01.Q035",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "An electric dipole is placed at the centre of a sphere. The total electric flux through the sphere is:",
+      "options": [
+        { "id": "A", "text": "pE" },
+        { "id": "B", "text": "q/epsilon_0" },
+        { "id": "C", "text": "2q/epsilon_0" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "A dipole consists of charges +q and -q. The total charge enclosed by the sphere is +q + (-q) = 0. By Gauss's law, the total flux = q_enclosed/epsilon_0 = 0/epsilon_0 = 0.",
+      "explanation_incorrect": "By Gauss's law, the total flux through a closed surface depends only on the net charge enclosed. A dipole has equal and opposite charges, so the net enclosed charge is zero, giving zero total flux. Individual fluxes due to +q and -q cancel."
+    },
+    {
+      "question_id": "T01.01.Q036",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The potential energy of an electric dipole of moment 5 x 10^-8 C.m aligned anti-parallel to a uniform electric field of 4 x 10^4 V/m is:",
+      "options": [
+        { "id": "A", "text": "-2 x 10^-3 J" },
+        { "id": "B", "text": "+2 x 10^-3 J" },
+        { "id": "C", "text": "-1 x 10^-3 J" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Potential energy U = -pE cos(theta). When anti-parallel, theta = 180 degrees, so U = -pE cos(180) = -pE(-1) = pE = 5 x 10^-8 x 4 x 10^4 = 2 x 10^-3 J. This is the maximum potential energy (unstable equilibrium).",
+      "explanation_incorrect": "U = -pE cos(theta). Anti-parallel means theta = 180 degrees, so U = -pE cos(180) = +pE = +2 x 10^-3 J. The negative value -2 x 10^-3 J would correspond to the parallel alignment (stable equilibrium, theta = 0)."
+    },
+    {
+      "question_id": "T01.01.Q037",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Gauss's theorem relates the electric flux through a closed surface to:",
+      "options": [
+        { "id": "A", "text": "Total charge in space" },
+        { "id": "B", "text": "Charge enclosed by the surface" },
+        { "id": "C", "text": "Charge outside the surface" },
+        { "id": "D", "text": "Total electric field in space" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Gauss's theorem states that the total electric flux through any closed surface equals 1/epsilon_0 times the total charge enclosed by that surface: phi = q_enclosed/epsilon_0. Charges outside the surface contribute zero net flux through it.",
+      "explanation_incorrect": "Gauss's law relates the flux through a closed surface only to the charge enclosed within it, not to total charge in space or charge outside. External charges produce zero net flux through the closed surface because their field lines enter and exit the surface."
+    },
+    {
+      "question_id": "T01.01.Q038",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of electric flux is:",
+      "options": [
+        { "id": "A", "text": "N.m^2/C" },
+        { "id": "B", "text": "N/C" },
+        { "id": "C", "text": "V.m" },
+        { "id": "D", "text": "Both A and C" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Electric flux = E.A, so its unit is (N/C)(m^2) = N.m^2/C. Since V = N.m/C, we have N.m^2/C = V.m. Both N.m^2/C and V.m are equivalent and correct SI units of electric flux.",
+      "explanation_incorrect": "Electric flux phi = E.dA has units of (N/C)(m^2) = N.m^2/C. Since 1 V = 1 N.m/C, this is also equal to V.m. Both N.m^2/C and V.m are correct. N/C is the unit of electric field, not flux."
+    },
+    {
+      "question_id": "T01.01.Q039",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "If a charge q is placed at the centre of a cube, the electric flux through each face is:",
+      "options": [
+        { "id": "A", "text": "q/epsilon_0" },
+        { "id": "B", "text": "q/(2*epsilon_0)" },
+        { "id": "C", "text": "q/(4*epsilon_0)" },
+        { "id": "D", "text": "q/(6*epsilon_0)" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "By Gauss's theorem, total flux through the cube = q/epsilon_0. By symmetry, the charge at the centre distributes the flux equally through all 6 faces. Therefore, flux through each face = q/(6*epsilon_0).",
+      "explanation_incorrect": "The total flux through the cube is q/epsilon_0 by Gauss's law. Since a cube has 6 identical faces and the charge is at the centre (symmetric position), each face gets one-sixth of the total flux = q/(6*epsilon_0)."
+    },
+    {
+      "question_id": "T01.01.Q040",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The electric field inside a uniformly charged spherical shell is:",
+      "options": [
+        { "id": "A", "text": "kQ/r^2" },
+        { "id": "B", "text": "kQ/R^2 (where R is the radius of the shell)" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "sigma/epsilon_0" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "By Gauss's law, for a Gaussian surface inside a uniformly charged spherical shell, the charge enclosed is zero (all charge is on the shell's surface). Therefore, E(4*pi*r^2) = 0, giving E = 0 inside the shell.",
+      "explanation_incorrect": "Using Gauss's law with a spherical Gaussian surface of radius r < R (inside the shell), the enclosed charge is zero because all the charge resides on the surface. Therefore, the electric field inside the shell is zero everywhere."
+    },
+    {
+      "question_id": "T01.01.Q041",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "question_text": "A charge of 5 microcoulombs is placed at the centre of a sphere of radius 10 cm. The electric flux through the sphere is (given epsilon_0 = 8.85 x 10^-12 C^2/N.m^2):",
+      "options": [
+        { "id": "A", "text": "5.65 x 10^5 N.m^2/C" },
+        { "id": "B", "text": "5.65 x 10^3 N.m^2/C" },
+        { "id": "C", "text": "1.13 x 10^5 N.m^2/C" },
+        { "id": "D", "text": "2.26 x 10^5 N.m^2/C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By Gauss's law, phi = q/epsilon_0 = 5 x 10^-6 / 8.85 x 10^-12 = 5.65 x 10^5 N.m^2/C. The flux depends only on the enclosed charge and is independent of the radius of the sphere.",
+      "explanation_incorrect": "The flux phi = q/epsilon_0 = 5 x 10^-6 / 8.85 x 10^-12 = 5.65 x 10^5 N.m^2/C. The radius of the sphere does not matter because Gauss's law states that total flux depends only on the enclosed charge. Using the radius in the calculation would be incorrect."
+    },
+    {
+      "question_id": "T01.01.Q042",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "question_text": "A Gaussian surface encloses charges of +3 microcoulombs and -1 microcoulomb. The net electric flux through the surface is:",
+      "options": [
+        { "id": "A", "text": "4 x 10^-6 / epsilon_0" },
+        { "id": "B", "text": "2 x 10^-6 / epsilon_0" },
+        { "id": "C", "text": "3 x 10^-6 / epsilon_0" },
+        { "id": "D", "text": "1 x 10^-6 / epsilon_0" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Gauss's law, the net flux = q_enclosed/epsilon_0. The net enclosed charge = +3 - 1 = +2 microcoulombs = 2 x 10^-6 C. Therefore, phi = 2 x 10^-6 / epsilon_0 N.m^2/C.",
+      "explanation_incorrect": "The net flux depends on the algebraic sum of all enclosed charges. q_net = +3 + (-1) = +2 microcoulombs. So phi = 2 x 10^-6/epsilon_0. It is not the sum of magnitudes (4 microcoulombs) but the algebraic sum."
+    },
+    {
+      "question_id": "T01.01.Q043",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "question_text": "The electric field outside a uniformly charged spherical shell of total charge Q and radius R at a distance r from the centre (r > R) is:",
+      "options": [
+        { "id": "A", "text": "kQ/R^2" },
+        { "id": "B", "text": "kQ/r^2" },
+        { "id": "C", "text": "kQ/(r^2 - R^2)" },
+        { "id": "D", "text": "kQ*r/R^3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using Gauss's law with a spherical Gaussian surface of radius r > R: E(4*pi*r^2) = Q/epsilon_0, giving E = Q/(4*pi*epsilon_0*r^2) = kQ/r^2. The shell behaves like a point charge Q placed at its centre for all external points.",
+      "explanation_incorrect": "For points outside the shell (r > R), Gauss's law gives E = kQ/r^2, identical to the field of a point charge Q at the centre. kQ/R^2 would be the field only on the surface. The other options have incorrect distance dependence."
+    },
+    {
+      "question_id": "T01.01.Q044",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "question_text": "An electric charge is placed at the corner of a cube. The electric flux through the cube is:",
+      "options": [
+        { "id": "A", "text": "q/epsilon_0" },
+        { "id": "B", "text": "q/(8*epsilon_0)" },
+        { "id": "C", "text": "q/(6*epsilon_0)" },
+        { "id": "D", "text": "q/(2*epsilon_0)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A charge at the corner of a cube is shared by 8 identical cubes that can be arranged to surround it. By Gauss's law, total flux through all 8 cubes = q/epsilon_0. By symmetry, flux through each cube = q/(8*epsilon_0).",
+      "explanation_incorrect": "When a charge is at the corner, imagine 8 identical cubes surrounding the charge (like building blocks). The total flux q/epsilon_0 distributes equally among 8 cubes, giving q/(8*epsilon_0) per cube. It is not q/(6*epsilon_0) (that would be for a charge at the centre)."
+    },
+    {
+      "question_id": "T01.01.Q045",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "Two large parallel plates carry surface charge densities +sigma and -sigma respectively. The electric field in the region between the plates is:",
+      "options": [
+        { "id": "A", "text": "sigma/epsilon_0" },
+        { "id": "B", "text": "sigma/(2*epsilon_0)" },
+        { "id": "C", "text": "2*sigma/epsilon_0" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Each plate produces a field of sigma/(2*epsilon_0). Between the plates, both fields point in the same direction (from positive to negative plate). The total field = sigma/(2*epsilon_0) + sigma/(2*epsilon_0) = sigma/epsilon_0.",
+      "explanation_incorrect": "Each infinite plate produces E = sigma/(2*epsilon_0). Between oppositely charged plates, the fields add: E_total = sigma/(2*epsilon_0) + sigma/(2*epsilon_0) = sigma/epsilon_0. Outside the plates, the fields cancel giving zero. The answer sigma/(2*epsilon_0) is the field due to only one plate."
+    },
+    {
+      "question_id": "T01.01.Q046",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A hollow conducting sphere of radius R has a charge Q on it. A point charge q is placed at the centre of the sphere. The electric field at a point P at distance r > R from the centre is:",
+      "options": [
+        { "id": "A", "text": "kQ/r^2" },
+        { "id": "B", "text": "kq/r^2" },
+        { "id": "C", "text": "k(Q + q)/r^2" },
+        { "id": "D", "text": "k(Q - q)/r^2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The charge q at the centre induces -q on the inner surface and +q on the outer surface of the sphere. The outer surface thus has charge Q + q. By Gauss's law for r > R, E = k(Q + q)/r^2, as the total enclosed charge is q + Q.",
+      "explanation_incorrect": "By Gauss's law, E at r > R depends on total enclosed charge = q (centre) + Q (on conductor) = Q + q. The conductor redistributes its charge, but total charge inside the Gaussian surface is Q + q. Hence E = k(Q + q)/r^2."
+    },
+    {
+      "question_id": "T01.01.Q047",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A uniformly charged solid non-conducting sphere of radius R has total charge Q. The electric field at a distance r < R from the centre is:",
+      "options": [
+        { "id": "A", "text": "kQ/R^2" },
+        { "id": "B", "text": "kQ/r^2" },
+        { "id": "C", "text": "kQr/R^3" },
+        { "id": "D", "text": "kQR/r^3" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a uniformly charged solid sphere, the charge enclosed within radius r < R is q_enc = Q(r/R)^3 (volume ratio). By Gauss's law: E(4*pi*r^2) = Q(r/R)^3/epsilon_0, giving E = kQr/R^3. The field increases linearly with r inside the sphere.",
+      "explanation_incorrect": "Inside a uniformly charged solid sphere, the enclosed charge is proportional to the cube of the radius: q_enc = Q(r^3/R^3). Applying Gauss's law gives E = kQr/R^3, which increases linearly with r. At r = R, this matches the external field kQ/R^2."
+    },
+    {
+      "question_id": "T01.01.Q048",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The electric flux through a closed surface S is zero. This necessarily implies that:",
+      "options": [
+        { "id": "A", "text": "The electric field is zero everywhere on S" },
+        { "id": "B", "text": "No charges exist inside S" },
+        { "id": "C", "text": "The net charge enclosed by S is zero" },
+        { "id": "D", "text": "No charges exist anywhere in space" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Zero flux through a closed surface means q_enclosed/epsilon_0 = 0, so the net enclosed charge is zero. This does not mean there are no charges inside (there could be equal positive and negative charges), nor does it mean E is zero on the surface.",
+      "explanation_incorrect": "Zero total flux only implies that the net enclosed charge is zero. There may still be charges inside (e.g., a dipole has zero net charge). The electric field need not be zero on the surface; field lines can enter and exit the surface in equal amounts."
+    },
+    {
+      "question_id": "T01.01.Q049",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "question_text": "The electric field at the surface of a charged conductor is:",
+      "options": [
+        { "id": "A", "text": "Tangential to the surface" },
+        { "id": "B", "text": "Zero" },
+        { "id": "C", "text": "Perpendicular to the surface, directed outward for positive charge" },
+        { "id": "D", "text": "At 45 degrees to the surface" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The electric field at the surface of a charged conductor is always perpendicular to the surface. For a positively charged conductor, it points outward. If there were a tangential component, free charges on the conductor would move, contradicting the static condition.",
+      "explanation_incorrect": "In electrostatic equilibrium, the electric field at the surface of a conductor must be perpendicular to the surface. Any tangential component would cause surface charges to move (since they are free), violating the equilibrium condition. The field is not zero at the surface (it is zero only inside)."
+    },
+    {
+      "question_id": "T01.01.Q050",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "application",
+      "question_text": "A charge Q is distributed uniformly over a thin spherical shell of radius R. The electric field at the centre of the shell is:",
+      "options": [
+        { "id": "A", "text": "kQ/R^2" },
+        { "id": "B", "text": "2kQ/R^2" },
+        { "id": "C", "text": "kQ/2R^2" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "By Gauss's law, the electric field inside a uniformly charged spherical shell is zero everywhere, including at the centre. A Gaussian surface of any radius r < R encloses zero charge, so E = 0. Alternatively, by symmetry, the field contributions from all parts of the shell cancel at the centre.",
+      "explanation_incorrect": "Inside a uniformly charged spherical shell, the electric field is zero everywhere. At the centre, due to perfect symmetry, the field contributions from diametrically opposite charge elements cancel exactly, giving E = 0. The expression kQ/R^2 applies only on or outside the surface."
+    }
+  ]
+}

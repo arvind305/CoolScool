@@ -1,0 +1,828 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T06.01",
+  "topic_name": "Thermodynamics",
+  "canonical_explanation": {
+    "text": "Thermodynamics deals with energy changes accompanying physical and chemical processes. A system is the part of the universe under study; the surroundings are everything else. Systems are classified as open (exchange of matter and energy), closed (exchange of energy only), or isolated (no exchange). State functions (P, V, T, U, H, S, G) depend only on the current state, not on how that state was reached; path functions (q, w) depend on the path taken. Important processes include isothermal (constant T), adiabatic (q = 0), isobaric (constant P), and isochoric (constant V). The first law of thermodynamics states that energy is conserved: ΔU = q + w, where q is heat absorbed and w is work done on the system. For expansion work against constant pressure, w = −P_ext ΔV. For reversible isothermal expansion of an ideal gas, w = −nRT ln(V₂/V₁). Enthalpy H = U + PV; at constant pressure, ΔH = qₚ. For ideal gases, ΔH = ΔU + ΔnₘRT, where Δnₘ is the change in moles of gas. Standard enthalpy changes include formation (ΔfH°), combustion (ΔcH°), atomisation, ionisation, bond dissociation, lattice enthalpy, and hydration enthalpy. Hess's law states that the total enthalpy change for a reaction is the same regardless of the pathway, enabling calculation of unknown enthalpies from known ones. Entropy (S) is a measure of the disorder or randomness of a system; ΔS = q_rev / T. The second law states that in any spontaneous process, the total entropy of the universe increases: ΔS_universe > 0. Gibbs free energy G = H − TS combines enthalpy and entropy. At constant T, P: ΔG = ΔH − TΔS. A process is spontaneous when ΔG < 0, at equilibrium when ΔG = 0, and non-spontaneous when ΔG > 0. The relationship ΔG° = −RT ln K connects thermodynamics to equilibrium.",
+    "rules": [
+      "System types: open (matter + energy), closed (energy only), isolated (neither).",
+      "State functions (U, H, S, G) depend only on the state; path functions (q, w) depend on the process path.",
+      "First law: ΔU = q + w (IUPAC sign convention: w positive when work done on system).",
+      "At constant pressure: ΔH = qₚ; at constant volume: ΔU = qᵥ.",
+      "For ideal gases: ΔH = ΔU + ΔnₘRT, where Δnₘ = moles of gaseous products − moles of gaseous reactants.",
+      "Hess's law: ΔH for a reaction equals the sum of ΔH values for individual steps (enthalpy is a state function).",
+      "Standard enthalpy of formation ΔfH° of an element in its standard state is zero.",
+      "Entropy change: ΔS = q_rev / T; spontaneous processes increase the total entropy of the universe.",
+      "Gibbs free energy: ΔG = ΔH − TΔS; ΔG < 0 means spontaneous, ΔG = 0 means equilibrium, ΔG > 0 means non-spontaneous.",
+      "ΔG° = −RT ln K connects standard free energy change to the equilibrium constant."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T06.01.Q001",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A system that can exchange both energy and matter with its surroundings is called:",
+      "options": [
+        {"id": "A", "text": "Isolated system"},
+        {"id": "B", "text": "Closed system"},
+        {"id": "C", "text": "Open system"},
+        {"id": "D", "text": "Adiabatic system"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An open system can exchange both matter and energy with its surroundings. For example, an open beaker of hot water loses heat (energy) and water vapour (matter) to the surroundings.",
+      "explanation_incorrect": "An isolated system exchanges neither energy nor matter. A closed system exchanges energy but not matter. An adiabatic system is one where no heat is exchanged, but it may do work."
+    },
+    {
+      "question_id": "T06.01.Q002",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is a state function?",
+      "options": [
+        {"id": "A", "text": "Heat (q)"},
+        {"id": "B", "text": "Work (w)"},
+        {"id": "C", "text": "Enthalpy (H)"},
+        {"id": "D", "text": "Both heat and work"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Enthalpy (H) is a state function — its value depends only on the current state of the system (P, V, T, composition), not on how the system reached that state. Heat and work are path functions.",
+      "explanation_incorrect": "Heat (q) and work (w) are path functions whose values depend on the process path. Neither individually is a state function, though their sum (q + w = ΔU) gives a change in a state function."
+    },
+    {
+      "question_id": "T06.01.Q003",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A process that occurs at constant temperature is called:",
+      "options": [
+        {"id": "A", "text": "Adiabatic"},
+        {"id": "B", "text": "Isothermal"},
+        {"id": "C", "text": "Isobaric"},
+        {"id": "D", "text": "Isochoric"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An isothermal process occurs at constant temperature (iso = same, thermal = temperature). The system must exchange heat with the surroundings to maintain constant temperature during the process.",
+      "explanation_incorrect": "An adiabatic process has no heat exchange (q = 0). An isobaric process occurs at constant pressure. An isochoric process occurs at constant volume."
+    },
+    {
+      "question_id": "T06.01.Q004",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "For a cyclic process, the change in internal energy (ΔU) is:",
+      "options": [
+        {"id": "A", "text": "Always positive"},
+        {"id": "B", "text": "Always negative"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Depends on the path"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Internal energy (U) is a state function. In a cyclic process, the system returns to its initial state, so the initial and final states are identical. Therefore ΔU = U_final − U_initial = 0.",
+      "explanation_incorrect": "ΔU does not depend on the path because U is a state function. It is zero for any cyclic process, regardless of the steps involved."
+    },
+    {
+      "question_id": "T06.01.Q005",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "An insulated rigid container holds a gas. This is an example of:",
+      "options": [
+        {"id": "A", "text": "An open system"},
+        {"id": "B", "text": "A closed system"},
+        {"id": "C", "text": "An isolated system"},
+        {"id": "D", "text": "An adiabatic open system"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The container is rigid (no work due to volume change) and insulated (no heat transfer), so neither energy nor matter can be exchanged with the surroundings. This defines an isolated system.",
+      "explanation_incorrect": "An open system allows both matter and energy exchange. A closed system allows energy exchange. An adiabatic open system would allow matter exchange, which an insulated rigid container does not."
+    },
+    {
+      "question_id": "T06.01.Q006",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "question_text": "Which of the following is NOT a state function?",
+      "options": [
+        {"id": "A", "text": "Internal energy"},
+        {"id": "B", "text": "Entropy"},
+        {"id": "C", "text": "Work"},
+        {"id": "D", "text": "Gibbs free energy"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Work (w) is a path function — its value depends on how the process is carried out, not just on the initial and final states. Internal energy, entropy, and Gibbs free energy are all state functions.",
+      "explanation_incorrect": "Internal energy (U), entropy (S), and Gibbs free energy (G) are all state functions because their values depend only on the current state of the system."
+    },
+    {
+      "question_id": "T06.01.Q007",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "In a constant-volume process involving an ideal gas, which of the following is true?",
+      "options": [
+        {"id": "A", "text": "w = 0 and qᵥ = ΔU"},
+        {"id": "B", "text": "q = 0 and ΔU = w"},
+        {"id": "C", "text": "ΔH = 0"},
+        {"id": "D", "text": "ΔU = 0"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At constant volume, no expansion work is done (w = −PΔV = 0). From the first law, ΔU = q + w = q + 0 = qᵥ. So all the heat absorbed goes into changing the internal energy.",
+      "explanation_incorrect": "q = 0 applies to an adiabatic process, not an isochoric one. ΔH = 0 is not generally true at constant volume (ΔH = ΔU + ΔnₘRT). ΔU = 0 applies to isothermal processes for ideal gases."
+    },
+    {
+      "question_id": "T06.01.Q008",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For an adiabatic process, which statement is correct?",
+      "options": [
+        {"id": "A", "text": "q = 0, ΔU = w"},
+        {"id": "B", "text": "w = 0, ΔU = q"},
+        {"id": "C", "text": "ΔT = 0"},
+        {"id": "D", "text": "ΔH = q"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In an adiabatic process, no heat is exchanged with the surroundings (q = 0). From the first law: ΔU = q + w = 0 + w = w. The change in internal energy equals the work done on/by the system.",
+      "explanation_incorrect": "w = 0 applies to constant-volume processes. ΔT = 0 is for isothermal processes; adiabatic processes generally involve temperature changes. ΔH = q only at constant pressure."
+    },
+    {
+      "question_id": "T06.01.Q009",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The first law of thermodynamics is mathematically expressed as (IUPAC convention):",
+      "options": [
+        {"id": "A", "text": "ΔU = q − w"},
+        {"id": "B", "text": "ΔU = q + w"},
+        {"id": "C", "text": "ΔH = q + w"},
+        {"id": "D", "text": "ΔG = q − w"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the IUPAC convention, the first law is ΔU = q + w, where q is heat absorbed by the system and w is work done on the system (both positive when received by the system).",
+      "explanation_incorrect": "ΔU = q − w uses the old convention where w is work done by the system. ΔH = q + w and ΔG = q − w are not statements of the first law."
+    },
+    {
+      "question_id": "T06.01.Q010",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Enthalpy (H) is defined as:",
+      "options": [
+        {"id": "A", "text": "H = U − PV"},
+        {"id": "B", "text": "H = U + PV"},
+        {"id": "C", "text": "H = U + TS"},
+        {"id": "D", "text": "H = G + TS"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Enthalpy is defined as H = U + PV, where U is internal energy, P is pressure, and V is volume. At constant pressure, ΔH = qₚ (heat exchanged at constant pressure).",
+      "explanation_incorrect": "H = U − PV has the wrong sign. H = U + TS is not a standard thermodynamic definition. H = G + TS is actually correct (since G = H − TS), but it is not the fundamental definition of H."
+    },
+    {
+      "question_id": "T06.01.Q011",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The work done during the reversible isothermal expansion of n moles of an ideal gas from volume V₁ to V₂ is:",
+      "options": [
+        {"id": "A", "text": "w = −nRT ln(V₂/V₁)"},
+        {"id": "B", "text": "w = nRT ln(V₂/V₁)"},
+        {"id": "C", "text": "w = −nRT(V₂ − V₁)"},
+        {"id": "D", "text": "w = PΔV"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For reversible isothermal expansion, the work done by the system is w_by = nRT ln(V₂/V₁). In the IUPAC convention (w = work done on system), w = −nRT ln(V₂/V₁). Since V₂ > V₁ for expansion, w is negative (system does work on surroundings).",
+      "explanation_incorrect": "Option B has the wrong sign. Option C uses a linear expansion formula which is incorrect. w = PΔV applies only for expansion against constant external pressure."
+    },
+    {
+      "question_id": "T06.01.Q012",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "For an ideal gas undergoing isothermal expansion, ΔU is:",
+      "options": [
+        {"id": "A", "text": "Positive"},
+        {"id": "B", "text": "Negative"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal gas, internal energy depends only on temperature (U = f(T) only). In an isothermal process, T is constant, so ΔU = 0. From the first law: q = −w, meaning the heat absorbed equals the work done by the gas.",
+      "explanation_incorrect": "ΔU is neither positive nor negative for an isothermal process with an ideal gas. It can always be determined for an ideal gas if the temperature change is known."
+    },
+    {
+      "question_id": "T06.01.Q013",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "For the reaction N₂(g) + 3H₂(g) → 2NH₃(g), the relationship between ΔH and ΔU is:",
+      "options": [
+        {"id": "A", "text": "ΔH = ΔU + 2RT"},
+        {"id": "B", "text": "ΔH = ΔU − 2RT"},
+        {"id": "C", "text": "ΔH = ΔU + 4RT"},
+        {"id": "D", "text": "ΔH = ΔU − 4RT"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔH = ΔU + ΔnₘRT. Here Δnₘ = moles of gaseous products − moles of gaseous reactants = 2 − (1 + 3) = −2. So ΔH = ΔU + (−2)RT = ΔU − 2RT.",
+      "explanation_incorrect": "ΔH = ΔU + 2RT has the wrong sign for Δnₘ. Options with ±4RT miscalculate Δnₘ."
+    },
+    {
+      "question_id": "T06.01.Q014",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "When 1 mol of ice melts at 0 °C and 1 atm, the enthalpy change is +6.01 kJ/mol. During this process:",
+      "options": [
+        {"id": "A", "text": "Heat is released by the system"},
+        {"id": "B", "text": "Heat is absorbed by the system"},
+        {"id": "C", "text": "No heat exchange occurs"},
+        {"id": "D", "text": "Work is done on the system"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A positive ΔH (+6.01 kJ/mol) at constant pressure means qₚ > 0, indicating the system absorbs heat from the surroundings. Melting is an endothermic process.",
+      "explanation_incorrect": "Heat release would give a negative ΔH. The process is not adiabatic. While there may be a small PΔV work due to volume change, the key thermodynamic fact is heat absorption."
+    },
+    {
+      "question_id": "T06.01.Q015",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "2 moles of an ideal gas expand isothermally and reversibly from 10 L to 40 L at 300 K. The work done by the gas is approximately: (R = 8.314 J mol⁻¹ K⁻¹, ln 4 = 1.386)",
+      "options": [
+        {"id": "A", "text": "−6.91 kJ"},
+        {"id": "B", "text": "+6.91 kJ"},
+        {"id": "C", "text": "+3.46 kJ"},
+        {"id": "D", "text": "−3.46 kJ"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Work done by the gas = nRT ln(V₂/V₁) = 2 × 8.314 × 300 × ln(40/10) = 2 × 8.314 × 300 × 1.386 = 6908 J ≈ 6.91 kJ. The work is positive because the gas expands and does work on the surroundings.",
+      "explanation_incorrect": "−6.91 kJ is the work done on the system (w in IUPAC convention), not by the gas. 3.46 kJ uses only 1 mol instead of 2."
+    },
+    {
+      "question_id": "T06.01.Q016",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In a reaction where Δnₘ = 0 (no change in moles of gas), the relationship between ΔH and ΔU is:",
+      "options": [
+        {"id": "A", "text": "ΔH > ΔU"},
+        {"id": "B", "text": "ΔH < ΔU"},
+        {"id": "C", "text": "ΔH = ΔU"},
+        {"id": "D", "text": "No relationship can be established"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "ΔH = ΔU + ΔnₘRT. When Δnₘ = 0, the ΔnₘRT term vanishes, giving ΔH = ΔU. This occurs, for example, in H₂(g) + Cl₂(g) → 2HCl(g).",
+      "explanation_incorrect": "ΔH is neither greater nor less than ΔU when Δnₘ = 0. The relationship is definite and straightforward."
+    },
+    {
+      "question_id": "T06.01.Q017",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The standard enthalpy of formation (ΔfH°) of an element in its most stable form at 1 bar and 298 K is:",
+      "options": [
+        {"id": "A", "text": "Always positive"},
+        {"id": "B", "text": "Always negative"},
+        {"id": "C", "text": "Zero by convention"},
+        {"id": "D", "text": "Depends on the element"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "By convention, the standard enthalpy of formation of an element in its standard state (most stable allotrope at 1 bar and 298 K) is taken as zero. For example, ΔfH° for O₂(g), C(graphite), and Fe(s) are all zero.",
+      "explanation_incorrect": "It is zero by definition, not positive, negative, or variable. This serves as the reference point for measuring enthalpies of formation of compounds."
+    },
+    {
+      "question_id": "T06.01.Q018",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Hess's law states that the total enthalpy change for a reaction is:",
+      "options": [
+        {"id": "A", "text": "Dependent on the pathway followed"},
+        {"id": "B", "text": "Independent of the pathway and depends only on the initial and final states"},
+        {"id": "C", "text": "Always exothermic"},
+        {"id": "D", "text": "Equal to the sum of the entropies of the steps"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hess's law states that the enthalpy change for a reaction is the same regardless of whether the reaction occurs in one step or in a series of steps. This is a direct consequence of enthalpy being a state function.",
+      "explanation_incorrect": "Enthalpy change is path-independent, unlike heat and work. Reactions can be exothermic or endothermic. Hess's law deals with enthalpy, not entropy."
+    },
+    {
+      "question_id": "T06.01.Q019",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "An exothermic reaction is one in which:",
+      "options": [
+        {"id": "A", "text": "ΔH is positive"},
+        {"id": "B", "text": "ΔH is negative"},
+        {"id": "C", "text": "ΔH is zero"},
+        {"id": "D", "text": "ΔS is positive"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an exothermic reaction, the system releases heat to the surroundings, so qₚ < 0, meaning ΔH < 0. The enthalpy of the products is lower than that of the reactants.",
+      "explanation_incorrect": "ΔH > 0 describes an endothermic reaction. ΔH = 0 means no heat change. ΔS > 0 relates to entropy, not the exothermic/endothermic nature."
+    },
+    {
+      "question_id": "T06.01.Q020",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "Given: C(graphite) + O₂(g) → CO₂(g), ΔH = −393 kJ/mol and CO(g) + ½O₂(g) → CO₂(g), ΔH = −283 kJ/mol. The ΔH for C(graphite) + ½O₂(g) → CO(g) is:",
+      "options": [
+        {"id": "A", "text": "−110 kJ/mol"},
+        {"id": "B", "text": "+110 kJ/mol"},
+        {"id": "C", "text": "−676 kJ/mol"},
+        {"id": "D", "text": "+676 kJ/mol"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By Hess's law: ΔH(target) = ΔH(reaction 1) − ΔH(reaction 2) = (−393) − (−283) = −110 kJ/mol. The formation of CO is exothermic but less so than the formation of CO₂.",
+      "explanation_incorrect": "+110 kJ/mol has the wrong sign. −676 kJ/mol and +676 kJ/mol result from incorrectly adding the two values instead of subtracting."
+    },
+    {
+      "question_id": "T06.01.Q021",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "The standard enthalpy of formation of CO₂(g) is −393.5 kJ/mol and that of H₂O(l) is −285.8 kJ/mol. The enthalpy of combustion of CH₄(g) is −890.3 kJ/mol. The standard enthalpy of formation of CH₄(g) is:",
+      "options": [
+        {"id": "A", "text": "−74.8 kJ/mol"},
+        {"id": "B", "text": "+74.8 kJ/mol"},
+        {"id": "C", "text": "−210.8 kJ/mol"},
+        {"id": "D", "text": "+890.3 kJ/mol"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(l), ΔcH° = −890.3 kJ/mol. Using ΔcH° = ΣΔfH°(products) − ΣΔfH°(reactants): −890.3 = [−393.5 + 2(−285.8)] − [ΔfH°(CH₄) + 0]. −890.3 = −965.1 − ΔfH°(CH₄). ΔfH°(CH₄) = −965.1 + 890.3 = −74.8 kJ/mol.",
+      "explanation_incorrect": "+74.8 kJ/mol has the wrong sign. −210.8 kJ/mol results from a calculation error. +890.3 kJ/mol is the combustion enthalpy with reversed sign."
+    },
+    {
+      "question_id": "T06.01.Q022",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "The bond enthalpy of H–H is 436 kJ/mol and Cl–Cl is 242 kJ/mol. If the bond enthalpy of H–Cl is 431 kJ/mol, the enthalpy change for H₂(g) + Cl₂(g) → 2HCl(g) is:",
+      "options": [
+        {"id": "A", "text": "−184 kJ"},
+        {"id": "B", "text": "+184 kJ"},
+        {"id": "C", "text": "−247 kJ"},
+        {"id": "D", "text": "+247 kJ"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "ΔH = Σ(bond enthalpies of bonds broken) − Σ(bond enthalpies of bonds formed) = [436 + 242] − [2 × 431] = 678 − 862 = −184 kJ. The reaction is exothermic.",
+      "explanation_incorrect": "+184 kJ reverses the sign. −247 kJ and +247 kJ result from arithmetic errors or incorrect use of bond enthalpies."
+    },
+    {
+      "question_id": "T06.01.Q023",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If ΔfH°(CO₂) = −393 kJ/mol, ΔfH°(H₂O) = −286 kJ/mol, and ΔfH°(C₂H₆) = −85 kJ/mol, the standard enthalpy of combustion of ethane (C₂H₆) is:",
+      "options": [
+        {"id": "A", "text": "−1559 kJ/mol"},
+        {"id": "B", "text": "−764 kJ/mol"},
+        {"id": "C", "text": "+1559 kJ/mol"},
+        {"id": "D", "text": "−1473 kJ/mol"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "C₂H₆(g) + 7/2 O₂(g) → 2CO₂(g) + 3H₂O(l). ΔcH° = [2(−393) + 3(−286)] − [−85 + 0] = [−786 − 858] − [−85] = −1644 + 85 = −1559 kJ/mol.",
+      "explanation_incorrect": "−764 kJ/mol is roughly half the correct value. +1559 kJ/mol has the wrong sign. −1473 kJ/mol omits one mole of H₂O."
+    },
+    {
+      "question_id": "T06.01.Q024",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The lattice enthalpy of NaCl can be calculated indirectly using the Born–Haber cycle. This is an application of:",
+      "options": [
+        {"id": "A", "text": "The second law of thermodynamics"},
+        {"id": "B", "text": "Hess's law"},
+        {"id": "C", "text": "Le Chatelier's principle"},
+        {"id": "D", "text": "Raoult's law"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Born–Haber cycle is an application of Hess's law. It breaks the formation of an ionic compound from its elements into a series of steps (sublimation, ionisation, dissociation, electron affinity, lattice formation) whose enthalpy changes sum to the overall enthalpy of formation.",
+      "explanation_incorrect": "The second law deals with entropy and spontaneity. Le Chatelier's principle relates to equilibrium shifts. Raoult's law relates to vapour pressure of solutions."
+    },
+    {
+      "question_id": "T06.01.Q025",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The enthalpy of combustion of a substance is always:",
+      "options": [
+        {"id": "A", "text": "Positive"},
+        {"id": "B", "text": "Negative"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Cannot be predicted"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Combustion is an exothermic process — burning a substance in excess oxygen releases heat. Therefore, the enthalpy of combustion is always negative (ΔcH° < 0).",
+      "explanation_incorrect": "Combustion releases heat, so ΔcH° is never positive or zero. The sign can always be predicted — it is invariably negative."
+    },
+    {
+      "question_id": "T06.01.Q026",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Entropy is a measure of:",
+      "options": [
+        {"id": "A", "text": "The total energy of the system"},
+        {"id": "B", "text": "The randomness or disorder of the system"},
+        {"id": "C", "text": "The useful work obtainable from the system"},
+        {"id": "D", "text": "The temperature of the system"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Entropy (S) is a thermodynamic state function that measures the degree of randomness, disorder, or the number of microstates accessible to a system. Higher entropy means greater disorder.",
+      "explanation_incorrect": "Total energy relates to internal energy or enthalpy. Useful work is related to Gibbs free energy. Temperature is a separate intensive property."
+    },
+    {
+      "question_id": "T06.01.Q027",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The second law of thermodynamics states that for a spontaneous process:",
+      "options": [
+        {"id": "A", "text": "ΔS_system > 0 always"},
+        {"id": "B", "text": "ΔS_surroundings > 0 always"},
+        {"id": "C", "text": "ΔS_universe > 0"},
+        {"id": "D", "text": "ΔS_universe = 0"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The second law states that for any spontaneous (irreversible) process, the total entropy of the universe (system + surroundings) increases: ΔS_universe = ΔS_system + ΔS_surroundings > 0.",
+      "explanation_incorrect": "ΔS_system alone may be negative in a spontaneous process (e.g., freezing). ΔS_surroundings alone may also be negative. ΔS_universe = 0 applies only to reversible (equilibrium) processes."
+    },
+    {
+      "question_id": "T06.01.Q028",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following processes results in an increase in entropy?",
+      "options": [
+        {"id": "A", "text": "Freezing of water"},
+        {"id": "B", "text": "Condensation of steam"},
+        {"id": "C", "text": "Dissolution of a solid in a solvent"},
+        {"id": "D", "text": "Crystallisation of a supersaturated solution"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Dissolving a solid in a solvent typically increases entropy because the orderly crystal lattice breaks apart and the solute particles become randomly dispersed throughout the solution, increasing disorder.",
+      "explanation_incorrect": "Freezing converts liquid to solid (more ordered, ΔS < 0). Condensation converts gas to liquid (less disordered, ΔS < 0). Crystallisation produces an ordered crystal lattice (ΔS < 0)."
+    },
+    {
+      "question_id": "T06.01.Q029",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "question_text": "For the reaction 2H₂O(l) → 2H₂(g) + O₂(g), the entropy change (ΔS) is expected to be:",
+      "options": [
+        {"id": "A", "text": "Negative"},
+        {"id": "B", "text": "Positive"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The reaction produces 3 moles of gas from 2 moles of liquid. Gases have much higher entropy than liquids due to greater randomness and freedom of motion, so ΔS is positive and large.",
+      "explanation_incorrect": "The increase in moles of gas ensures a positive entropy change. It is not zero or negative. The sign can be confidently predicted from the phase changes involved."
+    },
+    {
+      "question_id": "T06.01.Q030",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "question_text": "The entropy change for a reversible process at constant temperature is given by:",
+      "options": [
+        {"id": "A", "text": "ΔS = q_rev × T"},
+        {"id": "B", "text": "ΔS = q_rev / T"},
+        {"id": "C", "text": "ΔS = T / q_rev"},
+        {"id": "D", "text": "ΔS = q_rev − T"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a reversible process at constant temperature, the entropy change is ΔS = q_rev / T, where q_rev is the heat exchanged reversibly and T is the absolute temperature.",
+      "explanation_incorrect": "ΔS = q_rev × T has incorrect dimensions (J²·K⁻¹ instead of J·K⁻¹). ΔS = T / q_rev is the inverse. ΔS = q_rev − T subtracts incompatible units."
+    },
+    {
+      "question_id": "T06.01.Q031",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "question_text": "When 1 mol of ice melts at 273 K, absorbing 6.01 kJ of heat, the entropy change is approximately:",
+      "options": [
+        {"id": "A", "text": "+22.0 J K⁻¹ mol⁻¹"},
+        {"id": "B", "text": "−22.0 J K⁻¹ mol⁻¹"},
+        {"id": "C", "text": "+6010 J K⁻¹ mol⁻¹"},
+        {"id": "D", "text": "+2.2 J K⁻¹ mol⁻¹"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "ΔS = q_rev / T = 6010 J / 273 K ≈ 22.0 J K⁻¹ mol⁻¹. The positive sign indicates an increase in entropy, consistent with the transition from ordered solid to less ordered liquid.",
+      "explanation_incorrect": "−22.0 J K⁻¹ mol⁻¹ has the wrong sign (melting increases entropy). 6010 J K⁻¹ mol⁻¹ fails to divide by T. 2.2 J K⁻¹ mol⁻¹ divides by 2730 instead of 273."
+    },
+    {
+      "question_id": "T06.01.Q032",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A process with ΔH > 0 and ΔS > 0 will be spontaneous:",
+      "options": [
+        {"id": "A", "text": "At all temperatures"},
+        {"id": "B", "text": "At high temperatures only"},
+        {"id": "C", "text": "At low temperatures only"},
+        {"id": "D", "text": "Never"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔG = ΔH − TΔS. When both ΔH and ΔS are positive, ΔG becomes negative only when TΔS > ΔH, i.e., at sufficiently high temperatures. Below T = ΔH/ΔS, the process is non-spontaneous.",
+      "explanation_incorrect": "It is not spontaneous at all temperatures because ΔH > 0 opposes spontaneity at low T. It is not spontaneous at low temperatures where ΔH dominates. It is not never spontaneous — high T makes TΔS overcome ΔH."
+    },
+    {
+      "question_id": "T06.01.Q033",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "At equilibrium in a reversible process, the entropy change of the universe is:",
+      "options": [
+        {"id": "A", "text": "Maximum"},
+        {"id": "B", "text": "Zero"},
+        {"id": "C", "text": "Negative"},
+        {"id": "D", "text": "Infinite"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At equilibrium (reversible process), the total entropy of the universe does not change: ΔS_universe = 0. The entropy of the system changes are exactly compensated by the entropy changes of the surroundings.",
+      "explanation_incorrect": "Maximum entropy of the universe characterises the final state of an isolated system, not equilibrium in a reversible process. ΔS_universe is never negative. It is finite, not infinite."
+    },
+    {
+      "question_id": "T06.01.Q034",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Gibbs free energy is defined as:",
+      "options": [
+        {"id": "A", "text": "G = H + TS"},
+        {"id": "B", "text": "G = H − TS"},
+        {"id": "C", "text": "G = U − TS"},
+        {"id": "D", "text": "G = U + PV + TS"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Gibbs free energy is defined as G = H − TS, where H is enthalpy, T is absolute temperature, and S is entropy. At constant T and P, ΔG = ΔH − TΔS determines spontaneity.",
+      "explanation_incorrect": "G = H + TS has the wrong sign for the entropy term. G = U − TS is the Helmholtz free energy (A). G = U + PV + TS adds rather than subtracts the entropy term."
+    },
+    {
+      "question_id": "T06.01.Q035",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "A reaction is spontaneous when:",
+      "options": [
+        {"id": "A", "text": "ΔG > 0"},
+        {"id": "B", "text": "ΔG = 0"},
+        {"id": "C", "text": "ΔG < 0"},
+        {"id": "D", "text": "ΔH > 0"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A process is spontaneous at constant T and P when the Gibbs free energy change is negative (ΔG < 0). This means the process releases free energy and can proceed without external input.",
+      "explanation_incorrect": "ΔG > 0 means the process is non-spontaneous. ΔG = 0 indicates equilibrium. ΔH > 0 alone does not determine spontaneity; both ΔH and ΔS must be considered."
+    },
+    {
+      "question_id": "T06.01.Q036",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "At equilibrium, the value of ΔG is:",
+      "options": [
+        {"id": "A", "text": "Maximum"},
+        {"id": "B", "text": "Minimum"},
+        {"id": "C", "text": "Zero"},
+        {"id": "D", "text": "Equal to ΔH"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At equilibrium, ΔG = 0. The system has reached the lowest possible Gibbs free energy for the given conditions, and there is no net tendency for the reaction to proceed in either direction.",
+      "explanation_incorrect": "ΔG is not maximum at equilibrium — that would be the least favourable state. While G itself is at a minimum, ΔG (the change) is zero. ΔG does not equal ΔH at equilibrium."
+    },
+    {
+      "question_id": "T06.01.Q037",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "question_text": "For a reaction with ΔH = −50 kJ and ΔS = −100 J/K, the temperature at which the reaction is at equilibrium is:",
+      "options": [
+        {"id": "A", "text": "500 K"},
+        {"id": "B", "text": "250 K"},
+        {"id": "C", "text": "5000 K"},
+        {"id": "D", "text": "50 K"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At equilibrium, ΔG = 0, so ΔH = TΔS. T = ΔH/ΔS = (−50,000 J) / (−100 J/K) = 500 K. Note the conversion of kJ to J.",
+      "explanation_incorrect": "250 K uses incorrect arithmetic. 5000 K fails to convert kJ to J. 50 K divides kJ by J/K without conversion."
+    },
+    {
+      "question_id": "T06.01.Q038",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "question_text": "A reaction has ΔH = −100 kJ and ΔS = +50 J/K at 298 K. The ΔG for this reaction is:",
+      "options": [
+        {"id": "A", "text": "−85.1 kJ"},
+        {"id": "B", "text": "−114.9 kJ"},
+        {"id": "C", "text": "+85.1 kJ"},
+        {"id": "D", "text": "−100 kJ"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔG = ΔH − TΔS = −100,000 − (298 × 50) = −100,000 − 14,900 = −114,900 J = −114.9 kJ. Both ΔH < 0 and ΔS > 0 favour spontaneity, making ΔG very negative.",
+      "explanation_incorrect": "−85.1 kJ incorrectly adds TΔS to ΔH. +85.1 kJ has the wrong sign. −100 kJ ignores the entropy contribution entirely."
+    },
+    {
+      "question_id": "T06.01.Q039",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "question_text": "A reaction with ΔH < 0 and ΔS < 0 is spontaneous:",
+      "options": [
+        {"id": "A", "text": "At all temperatures"},
+        {"id": "B", "text": "At high temperatures only"},
+        {"id": "C", "text": "At low temperatures only"},
+        {"id": "D", "text": "Never"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "ΔG = ΔH − TΔS. When ΔH < 0 and ΔS < 0, the −TΔS term is positive (since ΔS is negative). At low temperatures, |ΔH| > |TΔS|, so ΔG < 0 and the reaction is spontaneous. At high temperatures, TΔS becomes large enough to make ΔG > 0.",
+      "explanation_incorrect": "It is not spontaneous at all temperatures or never. It is not spontaneous at high temperatures because the unfavourable entropy term dominates."
+    },
+    {
+      "question_id": "T06.01.Q040",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "question_text": "The standard Gibbs energy change is related to the equilibrium constant by:",
+      "options": [
+        {"id": "A", "text": "ΔG° = RT ln K"},
+        {"id": "B", "text": "ΔG° = −RT ln K"},
+        {"id": "C", "text": "ΔG° = −RT / K"},
+        {"id": "D", "text": "ΔG° = K × RT"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The relationship is ΔG° = −RT ln K. When K > 1, ln K > 0 and ΔG° < 0 (products favoured). When K < 1, ln K < 0 and ΔG° > 0 (reactants favoured).",
+      "explanation_incorrect": "ΔG° = RT ln K has the wrong sign. ΔG° = −RT / K and ΔG° = K × RT are not valid thermodynamic relationships."
+    },
+    {
+      "question_id": "T06.01.Q041",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "For a reaction with ΔH = +40 kJ/mol and ΔS = +120 J/(mol·K), the minimum temperature at which the reaction becomes spontaneous is approximately:",
+      "options": [
+        {"id": "A", "text": "333 K"},
+        {"id": "B", "text": "500 K"},
+        {"id": "C", "text": "240 K"},
+        {"id": "D", "text": "120 K"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The reaction becomes spontaneous when ΔG < 0, i.e., ΔH < TΔS → T > ΔH/ΔS = 40,000/120 = 333.3 K. Above 333 K, the TΔS term exceeds ΔH and ΔG becomes negative.",
+      "explanation_incorrect": "500 K is above the transition temperature but is not the minimum. 240 K and 120 K are below the transition temperature, where the reaction is non-spontaneous."
+    },
+    {
+      "question_id": "T06.01.Q042",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "If ΔG° for a reaction is −5.7 kJ/mol at 298 K, the equilibrium constant K is approximately: (R = 8.314 J mol⁻¹ K⁻¹, e = 2.718)",
+      "options": [
+        {"id": "A", "text": "0.1"},
+        {"id": "B", "text": "1.0"},
+        {"id": "C", "text": "10"},
+        {"id": "D", "text": "100"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "ΔG° = −RT ln K → ln K = −ΔG° / RT = 5700 / (8.314 × 298) = 5700 / 2477.6 ≈ 2.3. K = e^2.3 ≈ 10. A negative ΔG° indicates products are favoured (K > 1).",
+      "explanation_incorrect": "K = 0.1 would require a positive ΔG°. K = 1.0 corresponds to ΔG° = 0. K = 100 would require ΔG° ≈ −11.4 kJ/mol."
+    },
+    {
+      "question_id": "T06.01.Q043",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A reaction with ΔH < 0 and ΔS > 0 is:",
+      "options": [
+        {"id": "A", "text": "Spontaneous at all temperatures"},
+        {"id": "B", "text": "Spontaneous only at high temperatures"},
+        {"id": "C", "text": "Spontaneous only at low temperatures"},
+        {"id": "D", "text": "Never spontaneous"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When ΔH < 0 and ΔS > 0, both terms in ΔG = ΔH − TΔS contribute to making ΔG negative at all temperatures. The enthalpy term is always negative and the −TΔS term is also always negative (since ΔS > 0). Therefore ΔG < 0 at every temperature.",
+      "explanation_incorrect": "There is no temperature at which this combination becomes non-spontaneous. Both the enthalpy and entropy factors always favour spontaneity."
+    },
+    {
+      "question_id": "T06.01.Q044",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "An ideal gas expands from 5 L to 15 L against a constant external pressure of 2 atm. The work done by the gas is:",
+      "options": [
+        {"id": "A", "text": "−20 L atm"},
+        {"id": "B", "text": "+20 L atm"},
+        {"id": "C", "text": "+10 L atm"},
+        {"id": "D", "text": "−10 L atm"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Work done by the gas = P_ext × ΔV = 2 × (15 − 5) = 2 × 10 = 20 L atm. It is positive because the gas expands against external pressure.",
+      "explanation_incorrect": "−20 L atm is the work done on the system (IUPAC convention w = −P_ext ΔV). 10 L atm uses P = 1 atm. −10 L atm is incorrect in both sign and magnitude."
+    },
+    {
+      "question_id": "T06.01.Q045",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "question_text": "Which of the following has a standard enthalpy of formation equal to zero?",
+      "options": [
+        {"id": "A", "text": "O₃(g)"},
+        {"id": "B", "text": "C(diamond)"},
+        {"id": "C", "text": "Fe(s)"},
+        {"id": "D", "text": "Br₂(g)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Fe(s) is iron in its most stable standard state at 298 K and 1 bar. By convention, ΔfH° = 0 for elements in their standard states.",
+      "explanation_incorrect": "O₃(g) is an allotrope of oxygen but not the most stable one (O₂ is). C(diamond) is not the most stable allotrope of carbon (graphite is). Br₂(g) is not the standard state of bromine — Br₂(l) is."
+    },
+    {
+      "question_id": "T06.01.Q046",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "For which of the following reactions is ΔS expected to be most positive?",
+      "options": [
+        {"id": "A", "text": "H₂(g) + Cl₂(g) → 2HCl(g)"},
+        {"id": "B", "text": "CaCO₃(s) → CaO(s) + CO₂(g)"},
+        {"id": "C", "text": "N₂(g) + 3H₂(g) → 2NH₃(g)"},
+        {"id": "D", "text": "2SO₂(g) + O₂(g) → 2SO₃(g)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "CaCO₃(s) → CaO(s) + CO₂(g) produces a gas from a solid, greatly increasing disorder. Δnₘ(gas) = 1 − 0 = +1. In the other reactions: A has Δnₘ = 0, C has Δnₘ = −2, D has Δnₘ = −1.",
+      "explanation_incorrect": "Reaction A has no change in gas moles. Reactions C and D decrease the number of gas moles, giving negative ΔS values."
+    },
+    {
+      "question_id": "T06.01.Q047",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "An extensive property is one that depends on the amount of matter in the system. Which of the following is extensive?",
+      "options": [
+        {"id": "A", "text": "Temperature"},
+        {"id": "B", "text": "Pressure"},
+        {"id": "C", "text": "Density"},
+        {"id": "D", "text": "Enthalpy"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Enthalpy (H) is an extensive property — its value depends on the amount of substance. If you double the amount of material, H doubles. Temperature, pressure, and density are intensive properties, independent of the amount.",
+      "explanation_incorrect": "Temperature, pressure, and density are all intensive properties that do not depend on the quantity of matter."
+    },
+    {
+      "question_id": "T06.01.Q048",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "question_text": "For a free expansion of an ideal gas into a vacuum (P_ext = 0):",
+      "options": [
+        {"id": "A", "text": "w = 0, q = 0, ΔU = 0"},
+        {"id": "B", "text": "w > 0, q > 0, ΔU > 0"},
+        {"id": "C", "text": "w < 0, q > 0, ΔU = 0"},
+        {"id": "D", "text": "w = 0, q > 0, ΔU > 0"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In free expansion against zero external pressure, w = −P_ext ΔV = 0. For an ideal gas expanding isothermally, ΔU = 0 (U depends only on T). From the first law: ΔU = q + w → 0 = q + 0 → q = 0.",
+      "explanation_incorrect": "No work is done against zero external pressure. Since ΔU = 0 for an ideal gas at constant T, no heat exchange is needed."
+    },
+    {
+      "question_id": "T06.01.Q049",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The enthalpy change accompanying the dissolution of a substance in a large excess of solvent is called:",
+      "options": [
+        {"id": "A", "text": "Enthalpy of combustion"},
+        {"id": "B", "text": "Enthalpy of solution (dissolution)"},
+        {"id": "C", "text": "Enthalpy of neutralisation"},
+        {"id": "D", "text": "Enthalpy of atomisation"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of solution (or dissolution) is the enthalpy change when one mole of a substance is dissolved in a large excess of solvent so that further dilution causes no appreciable change in enthalpy.",
+      "explanation_incorrect": "Combustion involves burning in oxygen. Neutralisation involves acid-base reactions. Atomisation involves converting a substance into isolated gaseous atoms."
+    },
+    {
+      "question_id": "T06.01.Q050",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "question_text": "The maximum amount of non-expansion work (useful work) obtainable from a reaction at constant T and P is equal to:",
+      "options": [
+        {"id": "A", "text": "ΔH"},
+        {"id": "B", "text": "ΔU"},
+        {"id": "C", "text": "−ΔG"},
+        {"id": "D", "text": "TΔS"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The maximum useful (non-expansion) work obtainable from a process at constant T and P equals −ΔG. If ΔG is negative, the magnitude |ΔG| represents the maximum work the system can perform.",
+      "explanation_incorrect": "ΔH includes both useful work and heat exchanged with surroundings. ΔU is the total energy change at constant volume. TΔS is the heat contribution related to entropy, not the total useful work."
+    }
+  ]
+}

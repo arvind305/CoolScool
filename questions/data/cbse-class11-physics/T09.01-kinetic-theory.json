@@ -1,0 +1,779 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T09.01",
+  "topic_name": "Kinetic Theory",
+  "canonical_explanation": {
+    "text": "The kinetic theory of gases explains the macroscopic properties of gases (pressure, temperature, volume) in terms of the microscopic behaviour of molecules. An ideal gas obeys PV = nRT (n = number of moles, R = 8.314 J mol⁻¹ K⁻¹) which unifies Boyle's law (PV = const at constant T), Charles's law (V/T = const at constant P), Gay-Lussac's law (P/T = const at constant V), and Avogadro's law (V ∝ n at constant T, P). Kinetic theory assumes a large number of identical molecules in random motion with perfectly elastic collisions and negligible intermolecular forces, yielding pressure P = (1/3)ρv²_rms. The average translational kinetic energy per molecule is (3/2)kT (k = R/Nₐ = 1.38 × 10⁻²³ J K⁻¹), directly proportional to absolute temperature. Three characteristic speeds are: v_rms = √(3kT/m), v_avg = √(8kT/πm), and v_mp = √(2kT/m), in the ratio 1.225 : 1.128 : 1. The law of equipartition of energy assigns (1/2)kT per degree of freedom: monoatomic gases have f = 3 (translational only), diatomic gases at moderate T have f = 5 (3 translational + 2 rotational), and polyatomic nonlinear gases have f = 6. Accordingly Cᵥ = (f/2)R and γ = Cₚ/Cᵥ = 1 + 2/f. The mean free path λ = 1/(√2 π n d²), where n is the number density and d is the molecular diameter.",
+    "rules": [
+      "Ideal gas equation: PV = nRT; equivalently PV = NkT where N is the number of molecules and k = R/Nₐ.",
+      "Boyle's law: PV = constant at constant T; Charles's law: V/T = constant at constant P; Gay-Lussac's law: P/T = constant at constant V.",
+      "Avogadro's law: Equal volumes of all gases at the same T and P contain the same number of molecules.",
+      "Kinetic theory pressure: P = (1/3)(Nm/V)v²_rms = (1/3)ρv²_rms.",
+      "Average translational KE per molecule = (3/2)kT; per mole = (3/2)RT.",
+      "v_rms = √(3kT/m) = √(3RT/M); v_avg = √(8kT/πm); v_mp = √(2kT/m).",
+      "Degrees of freedom: monoatomic f = 3, diatomic (moderate T) f = 5, polyatomic nonlinear f = 6.",
+      "Equipartition: each degree of freedom contributes (1/2)kT per molecule; Cᵥ = (f/2)R, Cₚ = Cᵥ + R, γ = 1 + 2/f.",
+      "Mean free path: λ = 1/(√2 π n d²), where n = number density, d = molecular diameter."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T09.01.Q001",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The ideal gas equation PV = nRT contains the universal gas constant R. Its value in SI units is approximately:",
+      "options": [
+        { "id": "A", "text": "8.314 J mol⁻¹ K⁻¹" },
+        { "id": "B", "text": "1.38 × 10⁻²³ J K⁻¹" },
+        { "id": "C", "text": "6.022 × 10²³ mol⁻¹" },
+        { "id": "D", "text": "8.314 kJ mol⁻¹ K⁻¹" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The universal gas constant R = 8.314 J mol⁻¹ K⁻¹. Option B is Boltzmann's constant k, option C is Avogadro's number Nₐ, and option D has incorrect units (kJ instead of J).",
+      "explanation_incorrect": "R = 8.314 J mol⁻¹ K⁻¹. Do not confuse it with Boltzmann's constant (1.38 × 10⁻²³ J K⁻¹), Avogadro's number (6.022 × 10²³ mol⁻¹), or a value 1000 times larger."
+    },
+    {
+      "question_id": "T09.01.Q002",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Boyle's law, at constant temperature for a fixed amount of gas:",
+      "options": [
+        { "id": "A", "text": "P ∝ V" },
+        { "id": "B", "text": "PV = constant" },
+        { "id": "C", "text": "V/T = constant" },
+        { "id": "D", "text": "P/T = constant" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Boyle's law states that at constant temperature, the product PV remains constant for a given mass of gas. This means pressure is inversely proportional to volume: P ∝ 1/V.",
+      "explanation_incorrect": "P ∝ V (option A) implies direct proportionality, which is incorrect. V/T = constant (option C) is Charles's law at constant P. P/T = constant (option D) is Gay-Lussac's law at constant V."
+    },
+    {
+      "question_id": "T09.01.Q003",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Charles's law relates the volume and temperature of a gas at constant pressure. It states:",
+      "options": [
+        { "id": "A", "text": "V ∝ 1/T at constant P" },
+        { "id": "B", "text": "V ∝ T at constant P" },
+        { "id": "C", "text": "V ∝ P at constant T" },
+        { "id": "D", "text": "V ∝ 1/P at constant T" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Charles's law states that at constant pressure, the volume of a fixed amount of gas is directly proportional to its absolute temperature: V ∝ T, or equivalently V/T = constant.",
+      "explanation_incorrect": "V ∝ 1/T (option A) is the inverse of Charles's law. Options C and D relate V and P, which is Boyle's law territory (V ∝ 1/P at constant T)."
+    },
+    {
+      "question_id": "T09.01.Q004",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Gay-Lussac's law states that at constant volume, the pressure of a gas is:",
+      "options": [
+        { "id": "A", "text": "Inversely proportional to absolute temperature" },
+        { "id": "B", "text": "Directly proportional to absolute temperature" },
+        { "id": "C", "text": "Independent of temperature" },
+        { "id": "D", "text": "Proportional to the square of temperature" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Gay-Lussac's law states that at constant volume, the pressure of a fixed amount of gas is directly proportional to its absolute temperature: P ∝ T, or P/T = constant.",
+      "explanation_incorrect": "Pressure increases as temperature increases at constant volume, ruling out inverse proportionality (A) and independence (C). The relationship is linear (P ∝ T), not quadratic (D)."
+    },
+    {
+      "question_id": "T09.01.Q005",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Avogadro's law states that equal volumes of all gases at the same temperature and pressure contain:",
+      "options": [
+        { "id": "A", "text": "Equal mass" },
+        { "id": "B", "text": "Equal number of molecules" },
+        { "id": "C", "text": "Equal density" },
+        { "id": "D", "text": "Equal kinetic energy per molecule" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Avogadro's law states that equal volumes of all gases at the same temperature and pressure contain an equal number of molecules. This is fundamental to the concept of the mole and the ideal gas equation.",
+      "explanation_incorrect": "Different gases have different molecular masses, so equal volumes at the same T and P do not have equal mass (A) or equal density (C). While the average KE per molecule is the same at a given T (option D), that is a consequence of kinetic theory, not the statement of Avogadro's law."
+    },
+    {
+      "question_id": "T09.01.Q006",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The Boltzmann constant k is related to the gas constant R and Avogadro's number Nₐ by:",
+      "options": [
+        { "id": "A", "text": "k = RNₐ" },
+        { "id": "B", "text": "k = R/Nₐ" },
+        { "id": "C", "text": "k = Nₐ/R" },
+        { "id": "D", "text": "k = R + Nₐ" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Boltzmann constant is the gas constant per molecule: k = R/Nₐ = 8.314/6.022 × 10²³ ≈ 1.38 × 10⁻²³ J K⁻¹. This allows the ideal gas equation to be written as PV = NkT for N molecules.",
+      "explanation_incorrect": "k = RNₐ (option A) would give a huge number, not a small constant. k = Nₐ/R (option C) inverts the correct relationship. k = R + Nₐ (option D) makes no dimensional sense."
+    },
+    {
+      "question_id": "T09.01.Q007",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "A gas occupies 500 mL at 27°C and 1 atm. If the temperature is raised to 327°C at constant pressure, the new volume is:",
+      "options": [
+        { "id": "A", "text": "250 mL" },
+        { "id": "B", "text": "500 mL" },
+        { "id": "C", "text": "1000 mL" },
+        { "id": "D", "text": "750 mL" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using Charles's law V₁/T₁ = V₂/T₂. T₁ = 27 + 273 = 300 K, T₂ = 327 + 273 = 600 K. So V₂ = V₁ × T₂/T₁ = 500 × 600/300 = 1000 mL.",
+      "explanation_incorrect": "Temperature must be converted to Kelvin: T₁ = 300 K, T₂ = 600 K. Since T₂/T₁ = 2, the volume doubles from 500 mL to 1000 mL. Options A, B, and D result from incorrect temperature conversions or ratios."
+    },
+    {
+      "question_id": "T09.01.Q008",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "A gas at 2 atm pressure and 300 K occupies 10 L. How many moles of gas are present? (R = 0.0821 L atm mol⁻¹ K⁻¹)",
+      "options": [
+        { "id": "A", "text": "0.41 mol" },
+        { "id": "B", "text": "0.81 mol" },
+        { "id": "C", "text": "1.22 mol" },
+        { "id": "D", "text": "2.44 mol" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From PV = nRT, n = PV/RT = (2 × 10)/(0.0821 × 300) = 20/24.63 ≈ 0.81 mol.",
+      "explanation_incorrect": "Substituting into n = PV/RT: n = (2 atm × 10 L)/(0.0821 L atm mol⁻¹ K⁻¹ × 300 K) = 20/24.63 ≈ 0.81 mol. Options A, C, and D arise from incorrect substitution or arithmetic errors."
+    },
+    {
+      "question_id": "T09.01.Q009",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "question_text": "An ideal gas at 27°C has its pressure doubled and volume halved. The final temperature is:",
+      "options": [
+        { "id": "A", "text": "27°C" },
+        { "id": "B", "text": "54°C" },
+        { "id": "C", "text": "150 K" },
+        { "id": "D", "text": "300 K" }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Using PV/T = const for a fixed amount: P₁V₁/T₁ = P₂V₂/T₂. With P₂ = 2P₁ and V₂ = V₁/2: T₂ = T₁ × (P₂V₂)/(P₁V₁) = 300 × (2 × 0.5)/1 = 300 K = 27°C. The temperature remains 300 K.",
+      "explanation_incorrect": "T₁ = 300 K. Since P doubles and V halves, PV stays the same, so T₂ = T₁ = 300 K. Option A (27°C) is numerically the same as 300 K but is listed as a separate option; 300 K is the more precise answer in absolute scale. Option B incorrectly doubles the Celsius value. Option C incorrectly halves the temperature."
+    },
+    {
+      "question_id": "T09.01.Q010",
+      "type": "true_false",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "At constant temperature, if the volume of an ideal gas is reduced to one-third, its pressure becomes three times the original value.",
+      "correct_answer": "True",
+      "explanation_correct": "By Boyle's law, PV = constant at constant T. If V becomes V/3, then P must become 3P to keep PV unchanged. Therefore the statement is true.",
+      "explanation_incorrect": "Boyle's law requires PV = constant. When V is reduced to V/3, P must increase to 3P. The statement correctly applies Boyle's law."
+    },
+    {
+      "question_id": "T09.01.Q011",
+      "type": "true_false",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The ideal gas equation PV = nRT can also be written as PV = NkT, where N is the total number of molecules and k is the Boltzmann constant.",
+      "correct_answer": "True",
+      "explanation_correct": "Since n = N/Nₐ and k = R/Nₐ, substituting gives PV = (N/Nₐ)(Nₐ k)T = NkT. The two forms are equivalent.",
+      "explanation_incorrect": "The substitution n = N/Nₐ and R = Nₐk directly transforms PV = nRT into PV = NkT. This is a standard equivalent form of the ideal gas equation."
+    },
+    {
+      "question_id": "T09.01.Q012",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Boyle's law, the pressure of a given mass of gas is ______ proportional to its volume at constant temperature.",
+      "correct_answer": "inversely",
+      "explanation_correct": "Boyle's law states PV = constant at constant temperature, which means P ∝ 1/V. Pressure is inversely proportional to volume.",
+      "explanation_incorrect": "Boyle's law gives PV = constant, meaning P increases when V decreases and vice versa. The relationship is inverse, not direct."
+    },
+    {
+      "question_id": "T09.01.Q013",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is NOT an assumption of the kinetic theory of an ideal gas?",
+      "options": [
+        { "id": "A", "text": "Molecules are in random motion" },
+        { "id": "B", "text": "Collisions between molecules are perfectly elastic" },
+        { "id": "C", "text": "Intermolecular attractive forces are significant" },
+        { "id": "D", "text": "The size of molecules is negligible compared to the distance between them" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The kinetic theory of ideal gases assumes that intermolecular forces are negligible (not significant). Options A, B, and D are all valid assumptions of the kinetic theory.",
+      "explanation_incorrect": "Kinetic theory assumes random motion (A), perfectly elastic collisions (B), and negligible molecular size (D). It explicitly assumes no significant intermolecular forces, making option C the incorrect assumption."
+    },
+    {
+      "question_id": "T09.01.Q014",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to kinetic theory, the pressure exerted by an ideal gas is given by:",
+      "options": [
+        { "id": "A", "text": "P = (1/3)ρv²_rms" },
+        { "id": "B", "text": "P = ρv²_rms" },
+        { "id": "C", "text": "P = (2/3)ρv²_rms" },
+        { "id": "D", "text": "P = (1/2)ρv²_rms" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From kinetic theory, the pressure of an ideal gas is P = (1/3)ρv²_rms, where ρ is the density and v_rms is the root-mean-square speed. The factor 1/3 arises because molecular motion is equally distributed along three independent directions.",
+      "explanation_incorrect": "The correct expression is P = (1/3)ρv²_rms. The factor 1/3 comes from averaging the velocity components over three spatial dimensions. Options B, C, and D have incorrect prefactors."
+    },
+    {
+      "question_id": "T09.01.Q015",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In kinetic theory, collisions between gas molecules are assumed to be:",
+      "options": [
+        { "id": "A", "text": "Perfectly inelastic" },
+        { "id": "B", "text": "Perfectly elastic" },
+        { "id": "C", "text": "Partially elastic" },
+        { "id": "D", "text": "Superelastic" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the kinetic theory of ideal gases, all collisions (between molecules and between molecules and walls) are assumed to be perfectly elastic, meaning kinetic energy is conserved in every collision.",
+      "explanation_incorrect": "If collisions were inelastic or partially elastic, kinetic energy would be lost, and the gas would cool down over time without external energy input. The ideal gas model requires perfectly elastic collisions."
+    },
+    {
+      "question_id": "T09.01.Q016",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The pressure of a gas in a container is P. If the number of molecules is doubled while keeping the volume and temperature constant, the new pressure is:",
+      "options": [
+        { "id": "A", "text": "P" },
+        { "id": "B", "text": "2P" },
+        { "id": "C", "text": "P/2" },
+        { "id": "D", "text": "4P" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From PV = NkT, at constant V and T, pressure is directly proportional to the number of molecules N. Doubling N doubles the pressure to 2P.",
+      "explanation_incorrect": "Since P = NkT/V, doubling N at constant V and T gives P_new = 2NkT/V = 2P. The pressure doubles because twice as many molecules strike the walls per unit time."
+    },
+    {
+      "question_id": "T09.01.Q017",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "Two ideal gases at the same temperature have molecular masses m₁ and m₂ (m₁ > m₂). If both have the same pressure and volume, then:",
+      "options": [
+        { "id": "A", "text": "They have the same number of molecules" },
+        { "id": "B", "text": "The heavier gas has more molecules" },
+        { "id": "C", "text": "The lighter gas has more molecules" },
+        { "id": "D", "text": "Their number of molecules depends on molecular mass" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From PV = NkT, if P, V, and T are the same for both gases, then N must be the same regardless of molecular mass. This is a direct consequence of the ideal gas equation and Avogadro's law.",
+      "explanation_incorrect": "The ideal gas equation PV = NkT contains no reference to molecular mass. At the same P, V, and T, the number of molecules N is identical for any ideal gas, heavy or light."
+    },
+    {
+      "question_id": "T09.01.Q018",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "question_text": "The RMS speed of oxygen molecules at a certain temperature is 500 m/s. The RMS speed of hydrogen molecules at the same temperature is (M_O₂ = 32, M_H₂ = 2):",
+      "options": [
+        { "id": "A", "text": "500 m/s" },
+        { "id": "B", "text": "1000 m/s" },
+        { "id": "C", "text": "2000 m/s" },
+        { "id": "D", "text": "125 m/s" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "v_rms = √(3RT/M). At the same temperature, v_rms ∝ 1/√M. So v_H₂/v_O₂ = √(M_O₂/M_H₂) = √(32/2) = √16 = 4. Therefore v_H₂ = 4 × 500 = 2000 m/s.",
+      "explanation_incorrect": "Since v_rms ∝ 1/√M at constant T, the ratio is √(32/2) = 4. Hydrogen molecules, being 16 times lighter, move 4 times faster: 4 × 500 = 2000 m/s."
+    },
+    {
+      "question_id": "T09.01.Q019",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A vessel contains a mixture of N₂ and He at 300 K. If the RMS speed of He atoms is v, the RMS speed of N₂ molecules is (M_He = 4, M_N₂ = 28):",
+      "options": [
+        { "id": "A", "text": "v/√7" },
+        { "id": "B", "text": "v√7" },
+        { "id": "C", "text": "v/7" },
+        { "id": "D", "text": "7v" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At the same temperature, v_rms ∝ 1/√M. So v_N₂/v_He = √(M_He/M_N₂) = √(4/28) = √(1/7) = 1/√7. Therefore v_N₂ = v/√7.",
+      "explanation_incorrect": "The RMS speed is inversely proportional to the square root of molar mass. With M_N₂/M_He = 28/4 = 7, we get v_N₂ = v_He × √(4/28) = v/√7."
+    },
+    {
+      "question_id": "T09.01.Q020",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to kinetic theory, the pressure of an ideal gas is P = (1/3)ρv²_rms. The factor 1/3 arises because molecular motion is distributed equally along ______ independent spatial directions.",
+      "correct_answer": "three",
+      "explanation_correct": "Molecules move randomly in three-dimensional space (x, y, z directions). When computing the pressure on a wall perpendicular to one axis, only the component along that axis contributes, giving the factor 1/3.",
+      "explanation_incorrect": "Space has three dimensions, so the average of the squared velocity component along any one direction is (1/3)v²_rms. This is why the factor 1/3 appears."
+    },
+    {
+      "question_id": "T09.01.Q021",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The average translational kinetic energy of one molecule of an ideal gas at temperature T is:",
+      "options": [
+        { "id": "A", "text": "(1/2)kT" },
+        { "id": "B", "text": "kT" },
+        { "id": "C", "text": "(3/2)kT" },
+        { "id": "D", "text": "3kT" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "From kinetic theory, the mean translational kinetic energy per molecule is (3/2)kT, arising from three translational degrees of freedom, each contributing (1/2)kT.",
+      "explanation_incorrect": "(1/2)kT (option A) is the energy per degree of freedom, not the total. kT (option B) and 3kT (option D) do not correctly account for the three translational degrees of freedom."
+    },
+    {
+      "question_id": "T09.01.Q022",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The kinetic interpretation of temperature states that the absolute temperature of a gas is directly proportional to:",
+      "options": [
+        { "id": "A", "text": "The average speed of molecules" },
+        { "id": "B", "text": "The average translational kinetic energy of molecules" },
+        { "id": "C", "text": "The total potential energy of molecules" },
+        { "id": "D", "text": "The pressure of the gas" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The kinetic interpretation of temperature directly links absolute temperature to the average translational kinetic energy: KE_avg = (3/2)kT. Temperature is a measure of the average random kinetic energy of gas molecules.",
+      "explanation_incorrect": "Temperature is proportional to KE (∝ v²), not to speed directly (option A). Ideal gases have no potential energy (option C). Pressure depends on both T and density, so it is not solely proportional to T (option D)."
+    },
+    {
+      "question_id": "T09.01.Q023",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The expression for the RMS speed of gas molecules is:",
+      "options": [
+        { "id": "A", "text": "v_rms = √(3kT/m)" },
+        { "id": "B", "text": "v_rms = √(2kT/m)" },
+        { "id": "C", "text": "v_rms = √(8kT/πm)" },
+        { "id": "D", "text": "v_rms = √(kT/m)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The RMS speed is v_rms = √(3kT/m), where k is Boltzmann's constant, T is absolute temperature, and m is the mass of one molecule. This follows from (1/2)mv²_rms = (3/2)kT.",
+      "explanation_incorrect": "√(2kT/m) (option B) is the most probable speed v_mp. √(8kT/πm) (option C) is the mean speed v_avg. √(kT/m) (option D) has an incorrect numerical factor."
+    },
+    {
+      "question_id": "T09.01.Q024",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "At what temperature will the RMS speed of oxygen molecules be double their RMS speed at 27°C? (Assume ideal gas behaviour.)",
+      "options": [
+        { "id": "A", "text": "54°C" },
+        { "id": "B", "text": "327°C" },
+        { "id": "C", "text": "927°C" },
+        { "id": "D", "text": "1200°C" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "v_rms ∝ √T. For v to double, T must become 4 times: T₂ = 4 × 300 = 1200 K = 927°C.",
+      "explanation_incorrect": "Since v_rms ∝ √T, doubling the speed requires T₂ = 4T₁ = 4 × 300 K = 1200 K = 1200 - 273 = 927°C. Option A incorrectly doubles the Celsius temperature. Option B quadruples the Celsius value. Option D forgets to convert back from Kelvin."
+    },
+    {
+      "question_id": "T09.01.Q025",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "The average kinetic energy per mole of an ideal gas at 600 K is (R = 8.314 J mol⁻¹ K⁻¹):",
+      "options": [
+        { "id": "A", "text": "2494 J" },
+        { "id": "B", "text": "4988 J" },
+        { "id": "C", "text": "7482 J" },
+        { "id": "D", "text": "9977 J" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The average translational KE per mole = (3/2)RT = (3/2) × 8.314 × 600 = 1.5 × 4988.4 = 7482.6 J ≈ 7482 J.",
+      "explanation_incorrect": "KE per mole = (3/2)RT = 1.5 × 8.314 × 600 ≈ 7482 J. Option A uses (1/2)RT. Option B uses RT. Option D uses 2RT."
+    },
+    {
+      "question_id": "T09.01.Q026",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "The RMS speed of nitrogen molecules (M = 28 g/mol) at 300 K is approximately (R = 8.314 J mol⁻¹ K⁻¹):",
+      "options": [
+        { "id": "A", "text": "289 m/s" },
+        { "id": "B", "text": "517 m/s" },
+        { "id": "C", "text": "731 m/s" },
+        { "id": "D", "text": "1035 m/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v_rms = √(3RT/M) = √(3 × 8.314 × 300 / 0.028) = √(7482.6/0.028) = √(267235.7) ≈ 517 m/s. Note M must be in kg/mol (0.028 kg/mol).",
+      "explanation_incorrect": "Using v_rms = √(3RT/M) with R = 8.314, T = 300, M = 0.028 kg/mol: v_rms = √(3 × 8.314 × 300/0.028) ≈ 517 m/s. Common errors include using M in g/mol instead of kg/mol."
+    },
+    {
+      "question_id": "T09.01.Q027",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The ratio v_rms : v_avg : v_mp for an ideal gas is:",
+      "options": [
+        { "id": "A", "text": "1 : 1.128 : 1.225" },
+        { "id": "B", "text": "1.225 : 1.128 : 1" },
+        { "id": "C", "text": "1 : 1.225 : 1.128" },
+        { "id": "D", "text": "1.128 : 1 : 1.225" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v_rms = √(3kT/m), v_avg = √(8kT/πm), v_mp = √(2kT/m). Taking v_mp as the base unit: v_mp : v_avg : v_rms = √2 : √(8/π) : √3 = 1 : 1.128 : 1.225. So v_rms : v_avg : v_mp = 1.225 : 1.128 : 1.",
+      "explanation_incorrect": "The correct ordering from largest to smallest is v_rms > v_avg > v_mp. Their ratio is 1.225 : 1.128 : 1, corresponding to √3 : √(8/π) : √2."
+    },
+    {
+      "question_id": "T09.01.Q028",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two monoatomic ideal gases at temperatures T₁ and T₂ have RMS speeds in the ratio 2 : 3. If both have the same molar mass, then T₁ : T₂ is:",
+      "options": [
+        { "id": "A", "text": "2 : 3" },
+        { "id": "B", "text": "4 : 9" },
+        { "id": "C", "text": "9 : 4" },
+        { "id": "D", "text": "√2 : √3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v_rms ∝ √T (for the same molar mass). If v₁ : v₂ = 2 : 3, then √T₁ : √T₂ = 2 : 3, so T₁ : T₂ = 4 : 9.",
+      "explanation_incorrect": "Since v_rms = √(3RT/M), at equal M, v ∝ √T. Squaring the speed ratio 2 : 3 gives the temperature ratio T₁ : T₂ = 4 : 9."
+    },
+    {
+      "question_id": "T09.01.Q029",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "An ideal gas has its absolute temperature increased from T to 3T. The ratio of the new RMS speed to the original RMS speed is:",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "√3" },
+        { "id": "C", "text": "9" },
+        { "id": "D", "text": "1/√3" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v_rms ∝ √T. When T increases to 3T, the new v_rms = √3 × original v_rms. The ratio is √3.",
+      "explanation_incorrect": "Since v_rms = √(3kT/m), it scales as √T, not linearly with T. Tripling T multiplies v_rms by √3, not by 3 or 9."
+    },
+    {
+      "question_id": "T09.01.Q030",
+      "type": "true_false",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "question_text": "At the same temperature, lighter gas molecules have higher RMS speeds than heavier gas molecules.",
+      "correct_answer": "True",
+      "explanation_correct": "v_rms = √(3kT/m). At constant T, v_rms ∝ 1/√m. Lighter molecules (smaller m) therefore have higher RMS speeds.",
+      "explanation_incorrect": "The RMS speed is inversely proportional to the square root of molecular mass at a given temperature. Lighter molecules move faster on average."
+    },
+    {
+      "question_id": "T09.01.Q031",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The number of degrees of freedom for a monoatomic ideal gas molecule is:",
+      "options": [
+        { "id": "A", "text": "1" },
+        { "id": "B", "text": "3" },
+        { "id": "C", "text": "5" },
+        { "id": "D", "text": "6" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A monoatomic molecule (e.g., He, Ne, Ar) has only 3 translational degrees of freedom corresponding to motion along the x, y, and z axes. It has no rotational or vibrational degrees of freedom at ordinary temperatures.",
+      "explanation_incorrect": "Monoatomic gases have f = 3 (translational only). f = 5 applies to diatomic gases at moderate T, and f = 6 applies to nonlinear polyatomic gases."
+    },
+    {
+      "question_id": "T09.01.Q032",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A diatomic gas at moderate temperatures has degrees of freedom:",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "5" },
+        { "id": "C", "text": "6" },
+        { "id": "D", "text": "7" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At moderate temperatures, a diatomic molecule has 3 translational and 2 rotational degrees of freedom, totalling f = 5. Vibrational modes are not significantly excited at moderate temperatures.",
+      "explanation_incorrect": "f = 3 is for monoatomic gases. f = 5 is correct for diatomic at moderate T (3 translational + 2 rotational). f = 7 would include vibrational modes, which become significant only at high temperatures."
+    },
+    {
+      "question_id": "T09.01.Q033",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "According to the law of equipartition of energy, each degree of freedom of a molecule contributes an energy of:",
+      "options": [
+        { "id": "A", "text": "kT" },
+        { "id": "B", "text": "(1/2)kT" },
+        { "id": "C", "text": "(3/2)kT" },
+        { "id": "D", "text": "2kT" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The law of equipartition of energy states that each quadratic (squared) term in the expression for energy contributes (1/2)kT to the average energy per molecule. Each degree of freedom corresponds to one such quadratic term.",
+      "explanation_incorrect": "(1/2)kT per degree of freedom is the fundamental result of equipartition. The total (3/2)kT for a monoatomic gas comes from 3 degrees of freedom, each contributing (1/2)kT."
+    },
+    {
+      "question_id": "T09.01.Q034",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The molar specific heat at constant volume (Cᵥ) for a monoatomic ideal gas is:",
+      "options": [
+        { "id": "A", "text": "(3/2)R" },
+        { "id": "B", "text": "(5/2)R" },
+        { "id": "C", "text": "(7/2)R" },
+        { "id": "D", "text": "R" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a monoatomic gas, f = 3. By equipartition, Cᵥ = (f/2)R = (3/2)R = 12.47 J mol⁻¹ K⁻¹.",
+      "explanation_incorrect": "(5/2)R is Cᵥ for a diatomic gas. (7/2)R is Cₚ for a diatomic gas. R alone is too small. For monoatomic gases with f = 3, Cᵥ = (3/2)R."
+    },
+    {
+      "question_id": "T09.01.Q035",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The ratio γ = Cₚ/Cᵥ for a monoatomic ideal gas is:",
+      "options": [
+        { "id": "A", "text": "7/5" },
+        { "id": "B", "text": "5/3" },
+        { "id": "C", "text": "4/3" },
+        { "id": "D", "text": "9/7" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a monoatomic gas, Cᵥ = (3/2)R and Cₚ = Cᵥ + R = (5/2)R. Therefore γ = Cₚ/Cᵥ = (5/2)R ÷ (3/2)R = 5/3.",
+      "explanation_incorrect": "γ = 7/5 is for diatomic gases (f = 5). γ = 4/3 is for polyatomic nonlinear gases (f = 6). For monoatomic gases (f = 3), γ = 1 + 2/f = 1 + 2/3 = 5/3."
+    },
+    {
+      "question_id": "T09.01.Q036",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "For a diatomic gas at moderate temperatures (f = 5), the value of Cₚ is:",
+      "options": [
+        { "id": "A", "text": "(3/2)R" },
+        { "id": "B", "text": "(5/2)R" },
+        { "id": "C", "text": "(7/2)R" },
+        { "id": "D", "text": "(9/2)R" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For diatomic gas with f = 5: Cᵥ = (5/2)R. Using Cₚ = Cᵥ + R (Mayer's relation): Cₚ = (5/2)R + R = (7/2)R.",
+      "explanation_incorrect": "(5/2)R is Cᵥ for diatomic, not Cₚ. (3/2)R is Cᵥ for monoatomic. Cₚ = Cᵥ + R = (5/2 + 1)R = (7/2)R."
+    },
+    {
+      "question_id": "T09.01.Q037",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "A polyatomic nonlinear gas molecule has f = 6 degrees of freedom at moderate temperatures. Its γ = Cₚ/Cᵥ is:",
+      "options": [
+        { "id": "A", "text": "5/3" },
+        { "id": "B", "text": "7/5" },
+        { "id": "C", "text": "4/3" },
+        { "id": "D", "text": "8/6" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For f = 6: Cᵥ = (6/2)R = 3R, Cₚ = 3R + R = 4R. Therefore γ = 4R/3R = 4/3.",
+      "explanation_incorrect": "γ = 1 + 2/f = 1 + 2/6 = 1 + 1/3 = 4/3. Note that 8/6 = 4/3 numerically, but option D is expressed as 8/6 which is unconventional; option C gives the standard reduced form 4/3. However, since 8/6 and 4/3 are equal, the key is that option C is the standard expression. Options A and B apply to monoatomic and diatomic gases respectively."
+    },
+    {
+      "question_id": "T09.01.Q038",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If 1 mole of an ideal diatomic gas (f = 5) is heated from 300 K to 500 K at constant volume, the heat absorbed is (R = 8.314 J mol⁻¹ K⁻¹):",
+      "options": [
+        { "id": "A", "text": "2494 J" },
+        { "id": "B", "text": "4157 J" },
+        { "id": "C", "text": "5815 J" },
+        { "id": "D", "text": "8314 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Q = nCᵥΔT = 1 × (5/2) × 8.314 × (500 - 300) = 2.5 × 8.314 × 200 = 20.785 × 200 = 4157 J.",
+      "explanation_incorrect": "Using Q = nCᵥΔT with Cᵥ = (5/2)R for a diatomic gas: Q = 1 × 2.5 × 8.314 × 200 = 4157 J. Option A uses (3/2)R. Option C uses (7/2)R. Option D uses 5R."
+    },
+    {
+      "question_id": "T09.01.Q039",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The internal energy of 2 moles of a monoatomic ideal gas at 400 K is (R = 8.314 J mol⁻¹ K⁻¹):",
+      "options": [
+        { "id": "A", "text": "4988 J" },
+        { "id": "B", "text": "6651 J" },
+        { "id": "C", "text": "9977 J" },
+        { "id": "D", "text": "13302 J" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The internal energy of an ideal gas is U = n(f/2)RT. For monoatomic gas, f = 3: U = 2 × (3/2) × 8.314 × 400 = 2 × 3 × 8.314 × 200 = 9977 J.",
+      "explanation_incorrect": "U = nCᵥT = n(3/2)RT = 2 × 1.5 × 8.314 × 400 = 9977 J. Option A is for 1 mole. Option B uses (5/2)R incorrectly for 1 mole. Option D uses f = 6."
+    },
+    {
+      "question_id": "T09.01.Q040",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A gas mixture contains 1 mole of a monoatomic gas (Cᵥ = 3R/2) and 1 mole of a diatomic gas (Cᵥ = 5R/2). The Cᵥ of the mixture is:",
+      "options": [
+        { "id": "A", "text": "R" },
+        { "id": "B", "text": "2R" },
+        { "id": "C", "text": "3R" },
+        { "id": "D", "text": "4R" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a mixture, Cᵥ(mix) = (n₁Cᵥ₁ + n₂Cᵥ₂)/(n₁ + n₂) = (1 × 3R/2 + 1 × 5R/2)/(1 + 1) = (3R/2 + 5R/2)/2 = (8R/2)/2 = 4R/2 = 2R.",
+      "explanation_incorrect": "The mixture's Cᵥ is the mole-fraction-weighted average: (3R/2 + 5R/2)/2 = 4R/2 = 2R. This is between the monoatomic value (3R/2) and the diatomic value (5R/2), as expected."
+    },
+    {
+      "question_id": "T09.01.Q041",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A diatomic gas at moderate temperatures has ______ degrees of freedom: three translational and two rotational.",
+      "correct_answer": "five",
+      "explanation_correct": "At moderate temperatures, vibrational modes are not excited for diatomic molecules. They have 3 translational and 2 rotational degrees of freedom, totalling 5.",
+      "explanation_incorrect": "Diatomic molecules at moderate temperatures have 3 translational + 2 rotational = 5 degrees of freedom. Vibrational degrees of freedom become significant only at high temperatures."
+    },
+    {
+      "question_id": "T09.01.Q042",
+      "type": "true_false",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "question_text": "The ratio γ = Cₚ/Cᵥ for an ideal gas decreases as the number of degrees of freedom increases.",
+      "correct_answer": "True",
+      "explanation_correct": "γ = 1 + 2/f. As f increases, 2/f decreases, so γ decreases. For monoatomic (f = 3), γ = 5/3 ≈ 1.67. For diatomic (f = 5), γ = 7/5 = 1.4. For polyatomic (f = 6), γ = 4/3 ≈ 1.33.",
+      "explanation_incorrect": "Since γ = 1 + 2/f, increasing f makes γ smaller. More degrees of freedom mean a larger Cᵥ relative to the fixed increment R in Cₚ, so their ratio decreases."
+    },
+    {
+      "question_id": "T09.01.Q043",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The mean free path of a gas molecule is defined as:",
+      "options": [
+        { "id": "A", "text": "The total distance covered by a molecule in one second" },
+        { "id": "B", "text": "The average distance a molecule travels between two successive collisions" },
+        { "id": "C", "text": "The shortest distance between two molecules" },
+        { "id": "D", "text": "The diameter of a gas molecule" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The mean free path (λ) is the average distance a gas molecule travels between two successive collisions with other molecules. It depends on the number density and molecular diameter.",
+      "explanation_incorrect": "Option A describes the total distance, not the distance between collisions. Option C describes molecular separation, and option D is the molecular diameter. The mean free path specifically refers to the average inter-collision distance."
+    },
+    {
+      "question_id": "T09.01.Q044",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The expression for the mean free path of a gas molecule is:",
+      "options": [
+        { "id": "A", "text": "λ = 1/(√2 π n d²)" },
+        { "id": "B", "text": "λ = 1/(π n d²)" },
+        { "id": "C", "text": "λ = √2/(π n d²)" },
+        { "id": "D", "text": "λ = 1/(2π n d²)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean free path is λ = 1/(√2 π n d²), where n is the number density (number of molecules per unit volume) and d is the molecular diameter. The √2 factor accounts for the relative speed of molecules.",
+      "explanation_incorrect": "The correct formula includes the factor √2 in the denominator: λ = 1/(√2 π n d²). Options B, C, and D either omit the √2 or place it incorrectly."
+    },
+    {
+      "question_id": "T09.01.Q045",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "application",
+      "question_text": "If the pressure of a gas is doubled at constant temperature, its mean free path:",
+      "options": [
+        { "id": "A", "text": "Doubles" },
+        { "id": "B", "text": "Remains the same" },
+        { "id": "C", "text": "Halves" },
+        { "id": "D", "text": "Becomes one-fourth" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "λ = 1/(√2 π n d²). At constant T, doubling P doubles the number density n (from PV = NkT, n = N/V = P/kT). Since λ ∝ 1/n, doubling n halves λ.",
+      "explanation_incorrect": "Mean free path is inversely proportional to number density. At constant temperature, P ∝ n, so doubling P doubles n and halves λ. The mean free path becomes half its original value."
+    },
+    {
+      "question_id": "T09.01.Q046",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "If the temperature of a gas is increased from 300 K to 600 K at constant pressure, its mean free path:",
+      "options": [
+        { "id": "A", "text": "Doubles" },
+        { "id": "B", "text": "Halves" },
+        { "id": "C", "text": "Remains the same" },
+        { "id": "D", "text": "Becomes four times" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At constant pressure, n = P/(kT), so n ∝ 1/T. Since λ = 1/(√2 π n d²) ∝ 1/n ∝ T, doubling T doubles the mean free path.",
+      "explanation_incorrect": "At constant pressure, increasing temperature reduces the number density (gas expands). Since n halves when T doubles, and λ ∝ 1/n, the mean free path doubles."
+    },
+    {
+      "question_id": "T09.01.Q047",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The mean free path of gas molecules depends on the molecular diameter d as:",
+      "options": [
+        { "id": "A", "text": "λ ∝ d" },
+        { "id": "B", "text": "λ ∝ 1/d" },
+        { "id": "C", "text": "λ ∝ 1/d²" },
+        { "id": "D", "text": "λ ∝ d²" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "From λ = 1/(√2 π n d²), it is clear that λ ∝ 1/d². Larger molecules have a bigger collision cross-section (πd²), leading to more frequent collisions and a shorter mean free path.",
+      "explanation_incorrect": "The mean free path formula contains d² in the denominator, so λ ∝ 1/d². A molecule with twice the diameter has a collision cross-section four times larger, giving a mean free path one-fourth as long."
+    },
+    {
+      "question_id": "T09.01.Q048",
+      "type": "fill_blank",
+      "concept_id": "T09.01.C05",
+      "difficulty": "application",
+      "question_text": "The mean free path of a gas molecule is λ = 1/(√2 π n d²). If the number density n is doubled while keeping the molecular diameter constant, the new mean free path is ______ of the original.",
+      "correct_answer": "half",
+      "explanation_correct": "Since λ ∝ 1/n, doubling n makes λ_new = λ_old/2. The mean free path is halved because there are now twice as many molecules per unit volume, so collisions occur twice as frequently.",
+      "explanation_incorrect": "λ is inversely proportional to the number density n. Doubling n means twice as many collision targets per unit volume, halving the average distance between collisions."
+    },
+    {
+      "question_id": "T09.01.Q049",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A container of volume V holds n₁ moles of gas A and n₂ moles of gas B at temperature T. The total pressure in the container is:",
+      "options": [
+        { "id": "A", "text": "(n₁ + n₂)RT/V" },
+        { "id": "B", "text": "n₁n₂RT/V" },
+        { "id": "C", "text": "(n₁ - n₂)RT/V" },
+        { "id": "D", "text": "n₁RT/(n₂V)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By Dalton's law of partial pressures, the total pressure is the sum of individual partial pressures: P = P_A + P_B = n₁RT/V + n₂RT/V = (n₁ + n₂)RT/V. Each gas independently obeys the ideal gas equation.",
+      "explanation_incorrect": "Each gas exerts its own partial pressure as if the other were absent. The total pressure is P = (n₁ + n₂)RT/V, which follows from Dalton's law and the ideal gas equation."
+    },
+    {
+      "question_id": "T09.01.Q050",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The translational kinetic energy of all molecules in 1 mole of an ideal gas at temperature T is E. If 3 moles of the same gas are at temperature 2T, the total translational kinetic energy is:",
+      "options": [
+        { "id": "A", "text": "2E" },
+        { "id": "B", "text": "3E" },
+        { "id": "C", "text": "6E" },
+        { "id": "D", "text": "9E" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Translational KE = (3/2)nRT. For 1 mole at T: E = (3/2)(1)RT. For 3 moles at 2T: E' = (3/2)(3)(R)(2T) = 6 × (3/2)RT = 6E.",
+      "explanation_incorrect": "KE scales with both the number of moles and the temperature. Going from 1 mole at T to 3 moles at 2T multiplies the energy by 3 × 2 = 6. So the new energy is 6E."
+    }
+  ]
+}

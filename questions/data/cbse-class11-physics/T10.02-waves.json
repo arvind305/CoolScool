@@ -1,0 +1,776 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T10.02",
+  "topic_name": "Waves",
+  "canonical_explanation": {
+    "text": "A wave is a disturbance that transfers energy without transferring matter. Waves are classified as transverse (particle displacement perpendicular to propagation, e.g. waves on a string) and longitudinal (particle displacement along propagation, e.g. sound waves). A sinusoidal travelling wave is described by y = A sin(kx - wt), where A is amplitude, k = 2pi/lambda is the angular wave number, and w = 2pi f is the angular frequency; the wave speed follows v = f lambda. The speed of sound in a gas is given by Newton's formula v = sqrt(P/rho), corrected by Laplace to v = sqrt(gamma P/rho) where gamma is the ratio of specific heats. Sound travels fastest in solids, then liquids, then gases. When two waves overlap, the principle of superposition states the resultant displacement is the algebraic sum of individual displacements. Standing (stationary) waves form when two identical waves travelling in opposite directions superpose; they have fixed nodes (zero displacement) and antinodes (maximum displacement). A stretched string of length L fixed at both ends vibrates in harmonics with frequencies n v/(2L) for n = 1, 2, 3, ... An open organ pipe supports all harmonics f_n = n v/(2L), while a closed pipe supports only odd harmonics f_n = n v/(4L), n = 1, 3, 5, ... When two waves of slightly different frequencies f1 and f2 superpose, beats are heard at frequency f_beat = |f1 - f2|. The Doppler effect describes the apparent change in frequency when there is relative motion between source and observer: f' = f (v +/- v_o) / (v -/+ v_s), where the upper signs apply when source and observer move toward each other and the lower signs when they move apart.",
+    "rules": [
+      "A progressive wave is described by y = A sin(kx - wt); wave speed v = f lambda = w/k, where k = 2 pi/lambda and w = 2 pi f.",
+      "Speed of sound in an ideal gas: v = sqrt(gamma P / rho) (Laplace correction); Newton's uncorrected formula v = sqrt(P/rho) underestimates the speed because sound propagation is adiabatic, not isothermal.",
+      "Principle of superposition: when two or more waves overlap, the net displacement at any point is the algebraic sum of the individual displacements.",
+      "Standing waves on a string fixed at both ends have harmonics f_n = n v/(2L); an open pipe has f_n = n v/(2L) (all harmonics); a closed pipe has f_n = n v/(4L) (odd harmonics only, n = 1, 3, 5, ...).",
+      "Beat frequency f_beat = |f1 - f2|; beats are audible when the difference is small (typically < 10 Hz).",
+      "Doppler effect for sound: f' = f (v +/- v_o) / (v -/+ v_s); use upper signs for approach and lower signs for recession."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T10.02.Q001",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "In a transverse wave, the particles of the medium vibrate:",
+      "options": [
+        { "id": "A", "text": "Along the direction of wave propagation" },
+        { "id": "B", "text": "Perpendicular to the direction of wave propagation" },
+        { "id": "C", "text": "In circular paths" },
+        { "id": "D", "text": "Randomly in all directions" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a transverse wave the particles of the medium oscillate perpendicular to the direction in which the wave travels. Examples include waves on a stretched string and electromagnetic waves.",
+      "explanation_incorrect": "Option A describes a longitudinal wave, not a transverse wave. In a transverse wave, the displacement of particles is at right angles to the direction of propagation, not along it."
+    },
+    {
+      "question_id": "T10.02.Q002",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Sound waves in air are:",
+      "options": [
+        { "id": "A", "text": "Transverse" },
+        { "id": "B", "text": "Longitudinal" },
+        { "id": "C", "text": "Both transverse and longitudinal" },
+        { "id": "D", "text": "Neither transverse nor longitudinal" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Sound waves in air are longitudinal waves. The air molecules oscillate back and forth along the direction of wave propagation, creating compressions and rarefactions.",
+      "explanation_incorrect": "Sound in air cannot be transverse because gases and liquids do not support shear stress, which is required for transverse wave propagation. Sound waves are longitudinal — the particle displacement is parallel to the direction of travel."
+    },
+    {
+      "question_id": "T10.02.Q003",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The wave equation y = A sin(kx - wt) represents a wave travelling in:",
+      "options": [
+        { "id": "A", "text": "The positive x-direction" },
+        { "id": "B", "text": "The negative x-direction" },
+        { "id": "C", "text": "The positive y-direction" },
+        { "id": "D", "text": "Any direction depending on A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In the equation y = A sin(kx - wt), the negative sign between kx and wt indicates that the wave travels in the positive x-direction. A wave travelling in the negative x-direction would be written as y = A sin(kx + wt).",
+      "explanation_incorrect": "The sign convention in the wave equation determines the direction of propagation. The form (kx - wt) always represents a wave moving in the +x direction, while (kx + wt) represents motion in the -x direction."
+    },
+    {
+      "question_id": "T10.02.Q004",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The relation between wave speed (v), frequency (f) and wavelength (lambda) is:",
+      "options": [
+        { "id": "A", "text": "v = f / lambda" },
+        { "id": "B", "text": "v = f lambda" },
+        { "id": "C", "text": "v = lambda / f" },
+        { "id": "D", "text": "v = f^2 lambda" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The fundamental wave equation is v = f lambda. The wave speed equals the product of its frequency and wavelength. This holds for all types of waves — mechanical and electromagnetic.",
+      "explanation_incorrect": "The correct relation is v = f lambda, not any other combination. This follows from the definition: in one time period T = 1/f the wave moves a distance of one wavelength, so v = lambda / T = f lambda."
+    },
+    {
+      "question_id": "T10.02.Q005",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "application",
+      "question_text": "A wave has a frequency of 500 Hz and a wavelength of 0.66 m. What is its speed?",
+      "options": [
+        { "id": "A", "text": "330 m/s" },
+        { "id": "B", "text": "757 m/s" },
+        { "id": "C", "text": "165 m/s" },
+        { "id": "D", "text": "660 m/s" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using v = f lambda = 500 x 0.66 = 330 m/s. This is approximately the speed of sound in air at room temperature.",
+      "explanation_incorrect": "The wave speed is calculated as v = f lambda. Substituting the given values: v = 500 Hz x 0.66 m = 330 m/s. Other options result from incorrect arithmetic or using wrong formulae."
+    },
+    {
+      "question_id": "T10.02.Q006",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "application",
+      "question_text": "A transverse wave on a string is described by y = 0.05 sin(20x - 400t) in SI units. The speed of the wave is:",
+      "options": [
+        { "id": "A", "text": "10 m/s" },
+        { "id": "B", "text": "20 m/s" },
+        { "id": "C", "text": "400 m/s" },
+        { "id": "D", "text": "8000 m/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Comparing with y = A sin(kx - wt), we get k = 20 rad/m and w = 400 rad/s. The wave speed v = w/k = 400/20 = 20 m/s.",
+      "explanation_incorrect": "The wave speed is v = w/k, not w x k or any other combination. Here w = 400 rad/s and k = 20 rad/m, giving v = 400/20 = 20 m/s."
+    },
+    {
+      "question_id": "T10.02.Q007",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "application",
+      "question_text": "For the wave y = 3 sin(2 pi (t/0.04 - x/0.8)) in SI units, the wavelength is:",
+      "options": [
+        { "id": "A", "text": "0.04 m" },
+        { "id": "B", "text": "0.4 m" },
+        { "id": "C", "text": "0.8 m" },
+        { "id": "D", "text": "2.0 m" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Rewriting: y = 3 sin(2 pi t/0.04 - 2 pi x/0.8). Comparing with y = A sin(wt - kx), we get k = 2 pi / 0.8, so lambda = 0.8 m.",
+      "explanation_incorrect": "From the coefficient of x inside the sine, 2 pi / lambda = 2 pi / 0.8, giving lambda = 0.8 m. The value 0.04 is the time period T, not the wavelength."
+    },
+    {
+      "question_id": "T10.02.Q008",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "A wave travelling along a string is described by y(x, t) = 0.005 sin(80x - 3t), where x is in metres and t in seconds. The wavelength and period of the wave are respectively:",
+      "options": [
+        { "id": "A", "text": "pi/40 m and 2 pi/3 s" },
+        { "id": "B", "text": "2 pi/80 m and 2 pi/3 s" },
+        { "id": "C", "text": "80 m and 3 s" },
+        { "id": "D", "text": "pi/40 m and 3 s" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Here k = 80, so lambda = 2 pi/k = 2 pi/80 = pi/40 m. Also w = 3, so T = 2 pi/w = 2 pi/3 s. Option B writes the same wavelength differently; 2 pi/80 simplifies to pi/40, so A and B are numerically equivalent, but the simplified form in A is the standard answer.",
+      "explanation_incorrect": "Using the standard relations: lambda = 2 pi/k = 2 pi/80 = pi/40 m, and T = 2 pi/w = 2 pi/3 s. Option C incorrectly takes k and w directly as lambda and T. Note that options A and B give the same numerical values since 2 pi/80 = pi/40."
+    },
+    {
+      "question_id": "T10.02.Q009",
+      "type": "mcq",
+      "concept_id": "T10.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The equation of a plane progressive wave is y = 10 sin 2 pi (t/0.005 - x/0.5). The maximum velocity of a particle in the medium is:",
+      "options": [
+        { "id": "A", "text": "200 pi m/s" },
+        { "id": "B", "text": "4000 pi m/s" },
+        { "id": "C", "text": "400 pi m/s" },
+        { "id": "D", "text": "2000 pi m/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The amplitude A = 10 m (as given) and w = 2 pi / 0.005 = 400 pi rad/s. The maximum particle velocity = A w = 10 x 400 pi = 4000 pi m/s. (Note: the question uses large values for pedagogical illustration of the formula.)",
+      "explanation_incorrect": "Maximum particle velocity is v_max = A w. Here A = 10 and T = 0.005 s, so w = 2 pi/T = 2 pi/0.005 = 400 pi rad/s. Therefore v_max = 10 x 400 pi = 4000 pi m/s."
+    },
+    {
+      "question_id": "T10.02.Q010",
+      "type": "true_false",
+      "concept_id": "T10.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "In a longitudinal wave, the particles of the medium vibrate parallel to the direction of wave propagation.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. In a longitudinal wave, particle displacement is along the direction of wave travel. Sound waves in air are the most common example — air molecules oscillate back and forth in the same direction as the wave moves.",
+      "explanation_incorrect": "The statement is true, not false. Longitudinal waves are defined by particle vibration being parallel to the direction of propagation, producing compressions and rarefactions. It is transverse waves where particles vibrate perpendicular to the propagation direction."
+    },
+    {
+      "question_id": "T10.02.Q011",
+      "type": "fill_blank",
+      "concept_id": "T10.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of angular wave number k is ___.",
+      "correct_answer": "rad/m",
+      "explanation_correct": "The angular wave number k = 2 pi / lambda has dimensions of inverse length. Since the numerator (2 pi) is in radians and lambda is in metres, the SI unit of k is rad/m (radian per metre).",
+      "explanation_incorrect": "The angular wave number k is not measured in m or Hz. It is defined as k = 2 pi / lambda, which gives units of radians per metre (rad/m)."
+    },
+    {
+      "question_id": "T10.02.Q012",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "Newton's formula for the speed of sound in air gives v = sqrt(P/rho). Laplace corrected this by replacing P with:",
+      "options": [
+        { "id": "A", "text": "gamma P, where gamma is the ratio of specific heats" },
+        { "id": "B", "text": "P/gamma" },
+        { "id": "C", "text": "2P" },
+        { "id": "D", "text": "P + rho" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Laplace corrected Newton's formula by recognising that sound propagation in a gas is an adiabatic process, not isothermal. In an adiabatic process, the effective bulk modulus is gamma P instead of P, giving v = sqrt(gamma P / rho).",
+      "explanation_incorrect": "Newton assumed isothermal conditions (constant temperature) for sound propagation, which gave v = sqrt(P/rho). Laplace's correction accounts for the adiabatic nature of sound compression, replacing P by gamma P, where gamma = C_p / C_v."
+    },
+    {
+      "question_id": "T10.02.Q013",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The speed of sound is greatest in:",
+      "options": [
+        { "id": "A", "text": "Air" },
+        { "id": "B", "text": "Water" },
+        { "id": "C", "text": "Steel" },
+        { "id": "D", "text": "Vacuum" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Sound travels fastest in solids because the molecules are closely packed and the elastic modulus is very high. Among the given options, steel (a solid) has the highest speed of sound — approximately 5000 m/s, compared to about 1500 m/s in water and 340 m/s in air.",
+      "explanation_incorrect": "Sound cannot travel through a vacuum at all (it requires a material medium). Among material media, solids transmit sound fastest because of their high elasticity and close molecular packing, followed by liquids and then gases."
+    },
+    {
+      "question_id": "T10.02.Q014",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "Newton's formula for the speed of sound in air gave an incorrect value because he assumed that the process of sound propagation is:",
+      "options": [
+        { "id": "A", "text": "Adiabatic" },
+        { "id": "B", "text": "Isothermal" },
+        { "id": "C", "text": "Isobaric" },
+        { "id": "D", "text": "Isochoric" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Newton assumed that the compressions and rarefactions in a sound wave occur isothermally (at constant temperature). This assumption was incorrect because the changes happen so rapidly that there is no time for heat exchange, making the process adiabatic.",
+      "explanation_incorrect": "Newton's error was in assuming an isothermal process. Since compressions and rarefactions in a sound wave occur very quickly, the gas does not exchange heat with its surroundings, so the correct description is adiabatic (Laplace's correction)."
+    },
+    {
+      "question_id": "T10.02.Q015",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "application",
+      "question_text": "The speed of sound in air at 0 degree C is 332 m/s. What is its approximate speed at 20 degree C? (Use v proportional to sqrt(T))",
+      "options": [
+        { "id": "A", "text": "320 m/s" },
+        { "id": "B", "text": "340 m/s" },
+        { "id": "C", "text": "344 m/s" },
+        { "id": "D", "text": "352 m/s" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "v is proportional to sqrt(T) where T is the absolute temperature. v_20/v_0 = sqrt(293/273) = sqrt(1.0733) approximately 1.036. So v_20 = 332 x 1.036 approximately 344 m/s.",
+      "explanation_incorrect": "The speed of sound varies as the square root of absolute temperature, not Celsius temperature. v_20 = 332 x sqrt(293/273) = 332 x 1.036 approximately 344 m/s. A common mistake is to use Celsius directly instead of converting to Kelvin."
+    },
+    {
+      "question_id": "T10.02.Q016",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "application",
+      "question_text": "If the temperature of air is increased from 27 degree C to 327 degree C, the speed of sound becomes:",
+      "options": [
+        { "id": "A", "text": "Double the original" },
+        { "id": "B", "text": "sqrt(2) times the original" },
+        { "id": "C", "text": "Half the original" },
+        { "id": "D", "text": "4 times the original" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At 27 degree C, T1 = 300 K. At 327 degree C, T2 = 600 K. Since v is proportional to sqrt(T), v2/v1 = sqrt(600/300) = sqrt(2). The speed becomes sqrt(2) times the original.",
+      "explanation_incorrect": "Convert to Kelvin: T1 = 300 K, T2 = 600 K. The ratio is T2/T1 = 2, so v2/v1 = sqrt(2), not 2. The speed of sound is proportional to the square root of absolute temperature, not directly proportional to it."
+    },
+    {
+      "question_id": "T10.02.Q017",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Using Laplace's formula, the speed of sound in air (gamma = 1.4, P = 1.013 x 10^5 Pa, rho = 1.293 kg/m^3) is approximately:",
+      "options": [
+        { "id": "A", "text": "280 m/s" },
+        { "id": "B", "text": "332 m/s" },
+        { "id": "C", "text": "350 m/s" },
+        { "id": "D", "text": "400 m/s" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v = sqrt(gamma P / rho) = sqrt(1.4 x 1.013 x 10^5 / 1.293) = sqrt(1.418 x 10^5 / 1.293) = sqrt(1.097 x 10^5) approximately 331 m/s, which rounds to 332 m/s.",
+      "explanation_incorrect": "Applying Laplace's formula: v = sqrt(gamma P / rho) = sqrt(1.4 x 1.013 x 10^5 / 1.293) approximately 332 m/s. Newton's uncorrected formula (without gamma) gives only about 280 m/s, which was the historically incorrect value."
+    },
+    {
+      "question_id": "T10.02.Q018",
+      "type": "true_false",
+      "concept_id": "T10.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The speed of sound in a gas is independent of pressure at constant temperature.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. From v = sqrt(gamma P / rho) and using the ideal gas law P = rho R T / M, we get v = sqrt(gamma R T / M). At constant temperature, v depends only on gamma, T, and the molar mass M, not on pressure. When pressure increases at constant temperature, density increases proportionally, keeping the ratio P/rho constant.",
+      "explanation_incorrect": "The statement is true. Although the formula v = sqrt(gamma P / rho) appears to show dependence on P, increasing pressure at constant temperature proportionally increases the density rho, so the ratio P/rho remains unchanged. The speed depends only on temperature and the nature of the gas."
+    },
+    {
+      "question_id": "T10.02.Q019",
+      "type": "mcq",
+      "concept_id": "T10.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "The ratio of the speed of sound in hydrogen to that in oxygen at the same temperature is (M_H2 = 2, M_O2 = 32, both diatomic):",
+      "options": [
+        { "id": "A", "text": "1 : 4" },
+        { "id": "B", "text": "4 : 1" },
+        { "id": "C", "text": "1 : 16" },
+        { "id": "D", "text": "16 : 1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since both are diatomic gases, gamma is the same. v = sqrt(gamma R T / M), so v_H2 / v_O2 = sqrt(M_O2 / M_H2) = sqrt(32/2) = sqrt(16) = 4. The ratio is 4 : 1.",
+      "explanation_incorrect": "The speed of sound in a gas is inversely proportional to the square root of its molar mass (at the same temperature and for the same gamma). v_H2/v_O2 = sqrt(32/2) = 4, so the ratio is 4:1, not 16:1 (which would be the ratio of molar masses, not speeds)."
+    },
+    {
+      "question_id": "T10.02.Q020",
+      "type": "fill_blank",
+      "concept_id": "T10.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The value of gamma for a diatomic gas such as air is approximately ___.",
+      "correct_answer": "1.4",
+      "explanation_correct": "For a diatomic gas like nitrogen and oxygen (the main components of air), gamma = C_p/C_v = 7/5 = 1.4. This is the value used in Laplace's correction for the speed of sound in air.",
+      "explanation_incorrect": "The ratio of specific heats gamma for a diatomic gas is 7/5 = 1.4, not 5/3 (which applies to monatomic gases) or 4/3 (which applies to polyatomic/non-linear molecules at high temperature)."
+    },
+    {
+      "question_id": "T10.02.Q021",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The principle of superposition states that when two or more waves overlap, the resultant displacement at any point is:",
+      "options": [
+        { "id": "A", "text": "The product of individual displacements" },
+        { "id": "B", "text": "The algebraic sum of individual displacements" },
+        { "id": "C", "text": "The average of individual displacements" },
+        { "id": "D", "text": "The square root of the sum of squares of individual displacements" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The principle of superposition states that the resultant displacement at any point where two or more waves overlap is the algebraic (vector) sum of the displacements due to each individual wave. This is a fundamental property of linear wave equations.",
+      "explanation_incorrect": "Superposition is a linear operation — the net displacement is the algebraic sum, not the product, average, or any other combination. This principle holds as long as the wave equation is linear (i.e., for small amplitudes)."
+    },
+    {
+      "question_id": "T10.02.Q022",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "In a stationary (standing) wave, the distance between two consecutive nodes is:",
+      "options": [
+        { "id": "A", "text": "lambda" },
+        { "id": "B", "text": "lambda/2" },
+        { "id": "C", "text": "lambda/4" },
+        { "id": "D", "text": "2 lambda" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a standing wave, nodes are equally spaced and the distance between two consecutive nodes is lambda/2. Antinodes are located midway between nodes, also separated by lambda/2.",
+      "explanation_incorrect": "The node spacing in a standing wave is half the wavelength (lambda/2). The distance between a node and the nearest antinode is lambda/4. A full wavelength spans two node-to-node intervals."
+    },
+    {
+      "question_id": "T10.02.Q023",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The fundamental frequency of a string of length L fixed at both ends is:",
+      "options": [
+        { "id": "A", "text": "v / (4L)" },
+        { "id": "B", "text": "v / (2L)" },
+        { "id": "C", "text": "v / L" },
+        { "id": "D", "text": "2v / L" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a string fixed at both ends, standing waves require nodes at both ends. The longest possible wavelength (fundamental mode) has lambda = 2L, giving the fundamental frequency f_1 = v / (2L).",
+      "explanation_incorrect": "The fundamental mode of a string fixed at both ends has one antinode and two nodes, with lambda_1 = 2L. Thus f_1 = v / lambda_1 = v / (2L). The formula v/(4L) applies to a closed organ pipe, not a string."
+    },
+    {
+      "question_id": "T10.02.Q024",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "application",
+      "question_text": "A string of length 1 m is fixed at both ends. If the speed of the wave on the string is 400 m/s, the frequency of the third harmonic is:",
+      "options": [
+        { "id": "A", "text": "200 Hz" },
+        { "id": "B", "text": "400 Hz" },
+        { "id": "C", "text": "600 Hz" },
+        { "id": "D", "text": "800 Hz" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a string fixed at both ends, f_n = n v / (2L). The third harmonic (n = 3): f_3 = 3 x 400 / (2 x 1) = 3 x 200 = 600 Hz.",
+      "explanation_incorrect": "The nth harmonic of a string fixed at both ends is f_n = n v/(2L). For n = 3: f_3 = 3 x 400/(2 x 1) = 600 Hz. Option A gives the fundamental (n = 1), and option B gives the second harmonic (n = 2)."
+    },
+    {
+      "question_id": "T10.02.Q025",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "application",
+      "question_text": "A closed organ pipe has a fundamental frequency of 200 Hz. Its first overtone frequency is:",
+      "options": [
+        { "id": "A", "text": "400 Hz" },
+        { "id": "B", "text": "600 Hz" },
+        { "id": "C", "text": "800 Hz" },
+        { "id": "D", "text": "300 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A closed pipe supports only odd harmonics: f_1, 3f_1, 5f_1, ... The first overtone is the third harmonic = 3 x 200 = 600 Hz.",
+      "explanation_incorrect": "In a closed organ pipe, only odd harmonics are present (1st, 3rd, 5th, ...). The first overtone is the 3rd harmonic, not the 2nd. So the first overtone = 3 x 200 = 600 Hz, not 400 Hz (which would be the 2nd harmonic, absent in a closed pipe)."
+    },
+    {
+      "question_id": "T10.02.Q026",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "application",
+      "question_text": "An open organ pipe of length 0.5 m produces a fundamental frequency (speed of sound = 340 m/s) of:",
+      "options": [
+        { "id": "A", "text": "170 Hz" },
+        { "id": "B", "text": "340 Hz" },
+        { "id": "C", "text": "680 Hz" },
+        { "id": "D", "text": "85 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an open pipe, f_1 = v / (2L) = 340 / (2 x 0.5) = 340 / 1 = 340 Hz.",
+      "explanation_incorrect": "An open organ pipe has antinodes at both ends. Its fundamental wavelength is lambda_1 = 2L = 1 m, so f_1 = v/lambda_1 = 340/1 = 340 Hz. The formula v/(4L) = 170 Hz applies to a closed pipe, not an open one."
+    },
+    {
+      "question_id": "T10.02.Q027",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "application",
+      "question_text": "When a wave is reflected from a rigid (fixed) boundary, its phase changes by:",
+      "options": [
+        { "id": "A", "text": "0" },
+        { "id": "B", "text": "pi/2" },
+        { "id": "C", "text": "pi" },
+        { "id": "D", "text": "2 pi" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When a wave reflects from a rigid (fixed) boundary, it undergoes a phase change of pi (180 degrees). This means the reflected wave is inverted — a crest returns as a trough and vice versa. This ensures that the displacement at the fixed end is always zero (a node).",
+      "explanation_incorrect": "At a fixed boundary, the displacement must always be zero, so the reflected pulse must be inverted. This inversion corresponds to a phase change of pi (180 degrees), not zero or any other value."
+    },
+    {
+      "question_id": "T10.02.Q028",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The ratio of the fundamental frequency of an open organ pipe to that of a closed organ pipe of the same length is:",
+      "options": [
+        { "id": "A", "text": "1 : 2" },
+        { "id": "B", "text": "2 : 1" },
+        { "id": "C", "text": "1 : 1" },
+        { "id": "D", "text": "4 : 1" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an open pipe, f_open = v/(2L). For a closed pipe, f_closed = v/(4L). The ratio f_open/f_closed = [v/(2L)] / [v/(4L)] = 4L/(2L) = 2. So the ratio is 2:1.",
+      "explanation_incorrect": "The open pipe has antinodes at both ends (lambda = 2L, f = v/2L), while the closed pipe has a node at the closed end and an antinode at the open end (lambda = 4L, f = v/4L). The open pipe's fundamental is twice that of the closed pipe of the same length."
+    },
+    {
+      "question_id": "T10.02.Q029",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A pipe closed at one end and open at the other resonates with a fundamental frequency of 250 Hz. Which of the following frequencies will NOT be produced by this pipe?",
+      "options": [
+        { "id": "A", "text": "750 Hz" },
+        { "id": "B", "text": "1250 Hz" },
+        { "id": "C", "text": "1000 Hz" },
+        { "id": "D", "text": "1750 Hz" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A closed pipe produces only odd harmonics: f, 3f, 5f, 7f, ... = 250, 750, 1250, 1750 Hz, etc. The frequency 1000 Hz = 4 x 250 = 4f is an even harmonic and will NOT be produced.",
+      "explanation_incorrect": "Closed pipes support only odd harmonics of the fundamental. 1000 Hz = 4 x 250 Hz is the 4th harmonic (even), which is absent in a closed pipe. All other options (750 = 3f, 1250 = 5f, 1750 = 7f) are odd harmonics and will be produced."
+    },
+    {
+      "question_id": "T10.02.Q030",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A string vibrates in 5 loops when a frequency of 100 Hz is applied. To make it vibrate in 2 loops, the frequency should be:",
+      "options": [
+        { "id": "A", "text": "250 Hz" },
+        { "id": "B", "text": "40 Hz" },
+        { "id": "C", "text": "50 Hz" },
+        { "id": "D", "text": "20 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The number of loops equals the harmonic number n. If 5 loops correspond to 100 Hz, then the fundamental f_1 = 100/5 = 20 Hz. For 2 loops (2nd harmonic): f_2 = 2 x 20 = 40 Hz.",
+      "explanation_incorrect": "Each loop is half a wavelength, so n loops means the nth harmonic. f_n = n f_1, so f_1 = 100/5 = 20 Hz. For 2 loops: f_2 = 2 x 20 = 40 Hz. A common error is to think the frequency is inversely proportional to the number of loops."
+    },
+    {
+      "question_id": "T10.02.Q031",
+      "type": "true_false",
+      "concept_id": "T10.02.C03",
+      "difficulty": "application",
+      "question_text": "An open organ pipe of length L can produce all harmonics (both odd and even).",
+      "correct_answer": true,
+      "explanation_correct": "This is true. An open organ pipe has antinodes at both ends and supports all harmonics: f, 2f, 3f, 4f, ... with frequencies n v/(2L) for n = 1, 2, 3, ... This is in contrast to a closed pipe, which supports only odd harmonics.",
+      "explanation_incorrect": "The statement is true. An open pipe produces all harmonics because the boundary conditions (antinodes at both ends) allow standing waves for every integer number of half-wavelengths fitting inside the pipe. Only a closed pipe is restricted to odd harmonics."
+    },
+    {
+      "question_id": "T10.02.Q032",
+      "type": "fill_blank",
+      "concept_id": "T10.02.C03",
+      "difficulty": "application",
+      "question_text": "A stretched string of length 2 m vibrates in its fundamental mode with a wave speed of 200 m/s. The fundamental frequency is ___ Hz.",
+      "correct_answer": "50",
+      "explanation_correct": "For a string fixed at both ends, f_1 = v/(2L) = 200/(2 x 2) = 200/4 = 50 Hz.",
+      "explanation_incorrect": "Using the formula for fundamental frequency of a string: f_1 = v/(2L) = 200/(2 x 2) = 50 Hz. A common error is using v/L = 100 Hz, which would give the second harmonic, not the fundamental."
+    },
+    {
+      "question_id": "T10.02.Q033",
+      "type": "mcq",
+      "concept_id": "T10.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "Beats are produced when two sound waves of:",
+      "options": [
+        { "id": "A", "text": "Same frequency and same amplitude are superposed" },
+        { "id": "B", "text": "Slightly different frequencies are superposed" },
+        { "id": "C", "text": "Very different frequencies are superposed" },
+        { "id": "D", "text": "Same frequency but different amplitudes are superposed" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Beats are produced when two sound waves of slightly different frequencies are superposed. The resulting sound alternates between loud (constructive interference) and soft (destructive interference), and the beat frequency equals |f1 - f2|.",
+      "explanation_incorrect": "Beats require two waves with slightly different frequencies. If the frequencies are identical, there is steady interference (no periodic variation in loudness). If the frequencies differ by too much, the beats become too rapid to be perceived as periodic loudness variation."
+    },
+    {
+      "question_id": "T10.02.Q034",
+      "type": "mcq",
+      "concept_id": "T10.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The beat frequency when two tuning forks of frequencies 256 Hz and 260 Hz are sounded together is:",
+      "options": [
+        { "id": "A", "text": "2 Hz" },
+        { "id": "B", "text": "4 Hz" },
+        { "id": "C", "text": "516 Hz" },
+        { "id": "D", "text": "256 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Beat frequency = |f1 - f2| = |256 - 260| = 4 Hz. This means the listener hears 4 cycles of loudness variation per second.",
+      "explanation_incorrect": "The beat frequency is the absolute difference of the two frequencies: |260 - 256| = 4 Hz. It is not the sum (516 Hz) or either individual frequency. The sum frequency does not correspond to any audible phenomenon in this context."
+    },
+    {
+      "question_id": "T10.02.Q035",
+      "type": "mcq",
+      "concept_id": "T10.02.C04",
+      "difficulty": "application",
+      "question_text": "A tuning fork of unknown frequency produces 5 beats per second when sounded with a fork of frequency 512 Hz. When a small piece of wax is attached to the unknown fork, the beat frequency decreases to 3 beats per second. The frequency of the unknown fork is:",
+      "options": [
+        { "id": "A", "text": "507 Hz" },
+        { "id": "B", "text": "517 Hz" },
+        { "id": "C", "text": "509 Hz" },
+        { "id": "D", "text": "515 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Initially, the unknown frequency is either 512 + 5 = 517 Hz or 512 - 5 = 507 Hz. Adding wax decreases the frequency of the unknown fork. If the unknown were 507 Hz, lowering it further would increase the beat frequency (moving further from 512), but the beats decrease to 3. So the unknown must be 517 Hz — when wax lowers it toward 512, the beat frequency decreases.",
+      "explanation_incorrect": "The wax test determines which side of 512 Hz the unknown lies on. Adding wax lowers the unknown fork's frequency. Since beats decrease (from 5 to 3), the unknown fork must be above 512 Hz and is getting closer to it. Thus the unknown frequency = 512 + 5 = 517 Hz."
+    },
+    {
+      "question_id": "T10.02.Q036",
+      "type": "mcq",
+      "concept_id": "T10.02.C04",
+      "difficulty": "application",
+      "question_text": "Two tuning forks A and B produce 6 beats per second. Fork A has a frequency of 480 Hz. When B is filed (material removed), the beat frequency increases to 8. The original frequency of B is:",
+      "options": [
+        { "id": "A", "text": "474 Hz" },
+        { "id": "B", "text": "486 Hz" },
+        { "id": "C", "text": "488 Hz" },
+        { "id": "D", "text": "472 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Initially B is either 474 Hz or 486 Hz. Filing removes material, which increases the frequency of B. If B = 486 Hz (above A), filing raises it further above 480, so beats increase — this matches (6 to 8). If B = 474 Hz, filing raises it toward 480, which would decrease beats, contradicting the observation. Therefore B = 486 Hz.",
+      "explanation_incorrect": "Filing a tuning fork removes mass, increasing its frequency. Since the beat frequency increased from 6 to 8, fork B must have been above fork A so that filing moves it further away. B = 480 + 6 = 486 Hz."
+    },
+    {
+      "question_id": "T10.02.Q037",
+      "type": "mcq",
+      "concept_id": "T10.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Two organ pipes of lengths 80 cm and 81 cm, both open at both ends, are sounded together. If the speed of sound is 324 m/s, the number of beats produced per second is:",
+      "options": [
+        { "id": "A", "text": "2.5" },
+        { "id": "B", "text": "5" },
+        { "id": "C", "text": "1" },
+        { "id": "D", "text": "10" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For open pipes, f = v/(2L). f_1 = 324/(2 x 0.80) = 324/1.6 = 202.5 Hz. f_2 = 324/(2 x 0.81) = 324/1.62 = 200 Hz. Beat frequency = |202.5 - 200| = 2.5 beats per second.",
+      "explanation_incorrect": "Calculate both fundamental frequencies: f_1 = 324/(2 x 0.80) = 202.5 Hz and f_2 = 324/(2 x 0.81) = 200 Hz. The beat frequency = 202.5 - 200 = 2.5 Hz."
+    },
+    {
+      "question_id": "T10.02.Q038",
+      "type": "mcq",
+      "concept_id": "T10.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A tuning fork of frequency 340 Hz is vibrated just above a tube of length 120 cm. The tube is gradually filled with water. Resonance will be observed when the water level is at a distance from the top of the tube equal to (speed of sound = 340 m/s):",
+      "options": [
+        { "id": "A", "text": "25 cm, 75 cm only" },
+        { "id": "B", "text": "25 cm, 75 cm, 125 cm" },
+        { "id": "C", "text": "50 cm, 100 cm only" },
+        { "id": "D", "text": "25 cm only" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The tube with water acts as a closed pipe. Resonance occurs when L = (2n-1) lambda/4. lambda = v/f = 340/340 = 1 m = 100 cm. So L = 25 cm (n=1), 75 cm (n=2), 125 cm (n=3). Since the tube is only 120 cm long, only 25 cm and 75 cm are possible.",
+      "explanation_incorrect": "For a closed pipe, resonant lengths are lambda/4, 3 lambda/4, 5 lambda/4, ... With lambda = 100 cm, these are 25 cm, 75 cm, 125 cm. Since the tube length is only 120 cm, the air column can be at most 120 cm, so only 25 cm and 75 cm are achievable."
+    },
+    {
+      "question_id": "T10.02.Q039",
+      "type": "true_false",
+      "concept_id": "T10.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "Beats can be heard distinctly when the beat frequency is greater than 10 Hz.",
+      "correct_answer": false,
+      "explanation_correct": "This is false. Beats are distinctly audible only when the beat frequency is small, typically less than about 10 Hz. Beyond that, the alternations of loudness become too rapid for the human ear to resolve, and the listener perceives a continuous sound rather than distinct beats.",
+      "explanation_incorrect": "The statement is false. For beats to be heard distinctly, the beat frequency should be small (usually less than 10 Hz). At higher beat frequencies, the variations in loudness are too rapid to be perceived as distinct pulsations."
+    },
+    {
+      "question_id": "T10.02.Q040",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "familiarity",
+      "question_text": "The Doppler effect in sound refers to the change in:",
+      "options": [
+        { "id": "A", "text": "Speed of sound due to motion of the source" },
+        { "id": "B", "text": "Apparent frequency due to relative motion between source and observer" },
+        { "id": "C", "text": "Amplitude of sound due to distance" },
+        { "id": "D", "text": "Wavelength due to change in medium" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Doppler effect is the apparent change in the frequency (or pitch) of a sound wave observed when there is relative motion between the source and the observer. It does not change the actual speed of sound in the medium.",
+      "explanation_incorrect": "The Doppler effect describes the change in apparent (observed) frequency, not the speed, amplitude, or wavelength due to a change in medium. It is caused by relative motion between source and observer."
+    },
+    {
+      "question_id": "T10.02.Q041",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "familiarity",
+      "question_text": "When a sound source moves toward a stationary observer, the observer perceives:",
+      "options": [
+        { "id": "A", "text": "A higher frequency" },
+        { "id": "B", "text": "A lower frequency" },
+        { "id": "C", "text": "The same frequency" },
+        { "id": "D", "text": "No sound at all" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When a source approaches a stationary observer, the sound waves are compressed (wavelength decreases), and the observer hears a higher frequency (higher pitch). This is the Doppler effect — the apparent frequency increases during approach.",
+      "explanation_incorrect": "As a source moves toward the observer, successive wavefronts are emitted from progressively closer positions, reducing the effective wavelength and increasing the observed frequency. The frequency decreases only when the source moves away."
+    },
+    {
+      "question_id": "T10.02.Q042",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "application",
+      "question_text": "A source of sound of frequency 500 Hz moves toward a stationary observer at 34 m/s. If the speed of sound is 340 m/s, the apparent frequency heard by the observer is:",
+      "options": [
+        { "id": "A", "text": "550 Hz" },
+        { "id": "B", "text": "556 Hz" },
+        { "id": "C", "text": "450 Hz" },
+        { "id": "D", "text": "600 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using f' = f v/(v - v_s) = 500 x 340/(340 - 34) = 500 x 340/306 = 170000/306 approximately 555.6 Hz, which rounds to 556 Hz.",
+      "explanation_incorrect": "When the source approaches, use f' = f v/(v - v_s). Here f' = 500 x 340/(340 - 34) = 500 x 340/306 approximately 556 Hz. The frequency increases because the source is approaching. Using (v + v_s) in the denominator would be incorrect — that applies when the source recedes."
+    },
+    {
+      "question_id": "T10.02.Q043",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "application",
+      "question_text": "An observer moves toward a stationary source of frequency 1000 Hz at a speed of 17 m/s. If the speed of sound is 340 m/s, the apparent frequency is:",
+      "options": [
+        { "id": "A", "text": "950 Hz" },
+        { "id": "B", "text": "1000 Hz" },
+        { "id": "C", "text": "1050 Hz" },
+        { "id": "D", "text": "1100 Hz" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When the observer moves toward a stationary source, f' = f (v + v_o)/v = 1000 x (340 + 17)/340 = 1000 x 357/340 = 1050 Hz.",
+      "explanation_incorrect": "For a moving observer and stationary source, the formula is f' = f (v + v_o)/v (+ for approach). f' = 1000 x (340 + 17)/340 = 1000 x 1.05 = 1050 Hz."
+    },
+    {
+      "question_id": "T10.02.Q044",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "application",
+      "question_text": "A source recedes from a stationary observer at a speed of 68 m/s emitting sound of frequency 500 Hz. The apparent frequency heard (v = 340 m/s) is:",
+      "options": [
+        { "id": "A", "text": "417 Hz" },
+        { "id": "B", "text": "500 Hz" },
+        { "id": "C", "text": "600 Hz" },
+        { "id": "D", "text": "450 Hz" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When the source recedes, f' = f v/(v + v_s) = 500 x 340/(340 + 68) = 500 x 340/408 = 170000/408 approximately 416.7 Hz, which rounds to 417 Hz.",
+      "explanation_incorrect": "For a receding source, use the formula f' = f v/(v + v_s). The denominator uses + because the source moves away, effectively stretching the wavelength. f' = 500 x 340/408 approximately 417 Hz."
+    },
+    {
+      "question_id": "T10.02.Q045",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "exam_style",
+      "question_text": "A train emitting a whistle of frequency 640 Hz approaches a station at 20 m/s. What frequency is heard by a person standing on the platform? (Speed of sound = 340 m/s)",
+      "options": [
+        { "id": "A", "text": "640 Hz" },
+        { "id": "B", "text": "600 Hz" },
+        { "id": "C", "text": "680 Hz" },
+        { "id": "D", "text": "720 Hz" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "f' = f v/(v - v_s) = 640 x 340/(340 - 20) = 640 x 340/320 = 640 x 1.0625 = 680 Hz.",
+      "explanation_incorrect": "As the train approaches, the observed frequency increases. f' = 640 x 340/(340 - 20) = 640 x 340/320 = 680 Hz. After the train passes, the observed frequency would drop below 640 Hz."
+    },
+    {
+      "question_id": "T10.02.Q046",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "exam_style",
+      "question_text": "Two cars A and B approach each other. A has a horn frequency of 800 Hz and moves at 20 m/s; B moves at 15 m/s toward A. The frequency heard by a person in car B is (v = 340 m/s):",
+      "options": [
+        { "id": "A", "text": "835 Hz" },
+        { "id": "B", "text": "872 Hz" },
+        { "id": "C", "text": "888 Hz" },
+        { "id": "D", "text": "900 Hz" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Both source and observer move toward each other. f' = f (v + v_o)/(v - v_s) = 800 x (340 + 15)/(340 - 20) = 800 x 355/320 = 800 x 1.1094 approximately 887.5 Hz, which rounds to 888 Hz.",
+      "explanation_incorrect": "When source and observer approach each other, use f' = f(v + v_o)/(v - v_s). Here v_o = 15 m/s (observer toward source) and v_s = 20 m/s (source toward observer). f' = 800 x 355/320 approximately 888 Hz."
+    },
+    {
+      "question_id": "T10.02.Q047",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "exam_style",
+      "question_text": "A source of sound moves toward a wall with speed 10 m/s, emitting a frequency of 680 Hz. If the speed of sound is 340 m/s, the number of beats per second heard by the source is:",
+      "options": [
+        { "id": "A", "text": "20" },
+        { "id": "B", "text": "40" },
+        { "id": "C", "text": "10" },
+        { "id": "D", "text": "30" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The wall acts as a reflector. The frequency of sound reaching the wall: f_wall = f v/(v - v_s) = 680 x 340/330 = 680 x 34/33. The wall reflects this frequency. The source, now acting as an observer moving toward the wall, hears f' = f_wall (v + v_o)/v = (680 x 34/33) x (350/340) = 680 x 34 x 350 / (33 x 340) = 680 x 35/33 = 680 x 35/33 approximately 721.2 Hz. Beats = f' - f = 721.2 - 680 = 41.2 approximately 40 Hz. More precisely: f' = 680 (v + v_s)/(v - v_s) = 680 x 350/330 = 680 x 35/33 approximately 721.2. Beats = 721.2 - 680 = 41.2, which rounds to approximately 40.",
+      "explanation_incorrect": "The sound reflects off the wall. The reflected frequency heard by the moving source is f' = f(v + v_s)/(v - v_s) = 680 x 350/330 approximately 721 Hz. The source also hears its own frequency of 680 Hz. Beat frequency = 721 - 680 = 41 approximately 40 beats/s."
+    },
+    {
+      "question_id": "T10.02.Q048",
+      "type": "fill_blank",
+      "concept_id": "T10.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "If two tuning forks of frequencies 512 Hz and 518 Hz are sounded together, the beat frequency is ___ Hz.",
+      "correct_answer": "6",
+      "explanation_correct": "Beat frequency = |f1 - f2| = |512 - 518| = 6 Hz. This means the listener hears 6 periodic variations in loudness per second.",
+      "explanation_incorrect": "The beat frequency is simply the absolute difference of the two frequencies: |518 - 512| = 6 Hz. It is not the sum or average of the two frequencies."
+    },
+    {
+      "question_id": "T10.02.Q049",
+      "type": "mcq",
+      "concept_id": "T10.02.C05",
+      "difficulty": "application",
+      "question_text": "A person standing between two identical sources of frequency 660 Hz observes no beats. If one source now moves toward the person at 5 m/s (speed of sound = 330 m/s), the beat frequency heard is:",
+      "options": [
+        { "id": "A", "text": "5 Hz" },
+        { "id": "B", "text": "10 Hz" },
+        { "id": "C", "text": "15 Hz" },
+        { "id": "D", "text": "20 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From the stationary source, f_1 = 660 Hz. From the approaching source, f_2 = 660 x 330/(330 - 5) = 660 x 330/325 = 660 x 66/65 = 670.15 Hz approximately 670 Hz. Beat frequency = |670 - 660| = 10 Hz.",
+      "explanation_incorrect": "The approaching source is heard at f' = 660 x 330/325 approximately 670 Hz, while the other source is still at 660 Hz. Beats = 670 - 660 = 10 Hz."
+    },
+    {
+      "question_id": "T10.02.Q050",
+      "type": "mcq",
+      "concept_id": "T10.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "The frequency of the second overtone of a closed organ pipe is 900 Hz. The frequency of the third overtone of this pipe is:",
+      "options": [
+        { "id": "A", "text": "1200 Hz" },
+        { "id": "B", "text": "1260 Hz" },
+        { "id": "C", "text": "1500 Hz" },
+        { "id": "D", "text": "1800 Hz" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A closed pipe has harmonics f, 3f, 5f, 7f, ... The fundamental is the 1st harmonic, 1st overtone is the 3rd harmonic (3f), 2nd overtone is the 5th harmonic (5f), 3rd overtone is the 7th harmonic (7f). If the 2nd overtone (5f) = 900 Hz, then f = 180 Hz. The 3rd overtone (7f) = 7 x 180 = 1260 Hz.",
+      "explanation_incorrect": "In a closed pipe, the nth overtone is the (2n+1)th harmonic. The 2nd overtone = 5th harmonic = 5f_1 = 900, so f_1 = 180 Hz. The 3rd overtone = 7th harmonic = 7 x 180 = 1260 Hz. A common error is to treat overtones as consecutive integers instead of odd multiples."
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T07.01",
+  "topic_name": "Equilibrium",
+  "canonical_explanation": {
+    "text": "Equilibrium is the state in which the rates of the forward and reverse processes become equal, and the macroscopic properties of the system remain constant with time. Physical equilibria (e.g., liquid–vapour, solid–liquid) and chemical equilibria are both dynamic — processes continue at the molecular level even though no net change is observed. The law of mass action states that the rate of a reaction is proportional to the product of the active masses (concentrations) of the reactants, each raised to the power of its stoichiometric coefficient. For a general reaction aA + bB ⇌ cC + dD, the equilibrium constant Kc = [C]^c[D]^d / [A]^a[B]^b. When expressed in terms of partial pressures, Kp = (pC)^c(pD)^d / (pA)^a(pB)^b, and the relation Kp = Kc(RT)^Δn holds, where Δn = (c + d) − (a + b) for gaseous species. Le Chatelier's principle states that if a system at equilibrium is disturbed, it shifts in the direction that tends to counteract the disturbance. Changes in concentration, pressure, and temperature all affect the equilibrium position. Ionic equilibrium involves the equilibrium established by weak electrolytes in aqueous solution. Arrhenius defined acids as H⁺ donors and bases as OH⁻ donors in water; Brønsted–Lowry defined acids as proton donors and bases as proton acceptors; Lewis defined acids as electron-pair acceptors and bases as electron-pair donors. The ionic product of water Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25 °C. pH = −log[H⁺]; for acids Ka = [H⁺][A⁻]/[HA], and for bases Kb = [BH⁺][OH⁻]/[B]. The relation Ka × Kb = Kw holds for a conjugate acid–base pair. Buffer solutions resist changes in pH upon addition of small amounts of acid or base. The Henderson–Hasselbalch equation is pH = pKa + log([A⁻]/[HA]). Solubility equilibrium involves sparingly soluble salts; the solubility product Ksp = product of the ion concentrations raised to their stoichiometric powers. Precipitation occurs when the ionic product Q > Ksp; the common ion effect decreases the solubility of a sparingly soluble salt.",
+    "rules": [
+      "At equilibrium, the rate of forward reaction equals the rate of reverse reaction; concentrations remain constant.",
+      "Kc = [products]^coefficients / [reactants]^coefficients; pure solids and liquids are excluded from the expression.",
+      "Kp = Kc(RT)^Δn, where Δn = moles of gaseous products − moles of gaseous reactants.",
+      "Le Chatelier's principle: a system at equilibrium shifts to counteract any imposed change (concentration, pressure, temperature).",
+      "Increasing temperature shifts equilibrium in the endothermic direction; a catalyst does not shift equilibrium.",
+      "Arrhenius: acid gives H⁺, base gives OH⁻. Brønsted–Lowry: acid donates proton, base accepts proton. Lewis: acid accepts electron pair, base donates electron pair.",
+      "Kw = [H⁺][OH⁻] = 10⁻¹⁴ at 25 °C; pH + pOH = 14.",
+      "Ka × Kb = Kw for a conjugate acid–base pair.",
+      "Henderson–Hasselbalch: pH = pKa + log([salt]/[acid]) for acidic buffers.",
+      "Ksp = product of ion concentrations at equilibrium; precipitation occurs when ionic product > Ksp."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T07.01.Q001",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Chemical equilibrium is described as 'dynamic' because:",
+      "options": [
+        {"id": "A", "text": "The concentrations of reactants and products keep changing"},
+        {"id": "B", "text": "Both forward and reverse reactions continue to occur at equal rates"},
+        {"id": "C", "text": "The system is not in a stable state"},
+        {"id": "D", "text": "The temperature keeps fluctuating"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At dynamic equilibrium, both the forward and reverse reactions continue to occur, but their rates are equal, so there is no net change in concentrations. The system appears static macroscopically but is active at the molecular level.",
+      "explanation_incorrect": "Concentrations do not keep changing — they remain constant at equilibrium. The system is stable (in terms of macroscopic properties). Temperature does not fluctuate at equilibrium."
+    },
+    {
+      "question_id": "T07.01.Q002",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "For the equilibrium reaction aA + bB ⇌ cC + dD, the expression for Kc is:",
+      "options": [
+        {"id": "A", "text": "[A]^a[B]^b / [C]^c[D]^d"},
+        {"id": "B", "text": "[C]^c[D]^d / [A]^a[B]^b"},
+        {"id": "C", "text": "[C][D] / [A][B]"},
+        {"id": "D", "text": "(c + d) / (a + b)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By the law of mass action, Kc = [C]^c[D]^d / [A]^a[B]^b, with products in the numerator and reactants in the denominator, each raised to its stoichiometric coefficient.",
+      "explanation_incorrect": "Option A has reactants in the numerator (inverse of Kc). Option C ignores stoichiometric coefficients. Option D is a ratio of coefficients, not concentrations."
+    },
+    {
+      "question_id": "T07.01.Q003",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "In the equilibrium expression, the concentrations of pure solids and pure liquids:",
+      "options": [
+        {"id": "A", "text": "Appear in the numerator"},
+        {"id": "B", "text": "Appear in the denominator"},
+        {"id": "C", "text": "Are included with their stoichiometric coefficients"},
+        {"id": "D", "text": "Are not included because their activities are unity"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Pure solids and pure liquids have fixed concentrations (densities) that do not change during the reaction. Their activities are taken as 1 by convention and are therefore excluded from the equilibrium expression.",
+      "explanation_incorrect": "Pure solids and liquids are not included anywhere in the Kc or Kp expression. Their concentrations are constant and absorbed into the equilibrium constant."
+    },
+    {
+      "question_id": "T07.01.Q004",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "For the reaction CaCO₃(s) ⇌ CaO(s) + CO₂(g), the equilibrium expression is:",
+      "options": [
+        {"id": "A", "text": "Kp = p(CaO) × p(CO₂) / p(CaCO₃)"},
+        {"id": "B", "text": "Kp = p(CO₂)"},
+        {"id": "C", "text": "Kp = 1 / p(CO₂)"},
+        {"id": "D", "text": "Kp = p(CaO) / p(CaCO₃)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "CaCO₃ and CaO are pure solids, so their activities are 1 and they are excluded from the expression. The only gaseous species is CO₂, so Kp = p(CO₂).",
+      "explanation_incorrect": "Options A and D include pure solids in the expression, which is incorrect. Option C inverts the expression."
+    },
+    {
+      "question_id": "T07.01.Q005",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "If the equilibrium constant for A ⇌ B is K, then the equilibrium constant for 2B ⇌ 2A is:",
+      "options": [
+        {"id": "A", "text": "K²"},
+        {"id": "B", "text": "1/K²"},
+        {"id": "C", "text": "2K"},
+        {"id": "D", "text": "1/(2K)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Reversing a reaction inverts K (gives 1/K). Multiplying a reaction by a factor n raises K to the power n. Reversing A ⇌ B gives K' = 1/K for B ⇌ A. Multiplying by 2 gives K'' = (1/K)² = 1/K².",
+      "explanation_incorrect": "K² would apply if the forward reaction were multiplied by 2 (without reversing). 2K incorrectly multiplies rather than exponentiating. 1/(2K) confuses multiplication with exponentiation."
+    },
+    {
+      "question_id": "T07.01.Q006",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "The reaction quotient Q for a reaction is less than Kc. This means:",
+      "options": [
+        {"id": "A", "text": "The reaction is at equilibrium"},
+        {"id": "B", "text": "The reaction will shift towards reactants (reverse direction)"},
+        {"id": "C", "text": "The reaction will shift towards products (forward direction)"},
+        {"id": "D", "text": "The reaction has reached completion"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When Q < Kc, the ratio of product concentrations to reactant concentrations is less than at equilibrium. The system must produce more products and consume more reactants to reach equilibrium, so the reaction shifts forward.",
+      "explanation_incorrect": "Q = K indicates equilibrium. Q > K means the reaction shifts in reverse. The reaction has not reached completion; equilibrium is not the same as completion."
+    },
+    {
+      "question_id": "T07.01.Q007",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), if Kc = 0.5 at a certain temperature, then for ½N₂(g) + 3/2 H₂(g) ⇌ NH₃(g), Kc is:",
+      "options": [
+        {"id": "A", "text": "0.25"},
+        {"id": "B", "text": "0.707"},
+        {"id": "C", "text": "1.0"},
+        {"id": "D", "text": "2.0"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The second reaction is the first reaction divided by 2. When a reaction is multiplied by a factor n, the new Kc = (old Kc)^n. Here n = 1/2, so Kc(new) = (0.5)^(1/2) = √0.5 ≈ 0.707.",
+      "explanation_incorrect": "0.25 is (0.5)². 1.0 is incorrect. 2.0 is 1/0.5, which would apply if the reaction were reversed."
+    },
+    {
+      "question_id": "T07.01.Q008",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A large value of Kc (>>1) indicates that at equilibrium:",
+      "options": [
+        {"id": "A", "text": "Reactants are predominantly present"},
+        {"id": "B", "text": "Products are predominantly present"},
+        {"id": "C", "text": "Reactants and products are present in equal amounts"},
+        {"id": "D", "text": "The reaction has not started"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A large Kc means the numerator (product concentrations) is much larger than the denominator (reactant concentrations). This indicates that at equilibrium, the reaction lies far to the right, with products predominating.",
+      "explanation_incorrect": "Reactants predominate when Kc << 1. Equal amounts correspond to Kc ≈ 1. A large Kc does not mean the reaction has not started."
+    },
+    {
+      "question_id": "T07.01.Q009",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The relationship between Kp and Kc is:",
+      "options": [
+        {"id": "A", "text": "Kp = Kc + RT"},
+        {"id": "B", "text": "Kp = Kc × (RT)^Δn"},
+        {"id": "C", "text": "Kp = Kc / (RT)^Δn"},
+        {"id": "D", "text": "Kp = Kc − Δn × RT"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The relation is Kp = Kc(RT)^Δn, where Δn = moles of gaseous products − moles of gaseous reactants, R is the gas constant, and T is absolute temperature.",
+      "explanation_incorrect": "Addition and subtraction of RT are dimensionally incorrect for equilibrium constants. Division by (RT)^Δn inverts the correct relationship."
+    },
+    {
+      "question_id": "T07.01.Q010",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to Le Chatelier's principle, if the concentration of a reactant is increased at equilibrium, the equilibrium will:",
+      "options": [
+        {"id": "A", "text": "Shift towards the reactants"},
+        {"id": "B", "text": "Shift towards the products"},
+        {"id": "C", "text": "Remain unchanged"},
+        {"id": "D", "text": "The equilibrium constant will change"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Le Chatelier's principle states that the system will counteract the disturbance. Increasing a reactant concentration makes Q < K, so the equilibrium shifts forward (towards products) to consume the added reactant and re-establish equilibrium.",
+      "explanation_incorrect": "Shifting towards reactants would increase the disturbance. The equilibrium position changes, but not Kc (which depends only on temperature). It does not remain unchanged."
+    },
+    {
+      "question_id": "T07.01.Q011",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A catalyst affects a chemical equilibrium by:",
+      "options": [
+        {"id": "A", "text": "Shifting the equilibrium towards products"},
+        {"id": "B", "text": "Shifting the equilibrium towards reactants"},
+        {"id": "C", "text": "Increasing the equilibrium constant"},
+        {"id": "D", "text": "Helping the system reach equilibrium faster without changing Kc"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "A catalyst lowers the activation energy equally for both forward and reverse reactions, so equilibrium is reached faster but the equilibrium position (Kc) is unchanged.",
+      "explanation_incorrect": "A catalyst does not shift equilibrium in either direction. It does not change the equilibrium constant, as it affects both forward and reverse rates equally."
+    },
+    {
+      "question_id": "T07.01.Q012",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "For the exothermic reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), increasing the temperature will:",
+      "options": [
+        {"id": "A", "text": "Shift equilibrium to the right and increase Kc"},
+        {"id": "B", "text": "Shift equilibrium to the left and decrease Kc"},
+        {"id": "C", "text": "Have no effect on equilibrium"},
+        {"id": "D", "text": "Shift equilibrium to the right and decrease Kc"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an exothermic reaction, heat is a product. Increasing temperature is equivalent to adding heat, which shifts equilibrium to the left (endothermic direction) to absorb the extra heat. This also decreases the value of Kc.",
+      "explanation_incorrect": "Shifting right would occur for an endothermic reaction upon heating. Temperature does affect equilibrium (unlike a catalyst). Kc changes with temperature."
+    },
+    {
+      "question_id": "T07.01.Q013",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "For the reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), what happens when the total pressure is increased at constant temperature?",
+      "options": [
+        {"id": "A", "text": "Equilibrium shifts to the left"},
+        {"id": "B", "text": "Equilibrium shifts to the right"},
+        {"id": "C", "text": "No change in equilibrium"},
+        {"id": "D", "text": "Kp increases"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Δn = 2 − (2 + 1) = −1. Increasing pressure favours the side with fewer moles of gas (products side). The equilibrium shifts to the right, producing more SO₃.",
+      "explanation_incorrect": "Shifting left would increase the number of gas moles, which opposes the pressure increase — not what Le Chatelier predicts. Kp is unchanged by pressure changes (it depends only on temperature)."
+    },
+    {
+      "question_id": "T07.01.Q014",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "For the reaction H₂(g) + I₂(g) ⇌ 2HI(g), an increase in total pressure at constant temperature will:",
+      "options": [
+        {"id": "A", "text": "Shift equilibrium to the right"},
+        {"id": "B", "text": "Shift equilibrium to the left"},
+        {"id": "C", "text": "Have no effect on the equilibrium position"},
+        {"id": "D", "text": "Decrease the value of Kp"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Δn = 2 − (1 + 1) = 0. When the number of moles of gas is the same on both sides, changing pressure has no effect on the equilibrium position.",
+      "explanation_incorrect": "With Δn = 0, neither direction is favoured by pressure changes. Kp is unaffected by pressure changes at constant temperature."
+    },
+    {
+      "question_id": "T07.01.Q015",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), Kc = 0.5 at a certain temperature. The value of Kp at the same temperature is: (R = 0.0821 L atm mol⁻¹ K⁻¹, T = 500 K)",
+      "options": [
+        {"id": "A", "text": "0.5 × (0.0821 × 500)²"},
+        {"id": "B", "text": "0.5 / (0.0821 × 500)²"},
+        {"id": "C", "text": "0.5 × (0.0821 × 500)"},
+        {"id": "D", "text": "0.5"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kp = Kc(RT)^Δn. Here Δn = 2 − 4 = −2. So Kp = 0.5 × (0.0821 × 500)^(−2) = 0.5 / (41.05)² = 0.5 / 1685 ≈ 2.97 × 10⁻⁴.",
+      "explanation_incorrect": "Option A uses Δn = +2 instead of −2. Option C uses Δn = +1. Option D assumes Kp = Kc, which is only true when Δn = 0."
+    },
+    {
+      "question_id": "T07.01.Q016",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "In the Haber process for ammonia synthesis (N₂ + 3H₂ ⇌ 2NH₃, ΔH = −92 kJ), the conditions that favour maximum yield of NH₃ are:",
+      "options": [
+        {"id": "A", "text": "High temperature, high pressure"},
+        {"id": "B", "text": "Low temperature, high pressure"},
+        {"id": "C", "text": "High temperature, low pressure"},
+        {"id": "D", "text": "Low temperature, low pressure"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The forward reaction is exothermic (ΔH < 0) and decreases the number of gas moles (Δn = −2). Low temperature favours the exothermic direction, and high pressure favours the side with fewer moles of gas. Both favour product formation.",
+      "explanation_incorrect": "High temperature shifts equilibrium backward (endothermic direction). Low pressure shifts equilibrium toward more gas moles (reactant side). The optimal conditions for yield are low T, high P (though practically, moderate T ~700 K is used with a catalyst for adequate rate)."
+    },
+    {
+      "question_id": "T07.01.Q017",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Adding an inert gas to an equilibrium mixture in a rigid container at constant temperature:",
+      "options": [
+        {"id": "A", "text": "Shifts equilibrium to the right"},
+        {"id": "B", "text": "Shifts equilibrium to the left"},
+        {"id": "C", "text": "Does not affect the equilibrium"},
+        {"id": "D", "text": "Changes the value of Kc"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Adding an inert gas at constant volume increases the total pressure but does not change the partial pressures or concentrations of the reacting species. Therefore, Q remains equal to K and the equilibrium is unaffected.",
+      "explanation_incorrect": "Since concentrations are unchanged, there is no shift in either direction. Kc depends only on temperature, not on the presence of inert gases."
+    },
+    {
+      "question_id": "T07.01.Q018",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Adding an inert gas to an equilibrium mixture at constant total pressure (by increasing volume) will shift the equilibrium for A(g) ⇌ 2B(g) towards:",
+      "options": [
+        {"id": "A", "text": "Products (right)"},
+        {"id": "B", "text": "Reactants (left)"},
+        {"id": "C", "text": "No shift occurs"},
+        {"id": "D", "text": "Depends on the temperature"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At constant total pressure, adding inert gas increases the volume. This effectively decreases the partial pressures of reacting gases. The equilibrium shifts toward the side with more moles of gas (products, with 2 mol vs 1 mol) to counteract the decrease in pressure.",
+      "explanation_incorrect": "Shifting left would reduce gas moles, not counteract the decreased partial pressures. The shift does occur because partial pressures change. The direction depends on Δn, not temperature."
+    },
+    {
+      "question_id": "T07.01.Q019",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "According to the Brønsted–Lowry theory, an acid is:",
+      "options": [
+        {"id": "A", "text": "A substance that donates an electron pair"},
+        {"id": "B", "text": "A substance that accepts a proton"},
+        {"id": "C", "text": "A substance that donates a proton"},
+        {"id": "D", "text": "A substance that releases OH⁻ ions in water"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In the Brønsted–Lowry theory, an acid is a proton (H⁺) donor. For example, HCl donates a proton to water: HCl → H⁺ + Cl⁻.",
+      "explanation_incorrect": "An electron-pair donor is a Lewis base. A proton acceptor is a Brønsted–Lowry base. Releasing OH⁻ ions describes an Arrhenius base."
+    },
+    {
+      "question_id": "T07.01.Q020",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A Lewis acid is defined as:",
+      "options": [
+        {"id": "A", "text": "A proton donor"},
+        {"id": "B", "text": "An electron pair donor"},
+        {"id": "C", "text": "An electron pair acceptor"},
+        {"id": "D", "text": "A substance that increases [H⁺] in water"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A Lewis acid is a species that can accept an electron pair to form a coordinate covalent bond. Examples include BF₃, AlCl₃, and metal cations like Fe³⁺.",
+      "explanation_incorrect": "A proton donor is a Brønsted–Lowry acid. An electron pair donor is a Lewis base. Increasing [H⁺] describes an Arrhenius acid."
+    },
+    {
+      "question_id": "T07.01.Q021",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The conjugate base of H₂O is:",
+      "options": [
+        {"id": "A", "text": "H₃O⁺"},
+        {"id": "B", "text": "OH⁻"},
+        {"id": "C", "text": "O²⁻"},
+        {"id": "D", "text": "H₂O₂"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The conjugate base of an acid is formed by removing one proton (H⁺). Removing H⁺ from H₂O gives OH⁻. Water acts as an acid when it donates a proton: H₂O → H⁺ + OH⁻.",
+      "explanation_incorrect": "H₃O⁺ is the conjugate acid of water (formed when water accepts a proton). O²⁻ results from removing two protons, which is not a conjugate relationship. H₂O₂ is hydrogen peroxide, a different substance."
+    },
+    {
+      "question_id": "T07.01.Q022",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "Water can act as both an acid and a base. This property is called:",
+      "options": [
+        {"id": "A", "text": "Neutralisation"},
+        {"id": "B", "text": "Amphoteric nature"},
+        {"id": "C", "text": "Polyprotic nature"},
+        {"id": "D", "text": "Buffering action"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A substance that can act as both an acid (proton donor) and a base (proton acceptor) is called amphoteric (or amphiprotic). Water donates a proton to form OH⁻ (acting as acid) or accepts a proton to form H₃O⁺ (acting as base).",
+      "explanation_incorrect": "Neutralisation is the reaction between an acid and a base. Polyprotic refers to acids that can donate more than one proton. Buffering action involves resisting pH changes."
+    },
+    {
+      "question_id": "T07.01.Q023",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "Which of the following is a Lewis acid but NOT a Brønsted–Lowry acid?",
+      "options": [
+        {"id": "A", "text": "HCl"},
+        {"id": "B", "text": "BF₃"},
+        {"id": "C", "text": "H₂SO₄"},
+        {"id": "D", "text": "CH₃COOH"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "BF₃ has an incomplete octet on boron and can accept an electron pair (Lewis acid), but it has no proton to donate, so it is not a Brønsted–Lowry acid.",
+      "explanation_incorrect": "HCl, H₂SO₄, and CH₃COOH are all proton donors (Brønsted–Lowry acids) as well as Lewis acids. The question asks for one that is exclusively a Lewis acid."
+    },
+    {
+      "question_id": "T07.01.Q024",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "question_text": "The ionic product of water (Kw) at 25 °C is:",
+      "options": [
+        {"id": "A", "text": "1.0 × 10⁻⁷"},
+        {"id": "B", "text": "1.0 × 10⁻¹⁴"},
+        {"id": "C", "text": "1.0 × 10⁻¹⁰"},
+        {"id": "D", "text": "1.0 × 10⁻⁷ M"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25 °C. In pure water, [H⁺] = [OH⁻] = 1.0 × 10⁻⁷ M, giving Kw = (10⁻⁷)(10⁻⁷) = 10⁻¹⁴.",
+      "explanation_incorrect": "1.0 × 10⁻⁷ is the concentration of H⁺ (or OH⁻) in pure water, not Kw itself. 1.0 × 10⁻¹⁰ is incorrect. 1.0 × 10⁻⁷ M is a concentration, not the ionic product."
+    },
+    {
+      "question_id": "T07.01.Q025",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Identify the conjugate acid–base pairs in: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+      "options": [
+        {"id": "A", "text": "NH₃/NH₄⁺ and H₂O/OH⁻"},
+        {"id": "B", "text": "NH₃/OH⁻ and H₂O/NH₄⁺"},
+        {"id": "C", "text": "NH₄⁺/OH⁻ and NH₃/H₂O"},
+        {"id": "D", "text": "H₂O/NH₃ and OH⁻/NH₄⁺"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "NH₃ (base) accepts a proton to form NH₄⁺ (its conjugate acid) — first pair: NH₃/NH₄⁺. H₂O (acid) donates a proton to form OH⁻ (its conjugate base) — second pair: H₂O/OH⁻.",
+      "explanation_incorrect": "Conjugate pairs differ by exactly one proton. NH₃/OH⁻ and H₂O/NH₄⁺ are not correct conjugate pairs. The pairs must be from the same species gaining or losing a proton."
+    },
+    {
+      "question_id": "T07.01.Q026",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The stronger the acid, its conjugate base is:",
+      "options": [
+        {"id": "A", "text": "Also a strong base"},
+        {"id": "B", "text": "A weak base"},
+        {"id": "C", "text": "Neither acidic nor basic"},
+        {"id": "D", "text": "Equally strong as the acid"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A strong acid has a high tendency to donate protons, meaning its conjugate base has very little tendency to accept protons — making it a weak base. For example, HCl is a strong acid and Cl⁻ is a very weak base.",
+      "explanation_incorrect": "A strong acid does not produce a strong conjugate base — they are inversely related. The conjugate base is not neutral. Strength of an acid and its conjugate base are not equal."
+    },
+    {
+      "question_id": "T07.01.Q027",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The pH of a solution with [H⁺] = 1.0 × 10⁻³ M is:",
+      "options": [
+        {"id": "A", "text": "3"},
+        {"id": "B", "text": "11"},
+        {"id": "C", "text": "7"},
+        {"id": "D", "text": "−3"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "pH = −log[H⁺] = −log(1.0 × 10⁻³) = −(−3) = 3. A pH of 3 indicates an acidic solution.",
+      "explanation_incorrect": "pH 11 corresponds to [H⁺] = 10⁻¹¹. pH 7 is neutral. pH −3 is not obtained with this concentration (would require [H⁺] = 1000 M)."
+    },
+    {
+      "question_id": "T07.01.Q028",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The pH of a neutral solution at 25 °C is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "7"},
+        {"id": "C", "text": "14"},
+        {"id": "D", "text": "1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a neutral solution at 25 °C, [H⁺] = [OH⁻] = 1.0 × 10⁻⁷ M. Therefore pH = −log(10⁻⁷) = 7.",
+      "explanation_incorrect": "pH 0 corresponds to [H⁺] = 1 M (strongly acidic). pH 14 corresponds to [OH⁻] = 1 M (strongly basic). pH 1 is acidic."
+    },
+    {
+      "question_id": "T07.01.Q029",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "For a weak acid HA, the dissociation constant Ka is given by:",
+      "options": [
+        {"id": "A", "text": "Ka = [HA] / [H⁺][A⁻]"},
+        {"id": "B", "text": "Ka = [H⁺][A⁻] / [HA]"},
+        {"id": "C", "text": "Ka = [H⁺][HA] / [A⁻]"},
+        {"id": "D", "text": "Ka = [H⁺] / [A⁻]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For HA ⇌ H⁺ + A⁻, Ka = [H⁺][A⁻] / [HA]. This is the equilibrium constant for the dissociation of the weak acid.",
+      "explanation_incorrect": "Option A is the inverse of Ka. Option C has HA in the numerator instead of the denominator. Option D omits [HA] from the denominator."
+    },
+    {
+      "question_id": "T07.01.Q030",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "The Ka of a weak acid is 1.0 × 10⁻⁵. Its pKa is:",
+      "options": [
+        {"id": "A", "text": "5"},
+        {"id": "B", "text": "−5"},
+        {"id": "C", "text": "9"},
+        {"id": "D", "text": "10⁻⁵"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "pKa = −log Ka = −log(1.0 × 10⁻⁵) = 5. A higher pKa indicates a weaker acid.",
+      "explanation_incorrect": "−5 is log Ka, not −log Ka. 9 is incorrect. 10⁻⁵ is Ka itself, not pKa."
+    },
+    {
+      "question_id": "T07.01.Q031",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "The pH of a 0.01 M NaOH solution is:",
+      "options": [
+        {"id": "A", "text": "2"},
+        {"id": "B", "text": "7"},
+        {"id": "C", "text": "12"},
+        {"id": "D", "text": "14"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "[OH⁻] = 0.01 M = 10⁻² M. pOH = −log(10⁻²) = 2. pH = 14 − pOH = 14 − 2 = 12. The solution is basic.",
+      "explanation_incorrect": "pH 2 would mean the solution is acidic (confusing pH with pOH). pH 7 is neutral. pH 14 would require [OH⁻] = 1 M."
+    },
+    {
+      "question_id": "T07.01.Q032",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "A buffer solution of pH 5 can be prepared by mixing:",
+      "options": [
+        {"id": "A", "text": "A strong acid and its salt"},
+        {"id": "B", "text": "A weak acid (pKa ≈ 5) and its sodium salt"},
+        {"id": "C", "text": "A strong acid and a strong base"},
+        {"id": "D", "text": "A weak base and a strong base"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An acidic buffer is prepared from a weak acid and its conjugate base (salt). By the Henderson–Hasselbalch equation, pH = pKa + log([A⁻]/[HA]). For pH = 5 with equal concentrations, pKa should be approximately 5.",
+      "explanation_incorrect": "Strong acids cannot form buffers (they dissociate completely). A strong acid + strong base gives a neutral salt, not a buffer. A weak base + strong base does not form a buffer system."
+    },
+    {
+      "question_id": "T07.01.Q033",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "question_text": "For a conjugate acid–base pair, Ka × Kb equals:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "Kw = 10⁻¹⁴ at 25 °C"},
+        {"id": "C", "text": "10⁻⁷"},
+        {"id": "D", "text": "14"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a conjugate acid–base pair, Ka × Kb = Kw = 1.0 × 10⁻¹⁴ at 25 °C. This fundamental relationship connects the strengths of a conjugate acid and its conjugate base.",
+      "explanation_incorrect": "Ka × Kb = 1 is incorrect. 10⁻⁷ is the concentration of H⁺ in pure water, not the product Ka × Kb. 14 is pH + pOH, not Ka × Kb."
+    },
+    {
+      "question_id": "T07.01.Q034",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The pH of a 0.1 M solution of a weak acid HA with Ka = 1.0 × 10⁻⁵ is approximately:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "3"},
+        {"id": "C", "text": "5"},
+        {"id": "D", "text": "7"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a weak acid: [H⁺] ≈ √(Ka × c) = √(10⁻⁵ × 0.1) = √(10⁻⁶) = 10⁻³ M. pH = −log(10⁻³) = 3.",
+      "explanation_incorrect": "pH 1 would correspond to a strong acid at 0.1 M. pH 5 is the pKa, not the pH. pH 7 is neutral, not acidic."
+    },
+    {
+      "question_id": "T07.01.Q035",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A buffer solution contains 0.1 M CH₃COOH (pKa = 4.76) and 0.1 M CH₃COONa. The pH of the solution is:",
+      "options": [
+        {"id": "A", "text": "4.76"},
+        {"id": "B", "text": "7.00"},
+        {"id": "C", "text": "9.24"},
+        {"id": "D", "text": "2.88"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using Henderson–Hasselbalch: pH = pKa + log([A⁻]/[HA]) = 4.76 + log(0.1/0.1) = 4.76 + log(1) = 4.76 + 0 = 4.76. When [acid] = [salt], pH = pKa.",
+      "explanation_incorrect": "pH 7.00 is neutral, not a buffer with acetic acid. 9.24 is pKb (14 − 4.76). 2.88 would correspond to a much more acidic solution."
+    },
+    {
+      "question_id": "T07.01.Q036",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "If the Kb of NH₃ is 1.8 × 10⁻⁵, the Ka of NH₄⁺ is:",
+      "options": [
+        {"id": "A", "text": "1.8 × 10⁻⁵"},
+        {"id": "B", "text": "5.6 × 10⁻¹⁰"},
+        {"id": "C", "text": "1.0 × 10⁻¹⁴"},
+        {"id": "D", "text": "5.6 × 10⁻⁵"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "NH₄⁺ is the conjugate acid of NH₃. Ka × Kb = Kw → Ka = Kw / Kb = (1.0 × 10⁻¹⁴) / (1.8 × 10⁻⁵) = 5.6 × 10⁻¹⁰.",
+      "explanation_incorrect": "1.8 × 10⁻⁵ is Kb of NH₃, not Ka of NH₄⁺. 1.0 × 10⁻¹⁴ is Kw. 5.6 × 10⁻⁵ has an incorrect exponent."
+    },
+    {
+      "question_id": "T07.01.Q037",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The solubility product (Ksp) of a sparingly soluble salt is defined as:",
+      "options": [
+        {"id": "A", "text": "The product of the concentrations of the undissolved salt"},
+        {"id": "B", "text": "The product of the molar concentrations of the ions, each raised to the power of its coefficient, at equilibrium"},
+        {"id": "C", "text": "The total concentration of all ions in solution"},
+        {"id": "D", "text": "The ratio of dissolved salt to undissolved salt"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a salt MₓAᵧ ⇌ xM^(y+) + yA^(x−), Ksp = [M^(y+)]^x × [A^(x−)]^y. It is the equilibrium constant for the dissolution of the salt, with the solid excluded from the expression.",
+      "explanation_incorrect": "The undissolved solid is not included in Ksp. Total ion concentration is not the same as the product of ion concentrations. The ratio of dissolved to undissolved salt does not define Ksp."
+    },
+    {
+      "question_id": "T07.01.Q038",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Precipitation of a sparingly soluble salt occurs when:",
+      "options": [
+        {"id": "A", "text": "Q < Ksp"},
+        {"id": "B", "text": "Q = Ksp"},
+        {"id": "C", "text": "Q > Ksp"},
+        {"id": "D", "text": "Q = 0"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When the ionic product Q exceeds Ksp, the solution is supersaturated and the excess ions precipitate as the solid salt until Q decreases to Ksp (equilibrium is re-established).",
+      "explanation_incorrect": "Q < Ksp means the solution is unsaturated (no precipitation). Q = Ksp means the solution is saturated (equilibrium, no net precipitation). Q = 0 means no ions are present."
+    },
+    {
+      "question_id": "T07.01.Q039",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The common ion effect refers to the decrease in solubility of a salt when:",
+      "options": [
+        {"id": "A", "text": "Temperature is increased"},
+        {"id": "B", "text": "An electrolyte with a common ion is added"},
+        {"id": "C", "text": "The solution is diluted"},
+        {"id": "D", "text": "A catalyst is added"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The common ion effect is the suppression of dissociation of a weak electrolyte or the decrease in solubility of a sparingly soluble salt by the addition of a strong electrolyte having an ion in common. This is an application of Le Chatelier's principle.",
+      "explanation_incorrect": "Temperature changes affect solubility but are not the common ion effect. Dilution generally increases dissolution. A catalyst has no effect on equilibrium position."
+    },
+    {
+      "question_id": "T07.01.Q040",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "application",
+      "question_text": "The Ksp of AgCl is 1.8 × 10⁻¹⁰. The molar solubility of AgCl in pure water is:",
+      "options": [
+        {"id": "A", "text": "1.34 × 10⁻⁵ M"},
+        {"id": "B", "text": "1.8 × 10⁻¹⁰ M"},
+        {"id": "C", "text": "1.8 × 10⁻⁵ M"},
+        {"id": "D", "text": "9.0 × 10⁻⁶ M"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "AgCl ⇌ Ag⁺ + Cl⁻. Let solubility = s. Then Ksp = s × s = s². s = √Ksp = √(1.8 × 10⁻¹⁰) = 1.34 × 10⁻⁵ M.",
+      "explanation_incorrect": "1.8 × 10⁻¹⁰ M is Ksp itself, not the solubility. 1.8 × 10⁻⁵ M and 9.0 × 10⁻⁶ M are incorrect calculations of the square root."
+    },
+    {
+      "question_id": "T07.01.Q041",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "application",
+      "question_text": "The Ksp expression for Ca₃(PO₄)₂ is:",
+      "options": [
+        {"id": "A", "text": "Ksp = [Ca²⁺]²[PO₄³⁻]³"},
+        {"id": "B", "text": "Ksp = [Ca²⁺]³[PO₄³⁻]²"},
+        {"id": "C", "text": "Ksp = [Ca²⁺][PO₄³⁻]"},
+        {"id": "D", "text": "Ksp = 3[Ca²⁺] × 2[PO₄³⁻]"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ca₃(PO₄)₂ ⇌ 3Ca²⁺ + 2PO₄³⁻. Ksp = [Ca²⁺]³[PO₄³⁻]². The stoichiometric coefficients become the exponents in the Ksp expression.",
+      "explanation_incorrect": "Option A swaps the exponents (2 and 3). Option C ignores coefficients entirely. Option D multiplies concentrations by coefficients instead of raising to the power."
+    },
+    {
+      "question_id": "T07.01.Q042",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "application",
+      "question_text": "The solubility of AgCl (Ksp = 1.8 × 10⁻¹⁰) in 0.1 M NaCl solution is approximately:",
+      "options": [
+        {"id": "A", "text": "1.34 × 10⁻⁵ M"},
+        {"id": "B", "text": "1.8 × 10⁻⁹ M"},
+        {"id": "C", "text": "1.8 × 10⁻⁵ M"},
+        {"id": "D", "text": "1.8 × 10⁻¹¹ M"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In 0.1 M NaCl, [Cl⁻] ≈ 0.1 M (common ion). Ksp = [Ag⁺][Cl⁻] = s × 0.1 = 1.8 × 10⁻¹⁰. s = 1.8 × 10⁻⁹ M. The common ion effect reduces solubility dramatically from 1.34 × 10⁻⁵ M to 1.8 × 10⁻⁹ M.",
+      "explanation_incorrect": "1.34 × 10⁻⁵ M is the solubility in pure water, not in NaCl solution. 1.8 × 10⁻⁵ M and 1.8 × 10⁻¹¹ M are incorrect calculations."
+    },
+    {
+      "question_id": "T07.01.Q043",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The Ksp of PbCl₂ is 1.6 × 10⁻⁵. Its molar solubility in pure water is approximately:",
+      "options": [
+        {"id": "A", "text": "1.59 × 10⁻² M"},
+        {"id": "B", "text": "4.0 × 10⁻³ M"},
+        {"id": "C", "text": "2.5 × 10⁻² M"},
+        {"id": "D", "text": "1.6 × 10⁻⁵ M"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "PbCl₂ ⇌ Pb²⁺ + 2Cl⁻. Let solubility = s. [Pb²⁺] = s, [Cl⁻] = 2s. Ksp = s(2s)² = 4s³. s = (Ksp/4)^(1/3) = (1.6 × 10⁻⁵/4)^(1/3) = (4 × 10⁻⁶)^(1/3) ≈ 1.59 × 10⁻² M.",
+      "explanation_incorrect": "4.0 × 10⁻³ M incorrectly uses s² instead of 4s³. 2.5 × 10⁻² M has an arithmetic error. 1.6 × 10⁻⁵ M is Ksp itself."
+    },
+    {
+      "question_id": "T07.01.Q044",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "Will a precipitate of BaSO₄ form when 100 mL of 0.001 M BaCl₂ is mixed with 100 mL of 0.001 M Na₂SO₄? (Ksp of BaSO₄ = 1.1 × 10⁻¹⁰)",
+      "options": [
+        {"id": "A", "text": "No, because Q < Ksp"},
+        {"id": "B", "text": "Yes, because Q > Ksp"},
+        {"id": "C", "text": "No, because Q = Ksp"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "After mixing, total volume = 200 mL. [Ba²⁺] = 0.001 × 100/200 = 5 × 10⁻⁴ M. [SO₄²⁻] = 5 × 10⁻⁴ M. Q = [Ba²⁺][SO₄²⁻] = (5 × 10⁻⁴)² = 2.5 × 10⁻⁷. Since Q (2.5 × 10⁻⁷) >> Ksp (1.1 × 10⁻¹⁰), precipitation occurs.",
+      "explanation_incorrect": "Q is much greater than Ksp, so precipitation will occur. It can be determined using the given data."
+    },
+    {
+      "question_id": "T07.01.Q045",
+      "type": "mcq",
+      "concept_id": "T07.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "Among AgCl (Ksp = 1.8 × 10⁻¹⁰), AgBr (Ksp = 5.0 × 10⁻¹³), and AgI (Ksp = 8.5 × 10⁻¹⁷), the most soluble in water is:",
+      "options": [
+        {"id": "A", "text": "AgI"},
+        {"id": "B", "text": "AgBr"},
+        {"id": "C", "text": "AgCl"},
+        {"id": "D", "text": "All have the same solubility"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "All three salts have the same formula type (1:1), so solubility = √Ksp. The largest Ksp gives the highest solubility. AgCl has the largest Ksp (1.8 × 10⁻¹⁰), so it is the most soluble.",
+      "explanation_incorrect": "AgI has the smallest Ksp and is the least soluble. AgBr is intermediate. They do not have equal solubility."
+    },
+    {
+      "question_id": "T07.01.Q046",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "question_text": "The equilibrium constant Kc for the reaction 2A(g) ⇌ B(g) is 4. If the initial concentration of A is 1.0 M and B is 0 M, the equilibrium concentration of B is:",
+      "options": [
+        {"id": "A", "text": "0.67 M"},
+        {"id": "B", "text": "0.80 M"},
+        {"id": "C", "text": "0.50 M"},
+        {"id": "D", "text": "0.33 M"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Let x mol/L of B be formed. Then [B] = x, [A] = 1 − 2x. Kc = x / (1 − 2x)² = 4. Solving: x = 4(1 − 2x)² = 4(1 − 4x + 4x²) = 4 − 16x + 16x². 16x² − 17x + 4 = 0. Using the quadratic formula: x = (17 ± √(289 − 256))/32 = (17 ± √33)/32. x ≈ (17 − 5.74)/32 ≈ 0.35 or (17 + 5.74)/32 ≈ 0.71. Since [A] = 1 − 2x ≥ 0, x ≤ 0.5, so x ≈ 0.35, closest to 0.33 M.",
+      "explanation_incorrect": "The other values do not satisfy the equilibrium expression Kc = x/(1 − 2x)² = 4."
+    },
+    {
+      "question_id": "T07.01.Q047",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "question_text": "For the endothermic reaction CaCO₃(s) ⇌ CaO(s) + CO₂(g), which change will NOT shift the equilibrium to the right?",
+      "options": [
+        {"id": "A", "text": "Increasing the temperature"},
+        {"id": "B", "text": "Removing CO₂ from the system"},
+        {"id": "C", "text": "Adding more CaCO₃(s)"},
+        {"id": "D", "text": "Decreasing the total pressure"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "CaCO₃ is a pure solid, so changing its amount does not affect the equilibrium position (its activity remains 1 as long as some solid is present). The equilibrium expression involves only CO₂.",
+      "explanation_incorrect": "Increasing temperature favours the endothermic direction (forward). Removing CO₂ reduces product concentration, shifting right. Decreasing pressure favours more gas moles (forward)."
+    },
+    {
+      "question_id": "T07.01.Q048",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following is the strongest acid?",
+      "options": [
+        {"id": "A", "text": "CH₃COOH (Ka = 1.8 × 10⁻⁵)"},
+        {"id": "B", "text": "HCN (Ka = 4.9 × 10⁻¹⁰)"},
+        {"id": "C", "text": "HF (Ka = 3.5 × 10⁻⁴)"},
+        {"id": "D", "text": "H₂CO₃ (Ka₁ = 4.3 × 10⁻⁷)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The strength of a weak acid is indicated by its Ka value — the larger the Ka, the stronger the acid. HF has the largest Ka (3.5 × 10⁻⁴) among the options, making it the strongest acid in this group.",
+      "explanation_incorrect": "CH₃COOH (Ka = 10⁻⁵), H₂CO₃ (Ka = 10⁻⁷), and HCN (Ka = 10⁻¹⁰) all have smaller Ka values than HF."
+    },
+    {
+      "question_id": "T07.01.Q049",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The degree of dissociation of a 0.1 M weak acid (Ka = 1.0 × 10⁻⁴) is:",
+      "options": [
+        {"id": "A", "text": "0.01"},
+        {"id": "B", "text": "0.0316"},
+        {"id": "C", "text": "0.1"},
+        {"id": "D", "text": "0.001"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a weak acid, α ≈ √(Ka/c) when α << 1. α = √(10⁻⁴/0.1) = √(10⁻³) = 0.0316 (3.16%). This means about 3.16% of the acid molecules dissociate.",
+      "explanation_incorrect": "0.01 uses Ka directly. 0.1 would imply 10% dissociation (too high). 0.001 underestimates the dissociation."
+    },
+    {
+      "question_id": "T07.01.Q050",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For the reaction PCl₅(g) ⇌ PCl₃(g) + Cl₂(g), if Kp = Kc, then Δn must be:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "−1"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Kp = Kc(RT)^Δn. For Kp = Kc, we need (RT)^Δn = 1, which requires Δn = 0. However, for PCl₅ ⇌ PCl₃ + Cl₂, Δn = 2 − 1 = 1 ≠ 0, so actually Kp ≠ Kc for this reaction. The question tests the general condition: Kp = Kc only when Δn = 0.",
+      "explanation_incorrect": "When Δn = 1, −1, or 2, (RT)^Δn ≠ 1, so Kp ≠ Kc. The condition Kp = Kc holds exclusively for Δn = 0."
+    }
+  ]
+}

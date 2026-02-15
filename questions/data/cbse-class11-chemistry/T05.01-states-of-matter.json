@@ -1,0 +1,828 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T05.01",
+  "topic_name": "States of Matter",
+  "canonical_explanation": {
+    "text": "Matter exists in three principal states — solid, liquid, and gas — whose properties are determined by the balance between intermolecular forces and thermal energy. Intermolecular forces include dispersion (London) forces, dipole–dipole interactions, and hydrogen bonds; their relative strengths govern melting points, boiling points, and other physical properties. Gases are described quantitatively by the gas laws: Boyle's law (P ∝ 1/V at constant T), Charles's law (V ∝ T at constant P), Gay-Lussac's law (P ∝ T at constant V), and Avogadro's law (V ∝ n at constant T, P). These combine into the ideal gas equation PV = nRT, where R = 8.314 J mol⁻¹ K⁻¹. Dalton's law of partial pressures states that the total pressure of a gas mixture equals the sum of the partial pressures. The kinetic molecular theory assumes gas molecules are point masses in random motion with perfectly elastic collisions; average kinetic energy is proportional to absolute temperature (KE = 3/2 kT). The Maxwell–Boltzmann distribution describes the spread of molecular speeds. Real gases deviate from ideal behaviour at high pressures and low temperatures. The van der Waals equation (P + a/V²)(V − b) = RT (for 1 mol) corrects for intermolecular attractions (a) and finite molecular volume (b). The critical temperature is the temperature above which a gas cannot be liquefied by pressure alone. The liquefaction of gases is achieved by methods such as Linde's process (Joule–Thomson effect) and Claude's process. In the liquid state, vapour pressure is the pressure exerted by a vapour in equilibrium with its liquid at a given temperature; it increases with temperature and is independent of the amount of liquid. Surface tension is the force per unit length acting at the surface of a liquid, arising from the net inward pull on surface molecules. Viscosity is a measure of a liquid's resistance to flow, caused by intermolecular attractive forces; it decreases with increasing temperature.",
+    "rules": [
+      "Intermolecular forces (London, dipole–dipole, H-bonding) increase with molecular mass, polarity, and capacity for hydrogen bonding.",
+      "Boyle's law: P₁V₁ = P₂V₂ at constant temperature and amount of gas.",
+      "Charles's law: V₁/T₁ = V₂/T₂ at constant pressure and amount of gas (T in kelvin).",
+      "Ideal gas equation: PV = nRT; R = 8.314 J mol⁻¹ K⁻¹ = 0.0821 L atm mol⁻¹ K⁻¹.",
+      "Dalton's law: P_total = p₁ + p₂ + … ; partial pressure pᵢ = xᵢ × P_total.",
+      "Average kinetic energy of a gas molecule = (3/2)kT, independent of the nature of the gas.",
+      "Van der Waals equation for 1 mol: (P + a/V²)(V − b) = RT; 'a' corrects for attraction, 'b' for volume.",
+      "Critical temperature (Tc) is the highest temperature at which a gas can be liquefied by applying pressure.",
+      "Vapour pressure increases with temperature and is characteristic of the liquid, not its amount.",
+      "Surface tension and viscosity both decrease with increasing temperature."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T05.01.Q001",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following intermolecular forces is present in all molecules, regardless of polarity?",
+      "options": [
+        {"id": "A", "text": "Dipole–dipole interaction"},
+        {"id": "B", "text": "Hydrogen bonding"},
+        {"id": "C", "text": "London dispersion forces"},
+        {"id": "D", "text": "Ion–dipole interaction"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "London dispersion forces (instantaneous dipole–induced dipole forces) are present in all molecules — polar and non-polar — because they arise from temporary fluctuations in electron distribution.",
+      "explanation_incorrect": "Dipole–dipole interactions require permanent dipoles, hydrogen bonding requires H bonded to N, O, or F, and ion–dipole interactions require an ion. None of these are universal to all molecules."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Hydrogen bonding is strongest when hydrogen is bonded to:",
+      "options": [
+        {"id": "A", "text": "Carbon and sulphur"},
+        {"id": "B", "text": "Nitrogen, oxygen, or fluorine"},
+        {"id": "C", "text": "Chlorine and bromine"},
+        {"id": "D", "text": "Phosphorus and silicon"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hydrogen bonding occurs when hydrogen is covalently bonded to a highly electronegative atom with a lone pair — specifically N, O, or F. These elements are small and highly electronegative, creating a strong partial positive charge on H.",
+      "explanation_incorrect": "Carbon and sulphur are not electronegative enough to form strong hydrogen bonds. Chlorine and bromine are larger and less electronegative than N, O, F, producing much weaker hydrogen bonds. Phosphorus and silicon do not form significant hydrogen bonds."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Among CH₄, NH₃, and H₂O, the substance with the highest boiling point is:",
+      "options": [
+        {"id": "A", "text": "CH₄"},
+        {"id": "B", "text": "NH₃"},
+        {"id": "C", "text": "H₂O"},
+        {"id": "D", "text": "All have the same boiling point"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Water (H₂O) has the highest boiling point (100 °C) because it can form two hydrogen bonds per molecule (two lone pairs and two O–H bonds), creating an extensive hydrogen-bonded network. NH₃ has one lone pair and weaker hydrogen bonding; CH₄ has only weak London forces.",
+      "explanation_incorrect": "CH₄ has the lowest boiling point (−161 °C) as it has only London forces. NH₃ boils at −33 °C, higher than CH₄ but lower than H₂O. They do not have the same boiling point."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "The boiling points of noble gases increase in the order He < Ne < Ar < Kr < Xe. This trend is best explained by:",
+      "options": [
+        {"id": "A", "text": "Increasing dipole–dipole interactions"},
+        {"id": "B", "text": "Increasing hydrogen bonding"},
+        {"id": "C", "text": "Increasing London dispersion forces with increasing atomic size"},
+        {"id": "D", "text": "Increasing ionic character"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Noble gases are non-polar and monoatomic, so only London dispersion forces act between them. As atomic size (and number of electrons) increases from He to Xe, the electron cloud becomes more polarisable, strengthening London forces and raising the boiling point.",
+      "explanation_incorrect": "Noble gases have no permanent dipole, so dipole–dipole interactions do not apply. Hydrogen bonding requires H bonded to N, O, or F. Ionic character is irrelevant for neutral atoms."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Which of the following pairs of substances would exhibit the strongest intermolecular attractions?",
+      "options": [
+        {"id": "A", "text": "He and He"},
+        {"id": "B", "text": "CH₃Cl and CH₃Cl"},
+        {"id": "C", "text": "HF and HF"},
+        {"id": "D", "text": "CO₂ and CO₂"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "HF molecules interact through strong hydrogen bonds (H bonded to the highly electronegative F atom) in addition to dipole–dipole and London forces, making the overall intermolecular attraction the strongest among the given pairs.",
+      "explanation_incorrect": "He–He has only very weak London forces. CH₃Cl–CH₃Cl has dipole–dipole and London forces but no hydrogen bonding. CO₂ is non-polar and has only London forces."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "question_text": "Ethanol (C₂H₅OH) has a much higher boiling point than dimethyl ether (CH₃OCH₃), even though both have the same molecular formula C₂H₆O. The main reason is:",
+      "options": [
+        {"id": "A", "text": "Dimethyl ether has a higher molecular mass"},
+        {"id": "B", "text": "Ethanol can form intermolecular hydrogen bonds through its –OH group"},
+        {"id": "C", "text": "Dimethyl ether has stronger London forces"},
+        {"id": "D", "text": "Ethanol is non-polar while dimethyl ether is polar"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ethanol possesses an –OH group that allows it to act as both a hydrogen bond donor and acceptor, forming extensive intermolecular hydrogen bonds. Dimethyl ether lacks an O–H bond and can only act as a hydrogen bond acceptor, resulting in much weaker intermolecular forces and a lower boiling point.",
+      "explanation_incorrect": "Both isomers have the same molecular mass (46 g/mol). Dimethyl ether does not have stronger London forces; both molecules are similar in size. Ethanol is actually polar, not non-polar."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Arrange the following in order of increasing boiling point: O₂, HCl, H₂O, HF.",
+      "options": [
+        {"id": "A", "text": "O₂ < HCl < HF < H₂O"},
+        {"id": "B", "text": "O₂ < HF < HCl < H₂O"},
+        {"id": "C", "text": "HCl < O₂ < HF < H₂O"},
+        {"id": "D", "text": "O₂ < HCl < H₂O < HF"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "O₂ (−183 °C) is non-polar with only London forces, so it has the lowest boiling point. HCl (−85 °C) has dipole–dipole forces. HF (19.5 °C) has strong hydrogen bonding but only one H-bond per molecule on average. H₂O (100 °C) has extensive hydrogen bonding (two donors, two lone pairs), giving the highest boiling point. Order: O₂ < HCl < HF < H₂O.",
+      "explanation_incorrect": "The other orderings incorrectly rank the intermolecular force strengths. Water's extensive hydrogen-bond network makes its boiling point higher than HF despite HF having a larger electronegativity difference."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The unusually high boiling point of water compared to H₂S, H₂Se, and H₂Te is attributed to:",
+      "options": [
+        {"id": "A", "text": "The larger molecular mass of water"},
+        {"id": "B", "text": "The extensive hydrogen bonding in water due to the high electronegativity and small size of oxygen"},
+        {"id": "C", "text": "Stronger London dispersion forces in water"},
+        {"id": "D", "text": "The linear shape of the water molecule"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Water's anomalously high boiling point (100 °C versus −60 °C for H₂S) is due to extensive intermolecular hydrogen bonding. Oxygen is small and highly electronegative, enabling each water molecule to form up to four hydrogen bonds in a tetrahedral arrangement.",
+      "explanation_incorrect": "Water has the lowest molecular mass in the series (18 vs 34, 81, 130), so mass is not the reason. London forces are actually weakest for water due to its small size. Water is bent, not linear."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to Boyle's law, at constant temperature, the volume of a given mass of gas is:",
+      "options": [
+        {"id": "A", "text": "Directly proportional to pressure"},
+        {"id": "B", "text": "Inversely proportional to pressure"},
+        {"id": "C", "text": "Independent of pressure"},
+        {"id": "D", "text": "Directly proportional to the square of pressure"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Boyle's law states that at constant temperature, the volume of a given mass of gas is inversely proportional to its pressure: V ∝ 1/P, or PV = constant.",
+      "explanation_incorrect": "A direct proportionality would mean volume increases with pressure, which contradicts observation. Volume is not independent of pressure for gases. There is no square relationship in Boyle's law."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Charles's law relates the volume of a gas to its:",
+      "options": [
+        {"id": "A", "text": "Pressure at constant temperature"},
+        {"id": "B", "text": "Absolute temperature at constant pressure"},
+        {"id": "C", "text": "Number of moles at constant temperature and pressure"},
+        {"id": "D", "text": "Density at constant pressure"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Charles's law states that at constant pressure, the volume of a given mass of gas is directly proportional to its absolute temperature (in kelvin): V ∝ T, or V/T = constant.",
+      "explanation_incorrect": "The volume–pressure relationship at constant T is Boyle's law. The volume–moles relationship at constant T, P is Avogadro's law. Density changes are a consequence, not the direct statement of Charles's law."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The value of the universal gas constant R in SI units is:",
+      "options": [
+        {"id": "A", "text": "0.0821 L atm mol⁻¹ K⁻¹"},
+        {"id": "B", "text": "8.314 J mol⁻¹ K⁻¹"},
+        {"id": "C", "text": "1.987 cal mol⁻¹ K⁻¹"},
+        {"id": "D", "text": "82.1 cm³ atm mol⁻¹ K⁻¹"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In SI units (pressure in Pa, volume in m³, temperature in K), R = 8.314 J mol⁻¹ K⁻¹. The other values are R expressed in non-SI units.",
+      "explanation_incorrect": "0.0821 L atm mol⁻¹ K⁻¹ is R in litre-atmosphere units, not SI. 1.987 cal mol⁻¹ K⁻¹ is R in calorie units. 82.1 cm³ atm mol⁻¹ K⁻¹ is R in CGS-atmosphere units."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to Dalton's law of partial pressures, the total pressure exerted by a mixture of non-reacting gases is:",
+      "options": [
+        {"id": "A", "text": "Equal to the pressure of the gas with the highest mole fraction"},
+        {"id": "B", "text": "The product of the partial pressures of all component gases"},
+        {"id": "C", "text": "The sum of the partial pressures of all component gases"},
+        {"id": "D", "text": "The average of the partial pressures of all component gases"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Dalton's law states that the total pressure of a mixture of non-reacting gases equals the sum of the partial pressures each gas would exert if it alone occupied the entire volume: P_total = p₁ + p₂ + p₃ + …",
+      "explanation_incorrect": "The total pressure is not determined by just the gas with the highest mole fraction, nor is it a product or average of partial pressures. It is a simple sum."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A sample of gas occupies 500 mL at 1 atm pressure. If the pressure is increased to 2 atm at constant temperature, what will be the new volume?",
+      "options": [
+        {"id": "A", "text": "1000 mL"},
+        {"id": "B", "text": "500 mL"},
+        {"id": "C", "text": "250 mL"},
+        {"id": "D", "text": "125 mL"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using Boyle's law: P₁V₁ = P₂V₂ → 1 × 500 = 2 × V₂ → V₂ = 250 mL. Doubling the pressure at constant temperature halves the volume.",
+      "explanation_incorrect": "1000 mL would result from halving the pressure. 500 mL implies no change. 125 mL would correspond to quadrupling the pressure."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A gas occupies 2.0 L at 300 K. If heated to 600 K at constant pressure, the new volume is:",
+      "options": [
+        {"id": "A", "text": "1.0 L"},
+        {"id": "B", "text": "2.0 L"},
+        {"id": "C", "text": "4.0 L"},
+        {"id": "D", "text": "6.0 L"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "By Charles's law: V₁/T₁ = V₂/T₂ → 2.0/300 = V₂/600 → V₂ = 4.0 L. Doubling the absolute temperature at constant pressure doubles the volume.",
+      "explanation_incorrect": "1.0 L would mean the volume halved (incorrect direction). 2.0 L implies no change, which violates Charles's law. 6.0 L would require tripling the temperature."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "How many moles of an ideal gas are contained in a 10.0 L vessel at 2.0 atm and 300 K? (R = 0.0821 L atm mol⁻¹ K⁻¹)",
+      "options": [
+        {"id": "A", "text": "0.41 mol"},
+        {"id": "B", "text": "0.81 mol"},
+        {"id": "C", "text": "1.22 mol"},
+        {"id": "D", "text": "2.44 mol"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using PV = nRT: n = PV / RT = (2.0 × 10.0) / (0.0821 × 300) = 20.0 / 24.63 ≈ 0.81 mol.",
+      "explanation_incorrect": "0.41 mol would result if the pressure were 1.0 atm. 1.22 mol would correspond to a 3 atm pressure. 2.44 mol is double the correct answer."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A 5.0 L flask contains 0.5 mol of N₂ and 1.5 mol of O₂ at 300 K. The partial pressure of N₂ is: (R = 0.0821 L atm mol⁻¹ K⁻¹)",
+      "options": [
+        {"id": "A", "text": "2.46 atm"},
+        {"id": "B", "text": "4.93 atm"},
+        {"id": "C", "text": "7.39 atm"},
+        {"id": "D", "text": "9.85 atm"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Partial pressure of N₂ = n(N₂)RT / V = (0.5 × 0.0821 × 300) / 5.0 = 12.315 / 5.0 = 2.46 atm. Each gas exerts pressure independently as if it alone occupied the volume.",
+      "explanation_incorrect": "4.93 atm would be the partial pressure if n(N₂) were 1.0 mol. 7.39 atm uses the total moles (which gives total pressure). 9.85 atm is the total pressure multiplied by an incorrect factor."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "At STP (0 °C, 1 atm), the density of an ideal gas with molar mass 44 g/mol is approximately:",
+      "options": [
+        {"id": "A", "text": "0.97 g/L"},
+        {"id": "B", "text": "1.43 g/L"},
+        {"id": "C", "text": "1.96 g/L"},
+        {"id": "D", "text": "2.86 g/L"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At STP, 1 mol of ideal gas occupies 22.4 L. Density = M / V_m = 44 / 22.4 ≈ 1.96 g/L. This corresponds to CO₂.",
+      "explanation_incorrect": "0.97 g/L corresponds to a molar mass of about 22 g/mol. 1.43 g/L corresponds to a molar mass of about 32 g/mol (O₂). 2.86 g/L would imply a molar mass of about 64 g/mol."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A mixture of gases at 1 atm total pressure contains N₂ (mole fraction 0.78), O₂ (0.21), and Ar (0.01). The partial pressure of O₂ is:",
+      "options": [
+        {"id": "A", "text": "0.01 atm"},
+        {"id": "B", "text": "0.21 atm"},
+        {"id": "C", "text": "0.78 atm"},
+        {"id": "D", "text": "1.00 atm"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Dalton's law, partial pressure = mole fraction × total pressure. p(O₂) = 0.21 × 1 = 0.21 atm.",
+      "explanation_incorrect": "0.01 atm is the partial pressure of Ar. 0.78 atm is the partial pressure of N₂. 1.00 atm is the total pressure of the mixture."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "According to the kinetic molecular theory, the average kinetic energy of gas molecules is directly proportional to:",
+      "options": [
+        {"id": "A", "text": "Pressure of the gas"},
+        {"id": "B", "text": "Volume of the container"},
+        {"id": "C", "text": "Absolute temperature"},
+        {"id": "D", "text": "Molar mass of the gas"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The kinetic molecular theory establishes that the average kinetic energy of gas molecules is KE = (3/2)kT, where k is Boltzmann's constant and T is the absolute temperature. It depends only on temperature, not on the nature or mass of the gas.",
+      "explanation_incorrect": "Pressure and volume are macroscopic properties related to kinetic energy through the equation PV = nRT, but KE depends directly only on T. Molar mass affects speed but not average kinetic energy at the same temperature."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is NOT an assumption of the kinetic molecular theory of ideal gases?",
+      "options": [
+        {"id": "A", "text": "Gas molecules are in constant random motion"},
+        {"id": "B", "text": "Collisions between molecules are perfectly elastic"},
+        {"id": "C", "text": "The actual volume of gas molecules is negligible compared to the container volume"},
+        {"id": "D", "text": "Attractive forces between molecules are significant"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The kinetic molecular theory of ideal gases assumes that there are no intermolecular forces of attraction or repulsion between gas molecules. This is one reason real gases deviate from ideal behaviour.",
+      "explanation_incorrect": "Constant random motion, elastic collisions, and negligible molecular volume are all key assumptions of the kinetic molecular theory for ideal gases."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The root mean square (rms) speed of gas molecules is given by the expression:",
+      "options": [
+        {"id": "A", "text": "u_rms = √(3RT/M)"},
+        {"id": "B", "text": "u_rms = √(2RT/M)"},
+        {"id": "C", "text": "u_rms = √(RT/M)"},
+        {"id": "D", "text": "u_rms = √(8RT/πM)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The root mean square speed is derived from KE = (3/2)RT = (1/2)Mu² rms, giving u_rms = √(3RT/M), where M is the molar mass and T is absolute temperature.",
+      "explanation_incorrect": "√(2RT/M) is the most probable speed. √(8RT/πM) is the average speed. √(RT/M) does not correspond to any standard molecular speed expression."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "At the same temperature, which gas has the highest root mean square speed?",
+      "options": [
+        {"id": "A", "text": "O₂ (M = 32)"},
+        {"id": "B", "text": "N₂ (M = 28)"},
+        {"id": "C", "text": "H₂ (M = 2)"},
+        {"id": "D", "text": "CO₂ (M = 44)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since u_rms = √(3RT/M), at a given temperature the gas with the smallest molar mass has the highest rms speed. H₂ (M = 2 g/mol) is the lightest, so it moves fastest.",
+      "explanation_incorrect": "O₂, N₂, and CO₂ all have higher molar masses than H₂, so they have lower rms speeds at the same temperature."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "If the absolute temperature of a gas is doubled, its root mean square speed becomes:",
+      "options": [
+        {"id": "A", "text": "Double the original"},
+        {"id": "B", "text": "Four times the original"},
+        {"id": "C", "text": "√2 times the original"},
+        {"id": "D", "text": "Half the original"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "u_rms = √(3RT/M). If T is doubled, u_rms(new) = √(3R × 2T/M) = √2 × √(3RT/M) = √2 × u_rms(original). The rms speed increases by a factor of √2.",
+      "explanation_incorrect": "Doubling would occur only if speed were directly proportional to T (it is proportional to √T). Four times would require T to increase 16-fold. Halving would mean T decreased."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "question_text": "According to the Maxwell–Boltzmann distribution, as temperature increases, the peak of the molecular speed distribution curve:",
+      "options": [
+        {"id": "A", "text": "Shifts to higher speeds and becomes taller"},
+        {"id": "B", "text": "Shifts to higher speeds and becomes flatter"},
+        {"id": "C", "text": "Shifts to lower speeds and becomes taller"},
+        {"id": "D", "text": "Remains at the same speed but becomes taller"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "As temperature increases, molecules gain kinetic energy and move faster, so the most probable speed increases (peak shifts right). The distribution broadens and the peak height decreases (becomes flatter) because the total area under the curve (representing the total number of molecules) remains constant.",
+      "explanation_incorrect": "The peak cannot become taller while also broadening, as the area must remain constant. The peak does not shift to lower speeds with increasing temperature, nor does it remain at the same position."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The ratio of the rms speed of H₂ to O₂ at the same temperature is:",
+      "options": [
+        {"id": "A", "text": "1 : 4"},
+        {"id": "B", "text": "4 : 1"},
+        {"id": "C", "text": "1 : 16"},
+        {"id": "D", "text": "16 : 1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "u_rms ∝ 1/√M at constant T. u(H₂)/u(O₂) = √(M(O₂)/M(H₂)) = √(32/2) = √16 = 4. So the ratio is 4 : 1.",
+      "explanation_incorrect": "1 : 4 reverses the ratio. 1 : 16 and 16 : 1 arise from forgetting the square root; the ratio of molar masses is 1 : 16, but the ratio of speeds involves √(M₂/M₁)."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "Two gases X and Y have molar masses in the ratio 1 : 4. The ratio of their rms speeds at the same temperature is:",
+      "options": [
+        {"id": "A", "text": "1 : 2"},
+        {"id": "B", "text": "2 : 1"},
+        {"id": "C", "text": "4 : 1"},
+        {"id": "D", "text": "1 : 4"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "u_rms ∝ 1/√M. If M_X : M_Y = 1 : 4, then u_X : u_Y = √4 : √1 = 2 : 1. The lighter gas moves faster.",
+      "explanation_incorrect": "1 : 2 reverses the ratio. 4 : 1 uses the mass ratio directly instead of its square root. 1 : 4 incorrectly suggests the heavier gas is faster."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "In the van der Waals equation (P + a/V²)(V − b) = RT for one mole of gas, the constant 'a' accounts for:",
+      "options": [
+        {"id": "A", "text": "The volume occupied by gas molecules"},
+        {"id": "B", "text": "Intermolecular attractive forces"},
+        {"id": "C", "text": "The kinetic energy of molecules"},
+        {"id": "D", "text": "The mass of gas molecules"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The constant 'a' in the van der Waals equation corrects for intermolecular attractive forces. These attractions reduce the pressure exerted by the gas on the container walls, so a correction term a/V² is added to the measured pressure.",
+      "explanation_incorrect": "The volume occupied by molecules is corrected by the constant 'b'. The kinetic energy and mass of molecules are not directly corrected by either constant."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The critical temperature of a gas is defined as:",
+      "options": [
+        {"id": "A", "text": "The temperature at which the gas becomes an ideal gas"},
+        {"id": "B", "text": "The temperature below which a gas can be liquefied by pressure alone"},
+        {"id": "C", "text": "The temperature above which a gas cannot be liquefied by pressure alone"},
+        {"id": "D", "text": "The temperature at which all molecular motion ceases"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The critical temperature (Tc) is the highest temperature at which a gas can be liquefied by applying pressure. Above Tc, no amount of pressure can liquefy the gas, as the kinetic energy of molecules overcomes all intermolecular attractions.",
+      "explanation_incorrect": "Option A describes no specific temperature. Option B is partially correct in meaning but states 'below' instead of defining Tc itself. Option D describes absolute zero (0 K), not the critical temperature."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A gas is called 'ideal' when it obeys PV = nRT exactly. Real gases approach ideal behaviour at:",
+      "options": [
+        {"id": "A", "text": "High pressure and low temperature"},
+        {"id": "B", "text": "Low pressure and high temperature"},
+        {"id": "C", "text": "High pressure and high temperature"},
+        {"id": "D", "text": "Low pressure and low temperature"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At low pressures the molecules are far apart, making the volume correction (b) negligible and reducing attractive forces. At high temperatures, kinetic energy dominates over intermolecular attractions (a). Both conditions make the gas behave more ideally.",
+      "explanation_incorrect": "High pressure brings molecules close together, increasing deviations. Low temperature allows intermolecular forces to dominate. Both conditions increase non-ideal behaviour."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "Among CO₂, NH₃, and H₂, the gas with the largest van der Waals constant 'a' is expected to be:",
+      "options": [
+        {"id": "A", "text": "H₂"},
+        {"id": "B", "text": "CO₂"},
+        {"id": "C", "text": "NH₃"},
+        {"id": "D", "text": "All have equal 'a' values"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The constant 'a' reflects the strength of intermolecular attractive forces. NH₃ has strong hydrogen bonding and a high dipole moment, giving it the strongest intermolecular forces and thus the largest 'a' value among the three. (Actual values: NH₃ = 4.17, CO₂ = 3.59, H₂ = 0.244 L² atm mol⁻².)",
+      "explanation_incorrect": "H₂ is non-polar and very small, with the weakest intermolecular forces and smallest 'a'. CO₂ has moderate intermolecular forces but no hydrogen bonding. The values are not equal."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The compressibility factor Z = PV/nRT for an ideal gas is:",
+      "options": [
+        {"id": "A", "text": "Always greater than 1"},
+        {"id": "B", "text": "Always less than 1"},
+        {"id": "C", "text": "Exactly equal to 1"},
+        {"id": "D", "text": "Equal to 0"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal gas, PV = nRT exactly, so Z = PV/nRT = 1 at all temperatures and pressures. Deviations from Z = 1 indicate non-ideal behaviour.",
+      "explanation_incorrect": "Z > 1 indicates that repulsive interactions dominate (real gas behaviour at very high pressures). Z < 1 indicates attractive forces dominate (real gas at moderate pressures). Z = 0 is not physically meaningful."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "For a real gas at moderate pressures, the compressibility factor Z is typically less than 1 because:",
+      "options": [
+        {"id": "A", "text": "The actual volume is greater than the ideal volume due to molecular size"},
+        {"id": "B", "text": "Intermolecular attractions reduce the pressure, making PV < nRT"},
+        {"id": "C", "text": "The gas molecules move faster than predicted"},
+        {"id": "D", "text": "The temperature measurement is inaccurate"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At moderate pressures, intermolecular attractive forces are significant. These attractions pull molecules together, reducing the force of their impacts on container walls and thus reducing the observed pressure. This makes PV < nRT and Z < 1.",
+      "explanation_incorrect": "At moderate pressures, the volume correction due to molecular size is less important than the attraction correction. Molecular speeds follow kinetic theory. Temperature measurement is not the issue."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following gases is most easily liquefied?",
+      "options": [
+        {"id": "A", "text": "He (Tc = 5.2 K)"},
+        {"id": "B", "text": "H₂ (Tc = 33.2 K)"},
+        {"id": "C", "text": "CO₂ (Tc = 304.1 K)"},
+        {"id": "D", "text": "N₂ (Tc = 126.2 K)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A gas with a higher critical temperature has stronger intermolecular forces and is easier to liquefy. CO₂ has the highest Tc (304.1 K) among the options, meaning it can be liquefied at temperatures close to room temperature by applying sufficient pressure.",
+      "explanation_incorrect": "He and H₂ have very low critical temperatures, making them among the hardest gases to liquefy. N₂ has an intermediate Tc but is still much harder to liquefy than CO₂."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "In the Linde process for liquefaction of gases, the principle used is:",
+      "options": [
+        {"id": "A", "text": "Adiabatic demagnetisation"},
+        {"id": "B", "text": "Joule–Thomson effect (cooling on expansion through a porous plug)"},
+        {"id": "C", "text": "Evaporation of a liquid under reduced pressure"},
+        {"id": "D", "text": "Compression at constant temperature above Tc"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Linde process uses the Joule–Thomson effect: when a compressed gas (below its inversion temperature) is allowed to expand through a porous plug or nozzle, it cools. Repeated cycles of compression and expansion progressively cool the gas until it liquefies.",
+      "explanation_incorrect": "Adiabatic demagnetisation is used to reach extremely low temperatures, not for gas liquefaction. Evaporation under reduced pressure is a different cooling method. Compression above Tc cannot liquefy a gas."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The Boyle temperature is the temperature at which a real gas obeys the ideal gas law over a wide range of pressures. At this temperature, which correction in the van der Waals equation becomes negligible?",
+      "options": [
+        {"id": "A", "text": "Only the volume correction (b)"},
+        {"id": "B", "text": "Only the pressure correction (a/V²)"},
+        {"id": "C", "text": "The effects of 'a' and 'b' roughly cancel each other"},
+        {"id": "D", "text": "Both corrections become exactly zero"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At the Boyle temperature (T_B = a/Rb), the attractive and repulsive correction terms approximately cancel, making PV ≈ nRT over a wide pressure range. The individual corrections are not zero, but their net effect is negligible.",
+      "explanation_incorrect": "Neither correction is individually negligible at the Boyle temperature. The corrections do not become exactly zero; they simply balance each other."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The vapour pressure of a liquid depends on:",
+      "options": [
+        {"id": "A", "text": "The amount of liquid in the container"},
+        {"id": "B", "text": "The surface area of the liquid"},
+        {"id": "C", "text": "The nature of the liquid and its temperature"},
+        {"id": "D", "text": "The shape of the container"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Vapour pressure is an intrinsic property that depends on the nature of the liquid (strength of intermolecular forces) and the temperature. It is independent of the amount of liquid, its surface area, or the shape of the container, as long as liquid–vapour equilibrium is established.",
+      "explanation_incorrect": "The amount, surface area, and container shape may affect the rate of reaching equilibrium but do not change the equilibrium vapour pressure."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Surface tension of a liquid is caused by:",
+      "options": [
+        {"id": "A", "text": "Gravitational force acting on surface molecules"},
+        {"id": "B", "text": "Net inward pull on surface molecules due to unbalanced intermolecular forces"},
+        {"id": "C", "text": "The weight of the liquid column above"},
+        {"id": "D", "text": "The pressure difference between the liquid and gas phases"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Molecules at the surface of a liquid experience a net inward pull because they are attracted by molecules below and beside them but not above (where there is vapour). This unbalanced force causes the surface to contract, resulting in surface tension.",
+      "explanation_incorrect": "Gravity acts on all molecules, not specifically surface molecules. The weight of the liquid column relates to hydrostatic pressure. Pressure differences are a consequence, not a cause of surface tension."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Viscosity of a liquid generally:",
+      "options": [
+        {"id": "A", "text": "Increases with increasing temperature"},
+        {"id": "B", "text": "Decreases with increasing temperature"},
+        {"id": "C", "text": "Remains constant with temperature changes"},
+        {"id": "D", "text": "First increases then decreases with temperature"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Viscosity decreases with increasing temperature because thermal energy allows molecules to overcome intermolecular attractive forces more easily, reducing resistance to flow.",
+      "explanation_incorrect": "Viscosity does not increase with temperature for liquids (though it does for gases). It is not constant; temperature significantly affects it. There is no increase-then-decrease pattern."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of surface tension is:",
+      "options": [
+        {"id": "A", "text": "N m⁻²"},
+        {"id": "B", "text": "N m⁻¹"},
+        {"id": "C", "text": "J m⁻¹"},
+        {"id": "D", "text": "Pa"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Surface tension is defined as force per unit length, so its SI unit is N m⁻¹ (newton per metre). It can also be expressed as J m⁻² (energy per unit area), which is dimensionally equivalent.",
+      "explanation_incorrect": "N m⁻² (which equals Pa) is the unit of pressure, not surface tension. J m⁻¹ has incorrect dimensions. Pa is also a unit of pressure."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "Which of the following liquids is expected to have the highest surface tension at room temperature?",
+      "options": [
+        {"id": "A", "text": "Hexane (non-polar)"},
+        {"id": "B", "text": "Ethanol (H-bonding)"},
+        {"id": "C", "text": "Water (extensive H-bonding)"},
+        {"id": "D", "text": "Diethyl ether (weak dipolar)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Water has the highest surface tension among common liquids (about 72 mN/m at 25 °C) due to its extensive network of hydrogen bonds. Strong intermolecular forces lead to a greater net inward pull on surface molecules.",
+      "explanation_incorrect": "Hexane has only London forces and low surface tension (~18 mN/m). Ethanol has hydrogen bonding but weaker than water (~22 mN/m). Diethyl ether has weak dipole forces (~17 mN/m)."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "The vapour pressure of water at 100 °C equals 1 atm. At 80 °C the vapour pressure of water will be:",
+      "options": [
+        {"id": "A", "text": "Greater than 1 atm"},
+        {"id": "B", "text": "Equal to 1 atm"},
+        {"id": "C", "text": "Less than 1 atm"},
+        {"id": "D", "text": "Zero"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Vapour pressure increases with temperature. Since the vapour pressure of water reaches 1 atm at 100 °C (its normal boiling point), at the lower temperature of 80 °C the vapour pressure must be less than 1 atm (approximately 0.47 atm).",
+      "explanation_incorrect": "It cannot be greater than 1 atm at a temperature below the boiling point. It equals 1 atm only at 100 °C. It is not zero because water has a measurable vapour pressure at 80 °C."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "Among glycerol, water, and acetone, the liquid with the highest viscosity at room temperature is:",
+      "options": [
+        {"id": "A", "text": "Acetone"},
+        {"id": "B", "text": "Water"},
+        {"id": "C", "text": "Glycerol"},
+        {"id": "D", "text": "All have equal viscosity"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Glycerol (glycerine) has three hydroxyl groups per molecule, enabling extensive hydrogen bonding. This creates a very thick, viscous liquid (viscosity ≈ 1.5 Pa·s at 20 °C), far higher than water (0.001 Pa·s) or acetone (0.0003 Pa·s).",
+      "explanation_incorrect": "Acetone has the lowest viscosity due to its relatively weak dipole–dipole forces. Water is more viscous than acetone but far less than glycerol. Their viscosities are not equal."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The normal boiling point of a liquid is defined as the temperature at which its vapour pressure equals:",
+      "options": [
+        {"id": "A", "text": "0.5 atm"},
+        {"id": "B", "text": "1 atm (101.325 kPa)"},
+        {"id": "C", "text": "2 atm"},
+        {"id": "D", "text": "The critical pressure"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The normal boiling point is the temperature at which the vapour pressure of a liquid equals 1 atm (101.325 kPa), which is the standard atmospheric pressure. At this point, bubbles of vapour form throughout the liquid.",
+      "explanation_incorrect": "0.5 atm and 2 atm are not the standard atmospheric pressure. The critical pressure is a much higher pressure related to the critical point, not the boiling point."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "Drops of liquid tend to assume a spherical shape because of:",
+      "options": [
+        {"id": "A", "text": "Viscosity"},
+        {"id": "B", "text": "Vapour pressure"},
+        {"id": "C", "text": "Surface tension"},
+        {"id": "D", "text": "Atmospheric pressure"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Surface tension minimises the surface area of a liquid for a given volume. A sphere has the smallest surface area for a given volume, so small liquid drops naturally assume a spherical shape under the influence of surface tension.",
+      "explanation_incorrect": "Viscosity resists flow but does not determine shape. Vapour pressure relates to evaporation, not drop shape. Atmospheric pressure acts equally on all sides and does not cause spherical shape."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The SI unit of viscosity (dynamic viscosity) is:",
+      "options": [
+        {"id": "A", "text": "N m⁻¹"},
+        {"id": "B", "text": "Pa·s (pascal second)"},
+        {"id": "C", "text": "J m⁻²"},
+        {"id": "D", "text": "kg m⁻¹"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Dynamic viscosity is measured in Pa·s (pascal second) in SI units, which equals kg m⁻¹ s⁻¹. The CGS unit is poise (1 Pa·s = 10 poise).",
+      "explanation_incorrect": "N m⁻¹ is the unit of surface tension. J m⁻² is energy per unit area. kg m⁻¹ is missing the time component (s⁻¹)."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "question_text": "A balloon contains 2 mol of He at 27 °C. The volume of the balloon at 1 atm is approximately: (R = 0.0821 L atm mol⁻¹ K⁻¹)",
+      "options": [
+        {"id": "A", "text": "24.6 L"},
+        {"id": "B", "text": "44.8 L"},
+        {"id": "C", "text": "49.2 L"},
+        {"id": "D", "text": "89.6 L"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "V = nRT/P = (2 × 0.0821 × 300) / 1 = 49.26 ≈ 49.2 L. Remember to convert 27 °C to 300 K.",
+      "explanation_incorrect": "24.6 L uses only 1 mol. 44.8 L is 2 × 22.4 L (STP volume, valid at 0 °C, not 27 °C). 89.6 L would require double the temperature or moles."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "According to kinetic molecular theory, the pressure of a gas arises from:",
+      "options": [
+        {"id": "A", "text": "Gravitational pull on gas molecules"},
+        {"id": "B", "text": "Collisions of gas molecules with the walls of the container"},
+        {"id": "C", "text": "Intermolecular attractive forces between molecules"},
+        {"id": "D", "text": "The weight of the gas above the point of measurement"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In kinetic molecular theory, gas pressure results from the continuous bombardment of gas molecules against the container walls. Each collision exerts a tiny force, and the cumulative effect of billions of collisions per second produces the measurable gas pressure.",
+      "explanation_incorrect": "Gravitational pull is negligible for individual gas molecules in kinetic theory. Intermolecular forces are assumed to be zero for an ideal gas. The weight of the gas column relates to atmospheric pressure measurement, not the kinetic theory definition."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "question_text": "The van der Waals constant 'b' is related to:",
+      "options": [
+        {"id": "A", "text": "The strength of intermolecular attraction"},
+        {"id": "B", "text": "The effective volume occupied by gas molecules themselves"},
+        {"id": "C", "text": "The compressibility factor at high temperature"},
+        {"id": "D", "text": "The critical pressure of the gas"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The constant 'b' represents the excluded volume — the effective volume occupied by the gas molecules themselves. It corrects for the fact that real molecules have a finite size, reducing the available free space for molecular motion. V_free = V − nb.",
+      "explanation_incorrect": "Intermolecular attraction is corrected by 'a', not 'b'. While 'b' is related to the critical constants through Vc = 3b, it directly represents molecular volume. The compressibility factor involves both 'a' and 'b'."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "question_text": "Adding a detergent (surfactant) to water:",
+      "options": [
+        {"id": "A", "text": "Increases the surface tension of water"},
+        {"id": "B", "text": "Decreases the surface tension of water"},
+        {"id": "C", "text": "Has no effect on surface tension"},
+        {"id": "D", "text": "Increases the viscosity but not the surface tension"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Surfactants (surface-active agents) have hydrophilic and hydrophobic parts. They accumulate at the surface, disrupting the hydrogen-bond network of water and thereby lowering the surface tension. This is why soaps and detergents help water spread and wet surfaces more effectively.",
+      "explanation_incorrect": "Surfactants decrease, not increase, surface tension. They have a measurable effect. While they may slightly affect viscosity, the primary and well-known effect is on surface tension."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The correct order of strength of intermolecular forces is:",
+      "options": [
+        {"id": "A", "text": "Ion–dipole > Hydrogen bonding > Dipole–dipole > London dispersion"},
+        {"id": "B", "text": "London dispersion > Dipole–dipole > Hydrogen bonding > Ion–dipole"},
+        {"id": "C", "text": "Hydrogen bonding > Ion–dipole > London dispersion > Dipole–dipole"},
+        {"id": "D", "text": "Dipole–dipole > Hydrogen bonding > Ion–dipole > London dispersion"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The general order of intermolecular force strength is: ion–dipole (40–600 kJ/mol) > hydrogen bonding (10–40 kJ/mol) > dipole–dipole (5–25 kJ/mol) > London dispersion (0.05–40 kJ/mol, though this depends on molecular size). Ion–dipole forces are the strongest as they involve the interaction of a full ion charge with a molecular dipole.",
+      "explanation_incorrect": "The other options incorrectly rank the forces. London dispersion forces are generally the weakest (for small molecules), and ion–dipole forces are the strongest intermolecular interactions."
+    }
+  ]
+}

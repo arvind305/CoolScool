@@ -1,0 +1,829 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Chemical Bonding and Molecular Structure",
+  "canonical_explanation": {
+    "text": "Atoms combine to form molecules by chemical bonding in order to attain a stable noble gas configuration. The three main types of bonding are ionic (electrovalent), covalent, and coordinate (dative) bonding. Ionic bonding involves the transfer of electrons from a metal to a non-metal, forming cations and anions held together by electrostatic forces. Lattice enthalpy is the energy required to completely separate one mole of an ionic compound into its gaseous ions; higher lattice enthalpy indicates a more stable ionic compound. The Born-Haber cycle relates lattice enthalpy to other thermodynamic quantities. Covalent bonding involves the sharing of electron pairs between atoms. Lewis dot structures show shared and lone electron pairs. The octet rule states that atoms tend to achieve 8 electrons in their valence shell, though there are exceptions (incomplete octet in BF₃, expanded octet in PCl₅ and SF₆, odd-electron molecules like NO). Formal charge = (valence electrons) − (non-bonding electrons) − ½(bonding electrons); the best Lewis structure minimises formal charges. Resonance occurs when more than one valid Lewis structure can be drawn for a molecule; the actual structure is a hybrid. Bond parameters include bond length (internuclear distance), bond angle (angle between bonded atoms), bond order (number of bonds between two atoms), and bond enthalpy (energy to break one mole of bonds). VSEPR theory (Sidgwick and Powell, refined by Gillespie and Nyholm) predicts molecular geometry by minimising repulsion between electron pairs around the central atom. Lone pair-lone pair repulsion > lone pair-bond pair repulsion > bond pair-bond pair repulsion. Common geometries: linear (2 electron pairs), trigonal planar (3), tetrahedral (4), trigonal bipyramidal (5), octahedral (6). Lone pairs cause deviation from ideal bond angles. Hybridisation is the intermixing of atomic orbitals to form equivalent hybrid orbitals: sp (linear, 180°), sp² (trigonal planar, 120°), sp³ (tetrahedral, 109.5°), sp³d (trigonal bipyramidal), sp³d² (octahedral). Molecular Orbital Theory (MOT) treats electrons as belonging to the molecule as a whole. Atomic orbitals combine to form bonding MOs (lower energy) and antibonding MOs (higher energy). Bond order = ½(electrons in bonding MOs − electrons in antibonding MOs). If bond order > 0, the molecule is stable. MOT explains the paramagnetism of O₂ (two unpaired electrons in π* orbitals). Hydrogen bonding is a special type of dipole-dipole interaction between a hydrogen atom bonded to a highly electronegative atom (F, O, N) and a lone pair on another electronegative atom. It can be intermolecular (between different molecules, e.g., water) or intramolecular (within the same molecule, e.g., o-nitrophenol).",
+    "rules": [
+      "Ionic bond: formed by transfer of electrons; lattice enthalpy determines stability of ionic compounds.",
+      "Covalent bond: formed by sharing of electron pairs; Lewis structures show bonding and lone pairs.",
+      "Formal charge = (valence electrons) − (lone pair electrons) − ½(bonding electrons).",
+      "Resonance: actual structure is a weighted average (hybrid) of all valid Lewis structures.",
+      "VSEPR: molecular shape is determined by minimising repulsion among electron pairs; lp-lp > lp-bp > bp-bp.",
+      "Hybridisation: sp (linear, 180°), sp² (trigonal planar, 120°), sp³ (tetrahedral, 109.5°), sp³d (TBP), sp³d² (octahedral).",
+      "Bond order = ½(Nb − Na), where Nb = bonding electrons, Na = antibonding electrons.",
+      "If bond order = 0, the molecule does not exist (e.g., He₂).",
+      "O₂ is paramagnetic because it has two unpaired electrons in π*2p orbitals (bond order = 2).",
+      "Hydrogen bonding: H bonded to F, O, or N interacts with a lone pair on another F, O, or N; explains high boiling point of water.",
+      "Intermolecular H-bonding raises boiling points; intramolecular H-bonding lowers boiling points compared to the intermolecular form."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An ionic bond is formed between:",
+      "options": [
+        {"id": "A", "text": "Two non-metals"},
+        {"id": "B", "text": "A metal and a non-metal"},
+        {"id": "C", "text": "Two metals"},
+        {"id": "D", "text": "Two noble gases"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An ionic bond is formed by the transfer of electrons from a metal (low ionisation enthalpy) to a non-metal (high electron gain enthalpy). The resulting cation and anion are held together by electrostatic attraction.",
+      "explanation_incorrect": "Two non-metals typically form covalent bonds. Two metals form metallic bonds. Noble gases generally do not form bonds due to their stable electron configuration."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Lattice enthalpy of an ionic compound is:",
+      "options": [
+        {"id": "A", "text": "The energy released when gaseous ions combine to form an ionic solid"},
+        {"id": "B", "text": "The energy required to melt the ionic compound"},
+        {"id": "C", "text": "The energy required to completely separate one mole of an ionic solid into gaseous ions"},
+        {"id": "D", "text": "The energy of formation of the compound from its elements"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Lattice enthalpy is defined as the energy required to completely separate one mole of an ionic crystalline solid into its constituent gaseous ions. It is always positive (endothermic) and is a measure of the strength of ionic bonding.",
+      "explanation_incorrect": "The energy released when ions combine is the negative of lattice enthalpy. Melting energy is the enthalpy of fusion. Formation energy is the enthalpy of formation."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following factors increases the lattice enthalpy of an ionic compound?",
+      "options": [
+        {"id": "A", "text": "Large ionic size and low charge"},
+        {"id": "B", "text": "Small ionic size and high charge"},
+        {"id": "C", "text": "Large ionic size and high charge"},
+        {"id": "D", "text": "Small ionic size and low charge"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Lattice enthalpy is directly proportional to the product of ionic charges and inversely proportional to the sum of ionic radii (Coulomb's law). Small, highly charged ions produce the highest lattice enthalpy. For example, MgO has a much higher lattice enthalpy than NaCl.",
+      "explanation_incorrect": "Large ions have weaker electrostatic attraction. Low charges also reduce lattice enthalpy. The combination of small size and high charge maximises lattice enthalpy."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "Among NaCl, MgO, KBr, and CaO, which has the highest lattice enthalpy?",
+      "options": [
+        {"id": "A", "text": "NaCl"},
+        {"id": "B", "text": "MgO"},
+        {"id": "C", "text": "KBr"},
+        {"id": "D", "text": "CaO"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "MgO has the highest lattice enthalpy because both Mg²⁺ and O²⁻ have charges of ±2 (high charge) and small ionic radii. Lattice enthalpy ∝ q⁺ × q⁻ / (r⁺ + r⁻). The high charges and small sizes in MgO give the strongest electrostatic attraction.",
+      "explanation_incorrect": "NaCl and KBr have ±1 charges (lower lattice enthalpy). CaO also has ±2 charges but Ca²⁺ is larger than Mg²⁺, so CaO has lower lattice enthalpy than MgO."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "The Born-Haber cycle is used to calculate:",
+      "options": [
+        {"id": "A", "text": "Bond dissociation enthalpy"},
+        {"id": "B", "text": "Lattice enthalpy of ionic compounds"},
+        {"id": "C", "text": "Electron gain enthalpy of noble gases"},
+        {"id": "D", "text": "Ionisation enthalpy of transition metals"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Born-Haber cycle is a thermodynamic cycle that uses Hess's law to calculate the lattice enthalpy of ionic compounds from experimentally measurable quantities: enthalpy of formation, sublimation energy, bond dissociation energy, ionisation enthalpy, and electron gain enthalpy.",
+      "explanation_incorrect": "Bond dissociation enthalpy, electron gain enthalpy, and ionisation enthalpy are measured independently. The Born-Haber cycle specifically relates these to lattice enthalpy."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "In the formation of NaCl, the sodium atom loses an electron to become Na⁺. The electron configuration of Na⁺ is:",
+      "options": [
+        {"id": "A", "text": "1s² 2s² 2p⁶ 3s¹"},
+        {"id": "B", "text": "1s² 2s² 2p⁶"},
+        {"id": "C", "text": "1s² 2s² 2p⁵"},
+        {"id": "D", "text": "1s² 2s² 2p⁶ 3s²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Na (Z = 11) has the configuration 1s² 2s² 2p⁶ 3s¹. When it loses one electron to form Na⁺, it achieves the configuration 1s² 2s² 2p⁶, which is isoelectronic with neon (stable noble gas configuration).",
+      "explanation_incorrect": "1s² 2s² 2p⁶ 3s¹ is neutral sodium. 1s² 2s² 2p⁵ would mean losing from the 2p shell. 1s² 2s² 2p⁶ 3s² has 12 electrons (that's Mg)."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following ionic compounds is expected to have the highest melting point?",
+      "options": [
+        {"id": "A", "text": "NaCl"},
+        {"id": "B", "text": "MgO"},
+        {"id": "C", "text": "KI"},
+        {"id": "D", "text": "RbBr"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "MgO has the highest melting point because it has the highest lattice enthalpy among the options. Both ions have +2/−2 charges and small radii, leading to very strong electrostatic forces. MgO melts at about 2852°C, compared to NaCl at 801°C.",
+      "explanation_incorrect": "NaCl, KI, and RbBr all have ±1 charges and progressively larger ionic radii, resulting in lower lattice enthalpies and lower melting points than MgO."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The ionic compound that is most likely to have covalent character according to Fajan's rules is:",
+      "options": [
+        {"id": "A", "text": "NaCl"},
+        {"id": "B", "text": "KCl"},
+        {"id": "C", "text": "LiI"},
+        {"id": "D", "text": "CsF"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "According to Fajan's rules, covalent character in an ionic bond increases with: (1) small cation size, (2) large anion size, (3) high charge on cation. LiI has a small cation (Li⁺) and a large, polarisable anion (I⁻), giving it the most covalent character.",
+      "explanation_incorrect": "NaCl has a moderately small cation and moderately sized anion. KCl and CsF have larger cations. LiI has the optimal combination of a very small cation and a very large anion for maximum polarisation."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "In a Born-Haber cycle for NaCl, which step involves the electron gain enthalpy?",
+      "options": [
+        {"id": "A", "text": "Na(s) → Na(g)"},
+        {"id": "B", "text": "Na(g) → Na⁺(g) + e⁻"},
+        {"id": "C", "text": "Cl(g) + e⁻ → Cl⁻(g)"},
+        {"id": "D", "text": "½Cl₂(g) → Cl(g)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The electron gain enthalpy step involves adding an electron to a gaseous chlorine atom: Cl(g) + e⁻ → Cl⁻(g). For chlorine, this is exothermic (−349 kJ/mol).",
+      "explanation_incorrect": "Na(s) → Na(g) is sublimation energy. Na(g) → Na⁺(g) + e⁻ is ionisation enthalpy. ½Cl₂(g) → Cl(g) is bond dissociation energy."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A covalent bond is formed by:",
+      "options": [
+        {"id": "A", "text": "Transfer of electrons"},
+        {"id": "B", "text": "Sharing of electron pairs"},
+        {"id": "C", "text": "Electrostatic attraction between ions"},
+        {"id": "D", "text": "Delocalisation of electrons over a metallic lattice"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A covalent bond is formed by the sharing of one or more pairs of electrons between two atoms. Each atom contributes one electron to the shared pair (in a normal covalent bond), and the shared electrons belong to both atoms.",
+      "explanation_incorrect": "Transfer of electrons forms ionic bonds. Electrostatic attraction between ions is ionic bonding. Delocalisation over a lattice is metallic bonding."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The Lewis dot structure of N₂ shows:",
+      "options": [
+        {"id": "A", "text": "A single bond and 4 lone pairs"},
+        {"id": "B", "text": "A double bond and 4 lone pairs"},
+        {"id": "C", "text": "A triple bond and 2 lone pairs"},
+        {"id": "D", "text": "A triple bond and 4 lone pairs"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In N₂, each nitrogen (5 valence electrons) shares 3 electron pairs with the other nitrogen, forming a triple bond (:N≡N:). Each nitrogen also has one lone pair, giving 2 lone pairs total in the molecule.",
+      "explanation_incorrect": "A single or double bond would not satisfy the octet of nitrogen. A triple bond with 4 lone pairs would require too many electrons. The correct structure is :N≡N: with one lone pair on each N."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Which molecule is an exception to the octet rule due to an incomplete octet?",
+      "options": [
+        {"id": "A", "text": "CCl₄"},
+        {"id": "B", "text": "BF₃"},
+        {"id": "C", "text": "PCl₅"},
+        {"id": "D", "text": "H₂O"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "BF₃ is an exception to the octet rule. Boron has only 6 electrons in its valence shell (incomplete octet) even after forming 3 covalent bonds with fluorine. This makes BF₃ an electron-deficient molecule and a Lewis acid.",
+      "explanation_incorrect": "CCl₄ and H₂O obey the octet rule. PCl₅ is an exception due to an expanded octet (10 electrons around P), not an incomplete octet."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The formal charge on oxygen in the ozone molecule O₃ (central atom) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "+1"},
+        {"id": "C", "text": "−1"},
+        {"id": "D", "text": "+2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In one resonance structure of O₃, the central oxygen forms a double bond with one terminal O and a coordinate bond with the other. Formal charge on central O = 6 − 2 − ½(6) = 6 − 2 − 3 = +1.",
+      "explanation_incorrect": "The formal charge calculation for the central oxygen gives +1. The terminal oxygens have formal charges of 0 and −1 respectively in each resonance structure."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "Resonance structures differ in:",
+      "options": [
+        {"id": "A", "text": "The arrangement of atoms"},
+        {"id": "B", "text": "The position of electrons only"},
+        {"id": "C", "text": "The total number of electrons"},
+        {"id": "D", "text": "The type of atoms present"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Resonance structures have the same arrangement of atoms and the same number of electrons. They differ only in the distribution (position) of electrons, specifically the placement of bonds and lone pairs.",
+      "explanation_incorrect": "Atoms are in the same positions in all resonance structures. The total electron count is the same. The type of atoms does not change. Only electron distribution differs."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "The bond order in CO is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "2.5"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "CO has a triple bond: one sigma bond from shared electron pair, one pi bond from shared electron pair, and one coordinate bond (dative bond) from oxygen's lone pair donated to carbon's empty orbital. The Lewis structure is :C≡O: with bond order 3.",
+      "explanation_incorrect": "CO has 10 electrons in its MO configuration, giving bond order = ½(8 − 2) = 3. It is isoelectronic with N₂, which also has bond order 3."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "Which of the following species has the shortest bond length?",
+      "options": [
+        {"id": "A", "text": "O₂ (bond order 2)"},
+        {"id": "B", "text": "O₂⁺ (bond order 2.5)"},
+        {"id": "C", "text": "O₂⁻ (bond order 1.5)"},
+        {"id": "D", "text": "O₂²⁻ (bond order 1)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Bond length is inversely proportional to bond order. O₂⁺ has the highest bond order (2.5) among the given species, so it has the shortest bond length. The order is: O₂⁺ < O₂ < O₂⁻ < O₂²⁻.",
+      "explanation_incorrect": "Higher bond order means shorter and stronger bonds. O₂²⁻ has the lowest bond order (1) and longest bond length."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The formal charge on the nitrogen in the ammonium ion (NH₄⁺) is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "+1"},
+        {"id": "C", "text": "−1"},
+        {"id": "D", "text": "+2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In NH₄⁺, nitrogen has 4 bonding pairs and no lone pairs. Formal charge on N = 5 (valence electrons) − 0 (lone pair electrons) − ½(8 bonding electrons) = 5 − 0 − 4 = +1.",
+      "explanation_incorrect": "In neutral NH₃, nitrogen has formal charge 0. But in NH₄⁺, the extra bond (coordinate bond with H⁺) gives nitrogen a formal charge of +1."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A coordinate (dative) bond is formed when:",
+      "options": [
+        {"id": "A", "text": "Both atoms contribute one electron each"},
+        {"id": "B", "text": "One atom donates a lone pair to another atom"},
+        {"id": "C", "text": "Electrons are transferred completely"},
+        {"id": "D", "text": "Electrons are delocalised over the molecule"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A coordinate (dative) bond is formed when one atom (the donor) provides both electrons of the shared pair to another atom (the acceptor). The donor has a lone pair and the acceptor has an empty orbital. Example: NH₃ → BF₃.",
+      "explanation_incorrect": "Both atoms contributing one electron each is a normal covalent bond. Complete electron transfer is ionic bonding. Delocalisation is resonance or metallic bonding."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "According to VSEPR theory, the shape of a molecule is determined by:",
+      "options": [
+        {"id": "A", "text": "The number of protons in the nucleus"},
+        {"id": "B", "text": "The repulsion between electron pairs around the central atom"},
+        {"id": "C", "text": "The mass of the molecule"},
+        {"id": "D", "text": "The electronegativity of the atoms"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "VSEPR (Valence Shell Electron Pair Repulsion) theory states that the shape of a molecule is determined by the repulsion between electron pairs (bond pairs and lone pairs) around the central atom. Electron pairs arrange themselves to minimise repulsion.",
+      "explanation_incorrect": "The number of protons, molecular mass, and electronegativity do not directly determine molecular shape in VSEPR theory."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The correct order of electron pair repulsion is:",
+      "options": [
+        {"id": "A", "text": "bp-bp > lp-bp > lp-lp"},
+        {"id": "B", "text": "lp-lp > lp-bp > bp-bp"},
+        {"id": "C", "text": "lp-bp > lp-lp > bp-bp"},
+        {"id": "D", "text": "bp-bp > lp-lp > lp-bp"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In VSEPR theory, lone pair-lone pair repulsion is the strongest, followed by lone pair-bond pair, then bond pair-bond pair: lp-lp > lp-bp > bp-bp. Lone pairs occupy more space because they are held closer to the nucleus.",
+      "explanation_incorrect": "Lone pairs are closer to the central atom and spread over more space than bonding pairs, causing stronger repulsion. The correct order is lp-lp > lp-bp > bp-bp."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The shape of BF₃ is:",
+      "options": [
+        {"id": "A", "text": "Tetrahedral"},
+        {"id": "B", "text": "Trigonal planar"},
+        {"id": "C", "text": "Linear"},
+        {"id": "D", "text": "Pyramidal"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "BF₃ has 3 bond pairs and no lone pairs around boron. According to VSEPR, 3 electron pairs arrange in a trigonal planar geometry with 120° bond angles.",
+      "explanation_incorrect": "Tetrahedral requires 4 electron pairs. Linear requires 2. Pyramidal requires 3 bond pairs and 1 lone pair. BF₃ has 3 bond pairs and 0 lone pairs, giving trigonal planar."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "Water (H₂O) has a bent shape because:",
+      "options": [
+        {"id": "A", "text": "It has 2 bond pairs and no lone pairs"},
+        {"id": "B", "text": "It has 2 bond pairs and 2 lone pairs on the central atom"},
+        {"id": "C", "text": "It has 3 bond pairs and 1 lone pair"},
+        {"id": "D", "text": "It has 4 bond pairs"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Water has 2 bond pairs (O-H bonds) and 2 lone pairs on oxygen. The electron pair geometry is tetrahedral (4 electron pairs), but the molecular shape (considering only atoms) is bent/V-shaped with a bond angle of about 104.5° (less than 109.5° due to lp-bp repulsion).",
+      "explanation_incorrect": "2 bond pairs with no lone pairs would be linear. 3 bond pairs and 1 lone pair would give a pyramidal shape. 4 bond pairs would give tetrahedral."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The bond angle in NH₃ (107°) is less than in CH₄ (109.5°) because:",
+      "options": [
+        {"id": "A", "text": "N-H bond is weaker than C-H bond"},
+        {"id": "B", "text": "NH₃ has a lone pair that compresses bond angles"},
+        {"id": "C", "text": "NH₃ has fewer atoms than CH₄"},
+        {"id": "D", "text": "Nitrogen is more electronegative than carbon"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "NH₃ has 3 bond pairs and 1 lone pair on nitrogen. The lone pair occupies more space than a bond pair and exerts greater repulsion on the bonding pairs, compressing the H-N-H bond angle from the ideal 109.5° to about 107°.",
+      "explanation_incorrect": "Bond strength and number of atoms do not directly affect bond angles. While nitrogen is more electronegative, the key factor is the lone pair on nitrogen causing greater repulsion."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The molecular geometry of SF₆ is:",
+      "options": [
+        {"id": "A", "text": "Tetrahedral"},
+        {"id": "B", "text": "Trigonal bipyramidal"},
+        {"id": "C", "text": "Octahedral"},
+        {"id": "D", "text": "Square planar"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "SF₆ has 6 bond pairs and no lone pairs around sulphur. According to VSEPR, 6 electron pairs arrange in an octahedral geometry with 90° bond angles between adjacent fluorines.",
+      "explanation_incorrect": "Tetrahedral has 4 electron pairs. Trigonal bipyramidal has 5. Square planar arises from 4 bond pairs and 2 lone pairs. SF₆ has 6 bond pairs, giving octahedral."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The shape of XeF₄ is:",
+      "options": [
+        {"id": "A", "text": "Tetrahedral"},
+        {"id": "B", "text": "Octahedral"},
+        {"id": "C", "text": "Square planar"},
+        {"id": "D", "text": "See-saw"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "XeF₄ has 4 bond pairs and 2 lone pairs on Xe. The electron pair geometry is octahedral (6 pairs), and the 2 lone pairs occupy opposite positions (trans) to minimise lp-lp repulsion, giving a square planar molecular geometry.",
+      "explanation_incorrect": "Tetrahedral would require 4 electron pairs. Octahedral is the electron pair geometry, not the molecular shape. See-saw arises from 4 bond pairs and 1 lone pair."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The shape of ClF₃ according to VSEPR theory is:",
+      "options": [
+        {"id": "A", "text": "Trigonal planar"},
+        {"id": "B", "text": "T-shaped"},
+        {"id": "C", "text": "Pyramidal"},
+        {"id": "D", "text": "Linear"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ClF₃ has 3 bond pairs and 2 lone pairs on the central Cl atom. The electron pair geometry is trigonal bipyramidal (5 pairs). The 2 lone pairs occupy equatorial positions (less repulsion), leaving the 3 F atoms in a T-shaped molecular geometry.",
+      "explanation_incorrect": "Trigonal planar would require 3 bond pairs and no lone pairs. Pyramidal requires 3 bond pairs and 1 lone pair with tetrahedral electron pair geometry. Linear would require 2 bond pairs."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The bond angle in H₂O (104.5°) is less than in NH₃ (107°) because:",
+      "options": [
+        {"id": "A", "text": "H₂O has 2 lone pairs while NH₃ has 1 lone pair"},
+        {"id": "B", "text": "Oxygen is smaller than nitrogen"},
+        {"id": "C", "text": "O-H bond is shorter than N-H bond"},
+        {"id": "D", "text": "Water has fewer hydrogen atoms"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "H₂O has 2 lone pairs which exert more compression on the bond angle compared to NH₃ which has only 1 lone pair. More lone pairs create greater repulsion with bond pairs, reducing the bond angle further (104.5° for H₂O vs 107° for NH₃).",
+      "explanation_incorrect": "While oxygen being smaller and O-H bonds being shorter are true, the primary reason for the smaller bond angle is the presence of 2 lone pairs instead of 1."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "sp³ hybridisation gives a geometry of:",
+      "options": [
+        {"id": "A", "text": "Linear"},
+        {"id": "B", "text": "Trigonal planar"},
+        {"id": "C", "text": "Tetrahedral"},
+        {"id": "D", "text": "Octahedral"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In sp³ hybridisation, one s orbital and three p orbitals combine to form four equivalent sp³ hybrid orbitals directed towards the corners of a tetrahedron with bond angles of 109.5°. Example: CH₄.",
+      "explanation_incorrect": "Linear corresponds to sp (180°). Trigonal planar corresponds to sp² (120°). Octahedral corresponds to sp³d² (90°). Tetrahedral is the geometry for sp³."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The hybridisation of carbon in ethylene (C₂H₄) is:",
+      "options": [
+        {"id": "A", "text": "sp"},
+        {"id": "B", "text": "sp²"},
+        {"id": "C", "text": "sp³"},
+        {"id": "D", "text": "sp³d"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In ethylene (C₂H₄), each carbon forms a double bond (one σ and one π bond) with the other carbon and two σ bonds with hydrogen atoms. This requires sp² hybridisation with trigonal planar geometry around each carbon (120° angles).",
+      "explanation_incorrect": "sp gives a linear geometry (as in C₂H₂). sp³ gives a tetrahedral geometry (as in C₂H₆). sp³d involves d orbitals. sp² is correct for the double bond in ethylene."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The hybridisation of carbon in acetylene (C₂H₂) is:",
+      "options": [
+        {"id": "A", "text": "sp"},
+        {"id": "B", "text": "sp²"},
+        {"id": "C", "text": "sp³"},
+        {"id": "D", "text": "sp³d"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In acetylene (C₂H₂), each carbon forms a triple bond (one σ and two π bonds) with the other carbon and one σ bond with hydrogen. This requires sp hybridisation with linear geometry (180° bond angle).",
+      "explanation_incorrect": "sp² gives trigonal planar geometry (ethylene). sp³ gives tetrahedral geometry (ethane). sp is correct for the triple bond in acetylene."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The hybridisation of the central atom in PCl₅ is:",
+      "options": [
+        {"id": "A", "text": "sp²"},
+        {"id": "B", "text": "sp³"},
+        {"id": "C", "text": "sp³d"},
+        {"id": "D", "text": "sp³d²"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "PCl₅ has 5 bond pairs and no lone pairs around phosphorus. This requires 5 hybrid orbitals, formed by sp³d hybridisation (one s + three p + one d orbital). The resulting geometry is trigonal bipyramidal.",
+      "explanation_incorrect": "sp² gives 3 hybrid orbitals. sp³ gives 4. sp³d² gives 6. PCl₅ requires 5 hybrid orbitals, which is sp³d."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The hybridisation of nitrogen in NH₃ is:",
+      "options": [
+        {"id": "A", "text": "sp"},
+        {"id": "B", "text": "sp²"},
+        {"id": "C", "text": "sp³"},
+        {"id": "D", "text": "sp³d"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "NH₃ has 3 bond pairs and 1 lone pair on nitrogen, totalling 4 electron pairs. This requires 4 hybrid orbitals formed by sp³ hybridisation. The molecular shape is trigonal pyramidal (not tetrahedral) because one sp³ orbital holds a lone pair.",
+      "explanation_incorrect": "sp gives 2 orbitals (linear). sp² gives 3 orbitals (trigonal planar). sp³d gives 5. With 4 electron pairs, the hybridisation is sp³."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "In SF₆, the hybridisation of sulphur is:",
+      "options": [
+        {"id": "A", "text": "sp³"},
+        {"id": "B", "text": "sp³d"},
+        {"id": "C", "text": "sp³d²"},
+        {"id": "D", "text": "dsp²"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "SF₆ has 6 bond pairs and no lone pairs on sulphur. This requires 6 hybrid orbitals formed by sp³d² hybridisation (one s + three p + two d orbitals). The geometry is octahedral with 90° bond angles.",
+      "explanation_incorrect": "sp³ gives 4 orbitals. sp³d gives 5. dsp² gives 4 (square planar). SF₆ needs 6 orbitals, requiring sp³d²."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The hybridisation of the central atom in XeF₂ is:",
+      "options": [
+        {"id": "A", "text": "sp"},
+        {"id": "B", "text": "sp³"},
+        {"id": "C", "text": "sp³d"},
+        {"id": "D", "text": "sp³d²"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "XeF₂ has 2 bond pairs and 3 lone pairs on Xe, totalling 5 electron pairs. This requires sp³d hybridisation. The electron pair geometry is trigonal bipyramidal, with 3 lone pairs in equatorial positions and 2 F atoms in axial positions, giving a linear molecular shape.",
+      "explanation_incorrect": "sp gives 2 orbitals (no lone pairs). sp³ gives 4 orbitals. sp³d² gives 6 orbitals. With 5 electron pairs total, Xe needs sp³d hybridisation."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "In which of the following molecules is the central atom sp² hybridised?",
+      "options": [
+        {"id": "A", "text": "NH₃"},
+        {"id": "B", "text": "BF₃"},
+        {"id": "C", "text": "CH₄"},
+        {"id": "D", "text": "H₂O"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "BF₃ has 3 bond pairs and 0 lone pairs on boron. This requires 3 hybrid orbitals formed by sp² hybridisation. The molecule is trigonal planar with 120° bond angles.",
+      "explanation_incorrect": "NH₃ and H₂O are sp³ (4 electron pairs). CH₄ is sp³ (4 bond pairs). Only BF₃ is sp² with 3 electron pairs around boron."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The number of sigma (σ) and pi (π) bonds in ethylene (C₂H₄) are:",
+      "options": [
+        {"id": "A", "text": "5σ, 1π"},
+        {"id": "B", "text": "4σ, 2π"},
+        {"id": "C", "text": "3σ, 2π"},
+        {"id": "D", "text": "5σ, 0π"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In C₂H₄: 4 C-H sigma bonds + 1 C-C sigma bond = 5 sigma bonds. The C=C double bond consists of 1σ and 1π bond. Total: 5σ and 1π bonds.",
+      "explanation_incorrect": "A double bond has 1σ + 1π bond, not 2π bonds. There are 4 C-H bonds (each is σ) plus 1 C-C σ bond. The one π bond comes from the C=C double bond."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "According to Molecular Orbital Theory (MOT), bond order is calculated as:",
+      "options": [
+        {"id": "A", "text": "½(Nb + Na)"},
+        {"id": "B", "text": "½(Nb − Na)"},
+        {"id": "C", "text": "Nb − Na"},
+        {"id": "D", "text": "Nb + Na"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Bond order = ½(Nb − Na), where Nb = number of electrons in bonding molecular orbitals and Na = number of electrons in antibonding molecular orbitals. A positive bond order indicates a stable molecule.",
+      "explanation_incorrect": "½(Nb + Na) gives the total electron count divided by 2. Nb − Na without the ½ factor overestimates the bond order. Nb + Na is just the total electrons."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The bond order of H₂ is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "0.5"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "H₂ has 2 electrons, both in the σ1s bonding MO. Bond order = ½(2 − 0) = 1. This single bond is consistent with the Lewis structure H-H.",
+      "explanation_incorrect": "Bond order 0 would mean no bond (He₂). 0.5 would be H₂⁺ (1 electron). 2 would require 4 bonding electrons. H₂ with 2 bonding electrons has bond order 1."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "O₂ is paramagnetic because:",
+      "options": [
+        {"id": "A", "text": "It has a double bond"},
+        {"id": "B", "text": "It has two unpaired electrons in its π* antibonding orbitals"},
+        {"id": "C", "text": "It has a large bond length"},
+        {"id": "D", "text": "It is a diatomic molecule"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to MOT, the electronic configuration of O₂ places two electrons in the degenerate π*2p antibonding orbitals — one in each, with parallel spins (Hund's rule). These two unpaired electrons make O₂ paramagnetic, a fact that Lewis structures cannot explain.",
+      "explanation_incorrect": "Having a double bond, being diatomic, or having a large bond length do not cause paramagnetism. Paramagnetism requires unpaired electrons, which MOT predicts for O₂."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "He₂ does not exist because its bond order is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "0.5"},
+        {"id": "C", "text": "0"},
+        {"id": "D", "text": "−1"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "He₂ would have 4 electrons: 2 in σ1s (bonding) and 2 in σ*1s (antibonding). Bond order = ½(2 − 2) = 0. A bond order of zero means no net bonding, so He₂ does not exist as a stable molecule.",
+      "explanation_incorrect": "Bond order 1 is for H₂. 0.5 is for He₂⁺. Bond order cannot be negative. With equal bonding and antibonding electrons, the bond order is 0."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "The bond order of N₂ is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "2.5"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "N₂ has 14 electrons. MO configuration: σ1s² σ*1s² σ2s² σ*2s² π2p⁴ σ2p². Nb = 10, Na = 4. Bond order = ½(10 − 4) = 3. The triple bond makes N₂ extremely stable with a high bond dissociation energy (945 kJ/mol).",
+      "explanation_incorrect": "With 10 bonding and 4 antibonding electrons, bond order = ½(10 − 4) = 3. A bond order of 1 or 2 would underestimate the stability of N₂."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "Which of the following species is diamagnetic?",
+      "options": [
+        {"id": "A", "text": "O₂"},
+        {"id": "B", "text": "O₂⁻"},
+        {"id": "C", "text": "O₂²⁻"},
+        {"id": "D", "text": "O₂⁺"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "O₂²⁻ (peroxide ion) has 18 electrons. Its MO configuration fills both π*2p orbitals completely with 4 electrons (2 in each), leaving no unpaired electrons. Therefore, O₂²⁻ is diamagnetic.",
+      "explanation_incorrect": "O₂ has 2 unpaired electrons (paramagnetic). O₂⁻ has 1 unpaired electron (paramagnetic). O₂⁺ has 1 unpaired electron (paramagnetic). Only O₂²⁻ has all electrons paired."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The bond order of NO is:",
+      "options": [
+        {"id": "A", "text": "1.5"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "2.5"},
+        {"id": "D", "text": "3"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "NO has 15 electrons. MO configuration (similar to N₂ but with one extra electron in π*2p): Nb = 10, Na = 5. Bond order = ½(10 − 5) = 2.5. NO is paramagnetic with one unpaired electron.",
+      "explanation_incorrect": "1.5 would be for O₂⁻. 2 is for O₂. 3 is for N₂ or CO. NO with 15 electrons has bond order 2.5."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Hydrogen bonding is strongest when hydrogen is bonded to:",
+      "options": [
+        {"id": "A", "text": "Carbon"},
+        {"id": "B", "text": "Fluorine"},
+        {"id": "C", "text": "Chlorine"},
+        {"id": "D", "text": "Sulphur"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Hydrogen bonding is strongest when hydrogen is bonded to the most electronegative atoms with small size: F, O, and N. Among these, fluorine is the most electronegative (4.0) and smallest, forming the strongest H-bonds (e.g., HF).",
+      "explanation_incorrect": "Carbon is not electronegative enough for significant H-bonding. Chlorine and sulphur have larger sizes and lower electronegativity, making their H-bonds much weaker than those with F."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The unusually high boiling point of water compared to H₂S is due to:",
+      "options": [
+        {"id": "A", "text": "Higher molecular mass of water"},
+        {"id": "B", "text": "Intermolecular hydrogen bonding in water"},
+        {"id": "C", "text": "Covalent bonding in water"},
+        {"id": "D", "text": "Ionic character of water"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Water has extensive intermolecular hydrogen bonding (O-H...O) due to the high electronegativity and small size of oxygen. This creates a network of strong intermolecular forces, requiring more energy to break and resulting in a much higher boiling point (100°C) compared to H₂S (−60°C).",
+      "explanation_incorrect": "Water (M = 18) actually has a lower molecular mass than H₂S (M = 34). Covalent bonds exist in both molecules. Water is not ionic."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "o-Nitrophenol has a lower boiling point than p-nitrophenol because:",
+      "options": [
+        {"id": "A", "text": "It has lower molecular mass"},
+        {"id": "B", "text": "It has intramolecular hydrogen bonding which reduces intermolecular association"},
+        {"id": "C", "text": "It is more acidic"},
+        {"id": "D", "text": "It has weaker O-H bonds"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In o-nitrophenol, the -OH and -NO₂ groups are adjacent, allowing intramolecular hydrogen bonding. This reduces the availability of these groups for intermolecular hydrogen bonding, leading to weaker intermolecular forces and a lower boiling point. In p-nitrophenol, the groups are far apart, favouring intermolecular hydrogen bonding and a higher boiling point.",
+      "explanation_incorrect": "Both isomers have the same molecular mass. Acidity and O-H bond strength are not the primary reasons for the boiling point difference."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "application",
+      "question_text": "The MO energy level order for O₂ and F₂ is different from N₂ because:",
+      "options": [
+        {"id": "A", "text": "O and F have more protons"},
+        {"id": "B", "text": "In O₂ and F₂, there is no significant s-p mixing, so σ2p is lower in energy than π2p"},
+        {"id": "C", "text": "O and F cannot form pi bonds"},
+        {"id": "D", "text": "O₂ and F₂ are more stable than N₂"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For O₂ and F₂ (and beyond), the energy difference between 2s and 2p orbitals is large enough that s-p mixing is negligible. As a result, σ2p is lower in energy than π2p. For N₂ and lighter molecules, s-p mixing raises σ2p above π2p.",
+      "explanation_incorrect": "Having more protons doesn't directly change the MO ordering. O and F do form pi bonds. N₂ is actually more stable than O₂. The key is the extent of s-p mixing."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The hybridisation of oxygen in water is:",
+      "options": [
+        {"id": "A", "text": "sp"},
+        {"id": "B", "text": "sp²"},
+        {"id": "C", "text": "sp³"},
+        {"id": "D", "text": "sp³d"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In water, oxygen has 2 bond pairs and 2 lone pairs, totalling 4 electron pairs. This requires 4 hybrid orbitals formed by sp³ hybridisation. Two sp³ orbitals form O-H bonds and two hold lone pairs, giving a bent molecular shape.",
+      "explanation_incorrect": "sp gives 2 orbitals. sp² gives 3 orbitals. sp³d gives 5. With 4 electron pairs (2 bonding + 2 lone), oxygen requires sp³ hybridisation."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The shape of PCl₅ is trigonal bipyramidal. The axial P-Cl bonds are:",
+      "options": [
+        {"id": "A", "text": "Shorter than equatorial P-Cl bonds"},
+        {"id": "B", "text": "Longer than equatorial P-Cl bonds"},
+        {"id": "C", "text": "Equal to equatorial P-Cl bonds"},
+        {"id": "D", "text": "Sometimes longer and sometimes shorter"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a trigonal bipyramidal structure, axial bonds experience more repulsion (from 3 equatorial bond pairs at 90°) than equatorial bonds (which have only 2 neighbours at 90°). This makes axial bonds slightly longer and weaker than equatorial bonds.",
+      "explanation_incorrect": "Axial bonds are not shorter or equal to equatorial bonds. Due to greater repulsive interactions, axial P-Cl bonds in PCl₅ (214 pm) are longer than equatorial P-Cl bonds (202 pm)."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "mcq",
+      "concept_id": "T04.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The bond order of F₂ is 1. If one electron is removed to form F₂⁺, the bond order becomes:",
+      "options": [
+        {"id": "A", "text": "0.5"},
+        {"id": "B", "text": "1.5"},
+        {"id": "C", "text": "1"},
+        {"id": "D", "text": "2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F₂ has 18 electrons with bond order = ½(10 − 8) = 1. Removing one electron from the highest occupied antibonding orbital (π*2p) gives F₂⁺ with 17 electrons: bond order = ½(10 − 7) = 1.5. The bond becomes stronger.",
+      "explanation_incorrect": "Removing an electron from an antibonding orbital increases the bond order. F₂⁺ has one fewer antibonding electron, so bond order = ½(10 − 7) = 1.5, not 0.5, 1, or 2."
+    }
+  ]
+}

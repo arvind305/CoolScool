@@ -1,0 +1,778 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Electromagnetic Induction",
+  "canonical_explanation": {
+    "text": "Electromagnetic induction is the phenomenon in which an EMF is induced in a circuit whenever the magnetic flux linked with it changes. The magnetic flux through a surface of area A in a uniform magnetic field B is Φ = B·A·cos θ. Faraday's first law states that a change in magnetic flux linked with a circuit induces an EMF, and Faraday's second law gives its magnitude: ε = −N dΦ/dt. Lenz's law determines the direction of the induced current — it always opposes the change in flux that produced it, consistent with conservation of energy. A straight conductor of length l moving with velocity v perpendicular to a uniform magnetic field B develops a motional EMF ε = Blv. Eddy currents are loops of induced current that circulate in bulk conductors exposed to changing magnetic flux. Self-inductance L of a coil is defined as L = NΦ/I and the self-induced EMF is ε = −L dI/dt. The energy stored in an inductor carrying current I is E = ½LI². Mutual inductance M between two coils quantifies the flux linkage of one coil due to current in another. An AC generator converts mechanical energy into electrical energy, producing an EMF ε = NBAω sin ωt.",
+    "rules": [
+      "Magnetic flux: Φ = B·A·cos θ, where θ is the angle between B and the area normal",
+      "Faraday's law: ε = −N dΦ/dt; the induced EMF equals the negative rate of change of flux linkage",
+      "Lenz's law: the direction of induced current opposes the change in magnetic flux that causes it",
+      "Motional EMF: ε = Blv for a conductor of length l moving with velocity v perpendicular to field B",
+      "Self-inductance: L = NΦ/I; self-induced EMF: ε = −L dI/dt",
+      "Energy stored in an inductor: E = ½LI²",
+      "Mutual inductance: ε₁ = −M dI₂/dt",
+      "AC generator EMF: ε = NBAω sin ωt, where ω is the angular frequency of rotation"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Magnetic flux through a surface is defined as:",
+      "options": [
+        { "id": "A", "text": "Φ = B × A × sin θ" },
+        { "id": "B", "text": "Φ = B · A · cos θ" },
+        { "id": "C", "text": "Φ = B / A" },
+        { "id": "D", "text": "Φ = B + A · cos θ" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Magnetic flux through a surface of area A placed in a uniform magnetic field B is Φ = B · A · cos θ, where θ is the angle between the magnetic field vector and the outward normal to the surface. This is the scalar (dot) product of B and A vectors.",
+      "explanation_incorrect": "The formula Φ = B × A × sin θ represents the cross-product component, not the flux. Flux is a scalar quantity obtained from the dot product of B and the area vector, giving Φ = B · A · cos θ."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of magnetic flux is:",
+      "options": [
+        { "id": "A", "text": "Tesla" },
+        { "id": "B", "text": "Weber" },
+        { "id": "C", "text": "Henry" },
+        { "id": "D", "text": "Volt" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of magnetic flux is the weber (Wb). One weber equals one tesla multiplied by one square metre (1 Wb = 1 T · m²). Tesla is the unit of magnetic field, Henry is the unit of inductance, and Volt is the unit of EMF.",
+      "explanation_incorrect": "Tesla is the unit of magnetic field strength (B), not magnetic flux. Henry is the unit of inductance. Volt is the unit of EMF. The correct unit of magnetic flux Φ is the weber (Wb)."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "According to Faraday's second law of electromagnetic induction, the magnitude of induced EMF in a coil of N turns is:",
+      "options": [
+        { "id": "A", "text": "ε = N Φ" },
+        { "id": "B", "text": "ε = N dΦ/dt" },
+        { "id": "C", "text": "ε = Φ / N" },
+        { "id": "D", "text": "ε = N² dΦ/dt" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Faraday's second law states that the magnitude of the induced EMF equals the rate of change of the total magnetic flux linkage: |ε| = N |dΦ/dt|, where N is the number of turns and dΦ/dt is the rate of change of flux through each turn.",
+      "explanation_incorrect": "The induced EMF is proportional to N and to the rate of change of flux dΦ/dt, not to the flux itself or to N². The correct expression is ε = N dΦ/dt."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Electromagnetic induction was discovered by:",
+      "options": [
+        { "id": "A", "text": "Ampere" },
+        { "id": "B", "text": "Oersted" },
+        { "id": "C", "text": "Faraday" },
+        { "id": "D", "text": "Maxwell" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Michael Faraday experimentally discovered electromagnetic induction in 1831. He showed that a changing magnetic flux through a circuit induces an EMF. Joseph Henry independently discovered the same phenomenon around the same time, but Faraday is credited as the discoverer.",
+      "explanation_incorrect": "Ampere studied the magnetic effects of electric currents, Oersted discovered the connection between electricity and magnetism (a current-carrying wire deflects a compass), and Maxwell formulated the mathematical theory of electromagnetism. The discovery of electromagnetic induction is credited to Faraday."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "A circular coil of area 0.02 m² is placed in a uniform magnetic field of 0.5 T with its plane perpendicular to the field. The magnetic flux through the coil is:",
+      "options": [
+        { "id": "A", "text": "0.001 Wb" },
+        { "id": "B", "text": "0.01 Wb" },
+        { "id": "C", "text": "0.1 Wb" },
+        { "id": "D", "text": "0.25 Wb" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the plane of the coil is perpendicular to the field, the area normal is parallel to B, so θ = 0° and cos θ = 1. Therefore Φ = B · A · cos 0° = 0.5 × 0.02 × 1 = 0.01 Wb.",
+      "explanation_incorrect": "Using Φ = B · A · cos θ with the plane perpendicular to B means the normal to the plane is along B (θ = 0°), giving Φ = 0.5 × 0.02 = 0.01 Wb. The other values result from incorrect angle assumptions or arithmetic errors."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "If the magnetic flux through a coil does not change with time, the induced EMF is:",
+      "options": [
+        { "id": "A", "text": "Maximum" },
+        { "id": "B", "text": "Zero" },
+        { "id": "C", "text": "Equal to the flux" },
+        { "id": "D", "text": "Depends on the resistance of the coil" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Faraday's law, the induced EMF is ε = −N dΦ/dt. If the magnetic flux Φ does not change with time, then dΦ/dt = 0 and hence the induced EMF is zero. A static magnetic flux, no matter how large, does not induce any EMF.",
+      "explanation_incorrect": "The induced EMF depends solely on the rate of change of flux, not on its magnitude or the resistance of the coil. If the flux is constant, dΦ/dt = 0, so the induced EMF is zero."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "The magnetic flux through a coil of 100 turns changes from 0.04 Wb to 0.01 Wb in 0.1 s. The magnitude of the induced EMF is:",
+      "options": [
+        { "id": "A", "text": "3 V" },
+        { "id": "B", "text": "30 V" },
+        { "id": "C", "text": "300 V" },
+        { "id": "D", "text": "0.3 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "|ε| = N |ΔΦ/Δt| = 100 × |0.01 − 0.04| / 0.1 = 100 × 0.03 / 0.1 = 100 × 0.3 = 30 V.",
+      "explanation_incorrect": "The calculation requires multiplying the number of turns by the rate of change of flux per turn: 100 × (0.03/0.1) = 30 V. Values like 3 V or 300 V arise from forgetting N or misplacing the decimal."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A coil of area 0.05 m² is placed in a magnetic field that changes uniformly from 0.2 T to 0.8 T in 0.5 s. If the coil has 200 turns and the field is perpendicular to the plane of the coil, the induced EMF is:",
+      "options": [
+        { "id": "A", "text": "6 V" },
+        { "id": "B", "text": "12 V" },
+        { "id": "C", "text": "24 V" },
+        { "id": "D", "text": "120 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ΔΦ = A × ΔB = 0.05 × (0.8 − 0.2) = 0.05 × 0.6 = 0.03 Wb. |ε| = N × ΔΦ/Δt = 200 × 0.03/0.5 = 200 × 0.06 = 12 V.",
+      "explanation_incorrect": "The change in flux per turn is ΔΦ = A × ΔB = 0.05 × 0.6 = 0.03 Wb. Then |ε| = 200 × 0.03/0.5 = 12 V. Other options arise from errors in computing ΔB, forgetting to divide by time, or miscounting the number of turns."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "A rectangular coil of area 0.1 m² is placed in a magnetic field of 0.5 T. When the coil is rotated from a position where the field is perpendicular to its plane to a position where the field is parallel to its plane, the change in magnetic flux is:",
+      "options": [
+        { "id": "A", "text": "0.05 Wb" },
+        { "id": "B", "text": "0.5 Wb" },
+        { "id": "C", "text": "0.1 Wb" },
+        { "id": "D", "text": "Zero" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When B is perpendicular to the plane, the area normal is parallel to B (θ = 0°), so Φ₁ = BA cos 0° = 0.5 × 0.1 = 0.05 Wb. When B is parallel to the plane, the normal is perpendicular to B (θ = 90°), so Φ₂ = BA cos 90° = 0. The change in flux is |ΔΦ| = |0 − 0.05| = 0.05 Wb.",
+      "explanation_incorrect": "The flux changes from BA (when the normal is along B) to zero (when the normal is perpendicular to B). So ΔΦ = 0.5 × 0.1 = 0.05 Wb. It is not zero because the orientation changed, and it is not 0.5 Wb because we must multiply B by the area."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "According to Lenz's law, the direction of the induced current in a circuit is such that it:",
+      "options": [
+        { "id": "A", "text": "Aids the change in flux that produces it" },
+        { "id": "B", "text": "Opposes the change in flux that produces it" },
+        { "id": "C", "text": "Is always clockwise" },
+        { "id": "D", "text": "Is perpendicular to the magnetic field" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Lenz's law states that the induced current flows in a direction such that the magnetic field it produces opposes the change in magnetic flux that caused the induction. This is a consequence of the conservation of energy — the negative sign in Faraday's law (ε = −N dΦ/dt) reflects this opposition.",
+      "explanation_incorrect": "The induced current does not aid the change in flux (that would violate energy conservation). It is not always clockwise — its direction depends on the nature of the flux change. Lenz's law specifically states the induced current opposes the change in flux."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Lenz's law is a consequence of the law of conservation of:",
+      "options": [
+        { "id": "A", "text": "Charge" },
+        { "id": "B", "text": "Momentum" },
+        { "id": "C", "text": "Energy" },
+        { "id": "D", "text": "Angular momentum" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Lenz's law is a direct consequence of the conservation of energy. If the induced current aided the change in flux instead of opposing it, the flux change would increase indefinitely, creating energy from nothing, which violates energy conservation.",
+      "explanation_incorrect": "While conservation of charge and momentum are fundamental laws, Lenz's law is specifically a consequence of conservation of energy. The opposing nature of the induced current ensures that energy is conserved in electromagnetic induction."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The negative sign in Faraday's law (ε = −N dΦ/dt) signifies:",
+      "options": [
+        { "id": "A", "text": "The induced EMF is always negative" },
+        { "id": "B", "text": "The direction of induced EMF opposes the cause producing it" },
+        { "id": "C", "text": "The flux is decreasing" },
+        { "id": "D", "text": "The coil has fewer turns" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The negative sign in Faraday's law represents Lenz's law — it indicates that the induced EMF acts in a direction that opposes the change in magnetic flux responsible for producing it. It does not mean the EMF value is always numerically negative.",
+      "explanation_incorrect": "The negative sign does not mean the EMF is always a negative number, nor does it indicate decreasing flux or fewer turns. It encodes Lenz's law: the induced EMF opposes the change in flux."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "A bar magnet is moved towards a circular coil with its north pole facing the coil. The induced current in the coil, as seen from the side of the magnet, will be:",
+      "options": [
+        { "id": "A", "text": "Clockwise" },
+        { "id": "B", "text": "Anticlockwise" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Alternating" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "As the north pole approaches the coil, the magnetic flux through the coil increases. By Lenz's law, the induced current must oppose this increase by creating a magnetic field that repels the approaching north pole. For the face facing the magnet to act as a north pole, the current must flow anticlockwise when viewed from the magnet's side.",
+      "explanation_incorrect": "A clockwise current (viewed from the magnet side) would create a south pole facing the magnet, which would attract it — this would aid the flux change and violate Lenz's law. The current is not zero because the flux is changing, and it is not alternating because the magnet moves in one direction."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "A magnet is dropped through a vertical copper tube. Compared to free fall, the magnet falls:",
+      "options": [
+        { "id": "A", "text": "Faster" },
+        { "id": "B", "text": "At the same rate" },
+        { "id": "C", "text": "Slower" },
+        { "id": "D", "text": "It will stop completely" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "As the magnet falls through the copper tube, it induces eddy currents in the tube walls. By Lenz's law, these eddy currents create a magnetic field that opposes the motion of the magnet, producing a retarding force. This causes the magnet to fall slower than in free fall, though it does not stop completely.",
+      "explanation_incorrect": "The magnet does not fall faster or at the same rate because Lenz's law causes induced currents to oppose its motion. It does not stop completely because gravity continues to act; the retarding force only reduces the acceleration."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "When the north pole of a bar magnet is withdrawn from a solenoid, the end of the solenoid nearest to the magnet behaves as:",
+      "options": [
+        { "id": "A", "text": "A north pole" },
+        { "id": "B", "text": "A south pole" },
+        { "id": "C", "text": "Neutral" },
+        { "id": "D", "text": "Alternating polarity" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the north pole is withdrawn, the flux through the solenoid decreases. By Lenz's law, the induced current must oppose this decrease by trying to maintain the flux. The near end of the solenoid becomes a south pole to attract the receding north pole and oppose the withdrawal.",
+      "explanation_incorrect": "If the near end became a north pole, it would repel the retreating magnet, aiding the flux decrease — this violates Lenz's law. The end must become a south pole to attract the magnet and oppose the change in flux."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The motional EMF induced in a straight conductor of length l moving with velocity v perpendicular to a uniform magnetic field B is:",
+      "options": [
+        { "id": "A", "text": "ε = Bl/v" },
+        { "id": "B", "text": "ε = Bv/l" },
+        { "id": "C", "text": "ε = Blv" },
+        { "id": "D", "text": "ε = Bl²v" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When a conductor of length l moves with velocity v perpendicular to a uniform magnetic field B, the free electrons in the conductor experience a Lorentz force, leading to charge separation and an EMF given by ε = Blv.",
+      "explanation_incorrect": "The motional EMF is directly proportional to B, l, and v (first power of each). The formula ε = Blv is derived from the force on charges (F = qvB) acting over the length l of the conductor."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Eddy currents are induced in:",
+      "options": [
+        { "id": "A", "text": "Only thin wires" },
+        { "id": "B", "text": "Only magnetic materials" },
+        { "id": "C", "text": "Bulk pieces of conductors exposed to changing magnetic flux" },
+        { "id": "D", "text": "Insulators placed in a magnetic field" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Eddy currents are loops of electric current induced within bulk conductors when they are exposed to a changing magnetic flux. These swirling currents flow in closed loops within the conductor, perpendicular to the magnetic field. They occur in any conductor, not just magnetic materials.",
+      "explanation_incorrect": "Eddy currents are not limited to thin wires or magnetic materials — they are induced in any bulk conductor subjected to changing magnetic flux. Insulators do not conduct electricity, so eddy currents cannot flow in them."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following is NOT an application of eddy currents?",
+      "options": [
+        { "id": "A", "text": "Electromagnetic braking" },
+        { "id": "B", "text": "Induction furnace" },
+        { "id": "C", "text": "Electric motor" },
+        { "id": "D", "text": "Transformer core lamination to reduce them" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An electric motor works on the principle of a current-carrying conductor in a magnetic field experiencing a force, not on the principle of eddy currents. Electromagnetic braking, induction furnaces, and the lamination of transformer cores (to minimize eddy current losses) are all directly related to eddy currents.",
+      "explanation_incorrect": "Electromagnetic braking uses the retarding force of eddy currents, induction furnaces use the heating effect of eddy currents, and transformer cores are laminated specifically to reduce eddy current losses. An electric motor, however, operates on the motor principle (force on a current-carrying conductor), not on eddy currents."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A metallic rod of length 0.4 m moves with a velocity of 5 m/s perpendicular to a magnetic field of 0.3 T. The motional EMF developed across the rod is:",
+      "options": [
+        { "id": "A", "text": "0.06 V" },
+        { "id": "B", "text": "0.6 V" },
+        { "id": "C", "text": "6 V" },
+        { "id": "D", "text": "0.12 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the formula for motional EMF: ε = Blv = 0.3 × 0.4 × 5 = 0.6 V.",
+      "explanation_incorrect": "ε = Blv = 0.3 × 0.4 × 5 = 0.6 V. The value 0.06 V arises if one multiplies only B and l without v, 6 V results from a factor-of-10 error, and 0.12 V comes from omitting v and doubling instead."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A conducting rod of length 1 m slides at 2 m/s on two parallel rails in a uniform magnetic field of 0.5 T perpendicular to the rails. If the resistance of the circuit is 4 Ω, the current in the circuit is:",
+      "options": [
+        { "id": "A", "text": "0.25 A" },
+        { "id": "B", "text": "0.5 A" },
+        { "id": "C", "text": "1 A" },
+        { "id": "D", "text": "2 A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The motional EMF is ε = Blv = 0.5 × 1 × 2 = 1 V. The current is I = ε/R = 1/4 = 0.25 A.",
+      "explanation_incorrect": "First calculate the EMF: ε = Blv = 0.5 × 1 × 2 = 1 V, then apply Ohm's law: I = 1/4 = 0.25 A. A value of 0.5 A would imply R = 2 Ω, and 1 A would imply R = 1 Ω."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A rod of length 0.5 m rotates about one end in a uniform magnetic field of 2 T perpendicular to the plane of rotation. If the angular velocity is 4 rad/s, the EMF induced between the two ends of the rod is:",
+      "options": [
+        { "id": "A", "text": "0.5 V" },
+        { "id": "B", "text": "1 V" },
+        { "id": "C", "text": "2 V" },
+        { "id": "D", "text": "4 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a rod rotating about one end, the induced EMF is ε = ½Bωl² = ½ × 2 × 4 × (0.5)² = ½ × 2 × 4 × 0.25 = 1 V. This comes from integrating the motional EMF along the rod, as different parts move at different velocities.",
+      "explanation_incorrect": "The formula for a rotating rod is ε = ½Bωl², not Bωl or Bωl². Using ε = ½ × 2 × 4 × 0.25 gives 1 V."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "Eddy currents in the core of a transformer can be reduced by:",
+      "options": [
+        { "id": "A", "text": "Increasing the thickness of the core" },
+        { "id": "B", "text": "Using a solid iron core" },
+        { "id": "C", "text": "Laminating the core with insulated thin sheets" },
+        { "id": "D", "text": "Increasing the frequency of the AC supply" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Laminating the core — using thin insulated sheets stacked together — increases the resistance to eddy current paths by confining them to smaller loops within each thin lamination. This significantly reduces eddy current losses. A solid core would allow large eddy current loops and hence more energy loss.",
+      "explanation_incorrect": "Increasing thickness or using a solid core would increase eddy current paths and losses. Increasing frequency would increase the rate of flux change and thereby increase eddy currents. Lamination is the standard technique to reduce eddy current losses."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The self-inductance of a coil is defined as:",
+      "options": [
+        { "id": "A", "text": "L = Φ / I²" },
+        { "id": "B", "text": "L = NΦ / I" },
+        { "id": "C", "text": "L = NI / Φ" },
+        { "id": "D", "text": "L = I / NΦ" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Self-inductance is defined as L = NΦ/I, where N is the number of turns, Φ is the magnetic flux through each turn due to current I. It measures the ability of a coil to oppose changes in the current flowing through it.",
+      "explanation_incorrect": "The correct definition is L = NΦ/I, not Φ/I², NI/Φ, or I/NΦ. Self-inductance relates the total flux linkage (NΦ) to the current producing it."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of self-inductance is:",
+      "options": [
+        { "id": "A", "text": "Volt" },
+        { "id": "B", "text": "Weber" },
+        { "id": "C", "text": "Henry" },
+        { "id": "D", "text": "Farad" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The SI unit of self-inductance (and mutual inductance) is the henry (H), named after Joseph Henry. One henry is defined as the inductance when a rate of change of current of 1 A/s induces an EMF of 1 V.",
+      "explanation_incorrect": "Volt is the unit of EMF, Weber is the unit of magnetic flux, and Farad is the unit of capacitance. The unit of inductance is the henry (H)."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The energy stored in an inductor of inductance L carrying a current I is:",
+      "options": [
+        { "id": "A", "text": "E = LI" },
+        { "id": "B", "text": "E = LI²" },
+        { "id": "C", "text": "E = ½LI²" },
+        { "id": "D", "text": "E = ½L²I" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The energy stored in the magnetic field of an inductor is E = ½LI². This is analogous to the energy stored in a capacitor (½CV²). The factor of ½ arises because the energy is built up gradually as the current increases from zero to I.",
+      "explanation_incorrect": "The energy is not simply LI or LI² — the factor ½ is essential and arises from the integration of the instantaneous power (P = εI = LI dI/dt) as the current builds up. The correct formula is E = ½LI²."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The self-induced EMF in a coil of inductance L when the current changes at a rate dI/dt is:",
+      "options": [
+        { "id": "A", "text": "ε = L dI/dt" },
+        { "id": "B", "text": "ε = −L dI/dt" },
+        { "id": "C", "text": "ε = −L I" },
+        { "id": "D", "text": "ε = L²/I" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The self-induced EMF (back-EMF) in an inductor is given by ε = −L dI/dt. The negative sign indicates that the self-induced EMF opposes the change in current (consistent with Lenz's law).",
+      "explanation_incorrect": "The formula ε = L dI/dt without the negative sign would violate Lenz's law. The self-induced EMF opposes the rate of change of current, so the negative sign is essential. The correct expression is ε = −L dI/dt."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "An AC generator works on the principle of:",
+      "options": [
+        { "id": "A", "text": "Coulomb's law" },
+        { "id": "B", "text": "Ohm's law" },
+        { "id": "C", "text": "Electromagnetic induction" },
+        { "id": "D", "text": "Biot-Savart law" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An AC generator converts mechanical energy into electrical energy based on the principle of electromagnetic induction. As a coil rotates in a magnetic field, the changing flux through the coil induces an alternating EMF as described by Faraday's law.",
+      "explanation_incorrect": "Coulomb's law governs electrostatic forces, Ohm's law relates current, voltage, and resistance, and Biot-Savart law gives the magnetic field due to a current element. An AC generator operates on the principle of electromagnetic induction."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "An inductor of 5 H carries a current of 2 A. The energy stored in the inductor is:",
+      "options": [
+        { "id": "A", "text": "5 J" },
+        { "id": "B", "text": "10 J" },
+        { "id": "C", "text": "20 J" },
+        { "id": "D", "text": "2.5 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "E = ½LI² = ½ × 5 × (2)² = ½ × 5 × 4 = 10 J.",
+      "explanation_incorrect": "Using E = ½LI²: ½ × 5 × 4 = 10 J. The value 5 J results from forgetting to square the current, 20 J from omitting the ½ factor, and 2.5 J from other arithmetic errors."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The current through an inductor of 0.2 H changes at the rate of 50 A/s. The magnitude of the self-induced EMF is:",
+      "options": [
+        { "id": "A", "text": "250 V" },
+        { "id": "B", "text": "10 V" },
+        { "id": "C", "text": "25 V" },
+        { "id": "D", "text": "0.004 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "|ε| = L |dI/dt| = 0.2 × 50 = 10 V.",
+      "explanation_incorrect": "Using |ε| = L × dI/dt = 0.2 × 50 = 10 V. The value 250 V would result from using L = 5 H, and 0.004 V from dividing L by dI/dt instead of multiplying."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "Two coils have mutual inductance M = 0.5 H. If the current in coil 1 changes at a rate of 10 A/s, the magnitude of the EMF induced in coil 2 is:",
+      "options": [
+        { "id": "A", "text": "0.05 V" },
+        { "id": "B", "text": "0.5 V" },
+        { "id": "C", "text": "5 V" },
+        { "id": "D", "text": "50 V" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "|ε₂| = M |dI₁/dt| = 0.5 × 10 = 5 V. Mutual inductance M quantifies the EMF induced in one coil due to the rate of change of current in the other.",
+      "explanation_incorrect": "The calculation is straightforward: |ε₂| = M × dI₁/dt = 0.5 × 10 = 5 V. Values of 0.05 or 0.5 arise from extra division, while 50 V comes from using M = 5 H."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "An AC generator has a coil of 100 turns, each of area 0.1 m², rotating at 50 revolutions per second in a magnetic field of 0.2 T. The maximum EMF produced is approximately:",
+      "options": [
+        { "id": "A", "text": "314 V" },
+        { "id": "B", "text": "628 V" },
+        { "id": "C", "text": "100 V" },
+        { "id": "D", "text": "200 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum EMF is ε₀ = NBAω, where ω = 2πf = 2π × 50 = 100π rad/s. So ε₀ = 100 × 0.2 × 0.1 × 100π = 2 × 100π = 200π ≈ 628 V.",
+      "explanation_incorrect": "ε₀ = NBAω = 100 × 0.2 × 0.1 × 100π = 200π ≈ 628 V. The value 314 V (= 100π) results from a factor-of-2 error, likely from incorrect computation of NB or A."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A coil of 500 turns and area 0.04 m² is placed perpendicular to a magnetic field. If the field increases uniformly from 0.1 T to 0.5 T in 0.2 s, the average induced EMF and the induced current (if the coil resistance is 10 Ω) are respectively:",
+      "options": [
+        { "id": "A", "text": "40 V and 4 A" },
+        { "id": "B", "text": "20 V and 2 A" },
+        { "id": "C", "text": "40 V and 2 A" },
+        { "id": "D", "text": "80 V and 8 A" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "|ε| = N × A × ΔB/Δt = 500 × 0.04 × (0.5 − 0.1)/0.2 = 500 × 0.04 × 2 = 40 V. Current I = ε/R = 40/10 = 4 A.",
+      "explanation_incorrect": "ΔB = 0.4 T, Δt = 0.2 s, so ΔB/Δt = 2 T/s. The EMF is 500 × 0.04 × 2 = 40 V, and the current is 40/10 = 4 A. Other options arise from halving the area or the number of turns."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A conducting loop is placed in a region where the magnetic field is directed into the page and is increasing in magnitude. The induced current in the loop and the nature of the force on the loop are respectively:",
+      "options": [
+        { "id": "A", "text": "Clockwise; the loop tends to expand" },
+        { "id": "B", "text": "Anticlockwise; the loop tends to contract" },
+        { "id": "C", "text": "Anticlockwise; the loop tends to expand" },
+        { "id": "D", "text": "Clockwise; the loop tends to contract" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The magnetic field is into the page and increasing, so by Lenz's law, the induced current flows anticlockwise (to produce a field out of the page to oppose the increase). The current-carrying loop in the external field experiences a force that tends to decrease its area (contract), thereby reducing the flux through it — again consistent with opposing the increase in flux.",
+      "explanation_incorrect": "A clockwise current would create a field into the page, aiding the flux increase, which violates Lenz's law. The induced current must be anticlockwise. The loop contracts (not expands) because reducing area helps oppose the increasing flux."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A conducting rod PQ of length 0.5 m is moving with a velocity of 4 m/s in a uniform magnetic field of 2 T directed into the page, as shown. The rod moves perpendicular to its length. Which end of the rod is at higher potential and what is the potential difference?",
+      "options": [
+        { "id": "A", "text": "P is at higher potential; 4 V" },
+        { "id": "B", "text": "Q is at higher potential; 4 V" },
+        { "id": "C", "text": "P is at higher potential; 2 V" },
+        { "id": "D", "text": "Both ends are at the same potential" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The EMF is ε = Blv = 2 × 0.5 × 4 = 4 V. Using the Lorentz force on positive charges in the rod (F = qv × B), the force drives positive charges towards P, making P the higher potential end. The potential difference is 4 V.",
+      "explanation_incorrect": "The motional EMF is Blv = 2 × 0.5 × 4 = 4 V. The polarity depends on the direction of the Lorentz force on positive charges. Both ends cannot be at the same potential since the rod is moving in a magnetic field."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A conducting rod slides along two parallel conducting rails connected by a resistance R = 5 Ω. The rod moves at 3 m/s in a magnetic field of 0.4 T. If the length of the rod between the rails is 0.5 m, the power dissipated in the resistance is:",
+      "options": [
+        { "id": "A", "text": "0.036 W" },
+        { "id": "B", "text": "0.072 W" },
+        { "id": "C", "text": "0.36 W" },
+        { "id": "D", "text": "3.6 W" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ε = Blv = 0.4 × 0.5 × 3 = 0.6 V. I = ε/R = 0.6/5 = 0.12 A. Power P = I²R = (0.12)² × 5 = 0.0144 × 5 = 0.072 W. Equivalently, P = ε²/R = (0.6)²/5 = 0.36/5 = 0.072 W.",
+      "explanation_incorrect": "ε = Blv = 0.4 × 0.5 × 3 = 0.6 V. Power P = ε²/R = (0.6)²/5 = 0.36/5 = 0.072 W. The value 0.036 W results from incorrectly halving the answer, and 3.6 W from forgetting to divide by R."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A solenoid of 1000 turns has a self-inductance of 0.2 H. If the current through it is 4 A, the magnetic flux through each turn is:",
+      "options": [
+        { "id": "A", "text": "8 × 10⁻⁴ Wb" },
+        { "id": "B", "text": "8 × 10⁻³ Wb" },
+        { "id": "C", "text": "0.8 Wb" },
+        { "id": "D", "text": "5 × 10⁻⁴ Wb" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From L = NΦ/I, we get Φ = LI/N = 0.2 × 4 / 1000 = 0.8/1000 = 8 × 10⁻⁴ Wb.",
+      "explanation_incorrect": "Using L = NΦ/I rearranged to Φ = LI/N = 0.2 × 4/1000 = 8 × 10⁻⁴ Wb. The value 8 × 10⁻³ Wb would result from using N = 100, and 0.8 Wb from forgetting to divide by N."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The mutual inductance between two coils is 1.5 H. If the current in coil A changes from 5 A to 2 A in 0.1 s, the average EMF induced in coil B is:",
+      "options": [
+        { "id": "A", "text": "15 V" },
+        { "id": "B", "text": "30 V" },
+        { "id": "C", "text": "45 V" },
+        { "id": "D", "text": "4.5 V" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "|ε| = M |ΔI/Δt| = 1.5 × |2 − 5|/0.1 = 1.5 × 3/0.1 = 1.5 × 30 = 45 V.",
+      "explanation_incorrect": "The rate of change of current is |ΔI/Δt| = 3/0.1 = 30 A/s. So |ε| = 1.5 × 30 = 45 V. The value 15 V would result from using ΔI = 1 A/s, and 4.5 V from using Δt = 1 s."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "An AC generator has a coil of 200 turns each of area 0.05 m² rotating at 3000 rpm in a field of 0.06 T. The peak value of the EMF generated is approximately:",
+      "options": [
+        { "id": "A", "text": "62.8 V" },
+        { "id": "B", "text": "188.5 V" },
+        { "id": "C", "text": "125.7 V" },
+        { "id": "D", "text": "376.9 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "ω = 2π × (3000/60) = 2π × 50 = 100π rad/s. ε₀ = NBAω = 200 × 0.06 × 0.05 × 100π = 200 × 0.003 × 100π = 0.6 × 100π = 60π ≈ 188.5 V.",
+      "explanation_incorrect": "First convert rpm to rad/s: ω = 2π × 50 = 100π. Then ε₀ = 200 × 0.06 × 0.05 × 100π = 60π ≈ 188.5 V. The value 62.8 V (= 20π) results from incorrect multiplication, and 376.9 V (= 120π) from doubling the result."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A square loop of side 10 cm with its plane perpendicular to a magnetic field has the field increasing at 0.5 T/s. The induced EMF in the loop is:",
+      "options": [
+        { "id": "A", "text": "5 × 10⁻⁴ V" },
+        { "id": "B", "text": "5 × 10⁻³ V" },
+        { "id": "C", "text": "5 × 10⁻² V" },
+        { "id": "D", "text": "0.5 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area A = (0.1)² = 0.01 m². Since the plane is perpendicular to B, the normal is along B, so |ε| = A × dB/dt = 0.01 × 0.5 = 5 × 10⁻³ V.",
+      "explanation_incorrect": "A = (0.1 m)² = 0.01 m². The rate of change of flux is A × dB/dt = 0.01 × 0.5 = 0.005 = 5 × 10⁻³ V. The value 5 × 10⁻⁴ V results from using A = 0.001 m², and 5 × 10⁻² from using side = 1 m."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The current through an inductor of 10 mH changes from 5 A to 1 A in 0.02 s. The average self-induced EMF is:",
+      "options": [
+        { "id": "A", "text": "0.2 V" },
+        { "id": "B", "text": "2 V" },
+        { "id": "C", "text": "20 V" },
+        { "id": "D", "text": "0.5 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "|ε| = L |ΔI/Δt| = 10 × 10⁻³ × |1 − 5|/0.02 = 0.01 × 200 = 2 V.",
+      "explanation_incorrect": "|ΔI/Δt| = 4/0.02 = 200 A/s. |ε| = 0.01 × 200 = 2 V. The value 0.2 V comes from using ΔI = 0.4, and 20 V from using L = 0.1 H."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A rectangular loop of wire is being pulled out of a uniform magnetic field region at a constant velocity. While the loop is partially inside the field, the force required to maintain constant velocity is proportional to:",
+      "options": [
+        { "id": "A", "text": "v" },
+        { "id": "B", "text": "v²" },
+        { "id": "C", "text": "1/v" },
+        { "id": "D", "text": "Independent of v" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The induced EMF is ε = Blv, giving current I = Blv/R. The retarding force due to the induced current is F = BIl = B²l²v/R, which is directly proportional to v. To maintain constant velocity, the applied force must equal this retarding force, so it is proportional to v.",
+      "explanation_incorrect": "The retarding force F = B²l²v/R is linear in v, not quadratic. The power dissipated P = Fv = B²l²v²/R is proportional to v², but the force itself is proportional to v."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The self-inductance of a long solenoid of length l, cross-sectional area A, and N total turns is:",
+      "options": [
+        { "id": "A", "text": "L = μ₀N²A/l" },
+        { "id": "B", "text": "L = μ₀NA/l" },
+        { "id": "C", "text": "L = μ₀N²l/A" },
+        { "id": "D", "text": "L = μ₀NA²/l" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a long solenoid, B = μ₀nI where n = N/l. Flux through each turn: Φ = BA = μ₀nIA. Total flux linkage: NΦ = N × μ₀(N/l)IA = μ₀N²IA/l. So L = NΦ/I = μ₀N²A/l.",
+      "explanation_incorrect": "The derivation involves B = μ₀(N/l)I and Φ = BA, leading to L = NΦ/I = μ₀N²A/l. The inductance depends on N² (not N) and on A (not A²), and l appears in the denominator."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "true_false",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "An EMF can be induced in a coil by changing the area of the coil in a magnetic field, even if the magnetic field itself remains constant.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. The magnetic flux Φ = B · A · cos θ depends on B, A, and θ. If any of these quantities changes, the flux changes and an EMF is induced. Changing the area while B is constant still causes dΦ/dt to be nonzero.",
+      "explanation_incorrect": "The statement is true because Faraday's law involves the rate of change of flux, and flux depends on B, A, and θ. A change in area with constant B does change the flux and therefore induces an EMF."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "true_false",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "If the induced current aided the change in flux instead of opposing it, energy would be created from nothing, violating conservation of energy.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. If the induced current aided the flux change, it would increase the flux further, which would induce more current, creating a runaway process. This would generate unlimited energy from nothing, violating the conservation of energy. Lenz's law prevents this by ensuring the induced current opposes the change.",
+      "explanation_incorrect": "The statement is true. This is the fundamental reasoning behind Lenz's law — the induced current must oppose the change in flux to ensure energy is conserved. Otherwise, a self-amplifying cycle would create energy from nothing."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "true_false",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A metallic ring falling through a region of non-uniform magnetic field will experience a retarding force due to the induced eddy currents in it.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. When a metallic ring passes through a non-uniform magnetic field (where the flux through the ring is changing), eddy currents are induced. By Lenz's law, these induced currents create a magnetic field that opposes the cause of induction — namely the motion of the ring — producing a retarding force.",
+      "explanation_incorrect": "The statement is true. In a non-uniform field, the flux through the ring changes as it moves, inducing currents that by Lenz's law oppose the motion, creating a retarding force."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "true_false",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The mutual inductance between two coils depends on the geometry, number of turns, and relative orientation of the coils, but is independent of the current flowing through either coil.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. Mutual inductance M is a geometric property that depends on the shapes, sizes, number of turns, and relative positioning of the two coils, as well as the permeability of the medium between them. It does not depend on the current flowing through the coils (assuming no magnetic saturation).",
+      "explanation_incorrect": "The statement is true. While M is defined through the relationship ε = −M dI/dt, the value of M itself is determined by the geometry and arrangement of the coils, not by the current. It is a constant for a given configuration."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The magnetic flux through a coil of area A in a uniform field B, with the normal to the coil making angle θ with the field, is Φ = ___.",
+      "correct_answer": "BA cos θ",
+      "explanation_correct": "The magnetic flux is defined as the dot product of the magnetic field vector and the area vector: Φ = B · A = BA cos θ, where θ is the angle between the magnetic field B and the outward normal to the surface.",
+      "explanation_incorrect": "The correct answer is BA cos θ. The magnetic flux is a scalar quantity obtained from the dot product of B and the area vector A, not the cross product (which would give BA sin θ)."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The motional EMF induced in a conductor of length l moving with velocity v perpendicular to a magnetic field B is ε = ___.",
+      "correct_answer": "Blv",
+      "explanation_correct": "The motional EMF is ε = Blv, derived from the Lorentz force on free charges in the moving conductor. The force qvB acts over the length l, producing a potential difference of Blv across the conductor.",
+      "explanation_incorrect": "The correct answer is Blv. This is obtained from the work done by the magnetic Lorentz force on the free charges as they are displaced through the length of the conductor."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The energy stored in an inductor of inductance L carrying current I is E = ___.",
+      "correct_answer": "1/2 LI^2",
+      "explanation_correct": "The energy stored in the magnetic field of an inductor is E = ½LI². This is derived by integrating the instantaneous power P = LI(dI/dt) from zero current to final current I, giving ½LI².",
+      "explanation_incorrect": "The correct answer is ½LI² (or equivalently 1/2 LI²). The factor of ½ is essential and arises from the integration of power as the current builds up from zero to I."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "fill_blank",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The instantaneous EMF produced by an AC generator with N turns, area A, angular velocity ω, and magnetic field B is ε = ___.",
+      "correct_answer": "NBAω sin ωt",
+      "explanation_correct": "The EMF of an AC generator is ε = NBAω sin ωt, where NBAω is the peak EMF (ε₀). This arises because the flux Φ = NBA cos ωt, and ε = −dΦ/dt = NBAω sin ωt.",
+      "explanation_incorrect": "The correct answer is NBAω sin ωt. The flux through the rotating coil is Φ = NBA cos ωt, so by Faraday's law, ε = −dΦ/dt = NBAω sin ωt. The sine function appears because differentiation of cosine gives negative sine, and the overall negative sign from Faraday's law yields a positive sine."
+    }
+  ]
+}

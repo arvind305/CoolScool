@@ -1,0 +1,827 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Chemistry"
+  },
+  "topic_id": "T04.01",
+  "topic_name": "Chemical Kinetics",
+  "canonical_explanation": {
+    "text": "Chemical kinetics deals with the rates of chemical reactions and the factors that affect them. The rate of a reaction is the change in concentration of reactant or product per unit time. For a reaction aA + bB → cC + dD, the rate = −(1/a)d[A]/dt = −(1/b)d[B]/dt = (1/c)d[C]/dt = (1/d)d[D]/dt. The rate law expresses the rate as a function of concentrations: Rate = k[A]^x[B]^y, where k is the rate constant and x, y are the orders with respect to A and B. The overall order = x + y. The order is determined experimentally and may or may not equal stoichiometric coefficients. For a zero-order reaction: [A] = [A]₀ − kt, t₁/₂ = [A]₀/(2k), units of k are mol L⁻¹ s⁻¹. For a first-order reaction: ln[A] = ln[A]₀ − kt or k = (2.303/t)log([A]₀/[A]), t₁/₂ = 0.693/k (independent of initial concentration), units of k are s⁻¹. For a second-order reaction: 1/[A] = 1/[A]₀ + kt, t₁/₂ = 1/(k[A]₀). The Arrhenius equation relates the rate constant to temperature: k = Ae^(−Ea/RT), where A is the pre-exponential factor (frequency factor), Ea is the activation energy, R is the gas constant, and T is the temperature. Taking logarithm: ln k = ln A − Ea/RT. For two temperatures: log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂). A catalyst lowers the activation energy, providing an alternative pathway. Molecularity is the number of reacting species that collide simultaneously in an elementary reaction. It is always a whole number (1 = unimolecular, 2 = bimolecular, 3 = termolecular). Molecularity is a theoretical concept for elementary reactions, while order is experimental and applies to the overall reaction. Collision theory states that for a reaction to occur, molecules must collide with sufficient energy (≥ Ea) and proper orientation. The rate constant k = PZe^(−Ea/RT), where P is the steric factor and Z is the collision frequency.",
+    "rules": [
+      "Rate law: Rate = k[A]^x[B]^y; order is determined experimentally, not from stoichiometry.",
+      "Zero order: [A] = [A]₀ − kt; t₁/₂ = [A]₀/(2k); k units: mol L⁻¹ s⁻¹.",
+      "First order: k = (2.303/t)log([A]₀/[A]); t₁/₂ = 0.693/k (independent of [A]₀); k units: s⁻¹.",
+      "Second order: 1/[A] = 1/[A]₀ + kt; t₁/₂ = 1/(k[A]₀); k units: L mol⁻¹ s⁻¹.",
+      "Arrhenius equation: k = Ae^(−Ea/RT); log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂).",
+      "A catalyst lowers activation energy without being consumed; it does not change ΔG or equilibrium constant.",
+      "Molecularity: number of species in an elementary step (always whole number); order: sum of powers in rate law (can be fractional).",
+      "Collision theory: effective collisions require sufficient energy (≥ Ea) and proper orientation; k = PZe^(−Ea/RT).",
+      "For first-order reactions, a plot of log[A] vs t is linear with slope = −k/2.303."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T04.01.Q001",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The rate of a chemical reaction is defined as:",
+      "options": [
+        {"id": "A", "text": "The change in mass of reactant per unit time"},
+        {"id": "B", "text": "The change in concentration of a reactant or product per unit time"},
+        {"id": "C", "text": "The change in temperature per unit time"},
+        {"id": "D", "text": "The change in volume per unit time"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rate of reaction is defined as the change in concentration of a reactant or product per unit time. For reactants, rate = −d[R]/dt (negative sign because concentration decreases); for products, rate = d[P]/dt.",
+      "explanation_incorrect": "The rate of reaction is expressed in terms of concentration change (mol/L per unit time), not mass, temperature, or volume changes."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The order of a reaction is:",
+      "options": [
+        {"id": "A", "text": "Always equal to the sum of stoichiometric coefficients"},
+        {"id": "B", "text": "Determined from the balanced chemical equation"},
+        {"id": "C", "text": "Determined experimentally from the rate law"},
+        {"id": "D", "text": "Always a whole number"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The order of a reaction is the sum of the powers to which the concentrations are raised in the experimentally determined rate law. It cannot be deduced from the stoichiometric equation and may be zero, fractional, or a whole number.",
+      "explanation_incorrect": "Order is not necessarily equal to stoichiometric coefficients and is not determined from the balanced equation. It is purely an experimental quantity and can be zero, fractional, or negative."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "For the rate law Rate = k[A]²[B], the overall order of the reaction is:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The overall order is the sum of the powers of the concentration terms in the rate law: 2 (for A) + 1 (for B) = 3. This is a third-order reaction.",
+      "explanation_incorrect": "The order with respect to A is 2 and with respect to B is 1. The overall order = 2 + 1 = 3, not 2 or 4."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The unit of rate constant for a first-order reaction is:",
+      "options": [
+        {"id": "A", "text": "mol L⁻¹ s⁻¹"},
+        {"id": "B", "text": "L mol⁻¹ s⁻¹"},
+        {"id": "C", "text": "s⁻¹"},
+        {"id": "D", "text": "mol⁻¹ L s⁻¹"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a first-order reaction, Rate = k[A]. Units: mol L⁻¹ s⁻¹ = k × mol L⁻¹. Therefore, k has units of s⁻¹ (reciprocal seconds).",
+      "explanation_incorrect": "mol L⁻¹ s⁻¹ is the unit of k for zero-order reactions. L mol⁻¹ s⁻¹ is for second-order reactions. The unit of k for a first-order reaction is s⁻¹."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "For a reaction 2A + B → Products, the rate is found to be Rate = k[A][B]. The order with respect to A and the overall order are:",
+      "options": [
+        {"id": "A", "text": "2 and 3"},
+        {"id": "B", "text": "1 and 2"},
+        {"id": "C", "text": "1 and 3"},
+        {"id": "D", "text": "2 and 2"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From the rate law Rate = k[A][B], the order with respect to A is 1 (not 2, as stoichiometry would suggest) and with respect to B is 1. Overall order = 1 + 1 = 2.",
+      "explanation_incorrect": "The order is determined from the rate law, not from stoichiometric coefficients. The stoichiometric coefficient of A is 2, but the order with respect to A is 1. Overall order = 1 + 1 = 2."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "For a reaction A → Products, when the concentration of A is doubled, the rate doubles. When the concentration is tripled, the rate triples. The order of the reaction is:",
+      "options": [
+        {"id": "A", "text": "0"},
+        {"id": "B", "text": "1"},
+        {"id": "C", "text": "2"},
+        {"id": "D", "text": "3"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rate = k[A]^n. When [A] is doubled, rate doubles: 2^n = 2, so n = 1. When [A] is tripled, rate triples: 3^n = 3, confirming n = 1. The reaction is first order.",
+      "explanation_incorrect": "If the rate changes proportionally to the concentration change (doubled gives doubled rate, tripled gives tripled rate), the exponent n = 1. For second order, doubling the concentration would quadruple the rate."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "For a zero-order reaction, the rate of reaction:",
+      "options": [
+        {"id": "A", "text": "Depends on the concentration of reactant"},
+        {"id": "B", "text": "Is independent of the concentration of reactant"},
+        {"id": "C", "text": "Doubles when concentration is doubled"},
+        {"id": "D", "text": "Is always very slow"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a zero-order reaction, Rate = k[A]⁰ = k. The rate is constant and does not depend on the concentration of the reactant.",
+      "explanation_incorrect": "In a zero-order reaction, the rate law is Rate = k (constant). The rate does not change with concentration changes. Reactions on metal surfaces often follow zero-order kinetics when the surface is saturated."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a reaction A + B → C, the following data is obtained:\n[A] = 0.1 M, [B] = 0.1 M, Rate = 2 × 10⁻³\n[A] = 0.2 M, [B] = 0.1 M, Rate = 4 × 10⁻³\n[A] = 0.1 M, [B] = 0.2 M, Rate = 8 × 10⁻³\nThe rate law is:",
+      "options": [
+        {"id": "A", "text": "Rate = k[A][B]"},
+        {"id": "B", "text": "Rate = k[A][B]²"},
+        {"id": "C", "text": "Rate = k[A]²[B]"},
+        {"id": "D", "text": "Rate = k[A]²[B]²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Comparing experiments 1 and 2: [A] doubles, [B] constant, rate doubles → order w.r.t. A = 1. Comparing experiments 1 and 3: [B] doubles, [A] constant, rate quadruples (×4) → order w.r.t. B = 2. Rate = k[A][B]².",
+      "explanation_incorrect": "From experiments 1 and 2: 4/2 = 2 = (0.2/0.1)^x, so x = 1 (first order in A). From experiments 1 and 3: 8/2 = 4 = (0.2/0.1)^y, so y = 2 (second order in B). Rate = k[A]¹[B]²."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "The unit of rate constant for an nth order reaction is:",
+      "options": [
+        {"id": "A", "text": "(mol L⁻¹)^(1−n) s⁻¹"},
+        {"id": "B", "text": "(mol L⁻¹)^n s⁻¹"},
+        {"id": "C", "text": "(mol L⁻¹)^(n−1) s⁻¹"},
+        {"id": "D", "text": "mol^(n−1) L^(n−1) s⁻¹"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rate = k[A]^n. Units: mol L⁻¹ s⁻¹ = k × (mol L⁻¹)^n. Therefore k = (mol L⁻¹)^(1−n) s⁻¹. For n = 0: mol L⁻¹ s⁻¹; n = 1: s⁻¹; n = 2: L mol⁻¹ s⁻¹.",
+      "explanation_incorrect": "Deriving units from Rate = k[A]^n: k = Rate/[A]^n = (mol L⁻¹ s⁻¹)/(mol L⁻¹)^n = (mol L⁻¹)^(1−n) s⁻¹. This general formula gives correct units for all orders."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a reaction 2N₂O₅ → 4NO₂ + O₂, if −d[N₂O₅]/dt = k₁[N₂O₅] and d[NO₂]/dt = k₂[N₂O₅], the relation between k₁ and k₂ is:",
+      "options": [
+        {"id": "A", "text": "k₁ = k₂"},
+        {"id": "B", "text": "k₁ = 2k₂"},
+        {"id": "C", "text": "2k₁ = k₂"},
+        {"id": "D", "text": "k₁ = 4k₂"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Rate = −(1/2)d[N₂O₅]/dt = (1/4)d[NO₂]/dt. So −d[N₂O₅]/dt = (1/2)d[NO₂]/dt. This gives k₁[N₂O₅] = (1/2)k₂[N₂O₅], so k₁ = k₂/2, i.e., 2k₁ = k₂.",
+      "explanation_incorrect": "From the stoichiometry: −(1/2)d[N₂O₅]/dt = (1/4)d[NO₂]/dt. Therefore d[NO₂]/dt = 2 × (−d[N₂O₅]/dt), giving k₂ = 2k₁."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The half-life of a first-order reaction is:",
+      "options": [
+        {"id": "A", "text": "t₁/₂ = [A]₀/(2k)"},
+        {"id": "B", "text": "t₁/₂ = 0.693/k"},
+        {"id": "C", "text": "t₁/₂ = 1/(k[A]₀)"},
+        {"id": "D", "text": "t₁/₂ = 2.303/k"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a first-order reaction, t₁/₂ = 0.693/k = ln 2/k. The half-life is independent of the initial concentration, which is a distinctive feature of first-order kinetics.",
+      "explanation_incorrect": "t₁/₂ = [A]₀/(2k) is for zero-order reactions. t₁/₂ = 1/(k[A]₀) is for second-order reactions. The first-order half-life is t₁/₂ = 0.693/k."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The integrated rate equation for a first-order reaction is:",
+      "options": [
+        {"id": "A", "text": "[A] = [A]₀ − kt"},
+        {"id": "B", "text": "k = (2.303/t) log([A]₀/[A])"},
+        {"id": "C", "text": "1/[A] = 1/[A]₀ + kt"},
+        {"id": "D", "text": "k = (1/t)([A]₀ − [A])"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The integrated rate equation for a first-order reaction is k = (2.303/t) log([A]₀/[A]) or equivalently ln([A]₀/[A]) = kt. A plot of log[A] vs t gives a straight line with slope −k/2.303.",
+      "explanation_incorrect": "[A] = [A]₀ − kt is for zero order. 1/[A] = 1/[A]₀ + kt is for second order. The first-order integrated equation involves logarithmic dependence: k = (2.303/t)log([A]₀/[A])."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "For a first-order reaction, a plot of log[A] versus time gives:",
+      "options": [
+        {"id": "A", "text": "A parabola"},
+        {"id": "B", "text": "A straight line with slope = −k/2.303"},
+        {"id": "C", "text": "A straight line with slope = k"},
+        {"id": "D", "text": "An exponential curve"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For first order: log[A] = log[A]₀ − (k/2.303)t. This is of the form y = c + mx, where y = log[A], m = −k/2.303, and c = log[A]₀. So the plot is a straight line with slope = −k/2.303.",
+      "explanation_incorrect": "The first-order integrated equation in logarithmic form gives a linear relationship between log[A] and t. The slope is −k/2.303, not k or any other value."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "A first-order reaction has a rate constant of 1.386 × 10⁻² min⁻¹. The half-life of the reaction is:",
+      "options": [
+        {"id": "A", "text": "25 min"},
+        {"id": "B", "text": "50 min"},
+        {"id": "C", "text": "100 min"},
+        {"id": "D", "text": "75 min"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "t₁/₂ = 0.693/k = 0.693/(1.386 × 10⁻²) = 0.693/0.01386 = 50 min.",
+      "explanation_incorrect": "For a first-order reaction, t₁/₂ = 0.693/k = 0.693/0.01386 = 50 minutes. The half-life does not depend on the initial concentration."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For a first-order reaction, the time required for 75% completion is:",
+      "options": [
+        {"id": "A", "text": "t₁/₂"},
+        {"id": "B", "text": "2 × t₁/₂"},
+        {"id": "C", "text": "3 × t₁/₂"},
+        {"id": "D", "text": "4 × t₁/₂"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "After 75% completion, 25% remains. [A] = [A]₀/4. Using k = (2.303/t)log([A]₀/[A]): t = (2.303/k)log(4) = (2.303/k)(2 × 0.301) = 2 × (0.693/k) = 2 × t₁/₂.",
+      "explanation_incorrect": "After 1 half-life: 50% remains. After 2 half-lives: 25% remains (75% complete). So the time for 75% completion equals 2 half-lives."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For a zero-order reaction with initial concentration [A]₀ = 0.1 M and k = 2 × 10⁻³ mol L⁻¹ s⁻¹, the half-life is:",
+      "options": [
+        {"id": "A", "text": "25 s"},
+        {"id": "B", "text": "50 s"},
+        {"id": "C", "text": "100 s"},
+        {"id": "D", "text": "346.5 s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For zero-order: t₁/₂ = [A]₀/(2k) = 0.1/(2 × 2 × 10⁻³) = 0.1/0.004 = 25 s.",
+      "explanation_incorrect": "The half-life of a zero-order reaction depends on the initial concentration: t₁/₂ = [A]₀/(2k). Substituting: 0.1/(2 × 0.002) = 0.1/0.004 = 25 s."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A first-order reaction is 50% complete in 20 minutes. The time required for 99.9% completion is approximately:",
+      "options": [
+        {"id": "A", "text": "100 min"},
+        {"id": "B", "text": "150 min"},
+        {"id": "C", "text": "200 min"},
+        {"id": "D", "text": "300 min"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "k = 0.693/t₁/₂ = 0.693/20 min⁻¹. For 99.9% completion, [A] = 0.001[A]₀. t = (2.303/k)log(1000) = (2.303 × 20/0.693) × 3 = (2.303/0.693) × 60 = 3.32 × 60 ≈ 200 min. Also, 99.9% complete means 10 half-lives (2¹⁰ ≈ 1000), so t ≈ 10 × 20 = 200 min.",
+      "explanation_incorrect": "With t₁/₂ = 20 min, 99.9% completion requires [A]₀/[A] = 1000. Since 2¹⁰ = 1024 ≈ 1000, approximately 10 half-lives are needed: 10 × 20 = 200 min."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The half-life of a zero-order reaction is proportional to:",
+      "options": [
+        {"id": "A", "text": "The initial concentration [A]₀"},
+        {"id": "B", "text": "The square of [A]₀"},
+        {"id": "C", "text": "1/[A]₀"},
+        {"id": "D", "text": "It is independent of [A]₀"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a zero-order reaction, t₁/₂ = [A]₀/(2k). The half-life is directly proportional to the initial concentration. If the initial concentration doubles, the half-life also doubles.",
+      "explanation_incorrect": "The half-life being independent of [A]₀ is a feature of first-order reactions. For zero-order, t₁/₂ = [A]₀/(2k), showing direct proportionality to [A]₀."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "For a first-order reaction with k = 2.303 × 10⁻² s⁻¹, the time required for the concentration to decrease from 0.1 M to 0.01 M is:",
+      "options": [
+        {"id": "A", "text": "50 s"},
+        {"id": "B", "text": "100 s"},
+        {"id": "C", "text": "200 s"},
+        {"id": "D", "text": "1000 s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "t = (2.303/k)log([A]₀/[A]) = (2.303/2.303 × 10⁻²)log(0.1/0.01) = (1/10⁻²) × log(10) = 100 × 1 = 100 s.",
+      "explanation_incorrect": "Substituting into the first-order equation: t = (2.303/0.02303) × log(10) = 100 × 1 = 100 seconds."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "A distinctive feature of a first-order reaction is that its half-life:",
+      "options": [
+        {"id": "A", "text": "Increases with increasing initial concentration"},
+        {"id": "B", "text": "Decreases with increasing initial concentration"},
+        {"id": "C", "text": "Is independent of initial concentration"},
+        {"id": "D", "text": "Is inversely proportional to the square of initial concentration"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a first-order reaction, t₁/₂ = 0.693/k. The half-life depends only on the rate constant and not on the initial concentration. This is a unique characteristic of first-order kinetics.",
+      "explanation_incorrect": "Half-life increasing with [A]₀ is characteristic of zero-order. Half-life decreasing with [A]₀ is characteristic of second-order. First-order is unique in having t₁/₂ independent of [A]₀."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The Arrhenius equation is:",
+      "options": [
+        {"id": "A", "text": "k = Ae^(Ea/RT)"},
+        {"id": "B", "text": "k = Ae^(−Ea/RT)"},
+        {"id": "C", "text": "k = A + Ea/RT"},
+        {"id": "D", "text": "k = A − Ea/RT"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Arrhenius equation is k = Ae^(−Ea/RT), where A is the pre-exponential factor (frequency factor), Ea is the activation energy, R is the gas constant, and T is the absolute temperature. The negative sign indicates that k increases as temperature increases.",
+      "explanation_incorrect": "Without the negative sign (k = Ae^(Ea/RT)), k would decrease with increasing temperature, which contradicts experimental observations. The correct form has a negative exponent: k = Ae^(−Ea/RT)."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Activation energy (Ea) is defined as:",
+      "options": [
+        {"id": "A", "text": "The energy released during the reaction"},
+        {"id": "B", "text": "The minimum energy that reactant molecules must possess for an effective collision"},
+        {"id": "C", "text": "The energy of the products"},
+        {"id": "D", "text": "The total energy of the system"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Activation energy is the minimum extra energy that reactant molecules must have over and above their average energy for a collision to result in a chemical reaction. It represents the energy barrier between reactants and products.",
+      "explanation_incorrect": "Activation energy is the energy barrier, not the energy released (which is the enthalpy of reaction) or the total energy. It is the threshold energy required for effective collisions."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A catalyst increases the rate of a reaction by:",
+      "options": [
+        {"id": "A", "text": "Increasing the activation energy"},
+        {"id": "B", "text": "Decreasing the activation energy by providing an alternative pathway"},
+        {"id": "C", "text": "Changing the equilibrium constant"},
+        {"id": "D", "text": "Increasing the temperature"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A catalyst provides an alternative reaction pathway with a lower activation energy. This increases the fraction of molecules with sufficient energy to react, thereby increasing the rate. The catalyst is not consumed and does not change the equilibrium position.",
+      "explanation_incorrect": "A catalyst lowers the activation energy, not increases it. It does not change the equilibrium constant (it speeds up both forward and reverse reactions equally). It does not change the temperature of the reaction."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "A plot of ln k versus 1/T for a reaction gives a straight line with slope equal to:",
+      "options": [
+        {"id": "A", "text": "Ea/R"},
+        {"id": "B", "text": "−Ea/R"},
+        {"id": "C", "text": "Ea/2.303R"},
+        {"id": "D", "text": "−Ea/2.303R"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From ln k = ln A − Ea/(RT), a plot of ln k vs 1/T gives a straight line with slope = −Ea/R and intercept = ln A.",
+      "explanation_incorrect": "The Arrhenius equation in logarithmic form is ln k = ln A − (Ea/R)(1/T). Comparing with y = c + mx, the slope is −Ea/R. If using log k vs 1/T, the slope would be −Ea/2.303R."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "For two different reactions A and B, the activation energies are Ea(A) > Ea(B). If both have the same frequency factor A, then at a given temperature:",
+      "options": [
+        {"id": "A", "text": "Reaction A is faster"},
+        {"id": "B", "text": "Reaction B is faster"},
+        {"id": "C", "text": "Both have the same rate"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From k = Ae^(−Ea/RT), a higher Ea gives a smaller rate constant k. Since Ea(A) > Ea(B) and both have the same A, k(A) < k(B). Therefore, reaction B is faster.",
+      "explanation_incorrect": "The exponential factor e^(−Ea/RT) decreases with increasing Ea. A higher activation energy means fewer molecules have sufficient energy to react, resulting in a slower reaction."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The rate constant of a reaction doubles when the temperature increases from 300 K to 310 K. The approximate activation energy is: (R = 8.314 J mol⁻¹ K⁻¹)",
+      "options": [
+        {"id": "A", "text": "53.6 kJ/mol"},
+        {"id": "B", "text": "26.8 kJ/mol"},
+        {"id": "C", "text": "107.2 kJ/mol"},
+        {"id": "D", "text": "5.36 kJ/mol"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂). log(2) = (Ea/2.303 × 8.314)(1/300 − 1/310). 0.301 = (Ea/19.147)(10/93000). Ea = 0.301 × 19.147 × 9300 = 53,598 J/mol ≈ 53.6 kJ/mol.",
+      "explanation_incorrect": "Using log(k₂/k₁) = (Ea/2.303R)(T₂ − T₁)/(T₁T₂): 0.301 = (Ea/19.147)(10/93000). Solving: Ea ≈ 53.6 kJ/mol."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The rate constants of a reaction at 500 K and 700 K are 0.02 s⁻¹ and 0.07 s⁻¹ respectively. The value of Ea/2.303R is: (using log 3.5 = 0.544)",
+      "options": [
+        {"id": "A", "text": "950 K"},
+        {"id": "B", "text": "1050 K"},
+        {"id": "C", "text": "2000 K"},
+        {"id": "D", "text": "500 K"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂). log(0.07/0.02) = (Ea/2.303R)(1/500 − 1/700). 0.544 = (Ea/2.303R)(200/350000). Ea/2.303R = 0.544 × 350000/200 = 0.544 × 1750 = 952 ≈ 950 K.",
+      "explanation_incorrect": "Substituting: 0.544 = (Ea/2.303R) × (200/350000) = (Ea/2.303R) × 5.714 × 10⁻⁴. Ea/2.303R = 0.544/5.714 × 10⁻⁴ ≈ 952 K ≈ 950 K."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A catalyst in a reversible reaction:",
+      "options": [
+        {"id": "A", "text": "Increases the rate of the forward reaction only"},
+        {"id": "B", "text": "Increases the rate of the backward reaction only"},
+        {"id": "C", "text": "Increases the rate of both forward and backward reactions equally"},
+        {"id": "D", "text": "Shifts the equilibrium towards products"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A catalyst lowers the activation energy for both the forward and backward reactions by the same amount. It therefore increases the rate of both reactions equally and does not shift the equilibrium position.",
+      "explanation_incorrect": "A catalyst cannot selectively speed up one direction of a reversible reaction. It provides an alternative pathway that lowers the activation energy for both directions equally, reaching equilibrium faster without shifting it."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "question_text": "The pre-exponential factor (A) in the Arrhenius equation represents:",
+      "options": [
+        {"id": "A", "text": "The activation energy"},
+        {"id": "B", "text": "The rate constant at infinite temperature"},
+        {"id": "C", "text": "The equilibrium constant"},
+        {"id": "D", "text": "The enthalpy of reaction"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "As T → ∞, e^(−Ea/RT) → 1, so k → A. The pre-exponential factor represents the rate constant at infinitely high temperature when every collision has sufficient energy. It is related to the frequency of collisions and proper orientation.",
+      "explanation_incorrect": "A is not the activation energy (that is Ea), equilibrium constant, or enthalpy. It represents the frequency factor — essentially the rate constant when all collisions are effective (at infinite temperature)."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "If the activation energy of a reaction is zero, then the rate constant:",
+      "options": [
+        {"id": "A", "text": "Is zero"},
+        {"id": "B", "text": "Increases with temperature"},
+        {"id": "C", "text": "Is independent of temperature and equals A"},
+        {"id": "D", "text": "Decreases with temperature"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If Ea = 0, then k = Ae^(0/RT) = Ae⁰ = A. The rate constant equals the frequency factor and is independent of temperature. This means every collision with proper orientation leads to reaction.",
+      "explanation_incorrect": "With Ea = 0, the exponential term becomes e⁰ = 1, so k = A regardless of temperature. The rate constant is not zero and does not vary with temperature."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Molecularity of a reaction is:",
+      "options": [
+        {"id": "A", "text": "The sum of powers in the rate law"},
+        {"id": "B", "text": "The number of reacting species taking part in an elementary reaction"},
+        {"id": "C", "text": "Always determined experimentally"},
+        {"id": "D", "text": "Can be fractional"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Molecularity is defined as the number of reacting species (atoms, ions, or molecules) that collide simultaneously in an elementary reaction step. It is a theoretical concept and is always a whole number.",
+      "explanation_incorrect": "The sum of powers in the rate law gives the order (not molecularity). Molecularity is a theoretical concept deduced from the mechanism. It is always a whole number (1, 2, or rarely 3), never fractional."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "A reaction involving one reacting species in the elementary step is called:",
+      "options": [
+        {"id": "A", "text": "Bimolecular"},
+        {"id": "B", "text": "Unimolecular"},
+        {"id": "C", "text": "Termolecular"},
+        {"id": "D", "text": "Zero molecular"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A unimolecular reaction involves a single reacting species in the elementary step. Examples include radioactive decay and decomposition reactions like N₂O₅ → NO₂ + NO₃.",
+      "explanation_incorrect": "Bimolecular involves 2 species, termolecular involves 3 species. A reaction with 1 reacting species in an elementary step is called unimolecular. There is no such thing as zero molecular."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Which of the following statements about molecularity is CORRECT?",
+      "options": [
+        {"id": "A", "text": "It can be zero"},
+        {"id": "B", "text": "It can be fractional"},
+        {"id": "C", "text": "It is always a positive whole number"},
+        {"id": "D", "text": "It can be negative"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Molecularity is the number of molecules (or atoms or ions) participating in an elementary reaction. Since you cannot have a fraction of a molecule colliding, it must be a positive whole number — 1 (unimolecular), 2 (bimolecular), or 3 (termolecular).",
+      "explanation_incorrect": "Molecularity cannot be zero (at least one species must react), fractional, or negative. It is always 1, 2, or 3 for elementary reactions."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "According to collision theory, the rate of a reaction depends on:",
+      "options": [
+        {"id": "A", "text": "Total number of collisions only"},
+        {"id": "B", "text": "Frequency of effective collisions (with proper energy and orientation)"},
+        {"id": "C", "text": "Temperature only"},
+        {"id": "D", "text": "Concentration only"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to collision theory, not all collisions lead to reaction. Only collisions with energy equal to or greater than the activation energy (Ea) and with the proper orientation of molecules (steric factor P) result in product formation. These are called effective collisions.",
+      "explanation_incorrect": "The total number of collisions is very high, but only a small fraction are effective. Both sufficient energy and proper orientation are required. Temperature and concentration affect the collision frequency but are not the sole determinants."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The difference between order and molecularity is:",
+      "options": [
+        {"id": "A", "text": "Order is experimental, molecularity is theoretical; both can be fractional"},
+        {"id": "B", "text": "Order is theoretical, molecularity is experimental"},
+        {"id": "C", "text": "Order is experimental and can be fractional; molecularity is theoretical and always a whole number"},
+        {"id": "D", "text": "There is no difference between order and molecularity"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Order is determined experimentally from the rate law and can be zero, fractional, or integral. Molecularity is a theoretical concept defined for elementary reactions only and is always a positive whole number (1, 2, or 3).",
+      "explanation_incorrect": "Order and molecularity are fundamentally different concepts. Order is experimental and applies to overall reactions; molecularity is theoretical and applies only to elementary steps."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The rate-determining step (slowest step) of a multi-step reaction determines the:",
+      "options": [
+        {"id": "A", "text": "Equilibrium constant of the reaction"},
+        {"id": "B", "text": "Rate law of the overall reaction"},
+        {"id": "C", "text": "Products of the reaction"},
+        {"id": "D", "text": "Activation energy of the fastest step"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a multi-step reaction, the slowest step is the rate-determining step (RDS). The rate law of the overall reaction is determined by the rate law of this slowest step, as it acts as the bottleneck for the entire process.",
+      "explanation_incorrect": "The RDS determines the kinetics (rate law) of the overall reaction, not the equilibrium constant or products. The overall rate cannot exceed the rate of the slowest elementary step."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "Termolecular reactions are rare because:",
+      "options": [
+        {"id": "A", "text": "They have very high activation energy"},
+        {"id": "B", "text": "The simultaneous collision of three molecules with proper orientation and energy is highly improbable"},
+        {"id": "C", "text": "They always have fractional order"},
+        {"id": "D", "text": "They cannot occur in the gas phase"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Termolecular reactions require the simultaneous collision of three molecules with both sufficient energy and the correct orientation. The probability of such a three-body collision is extremely low, making termolecular elementary reactions very rare.",
+      "explanation_incorrect": "Termolecular reactions are rare due to the low probability of three-body collisions, not because of high activation energy or fractional order. They can occur in the gas phase but are extremely uncommon."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "question_text": "The steric factor (P) in the collision theory accounts for:",
+      "options": [
+        {"id": "A", "text": "The total number of collisions"},
+        {"id": "B", "text": "The fraction of collisions with the proper orientation"},
+        {"id": "C", "text": "The activation energy"},
+        {"id": "D", "text": "The temperature of the reaction"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The steric factor P (also called the probability factor or orientation factor) accounts for the fact that not all collisions with sufficient energy lead to reaction. Only those collisions where the molecules are oriented correctly will be effective. P is usually less than 1.",
+      "explanation_incorrect": "The total number of collisions is given by the collision frequency Z. The activation energy factor is e^(−Ea/RT). The steric factor P specifically accounts for the requirement of proper molecular orientation."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "For the reaction: 2NO + O₂ → 2NO₂, if the elementary step is 2NO + O₂ → 2NO₂ (single step), the molecularity and order would be:",
+      "options": [
+        {"id": "A", "text": "Molecularity = 3, Order = 3"},
+        {"id": "B", "text": "Molecularity = 2, Order = 3"},
+        {"id": "C", "text": "Molecularity = 3, Order = 2"},
+        {"id": "D", "text": "Molecularity = 2, Order = 2"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "If this is a single elementary step, then 2 molecules of NO and 1 molecule of O₂ collide simultaneously, giving molecularity = 3 (termolecular). For an elementary reaction, order equals molecularity, so the rate law would be Rate = k[NO]²[O₂], and order = 2 + 1 = 3.",
+      "explanation_incorrect": "In an elementary reaction, the stoichiometric coefficients directly give the order. With 2 NO molecules and 1 O₂ molecule, both molecularity and order are 3. However, in reality this reaction likely occurs through a multi-step mechanism."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "In collision theory, the rate constant k is given by:",
+      "options": [
+        {"id": "A", "text": "k = Ze^(−Ea/RT)"},
+        {"id": "B", "text": "k = PZe^(−Ea/RT)"},
+        {"id": "C", "text": "k = Ae^(Ea/RT)"},
+        {"id": "D", "text": "k = PZ/e^(Ea/RT)"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In collision theory, k = PZe^(−Ea/RT), where P is the steric (orientation) factor, Z is the collision frequency, and e^(−Ea/RT) is the fraction of molecules with energy ≥ Ea. Both proper orientation AND sufficient energy are needed.",
+      "explanation_incorrect": "Without P, the equation overestimates the rate because it does not account for proper orientation. The complete expression includes all three factors: collision frequency (Z), energy factor (e^(−Ea/RT)), and orientation factor (P)."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "question_text": "For a reaction A → B, the rate can be expressed as −d[A]/dt or d[B]/dt. These two expressions are equal when:",
+      "options": [
+        {"id": "A", "text": "The stoichiometric coefficients of A and B are equal"},
+        {"id": "B", "text": "The reaction is first order"},
+        {"id": "C", "text": "The reaction is at equilibrium"},
+        {"id": "D", "text": "Always, regardless of conditions"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For the reaction A → B, the stoichiometric coefficient of both A and B is 1. Therefore, −d[A]/dt = d[B]/dt. In general, for aA → bB, −(1/a)d[A]/dt = (1/b)d[B]/dt.",
+      "explanation_incorrect": "The equality −d[A]/dt = d[B]/dt holds because the coefficients are both 1. If the reaction were 2A → B, then −d[A]/dt = 2(d[B]/dt), and the expressions would not be equal."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "The integrated rate equation for a zero-order reaction is:",
+      "options": [
+        {"id": "A", "text": "[A] = [A]₀ − kt"},
+        {"id": "B", "text": "log[A] = log[A]₀ − kt/2.303"},
+        {"id": "C", "text": "1/[A] = 1/[A]₀ + kt"},
+        {"id": "D", "text": "[A] = [A]₀e^(−kt)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a zero-order reaction, −d[A]/dt = k. Integrating: [A] = [A]₀ − kt. The concentration decreases linearly with time until the reactant is completely consumed.",
+      "explanation_incorrect": "The logarithmic equation is for first-order, the reciprocal equation is for second-order, and the exponential equation is an alternative form of first-order. Zero-order gives a simple linear decrease: [A] = [A]₀ − kt."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "For a pseudo first-order reaction, an example is:",
+      "options": [
+        {"id": "A", "text": "Decomposition of N₂O₅"},
+        {"id": "B", "text": "Acid hydrolysis of an ester in the presence of excess water"},
+        {"id": "C", "text": "Reaction between H₂ and I₂"},
+        {"id": "D", "text": "Decomposition of H₂O₂"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In acid hydrolysis of an ester (e.g., CH₃COOC₂H₅ + H₂O → CH₃COOH + C₂H₅OH), water is present in large excess and its concentration remains essentially constant. The rate becomes Rate = k'[ester], which is pseudo first-order.",
+      "explanation_incorrect": "Decomposition of N₂O₅ is genuinely first order. H₂ + I₂ is second order. Ester hydrolysis in excess water is the classic example of a pseudo first-order reaction, where the concentration of water is effectively constant."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "As the temperature increases, the rate of a reaction generally increases because:",
+      "options": [
+        {"id": "A", "text": "The activation energy decreases"},
+        {"id": "B", "text": "The fraction of molecules with energy ≥ Ea increases"},
+        {"id": "C", "text": "The equilibrium shifts to the right"},
+        {"id": "D", "text": "New products are formed"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to the Arrhenius equation and the Maxwell-Boltzmann distribution, increasing temperature shifts the energy distribution to higher values. A larger fraction of molecules then possess energy equal to or greater than Ea, leading to more effective collisions and a faster rate.",
+      "explanation_incorrect": "The activation energy itself does not change with temperature (it is a characteristic of the reaction). Temperature does not change equilibrium position in a kinetic context. The key effect is the increased fraction of molecules with sufficient energy."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "The time required for 87.5% completion of a first-order reaction is:",
+      "options": [
+        {"id": "A", "text": "t₁/₂"},
+        {"id": "B", "text": "2 × t₁/₂"},
+        {"id": "C", "text": "3 × t₁/₂"},
+        {"id": "D", "text": "4 × t₁/₂"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "After 87.5% completion, 12.5% remains = 1/8 of the initial amount. Since (1/2)³ = 1/8, this corresponds to 3 half-lives. Alternatively: t = (2.303/k)log(8) = (2.303/k)(3 × log 2) = 3 × 0.693/k = 3 × t₁/₂.",
+      "explanation_incorrect": "After 1 half-life: 50% remains. After 2 half-lives: 25% remains. After 3 half-lives: 12.5% remains (87.5% complete). So 3 half-lives are needed."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "For a complex reaction occurring in two steps:\nStep 1: A + B → C (slow)\nStep 2: C + B → D (fast)\nThe rate law is:",
+      "options": [
+        {"id": "A", "text": "Rate = k[A][B]²"},
+        {"id": "B", "text": "Rate = k[C][B]"},
+        {"id": "C", "text": "Rate = k[A][B]"},
+        {"id": "D", "text": "Rate = k[D]"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The rate-determining step (slowest step) determines the rate law. Step 1 (A + B → C) is the slow step, so the rate law is Rate = k[A][B]. The fast step does not affect the overall rate.",
+      "explanation_incorrect": "The rate law is determined by the slowest step in the mechanism. Since Step 1 is slow and involves A and B, the rate = k[A][B]. C is an intermediate and should not appear in the rate law. The products of the fast step are irrelevant to the rate law."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "The rate constant of a reaction at 27°C is 3 × 10⁻³ s⁻¹ and at 127°C is 9 × 10⁻³ s⁻¹. The activation energy is: (R = 8.314 J/mol/K, log 3 = 0.477)",
+      "options": [
+        {"id": "A", "text": "10.8 kJ/mol"},
+        {"id": "B", "text": "21.6 kJ/mol"},
+        {"id": "C", "text": "43.2 kJ/mol"},
+        {"id": "D", "text": "108 kJ/mol"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "T₁ = 300 K, T₂ = 400 K. log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂). log(9/3) = (Ea/2.303 × 8.314)(1/300 − 1/400). 0.477 = (Ea/19.147)(100/120000). Ea = 0.477 × 19.147 × 1200 = 10,960 J/mol ≈ 10.8 kJ/mol.",
+      "explanation_incorrect": "log(3) = (Ea/19.147)(1/300 − 1/400) = (Ea/19.147)(100/120000). Solving: Ea = 0.477 × 19.147 × 1200 ≈ 10,960 J ≈ 10.8 kJ/mol."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The unit of rate constant for a zero-order reaction is:",
+      "options": [
+        {"id": "A", "text": "s⁻¹"},
+        {"id": "B", "text": "mol L⁻¹ s⁻¹"},
+        {"id": "C", "text": "L mol⁻¹ s⁻¹"},
+        {"id": "D", "text": "mol⁻² L² s⁻¹"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For zero-order: Rate = k. Since rate has units of mol L⁻¹ s⁻¹, k also has units of mol L⁻¹ s⁻¹.",
+      "explanation_incorrect": "s⁻¹ is for first-order, L mol⁻¹ s⁻¹ is for second-order. For zero-order, k has the same units as the rate: mol L⁻¹ s⁻¹."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "type": "mcq",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The molecularity of the elementary reaction 2SO₂ + O₂ → 2SO₃ (if it occurred in one step) would be:",
+      "options": [
+        {"id": "A", "text": "1"},
+        {"id": "B", "text": "2"},
+        {"id": "C", "text": "3"},
+        {"id": "D", "text": "4"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "If the reaction occurred in a single elementary step, 2 molecules of SO₂ and 1 molecule of O₂ would need to collide simultaneously. Molecularity = 2 + 1 = 3 (termolecular). In practice, such a reaction would proceed through multiple steps.",
+      "explanation_incorrect": "Molecularity counts the total number of reactant molecules in an elementary step: 2 (SO₂) + 1 (O₂) = 3. However, termolecular reactions are rare, so this reaction likely occurs through a multi-step mechanism."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "question_text": "For a second-order reaction A → Products, the plot of 1/[A] vs time gives:",
+      "options": [
+        {"id": "A", "text": "A curve"},
+        {"id": "B", "text": "A straight line with positive slope = k"},
+        {"id": "C", "text": "A straight line with negative slope"},
+        {"id": "D", "text": "A horizontal line"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a second-order reaction: 1/[A] = 1/[A]₀ + kt. This is a linear equation in the form y = c + mx, where y = 1/[A], c = 1/[A]₀, and m = k (positive slope). Plotting 1/[A] vs t gives a straight line with slope = k.",
+      "explanation_incorrect": "The integrated second-order equation 1/[A] = 1/[A]₀ + kt is linear in t. The slope is positive (+k) because 1/[A] increases as [A] decreases over time."
+    }
+  ]
+}

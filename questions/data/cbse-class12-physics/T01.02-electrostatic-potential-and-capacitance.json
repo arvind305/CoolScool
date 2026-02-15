@@ -1,0 +1,784 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Physics"
+  },
+  "topic_id": "T01.02",
+  "topic_name": "Electrostatic Potential and Capacitance",
+  "canonical_explanation": {
+    "text": "Electrostatic potential at a point is defined as the work done per unit positive test charge in bringing it from infinity to that point. For a point charge q, the potential is V = kq/r and is a scalar quantity. The potential due to a dipole varies as 1/r^2 and depends on the angle from the dipole axis. Equipotential surfaces are surfaces where the potential is constant; the electric field is always perpendicular to them and no work is done in moving a charge along an equipotential surface. The potential energy of a system of charges is U = kq1q2/r for two charges, and for multiple charges, it is the sum of all pair interactions. Capacitance C = Q/V measures a conductor's ability to store charge; for a parallel plate capacitor C = epsilon_0 A/d. Capacitors combine as 1/C_eq = sum(1/Ci) in series and C_eq = sum(Ci) in parallel. Energy stored in a capacitor is U = 1/2 CV^2 = 1/2 QV = Q^2/2C. Inserting a dielectric of constant K increases capacitance to C' = KC. The Van de Graaff generator uses the principle of electrostatic induction and the property that charge resides on the outer surface of a conductor to build up very high voltages.",
+    "rules": [
+      "Electric potential due to a point charge: V = kq/r = q/(4*pi*epsilon_0*r)",
+      "Potential is a scalar quantity; potentials due to multiple charges add algebraically",
+      "Equipotential surfaces are perpendicular to electric field lines; no work is done moving a charge along them",
+      "Potential energy of two-charge system: U = kq1q2/r; for a system of charges, sum all pair interactions",
+      "Capacitance of parallel plate capacitor: C = epsilon_0 A/d",
+      "Series combination: 1/C_eq = 1/C1 + 1/C2 + ...; Parallel combination: C_eq = C1 + C2 + ...",
+      "Energy stored in capacitor: U = 1/2 CV^2 = 1/2 QV = Q^2/(2C)",
+      "Effect of dielectric: capacitance increases by factor K, so C' = KC"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T01.02.Q001",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of electric potential is:",
+      "options": [
+        { "id": "A", "text": "Coulomb" },
+        { "id": "B", "text": "Volt" },
+        { "id": "C", "text": "Farad" },
+        { "id": "D", "text": "Joule" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The SI unit of electric potential is the Volt (V). It is defined as the potential difference when 1 joule of work is done in moving 1 coulomb of charge, so 1 V = 1 J/C.",
+      "explanation_incorrect": "Coulomb is the unit of charge, Farad is the unit of capacitance, and Joule is the unit of energy. The SI unit of electric potential is Volt (V), which equals joule per coulomb."
+    },
+    {
+      "question_id": "T01.02.Q002",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Electric potential is a:",
+      "options": [
+        { "id": "A", "text": "Vector quantity" },
+        { "id": "B", "text": "Scalar quantity" },
+        { "id": "C", "text": "Tensor quantity" },
+        { "id": "D", "text": "Dimensionless quantity" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Electric potential is a scalar quantity. It has magnitude but no direction. The potential at a point due to several charges is found by algebraic addition (not vector addition) of the individual potentials.",
+      "explanation_incorrect": "Electric potential is not a vector; it does not have a direction associated with it. Unlike electric field, which is a vector, potential is a scalar quantity. Potentials from multiple charges are added algebraically, not by vector addition."
+    },
+    {
+      "question_id": "T01.02.Q003",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The electric potential at a distance r from a point charge q is given by:",
+      "options": [
+        { "id": "A", "text": "V = kq/r^2" },
+        { "id": "B", "text": "V = kq/r" },
+        { "id": "C", "text": "V = kq^2/r" },
+        { "id": "D", "text": "V = kr/q" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The electric potential at distance r from a point charge q is V = kq/r, where k = 1/(4*pi*epsilon_0) = 9 x 10^9 N m^2 C^-2. The potential follows an inverse first-power law with distance, unlike the electric field which follows an inverse-square law.",
+      "explanation_incorrect": "V = kq/r^2 represents the magnitude of the electric field, not the potential. V = kq/r is the correct expression for the potential at distance r from a point charge. The potential varies inversely as the first power of distance, not the square."
+    },
+    {
+      "question_id": "T01.02.Q004",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The work done in moving a charge along an equipotential surface is:",
+      "options": [
+        { "id": "A", "text": "Positive" },
+        { "id": "B", "text": "Negative" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Depends on the path taken" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The work done in moving a charge along an equipotential surface is zero. Since all points on an equipotential surface are at the same potential, the potential difference is zero, and W = q(V_A - V_B) = q x 0 = 0.",
+      "explanation_incorrect": "The work done is zero, not positive or negative. On an equipotential surface, every point has the same potential, so the potential difference between any two points is zero. Since work W = q * delta_V, and delta_V = 0, the work done is zero regardless of the path."
+    },
+    {
+      "question_id": "T01.02.Q005",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "Equipotential surfaces for a uniform electric field are:",
+      "options": [
+        { "id": "A", "text": "Concentric spheres" },
+        { "id": "B", "text": "Planes perpendicular to the field direction" },
+        { "id": "C", "text": "Planes parallel to the field direction" },
+        { "id": "D", "text": "Concentric cylinders" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a uniform electric field, the equipotential surfaces are planes perpendicular to the field direction. Since the electric field is always normal to an equipotential surface and a uniform field has constant direction, the equipotential surfaces must be equally spaced parallel planes perpendicular to E.",
+      "explanation_incorrect": "Concentric spheres are equipotential surfaces for a point charge, not a uniform field. For a uniform electric field, which has the same magnitude and direction everywhere, the equipotential surfaces are parallel planes perpendicular to the field direction."
+    },
+    {
+      "question_id": "T01.02.Q006",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The electric potential at any point on the equatorial line of an electric dipole is:",
+      "options": [
+        { "id": "A", "text": "Maximum" },
+        { "id": "B", "text": "Minimum" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Equal to kp/r^2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The electric potential at any point on the equatorial line (perpendicular bisector) of an electric dipole is zero. This is because the equatorial plane is equidistant from the positive and negative charges, and their potentials (+kq/r and -kq/r) cancel each other out exactly.",
+      "explanation_incorrect": "The potential on the equatorial line is neither maximum nor minimum nor kp/r^2. At any point on the equatorial line, the distances to the +q and -q charges are equal, so V = kq/r + k(-q)/r = 0. The entire equatorial plane is an equipotential surface at V = 0."
+    },
+    {
+      "question_id": "T01.02.Q007",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The relationship between electric field E and electric potential V is:",
+      "options": [
+        { "id": "A", "text": "E = dV/dr" },
+        { "id": "B", "text": "E = -dV/dr" },
+        { "id": "C", "text": "E = V/r" },
+        { "id": "D", "text": "E = -V/r^2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The electric field is the negative gradient of the electric potential: E = -dV/dr. The negative sign indicates that the electric field points in the direction of decreasing potential. This relation connects the vector field E with the scalar potential V.",
+      "explanation_incorrect": "The correct relation is E = -dV/dr, not E = dV/dr. The negative sign is essential because the electric field points from high potential to low potential, i.e., in the direction of decreasing potential. The other options do not correctly represent this fundamental relationship."
+    },
+    {
+      "question_id": "T01.02.Q008",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The electric potential at a point due to two charges of +4 uC and -4 uC placed 20 cm apart, at the midpoint of the line joining them, is:",
+      "options": [
+        { "id": "A", "text": "3.6 x 10^5 V" },
+        { "id": "B", "text": "0 V" },
+        { "id": "C", "text": "7.2 x 10^5 V" },
+        { "id": "D", "text": "-3.6 x 10^5 V" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At the midpoint, the distance from each charge is 10 cm = 0.1 m. The potential due to the +4 uC charge is V1 = kq/r = 9 x 10^9 x 4 x 10^-6 / 0.1 = 3.6 x 10^5 V. The potential due to the -4 uC charge is V2 = -3.6 x 10^5 V. Since potential is scalar, V_total = V1 + V2 = 0 V.",
+      "explanation_incorrect": "Since potential is a scalar quantity, we add the potentials algebraically. At the midpoint, the magnitudes of the potentials from +4 uC and -4 uC are equal but opposite in sign, giving V_total = 0 V. The potential does not add as vectors."
+    },
+    {
+      "question_id": "T01.02.Q009",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The electric potential at a distance of 0.5 m from a point charge of 2 uC is:",
+      "options": [
+        { "id": "A", "text": "3.6 x 10^4 V" },
+        { "id": "B", "text": "7.2 x 10^4 V" },
+        { "id": "C", "text": "1.8 x 10^4 V" },
+        { "id": "D", "text": "9.0 x 10^3 V" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using V = kq/r, we get V = (9 x 10^9)(2 x 10^-6) / 0.5 = 18 x 10^3 / 0.5 = 3.6 x 10^4 V. So the electric potential at 0.5 m from a 2 uC charge is 3.6 x 10^4 V.",
+      "explanation_incorrect": "The correct calculation is V = kq/r = (9 x 10^9 x 2 x 10^-6) / 0.5 = 36000 V = 3.6 x 10^4 V. Note that potential uses the inverse first-power of distance (1/r), not the inverse square (1/r^2)."
+    },
+    {
+      "question_id": "T01.02.Q010",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "The potential at a point on the axial line of a short dipole at a large distance r from the centre is proportional to:",
+      "options": [
+        { "id": "A", "text": "1/r" },
+        { "id": "B", "text": "1/r^2" },
+        { "id": "C", "text": "1/r^3" },
+        { "id": "D", "text": "r" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a short electric dipole, the potential at a point on the axial line at a large distance r from the centre is V = kp cos(theta)/r^2. On the axial line theta = 0, so V = kp/r^2. Thus the potential is proportional to 1/r^2.",
+      "explanation_incorrect": "The potential due to a point charge varies as 1/r, but the potential due to a dipole varies as 1/r^2. This is because the dipole consists of two equal and opposite charges, and their potentials partially cancel. The dipole potential formula is V = kp cos(theta)/r^2."
+    },
+    {
+      "question_id": "T01.02.Q011",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "application",
+      "question_text": "Two equipotential surfaces can never intersect because:",
+      "options": [
+        { "id": "A", "text": "They have different charge densities" },
+        { "id": "B", "text": "The electric field would have two directions at the point of intersection" },
+        { "id": "C", "text": "They are always spherical" },
+        { "id": "D", "text": "The potential would become infinite at the intersection" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If two equipotential surfaces intersected, then at the point of intersection the electric field (which is perpendicular to the equipotential surface) would have to point in two different directions simultaneously, which is physically impossible. Hence, two equipotential surfaces can never intersect.",
+      "explanation_incorrect": "The reason two equipotential surfaces cannot intersect is not related to charge densities, shape, or potential becoming infinite. It is because the electric field must be perpendicular to the equipotential surface at every point; at an intersection, this would require two different directions for E at the same point, which is impossible."
+    },
+    {
+      "question_id": "T01.02.Q012",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The electrostatic potential energy of a system of two point charges q1 and q2 separated by distance r is:",
+      "options": [
+        { "id": "A", "text": "U = kq1q2/r^2" },
+        { "id": "B", "text": "U = kq1q2/r" },
+        { "id": "C", "text": "U = k(q1 + q2)/r" },
+        { "id": "D", "text": "U = kq1q2 r" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The electrostatic potential energy of a system of two point charges is U = kq1q2/r. This represents the work done in assembling the configuration by bringing the charges from infinity to their positions. The sign of U depends on the signs of the charges.",
+      "explanation_incorrect": "The correct formula is U = kq1q2/r, not U = kq1q2/r^2 (which would be the force, not energy). Potential energy uses the inverse first power of distance. It can be positive (like charges) or negative (unlike charges), indicating whether the system is bound or unbound."
+    },
+    {
+      "question_id": "T01.02.Q013",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "familiarity",
+      "question_text": "The potential energy of a system of two like charges brought close together is:",
+      "options": [
+        { "id": "A", "text": "Positive" },
+        { "id": "B", "text": "Negative" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "Infinite" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The potential energy of a system of two like charges (both positive or both negative) is positive. This is because U = kq1q2/r, and when both charges have the same sign, the product q1q2 is positive, making U positive. Positive potential energy means work must be done against the repulsive force to bring the charges together.",
+      "explanation_incorrect": "The potential energy is positive for like charges because U = kq1q2/r, and the product of two charges of the same sign is positive. A positive potential energy indicates that external work was needed to assemble the configuration against the repulsive Coulomb force."
+    },
+    {
+      "question_id": "T01.02.Q014",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "Three equal charges of 2 uC each are placed at the vertices of an equilateral triangle of side 10 cm. The potential energy of the system is:",
+      "options": [
+        { "id": "A", "text": "0.54 J" },
+        { "id": "B", "text": "1.08 J" },
+        { "id": "C", "text": "0.36 J" },
+        { "id": "D", "text": "1.62 J" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For three charges at the vertices of an equilateral triangle, there are three pairs. U = 3 x kq^2/r = 3 x (9 x 10^9)(2 x 10^-6)^2 / 0.1 = 3 x 9 x 10^9 x 4 x 10^-12 / 0.1 = 3 x 0.36 = 1.08 J.",
+      "explanation_incorrect": "The system has three pairs of charges (1-2, 2-3, 1-3), each at the same distance. The total potential energy is U = 3 x kq^2/r = 3 x (9 x 10^9 x 4 x 10^-12)/0.1 = 1.08 J. Remember to count all pairs in a system of charges."
+    },
+    {
+      "question_id": "T01.02.Q015",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "A charge of 5 uC is placed in a uniform electric field of 2 x 10^3 N/C. The potential energy of the charge at a point where the potential is 100 V is:",
+      "options": [
+        { "id": "A", "text": "5 x 10^-4 J" },
+        { "id": "B", "text": "5 x 10^-3 J" },
+        { "id": "C", "text": "5 x 10^-2 J" },
+        { "id": "D", "text": "5 x 10^-1 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The potential energy of a charge q at a point where the potential is V is U = qV. So U = 5 x 10^-6 x 100 = 5 x 10^-4 J. The electric field value is extra information not needed for this calculation.",
+      "explanation_incorrect": "The potential energy of a charge in an external potential is simply U = qV = 5 x 10^-6 C x 100 V = 5 x 10^-4 J. The electric field value given is a distractor; the potential energy depends only on the charge and the potential at that point."
+    },
+    {
+      "question_id": "T01.02.Q016",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "An electric dipole of moment p is placed in a uniform electric field E. The work done in rotating the dipole from an angle theta_1 to theta_2 with respect to the field is:",
+      "options": [
+        { "id": "A", "text": "pE(cos theta_1 - cos theta_2)" },
+        { "id": "B", "text": "pE(cos theta_2 - cos theta_1)" },
+        { "id": "C", "text": "pE(sin theta_2 - sin theta_1)" },
+        { "id": "D", "text": "pE(theta_2 - theta_1)" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The potential energy of a dipole in a uniform field is U = -pE cos(theta). The work done in rotating from theta_1 to theta_2 is W = U(theta_2) - U(theta_1) = -pE cos(theta_2) - (-pE cos(theta_1)) = pE(cos theta_1 - cos theta_2).",
+      "explanation_incorrect": "The work done equals the change in potential energy: W = U_final - U_initial. With U = -pE cos(theta), we get W = -pE cos(theta_2) + pE cos(theta_1) = pE(cos theta_1 - cos theta_2). The sign matters and comes from the definition U = -p.E."
+    },
+    {
+      "question_id": "T01.02.Q017",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of capacitance is:",
+      "options": [
+        { "id": "A", "text": "Coulomb" },
+        { "id": "B", "text": "Volt" },
+        { "id": "C", "text": "Farad" },
+        { "id": "D", "text": "Henry" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The SI unit of capacitance is the Farad (F), named after Michael Faraday. One Farad is defined as the capacitance of a capacitor that stores one coulomb of charge when one volt is applied across it: 1 F = 1 C/V.",
+      "explanation_incorrect": "The SI unit of capacitance is Farad (F), not Coulomb (unit of charge), Volt (unit of potential), or Henry (unit of inductance). A Farad equals one coulomb per volt (1 F = 1 C/V)."
+    },
+    {
+      "question_id": "T01.02.Q018",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The capacitance of a parallel plate capacitor with plate area A and separation d is:",
+      "options": [
+        { "id": "A", "text": "C = epsilon_0 A d" },
+        { "id": "B", "text": "C = epsilon_0 A / d" },
+        { "id": "C", "text": "C = epsilon_0 d / A" },
+        { "id": "D", "text": "C = epsilon_0 / (A d)" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The capacitance of a parallel plate capacitor is C = epsilon_0 A/d, where epsilon_0 is the permittivity of free space, A is the area of each plate, and d is the separation between the plates. Capacitance increases with plate area and decreases with plate separation.",
+      "explanation_incorrect": "The correct formula is C = epsilon_0 A/d. Capacitance is directly proportional to the plate area A (larger plates store more charge) and inversely proportional to the separation d (closer plates create a stronger field for the same voltage)."
+    },
+    {
+      "question_id": "T01.02.Q019",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "Capacitance depends on:",
+      "options": [
+        { "id": "A", "text": "The charge on the plates" },
+        { "id": "B", "text": "The potential difference between the plates" },
+        { "id": "C", "text": "The geometry of the capacitor and the dielectric medium" },
+        { "id": "D", "text": "Both charge and potential difference" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Capacitance is a property of the capacitor itself and depends only on its geometry (shape, size, separation of conductors) and the dielectric medium between the plates. It does not depend on the charge or voltage, which only determine how much energy is stored.",
+      "explanation_incorrect": "Although C = Q/V, capacitance is not determined by Q or V individually. It is an intrinsic property of the capacitor that depends on the geometry (plate area, separation) and the dielectric material. Changing Q changes V proportionally, keeping C constant."
+    },
+    {
+      "question_id": "T01.02.Q020",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "A parallel plate capacitor has plates of area 100 cm^2 separated by 2 mm. Its capacitance is approximately:",
+      "options": [
+        { "id": "A", "text": "4.43 x 10^-11 F" },
+        { "id": "B", "text": "8.85 x 10^-11 F" },
+        { "id": "C", "text": "4.43 x 10^-12 F" },
+        { "id": "D", "text": "8.85 x 10^-12 F" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "C = epsilon_0 A/d = (8.85 x 10^-12)(100 x 10^-4)/(2 x 10^-3) = (8.85 x 10^-12)(10^-2)/(2 x 10^-3) = (8.85 x 10^-14)/(2 x 10^-3) = 4.425 x 10^-11 F, approximately 4.43 x 10^-11 F.",
+      "explanation_incorrect": "Using C = epsilon_0 A/d: convert A = 100 cm^2 = 100 x 10^-4 m^2 = 10^-2 m^2 and d = 2 mm = 2 x 10^-3 m. Then C = 8.85 x 10^-12 x 10^-2 / (2 x 10^-3) = 4.43 x 10^-11 F. Be careful with unit conversions."
+    },
+    {
+      "question_id": "T01.02.Q021",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "application",
+      "question_text": "If the distance between the plates of a parallel plate capacitor is doubled, the capacitance:",
+      "options": [
+        { "id": "A", "text": "Doubles" },
+        { "id": "B", "text": "Remains the same" },
+        { "id": "C", "text": "Becomes half" },
+        { "id": "D", "text": "Becomes four times" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since C = epsilon_0 A/d, the capacitance is inversely proportional to the plate separation d. If d is doubled, C becomes epsilon_0 A/(2d) = C/2, so the capacitance is halved.",
+      "explanation_incorrect": "The capacitance of a parallel plate capacitor is C = epsilon_0 A/d. Since C is inversely proportional to d, doubling d halves C. It does not double or remain the same."
+    },
+    {
+      "question_id": "T01.02.Q022",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "When capacitors are connected in series, the equivalent capacitance is:",
+      "options": [
+        { "id": "A", "text": "Greater than the largest individual capacitance" },
+        { "id": "B", "text": "Equal to the sum of individual capacitances" },
+        { "id": "C", "text": "Less than the smallest individual capacitance" },
+        { "id": "D", "text": "Equal to the product of individual capacitances" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When capacitors are connected in series, 1/C_eq = 1/C1 + 1/C2 + ... This always gives an equivalent capacitance less than the smallest individual capacitance. This is analogous to resistors in parallel, where the equivalent resistance is less than the smallest resistance.",
+      "explanation_incorrect": "In a series combination, the equivalent capacitance is always less than the smallest individual capacitance. The formula is 1/C_eq = 1/C1 + 1/C2 + ..., which yields a value smaller than any individual capacitance. The sum of reciprocals is always greater than any single reciprocal."
+    },
+    {
+      "question_id": "T01.02.Q023",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "familiarity",
+      "question_text": "The energy stored in a charged capacitor is given by:",
+      "options": [
+        { "id": "A", "text": "U = CV^2" },
+        { "id": "B", "text": "U = 1/2 CV^2" },
+        { "id": "C", "text": "U = 2CV^2" },
+        { "id": "D", "text": "U = CV" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The energy stored in a capacitor is U = 1/2 CV^2. This can also be written as U = 1/2 QV = Q^2/(2C). The factor of 1/2 arises because as the capacitor charges, the voltage increases linearly, so the average voltage during charging is V/2.",
+      "explanation_incorrect": "The correct formula for energy stored in a capacitor is U = 1/2 CV^2, not CV^2 or 2CV^2. The 1/2 factor comes from integrating the work done to charge the capacitor from 0 to Q: W = integral of V dq = integral of (q/C) dq = Q^2/(2C) = 1/2 CV^2."
+    },
+    {
+      "question_id": "T01.02.Q024",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "Two capacitors of 3 uF and 6 uF are connected in series. The equivalent capacitance is:",
+      "options": [
+        { "id": "A", "text": "9 uF" },
+        { "id": "B", "text": "2 uF" },
+        { "id": "C", "text": "4.5 uF" },
+        { "id": "D", "text": "18 uF" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For series combination: 1/C_eq = 1/C1 + 1/C2 = 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2. Therefore C_eq = 2 uF. As expected, this is less than the smaller capacitor (3 uF).",
+      "explanation_incorrect": "In series, 1/C_eq = 1/C1 + 1/C2 = 1/3 + 1/6 = 1/2, giving C_eq = 2 uF. Note that 9 uF would be the result for a parallel combination (C_eq = C1 + C2). In series, the equivalent is always less than the smallest individual capacitance."
+    },
+    {
+      "question_id": "T01.02.Q025",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "Two capacitors of 3 uF and 6 uF are connected in parallel. The equivalent capacitance is:",
+      "options": [
+        { "id": "A", "text": "9 uF" },
+        { "id": "B", "text": "2 uF" },
+        { "id": "C", "text": "4.5 uF" },
+        { "id": "D", "text": "18 uF" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For parallel combination: C_eq = C1 + C2 = 3 + 6 = 9 uF. In parallel, the equivalent capacitance is simply the sum of individual capacitances and is always greater than the largest individual capacitance.",
+      "explanation_incorrect": "In parallel, C_eq = C1 + C2 = 3 + 6 = 9 uF. The answer 2 uF would be obtained for a series combination. In parallel, the capacitances add directly, giving a value greater than any individual capacitance."
+    },
+    {
+      "question_id": "T01.02.Q026",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "A capacitor of 10 uF is charged to 100 V. The energy stored in it is:",
+      "options": [
+        { "id": "A", "text": "0.05 J" },
+        { "id": "B", "text": "0.1 J" },
+        { "id": "C", "text": "0.5 J" },
+        { "id": "D", "text": "1.0 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Energy stored U = 1/2 CV^2 = 1/2 x 10 x 10^-6 x (100)^2 = 1/2 x 10 x 10^-6 x 10^4 = 1/2 x 10^-1 = 0.05 J.",
+      "explanation_incorrect": "Using U = 1/2 CV^2 = 0.5 x 10 x 10^-6 x 10000 = 0.5 x 0.1 = 0.05 J. Remember the factor of 1/2 in the energy formula. Without the 1/2, you would get 0.1 J, which is incorrect."
+    },
+    {
+      "question_id": "T01.02.Q027",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "A dielectric slab of dielectric constant K is inserted between the plates of a parallel plate capacitor. The new capacitance becomes:",
+      "options": [
+        { "id": "A", "text": "C/K" },
+        { "id": "B", "text": "KC" },
+        { "id": "C", "text": "C/K^2" },
+        { "id": "D", "text": "K^2 C" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a dielectric of constant K is fully inserted between the plates, the capacitance increases by a factor of K. The new capacitance C' = KC = K epsilon_0 A/d. This is because the dielectric reduces the effective electric field inside, allowing more charge to be stored at the same voltage.",
+      "explanation_incorrect": "The capacitance increases by a factor K, not decreases. The dielectric reduces the electric field between the plates by polarisation, effectively allowing the capacitor to store more charge for the same voltage. Therefore C' = KC, and K > 1 for all dielectrics."
+    },
+    {
+      "question_id": "T01.02.Q028",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "A parallel plate capacitor of capacitance C is charged to voltage V and then disconnected from the battery. If the plate separation is doubled, the energy stored becomes:",
+      "options": [
+        { "id": "A", "text": "1/2 CV^2" },
+        { "id": "B", "text": "CV^2" },
+        { "id": "C", "text": "1/4 CV^2" },
+        { "id": "D", "text": "2CV^2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When disconnected from the battery, charge Q remains constant. Initial energy = Q^2/(2C). When d is doubled, new capacitance C' = C/2. New energy = Q^2/(2C') = Q^2/(2 x C/2) = Q^2/C. Since initial Q = CV, the new energy = (CV)^2/C = CV^2. This is double the initial energy (1/2 CV^2), and the extra energy comes from the work done in separating the plates.",
+      "explanation_incorrect": "Since the capacitor is disconnected, charge Q is constant. With C' = C/2, the new energy is U' = Q^2/(2C') = Q^2/C = (CV)^2/C = CV^2. The energy doubles from 1/2 CV^2 to CV^2 because work is done against the attractive force between the plates when pulling them apart."
+    },
+    {
+      "question_id": "T01.02.Q029",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A parallel plate capacitor with air between the plates has capacitance C. If a dielectric of constant K = 3 is inserted and simultaneously the plate separation is tripled, the new capacitance is:",
+      "options": [
+        { "id": "A", "text": "C" },
+        { "id": "B", "text": "3C" },
+        { "id": "C", "text": "C/3" },
+        { "id": "D", "text": "9C" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Original capacitance C = epsilon_0 A/d. With dielectric K = 3 and new separation 3d: C' = K epsilon_0 A/(3d) = 3 epsilon_0 A/(3d) = epsilon_0 A/d = C. The effect of the dielectric exactly compensates the increased separation, so the capacitance remains C.",
+      "explanation_incorrect": "C' = K epsilon_0 A/(new d) = 3 x epsilon_0 A/(3d) = epsilon_0 A/d = C. The dielectric increases capacitance by factor 3 while tripling the separation decreases it by factor 3. These two effects cancel, leaving the capacitance unchanged."
+    },
+    {
+      "question_id": "T01.02.Q030",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A capacitor of 4 uF is charged to 200 V and then connected to an uncharged capacitor of 2 uF. The common potential after connection is:",
+      "options": [
+        { "id": "A", "text": "100 V" },
+        { "id": "B", "text": "200 V" },
+        { "id": "C", "text": "400/3 V" },
+        { "id": "D", "text": "200/3 V" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Total charge Q = C1 V1 = 4 x 10^-6 x 200 = 8 x 10^-4 C. When connected, charge is shared. Common potential V = Q/(C1 + C2) = 8 x 10^-4 / (4 + 2) x 10^-6 = 8 x 10^-4 / 6 x 10^-6 = 800/6 = 400/3 V, approximately 133.3 V.",
+      "explanation_incorrect": "By conservation of charge, Q_total = C1 V1 + 0 = 4 x 200 = 800 uC. The common potential V = Q_total/(C1 + C2) = 800/(4 + 2) = 800/6 = 400/3 V. The voltage is not simply halved because the capacitors are unequal."
+    },
+    {
+      "question_id": "T01.02.Q031",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A parallel plate capacitor is connected to a battery. If a dielectric slab of constant K is inserted between the plates while the battery remains connected, the charge on the plates:",
+      "options": [
+        { "id": "A", "text": "Decreases by a factor of K" },
+        { "id": "B", "text": "Remains the same" },
+        { "id": "C", "text": "Increases by a factor of K" },
+        { "id": "D", "text": "Increases by a factor of K^2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When the battery remains connected, the voltage V stays constant. The new capacitance C' = KC. Since Q = CV, the new charge Q' = C'V = KCV = KQ. So the charge increases by a factor of K. The battery supplies the additional charge.",
+      "explanation_incorrect": "With the battery connected, V is constant. Since C' = KC, the new charge Q' = C'V = KCV = KQ. The charge increases by a factor K because the dielectric increases the capacitance and the battery maintains constant voltage, pushing more charge onto the plates."
+    },
+    {
+      "question_id": "T01.02.Q032",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A charged capacitor of capacitance C stores energy U. Another identical uncharged capacitor is connected in parallel with it. The energy stored in the system after connection is:",
+      "options": [
+        { "id": "A", "text": "U" },
+        { "id": "B", "text": "U/2" },
+        { "id": "C", "text": "2U" },
+        { "id": "D", "text": "U/4" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Charge Q is conserved. Initial charge Q = CV, so V = Q/C. After connecting identical capacitors in parallel, C_total = 2C. Common voltage V' = Q/(2C) = V/2. New energy = 1/2 (2C)(V/2)^2 = 1/2 x 2C x V^2/4 = CV^2/4 = (1/2 CV^2)/2 = U/2. Half the energy is lost as heat during charge redistribution.",
+      "explanation_incorrect": "By charge conservation, total charge stays Q. The new equivalent capacitance is 2C. New voltage = Q/(2C) = V/2. New energy = Q^2/(2 x 2C) = Q^2/(4C) = U/2. Energy is lost as heat due to resistance in the connecting wires during transient current flow."
+    },
+    {
+      "question_id": "T01.02.Q033",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The work done in carrying a charge of 5 uC from a point at potential 100 V to a point at potential 50 V is:",
+      "options": [
+        { "id": "A", "text": "-2.5 x 10^-4 J" },
+        { "id": "B", "text": "2.5 x 10^-4 J" },
+        { "id": "C", "text": "-5 x 10^-4 J" },
+        { "id": "D", "text": "5 x 10^-4 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Work done W = q(V_final - V_initial) = 5 x 10^-6 x (50 - 100) = 5 x 10^-6 x (-50) = -2.5 x 10^-4 J. The negative sign indicates the electric field does positive work (the charge moves from higher to lower potential, which is the natural direction for a positive charge).",
+      "explanation_incorrect": "W = q x delta_V = q(V_final - V_initial) = 5 x 10^-6 x (50 - 100) = -2.5 x 10^-4 J. A positive charge naturally moves from high to low potential, so the external agent does negative work (the field does the work). The sign convention is important here."
+    },
+    {
+      "question_id": "T01.02.Q034",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "exam_style",
+      "question_text": "Four equal charges q are placed at the four corners of a square of side a. The potential energy of the system is:",
+      "options": [
+        { "id": "A", "text": "kq^2/a (4 + sqrt(2))" },
+        { "id": "B", "text": "kq^2/a (4 + 1/sqrt(2))" },
+        { "id": "C", "text": "kq^2/a (4 + sqrt(2))/sqrt(2)" },
+        { "id": "D", "text": "4kq^2/a" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "There are C(4,2) = 6 pairs. Four pairs are along the sides (distance a) and two pairs are along the diagonals (distance a*sqrt(2)). U = 4 x kq^2/a + 2 x kq^2/(a*sqrt(2)) = kq^2/a (4 + 2/sqrt(2)) = kq^2/a (4 + sqrt(2)).",
+      "explanation_incorrect": "With 4 charges at corners of a square, there are 6 unique pairs: 4 side pairs at distance a and 2 diagonal pairs at distance a*sqrt(2). Total U = 4(kq^2/a) + 2(kq^2/(a*sqrt(2))) = kq^2/a [4 + 2/sqrt(2)] = kq^2/a [4 + sqrt(2)]."
+    },
+    {
+      "question_id": "T01.02.Q035",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "Three capacitors of capacitance 2 uF, 3 uF, and 6 uF are connected in series. The equivalent capacitance of the combination is:",
+      "options": [
+        { "id": "A", "text": "1 uF" },
+        { "id": "B", "text": "11 uF" },
+        { "id": "C", "text": "0.5 uF" },
+        { "id": "D", "text": "2 uF" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For series combination: 1/C_eq = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1. Therefore C_eq = 1 uF. This is less than the smallest capacitance (2 uF), as expected for series combination.",
+      "explanation_incorrect": "In series: 1/C_eq = 1/C1 + 1/C2 + 1/C3 = 1/2 + 1/3 + 1/6 = (3 + 2 + 1)/6 = 1, so C_eq = 1 uF. The answer 11 uF would be the parallel combination. Remember, series capacitance is always smaller than the smallest individual value."
+    },
+    {
+      "question_id": "T01.02.Q036",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A capacitor is charged to a potential V. The energy stored in the capacitor is E. If the charge on the capacitor is doubled, the energy stored becomes:",
+      "options": [
+        { "id": "A", "text": "E" },
+        { "id": "B", "text": "2E" },
+        { "id": "C", "text": "4E" },
+        { "id": "D", "text": "E/2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Energy U = Q^2/(2C). If charge is doubled to 2Q, new energy U' = (2Q)^2/(2C) = 4Q^2/(2C) = 4U = 4E. The energy is proportional to the square of the charge, so doubling the charge quadruples the energy.",
+      "explanation_incorrect": "Since U = Q^2/(2C), the energy depends on the square of the charge. When Q is doubled, U becomes (2Q)^2/(2C) = 4Q^2/(2C) = 4E. The energy quadruples, not doubles, because of the square dependence on charge."
+    },
+    {
+      "question_id": "T01.02.Q037",
+      "type": "mcq",
+      "concept_id": "T01.02.C05",
+      "difficulty": "familiarity",
+      "question_text": "The Van de Graaff generator is used to:",
+      "options": [
+        { "id": "A", "text": "Generate high alternating current" },
+        { "id": "B", "text": "Build up very high voltages of the order of millions of volts" },
+        { "id": "C", "text": "Store large amounts of charge in a battery" },
+        { "id": "D", "text": "Convert DC to AC" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Van de Graaff generator is an electrostatic generator used to build up very high voltages, of the order of several million volts. It is used in nuclear physics to accelerate charged particles to high energies for experiments involving nuclear reactions.",
+      "explanation_incorrect": "The Van de Graaff generator is not used for generating AC, storing charge in batteries, or converting DC to AC. It is specifically designed to produce extremely high electrostatic potentials (millions of volts) by accumulating charge on a large hollow metal sphere."
+    },
+    {
+      "question_id": "T01.02.Q038",
+      "type": "mcq",
+      "concept_id": "T01.02.C05",
+      "difficulty": "familiarity",
+      "question_text": "In a Van de Graaff generator, the charge is transferred to the outer surface of the large spherical shell because:",
+      "options": [
+        { "id": "A", "text": "The inner surface attracts the charge" },
+        { "id": "B", "text": "Charge always resides on the outer surface of a conductor" },
+        { "id": "C", "text": "The belt is positively charged" },
+        { "id": "D", "text": "Gravity pulls the charge outward" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a conductor in electrostatic equilibrium, all excess charge resides on the outer surface. This is a fundamental property derived from Gauss's law: the electric field inside a conductor is zero, so by Gauss's law the net charge inside any Gaussian surface within the conductor must be zero.",
+      "explanation_incorrect": "The charge moves to the outer surface not because of the belt, gravity, or inner surface attraction, but because of the fundamental electrostatic property that charge on a conductor always resides on its outer surface in equilibrium. This is a consequence of Gauss's law."
+    },
+    {
+      "question_id": "T01.02.Q039",
+      "type": "mcq",
+      "concept_id": "T01.02.C05",
+      "difficulty": "application",
+      "question_text": "The maximum voltage to which a Van de Graaff generator can be charged is limited by:",
+      "options": [
+        { "id": "A", "text": "The speed of the belt" },
+        { "id": "B", "text": "The dielectric breakdown of the surrounding medium" },
+        { "id": "C", "text": "The size of the motor" },
+        { "id": "D", "text": "The resistance of the belt" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The maximum voltage is limited by the dielectric breakdown of the surrounding medium (usually air). When the electric field at the surface of the sphere becomes strong enough to ionise the surrounding gas, charge leaks off. This is why high-voltage generators are sometimes enclosed in pressurised gas.",
+      "explanation_incorrect": "The limiting factor is not the belt speed, motor size, or belt resistance, but the dielectric breakdown of the surrounding medium. When the surface charge density creates an electric field exceeding the breakdown field of air (~3 x 10^6 V/m), the air ionises and charge leaks away."
+    },
+    {
+      "question_id": "T01.02.Q040",
+      "type": "mcq",
+      "concept_id": "T01.02.C01",
+      "difficulty": "exam_style",
+      "question_text": "The electric potential V at a distance r from the centre of a charged conducting sphere of radius R (for r > R) carrying charge Q is:",
+      "options": [
+        { "id": "A", "text": "V = kQ/R" },
+        { "id": "B", "text": "V = kQ/r" },
+        { "id": "C", "text": "V = kQ/r^2" },
+        { "id": "D", "text": "V = kQR/r^2" }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For points outside a charged conducting sphere (r > R), the sphere behaves like a point charge at its centre. Therefore the potential is V = kQ/r, the same as for a point charge. The actual size of the sphere does not matter as long as we are outside it.",
+      "explanation_incorrect": "Outside a charged conducting sphere (r > R), the potential is V = kQ/r, identical to that of a point charge. V = kQ/R gives the potential on the surface of the sphere, not at an arbitrary point outside. The sphere's charge distribution appears as a point charge from outside."
+    },
+    {
+      "question_id": "T01.02.Q041",
+      "type": "mcq",
+      "concept_id": "T01.02.C02",
+      "difficulty": "application",
+      "question_text": "An electric dipole of moment p is placed in a uniform electric field E with the dipole moment perpendicular to the field. The potential energy of the dipole is:",
+      "options": [
+        { "id": "A", "text": "-pE" },
+        { "id": "B", "text": "pE" },
+        { "id": "C", "text": "Zero" },
+        { "id": "D", "text": "-pE/2" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The potential energy of a dipole in a uniform field is U = -pE cos(theta). When the dipole is perpendicular to the field, theta = 90 degrees, so U = -pE cos(90) = -pE x 0 = 0.",
+      "explanation_incorrect": "U = -pE cos(theta). At theta = 90 degrees (perpendicular), cos(90) = 0, so U = 0. The potential energy is zero when the dipole is perpendicular to the field. It is minimum (-pE) when aligned and maximum (+pE) when anti-aligned."
+    },
+    {
+      "question_id": "T01.02.Q042",
+      "type": "mcq",
+      "concept_id": "T01.02.C03",
+      "difficulty": "exam_style",
+      "question_text": "A parallel plate capacitor has a capacitance of 50 pF in air. If half the space between the plates is filled with a dielectric of constant K = 6, the new capacitance is:",
+      "options": [
+        { "id": "A", "text": "150 pF" },
+        { "id": "B", "text": "300 pF" },
+        { "id": "C", "text": "600/7 pF" },
+        { "id": "D", "text": "75 pF" }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When half the space (thickness d/2) is filled with dielectric of constant K, the system acts as two capacitors in series: C1 = epsilon_0 A/(d/2) = 2C and C2 = K epsilon_0 A/(d/2) = 2KC. Using 1/C_eq = 1/C1 + 1/C2 = 1/(2C) + 1/(2KC) = (K + 1)/(2KC), we get C_eq = 2KC/(K + 1) = 2 x 6 x 50/(6 + 1) = 600/7 pF.",
+      "explanation_incorrect": "This is a series combination of two half-capacitors: one with air (C1 = 2C = 100 pF) and one with dielectric (C2 = 2KC = 600 pF). In series: C_eq = C1 C2/(C1 + C2) = 100 x 600/700 = 600/7 pF, approximately 85.7 pF."
+    },
+    {
+      "question_id": "T01.02.Q043",
+      "type": "mcq",
+      "concept_id": "T01.02.C04",
+      "difficulty": "exam_style",
+      "question_text": "A capacitor of 2 uF charged to 200 V is connected in parallel with an uncharged capacitor of 4 uF. The loss of energy in the process is:",
+      "options": [
+        { "id": "A", "text": "2/75 J" },
+        { "id": "B", "text": "0.04 J" },
+        { "id": "C", "text": "0.02 J" },
+        { "id": "D", "text": "1/150 J" }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Initial energy U_i = 1/2 x 2 x 10^-6 x (200)^2 = 0.04 J = 3/75 J. Total charge Q = 2 x 10^-6 x 200 = 4 x 10^-4 C. Common potential V' = Q/(C1 + C2) = 4 x 10^-4 / (6 x 10^-6) = 200/3 V. Final energy U_f = 1/2 x 6 x 10^-6 x (200/3)^2 = 3 x 10^-6 x 40000/9 = 1/75 J. Energy loss = 3/75 - 1/75 = 2/75 J.",
+      "explanation_incorrect": "U_i = 0.04 J = 3/75 J. After sharing, V' = 200/3 V. U_f = 1/2 x 6 x 10^-6 x (200/3)^2 = 1/75 J. Loss = 3/75 - 1/75 = 2/75 J. This energy is dissipated as heat in the connecting wires during the transient current."
+    },
+    {
+      "question_id": "T01.02.Q044",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The electric field is always perpendicular to an equipotential surface.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. The electric field at any point is always perpendicular (normal) to the equipotential surface passing through that point. If the field had a component along the surface, it would do work on a charge moving along the surface, contradicting the fact that no work is done moving along an equipotential.",
+      "explanation_incorrect": "The statement is actually true. The electric field must be perpendicular to the equipotential surface because any tangential component of the field along the surface would imply a potential difference along the surface, contradicting the definition of an equipotential surface."
+    },
+    {
+      "question_id": "T01.02.Q045",
+      "type": "true_false",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The electric potential inside a charged conductor is zero.",
+      "correct_answer": false,
+      "explanation_correct": "This is false. The electric potential inside a charged conductor is constant (equal to the potential on its surface), but it is not zero unless the conductor is uncharged or at zero potential. The electric field inside a conductor in electrostatic equilibrium is zero, but the potential is constant and non-zero in general.",
+      "explanation_incorrect": "The statement is false. A common misconception confuses electric field with electric potential. Inside a conductor, the electric field is zero, but the potential is constant and equal to the surface potential, which is generally not zero for a charged conductor."
+    },
+    {
+      "question_id": "T01.02.Q046",
+      "type": "true_false",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "When capacitors are connected in parallel, the charge on each capacitor is the same.",
+      "correct_answer": false,
+      "explanation_correct": "This is false. When capacitors are connected in parallel, the voltage across each capacitor is the same, but the charge on each depends on its capacitance (Q = CV). Since different capacitors generally have different capacitances, they store different charges. It is in series combination that the charge on each capacitor is the same.",
+      "explanation_incorrect": "The statement is false. In a parallel combination, the voltage is the same across all capacitors, but each capacitor stores charge Q = CV according to its own capacitance. Equal charge on all capacitors occurs in a series combination, not parallel."
+    },
+    {
+      "question_id": "T01.02.Q047",
+      "type": "true_false",
+      "concept_id": "T01.02.C05",
+      "difficulty": "familiarity",
+      "question_text": "The Van de Graaff generator works on the principle that charge resides on the outer surface of a hollow conductor.",
+      "correct_answer": true,
+      "explanation_correct": "This is true. The Van de Graaff generator exploits the property that charge always moves to the outer surface of a hollow conductor. When charge is deposited on the inner surface via a belt, it immediately migrates to the outer surface, allowing more charge to be continuously added and building up very high potentials.",
+      "explanation_incorrect": "The statement is indeed true. The fundamental principle behind the Van de Graaff generator is that any charge placed inside a hollow conductor immediately moves to its outer surface. This allows unlimited accumulation of charge and build-up of very high voltages."
+    },
+    {
+      "question_id": "T01.02.Q048",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C01",
+      "difficulty": "familiarity",
+      "question_text": "The electric potential due to a point charge varies inversely as the ___ of the distance from the charge.",
+      "correct_answer": "first power",
+      "explanation_correct": "The electric potential V = kq/r varies inversely as the first power of the distance r. This is in contrast to the electric field E = kq/r^2, which varies inversely as the square of the distance.",
+      "explanation_incorrect": "The correct answer is 'first power'. The potential V = kq/r depends on 1/r (first power), unlike the electric field which depends on 1/r^2 (square). This distinction between potential and field distance dependence is a key concept."
+    },
+    {
+      "question_id": "T01.02.Q049",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C03",
+      "difficulty": "familiarity",
+      "question_text": "The capacitance of a parallel plate capacitor is C = epsilon_0 A/d. If a dielectric of constant K fills the space, the capacitance becomes C' = ___.",
+      "correct_answer": "K epsilon_0 A/d",
+      "explanation_correct": "When a dielectric of constant K completely fills the space between the plates, the capacitance becomes C' = K epsilon_0 A/d = KC. The dielectric constant K is always greater than 1, so the capacitance always increases with the insertion of a dielectric.",
+      "explanation_incorrect": "The correct answer is K epsilon_0 A/d (or equivalently KC). Inserting a dielectric of constant K multiplies the capacitance by K because the dielectric reduces the effective electric field, allowing more charge storage at the same voltage."
+    },
+    {
+      "question_id": "T01.02.Q050",
+      "type": "fill_blank",
+      "concept_id": "T01.02.C04",
+      "difficulty": "application",
+      "question_text": "The energy stored in a capacitor of capacitance C charged to voltage V is U = ___.",
+      "correct_answer": "1/2 CV^2",
+      "explanation_correct": "The energy stored in a capacitor is U = 1/2 CV^2. This can equivalently be written as U = 1/2 QV or U = Q^2/(2C). The factor of 1/2 arises from the integration of the work done in charging the capacitor, since the voltage builds up linearly as charge is added.",
+      "explanation_incorrect": "The correct expression is U = 1/2 CV^2. The factor of 1/2 is essential and comes from the fact that the average voltage during the charging process is V/2, since voltage increases linearly from 0 to V as charge accumulates."
+    }
+  ]
+}

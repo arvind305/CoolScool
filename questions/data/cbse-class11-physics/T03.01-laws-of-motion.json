@@ -1,0 +1,828 @@
+{
+  "version": "1.0.0",
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Physics"
+  },
+  "topic_id": "T03.01",
+  "topic_name": "Laws of Motion",
+  "canonical_explanation": {
+    "text": "Newton's laws of motion form the foundation of classical mechanics. The first law (law of inertia) states that a body remains at rest or in uniform motion unless acted upon by a net external force. Inertia is the tendency of a body to resist change in its state of motion and is measured by mass. Linear momentum p = mv is a vector quantity. Newton's second law states that the rate of change of momentum equals the net external force: F = dp/dt = ma (for constant mass). The impulse of a force is J = FΔt = Δp (change in momentum). Newton's third law states that for every action there is an equal and opposite reaction; these act on different bodies. The law of conservation of momentum states that in the absence of external forces, total momentum of a system remains constant. This applies to collisions, explosions, and recoil. Friction is the force that opposes relative motion between surfaces. Static friction fs ≤ μsN prevents motion until the applied force exceeds fsmax = μsN. Kinetic friction fk = μkN acts during motion, where μk < μs. Rolling friction is much smaller than sliding friction. For circular motion, the net force toward the center provides centripetal force: F = mv²/r. On a banked road of angle θ, the optimal speed (no friction needed) is v = √(rg tan θ). A conical pendulum of length L and half-angle θ has period T = 2π√(L cos θ/g).",
+    "rules": [
+      "Newton's first law: a body continues in its state unless acted upon by external force.",
+      "Momentum: p = mv; F = dp/dt = ma (for constant mass).",
+      "Impulse: J = FΔt = Δp (change in momentum).",
+      "Newton's third law: F_AB = −F_BA (action-reaction pairs act on different bodies).",
+      "Conservation of momentum: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂ (no external force).",
+      "Static friction: fs ≤ μsN; kinetic friction: fk = μkN; μk < μs.",
+      "Centripetal force: F = mv²/r = mω²r.",
+      "Banking angle: tan θ = v²/(rg) for no friction.",
+      "Conical pendulum: T = 2π√(L cos θ/g).",
+      "Weight = mg; apparent weight in a lift: m(g ± a)."
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "T03.01.Q001",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Newton's first law of motion is also known as the law of:",
+      "options": [
+        {"id": "A", "text": "Acceleration"},
+        {"id": "B", "text": "Action and reaction"},
+        {"id": "C", "text": "Inertia"},
+        {"id": "D", "text": "Conservation of energy"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Newton's first law states that a body resists change in its state of motion, which is the property of inertia.",
+      "explanation_incorrect": "The second law deals with acceleration, and the third law with action-reaction. The first law defines inertia."
+    },
+    {
+      "question_id": "T03.01.Q002",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "Inertia of a body depends on:",
+      "options": [
+        {"id": "A", "text": "Velocity"},
+        {"id": "B", "text": "Acceleration"},
+        {"id": "C", "text": "Mass"},
+        {"id": "D", "text": "Shape"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Inertia is the resistance to change in motion and is directly proportional to the mass of the body.",
+      "explanation_incorrect": "Mass is the measure of inertia. Greater mass means greater inertia, regardless of velocity or shape."
+    },
+    {
+      "question_id": "T03.01.Q003",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The momentum of a body of mass 2 kg moving with velocity 3 m/s is:",
+      "options": [
+        {"id": "A", "text": "6 kg·m/s"},
+        {"id": "B", "text": "1.5 kg·m/s"},
+        {"id": "C", "text": "5 kg·m/s"},
+        {"id": "D", "text": "9 kg·m/s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "p = mv = 2 × 3 = 6 kg·m/s.",
+      "explanation_incorrect": "Momentum = mass × velocity = 2 × 3 = 6 kg·m/s."
+    },
+    {
+      "question_id": "T03.01.Q004",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "A passenger in a bus tends to fall forward when brakes are applied suddenly. This is due to:",
+      "options": [
+        {"id": "A", "text": "Gravitational force"},
+        {"id": "B", "text": "Inertia of motion"},
+        {"id": "C", "text": "Friction"},
+        {"id": "D", "text": "Centripetal force"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When brakes are applied, the bus decelerates but the passenger's body tends to continue moving forward due to inertia of motion.",
+      "explanation_incorrect": "This is a direct consequence of Newton's first law — the body resists change in its state of motion."
+    },
+    {
+      "question_id": "T03.01.Q005",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "Two objects of masses 5 kg and 10 kg have the same momentum. The ratio of their kinetic energies is:",
+      "options": [
+        {"id": "A", "text": "1:2"},
+        {"id": "B", "text": "2:1"},
+        {"id": "C", "text": "1:4"},
+        {"id": "D", "text": "4:1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "KE = p²/(2m). For same momentum: KE₁/KE₂ = m₂/m₁ = 10/5 = 2:1.",
+      "explanation_incorrect": "Since KE = p²/(2m) and p is the same, KE is inversely proportional to mass. Ratio = 10/5 = 2:1."
+    },
+    {
+      "question_id": "T03.01.Q006",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A body of mass m moving with velocity v is brought to rest. The change in momentum is:",
+      "options": [
+        {"id": "A", "text": "mv"},
+        {"id": "B", "text": "−mv"},
+        {"id": "C", "text": "2mv"},
+        {"id": "D", "text": "zero"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Change in momentum = final − initial = 0 − mv = −mv. The negative sign indicates the change is opposite to the initial direction.",
+      "explanation_incorrect": "Δp = p_final − p_initial = 0 − mv = −mv."
+    },
+    {
+      "question_id": "T03.01.Q007",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "If the net force acting on a body is zero, which quantity must be constant?",
+      "options": [
+        {"id": "A", "text": "Velocity"},
+        {"id": "B", "text": "Acceleration"},
+        {"id": "C", "text": "Momentum"},
+        {"id": "D", "text": "Both A and C"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "When F_net = 0, acceleration = 0 (Newton's second law), so velocity is constant, and momentum (p = mv) is also constant.",
+      "explanation_incorrect": "Zero net force means zero acceleration, constant velocity, and constant momentum. Acceleration is zero, not just constant."
+    },
+    {
+      "question_id": "T03.01.Q008",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "familiarity",
+      "question_text": "The SI unit of momentum is:",
+      "options": [
+        {"id": "A", "text": "kg·m/s²"},
+        {"id": "B", "text": "kg·m/s"},
+        {"id": "C", "text": "N·s²"},
+        {"id": "D", "text": "J·s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Momentum = mass × velocity. SI unit = kg × m/s = kg·m/s (also equivalent to N·s).",
+      "explanation_incorrect": "kg·m/s² is the unit of force (Newton). Momentum has units kg·m/s."
+    },
+    {
+      "question_id": "T03.01.Q009",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "application",
+      "question_text": "A ball of mass 0.5 kg moving at 10 m/s hits a wall and bounces back at 8 m/s. The change in momentum is:",
+      "options": [
+        {"id": "A", "text": "1 kg·m/s"},
+        {"id": "B", "text": "−9 kg·m/s"},
+        {"id": "C", "text": "9 kg·m/s"},
+        {"id": "D", "text": "−1 kg·m/s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Taking initial direction as positive: Δp = m(v−u) = 0.5(−8 − 10) = 0.5 × (−18) = −9 kg·m/s.",
+      "explanation_incorrect": "The ball reverses direction: Δp = 0.5 × (−8 − 10) = −9 kg·m/s. The magnitude is 9 kg·m/s."
+    },
+    {
+      "question_id": "T03.01.Q010",
+      "type": "mcq",
+      "concept_id": "T03.01.C01",
+      "difficulty": "exam_style",
+      "question_text": "A rocket works on the principle of:",
+      "options": [
+        {"id": "A", "text": "Newton's first law"},
+        {"id": "B", "text": "Newton's second law only"},
+        {"id": "C", "text": "Conservation of momentum (Newton's third law)"},
+        {"id": "D", "text": "Conservation of energy"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A rocket expels gases backward (action) and moves forward (reaction), based on Newton's third law and conservation of momentum.",
+      "explanation_incorrect": "Rocket propulsion is a direct application of Newton's third law and momentum conservation."
+    },
+    {
+      "question_id": "T03.01.Q011",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "Newton's second law of motion states that F equals:",
+      "options": [
+        {"id": "A", "text": "mv"},
+        {"id": "B", "text": "ma"},
+        {"id": "C", "text": "mv²"},
+        {"id": "D", "text": "m/a"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Newton's second law: F = ma (force equals mass times acceleration), or more generally F = dp/dt.",
+      "explanation_incorrect": "F = ma for constant mass. mv is momentum, mv² has dimensions of energy × 2."
+    },
+    {
+      "question_id": "T03.01.Q012",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "A force of 10 N acts on a body of mass 2 kg. The acceleration produced is:",
+      "options": [
+        {"id": "A", "text": "20 m/s²"},
+        {"id": "B", "text": "5 m/s²"},
+        {"id": "C", "text": "0.2 m/s²"},
+        {"id": "D", "text": "12 m/s²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "a = F/m = 10/2 = 5 m/s².",
+      "explanation_incorrect": "From F = ma: a = F/m = 10/2 = 5 m/s²."
+    },
+    {
+      "question_id": "T03.01.Q013",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "The impulse experienced by a body is equal to:",
+      "options": [
+        {"id": "A", "text": "Change in kinetic energy"},
+        {"id": "B", "text": "Change in momentum"},
+        {"id": "C", "text": "Force × distance"},
+        {"id": "D", "text": "Force × velocity"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Impulse J = FΔt = Δp (change in momentum). This is the impulse-momentum theorem.",
+      "explanation_incorrect": "Impulse = FΔt = change in momentum. Force × distance = work, not impulse."
+    },
+    {
+      "question_id": "T03.01.Q014",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "A cricket ball of mass 150 g moving at 20 m/s is caught by a player in 0.1 s. The average force exerted on the player's hands is:",
+      "options": [
+        {"id": "A", "text": "30 N"},
+        {"id": "B", "text": "3 N"},
+        {"id": "C", "text": "300 N"},
+        {"id": "D", "text": "3000 N"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "F = Δp/Δt = (0.15 × 20)/0.1 = 3/0.1 = 30 N.",
+      "explanation_incorrect": "Impulse = change in momentum = 0.15 × 20 = 3 kg·m/s. F = 3/0.1 = 30 N."
+    },
+    {
+      "question_id": "T03.01.Q015",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "A person of mass 60 kg stands on a weighing scale in a lift accelerating upward at 2 m/s². The reading on the scale is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "480 N"},
+        {"id": "B", "text": "600 N"},
+        {"id": "C", "text": "720 N"},
+        {"id": "D", "text": "120 N"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Apparent weight = m(g + a) = 60(10 + 2) = 720 N.",
+      "explanation_incorrect": "When lift accelerates upward, apparent weight increases: N = m(g + a) = 60 × 12 = 720 N."
+    },
+    {
+      "question_id": "T03.01.Q016",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A body of mass 5 kg is acted upon by two perpendicular forces of 3 N and 4 N. The acceleration is:",
+      "options": [
+        {"id": "A", "text": "1.4 m/s²"},
+        {"id": "B", "text": "1 m/s²"},
+        {"id": "C", "text": "0.2 m/s²"},
+        {"id": "D", "text": "7 m/s²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Resultant force = √(3² + 4²) = 5 N. a = F/m = 5/5 = 1 m/s².",
+      "explanation_incorrect": "Net force = √(9 + 16) = 5 N. Acceleration = 5/5 = 1 m/s²."
+    },
+    {
+      "question_id": "T03.01.Q017",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A force acts on a 2 kg body for 4 s, changing its velocity from 3 m/s to 7 m/s. The force is:",
+      "options": [
+        {"id": "A", "text": "8 N"},
+        {"id": "B", "text": "4 N"},
+        {"id": "C", "text": "2 N"},
+        {"id": "D", "text": "1 N"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "F = m × (v−u)/t = 2 × (7−3)/4 = 2 × 1 = 2 N.",
+      "explanation_incorrect": "F = ma = m(Δv/Δt) = 2 × 4/4 = 2 N."
+    },
+    {
+      "question_id": "T03.01.Q018",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "exam_style",
+      "question_text": "A bullet of mass 20 g travelling at 300 m/s penetrates a wooden block and comes to rest in 0.01 s. The resistive force is:",
+      "options": [
+        {"id": "A", "text": "600 N"},
+        {"id": "B", "text": "6000 N"},
+        {"id": "C", "text": "60 N"},
+        {"id": "D", "text": "60000 N"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "F = Δp/Δt = (0.02 × 300)/0.01 = 6/0.01 = 600 N.",
+      "explanation_incorrect": "F = mΔv/Δt = 0.02 × 300/0.01 = 600 N."
+    },
+    {
+      "question_id": "T03.01.Q019",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "familiarity",
+      "question_text": "One newton is the force that produces an acceleration of 1 m/s² in a body of mass:",
+      "options": [
+        {"id": "A", "text": "1 g"},
+        {"id": "B", "text": "1 kg"},
+        {"id": "C", "text": "100 g"},
+        {"id": "D", "text": "10 kg"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By definition, 1 N = 1 kg × 1 m/s². It is the force that gives 1 kg mass an acceleration of 1 m/s².",
+      "explanation_incorrect": "The newton is defined as the force needed to accelerate 1 kg by 1 m/s²."
+    },
+    {
+      "question_id": "T03.01.Q020",
+      "type": "mcq",
+      "concept_id": "T03.01.C02",
+      "difficulty": "application",
+      "question_text": "A person in a lift of mass 50 kg feels weightless. The lift is:",
+      "options": [
+        {"id": "A", "text": "Moving upward with uniform velocity"},
+        {"id": "B", "text": "Moving downward with uniform velocity"},
+        {"id": "C", "text": "In free fall (accelerating downward at g)"},
+        {"id": "D", "text": "At rest"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Apparent weight = m(g − a). When a = g (free fall), apparent weight = 0, producing weightlessness.",
+      "explanation_incorrect": "Weightlessness occurs when the lift is in free fall: a = g, so N = m(g − g) = 0."
+    },
+    {
+      "question_id": "T03.01.Q021",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "According to Newton's third law, action and reaction forces:",
+      "options": [
+        {"id": "A", "text": "Act on the same body"},
+        {"id": "B", "text": "Act on different bodies"},
+        {"id": "C", "text": "Need not be equal"},
+        {"id": "D", "text": "Act in the same direction"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Action and reaction are equal and opposite but act on different bodies, so they do not cancel each other.",
+      "explanation_incorrect": "The key point is that action-reaction pairs act on different bodies, not on the same body."
+    },
+    {
+      "question_id": "T03.01.Q022",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "The law of conservation of momentum is applicable when:",
+      "options": [
+        {"id": "A", "text": "Internal forces are zero"},
+        {"id": "B", "text": "External forces are zero"},
+        {"id": "C", "text": "Both internal and external forces are zero"},
+        {"id": "D", "text": "Friction is present"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Conservation of momentum holds when no net external force acts on the system. Internal forces cancel out (Newton's third law).",
+      "explanation_incorrect": "Internal forces always cancel in pairs. Momentum is conserved when the net external force on the system is zero."
+    },
+    {
+      "question_id": "T03.01.Q023",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "A gun of mass 4 kg fires a bullet of mass 50 g at 400 m/s. The recoil velocity of the gun is:",
+      "options": [
+        {"id": "A", "text": "5 m/s"},
+        {"id": "B", "text": "10 m/s"},
+        {"id": "C", "text": "20 m/s"},
+        {"id": "D", "text": "50 m/s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By conservation of momentum: 0 = 0.05 × 400 + 4 × v. v = −20/4 = −5 m/s. Speed = 5 m/s.",
+      "explanation_incorrect": "m_bullet × v_bullet = m_gun × v_gun. v_gun = 0.05 × 400/4 = 5 m/s (opposite to bullet)."
+    },
+    {
+      "question_id": "T03.01.Q024",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "Two bodies of masses 3 kg and 2 kg moving in the same direction at 5 m/s and 2 m/s respectively collide and stick together. Their common velocity after collision is:",
+      "options": [
+        {"id": "A", "text": "3.8 m/s"},
+        {"id": "B", "text": "3.5 m/s"},
+        {"id": "C", "text": "4 m/s"},
+        {"id": "D", "text": "7 m/s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By conservation of momentum: (3×5 + 2×2) = (3+2)v. 19 = 5v. v = 3.8 m/s.",
+      "explanation_incorrect": "m₁u₁ + m₂u₂ = (m₁+m₂)v → 15 + 4 = 5v → v = 19/5 = 3.8 m/s."
+    },
+    {
+      "question_id": "T03.01.Q025",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A man of mass 60 kg jumps from a boat of mass 120 kg with a velocity of 3 m/s. The velocity with which the boat moves back is:",
+      "options": [
+        {"id": "A", "text": "1 m/s"},
+        {"id": "B", "text": "1.5 m/s"},
+        {"id": "C", "text": "2 m/s"},
+        {"id": "D", "text": "3 m/s"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "0 = 60 × 3 + 120 × v. v = −180/120 = −1.5 m/s. The boat moves at 1.5 m/s in the opposite direction.",
+      "explanation_incorrect": "By momentum conservation: m_man × v_man = m_boat × v_boat. v_boat = 60 × 3/120 = 1.5 m/s."
+    },
+    {
+      "question_id": "T03.01.Q026",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A body at rest explodes into two pieces of masses m and 2m. The ratio of their kinetic energies is:",
+      "options": [
+        {"id": "A", "text": "1:2"},
+        {"id": "B", "text": "2:1"},
+        {"id": "C", "text": "1:1"},
+        {"id": "D", "text": "4:1"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By conservation of momentum: mv₁ = 2mv₂, so v₁ = 2v₂. KE₁/KE₂ = (½mv₁²)/(½ × 2m × v₂²) = (m × 4v₂²)/(2m × v₂²) = 2:1.",
+      "explanation_incorrect": "Since momenta are equal in magnitude, KE = p²/(2m). KE₁/KE₂ = m₂/m₁ = 2m/m = 2:1."
+    },
+    {
+      "question_id": "T03.01.Q027",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "application",
+      "question_text": "When you walk forward, the force that actually moves you forward is:",
+      "options": [
+        {"id": "A", "text": "The force you push on the ground (backward)"},
+        {"id": "B", "text": "The reaction force of the ground pushing you forward"},
+        {"id": "C", "text": "Gravitational force"},
+        {"id": "D", "text": "Air resistance"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "You push the ground backward (action). The ground pushes you forward (reaction). It is this reaction force that propels you forward.",
+      "explanation_incorrect": "By Newton's third law, the ground exerts a forward friction force on your foot as a reaction to your backward push."
+    },
+    {
+      "question_id": "T03.01.Q028",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "exam_style",
+      "question_text": "A ball of mass 0.1 kg strikes a wall at 5 m/s and rebounds at 4 m/s. If the contact time is 0.02 s, the force exerted on the wall is:",
+      "options": [
+        {"id": "A", "text": "5 N"},
+        {"id": "B", "text": "45 N"},
+        {"id": "C", "text": "0.5 N"},
+        {"id": "D", "text": "90 N"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Δp = m(v − u) = 0.1(4 − (−5)) = 0.1 × 9 = 0.9 kg·m/s. F = 0.9/0.02 = 45 N.",
+      "explanation_incorrect": "Taking rebound as positive: Δp = 0.1(4+5) = 0.9 N·s. F = 0.9/0.02 = 45 N."
+    },
+    {
+      "question_id": "T03.01.Q029",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "Newton's third law implies that forces always occur in:",
+      "options": [
+        {"id": "A", "text": "Triplets"},
+        {"id": "B", "text": "Pairs"},
+        {"id": "C", "text": "Groups of four"},
+        {"id": "D", "text": "Isolation"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Newton's third law states that forces always occur in action-reaction pairs of equal magnitude and opposite direction.",
+      "explanation_incorrect": "Every force has a corresponding reaction force — forces always come in pairs."
+    },
+    {
+      "question_id": "T03.01.Q030",
+      "type": "mcq",
+      "concept_id": "T03.01.C03",
+      "difficulty": "familiarity",
+      "question_text": "A horse pulls a cart. The horse moves forward because:",
+      "options": [
+        {"id": "A", "text": "The horse pushes the ground backward and the ground pushes the horse forward"},
+        {"id": "B", "text": "The cart pushes the horse forward"},
+        {"id": "C", "text": "The horse's pull is greater than the cart's pull"},
+        {"id": "D", "text": "Action and reaction are unequal"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The horse pushes the ground backward with its feet. By Newton's third law, the ground pushes the horse forward. This forward friction force exceeds the backward pull of the cart.",
+      "explanation_incorrect": "The action-reaction between horse and cart are equal and opposite. The horse moves because of friction from the ground."
+    },
+    {
+      "question_id": "T03.01.Q031",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Static friction is always:",
+      "options": [
+        {"id": "A", "text": "Equal to μsN"},
+        {"id": "B", "text": "Greater than kinetic friction"},
+        {"id": "C", "text": "Less than or equal to μsN"},
+        {"id": "D", "text": "Independent of the normal force"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Static friction is a self-adjusting force: fs ≤ μsN. It equals the applied force until the maximum value μsN is reached.",
+      "explanation_incorrect": "Static friction adjusts itself to balance the applied force, up to the maximum limit of μsN."
+    },
+    {
+      "question_id": "T03.01.Q032",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "The coefficient of kinetic friction is generally:",
+      "options": [
+        {"id": "A", "text": "Greater than the coefficient of static friction"},
+        {"id": "B", "text": "Less than the coefficient of static friction"},
+        {"id": "C", "text": "Equal to the coefficient of static friction"},
+        {"id": "D", "text": "Zero"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "μk < μs because less force is needed to maintain sliding motion than to initiate it.",
+      "explanation_incorrect": "It's harder to start sliding than to keep sliding, hence μk < μs."
+    },
+    {
+      "question_id": "T03.01.Q033",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "A block of mass 10 kg rests on a surface with μs = 0.4. The minimum force required to just start moving it is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "4 N"},
+        {"id": "B", "text": "40 N"},
+        {"id": "C", "text": "100 N"},
+        {"id": "D", "text": "25 N"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F = μsN = μsmg = 0.4 × 10 × 10 = 40 N.",
+      "explanation_incorrect": "Maximum static friction = μs × mg = 0.4 × 100 = 40 N."
+    },
+    {
+      "question_id": "T03.01.Q034",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "A body slides on a rough horizontal surface. The coefficient of kinetic friction is 0.3. The deceleration of the body is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "0.3 m/s²"},
+        {"id": "B", "text": "3 m/s²"},
+        {"id": "C", "text": "30 m/s²"},
+        {"id": "D", "text": "0.03 m/s²"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Friction force = μkN = μkmg. Deceleration = μkg = 0.3 × 10 = 3 m/s².",
+      "explanation_incorrect": "a = fk/m = μkmg/m = μkg = 0.3 × 10 = 3 m/s²."
+    },
+    {
+      "question_id": "T03.01.Q035",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "application",
+      "question_text": "A block rests on an inclined plane at angle θ. The minimum angle at which the block begins to slide is related to μs by:",
+      "options": [
+        {"id": "A", "text": "sin θ = μs"},
+        {"id": "B", "text": "cos θ = μs"},
+        {"id": "C", "text": "tan θ = μs"},
+        {"id": "D", "text": "θ = μs"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At the point of sliding: mg sin θ = μs mg cos θ, giving tan θ = μs. This angle is called the angle of repose.",
+      "explanation_incorrect": "The angle of repose satisfies tan θ = μs, where the component of gravity along the plane equals maximum static friction."
+    },
+    {
+      "question_id": "T03.01.Q036",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A 5 kg block is on a horizontal surface with μk = 0.2. A horizontal force of 20 N is applied. The acceleration is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "2 m/s²"},
+        {"id": "B", "text": "4 m/s²"},
+        {"id": "C", "text": "6 m/s²"},
+        {"id": "D", "text": "1 m/s²"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Friction = μkmg = 0.2 × 5 × 10 = 10 N. Net force = 20 − 10 = 10 N. a = 10/5 = 2 m/s².",
+      "explanation_incorrect": "Net force = applied force − friction = 20 − 10 = 10 N. a = 10/5 = 2 m/s²."
+    },
+    {
+      "question_id": "T03.01.Q037",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "Friction depends on:",
+      "options": [
+        {"id": "A", "text": "Area of contact"},
+        {"id": "B", "text": "Nature of surfaces and normal force"},
+        {"id": "C", "text": "Velocity of the body"},
+        {"id": "D", "text": "Shape of the body"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Friction depends on the nature of the two surfaces (μ) and the normal force (N): f = μN. It is largely independent of the area of contact.",
+      "explanation_incorrect": "Laws of friction state that friction depends on normal reaction and nature of surfaces, not on contact area."
+    },
+    {
+      "question_id": "T03.01.Q038",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "familiarity",
+      "question_text": "Rolling friction is generally:",
+      "options": [
+        {"id": "A", "text": "Greater than sliding friction"},
+        {"id": "B", "text": "Equal to sliding friction"},
+        {"id": "C", "text": "Much less than sliding friction"},
+        {"id": "D", "text": "Zero"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Rolling friction is much smaller than sliding (kinetic) friction, which is why wheels are used for transport.",
+      "explanation_incorrect": "Rolling friction << kinetic friction << static friction (in terms of coefficients)."
+    },
+    {
+      "question_id": "T03.01.Q039",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "A block of mass 2 kg is pushed against a vertical wall by a horizontal force of 40 N. If μs = 0.5, the friction force acting on the block is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "20 N"},
+        {"id": "B", "text": "40 N"},
+        {"id": "C", "text": "10 N"},
+        {"id": "D", "text": "0 N"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Normal force = 40 N (horizontal push). Max static friction = μsN = 0.5 × 40 = 20 N. Weight = 20 N. Since weight (20 N) ≤ max friction (20 N), the block doesn't slide. Friction = weight = 20 N upward.",
+      "explanation_incorrect": "The block's weight is mg = 20 N downward. Friction supports this weight: f = 20 N (just at the limit since μsN = 20 N)."
+    },
+    {
+      "question_id": "T03.01.Q040",
+      "type": "mcq",
+      "concept_id": "T03.01.C04",
+      "difficulty": "exam_style",
+      "question_text": "The angle of friction is defined as:",
+      "options": [
+        {"id": "A", "text": "tan⁻¹(μ)"},
+        {"id": "B", "text": "sin⁻¹(μ)"},
+        {"id": "C", "text": "cos⁻¹(μ)"},
+        {"id": "D", "text": "μ/g"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The angle of friction λ is the angle that the resultant of friction force and normal force makes with the normal: tan λ = f/N = μ, so λ = tan⁻¹(μ).",
+      "explanation_incorrect": "Angle of friction = tan⁻¹(μ). At this angle, the resultant contact force is inclined to the normal."
+    },
+    {
+      "question_id": "T03.01.Q041",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "The centripetal force required for uniform circular motion is:",
+      "options": [
+        {"id": "A", "text": "mv/r"},
+        {"id": "B", "text": "mv²/r"},
+        {"id": "C", "text": "mr/v²"},
+        {"id": "D", "text": "mvr"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Centripetal force = mv²/r = mω²r, directed toward the center of the circle.",
+      "explanation_incorrect": "F = ma_c = m × v²/r = mv²/r."
+    },
+    {
+      "question_id": "T03.01.Q042",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "Centripetal force is directed:",
+      "options": [
+        {"id": "A", "text": "Along the velocity"},
+        {"id": "B", "text": "Opposite to velocity"},
+        {"id": "C", "text": "Toward the center of the circle"},
+        {"id": "D", "text": "Away from the center"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Centripetal (center-seeking) force always points radially inward toward the center of the circular path.",
+      "explanation_incorrect": "Centripetal means 'center-seeking'. The force is always directed toward the center."
+    },
+    {
+      "question_id": "T03.01.Q043",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "A car of mass 1000 kg moves on a circular road of radius 50 m at 20 m/s. The centripetal force required is:",
+      "options": [
+        {"id": "A", "text": "4000 N"},
+        {"id": "B", "text": "8000 N"},
+        {"id": "C", "text": "400 N"},
+        {"id": "D", "text": "2000 N"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F = mv²/r = 1000 × 400/50 = 8000 N.",
+      "explanation_incorrect": "F = mv²/r = 1000 × (20)²/50 = 1000 × 8 = 8000 N."
+    },
+    {
+      "question_id": "T03.01.Q044",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "For a car on a banked road of angle θ with no friction, the safe speed is:",
+      "options": [
+        {"id": "A", "text": "√(rg sin θ)"},
+        {"id": "B", "text": "√(rg cos θ)"},
+        {"id": "C", "text": "√(rg tan θ)"},
+        {"id": "D", "text": "√(rg/tan θ)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "On a frictionless banked road: tan θ = v²/(rg), so v = √(rg tan θ).",
+      "explanation_incorrect": "From the force balance on a banked turn: N sin θ = mv²/r and N cos θ = mg. Dividing: tan θ = v²/(rg)."
+    },
+    {
+      "question_id": "T03.01.Q045",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "A stone of mass 0.5 kg tied to a string of length 1 m is whirled in a vertical circle. The minimum speed at the top for the string to remain taut is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "√10 m/s"},
+        {"id": "B", "text": "10 m/s"},
+        {"id": "C", "text": "√5 m/s"},
+        {"id": "D", "text": "5 m/s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At the top, mg = mv²/r (tension = 0 for minimum speed). v = √(gr) = √(10 × 1) = √10 m/s.",
+      "explanation_incorrect": "Minimum speed at top: mg = mv²_min/r → v_min = √(gr) = √10 ≈ 3.16 m/s."
+    },
+    {
+      "question_id": "T03.01.Q046",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A cyclist negotiates a circular turn of radius 100 m at 36 km/h. The angle of inclination with the vertical is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "tan⁻¹(0.1)"},
+        {"id": "B", "text": "tan⁻¹(1)"},
+        {"id": "C", "text": "tan⁻¹(0.5)"},
+        {"id": "D", "text": "tan⁻¹(0.01)"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "36 km/h = 10 m/s. tan θ = v²/(rg) = 100/(100 × 10) = 0.1. θ = tan⁻¹(0.1).",
+      "explanation_incorrect": "tan θ = v²/(rg) = (10)²/(100 × 10) = 100/1000 = 0.1."
+    },
+    {
+      "question_id": "T03.01.Q047",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "A flat curve of radius 50 m on a road has μs = 0.5. The maximum safe speed is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "15.8 m/s"},
+        {"id": "B", "text": "25 m/s"},
+        {"id": "C", "text": "50 m/s"},
+        {"id": "D", "text": "10 m/s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "On a flat curve, friction provides centripetal force: μsmg = mv²/r. v = √(μsrg) = √(0.5 × 50 × 10) = √250 ≈ 15.8 m/s.",
+      "explanation_incorrect": "v_max = √(μsrg) = √(0.5 × 50 × 10) = √250 = 5√10 ≈ 15.8 m/s."
+    },
+    {
+      "question_id": "T03.01.Q048",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "exam_style",
+      "question_text": "The centripetal force for a satellite orbiting Earth is provided by:",
+      "options": [
+        {"id": "A", "text": "The thrust of the satellite engine"},
+        {"id": "B", "text": "Gravitational force of the Earth"},
+        {"id": "C", "text": "Atmospheric drag"},
+        {"id": "D", "text": "The normal reaction"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a satellite in orbit, the gravitational pull of the Earth provides the necessary centripetal force.",
+      "explanation_incorrect": "Satellites don't use engines for orbit. Earth's gravitational force acts as the centripetal force."
+    },
+    {
+      "question_id": "T03.01.Q049",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "familiarity",
+      "question_text": "In a conical pendulum, the string makes angle θ with the vertical. The tension in the string is:",
+      "options": [
+        {"id": "A", "text": "mg"},
+        {"id": "B", "text": "mg cos θ"},
+        {"id": "C", "text": "mg/cos θ"},
+        {"id": "D", "text": "mg sin θ"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Vertical equilibrium: T cos θ = mg, so T = mg/cos θ.",
+      "explanation_incorrect": "The vertical component of tension balances weight: T cos θ = mg → T = mg/cos θ."
+    },
+    {
+      "question_id": "T03.01.Q050",
+      "type": "mcq",
+      "concept_id": "T03.01.C05",
+      "difficulty": "application",
+      "question_text": "A conical pendulum of string length 2 m makes an angle of 60° with the vertical. The period of revolution is (g = 10 m/s²):",
+      "options": [
+        {"id": "A", "text": "2π√(0.1) s"},
+        {"id": "B", "text": "2π√(0.2) s"},
+        {"id": "C", "text": "2π√(1) s"},
+        {"id": "D", "text": "2π√(0.5) s"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "T = 2π√(L cos θ/g) = 2π√(2 × cos 60°/10) = 2π√(2 × 0.5/10) = 2π√(0.1) s.",
+      "explanation_incorrect": "T = 2π√(L cos θ/g) = 2π√(2 × 0.5/10) = 2π√(0.1) ≈ 1.99 s."
+    }
+  ]
+}

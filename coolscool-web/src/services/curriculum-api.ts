@@ -226,7 +226,11 @@ export async function fetchQuestionBankByCurriculumId(
         type: q.type,
         question_text: q.question_text,
         options: q.options,
-        correct_answer: q.correct_answer,
+        // Normalize true_false correct_answer to "A"/"B" at load time
+        // (data has inconsistent formats: "true"/"false"/"True"/"False"/"A"/"B")
+        correct_answer: q.type === 'true_false'
+          ? (['true', 'a'].includes(String(q.correct_answer).toLowerCase().trim()) ? 'A' : 'B')
+          : q.correct_answer,
         ordering_items: q.ordering_items,
         explanation_correct: q.explanation_correct,
         explanation_incorrect: q.explanation_incorrect,

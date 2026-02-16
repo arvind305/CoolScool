@@ -46,7 +46,8 @@ export function SessionHistory({
   maxItems = 10,
   showViewAll = true,
 }: SessionHistoryProps) {
-  const displaySessions = sessions.slice(0, maxItems);
+  const [showAll, setShowAll] = React.useState(false);
+  const displaySessions = showAll ? sessions : sessions.slice(0, maxItems);
 
   if (sessions.length === 0) {
     return (
@@ -74,7 +75,12 @@ export function SessionHistory({
       <div className="session-history-header">
         <h2 className="session-history-title">Recent Sessions</h2>
         {showViewAll && sessions.length > maxItems && (
-          <button className="btn btn-ghost btn-sm">View All</button>
+          <button
+            className="btn btn-ghost btn-sm"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? 'Show Less' : `View All (${sessions.length})`}
+          </button>
         )}
       </div>
       <div className="session-history-list">

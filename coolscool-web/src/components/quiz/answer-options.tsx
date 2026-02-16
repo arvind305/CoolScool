@@ -58,14 +58,22 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
     },
     ref
   ) {
-    // Normalize answer for comparison (handles case differences in true_false, etc.)
+    // Normalize answer for comparison (handles case differences and true_false format variants)
     const normalizeAnswer = useCallback(
       (answer: string | string[] | null | undefined): string => {
         if (answer === null || answer === undefined) return '';
-        if (typeof answer === 'string') return answer.toLowerCase().trim();
+        if (typeof answer === 'string') {
+          const lower = answer.toLowerCase().trim();
+          // For true_false, normalize all variants to canonical "a"/"b"
+          if (type === 'true_false') {
+            if (lower === 'true' || lower === 'a') return 'a';
+            if (lower === 'false' || lower === 'b') return 'b';
+          }
+          return lower;
+        }
         return JSON.stringify(answer).toLowerCase();
       },
-      []
+      [type]
     );
 
     // Determine answer state for an option

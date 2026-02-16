@@ -127,6 +127,17 @@ export function checkFillBlank(userRaw: string, correctRaw: string): boolean {
 }
 
 /**
+ * Normalize a true/false answer to canonical form ("a" or "b").
+ * Handles inconsistent data: "A", "B", "true", "false", "True", "False".
+ */
+export function normalizeTrueFalse(answer: string): string {
+  const lower = answer.toLowerCase().trim();
+  if (lower === 'true' || lower === 'a') return 'a';
+  if (lower === 'false' || lower === 'b') return 'b';
+  return lower;
+}
+
+/**
  * Checks if a user's answer is correct
  */
 export function checkAnswer(
@@ -137,9 +148,13 @@ export function checkAnswer(
 
   switch (question.type) {
     case 'mcq':
-    case 'true_false':
       return (
         String(userAnswer).toLowerCase() === String(correctAnswer).toLowerCase()
+      );
+
+    case 'true_false':
+      return (
+        normalizeTrueFalse(String(userAnswer)) === normalizeTrueFalse(String(correctAnswer))
       );
 
     case 'fill_blank':

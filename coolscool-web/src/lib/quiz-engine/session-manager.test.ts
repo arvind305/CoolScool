@@ -248,7 +248,7 @@ describe('Session Manager', () => {
       expect(checkAnswer('A', question)).toBe(false);
     });
 
-    it('should check true/false answers correctly', () => {
+    it('should check true/false answers with correct_answer="A"', () => {
       const question: EnrichedQuestion = {
         question_id: 'Q001',
         concept_id: 'C01',
@@ -265,6 +265,37 @@ describe('Session Manager', () => {
       expect(checkAnswer('A', question)).toBe(true);
       expect(checkAnswer('a', question)).toBe(true);
       expect(checkAnswer('B', question)).toBe(false);
+    });
+
+    it('should check true/false answers with correct_answer="true" (inconsistent data)', () => {
+      const q = (correct: string): EnrichedQuestion => ({
+        question_id: 'Q001',
+        concept_id: 'C01',
+        difficulty: 'familiarity',
+        type: 'true_false',
+        question_text: 'Test?',
+        correct_answer: correct,
+        eligible: true,
+        is_recommended: true,
+        priority_score: 100,
+        concept_progress: null,
+      });
+
+      // correct_answer="true" — UI sends "A" for True
+      expect(checkAnswer('A', q('true'))).toBe(true);
+      expect(checkAnswer('B', q('true'))).toBe(false);
+
+      // correct_answer="false" — UI sends "B" for False
+      expect(checkAnswer('B', q('false'))).toBe(true);
+      expect(checkAnswer('A', q('false'))).toBe(false);
+
+      // correct_answer="True" (capitalized)
+      expect(checkAnswer('A', q('True'))).toBe(true);
+      expect(checkAnswer('B', q('True'))).toBe(false);
+
+      // correct_answer="False" (capitalized)
+      expect(checkAnswer('B', q('False'))).toBe(true);
+      expect(checkAnswer('A', q('False'))).toBe(false);
     });
 
     it('should check fill_blank answers with trimming and case', () => {

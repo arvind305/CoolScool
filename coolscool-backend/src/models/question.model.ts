@@ -229,8 +229,10 @@ export function checkAnswer(
 ): boolean {
   switch (question.question_type) {
     case 'mcq':
-    case 'true_false':
       return checkStringAnswer(question.correct_answer as string, userAnswer);
+
+    case 'true_false':
+      return checkTrueFalseAnswer(question.correct_answer as string, userAnswer);
 
     case 'fill_blank':
       return checkFillBlankAnswer(question.correct_answer as string, userAnswer);
@@ -246,10 +248,23 @@ export function checkAnswer(
   }
 }
 
-// MCQ/True-False: case-insensitive string comparison
+// MCQ: case-insensitive string comparison
 function checkStringAnswer(correctAnswer: string, userAnswer: unknown): boolean {
   if (typeof userAnswer !== 'string') return false;
   return userAnswer.toLowerCase().trim() === String(correctAnswer).toLowerCase().trim();
+}
+
+// True/False: normalize all formats (A/B/true/false/True/False) to canonical form
+function normalizeTrueFalse(answer: string): string {
+  const lower = answer.toLowerCase().trim();
+  if (lower === 'true' || lower === 'a') return 'a';
+  if (lower === 'false' || lower === 'b') return 'b';
+  return lower;
+}
+
+function checkTrueFalseAnswer(correctAnswer: string, userAnswer: unknown): boolean {
+  if (typeof userAnswer !== 'string') return false;
+  return normalizeTrueFalse(userAnswer) === normalizeTrueFalse(String(correctAnswer));
 }
 
 // Normalize a fill-blank answer for comparison

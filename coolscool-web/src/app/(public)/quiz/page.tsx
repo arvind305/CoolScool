@@ -491,7 +491,10 @@ function QuizPageContent() {
                 correctAnswer={(() => {
                   const raw = lastResult.correctAnswer;
                   if (currentQuestion.type === 'true_false') {
-                    return raw === 'A' ? 'True' : raw === 'B' ? 'False' : raw;
+                    const lower = String(raw).toLowerCase().trim();
+                    if (lower === 'a' || lower === 'true') return 'True';
+                    if (lower === 'b' || lower === 'false') return 'False';
+                    return raw;
                   }
                   if (currentQuestion.type === 'mcq' && typeof raw === 'string') {
                     const idx = raw.charCodeAt(0) - 65;

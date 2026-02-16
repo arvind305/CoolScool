@@ -27,23 +27,23 @@ export default function HomePage() {
       <section className="stats-banner">
         <div className="stats-banner-inner">
           <div className="stats-banner-item">
-            <span className="stats-banner-number">5,000+</span>
+            <span className="stats-banner-number">60,000+</span>
             <span className="stats-banner-label">Questions</span>
           </div>
           <div className="stats-banner-divider" />
           <div className="stats-banner-item">
-            <span className="stats-banner-number">3</span>
-            <span className="stats-banner-label">Subjects</span>
+            <span className="stats-banner-number">700+</span>
+            <span className="stats-banner-label">Topics</span>
           </div>
           <div className="stats-banner-divider" />
           <div className="stats-banner-item">
-            <span className="stats-banner-number">12</span>
+            <span className="stats-banner-number">3,000+</span>
+            <span className="stats-banner-label">Concepts</span>
+          </div>
+          <div className="stats-banner-divider" />
+          <div className="stats-banner-item">
+            <span className="stats-banner-number">1–12</span>
             <span className="stats-banner-label">Classes</span>
-          </div>
-          <div className="stats-banner-divider" />
-          <div className="stats-banner-item">
-            <span className="stats-banner-number">2</span>
-            <span className="stats-banner-label">Boards</span>
           </div>
         </div>
         {/* TODO: Fetch live stats from /api/v1/curricula/overview */}
@@ -118,7 +118,7 @@ export default function HomePage() {
             board="cbse"
             name="CBSE"
             fullName="Central Board of Secondary Education"
-            status="coming_soon"
+            status="live"
           />
         </div>
       </section>

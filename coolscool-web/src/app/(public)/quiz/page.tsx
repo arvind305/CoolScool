@@ -489,9 +489,11 @@ function QuizPageContent() {
               <Feedback
                 isCorrect={lastResult.isCorrect}
                 correctAnswer={
-                  Array.isArray(lastResult.correctAnswer)
-                    ? lastResult.correctAnswer.join(' -> ')
-                    : lastResult.correctAnswer
+                  currentQuestion.type === 'true_false'
+                    ? (lastResult.correctAnswer === 'A' ? 'True' : lastResult.correctAnswer === 'B' ? 'False' : lastResult.correctAnswer)
+                    : Array.isArray(lastResult.correctAnswer)
+                      ? lastResult.correctAnswer.join(' -> ')
+                      : lastResult.correctAnswer
                 }
                 explanation={lastResult.explanation}
                 xpEarned={lastResult.xpEarned}

@@ -249,8 +249,8 @@ interface TrueFalseOptionsProps {
 const TrueFalseOptions = forwardRef<HTMLDivElement, TrueFalseOptionsProps>(
   function TrueFalseOptions({ getOptionState, onSelect, disabled, className = '' }, ref) {
     const options = [
-      { id: 'True', marker: 'T', text: 'True' },
-      { id: 'False', marker: 'F', text: 'False' },
+      { id: 'A', marker: 'T', text: 'True' },
+      { id: 'B', marker: 'F', text: 'False' },
     ];
 
     return (

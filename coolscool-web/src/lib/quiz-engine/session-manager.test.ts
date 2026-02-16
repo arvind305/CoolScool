@@ -43,7 +43,7 @@ function createMockQuestionBank(): QuestionBank {
         difficulty: 'familiarity',
         type: 'true_false',
         question_text: 'Is 2 + 2 = 4?',
-        correct_answer: 'true',
+        correct_answer: 'A',
       },
       {
         question_id: 'Q003',
@@ -255,16 +255,16 @@ describe('Session Manager', () => {
         difficulty: 'familiarity',
         type: 'true_false',
         question_text: 'Test?',
-        correct_answer: 'true',
+        correct_answer: 'A',
         eligible: true,
         is_recommended: true,
         priority_score: 100,
         concept_progress: null,
       };
 
-      expect(checkAnswer('true', question)).toBe(true);
-      expect(checkAnswer('TRUE', question)).toBe(true);
-      expect(checkAnswer('false', question)).toBe(false);
+      expect(checkAnswer('A', question)).toBe(true);
+      expect(checkAnswer('a', question)).toBe(true);
+      expect(checkAnswer('B', question)).toBe(false);
     });
 
     it('should check fill_blank answers with trimming', () => {

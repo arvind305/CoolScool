@@ -252,10 +252,46 @@ function checkStringAnswer(correctAnswer: string, userAnswer: unknown): boolean 
   return userAnswer.toLowerCase().trim() === String(correctAnswer).toLowerCase().trim();
 }
 
-// Fill blank: case-insensitive, trimmed comparison
+// Normalize a fill-blank answer for comparison
+function normalizeFillBlank(raw: string): string {
+  let s = raw.trim().toLowerCase();
+  s = s.replace(/\s+/g, ' ');
+  s = s.replace(/[.,]+$/, '');
+  s = s.replace(/'/g, '');
+  if (/^[a-z\s-]+$/.test(s)) {
+    s = s.replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+  return s;
+}
+
+// Levenshtein distance for limited typo tolerance
+function levenshtein(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  let prev = Array.from({ length: n + 1 }, (_, i) => i);
+  for (let i = 1; i <= m; i++) {
+    const curr = [i];
+    for (let j = 1; j <= n; j++) {
+      curr[j] = a[i - 1] === b[j - 1]
+        ? prev[j - 1]!
+        : 1 + Math.min(prev[j - 1]!, prev[j]!, curr[j - 1]!);
+    }
+    prev = curr;
+  }
+  return prev[n]!;
+}
+
+// Fill blank: normalize + exact match, with limited typo tolerance for text answers > 5 chars
 function checkFillBlankAnswer(correctAnswer: string, userAnswer: unknown): boolean {
   if (typeof userAnswer !== 'string') return false;
-  return userAnswer.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
+  const user = normalizeFillBlank(userAnswer);
+  const correct = normalizeFillBlank(correctAnswer);
+  if (user === correct) return true;
+  const isNumericOrMath = /[0-9^()\/]/.test(correct);
+  if (isNumericOrMath) return false;
+  if (correct.length <= 5) return false;
+  return levenshtein(user, correct) <= 1;
 }
 
 // Ordering: exact array order match

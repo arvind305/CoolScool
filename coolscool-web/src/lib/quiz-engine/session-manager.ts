@@ -65,6 +65,68 @@ function generateSessionId(): string {
 }
 
 /**
+ * Normalize a fill-blank answer for comparison.
+ * Applied identically to both user input and correct answer.
+ */
+export function normalizeFillBlank(raw: string): string {
+  let s = raw.trim().toLowerCase();
+  // Collapse multiple spaces to single
+  s = s.replace(/\s+/g, ' ');
+  // Strip trailing period or comma
+  s = s.replace(/[.,]+$/, '');
+  // Remove apostrophes ("bowman's" → "bowmans")
+  s = s.replace(/'/g, '');
+  // Normalize hyphens to spaces for text (not purely numeric/math)
+  // Only if the string contains letters (skip "-3", "x^2 - 1")
+  if (/^[a-z\s-]+$/.test(s)) {
+    s = s.replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+  return s;
+}
+
+/**
+ * Levenshtein distance between two strings.
+ * Used for limited typo tolerance on longer text answers.
+ */
+function levenshtein(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  // Use single-row optimization
+  let prev = Array.from({ length: n + 1 }, (_, i) => i);
+  for (let i = 1; i <= m; i++) {
+    const curr = [i];
+    for (let j = 1; j <= n; j++) {
+      curr[j] = a[i - 1] === b[j - 1]
+        ? prev[j - 1]!
+        : 1 + Math.min(prev[j - 1]!, prev[j]!, curr[j - 1]!);
+    }
+    prev = curr;
+  }
+  return prev[n]!;
+}
+
+/**
+ * Check a fill-blank answer: normalize then compare, with limited typo tolerance
+ * for non-numeric text answers longer than 5 characters.
+ */
+export function checkFillBlank(userRaw: string, correctRaw: string): boolean {
+  const user = normalizeFillBlank(userRaw);
+  const correct = normalizeFillBlank(correctRaw);
+
+  // Exact match after normalization
+  if (user === correct) return true;
+
+  // No fuzzy matching for numeric/math answers or short strings
+  const isNumericOrMath = /[0-9^()\/]/.test(correct);
+  if (isNumericOrMath) return false;
+  if (correct.length <= 5) return false;
+
+  // Allow Levenshtein distance of 1 for typo tolerance
+  return levenshtein(user, correct) <= 1;
+}
+
+/**
  * Checks if a user's answer is correct
  */
 export function checkAnswer(
@@ -81,10 +143,7 @@ export function checkAnswer(
       );
 
     case 'fill_blank':
-      return (
-        String(userAnswer).trim().toLowerCase() ===
-        String(correctAnswer).trim().toLowerCase()
-      );
+      return checkFillBlank(String(userAnswer), String(correctAnswer));
 
     case 'ordering':
       if (!Array.isArray(userAnswer) || !Array.isArray(correctAnswer)) {

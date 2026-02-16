@@ -488,13 +488,20 @@ function QuizPageContent() {
             {showingFeedback && (
               <Feedback
                 isCorrect={lastResult.isCorrect}
-                correctAnswer={
-                  currentQuestion.type === 'true_false'
-                    ? (lastResult.correctAnswer === 'A' ? 'True' : lastResult.correctAnswer === 'B' ? 'False' : lastResult.correctAnswer)
-                    : Array.isArray(lastResult.correctAnswer)
-                      ? lastResult.correctAnswer.join(' -> ')
-                      : lastResult.correctAnswer
-                }
+                correctAnswer={(() => {
+                  const raw = lastResult.correctAnswer;
+                  if (currentQuestion.type === 'true_false') {
+                    return raw === 'A' ? 'True' : raw === 'B' ? 'False' : raw;
+                  }
+                  if (currentQuestion.type === 'mcq' && typeof raw === 'string') {
+                    const idx = raw.charCodeAt(0) - 65;
+                    const opt = currentQuestion.options?.[idx];
+                    const text = typeof opt === 'string' ? opt : (opt as { id: string; text: string } | undefined)?.text;
+                    return text ? `${raw}. ${text}` : raw;
+                  }
+                  if (Array.isArray(raw)) return raw.join(' -> ');
+                  return raw;
+                })()}
                 explanation={lastResult.explanation}
                 xpEarned={lastResult.xpEarned}
               />

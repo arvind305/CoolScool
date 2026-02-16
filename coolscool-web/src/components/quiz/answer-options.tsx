@@ -2,6 +2,7 @@
 
 import { forwardRef, useCallback, useEffect, useState, useRef } from 'react';
 import type { QuestionType } from '@/lib/quiz-engine/types';
+import { checkFillBlank } from '@/lib/quiz-engine/session-manager';
 
 // ============================================================
 // AnswerOptions Component
@@ -131,7 +132,7 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
             value={(selectedAnswer as string) || ''}
             onChange={(val) => onSelect?.(val)}
             disabled={disabled}
-            isCorrect={correctAnswer !== undefined ? selectedAnswer === correctAnswer : undefined}
+            isCorrect={correctAnswer !== undefined ? checkFillBlank(String(selectedAnswer ?? ''), String(correctAnswer)) : undefined}
             className={className}
           />
         );

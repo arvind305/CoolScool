@@ -267,7 +267,7 @@ describe('Session Manager', () => {
       expect(checkAnswer('B', question)).toBe(false);
     });
 
-    it('should check fill_blank answers with trimming', () => {
+    it('should check fill_blank answers with trimming and case', () => {
       const question: EnrichedQuestion = {
         question_id: 'Q001',
         concept_id: 'C01',
@@ -285,6 +285,84 @@ describe('Session Manager', () => {
       expect(checkAnswer('  answer  ', question)).toBe(true);
       expect(checkAnswer('ANSWER', question)).toBe(true);
       expect(checkAnswer('wrong', question)).toBe(false);
+    });
+
+    it('should normalize hyphens and apostrophes for text fill_blank', () => {
+      const q = (correct: string): EnrichedQuestion => ({
+        question_id: 'Q001',
+        concept_id: 'C01',
+        difficulty: 'familiarity',
+        type: 'fill_blank',
+        question_text: 'Test?',
+        correct_answer: correct,
+        eligible: true,
+        is_recommended: true,
+        priority_score: 100,
+        concept_progress: null,
+      });
+
+      // Hyphen normalization
+      expect(checkAnswer('non biodegradable', q('non-biodegradable'))).toBe(true);
+      expect(checkAnswer('non-metal', q('non metal'))).toBe(true);
+
+      // Apostrophe normalization
+      expect(checkAnswer("Bowmans capsule", q("Bowman's capsule"))).toBe(true);
+
+      // Trailing punctuation
+      expect(checkAnswer('photosynthesis.', q('photosynthesis'))).toBe(true);
+      expect(checkAnswer('photosynthesis', q('photosynthesis.'))).toBe(true);
+    });
+
+    it('should allow 1-char typo for text answers > 5 chars', () => {
+      const q = (correct: string): EnrichedQuestion => ({
+        question_id: 'Q001',
+        concept_id: 'C01',
+        difficulty: 'familiarity',
+        type: 'fill_blank',
+        question_text: 'Test?',
+        correct_answer: correct,
+        eligible: true,
+        is_recommended: true,
+        priority_score: 100,
+        concept_progress: null,
+      });
+
+      // 1 char typo on long word → accepted
+      expect(checkAnswer('photosythesis', q('photosynthesis'))).toBe(true);
+      expect(checkAnswer('mitochndria', q('mitochondria'))).toBe(true);
+
+      // 2 char typo → rejected
+      expect(checkAnswer('photsythesis', q('photosynthesis'))).toBe(false);
+
+      // Short word — no typo tolerance ("cat" vs "bat")
+      expect(checkAnswer('bat', q('cat'))).toBe(false);
+      expect(checkAnswer('cll', q('cell'))).toBe(false);
+    });
+
+    it('should NOT apply typo tolerance to numeric/math answers', () => {
+      const q = (correct: string): EnrichedQuestion => ({
+        question_id: 'Q001',
+        concept_id: 'C01',
+        difficulty: 'familiarity',
+        type: 'fill_blank',
+        question_text: 'Test?',
+        correct_answer: correct,
+        eligible: true,
+        is_recommended: true,
+        priority_score: 100,
+        concept_progress: null,
+      });
+
+      // Exact numeric match
+      expect(checkAnswer('42', q('42'))).toBe(true);
+      expect(checkAnswer('0.8', q('0.8'))).toBe(true);
+
+      // Numeric typo → rejected (43 is not 42)
+      expect(checkAnswer('43', q('42'))).toBe(false);
+
+      // Math expression — exact only
+      expect(checkAnswer('x^2 - 1', q('x^2 - 1'))).toBe(true);
+      expect(checkAnswer('x^2 - 2', q('x^2 - 1'))).toBe(false);
     });
 
     it('should check ordering answers correctly', () => {

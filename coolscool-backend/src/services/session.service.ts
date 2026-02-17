@@ -99,6 +99,8 @@ export interface SubmitAnswerResult {
   masteryAchieved: boolean;
   newDifficulty: string;
   correctAnswer: unknown;
+  explanationCorrect: string | null;
+  explanationIncorrect: string | null;
   isSessionComplete: boolean;
   nextQuestion: QuestionModel.QuestionForClient | null;
 }
@@ -451,6 +453,8 @@ export async function submitAnswer(
     masteryAchieved: masteryResult.masteryAchieved,
     newDifficulty: masteryResult.newDifficulty,
     correctAnswer: question.correct_answer,
+    explanationCorrect: question.explanation_correct,
+    explanationIncorrect: question.explanation_incorrect,
     isSessionComplete,
     nextQuestion,
   };

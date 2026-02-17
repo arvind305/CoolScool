@@ -95,8 +95,8 @@ function QuizPageContent() {
         return;
       }
 
-      // Check if anonymous user has exhausted samples BEFORE loading quiz
-      if (!access.isAuthenticated && !access.hasFreeSamples(topicId)) {
+      // Backend sessions require authentication
+      if (!access.isAuthenticated) {
         setQuizState('sample_exhausted');
         return;
       }
@@ -124,7 +124,7 @@ function QuizPageContent() {
       initAttemptedRef.current = true;
       initQuiz();
     }
-  }, [engine.isInitialized, engine.isLoading, topicId, timeMode, access.isLoading, access.isAuthenticated, access.hasFreeSamples]);
+  }, [engine.isInitialized, engine.isLoading, topicId, timeMode, access.isLoading, access.isAuthenticated]);
 
   // Start the timer
   const startTimer = useCallback(() => {
@@ -206,32 +206,39 @@ function QuizPageContent() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [selectedAnswer, quizState, handleSubmit]);
 
+  // Handle end session (defined first — used by handleSkip and handleNext)
+  const handleEndSession = useCallback(async () => {
+    stopTimer();
+    const elapsed = Date.now() - sessionStartTimeRef.current;
+    const sessionSummary = await engine.endSession(true, elapsed);
+    if (sessionSummary) {
+      setSummary(sessionSummary);
+      // Get final proficiency
+      const prof = await engine.getTopicProficiency(topicId);
+      setProficiency({ band: prof.band, label: prof.label });
+      setQuizState('summary');
+    }
+  }, [engine, topicId, stopTimer]);
+
   // Handle skip question
-  const handleSkip = useCallback(() => {
+  const handleSkip = useCallback(async () => {
     // Stop any ongoing speech
     window.dispatchEvent(new Event('quiz:stop-speech'));
 
-    engine.skipQuestion();
+    const result = await engine.skipQuestion();
     setSelectedAnswer(null);
     questionStartTimeRef.current = Date.now();
 
     // Check if session is complete after skipping
-    if (!engine.currentQuestion) {
+    if (result.isSessionComplete) {
       handleEndSession();
     }
-  }, [engine]);
+  }, [engine, handleEndSession]);
 
   // Handle next question
   const handleNext = useCallback(() => {
     // Stop any ongoing speech
     window.dispatchEvent(new Event('quiz:stop-speech'));
-
-    // For anonymous users, check if samples are exhausted before moving to next
-    if (!access.isAuthenticated && !access.hasFreeSamples(topicId)) {
-      stopTimer();
-      setQuizState('sample_exhausted');
-      return;
-    }
 
     engine.nextQuestion();
     setSelectedAnswer(null);
@@ -243,29 +250,10 @@ function QuizPageContent() {
     } else {
       handleEndSession();
     }
-  }, [engine, access, topicId, stopTimer]);
-
-  // Handle end session
-  const handleEndSession = useCallback(async () => {
-    stopTimer();
-    const sessionSummary = await engine.endSession(true);
-    if (sessionSummary) {
-      setSummary(sessionSummary);
-      // Get final proficiency
-      const prof = await engine.getTopicProficiency(topicId);
-      setProficiency({ band: prof.band, label: prof.label });
-      setQuizState('summary');
-    }
-  }, [engine, topicId, stopTimer]);
+  }, [engine, handleEndSession]);
 
   // Handle practice again
   const handlePracticeAgain = useCallback(() => {
-    // For anonymous users, check if they have samples before restarting
-    if (!access.isAuthenticated && !access.hasFreeSamples(topicId)) {
-      setQuizState('sample_exhausted');
-      return;
-    }
-
     // Reset and restart
     setSelectedAnswer(null);
     setQuizState('loading');
@@ -274,14 +262,14 @@ function QuizPageContent() {
     questionStartTimeRef.current = Date.now();
     setElapsedTime(0);
 
-    // Restart the quiz
+    // Create a new backend session
     engine.startQuiz(topicId, timeMode).then((success) => {
       if (success) {
         setQuizState('ready');
         startTimer();
       }
     });
-  }, [engine, topicId, timeMode, startTimer, access]);
+  }, [engine, topicId, timeMode, startTimer]);
 
   // Get session info (needed by callbacks below)
   const session = engine.session;

@@ -143,6 +143,8 @@ export async function submitAnswer(
         masteryAchieved: result.masteryAchieved,
         newDifficulty: result.newDifficulty,
         correctAnswer: result.correctAnswer,
+        explanationCorrect: result.explanationCorrect,
+        explanationIncorrect: result.explanationIncorrect,
         isSessionComplete: result.isSessionComplete,
         nextQuestion: result.nextQuestion,
       },

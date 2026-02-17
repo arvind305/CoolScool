@@ -124,6 +124,7 @@ interface QuestionWithMetadata extends QuestionModel.Question {
   eligible: boolean;
   is_recommended: boolean;
   priority_score: number;
+  recency_penalty: number;
   concept_progress: ConceptProgress | null;
 }
 
@@ -190,11 +191,15 @@ export async function createSession(
     conceptProgresses.set(progress.concept_id_str, progress);
   }
 
+  // Build recency map: question UUID -> sessions ago (1 = last session)
+  const recencyMap = await buildRecencyMap(userId, topicIdStr);
+
   // Select questions using the specified strategy
   const selectedQuestionIds = selectQuestions({
     questions,
     camConcepts: camResult.rows,
     conceptProgresses,
+    recencyMap,
     count: questionCount,
     strategy,
   });
@@ -641,13 +646,159 @@ export function isSessionTimedOut(session: QuizSession, currentElapsedMs: number
 }
 
 // ============================================
+// RECENCY TRACKING
+// ============================================
+
+/** Recency penalty constants (from Cognitive Depth Framework spec) */
+export const RECENCY_PENALTIES = {
+  LAST_SESSION: -80,
+  TWO_SESSIONS_AGO: -50,
+  THREE_SESSIONS_AGO: -30,
+  FOUR_PLUS_AGO: -10,
+  NEVER_SEEN: 20,
+} as const;
+
+/**
+ * Builds a map of question UUID -> sessions ago for a user + topic.
+ * Queries the last N completed sessions for this topic and maps each
+ * answered question to how many sessions ago it appeared.
+ */
+export async function buildRecencyMap(
+  userId: string,
+  topicIdStr: string
+): Promise<RecencyMap> {
+  // Get the last 5 completed sessions for this user + topic, ordered newest first
+  const sessionsResult = await query<{ id: string }>(
+    `SELECT id FROM quiz_sessions
+     WHERE user_id = $1 AND topic_id_str = $2
+       AND session_status IN ('completed', 'abandoned')
+     ORDER BY completed_at DESC NULLS LAST, created_at DESC
+     LIMIT 5`,
+    [userId, topicIdStr]
+  );
+
+  if (sessionsResult.rows.length === 0) {
+    return new Map();
+  }
+
+  const sessionIds = sessionsResult.rows.map(r => r.id);
+
+  // Get all answered question_ids from those sessions
+  const answersResult = await query<{ question_id: string; session_id: string }>(
+    `SELECT sa.question_id, sa.session_id
+     FROM session_answers sa
+     WHERE sa.session_id = ANY($1)`,
+    [sessionIds]
+  );
+
+  // Build session index map: session_id -> sessions ago (1-indexed)
+  const sessionIndexMap = new Map<string, number>();
+  for (let i = 0; i < sessionIds.length; i++) {
+    sessionIndexMap.set(sessionIds[i]!, i + 1);
+  }
+
+  // Map question_id -> minimum sessions ago (a question could appear in multiple sessions)
+  const recencyMap: RecencyMap = new Map();
+  for (const row of answersResult.rows) {
+    const sessionsAgo = sessionIndexMap.get(row.session_id) ?? 5;
+    const existing = recencyMap.get(row.question_id);
+    if (existing === undefined || sessionsAgo < existing) {
+      recencyMap.set(row.question_id, sessionsAgo);
+    }
+  }
+
+  return recencyMap;
+}
+
+/**
+ * Returns the recency penalty for a question based on how many sessions ago it was seen.
+ */
+export function getRecencyPenalty(sessionsAgo: number | undefined): number {
+  if (sessionsAgo === undefined) return RECENCY_PENALTIES.NEVER_SEEN;
+  if (sessionsAgo <= 1) return RECENCY_PENALTIES.LAST_SESSION;
+  if (sessionsAgo === 2) return RECENCY_PENALTIES.TWO_SESSIONS_AGO;
+  if (sessionsAgo === 3) return RECENCY_PENALTIES.THREE_SESSIONS_AGO;
+  return RECENCY_PENALTIES.FOUR_PLUS_AGO;
+}
+
+// ============================================
+// COGNITIVE VARIETY BALANCING
+// ============================================
+
+/**
+ * Ensures cognitive level variety in the final question queue:
+ * 1. At least 2 different cognitive_levels in the queue
+ * 2. No more than 3 consecutive questions at the same cognitive_level
+ *
+ * Swaps lowest-scored questions from the selected set with higher-variety
+ * questions from the remaining pool when needed.
+ */
+export function applyCognitiveVariety(
+  selected: QuestionWithMetadata[],
+  remainingPool: QuestionWithMetadata[]
+): QuestionWithMetadata[] {
+  if (selected.length <= 1) return selected;
+
+  const result = [...selected];
+
+  // Pass 1: Ensure at least 2 different cognitive levels
+  const uniqueLevels = new Set(result.map(q => q.cognitive_level));
+  if (uniqueLevels.size < 2 && remainingPool.length > 0) {
+    // Find a replacement from the pool with a different cognitive level
+    const currentLevel = result[0]!.cognitive_level;
+    const replacement = remainingPool.find(q => q.cognitive_level !== currentLevel);
+    if (replacement) {
+      // Replace the lowest-scored question
+      const lowestIdx = result.reduce((minIdx, q, idx) =>
+        q.priority_score < result[minIdx]!.priority_score ? idx : minIdx, 0);
+      result[lowestIdx] = replacement;
+    }
+  }
+
+  // Pass 2: Break consecutive runs of >3 same cognitive_level
+  for (let i = 3; i < result.length; i++) {
+    const a = result[i - 3]!.cognitive_level;
+    const b = result[i - 2]!.cognitive_level;
+    const c = result[i - 1]!.cognitive_level;
+    const d = result[i]!.cognitive_level;
+
+    if (a === b && b === c && c === d) {
+      // Find a question later in the array with a different level to swap with
+      let swapped = false;
+      for (let j = i + 1; j < result.length; j++) {
+        if (result[j]!.cognitive_level !== d) {
+          const temp = result[i]!;
+          result[i] = result[j]!;
+          result[j] = temp;
+          swapped = true;
+          break;
+        }
+      }
+      // If no swap found in selected, try from remaining pool
+      if (!swapped && remainingPool.length > 0) {
+        const replacement = remainingPool.find(q => q.cognitive_level !== d);
+        if (replacement) {
+          result[i] = replacement;
+        }
+      }
+    }
+  }
+
+  return result;
+}
+
+// ============================================
 // QUESTION SELECTION (Ported from question-selector.js)
 // ============================================
+
+/** Map from question UUID to how many sessions ago it was last answered (1 = last session, etc.) */
+type RecencyMap = Map<string, number>;
 
 interface SelectQuestionsParams {
   questions: QuestionModel.Question[];
   camConcepts: CAMConcept[];
   conceptProgresses: Map<string, ConceptProgress>;
+  recencyMap: RecencyMap;
   count: number | null;
   strategy: SelectionStrategy;
 }
@@ -656,14 +807,14 @@ interface SelectQuestionsParams {
  * Selects questions for a quiz session
  */
 function selectQuestions(params: SelectQuestionsParams): string[] {
-  const { questions, camConcepts, conceptProgresses, count, strategy } = params;
+  const { questions, camConcepts, conceptProgresses, recencyMap, count, strategy } = params;
 
   if (questions.length === 0) {
     return [];
   }
 
   // Build question pool with eligibility info
-  const questionPool = buildQuestionPool(questions, camConcepts, conceptProgresses);
+  const questionPool = buildQuestionPool(questions, camConcepts, conceptProgresses, recencyMap);
 
   // Apply selection strategy
   let selected: QuestionWithMetadata[];
@@ -694,7 +845,8 @@ function selectQuestions(params: SelectQuestionsParams): string[] {
 function buildQuestionPool(
   questions: QuestionModel.Question[],
   camConcepts: CAMConcept[],
-  conceptProgresses: Map<string, ConceptProgress>
+  conceptProgresses: Map<string, ConceptProgress>,
+  recencyMap: RecencyMap
 ): QuestionWithMetadata[] {
   // Build concept lookup
   const conceptMap = new Map<string, CAMConcept>();
@@ -727,14 +879,16 @@ function buildQuestionPool(
 
     const isRecommended = question.difficulty === recommendedDifficulty;
 
-    // Calculate priority score
-    const priorityScore = calculatePriorityScore(question, progress, isRecommended);
+    // Calculate priority score with recency penalty
+    const recencyPenalty = getRecencyPenalty(recencyMap.get(question.id));
+    const priorityScore = calculatePriorityScore(question, progress, isRecommended) + recencyPenalty;
 
     pool.push({
       ...question,
       eligible: true,
       is_recommended: isRecommended,
       priority_score: priorityScore,
+      recency_penalty: recencyPenalty,
       concept_progress: progress,
     });
   }
@@ -798,7 +952,11 @@ function selectAdaptive(pool: QuestionWithMetadata[], count: number | null): Que
   const interleaved = groupAndInterleave(sorted);
 
   const limit = count || interleaved.length;
-  return interleaved.slice(0, limit);
+  const selected = interleaved.slice(0, limit);
+  const remaining = interleaved.slice(limit);
+
+  // Apply cognitive variety balancing
+  return applyCognitiveVariety(selected, remaining);
 }
 
 /**

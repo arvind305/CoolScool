@@ -67,6 +67,7 @@ interface Question {
   question_id: string;
   concept_id: string;
   difficulty: string;
+  cognitive_level?: string;
   type: string;
   question_text: string;
   options?: QuestionOption[];
@@ -260,17 +261,18 @@ async function seedClass(classLevel: number): Promise<{
         await client.query(
           `INSERT INTO questions (
              curriculum_id, question_id, concept_id, concept_id_str, topic_id_str,
-             difficulty, question_type, question_text, options,
+             difficulty, cognitive_level, question_type, question_text, options,
              correct_answer, match_pairs, ordering_items, hint, tags,
              explanation_correct, explanation_incorrect,
              image_url, option_images
            )
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)
            ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
              concept_id = EXCLUDED.concept_id,
              concept_id_str = EXCLUDED.concept_id_str,
              topic_id_str = EXCLUDED.topic_id_str,
              question_text = EXCLUDED.question_text,
+             cognitive_level = EXCLUDED.cognitive_level,
              options = EXCLUDED.options,
              correct_answer = EXCLUDED.correct_answer,
              match_pairs = EXCLUDED.match_pairs,
@@ -283,7 +285,7 @@ async function seedClass(classLevel: number): Promise<{
              option_images = COALESCE(EXCLUDED.option_images, questions.option_images)`,
           [
             curriculumId, q.question_id, conceptUuid, q.concept_id, data.topic_id,
-            q.difficulty, q.type, q.question_text,
+            q.difficulty, q.cognitive_level || 'recall', q.type, q.question_text,
             q.options ? JSON.stringify(q.options) : null,
             JSON.stringify(correctAnswer),
             q.match_pairs ? JSON.stringify(q.match_pairs) : null,

@@ -8,6 +8,8 @@
 import { query } from '../db/index.js';
 
 // Question type as stored in database
+export type CognitiveLevel = 'recall' | 'compare' | 'classify' | 'scenario' | 'exception' | 'reason';
+
 export interface Question {
   id: string;
   question_id: string;
@@ -16,6 +18,7 @@ export interface Question {
   topic_id_str: string;
   curriculum_id: string;
   difficulty: 'familiarity' | 'application' | 'exam_style';
+  cognitive_level: CognitiveLevel;
   question_type: 'mcq' | 'fill_blank' | 'true_false' | 'match' | 'ordering';
   question_text: string;
   options: { id: string; text: string }[] | null;
@@ -39,6 +42,7 @@ export interface QuestionForClient {
   concept_id_str: string;
   topic_id_str: string;
   difficulty: string;
+  cognitive_level: string;
   question_type: string;
   question_text: string;
   options: { id: string; text: string }[] | null;
@@ -177,6 +181,7 @@ export function stripAnswerData(question: Question): QuestionForClient {
     concept_id_str: question.concept_id_str,
     topic_id_str: question.topic_id_str,
     difficulty: question.difficulty,
+    cognitive_level: question.cognitive_level,
     question_type: question.question_type,
     question_text: question.question_text,
     options: question.options,

@@ -191,15 +191,15 @@ export async function createSession(
     conceptProgresses.set(progress.concept_id_str, progress);
   }
 
-  // Build recency map: question UUID -> sessions ago (1 = last session)
-  const recencyMap = await buildRecencyMap(userId, topicIdStr);
+  // Build full question history: tracks correctness + recency for ALL past sessions
+  const historyMap = await buildQuestionHistoryMap(userId, topicIdStr);
 
   // Select questions using the specified strategy
   const selectedQuestionIds = selectQuestions({
     questions,
     camConcepts: camResult.rows,
     conceptProgresses,
-    recencyMap,
+    historyMap,
     count: questionCount,
     strategy,
   });
@@ -646,34 +646,40 @@ export function isSessionTimedOut(session: QuizSession, currentElapsedMs: number
 }
 
 // ============================================
-// RECENCY TRACKING
+// QUESTION HISTORY TRACKING
 // ============================================
 
-/** Recency penalty constants (from Cognitive Depth Framework spec) */
-export const RECENCY_PENALTIES = {
-  LAST_SESSION: -80,
-  TWO_SESSIONS_AGO: -50,
-  THREE_SESSIONS_AGO: -30,
-  FOUR_PLUS_AGO: -10,
-  NEVER_SEEN: 20,
-} as const;
+/** Supported question types that the frontend can render */
+const SUPPORTED_QUESTION_TYPES = new Set(['mcq', 'fill_blank', 'true_false', 'ordering']);
 
 /**
- * Builds a map of question UUID -> sessions ago for a user + topic.
- * Queries the last N completed sessions for this topic and maps each
- * answered question to how many sessions ago it appeared.
+ * History entry for a question the student has previously answered.
+ * Tracks the question UUID, whether it was answered correctly, and how many sessions ago.
  */
-export async function buildRecencyMap(
+interface QuestionHistoryEntry {
+  questionId: string;
+  isCorrect: boolean;
+  sessionsAgo: number;
+}
+
+/** Map from question UUID -> history entry */
+type QuestionHistoryMap = Map<string, QuestionHistoryEntry>;
+
+/**
+ * Builds a complete history map of all questions a student has answered for a topic.
+ * Tracks: question UUID, correctness, and how many sessions ago.
+ * No limit on sessions — we track everything.
+ */
+export async function buildQuestionHistoryMap(
   userId: string,
   topicIdStr: string
-): Promise<RecencyMap> {
-  // Get the last 5 completed sessions for this user + topic, ordered newest first
+): Promise<QuestionHistoryMap> {
+  // Get ALL completed/abandoned sessions for this user + topic, newest first
   const sessionsResult = await query<{ id: string }>(
     `SELECT id FROM quiz_sessions
      WHERE user_id = $1 AND topic_id_str = $2
        AND session_status IN ('completed', 'abandoned')
-     ORDER BY completed_at DESC NULLS LAST, created_at DESC
-     LIMIT 5`,
+     ORDER BY completed_at DESC NULLS LAST, created_at DESC`,
     [userId, topicIdStr]
   );
 
@@ -683,9 +689,9 @@ export async function buildRecencyMap(
 
   const sessionIds = sessionsResult.rows.map(r => r.id);
 
-  // Get all answered question_ids from those sessions
-  const answersResult = await query<{ question_id: string; session_id: string }>(
-    `SELECT sa.question_id, sa.session_id
+  // Get all answered question_ids with correctness from those sessions
+  const answersResult = await query<{ question_id: string; session_id: string; is_correct: boolean }>(
+    `SELECT sa.question_id, sa.session_id, sa.is_correct
      FROM session_answers sa
      WHERE sa.session_id = ANY($1)`,
     [sessionIds]
@@ -697,22 +703,48 @@ export async function buildRecencyMap(
     sessionIndexMap.set(sessionIds[i]!, i + 1);
   }
 
-  // Map question_id -> minimum sessions ago (a question could appear in multiple sessions)
-  const recencyMap: RecencyMap = new Map();
+  // Map question_id -> most recent history entry
+  // For correctness: use the MOST RECENT attempt's result
+  // For sessionsAgo: use the MOST RECENT appearance (minimum)
+  const historyMap: QuestionHistoryMap = new Map();
   for (const row of answersResult.rows) {
-    const sessionsAgo = sessionIndexMap.get(row.session_id) ?? 5;
-    const existing = recencyMap.get(row.question_id);
-    if (existing === undefined || sessionsAgo < existing) {
-      recencyMap.set(row.question_id, sessionsAgo);
+    const sessionsAgo = sessionIndexMap.get(row.session_id) ?? sessionIds.length;
+    const existing = historyMap.get(row.question_id);
+    if (existing === undefined || sessionsAgo < existing.sessionsAgo) {
+      historyMap.set(row.question_id, {
+        questionId: row.question_id,
+        isCorrect: row.is_correct,
+        sessionsAgo,
+      });
     }
   }
 
+  return historyMap;
+}
+
+// Keep legacy exports for test compatibility
+export type RecencyMap = Map<string, number>;
+export const RECENCY_PENALTIES = {
+  LAST_SESSION: -80,
+  TWO_SESSIONS_AGO: -50,
+  THREE_SESSIONS_AGO: -30,
+  FOUR_PLUS_AGO: -10,
+  NEVER_SEEN: 20,
+} as const;
+
+/** @deprecated Use buildQuestionHistoryMap instead */
+export async function buildRecencyMap(
+  userId: string,
+  topicIdStr: string
+): Promise<RecencyMap> {
+  const historyMap = await buildQuestionHistoryMap(userId, topicIdStr);
+  const recencyMap: RecencyMap = new Map();
+  for (const [qId, entry] of historyMap) {
+    recencyMap.set(qId, entry.sessionsAgo);
+  }
   return recencyMap;
 }
 
-/**
- * Returns the recency penalty for a question based on how many sessions ago it was seen.
- */
 export function getRecencyPenalty(sessionsAgo: number | undefined): number {
   if (sessionsAgo === undefined) return RECENCY_PENALTIES.NEVER_SEEN;
   if (sessionsAgo <= 1) return RECENCY_PENALTIES.LAST_SESSION;
@@ -741,17 +773,22 @@ export function applyCognitiveVariety(
 
   const result = [...selected];
 
+  // Track IDs already in the result to prevent duplicates
+  const usedIds = new Set(result.map(q => q.id));
+
   // Pass 1: Ensure at least 2 different cognitive levels
   const uniqueLevels = new Set(result.map(q => q.cognitive_level));
   if (uniqueLevels.size < 2 && remainingPool.length > 0) {
-    // Find a replacement from the pool with a different cognitive level
+    // Find a replacement from the pool with a different cognitive level (no duplicates)
     const currentLevel = result[0]!.cognitive_level;
-    const replacement = remainingPool.find(q => q.cognitive_level !== currentLevel);
+    const replacement = remainingPool.find(q => q.cognitive_level !== currentLevel && !usedIds.has(q.id));
     if (replacement) {
       // Replace the lowest-scored question
       const lowestIdx = result.reduce((minIdx, q, idx) =>
         q.priority_score < result[minIdx]!.priority_score ? idx : minIdx, 0);
+      usedIds.delete(result[lowestIdx]!.id);
       result[lowestIdx] = replacement;
+      usedIds.add(replacement.id);
     }
   }
 
@@ -774,11 +811,13 @@ export function applyCognitiveVariety(
           break;
         }
       }
-      // If no swap found in selected, try from remaining pool
+      // If no swap found in selected, try from remaining pool (no duplicates)
       if (!swapped && remainingPool.length > 0) {
-        const replacement = remainingPool.find(q => q.cognitive_level !== d);
+        const replacement = remainingPool.find(q => q.cognitive_level !== d && !usedIds.has(q.id));
         if (replacement) {
+          usedIds.delete(result[i]!.id);
           result[i] = replacement;
+          usedIds.add(replacement.id);
         }
       }
     }
@@ -791,30 +830,46 @@ export function applyCognitiveVariety(
 // QUESTION SELECTION (Ported from question-selector.js)
 // ============================================
 
-/** Map from question UUID to how many sessions ago it was last answered (1 = last session, etc.) */
-type RecencyMap = Map<string, number>;
-
 interface SelectQuestionsParams {
   questions: QuestionModel.Question[];
   camConcepts: CAMConcept[];
   conceptProgresses: Map<string, ConceptProgress>;
-  recencyMap: RecencyMap;
+  historyMap: QuestionHistoryMap;
   count: number | null;
   strategy: SelectionStrategy;
 }
 
 /**
- * Selects questions for a quiz session
+ * Selects questions for a quiz session.
+ *
+ * Core rules:
+ * 1. Never serve a question the student answered correctly recently (hard exclude)
+ * 2. Re-test wrong answers after a 2-session gap
+ * 3. When the pool at recommended difficulty is thin, widen to adjacent difficulties
+ * 4. Final dedup check — no question appears twice
+ * 5. Only serve question types the frontend supports
  */
 function selectQuestions(params: SelectQuestionsParams): string[] {
-  const { questions, camConcepts, conceptProgresses, recencyMap, count, strategy } = params;
+  const { questions, camConcepts, conceptProgresses, historyMap, count, strategy } = params;
 
   if (questions.length === 0) {
     return [];
   }
 
-  // Build question pool with eligibility info
-  const questionPool = buildQuestionPool(questions, camConcepts, conceptProgresses, recencyMap);
+  // Filter out unsupported question types and questions with missing data
+  const validQuestions = questions.filter(q => {
+    if (!SUPPORTED_QUESTION_TYPES.has(q.question_type)) return false;
+    if (!q.question_text || q.question_text.trim() === '') return false;
+    if (q.question_type === 'mcq' && (!q.options || q.options.length === 0)) return false;
+    return true;
+  });
+
+  if (validQuestions.length === 0) {
+    return [];
+  }
+
+  // Build question pool with eligibility info (uses history for exclusion)
+  const questionPool = buildQuestionPool(validQuestions, camConcepts, conceptProgresses, historyMap);
 
   // Apply selection strategy
   let selected: QuestionWithMetadata[];
@@ -835,18 +890,35 @@ function selectQuestions(params: SelectQuestionsParams): string[] {
       break;
   }
 
+  // Final dedup: ensure no question UUID appears twice
+  const seen = new Set<string>();
+  const deduped = selected.filter(q => {
+    if (seen.has(q.id)) return false;
+    seen.add(q.id);
+    return true;
+  });
+
   // Return UUIDs only
-  return selected.map(q => q.id);
+  return deduped.map(q => q.id);
 }
 
 /**
- * Builds question pool with eligibility based on CAM and mastery
+ * Builds question pool with eligibility based on CAM, mastery, and history.
+ *
+ * Exclusion rules:
+ * - Correctly answered questions are HARD EXCLUDED (not in pool at all)
+ * - Incorrectly answered questions return after a 2-session gap
+ * - Never-seen questions get a bonus
+ *
+ * Difficulty widening:
+ * - Always includes recommended difficulty questions
+ * - If pool at recommended difficulty is thin (< count needed), widens to adjacent difficulties
  */
 function buildQuestionPool(
   questions: QuestionModel.Question[],
   camConcepts: CAMConcept[],
   conceptProgresses: Map<string, ConceptProgress>,
-  recencyMap: RecencyMap
+  historyMap: QuestionHistoryMap
 ): QuestionWithMetadata[] {
   // Build concept lookup
   const conceptMap = new Map<string, CAMConcept>();
@@ -868,6 +940,22 @@ function buildQuestionPool(
       continue; // Skip ineligible questions
     }
 
+    // --- HISTORY-BASED EXCLUSION ---
+    const history = historyMap.get(question.id);
+    if (history) {
+      // Rule 1: Correctly answered → HARD EXCLUDE
+      // The student proved they know this. Don't show it again.
+      if (history.isCorrect) {
+        continue;
+      }
+
+      // Rule 2: Incorrectly answered → allow back after 2-session gap
+      // Give the student time to absorb the correct answer before retesting.
+      if (!history.isCorrect && history.sessionsAgo < 3) {
+        continue;
+      }
+    }
+
     // Determine recommended difficulty
     let recommendedDifficulty = 'familiarity';
     if (progress) {
@@ -879,16 +967,18 @@ function buildQuestionPool(
 
     const isRecommended = question.difficulty === recommendedDifficulty;
 
-    // Calculate priority score with recency penalty
-    const recencyPenalty = getRecencyPenalty(recencyMap.get(question.id));
-    const priorityScore = calculatePriorityScore(question, progress, isRecommended) + recencyPenalty;
+    // Calculate priority score
+    // No recency penalty needed — correctly-answered questions are already excluded
+    const neverSeen = !history;
+    const priorityScore = calculatePriorityScore(question, progress, isRecommended)
+      + (neverSeen ? 20 : 0); // Bonus for fresh questions
 
     pool.push({
       ...question,
       eligible: true,
       is_recommended: isRecommended,
       priority_score: priorityScore,
-      recency_penalty: recencyPenalty,
+      recency_penalty: neverSeen ? 20 : 0,
       concept_progress: progress,
     });
   }

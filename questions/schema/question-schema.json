@@ -117,7 +117,6 @@
                 "mcq": { "type": "integer", "minimum": 0 },
                 "fill_blank": { "type": "integer", "minimum": 0 },
                 "true_false": { "type": "integer", "minimum": 0 },
-                "match": { "type": "integer", "minimum": 0 },
                 "ordering": { "type": "integer", "minimum": 0 }
               }
             }
@@ -149,7 +148,7 @@
         "type": {
           "type": "string",
           "description": "Question format type",
-          "enum": ["mcq", "fill_blank", "true_false", "match", "ordering"]
+          "enum": ["mcq", "fill_blank", "true_false", "ordering"]
         },
         "question_text": {
           "type": "string",
@@ -216,10 +215,6 @@
         {
           "if": { "properties": { "type": { "const": "mcq" } } },
           "then": { "required": ["options"] }
-        },
-        {
-          "if": { "properties": { "type": { "const": "match" } } },
-          "then": { "required": ["match_pairs"] }
         },
         {
           "if": { "properties": { "type": { "const": "ordering" } } },

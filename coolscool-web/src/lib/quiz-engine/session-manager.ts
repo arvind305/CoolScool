@@ -405,7 +405,7 @@ export function submitAnswer(
         questions_correct: newQuestionsCorrect,
         xp_earned: newXpEarned,
         current_question_index: isComplete
-          ? newQuestionIndex
+          ? session.progress.current_question_index  // Keep at last valid index when complete
           : nextQuestionResult.index,
       },
       questions: updatedQuestions,
@@ -453,7 +453,7 @@ export function skipQuestion(session: QuizSession): QuizSession {
     progress: {
       ...session.progress,
       current_question_index: isComplete
-        ? session.progress.current_question_index + 1
+        ? session.progress.current_question_index  // Keep at last valid index when complete
         : nextQuestionResult.index,
     },
     questions: updatedQuestions,

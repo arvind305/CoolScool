@@ -19,7 +19,7 @@ export interface Question {
   curriculum_id: string;
   difficulty: 'familiarity' | 'application' | 'exam_style';
   cognitive_level: CognitiveLevel;
-  question_type: 'mcq' | 'fill_blank' | 'true_false' | 'match' | 'ordering';
+  question_type: 'mcq' | 'fill_blank' | 'true_false' | 'ordering';
   question_text: string;
   options: { id: string; text: string }[] | null;
   correct_answer: string | boolean | string[] | Record<string, string>;
@@ -193,14 +193,6 @@ export function stripAnswerData(question: Question): QuestionForClient {
     option_images: question.option_images || null,
   };
 
-  // For match questions: separate left and right, shuffle right side
-  if (question.question_type === 'match' && question.match_pairs) {
-    const pairs = question.match_pairs;
-    base.match_left = pairs.map(p => p.left);
-    // Shuffle right side so student can't guess by position
-    base.match_right_shuffled = shuffleArray(pairs.map(p => p.right));
-  }
-
   // For ordering questions: shuffle the items
   if (question.question_type === 'ordering' && question.ordering_items) {
     base.ordering_items_shuffled = shuffleArray([...question.ordering_items]);
@@ -244,9 +236,6 @@ export function checkAnswer(
 
     case 'ordering':
       return checkOrderingAnswer(question.correct_answer as string[], userAnswer);
-
-    case 'match':
-      return checkMatchAnswer(question.match_pairs || [], userAnswer);
 
     default:
       return false;
@@ -319,29 +308,6 @@ function checkOrderingAnswer(correctOrder: string[], userAnswer: unknown): boole
   if (!Array.isArray(userAnswer)) return false;
   if (userAnswer.length !== correctOrder.length) return false;
   return userAnswer.every((item, index) => item === correctOrder[index]);
-}
-
-// Match: all pairs must be correctly matched
-function checkMatchAnswer(
-  matchPairs: { left: string; right: string }[],
-  userAnswer: unknown
-): boolean {
-  if (typeof userAnswer !== 'object' || userAnswer === null) return false;
-
-  const answer = userAnswer as Record<string, string>;
-  const answerKeys = Object.keys(answer);
-
-  // Must have same number of pairs
-  if (answerKeys.length !== matchPairs.length) return false;
-
-  // Each left item must map to correct right item
-  for (const pair of matchPairs) {
-    if (answer[pair.left] !== pair.right) {
-      return false;
-    }
-  }
-
-  return true;
 }
 
 /**

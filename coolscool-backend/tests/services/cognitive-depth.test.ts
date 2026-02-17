@@ -9,6 +9,7 @@ import {
   getRecencyPenalty,
   applyCognitiveVariety,
   buildRecencyMap,
+  buildQuestionHistoryMap,
   RECENCY_PENALTIES,
 } from '../../src/services/session.service';
 import type { CognitiveLevel } from '../../src/models/question.model';
@@ -385,5 +386,119 @@ describe('Seed script cognitive_level handling', () => {
       const q = { cognitive_level: level };
       expect(q.cognitive_level || 'recall').toBe(level);
     }
+  });
+});
+
+// ── Cognitive Variety Dedup Tests ──────────────────────────────
+
+describe('applyCognitiveVariety dedup', () => {
+  it('should never introduce duplicate question IDs from pool', () => {
+    const selected = [
+      makeQuestion({ id: 'q1', cognitive_level: 'recall', priority_score: 100 }),
+      makeQuestion({ id: 'q2', cognitive_level: 'recall', priority_score: 90 }),
+      makeQuestion({ id: 'q3', cognitive_level: 'recall', priority_score: 80 }),
+      makeQuestion({ id: 'q4', cognitive_level: 'recall', priority_score: 70 }),
+    ];
+    const pool = [
+      makeQuestion({ id: 'q5', cognitive_level: 'compare', priority_score: 60 }),
+      makeQuestion({ id: 'q6', cognitive_level: 'scenario', priority_score: 50 }),
+    ];
+
+    const result = applyCognitiveVariety(selected, pool);
+    const ids = result.map(q => q.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length); // No duplicates
+  });
+
+  it('should not add a pool question that already exists in selected', () => {
+    // Edge case: a question appears in both selected and pool
+    const sharedQuestion = makeQuestion({ id: 'q-shared', cognitive_level: 'compare', priority_score: 60 });
+    const selected = [
+      makeQuestion({ id: 'q1', cognitive_level: 'recall', priority_score: 100 }),
+      makeQuestion({ id: 'q2', cognitive_level: 'recall', priority_score: 90 }),
+      sharedQuestion, // Already in selected
+    ];
+    const pool = [
+      { ...sharedQuestion }, // Same ID in pool
+      makeQuestion({ id: 'q-other', cognitive_level: 'scenario', priority_score: 40 }),
+    ];
+
+    const result = applyCognitiveVariety(selected, pool);
+    const ids = result.map(q => q.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length); // No duplicates
+  });
+});
+
+// ── buildQuestionHistoryMap Tests ──────────────────────────────
+
+describe('buildQuestionHistoryMap', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should return empty map when user has no sessions', async () => {
+    mockedQuery.mockResolvedValueOnce({ rows: [], rowCount: 0, command: '', oid: 0, fields: [] });
+
+    const map = await buildQuestionHistoryMap('user-1', 'T10.01');
+    expect(map.size).toBe(0);
+  });
+
+  it('should track correctness of answered questions', async () => {
+    mockedQuery.mockResolvedValueOnce({
+      rows: [{ id: 'session-A' }],
+      rowCount: 1, command: '', oid: 0, fields: [],
+    });
+    mockedQuery.mockResolvedValueOnce({
+      rows: [
+        { question_id: 'q1', session_id: 'session-A', is_correct: true },
+        { question_id: 'q2', session_id: 'session-A', is_correct: false },
+      ],
+      rowCount: 2, command: '', oid: 0, fields: [],
+    });
+
+    const map = await buildQuestionHistoryMap('user-1', 'T10.01');
+    expect(map.get('q1')?.isCorrect).toBe(true);
+    expect(map.get('q1')?.sessionsAgo).toBe(1);
+    expect(map.get('q2')?.isCorrect).toBe(false);
+    expect(map.get('q2')?.sessionsAgo).toBe(1);
+  });
+
+  it('should use most recent attempt for correctness when seen in multiple sessions', async () => {
+    mockedQuery.mockResolvedValueOnce({
+      rows: [
+        { id: 'session-B' }, // newest = 1
+        { id: 'session-A' }, // 2 ago
+      ],
+      rowCount: 2, command: '', oid: 0, fields: [],
+    });
+    mockedQuery.mockResolvedValueOnce({
+      rows: [
+        { question_id: 'q1', session_id: 'session-B', is_correct: true },  // most recent: correct
+        { question_id: 'q1', session_id: 'session-A', is_correct: false }, // older: incorrect
+      ],
+      rowCount: 2, command: '', oid: 0, fields: [],
+    });
+
+    const map = await buildQuestionHistoryMap('user-1', 'T10.01');
+    // Should use the most recent (session-B, sessionsAgo=1)
+    expect(map.get('q1')?.isCorrect).toBe(true);
+    expect(map.get('q1')?.sessionsAgo).toBe(1);
+  });
+
+  it('should query all sessions without a LIMIT', async () => {
+    mockedQuery.mockResolvedValueOnce({
+      rows: Array.from({ length: 20 }, (_, i) => ({ id: `session-${i}` })),
+      rowCount: 20, command: '', oid: 0, fields: [],
+    });
+    mockedQuery.mockResolvedValueOnce({
+      rows: [], rowCount: 0, command: '', oid: 0, fields: [],
+    });
+
+    await buildQuestionHistoryMap('user-1', 'T10.01');
+
+    // Verify the first query does NOT contain LIMIT
+    const firstCallArgs = mockedQuery.mock.calls[0]![0] as string;
+    expect(firstCallArgs).not.toContain('LIMIT');
   });
 });

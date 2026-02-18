@@ -1,62 +1,1312 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 5, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 5,
+    "subject": "Mathematics"
+  },
   "topic_id": "T02.04",
   "topic_name": "Order of Operations",
   "canonical_explanation": {
     "text": "BODMAS tells us the correct order to solve mathematical expressions: Brackets first, then Of (multiplication implied by 'of'), then Division and Multiplication (left to right), then Addition and Subtraction (left to right). Following BODMAS ensures everyone gets the same answer.",
-    "rules": ["B = Brackets (solve inside brackets first)", "O = Of (means multiplication, e.g., 1/2 of 10 = 5)", "D = Division (left to right with multiplication)", "M = Multiplication (left to right with division)", "A = Addition (left to right with subtraction)", "S = Subtraction (left to right with addition)"]
+    "rules": [
+      "B = Brackets (solve inside brackets first)",
+      "O = Of (means multiplication, e.g., 1/2 of 10 = 5)",
+      "D = Division (left to right with multiplication)",
+      "M = Multiplication (left to right with division)",
+      "A = Addition (left to right with subtraction)",
+      "S = Subtraction (left to right with addition)"
+    ]
   },
   "questions": [
-    {"question_id":"T02.04.Q001","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"What does BODMAS stand for?","options":[{"id":"A","text":"Brackets, Of, Division, Multiplication, Addition, Subtraction"},{"id":"B","text":"Brackets, Order, Division, Multiplication, Addition, Subtraction"},{"id":"C","text":"Both A and B are acceptable"},{"id":"D","text":"None of the above"}],"correct_answer":"C","explanation_correct":"BODMAS can stand for Brackets-Of-Division-Multiplication-Addition-Subtraction or Brackets-Order-Division-Multiplication-Addition-Subtraction. Both are accepted.","explanation_incorrect":"Both interpretations of BODMAS are accepted: 'O' can stand for 'Of' or 'Order'."},
-    {"question_id":"T02.04.Q002","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Solve: 8 + 4 x 3","options":[{"id":"A","text":"36"},{"id":"B","text":"20"},{"id":"C","text":"24"},{"id":"D","text":"15"}],"correct_answer":"B","explanation_correct":"By BODMAS, multiplication before addition: 4 x 3 = 12, then 8 + 12 = 20.","explanation_incorrect":"Do multiplication first: 4 x 3 = 12. Then add: 8 + 12 = 20."},
-    {"question_id":"T02.04.Q003","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Solve: 20 - 12 ÷ 4","options":[{"id":"A","text":"2"},{"id":"B","text":"17"},{"id":"C","text":"8"},{"id":"D","text":"5"}],"correct_answer":"B","explanation_correct":"Division first: 12 ÷ 4 = 3. Then 20 - 3 = 17.","explanation_incorrect":"By BODMAS, divide first: 12 ÷ 4 = 3. Then subtract: 20 - 3 = 17."},
-    {"question_id":"T02.04.Q004","concept_id":"T02.04.C01","difficulty":"familiarity","type":"fill_blank","question_text":"Solve: 6 x 5 - 10 ÷ 2 = ___","correct_answer":"25","explanation_correct":"Multiplication: 6 x 5 = 30. Division: 10 ÷ 2 = 5. Then: 30 - 5 = 25.","explanation_incorrect":"Do multiplication and division first (left to right), then subtraction."},
-    {"question_id":"T02.04.Q005","concept_id":"T02.04.C02","difficulty":"familiarity","type":"mcq","question_text":"Solve: (8 + 2) x 5","options":[{"id":"A","text":"18"},{"id":"B","text":"50"},{"id":"C","text":"42"},{"id":"D","text":"40"}],"correct_answer":"B","explanation_correct":"Brackets first: 8 + 2 = 10. Then 10 x 5 = 50.","explanation_incorrect":"Solve brackets first: (8 + 2) = 10. Then multiply: 10 x 5 = 50."},
-    {"question_id":"T02.04.Q006","concept_id":"T02.04.C02","difficulty":"familiarity","type":"mcq","question_text":"Solve: 100 - (25 + 35)","options":[{"id":"A","text":"40"},{"id":"B","text":"60"},{"id":"C","text":"140"},{"id":"D","text":"90"}],"correct_answer":"A","explanation_correct":"Brackets first: 25 + 35 = 60. Then 100 - 60 = 40.","explanation_incorrect":"Brackets: 25 + 35 = 60. Then: 100 - 60 = 40."},
-    {"question_id":"T02.04.Q007","concept_id":"T02.04.C02","difficulty":"application","type":"mcq","question_text":"Solve: 3 x (12 - 4) + 6","options":[{"id":"A","text":"30"},{"id":"B","text":"42"},{"id":"C","text":"26"},{"id":"D","text":"36"}],"correct_answer":"A","explanation_correct":"Brackets: 12 - 4 = 8. Multiply: 3 x 8 = 24. Add: 24 + 6 = 30.","explanation_incorrect":"Step by step: brackets (8), then multiply (24), then add 6 = 30."},
-    {"question_id":"T02.04.Q008","concept_id":"T02.04.C02","difficulty":"application","type":"mcq","question_text":"Solve: (15 + 5) ÷ (10 - 6)","options":[{"id":"A","text":"5"},{"id":"B","text":"4"},{"id":"C","text":"10"},{"id":"D","text":"20"}],"correct_answer":"A","explanation_correct":"First bracket: 15 + 5 = 20. Second bracket: 10 - 6 = 4. Then 20 ÷ 4 = 5.","explanation_incorrect":"Solve both brackets: 20 ÷ 4 = 5."},
-    {"question_id":"T02.04.Q009","concept_id":"T02.04.C03","difficulty":"application","type":"mcq","question_text":"Solve: 48 ÷ 6 + 3 x 4 - 2","options":[{"id":"A","text":"18"},{"id":"B","text":"20"},{"id":"C","text":"22"},{"id":"D","text":"14"}],"correct_answer":"B","explanation_correct":"Division: 48 ÷ 6 = 8. Multiplication: 3 x 4 = 12. Then: 8 + 12 - 2 = 18. Wait: 8 + 12 = 20, 20 - 2 = 18. Let me recheck. 48÷6=8, 3x4=12. 8+12-2=18. The answer should be 18, not 20. Let me re-examine. 8 + 12 - 2 = 18.","explanation_incorrect":"By BODMAS: 48÷6=8, 3x4=12. Then left to right: 8+12-2=18."},
-    {"question_id":"T02.04.Q010","concept_id":"T02.04.C03","difficulty":"application","type":"mcq","question_text":"Solve: 5 + 3 x 2 - 4 ÷ 2","options":[{"id":"A","text":"9"},{"id":"B","text":"12"},{"id":"C","text":"6"},{"id":"D","text":"8"}],"correct_answer":"A","explanation_correct":"Multiplication: 3 x 2 = 6. Division: 4 ÷ 2 = 2. Then: 5 + 6 - 2 = 9.","explanation_incorrect":"BODMAS: multiply (6), divide (2), then 5+6-2=9."},
-    {"question_id":"T02.04.Q011","concept_id":"T02.04.C01","difficulty":"familiarity","type":"true_false","question_text":"In BODMAS, addition is done before multiplication.","correct_answer":"false","explanation_correct":"In BODMAS, multiplication comes before addition. M comes before A in BODMAS.","explanation_incorrect":"False. Multiplication (M) is done before Addition (A) in BODMAS."},
-    {"question_id":"T02.04.Q012","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Solve: 100 - 5 x (8 + 2) + 20 ÷ 4","options":[{"id":"A","text":"55"},{"id":"B","text":"50"},{"id":"C","text":"45"},{"id":"D","text":"60"}],"correct_answer":"A","explanation_correct":"Brackets: 8+2=10. Multiply: 5x10=50. Divide: 20÷4=5. Then: 100-50+5=55.","explanation_incorrect":"Brackets first (10), then multiply (50) and divide (5), then 100-50+5=55."},
-    {"question_id":"T02.04.Q013","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Solve: 18 ÷ 3 + 4","options":[{"id":"A","text":"10"},{"id":"B","text":"2"},{"id":"C","text":"6"},{"id":"D","text":"22"}],"correct_answer":"A","explanation_correct":"Division first: 18 ÷ 3 = 6. Then 6 + 4 = 10.","explanation_incorrect":"Divide first: 18÷3=6, then add: 6+4=10."},
-    {"question_id":"T02.04.Q014","concept_id":"T02.04.C02","difficulty":"application","type":"fill_blank","question_text":"Solve: 4 x (5 + 3) - 12 = ___","correct_answer":"20","explanation_correct":"Brackets: 5+3=8. Multiply: 4x8=32. Subtract: 32-12=20.","explanation_incorrect":"Brackets (8), multiply (32), subtract 12 = 20."},
-    {"question_id":"T02.04.Q015","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Solve: 2 + 3 x 4 - 6 ÷ 3 + 1","options":[{"id":"A","text":"13"},{"id":"B","text":"12"},{"id":"C","text":"15"},{"id":"D","text":"11"}],"correct_answer":"A","explanation_correct":"Multiply: 3x4=12. Divide: 6÷3=2. Then: 2+12-2+1=13.","explanation_incorrect":"BODMAS: 3x4=12, 6÷3=2. Then left to right: 2+12-2+1=13."},
-    {"question_id":"T02.04.Q016","concept_id":"T02.04.C01","difficulty":"application","type":"mcq","question_text":"Solve: 36 ÷ 6 ÷ 3","options":[{"id":"A","text":"2"},{"id":"B","text":"18"},{"id":"C","text":"6"},{"id":"D","text":"12"}],"correct_answer":"A","explanation_correct":"When operations are of the same level, work left to right: 36÷6=6, then 6÷3=2.","explanation_incorrect":"Left to right: 36÷6=6, then 6÷3=2."},
-    {"question_id":"T02.04.Q017","concept_id":"T02.04.C02","difficulty":"exam_style","type":"mcq","question_text":"Solve: (50 - 20) x (4 + 1)","options":[{"id":"A","text":"150"},{"id":"B","text":"170"},{"id":"C","text":"100"},{"id":"D","text":"250"}],"correct_answer":"A","explanation_correct":"First bracket: 50-20=30. Second bracket: 4+1=5. Then: 30x5=150.","explanation_incorrect":"Solve brackets: 30 x 5 = 150."},
-    {"question_id":"T02.04.Q018","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Solve: 72 ÷ 8 - 3 + 2 x 5","options":[{"id":"A","text":"16"},{"id":"B","text":"14"},{"id":"C","text":"20"},{"id":"D","text":"12"}],"correct_answer":"A","explanation_correct":"Division: 72÷8=9. Multiplication: 2x5=10. Then: 9-3+10=16.","explanation_incorrect":"BODMAS: 72÷8=9, 2x5=10. Then 9-3+10=16."},
-    {"question_id":"T02.04.Q019","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Which should be solved first in 5 + 3 x 2?","options":[{"id":"A","text":"5 + 3"},{"id":"B","text":"3 x 2"},{"id":"C","text":"Either one"},{"id":"D","text":"5 x 2"}],"correct_answer":"B","explanation_correct":"By BODMAS, multiplication comes before addition. So 3 x 2 = 6 is calculated first, then 5 + 6 = 11.","explanation_incorrect":"Multiplication has higher priority than addition in BODMAS."},
-    {"question_id":"T02.04.Q020","concept_id":"T02.04.C02","difficulty":"familiarity","type":"mcq","question_text":"Solve: 7 x (6 - 2)","options":[{"id":"A","text":"28"},{"id":"B","text":"40"},{"id":"C","text":"21"},{"id":"D","text":"35"}],"correct_answer":"A","explanation_correct":"Brackets: 6-2=4. Then 7x4=28.","explanation_incorrect":"Brackets first: 6-2=4. Multiply: 7x4=28."},
-    {"question_id":"T02.04.Q021","concept_id":"T02.04.C03","difficulty":"application","type":"mcq","question_text":"Place brackets to make this true: 8 + 2 x 5 = 50","options":[{"id":"A","text":"(8 + 2) x 5 = 50"},{"id":"B","text":"8 + (2 x 5) = 50"},{"id":"C","text":"(8 + 2 x 5) = 50"},{"id":"D","text":"Brackets cannot make this true"}],"correct_answer":"A","explanation_correct":"(8 + 2) x 5 = 10 x 5 = 50. Without brackets: 8 + 2 x 5 = 8 + 10 = 18.","explanation_incorrect":"Adding brackets around 8+2 forces addition first: (8+2)x5=10x5=50."},
-    {"question_id":"T02.04.Q022","concept_id":"T02.04.C01","difficulty":"application","type":"mcq","question_text":"Solve: 15 - 3 x 4 + 2","options":[{"id":"A","text":"5"},{"id":"B","text":"50"},{"id":"C","text":"6"},{"id":"D","text":"3"}],"correct_answer":"A","explanation_correct":"Multiply: 3x4=12. Then: 15-12+2=5.","explanation_incorrect":"BODMAS: 3x4=12 first. Then 15-12+2=5."},
-    {"question_id":"T02.04.Q023","concept_id":"T02.04.C02","difficulty":"exam_style","type":"fill_blank","question_text":"Solve: (100 - 60) ÷ (2 x 5) = ___","correct_answer":"4","explanation_correct":"First bracket: 100-60=40. Second bracket: 2x5=10. Then: 40÷10=4.","explanation_incorrect":"Brackets: 40 ÷ 10 = 4."},
-    {"question_id":"T02.04.Q024","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"A shopkeeper sold 5 pens at Rs 12 each and 3 pencils at Rs 5 each. He gave a discount of Rs 10. What did the customer pay?","options":[{"id":"A","text":"Rs 65"},{"id":"B","text":"Rs 75"},{"id":"C","text":"Rs 55"},{"id":"D","text":"Rs 85"}],"correct_answer":"B","explanation_correct":"5 x 12 + 3 x 5 - 10 = 60 + 15 - 10 = 65. Wait: 60+15=75, 75-10=65. The answer is 65, which is option A. But let me re-read. Actually 5x12=60, 3x5=15, total=75, minus 10 discount = 65. So A is correct.","explanation_incorrect":"Total = 5x12 + 3x5 - 10 = 60 + 15 - 10 = 65."},
-    {"question_id":"T02.04.Q025","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Solve: 10 + 10 ÷ 10","options":[{"id":"A","text":"11"},{"id":"B","text":"2"},{"id":"C","text":"20"},{"id":"D","text":"1"}],"correct_answer":"A","explanation_correct":"Division first: 10÷10=1. Then 10+1=11.","explanation_incorrect":"BODMAS: divide first (10÷10=1), then add (10+1=11)."},
-    {"question_id":"T02.04.Q026","concept_id":"T02.04.C03","difficulty":"application","type":"mcq","question_text":"Solve: 8 x 3 + 16 ÷ 4 - 5","options":[{"id":"A","text":"23"},{"id":"B","text":"27"},{"id":"C","text":"19"},{"id":"D","text":"25"}],"correct_answer":"A","explanation_correct":"Multiply: 8x3=24. Divide: 16÷4=4. Then: 24+4-5=23.","explanation_incorrect":"BODMAS: 8x3=24, 16÷4=4. Then 24+4-5=23."},
-    {"question_id":"T02.04.Q027","concept_id":"T02.04.C02","difficulty":"application","type":"mcq","question_text":"Solve: 2 x (3 + (4 x 2))","options":[{"id":"A","text":"22"},{"id":"B","text":"20"},{"id":"C","text":"14"},{"id":"D","text":"18"}],"correct_answer":"A","explanation_correct":"Inner brackets: 4x2=8. Outer brackets: 3+8=11. Then: 2x11=22.","explanation_incorrect":"Work from innermost brackets: 4x2=8, then 3+8=11, then 2x11=22."},
-    {"question_id":"T02.04.Q028","concept_id":"T02.04.C01","difficulty":"exam_style","type":"mcq","question_text":"What is the value of 1/2 of 100 + 20?","options":[{"id":"A","text":"70"},{"id":"B","text":"60"},{"id":"C","text":"50"},{"id":"D","text":"120"}],"correct_answer":"A","explanation_correct":"'Of' means multiplication and comes before addition: 1/2 of 100 = 50. Then 50 + 20 = 70.","explanation_incorrect":"In BODMAS, 'Of' comes before addition: 1/2 x 100 = 50, then 50 + 20 = 70."},
-    {"question_id":"T02.04.Q029","concept_id":"T02.04.C03","difficulty":"exam_style","type":"fill_blank","question_text":"Solve: 50 - 2 x (15 - 5) + 8 ÷ 4 = ___","correct_answer":"32","explanation_correct":"Brackets: 15-5=10. Multiply: 2x10=20. Divide: 8÷4=2. Then: 50-20+2=32.","explanation_incorrect":"Brackets(10), multiply(20), divide(2), then 50-20+2=32."},
-    {"question_id":"T02.04.Q030","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Solve: 24 ÷ 4 x 3","options":[{"id":"A","text":"18"},{"id":"B","text":"2"},{"id":"C","text":"6"},{"id":"D","text":"24"}],"correct_answer":"A","explanation_correct":"Division and multiplication are same priority, work left to right: 24÷4=6, then 6x3=18.","explanation_incorrect":"Left to right: 24÷4=6, then 6x3=18."},
-    {"question_id":"T02.04.Q031","concept_id":"T02.04.C02","difficulty":"familiarity","type":"true_false","question_text":"(5 + 3) x 2 gives the same answer as 5 + 3 x 2.","correct_answer":"false","explanation_correct":"(5+3)x2 = 8x2 = 16. But 5+3x2 = 5+6 = 11. They are different because brackets change the order.","explanation_incorrect":"(5+3)x2=16 but 5+3x2=11. Brackets change the order of operations."},
-    {"question_id":"T02.04.Q032","concept_id":"T02.04.C03","difficulty":"application","type":"mcq","question_text":"Solve: 7 + 14 ÷ 7 - 2 x 3","options":[{"id":"A","text":"3"},{"id":"B","text":"9"},{"id":"C","text":"0"},{"id":"D","text":"5"}],"correct_answer":"A","explanation_correct":"Divide: 14÷7=2. Multiply: 2x3=6. Then: 7+2-6=3.","explanation_incorrect":"BODMAS: 14÷7=2, 2x3=6. Then 7+2-6=3."},
-    {"question_id":"T02.04.Q033","concept_id":"T02.04.C02","difficulty":"exam_style","type":"mcq","question_text":"Solve: (20 + 10) ÷ 5 x 2","options":[{"id":"A","text":"12"},{"id":"B","text":"3"},{"id":"C","text":"24"},{"id":"D","text":"6"}],"correct_answer":"A","explanation_correct":"Brackets: 20+10=30. Then left to right: 30÷5=6, 6x2=12.","explanation_incorrect":"Brackets first (30), then left to right: 30÷5=6, 6x2=12."},
-    {"question_id":"T02.04.Q034","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Rahul solved: 6 + 4 x 5 = 50. Is he correct?","options":[{"id":"A","text":"No, the correct answer is 26"},{"id":"B","text":"Yes, 50 is correct"},{"id":"C","text":"No, the correct answer is 30"},{"id":"D","text":"No, the correct answer is 11"}],"correct_answer":"A","explanation_correct":"Rahul added first (6+4=10, then 10x5=50), but BODMAS says multiply first: 4x5=20, then 6+20=26.","explanation_incorrect":"BODMAS: multiply first (4x5=20), then add (6+20=26). Rahul's answer of 50 is wrong."},
-    {"question_id":"T02.04.Q035","concept_id":"T02.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Solve: 9 + 3 - 2 + 6","options":[{"id":"A","text":"16"},{"id":"B","text":"10"},{"id":"C","text":"14"},{"id":"D","text":"12"}],"correct_answer":"A","explanation_correct":"Addition and subtraction have the same priority. Work left to right: 9+3=12, 12-2=10, 10+6=16.","explanation_incorrect":"Same priority, left to right: 9+3-2+6=16."},
-    {"question_id":"T02.04.Q036","concept_id":"T02.04.C02","difficulty":"application","type":"mcq","question_text":"Solve: 5 x (20 - 8 ÷ 2)","options":[{"id":"A","text":"80"},{"id":"B","text":"30"},{"id":"C","text":"100"},{"id":"D","text":"60"}],"correct_answer":"A","explanation_correct":"Inside brackets, division first: 8÷2=4. Then: 20-4=16. Multiply: 5x16=80.","explanation_incorrect":"Inside brackets: BODMAS still applies. 8÷2=4, 20-4=16. Then 5x16=80."},
-    {"question_id":"T02.04.Q037","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Solve: 1000 - 10 x 10 x 10","options":[{"id":"A","text":"0"},{"id":"B","text":"990,000"},{"id":"C","text":"900"},{"id":"D","text":"990"}],"correct_answer":"A","explanation_correct":"Multiplication first (left to right): 10x10=100, 100x10=1000. Then: 1000-1000=0.","explanation_incorrect":"Multiply first: 10x10x10=1000. Then 1000-1000=0."},
-    {"question_id":"T02.04.Q038","concept_id":"T02.04.C01","difficulty":"application","type":"fill_blank","question_text":"Solve: 30 - 20 + 10 = ___","correct_answer":"20","explanation_correct":"Left to right: 30-20=10, 10+10=20.","explanation_incorrect":"Addition and subtraction same priority, left to right: 30-20+10=20."},
-    {"question_id":"T02.04.Q039","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Place brackets to make: 12 ÷ 2 + 4 = 2","options":[{"id":"A","text":"12 ÷ (2 + 4) = 2"},{"id":"B","text":"(12 ÷ 2) + 4 = 2"},{"id":"C","text":"12 ÷ 2 + (4) = 2"},{"id":"D","text":"Cannot be done"}],"correct_answer":"A","explanation_correct":"12 ÷ (2+4) = 12 ÷ 6 = 2. Without brackets: 12÷2+4 = 6+4 = 10.","explanation_incorrect":"(2+4)=6, then 12÷6=2."},
-    {"question_id":"T02.04.Q040","concept_id":"T02.04.C02","difficulty":"familiarity","type":"mcq","question_text":"Solve: (15 - 5) x (3 + 2)","options":[{"id":"A","text":"50"},{"id":"B","text":"40"},{"id":"C","text":"30"},{"id":"D","text":"60"}],"correct_answer":"A","explanation_correct":"First bracket: 15-5=10. Second bracket: 3+2=5. Then: 10x5=50.","explanation_incorrect":"Solve both brackets: 10 x 5 = 50."},
-    {"question_id":"T02.04.Q041","concept_id":"T02.04.C01","difficulty":"exam_style","type":"mcq","question_text":"Solve: 3 x 3 + 3 ÷ 3 - 3","options":[{"id":"A","text":"7"},{"id":"B","text":"3"},{"id":"C","text":"6"},{"id":"D","text":"0"}],"correct_answer":"A","explanation_correct":"Multiply: 3x3=9. Divide: 3÷3=1. Then: 9+1-3=7.","explanation_incorrect":"BODMAS: 3x3=9, 3÷3=1. Then 9+1-3=7."},
-    {"question_id":"T02.04.Q042","concept_id":"T02.04.C03","difficulty":"application","type":"mcq","question_text":"What is the value of 1/4 of 80 - 10?","options":[{"id":"A","text":"10"},{"id":"B","text":"17.5"},{"id":"C","text":"20"},{"id":"D","text":"70"}],"correct_answer":"A","explanation_correct":"'Of' before subtraction: 1/4 of 80 = 20. Then 20 - 10 = 10.","explanation_incorrect":"'Of' comes before subtraction: 80÷4=20, then 20-10=10."},
-    {"question_id":"T02.04.Q043","concept_id":"T02.04.C02","difficulty":"exam_style","type":"mcq","question_text":"Solve: 2 x ((5 + 3) x (10 - 6))","options":[{"id":"A","text":"64"},{"id":"B","text":"32"},{"id":"C","text":"48"},{"id":"D","text":"80"}],"correct_answer":"A","explanation_correct":"Inner brackets: 5+3=8 and 10-6=4. Multiply inside: 8x4=32. Outer: 2x32=64.","explanation_incorrect":"Innermost brackets: 8 and 4. Then 8x4=32. Then 2x32=64."},
-    {"question_id":"T02.04.Q044","concept_id":"T02.04.C01","difficulty":"familiarity","type":"true_false","question_text":"12 ÷ 3 x 2 = 12 ÷ 6 = 2.","correct_answer":"false","explanation_correct":"Division and multiplication are left to right: 12÷3=4, then 4x2=8. Not 12÷6=2.","explanation_incorrect":"Left to right: 12÷3=4, 4x2=8. The answer is 8, not 2."},
-    {"question_id":"T02.04.Q045","concept_id":"T02.04.C03","difficulty":"exam_style","type":"fill_blank","question_text":"Solve: 5 + 5 x 5 - 5 ÷ 5 = ___","correct_answer":"29","explanation_correct":"Multiply: 5x5=25. Divide: 5÷5=1. Then: 5+25-1=29.","explanation_incorrect":"BODMAS: 5x5=25, 5÷5=1. Then 5+25-1=29."},
-    {"question_id":"T02.04.Q046","concept_id":"T02.04.C02","difficulty":"application","type":"mcq","question_text":"Solve: (6 + 4) x (8 - 3) ÷ 5","options":[{"id":"A","text":"10"},{"id":"B","text":"50"},{"id":"C","text":"5"},{"id":"D","text":"20"}],"correct_answer":"A","explanation_correct":"Brackets: 6+4=10, 8-3=5. Then: 10x5÷5. Left to right: 10x5=50, 50÷5=10.","explanation_incorrect":"Brackets: 10 and 5. Then 10x5÷5 = 50÷5 = 10."},
-    {"question_id":"T02.04.Q047","concept_id":"T02.04.C01","difficulty":"application","type":"mcq","question_text":"Which expression equals 20?","options":[{"id":"A","text":"4 x 3 + 8"},{"id":"B","text":"4 + 3 x 8"},{"id":"C","text":"(4 + 3) x 8"},{"id":"D","text":"4 x (3 + 8)"}],"correct_answer":"A","explanation_correct":"4x3+8 = 12+8 = 20. Others: 4+3x8=4+24=28, (4+3)x8=56, 4x(3+8)=44.","explanation_incorrect":"4x3+8: multiply first (12), then add 8 = 20."},
-    {"question_id":"T02.04.Q048","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Meera bought 3 books at Rs 45 each and 2 pens at Rs 15 each. She paid with a Rs 200 note. Change received:","options":[{"id":"A","text":"Rs 35"},{"id":"B","text":"Rs 45"},{"id":"C","text":"Rs 25"},{"id":"D","text":"Rs 55"}],"correct_answer":"A","explanation_correct":"Cost = 3x45 + 2x15 = 135 + 30 = 165. Change = 200 - 165 = 35.","explanation_incorrect":"Total: 3x45+2x15=135+30=165. Change: 200-165=35."},
-    {"question_id":"T02.04.Q049","concept_id":"T02.04.C02","difficulty":"familiarity","type":"mcq","question_text":"Solve: (100 - 50) ÷ 10","options":[{"id":"A","text":"5"},{"id":"B","text":"95"},{"id":"C","text":"10"},{"id":"D","text":"50"}],"correct_answer":"A","explanation_correct":"Brackets: 100-50=50. Then 50÷10=5.","explanation_incorrect":"Brackets first: 50. Then 50÷10=5."},
-    {"question_id":"T02.04.Q050","concept_id":"T02.04.C03","difficulty":"exam_style","type":"mcq","question_text":"Solve: 10 + 10 x 10 - 10 ÷ 10","options":[{"id":"A","text":"109"},{"id":"B","text":"110"},{"id":"C","text":"100"},{"id":"D","text":"19"}],"correct_answer":"A","explanation_correct":"Multiply: 10x10=100. Divide: 10÷10=1. Then: 10+100-1=109.","explanation_incorrect":"BODMAS: 10x10=100, 10÷10=1. Then 10+100-1=109."}
+    {
+      "question_id": "T02.04.Q001",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What does BODMAS stand for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Brackets, Of, Division, Multiplication, Addition, Subtraction"
+        },
+        {
+          "id": "B",
+          "text": "Brackets, Order, Division, Multiplication, Addition, Subtraction"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B are acceptable"
+        },
+        {
+          "id": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "BODMAS can stand for Brackets-Of-Division-Multiplication-Addition-Subtraction or Brackets-Order-Division-Multiplication-Addition-Subtraction. Both are accepted.",
+      "explanation_incorrect": "Both interpretations of BODMAS are accepted: 'O' can stand for 'Of' or 'Order'."
+    },
+    {
+      "question_id": "T02.04.Q002",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 8 + 4 x 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "36"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By BODMAS, multiplication before addition: 4 x 3 = 12, then 8 + 12 = 20.",
+      "explanation_incorrect": "Do multiplication first: 4 x 3 = 12. Then add: 8 + 12 = 20."
+    },
+    {
+      "question_id": "T02.04.Q003",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 20 - 12 ÷ 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "17"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Division first: 12 ÷ 4 = 3. Then 20 - 3 = 17.",
+      "explanation_incorrect": "By BODMAS, divide first: 12 ÷ 4 = 3. Then subtract: 20 - 3 = 17."
+    },
+    {
+      "question_id": "T02.04.Q004",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Solve: 6 x 5 - 10 ÷ 2 = ___",
+      "correct_answer": "25",
+      "explanation_correct": "Multiplication: 6 x 5 = 30. Division: 10 ÷ 2 = 5. Then: 30 - 5 = 25.",
+      "explanation_incorrect": "Do multiplication and division first (left to right), then subtraction."
+    },
+    {
+      "question_id": "T02.04.Q005",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (8 + 2) x 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "18"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "42"
+        },
+        {
+          "id": "D",
+          "text": "40"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Brackets first: 8 + 2 = 10. Then 10 x 5 = 50.",
+      "explanation_incorrect": "Solve brackets first: (8 + 2) = 10. Then multiply: 10 x 5 = 50."
+    },
+    {
+      "question_id": "T02.04.Q006",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 100 - (25 + 35)",
+      "options": [
+        {
+          "id": "A",
+          "text": "40"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "140"
+        },
+        {
+          "id": "D",
+          "text": "90"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets first: 25 + 35 = 60. Then 100 - 60 = 40.",
+      "explanation_incorrect": "Brackets: 25 + 35 = 60. Then: 100 - 60 = 40."
+    },
+    {
+      "question_id": "T02.04.Q007",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 3 x (12 - 4) + 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "42"
+        },
+        {
+          "id": "C",
+          "text": "26"
+        },
+        {
+          "id": "D",
+          "text": "36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets: 12 - 4 = 8. Multiply: 3 x 8 = 24. Add: 24 + 6 = 30.",
+      "explanation_incorrect": "Step by step: brackets (8), then multiply (24), then add 6 = 30."
+    },
+    {
+      "question_id": "T02.04.Q008",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (15 + 5) ÷ (10 - 6)",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "First bracket: 15 + 5 = 20. Second bracket: 10 - 6 = 4. Then 20 ÷ 4 = 5.",
+      "explanation_incorrect": "Solve both brackets: 20 ÷ 4 = 5."
+    },
+    {
+      "question_id": "T02.04.Q009",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 48 ÷ 6 + 3 x 4 - 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "18"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "22"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Division: 48 ÷ 6 = 8. Multiplication: 3 x 4 = 12. Then: 8 + 12 - 2 = 18. Wait: 8 + 12 = 20, 20 - 2 = 18. Let me recheck. 48÷6=8, 3x4=12. 8+12-2=18. The answer should be 18, not 20. Let me re-examine. 8 + 12 - 2 = 18.",
+      "explanation_incorrect": "By BODMAS: 48÷6=8, 3x4=12. Then left to right: 8+12-2=18."
+    },
+    {
+      "question_id": "T02.04.Q010",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 5 + 3 x 2 - 4 ÷ 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiplication: 3 x 2 = 6. Division: 4 ÷ 2 = 2. Then: 5 + 6 - 2 = 9.",
+      "explanation_incorrect": "BODMAS: multiply (6), divide (2), then 5+6-2=9."
+    },
+    {
+      "question_id": "T02.04.Q011",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "In BODMAS, addition is done before multiplication.",
+      "correct_answer": "false",
+      "explanation_correct": "In BODMAS, multiplication comes before addition. M comes before A in BODMAS.",
+      "explanation_incorrect": "False. Multiplication (M) is done before Addition (A) in BODMAS."
+    },
+    {
+      "question_id": "T02.04.Q012",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 100 - 5 x (8 + 2) + 20 ÷ 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "55"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "45"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets: 8+2=10. Multiply: 5x10=50. Divide: 20÷4=5. Then: 100-50+5=55.",
+      "explanation_incorrect": "Brackets first (10), then multiply (50) and divide (5), then 100-50+5=55."
+    },
+    {
+      "question_id": "T02.04.Q013",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 18 ÷ 3 + 4",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "22"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Division first: 18 ÷ 3 = 6. Then 6 + 4 = 10.",
+      "explanation_incorrect": "Divide first: 18÷3=6, then add: 6+4=10."
+    },
+    {
+      "question_id": "T02.04.Q014",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Solve: 4 x (5 + 3) - 12 = ___",
+      "correct_answer": "20",
+      "explanation_correct": "Brackets: 5+3=8. Multiply: 4x8=32. Subtract: 32-12=20.",
+      "explanation_incorrect": "Brackets (8), multiply (32), subtract 12 = 20."
+    },
+    {
+      "question_id": "T02.04.Q015",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 2 + 3 x 4 - 6 ÷ 3 + 1",
+      "options": [
+        {
+          "id": "A",
+          "text": "13"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "11"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiply: 3x4=12. Divide: 6÷3=2. Then: 2+12-2+1=13.",
+      "explanation_incorrect": "BODMAS: 3x4=12, 6÷3=2. Then left to right: 2+12-2+1=13."
+    },
+    {
+      "question_id": "T02.04.Q016",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 36 ÷ 6 ÷ 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "18"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When operations are of the same level, work left to right: 36÷6=6, then 6÷3=2.",
+      "explanation_incorrect": "Left to right: 36÷6=6, then 6÷3=2."
+    },
+    {
+      "question_id": "T02.04.Q017",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (50 - 20) x (4 + 1)",
+      "options": [
+        {
+          "id": "A",
+          "text": "150"
+        },
+        {
+          "id": "B",
+          "text": "170"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "250"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "First bracket: 50-20=30. Second bracket: 4+1=5. Then: 30x5=150.",
+      "explanation_incorrect": "Solve brackets: 30 x 5 = 150."
+    },
+    {
+      "question_id": "T02.04.Q018",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 72 ÷ 8 - 3 + 2 x 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "16"
+        },
+        {
+          "id": "B",
+          "text": "14"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Division: 72÷8=9. Multiplication: 2x5=10. Then: 9-3+10=16.",
+      "explanation_incorrect": "BODMAS: 72÷8=9, 2x5=10. Then 9-3+10=16."
+    },
+    {
+      "question_id": "T02.04.Q019",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which should be solved first in 5 + 3 x 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 + 3"
+        },
+        {
+          "id": "B",
+          "text": "3 x 2"
+        },
+        {
+          "id": "C",
+          "text": "Either one"
+        },
+        {
+          "id": "D",
+          "text": "5 x 2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By BODMAS, multiplication comes before addition. So 3 x 2 = 6 is calculated first, then 5 + 6 = 11.",
+      "explanation_incorrect": "Multiplication has higher priority than addition in BODMAS."
+    },
+    {
+      "question_id": "T02.04.Q020",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 7 x (6 - 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "40"
+        },
+        {
+          "id": "C",
+          "text": "21"
+        },
+        {
+          "id": "D",
+          "text": "35"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets: 6-2=4. Then 7x4=28.",
+      "explanation_incorrect": "Brackets first: 6-2=4. Multiply: 7x4=28."
+    },
+    {
+      "question_id": "T02.04.Q021",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Place brackets to make this true: 8 + 2 x 5 = 50",
+      "options": [
+        {
+          "id": "A",
+          "text": "(8 + 2) x 5 = 50"
+        },
+        {
+          "id": "B",
+          "text": "8 + (2 x 5) = 50"
+        },
+        {
+          "id": "C",
+          "text": "(8 + 2 x 5) = 50"
+        },
+        {
+          "id": "D",
+          "text": "Brackets cannot make this true"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "(8 + 2) x 5 = 10 x 5 = 50. Without brackets: 8 + 2 x 5 = 8 + 10 = 18.",
+      "explanation_incorrect": "Adding brackets around 8+2 forces addition first: (8+2)x5=10x5=50."
+    },
+    {
+      "question_id": "T02.04.Q022",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 15 - 3 x 4 + 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiply: 3x4=12. Then: 15-12+2=5.",
+      "explanation_incorrect": "BODMAS: 3x4=12 first. Then 15-12+2=5."
+    },
+    {
+      "question_id": "T02.04.Q023",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Solve: (100 - 60) ÷ (2 x 5) = ___",
+      "correct_answer": "4",
+      "explanation_correct": "First bracket: 100-60=40. Second bracket: 2x5=10. Then: 40÷10=4.",
+      "explanation_incorrect": "Brackets: 40 ÷ 10 = 4."
+    },
+    {
+      "question_id": "T02.04.Q024",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A shopkeeper sold 5 pens at Rs 12 each and 3 pencils at Rs 5 each. He gave a discount of Rs 10. What did the customer pay?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rs 65"
+        },
+        {
+          "id": "B",
+          "text": "Rs 75"
+        },
+        {
+          "id": "C",
+          "text": "Rs 55"
+        },
+        {
+          "id": "D",
+          "text": "Rs 85"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5 x 12 + 3 x 5 - 10 = 60 + 15 - 10 = 65. Wait: 60+15=75, 75-10=65. The answer is 65, which is option A. But let me re-read. Actually 5x12=60, 3x5=15, total=75, minus 10 discount = 65. So A is correct.",
+      "explanation_incorrect": "Total = 5x12 + 3x5 - 10 = 60 + 15 - 10 = 65."
+    },
+    {
+      "question_id": "T02.04.Q025",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 10 + 10 ÷ 10",
+      "options": [
+        {
+          "id": "A",
+          "text": "11"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Division first: 10÷10=1. Then 10+1=11.",
+      "explanation_incorrect": "BODMAS: divide first (10÷10=1), then add (10+1=11)."
+    },
+    {
+      "question_id": "T02.04.Q026",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 8 x 3 + 16 ÷ 4 - 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "23"
+        },
+        {
+          "id": "B",
+          "text": "27"
+        },
+        {
+          "id": "C",
+          "text": "19"
+        },
+        {
+          "id": "D",
+          "text": "25"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiply: 8x3=24. Divide: 16÷4=4. Then: 24+4-5=23.",
+      "explanation_incorrect": "BODMAS: 8x3=24, 16÷4=4. Then 24+4-5=23."
+    },
+    {
+      "question_id": "T02.04.Q027",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 2 x (3 + (4 x 2))",
+      "options": [
+        {
+          "id": "A",
+          "text": "22"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Inner brackets: 4x2=8. Outer brackets: 3+8=11. Then: 2x11=22.",
+      "explanation_incorrect": "Work from innermost brackets: 4x2=8, then 3+8=11, then 2x11=22."
+    },
+    {
+      "question_id": "T02.04.Q028",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the value of 1/2 of 100 + 20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "70"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "50"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "'Of' means multiplication and comes before addition: 1/2 of 100 = 50. Then 50 + 20 = 70.",
+      "explanation_incorrect": "In BODMAS, 'Of' comes before addition: 1/2 x 100 = 50, then 50 + 20 = 70."
+    },
+    {
+      "question_id": "T02.04.Q029",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Solve: 50 - 2 x (15 - 5) + 8 ÷ 4 = ___",
+      "correct_answer": "32",
+      "explanation_correct": "Brackets: 15-5=10. Multiply: 2x10=20. Divide: 8÷4=2. Then: 50-20+2=32.",
+      "explanation_incorrect": "Brackets(10), multiply(20), divide(2), then 50-20+2=32."
+    },
+    {
+      "question_id": "T02.04.Q030",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 24 ÷ 4 x 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "18"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Division and multiplication are same priority, work left to right: 24÷4=6, then 6x3=18.",
+      "explanation_incorrect": "Left to right: 24÷4=6, then 6x3=18."
+    },
+    {
+      "question_id": "T02.04.Q031",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "(5 + 3) x 2 gives the same answer as 5 + 3 x 2.",
+      "correct_answer": "false",
+      "explanation_correct": "(5+3)x2 = 8x2 = 16. But 5+3x2 = 5+6 = 11. They are different because brackets change the order.",
+      "explanation_incorrect": "(5+3)x2=16 but 5+3x2=11. Brackets change the order of operations."
+    },
+    {
+      "question_id": "T02.04.Q032",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 7 + 14 ÷ 7 - 2 x 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Divide: 14÷7=2. Multiply: 2x3=6. Then: 7+2-6=3.",
+      "explanation_incorrect": "BODMAS: 14÷7=2, 2x3=6. Then 7+2-6=3."
+    },
+    {
+      "question_id": "T02.04.Q033",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (20 + 10) ÷ 5 x 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets: 20+10=30. Then left to right: 30÷5=6, 6x2=12.",
+      "explanation_incorrect": "Brackets first (30), then left to right: 30÷5=6, 6x2=12."
+    },
+    {
+      "question_id": "T02.04.Q034",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Rahul solved: 6 + 4 x 5 = 50. Is he correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No, the correct answer is 26"
+        },
+        {
+          "id": "B",
+          "text": "Yes, 50 is correct"
+        },
+        {
+          "id": "C",
+          "text": "No, the correct answer is 30"
+        },
+        {
+          "id": "D",
+          "text": "No, the correct answer is 11"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rahul added first (6+4=10, then 10x5=50), but BODMAS says multiply first: 4x5=20, then 6+20=26.",
+      "explanation_incorrect": "BODMAS: multiply first (4x5=20), then add (6+20=26). Rahul's answer of 50 is wrong."
+    },
+    {
+      "question_id": "T02.04.Q035",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 9 + 3 - 2 + 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "16"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Addition and subtraction have the same priority. Work left to right: 9+3=12, 12-2=10, 10+6=16.",
+      "explanation_incorrect": "Same priority, left to right: 9+3-2+6=16."
+    },
+    {
+      "question_id": "T02.04.Q036",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 5 x (20 - 8 ÷ 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "80"
+        },
+        {
+          "id": "B",
+          "text": "30"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Inside brackets, division first: 8÷2=4. Then: 20-4=16. Multiply: 5x16=80.",
+      "explanation_incorrect": "Inside brackets: BODMAS still applies. 8÷2=4, 20-4=16. Then 5x16=80."
+    },
+    {
+      "question_id": "T02.04.Q037",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 1000 - 10 x 10 x 10",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "990,000"
+        },
+        {
+          "id": "C",
+          "text": "900"
+        },
+        {
+          "id": "D",
+          "text": "990"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiplication first (left to right): 10x10=100, 100x10=1000. Then: 1000-1000=0.",
+      "explanation_incorrect": "Multiply first: 10x10x10=1000. Then 1000-1000=0."
+    },
+    {
+      "question_id": "T02.04.Q038",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Solve: 30 - 20 + 10 = ___",
+      "correct_answer": "20",
+      "explanation_correct": "Left to right: 30-20=10, 10+10=20.",
+      "explanation_incorrect": "Addition and subtraction same priority, left to right: 30-20+10=20."
+    },
+    {
+      "question_id": "T02.04.Q039",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Place brackets to make: 12 ÷ 2 + 4 = 2",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 ÷ (2 + 4) = 2"
+        },
+        {
+          "id": "B",
+          "text": "(12 ÷ 2) + 4 = 2"
+        },
+        {
+          "id": "C",
+          "text": "12 ÷ 2 + (4) = 2"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be done"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "12 ÷ (2+4) = 12 ÷ 6 = 2. Without brackets: 12÷2+4 = 6+4 = 10.",
+      "explanation_incorrect": "(2+4)=6, then 12÷6=2."
+    },
+    {
+      "question_id": "T02.04.Q040",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (15 - 5) x (3 + 2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "50"
+        },
+        {
+          "id": "B",
+          "text": "40"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "First bracket: 15-5=10. Second bracket: 3+2=5. Then: 10x5=50.",
+      "explanation_incorrect": "Solve both brackets: 10 x 5 = 50."
+    },
+    {
+      "question_id": "T02.04.Q041",
+      "concept_id": "T02.04.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 3 x 3 + 3 ÷ 3 - 3",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiply: 3x3=9. Divide: 3÷3=1. Then: 9+1-3=7.",
+      "explanation_incorrect": "BODMAS: 3x3=9, 3÷3=1. Then 9+1-3=7."
+    },
+    {
+      "question_id": "T02.04.Q042",
+      "concept_id": "T02.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the value of 1/4 of 80 - 10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "17.5"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "70"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "'Of' before subtraction: 1/4 of 80 = 20. Then 20 - 10 = 10.",
+      "explanation_incorrect": "'Of' comes before subtraction: 80÷4=20, then 20-10=10."
+    },
+    {
+      "question_id": "T02.04.Q043",
+      "concept_id": "T02.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 2 x ((5 + 3) x (10 - 6))",
+      "options": [
+        {
+          "id": "A",
+          "text": "64"
+        },
+        {
+          "id": "B",
+          "text": "32"
+        },
+        {
+          "id": "C",
+          "text": "48"
+        },
+        {
+          "id": "D",
+          "text": "80"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Inner brackets: 5+3=8 and 10-6=4. Multiply inside: 8x4=32. Outer: 2x32=64.",
+      "explanation_incorrect": "Innermost brackets: 8 and 4. Then 8x4=32. Then 2x32=64."
+    },
+    {
+      "question_id": "T02.04.Q044",
+      "concept_id": "T02.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "12 ÷ 3 x 2 = 12 ÷ 6 = 2.",
+      "correct_answer": "false",
+      "explanation_correct": "Division and multiplication are left to right: 12÷3=4, then 4x2=8. Not 12÷6=2.",
+      "explanation_incorrect": "Left to right: 12÷3=4, 4x2=8. The answer is 8, not 2."
+    },
+    {
+      "question_id": "T02.04.Q045",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Solve: 5 + 5 x 5 - 5 ÷ 5 = ___",
+      "correct_answer": "29",
+      "explanation_correct": "Multiply: 5x5=25. Divide: 5÷5=1. Then: 5+25-1=29.",
+      "explanation_incorrect": "BODMAS: 5x5=25, 5÷5=1. Then 5+25-1=29."
+    },
+    {
+      "question_id": "T02.04.Q046",
+      "concept_id": "T02.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (6 + 4) x (8 - 3) ÷ 5",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets: 6+4=10, 8-3=5. Then: 10x5÷5. Left to right: 10x5=50, 50÷5=10.",
+      "explanation_incorrect": "Brackets: 10 and 5. Then 10x5÷5 = 50÷5 = 10."
+    },
+    {
+      "question_id": "T02.04.Q047",
+      "concept_id": "T02.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which expression equals 20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 x 3 + 8"
+        },
+        {
+          "id": "B",
+          "text": "4 + 3 x 8"
+        },
+        {
+          "id": "C",
+          "text": "(4 + 3) x 8"
+        },
+        {
+          "id": "D",
+          "text": "4 x (3 + 8)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4x3+8 = 12+8 = 20. Others: 4+3x8=4+24=28, (4+3)x8=56, 4x(3+8)=44.",
+      "explanation_incorrect": "4x3+8: multiply first (12), then add 8 = 20."
+    },
+    {
+      "question_id": "T02.04.Q048",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Meera bought 3 books at Rs 45 each and 2 pens at Rs 15 each. She paid with a Rs 200 note. Change received:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rs 35"
+        },
+        {
+          "id": "B",
+          "text": "Rs 45"
+        },
+        {
+          "id": "C",
+          "text": "Rs 25"
+        },
+        {
+          "id": "D",
+          "text": "Rs 55"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Cost = 3x45 + 2x15 = 135 + 30 = 165. Change = 200 - 165 = 35.",
+      "explanation_incorrect": "Total: 3x45+2x15=135+30=165. Change: 200-165=35."
+    },
+    {
+      "question_id": "T02.04.Q049",
+      "concept_id": "T02.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: (100 - 50) ÷ 10",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "95"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "50"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Brackets: 100-50=50. Then 50÷10=5.",
+      "explanation_incorrect": "Brackets first: 50. Then 50÷10=5."
+    },
+    {
+      "question_id": "T02.04.Q050",
+      "concept_id": "T02.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Solve: 10 + 10 x 10 - 10 ÷ 10",
+      "options": [
+        {
+          "id": "A",
+          "text": "109"
+        },
+        {
+          "id": "B",
+          "text": "110"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "19"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiply: 10x10=100. Divide: 10÷10=1. Then: 10+100-1=109.",
+      "explanation_incorrect": "BODMAS: 10x10=100, 10÷10=1. Then 10+100-1=109."
+    }
   ]
 }

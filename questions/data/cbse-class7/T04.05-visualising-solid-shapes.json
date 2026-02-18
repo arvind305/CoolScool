@@ -1,62 +1,1379 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version":"1.0.0","board":"CBSE","class":7,"subject":"Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 7,
+    "subject": "Mathematics"
+  },
   "topic_id": "T04.05",
   "topic_name": "Visualising Solid Shapes",
   "canonical_explanation": {
     "text": "3D shapes (solids) have faces, edges, and vertices. Euler's formula relates these: F + V - E = 2 for any convex polyhedron. Nets are 2D patterns that fold into 3D shapes. We can draw 3D shapes on flat surfaces using oblique sketches or isometric sketches. Cross-sections of solids reveal 2D shapes when cut by a plane.",
-    "rules": ["Euler's formula: F + V - E = 2","A cube has 6 faces, 12 edges, 8 vertices","A cuboid has 6 faces, 12 edges, 8 vertices","A triangular prism has 5 faces, 9 edges, 6 vertices","A cylinder has 3 faces (2 flat, 1 curved), 2 edges, 0 vertices","A cone has 2 faces (1 flat, 1 curved), 1 edge, 1 vertex","A sphere has 1 face (curved), 0 edges, 0 vertices"]
+    "rules": [
+      "Euler's formula: F + V - E = 2",
+      "A cube has 6 faces, 12 edges, 8 vertices",
+      "A cuboid has 6 faces, 12 edges, 8 vertices",
+      "A triangular prism has 5 faces, 9 edges, 6 vertices",
+      "A cylinder has 3 faces (2 flat, 1 curved), 2 edges, 0 vertices",
+      "A cone has 2 faces (1 flat, 1 curved), 1 edge, 1 vertex",
+      "A sphere has 1 face (curved), 0 edges, 0 vertices"
+    ]
   },
   "questions": [
-    {"question_id":"T04.05.Q001","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"How many faces does a cube have?","options":[{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"12"}],"correct_answer":"B","explanation_correct":"A cube has 6 square faces.","explanation_incorrect":"A cube has 6 faces."},
-    {"question_id":"T04.05.Q002","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"How many edges does a cube have?","options":[{"id":"A","text":"6"},{"id":"B","text":"8"},{"id":"C","text":"12"},{"id":"D","text":"4"}],"correct_answer":"C","explanation_correct":"A cube has 12 edges.","explanation_incorrect":"A cube has 12 edges."},
-    {"question_id":"T04.05.Q003","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"How many vertices does a cube have?","options":[{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"12"}],"correct_answer":"C","explanation_correct":"A cube has 8 vertices (corners).","explanation_incorrect":"A cube has 8 vertices."},
-    {"question_id":"T04.05.Q004","concept_id":"T04.05.C01","difficulty":"familiarity","type":"fill_blank","question_text":"A triangular prism has ___ faces.","correct_answer":"5","explanation_correct":"A triangular prism has 5 faces: 2 triangular and 3 rectangular.","explanation_incorrect":"2 triangular + 3 rectangular = 5 faces."},
-    {"question_id":"T04.05.Q005","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"Verify Euler's formula for a cuboid: F + V - E = ?","options":[{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"4"}],"correct_answer":"C","explanation_correct":"Cuboid: F=6, V=8, E=12. F+V-E = 6+8-12 = 2.","explanation_incorrect":"6 + 8 - 12 = 2."},
-    {"question_id":"T04.05.Q006","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"A square pyramid has how many faces?","options":[{"id":"A","text":"4"},{"id":"B","text":"5"},{"id":"C","text":"6"},{"id":"D","text":"8"}],"correct_answer":"B","explanation_correct":"A square pyramid has 5 faces: 1 square base and 4 triangular faces.","explanation_incorrect":"1 square + 4 triangles = 5 faces."},
-    {"question_id":"T04.05.Q007","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"A square pyramid has how many vertices?","options":[{"id":"A","text":"4"},{"id":"B","text":"5"},{"id":"C","text":"6"},{"id":"D","text":"8"}],"correct_answer":"B","explanation_correct":"A square pyramid has 5 vertices: 4 at the base and 1 at the apex.","explanation_incorrect":"4 base + 1 apex = 5 vertices."},
-    {"question_id":"T04.05.Q008","concept_id":"T04.05.C01","difficulty":"application","type":"mcq","question_text":"A solid has 8 faces and 6 vertices. Using Euler's formula, how many edges does it have?","options":[{"id":"A","text":"10"},{"id":"B","text":"12"},{"id":"C","text":"14"},{"id":"D","text":"16"}],"correct_answer":"B","explanation_correct":"F + V - E = 2. 8 + 6 - E = 2. E = 12.","explanation_incorrect":"E = F + V - 2 = 8 + 6 - 2 = 12."},
-    {"question_id":"T04.05.Q009","concept_id":"T04.05.C01","difficulty":"application","type":"mcq","question_text":"A solid has 5 faces and 8 edges. How many vertices does it have?","options":[{"id":"A","text":"4"},{"id":"B","text":"5"},{"id":"C","text":"6"},{"id":"D","text":"7"}],"correct_answer":"B","explanation_correct":"V = 2 - F + E = 2 - 5 + 8 = 5.","explanation_incorrect":"V = E - F + 2 = 8 - 5 + 2 = 5."},
-    {"question_id":"T04.05.Q010","concept_id":"T04.05.C02","difficulty":"familiarity","type":"mcq","question_text":"How many squares are needed to make a net of a cube?","options":[{"id":"A","text":"4"},{"id":"B","text":"5"},{"id":"C","text":"6"},{"id":"D","text":"8"}],"correct_answer":"C","explanation_correct":"A cube has 6 faces, so its net needs 6 squares.","explanation_incorrect":"A cube has 6 faces = 6 squares in the net."},
-    {"question_id":"T04.05.Q011","concept_id":"T04.05.C02","difficulty":"familiarity","type":"true_false","question_text":"There is only one possible net for a cube.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"B","explanation_correct":"A cube has 11 different nets.","explanation_incorrect":"There are 11 different nets that fold into a cube."},
-    {"question_id":"T04.05.Q012","concept_id":"T04.05.C02","difficulty":"familiarity","type":"mcq","question_text":"The net of a cylinder consists of:","options":[{"id":"A","text":"2 circles and 1 rectangle"},{"id":"B","text":"1 circle and 1 rectangle"},{"id":"C","text":"2 rectangles and 1 circle"},{"id":"D","text":"3 rectangles"}],"correct_answer":"A","explanation_correct":"A cylinder net has 2 circles (top and bottom) and 1 rectangle (curved surface unrolled).","explanation_incorrect":"2 circles + 1 rectangle = cylinder net."},
-    {"question_id":"T04.05.Q013","concept_id":"T04.05.C02","difficulty":"application","type":"mcq","question_text":"The net of a cone consists of:","options":[{"id":"A","text":"1 circle and 1 sector"},{"id":"B","text":"2 circles"},{"id":"C","text":"1 triangle and 1 circle"},{"id":"D","text":"1 rectangle and 1 circle"}],"correct_answer":"A","explanation_correct":"A cone net has 1 circle (base) and 1 sector (curved surface unrolled).","explanation_incorrect":"1 circle (base) + 1 sector (lateral surface) = cone net."},
-    {"question_id":"T04.05.Q014","concept_id":"T04.05.C02","difficulty":"application","type":"mcq","question_text":"Which 3D shape does a net with 2 triangles and 3 rectangles form?","options":[{"id":"A","text":"Cube"},{"id":"B","text":"Triangular prism"},{"id":"C","text":"Square pyramid"},{"id":"D","text":"Cuboid"}],"correct_answer":"B","explanation_correct":"2 triangles + 3 rectangles = triangular prism.","explanation_incorrect":"A triangular prism has 2 triangular and 3 rectangular faces."},
-    {"question_id":"T04.05.Q015","concept_id":"T04.05.C03","difficulty":"familiarity","type":"mcq","question_text":"In an oblique sketch of a cube:","options":[{"id":"A","text":"All edges are drawn equal"},{"id":"B","text":"Front face is a square, depth edges are drawn at an angle"},{"id":"C","text":"All faces are circles"},{"id":"D","text":"Only 3 faces are visible"}],"correct_answer":"B","explanation_correct":"In an oblique sketch, the front face is drawn as a true square, and the depth is shown using lines drawn at an angle (usually 45 degrees) and shorter than actual length.","explanation_incorrect":"Oblique sketch: front face is exact, depth is shown at an angle with reduced length."},
-    {"question_id":"T04.05.Q016","concept_id":"T04.05.C03","difficulty":"familiarity","type":"mcq","question_text":"Isometric sketches use:","options":[{"id":"A","text":"Dot paper with dots in square grid"},{"id":"B","text":"Dot paper with dots in triangular pattern"},{"id":"C","text":"Plain paper"},{"id":"D","text":"Graph paper"}],"correct_answer":"B","explanation_correct":"Isometric sketches are drawn on isometric dot paper, which has dots arranged in a triangular pattern.","explanation_incorrect":"Isometric dot paper has dots in equilateral triangular arrangement."},
-    {"question_id":"T04.05.Q017","concept_id":"T04.05.C03","difficulty":"application","type":"mcq","question_text":"In an isometric sketch, edges along all three axes are:","options":[{"id":"A","text":"Different lengths"},{"id":"B","text":"Drawn at right angles"},{"id":"C","text":"Drawn to scale (equal actual measurements)"},{"id":"D","text":"Always vertical"}],"correct_answer":"C","explanation_correct":"In isometric sketches, all edges along the three axes are drawn to the same scale, preserving actual proportions.","explanation_incorrect":"Isometric drawing preserves scale along all three axes."},
-    {"question_id":"T04.05.Q018","concept_id":"T04.05.C04","difficulty":"familiarity","type":"mcq","question_text":"What is the cross-section when a cube is cut by a plane parallel to a face?","options":[{"id":"A","text":"Triangle"},{"id":"B","text":"Square"},{"id":"C","text":"Circle"},{"id":"D","text":"Rectangle"}],"correct_answer":"B","explanation_correct":"A plane parallel to a face of a cube creates a square cross-section.","explanation_incorrect":"Cutting parallel to a face gives the same shape as the face: square."},
-    {"question_id":"T04.05.Q019","concept_id":"T04.05.C04","difficulty":"familiarity","type":"mcq","question_text":"What is the cross-section of a cylinder cut by a plane perpendicular to its axis?","options":[{"id":"A","text":"Rectangle"},{"id":"B","text":"Triangle"},{"id":"C","text":"Circle"},{"id":"D","text":"Ellipse"}],"correct_answer":"C","explanation_correct":"Cutting a cylinder perpendicular to its axis gives a circular cross-section.","explanation_incorrect":"Perpendicular cut through a cylinder gives a circle."},
-    {"question_id":"T04.05.Q020","concept_id":"T04.05.C04","difficulty":"application","type":"mcq","question_text":"What is the cross-section of a cylinder cut by a plane parallel to its axis?","options":[{"id":"A","text":"Circle"},{"id":"B","text":"Rectangle"},{"id":"C","text":"Triangle"},{"id":"D","text":"Ellipse"}],"correct_answer":"B","explanation_correct":"Cutting a cylinder parallel to its axis gives a rectangular cross-section.","explanation_incorrect":"A vertical cut through a cylinder gives a rectangle."},
-    {"question_id":"T04.05.Q021","concept_id":"T04.05.C01","difficulty":"application","type":"mcq","question_text":"A triangular pyramid (tetrahedron) has how many edges?","options":[{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"10"}],"correct_answer":"B","explanation_correct":"A tetrahedron has 4 vertices, 4 faces, and 6 edges. Check: 4 + 4 - 6 = 2.","explanation_incorrect":"Tetrahedron: 6 edges."},
-    {"question_id":"T04.05.Q022","concept_id":"T04.05.C01","difficulty":"application","type":"fill_blank","question_text":"A pentagonal prism has ___ faces.","correct_answer":"7","explanation_correct":"A pentagonal prism has 7 faces: 2 pentagons + 5 rectangles.","explanation_incorrect":"2 pentagonal + 5 rectangular = 7 faces."},
-    {"question_id":"T04.05.Q023","concept_id":"T04.05.C02","difficulty":"application","type":"mcq","question_text":"A net made of 1 square and 4 identical triangles folds into a:","options":[{"id":"A","text":"Cube"},{"id":"B","text":"Triangular prism"},{"id":"C","text":"Square pyramid"},{"id":"D","text":"Tetrahedron"}],"correct_answer":"C","explanation_correct":"1 square base + 4 triangular faces = square pyramid.","explanation_incorrect":"1 square + 4 triangles = square pyramid."},
-    {"question_id":"T04.05.Q024","concept_id":"T04.05.C03","difficulty":"application","type":"mcq","question_text":"How many faces of a cube are visible in an oblique sketch?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"6"}],"correct_answer":"C","explanation_correct":"In an oblique or isometric sketch of a cube, 3 faces are visible (top, front, and one side).","explanation_incorrect":"3 faces are visible: top, front, side."},
-    {"question_id":"T04.05.Q025","concept_id":"T04.05.C04","difficulty":"application","type":"mcq","question_text":"The shadow of a sphere is always:","options":[{"id":"A","text":"A square"},{"id":"B","text":"A circle"},{"id":"C","text":"An oval"},{"id":"D","text":"A point"}],"correct_answer":"B","explanation_correct":"The shadow (or any cross-section) of a sphere is always a circle.","explanation_incorrect":"A sphere always casts a circular shadow."},
-    {"question_id":"T04.05.Q026","concept_id":"T04.05.C01","difficulty":"exam_style","type":"mcq","question_text":"A hexagonal prism has how many vertices?","options":[{"id":"A","text":"8"},{"id":"B","text":"10"},{"id":"C","text":"12"},{"id":"D","text":"14"}],"correct_answer":"C","explanation_correct":"A hexagonal prism has 2 hexagons, each with 6 vertices = 12 vertices total.","explanation_incorrect":"6 + 6 = 12 vertices."},
-    {"question_id":"T04.05.Q027","concept_id":"T04.05.C01","difficulty":"exam_style","type":"mcq","question_text":"A hexagonal prism has how many edges?","options":[{"id":"A","text":"12"},{"id":"B","text":"15"},{"id":"C","text":"18"},{"id":"D","text":"20"}],"correct_answer":"C","explanation_correct":"Top 6 + bottom 6 + 6 vertical = 18 edges. Check: F+V-E = 8+12-18 = 2.","explanation_incorrect":"6 + 6 + 6 = 18 edges."},
-    {"question_id":"T04.05.Q028","concept_id":"T04.05.C02","difficulty":"exam_style","type":"true_false","question_text":"A net of a tetrahedron consists of 4 equilateral triangles (for a regular tetrahedron).","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"A","explanation_correct":"A regular tetrahedron has 4 equilateral triangular faces, so its net has 4 equilateral triangles.","explanation_incorrect":"4 faces = 4 triangles in the net."},
-    {"question_id":"T04.05.Q029","concept_id":"T04.05.C04","difficulty":"exam_style","type":"mcq","question_text":"What is the cross-section of a cone cut by a plane parallel to its base?","options":[{"id":"A","text":"Triangle"},{"id":"B","text":"Circle"},{"id":"C","text":"Rectangle"},{"id":"D","text":"Parabola"}],"correct_answer":"B","explanation_correct":"A plane parallel to the base of a cone creates a circular cross-section.","explanation_incorrect":"Parallel to the base gives a smaller circle."},
-    {"question_id":"T04.05.Q030","concept_id":"T04.05.C01","difficulty":"exam_style","type":"mcq","question_text":"Which solid has the same number of faces and vertices?","options":[{"id":"A","text":"Cube"},{"id":"B","text":"Tetrahedron"},{"id":"C","text":"Triangular prism"},{"id":"D","text":"Square pyramid"}],"correct_answer":"B","explanation_correct":"Tetrahedron: F=4, V=4, E=6. Faces = Vertices.","explanation_incorrect":"Tetrahedron has 4 faces and 4 vertices."},
-    {"question_id":"T04.05.Q031","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"Which 3D shape has no vertex?","options":[{"id":"A","text":"Cube"},{"id":"B","text":"Cone"},{"id":"C","text":"Sphere"},{"id":"D","text":"Pyramid"}],"correct_answer":"C","explanation_correct":"A sphere has no vertices, no edges, and 1 curved face.","explanation_incorrect":"A sphere has no corners (vertices)."},
-    {"question_id":"T04.05.Q032","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"A cone has how many edges?","options":[{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}],"correct_answer":"B","explanation_correct":"A cone has 1 edge (the circular edge at the base).","explanation_incorrect":"A cone has 1 circular edge at the base."},
-    {"question_id":"T04.05.Q033","concept_id":"T04.05.C02","difficulty":"exam_style","type":"mcq","question_text":"Which of the following CANNOT be a net of a cube?","options":[{"id":"A","text":"Four squares in a row with one on top and one on bottom of the second square"},{"id":"B","text":"Three squares in an L-shape with three more in another L"},{"id":"C","text":"Six squares in a straight line"},{"id":"D","text":"A cross shape made of six squares"}],"correct_answer":"C","explanation_correct":"Six squares in a straight line cannot fold into a cube because opposite faces would overlap.","explanation_incorrect":"A straight line of 6 squares won't fold into a cube — sides would overlap."},
-    {"question_id":"T04.05.Q034","concept_id":"T04.05.C03","difficulty":"exam_style","type":"mcq","question_text":"The top view of a cone is:","options":[{"id":"A","text":"A triangle"},{"id":"B","text":"A circle"},{"id":"C","text":"A rectangle"},{"id":"D","text":"A point"}],"correct_answer":"B","explanation_correct":"Looking at a cone from the top, you see a circle (the base) with a point at the center (the apex).","explanation_incorrect":"Top view of a cone = circle with center point."},
-    {"question_id":"T04.05.Q035","concept_id":"T04.05.C03","difficulty":"exam_style","type":"mcq","question_text":"The front view of a cylinder is:","options":[{"id":"A","text":"A circle"},{"id":"B","text":"A rectangle"},{"id":"C","text":"A triangle"},{"id":"D","text":"An oval"}],"correct_answer":"B","explanation_correct":"The front view (side view) of a cylinder is a rectangle.","explanation_incorrect":"A cylinder from the front looks like a rectangle."},
-    {"question_id":"T04.05.Q036","concept_id":"T04.05.C04","difficulty":"exam_style","type":"mcq","question_text":"What shape do you get when you cut a cuboid with a diagonal plane from one edge to the opposite?","options":[{"id":"A","text":"Square"},{"id":"B","text":"Triangle"},{"id":"C","text":"Rectangle"},{"id":"D","text":"Parallelogram"}],"correct_answer":"C","explanation_correct":"A diagonal cut through a cuboid typically produces a rectangular cross-section.","explanation_incorrect":"A diagonal cut through a cuboid gives a rectangle."},
-    {"question_id":"T04.05.Q037","concept_id":"T04.05.C01","difficulty":"exam_style","type":"fill_blank","question_text":"A pentagonal pyramid has ___ edges.","correct_answer":"10","explanation_correct":"A pentagonal pyramid has 5 base edges + 5 lateral edges = 10 edges.","explanation_incorrect":"5 + 5 = 10 edges."},
-    {"question_id":"T04.05.Q038","concept_id":"T04.05.C01","difficulty":"application","type":"mcq","question_text":"A solid has 7 faces, 15 edges. How many vertices does it have?","options":[{"id":"A","text":"8"},{"id":"B","text":"10"},{"id":"C","text":"12"},{"id":"D","text":"14"}],"correct_answer":"B","explanation_correct":"V = 2 - F + E = 2 - 7 + 15 = 10.","explanation_incorrect":"V = E - F + 2 = 15 - 7 + 2 = 10."},
-    {"question_id":"T04.05.Q039","concept_id":"T04.05.C02","difficulty":"application","type":"mcq","question_text":"The net of a triangular prism has:","options":[{"id":"A","text":"2 triangles and 2 rectangles"},{"id":"B","text":"2 triangles and 3 rectangles"},{"id":"C","text":"3 triangles and 2 rectangles"},{"id":"D","text":"1 triangle and 3 rectangles"}],"correct_answer":"B","explanation_correct":"A triangular prism has 2 triangular faces and 3 rectangular faces, so its net has 2 triangles and 3 rectangles.","explanation_incorrect":"2 triangular + 3 rectangular faces = net of triangular prism."},
-    {"question_id":"T04.05.Q040","concept_id":"T04.05.C03","difficulty":"application","type":"mcq","question_text":"The side view of a cube is:","options":[{"id":"A","text":"A triangle"},{"id":"B","text":"A circle"},{"id":"C","text":"A square"},{"id":"D","text":"A rectangle"}],"correct_answer":"C","explanation_correct":"Looking at a cube from the side, front, or top, you always see a square.","explanation_incorrect":"A cube from any standard view looks like a square."},
-    {"question_id":"T04.05.Q041","concept_id":"T04.05.C01","difficulty":"exam_style","type":"mcq","question_text":"Which solid has all faces as triangles?","options":[{"id":"A","text":"Cube"},{"id":"B","text":"Triangular prism"},{"id":"C","text":"Tetrahedron"},{"id":"D","text":"Square pyramid"}],"correct_answer":"C","explanation_correct":"A tetrahedron has 4 triangular faces. All faces are triangles.","explanation_incorrect":"Tetrahedron: all 4 faces are triangles."},
-    {"question_id":"T04.05.Q042","concept_id":"T04.05.C04","difficulty":"exam_style","type":"true_false","question_text":"The cross-section of a sphere is always a circle.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"A","explanation_correct":"Any plane cutting through a sphere creates a circular cross-section.","explanation_incorrect":"Every cross-section of a sphere is a circle."},
-    {"question_id":"T04.05.Q043","concept_id":"T04.05.C01","difficulty":"familiarity","type":"mcq","question_text":"Which 3D shape has exactly 1 vertex?","options":[{"id":"A","text":"Cylinder"},{"id":"B","text":"Cone"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cube"}],"correct_answer":"B","explanation_correct":"A cone has exactly 1 vertex (the apex).","explanation_incorrect":"The apex of a cone is its only vertex."},
-    {"question_id":"T04.05.Q044","concept_id":"T04.05.C02","difficulty":"exam_style","type":"mcq","question_text":"How many faces does a solid formed by folding a net of 4 equilateral triangles have?","options":[{"id":"A","text":"3"},{"id":"B","text":"4"},{"id":"C","text":"5"},{"id":"D","text":"6"}],"correct_answer":"B","explanation_correct":"4 equilateral triangles fold into a tetrahedron, which has 4 faces.","explanation_incorrect":"4 triangles = tetrahedron = 4 faces."},
-    {"question_id":"T04.05.Q045","concept_id":"T04.05.C03","difficulty":"exam_style","type":"mcq","question_text":"The front view of a sphere is:","options":[{"id":"A","text":"A point"},{"id":"B","text":"A circle"},{"id":"C","text":"A semicircle"},{"id":"D","text":"An oval"}],"correct_answer":"B","explanation_correct":"From any view, a sphere looks like a circle.","explanation_incorrect":"A sphere always appears as a circle from any direction."},
-    {"question_id":"T04.05.Q046","concept_id":"T04.05.C01","difficulty":"exam_style","type":"mcq","question_text":"How many faces does a cylinder have (counting curved faces)?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"4"}],"correct_answer":"C","explanation_correct":"A cylinder has 3 faces: 2 flat circular faces and 1 curved surface.","explanation_incorrect":"2 flat circles + 1 curved surface = 3 faces."},
-    {"question_id":"T04.05.Q047","concept_id":"T04.05.C04","difficulty":"application","type":"mcq","question_text":"What shape is the cross-section of a cube cut diagonally through two opposite edges?","options":[{"id":"A","text":"Square"},{"id":"B","text":"Rectangle"},{"id":"C","text":"Triangle"},{"id":"D","text":"Hexagon"}],"correct_answer":"B","explanation_correct":"A diagonal cut through two opposite edges of a cube creates a rectangular cross-section.","explanation_incorrect":"This diagonal cut gives a rectangle."},
-    {"question_id":"T04.05.Q048","concept_id":"T04.05.C01","difficulty":"application","type":"mcq","question_text":"A prism with an octagonal base has how many faces?","options":[{"id":"A","text":"8"},{"id":"B","text":"10"},{"id":"C","text":"16"},{"id":"D","text":"12"}],"correct_answer":"B","explanation_correct":"Octagonal prism: 2 octagons + 8 rectangles = 10 faces.","explanation_incorrect":"2 + 8 = 10 faces."},
-    {"question_id":"T04.05.Q049","concept_id":"T04.05.C02","difficulty":"exam_style","type":"fill_blank","question_text":"The number of rectangles in the net of a pentagonal prism is ___.","correct_answer":"5","explanation_correct":"A pentagonal prism has 5 rectangular lateral faces, so its net has 5 rectangles (plus 2 pentagons).","explanation_incorrect":"Pentagonal prism: 5 rectangles + 2 pentagons."},
-    {"question_id":"T04.05.Q050","concept_id":"T04.05.C03","difficulty":"exam_style","type":"mcq","question_text":"The top view of a cuboid with dimensions 5 x 3 x 2 (length x width x height) is:","options":[{"id":"A","text":"A 5 x 3 rectangle"},{"id":"B","text":"A 5 x 2 rectangle"},{"id":"C","text":"A 3 x 2 rectangle"},{"id":"D","text":"A square"}],"correct_answer":"A","explanation_correct":"The top view shows the length and width: 5 x 3 rectangle.","explanation_incorrect":"Top view = length x width = 5 x 3."}
+    {
+      "question_id": "T04.05.Q001",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces does a cube have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cube has 6 square faces.",
+      "explanation_incorrect": "A cube has 6 faces."
+    },
+    {
+      "question_id": "T04.05.Q002",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many edges does a cube have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cube has 12 edges.",
+      "explanation_incorrect": "A cube has 12 edges."
+    },
+    {
+      "question_id": "T04.05.Q003",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many vertices does a cube have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cube has 8 vertices (corners).",
+      "explanation_incorrect": "A cube has 8 vertices."
+    },
+    {
+      "question_id": "T04.05.Q004",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "A triangular prism has ___ faces.",
+      "correct_answer": "5",
+      "explanation_correct": "A triangular prism has 5 faces: 2 triangular and 3 rectangular.",
+      "explanation_incorrect": "2 triangular + 3 rectangular = 5 faces."
+    },
+    {
+      "question_id": "T04.05.Q005",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Verify Euler's formula for a cuboid: F + V - E = ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Cuboid: F=6, V=8, E=12. F+V-E = 6+8-12 = 2.",
+      "explanation_incorrect": "6 + 8 - 12 = 2."
+    },
+    {
+      "question_id": "T04.05.Q006",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A square pyramid has how many faces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A square pyramid has 5 faces: 1 square base and 4 triangular faces.",
+      "explanation_incorrect": "1 square + 4 triangles = 5 faces."
+    },
+    {
+      "question_id": "T04.05.Q007",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A square pyramid has how many vertices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A square pyramid has 5 vertices: 4 at the base and 1 at the apex.",
+      "explanation_incorrect": "4 base + 1 apex = 5 vertices."
+    },
+    {
+      "question_id": "T04.05.Q008",
+      "concept_id": "T04.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A solid has 8 faces and 6 vertices. Using Euler's formula, how many edges does it have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "F + V - E = 2. 8 + 6 - E = 2. E = 12.",
+      "explanation_incorrect": "E = F + V - 2 = 8 + 6 - 2 = 12."
+    },
+    {
+      "question_id": "T04.05.Q009",
+      "concept_id": "T04.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A solid has 5 faces and 8 edges. How many vertices does it have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V = 2 - F + E = 2 - 5 + 8 = 5.",
+      "explanation_incorrect": "V = E - F + 2 = 8 - 5 + 2 = 5."
+    },
+    {
+      "question_id": "T04.05.Q010",
+      "concept_id": "T04.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many squares are needed to make a net of a cube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cube has 6 faces, so its net needs 6 squares.",
+      "explanation_incorrect": "A cube has 6 faces = 6 squares in the net."
+    },
+    {
+      "question_id": "T04.05.Q011",
+      "concept_id": "T04.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "There is only one possible net for a cube.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cube has 11 different nets.",
+      "explanation_incorrect": "There are 11 different nets that fold into a cube."
+    },
+    {
+      "question_id": "T04.05.Q012",
+      "concept_id": "T04.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The net of a cylinder consists of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 circles and 1 rectangle"
+        },
+        {
+          "id": "B",
+          "text": "1 circle and 1 rectangle"
+        },
+        {
+          "id": "C",
+          "text": "2 rectangles and 1 circle"
+        },
+        {
+          "id": "D",
+          "text": "3 rectangles"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A cylinder net has 2 circles (top and bottom) and 1 rectangle (curved surface unrolled).",
+      "explanation_incorrect": "2 circles + 1 rectangle = cylinder net."
+    },
+    {
+      "question_id": "T04.05.Q013",
+      "concept_id": "T04.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The net of a cone consists of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 circle and 1 sector"
+        },
+        {
+          "id": "B",
+          "text": "2 circles"
+        },
+        {
+          "id": "C",
+          "text": "1 triangle and 1 circle"
+        },
+        {
+          "id": "D",
+          "text": "1 rectangle and 1 circle"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A cone net has 1 circle (base) and 1 sector (curved surface unrolled).",
+      "explanation_incorrect": "1 circle (base) + 1 sector (lateral surface) = cone net."
+    },
+    {
+      "question_id": "T04.05.Q014",
+      "concept_id": "T04.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape does a net with 2 triangles and 3 rectangles form?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Triangular prism"
+        },
+        {
+          "id": "C",
+          "text": "Square pyramid"
+        },
+        {
+          "id": "D",
+          "text": "Cuboid"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2 triangles + 3 rectangles = triangular prism.",
+      "explanation_incorrect": "A triangular prism has 2 triangular and 3 rectangular faces."
+    },
+    {
+      "question_id": "T04.05.Q015",
+      "concept_id": "T04.05.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In an oblique sketch of a cube:",
+      "options": [
+        {
+          "id": "A",
+          "text": "All edges are drawn equal"
+        },
+        {
+          "id": "B",
+          "text": "Front face is a square, depth edges are drawn at an angle"
+        },
+        {
+          "id": "C",
+          "text": "All faces are circles"
+        },
+        {
+          "id": "D",
+          "text": "Only 3 faces are visible"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an oblique sketch, the front face is drawn as a true square, and the depth is shown using lines drawn at an angle (usually 45 degrees) and shorter than actual length.",
+      "explanation_incorrect": "Oblique sketch: front face is exact, depth is shown at an angle with reduced length."
+    },
+    {
+      "question_id": "T04.05.Q016",
+      "concept_id": "T04.05.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Isometric sketches use:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dot paper with dots in square grid"
+        },
+        {
+          "id": "B",
+          "text": "Dot paper with dots in triangular pattern"
+        },
+        {
+          "id": "C",
+          "text": "Plain paper"
+        },
+        {
+          "id": "D",
+          "text": "Graph paper"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Isometric sketches are drawn on isometric dot paper, which has dots arranged in a triangular pattern.",
+      "explanation_incorrect": "Isometric dot paper has dots in equilateral triangular arrangement."
+    },
+    {
+      "question_id": "T04.05.Q017",
+      "concept_id": "T04.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In an isometric sketch, edges along all three axes are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Different lengths"
+        },
+        {
+          "id": "B",
+          "text": "Drawn at right angles"
+        },
+        {
+          "id": "C",
+          "text": "Drawn to scale (equal actual measurements)"
+        },
+        {
+          "id": "D",
+          "text": "Always vertical"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In isometric sketches, all edges along the three axes are drawn to the same scale, preserving actual proportions.",
+      "explanation_incorrect": "Isometric drawing preserves scale along all three axes."
+    },
+    {
+      "question_id": "T04.05.Q018",
+      "concept_id": "T04.05.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the cross-section when a cube is cut by a plane parallel to a face?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Triangle"
+        },
+        {
+          "id": "B",
+          "text": "Square"
+        },
+        {
+          "id": "C",
+          "text": "Circle"
+        },
+        {
+          "id": "D",
+          "text": "Rectangle"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A plane parallel to a face of a cube creates a square cross-section.",
+      "explanation_incorrect": "Cutting parallel to a face gives the same shape as the face: square."
+    },
+    {
+      "question_id": "T04.05.Q019",
+      "concept_id": "T04.05.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the cross-section of a cylinder cut by a plane perpendicular to its axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rectangle"
+        },
+        {
+          "id": "B",
+          "text": "Triangle"
+        },
+        {
+          "id": "C",
+          "text": "Circle"
+        },
+        {
+          "id": "D",
+          "text": "Ellipse"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Cutting a cylinder perpendicular to its axis gives a circular cross-section.",
+      "explanation_incorrect": "Perpendicular cut through a cylinder gives a circle."
+    },
+    {
+      "question_id": "T04.05.Q020",
+      "concept_id": "T04.05.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the cross-section of a cylinder cut by a plane parallel to its axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Circle"
+        },
+        {
+          "id": "B",
+          "text": "Rectangle"
+        },
+        {
+          "id": "C",
+          "text": "Triangle"
+        },
+        {
+          "id": "D",
+          "text": "Ellipse"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Cutting a cylinder parallel to its axis gives a rectangular cross-section.",
+      "explanation_incorrect": "A vertical cut through a cylinder gives a rectangle."
+    },
+    {
+      "question_id": "T04.05.Q021",
+      "concept_id": "T04.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A triangular pyramid (tetrahedron) has how many edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A tetrahedron has 4 vertices, 4 faces, and 6 edges. Check: 4 + 4 - 6 = 2.",
+      "explanation_incorrect": "Tetrahedron: 6 edges."
+    },
+    {
+      "question_id": "T04.05.Q022",
+      "concept_id": "T04.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "A pentagonal prism has ___ faces.",
+      "correct_answer": "7",
+      "explanation_correct": "A pentagonal prism has 7 faces: 2 pentagons + 5 rectangles.",
+      "explanation_incorrect": "2 pentagonal + 5 rectangular = 7 faces."
+    },
+    {
+      "question_id": "T04.05.Q023",
+      "concept_id": "T04.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A net made of 1 square and 4 identical triangles folds into a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Triangular prism"
+        },
+        {
+          "id": "C",
+          "text": "Square pyramid"
+        },
+        {
+          "id": "D",
+          "text": "Tetrahedron"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "1 square base + 4 triangular faces = square pyramid.",
+      "explanation_incorrect": "1 square + 4 triangles = square pyramid."
+    },
+    {
+      "question_id": "T04.05.Q024",
+      "concept_id": "T04.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces of a cube are visible in an oblique sketch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In an oblique or isometric sketch of a cube, 3 faces are visible (top, front, and one side).",
+      "explanation_incorrect": "3 faces are visible: top, front, side."
+    },
+    {
+      "question_id": "T04.05.Q025",
+      "concept_id": "T04.05.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The shadow of a sphere is always:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A square"
+        },
+        {
+          "id": "B",
+          "text": "A circle"
+        },
+        {
+          "id": "C",
+          "text": "An oval"
+        },
+        {
+          "id": "D",
+          "text": "A point"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The shadow (or any cross-section) of a sphere is always a circle.",
+      "explanation_incorrect": "A sphere always casts a circular shadow."
+    },
+    {
+      "question_id": "T04.05.Q026",
+      "concept_id": "T04.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A hexagonal prism has how many vertices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A hexagonal prism has 2 hexagons, each with 6 vertices = 12 vertices total.",
+      "explanation_incorrect": "6 + 6 = 12 vertices."
+    },
+    {
+      "question_id": "T04.05.Q027",
+      "concept_id": "T04.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A hexagonal prism has how many edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Top 6 + bottom 6 + 6 vertical = 18 edges. Check: F+V-E = 8+12-18 = 2.",
+      "explanation_incorrect": "6 + 6 + 6 = 18 edges."
+    },
+    {
+      "question_id": "T04.05.Q028",
+      "concept_id": "T04.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A net of a tetrahedron consists of 4 equilateral triangles (for a regular tetrahedron).",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A regular tetrahedron has 4 equilateral triangular faces, so its net has 4 equilateral triangles.",
+      "explanation_incorrect": "4 faces = 4 triangles in the net."
+    },
+    {
+      "question_id": "T04.05.Q029",
+      "concept_id": "T04.05.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the cross-section of a cone cut by a plane parallel to its base?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Triangle"
+        },
+        {
+          "id": "B",
+          "text": "Circle"
+        },
+        {
+          "id": "C",
+          "text": "Rectangle"
+        },
+        {
+          "id": "D",
+          "text": "Parabola"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A plane parallel to the base of a cone creates a circular cross-section.",
+      "explanation_incorrect": "Parallel to the base gives a smaller circle."
+    },
+    {
+      "question_id": "T04.05.Q030",
+      "concept_id": "T04.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which solid has the same number of faces and vertices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Tetrahedron"
+        },
+        {
+          "id": "C",
+          "text": "Triangular prism"
+        },
+        {
+          "id": "D",
+          "text": "Square pyramid"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Tetrahedron: F=4, V=4, E=6. Faces = Vertices.",
+      "explanation_incorrect": "Tetrahedron has 4 faces and 4 vertices."
+    },
+    {
+      "question_id": "T04.05.Q031",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape has no vertex?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cone"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Pyramid"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A sphere has no vertices, no edges, and 1 curved face.",
+      "explanation_incorrect": "A sphere has no corners (vertices)."
+    },
+    {
+      "question_id": "T04.05.Q032",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cone has how many edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cone has 1 edge (the circular edge at the base).",
+      "explanation_incorrect": "A cone has 1 circular edge at the base."
+    },
+    {
+      "question_id": "T04.05.Q033",
+      "concept_id": "T04.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of the following CANNOT be a net of a cube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Four squares in a row with one on top and one on bottom of the second square"
+        },
+        {
+          "id": "B",
+          "text": "Three squares in an L-shape with three more in another L"
+        },
+        {
+          "id": "C",
+          "text": "Six squares in a straight line"
+        },
+        {
+          "id": "D",
+          "text": "A cross shape made of six squares"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Six squares in a straight line cannot fold into a cube because opposite faces would overlap.",
+      "explanation_incorrect": "A straight line of 6 squares won't fold into a cube — sides would overlap."
+    },
+    {
+      "question_id": "T04.05.Q034",
+      "concept_id": "T04.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The top view of a cone is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A triangle"
+        },
+        {
+          "id": "B",
+          "text": "A circle"
+        },
+        {
+          "id": "C",
+          "text": "A rectangle"
+        },
+        {
+          "id": "D",
+          "text": "A point"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Looking at a cone from the top, you see a circle (the base) with a point at the center (the apex).",
+      "explanation_incorrect": "Top view of a cone = circle with center point."
+    },
+    {
+      "question_id": "T04.05.Q035",
+      "concept_id": "T04.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The front view of a cylinder is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A circle"
+        },
+        {
+          "id": "B",
+          "text": "A rectangle"
+        },
+        {
+          "id": "C",
+          "text": "A triangle"
+        },
+        {
+          "id": "D",
+          "text": "An oval"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The front view (side view) of a cylinder is a rectangle.",
+      "explanation_incorrect": "A cylinder from the front looks like a rectangle."
+    },
+    {
+      "question_id": "T04.05.Q036",
+      "concept_id": "T04.05.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What shape do you get when you cut a cuboid with a diagonal plane from one edge to the opposite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Square"
+        },
+        {
+          "id": "B",
+          "text": "Triangle"
+        },
+        {
+          "id": "C",
+          "text": "Rectangle"
+        },
+        {
+          "id": "D",
+          "text": "Parallelogram"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A diagonal cut through a cuboid typically produces a rectangular cross-section.",
+      "explanation_incorrect": "A diagonal cut through a cuboid gives a rectangle."
+    },
+    {
+      "question_id": "T04.05.Q037",
+      "concept_id": "T04.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "A pentagonal pyramid has ___ edges.",
+      "correct_answer": "10",
+      "explanation_correct": "A pentagonal pyramid has 5 base edges + 5 lateral edges = 10 edges.",
+      "explanation_incorrect": "5 + 5 = 10 edges."
+    },
+    {
+      "question_id": "T04.05.Q038",
+      "concept_id": "T04.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A solid has 7 faces, 15 edges. How many vertices does it have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "V = 2 - F + E = 2 - 7 + 15 = 10.",
+      "explanation_incorrect": "V = E - F + 2 = 15 - 7 + 2 = 10."
+    },
+    {
+      "question_id": "T04.05.Q039",
+      "concept_id": "T04.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The net of a triangular prism has:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 triangles and 2 rectangles"
+        },
+        {
+          "id": "B",
+          "text": "2 triangles and 3 rectangles"
+        },
+        {
+          "id": "C",
+          "text": "3 triangles and 2 rectangles"
+        },
+        {
+          "id": "D",
+          "text": "1 triangle and 3 rectangles"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A triangular prism has 2 triangular faces and 3 rectangular faces, so its net has 2 triangles and 3 rectangles.",
+      "explanation_incorrect": "2 triangular + 3 rectangular faces = net of triangular prism."
+    },
+    {
+      "question_id": "T04.05.Q040",
+      "concept_id": "T04.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The side view of a cube is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A triangle"
+        },
+        {
+          "id": "B",
+          "text": "A circle"
+        },
+        {
+          "id": "C",
+          "text": "A square"
+        },
+        {
+          "id": "D",
+          "text": "A rectangle"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Looking at a cube from the side, front, or top, you always see a square.",
+      "explanation_incorrect": "A cube from any standard view looks like a square."
+    },
+    {
+      "question_id": "T04.05.Q041",
+      "concept_id": "T04.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which solid has all faces as triangles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Triangular prism"
+        },
+        {
+          "id": "C",
+          "text": "Tetrahedron"
+        },
+        {
+          "id": "D",
+          "text": "Square pyramid"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A tetrahedron has 4 triangular faces. All faces are triangles.",
+      "explanation_incorrect": "Tetrahedron: all 4 faces are triangles."
+    },
+    {
+      "question_id": "T04.05.Q042",
+      "concept_id": "T04.05.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The cross-section of a sphere is always a circle.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Any plane cutting through a sphere creates a circular cross-section.",
+      "explanation_incorrect": "Every cross-section of a sphere is a circle."
+    },
+    {
+      "question_id": "T04.05.Q043",
+      "concept_id": "T04.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape has exactly 1 vertex?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cylinder"
+        },
+        {
+          "id": "B",
+          "text": "Cone"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cube"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cone has exactly 1 vertex (the apex).",
+      "explanation_incorrect": "The apex of a cone is its only vertex."
+    },
+    {
+      "question_id": "T04.05.Q044",
+      "concept_id": "T04.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces does a solid formed by folding a net of 4 equilateral triangles have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "4 equilateral triangles fold into a tetrahedron, which has 4 faces.",
+      "explanation_incorrect": "4 triangles = tetrahedron = 4 faces."
+    },
+    {
+      "question_id": "T04.05.Q045",
+      "concept_id": "T04.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The front view of a sphere is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A point"
+        },
+        {
+          "id": "B",
+          "text": "A circle"
+        },
+        {
+          "id": "C",
+          "text": "A semicircle"
+        },
+        {
+          "id": "D",
+          "text": "An oval"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From any view, a sphere looks like a circle.",
+      "explanation_incorrect": "A sphere always appears as a circle from any direction."
+    },
+    {
+      "question_id": "T04.05.Q046",
+      "concept_id": "T04.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces does a cylinder have (counting curved faces)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cylinder has 3 faces: 2 flat circular faces and 1 curved surface.",
+      "explanation_incorrect": "2 flat circles + 1 curved surface = 3 faces."
+    },
+    {
+      "question_id": "T04.05.Q047",
+      "concept_id": "T04.05.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What shape is the cross-section of a cube cut diagonally through two opposite edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Square"
+        },
+        {
+          "id": "B",
+          "text": "Rectangle"
+        },
+        {
+          "id": "C",
+          "text": "Triangle"
+        },
+        {
+          "id": "D",
+          "text": "Hexagon"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A diagonal cut through two opposite edges of a cube creates a rectangular cross-section.",
+      "explanation_incorrect": "This diagonal cut gives a rectangle."
+    },
+    {
+      "question_id": "T04.05.Q048",
+      "concept_id": "T04.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A prism with an octagonal base has how many faces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Octagonal prism: 2 octagons + 8 rectangles = 10 faces.",
+      "explanation_incorrect": "2 + 8 = 10 faces."
+    },
+    {
+      "question_id": "T04.05.Q049",
+      "concept_id": "T04.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The number of rectangles in the net of a pentagonal prism is ___.",
+      "correct_answer": "5",
+      "explanation_correct": "A pentagonal prism has 5 rectangular lateral faces, so its net has 5 rectangles (plus 2 pentagons).",
+      "explanation_incorrect": "Pentagonal prism: 5 rectangles + 2 pentagons."
+    },
+    {
+      "question_id": "T04.05.Q050",
+      "concept_id": "T04.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The top view of a cuboid with dimensions 5 x 3 x 2 (length x width x height) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A 5 x 3 rectangle"
+        },
+        {
+          "id": "B",
+          "text": "A 5 x 2 rectangle"
+        },
+        {
+          "id": "C",
+          "text": "A 3 x 2 rectangle"
+        },
+        {
+          "id": "D",
+          "text": "A square"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The top view shows the length and width: 5 x 3 rectangle.",
+      "explanation_incorrect": "Top view = length x width = 5 x 3."
+    }
   ]
 }

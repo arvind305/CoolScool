@@ -9,13 +9,13 @@
   "topic_id": "T03.01",
   "topic_name": "Continuity and Differentiability",
   "canonical_explanation": {
-    "text": "A function f is continuous at x=a if lim(x\u2192a) f(x) = f(a), i.e., LHL = RHL = f(a). Every differentiable function is continuous but the converse is not true (e.g., |x| at x=0). The chain rule gives d/dx[f(g(x))] = f'(g(x))\u00b7g'(x). For implicit functions F(x,y)=0, differentiate both sides w.r.t. x treating y as a function of x. Logarithmic differentiation is used for y=[f(x)]^g(x) by taking log on both sides. Rolle's theorem states that if f is continuous on [a,b], differentiable on (a,b), and f(a)=f(b), then there exists c\u2208(a,b) such that f'(c)=0.",
+    "text": "A function f is continuous at x=a if lim(x→a) f(x) = f(a), i.e., LHL = RHL = f(a). Every differentiable function is continuous but the converse is not true (e.g., |x| at x=0). The chain rule gives d/dx[f(g(x))] = f'(g(x))·g'(x). For implicit functions F(x,y)=0, differentiate both sides w.r.t. x treating y as a function of x. Logarithmic differentiation is used for y=[f(x)]^g(x) by taking log on both sides. Rolle's theorem states that if f is continuous on [a,b], differentiable on (a,b), and f(a)=f(b), then there exists c∈(a,b) such that f'(c)=0.",
     "rules": [
-      "Continuity at x=a: lim(x\u2192a\u207b)f(x) = lim(x\u2192a\u207a)f(x) = f(a)",
-      "d/dx[sin\u207b\u00b9x] = 1/\u221a(1-x\u00b2), d/dx[cos\u207b\u00b9x] = -1/\u221a(1-x\u00b2), d/dx[tan\u207b\u00b9x] = 1/(1+x\u00b2)",
-      "Logarithmic differentiation: if y = [f(x)]^g(x), then log y = g(x)\u00b7log f(x)",
-      "Rolle's Theorem: f continuous on [a,b], differentiable on (a,b), f(a)=f(b) \u27f9 \u2203c\u2208(a,b): f'(c)=0",
-      "MVT: f continuous on [a,b], differentiable on (a,b) \u27f9 \u2203c\u2208(a,b): f'(c) = (f(b)-f(a))/(b-a)"
+      "Continuity at x=a: lim(x→a⁻)f(x) = lim(x→a⁺)f(x) = f(a)",
+      "d/dx[sin⁻¹x] = 1/√(1-x²), d/dx[cos⁻¹x] = -1/√(1-x²), d/dx[tan⁻¹x] = 1/(1+x²)",
+      "Logarithmic differentiation: if y = [f(x)]^g(x), then log y = g(x)·log f(x)",
+      "Rolle's Theorem: f continuous on [a,b], differentiable on (a,b), f(a)=f(b) ⟹ ∃c∈(a,b): f'(c)=0",
+      "MVT: f continuous on [a,b], differentiable on (a,b) ⟹ ∃c∈(a,b): f'(c) = (f(b)-f(a))/(b-a)"
     ]
   },
   "questions": [
@@ -23,75 +23,134 @@
       "question_id": "T03.01.Q001",
       "concept_id": "T03.01.C01",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "A function f is continuous at x = a if:",
       "options": [
-        { "id": "A", "text": "f(a) is defined" },
-        { "id": "B", "text": "lim(x\u2192a) f(x) exists" },
-        { "id": "C", "text": "lim(x\u2192a) f(x) = f(a)" },
-        { "id": "D", "text": "f'(a) exists" }
+        {
+          "id": "A",
+          "text": "f(a) is defined"
+        },
+        {
+          "id": "B",
+          "text": "lim(x→a) f(x) exists"
+        },
+        {
+          "id": "C",
+          "text": "lim(x→a) f(x) = f(a)"
+        },
+        {
+          "id": "D",
+          "text": "f'(a) exists"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "A function f is continuous at x = a if and only if three conditions hold: (i) f(a) is defined, (ii) lim(x\u2192a) f(x) exists, and (iii) lim(x\u2192a) f(x) = f(a). Option C captures the complete requirement since it implicitly requires (i) and (ii).",
+      "explanation_correct": "A function f is continuous at x = a if and only if three conditions hold: (i) f(a) is defined, (ii) lim(x→a) f(x) exists, and (iii) lim(x→a) f(x) = f(a). Option C captures the complete requirement since it implicitly requires (i) and (ii).",
       "explanation_incorrect": "Options A and B are necessary but not sufficient conditions individually. Option D describes differentiability, which is a stronger condition than continuity."
     },
     {
       "question_id": "T03.01.Q002",
       "concept_id": "T03.01.C01",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "true_false",
       "question_text": "The function f(x) = |x| is continuous at x = 0.",
       "options": [
-        { "id": "A", "text": "True" },
-        { "id": "B", "text": "False" }
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "f(0) = 0. lim(x\u21920\u207b) |x| = 0 and lim(x\u21920\u207a) |x| = 0. Since LHL = RHL = f(0) = 0, the function is continuous at x = 0.",
+      "explanation_correct": "f(0) = 0. lim(x→0⁻) |x| = 0 and lim(x→0⁺) |x| = 0. Since LHL = RHL = f(0) = 0, the function is continuous at x = 0.",
       "explanation_incorrect": "Although |x| is not differentiable at x = 0 (the left and right derivatives differ), it is continuous there because LHL = RHL = f(0) = 0."
     },
     {
       "question_id": "T03.01.Q003",
       "concept_id": "T03.01.C01",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "For the function f(x) = {2x+3 if x<1; 7 if x=1; 3x+2 if x>1}, check continuity at x = 1.",
       "options": [
-        { "id": "A", "text": "Continuous because LHL = 5 = RHL" },
-        { "id": "B", "text": "Continuous because LHL = RHL = f(1) = 5" },
-        { "id": "C", "text": "Discontinuous because LHL = RHL = 5 \u2260 f(1) = 7" },
-        { "id": "D", "text": "Discontinuous because LHL \u2260 RHL" }
+        {
+          "id": "A",
+          "text": "Continuous because LHL = 5 = RHL"
+        },
+        {
+          "id": "B",
+          "text": "Continuous because LHL = RHL = f(1) = 5"
+        },
+        {
+          "id": "C",
+          "text": "Discontinuous because LHL = RHL = 5 ≠ f(1) = 7"
+        },
+        {
+          "id": "D",
+          "text": "Discontinuous because LHL ≠ RHL"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "LHL = lim(x\u21921\u207b)(2x+3) = 5. RHL = lim(x\u21921\u207a)(3x+2) = 5. But f(1) = 7. Since LHL = RHL = 5 \u2260 7 = f(1), the function is discontinuous at x = 1.",
+      "explanation_correct": "LHL = lim(x→1⁻)(2x+3) = 5. RHL = lim(x→1⁺)(3x+2) = 5. But f(1) = 7. Since LHL = RHL = 5 ≠ 7 = f(1), the function is discontinuous at x = 1.",
       "explanation_incorrect": "For continuity we need LHL = RHL = f(a). Here LHL = RHL = 5 but f(1) = 7, so the limit exists but does not equal the function value."
     },
     {
       "question_id": "T03.01.Q004",
       "concept_id": "T03.01.C01",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If f(x) = (x\u00b2 - 4)/(x - 2) for x \u2260 2 and f(2) = k, what value of k makes f continuous at x = 2?",
+      "question_text": "If f(x) = (x² - 4)/(x - 2) for x ≠ 2 and f(2) = k, what value of k makes f continuous at x = 2?",
       "options": [
-        { "id": "A", "text": "0" },
-        { "id": "B", "text": "2" },
-        { "id": "C", "text": "4" },
-        { "id": "D", "text": "Undefined" }
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "Undefined"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "For x \u2260 2, f(x) = (x\u00b2-4)/(x-2) = (x-2)(x+2)/(x-2) = x+2. So lim(x\u21922) f(x) = 2+2 = 4. For continuity, f(2) = k must equal 4.",
-      "explanation_incorrect": "Simplify the expression: (x\u00b2-4)/(x-2) = (x+2) for x \u2260 2. The limit as x\u21922 is 4, so k = 4 makes f continuous."
+      "explanation_correct": "For x ≠ 2, f(x) = (x²-4)/(x-2) = (x-2)(x+2)/(x-2) = x+2. So lim(x→2) f(x) = 2+2 = 4. For continuity, f(2) = k must equal 4.",
+      "explanation_incorrect": "Simplify the expression: (x²-4)/(x-2) = (x+2) for x ≠ 2. The limit as x→2 is 4, so k = 4 makes f continuous."
     },
     {
       "question_id": "T03.01.Q005",
       "concept_id": "T03.01.C01",
       "difficulty": "familiarity",
+      "cognitive_level": "exception",
       "type": "mcq",
       "question_text": "Which of the following functions is NOT continuous at x = 0?",
       "options": [
-        { "id": "A", "text": "f(x) = sin(x)" },
-        { "id": "B", "text": "f(x) = |x|" },
-        { "id": "C", "text": "f(x) = 1/x" },
-        { "id": "D", "text": "f(x) = x\u00b2" }
+        {
+          "id": "A",
+          "text": "f(x) = sin(x)"
+        },
+        {
+          "id": "B",
+          "text": "f(x) = |x|"
+        },
+        {
+          "id": "C",
+          "text": "f(x) = 1/x"
+        },
+        {
+          "id": "D",
+          "text": "f(x) = x²"
+        }
       ],
       "correct_answer": "C",
       "explanation_correct": "f(x) = 1/x is not defined at x = 0 (division by zero), so it cannot be continuous there. The other functions are all defined and continuous at x = 0.",
@@ -101,123 +160,221 @@
       "question_id": "T03.01.Q006",
       "concept_id": "T03.01.C01",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "If f and g are continuous at x = a, which of the following is also continuous at x = a?",
       "options": [
-        { "id": "A", "text": "f + g only" },
-        { "id": "B", "text": "f \u00b7 g only" },
-        { "id": "C", "text": "f/g (provided g(a) \u2260 0) only" },
-        { "id": "D", "text": "All of f+g, f\u00b7g, and f/g (when g(a) \u2260 0)" }
+        {
+          "id": "A",
+          "text": "f + g only"
+        },
+        {
+          "id": "B",
+          "text": "f · g only"
+        },
+        {
+          "id": "C",
+          "text": "f/g (provided g(a) ≠ 0) only"
+        },
+        {
+          "id": "D",
+          "text": "All of f+g, f·g, and f/g (when g(a) ≠ 0)"
+        }
       ],
       "correct_answer": "D",
-      "explanation_correct": "By the algebra of continuous functions, if f and g are continuous at x = a, then f+g, f-g, f\u00b7g are all continuous at x = a. Also f/g is continuous at x = a provided g(a) \u2260 0.",
+      "explanation_correct": "By the algebra of continuous functions, if f and g are continuous at x = a, then f+g, f-g, f·g are all continuous at x = a. Also f/g is continuous at x = a provided g(a) ≠ 0.",
       "explanation_incorrect": "The algebra of continuous functions guarantees that sums, differences, products, and quotients (when the denominator is non-zero) of continuous functions are continuous."
     },
     {
       "question_id": "T03.01.Q007",
       "concept_id": "T03.01.C01",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "Find the value of k so that f(x) = {kx + 1 if x \u2264 5; 3x - 5 if x > 5} is continuous at x = 5.",
+      "question_text": "Find the value of k so that f(x) = {kx + 1 if x ≤ 5; 3x - 5 if x > 5} is continuous at x = 5.",
       "options": [
-        { "id": "A", "text": "k = 1" },
-        { "id": "B", "text": "k = 9/5" },
-        { "id": "C", "text": "k = 2" },
-        { "id": "D", "text": "k = 3" }
+        {
+          "id": "A",
+          "text": "k = 1"
+        },
+        {
+          "id": "B",
+          "text": "k = 9/5"
+        },
+        {
+          "id": "C",
+          "text": "k = 2"
+        },
+        {
+          "id": "D",
+          "text": "k = 3"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "LHL = lim(x\u21925\u207b)(kx+1) = 5k+1. RHL = lim(x\u21925\u207a)(3x-5) = 15-5 = 10. For continuity, 5k+1 = 10, so 5k = 9, giving k = 9/5.",
+      "explanation_correct": "LHL = lim(x→5⁻)(kx+1) = 5k+1. RHL = lim(x→5⁺)(3x-5) = 15-5 = 10. For continuity, 5k+1 = 10, so 5k = 9, giving k = 9/5.",
       "explanation_incorrect": "Set the left-hand limit equal to the right-hand limit: 5k + 1 = 3(5) - 5 = 10. Solving gives k = 9/5."
     },
     {
       "question_id": "T03.01.Q008",
       "concept_id": "T03.01.C01",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If f(x) = {sin(3x)/x if x \u2260 0; k if x = 0} is continuous at x = 0, find k.",
+      "question_text": "If f(x) = {sin(3x)/x if x ≠ 0; k if x = 0} is continuous at x = 0, find k.",
       "options": [
-        { "id": "A", "text": "0" },
-        { "id": "B", "text": "1" },
-        { "id": "C", "text": "3" },
-        { "id": "D", "text": "1/3" }
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "1/3"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "lim(x\u21920) sin(3x)/x = lim(x\u21920) 3\u00b7sin(3x)/(3x) = 3\u00b71 = 3. For continuity, k = f(0) must equal this limit, so k = 3.",
-      "explanation_incorrect": "Use the standard limit lim(t\u21920) sin(t)/t = 1. Write sin(3x)/x = 3\u00b7sin(3x)/(3x). As x\u21920, this gives 3\u00b71 = 3."
+      "explanation_correct": "lim(x→0) sin(3x)/x = lim(x→0) 3·sin(3x)/(3x) = 3·1 = 3. For continuity, k = f(0) must equal this limit, so k = 3.",
+      "explanation_incorrect": "Use the standard limit lim(t→0) sin(t)/t = 1. Write sin(3x)/x = 3·sin(3x)/(3x). As x→0, this gives 3·1 = 3."
     },
     {
       "question_id": "T03.01.Q009",
       "concept_id": "T03.01.C01",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "fill_blank",
-      "question_text": "The number of points of discontinuity of f(x) = 1/(x\u00b2 - 3x + 2) is ___.",
+      "question_text": "The number of points of discontinuity of f(x) = 1/(x² - 3x + 2) is ___.",
       "options": [
-        { "id": "A", "text": "0" },
-        { "id": "B", "text": "1" },
-        { "id": "C", "text": "2" },
-        { "id": "D", "text": "3" }
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "x\u00b2 - 3x + 2 = (x-1)(x-2). The function is undefined (and hence discontinuous) at x = 1 and x = 2. So there are 2 points of discontinuity.",
-      "explanation_incorrect": "Factor the denominator: x\u00b2 - 3x + 2 = (x-1)(x-2) = 0 gives x = 1 and x = 2. The function is discontinuous at exactly these 2 points."
+      "explanation_correct": "x² - 3x + 2 = (x-1)(x-2). The function is undefined (and hence discontinuous) at x = 1 and x = 2. So there are 2 points of discontinuity.",
+      "explanation_incorrect": "Factor the denominator: x² - 3x + 2 = (x-1)(x-2) = 0 gives x = 1 and x = 2. The function is discontinuous at exactly these 2 points."
     },
     {
       "question_id": "T03.01.Q010",
       "concept_id": "T03.01.C01",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If f(x) = {(x\u00b2 - 9)/(x - 3) if x \u2260 3; 2k if x = 3} is continuous at x = 3, find k.",
+      "question_text": "If f(x) = {(x² - 9)/(x - 3) if x ≠ 3; 2k if x = 3} is continuous at x = 3, find k.",
       "options": [
-        { "id": "A", "text": "3" },
-        { "id": "B", "text": "6" },
-        { "id": "C", "text": "9" },
-        { "id": "D", "text": "3/2" }
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "3/2"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "For x \u2260 3: f(x) = (x-3)(x+3)/(x-3) = x+3. So lim(x\u21923) f(x) = 6. For continuity, f(3) = 2k = 6, giving k = 3.",
-      "explanation_incorrect": "Simplify: (x\u00b2-9)/(x-3) = x+3. The limit as x\u21923 is 6. Setting 2k = 6 gives k = 3."
+      "explanation_correct": "For x ≠ 3: f(x) = (x-3)(x+3)/(x-3) = x+3. So lim(x→3) f(x) = 6. For continuity, f(3) = 2k = 6, giving k = 3.",
+      "explanation_incorrect": "Simplify: (x²-9)/(x-3) = x+3. The limit as x→3 is 6. Setting 2k = 6 gives k = 3."
     },
     {
       "question_id": "T03.01.Q011",
       "concept_id": "T03.01.C01",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "Let f(x) = {(1-cos(4x))/x\u00b2 if x \u2260 0; k if x = 0}. For f to be continuous at x = 0, k equals:",
+      "question_text": "Let f(x) = {(1-cos(4x))/x² if x ≠ 0; k if x = 0}. For f to be continuous at x = 0, k equals:",
       "options": [
-        { "id": "A", "text": "4" },
-        { "id": "B", "text": "8" },
-        { "id": "C", "text": "16" },
-        { "id": "D", "text": "2" }
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "Using 1-cos\u03b8 = 2sin\u00b2(\u03b8/2): (1-cos4x)/x\u00b2 = 2sin\u00b2(2x)/x\u00b2 = 2\u00b7[sin(2x)/x]\u00b2 = 2\u00b7[2\u00b7sin(2x)/(2x)]\u00b2 = 2\u00b74\u00b71 = 8. So k = 8.",
-      "explanation_incorrect": "Write 1-cos(4x) = 2sin\u00b2(2x). Then (1-cos4x)/x\u00b2 = 2\u00b7sin\u00b2(2x)/x\u00b2 = 2\u00b74\u00b7[sin(2x)/(2x)]\u00b2 \u2192 8 as x\u21920."
+      "explanation_correct": "Using 1-cosθ = 2sin²(θ/2): (1-cos4x)/x² = 2sin²(2x)/x² = 2·[sin(2x)/x]² = 2·[2·sin(2x)/(2x)]² = 2·4·1 = 8. So k = 8.",
+      "explanation_incorrect": "Write 1-cos(4x) = 2sin²(2x). Then (1-cos4x)/x² = 2·sin²(2x)/x² = 2·4·[sin(2x)/(2x)]² → 8 as x→0."
     },
     {
       "question_id": "T03.01.Q012",
       "concept_id": "T03.01.C01",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If f(x) = {(sqrt(1+kx) - sqrt(1-kx))/x if x \u2260 0; 2k+1 if x = 0} and lim(x\u21920) f(x) = f(0), find k. (Assume k > 0.)",
+      "question_text": "If f(x) = {(sqrt(1+kx) - sqrt(1-kx))/x if x ≠ 0; 2k+1 if x = 0} and lim(x→0) f(x) = f(0), find k. (Assume k > 0.)",
       "options": [
-        { "id": "A", "text": "k = -1" },
-        { "id": "B", "text": "k = 1" },
-        { "id": "C", "text": "k = 1/2" },
-        { "id": "D", "text": "No value of k works" }
+        {
+          "id": "A",
+          "text": "k = -1"
+        },
+        {
+          "id": "B",
+          "text": "k = 1"
+        },
+        {
+          "id": "C",
+          "text": "k = 1/2"
+        },
+        {
+          "id": "D",
+          "text": "No value of k works"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Rationalize: multiply by [sqrt(1+kx)+sqrt(1-kx)]/[sqrt(1+kx)+sqrt(1-kx)]. Numerator becomes (1+kx)-(1-kx) = 2kx. So f(x) = 2kx / {x[sqrt(1+kx)+sqrt(1-kx)]} = 2k/[sqrt(1+kx)+sqrt(1-kx)]. As x\u21920, this gives 2k/2 = k. For continuity: k = 2k+1, so k = -1. Although the problem states k>0, mathematically only k = -1 satisfies the equation; with no valid positive k, the answer that solves the equation is k = -1.",
+      "explanation_correct": "Rationalize: multiply by [sqrt(1+kx)+sqrt(1-kx)]/[sqrt(1+kx)+sqrt(1-kx)]. Numerator becomes (1+kx)-(1-kx) = 2kx. So f(x) = 2kx / {x[sqrt(1+kx)+sqrt(1-kx)]} = 2k/[sqrt(1+kx)+sqrt(1-kx)]. As x→0, this gives 2k/2 = k. For continuity: k = 2k+1, so k = -1. Although the problem states k>0, mathematically only k = -1 satisfies the equation; with no valid positive k, the answer that solves the equation is k = -1.",
       "explanation_incorrect": "After rationalizing, the limit equals k. Setting k = 2k+1 gives -k = 1, so k = -1."
     },
     {
       "question_id": "T03.01.Q013",
       "concept_id": "T03.01.C01",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "true_false",
       "question_text": "Every polynomial function is continuous on the entire real line.",
       "options": [
-        { "id": "A", "text": "True" },
-        { "id": "B", "text": "False" }
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
       ],
       "correct_answer": "A",
       "explanation_correct": "Polynomial functions are built from sums and products of continuous functions (constants and x). By the algebra of continuous functions, every polynomial is continuous everywhere on R.",
@@ -227,347 +384,627 @@
       "question_id": "T03.01.Q014",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "true_false",
       "question_text": "If a function is differentiable at a point, then it is necessarily continuous at that point.",
       "options": [
-        { "id": "A", "text": "True" },
-        { "id": "B", "text": "False" }
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Differentiability implies continuity. If f'(a) exists, then lim(x\u2192a) [f(x)-f(a)] = lim(x\u2192a) [(f(x)-f(a))/(x-a)]\u00b7(x-a) = f'(a)\u00b70 = 0, so lim(x\u2192a) f(x) = f(a).",
+      "explanation_correct": "Differentiability implies continuity. If f'(a) exists, then lim(x→a) [f(x)-f(a)] = lim(x→a) [(f(x)-f(a))/(x-a)]·(x-a) = f'(a)·0 = 0, so lim(x→a) f(x) = f(a).",
       "explanation_incorrect": "This is a fundamental theorem: differentiability at a point always implies continuity at that point. However, the converse is false (e.g., |x| at x = 0)."
     },
     {
       "question_id": "T03.01.Q015",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "The function f(x) = |x| at x = 0 is:",
       "options": [
-        { "id": "A", "text": "Both continuous and differentiable" },
-        { "id": "B", "text": "Continuous but not differentiable" },
-        { "id": "C", "text": "Differentiable but not continuous" },
-        { "id": "D", "text": "Neither continuous nor differentiable" }
+        {
+          "id": "A",
+          "text": "Both continuous and differentiable"
+        },
+        {
+          "id": "B",
+          "text": "Continuous but not differentiable"
+        },
+        {
+          "id": "C",
+          "text": "Differentiable but not continuous"
+        },
+        {
+          "id": "D",
+          "text": "Neither continuous nor differentiable"
+        }
       ],
       "correct_answer": "B",
       "explanation_correct": "f(x) = |x| is continuous at x = 0 (LHL = RHL = f(0) = 0). But the left derivative = -1 and the right derivative = +1, so f is not differentiable at x = 0.",
-      "explanation_incorrect": "At x = 0, |x| is continuous (limit equals function value = 0). But the left-hand derivative lim(h\u21920\u207b) |h|/h = -1 and right-hand derivative lim(h\u21920\u207a) |h|/h = 1 are unequal, so it is not differentiable."
+      "explanation_incorrect": "At x = 0, |x| is continuous (limit equals function value = 0). But the left-hand derivative lim(h→0⁻) |h|/h = -1 and right-hand derivative lim(h→0⁺) |h|/h = 1 are unequal, so it is not differentiable."
     },
     {
       "question_id": "T03.01.Q016",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "Using the chain rule, d/dx[sin(x\u00b2)] equals:",
+      "question_text": "Using the chain rule, d/dx[sin(x²)] equals:",
       "options": [
-        { "id": "A", "text": "cos(x\u00b2)" },
-        { "id": "B", "text": "2x\u00b7cos(x\u00b2)" },
-        { "id": "C", "text": "x\u00b2\u00b7cos(x\u00b2)" },
-        { "id": "D", "text": "2x\u00b7sin(x\u00b2)" }
+        {
+          "id": "A",
+          "text": "cos(x²)"
+        },
+        {
+          "id": "B",
+          "text": "2x·cos(x²)"
+        },
+        {
+          "id": "C",
+          "text": "x²·cos(x²)"
+        },
+        {
+          "id": "D",
+          "text": "2x·sin(x²)"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "Let u = x\u00b2. Then d/dx[sin(u)] = cos(u)\u00b7du/dx = cos(x\u00b2)\u00b72x = 2x\u00b7cos(x\u00b2).",
-      "explanation_incorrect": "Apply the chain rule: d/dx[sin(g(x))] = cos(g(x))\u00b7g'(x). Here g(x) = x\u00b2, g'(x) = 2x, giving 2x\u00b7cos(x\u00b2)."
+      "explanation_correct": "Let u = x². Then d/dx[sin(u)] = cos(u)·du/dx = cos(x²)·2x = 2x·cos(x²).",
+      "explanation_incorrect": "Apply the chain rule: d/dx[sin(g(x))] = cos(g(x))·g'(x). Here g(x) = x², g'(x) = 2x, giving 2x·cos(x²)."
     },
     {
       "question_id": "T03.01.Q017",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "d/dx[cos(3x + 5)] equals:",
       "options": [
-        { "id": "A", "text": "-sin(3x + 5)" },
-        { "id": "B", "text": "-3sin(3x + 5)" },
-        { "id": "C", "text": "3sin(3x + 5)" },
-        { "id": "D", "text": "sin(3x + 5)" }
+        {
+          "id": "A",
+          "text": "-sin(3x + 5)"
+        },
+        {
+          "id": "B",
+          "text": "-3sin(3x + 5)"
+        },
+        {
+          "id": "C",
+          "text": "3sin(3x + 5)"
+        },
+        {
+          "id": "D",
+          "text": "sin(3x + 5)"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "By the chain rule: d/dx[cos(3x+5)] = -sin(3x+5)\u00b7d/dx(3x+5) = -sin(3x+5)\u00b73 = -3sin(3x+5).",
+      "explanation_correct": "By the chain rule: d/dx[cos(3x+5)] = -sin(3x+5)·d/dx(3x+5) = -sin(3x+5)·3 = -3sin(3x+5).",
       "explanation_incorrect": "The chain rule gives: differentiate cos to get -sin, then multiply by the derivative of the inner function (3x+5), which is 3."
     },
     {
       "question_id": "T03.01.Q018",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "d/dx[e^(2x+1)] equals:",
       "options": [
-        { "id": "A", "text": "e^(2x+1)" },
-        { "id": "B", "text": "2e^(2x+1)" },
-        { "id": "C", "text": "(2x+1)e^(2x)" },
-        { "id": "D", "text": "2xe^(2x+1)" }
+        {
+          "id": "A",
+          "text": "e^(2x+1)"
+        },
+        {
+          "id": "B",
+          "text": "2e^(2x+1)"
+        },
+        {
+          "id": "C",
+          "text": "(2x+1)e^(2x)"
+        },
+        {
+          "id": "D",
+          "text": "2xe^(2x+1)"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "By the chain rule: d/dx[e^(2x+1)] = e^(2x+1)\u00b7d/dx(2x+1) = e^(2x+1)\u00b72 = 2e^(2x+1).",
+      "explanation_correct": "By the chain rule: d/dx[e^(2x+1)] = e^(2x+1)·d/dx(2x+1) = e^(2x+1)·2 = 2e^(2x+1).",
       "explanation_incorrect": "The derivative of e^u is e^u times u'. Here u = 2x+1, u' = 2, so the answer is 2e^(2x+1)."
     },
     {
       "question_id": "T03.01.Q019",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "d/dx[tan\u207b\u00b9(x)] equals:",
+      "question_text": "d/dx[tan⁻¹(x)] equals:",
       "options": [
-        { "id": "A", "text": "1/\u221a(1-x\u00b2)" },
-        { "id": "B", "text": "-1/\u221a(1-x\u00b2)" },
-        { "id": "C", "text": "1/(1+x\u00b2)" },
-        { "id": "D", "text": "-1/(1+x\u00b2)" }
+        {
+          "id": "A",
+          "text": "1/√(1-x²)"
+        },
+        {
+          "id": "B",
+          "text": "-1/√(1-x²)"
+        },
+        {
+          "id": "C",
+          "text": "1/(1+x²)"
+        },
+        {
+          "id": "D",
+          "text": "-1/(1+x²)"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "This is a standard result: d/dx[tan\u207b\u00b9(x)] = 1/(1+x\u00b2). It can be derived by letting y = tan\u207b\u00b9(x), so x = tan(y), and differentiating implicitly: 1 = sec\u00b2(y)\u00b7dy/dx, giving dy/dx = 1/sec\u00b2(y) = 1/(1+tan\u00b2y) = 1/(1+x\u00b2).",
-      "explanation_incorrect": "The derivative of sin\u207b\u00b9(x) is 1/\u221a(1-x\u00b2), not tan\u207b\u00b9(x). The derivative of tan\u207b\u00b9(x) is 1/(1+x\u00b2)."
+      "explanation_correct": "This is a standard result: d/dx[tan⁻¹(x)] = 1/(1+x²). It can be derived by letting y = tan⁻¹(x), so x = tan(y), and differentiating implicitly: 1 = sec²(y)·dy/dx, giving dy/dx = 1/sec²(y) = 1/(1+tan²y) = 1/(1+x²).",
+      "explanation_incorrect": "The derivative of sin⁻¹(x) is 1/√(1-x²), not tan⁻¹(x). The derivative of tan⁻¹(x) is 1/(1+x²)."
     },
     {
       "question_id": "T03.01.Q020",
       "concept_id": "T03.01.C02",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "d/dx[sin\u207b\u00b9(x)] equals:",
+      "question_text": "d/dx[sin⁻¹(x)] equals:",
       "options": [
-        { "id": "A", "text": "1/(1+x\u00b2)" },
-        { "id": "B", "text": "-1/\u221a(1-x\u00b2)" },
-        { "id": "C", "text": "1/\u221a(1-x\u00b2)" },
-        { "id": "D", "text": "1/\u221a(1+x\u00b2)" }
+        {
+          "id": "A",
+          "text": "1/(1+x²)"
+        },
+        {
+          "id": "B",
+          "text": "-1/√(1-x²)"
+        },
+        {
+          "id": "C",
+          "text": "1/√(1-x²)"
+        },
+        {
+          "id": "D",
+          "text": "1/√(1+x²)"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "Standard result: d/dx[sin\u207b\u00b9(x)] = 1/\u221a(1-x\u00b2) for |x| < 1. Derived by setting y = sin\u207b\u00b9(x), then x = sin(y), so 1 = cos(y)\u00b7dy/dx, and dy/dx = 1/cos(y) = 1/\u221a(1-sin\u00b2y) = 1/\u221a(1-x\u00b2).",
-      "explanation_incorrect": "d/dx[sin\u207b\u00b9(x)] = 1/\u221a(1-x\u00b2). Note: d/dx[cos\u207b\u00b9(x)] = -1/\u221a(1-x\u00b2) (with a negative sign)."
+      "explanation_correct": "Standard result: d/dx[sin⁻¹(x)] = 1/√(1-x²) for |x| < 1. Derived by setting y = sin⁻¹(x), then x = sin(y), so 1 = cos(y)·dy/dx, and dy/dx = 1/cos(y) = 1/√(1-sin²y) = 1/√(1-x²).",
+      "explanation_incorrect": "d/dx[sin⁻¹(x)] = 1/√(1-x²). Note: d/dx[cos⁻¹(x)] = -1/√(1-x²) (with a negative sign)."
     },
     {
       "question_id": "T03.01.Q021",
       "concept_id": "T03.01.C02",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = sin\u207b\u00b9(2x\u221a(1-x\u00b2)), and we substitute x = sin\u03b8, what does y simplify to?",
+      "question_text": "If y = sin⁻¹(2x√(1-x²)), and we substitute x = sinθ, what does y simplify to?",
       "options": [
-        { "id": "A", "text": "2\u03b8" },
-        { "id": "B", "text": "\u03b8\u00b2" },
-        { "id": "C", "text": "sin(2\u03b8)" },
-        { "id": "D", "text": "\u03b8" }
+        {
+          "id": "A",
+          "text": "2θ"
+        },
+        {
+          "id": "B",
+          "text": "θ²"
+        },
+        {
+          "id": "C",
+          "text": "sin(2θ)"
+        },
+        {
+          "id": "D",
+          "text": "θ"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Substituting x = sin\u03b8: 2x\u221a(1-x\u00b2) = 2sin\u03b8\u00b7\u221a(1-sin\u00b2\u03b8) = 2sin\u03b8\u00b7cos\u03b8 = sin(2\u03b8). So y = sin\u207b\u00b9(sin(2\u03b8)) = 2\u03b8 (for appropriate range).",
-      "explanation_incorrect": "Put x = sin\u03b8 to get 2sin\u03b8\u00b7cos\u03b8 = sin(2\u03b8) inside sin\u207b\u00b9. Then y = sin\u207b\u00b9(sin(2\u03b8)) = 2\u03b8."
+      "explanation_correct": "Substituting x = sinθ: 2x√(1-x²) = 2sinθ·√(1-sin²θ) = 2sinθ·cosθ = sin(2θ). So y = sin⁻¹(sin(2θ)) = 2θ (for appropriate range).",
+      "explanation_incorrect": "Put x = sinθ to get 2sinθ·cosθ = sin(2θ) inside sin⁻¹. Then y = sin⁻¹(sin(2θ)) = 2θ."
     },
     {
       "question_id": "T03.01.Q022",
       "concept_id": "T03.01.C02",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "d/dx[tan\u207b\u00b9(sin x / (1 + cos x))] equals:",
+      "question_text": "d/dx[tan⁻¹(sin x / (1 + cos x))] equals:",
       "options": [
-        { "id": "A", "text": "1" },
-        { "id": "B", "text": "1/2" },
-        { "id": "C", "text": "sec\u00b2(x/2)" },
-        { "id": "D", "text": "1/(1+cos x)" }
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "sec²(x/2)"
+        },
+        {
+          "id": "D",
+          "text": "1/(1+cos x)"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "sin x/(1+cos x) = 2sin(x/2)cos(x/2) / (2cos\u00b2(x/2)) = sin(x/2)/cos(x/2) = tan(x/2). So tan\u207b\u00b9(tan(x/2)) = x/2, and d/dx(x/2) = 1/2.",
-      "explanation_incorrect": "Simplify using half-angle formulas: sin x = 2sin(x/2)cos(x/2) and 1+cos x = 2cos\u00b2(x/2). The ratio is tan(x/2), so the expression equals x/2, whose derivative is 1/2."
+      "explanation_correct": "sin x/(1+cos x) = 2sin(x/2)cos(x/2) / (2cos²(x/2)) = sin(x/2)/cos(x/2) = tan(x/2). So tan⁻¹(tan(x/2)) = x/2, and d/dx(x/2) = 1/2.",
+      "explanation_incorrect": "Simplify using half-angle formulas: sin x = 2sin(x/2)cos(x/2) and 1+cos x = 2cos²(x/2). The ratio is tan(x/2), so the expression equals x/2, whose derivative is 1/2."
     },
     {
       "question_id": "T03.01.Q023",
       "concept_id": "T03.01.C02",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If x\u00b2 + y\u00b2 = 25, find dy/dx by implicit differentiation.",
+      "question_text": "If x² + y² = 25, find dy/dx by implicit differentiation.",
       "options": [
-        { "id": "A", "text": "-x/y" },
-        { "id": "B", "text": "x/y" },
-        { "id": "C", "text": "-y/x" },
-        { "id": "D", "text": "y/x" }
+        {
+          "id": "A",
+          "text": "-x/y"
+        },
+        {
+          "id": "B",
+          "text": "x/y"
+        },
+        {
+          "id": "C",
+          "text": "-y/x"
+        },
+        {
+          "id": "D",
+          "text": "y/x"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Differentiate both sides w.r.t. x: 2x + 2y\u00b7(dy/dx) = 0. So 2y\u00b7(dy/dx) = -2x, giving dy/dx = -x/y.",
-      "explanation_incorrect": "Implicit differentiation of x\u00b2 + y\u00b2 = 25 gives 2x + 2y(dy/dx) = 0. Solving: dy/dx = -2x/(2y) = -x/y."
+      "explanation_correct": "Differentiate both sides w.r.t. x: 2x + 2y·(dy/dx) = 0. So 2y·(dy/dx) = -2x, giving dy/dx = -x/y.",
+      "explanation_incorrect": "Implicit differentiation of x² + y² = 25 gives 2x + 2y(dy/dx) = 0. Solving: dy/dx = -2x/(2y) = -x/y."
     },
     {
       "question_id": "T03.01.Q024",
       "concept_id": "T03.01.C02",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If x\u00b3 + y\u00b3 = 3xy, find dy/dx.",
+      "question_text": "If x³ + y³ = 3xy, find dy/dx.",
       "options": [
-        { "id": "A", "text": "(y - x\u00b2)/(y\u00b2 - x)" },
-        { "id": "B", "text": "(3x\u00b2 - 3y)/(3y\u00b2 - 3x)" },
-        { "id": "C", "text": "(y - x\u00b2)/(y\u00b2 + x)" },
-        { "id": "D", "text": "(x\u00b2 - y)/(y\u00b2 - x)" }
+        {
+          "id": "A",
+          "text": "(y - x²)/(y² - x)"
+        },
+        {
+          "id": "B",
+          "text": "(3x² - 3y)/(3y² - 3x)"
+        },
+        {
+          "id": "C",
+          "text": "(y - x²)/(y² + x)"
+        },
+        {
+          "id": "D",
+          "text": "(x² - y)/(y² - x)"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Differentiate: 3x\u00b2 + 3y\u00b2(dy/dx) = 3y + 3x(dy/dx). Rearranging: 3y\u00b2(dy/dx) - 3x(dy/dx) = 3y - 3x\u00b2. So (dy/dx)(y\u00b2 - x) = y - x\u00b2, giving dy/dx = (y - x\u00b2)/(y\u00b2 - x).",
-      "explanation_incorrect": "Differentiate x\u00b3 + y\u00b3 = 3xy implicitly. The RHS uses the product rule: d/dx(3xy) = 3y + 3x(dy/dx). Collect dy/dx terms and solve."
+      "explanation_correct": "Differentiate: 3x² + 3y²(dy/dx) = 3y + 3x(dy/dx). Rearranging: 3y²(dy/dx) - 3x(dy/dx) = 3y - 3x². So (dy/dx)(y² - x) = y - x², giving dy/dx = (y - x²)/(y² - x).",
+      "explanation_incorrect": "Differentiate x³ + y³ = 3xy implicitly. The RHS uses the product rule: d/dx(3xy) = 3y + 3x(dy/dx). Collect dy/dx terms and solve."
     },
     {
       "question_id": "T03.01.Q025",
       "concept_id": "T03.01.C02",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "fill_blank",
-      "question_text": "If y = e^(sin\u207b\u00b9x), then dy/dx = ___.",
+      "question_text": "If y = e^(sin⁻¹x), then dy/dx = ___.",
       "options": [
-        { "id": "A", "text": "e^(sin\u207b\u00b9x) / \u221a(1-x\u00b2)" },
-        { "id": "B", "text": "e^(sin\u207b\u00b9x) \u00b7 cos\u207b\u00b9x" },
-        { "id": "C", "text": "e^(sin\u207b\u00b9x) / (1+x\u00b2)" },
-        { "id": "D", "text": "sin\u207b\u00b9x \u00b7 e^(sin\u207b\u00b9x - 1)" }
+        {
+          "id": "A",
+          "text": "e^(sin⁻¹x) / √(1-x²)"
+        },
+        {
+          "id": "B",
+          "text": "e^(sin⁻¹x) · cos⁻¹x"
+        },
+        {
+          "id": "C",
+          "text": "e^(sin⁻¹x) / (1+x²)"
+        },
+        {
+          "id": "D",
+          "text": "sin⁻¹x · e^(sin⁻¹x - 1)"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "By the chain rule: dy/dx = e^(sin\u207b\u00b9x) \u00b7 d/dx(sin\u207b\u00b9x) = e^(sin\u207b\u00b9x) \u00b7 1/\u221a(1-x\u00b2) = e^(sin\u207b\u00b9x) / \u221a(1-x\u00b2).",
-      "explanation_incorrect": "Use the chain rule with outer function e^u and inner function u = sin\u207b\u00b9x. The derivative of sin\u207b\u00b9x is 1/\u221a(1-x\u00b2)."
+      "explanation_correct": "By the chain rule: dy/dx = e^(sin⁻¹x) · d/dx(sin⁻¹x) = e^(sin⁻¹x) · 1/√(1-x²) = e^(sin⁻¹x) / √(1-x²).",
+      "explanation_incorrect": "Use the chain rule with outer function e^u and inner function u = sin⁻¹x. The derivative of sin⁻¹x is 1/√(1-x²)."
     },
     {
       "question_id": "T03.01.Q026",
       "concept_id": "T03.01.C02",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = tan\u207b\u00b9((3x - x\u00b3)/(1 - 3x\u00b2)), find dy/dx for |x| < 1/\u221a3.",
+      "question_text": "If y = tan⁻¹((3x - x³)/(1 - 3x²)), find dy/dx for |x| < 1/√3.",
       "options": [
-        { "id": "A", "text": "1/(1+x\u00b2)" },
-        { "id": "B", "text": "3/(1+x\u00b2)" },
-        { "id": "C", "text": "3/(1-x\u00b2)" },
-        { "id": "D", "text": "1/(1+9x\u00b2)" }
+        {
+          "id": "A",
+          "text": "1/(1+x²)"
+        },
+        {
+          "id": "B",
+          "text": "3/(1+x²)"
+        },
+        {
+          "id": "C",
+          "text": "3/(1-x²)"
+        },
+        {
+          "id": "D",
+          "text": "1/(1+9x²)"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "Substitute x = tan\u03b8. Then (3tan\u03b8 - tan\u00b3\u03b8)/(1-3tan\u00b2\u03b8) = tan(3\u03b8). So y = tan\u207b\u00b9(tan(3\u03b8)) = 3\u03b8 = 3tan\u207b\u00b9(x). Therefore dy/dx = 3/(1+x\u00b2).",
-      "explanation_incorrect": "Recognize the triple angle formula: (3tan\u03b8 - tan\u00b3\u03b8)/(1 - 3tan\u00b2\u03b8) = tan(3\u03b8). With x = tan\u03b8, y = 3tan\u207b\u00b9(x), so dy/dx = 3/(1+x\u00b2)."
+      "explanation_correct": "Substitute x = tanθ. Then (3tanθ - tan³θ)/(1-3tan²θ) = tan(3θ). So y = tan⁻¹(tan(3θ)) = 3θ = 3tan⁻¹(x). Therefore dy/dx = 3/(1+x²).",
+      "explanation_incorrect": "Recognize the triple angle formula: (3tanθ - tan³θ)/(1 - 3tan²θ) = tan(3θ). With x = tanθ, y = 3tan⁻¹(x), so dy/dx = 3/(1+x²)."
     },
     {
       "question_id": "T03.01.Q027",
       "concept_id": "T03.01.C02",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = cos\u207b\u00b9((1-x\u00b2)/(1+x\u00b2)), for x > 0, find dy/dx.",
+      "question_text": "If y = cos⁻¹((1-x²)/(1+x²)), for x > 0, find dy/dx.",
       "options": [
-        { "id": "A", "text": "2/(1+x\u00b2)" },
-        { "id": "B", "text": "-2/(1+x\u00b2)" },
-        { "id": "C", "text": "1/(1+x\u00b2)" },
-        { "id": "D", "text": "-1/(1+x\u00b2)" }
+        {
+          "id": "A",
+          "text": "2/(1+x²)"
+        },
+        {
+          "id": "B",
+          "text": "-2/(1+x²)"
+        },
+        {
+          "id": "C",
+          "text": "1/(1+x²)"
+        },
+        {
+          "id": "D",
+          "text": "-1/(1+x²)"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Let x = tan\u03b8 (with \u03b8 > 0). Then (1-tan\u00b2\u03b8)/(1+tan\u00b2\u03b8) = cos(2\u03b8). So y = cos\u207b\u00b9(cos(2\u03b8)) = 2\u03b8 = 2tan\u207b\u00b9(x). Therefore dy/dx = 2/(1+x\u00b2).",
-      "explanation_incorrect": "Use the substitution x = tan\u03b8 to simplify the expression inside cos\u207b\u00b9 to cos(2\u03b8), making y = 2tan\u207b\u00b9(x)."
+      "explanation_correct": "Let x = tanθ (with θ > 0). Then (1-tan²θ)/(1+tan²θ) = cos(2θ). So y = cos⁻¹(cos(2θ)) = 2θ = 2tan⁻¹(x). Therefore dy/dx = 2/(1+x²).",
+      "explanation_incorrect": "Use the substitution x = tanθ to simplify the expression inside cos⁻¹ to cos(2θ), making y = 2tan⁻¹(x)."
     },
     {
       "question_id": "T03.01.Q028",
       "concept_id": "T03.01.C02",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "d/dx[log(sin x)] equals:",
       "options": [
-        { "id": "A", "text": "cos x / sin x" },
-        { "id": "B", "text": "1/sin x" },
-        { "id": "C", "text": "cot x" },
-        { "id": "D", "text": "Both A and C" }
+        {
+          "id": "A",
+          "text": "cos x / sin x"
+        },
+        {
+          "id": "B",
+          "text": "1/sin x"
+        },
+        {
+          "id": "C",
+          "text": "cot x"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
       ],
       "correct_answer": "D",
-      "explanation_correct": "d/dx[log(sin x)] = (1/sin x)\u00b7cos x = cos x/sin x = cot x. Options A and C are the same expression, so both are correct.",
-      "explanation_incorrect": "By the chain rule, d/dx[log(u)] = (1/u)\u00b7u'. Here u = sin x, u' = cos x, giving cos(x)/sin(x) = cot(x)."
+      "explanation_correct": "d/dx[log(sin x)] = (1/sin x)·cos x = cos x/sin x = cot x. Options A and C are the same expression, so both are correct.",
+      "explanation_incorrect": "By the chain rule, d/dx[log(u)] = (1/u)·u'. Here u = sin x, u' = cos x, giving cos(x)/sin(x) = cot(x)."
     },
     {
       "question_id": "T03.01.Q029",
       "concept_id": "T03.01.C02",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "If x = a(t - sin t) and y = a(1 - cos t), find dy/dx.",
       "options": [
-        { "id": "A", "text": "sin t / (1 - cos t)" },
-        { "id": "B", "text": "sin t / (1 + cos t)" },
-        { "id": "C", "text": "cos t / sin t" },
-        { "id": "D", "text": "(1 - cos t) / sin t" }
+        {
+          "id": "A",
+          "text": "sin t / (1 - cos t)"
+        },
+        {
+          "id": "B",
+          "text": "sin t / (1 + cos t)"
+        },
+        {
+          "id": "C",
+          "text": "cos t / sin t"
+        },
+        {
+          "id": "D",
+          "text": "(1 - cos t) / sin t"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "dx/dt = a(1 - cos t), dy/dt = a\u00b7sin t. So dy/dx = (dy/dt)/(dx/dt) = (a\u00b7sin t)/(a(1 - cos t)) = sin t/(1 - cos t).",
-      "explanation_incorrect": "For parametric differentiation: dy/dx = (dy/dt)/(dx/dt). Here dy/dt = a\u00b7sin t and dx/dt = a(1 - cos t)."
+      "explanation_correct": "dx/dt = a(1 - cos t), dy/dt = a·sin t. So dy/dx = (dy/dt)/(dx/dt) = (a·sin t)/(a(1 - cos t)) = sin t/(1 - cos t).",
+      "explanation_incorrect": "For parametric differentiation: dy/dx = (dy/dt)/(dx/dt). Here dy/dt = a·sin t and dx/dt = a(1 - cos t)."
     },
     {
       "question_id": "T03.01.Q030",
       "concept_id": "T03.01.C03",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "Logarithmic differentiation is particularly useful when y equals:",
       "options": [
-        { "id": "A", "text": "A polynomial function" },
-        { "id": "B", "text": "A function of the form [f(x)]^g(x)" },
-        { "id": "C", "text": "A constant function" },
-        { "id": "D", "text": "A linear function" }
+        {
+          "id": "A",
+          "text": "A polynomial function"
+        },
+        {
+          "id": "B",
+          "text": "A function of the form [f(x)]^g(x)"
+        },
+        {
+          "id": "C",
+          "text": "A constant function"
+        },
+        {
+          "id": "D",
+          "text": "A linear function"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "Logarithmic differentiation is especially useful for y = [f(x)]^g(x) where both the base and exponent are functions of x. Taking log: log y = g(x)\u00b7log f(x), then differentiate both sides.",
+      "explanation_correct": "Logarithmic differentiation is especially useful for y = [f(x)]^g(x) where both the base and exponent are functions of x. Taking log: log y = g(x)·log f(x), then differentiate both sides.",
       "explanation_incorrect": "Polynomials, constants, and linear functions can be differentiated directly. Logarithmic differentiation is needed when y = [f(x)]^g(x) because neither the power rule nor the exponential rule applies directly."
     },
     {
       "question_id": "T03.01.Q031",
       "concept_id": "T03.01.C03",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "If y = x^x (x > 0), then dy/dx equals:",
       "options": [
-        { "id": "A", "text": "x^x \u00b7 x" },
-        { "id": "B", "text": "x^x \u00b7 (1 + log x)" },
-        { "id": "C", "text": "x \u00b7 x^(x-1)" },
-        { "id": "D", "text": "x^x \u00b7 log x" }
+        {
+          "id": "A",
+          "text": "x^x · x"
+        },
+        {
+          "id": "B",
+          "text": "x^x · (1 + log x)"
+        },
+        {
+          "id": "C",
+          "text": "x · x^(x-1)"
+        },
+        {
+          "id": "D",
+          "text": "x^x · log x"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "Take log: log y = x\u00b7log x. Differentiate: (1/y)(dy/dx) = 1\u00b7log x + x\u00b7(1/x) = log x + 1. So dy/dx = y(1 + log x) = x^x(1 + log x).",
+      "explanation_correct": "Take log: log y = x·log x. Differentiate: (1/y)(dy/dx) = 1·log x + x·(1/x) = log x + 1. So dy/dx = y(1 + log x) = x^x(1 + log x).",
       "explanation_incorrect": "For y = x^x, take natural log of both sides: log y = x log x. Differentiate using the product rule on the RHS, then multiply by y."
     },
     {
       "question_id": "T03.01.Q032",
       "concept_id": "T03.01.C03",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "If y = (sin x)^x (for sin x > 0), then dy/dx equals:",
       "options": [
-        { "id": "A", "text": "(sin x)^x [x\u00b7cot x + log(sin x)]" },
-        { "id": "B", "text": "(sin x)^x [x\u00b7cos x + log(sin x)]" },
-        { "id": "C", "text": "x\u00b7(sin x)^(x-1)\u00b7cos x" },
-        { "id": "D", "text": "(sin x)^x \u00b7 log(cos x)" }
+        {
+          "id": "A",
+          "text": "(sin x)^x [x·cot x + log(sin x)]"
+        },
+        {
+          "id": "B",
+          "text": "(sin x)^x [x·cos x + log(sin x)]"
+        },
+        {
+          "id": "C",
+          "text": "x·(sin x)^(x-1)·cos x"
+        },
+        {
+          "id": "D",
+          "text": "(sin x)^x · log(cos x)"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Take log: log y = x\u00b7log(sin x). Differentiate: (1/y)(dy/dx) = log(sin x) + x\u00b7(cos x/sin x) = log(sin x) + x\u00b7cot x. So dy/dx = (sin x)^x [x\u00b7cot x + log(sin x)].",
-      "explanation_incorrect": "Take log of both sides: log y = x\u00b7log(sin x). Apply product rule on the RHS: d/dx[x\u00b7log(sin x)] = log(sin x) + x\u00b7(cos x / sin x)."
+      "explanation_correct": "Take log: log y = x·log(sin x). Differentiate: (1/y)(dy/dx) = log(sin x) + x·(cos x/sin x) = log(sin x) + x·cot x. So dy/dx = (sin x)^x [x·cot x + log(sin x)].",
+      "explanation_incorrect": "Take log of both sides: log y = x·log(sin x). Apply product rule on the RHS: d/dx[x·log(sin x)] = log(sin x) + x·(cos x / sin x)."
     },
     {
       "question_id": "T03.01.Q033",
       "concept_id": "T03.01.C03",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "If y = x^(sin x) (x > 0), then (1/y)(dy/dx) equals:",
       "options": [
-        { "id": "A", "text": "sin x / x + cos x \u00b7 log x" },
-        { "id": "B", "text": "cos x \u00b7 log x" },
-        { "id": "C", "text": "sin x \u00b7 log x + cos x / x" },
-        { "id": "D", "text": "sin x / x" }
+        {
+          "id": "A",
+          "text": "sin x / x + cos x · log x"
+        },
+        {
+          "id": "B",
+          "text": "cos x · log x"
+        },
+        {
+          "id": "C",
+          "text": "sin x · log x + cos x / x"
+        },
+        {
+          "id": "D",
+          "text": "sin x / x"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Take log: log y = sin x \u00b7 log x. Differentiate: (1/y)(dy/dx) = cos x \u00b7 log x + sin x \u00b7 (1/x) = sin x / x + cos x \u00b7 log x.",
-      "explanation_incorrect": "log y = sin x \u00b7 log x. Using the product rule: d/dx[sin x \u00b7 log x] = cos x \u00b7 log x + sin x \u00b7 (1/x)."
+      "explanation_correct": "Take log: log y = sin x · log x. Differentiate: (1/y)(dy/dx) = cos x · log x + sin x · (1/x) = sin x / x + cos x · log x.",
+      "explanation_incorrect": "log y = sin x · log x. Using the product rule: d/dx[sin x · log x] = cos x · log x + sin x · (1/x)."
     },
     {
       "question_id": "T03.01.Q034",
       "concept_id": "T03.01.C03",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If x = a\u00b7cos\u00b3\u03b8 and y = a\u00b7sin\u00b3\u03b8, find dy/dx.",
+      "question_text": "If x = a·cos³θ and y = a·sin³θ, find dy/dx.",
       "options": [
-        { "id": "A", "text": "-tan\u03b8" },
-        { "id": "B", "text": "tan\u03b8" },
-        { "id": "C", "text": "-cot\u03b8" },
-        { "id": "D", "text": "cot\u03b8" }
+        {
+          "id": "A",
+          "text": "-tanθ"
+        },
+        {
+          "id": "B",
+          "text": "tanθ"
+        },
+        {
+          "id": "C",
+          "text": "-cotθ"
+        },
+        {
+          "id": "D",
+          "text": "cotθ"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "dx/d\u03b8 = a\u00b73cos\u00b2\u03b8\u00b7(-sin\u03b8) = -3a\u00b7cos\u00b2\u03b8\u00b7sin\u03b8. dy/d\u03b8 = a\u00b73sin\u00b2\u03b8\u00b7cos\u03b8 = 3a\u00b7sin\u00b2\u03b8\u00b7cos\u03b8. dy/dx = (3a\u00b7sin\u00b2\u03b8\u00b7cos\u03b8)/(-3a\u00b7cos\u00b2\u03b8\u00b7sin\u03b8) = -sin\u03b8/cos\u03b8 = -tan\u03b8.",
-      "explanation_incorrect": "Differentiate parametrically: dy/dx = (dy/d\u03b8)/(dx/d\u03b8). The 3a terms cancel, leaving -sin\u03b8/cos\u03b8 = -tan\u03b8."
+      "explanation_correct": "dx/dθ = a·3cos²θ·(-sinθ) = -3a·cos²θ·sinθ. dy/dθ = a·3sin²θ·cosθ = 3a·sin²θ·cosθ. dy/dx = (3a·sin²θ·cosθ)/(-3a·cos²θ·sinθ) = -sinθ/cosθ = -tanθ.",
+      "explanation_incorrect": "Differentiate parametrically: dy/dx = (dy/dθ)/(dx/dθ). The 3a terms cancel, leaving -sinθ/cosθ = -tanθ."
     },
     {
       "question_id": "T03.01.Q035",
       "concept_id": "T03.01.C03",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If x = at\u00b2 and y = 2at, find dy/dx.",
+      "question_text": "If x = at² and y = 2at, find dy/dx.",
       "options": [
-        { "id": "A", "text": "2a" },
-        { "id": "B", "text": "1/t" },
-        { "id": "C", "text": "t" },
-        { "id": "D", "text": "2t" }
+        {
+          "id": "A",
+          "text": "2a"
+        },
+        {
+          "id": "B",
+          "text": "1/t"
+        },
+        {
+          "id": "C",
+          "text": "t"
+        },
+        {
+          "id": "D",
+          "text": "2t"
+        }
       ],
       "correct_answer": "B",
       "explanation_correct": "dx/dt = 2at, dy/dt = 2a. So dy/dx = (dy/dt)/(dx/dt) = 2a/(2at) = 1/t.",
@@ -577,157 +1014,287 @@
       "question_id": "T03.01.Q036",
       "concept_id": "T03.01.C03",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = (x + 1)^2 \u00b7 (x + 2)^3 / (x + 3)^4, find (1/y)(dy/dx).",
+      "question_text": "If y = (x + 1)^2 · (x + 2)^3 / (x + 3)^4, find (1/y)(dy/dx).",
       "options": [
-        { "id": "A", "text": "2/(x+1) + 3/(x+2) - 4/(x+3)" },
-        { "id": "B", "text": "2/(x+1) + 3/(x+2) + 4/(x+3)" },
-        { "id": "C", "text": "2(x+1) + 3(x+2) - 4(x+3)" },
-        { "id": "D", "text": "log[(x+1)\u00b2(x+2)\u00b3/(x+3)\u2074]" }
+        {
+          "id": "A",
+          "text": "2/(x+1) + 3/(x+2) - 4/(x+3)"
+        },
+        {
+          "id": "B",
+          "text": "2/(x+1) + 3/(x+2) + 4/(x+3)"
+        },
+        {
+          "id": "C",
+          "text": "2(x+1) + 3(x+2) - 4(x+3)"
+        },
+        {
+          "id": "D",
+          "text": "log[(x+1)²(x+2)³/(x+3)⁴]"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Take log: log y = 2\u00b7log(x+1) + 3\u00b7log(x+2) - 4\u00b7log(x+3). Differentiate: (1/y)(dy/dx) = 2/(x+1) + 3/(x+2) - 4/(x+3).",
+      "explanation_correct": "Take log: log y = 2·log(x+1) + 3·log(x+2) - 4·log(x+3). Differentiate: (1/y)(dy/dx) = 2/(x+1) + 3/(x+2) - 4/(x+3).",
       "explanation_incorrect": "Use logarithmic differentiation: take log of both sides and use log properties to convert products/quotients/powers into sums/differences/multiples. Then differentiate."
     },
     {
       "question_id": "T03.01.Q037",
       "concept_id": "T03.01.C03",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If x = a(cos t + t\u00b7sin t) and y = a(sin t - t\u00b7cos t), find dy/dx.",
+      "question_text": "If x = a(cos t + t·sin t) and y = a(sin t - t·cos t), find dy/dx.",
       "options": [
-        { "id": "A", "text": "tan t" },
-        { "id": "B", "text": "cot t" },
-        { "id": "C", "text": "-tan t" },
-        { "id": "D", "text": "t\u00b7tan t" }
+        {
+          "id": "A",
+          "text": "tan t"
+        },
+        {
+          "id": "B",
+          "text": "cot t"
+        },
+        {
+          "id": "C",
+          "text": "-tan t"
+        },
+        {
+          "id": "D",
+          "text": "t·tan t"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "dx/dt = a(-sin t + sin t + t\u00b7cos t) = at\u00b7cos t. dy/dt = a(cos t - cos t + t\u00b7sin t) = at\u00b7sin t. So dy/dx = (at\u00b7sin t)/(at\u00b7cos t) = tan t.",
+      "explanation_correct": "dx/dt = a(-sin t + sin t + t·cos t) = at·cos t. dy/dt = a(cos t - cos t + t·sin t) = at·sin t. So dy/dx = (at·sin t)/(at·cos t) = tan t.",
       "explanation_incorrect": "Compute dx/dt and dy/dt using the product rule. After simplification, dx/dt = at cos t and dy/dt = at sin t. The ratio gives tan t."
     },
     {
       "question_id": "T03.01.Q038",
       "concept_id": "T03.01.C03",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "fill_blank",
       "question_text": "If y = x^(1/x) (x > 0), then log y = ___.",
       "options": [
-        { "id": "A", "text": "(1/x) \u00b7 log x" },
-        { "id": "B", "text": "x \u00b7 log(1/x)" },
-        { "id": "C", "text": "log x / log(1/x)" },
-        { "id": "D", "text": "(log x)^(1/x)" }
+        {
+          "id": "A",
+          "text": "(1/x) · log x"
+        },
+        {
+          "id": "B",
+          "text": "x · log(1/x)"
+        },
+        {
+          "id": "C",
+          "text": "log x / log(1/x)"
+        },
+        {
+          "id": "D",
+          "text": "(log x)^(1/x)"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Taking natural log of both sides of y = x^(1/x): log y = (1/x)\u00b7log x. This is the first step in logarithmic differentiation.",
-      "explanation_incorrect": "By the logarithm power rule, log(a^b) = b\u00b7log(a). So log(x^(1/x)) = (1/x)\u00b7log x."
+      "explanation_correct": "Taking natural log of both sides of y = x^(1/x): log y = (1/x)·log x. This is the first step in logarithmic differentiation.",
+      "explanation_incorrect": "By the logarithm power rule, log(a^b) = b·log(a). So log(x^(1/x)) = (1/x)·log x."
     },
     {
       "question_id": "T03.01.Q039",
       "concept_id": "T03.01.C03",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "If y = (log x)^(cos x) (x > 1), then (1/y)(dy/dx) equals:",
       "options": [
-        { "id": "A", "text": "cos x / (x\u00b7log x) - sin x\u00b7log(log x)" },
-        { "id": "B", "text": "cos x\u00b7log(log x) + sin x / (x\u00b7log x)" },
-        { "id": "C", "text": "(cos x / x)\u00b7(log x)^(cos x - 1)" },
-        { "id": "D", "text": "-sin x\u00b7log(log x) + cos x\u00b7log x" }
+        {
+          "id": "A",
+          "text": "cos x / (x·log x) - sin x·log(log x)"
+        },
+        {
+          "id": "B",
+          "text": "cos x·log(log x) + sin x / (x·log x)"
+        },
+        {
+          "id": "C",
+          "text": "(cos x / x)·(log x)^(cos x - 1)"
+        },
+        {
+          "id": "D",
+          "text": "-sin x·log(log x) + cos x·log x"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "Take log: log y = cos x\u00b7log(log x). Differentiate using product rule: (1/y)(dy/dx) = -sin x\u00b7log(log x) + cos x\u00b7(1/log x)\u00b7(1/x) = cos x/(x\u00b7log x) - sin x\u00b7log(log x).",
-      "explanation_incorrect": "log y = cos x\u00b7log(log x). Apply the product rule: d/dx[cos x]\u00b7log(log x) + cos x\u00b7d/dx[log(log x)] = -sin x\u00b7log(log x) + cos x/(x\u00b7log x)."
+      "explanation_correct": "Take log: log y = cos x·log(log x). Differentiate using product rule: (1/y)(dy/dx) = -sin x·log(log x) + cos x·(1/log x)·(1/x) = cos x/(x·log x) - sin x·log(log x).",
+      "explanation_incorrect": "log y = cos x·log(log x). Apply the product rule: d/dx[cos x]·log(log x) + cos x·d/dx[log(log x)] = -sin x·log(log x) + cos x/(x·log x)."
     },
     {
       "question_id": "T03.01.Q040",
       "concept_id": "T03.01.C04",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = x\u00b3 + 2x\u00b2 + 5x + 1, then d\u00b2y/dx\u00b2 equals:",
+      "question_text": "If y = x³ + 2x² + 5x + 1, then d²y/dx² equals:",
       "options": [
-        { "id": "A", "text": "3x\u00b2 + 4x + 5" },
-        { "id": "B", "text": "6x + 4" },
-        { "id": "C", "text": "6" },
-        { "id": "D", "text": "6x\u00b2 + 4x" }
+        {
+          "id": "A",
+          "text": "3x² + 4x + 5"
+        },
+        {
+          "id": "B",
+          "text": "6x + 4"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "6x² + 4x"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "dy/dx = 3x\u00b2 + 4x + 5. d\u00b2y/dx\u00b2 = d/dx(3x\u00b2 + 4x + 5) = 6x + 4.",
-      "explanation_incorrect": "First find dy/dx = 3x\u00b2 + 4x + 5. Then differentiate again: d\u00b2y/dx\u00b2 = 6x + 4."
+      "explanation_correct": "dy/dx = 3x² + 4x + 5. d²y/dx² = d/dx(3x² + 4x + 5) = 6x + 4.",
+      "explanation_incorrect": "First find dy/dx = 3x² + 4x + 5. Then differentiate again: d²y/dx² = 6x + 4."
     },
     {
       "question_id": "T03.01.Q041",
       "concept_id": "T03.01.C04",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = sin(2x), then d\u00b2y/dx\u00b2 equals:",
+      "question_text": "If y = sin(2x), then d²y/dx² equals:",
       "options": [
-        { "id": "A", "text": "2cos(2x)" },
-        { "id": "B", "text": "-4sin(2x)" },
-        { "id": "C", "text": "4sin(2x)" },
-        { "id": "D", "text": "-2sin(2x)" }
+        {
+          "id": "A",
+          "text": "2cos(2x)"
+        },
+        {
+          "id": "B",
+          "text": "-4sin(2x)"
+        },
+        {
+          "id": "C",
+          "text": "4sin(2x)"
+        },
+        {
+          "id": "D",
+          "text": "-2sin(2x)"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "dy/dx = 2cos(2x). d\u00b2y/dx\u00b2 = 2\u00b7(-sin(2x))\u00b72 = -4sin(2x).",
-      "explanation_incorrect": "First derivative: dy/dx = 2cos(2x). Second derivative: d\u00b2y/dx\u00b2 = -4sin(2x), applying the chain rule again."
+      "explanation_correct": "dy/dx = 2cos(2x). d²y/dx² = 2·(-sin(2x))·2 = -4sin(2x).",
+      "explanation_incorrect": "First derivative: dy/dx = 2cos(2x). Second derivative: d²y/dx² = -4sin(2x), applying the chain rule again."
     },
     {
       "question_id": "T03.01.Q042",
       "concept_id": "T03.01.C04",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = e^(3x), then d\u00b2y/dx\u00b2 equals:",
+      "question_text": "If y = e^(3x), then d²y/dx² equals:",
       "options": [
-        { "id": "A", "text": "3e^(3x)" },
-        { "id": "B", "text": "6e^(3x)" },
-        { "id": "C", "text": "9e^(3x)" },
-        { "id": "D", "text": "e^(3x)" }
+        {
+          "id": "A",
+          "text": "3e^(3x)"
+        },
+        {
+          "id": "B",
+          "text": "6e^(3x)"
+        },
+        {
+          "id": "C",
+          "text": "9e^(3x)"
+        },
+        {
+          "id": "D",
+          "text": "e^(3x)"
+        }
       ],
       "correct_answer": "C",
-      "explanation_correct": "dy/dx = 3e^(3x). d\u00b2y/dx\u00b2 = 3\u00b73e^(3x) = 9e^(3x).",
-      "explanation_incorrect": "Each differentiation multiplies by 3 (the chain rule). So d\u00b2y/dx\u00b2 = 3\u00b2 \u00b7 e^(3x) = 9e^(3x)."
+      "explanation_correct": "dy/dx = 3e^(3x). d²y/dx² = 3·3e^(3x) = 9e^(3x).",
+      "explanation_incorrect": "Each differentiation multiplies by 3 (the chain rule). So d²y/dx² = 3² · e^(3x) = 9e^(3x)."
     },
     {
       "question_id": "T03.01.Q043",
       "concept_id": "T03.01.C04",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = log(x\u00b2), find d\u00b2y/dx\u00b2.",
+      "question_text": "If y = log(x²), find d²y/dx².",
       "options": [
-        { "id": "A", "text": "2/x" },
-        { "id": "B", "text": "-2/x\u00b2" },
-        { "id": "C", "text": "2/x\u00b2" },
-        { "id": "D", "text": "-2/x" }
+        {
+          "id": "A",
+          "text": "2/x"
+        },
+        {
+          "id": "B",
+          "text": "-2/x²"
+        },
+        {
+          "id": "C",
+          "text": "2/x²"
+        },
+        {
+          "id": "D",
+          "text": "-2/x"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "y = log(x\u00b2) = 2log(x). dy/dx = 2/x = 2x\u207b\u00b9. d\u00b2y/dx\u00b2 = -2x\u207b\u00b2 = -2/x\u00b2.",
-      "explanation_incorrect": "Simplify first: log(x\u00b2) = 2log x. Then dy/dx = 2/x and d\u00b2y/dx\u00b2 = -2/x\u00b2."
+      "explanation_correct": "y = log(x²) = 2log(x). dy/dx = 2/x = 2x⁻¹. d²y/dx² = -2x⁻² = -2/x².",
+      "explanation_incorrect": "Simplify first: log(x²) = 2log x. Then dy/dx = 2/x and d²y/dx² = -2/x²."
     },
     {
       "question_id": "T03.01.Q044",
       "concept_id": "T03.01.C04",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If x = at\u00b2 and y = 2at, find d\u00b2y/dx\u00b2.",
+      "question_text": "If x = at² and y = 2at, find d²y/dx².",
       "options": [
-        { "id": "A", "text": "-1/(2at\u00b3)" },
-        { "id": "B", "text": "1/(2at)" },
-        { "id": "C", "text": "-1/t\u00b2" },
-        { "id": "D", "text": "0" }
+        {
+          "id": "A",
+          "text": "-1/(2at³)"
+        },
+        {
+          "id": "B",
+          "text": "1/(2at)"
+        },
+        {
+          "id": "C",
+          "text": "-1/t²"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "From Q035, dy/dx = 1/t. Now d\u00b2y/dx\u00b2 = d/dx(1/t) = (d/dt(1/t))/(dx/dt) = (-1/t\u00b2)/(2at) = -1/(2at\u00b3).",
-      "explanation_incorrect": "First dy/dx = 1/t. For the second derivative in parametric form: d\u00b2y/dx\u00b2 = (d/dt(dy/dx)) / (dx/dt) = (-1/t\u00b2) / (2at) = -1/(2at\u00b3)."
+      "explanation_correct": "From Q035, dy/dx = 1/t. Now d²y/dx² = d/dx(1/t) = (d/dt(1/t))/(dx/dt) = (-1/t²)/(2at) = -1/(2at³).",
+      "explanation_incorrect": "First dy/dx = 1/t. For the second derivative in parametric form: d²y/dx² = (d/dt(dy/dx)) / (dx/dt) = (-1/t²) / (2at) = -1/(2at³)."
     },
     {
       "question_id": "T03.01.Q045",
       "concept_id": "T03.01.C04",
       "difficulty": "familiarity",
+      "cognitive_level": "recall",
       "type": "mcq",
       "question_text": "Rolle's theorem requires which of the following conditions?",
       "options": [
-        { "id": "A", "text": "f is continuous on [a,b] only" },
-        { "id": "B", "text": "f is differentiable on [a,b] and f(a) = f(b)" },
-        { "id": "C", "text": "f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b)" },
-        { "id": "D", "text": "f is continuous on (a,b) and f(a) = f(b)" }
+        {
+          "id": "A",
+          "text": "f is continuous on [a,b] only"
+        },
+        {
+          "id": "B",
+          "text": "f is differentiable on [a,b] and f(a) = f(b)"
+        },
+        {
+          "id": "C",
+          "text": "f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b)"
+        },
+        {
+          "id": "D",
+          "text": "f is continuous on (a,b) and f(a) = f(b)"
+        }
       ],
       "correct_answer": "C",
       "explanation_correct": "Rolle's theorem has three conditions: (i) f is continuous on the closed interval [a,b], (ii) f is differentiable on the open interval (a,b), and (iii) f(a) = f(b). All three must be satisfied.",
@@ -737,81 +1304,146 @@
       "question_id": "T03.01.Q046",
       "concept_id": "T03.01.C04",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "Verify Rolle's theorem for f(x) = x\u00b2 - 4x + 3 on [1, 3]. The value of c is:",
+      "question_text": "Verify Rolle's theorem for f(x) = x² - 4x + 3 on [1, 3]. The value of c is:",
       "options": [
-        { "id": "A", "text": "1" },
-        { "id": "B", "text": "2" },
-        { "id": "C", "text": "3" },
-        { "id": "D", "text": "5/2" }
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "5/2"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "f(1) = 1-4+3 = 0 and f(3) = 9-12+3 = 0, so f(1) = f(3). f is a polynomial, so continuous and differentiable everywhere. f'(x) = 2x-4. Setting f'(c) = 0: 2c-4 = 0, so c = 2, and 2 \u2208 (1,3).",
+      "explanation_correct": "f(1) = 1-4+3 = 0 and f(3) = 9-12+3 = 0, so f(1) = f(3). f is a polynomial, so continuous and differentiable everywhere. f'(x) = 2x-4. Setting f'(c) = 0: 2c-4 = 0, so c = 2, and 2 ∈ (1,3).",
       "explanation_incorrect": "Check: f(1) = f(3) = 0. The function is a polynomial (continuous and differentiable). f'(x) = 2x - 4 = 0 gives x = 2, which lies in (1, 3)."
     },
     {
       "question_id": "T03.01.Q047",
       "concept_id": "T03.01.C04",
       "difficulty": "application",
+      "cognitive_level": "recall",
       "type": "fill_blank",
-      "question_text": "By the Mean Value Theorem, for f(x) = x\u00b2 on [1, 3], the value of c such that f'(c) = (f(3)-f(1))/(3-1) is ___.",
+      "question_text": "By the Mean Value Theorem, for f(x) = x² on [1, 3], the value of c such that f'(c) = (f(3)-f(1))/(3-1) is ___.",
       "options": [
-        { "id": "A", "text": "1" },
-        { "id": "B", "text": "2" },
-        { "id": "C", "text": "3" },
-        { "id": "D", "text": "4" }
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
       ],
       "correct_answer": "B",
-      "explanation_correct": "f(3) = 9, f(1) = 1. (f(3)-f(1))/(3-1) = (9-1)/2 = 4. f'(x) = 2x. Setting 2c = 4 gives c = 2, and 2 \u2208 (1,3).",
+      "explanation_correct": "f(3) = 9, f(1) = 1. (f(3)-f(1))/(3-1) = (9-1)/2 = 4. f'(x) = 2x. Setting 2c = 4 gives c = 2, and 2 ∈ (1,3).",
       "explanation_incorrect": "Compute the MVT slope: (9-1)/(3-1) = 4. Set f'(c) = 2c = 4, giving c = 2."
     },
     {
       "question_id": "T03.01.Q048",
       "concept_id": "T03.01.C04",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "For the function f(x) = x\u00b3 - 3x on [0, \u221a3], verify Rolle's theorem and find c.",
+      "question_text": "For the function f(x) = x³ - 3x on [0, √3], verify Rolle's theorem and find c.",
       "options": [
-        { "id": "A", "text": "c = 1" },
-        { "id": "B", "text": "c = \u221a3" },
-        { "id": "C", "text": "Rolle's theorem does not apply" },
-        { "id": "D", "text": "c = 0" }
+        {
+          "id": "A",
+          "text": "c = 1"
+        },
+        {
+          "id": "B",
+          "text": "c = √3"
+        },
+        {
+          "id": "C",
+          "text": "Rolle's theorem does not apply"
+        },
+        {
+          "id": "D",
+          "text": "c = 0"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "f(0) = 0, f(\u221a3) = 3\u221a3 - 3\u221a3 = 0. So f(0) = f(\u221a3). f'(x) = 3x\u00b2 - 3. Setting 3c\u00b2 - 3 = 0: c\u00b2 = 1, c = 1 (taking positive value in (0, \u221a3)).",
-      "explanation_incorrect": "f(0) = f(\u221a3) = 0, so Rolle's applies. f'(x) = 3x\u00b2 - 3 = 0 gives x = \u00b11. Only x = 1 lies in (0, \u221a3)."
+      "explanation_correct": "f(0) = 0, f(√3) = 3√3 - 3√3 = 0. So f(0) = f(√3). f'(x) = 3x² - 3. Setting 3c² - 3 = 0: c² = 1, c = 1 (taking positive value in (0, √3)).",
+      "explanation_incorrect": "f(0) = f(√3) = 0, so Rolle's applies. f'(x) = 3x² - 3 = 0 gives x = ±1. Only x = 1 lies in (0, √3)."
     },
     {
       "question_id": "T03.01.Q049",
       "concept_id": "T03.01.C04",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "Using MVT for f(x) = \u221ax on [4, 9], find the value of c.",
+      "question_text": "Using MVT for f(x) = √x on [4, 9], find the value of c.",
       "options": [
-        { "id": "A", "text": "25/4" },
-        { "id": "B", "text": "5" },
-        { "id": "C", "text": "6" },
-        { "id": "D", "text": "36/5" }
+        {
+          "id": "A",
+          "text": "25/4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "36/5"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "f(9) = 3, f(4) = 2. MVT slope = (3-2)/(9-4) = 1/5. f'(x) = 1/(2\u221ax). Setting 1/(2\u221ac) = 1/5: 2\u221ac = 5, \u221ac = 5/2, c = 25/4 = 6.25, which lies in (4,9).",
-      "explanation_incorrect": "MVT: f'(c) = (f(b)-f(a))/(b-a) = 1/5. Since f'(x) = 1/(2\u221ax), we get 1/(2\u221ac) = 1/5, so \u221ac = 5/2 and c = 25/4."
+      "explanation_correct": "f(9) = 3, f(4) = 2. MVT slope = (3-2)/(9-4) = 1/5. f'(x) = 1/(2√x). Setting 1/(2√c) = 1/5: 2√c = 5, √c = 5/2, c = 25/4 = 6.25, which lies in (4,9).",
+      "explanation_incorrect": "MVT: f'(c) = (f(b)-f(a))/(b-a) = 1/5. Since f'(x) = 1/(2√x), we get 1/(2√c) = 1/5, so √c = 5/2 and c = 25/4."
     },
     {
       "question_id": "T03.01.Q050",
       "concept_id": "T03.01.C04",
       "difficulty": "exam_style",
+      "cognitive_level": "recall",
       "type": "mcq",
-      "question_text": "If y = A\u00b7sin(3x) + B\u00b7cos(3x), then d\u00b2y/dx\u00b2 + 9y equals:",
+      "question_text": "If y = A·sin(3x) + B·cos(3x), then d²y/dx² + 9y equals:",
       "options": [
-        { "id": "A", "text": "0" },
-        { "id": "B", "text": "9" },
-        { "id": "C", "text": "3y" },
-        { "id": "D", "text": "A + B" }
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "3y"
+        },
+        {
+          "id": "D",
+          "text": "A + B"
+        }
       ],
       "correct_answer": "A",
-      "explanation_correct": "dy/dx = 3A\u00b7cos(3x) - 3B\u00b7sin(3x). d\u00b2y/dx\u00b2 = -9A\u00b7sin(3x) - 9B\u00b7cos(3x) = -9(A\u00b7sin(3x) + B\u00b7cos(3x)) = -9y. So d\u00b2y/dx\u00b2 + 9y = -9y + 9y = 0.",
-      "explanation_incorrect": "Differentiate twice: d\u00b2y/dx\u00b2 = -9A sin(3x) - 9B cos(3x) = -9y. Therefore d\u00b2y/dx\u00b2 + 9y = 0. This shows y satisfies the ODE y'' + 9y = 0."
+      "explanation_correct": "dy/dx = 3A·cos(3x) - 3B·sin(3x). d²y/dx² = -9A·sin(3x) - 9B·cos(3x) = -9(A·sin(3x) + B·cos(3x)) = -9y. So d²y/dx² + 9y = -9y + 9y = 0.",
+      "explanation_incorrect": "Differentiate twice: d²y/dx² = -9A sin(3x) - 9B cos(3x) = -9y. Therefore d²y/dx² + 9y = 0. This shows y satisfies the ODE y'' + 9y = 0."
     }
   ]
 }

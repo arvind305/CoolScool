@@ -1,62 +1,1293 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 5, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 5,
+    "subject": "Mathematics"
+  },
   "topic_id": "T04.02",
   "topic_name": "HCF and LCM",
   "canonical_explanation": {
     "text": "HCF (Highest Common Factor) is the largest number that divides two or more numbers exactly. LCM (Lowest Common Multiple) is the smallest number that is a multiple of two or more numbers. We find them using prime factorization or by listing factors/multiples.",
-    "rules": ["HCF: find common prime factors, take the lowest power of each", "LCM: take all prime factors, take the highest power of each", "HCF of two numbers is always <= the smaller number", "LCM of two numbers is always >= the larger number", "For two numbers a and b: HCF x LCM = a x b"]
+    "rules": [
+      "HCF: find common prime factors, take the lowest power of each",
+      "LCM: take all prime factors, take the highest power of each",
+      "HCF of two numbers is always <= the smaller number",
+      "LCM of two numbers is always >= the larger number",
+      "For two numbers a and b: HCF x LCM = a x b"
+    ]
   },
   "questions": [
-    {"question_id":"T04.02.Q001","concept_id":"T04.02.C01","difficulty":"familiarity","type":"mcq","question_text":"The prime factorization of 24 is:","options":[{"id":"A","text":"2 x 2 x 2 x 3"},{"id":"B","text":"2 x 3 x 4"},{"id":"C","text":"4 x 6"},{"id":"D","text":"2 x 12"}],"correct_answer":"A","explanation_correct":"24 = 2 x 12 = 2 x 2 x 6 = 2 x 2 x 2 x 3. Using only prime factors: 2³ x 3.","explanation_incorrect":"Break into primes: 24 = 2 x 2 x 2 x 3. All factors must be prime."},
-    {"question_id":"T04.02.Q002","concept_id":"T04.02.C01","difficulty":"familiarity","type":"mcq","question_text":"The prime factorization of 60 is:","options":[{"id":"A","text":"2 x 2 x 3 x 5"},{"id":"B","text":"2 x 3 x 10"},{"id":"C","text":"4 x 15"},{"id":"D","text":"6 x 10"}],"correct_answer":"A","explanation_correct":"60 = 2 x 30 = 2 x 2 x 15 = 2 x 2 x 3 x 5.","explanation_incorrect":"60 = 2² x 3 x 5 = 2 x 2 x 3 x 5."},
-    {"question_id":"T04.02.Q003","concept_id":"T04.02.C01","difficulty":"application","type":"fill_blank","question_text":"Prime factorization of 90: ___","correct_answer":"2 x 3 x 3 x 5","explanation_correct":"90 = 2 x 45 = 2 x 9 x 5 = 2 x 3 x 3 x 5.","explanation_incorrect":"90 = 2 x 3² x 5 = 2 x 3 x 3 x 5."},
-    {"question_id":"T04.02.Q004","concept_id":"T04.02.C02","difficulty":"familiarity","type":"mcq","question_text":"Find the HCF of 12 and 18.","options":[{"id":"A","text":"6"},{"id":"B","text":"3"},{"id":"C","text":"12"},{"id":"D","text":"36"}],"correct_answer":"A","explanation_correct":"12 = 2² x 3. 18 = 2 x 3². Common: 2¹ x 3¹ = 6. HCF = 6.","explanation_incorrect":"Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common: 6."},
-    {"question_id":"T04.02.Q005","concept_id":"T04.02.C02","difficulty":"familiarity","type":"mcq","question_text":"Find the HCF of 15 and 25.","options":[{"id":"A","text":"5"},{"id":"B","text":"15"},{"id":"C","text":"25"},{"id":"D","text":"75"}],"correct_answer":"A","explanation_correct":"15 = 3 x 5. 25 = 5 x 5. Common: 5. HCF = 5.","explanation_incorrect":"Common prime factor: 5. HCF = 5."},
-    {"question_id":"T04.02.Q006","concept_id":"T04.02.C02","difficulty":"application","type":"mcq","question_text":"Find the HCF of 36 and 48.","options":[{"id":"A","text":"12"},{"id":"B","text":"6"},{"id":"C","text":"24"},{"id":"D","text":"8"}],"correct_answer":"A","explanation_correct":"36 = 2² x 3². 48 = 2⁴ x 3. Common: 2² x 3 = 12. HCF = 12.","explanation_incorrect":"36 = 4x9 = 2²x3². 48 = 16x3 = 2⁴x3. HCF = 2²x3 = 12."},
-    {"question_id":"T04.02.Q007","concept_id":"T04.02.C03","difficulty":"familiarity","type":"mcq","question_text":"Find the LCM of 4 and 6.","options":[{"id":"A","text":"12"},{"id":"B","text":"24"},{"id":"C","text":"6"},{"id":"D","text":"2"}],"correct_answer":"A","explanation_correct":"4 = 2². 6 = 2 x 3. LCM = 2² x 3 = 12.","explanation_incorrect":"Multiples of 4: 4,8,12. Multiples of 6: 6,12. First common: 12."},
-    {"question_id":"T04.02.Q008","concept_id":"T04.02.C03","difficulty":"familiarity","type":"mcq","question_text":"Find the LCM of 5 and 7.","options":[{"id":"A","text":"35"},{"id":"B","text":"12"},{"id":"C","text":"70"},{"id":"D","text":"1"}],"correct_answer":"A","explanation_correct":"5 and 7 are both prime with no common factors. LCM = 5 x 7 = 35.","explanation_incorrect":"Since 5 and 7 are coprime, LCM = 5 x 7 = 35."},
-    {"question_id":"T04.02.Q009","concept_id":"T04.02.C03","difficulty":"application","type":"mcq","question_text":"Find the LCM of 12 and 15.","options":[{"id":"A","text":"60"},{"id":"B","text":"30"},{"id":"C","text":"180"},{"id":"D","text":"45"}],"correct_answer":"A","explanation_correct":"12 = 2² x 3. 15 = 3 x 5. LCM = 2² x 3 x 5 = 60.","explanation_incorrect":"Take highest powers: 2²x3x5 = 60."},
-    {"question_id":"T04.02.Q010","concept_id":"T04.02.C03","difficulty":"application","type":"fill_blank","question_text":"LCM of 8 and 12 = ___","correct_answer":"24","explanation_correct":"8 = 2³. 12 = 2² x 3. LCM = 2³ x 3 = 24.","explanation_incorrect":"Highest powers: 2³ x 3 = 24."},
-    {"question_id":"T04.02.Q011","concept_id":"T04.02.C04","difficulty":"application","type":"mcq","question_text":"Ravi has 24 red beads and 36 blue beads. He wants to make necklaces with equal numbers of each color. What is the maximum number of necklaces he can make?","options":[{"id":"A","text":"12"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"4"}],"correct_answer":"A","explanation_correct":"HCF of 24 and 36 = 12. He can make 12 necklaces (2 red + 3 blue each).","explanation_incorrect":"HCF of 24 and 36 = 12 necklaces maximum."},
-    {"question_id":"T04.02.Q012","concept_id":"T04.02.C04","difficulty":"application","type":"mcq","question_text":"Two bells ring every 6 minutes and 8 minutes. If they ring together now, after how many minutes will they ring together again?","options":[{"id":"A","text":"24 minutes"},{"id":"B","text":"14 minutes"},{"id":"C","text":"48 minutes"},{"id":"D","text":"6 minutes"}],"correct_answer":"A","explanation_correct":"LCM of 6 and 8 = 24. They will ring together after 24 minutes.","explanation_incorrect":"LCM(6,8) = 24 minutes."},
-    {"question_id":"T04.02.Q013","concept_id":"T04.02.C01","difficulty":"familiarity","type":"mcq","question_text":"Complete the factor tree: 72 = 8 x 9 = 2 x 2 x 2 x ___","options":[{"id":"A","text":"3 x 3"},{"id":"B","text":"9"},{"id":"C","text":"3"},{"id":"D","text":"6 x 3"}],"correct_answer":"A","explanation_correct":"72 = 8 x 9 = 2³ x 3² = 2 x 2 x 2 x 3 x 3.","explanation_incorrect":"9 = 3 x 3. So 72 = 2 x 2 x 2 x 3 x 3."},
-    {"question_id":"T04.02.Q014","concept_id":"T04.02.C02","difficulty":"exam_style","type":"mcq","question_text":"HCF of 100 and 150 is:","options":[{"id":"A","text":"50"},{"id":"B","text":"25"},{"id":"C","text":"10"},{"id":"D","text":"75"}],"correct_answer":"A","explanation_correct":"100 = 2² x 5². 150 = 2 x 3 x 5². HCF = 2 x 5² = 50.","explanation_incorrect":"Common factors: 2¹ x 5² = 50."},
-    {"question_id":"T04.02.Q015","concept_id":"T04.02.C03","difficulty":"exam_style","type":"mcq","question_text":"LCM of 10, 15, and 20 is:","options":[{"id":"A","text":"60"},{"id":"B","text":"120"},{"id":"C","text":"30"},{"id":"D","text":"300"}],"correct_answer":"A","explanation_correct":"10=2x5, 15=3x5, 20=2²x5. LCM = 2²x3x5 = 60.","explanation_incorrect":"Take highest powers: 2²x3x5=60."},
-    {"question_id":"T04.02.Q016","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"A shopkeeper has 48 apples and 64 oranges. He wants to pack them in boxes with equal number of fruits. What is the largest number of fruits in each box?","options":[{"id":"A","text":"16"},{"id":"B","text":"8"},{"id":"C","text":"12"},{"id":"D","text":"4"}],"correct_answer":"A","explanation_correct":"HCF of 48 and 64 = 16. Each box can have 16 fruits maximum.","explanation_incorrect":"HCF(48, 64) = 16."},
-    {"question_id":"T04.02.Q017","concept_id":"T04.02.C01","difficulty":"application","type":"true_false","question_text":"The prime factorization of a number is unique (only one way).","correct_answer":"true","explanation_correct":"The Fundamental Theorem of Arithmetic states every number has a unique prime factorization.","explanation_incorrect":"True. Every composite number has exactly one prime factorization (order doesn't matter)."},
-    {"question_id":"T04.02.Q018","concept_id":"T04.02.C02","difficulty":"familiarity","type":"mcq","question_text":"HCF of two prime numbers is always:","options":[{"id":"A","text":"1"},{"id":"B","text":"Their product"},{"id":"C","text":"The smaller one"},{"id":"D","text":"The larger one"}],"correct_answer":"A","explanation_correct":"Two different prime numbers have no common factors other than 1. So HCF = 1.","explanation_incorrect":"Different primes share only the factor 1. HCF = 1."},
-    {"question_id":"T04.02.Q019","concept_id":"T04.02.C03","difficulty":"application","type":"mcq","question_text":"LCM of two prime numbers p and q is:","options":[{"id":"A","text":"p x q"},{"id":"B","text":"p + q"},{"id":"C","text":"1"},{"id":"D","text":"p - q"}],"correct_answer":"A","explanation_correct":"Since primes share no common factors, LCM = p x q. For example, LCM(3,7) = 21.","explanation_incorrect":"Primes are coprime (HCF=1), so LCM = p x q."},
-    {"question_id":"T04.02.Q020","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"Buses from a station leave at intervals of 15 min, 20 min, and 30 min. If all leave at 9:00 AM, when will they leave together again?","options":[{"id":"A","text":"10:00 AM"},{"id":"B","text":"9:30 AM"},{"id":"C","text":"10:30 AM"},{"id":"D","text":"9:15 AM"}],"correct_answer":"A","explanation_correct":"LCM of 15, 20, 30 = 60 minutes = 1 hour. They leave together at 9:00 + 60 min = 10:00 AM.","explanation_incorrect":"LCM(15,20,30) = 60 minutes. 9:00 AM + 60 min = 10:00 AM."},
-    {"question_id":"T04.02.Q021","concept_id":"T04.02.C01","difficulty":"familiarity","type":"fill_blank","question_text":"Prime factorization of 120: ___","correct_answer":"2 x 2 x 2 x 3 x 5","explanation_correct":"120 = 2 x 60 = 2 x 2 x 30 = 2 x 2 x 2 x 15 = 2 x 2 x 2 x 3 x 5.","explanation_incorrect":"120 = 2³ x 3 x 5 = 2 x 2 x 2 x 3 x 5."},
-    {"question_id":"T04.02.Q022","concept_id":"T04.02.C02","difficulty":"application","type":"mcq","question_text":"Find HCF of 56 and 84.","options":[{"id":"A","text":"28"},{"id":"B","text":"14"},{"id":"C","text":"7"},{"id":"D","text":"42"}],"correct_answer":"A","explanation_correct":"56 = 2³ x 7. 84 = 2² x 3 x 7. Common: 2² x 7 = 28. HCF = 28.","explanation_incorrect":"Common prime factors at lowest powers: 2²x7 = 28."},
-    {"question_id":"T04.02.Q023","concept_id":"T04.02.C03","difficulty":"exam_style","type":"mcq","question_text":"Find LCM of 18 and 24.","options":[{"id":"A","text":"72"},{"id":"B","text":"36"},{"id":"C","text":"144"},{"id":"D","text":"48"}],"correct_answer":"A","explanation_correct":"18 = 2 x 3². 24 = 2³ x 3. LCM = 2³ x 3² = 72.","explanation_incorrect":"Take highest powers: 2³ x 3² = 8 x 9 = 72."},
-    {"question_id":"T04.02.Q024","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"Priya has 40 roses and 56 jasmine flowers. She wants to make identical bouquets. What is the maximum number of bouquets?","options":[{"id":"A","text":"8"},{"id":"B","text":"4"},{"id":"C","text":"10"},{"id":"D","text":"14"}],"correct_answer":"A","explanation_correct":"HCF of 40 and 56 = 8. She can make 8 bouquets (5 roses + 7 jasmine each).","explanation_incorrect":"HCF(40,56) = 8 bouquets."},
-    {"question_id":"T04.02.Q025","concept_id":"T04.02.C01","difficulty":"exam_style","type":"mcq","question_text":"Which shows 180 as a product of prime factors?","options":[{"id":"A","text":"2 x 2 x 3 x 3 x 5"},{"id":"B","text":"2 x 90"},{"id":"C","text":"4 x 45"},{"id":"D","text":"9 x 20"}],"correct_answer":"A","explanation_correct":"180 = 2² x 3² x 5 = 2 x 2 x 3 x 3 x 5. Only option A uses all prime factors.","explanation_incorrect":"Prime factorization means using only prime numbers: 2 x 2 x 3 x 3 x 5."},
-    {"question_id":"T04.02.Q026","concept_id":"T04.02.C02","difficulty":"familiarity","type":"true_false","question_text":"HCF of 8 and 12 is 2.","correct_answer":"false","explanation_correct":"8 = 2³. 12 = 2² x 3. HCF = 2² = 4, not 2.","explanation_incorrect":"HCF(8,12) = 4, not 2. Both are divisible by 4."},
-    {"question_id":"T04.02.Q027","concept_id":"T04.02.C03","difficulty":"familiarity","type":"mcq","question_text":"LCM of 3 and 9 is:","options":[{"id":"A","text":"9"},{"id":"B","text":"27"},{"id":"C","text":"3"},{"id":"D","text":"18"}],"correct_answer":"A","explanation_correct":"3 = 3. 9 = 3². LCM = 3² = 9. Since 9 is a multiple of 3, the LCM is 9.","explanation_incorrect":"Since 9 is already a multiple of 3, LCM = 9."},
-    {"question_id":"T04.02.Q028","concept_id":"T04.02.C04","difficulty":"application","type":"mcq","question_text":"What is the smallest number divisible by both 8 and 12?","options":[{"id":"A","text":"24"},{"id":"B","text":"48"},{"id":"C","text":"96"},{"id":"D","text":"12"}],"correct_answer":"A","explanation_correct":"LCM of 8 and 12 = 24. This is the smallest number divisible by both.","explanation_incorrect":"LCM(8,12) = 24."},
-    {"question_id":"T04.02.Q029","concept_id":"T04.02.C02","difficulty":"exam_style","type":"mcq","question_text":"HCF of 72 and 120 is:","options":[{"id":"A","text":"24"},{"id":"B","text":"12"},{"id":"C","text":"36"},{"id":"D","text":"8"}],"correct_answer":"A","explanation_correct":"72 = 2³ x 3². 120 = 2³ x 3 x 5. HCF = 2³ x 3 = 24.","explanation_incorrect":"Common: 2³ x 3 = 24."},
-    {"question_id":"T04.02.Q030","concept_id":"T04.02.C03","difficulty":"exam_style","type":"fill_blank","question_text":"LCM of 6, 8, and 12 = ___","correct_answer":"24","explanation_correct":"6=2x3, 8=2³, 12=2²x3. LCM = 2³x3 = 24.","explanation_incorrect":"Take highest powers: 2³x3 = 24."},
-    {"question_id":"T04.02.Q031","concept_id":"T04.02.C01","difficulty":"application","type":"mcq","question_text":"Using a factor tree, 144 = 2 x 2 x 2 x 2 x ___ x ___","options":[{"id":"A","text":"3 x 3"},{"id":"B","text":"2 x 9"},{"id":"C","text":"4 x 9"},{"id":"D","text":"6 x 6"}],"correct_answer":"A","explanation_correct":"144 = 2⁴ x 3² = 16 x 9 = 2x2x2x2x3x3.","explanation_incorrect":"144 = 2⁴ x 3². The missing factors are 3 x 3."},
-    {"question_id":"T04.02.Q032","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"A rectangular floor measures 12 m by 18 m. What is the side of the largest square tile that can cover it exactly?","options":[{"id":"A","text":"6 m"},{"id":"B","text":"3 m"},{"id":"C","text":"4 m"},{"id":"D","text":"9 m"}],"correct_answer":"A","explanation_correct":"HCF of 12 and 18 = 6. The largest square tile has side 6 m.","explanation_incorrect":"HCF(12,18) = 6 m. This ensures both dimensions are exactly divisible."},
-    {"question_id":"T04.02.Q033","concept_id":"T04.02.C02","difficulty":"familiarity","type":"mcq","question_text":"HCF of a number and 1 is always:","options":[{"id":"A","text":"1"},{"id":"B","text":"The number itself"},{"id":"C","text":"0"},{"id":"D","text":"Cannot determine"}],"correct_answer":"A","explanation_correct":"1 has only one factor: 1. So HCF of any number and 1 is 1.","explanation_incorrect":"The only factor of 1 is 1, so HCF is always 1."},
-    {"question_id":"T04.02.Q034","concept_id":"T04.02.C03","difficulty":"application","type":"mcq","question_text":"LCM of a number n and 1 is:","options":[{"id":"A","text":"n"},{"id":"B","text":"1"},{"id":"C","text":"n+1"},{"id":"D","text":"0"}],"correct_answer":"A","explanation_correct":"1 is a factor of every number, so LCM(n,1) = n.","explanation_incorrect":"Every number is a multiple of 1, so LCM = n."},
-    {"question_id":"T04.02.Q035","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"Find the greatest number that divides both 45 and 75.","options":[{"id":"A","text":"15"},{"id":"B","text":"5"},{"id":"C","text":"25"},{"id":"D","text":"3"}],"correct_answer":"A","explanation_correct":"45=3²x5. 75=3x5². HCF=3x5=15.","explanation_incorrect":"HCF(45,75) = 15."},
-    {"question_id":"T04.02.Q036","concept_id":"T04.02.C01","difficulty":"exam_style","type":"true_false","question_text":"In a factor tree, the leaves (end points) are always prime numbers.","correct_answer":"true","explanation_correct":"A factor tree breaks numbers until all branches end in prime numbers.","explanation_incorrect":"True. Factor trees keep splitting until only primes remain."},
-    {"question_id":"T04.02.Q037","concept_id":"T04.02.C02","difficulty":"application","type":"fill_blank","question_text":"HCF of 16 and 20 = ___","correct_answer":"4","explanation_correct":"16=2⁴. 20=2²x5. HCF = 2² = 4.","explanation_incorrect":"Common: 2² = 4."},
-    {"question_id":"T04.02.Q038","concept_id":"T04.02.C03","difficulty":"exam_style","type":"mcq","question_text":"LCM of 9 and 12 is:","options":[{"id":"A","text":"36"},{"id":"B","text":"72"},{"id":"C","text":"108"},{"id":"D","text":"18"}],"correct_answer":"A","explanation_correct":"9=3². 12=2²x3. LCM=2²x3²=36.","explanation_incorrect":"Highest powers: 2²x3²=4x9=36."},
-    {"question_id":"T04.02.Q039","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"Three lights blink every 4, 6, and 10 seconds. If they blink together, after how many seconds will they blink together again?","options":[{"id":"A","text":"60"},{"id":"B","text":"120"},{"id":"C","text":"20"},{"id":"D","text":"30"}],"correct_answer":"A","explanation_correct":"LCM of 4,6,10. 4=2², 6=2x3, 10=2x5. LCM=2²x3x5=60 seconds.","explanation_incorrect":"LCM(4,6,10) = 60 seconds."},
-    {"question_id":"T04.02.Q040","concept_id":"T04.02.C02","difficulty":"exam_style","type":"mcq","question_text":"HCF of 90 and 120 is:","options":[{"id":"A","text":"30"},{"id":"B","text":"15"},{"id":"C","text":"60"},{"id":"D","text":"10"}],"correct_answer":"A","explanation_correct":"90=2x3²x5. 120=2³x3x5. HCF=2x3x5=30.","explanation_incorrect":"Common factors at lowest powers: 2x3x5=30."},
-    {"question_id":"T04.02.Q041","concept_id":"T04.02.C01","difficulty":"familiarity","type":"mcq","question_text":"Prime factorization of 36 is:","options":[{"id":"A","text":"2 x 2 x 3 x 3"},{"id":"B","text":"4 x 9"},{"id":"C","text":"6 x 6"},{"id":"D","text":"2 x 18"}],"correct_answer":"A","explanation_correct":"36 = 6 x 6 = 2 x 3 x 2 x 3 = 2² x 3².","explanation_incorrect":"36 = 2 x 2 x 3 x 3. All factors are prime."},
-    {"question_id":"T04.02.Q042","concept_id":"T04.02.C04","difficulty":"application","type":"mcq","question_text":"What is the largest piece of equal length that can be cut from ropes of 36 m and 48 m?","options":[{"id":"A","text":"12 m"},{"id":"B","text":"6 m"},{"id":"C","text":"24 m"},{"id":"D","text":"8 m"}],"correct_answer":"A","explanation_correct":"HCF of 36 and 48 = 12. Largest equal pieces are 12 m each.","explanation_incorrect":"HCF(36,48) = 12 m."},
-    {"question_id":"T04.02.Q043","concept_id":"T04.02.C03","difficulty":"familiarity","type":"true_false","question_text":"LCM of 4 and 4 is 4.","correct_answer":"true","explanation_correct":"LCM of a number with itself is the number itself. LCM(4,4) = 4.","explanation_incorrect":"LCM of any number with itself equals that number."},
-    {"question_id":"T04.02.Q044","concept_id":"T04.02.C02","difficulty":"exam_style","type":"mcq","question_text":"If HCF of two numbers is 1, they are called:","options":[{"id":"A","text":"Co-prime"},{"id":"B","text":"Prime"},{"id":"C","text":"Composite"},{"id":"D","text":"Even"}],"correct_answer":"A","explanation_correct":"Two numbers with HCF = 1 are called co-prime. Example: 8 and 15.","explanation_incorrect":"Co-prime numbers have no common factor other than 1."},
-    {"question_id":"T04.02.Q045","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"Find the smallest 3-digit number divisible by both 4 and 6.","options":[{"id":"A","text":"108"},{"id":"B","text":"100"},{"id":"C","text":"120"},{"id":"D","text":"96"}],"correct_answer":"A","explanation_correct":"LCM of 4 and 6 = 12. Smallest 3-digit multiple of 12: 12 x 9 = 108.","explanation_incorrect":"LCM(4,6)=12. First 3-digit multiple: 12x9=108."},
-    {"question_id":"T04.02.Q046","concept_id":"T04.02.C01","difficulty":"application","type":"mcq","question_text":"Express 200 as a product of prime factors.","options":[{"id":"A","text":"2 x 2 x 2 x 5 x 5"},{"id":"B","text":"4 x 50"},{"id":"C","text":"8 x 25"},{"id":"D","text":"2 x 100"}],"correct_answer":"A","explanation_correct":"200 = 8 x 25 = 2³ x 5² = 2 x 2 x 2 x 5 x 5.","explanation_incorrect":"200 = 2³ x 5²."},
-    {"question_id":"T04.02.Q047","concept_id":"T04.02.C02","difficulty":"application","type":"mcq","question_text":"HCF of two consecutive numbers (like 14 and 15) is always:","options":[{"id":"A","text":"1"},{"id":"B","text":"The smaller number"},{"id":"C","text":"2"},{"id":"D","text":"The difference"}],"correct_answer":"A","explanation_correct":"Consecutive numbers are always co-prime. HCF = 1.","explanation_incorrect":"No two consecutive numbers share a factor other than 1."},
-    {"question_id":"T04.02.Q048","concept_id":"T04.02.C03","difficulty":"exam_style","type":"fill_blank","question_text":"LCM of 15 and 20 = ___","correct_answer":"60","explanation_correct":"15=3x5, 20=2²x5. LCM=2²x3x5=60.","explanation_incorrect":"Highest powers: 4x3x5=60."},
-    {"question_id":"T04.02.Q049","concept_id":"T04.02.C04","difficulty":"exam_style","type":"mcq","question_text":"Anu has 32 red beads and 24 green beads. She makes bracelets with equal red and equal green beads in each. What is the maximum number of bracelets?","options":[{"id":"A","text":"8"},{"id":"B","text":"4"},{"id":"C","text":"12"},{"id":"D","text":"6"}],"correct_answer":"A","explanation_correct":"HCF(32,24)=8. She can make 8 bracelets (4 red + 3 green each).","explanation_incorrect":"HCF(32,24)=8 bracelets."},
-    {"question_id":"T04.02.Q050","concept_id":"T04.02.C03","difficulty":"exam_style","type":"mcq","question_text":"The product of HCF and LCM of 12 and 18 is:","options":[{"id":"A","text":"216"},{"id":"B","text":"36"},{"id":"C","text":"72"},{"id":"D","text":"108"}],"correct_answer":"A","explanation_correct":"HCF(12,18)=6, LCM(12,18)=36. Product=6x36=216. Also, 12x18=216. This verifies HCFxLCM=product of numbers.","explanation_incorrect":"HCF x LCM = 6 x 36 = 216 = 12 x 18."}
+    {
+      "question_id": "T04.02.Q001",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The prime factorization of 24 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 x 2 x 2 x 3"
+        },
+        {
+          "id": "B",
+          "text": "2 x 3 x 4"
+        },
+        {
+          "id": "C",
+          "text": "4 x 6"
+        },
+        {
+          "id": "D",
+          "text": "2 x 12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "24 = 2 x 12 = 2 x 2 x 6 = 2 x 2 x 2 x 3. Using only prime factors: 2³ x 3.",
+      "explanation_incorrect": "Break into primes: 24 = 2 x 2 x 2 x 3. All factors must be prime."
+    },
+    {
+      "question_id": "T04.02.Q002",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The prime factorization of 60 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 x 2 x 3 x 5"
+        },
+        {
+          "id": "B",
+          "text": "2 x 3 x 10"
+        },
+        {
+          "id": "C",
+          "text": "4 x 15"
+        },
+        {
+          "id": "D",
+          "text": "6 x 10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "60 = 2 x 30 = 2 x 2 x 15 = 2 x 2 x 3 x 5.",
+      "explanation_incorrect": "60 = 2² x 3 x 5 = 2 x 2 x 3 x 5."
+    },
+    {
+      "question_id": "T04.02.Q003",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Prime factorization of 90: ___",
+      "correct_answer": "2 x 3 x 3 x 5",
+      "explanation_correct": "90 = 2 x 45 = 2 x 9 x 5 = 2 x 3 x 3 x 5.",
+      "explanation_incorrect": "90 = 2 x 3² x 5 = 2 x 3 x 3 x 5."
+    },
+    {
+      "question_id": "T04.02.Q004",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the HCF of 12 and 18.",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "12 = 2² x 3. 18 = 2 x 3². Common: 2¹ x 3¹ = 6. HCF = 6.",
+      "explanation_incorrect": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common: 6."
+    },
+    {
+      "question_id": "T04.02.Q005",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the HCF of 15 and 25.",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "75"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "15 = 3 x 5. 25 = 5 x 5. Common: 5. HCF = 5.",
+      "explanation_incorrect": "Common prime factor: 5. HCF = 5."
+    },
+    {
+      "question_id": "T04.02.Q006",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the HCF of 36 and 48.",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "36 = 2² x 3². 48 = 2⁴ x 3. Common: 2² x 3 = 12. HCF = 12.",
+      "explanation_incorrect": "36 = 4x9 = 2²x3². 48 = 16x3 = 2⁴x3. HCF = 2²x3 = 12."
+    },
+    {
+      "question_id": "T04.02.Q007",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the LCM of 4 and 6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4 = 2². 6 = 2 x 3. LCM = 2² x 3 = 12.",
+      "explanation_incorrect": "Multiples of 4: 4,8,12. Multiples of 6: 6,12. First common: 12."
+    },
+    {
+      "question_id": "T04.02.Q008",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the LCM of 5 and 7.",
+      "options": [
+        {
+          "id": "A",
+          "text": "35"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "70"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5 and 7 are both prime with no common factors. LCM = 5 x 7 = 35.",
+      "explanation_incorrect": "Since 5 and 7 are coprime, LCM = 5 x 7 = 35."
+    },
+    {
+      "question_id": "T04.02.Q009",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the LCM of 12 and 15.",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "30"
+        },
+        {
+          "id": "C",
+          "text": "180"
+        },
+        {
+          "id": "D",
+          "text": "45"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "12 = 2² x 3. 15 = 3 x 5. LCM = 2² x 3 x 5 = 60.",
+      "explanation_incorrect": "Take highest powers: 2²x3x5 = 60."
+    },
+    {
+      "question_id": "T04.02.Q010",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "LCM of 8 and 12 = ___",
+      "correct_answer": "24",
+      "explanation_correct": "8 = 2³. 12 = 2² x 3. LCM = 2³ x 3 = 24.",
+      "explanation_incorrect": "Highest powers: 2³ x 3 = 24."
+    },
+    {
+      "question_id": "T04.02.Q011",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Ravi has 24 red beads and 36 blue beads. He wants to make necklaces with equal numbers of each color. What is the maximum number of necklaces he can make?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF of 24 and 36 = 12. He can make 12 necklaces (2 red + 3 blue each).",
+      "explanation_incorrect": "HCF of 24 and 36 = 12 necklaces maximum."
+    },
+    {
+      "question_id": "T04.02.Q012",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two bells ring every 6 minutes and 8 minutes. If they ring together now, after how many minutes will they ring together again?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 minutes"
+        },
+        {
+          "id": "B",
+          "text": "14 minutes"
+        },
+        {
+          "id": "C",
+          "text": "48 minutes"
+        },
+        {
+          "id": "D",
+          "text": "6 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 6 and 8 = 24. They will ring together after 24 minutes.",
+      "explanation_incorrect": "LCM(6,8) = 24 minutes."
+    },
+    {
+      "question_id": "T04.02.Q013",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Complete the factor tree: 72 = 8 x 9 = 2 x 2 x 2 x ___",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 x 3"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "6 x 3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "72 = 8 x 9 = 2³ x 3² = 2 x 2 x 2 x 3 x 3.",
+      "explanation_incorrect": "9 = 3 x 3. So 72 = 2 x 2 x 2 x 3 x 3."
+    },
+    {
+      "question_id": "T04.02.Q014",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "HCF of 100 and 150 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "50"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "75"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "100 = 2² x 5². 150 = 2 x 3 x 5². HCF = 2 x 5² = 50.",
+      "explanation_incorrect": "Common factors: 2¹ x 5² = 50."
+    },
+    {
+      "question_id": "T04.02.Q015",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "LCM of 10, 15, and 20 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "300"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10=2x5, 15=3x5, 20=2²x5. LCM = 2²x3x5 = 60.",
+      "explanation_incorrect": "Take highest powers: 2²x3x5=60."
+    },
+    {
+      "question_id": "T04.02.Q016",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A shopkeeper has 48 apples and 64 oranges. He wants to pack them in boxes with equal number of fruits. What is the largest number of fruits in each box?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF of 48 and 64 = 16. Each box can have 16 fruits maximum.",
+      "explanation_incorrect": "HCF(48, 64) = 16."
+    },
+    {
+      "question_id": "T04.02.Q017",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The prime factorization of a number is unique (only one way).",
+      "correct_answer": "true",
+      "explanation_correct": "The Fundamental Theorem of Arithmetic states every number has a unique prime factorization.",
+      "explanation_incorrect": "True. Every composite number has exactly one prime factorization (order doesn't matter)."
+    },
+    {
+      "question_id": "T04.02.Q018",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "HCF of two prime numbers is always:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "Their product"
+        },
+        {
+          "id": "C",
+          "text": "The smaller one"
+        },
+        {
+          "id": "D",
+          "text": "The larger one"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Two different prime numbers have no common factors other than 1. So HCF = 1.",
+      "explanation_incorrect": "Different primes share only the factor 1. HCF = 1."
+    },
+    {
+      "question_id": "T04.02.Q019",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "LCM of two prime numbers p and q is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "p x q"
+        },
+        {
+          "id": "B",
+          "text": "p + q"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "p - q"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Since primes share no common factors, LCM = p x q. For example, LCM(3,7) = 21.",
+      "explanation_incorrect": "Primes are coprime (HCF=1), so LCM = p x q."
+    },
+    {
+      "question_id": "T04.02.Q020",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Buses from a station leave at intervals of 15 min, 20 min, and 30 min. If all leave at 9:00 AM, when will they leave together again?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10:00 AM"
+        },
+        {
+          "id": "B",
+          "text": "9:30 AM"
+        },
+        {
+          "id": "C",
+          "text": "10:30 AM"
+        },
+        {
+          "id": "D",
+          "text": "9:15 AM"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 15, 20, 30 = 60 minutes = 1 hour. They leave together at 9:00 + 60 min = 10:00 AM.",
+      "explanation_incorrect": "LCM(15,20,30) = 60 minutes. 9:00 AM + 60 min = 10:00 AM."
+    },
+    {
+      "question_id": "T04.02.Q021",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Prime factorization of 120: ___",
+      "correct_answer": "2 x 2 x 2 x 3 x 5",
+      "explanation_correct": "120 = 2 x 60 = 2 x 2 x 30 = 2 x 2 x 2 x 15 = 2 x 2 x 2 x 3 x 5.",
+      "explanation_incorrect": "120 = 2³ x 3 x 5 = 2 x 2 x 2 x 3 x 5."
+    },
+    {
+      "question_id": "T04.02.Q022",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find HCF of 56 and 84.",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "14"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "42"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "56 = 2³ x 7. 84 = 2² x 3 x 7. Common: 2² x 7 = 28. HCF = 28.",
+      "explanation_incorrect": "Common prime factors at lowest powers: 2²x7 = 28."
+    },
+    {
+      "question_id": "T04.02.Q023",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find LCM of 18 and 24.",
+      "options": [
+        {
+          "id": "A",
+          "text": "72"
+        },
+        {
+          "id": "B",
+          "text": "36"
+        },
+        {
+          "id": "C",
+          "text": "144"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "18 = 2 x 3². 24 = 2³ x 3. LCM = 2³ x 3² = 72.",
+      "explanation_incorrect": "Take highest powers: 2³ x 3² = 8 x 9 = 72."
+    },
+    {
+      "question_id": "T04.02.Q024",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Priya has 40 roses and 56 jasmine flowers. She wants to make identical bouquets. What is the maximum number of bouquets?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF of 40 and 56 = 8. She can make 8 bouquets (5 roses + 7 jasmine each).",
+      "explanation_incorrect": "HCF(40,56) = 8 bouquets."
+    },
+    {
+      "question_id": "T04.02.Q025",
+      "concept_id": "T04.02.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which shows 180 as a product of prime factors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 x 2 x 3 x 3 x 5"
+        },
+        {
+          "id": "B",
+          "text": "2 x 90"
+        },
+        {
+          "id": "C",
+          "text": "4 x 45"
+        },
+        {
+          "id": "D",
+          "text": "9 x 20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "180 = 2² x 3² x 5 = 2 x 2 x 3 x 3 x 5. Only option A uses all prime factors.",
+      "explanation_incorrect": "Prime factorization means using only prime numbers: 2 x 2 x 3 x 3 x 5."
+    },
+    {
+      "question_id": "T04.02.Q026",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "HCF of 8 and 12 is 2.",
+      "correct_answer": "false",
+      "explanation_correct": "8 = 2³. 12 = 2² x 3. HCF = 2² = 4, not 2.",
+      "explanation_incorrect": "HCF(8,12) = 4, not 2. Both are divisible by 4."
+    },
+    {
+      "question_id": "T04.02.Q027",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "LCM of 3 and 9 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "27"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "3 = 3. 9 = 3². LCM = 3² = 9. Since 9 is a multiple of 3, the LCM is 9.",
+      "explanation_incorrect": "Since 9 is already a multiple of 3, LCM = 9."
+    },
+    {
+      "question_id": "T04.02.Q028",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the smallest number divisible by both 8 and 12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "96"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 8 and 12 = 24. This is the smallest number divisible by both.",
+      "explanation_incorrect": "LCM(8,12) = 24."
+    },
+    {
+      "question_id": "T04.02.Q029",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "HCF of 72 and 120 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "72 = 2³ x 3². 120 = 2³ x 3 x 5. HCF = 2³ x 3 = 24.",
+      "explanation_incorrect": "Common: 2³ x 3 = 24."
+    },
+    {
+      "question_id": "T04.02.Q030",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "LCM of 6, 8, and 12 = ___",
+      "correct_answer": "24",
+      "explanation_correct": "6=2x3, 8=2³, 12=2²x3. LCM = 2³x3 = 24.",
+      "explanation_incorrect": "Take highest powers: 2³x3 = 24."
+    },
+    {
+      "question_id": "T04.02.Q031",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Using a factor tree, 144 = 2 x 2 x 2 x 2 x ___ x ___",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 x 3"
+        },
+        {
+          "id": "B",
+          "text": "2 x 9"
+        },
+        {
+          "id": "C",
+          "text": "4 x 9"
+        },
+        {
+          "id": "D",
+          "text": "6 x 6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "144 = 2⁴ x 3² = 16 x 9 = 2x2x2x2x3x3.",
+      "explanation_incorrect": "144 = 2⁴ x 3². The missing factors are 3 x 3."
+    },
+    {
+      "question_id": "T04.02.Q032",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A rectangular floor measures 12 m by 18 m. What is the side of the largest square tile that can cover it exactly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 m"
+        },
+        {
+          "id": "B",
+          "text": "3 m"
+        },
+        {
+          "id": "C",
+          "text": "4 m"
+        },
+        {
+          "id": "D",
+          "text": "9 m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF of 12 and 18 = 6. The largest square tile has side 6 m.",
+      "explanation_incorrect": "HCF(12,18) = 6 m. This ensures both dimensions are exactly divisible."
+    },
+    {
+      "question_id": "T04.02.Q033",
+      "concept_id": "T04.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "HCF of a number and 1 is always:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "The number itself"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "Cannot determine"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1 has only one factor: 1. So HCF of any number and 1 is 1.",
+      "explanation_incorrect": "The only factor of 1 is 1, so HCF is always 1."
+    },
+    {
+      "question_id": "T04.02.Q034",
+      "concept_id": "T04.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "LCM of a number n and 1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "n"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "n+1"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1 is a factor of every number, so LCM(n,1) = n.",
+      "explanation_incorrect": "Every number is a multiple of 1, so LCM = n."
+    },
+    {
+      "question_id": "T04.02.Q035",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the greatest number that divides both 45 and 75.",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "45=3²x5. 75=3x5². HCF=3x5=15.",
+      "explanation_incorrect": "HCF(45,75) = 15."
+    },
+    {
+      "question_id": "T04.02.Q036",
+      "concept_id": "T04.02.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "In a factor tree, the leaves (end points) are always prime numbers.",
+      "correct_answer": "true",
+      "explanation_correct": "A factor tree breaks numbers until all branches end in prime numbers.",
+      "explanation_incorrect": "True. Factor trees keep splitting until only primes remain."
+    },
+    {
+      "question_id": "T04.02.Q037",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "HCF of 16 and 20 = ___",
+      "correct_answer": "4",
+      "explanation_correct": "16=2⁴. 20=2²x5. HCF = 2² = 4.",
+      "explanation_incorrect": "Common: 2² = 4."
+    },
+    {
+      "question_id": "T04.02.Q038",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "LCM of 9 and 12 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "36"
+        },
+        {
+          "id": "B",
+          "text": "72"
+        },
+        {
+          "id": "C",
+          "text": "108"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "9=3². 12=2²x3. LCM=2²x3²=36.",
+      "explanation_incorrect": "Highest powers: 2²x3²=4x9=36."
+    },
+    {
+      "question_id": "T04.02.Q039",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Three lights blink every 4, 6, and 10 seconds. If they blink together, after how many seconds will they blink together again?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 4,6,10. 4=2², 6=2x3, 10=2x5. LCM=2²x3x5=60 seconds.",
+      "explanation_incorrect": "LCM(4,6,10) = 60 seconds."
+    },
+    {
+      "question_id": "T04.02.Q040",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "HCF of 90 and 120 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "90=2x3²x5. 120=2³x3x5. HCF=2x3x5=30.",
+      "explanation_incorrect": "Common factors at lowest powers: 2x3x5=30."
+    },
+    {
+      "question_id": "T04.02.Q041",
+      "concept_id": "T04.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Prime factorization of 36 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 x 2 x 3 x 3"
+        },
+        {
+          "id": "B",
+          "text": "4 x 9"
+        },
+        {
+          "id": "C",
+          "text": "6 x 6"
+        },
+        {
+          "id": "D",
+          "text": "2 x 18"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "36 = 6 x 6 = 2 x 3 x 2 x 3 = 2² x 3².",
+      "explanation_incorrect": "36 = 2 x 2 x 3 x 3. All factors are prime."
+    },
+    {
+      "question_id": "T04.02.Q042",
+      "concept_id": "T04.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the largest piece of equal length that can be cut from ropes of 36 m and 48 m?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 m"
+        },
+        {
+          "id": "B",
+          "text": "6 m"
+        },
+        {
+          "id": "C",
+          "text": "24 m"
+        },
+        {
+          "id": "D",
+          "text": "8 m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF of 36 and 48 = 12. Largest equal pieces are 12 m each.",
+      "explanation_incorrect": "HCF(36,48) = 12 m."
+    },
+    {
+      "question_id": "T04.02.Q043",
+      "concept_id": "T04.02.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "LCM of 4 and 4 is 4.",
+      "correct_answer": "true",
+      "explanation_correct": "LCM of a number with itself is the number itself. LCM(4,4) = 4.",
+      "explanation_incorrect": "LCM of any number with itself equals that number."
+    },
+    {
+      "question_id": "T04.02.Q044",
+      "concept_id": "T04.02.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If HCF of two numbers is 1, they are called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Co-prime"
+        },
+        {
+          "id": "B",
+          "text": "Prime"
+        },
+        {
+          "id": "C",
+          "text": "Composite"
+        },
+        {
+          "id": "D",
+          "text": "Even"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Two numbers with HCF = 1 are called co-prime. Example: 8 and 15.",
+      "explanation_incorrect": "Co-prime numbers have no common factor other than 1."
+    },
+    {
+      "question_id": "T04.02.Q045",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find the smallest 3-digit number divisible by both 4 and 6.",
+      "options": [
+        {
+          "id": "A",
+          "text": "108"
+        },
+        {
+          "id": "B",
+          "text": "100"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "96"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 4 and 6 = 12. Smallest 3-digit multiple of 12: 12 x 9 = 108.",
+      "explanation_incorrect": "LCM(4,6)=12. First 3-digit multiple: 12x9=108."
+    },
+    {
+      "question_id": "T04.02.Q046",
+      "concept_id": "T04.02.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Express 200 as a product of prime factors.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 x 2 x 2 x 5 x 5"
+        },
+        {
+          "id": "B",
+          "text": "4 x 50"
+        },
+        {
+          "id": "C",
+          "text": "8 x 25"
+        },
+        {
+          "id": "D",
+          "text": "2 x 100"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "200 = 8 x 25 = 2³ x 5² = 2 x 2 x 2 x 5 x 5.",
+      "explanation_incorrect": "200 = 2³ x 5²."
+    },
+    {
+      "question_id": "T04.02.Q047",
+      "concept_id": "T04.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "HCF of two consecutive numbers (like 14 and 15) is always:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "The smaller number"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "The difference"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Consecutive numbers are always co-prime. HCF = 1.",
+      "explanation_incorrect": "No two consecutive numbers share a factor other than 1."
+    },
+    {
+      "question_id": "T04.02.Q048",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "LCM of 15 and 20 = ___",
+      "correct_answer": "60",
+      "explanation_correct": "15=3x5, 20=2²x5. LCM=2²x3x5=60.",
+      "explanation_incorrect": "Highest powers: 4x3x5=60."
+    },
+    {
+      "question_id": "T04.02.Q049",
+      "concept_id": "T04.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Anu has 32 red beads and 24 green beads. She makes bracelets with equal red and equal green beads in each. What is the maximum number of bracelets?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF(32,24)=8. She can make 8 bracelets (4 red + 3 green each).",
+      "explanation_incorrect": "HCF(32,24)=8 bracelets."
+    },
+    {
+      "question_id": "T04.02.Q050",
+      "concept_id": "T04.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The product of HCF and LCM of 12 and 18 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "216"
+        },
+        {
+          "id": "B",
+          "text": "36"
+        },
+        {
+          "id": "C",
+          "text": "72"
+        },
+        {
+          "id": "D",
+          "text": "108"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "HCF(12,18)=6, LCM(12,18)=36. Product=6x36=216. Also, 12x18=216. This verifies HCFxLCM=product of numbers.",
+      "explanation_incorrect": "HCF x LCM = 6 x 36 = 216 = 12 x 18."
+    }
   ]
 }

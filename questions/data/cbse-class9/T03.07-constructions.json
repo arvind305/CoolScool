@@ -1,62 +1,1222 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 9, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 9,
+    "subject": "Mathematics"
+  },
   "topic_id": "T03.07",
   "topic_name": "Constructions",
   "canonical_explanation": {
     "text": "This chapter deals with geometric constructions using a compass and straightedge (ruler without markings). Key constructions include: bisecting a given angle, constructing the perpendicular bisector of a line segment, constructing specific angles (60°, 90°, 120°, etc.), and constructing triangles given various conditions such as base + base angle + sum of other two sides, base + base angle + difference of other two sides, and perimeter + two base angles.",
-    "rules": ["Only compass and straightedge are used for constructions","To bisect an angle: draw arcs from vertex, then arcs from intersection points","Perpendicular bisector: arcs from both endpoints of equal radius intersect above and below","60° angle: radius arc from vertex, same radius arc from intersection gives equilateral triangle angle","90° = bisector of 180° (straight line)","Triangle construction requires specific given conditions"]
+    "rules": [
+      "Only compass and straightedge are used for constructions",
+      "To bisect an angle: draw arcs from vertex, then arcs from intersection points",
+      "Perpendicular bisector: arcs from both endpoints of equal radius intersect above and below",
+      "60° angle: radius arc from vertex, same radius arc from intersection gives equilateral triangle angle",
+      "90° = bisector of 180° (straight line)",
+      "Triangle construction requires specific given conditions"
+    ]
   },
   "questions": [
-    {"question_id":"T03.07.Q001","concept_id":"T03.07.C01","difficulty":"familiarity","type":"mcq","question_text":"To bisect a given angle, we use:","options":[{"id":"A","text":"Only a ruler"},{"id":"B","text":"Only a protractor"},{"id":"C","text":"A compass and a straightedge"},{"id":"D","text":"A set square"}],"correct_answer":"C","explanation_correct":"Geometric constructions use only a compass (for drawing arcs) and a straightedge (for drawing straight lines).","explanation_incorrect":"Standard geometric constructions require only a compass and straightedge, not a protractor or set square."},
-    {"question_id":"T03.07.Q002","concept_id":"T03.07.C01","difficulty":"familiarity","type":"mcq","question_text":"The perpendicular bisector of a line segment AB divides AB into:","options":[{"id":"A","text":"Two unequal parts"},{"id":"B","text":"Two equal parts at right angles"},{"id":"C","text":"Three equal parts"},{"id":"D","text":"Two parts at 60°"}],"correct_answer":"B","explanation_correct":"The perpendicular bisector passes through the midpoint of AB at 90°, dividing it into two equal halves.","explanation_incorrect":"A perpendicular bisector: perpendicular (90°) + bisector (equal halves) = two equal parts at right angles."},
-    {"question_id":"T03.07.Q003","concept_id":"T03.07.C02","difficulty":"familiarity","type":"mcq","question_text":"To construct an angle of 60° using a compass, we use the property that:","options":[{"id":"A","text":"An equilateral triangle has all 60° angles"},{"id":"B","text":"A right triangle has a 60° angle"},{"id":"C","text":"A circle has 360°"},{"id":"D","text":"Two perpendicular lines make 90°"}],"correct_answer":"A","explanation_correct":"An equilateral triangle has all angles equal to 60°. By drawing arcs of equal radius from the vertex and the first arc's intersection, we get a 60° angle.","explanation_incorrect":"The 60° construction uses the equilateral triangle property: all angles = 60°."},
-    {"question_id":"T03.07.Q004","concept_id":"T03.07.C02","difficulty":"familiarity","type":"true_false","question_text":"An angle of 90° can be constructed by bisecting a straight angle (180°).","correct_answer":"true","explanation_correct":"A straight angle is 180°. Its bisector creates two 90° angles. We first draw a straight line, then construct its perpendicular bisector.","explanation_incorrect":"90° = 180°/2. Bisecting a straight angle gives a right angle."},
-    {"question_id":"T03.07.Q005","concept_id":"T03.07.C02","difficulty":"familiarity","type":"fill_blank","question_text":"To construct an angle of 30°, we first construct ___ ° and then bisect it.","correct_answer":"60","explanation_correct":"30° = 60°/2. We first construct a 60° angle, then bisect it to get 30°.","explanation_incorrect":"30° is half of 60°. Construct 60° first, then bisect."},
-    {"question_id":"T03.07.Q006","concept_id":"T03.07.C01","difficulty":"familiarity","type":"mcq","question_text":"The bisector of an angle divides it into:","options":[{"id":"A","text":"Two unequal angles"},{"id":"B","text":"Two equal angles"},{"id":"C","text":"Three equal angles"},{"id":"D","text":"One acute and one obtuse angle"}],"correct_answer":"B","explanation_correct":"An angle bisector divides the angle into two equal parts.","explanation_incorrect":"Bisect means to divide into two equal parts. The bisector splits the angle equally."},
-    {"question_id":"T03.07.Q007","concept_id":"T03.07.C03","difficulty":"familiarity","type":"mcq","question_text":"To construct a triangle given base, one base angle, and the sum of the other two sides, we need:","options":[{"id":"A","text":"Only the base length"},{"id":"B","text":"Base, one base angle, sum of remaining two sides"},{"id":"C","text":"All three sides"},{"id":"D","text":"All three angles"}],"correct_answer":"B","explanation_correct":"This is one of the three special triangle constructions in Class 9: given base BC, base angle B, and AB + AC.","explanation_incorrect":"The specific construction requires exactly these three pieces of information."},
-    {"question_id":"T03.07.Q008","concept_id":"T03.07.C02","difficulty":"familiarity","type":"mcq","question_text":"An angle of 120° can be constructed by:","options":[{"id":"A","text":"Drawing two adjacent 60° angles"},{"id":"B","text":"Bisecting 180°"},{"id":"C","text":"Adding 90° and 45°"},{"id":"D","text":"Both A and correct methods exist"}],"correct_answer":"A","explanation_correct":"120° = 60° + 60°. Construct one 60° angle, then construct another 60° adjacent to it. Alternatively, 120° = 180° − 60°.","explanation_incorrect":"120° = 2 × 60°. Draw two consecutive 60° angles to get 120°."},
-    {"question_id":"T03.07.Q009","concept_id":"T03.07.C01","difficulty":"familiarity","type":"mcq","question_text":"Every point on the perpendicular bisector of a segment is:","options":[{"id":"A","text":"Closer to one endpoint"},{"id":"B","text":"Equidistant from both endpoints"},{"id":"C","text":"On the segment"},{"id":"D","text":"At the midpoint"}],"correct_answer":"B","explanation_correct":"A fundamental property: every point on the perpendicular bisector of AB is equidistant from A and B.","explanation_incorrect":"The perpendicular bisector is the locus of points equidistant from both endpoints."},
-    {"question_id":"T03.07.Q010","concept_id":"T03.07.C03","difficulty":"familiarity","type":"true_false","question_text":"To construct a triangle given perimeter and two base angles, we need the perimeter value and both base angle values.","correct_answer":"true","explanation_correct":"This construction requires exactly three pieces of data: the total perimeter and the two base angles.","explanation_incorrect":"Given perimeter + two base angles uniquely determines the triangle."},
-    {"question_id":"T03.07.Q011","concept_id":"T03.07.C02","difficulty":"application","type":"mcq","question_text":"To construct 45°, we:","options":[{"id":"A","text":"Bisect 60°"},{"id":"B","text":"Bisect 90°"},{"id":"C","text":"Construct 30° + 15°"},{"id":"D","text":"Bisect 120°"}],"correct_answer":"B","explanation_correct":"45° = 90°/2. First construct a 90° angle, then bisect it to get 45°.","explanation_incorrect":"45° is half of 90°. Construct 90° first (bisect 180°), then bisect the 90° to get 45°."},
-    {"question_id":"T03.07.Q012","concept_id":"T03.07.C01","difficulty":"application","type":"mcq","question_text":"While constructing the perpendicular bisector of AB, we take arcs from A and B with radius:","options":[{"id":"A","text":"Equal to AB"},{"id":"B","text":"Less than half of AB"},{"id":"C","text":"More than half of AB"},{"id":"D","text":"Equal to half of AB"}],"correct_answer":"C","explanation_correct":"The compass opening must be more than half of AB so that the arcs from A and B intersect on both sides of AB.","explanation_incorrect":"If radius ≤ AB/2, the arcs won't intersect. The radius must be > AB/2."},
-    {"question_id":"T03.07.Q013","concept_id":"T03.07.C03","difficulty":"application","type":"mcq","question_text":"Construct triangle ABC with BC = 7 cm, angle B = 45°, AB − AC = 3 cm. In this construction, we extend which ray?","options":[{"id":"A","text":"Ray BA below B"},{"id":"B","text":"Ray BX making 45° with BC"},{"id":"C","text":"Ray CB beyond B"},{"id":"D","text":"The perpendicular bisector of BC"}],"correct_answer":"B","explanation_correct":"We draw BC = 7 cm, then ray BX at 45°. Since AB − AC = 3 cm (AB > AC), we cut BD = 3 cm on BX. We then join DC and draw the perpendicular bisector of DC to find A.","explanation_incorrect":"The construction starts with the base BC and the angle at B, creating ray BX."},
-    {"question_id":"T03.07.Q014","concept_id":"T03.07.C02","difficulty":"application","type":"mcq","question_text":"Which of the following angles CANNOT be constructed using compass and straightedge alone?","options":[{"id":"A","text":"15°"},{"id":"B","text":"75°"},{"id":"C","text":"40°"},{"id":"D","text":"135°"}],"correct_answer":"C","explanation_correct":"40° cannot be constructed exactly with compass and straightedge. 15° (bisect 30°), 75° (60°+15°), and 135° (90°+45°) can all be constructed.","explanation_incorrect":"Constructible angles are multiples of 3° derived from 60° and 90°. 40° is not achievable."},
-    {"question_id":"T03.07.Q015","concept_id":"T03.07.C01","difficulty":"application","type":"fill_blank","question_text":"To bisect angle ABC, we draw an arc from B cutting BA and BC at P and Q. Then we draw arcs from P and Q of equal radius. Their intersection R gives the bisector ___.","correct_answer":"BR","explanation_correct":"The line BR is the angle bisector. R is the point where arcs from P and Q (of equal radius) intersect.","explanation_incorrect":"Drawing the ray BR from vertex B through intersection point R gives the angle bisector."},
-    {"question_id":"T03.07.Q016","concept_id":"T03.07.C03","difficulty":"application","type":"mcq","question_text":"To construct a triangle with perimeter 11.5 cm and base angles 60° and 45°, the first step is:","options":[{"id":"A","text":"Draw a line segment of 11.5 cm"},{"id":"B","text":"Draw a base of any length"},{"id":"C","text":"Construct a 60° angle"},{"id":"D","text":"Draw a perpendicular"}],"correct_answer":"A","explanation_correct":"In the perimeter method, we first draw a line segment XY equal to the perimeter (11.5 cm), then construct the base angles at X and Y.","explanation_incorrect":"The construction begins with a segment equal to the perimeter, then the base angles are constructed at its endpoints."},
-    {"question_id":"T03.07.Q017","concept_id":"T03.07.C02","difficulty":"application","type":"mcq","question_text":"To construct 105°, which combination works?","options":[{"id":"A","text":"60° + 45°"},{"id":"B","text":"90° + 45°"},{"id":"C","text":"120° − 15°"},{"id":"D","text":"Both A and C"}],"correct_answer":"D","explanation_correct":"105° = 60° + 45° = 120° − 15°. Both methods work using constructible angles.","explanation_incorrect":"105° can be obtained as 60° + 45° or as 120° − 15°. Both are valid."},
-    {"question_id":"T03.07.Q018","concept_id":"T03.07.C01","difficulty":"application","type":"true_false","question_text":"The angle bisectors of a triangle meet at a single point called the incentre.","correct_answer":"true","explanation_correct":"The three angle bisectors of any triangle are concurrent, meeting at the incentre, which is equidistant from all three sides.","explanation_incorrect":"Angle bisectors meet at the incentre, which is the centre of the inscribed circle."},
-    {"question_id":"T03.07.Q019","concept_id":"T03.07.C03","difficulty":"application","type":"mcq","question_text":"In constructing a triangle with base BC, angle B, and AB + AC given, after drawing BC and ray BX at angle B, we cut BD = AB + AC on BX and join DC. The next step is:","options":[{"id":"A","text":"Bisect BD"},{"id":"B","text":"Draw perpendicular bisector of DC"},{"id":"C","text":"Draw angle bisector of angle C"},{"id":"D","text":"Bisect BC"}],"correct_answer":"B","explanation_correct":"The perpendicular bisector of DC intersects BX at point A (since any point on the perp. bisector of DC is equidistant from D and C, ensuring DA = CA, i.e., BA + AC = BD).","explanation_incorrect":"The perpendicular bisector of DC gives point A on BX such that AC = DC (making BA + AC = BD = AB + AC)."},
-    {"question_id":"T03.07.Q020","concept_id":"T03.07.C02","difficulty":"application","type":"mcq","question_text":"To construct 150°, we can:","options":[{"id":"A","text":"Construct 180° − 30° = 150°"},{"id":"B","text":"Construct 90° + 60° = 150°"},{"id":"C","text":"Construct 120° + 30° = 150°"},{"id":"D","text":"All of the above"}],"correct_answer":"D","explanation_correct":"150° can be constructed as 180° − 30°, or 90° + 60°, or 120° + 30°. All methods use constructible angles.","explanation_incorrect":"Multiple valid methods exist for constructing 150° using different combinations of standard angles."},
-    {"question_id":"T03.07.Q021","concept_id":"T03.07.C01","difficulty":"exam_style","type":"mcq","question_text":"Construct the perpendicular bisector of a segment AB = 8 cm. At what distance from A does it cross AB?","options":[{"id":"A","text":"2 cm"},{"id":"B","text":"4 cm"},{"id":"C","text":"6 cm"},{"id":"D","text":"8 cm"}],"correct_answer":"B","explanation_correct":"The perpendicular bisector crosses AB at its midpoint, which is 8/2 = 4 cm from A.","explanation_incorrect":"The perpendicular bisector passes through the midpoint = 4 cm from each end."},
-    {"question_id":"T03.07.Q022","concept_id":"T03.07.C02","difficulty":"exam_style","type":"mcq","question_text":"To construct 22.5°, the correct sequence is:","options":[{"id":"A","text":"Construct 90°, bisect to 45°, bisect to 22.5°"},{"id":"B","text":"Construct 60°, bisect to 30°, bisect to 15°"},{"id":"C","text":"Construct 45° directly"},{"id":"D","text":"It cannot be constructed"}],"correct_answer":"A","explanation_correct":"22.5° = 90°/4 = 45°/2. Construct 90° → bisect to get 45° → bisect again to get 22.5°.","explanation_incorrect":"90° → 45° → 22.5° through successive bisection."},
-    {"question_id":"T03.07.Q023","concept_id":"T03.07.C03","difficulty":"exam_style","type":"mcq","question_text":"Construct triangle with base = 6 cm, angle B = 60°, AB + AC = 10 cm. What length is cut on ray BX?","options":[{"id":"A","text":"6 cm"},{"id":"B","text":"10 cm"},{"id":"C","text":"4 cm"},{"id":"D","text":"16 cm"}],"correct_answer":"B","explanation_correct":"On ray BX at angle 60° to BC, we cut BD = AB + AC = 10 cm.","explanation_incorrect":"We mark BD = AB + AC = 10 cm on the ray from B."},
-    {"question_id":"T03.07.Q024","concept_id":"T03.07.C01","difficulty":"exam_style","type":"fill_blank","question_text":"The number of angle bisectors that can be drawn for a given angle is ___.","correct_answer":"1","explanation_correct":"Every angle has exactly one bisector — the unique ray that divides it into two equal angles.","explanation_incorrect":"An angle has a unique bisector; there is only one ray that divides it equally."},
-    {"question_id":"T03.07.Q025","concept_id":"T03.07.C02","difficulty":"exam_style","type":"mcq","question_text":"Which angles can be trisected (divided into 3 equal parts) using compass and straightedge?","options":[{"id":"A","text":"All angles"},{"id":"B","text":"Only right angles (90°)"},{"id":"C","text":"Only specific angles like 90°, 180°"},{"id":"D","text":"No angle can be trisected"}],"correct_answer":"C","explanation_correct":"In general, an arbitrary angle cannot be trisected with compass and straightedge (this is proven impossible). However, specific angles like 90° can be trisected (90°/3 = 30°, constructible).","explanation_incorrect":"The trisection of a general angle is impossible, but certain special angles can be divided into three equal parts."},
-    {"question_id":"T03.07.Q026","concept_id":"T03.07.C03","difficulty":"exam_style","type":"mcq","question_text":"In constructing a triangle with base BC = 8 cm, angle B = 45°, AB − AC = 2 cm (AB > AC), where is point D marked?","options":[{"id":"A","text":"On ray BX at distance 2 cm from B, on the same side as where C will be"},{"id":"B","text":"On BC at distance 2 cm from B"},{"id":"C","text":"On ray BX at distance 2 cm from B"},{"id":"D","text":"On the extension of BC"}],"correct_answer":"C","explanation_correct":"D is marked on ray BX (making 45° with BC) at distance BD = AB − AC = 2 cm from B.","explanation_incorrect":"Cut BD = 2 cm on ray BX. Then join DC and draw the perpendicular bisector of DC to find A."},
-    {"question_id":"T03.07.Q027","concept_id":"T03.07.C01","difficulty":"familiarity","type":"mcq","question_text":"In the construction of the perpendicular bisector, the two arcs are drawn with:","options":[{"id":"A","text":"Different radii from A and B"},{"id":"B","text":"Same radius from A and B, with radius > AB/2"},{"id":"C","text":"Radius exactly equal to AB"},{"id":"D","text":"Same radius from A and B, with radius = AB/2"}],"correct_answer":"B","explanation_correct":"Both arcs are drawn with the same radius (which must be > AB/2) from points A and B to ensure they intersect.","explanation_incorrect":"Same radius from both endpoints, and the radius must exceed half the segment length."},
-    {"question_id":"T03.07.Q028","concept_id":"T03.07.C02","difficulty":"familiarity","type":"true_false","question_text":"An angle of 75° can be constructed using compass and straightedge.","correct_answer":"true","explanation_correct":"75° = 60° + 15° = 60° + (30°/2). Alternatively, 75° = (60° + 90°)/2 (bisect the angle between 60° and 90°). Both methods work.","explanation_incorrect":"75° is constructible: construct 60° and 90° adjacent, then bisect the 30° gap to add 15° to 60°."},
-    {"question_id":"T03.07.Q029","concept_id":"T03.07.C03","difficulty":"application","type":"fill_blank","question_text":"To construct a triangle given perimeter and two base angles, we draw a line segment XY equal to the ___.","correct_answer":"perimeter","explanation_correct":"The first step is drawing XY = perimeter. Then we construct the base angles at X and Y inward, and use angle bisectors to find the base vertices.","explanation_incorrect":"The segment XY represents the full perimeter in this construction method."},
-    {"question_id":"T03.07.Q030","concept_id":"T03.07.C01","difficulty":"application","type":"mcq","question_text":"After constructing the angle bisector of angle A = 80°, each resulting angle measures:","options":[{"id":"A","text":"40°"},{"id":"B","text":"80°"},{"id":"C","text":"160°"},{"id":"D","text":"20°"}],"correct_answer":"A","explanation_correct":"The bisector divides 80° into two equal parts: 80°/2 = 40° each.","explanation_incorrect":"Bisecting 80° gives two angles of 40° each."},
-    {"question_id":"T03.07.Q031","concept_id":"T03.07.C02","difficulty":"exam_style","type":"mcq","question_text":"To construct 67.5°, we need to:","options":[{"id":"A","text":"Bisect 135°"},{"id":"B","text":"Bisect 120°"},{"id":"C","text":"Trisect 180°"},{"id":"D","text":"It cannot be constructed"}],"correct_answer":"A","explanation_correct":"67.5° = 135°/2. First construct 135° (= 90° + 45°), then bisect it to get 67.5°.","explanation_incorrect":"135°/2 = 67.5°. Construct 135° first, then bisect."},
-    {"question_id":"T03.07.Q032","concept_id":"T03.07.C03","difficulty":"exam_style","type":"mcq","question_text":"In the construction of a triangle given base, base angle, and sum of other two sides, why do we draw the perpendicular bisector of DC (where D is on ray BX)?","options":[{"id":"A","text":"To find the midpoint of DC"},{"id":"B","text":"To ensure the point A is equidistant from D and C, making AC = DC and thus BA + AC = BD"},{"id":"C","text":"To make the triangle equilateral"},{"id":"D","text":"To construct a right angle"}],"correct_answer":"B","explanation_correct":"Any point on the perpendicular bisector of DC is equidistant from D and C. The intersection with BX gives A where AD = AC, ensuring BA + AC = BA + AD = BD = given sum.","explanation_incorrect":"The perpendicular bisector ensures A is equidistant from D and C, making the sum condition work."},
-    {"question_id":"T03.07.Q033","concept_id":"T03.07.C01","difficulty":"exam_style","type":"true_false","question_text":"Using only a compass and straightedge, we can construct an angle exactly equal to a given angle.","correct_answer":"true","explanation_correct":"To copy an angle, draw an arc from the vertex of the given angle, then replicate the arc opening at the new location using the compass.","explanation_incorrect":"Angle copying is a standard compass-and-straightedge construction."},
-    {"question_id":"T03.07.Q034","concept_id":"T03.07.C02","difficulty":"familiarity","type":"mcq","question_text":"Constructing a 90° angle at a point on a line is equivalent to constructing:","options":[{"id":"A","text":"A perpendicular to the line at that point"},{"id":"B","text":"A parallel to the line"},{"id":"C","text":"An angle bisector"},{"id":"D","text":"A tangent"}],"correct_answer":"A","explanation_correct":"A 90° angle at a point on a line is a perpendicular to the line at that point.","explanation_incorrect":"90° from a line = perpendicular to the line."},
-    {"question_id":"T03.07.Q035","concept_id":"T03.07.C03","difficulty":"exam_style","type":"mcq","question_text":"Construct triangle PQR where QR = 5 cm, angle Q = 30°, PQ − PR = 1 cm. Since PQ > PR, point S (where PS = PQ − PR = 1 cm) is on:","options":[{"id":"A","text":"The extension of QP beyond Q"},{"id":"B","text":"Ray QX such that angle XQR = 30°"},{"id":"C","text":"The line QR"},{"id":"D","text":"The perpendicular from Q"}],"correct_answer":"B","explanation_correct":"S is on ray QX (making 30° with QR) at distance QS = PQ − PR = 1 cm from Q. Then we use the perpendicular bisector of SR to find P.","explanation_incorrect":"Mark QS = 1 cm on the ray from Q at the given angle. The perpendicular bisector of SR locates P."},
-    {"question_id":"T03.07.Q036","concept_id":"T03.07.C01","difficulty":"application","type":"mcq","question_text":"Three perpendicular bisectors of a triangle meet at a point called:","options":[{"id":"A","text":"Centroid"},{"id":"B","text":"Incentre"},{"id":"C","text":"Circumcentre"},{"id":"D","text":"Orthocentre"}],"correct_answer":"C","explanation_correct":"The perpendicular bisectors of the three sides of a triangle meet at the circumcentre, which is equidistant from all three vertices.","explanation_incorrect":"Perpendicular bisectors → circumcentre. Angle bisectors → incentre. Medians → centroid. Altitudes → orthocentre."},
-    {"question_id":"T03.07.Q037","concept_id":"T03.07.C02","difficulty":"application","type":"fill_blank","question_text":"An angle of 15° is obtained by bisecting an angle of ___°.","correct_answer":"30","explanation_correct":"15° = 30°/2. First construct 30° (by bisecting 60°), then bisect 30° to get 15°.","explanation_incorrect":"Bisecting 30° gives 15°."},
-    {"question_id":"T03.07.Q038","concept_id":"T03.07.C03","difficulty":"application","type":"mcq","question_text":"In constructing a triangle with perimeter 14 cm and base angles 50° and 70°, after drawing XY = 14 cm, we construct:","options":[{"id":"A","text":"50° at X and 70° at Y (below XY)"},{"id":"B","text":"25° at X and 35° at Y (above XY)"},{"id":"C","text":"50° at X and 70° at Y (above XY)"},{"id":"D","text":"100° at X and 140° at Y"}],"correct_answer":"B","explanation_correct":"We construct half the base angles: 50°/2 = 25° at X and 70°/2 = 35° at Y, above XY. Their intersection gives the apex A. Then bisectors of angle AXB and angle AYC give the base BC.","explanation_incorrect":"In the perimeter method, half the base angles are constructed at the endpoints of the perimeter segment."},
-    {"question_id":"T03.07.Q039","concept_id":"T03.07.C01","difficulty":"exam_style","type":"mcq","question_text":"Using compass and straightedge, which of the following CANNOT be directly constructed?","options":[{"id":"A","text":"Perpendicular from a point to a line"},{"id":"B","text":"Angle of 72°"},{"id":"C","text":"Perpendicular bisector of a segment"},{"id":"D","text":"Copy of a given angle"}],"correct_answer":"B","explanation_correct":"72° requires constructing a regular pentagon, which is possible but complex. Among these options, 72° is the most difficult and not a standard 'direct' construction covered in Class 9.","explanation_incorrect":"72° is constructible in principle but not directly from the standard angles (60°, 90°) covered in Class 9."},
-    {"question_id":"T03.07.Q040","concept_id":"T03.07.C02","difficulty":"exam_style","type":"true_false","question_text":"An angle of 7.5° can be constructed using compass and straightedge.","correct_answer":"true","explanation_correct":"7.5° = 15°/2 = (30°/2)/2 = 30°/4. Successive bisection: 60° → 30° → 15° → 7.5°. All steps use valid constructions.","explanation_incorrect":"60° → bisect → 30° → bisect → 15° → bisect → 7.5°. All possible with compass and straightedge."},
-    {"question_id":"T03.07.Q041","concept_id":"T03.07.C03","difficulty":"familiarity","type":"mcq","question_text":"How many different constructions of triangles are studied in Class 9?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"4"}],"correct_answer":"C","explanation_correct":"Three triangle constructions: (1) base + base angle + sum of other two sides, (2) base + base angle + difference of other two sides, (3) perimeter + two base angles.","explanation_incorrect":"The three constructions cover different given conditions for determining a triangle."},
-    {"question_id":"T03.07.Q042","concept_id":"T03.07.C01","difficulty":"exam_style","type":"mcq","question_text":"To construct the angle bisector, after drawing arc PQ from vertex B, we draw arcs from P and Q. These arcs must have:","options":[{"id":"A","text":"Different radii"},{"id":"B","text":"Equal radii"},{"id":"C","text":"Radius equal to PQ"},{"id":"D","text":"Radius equal to BP"}],"correct_answer":"B","explanation_correct":"The arcs from P and Q must have equal radii (any convenient radius, not necessarily equal to PQ or BP) to find the bisector point R.","explanation_incorrect":"Equal radii from P and Q ensure the intersection point R lies on the angle bisector."},
-    {"question_id":"T03.07.Q043","concept_id":"T03.07.C02","difficulty":"exam_style","type":"fill_blank","question_text":"To construct 135°, we can construct 90° + ___°.","correct_answer":"45","explanation_correct":"135° = 90° + 45°. Construct 90° first, then add 45° adjacent to it.","explanation_incorrect":"135° = 90° + 45°. Both are constructible angles."},
-    {"question_id":"T03.07.Q044","concept_id":"T03.07.C03","difficulty":"exam_style","type":"mcq","question_text":"In the construction of a triangle given base, base angle, and difference of other two sides (where AB < AC), point D is taken on:","options":[{"id":"A","text":"Ray BX opposite to X (extended beyond B)"},{"id":"B","text":"Ray BX on the same side as the triangle"},{"id":"C","text":"Line segment BC"},{"id":"D","text":"Perpendicular from B"}],"correct_answer":"A","explanation_correct":"When AB < AC, the difference AC − AB is marked as BD on the ray BX extended on the opposite side of the intended triangle (below BC). This ensures the construction works correctly with the perpendicular bisector of DC.","explanation_incorrect":"Since AB < AC, D must be on the opposite side so that BD = AC − AB and the perpendicular bisector of DC gives the correct point A."},
-    {"question_id":"T03.07.Q045","concept_id":"T03.07.C01","difficulty":"familiarity","type":"true_false","question_text":"A protractor is used in geometric constructions with compass and straightedge.","correct_answer":"false","explanation_correct":"Geometric constructions use only a compass and a straightedge (unmarked ruler). A protractor is not part of standard Euclidean constructions.","explanation_incorrect":"Standard geometric constructions prohibit protractors. Only compass and straightedge are allowed."},
-    {"question_id":"T03.07.Q046","concept_id":"T03.07.C02","difficulty":"application","type":"mcq","question_text":"To construct an equilateral triangle with side 5 cm, we need which construction?","options":[{"id":"A","text":"60° angle and 5 cm sides"},{"id":"B","text":"90° angle and 5 cm sides"},{"id":"C","text":"45° angle and 5 cm sides"},{"id":"D","text":"120° angle and 5 cm sides"}],"correct_answer":"A","explanation_correct":"An equilateral triangle has all angles = 60° and all sides = 5 cm. Draw one side of 5 cm, construct 60° at one end, and mark 5 cm on the ray.","explanation_incorrect":"All angles are 60° in an equilateral triangle. Construct 60° and mark the given side length."},
-    {"question_id":"T03.07.Q047","concept_id":"T03.07.C03","difficulty":"exam_style","type":"mcq","question_text":"If we are given base BC = 5 cm, angle B = 60°, and AB + AC = 8.5 cm, the triangle:","options":[{"id":"A","text":"Can always be constructed"},{"id":"B","text":"Cannot be constructed because AB + AC < BC"},{"id":"C","text":"Can be constructed since AB + AC > BC"},{"id":"D","text":"Can only be constructed if AB = AC"}],"correct_answer":"C","explanation_correct":"For a triangle to exist: AB + AC > BC. Here 8.5 > 5, so the triangle inequality is satisfied and the construction is possible.","explanation_incorrect":"Triangle inequality check: 8.5 > 5 ✓. The construction is valid."},
-    {"question_id":"T03.07.Q048","concept_id":"T03.07.C01","difficulty":"exam_style","type":"mcq","question_text":"How many perpendicular bisectors does a triangle have?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"6"}],"correct_answer":"C","explanation_correct":"A triangle has 3 sides, and each side has exactly one perpendicular bisector. So there are 3 perpendicular bisectors.","explanation_incorrect":"One perpendicular bisector per side: 3 sides → 3 perpendicular bisectors."},
-    {"question_id":"T03.07.Q049","concept_id":"T03.07.C02","difficulty":"exam_style","type":"mcq","question_text":"To construct an angle of 52.5°, the correct approach is:","options":[{"id":"A","text":"Bisect 105°"},{"id":"B","text":"Bisect 52°"},{"id":"C","text":"Construct 50° + 2.5°"},{"id":"D","text":"It cannot be constructed"}],"correct_answer":"A","explanation_correct":"52.5° = 105°/2. First construct 105° (= 60° + 45°), then bisect it.","explanation_incorrect":"105°/2 = 52.5°. Construct 105° then bisect."},
-    {"question_id":"T03.07.Q050","concept_id":"T03.07.C03","difficulty":"exam_style","type":"true_false","question_text":"In the construction of a triangle given perimeter and two base angles, the perpendicular bisectors of two segments are used to locate the base vertices.","correct_answer":"true","explanation_correct":"After constructing the apex A using half-angle bisectors from the perimeter segment XY, we draw perpendicular bisectors of AX and AY to locate B and C on XY.","explanation_incorrect":"The perpendicular bisectors of AX and AY intersect XY at the base vertices B and C of the required triangle."}
+    {
+      "question_id": "T03.07.Q001",
+      "concept_id": "T03.07.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To bisect a given angle, we use:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only a ruler"
+        },
+        {
+          "id": "B",
+          "text": "Only a protractor"
+        },
+        {
+          "id": "C",
+          "text": "A compass and a straightedge"
+        },
+        {
+          "id": "D",
+          "text": "A set square"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Geometric constructions use only a compass (for drawing arcs) and a straightedge (for drawing straight lines).",
+      "explanation_incorrect": "Standard geometric constructions require only a compass and straightedge, not a protractor or set square."
+    },
+    {
+      "question_id": "T03.07.Q002",
+      "concept_id": "T03.07.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The perpendicular bisector of a line segment AB divides AB into:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two unequal parts"
+        },
+        {
+          "id": "B",
+          "text": "Two equal parts at right angles"
+        },
+        {
+          "id": "C",
+          "text": "Three equal parts"
+        },
+        {
+          "id": "D",
+          "text": "Two parts at 60°"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The perpendicular bisector passes through the midpoint of AB at 90°, dividing it into two equal halves.",
+      "explanation_incorrect": "A perpendicular bisector: perpendicular (90°) + bisector (equal halves) = two equal parts at right angles."
+    },
+    {
+      "question_id": "T03.07.Q003",
+      "concept_id": "T03.07.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct an angle of 60° using a compass, we use the property that:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An equilateral triangle has all 60° angles"
+        },
+        {
+          "id": "B",
+          "text": "A right triangle has a 60° angle"
+        },
+        {
+          "id": "C",
+          "text": "A circle has 360°"
+        },
+        {
+          "id": "D",
+          "text": "Two perpendicular lines make 90°"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "An equilateral triangle has all angles equal to 60°. By drawing arcs of equal radius from the vertex and the first arc's intersection, we get a 60° angle.",
+      "explanation_incorrect": "The 60° construction uses the equilateral triangle property: all angles = 60°."
+    },
+    {
+      "question_id": "T03.07.Q004",
+      "concept_id": "T03.07.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "An angle of 90° can be constructed by bisecting a straight angle (180°).",
+      "correct_answer": "true",
+      "explanation_correct": "A straight angle is 180°. Its bisector creates two 90° angles. We first draw a straight line, then construct its perpendicular bisector.",
+      "explanation_incorrect": "90° = 180°/2. Bisecting a straight angle gives a right angle."
+    },
+    {
+      "question_id": "T03.07.Q005",
+      "concept_id": "T03.07.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "To construct an angle of 30°, we first construct ___ ° and then bisect it.",
+      "correct_answer": "60",
+      "explanation_correct": "30° = 60°/2. We first construct a 60° angle, then bisect it to get 30°.",
+      "explanation_incorrect": "30° is half of 60°. Construct 60° first, then bisect."
+    },
+    {
+      "question_id": "T03.07.Q006",
+      "concept_id": "T03.07.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The bisector of an angle divides it into:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two unequal angles"
+        },
+        {
+          "id": "B",
+          "text": "Two equal angles"
+        },
+        {
+          "id": "C",
+          "text": "Three equal angles"
+        },
+        {
+          "id": "D",
+          "text": "One acute and one obtuse angle"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An angle bisector divides the angle into two equal parts.",
+      "explanation_incorrect": "Bisect means to divide into two equal parts. The bisector splits the angle equally."
+    },
+    {
+      "question_id": "T03.07.Q007",
+      "concept_id": "T03.07.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct a triangle given base, one base angle, and the sum of the other two sides, we need:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only the base length"
+        },
+        {
+          "id": "B",
+          "text": "Base, one base angle, sum of remaining two sides"
+        },
+        {
+          "id": "C",
+          "text": "All three sides"
+        },
+        {
+          "id": "D",
+          "text": "All three angles"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is one of the three special triangle constructions in Class 9: given base BC, base angle B, and AB + AC.",
+      "explanation_incorrect": "The specific construction requires exactly these three pieces of information."
+    },
+    {
+      "question_id": "T03.07.Q008",
+      "concept_id": "T03.07.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "An angle of 120° can be constructed by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drawing two adjacent 60° angles"
+        },
+        {
+          "id": "B",
+          "text": "Bisecting 180°"
+        },
+        {
+          "id": "C",
+          "text": "Adding 90° and 45°"
+        },
+        {
+          "id": "D",
+          "text": "Both A and correct methods exist"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "120° = 60° + 60°. Construct one 60° angle, then construct another 60° adjacent to it. Alternatively, 120° = 180° − 60°.",
+      "explanation_incorrect": "120° = 2 × 60°. Draw two consecutive 60° angles to get 120°."
+    },
+    {
+      "question_id": "T03.07.Q009",
+      "concept_id": "T03.07.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Every point on the perpendicular bisector of a segment is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Closer to one endpoint"
+        },
+        {
+          "id": "B",
+          "text": "Equidistant from both endpoints"
+        },
+        {
+          "id": "C",
+          "text": "On the segment"
+        },
+        {
+          "id": "D",
+          "text": "At the midpoint"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A fundamental property: every point on the perpendicular bisector of AB is equidistant from A and B.",
+      "explanation_incorrect": "The perpendicular bisector is the locus of points equidistant from both endpoints."
+    },
+    {
+      "question_id": "T03.07.Q010",
+      "concept_id": "T03.07.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "To construct a triangle given perimeter and two base angles, we need the perimeter value and both base angle values.",
+      "correct_answer": "true",
+      "explanation_correct": "This construction requires exactly three pieces of data: the total perimeter and the two base angles.",
+      "explanation_incorrect": "Given perimeter + two base angles uniquely determines the triangle."
+    },
+    {
+      "question_id": "T03.07.Q011",
+      "concept_id": "T03.07.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct 45°, we:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bisect 60°"
+        },
+        {
+          "id": "B",
+          "text": "Bisect 90°"
+        },
+        {
+          "id": "C",
+          "text": "Construct 30° + 15°"
+        },
+        {
+          "id": "D",
+          "text": "Bisect 120°"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "45° = 90°/2. First construct a 90° angle, then bisect it to get 45°.",
+      "explanation_incorrect": "45° is half of 90°. Construct 90° first (bisect 180°), then bisect the 90° to get 45°."
+    },
+    {
+      "question_id": "T03.07.Q012",
+      "concept_id": "T03.07.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "While constructing the perpendicular bisector of AB, we take arcs from A and B with radius:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal to AB"
+        },
+        {
+          "id": "B",
+          "text": "Less than half of AB"
+        },
+        {
+          "id": "C",
+          "text": "More than half of AB"
+        },
+        {
+          "id": "D",
+          "text": "Equal to half of AB"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The compass opening must be more than half of AB so that the arcs from A and B intersect on both sides of AB.",
+      "explanation_incorrect": "If radius ≤ AB/2, the arcs won't intersect. The radius must be > AB/2."
+    },
+    {
+      "question_id": "T03.07.Q013",
+      "concept_id": "T03.07.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Construct triangle ABC with BC = 7 cm, angle B = 45°, AB − AC = 3 cm. In this construction, we extend which ray?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ray BA below B"
+        },
+        {
+          "id": "B",
+          "text": "Ray BX making 45° with BC"
+        },
+        {
+          "id": "C",
+          "text": "Ray CB beyond B"
+        },
+        {
+          "id": "D",
+          "text": "The perpendicular bisector of BC"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "We draw BC = 7 cm, then ray BX at 45°. Since AB − AC = 3 cm (AB > AC), we cut BD = 3 cm on BX. We then join DC and draw the perpendicular bisector of DC to find A.",
+      "explanation_incorrect": "The construction starts with the base BC and the angle at B, creating ray BX."
+    },
+    {
+      "question_id": "T03.07.Q014",
+      "concept_id": "T03.07.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of the following angles CANNOT be constructed using compass and straightedge alone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15°"
+        },
+        {
+          "id": "B",
+          "text": "75°"
+        },
+        {
+          "id": "C",
+          "text": "40°"
+        },
+        {
+          "id": "D",
+          "text": "135°"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "40° cannot be constructed exactly with compass and straightedge. 15° (bisect 30°), 75° (60°+15°), and 135° (90°+45°) can all be constructed.",
+      "explanation_incorrect": "Constructible angles are multiples of 3° derived from 60° and 90°. 40° is not achievable."
+    },
+    {
+      "question_id": "T03.07.Q015",
+      "concept_id": "T03.07.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "To bisect angle ABC, we draw an arc from B cutting BA and BC at P and Q. Then we draw arcs from P and Q of equal radius. Their intersection R gives the bisector ___.",
+      "correct_answer": "BR",
+      "explanation_correct": "The line BR is the angle bisector. R is the point where arcs from P and Q (of equal radius) intersect.",
+      "explanation_incorrect": "Drawing the ray BR from vertex B through intersection point R gives the angle bisector."
+    },
+    {
+      "question_id": "T03.07.Q016",
+      "concept_id": "T03.07.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct a triangle with perimeter 11.5 cm and base angles 60° and 45°, the first step is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Draw a line segment of 11.5 cm"
+        },
+        {
+          "id": "B",
+          "text": "Draw a base of any length"
+        },
+        {
+          "id": "C",
+          "text": "Construct a 60° angle"
+        },
+        {
+          "id": "D",
+          "text": "Draw a perpendicular"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In the perimeter method, we first draw a line segment XY equal to the perimeter (11.5 cm), then construct the base angles at X and Y.",
+      "explanation_incorrect": "The construction begins with a segment equal to the perimeter, then the base angles are constructed at its endpoints."
+    },
+    {
+      "question_id": "T03.07.Q017",
+      "concept_id": "T03.07.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct 105°, which combination works?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60° + 45°"
+        },
+        {
+          "id": "B",
+          "text": "90° + 45°"
+        },
+        {
+          "id": "C",
+          "text": "120° − 15°"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "105° = 60° + 45° = 120° − 15°. Both methods work using constructible angles.",
+      "explanation_incorrect": "105° can be obtained as 60° + 45° or as 120° − 15°. Both are valid."
+    },
+    {
+      "question_id": "T03.07.Q018",
+      "concept_id": "T03.07.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The angle bisectors of a triangle meet at a single point called the incentre.",
+      "correct_answer": "true",
+      "explanation_correct": "The three angle bisectors of any triangle are concurrent, meeting at the incentre, which is equidistant from all three sides.",
+      "explanation_incorrect": "Angle bisectors meet at the incentre, which is the centre of the inscribed circle."
+    },
+    {
+      "question_id": "T03.07.Q019",
+      "concept_id": "T03.07.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In constructing a triangle with base BC, angle B, and AB + AC given, after drawing BC and ray BX at angle B, we cut BD = AB + AC on BX and join DC. The next step is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bisect BD"
+        },
+        {
+          "id": "B",
+          "text": "Draw perpendicular bisector of DC"
+        },
+        {
+          "id": "C",
+          "text": "Draw angle bisector of angle C"
+        },
+        {
+          "id": "D",
+          "text": "Bisect BC"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The perpendicular bisector of DC intersects BX at point A (since any point on the perp. bisector of DC is equidistant from D and C, ensuring DA = CA, i.e., BA + AC = BD).",
+      "explanation_incorrect": "The perpendicular bisector of DC gives point A on BX such that AC = DC (making BA + AC = BD = AB + AC)."
+    },
+    {
+      "question_id": "T03.07.Q020",
+      "concept_id": "T03.07.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct 150°, we can:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Construct 180° − 30° = 150°"
+        },
+        {
+          "id": "B",
+          "text": "Construct 90° + 60° = 150°"
+        },
+        {
+          "id": "C",
+          "text": "Construct 120° + 30° = 150°"
+        },
+        {
+          "id": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "150° can be constructed as 180° − 30°, or 90° + 60°, or 120° + 30°. All methods use constructible angles.",
+      "explanation_incorrect": "Multiple valid methods exist for constructing 150° using different combinations of standard angles."
+    },
+    {
+      "question_id": "T03.07.Q021",
+      "concept_id": "T03.07.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Construct the perpendicular bisector of a segment AB = 8 cm. At what distance from A does it cross AB?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 cm"
+        },
+        {
+          "id": "B",
+          "text": "4 cm"
+        },
+        {
+          "id": "C",
+          "text": "6 cm"
+        },
+        {
+          "id": "D",
+          "text": "8 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The perpendicular bisector crosses AB at its midpoint, which is 8/2 = 4 cm from A.",
+      "explanation_incorrect": "The perpendicular bisector passes through the midpoint = 4 cm from each end."
+    },
+    {
+      "question_id": "T03.07.Q022",
+      "concept_id": "T03.07.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct 22.5°, the correct sequence is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Construct 90°, bisect to 45°, bisect to 22.5°"
+        },
+        {
+          "id": "B",
+          "text": "Construct 60°, bisect to 30°, bisect to 15°"
+        },
+        {
+          "id": "C",
+          "text": "Construct 45° directly"
+        },
+        {
+          "id": "D",
+          "text": "It cannot be constructed"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "22.5° = 90°/4 = 45°/2. Construct 90° → bisect to get 45° → bisect again to get 22.5°.",
+      "explanation_incorrect": "90° → 45° → 22.5° through successive bisection."
+    },
+    {
+      "question_id": "T03.07.Q023",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Construct triangle with base = 6 cm, angle B = 60°, AB + AC = 10 cm. What length is cut on ray BX?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "4 cm"
+        },
+        {
+          "id": "D",
+          "text": "16 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "On ray BX at angle 60° to BC, we cut BD = AB + AC = 10 cm.",
+      "explanation_incorrect": "We mark BD = AB + AC = 10 cm on the ray from B."
+    },
+    {
+      "question_id": "T03.07.Q024",
+      "concept_id": "T03.07.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The number of angle bisectors that can be drawn for a given angle is ___.",
+      "correct_answer": "1",
+      "explanation_correct": "Every angle has exactly one bisector — the unique ray that divides it into two equal angles.",
+      "explanation_incorrect": "An angle has a unique bisector; there is only one ray that divides it equally."
+    },
+    {
+      "question_id": "T03.07.Q025",
+      "concept_id": "T03.07.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which angles can be trisected (divided into 3 equal parts) using compass and straightedge?",
+      "options": [
+        {
+          "id": "A",
+          "text": "All angles"
+        },
+        {
+          "id": "B",
+          "text": "Only right angles (90°)"
+        },
+        {
+          "id": "C",
+          "text": "Only specific angles like 90°, 180°"
+        },
+        {
+          "id": "D",
+          "text": "No angle can be trisected"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In general, an arbitrary angle cannot be trisected with compass and straightedge (this is proven impossible). However, specific angles like 90° can be trisected (90°/3 = 30°, constructible).",
+      "explanation_incorrect": "The trisection of a general angle is impossible, but certain special angles can be divided into three equal parts."
+    },
+    {
+      "question_id": "T03.07.Q026",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In constructing a triangle with base BC = 8 cm, angle B = 45°, AB − AC = 2 cm (AB > AC), where is point D marked?",
+      "options": [
+        {
+          "id": "A",
+          "text": "On ray BX at distance 2 cm from B, on the same side as where C will be"
+        },
+        {
+          "id": "B",
+          "text": "On BC at distance 2 cm from B"
+        },
+        {
+          "id": "C",
+          "text": "On ray BX at distance 2 cm from B"
+        },
+        {
+          "id": "D",
+          "text": "On the extension of BC"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "D is marked on ray BX (making 45° with BC) at distance BD = AB − AC = 2 cm from B.",
+      "explanation_incorrect": "Cut BD = 2 cm on ray BX. Then join DC and draw the perpendicular bisector of DC to find A."
+    },
+    {
+      "question_id": "T03.07.Q027",
+      "concept_id": "T03.07.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In the construction of the perpendicular bisector, the two arcs are drawn with:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Different radii from A and B"
+        },
+        {
+          "id": "B",
+          "text": "Same radius from A and B, with radius > AB/2"
+        },
+        {
+          "id": "C",
+          "text": "Radius exactly equal to AB"
+        },
+        {
+          "id": "D",
+          "text": "Same radius from A and B, with radius = AB/2"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Both arcs are drawn with the same radius (which must be > AB/2) from points A and B to ensure they intersect.",
+      "explanation_incorrect": "Same radius from both endpoints, and the radius must exceed half the segment length."
+    },
+    {
+      "question_id": "T03.07.Q028",
+      "concept_id": "T03.07.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "An angle of 75° can be constructed using compass and straightedge.",
+      "correct_answer": "true",
+      "explanation_correct": "75° = 60° + 15° = 60° + (30°/2). Alternatively, 75° = (60° + 90°)/2 (bisect the angle between 60° and 90°). Both methods work.",
+      "explanation_incorrect": "75° is constructible: construct 60° and 90° adjacent, then bisect the 30° gap to add 15° to 60°."
+    },
+    {
+      "question_id": "T03.07.Q029",
+      "concept_id": "T03.07.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "To construct a triangle given perimeter and two base angles, we draw a line segment XY equal to the ___.",
+      "correct_answer": "perimeter",
+      "explanation_correct": "The first step is drawing XY = perimeter. Then we construct the base angles at X and Y inward, and use angle bisectors to find the base vertices.",
+      "explanation_incorrect": "The segment XY represents the full perimeter in this construction method."
+    },
+    {
+      "question_id": "T03.07.Q030",
+      "concept_id": "T03.07.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "After constructing the angle bisector of angle A = 80°, each resulting angle measures:",
+      "options": [
+        {
+          "id": "A",
+          "text": "40°"
+        },
+        {
+          "id": "B",
+          "text": "80°"
+        },
+        {
+          "id": "C",
+          "text": "160°"
+        },
+        {
+          "id": "D",
+          "text": "20°"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The bisector divides 80° into two equal parts: 80°/2 = 40° each.",
+      "explanation_incorrect": "Bisecting 80° gives two angles of 40° each."
+    },
+    {
+      "question_id": "T03.07.Q031",
+      "concept_id": "T03.07.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct 67.5°, we need to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bisect 135°"
+        },
+        {
+          "id": "B",
+          "text": "Bisect 120°"
+        },
+        {
+          "id": "C",
+          "text": "Trisect 180°"
+        },
+        {
+          "id": "D",
+          "text": "It cannot be constructed"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "67.5° = 135°/2. First construct 135° (= 90° + 45°), then bisect it to get 67.5°.",
+      "explanation_incorrect": "135°/2 = 67.5°. Construct 135° first, then bisect."
+    },
+    {
+      "question_id": "T03.07.Q032",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "type": "mcq",
+      "question_text": "In the construction of a triangle given base, base angle, and sum of other two sides, why do we draw the perpendicular bisector of DC (where D is on ray BX)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To find the midpoint of DC"
+        },
+        {
+          "id": "B",
+          "text": "To ensure the point A is equidistant from D and C, making AC = DC and thus BA + AC = BD"
+        },
+        {
+          "id": "C",
+          "text": "To make the triangle equilateral"
+        },
+        {
+          "id": "D",
+          "text": "To construct a right angle"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Any point on the perpendicular bisector of DC is equidistant from D and C. The intersection with BX gives A where AD = AC, ensuring BA + AC = BA + AD = BD = given sum.",
+      "explanation_incorrect": "The perpendicular bisector ensures A is equidistant from D and C, making the sum condition work."
+    },
+    {
+      "question_id": "T03.07.Q033",
+      "concept_id": "T03.07.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Using only a compass and straightedge, we can construct an angle exactly equal to a given angle.",
+      "correct_answer": "true",
+      "explanation_correct": "To copy an angle, draw an arc from the vertex of the given angle, then replicate the arc opening at the new location using the compass.",
+      "explanation_incorrect": "Angle copying is a standard compass-and-straightedge construction."
+    },
+    {
+      "question_id": "T03.07.Q034",
+      "concept_id": "T03.07.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Constructing a 90° angle at a point on a line is equivalent to constructing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A perpendicular to the line at that point"
+        },
+        {
+          "id": "B",
+          "text": "A parallel to the line"
+        },
+        {
+          "id": "C",
+          "text": "An angle bisector"
+        },
+        {
+          "id": "D",
+          "text": "A tangent"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A 90° angle at a point on a line is a perpendicular to the line at that point.",
+      "explanation_incorrect": "90° from a line = perpendicular to the line."
+    },
+    {
+      "question_id": "T03.07.Q035",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Construct triangle PQR where QR = 5 cm, angle Q = 30°, PQ − PR = 1 cm. Since PQ > PR, point S (where PS = PQ − PR = 1 cm) is on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The extension of QP beyond Q"
+        },
+        {
+          "id": "B",
+          "text": "Ray QX such that angle XQR = 30°"
+        },
+        {
+          "id": "C",
+          "text": "The line QR"
+        },
+        {
+          "id": "D",
+          "text": "The perpendicular from Q"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "S is on ray QX (making 30° with QR) at distance QS = PQ − PR = 1 cm from Q. Then we use the perpendicular bisector of SR to find P.",
+      "explanation_incorrect": "Mark QS = 1 cm on the ray from Q at the given angle. The perpendicular bisector of SR locates P."
+    },
+    {
+      "question_id": "T03.07.Q036",
+      "concept_id": "T03.07.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Three perpendicular bisectors of a triangle meet at a point called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Centroid"
+        },
+        {
+          "id": "B",
+          "text": "Incentre"
+        },
+        {
+          "id": "C",
+          "text": "Circumcentre"
+        },
+        {
+          "id": "D",
+          "text": "Orthocentre"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The perpendicular bisectors of the three sides of a triangle meet at the circumcentre, which is equidistant from all three vertices.",
+      "explanation_incorrect": "Perpendicular bisectors → circumcentre. Angle bisectors → incentre. Medians → centroid. Altitudes → orthocentre."
+    },
+    {
+      "question_id": "T03.07.Q037",
+      "concept_id": "T03.07.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "An angle of 15° is obtained by bisecting an angle of ___°.",
+      "correct_answer": "30",
+      "explanation_correct": "15° = 30°/2. First construct 30° (by bisecting 60°), then bisect 30° to get 15°.",
+      "explanation_incorrect": "Bisecting 30° gives 15°."
+    },
+    {
+      "question_id": "T03.07.Q038",
+      "concept_id": "T03.07.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In constructing a triangle with perimeter 14 cm and base angles 50° and 70°, after drawing XY = 14 cm, we construct:",
+      "options": [
+        {
+          "id": "A",
+          "text": "50° at X and 70° at Y (below XY)"
+        },
+        {
+          "id": "B",
+          "text": "25° at X and 35° at Y (above XY)"
+        },
+        {
+          "id": "C",
+          "text": "50° at X and 70° at Y (above XY)"
+        },
+        {
+          "id": "D",
+          "text": "100° at X and 140° at Y"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "We construct half the base angles: 50°/2 = 25° at X and 70°/2 = 35° at Y, above XY. Their intersection gives the apex A. Then bisectors of angle AXB and angle AYC give the base BC.",
+      "explanation_incorrect": "In the perimeter method, half the base angles are constructed at the endpoints of the perimeter segment."
+    },
+    {
+      "question_id": "T03.07.Q039",
+      "concept_id": "T03.07.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Using compass and straightedge, which of the following CANNOT be directly constructed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perpendicular from a point to a line"
+        },
+        {
+          "id": "B",
+          "text": "Angle of 72°"
+        },
+        {
+          "id": "C",
+          "text": "Perpendicular bisector of a segment"
+        },
+        {
+          "id": "D",
+          "text": "Copy of a given angle"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "72° requires constructing a regular pentagon, which is possible but complex. Among these options, 72° is the most difficult and not a standard 'direct' construction covered in Class 9.",
+      "explanation_incorrect": "72° is constructible in principle but not directly from the standard angles (60°, 90°) covered in Class 9."
+    },
+    {
+      "question_id": "T03.07.Q040",
+      "concept_id": "T03.07.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "An angle of 7.5° can be constructed using compass and straightedge.",
+      "correct_answer": "true",
+      "explanation_correct": "7.5° = 15°/2 = (30°/2)/2 = 30°/4. Successive bisection: 60° → 30° → 15° → 7.5°. All steps use valid constructions.",
+      "explanation_incorrect": "60° → bisect → 30° → bisect → 15° → bisect → 7.5°. All possible with compass and straightedge."
+    },
+    {
+      "question_id": "T03.07.Q041",
+      "concept_id": "T03.07.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many different constructions of triangles are studied in Class 9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Three triangle constructions: (1) base + base angle + sum of other two sides, (2) base + base angle + difference of other two sides, (3) perimeter + two base angles.",
+      "explanation_incorrect": "The three constructions cover different given conditions for determining a triangle."
+    },
+    {
+      "question_id": "T03.07.Q042",
+      "concept_id": "T03.07.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct the angle bisector, after drawing arc PQ from vertex B, we draw arcs from P and Q. These arcs must have:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Different radii"
+        },
+        {
+          "id": "B",
+          "text": "Equal radii"
+        },
+        {
+          "id": "C",
+          "text": "Radius equal to PQ"
+        },
+        {
+          "id": "D",
+          "text": "Radius equal to BP"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The arcs from P and Q must have equal radii (any convenient radius, not necessarily equal to PQ or BP) to find the bisector point R.",
+      "explanation_incorrect": "Equal radii from P and Q ensure the intersection point R lies on the angle bisector."
+    },
+    {
+      "question_id": "T03.07.Q043",
+      "concept_id": "T03.07.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "To construct 135°, we can construct 90° + ___°.",
+      "correct_answer": "45",
+      "explanation_correct": "135° = 90° + 45°. Construct 90° first, then add 45° adjacent to it.",
+      "explanation_incorrect": "135° = 90° + 45°. Both are constructible angles."
+    },
+    {
+      "question_id": "T03.07.Q044",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In the construction of a triangle given base, base angle, and difference of other two sides (where AB < AC), point D is taken on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ray BX opposite to X (extended beyond B)"
+        },
+        {
+          "id": "B",
+          "text": "Ray BX on the same side as the triangle"
+        },
+        {
+          "id": "C",
+          "text": "Line segment BC"
+        },
+        {
+          "id": "D",
+          "text": "Perpendicular from B"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When AB < AC, the difference AC − AB is marked as BD on the ray BX extended on the opposite side of the intended triangle (below BC). This ensures the construction works correctly with the perpendicular bisector of DC.",
+      "explanation_incorrect": "Since AB < AC, D must be on the opposite side so that BD = AC − AB and the perpendicular bisector of DC gives the correct point A."
+    },
+    {
+      "question_id": "T03.07.Q045",
+      "concept_id": "T03.07.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A protractor is used in geometric constructions with compass and straightedge.",
+      "correct_answer": "false",
+      "explanation_correct": "Geometric constructions use only a compass and a straightedge (unmarked ruler). A protractor is not part of standard Euclidean constructions.",
+      "explanation_incorrect": "Standard geometric constructions prohibit protractors. Only compass and straightedge are allowed."
+    },
+    {
+      "question_id": "T03.07.Q046",
+      "concept_id": "T03.07.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct an equilateral triangle with side 5 cm, we need which construction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60° angle and 5 cm sides"
+        },
+        {
+          "id": "B",
+          "text": "90° angle and 5 cm sides"
+        },
+        {
+          "id": "C",
+          "text": "45° angle and 5 cm sides"
+        },
+        {
+          "id": "D",
+          "text": "120° angle and 5 cm sides"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "An equilateral triangle has all angles = 60° and all sides = 5 cm. Draw one side of 5 cm, construct 60° at one end, and mark 5 cm on the ray.",
+      "explanation_incorrect": "All angles are 60° in an equilateral triangle. Construct 60° and mark the given side length."
+    },
+    {
+      "question_id": "T03.07.Q047",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If we are given base BC = 5 cm, angle B = 60°, and AB + AC = 8.5 cm, the triangle:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Can always be constructed"
+        },
+        {
+          "id": "B",
+          "text": "Cannot be constructed because AB + AC < BC"
+        },
+        {
+          "id": "C",
+          "text": "Can be constructed since AB + AC > BC"
+        },
+        {
+          "id": "D",
+          "text": "Can only be constructed if AB = AC"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For a triangle to exist: AB + AC > BC. Here 8.5 > 5, so the triangle inequality is satisfied and the construction is possible.",
+      "explanation_incorrect": "Triangle inequality check: 8.5 > 5 ✓. The construction is valid."
+    },
+    {
+      "question_id": "T03.07.Q048",
+      "concept_id": "T03.07.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many perpendicular bisectors does a triangle have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A triangle has 3 sides, and each side has exactly one perpendicular bisector. So there are 3 perpendicular bisectors.",
+      "explanation_incorrect": "One perpendicular bisector per side: 3 sides → 3 perpendicular bisectors."
+    },
+    {
+      "question_id": "T03.07.Q049",
+      "concept_id": "T03.07.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct an angle of 52.5°, the correct approach is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bisect 105°"
+        },
+        {
+          "id": "B",
+          "text": "Bisect 52°"
+        },
+        {
+          "id": "C",
+          "text": "Construct 50° + 2.5°"
+        },
+        {
+          "id": "D",
+          "text": "It cannot be constructed"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "52.5° = 105°/2. First construct 105° (= 60° + 45°), then bisect it.",
+      "explanation_incorrect": "105°/2 = 52.5°. Construct 105° then bisect."
+    },
+    {
+      "question_id": "T03.07.Q050",
+      "concept_id": "T03.07.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "In the construction of a triangle given perimeter and two base angles, the perpendicular bisectors of two segments are used to locate the base vertices.",
+      "correct_answer": "true",
+      "explanation_correct": "After constructing the apex A using half-angle bisectors from the perimeter segment XY, we draw perpendicular bisectors of AX and AY to locate B and C on XY.",
+      "explanation_incorrect": "The perpendicular bisectors of AX and AY intersect XY at the base vertices B and C of the required triangle."
+    }
   ]
 }

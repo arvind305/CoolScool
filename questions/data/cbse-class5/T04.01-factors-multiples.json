@@ -1,62 +1,1331 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 5, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 5,
+    "subject": "Mathematics"
+  },
   "topic_id": "T04.01",
   "topic_name": "Factors and Multiples",
   "canonical_explanation": {
     "text": "A factor of a number divides it exactly (no remainder). A multiple of a number is obtained by multiplying it by a whole number. Prime numbers have exactly two factors: 1 and themselves. Composite numbers have more than two factors. The number 1 is neither prime nor composite.",
-    "rules": ["Factors always come in pairs: if a divides n, then n/a also divides n", "Every number is a factor of itself; 1 is a factor of every number", "Multiples of n: n, 2n, 3n, 4n, ...", "Divisibility by 2: last digit is even (0,2,4,6,8)", "Divisibility by 3: sum of digits is divisible by 3", "Divisibility by 5: last digit is 0 or 5", "Divisibility by 10: last digit is 0"]
+    "rules": [
+      "Factors always come in pairs: if a divides n, then n/a also divides n",
+      "Every number is a factor of itself; 1 is a factor of every number",
+      "Multiples of n: n, 2n, 3n, 4n, ...",
+      "Divisibility by 2: last digit is even (0,2,4,6,8)",
+      "Divisibility by 3: sum of digits is divisible by 3",
+      "Divisibility by 5: last digit is 0 or 5",
+      "Divisibility by 10: last digit is 0"
+    ]
   },
   "questions": [
-    {"question_id":"T04.01.Q001","concept_id":"T04.01.C01","difficulty":"familiarity","type":"mcq","question_text":"Which of the following is a factor of 24?","options":[{"id":"A","text":"5"},{"id":"B","text":"6"},{"id":"C","text":"7"},{"id":"D","text":"9"}],"correct_answer":"B","explanation_correct":"24 ÷ 6 = 4 with no remainder. So 6 is a factor of 24.","explanation_incorrect":"A factor divides the number exactly. 24÷6=4 (no remainder), so 6 is a factor."},
-    {"question_id":"T04.01.Q002","concept_id":"T04.01.C01","difficulty":"familiarity","type":"mcq","question_text":"List all factors of 18.","options":[{"id":"A","text":"1, 2, 3, 6, 9, 18"},{"id":"B","text":"1, 2, 3, 4, 6, 18"},{"id":"C","text":"2, 3, 6, 9"},{"id":"D","text":"1, 2, 3, 6, 18"}],"correct_answer":"A","explanation_correct":"Factors of 18: 1x18, 2x9, 3x6. So factors are 1, 2, 3, 6, 9, 18.","explanation_incorrect":"Find factor pairs: 1x18, 2x9, 3x6. All factors: 1, 2, 3, 6, 9, 18."},
-    {"question_id":"T04.01.Q003","concept_id":"T04.01.C01","difficulty":"application","type":"fill_blank","question_text":"How many factors does 36 have? ___","correct_answer":"9","explanation_correct":"Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. That is 9 factors.","explanation_incorrect":"Factor pairs: 1x36, 2x18, 3x12, 4x9, 6x6. So 9 factors."},
-    {"question_id":"T04.01.Q004","concept_id":"T04.01.C02","difficulty":"familiarity","type":"mcq","question_text":"Which is a multiple of 7?","options":[{"id":"A","text":"27"},{"id":"B","text":"35"},{"id":"C","text":"36"},{"id":"D","text":"22"}],"correct_answer":"B","explanation_correct":"35 = 7 x 5. So 35 is a multiple of 7.","explanation_incorrect":"7 x 5 = 35. So 35 is a multiple of 7."},
-    {"question_id":"T04.01.Q005","concept_id":"T04.01.C02","difficulty":"familiarity","type":"mcq","question_text":"The first five multiples of 8 are:","options":[{"id":"A","text":"8, 16, 24, 32, 40"},{"id":"B","text":"1, 8, 16, 24, 32"},{"id":"C","text":"8, 16, 24, 30, 40"},{"id":"D","text":"8, 18, 28, 38, 48"}],"correct_answer":"A","explanation_correct":"8x1=8, 8x2=16, 8x3=24, 8x4=32, 8x5=40.","explanation_incorrect":"Multiply 8 by 1,2,3,4,5 to get 8, 16, 24, 32, 40."},
-    {"question_id":"T04.01.Q006","concept_id":"T04.01.C02","difficulty":"application","type":"mcq","question_text":"Is 150 a multiple of 6?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Cannot tell"},{"id":"D","text":"Only sometimes"}],"correct_answer":"A","explanation_correct":"150 ÷ 6 = 25 (exact). So 150 is a multiple of 6.","explanation_incorrect":"150 ÷ 6 = 25 with no remainder. Yes, it is a multiple of 6."},
-    {"question_id":"T04.01.Q007","concept_id":"T04.01.C03","difficulty":"familiarity","type":"mcq","question_text":"Which of the following is a prime number?","options":[{"id":"A","text":"15"},{"id":"B","text":"21"},{"id":"C","text":"23"},{"id":"D","text":"27"}],"correct_answer":"C","explanation_correct":"23 has only two factors: 1 and 23. So it is prime. 15=3x5, 21=3x7, 27=3x9 are composite.","explanation_incorrect":"23 is divisible only by 1 and 23, making it prime."},
-    {"question_id":"T04.01.Q008","concept_id":"T04.01.C03","difficulty":"familiarity","type":"mcq","question_text":"Is 1 a prime number?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No, it is composite"},{"id":"C","text":"No, it is neither prime nor composite"},{"id":"D","text":"It depends"}],"correct_answer":"C","explanation_correct":"1 has only one factor (itself). Prime numbers must have exactly 2 factors. So 1 is neither prime nor composite.","explanation_incorrect":"1 is special: it has only one factor (1), so it is neither prime nor composite."},
-    {"question_id":"T04.01.Q009","concept_id":"T04.01.C03","difficulty":"application","type":"mcq","question_text":"Which is the smallest prime number?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"0"}],"correct_answer":"B","explanation_correct":"2 is the smallest prime number. It has exactly two factors: 1 and 2. (1 is not prime.)","explanation_incorrect":"2 is the smallest and only even prime number."},
-    {"question_id":"T04.01.Q010","concept_id":"T04.01.C03","difficulty":"application","type":"mcq","question_text":"How many prime numbers are there between 10 and 20?","options":[{"id":"A","text":"4"},{"id":"B","text":"3"},{"id":"C","text":"5"},{"id":"D","text":"2"}],"correct_answer":"A","explanation_correct":"Primes between 10 and 20: 11, 13, 17, 19. That is 4 prime numbers.","explanation_incorrect":"Check each: 11(prime), 12(no), 13(prime), 14(no), 15(no), 16(no), 17(prime), 18(no), 19(prime). Four primes."},
-    {"question_id":"T04.01.Q011","concept_id":"T04.01.C04","difficulty":"familiarity","type":"mcq","question_text":"Is 456 divisible by 2?","options":[{"id":"A","text":"Yes, because last digit is 6 (even)"},{"id":"B","text":"No"},{"id":"C","text":"Yes, because sum of digits is even"},{"id":"D","text":"Cannot tell"}],"correct_answer":"A","explanation_correct":"A number is divisible by 2 if its last digit is even. 456 ends in 6 (even), so it is divisible by 2.","explanation_incorrect":"Divisibility by 2: check last digit. 6 is even, so 456 is divisible by 2."},
-    {"question_id":"T04.01.Q012","concept_id":"T04.01.C04","difficulty":"familiarity","type":"mcq","question_text":"Is 345 divisible by 3?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Cannot tell"},{"id":"D","text":"Only if divided by 9 first"}],"correct_answer":"A","explanation_correct":"Sum of digits: 3+4+5=12. 12 is divisible by 3, so 345 is divisible by 3.","explanation_incorrect":"Sum of digits = 12, which is divisible by 3. So 345 is divisible by 3."},
-    {"question_id":"T04.01.Q013","concept_id":"T04.01.C04","difficulty":"familiarity","type":"mcq","question_text":"Is 785 divisible by 5?","options":[{"id":"A","text":"Yes, last digit is 5"},{"id":"B","text":"No"},{"id":"C","text":"Yes, last digit is 0"},{"id":"D","text":"Cannot tell"}],"correct_answer":"A","explanation_correct":"A number is divisible by 5 if its last digit is 0 or 5. 785 ends in 5, so it is divisible by 5.","explanation_incorrect":"Last digit 5 means divisible by 5. 785 ÷ 5 = 157."},
-    {"question_id":"T04.01.Q014","concept_id":"T04.01.C04","difficulty":"application","type":"mcq","question_text":"Is 570 divisible by both 2 and 5?","options":[{"id":"A","text":"Yes, it is divisible by 10"},{"id":"B","text":"Only by 2"},{"id":"C","text":"Only by 5"},{"id":"D","text":"Neither"}],"correct_answer":"A","explanation_correct":"570 ends in 0, so it is divisible by both 2 and 5 (and hence by 10).","explanation_incorrect":"Last digit 0: divisible by 2, 5, and 10."},
-    {"question_id":"T04.01.Q015","concept_id":"T04.01.C04","difficulty":"application","type":"mcq","question_text":"Which number is divisible by both 3 and 5?","options":[{"id":"A","text":"25"},{"id":"B","text":"33"},{"id":"C","text":"45"},{"id":"D","text":"50"}],"correct_answer":"C","explanation_correct":"45: last digit 5 (÷5 ok). Sum of digits=4+5=9 (÷3 ok). So 45 is divisible by both 3 and 5.","explanation_incorrect":"45 ends in 5 (divisible by 5) and digit sum is 9 (divisible by 3)."},
-    {"question_id":"T04.01.Q016","concept_id":"T04.01.C01","difficulty":"application","type":"true_false","question_text":"Every number is a factor of itself.","correct_answer":"true","explanation_correct":"Any number divided by itself gives 1 (no remainder). So every number is a factor of itself.","explanation_incorrect":"n ÷ n = 1. So n is always a factor of n."},
-    {"question_id":"T04.01.Q017","concept_id":"T04.01.C03","difficulty":"exam_style","type":"mcq","question_text":"Which of the following is composite?","options":[{"id":"A","text":"37"},{"id":"B","text":"41"},{"id":"C","text":"51"},{"id":"D","text":"43"}],"correct_answer":"C","explanation_correct":"51 = 3 x 17, so it has more than 2 factors and is composite. 37, 41, 43 are all prime.","explanation_incorrect":"51 = 3 x 17. It has factors 1, 3, 17, 51 — more than 2, so it is composite."},
-    {"question_id":"T04.01.Q018","concept_id":"T04.01.C02","difficulty":"exam_style","type":"mcq","question_text":"The common multiples of 4 and 6 include:","options":[{"id":"A","text":"12, 24, 36"},{"id":"B","text":"4, 6, 12"},{"id":"C","text":"2, 4, 6"},{"id":"D","text":"8, 18, 24"}],"correct_answer":"A","explanation_correct":"Multiples of 4: 4,8,12,16,20,24,28,32,36. Multiples of 6: 6,12,18,24,30,36. Common: 12, 24, 36.","explanation_incorrect":"Find multiples of both and identify common ones: 12, 24, 36..."},
-    {"question_id":"T04.01.Q019","concept_id":"T04.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The common factors of 24 and 36 are:","options":[{"id":"A","text":"1, 2, 3, 4, 6, 12"},{"id":"B","text":"1, 2, 3, 6"},{"id":"C","text":"1, 2, 4, 8, 12"},{"id":"D","text":"2, 3, 4, 6"}],"correct_answer":"A","explanation_correct":"Factors of 24: 1,2,3,4,6,8,12,24. Factors of 36: 1,2,3,4,6,9,12,18,36. Common: 1,2,3,4,6,12.","explanation_incorrect":"List factors of both and find common ones: 1, 2, 3, 4, 6, 12."},
-    {"question_id":"T04.01.Q020","concept_id":"T04.01.C04","difficulty":"exam_style","type":"fill_blank","question_text":"The digit sum of 729 is ___. Is it divisible by 3?","correct_answer":"18, yes","explanation_correct":"7+2+9=18. 18÷3=6. So 729 is divisible by 3.","explanation_incorrect":"Sum: 7+2+9=18. Since 18 is divisible by 3, so is 729."},
-    {"question_id":"T04.01.Q021","concept_id":"T04.01.C01","difficulty":"familiarity","type":"mcq","question_text":"How many factors does a prime number have?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"Many"}],"correct_answer":"B","explanation_correct":"A prime number has exactly 2 factors: 1 and itself.","explanation_incorrect":"By definition, a prime number has exactly 2 factors."},
-    {"question_id":"T04.01.Q022","concept_id":"T04.01.C02","difficulty":"familiarity","type":"mcq","question_text":"The 10th multiple of 9 is:","options":[{"id":"A","text":"90"},{"id":"B","text":"99"},{"id":"C","text":"81"},{"id":"D","text":"100"}],"correct_answer":"A","explanation_correct":"10th multiple of 9 = 9 x 10 = 90.","explanation_incorrect":"9 x 10 = 90."},
-    {"question_id":"T04.01.Q023","concept_id":"T04.01.C03","difficulty":"exam_style","type":"mcq","question_text":"Twin primes are pairs of primes that differ by 2. Which is a twin prime pair?","options":[{"id":"A","text":"11 and 13"},{"id":"B","text":"13 and 15"},{"id":"C","text":"7 and 11"},{"id":"D","text":"19 and 22"}],"correct_answer":"A","explanation_correct":"11 and 13 are both prime and differ by 2. They form a twin prime pair.","explanation_incorrect":"Both 11 and 13 are prime, and 13-11=2. This is a twin prime pair."},
-    {"question_id":"T04.01.Q024","concept_id":"T04.01.C04","difficulty":"application","type":"true_false","question_text":"A number ending in 0 is divisible by both 5 and 10.","correct_answer":"true","explanation_correct":"If a number ends in 0, it satisfies the divisibility rules for both 5 (ends in 0 or 5) and 10 (ends in 0).","explanation_incorrect":"Last digit 0 means divisible by 5 and by 10."},
-    {"question_id":"T04.01.Q025","concept_id":"T04.01.C01","difficulty":"application","type":"mcq","question_text":"What is the largest factor of 100 other than 100 itself?","options":[{"id":"A","text":"50"},{"id":"B","text":"25"},{"id":"C","text":"20"},{"id":"D","text":"10"}],"correct_answer":"A","explanation_correct":"Factors of 100: 1,2,4,5,10,20,25,50,100. Largest other than 100 is 50.","explanation_incorrect":"100÷2=50. So 50 is the largest factor besides 100 itself."},
-    {"question_id":"T04.01.Q026","concept_id":"T04.01.C03","difficulty":"familiarity","type":"mcq","question_text":"Which is the only even prime number?","options":[{"id":"A","text":"4"},{"id":"B","text":"2"},{"id":"C","text":"6"},{"id":"D","text":"8"}],"correct_answer":"B","explanation_correct":"2 is the only even prime. All other even numbers are divisible by 2 and have more than 2 factors.","explanation_incorrect":"2 is the only even prime number. Every other even number is composite."},
-    {"question_id":"T04.01.Q027","concept_id":"T04.01.C02","difficulty":"application","type":"mcq","question_text":"Is 0 a multiple of every number?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Only of 0"},{"id":"D","text":"Cannot tell"}],"correct_answer":"A","explanation_correct":"Any number x 0 = 0. So 0 is a multiple of every number.","explanation_incorrect":"n x 0 = 0 for any n. So 0 is a multiple of every number."},
-    {"question_id":"T04.01.Q028","concept_id":"T04.01.C04","difficulty":"exam_style","type":"mcq","question_text":"A number is divisible by 6 if it is divisible by:","options":[{"id":"A","text":"Both 2 and 3"},{"id":"B","text":"Both 2 and 4"},{"id":"C","text":"Both 3 and 5"},{"id":"D","text":"Only 6"}],"correct_answer":"A","explanation_correct":"6 = 2 x 3. A number divisible by both 2 and 3 is divisible by 6.","explanation_incorrect":"Since 6 = 2 x 3, check divisibility by both 2 and 3."},
-    {"question_id":"T04.01.Q029","concept_id":"T04.01.C01","difficulty":"exam_style","type":"mcq","question_text":"Find all factors of 48.","options":[{"id":"A","text":"1, 2, 3, 4, 6, 8, 12, 16, 24, 48"},{"id":"B","text":"1, 2, 3, 4, 6, 8, 12, 48"},{"id":"C","text":"1, 2, 4, 8, 16, 48"},{"id":"D","text":"2, 3, 4, 6, 8, 12, 16, 24"}],"correct_answer":"A","explanation_correct":"Factor pairs: 1x48, 2x24, 3x16, 4x12, 6x8. All factors: 1,2,3,4,6,8,12,16,24,48.","explanation_incorrect":"48: 1x48, 2x24, 3x16, 4x12, 6x8. Ten factors in total."},
-    {"question_id":"T04.01.Q030","concept_id":"T04.01.C03","difficulty":"exam_style","type":"fill_blank","question_text":"List all prime numbers between 1 and 20: ___","correct_answer":"2, 3, 5, 7, 11, 13, 17, 19","explanation_correct":"Primes from 1 to 20: 2, 3, 5, 7, 11, 13, 17, 19 (8 primes).","explanation_incorrect":"Check each: 2,3,5,7 are prime. 11,13,17,19 are prime. Others are composite."},
-    {"question_id":"T04.01.Q031","concept_id":"T04.01.C02","difficulty":"familiarity","type":"true_false","question_text":"Every multiple of 10 is also a multiple of 5.","correct_answer":"true","explanation_correct":"10 = 2 x 5, so every multiple of 10 is automatically a multiple of 5.","explanation_incorrect":"Since 10 is a multiple of 5, all multiples of 10 are also multiples of 5."},
-    {"question_id":"T04.01.Q032","concept_id":"T04.01.C04","difficulty":"familiarity","type":"mcq","question_text":"Is 123 divisible by 3?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Only by 9"},{"id":"D","text":"Cannot tell"}],"correct_answer":"A","explanation_correct":"Sum of digits: 1+2+3=6. 6 is divisible by 3, so 123 is divisible by 3.","explanation_incorrect":"Digit sum = 6, divisible by 3. So 123 ÷ 3 = 41."},
-    {"question_id":"T04.01.Q033","concept_id":"T04.01.C01","difficulty":"application","type":"mcq","question_text":"Which number has exactly 3 factors?","options":[{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"10"}],"correct_answer":"A","explanation_correct":"4 has factors: 1, 2, 4 (exactly 3). Numbers with exactly 3 factors are squares of primes.","explanation_incorrect":"Factors of 4: 1, 2, 4. That is exactly 3 factors."},
-    {"question_id":"T04.01.Q034","concept_id":"T04.01.C03","difficulty":"application","type":"mcq","question_text":"What is the sum of the first 5 prime numbers?","options":[{"id":"A","text":"28"},{"id":"B","text":"26"},{"id":"C","text":"18"},{"id":"D","text":"30"}],"correct_answer":"A","explanation_correct":"First 5 primes: 2, 3, 5, 7, 11. Sum = 2+3+5+7+11 = 28.","explanation_incorrect":"2+3+5+7+11 = 28."},
-    {"question_id":"T04.01.Q035","concept_id":"T04.01.C04","difficulty":"exam_style","type":"mcq","question_text":"Without dividing, tell if 8,430 is divisible by 2, 3, 5, and 10.","options":[{"id":"A","text":"Divisible by all four"},{"id":"B","text":"Only by 2 and 5"},{"id":"C","text":"Only by 2 and 10"},{"id":"D","text":"Only by 5 and 10"}],"correct_answer":"A","explanation_correct":"Last digit 0: divisible by 2, 5, 10. Digit sum: 8+4+3+0=15, divisible by 3. So all four.","explanation_incorrect":"Ends in 0: ÷2, ÷5, ÷10. Digit sum 15: ÷3. Divisible by all four."},
-    {"question_id":"T04.01.Q036","concept_id":"T04.01.C02","difficulty":"exam_style","type":"mcq","question_text":"What is the smallest common multiple of 3 and 5?","options":[{"id":"A","text":"15"},{"id":"B","text":"8"},{"id":"C","text":"30"},{"id":"D","text":"1"}],"correct_answer":"A","explanation_correct":"LCM of 3 and 5 = 15. Multiples of 3: 3,6,9,12,15. Multiples of 5: 5,10,15. First common: 15.","explanation_incorrect":"Smallest number divisible by both 3 and 5 is 15."},
-    {"question_id":"T04.01.Q037","concept_id":"T04.01.C01","difficulty":"familiarity","type":"mcq","question_text":"Is 7 a factor of 49?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Only if 49 is prime"},{"id":"D","text":"Cannot tell"}],"correct_answer":"A","explanation_correct":"49 ÷ 7 = 7 exactly. So 7 is a factor of 49.","explanation_incorrect":"49 = 7 x 7. Yes, 7 is a factor of 49."},
-    {"question_id":"T04.01.Q038","concept_id":"T04.01.C03","difficulty":"exam_style","type":"mcq","question_text":"Which of these numbers is NOT composite?","options":[{"id":"A","text":"25"},{"id":"B","text":"57"},{"id":"C","text":"67"},{"id":"D","text":"91"}],"correct_answer":"C","explanation_correct":"67 is prime (only factors: 1 and 67). 25=5x5, 57=3x19, 91=7x13 are composite.","explanation_incorrect":"67 has no factors other than 1 and 67. It is prime, not composite."},
-    {"question_id":"T04.01.Q039","concept_id":"T04.01.C04","difficulty":"application","type":"fill_blank","question_text":"The largest 2-digit number divisible by both 2 and 3 is ___","correct_answer":"96","explanation_correct":"Must be divisible by 6. 96÷6=16. Check: ends in 6 (even), digit sum 9+6=15 (÷3). 96 is the answer.","explanation_incorrect":"Divisible by both 2 and 3 means divisible by 6. Largest 2-digit multiple of 6 = 96."},
-    {"question_id":"T04.01.Q040","concept_id":"T04.01.C02","difficulty":"application","type":"mcq","question_text":"Which of the following is NOT a multiple of 12?","options":[{"id":"A","text":"36"},{"id":"B","text":"48"},{"id":"C","text":"56"},{"id":"D","text":"72"}],"correct_answer":"C","explanation_correct":"56 ÷ 12 = 4 remainder 8. So 56 is not a multiple of 12.","explanation_incorrect":"36=12x3, 48=12x4, 72=12x6. But 56÷12 has a remainder, so 56 is not a multiple."},
-    {"question_id":"T04.01.Q041","concept_id":"T04.01.C01","difficulty":"exam_style","type":"mcq","question_text":"A gardener has 60 plants. In how many equal rows can he arrange them?","options":[{"id":"A","text":"1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60"},{"id":"B","text":"1, 2, 3, 5, 10"},{"id":"C","text":"Only 6 and 10"},{"id":"D","text":"Any number"}],"correct_answer":"A","explanation_correct":"The number of equal rows equals the factors of 60: 1,2,3,4,5,6,10,12,15,20,30,60.","explanation_incorrect":"Each factor of 60 gives a possible number of equal rows."},
-    {"question_id":"T04.01.Q042","concept_id":"T04.01.C03","difficulty":"familiarity","type":"true_false","question_text":"All even numbers greater than 2 are composite.","correct_answer":"true","explanation_correct":"Every even number > 2 is divisible by 1, 2, and itself — at least 3 factors, making it composite.","explanation_incorrect":"Even numbers > 2 have 2 as a factor (besides 1 and themselves), so they are composite."},
-    {"question_id":"T04.01.Q043","concept_id":"T04.01.C04","difficulty":"exam_style","type":"mcq","question_text":"Is 999 divisible by 3?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Only by 9"},{"id":"D","text":"Both 3 and 9"}],"correct_answer":"D","explanation_correct":"Digit sum: 9+9+9=27. 27 is divisible by both 3 and 9. So 999 is divisible by both.","explanation_incorrect":"Sum of digits = 27, divisible by 3 and 9. So 999 is divisible by both."},
-    {"question_id":"T04.01.Q044","concept_id":"T04.01.C02","difficulty":"familiarity","type":"mcq","question_text":"The smallest multiple of any number (other than 0) is:","options":[{"id":"A","text":"The number itself"},{"id":"B","text":"0"},{"id":"C","text":"1"},{"id":"D","text":"2 times the number"}],"correct_answer":"A","explanation_correct":"The smallest positive multiple of n is n itself (n x 1 = n).","explanation_incorrect":"n x 1 = n. The number itself is its smallest positive multiple."},
-    {"question_id":"T04.01.Q045","concept_id":"T04.01.C01","difficulty":"application","type":"mcq","question_text":"What are the common factors of 12 and 18?","options":[{"id":"A","text":"1, 2, 3, 6"},{"id":"B","text":"1, 2, 3, 4, 6"},{"id":"C","text":"1, 3, 6, 9"},{"id":"D","text":"2, 3, 6"}],"correct_answer":"A","explanation_correct":"Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Common: 1,2,3,6.","explanation_incorrect":"Common factors of 12 and 18: 1, 2, 3, 6."},
-    {"question_id":"T04.01.Q046","concept_id":"T04.01.C03","difficulty":"exam_style","type":"mcq","question_text":"A number between 30 and 40 that is prime is:","options":[{"id":"A","text":"31 and 37"},{"id":"B","text":"33 and 39"},{"id":"C","text":"31, 33, 37"},{"id":"D","text":"Only 37"}],"correct_answer":"A","explanation_correct":"31 is prime, 37 is prime. 32,33,34,35,36,38,39 are all composite.","explanation_incorrect":"Between 30 and 40, only 31 and 37 are prime."},
-    {"question_id":"T04.01.Q047","concept_id":"T04.01.C04","difficulty":"familiarity","type":"mcq","question_text":"Is 245 divisible by 5?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No"},{"id":"C","text":"Only by 10"},{"id":"D","text":"Cannot tell"}],"correct_answer":"A","explanation_correct":"245 ends in 5, so it is divisible by 5. 245 ÷ 5 = 49.","explanation_incorrect":"Last digit is 5, so divisible by 5."},
-    {"question_id":"T04.01.Q048","concept_id":"T04.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The number of factors of a prime number p is always:","options":[{"id":"A","text":"2"},{"id":"B","text":"1"},{"id":"C","text":"p"},{"id":"D","text":"p-1"}],"correct_answer":"A","explanation_correct":"Every prime number has exactly 2 factors: 1 and itself.","explanation_incorrect":"By definition, primes have exactly 2 factors."},
-    {"question_id":"T04.01.Q049","concept_id":"T04.01.C02","difficulty":"exam_style","type":"mcq","question_text":"What is the 15th multiple of 6?","options":[{"id":"A","text":"90"},{"id":"B","text":"96"},{"id":"C","text":"84"},{"id":"D","text":"75"}],"correct_answer":"A","explanation_correct":"15th multiple of 6 = 6 x 15 = 90.","explanation_incorrect":"6 x 15 = 90."},
-    {"question_id":"T04.01.Q050","concept_id":"T04.01.C04","difficulty":"exam_style","type":"mcq","question_text":"A number is divisible by 15 if it is divisible by:","options":[{"id":"A","text":"Both 3 and 5"},{"id":"B","text":"Both 5 and 10"},{"id":"C","text":"Both 2 and 5"},{"id":"D","text":"Only 15"}],"correct_answer":"A","explanation_correct":"15 = 3 x 5. If a number is divisible by both 3 and 5, it is divisible by 15.","explanation_incorrect":"15 = 3 x 5, so check divisibility by both 3 and 5."}
+    {
+      "question_id": "T04.01.Q001",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following is a factor of 24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "24 ÷ 6 = 4 with no remainder. So 6 is a factor of 24.",
+      "explanation_incorrect": "A factor divides the number exactly. 24÷6=4 (no remainder), so 6 is a factor."
+    },
+    {
+      "question_id": "T04.01.Q002",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "List all factors of 18.",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 3, 6, 9, 18"
+        },
+        {
+          "id": "B",
+          "text": "1, 2, 3, 4, 6, 18"
+        },
+        {
+          "id": "C",
+          "text": "2, 3, 6, 9"
+        },
+        {
+          "id": "D",
+          "text": "1, 2, 3, 6, 18"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Factors of 18: 1x18, 2x9, 3x6. So factors are 1, 2, 3, 6, 9, 18.",
+      "explanation_incorrect": "Find factor pairs: 1x18, 2x9, 3x6. All factors: 1, 2, 3, 6, 9, 18."
+    },
+    {
+      "question_id": "T04.01.Q003",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "How many factors does 36 have? ___",
+      "correct_answer": "9",
+      "explanation_correct": "Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. That is 9 factors.",
+      "explanation_incorrect": "Factor pairs: 1x36, 2x18, 3x12, 4x9, 6x6. So 9 factors."
+    },
+    {
+      "question_id": "T04.01.Q004",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which is a multiple of 7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "27"
+        },
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "22"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "35 = 7 x 5. So 35 is a multiple of 7.",
+      "explanation_incorrect": "7 x 5 = 35. So 35 is a multiple of 7."
+    },
+    {
+      "question_id": "T04.01.Q005",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The first five multiples of 8 are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8, 16, 24, 32, 40"
+        },
+        {
+          "id": "B",
+          "text": "1, 8, 16, 24, 32"
+        },
+        {
+          "id": "C",
+          "text": "8, 16, 24, 30, 40"
+        },
+        {
+          "id": "D",
+          "text": "8, 18, 28, 38, 48"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "8x1=8, 8x2=16, 8x3=24, 8x4=32, 8x5=40.",
+      "explanation_incorrect": "Multiply 8 by 1,2,3,4,5 to get 8, 16, 24, 32, 40."
+    },
+    {
+      "question_id": "T04.01.Q006",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 150 a multiple of 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Cannot tell"
+        },
+        {
+          "id": "D",
+          "text": "Only sometimes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "150 ÷ 6 = 25 (exact). So 150 is a multiple of 6.",
+      "explanation_incorrect": "150 ÷ 6 = 25 with no remainder. Yes, it is a multiple of 6."
+    },
+    {
+      "question_id": "T04.01.Q007",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following is a prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "21"
+        },
+        {
+          "id": "C",
+          "text": "23"
+        },
+        {
+          "id": "D",
+          "text": "27"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "23 has only two factors: 1 and 23. So it is prime. 15=3x5, 21=3x7, 27=3x9 are composite.",
+      "explanation_incorrect": "23 is divisible only by 1 and 23, making it prime."
+    },
+    {
+      "question_id": "T04.01.Q008",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 1 a prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No, it is composite"
+        },
+        {
+          "id": "C",
+          "text": "No, it is neither prime nor composite"
+        },
+        {
+          "id": "D",
+          "text": "It depends"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "1 has only one factor (itself). Prime numbers must have exactly 2 factors. So 1 is neither prime nor composite.",
+      "explanation_incorrect": "1 is special: it has only one factor (1), so it is neither prime nor composite."
+    },
+    {
+      "question_id": "T04.01.Q009",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which is the smallest prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2 is the smallest prime number. It has exactly two factors: 1 and 2. (1 is not prime.)",
+      "explanation_incorrect": "2 is the smallest and only even prime number."
+    },
+    {
+      "question_id": "T04.01.Q010",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many prime numbers are there between 10 and 20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Primes between 10 and 20: 11, 13, 17, 19. That is 4 prime numbers.",
+      "explanation_incorrect": "Check each: 11(prime), 12(no), 13(prime), 14(no), 15(no), 16(no), 17(prime), 18(no), 19(prime). Four primes."
+    },
+    {
+      "question_id": "T04.01.Q011",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 456 divisible by 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, because last digit is 6 (even)"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Yes, because sum of digits is even"
+        },
+        {
+          "id": "D",
+          "text": "Cannot tell"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A number is divisible by 2 if its last digit is even. 456 ends in 6 (even), so it is divisible by 2.",
+      "explanation_incorrect": "Divisibility by 2: check last digit. 6 is even, so 456 is divisible by 2."
+    },
+    {
+      "question_id": "T04.01.Q012",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 345 divisible by 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Cannot tell"
+        },
+        {
+          "id": "D",
+          "text": "Only if divided by 9 first"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of digits: 3+4+5=12. 12 is divisible by 3, so 345 is divisible by 3.",
+      "explanation_incorrect": "Sum of digits = 12, which is divisible by 3. So 345 is divisible by 3."
+    },
+    {
+      "question_id": "T04.01.Q013",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 785 divisible by 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, last digit is 5"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Yes, last digit is 0"
+        },
+        {
+          "id": "D",
+          "text": "Cannot tell"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A number is divisible by 5 if its last digit is 0 or 5. 785 ends in 5, so it is divisible by 5.",
+      "explanation_incorrect": "Last digit 5 means divisible by 5. 785 ÷ 5 = 157."
+    },
+    {
+      "question_id": "T04.01.Q014",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 570 divisible by both 2 and 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, it is divisible by 10"
+        },
+        {
+          "id": "B",
+          "text": "Only by 2"
+        },
+        {
+          "id": "C",
+          "text": "Only by 5"
+        },
+        {
+          "id": "D",
+          "text": "Neither"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "570 ends in 0, so it is divisible by both 2 and 5 (and hence by 10).",
+      "explanation_incorrect": "Last digit 0: divisible by 2, 5, and 10."
+    },
+    {
+      "question_id": "T04.01.Q015",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which number is divisible by both 3 and 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "33"
+        },
+        {
+          "id": "C",
+          "text": "45"
+        },
+        {
+          "id": "D",
+          "text": "50"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "45: last digit 5 (÷5 ok). Sum of digits=4+5=9 (÷3 ok). So 45 is divisible by both 3 and 5.",
+      "explanation_incorrect": "45 ends in 5 (divisible by 5) and digit sum is 9 (divisible by 3)."
+    },
+    {
+      "question_id": "T04.01.Q016",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Every number is a factor of itself.",
+      "correct_answer": "true",
+      "explanation_correct": "Any number divided by itself gives 1 (no remainder). So every number is a factor of itself.",
+      "explanation_incorrect": "n ÷ n = 1. So n is always a factor of n."
+    },
+    {
+      "question_id": "T04.01.Q017",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following is composite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "37"
+        },
+        {
+          "id": "B",
+          "text": "41"
+        },
+        {
+          "id": "C",
+          "text": "51"
+        },
+        {
+          "id": "D",
+          "text": "43"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "51 = 3 x 17, so it has more than 2 factors and is composite. 37, 41, 43 are all prime.",
+      "explanation_incorrect": "51 = 3 x 17. It has factors 1, 3, 17, 51 — more than 2, so it is composite."
+    },
+    {
+      "question_id": "T04.01.Q018",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The common multiples of 4 and 6 include:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12, 24, 36"
+        },
+        {
+          "id": "B",
+          "text": "4, 6, 12"
+        },
+        {
+          "id": "C",
+          "text": "2, 4, 6"
+        },
+        {
+          "id": "D",
+          "text": "8, 18, 24"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Multiples of 4: 4,8,12,16,20,24,28,32,36. Multiples of 6: 6,12,18,24,30,36. Common: 12, 24, 36.",
+      "explanation_incorrect": "Find multiples of both and identify common ones: 12, 24, 36..."
+    },
+    {
+      "question_id": "T04.01.Q019",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The common factors of 24 and 36 are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 3, 4, 6, 12"
+        },
+        {
+          "id": "B",
+          "text": "1, 2, 3, 6"
+        },
+        {
+          "id": "C",
+          "text": "1, 2, 4, 8, 12"
+        },
+        {
+          "id": "D",
+          "text": "2, 3, 4, 6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Factors of 24: 1,2,3,4,6,8,12,24. Factors of 36: 1,2,3,4,6,9,12,18,36. Common: 1,2,3,4,6,12.",
+      "explanation_incorrect": "List factors of both and find common ones: 1, 2, 3, 4, 6, 12."
+    },
+    {
+      "question_id": "T04.01.Q020",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The digit sum of 729 is ___. Is it divisible by 3?",
+      "correct_answer": "18, yes",
+      "explanation_correct": "7+2+9=18. 18÷3=6. So 729 is divisible by 3.",
+      "explanation_incorrect": "Sum: 7+2+9=18. Since 18 is divisible by 3, so is 729."
+    },
+    {
+      "question_id": "T04.01.Q021",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many factors does a prime number have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Many"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A prime number has exactly 2 factors: 1 and itself.",
+      "explanation_incorrect": "By definition, a prime number has exactly 2 factors."
+    },
+    {
+      "question_id": "T04.01.Q022",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The 10th multiple of 9 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "90"
+        },
+        {
+          "id": "B",
+          "text": "99"
+        },
+        {
+          "id": "C",
+          "text": "81"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10th multiple of 9 = 9 x 10 = 90.",
+      "explanation_incorrect": "9 x 10 = 90."
+    },
+    {
+      "question_id": "T04.01.Q023",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Twin primes are pairs of primes that differ by 2. Which is a twin prime pair?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11 and 13"
+        },
+        {
+          "id": "B",
+          "text": "13 and 15"
+        },
+        {
+          "id": "C",
+          "text": "7 and 11"
+        },
+        {
+          "id": "D",
+          "text": "19 and 22"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "11 and 13 are both prime and differ by 2. They form a twin prime pair.",
+      "explanation_incorrect": "Both 11 and 13 are prime, and 13-11=2. This is a twin prime pair."
+    },
+    {
+      "question_id": "T04.01.Q024",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A number ending in 0 is divisible by both 5 and 10.",
+      "correct_answer": "true",
+      "explanation_correct": "If a number ends in 0, it satisfies the divisibility rules for both 5 (ends in 0 or 5) and 10 (ends in 0).",
+      "explanation_incorrect": "Last digit 0 means divisible by 5 and by 10."
+    },
+    {
+      "question_id": "T04.01.Q025",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the largest factor of 100 other than 100 itself?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Factors of 100: 1,2,4,5,10,20,25,50,100. Largest other than 100 is 50.",
+      "explanation_incorrect": "100÷2=50. So 50 is the largest factor besides 100 itself."
+    },
+    {
+      "question_id": "T04.01.Q026",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which is the only even prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2 is the only even prime. All other even numbers are divisible by 2 and have more than 2 factors.",
+      "explanation_incorrect": "2 is the only even prime number. Every other even number is composite."
+    },
+    {
+      "question_id": "T04.01.Q027",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 0 a multiple of every number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Only of 0"
+        },
+        {
+          "id": "D",
+          "text": "Cannot tell"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Any number x 0 = 0. So 0 is a multiple of every number.",
+      "explanation_incorrect": "n x 0 = 0 for any n. So 0 is a multiple of every number."
+    },
+    {
+      "question_id": "T04.01.Q028",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A number is divisible by 6 if it is divisible by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both 2 and 3"
+        },
+        {
+          "id": "B",
+          "text": "Both 2 and 4"
+        },
+        {
+          "id": "C",
+          "text": "Both 3 and 5"
+        },
+        {
+          "id": "D",
+          "text": "Only 6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6 = 2 x 3. A number divisible by both 2 and 3 is divisible by 6.",
+      "explanation_incorrect": "Since 6 = 2 x 3, check divisibility by both 2 and 3."
+    },
+    {
+      "question_id": "T04.01.Q029",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Find all factors of 48.",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 3, 4, 6, 8, 12, 16, 24, 48"
+        },
+        {
+          "id": "B",
+          "text": "1, 2, 3, 4, 6, 8, 12, 48"
+        },
+        {
+          "id": "C",
+          "text": "1, 2, 4, 8, 16, 48"
+        },
+        {
+          "id": "D",
+          "text": "2, 3, 4, 6, 8, 12, 16, 24"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Factor pairs: 1x48, 2x24, 3x16, 4x12, 6x8. All factors: 1,2,3,4,6,8,12,16,24,48.",
+      "explanation_incorrect": "48: 1x48, 2x24, 3x16, 4x12, 6x8. Ten factors in total."
+    },
+    {
+      "question_id": "T04.01.Q030",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "List all prime numbers between 1 and 20: ___",
+      "correct_answer": "2, 3, 5, 7, 11, 13, 17, 19",
+      "explanation_correct": "Primes from 1 to 20: 2, 3, 5, 7, 11, 13, 17, 19 (8 primes).",
+      "explanation_incorrect": "Check each: 2,3,5,7 are prime. 11,13,17,19 are prime. Others are composite."
+    },
+    {
+      "question_id": "T04.01.Q031",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Every multiple of 10 is also a multiple of 5.",
+      "correct_answer": "true",
+      "explanation_correct": "10 = 2 x 5, so every multiple of 10 is automatically a multiple of 5.",
+      "explanation_incorrect": "Since 10 is a multiple of 5, all multiples of 10 are also multiples of 5."
+    },
+    {
+      "question_id": "T04.01.Q032",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 123 divisible by 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Only by 9"
+        },
+        {
+          "id": "D",
+          "text": "Cannot tell"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of digits: 1+2+3=6. 6 is divisible by 3, so 123 is divisible by 3.",
+      "explanation_incorrect": "Digit sum = 6, divisible by 3. So 123 ÷ 3 = 41."
+    },
+    {
+      "question_id": "T04.01.Q033",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which number has exactly 3 factors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4 has factors: 1, 2, 4 (exactly 3). Numbers with exactly 3 factors are squares of primes.",
+      "explanation_incorrect": "Factors of 4: 1, 2, 4. That is exactly 3 factors."
+    },
+    {
+      "question_id": "T04.01.Q034",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the sum of the first 5 prime numbers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "26"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "First 5 primes: 2, 3, 5, 7, 11. Sum = 2+3+5+7+11 = 28.",
+      "explanation_incorrect": "2+3+5+7+11 = 28."
+    },
+    {
+      "question_id": "T04.01.Q035",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Without dividing, tell if 8,430 is divisible by 2, 3, 5, and 10.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Divisible by all four"
+        },
+        {
+          "id": "B",
+          "text": "Only by 2 and 5"
+        },
+        {
+          "id": "C",
+          "text": "Only by 2 and 10"
+        },
+        {
+          "id": "D",
+          "text": "Only by 5 and 10"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Last digit 0: divisible by 2, 5, 10. Digit sum: 8+4+3+0=15, divisible by 3. So all four.",
+      "explanation_incorrect": "Ends in 0: ÷2, ÷5, ÷10. Digit sum 15: ÷3. Divisible by all four."
+    },
+    {
+      "question_id": "T04.01.Q036",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the smallest common multiple of 3 and 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "LCM of 3 and 5 = 15. Multiples of 3: 3,6,9,12,15. Multiples of 5: 5,10,15. First common: 15.",
+      "explanation_incorrect": "Smallest number divisible by both 3 and 5 is 15."
+    },
+    {
+      "question_id": "T04.01.Q037",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 7 a factor of 49?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Only if 49 is prime"
+        },
+        {
+          "id": "D",
+          "text": "Cannot tell"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "49 ÷ 7 = 7 exactly. So 7 is a factor of 49.",
+      "explanation_incorrect": "49 = 7 x 7. Yes, 7 is a factor of 49."
+    },
+    {
+      "question_id": "T04.01.Q038",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of these numbers is NOT composite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "57"
+        },
+        {
+          "id": "C",
+          "text": "67"
+        },
+        {
+          "id": "D",
+          "text": "91"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "67 is prime (only factors: 1 and 67). 25=5x5, 57=3x19, 91=7x13 are composite.",
+      "explanation_incorrect": "67 has no factors other than 1 and 67. It is prime, not composite."
+    },
+    {
+      "question_id": "T04.01.Q039",
+      "concept_id": "T04.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The largest 2-digit number divisible by both 2 and 3 is ___",
+      "correct_answer": "96",
+      "explanation_correct": "Must be divisible by 6. 96÷6=16. Check: ends in 6 (even), digit sum 9+6=15 (÷3). 96 is the answer.",
+      "explanation_incorrect": "Divisible by both 2 and 3 means divisible by 6. Largest 2-digit multiple of 6 = 96."
+    },
+    {
+      "question_id": "T04.01.Q040",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of the following is NOT a multiple of 12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "36"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "56"
+        },
+        {
+          "id": "D",
+          "text": "72"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "56 ÷ 12 = 4 remainder 8. So 56 is not a multiple of 12.",
+      "explanation_incorrect": "36=12x3, 48=12x4, 72=12x6. But 56÷12 has a remainder, so 56 is not a multiple."
+    },
+    {
+      "question_id": "T04.01.Q041",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A gardener has 60 plants. In how many equal rows can he arrange them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60"
+        },
+        {
+          "id": "B",
+          "text": "1, 2, 3, 5, 10"
+        },
+        {
+          "id": "C",
+          "text": "Only 6 and 10"
+        },
+        {
+          "id": "D",
+          "text": "Any number"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The number of equal rows equals the factors of 60: 1,2,3,4,5,6,10,12,15,20,30,60.",
+      "explanation_incorrect": "Each factor of 60 gives a possible number of equal rows."
+    },
+    {
+      "question_id": "T04.01.Q042",
+      "concept_id": "T04.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "All even numbers greater than 2 are composite.",
+      "correct_answer": "true",
+      "explanation_correct": "Every even number > 2 is divisible by 1, 2, and itself — at least 3 factors, making it composite.",
+      "explanation_incorrect": "Even numbers > 2 have 2 as a factor (besides 1 and themselves), so they are composite."
+    },
+    {
+      "question_id": "T04.01.Q043",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 999 divisible by 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Only by 9"
+        },
+        {
+          "id": "D",
+          "text": "Both 3 and 9"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Digit sum: 9+9+9=27. 27 is divisible by both 3 and 9. So 999 is divisible by both.",
+      "explanation_incorrect": "Sum of digits = 27, divisible by 3 and 9. So 999 is divisible by both."
+    },
+    {
+      "question_id": "T04.01.Q044",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The smallest multiple of any number (other than 0) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number itself"
+        },
+        {
+          "id": "B",
+          "text": "0"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "2 times the number"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The smallest positive multiple of n is n itself (n x 1 = n).",
+      "explanation_incorrect": "n x 1 = n. The number itself is its smallest positive multiple."
+    },
+    {
+      "question_id": "T04.01.Q045",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What are the common factors of 12 and 18?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 3, 6"
+        },
+        {
+          "id": "B",
+          "text": "1, 2, 3, 4, 6"
+        },
+        {
+          "id": "C",
+          "text": "1, 3, 6, 9"
+        },
+        {
+          "id": "D",
+          "text": "2, 3, 6"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Common: 1,2,3,6.",
+      "explanation_incorrect": "Common factors of 12 and 18: 1, 2, 3, 6."
+    },
+    {
+      "question_id": "T04.01.Q046",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A number between 30 and 40 that is prime is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "31 and 37"
+        },
+        {
+          "id": "B",
+          "text": "33 and 39"
+        },
+        {
+          "id": "C",
+          "text": "31, 33, 37"
+        },
+        {
+          "id": "D",
+          "text": "Only 37"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "31 is prime, 37 is prime. 32,33,34,35,36,38,39 are all composite.",
+      "explanation_incorrect": "Between 30 and 40, only 31 and 37 are prime."
+    },
+    {
+      "question_id": "T04.01.Q047",
+      "concept_id": "T04.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Is 245 divisible by 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        },
+        {
+          "id": "C",
+          "text": "Only by 10"
+        },
+        {
+          "id": "D",
+          "text": "Cannot tell"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "245 ends in 5, so it is divisible by 5. 245 ÷ 5 = 49.",
+      "explanation_incorrect": "Last digit is 5, so divisible by 5."
+    },
+    {
+      "question_id": "T04.01.Q048",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The number of factors of a prime number p is always:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "p"
+        },
+        {
+          "id": "D",
+          "text": "p-1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Every prime number has exactly 2 factors: 1 and itself.",
+      "explanation_incorrect": "By definition, primes have exactly 2 factors."
+    },
+    {
+      "question_id": "T04.01.Q049",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is the 15th multiple of 6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "90"
+        },
+        {
+          "id": "B",
+          "text": "96"
+        },
+        {
+          "id": "C",
+          "text": "84"
+        },
+        {
+          "id": "D",
+          "text": "75"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "15th multiple of 6 = 6 x 15 = 90.",
+      "explanation_incorrect": "6 x 15 = 90."
+    },
+    {
+      "question_id": "T04.01.Q050",
+      "concept_id": "T04.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A number is divisible by 15 if it is divisible by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both 3 and 5"
+        },
+        {
+          "id": "B",
+          "text": "Both 5 and 10"
+        },
+        {
+          "id": "C",
+          "text": "Both 2 and 5"
+        },
+        {
+          "id": "D",
+          "text": "Only 15"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "15 = 3 x 5. If a number is divisible by both 3 and 5, it is divisible by 15.",
+      "explanation_incorrect": "15 = 3 x 5, so check divisibility by both 3 and 5."
+    }
   ]
 }

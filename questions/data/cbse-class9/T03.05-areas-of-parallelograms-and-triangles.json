@@ -1,62 +1,1203 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 9, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 9,
+    "subject": "Mathematics"
+  },
   "topic_id": "T03.05",
   "topic_name": "Areas of Parallelograms and Triangles",
   "canonical_explanation": {
     "text": "Parallelograms on the same base and between the same parallels have equal area. The area of a parallelogram equals base × height. Triangles on the same base and between the same parallels have equal area. A triangle's area is half the area of a parallelogram on the same base and between the same parallels. A median of a triangle divides it into two triangles of equal area.",
-    "rules": ["Area of parallelogram = base × height","Parallelograms on same base and between same parallels have equal area","Triangles on same base and between same parallels have equal area","Triangle area = (1/2) × base × height","A median divides a triangle into two equal-area triangles"]
+    "rules": [
+      "Area of parallelogram = base × height",
+      "Parallelograms on same base and between same parallels have equal area",
+      "Triangles on same base and between same parallels have equal area",
+      "Triangle area = (1/2) × base × height",
+      "A median divides a triangle into two equal-area triangles"
+    ]
   },
   "questions": [
-    {"question_id":"T03.05.Q001","concept_id":"T03.05.C01","difficulty":"familiarity","type":"mcq","question_text":"The area of a parallelogram with base 8 cm and height 5 cm is:","options":[{"id":"A","text":"13 cm²"},{"id":"B","text":"40 cm²"},{"id":"C","text":"20 cm²"},{"id":"D","text":"80 cm²"}],"correct_answer":"B","explanation_correct":"Area = base × height = 8 × 5 = 40 cm².","explanation_incorrect":"Area of parallelogram = base × height, not base + height or base × height / 2."},
-    {"question_id":"T03.05.Q002","concept_id":"T03.05.C01","difficulty":"familiarity","type":"mcq","question_text":"Two parallelograms are on the same base and between the same parallels. Their areas are:","options":[{"id":"A","text":"In ratio 1:2"},{"id":"B","text":"Equal"},{"id":"C","text":"Different"},{"id":"D","text":"Cannot be determined"}],"correct_answer":"B","explanation_correct":"Parallelograms on the same base and between the same parallels have equal areas, regardless of the shape of the parallelograms.","explanation_incorrect":"This is a key theorem: same base + same parallels = same area for parallelograms."},
-    {"question_id":"T03.05.Q003","concept_id":"T03.05.C02","difficulty":"familiarity","type":"mcq","question_text":"Two triangles on the same base and between the same parallels have:","options":[{"id":"A","text":"Equal perimeters"},{"id":"B","text":"Equal areas"},{"id":"C","text":"Equal sides"},{"id":"D","text":"Equal angles"}],"correct_answer":"B","explanation_correct":"Triangles on the same base and between the same parallels have equal areas (each has the same base and same height).","explanation_incorrect":"Same base + same height (between same parallels) = same area. Other measurements may differ."},
-    {"question_id":"T03.05.Q004","concept_id":"T03.05.C03","difficulty":"familiarity","type":"true_false","question_text":"A median of a triangle divides it into two triangles of equal area.","correct_answer":"true","explanation_correct":"A median connects a vertex to the midpoint of the opposite side. The two triangles share the same height from the vertex, and their bases are equal (the median bisects the base). So both have equal area.","explanation_incorrect":"The median bisects the base, giving two triangles with equal bases and the same height, hence equal areas."},
-    {"question_id":"T03.05.Q005","concept_id":"T03.05.C01","difficulty":"familiarity","type":"fill_blank","question_text":"The area of a parallelogram is base × ___. ","correct_answer":"height","explanation_correct":"Area of parallelogram = base × height (the perpendicular distance between the base and the opposite side).","explanation_incorrect":"The height is the perpendicular distance from the base to the opposite parallel side."},
-    {"question_id":"T03.05.Q006","concept_id":"T03.05.C02","difficulty":"familiarity","type":"mcq","question_text":"The area of a triangle is what fraction of the area of a parallelogram on the same base and between the same parallels?","options":[{"id":"A","text":"1/4"},{"id":"B","text":"1/3"},{"id":"C","text":"1/2"},{"id":"D","text":"Equal"}],"correct_answer":"C","explanation_correct":"A triangle on the same base and between the same parallels has area = (1/2) × base × height, while the parallelogram has area = base × height. So the triangle's area is half.","explanation_incorrect":"Triangle area = (1/2) × parallelogram area when they share the same base and lie between the same parallels."},
-    {"question_id":"T03.05.Q007","concept_id":"T03.05.C01","difficulty":"familiarity","type":"mcq","question_text":"ABCD is a parallelogram with AB = 10 cm and height = 6 cm. Its area is:","options":[{"id":"A","text":"30 cm²"},{"id":"B","text":"60 cm²"},{"id":"C","text":"16 cm²"},{"id":"D","text":"120 cm²"}],"correct_answer":"B","explanation_correct":"Area = AB × height = 10 × 6 = 60 cm².","explanation_incorrect":"Parallelogram area = base × height = 10 × 6 = 60 cm²."},
-    {"question_id":"T03.05.Q008","concept_id":"T03.05.C03","difficulty":"familiarity","type":"mcq","question_text":"In triangle ABC, D is the midpoint of BC. Then area of triangle ABD : area of triangle ACD =","options":[{"id":"A","text":"1:2"},{"id":"B","text":"2:1"},{"id":"C","text":"1:1"},{"id":"D","text":"Cannot be determined"}],"correct_answer":"C","explanation_correct":"AD is a median. A median divides a triangle into two triangles of equal area. So the ratio is 1:1.","explanation_incorrect":"The median AD divides triangle ABC into two triangles of equal area."},
-    {"question_id":"T03.05.Q009","concept_id":"T03.05.C01","difficulty":"familiarity","type":"true_false","question_text":"If two parallelograms have the same area, they must be on the same base.","correct_answer":"false","explanation_correct":"Two parallelograms can have equal areas with different bases and heights (e.g., 4×5 = 2×10 = 20). They need not be on the same base.","explanation_incorrect":"Equal area does not require the same base. Different base-height combinations can give the same area."},
-    {"question_id":"T03.05.Q010","concept_id":"T03.05.C02","difficulty":"familiarity","type":"fill_blank","question_text":"A triangle with base 12 cm and height 8 cm has area = ___ cm².","correct_answer":"48","explanation_correct":"Area = (1/2) × 12 × 8 = 48 cm².","explanation_incorrect":"Triangle area = (1/2) × base × height = (1/2)(12)(8) = 48 cm²."},
-    {"question_id":"T03.05.Q011","concept_id":"T03.05.C01","difficulty":"application","type":"mcq","question_text":"ABCD and ABEF are two parallelograms on the same base AB and between the same parallels AB and DE. If area of ABCD = 50 cm², then area of ABEF =","options":[{"id":"A","text":"25 cm²"},{"id":"B","text":"50 cm²"},{"id":"C","text":"100 cm²"},{"id":"D","text":"Cannot be determined"}],"correct_answer":"B","explanation_correct":"Parallelograms on the same base and between the same parallels have equal area. Area of ABEF = 50 cm².","explanation_incorrect":"Same base + same parallels = same area. ABEF = ABCD = 50 cm²."},
-    {"question_id":"T03.05.Q012","concept_id":"T03.05.C02","difficulty":"application","type":"mcq","question_text":"Triangles ABC and DBC are on the same base BC and between the same parallels BC and AD. If area of ABC = 30 cm², then area of DBC =","options":[{"id":"A","text":"15 cm²"},{"id":"B","text":"30 cm²"},{"id":"C","text":"60 cm²"},{"id":"D","text":"45 cm²"}],"correct_answer":"B","explanation_correct":"Triangles on the same base and between the same parallels have equal areas. Area of DBC = 30 cm².","explanation_incorrect":"Same base + same parallels = equal triangle areas. Area DBC = 30 cm²."},
-    {"question_id":"T03.05.Q013","concept_id":"T03.05.C01","difficulty":"application","type":"mcq","question_text":"Parallelogram ABCD has base AB = 14 cm. If its area equals the area of a rectangle with dimensions 14 cm × 9 cm, the height of the parallelogram is:","options":[{"id":"A","text":"7 cm"},{"id":"B","text":"9 cm"},{"id":"C","text":"14 cm"},{"id":"D","text":"18 cm"}],"correct_answer":"B","explanation_correct":"Area of rectangle = 14 × 9 = 126 cm². Parallelogram area = base × height = 14 × h = 126. So h = 9 cm.","explanation_incorrect":"Rectangle area = 126 cm². Parallelogram: 14 × h = 126, so h = 9 cm."},
-    {"question_id":"T03.05.Q014","concept_id":"T03.05.C03","difficulty":"application","type":"mcq","question_text":"In triangle ABC, medians AD, BE, CF intersect at G (centroid). The area of triangle BGD is what fraction of area of ABC?","options":[{"id":"A","text":"1/2"},{"id":"B","text":"1/3"},{"id":"C","text":"1/6"},{"id":"D","text":"1/4"}],"correct_answer":"C","explanation_correct":"The three medians divide the triangle into 6 smaller triangles of equal area. So each has area = (1/6) × area of ABC.","explanation_incorrect":"Three medians divide any triangle into 6 equal-area triangles. Each small triangle = (1/6) of the whole."},
-    {"question_id":"T03.05.Q015","concept_id":"T03.05.C02","difficulty":"application","type":"fill_blank","question_text":"ABCD is a parallelogram. Triangle ABD has area 35 cm². The area of parallelogram ABCD is ___ cm².","correct_answer":"70","explanation_correct":"A diagonal of a parallelogram divides it into two triangles of equal area. Area of ABCD = 2 × 35 = 70 cm².","explanation_incorrect":"The diagonal BD splits the parallelogram into two equal triangles. Total area = 2 × 35 = 70 cm²."},
-    {"question_id":"T03.05.Q016","concept_id":"T03.05.C01","difficulty":"application","type":"mcq","question_text":"A parallelogram and a rectangle are on the same base and between the same parallels. Which has greater area?","options":[{"id":"A","text":"The parallelogram"},{"id":"B","text":"The rectangle"},{"id":"C","text":"Both have equal area"},{"id":"D","text":"Depends on dimensions"}],"correct_answer":"C","explanation_correct":"A rectangle is a special parallelogram. Any parallelogram on the same base and between the same parallels has equal area, including rectangles.","explanation_incorrect":"Same base + same parallels = same area, whether the shape is a general parallelogram or a rectangle."},
-    {"question_id":"T03.05.Q017","concept_id":"T03.05.C02","difficulty":"application","type":"mcq","question_text":"Triangle ABC has area 24 cm². If D is the midpoint of BC, area of triangle ABD is:","options":[{"id":"A","text":"24 cm²"},{"id":"B","text":"12 cm²"},{"id":"C","text":"6 cm²"},{"id":"D","text":"8 cm²"}],"correct_answer":"B","explanation_correct":"AD is a median. It divides triangle ABC into two equal-area triangles. Area of ABD = 24/2 = 12 cm².","explanation_incorrect":"Median divides the triangle into equal halves. Area ABD = 24/2 = 12 cm²."},
-    {"question_id":"T03.05.Q018","concept_id":"T03.05.C03","difficulty":"application","type":"true_false","question_text":"If two triangles have equal areas and equal bases, they must lie between the same parallels.","correct_answer":"true","explanation_correct":"Equal areas with equal bases means equal heights. If the base is the same line, then the vertices lie on lines at the same perpendicular distance from the base, meaning between the same parallels.","explanation_incorrect":"Equal area + same base → same height → vertices at equal distance from base → between the same parallels."},
-    {"question_id":"T03.05.Q019","concept_id":"T03.05.C01","difficulty":"application","type":"mcq","question_text":"ABCD is a parallelogram with area 80 cm². P is a point on AB. Area of triangle DPC is:","options":[{"id":"A","text":"40 cm²"},{"id":"B","text":"80 cm²"},{"id":"C","text":"20 cm²"},{"id":"D","text":"60 cm²"}],"correct_answer":"A","explanation_correct":"Triangle DPC shares base DC with parallelogram ABCD and lies between the same parallels AB and DC. Area of DPC = (1/2) × area of ABCD = 40 cm².","explanation_incorrect":"Triangle DPC has base DC (same as parallelogram base) and same height. Its area = half the parallelogram = 40 cm²."},
-    {"question_id":"T03.05.Q020","concept_id":"T03.05.C02","difficulty":"application","type":"mcq","question_text":"In a parallelogram ABCD, E is the midpoint of AD. Area of triangle ABE : area of parallelogram ABCD =","options":[{"id":"A","text":"1:2"},{"id":"B","text":"1:4"},{"id":"C","text":"1:3"},{"id":"D","text":"1:8"}],"correct_answer":"B","explanation_correct":"Triangle ABE has base AE = AD/2 and height equal to the distance between AB and DC. Area of ABE = (1/2)(AD/2)(h) = (1/4)(AD × h) = (1/4)(area of ABCD).","explanation_incorrect":"Area of ABE = (1/2) × AE × height = (1/2)(AD/2)(h) = (1/4) × parallelogram area. Ratio = 1:4."},
-    {"question_id":"T03.05.Q021","concept_id":"T03.05.C01","difficulty":"exam_style","type":"mcq","question_text":"P and Q are points on sides AB and DC of parallelogram ABCD. If area of triangle APD = area of triangle BQC, then:","options":[{"id":"A","text":"PQ ∥ AB"},{"id":"B","text":"PQ ∥ AD"},{"id":"C","text":"This is always true for any P on AB and Q on DC"},{"id":"D","text":"P and Q must be midpoints"}],"correct_answer":"C","explanation_correct":"In parallelogram ABCD, triangles APD and BQC both lie between parallels AB and DC. Triangle APD has base AD and height from P to AD; triangle BQC has base BC and height from Q to BC. Since AD = BC and both heights equal the distance between AB and DC, the areas are always equal.","explanation_incorrect":"Both triangles have bases on opposite sides of equal length and the same height. This is always true."},
-    {"question_id":"T03.05.Q022","concept_id":"T03.05.C02","difficulty":"exam_style","type":"mcq","question_text":"ABCD is a quadrilateral. AC divides it into triangles ABC and ACD. If ABC and ACD have equal areas, then:","options":[{"id":"A","text":"ABCD is a parallelogram"},{"id":"B","text":"AC bisects BD"},{"id":"C","text":"AC is a median of both triangles"},{"id":"D","text":"BD is bisected by AC"}],"correct_answer":"D","explanation_correct":"If triangles ABC and ACD have equal areas with the same base AC, the perpendicular distances from B and D to AC are equal. This means AC bisects BD (midpoint of BD lies on AC).","explanation_incorrect":"Equal areas on the same base means equal heights. B and D are equidistant from AC, implying AC bisects BD."},
-    {"question_id":"T03.05.Q023","concept_id":"T03.05.C03","difficulty":"exam_style","type":"mcq","question_text":"In triangle ABC, E is the midpoint of median AD. Area of triangle ABE : area of triangle ABC =","options":[{"id":"A","text":"1:2"},{"id":"B","text":"1:4"},{"id":"C","text":"1:3"},{"id":"D","text":"1:6"}],"correct_answer":"B","explanation_correct":"AD is a median so area of ABD = (1/2) area of ABC. E is midpoint of AD, so BE is a median of triangle ABD. Area of ABE = (1/2) area of ABD = (1/4) area of ABC. Ratio = 1:4.","explanation_incorrect":"Median halves the area twice: ABD = (1/2)ABC, then ABE = (1/2)ABD = (1/4)ABC."},
-    {"question_id":"T03.05.Q024","concept_id":"T03.05.C01","difficulty":"exam_style","type":"fill_blank","question_text":"ABCD is a parallelogram with base 15 cm and area 120 cm². Its height is ___ cm.","correct_answer":"8","explanation_correct":"Area = base × height. 120 = 15 × h. h = 8 cm.","explanation_incorrect":"Height = area / base = 120/15 = 8 cm."},
-    {"question_id":"T03.05.Q025","concept_id":"T03.05.C02","difficulty":"exam_style","type":"mcq","question_text":"ABCD is a parallelogram. P is any point inside it. Then area(APB) + area(CPD) =","options":[{"id":"A","text":"(1/2) area(ABCD)"},{"id":"B","text":"(1/3) area(ABCD)"},{"id":"C","text":"(1/4) area(ABCD)"},{"id":"D","text":"area(ABCD)"}],"correct_answer":"A","explanation_correct":"For any point P inside parallelogram ABCD: area(APB) + area(CPD) = area(BPC) + area(APD) = (1/2) area(ABCD). This follows from the fact that opposite triangle pairs share the same total height.","explanation_incorrect":"This is a standard result: opposite triangle pairs formed by an interior point sum to half the parallelogram's area."},
-    {"question_id":"T03.05.Q026","concept_id":"T03.05.C03","difficulty":"exam_style","type":"true_false","question_text":"The three medians of a triangle divide it into 6 triangles of equal area.","correct_answer":"true","explanation_correct":"Each median divides the triangle into two equal-area parts. The three medians together create 6 triangles, each with area = (1/6) of the original triangle.","explanation_incorrect":"This is a well-known result: three medians create 6 equal-area triangles meeting at the centroid."},
-    {"question_id":"T03.05.Q027","concept_id":"T03.05.C01","difficulty":"exam_style","type":"mcq","question_text":"Two parallelograms ABCD and ABPQ are on the same base AB. ABCD has height 10 cm and ABPQ has height 10 cm. If AB = 7 cm, then:","options":[{"id":"A","text":"Area ABCD = 70 cm², Area ABPQ = 70 cm²"},{"id":"B","text":"Area ABCD = 35 cm², Area ABPQ = 35 cm²"},{"id":"C","text":"Their areas are equal but unknown"},{"id":"D","text":"Their areas are different"}],"correct_answer":"A","explanation_correct":"Same base (7 cm) and same height (10 cm) means same area. Each = 7 × 10 = 70 cm².","explanation_incorrect":"Same base and height: both areas = 7 × 10 = 70 cm²."},
-    {"question_id":"T03.05.Q028","concept_id":"T03.05.C02","difficulty":"familiarity","type":"mcq","question_text":"If a triangle and a parallelogram are on the same base and between the same parallels, and the parallelogram has area 60 cm², the triangle has area:","options":[{"id":"A","text":"60 cm²"},{"id":"B","text":"30 cm²"},{"id":"C","text":"120 cm²"},{"id":"D","text":"15 cm²"}],"correct_answer":"B","explanation_correct":"Triangle area = (1/2) × parallelogram area = 30 cm².","explanation_incorrect":"Triangle = half of parallelogram on same base and between same parallels = 30 cm²."},
-    {"question_id":"T03.05.Q029","concept_id":"T03.05.C03","difficulty":"familiarity","type":"fill_blank","question_text":"In triangle ABC with area 48 cm², median AD divides it into triangles of area ___ cm² each.","correct_answer":"24","explanation_correct":"Median divides a triangle into two equal areas. Each = 48/2 = 24 cm².","explanation_incorrect":"Each triangle has area = 48/2 = 24 cm²."},
-    {"question_id":"T03.05.Q030","concept_id":"T03.05.C01","difficulty":"familiarity","type":"mcq","question_text":"'Two figures are said to be on the same base and between the same parallels' means:","options":[{"id":"A","text":"They share a side and the opposite sides are on the same line"},{"id":"B","text":"They have the same area"},{"id":"C","text":"They have the same perimeter"},{"id":"D","text":"They are congruent"}],"correct_answer":"A","explanation_correct":"'Same base and between same parallels' means the figures share a common side (base) and their opposite vertices/sides lie on a line parallel to the base.","explanation_incorrect":"This is a geometric configuration: shared base + opposite parts on a parallel line."},
-    {"question_id":"T03.05.Q031","concept_id":"T03.05.C02","difficulty":"application","type":"mcq","question_text":"In a quadrilateral ABCD, diagonal AC divides it into two triangles. If AC = 10 cm, and the perpendiculars from B and D to AC are 4 cm and 6 cm, the area of ABCD is:","options":[{"id":"A","text":"50 cm²"},{"id":"B","text":"100 cm²"},{"id":"C","text":"40 cm²"},{"id":"D","text":"60 cm²"}],"correct_answer":"A","explanation_correct":"Area of ABC = (1/2)(10)(4) = 20 cm². Area of ACD = (1/2)(10)(6) = 30 cm². Total = 50 cm².","explanation_incorrect":"Total area = (1/2)(AC)(h₁ + h₂) = (1/2)(10)(4+6) = 50 cm²."},
-    {"question_id":"T03.05.Q032","concept_id":"T03.05.C01","difficulty":"application","type":"true_false","question_text":"A rectangle and a parallelogram with the same base and equal areas have the same height.","correct_answer":"true","explanation_correct":"Area = base × height. Same base and same area implies the same height.","explanation_incorrect":"If base is the same and area is the same, height = area/base must be the same."},
-    {"question_id":"T03.05.Q033","concept_id":"T03.05.C03","difficulty":"application","type":"mcq","question_text":"Triangle ABC has area 36 cm². Points D and E are midpoints of AB and AC. Area of triangle ADE is:","options":[{"id":"A","text":"9 cm²"},{"id":"B","text":"18 cm²"},{"id":"C","text":"12 cm²"},{"id":"D","text":"6 cm²"}],"correct_answer":"A","explanation_correct":"D and E are midpoints. Triangle ADE is similar to ABC with ratio 1:2. Area ratio = 1:4. Area of ADE = 36/4 = 9 cm².","explanation_incorrect":"Midpoints give a triangle with sides half of the original. Area = (1/4) × 36 = 9 cm²."},
-    {"question_id":"T03.05.Q034","concept_id":"T03.05.C02","difficulty":"exam_style","type":"mcq","question_text":"ABCD is a trapezium with AB ∥ DC. Diagonals intersect at O. Then:","options":[{"id":"A","text":"Area(AOB) = Area(DOC)"},{"id":"B","text":"Area(AOD) = Area(BOC)"},{"id":"C","text":"Area(AOB) = Area(BOC)"},{"id":"D","text":"Area(AOD) = Area(DOC)"}],"correct_answer":"B","explanation_correct":"Triangles ABD and ABC share base AB and lie between the same parallels AB and DC (their heights from D and C to AB are equal). So area(ABD) = area(ABC). Subtracting the common triangle AOB: area(AOD) = area(BOC).","explanation_incorrect":"Triangles on same base AB between parallels: area(ABD) = area(ABC). Subtracting common area(AOB) gives area(AOD) = area(BOC)."},
-    {"question_id":"T03.05.Q035","concept_id":"T03.05.C01","difficulty":"exam_style","type":"mcq","question_text":"Parallelogram ABCD has vertices A(0,0), B(6,0), C(8,4), D(2,4). Its area is:","options":[{"id":"A","text":"24 sq units"},{"id":"B","text":"16 sq units"},{"id":"C","text":"32 sq units"},{"id":"D","text":"20 sq units"}],"correct_answer":"A","explanation_correct":"Base AB = 6 units. Height = perpendicular distance between AB (y=0) and DC (y=4) = 4 units. Area = 6 × 4 = 24 sq units.","explanation_incorrect":"Base = 6, height = 4 (distance between the parallel lines y=0 and y=4). Area = 24 sq units."},
-    {"question_id":"T03.05.Q036","concept_id":"T03.05.C03","difficulty":"exam_style","type":"fill_blank","question_text":"If the area of a triangle is 60 cm² and the base is 12 cm, the height is ___ cm.","correct_answer":"10","explanation_correct":"Area = (1/2) × base × height. 60 = (1/2)(12)(h). h = 10 cm.","explanation_incorrect":"Height = 2 × area / base = 2 × 60 / 12 = 10 cm."},
-    {"question_id":"T03.05.Q037","concept_id":"T03.05.C01","difficulty":"familiarity","type":"mcq","question_text":"Which of the following affects the area of a parallelogram?","options":[{"id":"A","text":"The length of the base only"},{"id":"B","text":"The slant height only"},{"id":"C","text":"Both the base and the perpendicular height"},{"id":"D","text":"The perimeter"}],"correct_answer":"C","explanation_correct":"Area = base × perpendicular height. Both the base and perpendicular height determine the area.","explanation_incorrect":"The area depends on the base and the perpendicular height (not the slant side or perimeter)."},
-    {"question_id":"T03.05.Q038","concept_id":"T03.05.C02","difficulty":"familiarity","type":"true_false","question_text":"Two triangles with the same area must have the same base and height.","correct_answer":"false","explanation_correct":"Two triangles can have the same area with different bases and heights. For example, a triangle with base 4 and height 6 and another with base 8 and height 3 both have area 12.","explanation_incorrect":"Different base-height combinations can yield the same area (e.g., 4×6/2 = 8×3/2 = 12)."},
-    {"question_id":"T03.05.Q039","concept_id":"T03.05.C01","difficulty":"application","type":"mcq","question_text":"ABCD is a parallelogram. E is a point on CD. If area of triangle AEB = 25 cm², find area of ABCD:","options":[{"id":"A","text":"25 cm²"},{"id":"B","text":"50 cm²"},{"id":"C","text":"75 cm²"},{"id":"D","text":"100 cm²"}],"correct_answer":"B","explanation_correct":"Triangle AEB has base AB (same as parallelogram) and lies between parallels AB and DC. Its area = (1/2) × area of ABCD. So area ABCD = 2 × 25 = 50 cm².","explanation_incorrect":"Triangle on same base and between same parallels = half the parallelogram. ABCD = 2 × 25 = 50 cm²."},
-    {"question_id":"T03.05.Q040","concept_id":"T03.05.C03","difficulty":"application","type":"mcq","question_text":"In triangle ABC, D is the midpoint of BC and E is the midpoint of AD. Area of triangle ABE : area of triangle ABC =","options":[{"id":"A","text":"1:2"},{"id":"B","text":"1:4"},{"id":"C","text":"1:3"},{"id":"D","text":"2:3"}],"correct_answer":"B","explanation_correct":"AD is a median, so area(ABD) = (1/2)area(ABC). E is midpoint of AD, so area(ABE) = (1/2)area(ABD) = (1/4)area(ABC).","explanation_incorrect":"Halving twice: ABD = (1/2)ABC, ABE = (1/2)ABD = (1/4)ABC."},
-    {"question_id":"T03.05.Q041","concept_id":"T03.05.C01","difficulty":"exam_style","type":"mcq","question_text":"ABCD is a parallelogram with area 100 cm². P is the midpoint of AB and Q is the midpoint of CD. Area of quadrilateral APCQ:","options":[{"id":"A","text":"25 cm²"},{"id":"B","text":"50 cm²"},{"id":"C","text":"75 cm²"},{"id":"D","text":"100 cm²"}],"correct_answer":"B","explanation_correct":"APCQ is itself a parallelogram (AP ∥ QC and AP = QC = half of AB = half of CD). Its base is half of AB with the same height. Area = (1/2) × 100 = 50 cm².","explanation_incorrect":"APCQ has half the base of ABCD with the same height. Area = 50 cm²."},
-    {"question_id":"T03.05.Q042","concept_id":"T03.05.C02","difficulty":"exam_style","type":"mcq","question_text":"In the figure, ABCD is a parallelogram and P is any point on DC. Prove: area(APB) = area(ABCD)/2. What is the key reason?","options":[{"id":"A","text":"P divides DC in half"},{"id":"B","text":"Triangle APB shares base AB with parallelogram and lies between same parallels"},{"id":"C","text":"AP = PB"},{"id":"D","text":"Triangles APD and BPC are congruent"}],"correct_answer":"B","explanation_correct":"Triangle APB and parallelogram ABCD share base AB and lie between the same parallels AB and DC. Therefore area(APB) = (1/2) × area(ABCD).","explanation_incorrect":"The key is: same base (AB) and between same parallels (AB ∥ DC). Triangle = half of parallelogram."},
-    {"question_id":"T03.05.Q043","concept_id":"T03.05.C03","difficulty":"exam_style","type":"true_false","question_text":"If D, E, F are the midpoints of sides BC, CA, AB of triangle ABC, then the medial triangle DEF has area equal to (1/4) of triangle ABC.","correct_answer":"true","explanation_correct":"The medial triangle is similar to ABC with ratio 1:2, so area ratio = (1/2)² = 1/4.","explanation_incorrect":"Medial triangle sides are half the original sides. Area ratio = (1:2)² = 1:4."},
-    {"question_id":"T03.05.Q044","concept_id":"T03.05.C01","difficulty":"exam_style","type":"mcq","question_text":"Two parallelograms PQRS and PQTU are on the same base PQ and between the same parallels. If PQ = 8 cm and the distance between parallels is 6 cm, then area of each is:","options":[{"id":"A","text":"48 cm²"},{"id":"B","text":"24 cm²"},{"id":"C","text":"96 cm²"},{"id":"D","text":"14 cm²"}],"correct_answer":"A","explanation_correct":"Both have area = PQ × height = 8 × 6 = 48 cm².","explanation_incorrect":"Same base (8) × same height (6) = 48 cm² for each."},
-    {"question_id":"T03.05.Q045","concept_id":"T03.05.C02","difficulty":"familiarity","type":"fill_blank","question_text":"If two triangles have the same base and equal areas, they lie between the same ___.","correct_answer":"parallels","explanation_correct":"Equal areas with the same base means equal heights, which means the vertices lie at the same distance from the base — i.e., between the same parallels.","explanation_incorrect":"Equal area + same base → same height → between the same parallels."},
-    {"question_id":"T03.05.Q046","concept_id":"T03.05.C01","difficulty":"application","type":"mcq","question_text":"ABCD is a parallelogram with base 20 cm and height 12 cm. EFGH is another parallelogram with base 20 cm and height 12 cm. Are their areas equal?","options":[{"id":"A","text":"Yes, because they have same base and height"},{"id":"B","text":"No, because they could be different shapes"},{"id":"C","text":"Only if they are congruent"},{"id":"D","text":"Cannot determine"}],"correct_answer":"A","explanation_correct":"Area = base × height. Both have base 20 cm and height 12 cm, so both have area 240 cm². Shape doesn't matter.","explanation_incorrect":"Area of a parallelogram depends only on base and height. Same values → same area."},
-    {"question_id":"T03.05.Q047","concept_id":"T03.05.C03","difficulty":"exam_style","type":"mcq","question_text":"In quadrilateral ABCD, if diagonal BD divides it such that area(ABD) = area(BCD), then:","options":[{"id":"A","text":"ABCD is a parallelogram"},{"id":"B","text":"A and C are equidistant from BD"},{"id":"C","text":"BD bisects AC"},{"id":"D","text":"Both B and C"}],"correct_answer":"B","explanation_correct":"Equal areas with the same base BD means the perpendicular distances from A and C to BD are equal. So A and C are equidistant from BD.","explanation_incorrect":"Same base BD and equal areas → equal heights from A and C → equidistant from BD."},
-    {"question_id":"T03.05.Q048","concept_id":"T03.05.C01","difficulty":"exam_style","type":"mcq","question_text":"ABCD is a rectangle with AB = 10 cm and BC = 6 cm. P is any point on AB. Area of triangle CPD is:","options":[{"id":"A","text":"60 cm²"},{"id":"B","text":"30 cm²"},{"id":"C","text":"15 cm²"},{"id":"D","text":"20 cm²"}],"correct_answer":"B","explanation_correct":"Triangle CPD has base CD = AB = 10 cm and height = distance from AB to DC = BC = 6 cm. Area = (1/2)(10)(6) = 30 cm². This equals half the rectangle's area.","explanation_incorrect":"Base CD = 10, height from P (on AB) to DC = 6. Area = (1/2)(10)(6) = 30 cm²."},
-    {"question_id":"T03.05.Q049","concept_id":"T03.05.C02","difficulty":"exam_style","type":"fill_blank","question_text":"Parallelogram ABCD and triangle ABE are on the same base AB and between the same parallels. If area of triangle ABE = 18 cm², area of ABCD = ___ cm².","correct_answer":"36","explanation_correct":"Parallelogram area = 2 × triangle area (same base, same parallels). Area ABCD = 2 × 18 = 36 cm².","explanation_incorrect":"Parallelogram = 2 × triangle on same base between same parallels = 36 cm²."},
-    {"question_id":"T03.05.Q050","concept_id":"T03.05.C03","difficulty":"exam_style","type":"mcq","question_text":"In triangle ABC, AD is a median. P is the midpoint of AD. Then area of triangle ABP : area of triangle ABC =","options":[{"id":"A","text":"1:2"},{"id":"B","text":"1:3"},{"id":"C","text":"1:4"},{"id":"D","text":"1:6"}],"correct_answer":"C","explanation_correct":"AD is a median: area(ABD) = (1/2)area(ABC). P is midpoint of AD: area(ABP) = (1/2)area(ABD) = (1/4)area(ABC). Ratio = 1:4.","explanation_incorrect":"Halving twice: area(ABP) = (1/2)(1/2)area(ABC) = (1/4)area(ABC)."}
+    {
+      "question_id": "T03.05.Q001",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a parallelogram with base 8 cm and height 5 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "13 cm²"
+        },
+        {
+          "id": "B",
+          "text": "40 cm²"
+        },
+        {
+          "id": "C",
+          "text": "20 cm²"
+        },
+        {
+          "id": "D",
+          "text": "80 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area = base × height = 8 × 5 = 40 cm².",
+      "explanation_incorrect": "Area of parallelogram = base × height, not base + height or base × height / 2."
+    },
+    {
+      "question_id": "T03.05.Q002",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two parallelograms are on the same base and between the same parallels. Their areas are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "In ratio 1:2"
+        },
+        {
+          "id": "B",
+          "text": "Equal"
+        },
+        {
+          "id": "C",
+          "text": "Different"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Parallelograms on the same base and between the same parallels have equal areas, regardless of the shape of the parallelograms.",
+      "explanation_incorrect": "This is a key theorem: same base + same parallels = same area for parallelograms."
+    },
+    {
+      "question_id": "T03.05.Q003",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two triangles on the same base and between the same parallels have:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Equal perimeters"
+        },
+        {
+          "id": "B",
+          "text": "Equal areas"
+        },
+        {
+          "id": "C",
+          "text": "Equal sides"
+        },
+        {
+          "id": "D",
+          "text": "Equal angles"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangles on the same base and between the same parallels have equal areas (each has the same base and same height).",
+      "explanation_incorrect": "Same base + same height (between same parallels) = same area. Other measurements may differ."
+    },
+    {
+      "question_id": "T03.05.Q004",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A median of a triangle divides it into two triangles of equal area.",
+      "correct_answer": "true",
+      "explanation_correct": "A median connects a vertex to the midpoint of the opposite side. The two triangles share the same height from the vertex, and their bases are equal (the median bisects the base). So both have equal area.",
+      "explanation_incorrect": "The median bisects the base, giving two triangles with equal bases and the same height, hence equal areas."
+    },
+    {
+      "question_id": "T03.05.Q005",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The area of a parallelogram is base × ___. ",
+      "correct_answer": "height",
+      "explanation_correct": "Area of parallelogram = base × height (the perpendicular distance between the base and the opposite side).",
+      "explanation_incorrect": "The height is the perpendicular distance from the base to the opposite parallel side."
+    },
+    {
+      "question_id": "T03.05.Q006",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a triangle is what fraction of the area of a parallelogram on the same base and between the same parallels?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "Equal"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A triangle on the same base and between the same parallels has area = (1/2) × base × height, while the parallelogram has area = base × height. So the triangle's area is half.",
+      "explanation_incorrect": "Triangle area = (1/2) × parallelogram area when they share the same base and lie between the same parallels."
+    },
+    {
+      "question_id": "T03.05.Q007",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a parallelogram with AB = 10 cm and height = 6 cm. Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30 cm²"
+        },
+        {
+          "id": "B",
+          "text": "60 cm²"
+        },
+        {
+          "id": "C",
+          "text": "16 cm²"
+        },
+        {
+          "id": "D",
+          "text": "120 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area = AB × height = 10 × 6 = 60 cm².",
+      "explanation_incorrect": "Parallelogram area = base × height = 10 × 6 = 60 cm²."
+    },
+    {
+      "question_id": "T03.05.Q008",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In triangle ABC, D is the midpoint of BC. Then area of triangle ABD : area of triangle ACD =",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:2"
+        },
+        {
+          "id": "B",
+          "text": "2:1"
+        },
+        {
+          "id": "C",
+          "text": "1:1"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "AD is a median. A median divides a triangle into two triangles of equal area. So the ratio is 1:1.",
+      "explanation_incorrect": "The median AD divides triangle ABC into two triangles of equal area."
+    },
+    {
+      "question_id": "T03.05.Q009",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "If two parallelograms have the same area, they must be on the same base.",
+      "correct_answer": "false",
+      "explanation_correct": "Two parallelograms can have equal areas with different bases and heights (e.g., 4×5 = 2×10 = 20). They need not be on the same base.",
+      "explanation_incorrect": "Equal area does not require the same base. Different base-height combinations can give the same area."
+    },
+    {
+      "question_id": "T03.05.Q010",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "A triangle with base 12 cm and height 8 cm has area = ___ cm².",
+      "correct_answer": "48",
+      "explanation_correct": "Area = (1/2) × 12 × 8 = 48 cm².",
+      "explanation_incorrect": "Triangle area = (1/2) × base × height = (1/2)(12)(8) = 48 cm²."
+    },
+    {
+      "question_id": "T03.05.Q011",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD and ABEF are two parallelograms on the same base AB and between the same parallels AB and DE. If area of ABCD = 50 cm², then area of ABEF =",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 cm²"
+        },
+        {
+          "id": "B",
+          "text": "50 cm²"
+        },
+        {
+          "id": "C",
+          "text": "100 cm²"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Parallelograms on the same base and between the same parallels have equal area. Area of ABEF = 50 cm².",
+      "explanation_incorrect": "Same base + same parallels = same area. ABEF = ABCD = 50 cm²."
+    },
+    {
+      "question_id": "T03.05.Q012",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Triangles ABC and DBC are on the same base BC and between the same parallels BC and AD. If area of ABC = 30 cm², then area of DBC =",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 cm²"
+        },
+        {
+          "id": "B",
+          "text": "30 cm²"
+        },
+        {
+          "id": "C",
+          "text": "60 cm²"
+        },
+        {
+          "id": "D",
+          "text": "45 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangles on the same base and between the same parallels have equal areas. Area of DBC = 30 cm².",
+      "explanation_incorrect": "Same base + same parallels = equal triangle areas. Area DBC = 30 cm²."
+    },
+    {
+      "question_id": "T03.05.Q013",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Parallelogram ABCD has base AB = 14 cm. If its area equals the area of a rectangle with dimensions 14 cm × 9 cm, the height of the parallelogram is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 cm"
+        },
+        {
+          "id": "B",
+          "text": "9 cm"
+        },
+        {
+          "id": "C",
+          "text": "14 cm"
+        },
+        {
+          "id": "D",
+          "text": "18 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area of rectangle = 14 × 9 = 126 cm². Parallelogram area = base × height = 14 × h = 126. So h = 9 cm.",
+      "explanation_incorrect": "Rectangle area = 126 cm². Parallelogram: 14 × h = 126, so h = 9 cm."
+    },
+    {
+      "question_id": "T03.05.Q014",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In triangle ABC, medians AD, BE, CF intersect at G (centroid). The area of triangle BGD is what fraction of area of ABC?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "1/6"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The three medians divide the triangle into 6 smaller triangles of equal area. So each has area = (1/6) × area of ABC.",
+      "explanation_incorrect": "Three medians divide any triangle into 6 equal-area triangles. Each small triangle = (1/6) of the whole."
+    },
+    {
+      "question_id": "T03.05.Q015",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "ABCD is a parallelogram. Triangle ABD has area 35 cm². The area of parallelogram ABCD is ___ cm².",
+      "correct_answer": "70",
+      "explanation_correct": "A diagonal of a parallelogram divides it into two triangles of equal area. Area of ABCD = 2 × 35 = 70 cm².",
+      "explanation_incorrect": "The diagonal BD splits the parallelogram into two equal triangles. Total area = 2 × 35 = 70 cm²."
+    },
+    {
+      "question_id": "T03.05.Q016",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A parallelogram and a rectangle are on the same base and between the same parallels. Which has greater area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The parallelogram"
+        },
+        {
+          "id": "B",
+          "text": "The rectangle"
+        },
+        {
+          "id": "C",
+          "text": "Both have equal area"
+        },
+        {
+          "id": "D",
+          "text": "Depends on dimensions"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A rectangle is a special parallelogram. Any parallelogram on the same base and between the same parallels has equal area, including rectangles.",
+      "explanation_incorrect": "Same base + same parallels = same area, whether the shape is a general parallelogram or a rectangle."
+    },
+    {
+      "question_id": "T03.05.Q017",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Triangle ABC has area 24 cm². If D is the midpoint of BC, area of triangle ABD is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 cm²"
+        },
+        {
+          "id": "B",
+          "text": "12 cm²"
+        },
+        {
+          "id": "C",
+          "text": "6 cm²"
+        },
+        {
+          "id": "D",
+          "text": "8 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "AD is a median. It divides triangle ABC into two equal-area triangles. Area of ABD = 24/2 = 12 cm².",
+      "explanation_incorrect": "Median divides the triangle into equal halves. Area ABD = 24/2 = 12 cm²."
+    },
+    {
+      "question_id": "T03.05.Q018",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "If two triangles have equal areas and equal bases, they must lie between the same parallels.",
+      "correct_answer": "true",
+      "explanation_correct": "Equal areas with equal bases means equal heights. If the base is the same line, then the vertices lie on lines at the same perpendicular distance from the base, meaning between the same parallels.",
+      "explanation_incorrect": "Equal area + same base → same height → vertices at equal distance from base → between the same parallels."
+    },
+    {
+      "question_id": "T03.05.Q019",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a parallelogram with area 80 cm². P is a point on AB. Area of triangle DPC is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "40 cm²"
+        },
+        {
+          "id": "B",
+          "text": "80 cm²"
+        },
+        {
+          "id": "C",
+          "text": "20 cm²"
+        },
+        {
+          "id": "D",
+          "text": "60 cm²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Triangle DPC shares base DC with parallelogram ABCD and lies between the same parallels AB and DC. Area of DPC = (1/2) × area of ABCD = 40 cm².",
+      "explanation_incorrect": "Triangle DPC has base DC (same as parallelogram base) and same height. Its area = half the parallelogram = 40 cm²."
+    },
+    {
+      "question_id": "T03.05.Q020",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In a parallelogram ABCD, E is the midpoint of AD. Area of triangle ABE : area of parallelogram ABCD =",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:2"
+        },
+        {
+          "id": "B",
+          "text": "1:4"
+        },
+        {
+          "id": "C",
+          "text": "1:3"
+        },
+        {
+          "id": "D",
+          "text": "1:8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangle ABE has base AE = AD/2 and height equal to the distance between AB and DC. Area of ABE = (1/2)(AD/2)(h) = (1/4)(AD × h) = (1/4)(area of ABCD).",
+      "explanation_incorrect": "Area of ABE = (1/2) × AE × height = (1/2)(AD/2)(h) = (1/4) × parallelogram area. Ratio = 1:4."
+    },
+    {
+      "question_id": "T03.05.Q021",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "P and Q are points on sides AB and DC of parallelogram ABCD. If area of triangle APD = area of triangle BQC, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "PQ ∥ AB"
+        },
+        {
+          "id": "B",
+          "text": "PQ ∥ AD"
+        },
+        {
+          "id": "C",
+          "text": "This is always true for any P on AB and Q on DC"
+        },
+        {
+          "id": "D",
+          "text": "P and Q must be midpoints"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In parallelogram ABCD, triangles APD and BQC both lie between parallels AB and DC. Triangle APD has base AD and height from P to AD; triangle BQC has base BC and height from Q to BC. Since AD = BC and both heights equal the distance between AB and DC, the areas are always equal.",
+      "explanation_incorrect": "Both triangles have bases on opposite sides of equal length and the same height. This is always true."
+    },
+    {
+      "question_id": "T03.05.Q022",
+      "concept_id": "T03.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a quadrilateral. AC divides it into triangles ABC and ACD. If ABC and ACD have equal areas, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ABCD is a parallelogram"
+        },
+        {
+          "id": "B",
+          "text": "AC bisects BD"
+        },
+        {
+          "id": "C",
+          "text": "AC is a median of both triangles"
+        },
+        {
+          "id": "D",
+          "text": "BD is bisected by AC"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "If triangles ABC and ACD have equal areas with the same base AC, the perpendicular distances from B and D to AC are equal. This means AC bisects BD (midpoint of BD lies on AC).",
+      "explanation_incorrect": "Equal areas on the same base means equal heights. B and D are equidistant from AC, implying AC bisects BD."
+    },
+    {
+      "question_id": "T03.05.Q023",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In triangle ABC, E is the midpoint of median AD. Area of triangle ABE : area of triangle ABC =",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:2"
+        },
+        {
+          "id": "B",
+          "text": "1:4"
+        },
+        {
+          "id": "C",
+          "text": "1:3"
+        },
+        {
+          "id": "D",
+          "text": "1:6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "AD is a median so area of ABD = (1/2) area of ABC. E is midpoint of AD, so BE is a median of triangle ABD. Area of ABE = (1/2) area of ABD = (1/4) area of ABC. Ratio = 1:4.",
+      "explanation_incorrect": "Median halves the area twice: ABD = (1/2)ABC, then ABE = (1/2)ABD = (1/4)ABC."
+    },
+    {
+      "question_id": "T03.05.Q024",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "ABCD is a parallelogram with base 15 cm and area 120 cm². Its height is ___ cm.",
+      "correct_answer": "8",
+      "explanation_correct": "Area = base × height. 120 = 15 × h. h = 8 cm.",
+      "explanation_incorrect": "Height = area / base = 120/15 = 8 cm."
+    },
+    {
+      "question_id": "T03.05.Q025",
+      "concept_id": "T03.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a parallelogram. P is any point inside it. Then area(APB) + area(CPD) =",
+      "options": [
+        {
+          "id": "A",
+          "text": "(1/2) area(ABCD)"
+        },
+        {
+          "id": "B",
+          "text": "(1/3) area(ABCD)"
+        },
+        {
+          "id": "C",
+          "text": "(1/4) area(ABCD)"
+        },
+        {
+          "id": "D",
+          "text": "area(ABCD)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For any point P inside parallelogram ABCD: area(APB) + area(CPD) = area(BPC) + area(APD) = (1/2) area(ABCD). This follows from the fact that opposite triangle pairs share the same total height.",
+      "explanation_incorrect": "This is a standard result: opposite triangle pairs formed by an interior point sum to half the parallelogram's area."
+    },
+    {
+      "question_id": "T03.05.Q026",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The three medians of a triangle divide it into 6 triangles of equal area.",
+      "correct_answer": "true",
+      "explanation_correct": "Each median divides the triangle into two equal-area parts. The three medians together create 6 triangles, each with area = (1/6) of the original triangle.",
+      "explanation_incorrect": "This is a well-known result: three medians create 6 equal-area triangles meeting at the centroid."
+    },
+    {
+      "question_id": "T03.05.Q027",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two parallelograms ABCD and ABPQ are on the same base AB. ABCD has height 10 cm and ABPQ has height 10 cm. If AB = 7 cm, then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Area ABCD = 70 cm², Area ABPQ = 70 cm²"
+        },
+        {
+          "id": "B",
+          "text": "Area ABCD = 35 cm², Area ABPQ = 35 cm²"
+        },
+        {
+          "id": "C",
+          "text": "Their areas are equal but unknown"
+        },
+        {
+          "id": "D",
+          "text": "Their areas are different"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Same base (7 cm) and same height (10 cm) means same area. Each = 7 × 10 = 70 cm².",
+      "explanation_incorrect": "Same base and height: both areas = 7 × 10 = 70 cm²."
+    },
+    {
+      "question_id": "T03.05.Q028",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If a triangle and a parallelogram are on the same base and between the same parallels, and the parallelogram has area 60 cm², the triangle has area:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 cm²"
+        },
+        {
+          "id": "B",
+          "text": "30 cm²"
+        },
+        {
+          "id": "C",
+          "text": "120 cm²"
+        },
+        {
+          "id": "D",
+          "text": "15 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangle area = (1/2) × parallelogram area = 30 cm².",
+      "explanation_incorrect": "Triangle = half of parallelogram on same base and between same parallels = 30 cm²."
+    },
+    {
+      "question_id": "T03.05.Q029",
+      "concept_id": "T03.05.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "In triangle ABC with area 48 cm², median AD divides it into triangles of area ___ cm² each.",
+      "correct_answer": "24",
+      "explanation_correct": "Median divides a triangle into two equal areas. Each = 48/2 = 24 cm².",
+      "explanation_incorrect": "Each triangle has area = 48/2 = 24 cm²."
+    },
+    {
+      "question_id": "T03.05.Q030",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "'Two figures are said to be on the same base and between the same parallels' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "They share a side and the opposite sides are on the same line"
+        },
+        {
+          "id": "B",
+          "text": "They have the same area"
+        },
+        {
+          "id": "C",
+          "text": "They have the same perimeter"
+        },
+        {
+          "id": "D",
+          "text": "They are congruent"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "'Same base and between same parallels' means the figures share a common side (base) and their opposite vertices/sides lie on a line parallel to the base.",
+      "explanation_incorrect": "This is a geometric configuration: shared base + opposite parts on a parallel line."
+    },
+    {
+      "question_id": "T03.05.Q031",
+      "concept_id": "T03.05.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In a quadrilateral ABCD, diagonal AC divides it into two triangles. If AC = 10 cm, and the perpendiculars from B and D to AC are 4 cm and 6 cm, the area of ABCD is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 cm²"
+        },
+        {
+          "id": "B",
+          "text": "100 cm²"
+        },
+        {
+          "id": "C",
+          "text": "40 cm²"
+        },
+        {
+          "id": "D",
+          "text": "60 cm²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Area of ABC = (1/2)(10)(4) = 20 cm². Area of ACD = (1/2)(10)(6) = 30 cm². Total = 50 cm².",
+      "explanation_incorrect": "Total area = (1/2)(AC)(h₁ + h₂) = (1/2)(10)(4+6) = 50 cm²."
+    },
+    {
+      "question_id": "T03.05.Q032",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A rectangle and a parallelogram with the same base and equal areas have the same height.",
+      "correct_answer": "true",
+      "explanation_correct": "Area = base × height. Same base and same area implies the same height.",
+      "explanation_incorrect": "If base is the same and area is the same, height = area/base must be the same."
+    },
+    {
+      "question_id": "T03.05.Q033",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Triangle ABC has area 36 cm². Points D and E are midpoints of AB and AC. Area of triangle ADE is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 cm²"
+        },
+        {
+          "id": "B",
+          "text": "18 cm²"
+        },
+        {
+          "id": "C",
+          "text": "12 cm²"
+        },
+        {
+          "id": "D",
+          "text": "6 cm²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "D and E are midpoints. Triangle ADE is similar to ABC with ratio 1:2. Area ratio = 1:4. Area of ADE = 36/4 = 9 cm².",
+      "explanation_incorrect": "Midpoints give a triangle with sides half of the original. Area = (1/4) × 36 = 9 cm²."
+    },
+    {
+      "question_id": "T03.05.Q034",
+      "concept_id": "T03.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a trapezium with AB ∥ DC. Diagonals intersect at O. Then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Area(AOB) = Area(DOC)"
+        },
+        {
+          "id": "B",
+          "text": "Area(AOD) = Area(BOC)"
+        },
+        {
+          "id": "C",
+          "text": "Area(AOB) = Area(BOC)"
+        },
+        {
+          "id": "D",
+          "text": "Area(AOD) = Area(DOC)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangles ABD and ABC share base AB and lie between the same parallels AB and DC (their heights from D and C to AB are equal). So area(ABD) = area(ABC). Subtracting the common triangle AOB: area(AOD) = area(BOC).",
+      "explanation_incorrect": "Triangles on same base AB between parallels: area(ABD) = area(ABC). Subtracting common area(AOB) gives area(AOD) = area(BOC)."
+    },
+    {
+      "question_id": "T03.05.Q035",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Parallelogram ABCD has vertices A(0,0), B(6,0), C(8,4), D(2,4). Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 sq units"
+        },
+        {
+          "id": "B",
+          "text": "16 sq units"
+        },
+        {
+          "id": "C",
+          "text": "32 sq units"
+        },
+        {
+          "id": "D",
+          "text": "20 sq units"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Base AB = 6 units. Height = perpendicular distance between AB (y=0) and DC (y=4) = 4 units. Area = 6 × 4 = 24 sq units.",
+      "explanation_incorrect": "Base = 6, height = 4 (distance between the parallel lines y=0 and y=4). Area = 24 sq units."
+    },
+    {
+      "question_id": "T03.05.Q036",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "If the area of a triangle is 60 cm² and the base is 12 cm, the height is ___ cm.",
+      "correct_answer": "10",
+      "explanation_correct": "Area = (1/2) × base × height. 60 = (1/2)(12)(h). h = 10 cm.",
+      "explanation_incorrect": "Height = 2 × area / base = 2 × 60 / 12 = 10 cm."
+    },
+    {
+      "question_id": "T03.05.Q037",
+      "concept_id": "T03.05.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following affects the area of a parallelogram?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The length of the base only"
+        },
+        {
+          "id": "B",
+          "text": "The slant height only"
+        },
+        {
+          "id": "C",
+          "text": "Both the base and the perpendicular height"
+        },
+        {
+          "id": "D",
+          "text": "The perimeter"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Area = base × perpendicular height. Both the base and perpendicular height determine the area.",
+      "explanation_incorrect": "The area depends on the base and the perpendicular height (not the slant side or perimeter)."
+    },
+    {
+      "question_id": "T03.05.Q038",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Two triangles with the same area must have the same base and height.",
+      "correct_answer": "false",
+      "explanation_correct": "Two triangles can have the same area with different bases and heights. For example, a triangle with base 4 and height 6 and another with base 8 and height 3 both have area 12.",
+      "explanation_incorrect": "Different base-height combinations can yield the same area (e.g., 4×6/2 = 8×3/2 = 12)."
+    },
+    {
+      "question_id": "T03.05.Q039",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a parallelogram. E is a point on CD. If area of triangle AEB = 25 cm², find area of ABCD:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 cm²"
+        },
+        {
+          "id": "B",
+          "text": "50 cm²"
+        },
+        {
+          "id": "C",
+          "text": "75 cm²"
+        },
+        {
+          "id": "D",
+          "text": "100 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangle AEB has base AB (same as parallelogram) and lies between parallels AB and DC. Its area = (1/2) × area of ABCD. So area ABCD = 2 × 25 = 50 cm².",
+      "explanation_incorrect": "Triangle on same base and between same parallels = half the parallelogram. ABCD = 2 × 25 = 50 cm²."
+    },
+    {
+      "question_id": "T03.05.Q040",
+      "concept_id": "T03.05.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In triangle ABC, D is the midpoint of BC and E is the midpoint of AD. Area of triangle ABE : area of triangle ABC =",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:2"
+        },
+        {
+          "id": "B",
+          "text": "1:4"
+        },
+        {
+          "id": "C",
+          "text": "1:3"
+        },
+        {
+          "id": "D",
+          "text": "2:3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "AD is a median, so area(ABD) = (1/2)area(ABC). E is midpoint of AD, so area(ABE) = (1/2)area(ABD) = (1/4)area(ABC).",
+      "explanation_incorrect": "Halving twice: ABD = (1/2)ABC, ABE = (1/2)ABD = (1/4)ABC."
+    },
+    {
+      "question_id": "T03.05.Q041",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a parallelogram with area 100 cm². P is the midpoint of AB and Q is the midpoint of CD. Area of quadrilateral APCQ:",
+      "options": [
+        {
+          "id": "A",
+          "text": "25 cm²"
+        },
+        {
+          "id": "B",
+          "text": "50 cm²"
+        },
+        {
+          "id": "C",
+          "text": "75 cm²"
+        },
+        {
+          "id": "D",
+          "text": "100 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "APCQ is itself a parallelogram (AP ∥ QC and AP = QC = half of AB = half of CD). Its base is half of AB with the same height. Area = (1/2) × 100 = 50 cm².",
+      "explanation_incorrect": "APCQ has half the base of ABCD with the same height. Area = 50 cm²."
+    },
+    {
+      "question_id": "T03.05.Q042",
+      "concept_id": "T03.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In the figure, ABCD is a parallelogram and P is any point on DC. Prove: area(APB) = area(ABCD)/2. What is the key reason?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P divides DC in half"
+        },
+        {
+          "id": "B",
+          "text": "Triangle APB shares base AB with parallelogram and lies between same parallels"
+        },
+        {
+          "id": "C",
+          "text": "AP = PB"
+        },
+        {
+          "id": "D",
+          "text": "Triangles APD and BPC are congruent"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangle APB and parallelogram ABCD share base AB and lie between the same parallels AB and DC. Therefore area(APB) = (1/2) × area(ABCD).",
+      "explanation_incorrect": "The key is: same base (AB) and between same parallels (AB ∥ DC). Triangle = half of parallelogram."
+    },
+    {
+      "question_id": "T03.05.Q043",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "If D, E, F are the midpoints of sides BC, CA, AB of triangle ABC, then the medial triangle DEF has area equal to (1/4) of triangle ABC.",
+      "correct_answer": "true",
+      "explanation_correct": "The medial triangle is similar to ABC with ratio 1:2, so area ratio = (1/2)² = 1/4.",
+      "explanation_incorrect": "Medial triangle sides are half the original sides. Area ratio = (1:2)² = 1:4."
+    },
+    {
+      "question_id": "T03.05.Q044",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two parallelograms PQRS and PQTU are on the same base PQ and between the same parallels. If PQ = 8 cm and the distance between parallels is 6 cm, then area of each is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "48 cm²"
+        },
+        {
+          "id": "B",
+          "text": "24 cm²"
+        },
+        {
+          "id": "C",
+          "text": "96 cm²"
+        },
+        {
+          "id": "D",
+          "text": "14 cm²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Both have area = PQ × height = 8 × 6 = 48 cm².",
+      "explanation_incorrect": "Same base (8) × same height (6) = 48 cm² for each."
+    },
+    {
+      "question_id": "T03.05.Q045",
+      "concept_id": "T03.05.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "If two triangles have the same base and equal areas, they lie between the same ___.",
+      "correct_answer": "parallels",
+      "explanation_correct": "Equal areas with the same base means equal heights, which means the vertices lie at the same distance from the base — i.e., between the same parallels.",
+      "explanation_incorrect": "Equal area + same base → same height → between the same parallels."
+    },
+    {
+      "question_id": "T03.05.Q046",
+      "concept_id": "T03.05.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a parallelogram with base 20 cm and height 12 cm. EFGH is another parallelogram with base 20 cm and height 12 cm. Are their areas equal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, because they have same base and height"
+        },
+        {
+          "id": "B",
+          "text": "No, because they could be different shapes"
+        },
+        {
+          "id": "C",
+          "text": "Only if they are congruent"
+        },
+        {
+          "id": "D",
+          "text": "Cannot determine"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Area = base × height. Both have base 20 cm and height 12 cm, so both have area 240 cm². Shape doesn't matter.",
+      "explanation_incorrect": "Area of a parallelogram depends only on base and height. Same values → same area."
+    },
+    {
+      "question_id": "T03.05.Q047",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In quadrilateral ABCD, if diagonal BD divides it such that area(ABD) = area(BCD), then:",
+      "options": [
+        {
+          "id": "A",
+          "text": "ABCD is a parallelogram"
+        },
+        {
+          "id": "B",
+          "text": "A and C are equidistant from BD"
+        },
+        {
+          "id": "C",
+          "text": "BD bisects AC"
+        },
+        {
+          "id": "D",
+          "text": "Both B and C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Equal areas with the same base BD means the perpendicular distances from A and C to BD are equal. So A and C are equidistant from BD.",
+      "explanation_incorrect": "Same base BD and equal areas → equal heights from A and C → equidistant from BD."
+    },
+    {
+      "question_id": "T03.05.Q048",
+      "concept_id": "T03.05.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "ABCD is a rectangle with AB = 10 cm and BC = 6 cm. P is any point on AB. Area of triangle CPD is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 cm²"
+        },
+        {
+          "id": "B",
+          "text": "30 cm²"
+        },
+        {
+          "id": "C",
+          "text": "15 cm²"
+        },
+        {
+          "id": "D",
+          "text": "20 cm²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Triangle CPD has base CD = AB = 10 cm and height = distance from AB to DC = BC = 6 cm. Area = (1/2)(10)(6) = 30 cm². This equals half the rectangle's area.",
+      "explanation_incorrect": "Base CD = 10, height from P (on AB) to DC = 6. Area = (1/2)(10)(6) = 30 cm²."
+    },
+    {
+      "question_id": "T03.05.Q049",
+      "concept_id": "T03.05.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "Parallelogram ABCD and triangle ABE are on the same base AB and between the same parallels. If area of triangle ABE = 18 cm², area of ABCD = ___ cm².",
+      "correct_answer": "36",
+      "explanation_correct": "Parallelogram area = 2 × triangle area (same base, same parallels). Area ABCD = 2 × 18 = 36 cm².",
+      "explanation_incorrect": "Parallelogram = 2 × triangle on same base between same parallels = 36 cm²."
+    },
+    {
+      "question_id": "T03.05.Q050",
+      "concept_id": "T03.05.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In triangle ABC, AD is a median. P is the midpoint of AD. Then area of triangle ABP : area of triangle ABC =",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:2"
+        },
+        {
+          "id": "B",
+          "text": "1:3"
+        },
+        {
+          "id": "C",
+          "text": "1:4"
+        },
+        {
+          "id": "D",
+          "text": "1:6"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "AD is a median: area(ABD) = (1/2)area(ABC). P is midpoint of AD: area(ABP) = (1/2)area(ABD) = (1/4)area(ABC). Ratio = 1:4.",
+      "explanation_incorrect": "Halving twice: area(ABP) = (1/2)(1/2)area(ABC) = (1/4)area(ABC)."
+    }
   ]
 }

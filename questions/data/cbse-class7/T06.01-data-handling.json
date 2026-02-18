@@ -1,62 +1,1398 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version":"1.0.0","board":"CBSE","class":7,"subject":"Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 7,
+    "subject": "Mathematics"
+  },
   "topic_id": "T06.01",
   "topic_name": "Data Handling",
   "canonical_explanation": {
     "text": "Data handling involves collecting, organising, and interpreting data. The arithmetic mean is the sum of observations divided by the number of observations. The range is the difference between the highest and lowest values. The median is the middle value when data is arranged in order. The mode is the most frequently occurring value. Bar graphs and double bar graphs are used to represent and compare data visually. Probability describes the chance of an event occurring; outcomes can be certain, impossible, or equally likely.",
-    "rules": ["Mean = Sum of all observations / Number of observations","Range = Highest value - Lowest value","Median = Middle value in ordered data (for odd count); average of two middle values (for even count)","Mode = Most frequently occurring observation","In a bar graph, bars have equal widths and uniform gaps","Double bar graphs compare two sets of data side by side","Probability of an event = Number of favourable outcomes / Total number of outcomes","Probability ranges from 0 (impossible) to 1 (certain)"]
+    "rules": [
+      "Mean = Sum of all observations / Number of observations",
+      "Range = Highest value - Lowest value",
+      "Median = Middle value in ordered data (for odd count); average of two middle values (for even count)",
+      "Mode = Most frequently occurring observation",
+      "In a bar graph, bars have equal widths and uniform gaps",
+      "Double bar graphs compare two sets of data side by side",
+      "Probability of an event = Number of favourable outcomes / Total number of outcomes",
+      "Probability ranges from 0 (impossible) to 1 (certain)"
+    ]
   },
   "questions": [
-    {"question_id":"T06.01.Q001","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The mean of 3, 5, 7, 9, and 11 is:","options":[{"id":"A","text":"5"},{"id":"B","text":"7"},{"id":"C","text":"9"},{"id":"D","text":"35"}],"correct_answer":"B","explanation_correct":"Mean = (3 + 5 + 7 + 9 + 11) / 5 = 35 / 5 = 7.","explanation_incorrect":"Sum = 35, count = 5, mean = 35/5 = 7."},
-    {"question_id":"T06.01.Q002","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The range of the data 12, 8, 15, 6, 20 is:","options":[{"id":"A","text":"14"},{"id":"B","text":"12"},{"id":"C","text":"8"},{"id":"D","text":"20"}],"correct_answer":"A","explanation_correct":"Range = Highest - Lowest = 20 - 6 = 14.","explanation_incorrect":"20 - 6 = 14."},
-    {"question_id":"T06.01.Q003","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The median of 2, 5, 8, 11, 14 is:","options":[{"id":"A","text":"5"},{"id":"B","text":"8"},{"id":"C","text":"11"},{"id":"D","text":"14"}],"correct_answer":"B","explanation_correct":"Data is already in order. There are 5 values, so the median is the 3rd value = 8.","explanation_incorrect":"Middle value of 5 ordered values is the 3rd one = 8."},
-    {"question_id":"T06.01.Q004","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The mode of 4, 6, 4, 8, 4, 6, 10 is:","options":[{"id":"A","text":"6"},{"id":"B","text":"4"},{"id":"C","text":"8"},{"id":"D","text":"10"}],"correct_answer":"B","explanation_correct":"4 appears 3 times, 6 appears 2 times, 8 and 10 appear once each. Mode = 4 (most frequent).","explanation_incorrect":"4 occurs most often (3 times), so mode = 4."},
-    {"question_id":"T06.01.Q005","concept_id":"T06.01.C01","difficulty":"familiarity","type":"fill_blank","question_text":"The mean of 10, 20, 30, 40, and 50 is ___.","correct_answer":"30","explanation_correct":"Mean = (10 + 20 + 30 + 40 + 50) / 5 = 150 / 5 = 30.","explanation_incorrect":"150 / 5 = 30."},
-    {"question_id":"T06.01.Q006","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The median of 7, 3, 5, 1, 9 is:","options":[{"id":"A","text":"3"},{"id":"B","text":"5"},{"id":"C","text":"7"},{"id":"D","text":"1"}],"correct_answer":"B","explanation_correct":"Arranged in order: 1, 3, 5, 7, 9. The middle (3rd) value is 5. So median = 5.","explanation_incorrect":"Ordered: 1, 3, 5, 7, 9. Middle value = 5."},
-    {"question_id":"T06.01.Q007","concept_id":"T06.01.C01","difficulty":"familiarity","type":"true_false","question_text":"The mode of a data set is always unique (there is always exactly one mode).","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"B","explanation_correct":"A data set can have more than one mode (bimodal or multimodal) if two or more values occur with the same highest frequency. It can also have no mode if all values occur equally.","explanation_incorrect":"Data can be bimodal (two modes) or have no mode."},
-    {"question_id":"T06.01.Q008","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The mean of the first five natural numbers is:","options":[{"id":"A","text":"2"},{"id":"B","text":"3"},{"id":"C","text":"2.5"},{"id":"D","text":"15"}],"correct_answer":"B","explanation_correct":"First five natural numbers: 1, 2, 3, 4, 5. Mean = (1+2+3+4+5)/5 = 15/5 = 3.","explanation_incorrect":"15/5 = 3."},
-    {"question_id":"T06.01.Q009","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The mean of 5 numbers is 12. If four of the numbers are 10, 14, 8, and 16, the fifth number is:","options":[{"id":"A","text":"12"},{"id":"B","text":"10"},{"id":"C","text":"14"},{"id":"D","text":"8"}],"correct_answer":"A","explanation_correct":"Sum of 5 numbers = 5 x 12 = 60. Sum of four numbers = 10 + 14 + 8 + 16 = 48. Fifth number = 60 - 48 = 12.","explanation_incorrect":"Fifth = 60 - 48 = 12."},
-    {"question_id":"T06.01.Q010","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The marks of 7 students are: 45, 60, 55, 70, 50, 65, 55. The mode is:","options":[{"id":"A","text":"45"},{"id":"B","text":"60"},{"id":"C","text":"55"},{"id":"D","text":"70"}],"correct_answer":"C","explanation_correct":"55 appears twice, all others appear once. Mode = 55 (most frequent).","explanation_incorrect":"55 occurs twice (most frequent), so mode = 55."},
-    {"question_id":"T06.01.Q011","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The median of 12, 18, 10, 15, 20, 14 is:","options":[{"id":"A","text":"14"},{"id":"B","text":"14.5"},{"id":"C","text":"15"},{"id":"D","text":"13"}],"correct_answer":"B","explanation_correct":"Ordered: 10, 12, 14, 15, 18, 20. There are 6 values (even), so median = average of 3rd and 4th values = (14 + 15)/2 = 14.5.","explanation_incorrect":"Ordered: 10, 12, 14, 15, 18, 20. Median = (14+15)/2 = 14.5."},
-    {"question_id":"T06.01.Q012","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The mean of 6, 8, x, 12, 14 is 10. The value of x is:","options":[{"id":"A","text":"10"},{"id":"B","text":"8"},{"id":"C","text":"12"},{"id":"D","text":"9"}],"correct_answer":"A","explanation_correct":"Sum = 5 x 10 = 50. 6 + 8 + x + 12 + 14 = 50. 40 + x = 50. x = 10.","explanation_incorrect":"40 + x = 50, so x = 10."},
-    {"question_id":"T06.01.Q013","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The range of temperatures recorded over a week: 22, 28, 25, 30, 24, 27, 26 (in degrees C) is:","options":[{"id":"A","text":"6"},{"id":"B","text":"8"},{"id":"C","text":"4"},{"id":"D","text":"10"}],"correct_answer":"B","explanation_correct":"Highest = 30, Lowest = 22. Range = 30 - 22 = 8 degrees.","explanation_incorrect":"30 - 22 = 8."},
-    {"question_id":"T06.01.Q014","concept_id":"T06.01.C01","difficulty":"application","type":"fill_blank","question_text":"If the mean of 4, 6, 8, 10, and x is 8, then x = ___.","correct_answer":"12","explanation_correct":"Sum = 5 x 8 = 40. 4 + 6 + 8 + 10 + x = 40. 28 + x = 40. x = 12.","explanation_incorrect":"28 + x = 40, so x = 12."},
-    {"question_id":"T06.01.Q015","concept_id":"T06.01.C02","difficulty":"familiarity","type":"mcq","question_text":"In a bar graph, the height of each bar represents:","options":[{"id":"A","text":"The width of the category"},{"id":"B","text":"The frequency or value of the category"},{"id":"C","text":"The number of categories"},{"id":"D","text":"The gap between bars"}],"correct_answer":"B","explanation_correct":"In a bar graph, the height (or length) of each bar represents the frequency or value associated with that category.","explanation_incorrect":"Bar height = frequency or value of the category."},
-    {"question_id":"T06.01.Q016","concept_id":"T06.01.C02","difficulty":"familiarity","type":"true_false","question_text":"In a bar graph, all bars must have equal width.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"A","explanation_correct":"In a bar graph, all bars have equal width and are separated by equal gaps. The height varies to show the data values.","explanation_incorrect":"Bars in a bar graph have uniform width with equal spacing."},
-    {"question_id":"T06.01.Q017","concept_id":"T06.01.C02","difficulty":"familiarity","type":"mcq","question_text":"A double bar graph is used to:","options":[{"id":"A","text":"Show data for one category only"},{"id":"B","text":"Compare two sets of data on the same graph"},{"id":"C","text":"Show the relationship between two variables"},{"id":"D","text":"Replace pie charts"}],"correct_answer":"B","explanation_correct":"A double bar graph uses two bars side by side for each category to compare two different sets of data (e.g., boys vs girls, 2024 vs 2025).","explanation_incorrect":"Double bar graphs compare two data sets for the same categories."},
-    {"question_id":"T06.01.Q018","concept_id":"T06.01.C02","difficulty":"familiarity","type":"mcq","question_text":"In a bar graph showing the favourite sports of students — Cricket: 25, Football: 15, Tennis: 10, Badminton: 20 — which sport has the tallest bar?","options":[{"id":"A","text":"Football"},{"id":"B","text":"Tennis"},{"id":"C","text":"Cricket"},{"id":"D","text":"Badminton"}],"correct_answer":"C","explanation_correct":"Cricket has the highest value (25), so it has the tallest bar.","explanation_incorrect":"Cricket (25) has the highest frequency, hence the tallest bar."},
-    {"question_id":"T06.01.Q019","concept_id":"T06.01.C02","difficulty":"application","type":"mcq","question_text":"A double bar graph compares the marks of two students A and B in 4 subjects. Student A scored 80, 75, 90, 85 and Student B scored 70, 85, 80, 95. In how many subjects did Student B score more than Student A?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"4"}],"correct_answer":"B","explanation_correct":"Comparing subject-wise: A=80 vs B=70 (A wins), A=75 vs B=85 (B wins), A=90 vs B=80 (A wins), A=85 vs B=95 (B wins). Student B scored more in 2 subjects.","explanation_incorrect":"B > A in subjects 2 and 4 only = 2 subjects."},
-    {"question_id":"T06.01.Q020","concept_id":"T06.01.C02","difficulty":"application","type":"mcq","question_text":"A bar graph shows the number of books read by students: Ravi: 8, Priya: 12, Amit: 6, Sita: 10. The total number of books read is:","options":[{"id":"A","text":"30"},{"id":"B","text":"36"},{"id":"C","text":"34"},{"id":"D","text":"28"}],"correct_answer":"B","explanation_correct":"Total = 8 + 12 + 6 + 10 = 36 books.","explanation_incorrect":"8 + 12 + 6 + 10 = 36."},
-    {"question_id":"T06.01.Q021","concept_id":"T06.01.C02","difficulty":"application","type":"mcq","question_text":"In a double bar graph, the scale on the y-axis is 1 cm = 10 students. If a bar has height 3.5 cm, it represents:","options":[{"id":"A","text":"3.5 students"},{"id":"B","text":"35 students"},{"id":"C","text":"350 students"},{"id":"D","text":"30 students"}],"correct_answer":"B","explanation_correct":"If 1 cm = 10 students, then 3.5 cm = 3.5 x 10 = 35 students.","explanation_incorrect":"3.5 x 10 = 35 students."},
-    {"question_id":"T06.01.Q022","concept_id":"T06.01.C03","difficulty":"familiarity","type":"mcq","question_text":"When a coin is tossed, the number of possible outcomes is:","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"4"}],"correct_answer":"B","explanation_correct":"A coin has two possible outcomes: Head (H) and Tail (T).","explanation_incorrect":"Coin toss: 2 outcomes — Head or Tail."},
-    {"question_id":"T06.01.Q023","concept_id":"T06.01.C03","difficulty":"familiarity","type":"mcq","question_text":"When a die is thrown, the number of possible outcomes is:","options":[{"id":"A","text":"4"},{"id":"B","text":"5"},{"id":"C","text":"6"},{"id":"D","text":"8"}],"correct_answer":"C","explanation_correct":"A standard die has 6 faces numbered 1 to 6, giving 6 possible outcomes.","explanation_incorrect":"A die has 6 faces: outcomes are 1, 2, 3, 4, 5, 6."},
-    {"question_id":"T06.01.Q024","concept_id":"T06.01.C03","difficulty":"familiarity","type":"mcq","question_text":"An event that is sure to happen is called:","options":[{"id":"A","text":"An impossible event"},{"id":"B","text":"An unlikely event"},{"id":"C","text":"A certain event"},{"id":"D","text":"A random event"}],"correct_answer":"C","explanation_correct":"A certain event is one that is sure to happen. For example, getting a number less than 7 when throwing a die.","explanation_incorrect":"An event that will definitely happen is called a certain event."},
-    {"question_id":"T06.01.Q025","concept_id":"T06.01.C03","difficulty":"familiarity","type":"true_false","question_text":"Getting a number 7 when throwing a standard die is an impossible event.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"A","explanation_correct":"A standard die has faces numbered 1 to 6 only. Getting 7 is not possible, so it is an impossible event.","explanation_incorrect":"A die has numbers 1-6 only; 7 cannot occur."},
-    {"question_id":"T06.01.Q026","concept_id":"T06.01.C03","difficulty":"familiarity","type":"mcq","question_text":"When a coin is tossed, the outcomes Head and Tail are:","options":[{"id":"A","text":"Unequal"},{"id":"B","text":"Equally likely"},{"id":"C","text":"Impossible"},{"id":"D","text":"Certain"}],"correct_answer":"B","explanation_correct":"When a fair coin is tossed, both Head and Tail have the same chance of occurring. They are equally likely outcomes.","explanation_incorrect":"Both outcomes have equal probability for a fair coin."},
-    {"question_id":"T06.01.Q027","concept_id":"T06.01.C03","difficulty":"application","type":"mcq","question_text":"A bag contains 3 red balls, 5 blue balls, and 2 green balls. If a ball is drawn at random, which colour has the highest chance of being picked?","options":[{"id":"A","text":"Red"},{"id":"B","text":"Blue"},{"id":"C","text":"Green"},{"id":"D","text":"All have equal chance"}],"correct_answer":"B","explanation_correct":"Blue has 5 balls out of 10 total (3+5+2=10). Since 5 > 3 > 2, blue has the highest chance.","explanation_incorrect":"Blue = 5 out of 10, highest among all colours."},
-    {"question_id":"T06.01.Q028","concept_id":"T06.01.C03","difficulty":"application","type":"mcq","question_text":"A die is thrown once. The probability of getting an even number is:","options":[{"id":"A","text":"1/6"},{"id":"B","text":"1/2"},{"id":"C","text":"1/3"},{"id":"D","text":"2/3"}],"correct_answer":"B","explanation_correct":"Even numbers on a die: 2, 4, 6 (3 outcomes). Total outcomes = 6. Probability = 3/6 = 1/2.","explanation_incorrect":"3 favourable out of 6 total = 3/6 = 1/2."},
-    {"question_id":"T06.01.Q029","concept_id":"T06.01.C03","difficulty":"application","type":"mcq","question_text":"A spinner has 4 equal sections coloured red, blue, green, and yellow. The probability of landing on red is:","options":[{"id":"A","text":"1/2"},{"id":"B","text":"1/3"},{"id":"C","text":"1/4"},{"id":"D","text":"1/5"}],"correct_answer":"C","explanation_correct":"There are 4 equal sections. Probability of red = 1/4.","explanation_incorrect":"1 favourable out of 4 = 1/4."},
-    {"question_id":"T06.01.Q030","concept_id":"T06.01.C03","difficulty":"application","type":"fill_blank","question_text":"When two coins are tossed together, the total number of outcomes is ___.","correct_answer":"4","explanation_correct":"Outcomes: HH, HT, TH, TT. Total = 4 outcomes.","explanation_incorrect":"HH, HT, TH, TT = 4 outcomes."},
-    {"question_id":"T06.01.Q031","concept_id":"T06.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The mean of 10 observations is 15. If one observation 25 is removed, the mean of the remaining 9 observations is:","options":[{"id":"A","text":"13.89"},{"id":"B","text":"14"},{"id":"C","text":"12.5"},{"id":"D","text":"125/9"}],"correct_answer":"D","explanation_correct":"Sum of 10 observations = 10 x 15 = 150. After removing 25: sum = 150 - 25 = 125. New mean = 125/9.","explanation_incorrect":"New sum = 125, new mean = 125/9."},
-    {"question_id":"T06.01.Q032","concept_id":"T06.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The mean of 5 observations is 20. If each observation is increased by 3, the new mean is:","options":[{"id":"A","text":"20"},{"id":"B","text":"23"},{"id":"C","text":"60"},{"id":"D","text":"15"}],"correct_answer":"B","explanation_correct":"When each observation is increased by a constant, the mean also increases by the same constant. New mean = 20 + 3 = 23.","explanation_incorrect":"Adding 3 to each value increases the mean by 3: 20 + 3 = 23."},
-    {"question_id":"T06.01.Q033","concept_id":"T06.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The heights (in cm) of 9 students are: 140, 135, 148, 142, 155, 138, 150, 145, 142. The median height is:","options":[{"id":"A","text":"142 cm"},{"id":"B","text":"145 cm"},{"id":"C","text":"148 cm"},{"id":"D","text":"140 cm"}],"correct_answer":"A","explanation_correct":"Ordered: 135, 138, 140, 142, 142, 145, 148, 150, 155. There are 9 values. Median = 5th value = 142 cm.","explanation_incorrect":"Ordered data: 5th value out of 9 = 142 cm."},
-    {"question_id":"T06.01.Q034","concept_id":"T06.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The data 3, 5, 7, 5, 3, 7, 3, 5, 3 has:","options":[{"id":"A","text":"Mode = 5"},{"id":"B","text":"Mode = 7"},{"id":"C","text":"Mode = 3"},{"id":"D","text":"No mode"}],"correct_answer":"C","explanation_correct":"3 appears 4 times, 5 appears 3 times, 7 appears 2 times. Mode = 3 (highest frequency).","explanation_incorrect":"3 occurs 4 times (most frequent), so mode = 3."},
-    {"question_id":"T06.01.Q035","concept_id":"T06.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The mean of 8 numbers is 25. If one more number 34 is added, the new mean is:","options":[{"id":"A","text":"26"},{"id":"B","text":"27"},{"id":"C","text":"25"},{"id":"D","text":"28"}],"correct_answer":"A","explanation_correct":"Sum of 8 numbers = 8 x 25 = 200. New sum = 200 + 34 = 234. New mean = 234/9 = 26.","explanation_incorrect":"234/9 = 26."},
-    {"question_id":"T06.01.Q036","concept_id":"T06.01.C02","difficulty":"application","type":"mcq","question_text":"In a bar graph, if the y-axis scale is 1 unit = 5 items and a bar reaches up to 7 units, the bar represents:","options":[{"id":"A","text":"7 items"},{"id":"B","text":"12 items"},{"id":"C","text":"35 items"},{"id":"D","text":"70 items"}],"correct_answer":"C","explanation_correct":"7 units x 5 items per unit = 35 items.","explanation_incorrect":"7 x 5 = 35 items."},
-    {"question_id":"T06.01.Q037","concept_id":"T06.01.C02","difficulty":"application","type":"mcq","question_text":"A bar graph shows sales of a shop over 4 months: Jan = 200, Feb = 350, Mar = 150, Apr = 300. The difference in sales between the highest and lowest months is:","options":[{"id":"A","text":"150"},{"id":"B","text":"200"},{"id":"C","text":"100"},{"id":"D","text":"250"}],"correct_answer":"B","explanation_correct":"Highest = Feb (350), Lowest = Mar (150). Difference = 350 - 150 = 200.","explanation_incorrect":"350 - 150 = 200."},
-    {"question_id":"T06.01.Q038","concept_id":"T06.01.C02","difficulty":"exam_style","type":"mcq","question_text":"A double bar graph compares rainfall (in mm) for City A and City B over 4 months. City A: 80, 120, 60, 100. City B: 90, 100, 80, 110. In which month was the difference in rainfall the greatest?","options":[{"id":"A","text":"Month 1"},{"id":"B","text":"Month 2"},{"id":"C","text":"Month 3"},{"id":"D","text":"Month 4"}],"correct_answer":"B","explanation_correct":"Differences: Month 1 = |80-90| = 10, Month 2 = |120-100| = 20, Month 3 = |60-80| = 20, Month 4 = |100-110| = 10. Months 2 and 3 both have difference 20. Month 2 is listed first.","explanation_incorrect":"Month 2 and Month 3 both have difference 20 mm, which is the greatest."},
-    {"question_id":"T06.01.Q039","concept_id":"T06.01.C03","difficulty":"exam_style","type":"mcq","question_text":"A bag has 4 red, 3 blue, and 5 yellow marbles. If one marble is drawn randomly, the probability of getting a blue marble is:","options":[{"id":"A","text":"3/12"},{"id":"B","text":"4/12"},{"id":"C","text":"5/12"},{"id":"D","text":"3/5"}],"correct_answer":"A","explanation_correct":"Total marbles = 4 + 3 + 5 = 12. Blue = 3. Probability = 3/12 = 1/4.","explanation_incorrect":"3 blue out of 12 total = 3/12 = 1/4."},
-    {"question_id":"T06.01.Q040","concept_id":"T06.01.C03","difficulty":"exam_style","type":"mcq","question_text":"A die is thrown once. What is the probability of getting a number greater than 4?","options":[{"id":"A","text":"1/6"},{"id":"B","text":"2/6"},{"id":"C","text":"4/6"},{"id":"D","text":"3/6"}],"correct_answer":"B","explanation_correct":"Numbers greater than 4: 5, 6 (2 outcomes). Total outcomes = 6. Probability = 2/6 = 1/3.","explanation_incorrect":"Favourable: 5 and 6 = 2 out of 6 = 2/6 = 1/3."},
-    {"question_id":"T06.01.Q041","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The mean of 15, 20, 25, 30, and 35 is:","options":[{"id":"A","text":"20"},{"id":"B","text":"25"},{"id":"C","text":"30"},{"id":"D","text":"125"}],"correct_answer":"B","explanation_correct":"Mean = (15 + 20 + 25 + 30 + 35) / 5 = 125 / 5 = 25.","explanation_incorrect":"125 / 5 = 25."},
-    {"question_id":"T06.01.Q042","concept_id":"T06.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The mode of 10, 20, 20, 30, 30, 30, 40 is:","options":[{"id":"A","text":"10"},{"id":"B","text":"20"},{"id":"C","text":"30"},{"id":"D","text":"40"}],"correct_answer":"C","explanation_correct":"30 appears 3 times, 20 appears 2 times, 10 and 40 appear once each. Mode = 30.","explanation_incorrect":"30 appears most frequently (3 times)."},
-    {"question_id":"T06.01.Q043","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The runs scored by a batsman in 6 innings are: 42, 55, 38, 55, 62, 48. The mean and mode are:","options":[{"id":"A","text":"Mean = 50, Mode = 55"},{"id":"B","text":"Mean = 55, Mode = 42"},{"id":"C","text":"Mean = 48, Mode = 55"},{"id":"D","text":"Mean = 50, Mode = 48"}],"correct_answer":"A","explanation_correct":"Mean = (42+55+38+55+62+48)/6 = 300/6 = 50. Mode = 55 (appears twice, others once).","explanation_incorrect":"Sum = 300, mean = 50. 55 occurs twice = mode."},
-    {"question_id":"T06.01.Q044","concept_id":"T06.01.C01","difficulty":"application","type":"mcq","question_text":"The median of 3, 7, 2, 9, 5, 8 is:","options":[{"id":"A","text":"5"},{"id":"B","text":"6"},{"id":"C","text":"7"},{"id":"D","text":"5.5"}],"correct_answer":"B","explanation_correct":"Ordered: 2, 3, 5, 7, 8, 9. There are 6 values (even count). Median = (5 + 7)/2 = 6.","explanation_incorrect":"Ordered: 2, 3, 5, 7, 8, 9. Median = (5+7)/2 = 6."},
-    {"question_id":"T06.01.Q045","concept_id":"T06.01.C02","difficulty":"familiarity","type":"mcq","question_text":"Which of the following is NOT a feature of a bar graph?","options":[{"id":"A","text":"Bars have equal width"},{"id":"B","text":"Bars have uniform gaps"},{"id":"C","text":"Bars must always be vertical"},{"id":"D","text":"Bar height represents data value"}],"correct_answer":"C","explanation_correct":"Bar graphs can be either vertical or horizontal. Bars do not have to be always vertical. The other three statements are correct features.","explanation_incorrect":"Bars can be horizontal or vertical; they need not always be vertical."},
-    {"question_id":"T06.01.Q046","concept_id":"T06.01.C02","difficulty":"exam_style","type":"mcq","question_text":"A double bar graph shows the number of boys and girls in 4 sections. Section A: 20B, 25G; Section B: 30B, 28G; Section C: 22B, 24G; Section D: 18B, 20G. Which section has the highest total students?","options":[{"id":"A","text":"Section A"},{"id":"B","text":"Section B"},{"id":"C","text":"Section C"},{"id":"D","text":"Section D"}],"correct_answer":"B","explanation_correct":"A = 20+25 = 45, B = 30+28 = 58, C = 22+24 = 46, D = 18+20 = 38. Section B has the most students (58).","explanation_incorrect":"B = 58 (highest). A=45, C=46, D=38."},
-    {"question_id":"T06.01.Q047","concept_id":"T06.01.C03","difficulty":"application","type":"mcq","question_text":"Two coins are tossed together. The probability of getting at least one Head is:","options":[{"id":"A","text":"1/4"},{"id":"B","text":"1/2"},{"id":"C","text":"3/4"},{"id":"D","text":"1"}],"correct_answer":"C","explanation_correct":"Outcomes: HH, HT, TH, TT. At least one Head: HH, HT, TH (3 outcomes). Probability = 3/4.","explanation_incorrect":"3 favourable (HH, HT, TH) out of 4 total = 3/4."},
-    {"question_id":"T06.01.Q048","concept_id":"T06.01.C03","difficulty":"exam_style","type":"mcq","question_text":"A bag contains 5 red and 3 green balls. One ball is drawn. Which statement is correct?","options":[{"id":"A","text":"Getting a red ball is more likely than a green ball"},{"id":"B","text":"Getting a green ball is more likely"},{"id":"C","text":"Both are equally likely"},{"id":"D","text":"Getting a red ball is impossible"}],"correct_answer":"A","explanation_correct":"P(red) = 5/8, P(green) = 3/8. Since 5/8 > 3/8, getting a red ball is more likely.","explanation_incorrect":"5 red vs 3 green; red is more likely."},
-    {"question_id":"T06.01.Q049","concept_id":"T06.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The mean of 12 observations is 18. If each observation is multiplied by 2, the new mean is:","options":[{"id":"A","text":"18"},{"id":"B","text":"36"},{"id":"C","text":"9"},{"id":"D","text":"24"}],"correct_answer":"B","explanation_correct":"When each observation is multiplied by a constant k, the mean is also multiplied by k. New mean = 18 x 2 = 36.","explanation_incorrect":"Mean x 2 = 18 x 2 = 36."},
-    {"question_id":"T06.01.Q050","concept_id":"T06.01.C03","difficulty":"exam_style","type":"mcq","question_text":"A die is thrown once. What is the probability of getting a prime number?","options":[{"id":"A","text":"1/6"},{"id":"B","text":"2/6"},{"id":"C","text":"3/6"},{"id":"D","text":"4/6"}],"correct_answer":"C","explanation_correct":"Prime numbers on a die: 2, 3, 5 (three outcomes). Total outcomes = 6. Probability = 3/6 = 1/2.","explanation_incorrect":"Primes: 2, 3, 5 = 3 out of 6 = 1/2."}
+    {
+      "question_id": "T06.01.Q001",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 3, 5, 7, 9, and 11 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "35"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mean = (3 + 5 + 7 + 9 + 11) / 5 = 35 / 5 = 7.",
+      "explanation_incorrect": "Sum = 35, count = 5, mean = 35/5 = 7."
+    },
+    {
+      "question_id": "T06.01.Q002",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The range of the data 12, 8, 15, 6, 20 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Range = Highest - Lowest = 20 - 6 = 14.",
+      "explanation_incorrect": "20 - 6 = 14."
+    },
+    {
+      "question_id": "T06.01.Q003",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The median of 2, 5, 8, 11, 14 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "11"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Data is already in order. There are 5 values, so the median is the 3rd value = 8.",
+      "explanation_incorrect": "Middle value of 5 ordered values is the 3rd one = 8."
+    },
+    {
+      "question_id": "T06.01.Q004",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mode of 4, 6, 4, 8, 4, 6, 10 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "4 appears 3 times, 6 appears 2 times, 8 and 10 appear once each. Mode = 4 (most frequent).",
+      "explanation_incorrect": "4 occurs most often (3 times), so mode = 4."
+    },
+    {
+      "question_id": "T06.01.Q005",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The mean of 10, 20, 30, 40, and 50 is ___.",
+      "correct_answer": "30",
+      "explanation_correct": "Mean = (10 + 20 + 30 + 40 + 50) / 5 = 150 / 5 = 30.",
+      "explanation_incorrect": "150 / 5 = 30."
+    },
+    {
+      "question_id": "T06.01.Q006",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The median of 7, 3, 5, 1, 9 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Arranged in order: 1, 3, 5, 7, 9. The middle (3rd) value is 5. So median = 5.",
+      "explanation_incorrect": "Ordered: 1, 3, 5, 7, 9. Middle value = 5."
+    },
+    {
+      "question_id": "T06.01.Q007",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The mode of a data set is always unique (there is always exactly one mode).",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A data set can have more than one mode (bimodal or multimodal) if two or more values occur with the same highest frequency. It can also have no mode if all values occur equally.",
+      "explanation_incorrect": "Data can be bimodal (two modes) or have no mode."
+    },
+    {
+      "question_id": "T06.01.Q008",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of the first five natural numbers is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "2.5"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "First five natural numbers: 1, 2, 3, 4, 5. Mean = (1+2+3+4+5)/5 = 15/5 = 3.",
+      "explanation_incorrect": "15/5 = 3."
+    },
+    {
+      "question_id": "T06.01.Q009",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 5 numbers is 12. If four of the numbers are 10, 14, 8, and 16, the fifth number is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "14"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of 5 numbers = 5 x 12 = 60. Sum of four numbers = 10 + 14 + 8 + 16 = 48. Fifth number = 60 - 48 = 12.",
+      "explanation_incorrect": "Fifth = 60 - 48 = 12."
+    },
+    {
+      "question_id": "T06.01.Q010",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The marks of 7 students are: 45, 60, 55, 70, 50, 65, 55. The mode is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "45"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "55"
+        },
+        {
+          "id": "D",
+          "text": "70"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "55 appears twice, all others appear once. Mode = 55 (most frequent).",
+      "explanation_incorrect": "55 occurs twice (most frequent), so mode = 55."
+    },
+    {
+      "question_id": "T06.01.Q011",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The median of 12, 18, 10, 15, 20, 14 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "14.5"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ordered: 10, 12, 14, 15, 18, 20. There are 6 values (even), so median = average of 3rd and 4th values = (14 + 15)/2 = 14.5.",
+      "explanation_incorrect": "Ordered: 10, 12, 14, 15, 18, 20. Median = (14+15)/2 = 14.5."
+    },
+    {
+      "question_id": "T06.01.Q012",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 6, 8, x, 12, 14 is 10. The value of x is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum = 5 x 10 = 50. 6 + 8 + x + 12 + 14 = 50. 40 + x = 50. x = 10.",
+      "explanation_incorrect": "40 + x = 50, so x = 10."
+    },
+    {
+      "question_id": "T06.01.Q013",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The range of temperatures recorded over a week: 22, 28, 25, 30, 24, 27, 26 (in degrees C) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Highest = 30, Lowest = 22. Range = 30 - 22 = 8 degrees.",
+      "explanation_incorrect": "30 - 22 = 8."
+    },
+    {
+      "question_id": "T06.01.Q014",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "If the mean of 4, 6, 8, 10, and x is 8, then x = ___.",
+      "correct_answer": "12",
+      "explanation_correct": "Sum = 5 x 8 = 40. 4 + 6 + 8 + 10 + x = 40. 28 + x = 40. x = 12.",
+      "explanation_incorrect": "28 + x = 40, so x = 12."
+    },
+    {
+      "question_id": "T06.01.Q015",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In a bar graph, the height of each bar represents:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The width of the category"
+        },
+        {
+          "id": "B",
+          "text": "The frequency or value of the category"
+        },
+        {
+          "id": "C",
+          "text": "The number of categories"
+        },
+        {
+          "id": "D",
+          "text": "The gap between bars"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a bar graph, the height (or length) of each bar represents the frequency or value associated with that category.",
+      "explanation_incorrect": "Bar height = frequency or value of the category."
+    },
+    {
+      "question_id": "T06.01.Q016",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "In a bar graph, all bars must have equal width.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In a bar graph, all bars have equal width and are separated by equal gaps. The height varies to show the data values.",
+      "explanation_incorrect": "Bars in a bar graph have uniform width with equal spacing."
+    },
+    {
+      "question_id": "T06.01.Q017",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A double bar graph is used to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Show data for one category only"
+        },
+        {
+          "id": "B",
+          "text": "Compare two sets of data on the same graph"
+        },
+        {
+          "id": "C",
+          "text": "Show the relationship between two variables"
+        },
+        {
+          "id": "D",
+          "text": "Replace pie charts"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A double bar graph uses two bars side by side for each category to compare two different sets of data (e.g., boys vs girls, 2024 vs 2025).",
+      "explanation_incorrect": "Double bar graphs compare two data sets for the same categories."
+    },
+    {
+      "question_id": "T06.01.Q018",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In a bar graph showing the favourite sports of students — Cricket: 25, Football: 15, Tennis: 10, Badminton: 20 — which sport has the tallest bar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Football"
+        },
+        {
+          "id": "B",
+          "text": "Tennis"
+        },
+        {
+          "id": "C",
+          "text": "Cricket"
+        },
+        {
+          "id": "D",
+          "text": "Badminton"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Cricket has the highest value (25), so it has the tallest bar.",
+      "explanation_incorrect": "Cricket (25) has the highest frequency, hence the tallest bar."
+    },
+    {
+      "question_id": "T06.01.Q019",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A double bar graph compares the marks of two students A and B in 4 subjects. Student A scored 80, 75, 90, 85 and Student B scored 70, 85, 80, 95. In how many subjects did Student B score more than Student A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Comparing subject-wise: A=80 vs B=70 (A wins), A=75 vs B=85 (B wins), A=90 vs B=80 (A wins), A=85 vs B=95 (B wins). Student B scored more in 2 subjects.",
+      "explanation_incorrect": "B > A in subjects 2 and 4 only = 2 subjects."
+    },
+    {
+      "question_id": "T06.01.Q020",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A bar graph shows the number of books read by students: Ravi: 8, Priya: 12, Amit: 6, Sita: 10. The total number of books read is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "36"
+        },
+        {
+          "id": "C",
+          "text": "34"
+        },
+        {
+          "id": "D",
+          "text": "28"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Total = 8 + 12 + 6 + 10 = 36 books.",
+      "explanation_incorrect": "8 + 12 + 6 + 10 = 36."
+    },
+    {
+      "question_id": "T06.01.Q021",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In a double bar graph, the scale on the y-axis is 1 cm = 10 students. If a bar has height 3.5 cm, it represents:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.5 students"
+        },
+        {
+          "id": "B",
+          "text": "35 students"
+        },
+        {
+          "id": "C",
+          "text": "350 students"
+        },
+        {
+          "id": "D",
+          "text": "30 students"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If 1 cm = 10 students, then 3.5 cm = 3.5 x 10 = 35 students.",
+      "explanation_incorrect": "3.5 x 10 = 35 students."
+    },
+    {
+      "question_id": "T06.01.Q022",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "When a coin is tossed, the number of possible outcomes is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A coin has two possible outcomes: Head (H) and Tail (T).",
+      "explanation_incorrect": "Coin toss: 2 outcomes — Head or Tail."
+    },
+    {
+      "question_id": "T06.01.Q023",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "When a die is thrown, the number of possible outcomes is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A standard die has 6 faces numbered 1 to 6, giving 6 possible outcomes.",
+      "explanation_incorrect": "A die has 6 faces: outcomes are 1, 2, 3, 4, 5, 6."
+    },
+    {
+      "question_id": "T06.01.Q024",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "An event that is sure to happen is called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An impossible event"
+        },
+        {
+          "id": "B",
+          "text": "An unlikely event"
+        },
+        {
+          "id": "C",
+          "text": "A certain event"
+        },
+        {
+          "id": "D",
+          "text": "A random event"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A certain event is one that is sure to happen. For example, getting a number less than 7 when throwing a die.",
+      "explanation_incorrect": "An event that will definitely happen is called a certain event."
+    },
+    {
+      "question_id": "T06.01.Q025",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Getting a number 7 when throwing a standard die is an impossible event.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A standard die has faces numbered 1 to 6 only. Getting 7 is not possible, so it is an impossible event.",
+      "explanation_incorrect": "A die has numbers 1-6 only; 7 cannot occur."
+    },
+    {
+      "question_id": "T06.01.Q026",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "When a coin is tossed, the outcomes Head and Tail are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Unequal"
+        },
+        {
+          "id": "B",
+          "text": "Equally likely"
+        },
+        {
+          "id": "C",
+          "text": "Impossible"
+        },
+        {
+          "id": "D",
+          "text": "Certain"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a fair coin is tossed, both Head and Tail have the same chance of occurring. They are equally likely outcomes.",
+      "explanation_incorrect": "Both outcomes have equal probability for a fair coin."
+    },
+    {
+      "question_id": "T06.01.Q027",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A bag contains 3 red balls, 5 blue balls, and 2 green balls. If a ball is drawn at random, which colour has the highest chance of being picked?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Red"
+        },
+        {
+          "id": "B",
+          "text": "Blue"
+        },
+        {
+          "id": "C",
+          "text": "Green"
+        },
+        {
+          "id": "D",
+          "text": "All have equal chance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Blue has 5 balls out of 10 total (3+5+2=10). Since 5 > 3 > 2, blue has the highest chance.",
+      "explanation_incorrect": "Blue = 5 out of 10, highest among all colours."
+    },
+    {
+      "question_id": "T06.01.Q028",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A die is thrown once. The probability of getting an even number is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "1/3"
+        },
+        {
+          "id": "D",
+          "text": "2/3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Even numbers on a die: 2, 4, 6 (3 outcomes). Total outcomes = 6. Probability = 3/6 = 1/2.",
+      "explanation_incorrect": "3 favourable out of 6 total = 3/6 = 1/2."
+    },
+    {
+      "question_id": "T06.01.Q029",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A spinner has 4 equal sections coloured red, blue, green, and yellow. The probability of landing on red is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "1/4"
+        },
+        {
+          "id": "D",
+          "text": "1/5"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "There are 4 equal sections. Probability of red = 1/4.",
+      "explanation_incorrect": "1 favourable out of 4 = 1/4."
+    },
+    {
+      "question_id": "T06.01.Q030",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "When two coins are tossed together, the total number of outcomes is ___.",
+      "correct_answer": "4",
+      "explanation_correct": "Outcomes: HH, HT, TH, TT. Total = 4 outcomes.",
+      "explanation_incorrect": "HH, HT, TH, TT = 4 outcomes."
+    },
+    {
+      "question_id": "T06.01.Q031",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 10 observations is 15. If one observation 25 is removed, the mean of the remaining 9 observations is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "13.89"
+        },
+        {
+          "id": "B",
+          "text": "14"
+        },
+        {
+          "id": "C",
+          "text": "12.5"
+        },
+        {
+          "id": "D",
+          "text": "125/9"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Sum of 10 observations = 10 x 15 = 150. After removing 25: sum = 150 - 25 = 125. New mean = 125/9.",
+      "explanation_incorrect": "New sum = 125, new mean = 125/9."
+    },
+    {
+      "question_id": "T06.01.Q032",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 5 observations is 20. If each observation is increased by 3, the new mean is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "23"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When each observation is increased by a constant, the mean also increases by the same constant. New mean = 20 + 3 = 23.",
+      "explanation_incorrect": "Adding 3 to each value increases the mean by 3: 20 + 3 = 23."
+    },
+    {
+      "question_id": "T06.01.Q033",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The heights (in cm) of 9 students are: 140, 135, 148, 142, 155, 138, 150, 145, 142. The median height is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "142 cm"
+        },
+        {
+          "id": "B",
+          "text": "145 cm"
+        },
+        {
+          "id": "C",
+          "text": "148 cm"
+        },
+        {
+          "id": "D",
+          "text": "140 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Ordered: 135, 138, 140, 142, 142, 145, 148, 150, 155. There are 9 values. Median = 5th value = 142 cm.",
+      "explanation_incorrect": "Ordered data: 5th value out of 9 = 142 cm."
+    },
+    {
+      "question_id": "T06.01.Q034",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The data 3, 5, 7, 5, 3, 7, 3, 5, 3 has:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mode = 5"
+        },
+        {
+          "id": "B",
+          "text": "Mode = 7"
+        },
+        {
+          "id": "C",
+          "text": "Mode = 3"
+        },
+        {
+          "id": "D",
+          "text": "No mode"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "3 appears 4 times, 5 appears 3 times, 7 appears 2 times. Mode = 3 (highest frequency).",
+      "explanation_incorrect": "3 occurs 4 times (most frequent), so mode = 3."
+    },
+    {
+      "question_id": "T06.01.Q035",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 8 numbers is 25. If one more number 34 is added, the new mean is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "26"
+        },
+        {
+          "id": "B",
+          "text": "27"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "28"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sum of 8 numbers = 8 x 25 = 200. New sum = 200 + 34 = 234. New mean = 234/9 = 26.",
+      "explanation_incorrect": "234/9 = 26."
+    },
+    {
+      "question_id": "T06.01.Q036",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In a bar graph, if the y-axis scale is 1 unit = 5 items and a bar reaches up to 7 units, the bar represents:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 items"
+        },
+        {
+          "id": "B",
+          "text": "12 items"
+        },
+        {
+          "id": "C",
+          "text": "35 items"
+        },
+        {
+          "id": "D",
+          "text": "70 items"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "7 units x 5 items per unit = 35 items.",
+      "explanation_incorrect": "7 x 5 = 35 items."
+    },
+    {
+      "question_id": "T06.01.Q037",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A bar graph shows sales of a shop over 4 months: Jan = 200, Feb = 350, Mar = 150, Apr = 300. The difference in sales between the highest and lowest months is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "150"
+        },
+        {
+          "id": "B",
+          "text": "200"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "250"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Highest = Feb (350), Lowest = Mar (150). Difference = 350 - 150 = 200.",
+      "explanation_incorrect": "350 - 150 = 200."
+    },
+    {
+      "question_id": "T06.01.Q038",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A double bar graph compares rainfall (in mm) for City A and City B over 4 months. City A: 80, 120, 60, 100. City B: 90, 100, 80, 110. In which month was the difference in rainfall the greatest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Month 1"
+        },
+        {
+          "id": "B",
+          "text": "Month 2"
+        },
+        {
+          "id": "C",
+          "text": "Month 3"
+        },
+        {
+          "id": "D",
+          "text": "Month 4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Differences: Month 1 = |80-90| = 10, Month 2 = |120-100| = 20, Month 3 = |60-80| = 20, Month 4 = |100-110| = 10. Months 2 and 3 both have difference 20. Month 2 is listed first.",
+      "explanation_incorrect": "Month 2 and Month 3 both have difference 20 mm, which is the greatest."
+    },
+    {
+      "question_id": "T06.01.Q039",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A bag has 4 red, 3 blue, and 5 yellow marbles. If one marble is drawn randomly, the probability of getting a blue marble is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/12"
+        },
+        {
+          "id": "B",
+          "text": "4/12"
+        },
+        {
+          "id": "C",
+          "text": "5/12"
+        },
+        {
+          "id": "D",
+          "text": "3/5"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total marbles = 4 + 3 + 5 = 12. Blue = 3. Probability = 3/12 = 1/4.",
+      "explanation_incorrect": "3 blue out of 12 total = 3/12 = 1/4."
+    },
+    {
+      "question_id": "T06.01.Q040",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A die is thrown once. What is the probability of getting a number greater than 4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "2/6"
+        },
+        {
+          "id": "C",
+          "text": "4/6"
+        },
+        {
+          "id": "D",
+          "text": "3/6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Numbers greater than 4: 5, 6 (2 outcomes). Total outcomes = 6. Probability = 2/6 = 1/3.",
+      "explanation_incorrect": "Favourable: 5 and 6 = 2 out of 6 = 2/6 = 1/3."
+    },
+    {
+      "question_id": "T06.01.Q041",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 15, 20, 25, 30, and 35 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "125"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Mean = (15 + 20 + 25 + 30 + 35) / 5 = 125 / 5 = 25.",
+      "explanation_incorrect": "125 / 5 = 25."
+    },
+    {
+      "question_id": "T06.01.Q042",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mode of 10, 20, 20, 30, 30, 30, 40 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "40"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "30 appears 3 times, 20 appears 2 times, 10 and 40 appear once each. Mode = 30.",
+      "explanation_incorrect": "30 appears most frequently (3 times)."
+    },
+    {
+      "question_id": "T06.01.Q043",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The runs scored by a batsman in 6 innings are: 42, 55, 38, 55, 62, 48. The mean and mode are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mean = 50, Mode = 55"
+        },
+        {
+          "id": "B",
+          "text": "Mean = 55, Mode = 42"
+        },
+        {
+          "id": "C",
+          "text": "Mean = 48, Mode = 55"
+        },
+        {
+          "id": "D",
+          "text": "Mean = 50, Mode = 48"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mean = (42+55+38+55+62+48)/6 = 300/6 = 50. Mode = 55 (appears twice, others once).",
+      "explanation_incorrect": "Sum = 300, mean = 50. 55 occurs twice = mode."
+    },
+    {
+      "question_id": "T06.01.Q044",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The median of 3, 7, 2, 9, 5, 8 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "5.5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Ordered: 2, 3, 5, 7, 8, 9. There are 6 values (even count). Median = (5 + 7)/2 = 6.",
+      "explanation_incorrect": "Ordered: 2, 3, 5, 7, 8, 9. Median = (5+7)/2 = 6."
+    },
+    {
+      "question_id": "T06.01.Q045",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of the following is NOT a feature of a bar graph?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bars have equal width"
+        },
+        {
+          "id": "B",
+          "text": "Bars have uniform gaps"
+        },
+        {
+          "id": "C",
+          "text": "Bars must always be vertical"
+        },
+        {
+          "id": "D",
+          "text": "Bar height represents data value"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Bar graphs can be either vertical or horizontal. Bars do not have to be always vertical. The other three statements are correct features.",
+      "explanation_incorrect": "Bars can be horizontal or vertical; they need not always be vertical."
+    },
+    {
+      "question_id": "T06.01.Q046",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A double bar graph shows the number of boys and girls in 4 sections. Section A: 20B, 25G; Section B: 30B, 28G; Section C: 22B, 24G; Section D: 18B, 20G. Which section has the highest total students?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Section A"
+        },
+        {
+          "id": "B",
+          "text": "Section B"
+        },
+        {
+          "id": "C",
+          "text": "Section C"
+        },
+        {
+          "id": "D",
+          "text": "Section D"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A = 20+25 = 45, B = 30+28 = 58, C = 22+24 = 46, D = 18+20 = 38. Section B has the most students (58).",
+      "explanation_incorrect": "B = 58 (highest). A=45, C=46, D=38."
+    },
+    {
+      "question_id": "T06.01.Q047",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two coins are tossed together. The probability of getting at least one Head is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4"
+        },
+        {
+          "id": "B",
+          "text": "1/2"
+        },
+        {
+          "id": "C",
+          "text": "3/4"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Outcomes: HH, HT, TH, TT. At least one Head: HH, HT, TH (3 outcomes). Probability = 3/4.",
+      "explanation_incorrect": "3 favourable (HH, HT, TH) out of 4 total = 3/4."
+    },
+    {
+      "question_id": "T06.01.Q048",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A bag contains 5 red and 3 green balls. One ball is drawn. Which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Getting a red ball is more likely than a green ball"
+        },
+        {
+          "id": "B",
+          "text": "Getting a green ball is more likely"
+        },
+        {
+          "id": "C",
+          "text": "Both are equally likely"
+        },
+        {
+          "id": "D",
+          "text": "Getting a red ball is impossible"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "P(red) = 5/8, P(green) = 3/8. Since 5/8 > 3/8, getting a red ball is more likely.",
+      "explanation_incorrect": "5 red vs 3 green; red is more likely."
+    },
+    {
+      "question_id": "T06.01.Q049",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The mean of 12 observations is 18. If each observation is multiplied by 2, the new mean is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "18"
+        },
+        {
+          "id": "B",
+          "text": "36"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When each observation is multiplied by a constant k, the mean is also multiplied by k. New mean = 18 x 2 = 36.",
+      "explanation_incorrect": "Mean x 2 = 18 x 2 = 36."
+    },
+    {
+      "question_id": "T06.01.Q050",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A die is thrown once. What is the probability of getting a prime number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/6"
+        },
+        {
+          "id": "B",
+          "text": "2/6"
+        },
+        {
+          "id": "C",
+          "text": "3/6"
+        },
+        {
+          "id": "D",
+          "text": "4/6"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Prime numbers on a die: 2, 3, 5 (three outcomes). Total outcomes = 6. Probability = 3/6 = 1/2.",
+      "explanation_incorrect": "Primes: 2, 3, 5 = 3 out of 6 = 1/2."
+    }
   ]
 }

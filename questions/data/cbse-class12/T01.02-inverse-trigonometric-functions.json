@@ -1,16 +1,21 @@
 {
   "version": "1.0.0",
-  "cam_reference": { "cam_version": "1.0.0", "board": "CBSE", "class": 12, "subject": "Mathematics" },
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 12,
+    "subject": "Mathematics"
+  },
   "topic_id": "T01.02",
   "topic_name": "Inverse Trigonometric Functions",
   "canonical_explanation": {
-    "text": "Inverse trigonometric functions are the inverse of trigonometric functions defined on restricted domains. The principal value branch of sin\u207b\u00b9 has domain [-1,1] and range [-\u03c0/2, \u03c0/2], cos\u207b\u00b9 has domain [-1,1] and range [0,\u03c0], and tan\u207b\u00b9 has domain \u211d and range (-\u03c0/2, \u03c0/2). Key identities include sin\u207b\u00b9(x)+cos\u207b\u00b9(x)=\u03c0/2, tan\u207b\u00b9(x)+cot\u207b\u00b9(x)=\u03c0/2, and the addition formula tan\u207b\u00b9x+tan\u207b\u00b9y=tan\u207b\u00b9((x+y)/(1-xy)) when xy<1.",
+    "text": "Inverse trigonometric functions are the inverse of trigonometric functions defined on restricted domains. The principal value branch of sin⁻¹ has domain [-1,1] and range [-π/2, π/2], cos⁻¹ has domain [-1,1] and range [0,π], and tan⁻¹ has domain ℝ and range (-π/2, π/2). Key identities include sin⁻¹(x)+cos⁻¹(x)=π/2, tan⁻¹(x)+cot⁻¹(x)=π/2, and the addition formula tan⁻¹x+tan⁻¹y=tan⁻¹((x+y)/(1-xy)) when xy<1.",
     "rules": [
-      "sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2 for all x \u2208 [-1, 1]",
-      "tan\u207b\u00b9(x) + cot\u207b\u00b9(x) = \u03c0/2 for all x \u2208 \u211d",
-      "sin\u207b\u00b9(-x) = -sin\u207b\u00b9(x); cos\u207b\u00b9(-x) = \u03c0 - cos\u207b\u00b9(x)",
-      "tan\u207b\u00b9(x) + tan\u207b\u00b9(y) = tan\u207b\u00b9((x+y)/(1-xy)) when xy < 1",
-      "2tan\u207b\u00b9(x) = sin\u207b\u00b9(2x/(1+x\u00b2)) for |x| \u2264 1"
+      "sin⁻¹(x) + cos⁻¹(x) = π/2 for all x ∈ [-1, 1]",
+      "tan⁻¹(x) + cot⁻¹(x) = π/2 for all x ∈ ℝ",
+      "sin⁻¹(-x) = -sin⁻¹(x); cos⁻¹(-x) = π - cos⁻¹(x)",
+      "tan⁻¹(x) + tan⁻¹(y) = tan⁻¹((x+y)/(1-xy)) when xy < 1",
+      "2tan⁻¹(x) = sin⁻¹(2x/(1+x²)) for |x| ≤ 1"
     ]
   },
   "questions": [
@@ -19,550 +24,1418 @@
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of sin\u207b\u00b9(1/2) is:",
-      "options": [{"id": "A", "text": "\u03c0/6"}, {"id": "B", "text": "\u03c0/3"}, {"id": "C", "text": "5\u03c0/6"}, {"id": "D", "text": "-\u03c0/6"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of sin⁻¹(1/2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/6"
+        },
+        {
+          "id": "B",
+          "text": "π/3"
+        },
+        {
+          "id": "C",
+          "text": "5π/6"
+        },
+        {
+          "id": "D",
+          "text": "-π/6"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "sin(\u03c0/6) = 1/2 and \u03c0/6 \u2208 [-\u03c0/2, \u03c0/2], so sin\u207b\u00b9(1/2) = \u03c0/6.",
-      "explanation_incorrect": "The principal value branch of sin\u207b\u00b9 has range [-\u03c0/2, \u03c0/2]. Since sin(\u03c0/6) = 1/2, the answer is \u03c0/6."
+      "explanation_correct": "sin(π/6) = 1/2 and π/6 ∈ [-π/2, π/2], so sin⁻¹(1/2) = π/6.",
+      "explanation_incorrect": "The principal value branch of sin⁻¹ has range [-π/2, π/2]. Since sin(π/6) = 1/2, the answer is π/6."
     },
     {
       "question_id": "T01.02.Q002",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of cos\u207b\u00b9(1/2) is:",
-      "options": [{"id": "A", "text": "\u03c0/6"}, {"id": "B", "text": "\u03c0/3"}, {"id": "C", "text": "2\u03c0/3"}, {"id": "D", "text": "\u03c0/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of cos⁻¹(1/2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/6"
+        },
+        {
+          "id": "B",
+          "text": "π/3"
+        },
+        {
+          "id": "C",
+          "text": "2π/3"
+        },
+        {
+          "id": "D",
+          "text": "π/4"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "cos(\u03c0/3) = 1/2 and \u03c0/3 \u2208 [0, \u03c0], so cos\u207b\u00b9(1/2) = \u03c0/3.",
-      "explanation_incorrect": "The principal value branch of cos\u207b\u00b9 has range [0, \u03c0]. Since cos(\u03c0/3) = 1/2, the answer is \u03c0/3, not \u03c0/6."
+      "explanation_correct": "cos(π/3) = 1/2 and π/3 ∈ [0, π], so cos⁻¹(1/2) = π/3.",
+      "explanation_incorrect": "The principal value branch of cos⁻¹ has range [0, π]. Since cos(π/3) = 1/2, the answer is π/3, not π/6."
     },
     {
       "question_id": "T01.02.Q003",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of tan\u207b\u00b9(1) is:",
-      "options": [{"id": "A", "text": "\u03c0/3"}, {"id": "B", "text": "\u03c0/4"}, {"id": "C", "text": "\u03c0/2"}, {"id": "D", "text": "5\u03c0/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of tan⁻¹(1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/3"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/2"
+        },
+        {
+          "id": "D",
+          "text": "5π/4"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "tan(\u03c0/4) = 1 and \u03c0/4 \u2208 (-\u03c0/2, \u03c0/2), so tan\u207b\u00b9(1) = \u03c0/4.",
-      "explanation_incorrect": "The principal value branch of tan\u207b\u00b9 has range (-\u03c0/2, \u03c0/2). Since tan(\u03c0/4) = 1, the answer is \u03c0/4."
+      "explanation_correct": "tan(π/4) = 1 and π/4 ∈ (-π/2, π/2), so tan⁻¹(1) = π/4.",
+      "explanation_incorrect": "The principal value branch of tan⁻¹ has range (-π/2, π/2). Since tan(π/4) = 1, the answer is π/4."
     },
     {
       "question_id": "T01.02.Q004",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The domain of the function sin\u207b\u00b9(x) is:",
-      "options": [{"id": "A", "text": "[-1, 1]"}, {"id": "B", "text": "(-\u221e, \u221e)"}, {"id": "C", "text": "[0, 1]"}, {"id": "D", "text": "[-\u03c0/2, \u03c0/2]"}],
+      "cognitive_level": "recall",
+      "question_text": "The domain of the function sin⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-1, 1]"
+        },
+        {
+          "id": "B",
+          "text": "(-∞, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "[0, 1]"
+        },
+        {
+          "id": "D",
+          "text": "[-π/2, π/2]"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "sin\u207b\u00b9(x) is defined only when -1 \u2264 x \u2264 1, so the domain is [-1, 1].",
-      "explanation_incorrect": "The inverse sine function is defined only for inputs in [-1, 1] since sine outputs values only in this range. [-\u03c0/2, \u03c0/2] is the range, not the domain."
+      "explanation_correct": "sin⁻¹(x) is defined only when -1 ≤ x ≤ 1, so the domain is [-1, 1].",
+      "explanation_incorrect": "The inverse sine function is defined only for inputs in [-1, 1] since sine outputs values only in this range. [-π/2, π/2] is the range, not the domain."
     },
     {
       "question_id": "T01.02.Q005",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The range (principal value branch) of cos\u207b\u00b9(x) is:",
-      "options": [{"id": "A", "text": "[-\u03c0/2, \u03c0/2]"}, {"id": "B", "text": "[0, \u03c0]"}, {"id": "C", "text": "(-\u03c0/2, \u03c0/2)"}, {"id": "D", "text": "[0, 2\u03c0]"}],
+      "cognitive_level": "recall",
+      "question_text": "The range (principal value branch) of cos⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-π/2, π/2]"
+        },
+        {
+          "id": "B",
+          "text": "[0, π]"
+        },
+        {
+          "id": "C",
+          "text": "(-π/2, π/2)"
+        },
+        {
+          "id": "D",
+          "text": "[0, 2π]"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "The principal value branch of cos\u207b\u00b9 is defined with range [0, \u03c0].",
-      "explanation_incorrect": "cos\u207b\u00b9(x) returns values in [0, \u03c0]. The range [-\u03c0/2, \u03c0/2] belongs to sin\u207b\u00b9(x)."
+      "explanation_correct": "The principal value branch of cos⁻¹ is defined with range [0, π].",
+      "explanation_incorrect": "cos⁻¹(x) returns values in [0, π]. The range [-π/2, π/2] belongs to sin⁻¹(x)."
     },
     {
       "question_id": "T01.02.Q006",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The range (principal value branch) of tan\u207b\u00b9(x) is:",
-      "options": [{"id": "A", "text": "[0, \u03c0]"}, {"id": "B", "text": "[-\u03c0/2, \u03c0/2]"}, {"id": "C", "text": "(-\u03c0/2, \u03c0/2)"}, {"id": "D", "text": "(-\u03c0, \u03c0)"}],
+      "cognitive_level": "recall",
+      "question_text": "The range (principal value branch) of tan⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[0, π]"
+        },
+        {
+          "id": "B",
+          "text": "[-π/2, π/2]"
+        },
+        {
+          "id": "C",
+          "text": "(-π/2, π/2)"
+        },
+        {
+          "id": "D",
+          "text": "(-π, π)"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "The principal value branch of tan\u207b\u00b9 has range (-\u03c0/2, \u03c0/2). The endpoints are excluded because tan is undefined at \u00b1\u03c0/2.",
-      "explanation_incorrect": "tan\u207b\u00b9(x) returns values in the open interval (-\u03c0/2, \u03c0/2). Note this is an open interval, not closed."
+      "explanation_correct": "The principal value branch of tan⁻¹ has range (-π/2, π/2). The endpoints are excluded because tan is undefined at ±π/2.",
+      "explanation_incorrect": "tan⁻¹(x) returns values in the open interval (-π/2, π/2). Note this is an open interval, not closed."
     },
     {
       "question_id": "T01.02.Q007",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of sin\u207b\u00b9(\u221a3/2) is:",
-      "options": [{"id": "A", "text": "\u03c0/6"}, {"id": "B", "text": "\u03c0/4"}, {"id": "C", "text": "\u03c0/3"}, {"id": "D", "text": "2\u03c0/3"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of sin⁻¹(√3/2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/6"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "2π/3"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "sin(\u03c0/3) = \u221a3/2 and \u03c0/3 \u2208 [-\u03c0/2, \u03c0/2], so sin\u207b\u00b9(\u221a3/2) = \u03c0/3.",
-      "explanation_incorrect": "Since sin(\u03c0/3) = \u221a3/2 and \u03c0/3 lies in the principal range [-\u03c0/2, \u03c0/2], the answer is \u03c0/3."
+      "explanation_correct": "sin(π/3) = √3/2 and π/3 ∈ [-π/2, π/2], so sin⁻¹(√3/2) = π/3.",
+      "explanation_incorrect": "Since sin(π/3) = √3/2 and π/3 lies in the principal range [-π/2, π/2], the answer is π/3."
     },
     {
       "question_id": "T01.02.Q008",
       "type": "true_false",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The domain of sec\u207b\u00b9(x) is (-\u221e, -1] \u222a [1, \u221e).",
-      "options": [{"id": "A", "text": "True"}, {"id": "B", "text": "False"}],
+      "cognitive_level": "recall",
+      "question_text": "The domain of sec⁻¹(x) is (-∞, -1] ∪ [1, ∞).",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "sec\u207b\u00b9(x) is defined when |x| \u2265 1, i.e., x \u2208 (-\u221e, -1] \u222a [1, \u221e), since sec takes values outside (-1, 1).",
-      "explanation_incorrect": "Since sec A = 1/cos A can only take values with |sec A| \u2265 1, the domain of sec\u207b\u00b9 is indeed (-\u221e, -1] \u222a [1, \u221e)."
+      "explanation_correct": "sec⁻¹(x) is defined when |x| ≥ 1, i.e., x ∈ (-∞, -1] ∪ [1, ∞), since sec takes values outside (-1, 1).",
+      "explanation_incorrect": "Since sec A = 1/cos A can only take values with |sec A| ≥ 1, the domain of sec⁻¹ is indeed (-∞, -1] ∪ [1, ∞)."
     },
     {
       "question_id": "T01.02.Q009",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of cos\u207b\u00b9(0) is:",
-      "options": [{"id": "A", "text": "0"}, {"id": "B", "text": "\u03c0/2"}, {"id": "C", "text": "\u03c0"}, {"id": "D", "text": "-\u03c0/2"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of cos⁻¹(0) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "π"
+        },
+        {
+          "id": "D",
+          "text": "-π/2"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "cos(\u03c0/2) = 0 and \u03c0/2 \u2208 [0, \u03c0], so cos\u207b\u00b9(0) = \u03c0/2.",
-      "explanation_incorrect": "The principal value branch of cos\u207b\u00b9 has range [0, \u03c0]. Since cos(\u03c0/2) = 0, cos\u207b\u00b9(0) = \u03c0/2."
+      "explanation_correct": "cos(π/2) = 0 and π/2 ∈ [0, π], so cos⁻¹(0) = π/2.",
+      "explanation_incorrect": "The principal value branch of cos⁻¹ has range [0, π]. Since cos(π/2) = 0, cos⁻¹(0) = π/2."
     },
     {
       "question_id": "T01.02.Q010",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of tan\u207b\u00b9(\u221a3) is:",
-      "options": [{"id": "A", "text": "\u03c0/6"}, {"id": "B", "text": "\u03c0/4"}, {"id": "C", "text": "\u03c0/3"}, {"id": "D", "text": "2\u03c0/3"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of tan⁻¹(√3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/6"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "2π/3"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "tan(\u03c0/3) = \u221a3 and \u03c0/3 \u2208 (-\u03c0/2, \u03c0/2), so tan\u207b\u00b9(\u221a3) = \u03c0/3.",
-      "explanation_incorrect": "Since tan(\u03c0/3) = \u221a3 and \u03c0/3 lies in the principal range (-\u03c0/2, \u03c0/2), the answer is \u03c0/3."
+      "explanation_correct": "tan(π/3) = √3 and π/3 ∈ (-π/2, π/2), so tan⁻¹(√3) = π/3.",
+      "explanation_incorrect": "Since tan(π/3) = √3 and π/3 lies in the principal range (-π/2, π/2), the answer is π/3."
     },
     {
       "question_id": "T01.02.Q011",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The domain of cot\u207b\u00b9(x) is:",
-      "options": [{"id": "A", "text": "[-1, 1]"}, {"id": "B", "text": "(-\u221e, \u221e)"}, {"id": "C", "text": "(-\u221e, -1] \u222a [1, \u221e)"}, {"id": "D", "text": "(0, \u03c0)"}],
+      "cognitive_level": "recall",
+      "question_text": "The domain of cot⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-1, 1]"
+        },
+        {
+          "id": "B",
+          "text": "(-∞, ∞)"
+        },
+        {
+          "id": "C",
+          "text": "(-∞, -1] ∪ [1, ∞)"
+        },
+        {
+          "id": "D",
+          "text": "(0, π)"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "cot\u207b\u00b9(x) is defined for all real numbers, so its domain is (-\u221e, \u221e) = \u211d.",
-      "explanation_incorrect": "Since cot can take any real value, cot\u207b\u00b9 is defined for all x \u2208 \u211d. The range (0, \u03c0) is the range, not the domain."
+      "explanation_correct": "cot⁻¹(x) is defined for all real numbers, so its domain is (-∞, ∞) = ℝ.",
+      "explanation_incorrect": "Since cot can take any real value, cot⁻¹ is defined for all x ∈ ℝ. The range (0, π) is the range, not the domain."
     },
     {
       "question_id": "T01.02.Q012",
       "type": "fill_blank",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of sin\u207b\u00b9(1) is ___.",
-      "options": [{"id": "A", "text": "\u03c0/2"}, {"id": "B", "text": "\u03c0"}, {"id": "C", "text": "0"}, {"id": "D", "text": "\u03c0/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of sin⁻¹(1) is ___.",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/2"
+        },
+        {
+          "id": "B",
+          "text": "π"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "π/4"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "sin(\u03c0/2) = 1 and \u03c0/2 \u2208 [-\u03c0/2, \u03c0/2], so sin\u207b\u00b9(1) = \u03c0/2.",
-      "explanation_incorrect": "Since sin(\u03c0/2) = 1, and \u03c0/2 is the upper boundary of the principal range [-\u03c0/2, \u03c0/2], sin\u207b\u00b9(1) = \u03c0/2."
+      "explanation_correct": "sin(π/2) = 1 and π/2 ∈ [-π/2, π/2], so sin⁻¹(1) = π/2.",
+      "explanation_incorrect": "Since sin(π/2) = 1, and π/2 is the upper boundary of the principal range [-π/2, π/2], sin⁻¹(1) = π/2."
     },
     {
       "question_id": "T01.02.Q013",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The range of cosec\u207b\u00b9(x) is:",
-      "options": [{"id": "A", "text": "[-\u03c0/2, \u03c0/2]"}, {"id": "B", "text": "[-\u03c0/2, \u03c0/2] - {0}"}, {"id": "C", "text": "[0, \u03c0]"}, {"id": "D", "text": "[0, \u03c0] - {\u03c0/2}"}],
+      "cognitive_level": "recall",
+      "question_text": "The range of cosec⁻¹(x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[-π/2, π/2]"
+        },
+        {
+          "id": "B",
+          "text": "[-π/2, π/2] - {0}"
+        },
+        {
+          "id": "C",
+          "text": "[0, π]"
+        },
+        {
+          "id": "D",
+          "text": "[0, π] - {π/2}"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "The principal value branch of cosec\u207b\u00b9 has range [-\u03c0/2, \u03c0/2] - {0}, since cosec is undefined at 0.",
-      "explanation_incorrect": "cosec\u207b\u00b9(x) takes values in [-\u03c0/2, \u03c0/2] excluding 0, because cosec(0) is undefined."
+      "explanation_correct": "The principal value branch of cosec⁻¹ has range [-π/2, π/2] - {0}, since cosec is undefined at 0.",
+      "explanation_incorrect": "cosec⁻¹(x) takes values in [-π/2, π/2] excluding 0, because cosec(0) is undefined."
     },
     {
       "question_id": "T01.02.Q014",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The principal value of cos\u207b\u00b9(-1) is:",
-      "options": [{"id": "A", "text": "0"}, {"id": "B", "text": "-\u03c0"}, {"id": "C", "text": "\u03c0"}, {"id": "D", "text": "\u03c0/2"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of cos⁻¹(-1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "-π"
+        },
+        {
+          "id": "C",
+          "text": "π"
+        },
+        {
+          "id": "D",
+          "text": "π/2"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "cos(\u03c0) = -1 and \u03c0 \u2208 [0, \u03c0], so cos\u207b\u00b9(-1) = \u03c0.",
-      "explanation_incorrect": "Since cos(\u03c0) = -1 and \u03c0 lies in the principal range [0, \u03c0], cos\u207b\u00b9(-1) = \u03c0."
+      "explanation_correct": "cos(π) = -1 and π ∈ [0, π], so cos⁻¹(-1) = π.",
+      "explanation_incorrect": "Since cos(π) = -1 and π lies in the principal range [0, π], cos⁻¹(-1) = π."
     },
     {
       "question_id": "T01.02.Q015",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "application",
-      "question_text": "The principal value of tan\u207b\u00b9(0) is:",
-      "options": [{"id": "A", "text": "\u03c0"}, {"id": "B", "text": "\u03c0/2"}, {"id": "C", "text": "0"}, {"id": "D", "text": "-\u03c0/2"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of tan⁻¹(0) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "-π/2"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "tan(0) = 0 and 0 \u2208 (-\u03c0/2, \u03c0/2), so tan\u207b\u00b9(0) = 0.",
-      "explanation_incorrect": "Since tan(0) = 0 and 0 lies in the principal range (-\u03c0/2, \u03c0/2), tan\u207b\u00b9(0) = 0."
+      "explanation_correct": "tan(0) = 0 and 0 ∈ (-π/2, π/2), so tan⁻¹(0) = 0.",
+      "explanation_incorrect": "Since tan(0) = 0 and 0 lies in the principal range (-π/2, π/2), tan⁻¹(0) = 0."
     },
     {
       "question_id": "T01.02.Q016",
       "type": "true_false",
       "concept_id": "T01.02.C01",
       "difficulty": "familiarity",
-      "question_text": "The range of the principal value branch of sin\u207b\u00b9(x) is [0, \u03c0].",
-      "options": [{"id": "A", "text": "True"}, {"id": "B", "text": "False"}],
+      "cognitive_level": "recall",
+      "question_text": "The range of the principal value branch of sin⁻¹(x) is [0, π].",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "The range of the principal value branch of sin\u207b\u00b9(x) is [-\u03c0/2, \u03c0/2], not [0, \u03c0]. The range [0, \u03c0] belongs to cos\u207b\u00b9(x).",
-      "explanation_incorrect": "The range [0, \u03c0] is for cos\u207b\u00b9(x). The principal value branch of sin\u207b\u00b9(x) has range [-\u03c0/2, \u03c0/2]."
+      "explanation_correct": "The range of the principal value branch of sin⁻¹(x) is [-π/2, π/2], not [0, π]. The range [0, π] belongs to cos⁻¹(x).",
+      "explanation_incorrect": "The range [0, π] is for cos⁻¹(x). The principal value branch of sin⁻¹(x) has range [-π/2, π/2]."
     },
     {
       "question_id": "T01.02.Q017",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "familiarity",
-      "question_text": "sin\u207b\u00b9(x) + cos\u207b\u00b9(x) equals:",
-      "options": [{"id": "A", "text": "\u03c0"}, {"id": "B", "text": "\u03c0/2"}, {"id": "C", "text": "0"}, {"id": "D", "text": "1"}],
+      "cognitive_level": "recall",
+      "question_text": "sin⁻¹(x) + cos⁻¹(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "For all x \u2208 [-1, 1], sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2. This is a fundamental property of inverse trigonometric functions.",
-      "explanation_incorrect": "This is a standard identity: sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2 for every x in [-1, 1]."
+      "explanation_correct": "For all x ∈ [-1, 1], sin⁻¹(x) + cos⁻¹(x) = π/2. This is a fundamental property of inverse trigonometric functions.",
+      "explanation_incorrect": "This is a standard identity: sin⁻¹(x) + cos⁻¹(x) = π/2 for every x in [-1, 1]."
     },
     {
       "question_id": "T01.02.Q018",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "familiarity",
-      "question_text": "The value of sin\u207b\u00b9(-x) is:",
-      "options": [{"id": "A", "text": "-sin\u207b\u00b9(x)"}, {"id": "B", "text": "\u03c0 - sin\u207b\u00b9(x)"}, {"id": "C", "text": "\u03c0 + sin\u207b\u00b9(x)"}, {"id": "D", "text": "sin\u207b\u00b9(x)"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sin⁻¹(-x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-sin⁻¹(x)"
+        },
+        {
+          "id": "B",
+          "text": "π - sin⁻¹(x)"
+        },
+        {
+          "id": "C",
+          "text": "π + sin⁻¹(x)"
+        },
+        {
+          "id": "D",
+          "text": "sin⁻¹(x)"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "sin\u207b\u00b9(-x) = -sin\u207b\u00b9(x) for all x \u2208 [-1, 1]. This is because sin\u207b\u00b9 is an odd function.",
-      "explanation_incorrect": "sin\u207b\u00b9 is an odd function, so sin\u207b\u00b9(-x) = -sin\u207b\u00b9(x). This follows from the fact that sin is an odd function on the principal domain."
+      "explanation_correct": "sin⁻¹(-x) = -sin⁻¹(x) for all x ∈ [-1, 1]. This is because sin⁻¹ is an odd function.",
+      "explanation_incorrect": "sin⁻¹ is an odd function, so sin⁻¹(-x) = -sin⁻¹(x). This follows from the fact that sin is an odd function on the principal domain."
     },
     {
       "question_id": "T01.02.Q019",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "familiarity",
-      "question_text": "The value of cos\u207b\u00b9(-x) is:",
-      "options": [{"id": "A", "text": "-cos\u207b\u00b9(x)"}, {"id": "B", "text": "\u03c0 - cos\u207b\u00b9(x)"}, {"id": "C", "text": "\u03c0 + cos\u207b\u00b9(x)"}, {"id": "D", "text": "cos\u207b\u00b9(x)"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of cos⁻¹(-x) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-cos⁻¹(x)"
+        },
+        {
+          "id": "B",
+          "text": "π - cos⁻¹(x)"
+        },
+        {
+          "id": "C",
+          "text": "π + cos⁻¹(x)"
+        },
+        {
+          "id": "D",
+          "text": "cos⁻¹(x)"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "cos\u207b\u00b9(-x) = \u03c0 - cos\u207b\u00b9(x) for all x \u2208 [-1, 1]. Unlike sin\u207b\u00b9, cos\u207b\u00b9 is not an odd function.",
-      "explanation_incorrect": "This is because if cos\u207b\u00b9(x) = \u03b8, then cos\u207b\u00b9(-x) = \u03c0 - \u03b8, since cos(\u03c0 - \u03b8) = -cos(\u03b8)."
+      "explanation_correct": "cos⁻¹(-x) = π - cos⁻¹(x) for all x ∈ [-1, 1]. Unlike sin⁻¹, cos⁻¹ is not an odd function.",
+      "explanation_incorrect": "This is because if cos⁻¹(x) = θ, then cos⁻¹(-x) = π - θ, since cos(π - θ) = -cos(θ)."
     },
     {
       "question_id": "T01.02.Q020",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "familiarity",
-      "question_text": "tan\u207b\u00b9(x) + cot\u207b\u00b9(x) equals:",
-      "options": [{"id": "A", "text": "\u03c0"}, {"id": "B", "text": "\u03c0/2"}, {"id": "C", "text": "0"}, {"id": "D", "text": "1"}],
+      "cognitive_level": "recall",
+      "question_text": "tan⁻¹(x) + cot⁻¹(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "For all x \u2208 \u211d, tan\u207b\u00b9(x) + cot\u207b\u00b9(x) = \u03c0/2.",
-      "explanation_incorrect": "This is a standard identity analogous to sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2."
+      "explanation_correct": "For all x ∈ ℝ, tan⁻¹(x) + cot⁻¹(x) = π/2.",
+      "explanation_incorrect": "This is a standard identity analogous to sin⁻¹(x) + cos⁻¹(x) = π/2."
     },
     {
       "question_id": "T01.02.Q021",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "exam_style",
-      "question_text": "sin\u207b\u00b9(1/x) is equal to:",
-      "options": [{"id": "A", "text": "cos\u207b\u00b9(x)"}, {"id": "B", "text": "cosec\u207b\u00b9(x)"}, {"id": "C", "text": "sec\u207b\u00b9(x)"}, {"id": "D", "text": "tan\u207b\u00b9(x)"}],
+      "cognitive_level": "recall",
+      "question_text": "sin⁻¹(1/x) is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "cos⁻¹(x)"
+        },
+        {
+          "id": "B",
+          "text": "cosec⁻¹(x)"
+        },
+        {
+          "id": "C",
+          "text": "sec⁻¹(x)"
+        },
+        {
+          "id": "D",
+          "text": "tan⁻¹(x)"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "If sin\u207b\u00b9(1/x) = \u03b8, then sin\u03b8 = 1/x, so cosec\u03b8 = x, meaning \u03b8 = cosec\u207b\u00b9(x). Hence sin\u207b\u00b9(1/x) = cosec\u207b\u00b9(x).",
-      "explanation_incorrect": "sin\u207b\u00b9(1/x) = cosec\u207b\u00b9(x) because if sin\u03b8 = 1/x then cosec\u03b8 = x."
+      "explanation_correct": "If sin⁻¹(1/x) = θ, then sinθ = 1/x, so cosecθ = x, meaning θ = cosec⁻¹(x). Hence sin⁻¹(1/x) = cosec⁻¹(x).",
+      "explanation_incorrect": "sin⁻¹(1/x) = cosec⁻¹(x) because if sinθ = 1/x then cosecθ = x."
     },
     {
       "question_id": "T01.02.Q022",
       "type": "true_false",
       "concept_id": "T01.02.C02",
       "difficulty": "familiarity",
-      "question_text": "tan\u207b\u00b9(-x) = -tan\u207b\u00b9(x) for all x \u2208 \u211d.",
-      "options": [{"id": "A", "text": "True"}, {"id": "B", "text": "False"}],
+      "cognitive_level": "recall",
+      "question_text": "tan⁻¹(-x) = -tan⁻¹(x) for all x ∈ ℝ.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "tan\u207b\u00b9 is an odd function, so tan\u207b\u00b9(-x) = -tan\u207b\u00b9(x) for all real x. This follows from the fact that tan is an odd function on its principal domain.",
-      "explanation_incorrect": "Since tan is odd on (-\u03c0/2, \u03c0/2), its inverse tan\u207b\u00b9 is also odd: tan\u207b\u00b9(-x) = -tan\u207b\u00b9(x)."
+      "explanation_correct": "tan⁻¹ is an odd function, so tan⁻¹(-x) = -tan⁻¹(x) for all real x. This follows from the fact that tan is an odd function on its principal domain.",
+      "explanation_incorrect": "Since tan is odd on (-π/2, π/2), its inverse tan⁻¹ is also odd: tan⁻¹(-x) = -tan⁻¹(x)."
     },
     {
       "question_id": "T01.02.Q023",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "application",
-      "question_text": "The principal value of sin\u207b\u00b9(-1/\u221a2) is:",
-      "options": [{"id": "A", "text": "\u03c0/4"}, {"id": "B", "text": "-\u03c0/4"}, {"id": "C", "text": "3\u03c0/4"}, {"id": "D", "text": "-3\u03c0/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of sin⁻¹(-1/√2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/4"
+        },
+        {
+          "id": "B",
+          "text": "-π/4"
+        },
+        {
+          "id": "C",
+          "text": "3π/4"
+        },
+        {
+          "id": "D",
+          "text": "-3π/4"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "sin\u207b\u00b9(-1/\u221a2) = -sin\u207b\u00b9(1/\u221a2) = -\u03c0/4. This uses the property sin\u207b\u00b9(-x) = -sin\u207b\u00b9(x) and sin(\u03c0/4) = 1/\u221a2.",
-      "explanation_incorrect": "Using sin\u207b\u00b9(-x) = -sin\u207b\u00b9(x): sin\u207b\u00b9(-1/\u221a2) = -sin\u207b\u00b9(1/\u221a2) = -\u03c0/4."
+      "explanation_correct": "sin⁻¹(-1/√2) = -sin⁻¹(1/√2) = -π/4. This uses the property sin⁻¹(-x) = -sin⁻¹(x) and sin(π/4) = 1/√2.",
+      "explanation_incorrect": "Using sin⁻¹(-x) = -sin⁻¹(x): sin⁻¹(-1/√2) = -sin⁻¹(1/√2) = -π/4."
     },
     {
       "question_id": "T01.02.Q024",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "application",
-      "question_text": "The principal value of cos\u207b\u00b9(-\u221a3/2) is:",
-      "options": [{"id": "A", "text": "\u03c0/6"}, {"id": "B", "text": "-\u03c0/6"}, {"id": "C", "text": "5\u03c0/6"}, {"id": "D", "text": "7\u03c0/6"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of cos⁻¹(-√3/2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/6"
+        },
+        {
+          "id": "B",
+          "text": "-π/6"
+        },
+        {
+          "id": "C",
+          "text": "5π/6"
+        },
+        {
+          "id": "D",
+          "text": "7π/6"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "cos\u207b\u00b9(-\u221a3/2) = \u03c0 - cos\u207b\u00b9(\u221a3/2) = \u03c0 - \u03c0/6 = 5\u03c0/6. This uses cos\u207b\u00b9(-x) = \u03c0 - cos\u207b\u00b9(x).",
-      "explanation_incorrect": "Using cos\u207b\u00b9(-x) = \u03c0 - cos\u207b\u00b9(x): cos\u207b\u00b9(-\u221a3/2) = \u03c0 - \u03c0/6 = 5\u03c0/6."
+      "explanation_correct": "cos⁻¹(-√3/2) = π - cos⁻¹(√3/2) = π - π/6 = 5π/6. This uses cos⁻¹(-x) = π - cos⁻¹(x).",
+      "explanation_incorrect": "Using cos⁻¹(-x) = π - cos⁻¹(x): cos⁻¹(-√3/2) = π - π/6 = 5π/6."
     },
     {
       "question_id": "T01.02.Q025",
       "type": "mcq",
       "concept_id": "T01.02.C01",
       "difficulty": "application",
-      "question_text": "The principal value of tan\u207b\u00b9(-1) is:",
-      "options": [{"id": "A", "text": "\u03c0/4"}, {"id": "B", "text": "3\u03c0/4"}, {"id": "C", "text": "-\u03c0/4"}, {"id": "D", "text": "-3\u03c0/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The principal value of tan⁻¹(-1) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/4"
+        },
+        {
+          "id": "B",
+          "text": "3π/4"
+        },
+        {
+          "id": "C",
+          "text": "-π/4"
+        },
+        {
+          "id": "D",
+          "text": "-3π/4"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "tan\u207b\u00b9(-1) = -tan\u207b\u00b9(1) = -\u03c0/4. This uses tan\u207b\u00b9(-x) = -tan\u207b\u00b9(x).",
-      "explanation_incorrect": "Since tan\u207b\u00b9 is an odd function, tan\u207b\u00b9(-1) = -tan\u207b\u00b9(1) = -\u03c0/4."
+      "explanation_correct": "tan⁻¹(-1) = -tan⁻¹(1) = -π/4. This uses tan⁻¹(-x) = -tan⁻¹(x).",
+      "explanation_incorrect": "Since tan⁻¹ is an odd function, tan⁻¹(-1) = -tan⁻¹(1) = -π/4."
     },
     {
       "question_id": "T01.02.Q026",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "application",
-      "question_text": "If sin\u207b\u00b9(x) = \u03c0/5, then cos\u207b\u00b9(x) equals:",
-      "options": [{"id": "A", "text": "3\u03c0/10"}, {"id": "B", "text": "\u03c0/5"}, {"id": "C", "text": "2\u03c0/5"}, {"id": "D", "text": "4\u03c0/5"}],
+      "cognitive_level": "recall",
+      "question_text": "If sin⁻¹(x) = π/5, then cos⁻¹(x) equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3π/10"
+        },
+        {
+          "id": "B",
+          "text": "π/5"
+        },
+        {
+          "id": "C",
+          "text": "2π/5"
+        },
+        {
+          "id": "D",
+          "text": "4π/5"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Using sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2: cos\u207b\u00b9(x) = \u03c0/2 - \u03c0/5 = (5\u03c0 - 2\u03c0)/10 = 3\u03c0/10.",
-      "explanation_incorrect": "From the identity sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2, we get cos\u207b\u00b9(x) = \u03c0/2 - \u03c0/5 = 3\u03c0/10."
+      "explanation_correct": "Using sin⁻¹(x) + cos⁻¹(x) = π/2: cos⁻¹(x) = π/2 - π/5 = (5π - 2π)/10 = 3π/10.",
+      "explanation_incorrect": "From the identity sin⁻¹(x) + cos⁻¹(x) = π/2, we get cos⁻¹(x) = π/2 - π/5 = 3π/10."
     },
     {
       "question_id": "T01.02.Q027",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "application",
-      "question_text": "The value of tan\u207b\u00b9(1) + tan\u207b\u00b9(2) + tan\u207b\u00b9(3) is:",
-      "options": [{"id": "A", "text": "\u03c0"}, {"id": "B", "text": "\u03c0/2"}, {"id": "C", "text": "3\u03c0/4"}, {"id": "D", "text": "0"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan⁻¹(1) + tan⁻¹(2) + tan⁻¹(3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "3π/4"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "First, tan\u207b\u00b9(1) = \u03c0/4. For tan\u207b\u00b9(2) + tan\u207b\u00b9(3): since 2\u00d73 = 6 > 1, tan\u207b\u00b9(2) + tan\u207b\u00b9(3) = \u03c0 + tan\u207b\u00b9((2+3)/(1-6)) = \u03c0 + tan\u207b\u00b9(-1) = \u03c0 - \u03c0/4 = 3\u03c0/4. So the total = \u03c0/4 + 3\u03c0/4 = \u03c0.",
-      "explanation_incorrect": "tan\u207b\u00b9(2) + tan\u207b\u00b9(3) = \u03c0 + tan\u207b\u00b9((2+3)/(1-2\u00d73)) = \u03c0 + tan\u207b\u00b9(-1) = 3\u03c0/4. Adding tan\u207b\u00b9(1) = \u03c0/4 gives \u03c0."
+      "explanation_correct": "First, tan⁻¹(1) = π/4. For tan⁻¹(2) + tan⁻¹(3): since 2×3 = 6 > 1, tan⁻¹(2) + tan⁻¹(3) = π + tan⁻¹((2+3)/(1-6)) = π + tan⁻¹(-1) = π - π/4 = 3π/4. So the total = π/4 + 3π/4 = π.",
+      "explanation_incorrect": "tan⁻¹(2) + tan⁻¹(3) = π + tan⁻¹((2+3)/(1-2×3)) = π + tan⁻¹(-1) = 3π/4. Adding tan⁻¹(1) = π/4 gives π."
     },
     {
       "question_id": "T01.02.Q028",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of tan\u207b\u00b9(1/2) + tan\u207b\u00b9(1/3) is:",
-      "options": [{"id": "A", "text": "\u03c0/2"}, {"id": "B", "text": "\u03c0/4"}, {"id": "C", "text": "\u03c0/3"}, {"id": "D", "text": "\u03c0/6"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan⁻¹(1/2) + tan⁻¹(1/3) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/2"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "π/6"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "Since (1/2)(1/3) = 1/6 < 1, tan\u207b\u00b9(1/2) + tan\u207b\u00b9(1/3) = tan\u207b\u00b9((1/2 + 1/3)/(1 - 1/6)) = tan\u207b\u00b9((5/6)/(5/6)) = tan\u207b\u00b9(1) = \u03c0/4.",
-      "explanation_incorrect": "Using the addition formula with xy = 1/6 < 1: tan\u207b\u00b9((1/2 + 1/3)/(1 - 1/6)) = tan\u207b\u00b9(1) = \u03c0/4."
+      "explanation_correct": "Since (1/2)(1/3) = 1/6 < 1, tan⁻¹(1/2) + tan⁻¹(1/3) = tan⁻¹((1/2 + 1/3)/(1 - 1/6)) = tan⁻¹((5/6)/(5/6)) = tan⁻¹(1) = π/4.",
+      "explanation_incorrect": "Using the addition formula with xy = 1/6 < 1: tan⁻¹((1/2 + 1/3)/(1 - 1/6)) = tan⁻¹(1) = π/4."
     },
     {
       "question_id": "T01.02.Q029",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of sin(sin\u207b\u00b9(1/2) + cos\u207b\u00b9(1/2)) is:",
-      "options": [{"id": "A", "text": "0"}, {"id": "B", "text": "1"}, {"id": "C", "text": "1/2"}, {"id": "D", "text": "\u221a3/2"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sin(sin⁻¹(1/2) + cos⁻¹(1/2)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "1/2"
+        },
+        {
+          "id": "D",
+          "text": "√3/2"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "sin\u207b\u00b9(1/2) + cos\u207b\u00b9(1/2) = \u03c0/2 (by the identity). So sin(\u03c0/2) = 1.",
-      "explanation_incorrect": "By the identity sin\u207b\u00b9(x) + cos\u207b\u00b9(x) = \u03c0/2, the argument is \u03c0/2, and sin(\u03c0/2) = 1."
+      "explanation_correct": "sin⁻¹(1/2) + cos⁻¹(1/2) = π/2 (by the identity). So sin(π/2) = 1.",
+      "explanation_incorrect": "By the identity sin⁻¹(x) + cos⁻¹(x) = π/2, the argument is π/2, and sin(π/2) = 1."
     },
     {
       "question_id": "T01.02.Q030",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of tan(cos\u207b\u00b9(4/5)) is:",
-      "options": [{"id": "A", "text": "3/4"}, {"id": "B", "text": "4/3"}, {"id": "C", "text": "5/3"}, {"id": "D", "text": "3/5"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan(cos⁻¹(4/5)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3/4"
+        },
+        {
+          "id": "B",
+          "text": "4/3"
+        },
+        {
+          "id": "C",
+          "text": "5/3"
+        },
+        {
+          "id": "D",
+          "text": "3/5"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Let \u03b8 = cos\u207b\u00b9(4/5). Then cos\u03b8 = 4/5, so sin\u03b8 = 3/5 (since \u03b8 \u2208 [0, \u03c0], sin\u03b8 \u2265 0). Therefore tan\u03b8 = sin\u03b8/cos\u03b8 = (3/5)/(4/5) = 3/4.",
-      "explanation_incorrect": "If cos\u03b8 = 4/5, then opposite = \u221a(25-16) = 3 and tan\u03b8 = 3/4."
+      "explanation_correct": "Let θ = cos⁻¹(4/5). Then cosθ = 4/5, so sinθ = 3/5 (since θ ∈ [0, π], sinθ ≥ 0). Therefore tanθ = sinθ/cosθ = (3/5)/(4/5) = 3/4.",
+      "explanation_incorrect": "If cosθ = 4/5, then opposite = √(25-16) = 3 and tanθ = 3/4."
     },
     {
       "question_id": "T01.02.Q031",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of cos(tan\u207b\u00b9(3/4)) is:",
-      "options": [{"id": "A", "text": "4/5"}, {"id": "B", "text": "3/5"}, {"id": "C", "text": "3/4"}, {"id": "D", "text": "5/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of cos(tan⁻¹(3/4)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/5"
+        },
+        {
+          "id": "B",
+          "text": "3/5"
+        },
+        {
+          "id": "C",
+          "text": "3/4"
+        },
+        {
+          "id": "D",
+          "text": "5/4"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Let \u03b8 = tan\u207b\u00b9(3/4). Then tan\u03b8 = 3/4, so the sides are 3, 4, hypotenuse = 5. Therefore cos\u03b8 = 4/5.",
-      "explanation_incorrect": "If tan\u03b8 = 3/4, construct a right triangle with opposite = 3, adjacent = 4, hypotenuse = 5. cos\u03b8 = adjacent/hypotenuse = 4/5."
+      "explanation_correct": "Let θ = tan⁻¹(3/4). Then tanθ = 3/4, so the sides are 3, 4, hypotenuse = 5. Therefore cosθ = 4/5.",
+      "explanation_incorrect": "If tanθ = 3/4, construct a right triangle with opposite = 3, adjacent = 4, hypotenuse = 5. cosθ = adjacent/hypotenuse = 4/5."
     },
     {
       "question_id": "T01.02.Q032",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of sin\u207b\u00b9(sin(2\u03c0/3)) is:",
-      "options": [{"id": "A", "text": "2\u03c0/3"}, {"id": "B", "text": "\u03c0/3"}, {"id": "C", "text": "-\u03c0/3"}, {"id": "D", "text": "-2\u03c0/3"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sin⁻¹(sin(2π/3)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2π/3"
+        },
+        {
+          "id": "B",
+          "text": "π/3"
+        },
+        {
+          "id": "C",
+          "text": "-π/3"
+        },
+        {
+          "id": "D",
+          "text": "-2π/3"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "sin(2\u03c0/3) = sin(\u03c0 - \u03c0/3) = sin(\u03c0/3) = \u221a3/2. Since sin\u207b\u00b9(\u221a3/2) = \u03c0/3 and \u03c0/3 \u2208 [-\u03c0/2, \u03c0/2], the answer is \u03c0/3. Note: sin\u207b\u00b9(sin(x)) \u2260 x when x is outside [-\u03c0/2, \u03c0/2].",
-      "explanation_incorrect": "2\u03c0/3 is outside the principal range [-\u03c0/2, \u03c0/2]. sin(2\u03c0/3) = \u221a3/2, and sin\u207b\u00b9(\u221a3/2) = \u03c0/3."
+      "explanation_correct": "sin(2π/3) = sin(π - π/3) = sin(π/3) = √3/2. Since sin⁻¹(√3/2) = π/3 and π/3 ∈ [-π/2, π/2], the answer is π/3. Note: sin⁻¹(sin(x)) ≠ x when x is outside [-π/2, π/2].",
+      "explanation_incorrect": "2π/3 is outside the principal range [-π/2, π/2]. sin(2π/3) = √3/2, and sin⁻¹(√3/2) = π/3."
     },
     {
       "question_id": "T01.02.Q033",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of cos\u207b\u00b9(cos(7\u03c0/6)) is:",
-      "options": [{"id": "A", "text": "7\u03c0/6"}, {"id": "B", "text": "5\u03c0/6"}, {"id": "C", "text": "\u03c0/6"}, {"id": "D", "text": "-\u03c0/6"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of cos⁻¹(cos(7π/6)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7π/6"
+        },
+        {
+          "id": "B",
+          "text": "5π/6"
+        },
+        {
+          "id": "C",
+          "text": "π/6"
+        },
+        {
+          "id": "D",
+          "text": "-π/6"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "cos(7\u03c0/6) = cos(\u03c0 + \u03c0/6) = -cos(\u03c0/6) = -\u221a3/2. Now cos\u207b\u00b9(-\u221a3/2) = \u03c0 - cos\u207b\u00b9(\u221a3/2) = \u03c0 - \u03c0/6 = 5\u03c0/6.",
-      "explanation_incorrect": "7\u03c0/6 is outside [0, \u03c0]. cos(7\u03c0/6) = -\u221a3/2, and cos\u207b\u00b9(-\u221a3/2) = 5\u03c0/6."
+      "explanation_correct": "cos(7π/6) = cos(π + π/6) = -cos(π/6) = -√3/2. Now cos⁻¹(-√3/2) = π - cos⁻¹(√3/2) = π - π/6 = 5π/6.",
+      "explanation_incorrect": "7π/6 is outside [0, π]. cos(7π/6) = -√3/2, and cos⁻¹(-√3/2) = 5π/6."
     },
     {
       "question_id": "T01.02.Q034",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "application",
-      "question_text": "The value of sec\u207b\u00b9(2) + cosec\u207b\u00b9(2) is:",
-      "options": [{"id": "A", "text": "\u03c0/2"}, {"id": "B", "text": "\u03c0"}, {"id": "C", "text": "\u03c0/3"}, {"id": "D", "text": "2\u03c0/3"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sec⁻¹(2) + cosec⁻¹(2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/2"
+        },
+        {
+          "id": "B",
+          "text": "π"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "2π/3"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "sec\u207b\u00b9(2) = cos\u207b\u00b9(1/2) = \u03c0/3. cosec\u207b\u00b9(2) = sin\u207b\u00b9(1/2) = \u03c0/6. Sum = \u03c0/3 + \u03c0/6 = \u03c0/2. This also follows from sec\u207b\u00b9(x) + cosec\u207b\u00b9(x) = \u03c0/2 for x \u2265 1.",
-      "explanation_incorrect": "sec\u207b\u00b9(2) = \u03c0/3 and cosec\u207b\u00b9(2) = \u03c0/6. Their sum is \u03c0/3 + \u03c0/6 = \u03c0/2."
+      "explanation_correct": "sec⁻¹(2) = cos⁻¹(1/2) = π/3. cosec⁻¹(2) = sin⁻¹(1/2) = π/6. Sum = π/3 + π/6 = π/2. This also follows from sec⁻¹(x) + cosec⁻¹(x) = π/2 for x ≥ 1.",
+      "explanation_incorrect": "sec⁻¹(2) = π/3 and cosec⁻¹(2) = π/6. Their sum is π/3 + π/6 = π/2."
     },
     {
       "question_id": "T01.02.Q035",
       "type": "fill_blank",
       "concept_id": "T01.02.C02",
       "difficulty": "application",
-      "question_text": "If tan\u207b\u00b9(x) = \u03c0/4 - tan\u207b\u00b9(1/3), then x = ___.",
-      "options": [{"id": "A", "text": "1/2"}, {"id": "B", "text": "1/3"}, {"id": "C", "text": "2/3"}, {"id": "D", "text": "1/4"}],
+      "cognitive_level": "recall",
+      "question_text": "If tan⁻¹(x) = π/4 - tan⁻¹(1/3), then x = ___.",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/2"
+        },
+        {
+          "id": "B",
+          "text": "1/3"
+        },
+        {
+          "id": "C",
+          "text": "2/3"
+        },
+        {
+          "id": "D",
+          "text": "1/4"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "tan\u207b\u00b9(x) = tan\u207b\u00b9(1) - tan\u207b\u00b9(1/3). Using the subtraction formula: x = (1 - 1/3)/(1 + 1 \u00d7 1/3) = (2/3)/(4/3) = 1/2.",
-      "explanation_incorrect": "Since \u03c0/4 = tan\u207b\u00b9(1), we have tan\u207b\u00b9(x) = tan\u207b\u00b9(1) - tan\u207b\u00b9(1/3) = tan\u207b\u00b9((1 - 1/3)/(1 + 1/3)) = tan\u207b\u00b9(1/2)."
+      "explanation_correct": "tan⁻¹(x) = tan⁻¹(1) - tan⁻¹(1/3). Using the subtraction formula: x = (1 - 1/3)/(1 + 1 × 1/3) = (2/3)/(4/3) = 1/2.",
+      "explanation_incorrect": "Since π/4 = tan⁻¹(1), we have tan⁻¹(x) = tan⁻¹(1) - tan⁻¹(1/3) = tan⁻¹((1 - 1/3)/(1 + 1/3)) = tan⁻¹(1/2)."
     },
     {
       "question_id": "T01.02.Q036",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "application",
-      "question_text": "cos\u207b\u00b9(1/x) for |x| \u2265 1 is equal to:",
-      "options": [{"id": "A", "text": "sin\u207b\u00b9(x)"}, {"id": "B", "text": "sec\u207b\u00b9(x)"}, {"id": "C", "text": "cosec\u207b\u00b9(x)"}, {"id": "D", "text": "tan\u207b\u00b9(x)"}],
+      "cognitive_level": "recall",
+      "question_text": "cos⁻¹(1/x) for |x| ≥ 1 is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sin⁻¹(x)"
+        },
+        {
+          "id": "B",
+          "text": "sec⁻¹(x)"
+        },
+        {
+          "id": "C",
+          "text": "cosec⁻¹(x)"
+        },
+        {
+          "id": "D",
+          "text": "tan⁻¹(x)"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "If cos\u207b\u00b9(1/x) = \u03b8, then cos\u03b8 = 1/x, so sec\u03b8 = x, meaning \u03b8 = sec\u207b\u00b9(x). Hence cos\u207b\u00b9(1/x) = sec\u207b\u00b9(x).",
-      "explanation_incorrect": "cos\u207b\u00b9(1/x) = sec\u207b\u00b9(x) because sec = 1/cos."
+      "explanation_correct": "If cos⁻¹(1/x) = θ, then cosθ = 1/x, so secθ = x, meaning θ = sec⁻¹(x). Hence cos⁻¹(1/x) = sec⁻¹(x).",
+      "explanation_incorrect": "cos⁻¹(1/x) = sec⁻¹(x) because sec = 1/cos."
     },
     {
       "question_id": "T01.02.Q037",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of 2tan\u207b\u00b9(1/3) is equal to:",
-      "options": [{"id": "A", "text": "tan\u207b\u00b9(3/4)"}, {"id": "B", "text": "tan\u207b\u00b9(2/3)"}, {"id": "C", "text": "tan\u207b\u00b9(1/2)"}, {"id": "D", "text": "tan\u207b\u00b9(4/3)"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of 2tan⁻¹(1/3) is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "tan⁻¹(3/4)"
+        },
+        {
+          "id": "B",
+          "text": "tan⁻¹(2/3)"
+        },
+        {
+          "id": "C",
+          "text": "tan⁻¹(1/2)"
+        },
+        {
+          "id": "D",
+          "text": "tan⁻¹(4/3)"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "2tan\u207b\u00b9(x) = tan\u207b\u00b9(2x/(1-x\u00b2)). With x = 1/3: 2tan\u207b\u00b9(1/3) = tan\u207b\u00b9((2/3)/(1-1/9)) = tan\u207b\u00b9((2/3)/(8/9)) = tan\u207b\u00b9((2/3)\u00d7(9/8)) = tan\u207b\u00b9(3/4).",
-      "explanation_incorrect": "Using 2tan\u207b\u00b9(x) = tan\u207b\u00b9(2x/(1-x\u00b2)) with x = 1/3: (2/3)/(8/9) = (2/3)(9/8) = 3/4."
+      "explanation_correct": "2tan⁻¹(x) = tan⁻¹(2x/(1-x²)). With x = 1/3: 2tan⁻¹(1/3) = tan⁻¹((2/3)/(1-1/9)) = tan⁻¹((2/3)/(8/9)) = tan⁻¹((2/3)×(9/8)) = tan⁻¹(3/4).",
+      "explanation_incorrect": "Using 2tan⁻¹(x) = tan⁻¹(2x/(1-x²)) with x = 1/3: (2/3)/(8/9) = (2/3)(9/8) = 3/4."
     },
     {
       "question_id": "T01.02.Q038",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "application",
-      "question_text": "The value of sin\u207b\u00b9(3/5) + sin\u207b\u00b9(4/5) is:",
-      "options": [{"id": "A", "text": "\u03c0/4"}, {"id": "B", "text": "\u03c0/3"}, {"id": "C", "text": "\u03c0/2"}, {"id": "D", "text": "\u03c0"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sin⁻¹(3/5) + sin⁻¹(4/5) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/4"
+        },
+        {
+          "id": "B",
+          "text": "π/3"
+        },
+        {
+          "id": "C",
+          "text": "π/2"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
       "correct_answer": "C",
-      "explanation_correct": "Let \u03b1 = sin\u207b\u00b9(3/5) and \u03b2 = sin\u207b\u00b9(4/5). Then cos\u03b1 = 4/5 and cos\u03b2 = 3/5. So sin\u03b1 = cos\u03b2, which means sin\u03b1 = sin(\u03c0/2 - \u03b2), giving \u03b1 = \u03c0/2 - \u03b2, i.e., \u03b1 + \u03b2 = \u03c0/2.",
-      "explanation_incorrect": "sin\u207b\u00b9(3/5) = cos\u207b\u00b9(4/5). So sin\u207b\u00b9(3/5) + sin\u207b\u00b9(4/5) = cos\u207b\u00b9(4/5) + sin\u207b\u00b9(4/5) = \u03c0/2."
+      "explanation_correct": "Let α = sin⁻¹(3/5) and β = sin⁻¹(4/5). Then cosα = 4/5 and cosβ = 3/5. So sinα = cosβ, which means sinα = sin(π/2 - β), giving α = π/2 - β, i.e., α + β = π/2.",
+      "explanation_incorrect": "sin⁻¹(3/5) = cos⁻¹(4/5). So sin⁻¹(3/5) + sin⁻¹(4/5) = cos⁻¹(4/5) + sin⁻¹(4/5) = π/2."
     },
     {
       "question_id": "T01.02.Q039",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of tan\u207b\u00b9(1/2) + tan\u207b\u00b9(1/5) + tan\u207b\u00b9(1/8) is:",
-      "options": [{"id": "A", "text": "\u03c0/3"}, {"id": "B", "text": "\u03c0/4"}, {"id": "C", "text": "\u03c0/6"}, {"id": "D", "text": "\u03c0/2"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan⁻¹(1/2) + tan⁻¹(1/5) + tan⁻¹(1/8) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/3"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/6"
+        },
+        {
+          "id": "D",
+          "text": "π/2"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "First, tan\u207b\u00b9(1/2) + tan\u207b\u00b9(1/5) = tan\u207b\u00b9((1/2 + 1/5)/(1 - 1/10)) = tan\u207b\u00b9((7/10)/(9/10)) = tan\u207b\u00b9(7/9). Then tan\u207b\u00b9(7/9) + tan\u207b\u00b9(1/8) = tan\u207b\u00b9((7/9 + 1/8)/(1 - 7/72)) = tan\u207b\u00b9((65/72)/(65/72)) = tan\u207b\u00b9(1) = \u03c0/4.",
-      "explanation_incorrect": "Combining step by step: tan\u207b\u00b9(1/2) + tan\u207b\u00b9(1/5) = tan\u207b\u00b9(7/9). Then tan\u207b\u00b9(7/9) + tan\u207b\u00b9(1/8) = tan\u207b\u00b9((56+9)/(72-7)) = tan\u207b\u00b9(65/65) = \u03c0/4."
+      "explanation_correct": "First, tan⁻¹(1/2) + tan⁻¹(1/5) = tan⁻¹((1/2 + 1/5)/(1 - 1/10)) = tan⁻¹((7/10)/(9/10)) = tan⁻¹(7/9). Then tan⁻¹(7/9) + tan⁻¹(1/8) = tan⁻¹((7/9 + 1/8)/(1 - 7/72)) = tan⁻¹((65/72)/(65/72)) = tan⁻¹(1) = π/4.",
+      "explanation_incorrect": "Combining step by step: tan⁻¹(1/2) + tan⁻¹(1/5) = tan⁻¹(7/9). Then tan⁻¹(7/9) + tan⁻¹(1/8) = tan⁻¹((56+9)/(72-7)) = tan⁻¹(65/65) = π/4."
     },
     {
       "question_id": "T01.02.Q040",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "If tan\u207b\u00b9(x) + tan\u207b\u00b9(y) + tan\u207b\u00b9(z) = \u03c0, then x + y + z equals:",
-      "options": [{"id": "A", "text": "xyz"}, {"id": "B", "text": "1"}, {"id": "C", "text": "x + y + z"}, {"id": "D", "text": "0"}],
+      "cognitive_level": "recall",
+      "question_text": "If tan⁻¹(x) + tan⁻¹(y) + tan⁻¹(z) = π, then x + y + z equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "xyz"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "x + y + z"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "If tan\u207b\u00b9(x) + tan\u207b\u00b9(y) + tan\u207b\u00b9(z) = \u03c0, then using the identity for sum of three inverse tangents, we get x + y + z = xyz.",
-      "explanation_incorrect": "This is a standard result. If \u03b1 + \u03b2 + \u03b3 = \u03c0, then tan\u03b1 + tan\u03b2 + tan\u03b3 = tan\u03b1 \u00b7 tan\u03b2 \u00b7 tan\u03b3, which gives x + y + z = xyz."
+      "explanation_correct": "If tan⁻¹(x) + tan⁻¹(y) + tan⁻¹(z) = π, then using the identity for sum of three inverse tangents, we get x + y + z = xyz.",
+      "explanation_incorrect": "This is a standard result. If α + β + γ = π, then tanα + tanβ + tanγ = tanα · tanβ · tanγ, which gives x + y + z = xyz."
     },
     {
       "question_id": "T01.02.Q041",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of 2tan\u207b\u00b9(1/3) + tan\u207b\u00b9(1/7) is:",
-      "options": [{"id": "A", "text": "\u03c0/2"}, {"id": "B", "text": "\u03c0/4"}, {"id": "C", "text": "\u03c0/3"}, {"id": "D", "text": "\u03c0"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of 2tan⁻¹(1/3) + tan⁻¹(1/7) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/2"
+        },
+        {
+          "id": "B",
+          "text": "π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "2tan\u207b\u00b9(1/3) = tan\u207b\u00b9(2 \u00d7 (1/3)/(1 - 1/9)) = tan\u207b\u00b9((2/3)/(8/9)) = tan\u207b\u00b9(3/4). Then tan\u207b\u00b9(3/4) + tan\u207b\u00b9(1/7): since (3/4)(1/7) = 3/28 < 1, this equals tan\u207b\u00b9((3/4 + 1/7)/(1 - 3/28)) = tan\u207b\u00b9((25/28)/(25/28)) = tan\u207b\u00b9(1) = \u03c0/4.",
-      "explanation_incorrect": "Using the double angle formula first: 2tan\u207b\u00b9(1/3) = tan\u207b\u00b9(3/4). Then applying the addition formula: tan\u207b\u00b9(3/4) + tan\u207b\u00b9(1/7) = tan\u207b\u00b9((21+4)/(28-3)) = tan\u207b\u00b9(1) = \u03c0/4."
+      "explanation_correct": "2tan⁻¹(1/3) = tan⁻¹(2 × (1/3)/(1 - 1/9)) = tan⁻¹((2/3)/(8/9)) = tan⁻¹(3/4). Then tan⁻¹(3/4) + tan⁻¹(1/7): since (3/4)(1/7) = 3/28 < 1, this equals tan⁻¹((3/4 + 1/7)/(1 - 3/28)) = tan⁻¹((25/28)/(25/28)) = tan⁻¹(1) = π/4.",
+      "explanation_incorrect": "Using the double angle formula first: 2tan⁻¹(1/3) = tan⁻¹(3/4). Then applying the addition formula: tan⁻¹(3/4) + tan⁻¹(1/7) = tan⁻¹((21+4)/(28-3)) = tan⁻¹(1) = π/4."
     },
     {
       "question_id": "T01.02.Q042",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of sin(2sin\u207b\u00b9(3/5)) is:",
-      "options": [{"id": "A", "text": "24/25"}, {"id": "B", "text": "12/25"}, {"id": "C", "text": "7/25"}, {"id": "D", "text": "9/25"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sin(2sin⁻¹(3/5)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24/25"
+        },
+        {
+          "id": "B",
+          "text": "12/25"
+        },
+        {
+          "id": "C",
+          "text": "7/25"
+        },
+        {
+          "id": "D",
+          "text": "9/25"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Let \u03b8 = sin\u207b\u00b9(3/5). Then sin\u03b8 = 3/5, cos\u03b8 = 4/5. sin(2\u03b8) = 2sin\u03b8cos\u03b8 = 2(3/5)(4/5) = 24/25.",
-      "explanation_incorrect": "With \u03b8 = sin\u207b\u00b9(3/5): sin\u03b8 = 3/5, cos\u03b8 = 4/5. sin(2\u03b8) = 2 \u00d7 3/5 \u00d7 4/5 = 24/25."
+      "explanation_correct": "Let θ = sin⁻¹(3/5). Then sinθ = 3/5, cosθ = 4/5. sin(2θ) = 2sinθcosθ = 2(3/5)(4/5) = 24/25.",
+      "explanation_incorrect": "With θ = sin⁻¹(3/5): sinθ = 3/5, cosθ = 4/5. sin(2θ) = 2 × 3/5 × 4/5 = 24/25."
     },
     {
       "question_id": "T01.02.Q043",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of cos(2cos\u207b\u00b9(3/5)) is:",
-      "options": [{"id": "A", "text": "-7/25"}, {"id": "B", "text": "7/25"}, {"id": "C", "text": "24/25"}, {"id": "D", "text": "-24/25"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of cos(2cos⁻¹(3/5)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "-7/25"
+        },
+        {
+          "id": "B",
+          "text": "7/25"
+        },
+        {
+          "id": "C",
+          "text": "24/25"
+        },
+        {
+          "id": "D",
+          "text": "-24/25"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Let \u03b8 = cos\u207b\u00b9(3/5). Then cos\u03b8 = 3/5. cos(2\u03b8) = 2cos\u00b2\u03b8 - 1 = 2(9/25) - 1 = 18/25 - 1 = -7/25.",
-      "explanation_incorrect": "With \u03b8 = cos\u207b\u00b9(3/5): cos(2\u03b8) = 2cos\u00b2\u03b8 - 1 = 2(9/25) - 1 = -7/25."
+      "explanation_correct": "Let θ = cos⁻¹(3/5). Then cosθ = 3/5. cos(2θ) = 2cos²θ - 1 = 2(9/25) - 1 = 18/25 - 1 = -7/25.",
+      "explanation_incorrect": "With θ = cos⁻¹(3/5): cos(2θ) = 2cos²θ - 1 = 2(9/25) - 1 = -7/25."
     },
     {
       "question_id": "T01.02.Q044",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The simplified value of tan\u207b\u00b9(\u221a3) - sec\u207b\u00b9(-2) is:",
-      "options": [{"id": "A", "text": "\u03c0/3"}, {"id": "B", "text": "-\u03c0/3"}, {"id": "C", "text": "\u03c0/6"}, {"id": "D", "text": "0"}],
+      "cognitive_level": "recall",
+      "question_text": "The simplified value of tan⁻¹(√3) - sec⁻¹(-2) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/3"
+        },
+        {
+          "id": "B",
+          "text": "-π/3"
+        },
+        {
+          "id": "C",
+          "text": "π/6"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "tan\u207b\u00b9(\u221a3) = \u03c0/3. sec\u207b\u00b9(-2) = cos\u207b\u00b9(-1/2) = \u03c0 - cos\u207b\u00b9(1/2) = \u03c0 - \u03c0/3 = 2\u03c0/3. So \u03c0/3 - 2\u03c0/3 = -\u03c0/3.",
-      "explanation_incorrect": "tan\u207b\u00b9(\u221a3) = \u03c0/3 and sec\u207b\u00b9(-2) = cos\u207b\u00b9(-1/2) = 2\u03c0/3. The difference is \u03c0/3 - 2\u03c0/3 = -\u03c0/3."
+      "explanation_correct": "tan⁻¹(√3) = π/3. sec⁻¹(-2) = cos⁻¹(-1/2) = π - cos⁻¹(1/2) = π - π/3 = 2π/3. So π/3 - 2π/3 = -π/3.",
+      "explanation_incorrect": "tan⁻¹(√3) = π/3 and sec⁻¹(-2) = cos⁻¹(-1/2) = 2π/3. The difference is π/3 - 2π/3 = -π/3."
     },
     {
       "question_id": "T01.02.Q045",
       "type": "mcq",
       "concept_id": "T01.02.C02",
       "difficulty": "exam_style",
-      "question_text": "The value of tan\u207b\u00b9(tan(3\u03c0/4)) is:",
-      "options": [{"id": "A", "text": "3\u03c0/4"}, {"id": "B", "text": "-\u03c0/4"}, {"id": "C", "text": "\u03c0/4"}, {"id": "D", "text": "-3\u03c0/4"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan⁻¹(tan(3π/4)) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3π/4"
+        },
+        {
+          "id": "B",
+          "text": "-π/4"
+        },
+        {
+          "id": "C",
+          "text": "π/4"
+        },
+        {
+          "id": "D",
+          "text": "-3π/4"
+        }
+      ],
       "correct_answer": "B",
-      "explanation_correct": "tan(3\u03c0/4) = tan(\u03c0 - \u03c0/4) = -tan(\u03c0/4) = -1. So tan\u207b\u00b9(-1) = -\u03c0/4. Note that 3\u03c0/4 is outside (-\u03c0/2, \u03c0/2), so tan\u207b\u00b9(tan(3\u03c0/4)) \u2260 3\u03c0/4.",
-      "explanation_incorrect": "3\u03c0/4 is outside the principal range (-\u03c0/2, \u03c0/2). tan(3\u03c0/4) = -1, and tan\u207b\u00b9(-1) = -\u03c0/4."
+      "explanation_correct": "tan(3π/4) = tan(π - π/4) = -tan(π/4) = -1. So tan⁻¹(-1) = -π/4. Note that 3π/4 is outside (-π/2, π/2), so tan⁻¹(tan(3π/4)) ≠ 3π/4.",
+      "explanation_incorrect": "3π/4 is outside the principal range (-π/2, π/2). tan(3π/4) = -1, and tan⁻¹(-1) = -π/4."
     },
     {
       "question_id": "T01.02.Q046",
       "type": "fill_blank",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of tan(2tan\u207b\u00b9(1/5)) is ___.",
-      "options": [{"id": "A", "text": "5/12"}, {"id": "B", "text": "12/5"}, {"id": "C", "text": "2/5"}, {"id": "D", "text": "10/24"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan(2tan⁻¹(1/5)) is ___.",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/12"
+        },
+        {
+          "id": "B",
+          "text": "12/5"
+        },
+        {
+          "id": "C",
+          "text": "2/5"
+        },
+        {
+          "id": "D",
+          "text": "10/24"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Let \u03b8 = tan\u207b\u00b9(1/5). Then tan\u03b8 = 1/5. tan(2\u03b8) = 2tan\u03b8/(1-tan\u00b2\u03b8) = (2/5)/(1-1/25) = (2/5)/(24/25) = (2/5)(25/24) = 50/120 = 5/12.",
-      "explanation_incorrect": "Using tan(2\u03b8) = 2tan\u03b8/(1-tan\u00b2\u03b8) with tan\u03b8 = 1/5: (2/5)/(24/25) = 5/12."
+      "explanation_correct": "Let θ = tan⁻¹(1/5). Then tanθ = 1/5. tan(2θ) = 2tanθ/(1-tan²θ) = (2/5)/(1-1/25) = (2/5)/(24/25) = (2/5)(25/24) = 50/120 = 5/12.",
+      "explanation_incorrect": "Using tan(2θ) = 2tanθ/(1-tan²θ) with tanθ = 1/5: (2/5)/(24/25) = 5/12."
     },
     {
       "question_id": "T01.02.Q047",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of sin\u207b\u00b9(2 \u00d7 (1/4) \u00d7 \u221a(1 - 1/16)) is equal to:",
-      "options": [{"id": "A", "text": "2sin\u207b\u00b9(1/4)"}, {"id": "B", "text": "sin\u207b\u00b9(1/2)"}, {"id": "C", "text": "2cos\u207b\u00b9(1/4)"}, {"id": "D", "text": "\u03c0/6"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of sin⁻¹(2 × (1/4) × √(1 - 1/16)) is equal to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2sin⁻¹(1/4)"
+        },
+        {
+          "id": "B",
+          "text": "sin⁻¹(1/2)"
+        },
+        {
+          "id": "C",
+          "text": "2cos⁻¹(1/4)"
+        },
+        {
+          "id": "D",
+          "text": "π/6"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "We know 2sin\u207b\u00b9(x) = sin\u207b\u00b9(2x\u221a(1-x\u00b2)) for |x| \u2264 1/\u221a2. Here x = 1/4, so 2x\u221a(1-x\u00b2) = 2(1/4)\u221a(15/16) = (1/2)(\u221a15/4) = \u221a15/8. The given expression equals sin\u207b\u00b9(\u221a15/8) = 2sin\u207b\u00b9(1/4).",
-      "explanation_incorrect": "This uses the identity 2sin\u207b\u00b9(x) = sin\u207b\u00b9(2x\u221a(1-x\u00b2)). With x = 1/4, the expression simplifies to 2sin\u207b\u00b9(1/4)."
+      "explanation_correct": "We know 2sin⁻¹(x) = sin⁻¹(2x√(1-x²)) for |x| ≤ 1/√2. Here x = 1/4, so 2x√(1-x²) = 2(1/4)√(15/16) = (1/2)(√15/4) = √15/8. The given expression equals sin⁻¹(√15/8) = 2sin⁻¹(1/4).",
+      "explanation_incorrect": "This uses the identity 2sin⁻¹(x) = sin⁻¹(2x√(1-x²)). With x = 1/4, the expression simplifies to 2sin⁻¹(1/4)."
     },
     {
       "question_id": "T01.02.Q048",
       "type": "mcq",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of tan\u207b\u00b9(1/3) + tan\u207b\u00b9(1/5) + tan\u207b\u00b9(1/7) + tan\u207b\u00b9(1/8) is:",
-      "options": [{"id": "A", "text": "\u03c0/4"}, {"id": "B", "text": "\u03c0/2"}, {"id": "C", "text": "\u03c0/3"}, {"id": "D", "text": "\u03c0"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of tan⁻¹(1/3) + tan⁻¹(1/5) + tan⁻¹(1/7) + tan⁻¹(1/8) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "π/4"
+        },
+        {
+          "id": "B",
+          "text": "π/2"
+        },
+        {
+          "id": "C",
+          "text": "π/3"
+        },
+        {
+          "id": "D",
+          "text": "π"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Group as (tan\u207b\u00b9(1/3) + tan\u207b\u00b9(1/5)) + (tan\u207b\u00b9(1/7) + tan\u207b\u00b9(1/8)). First pair: tan\u207b\u00b9((1/3+1/5)/(1-1/15)) = tan\u207b\u00b9((8/15)/(14/15)) = tan\u207b\u00b9(4/7). Second pair: tan\u207b\u00b9((1/7+1/8)/(1-1/56)) = tan\u207b\u00b9((15/56)/(55/56)) = tan\u207b\u00b9(3/11). Now tan\u207b\u00b9(4/7) + tan\u207b\u00b9(3/11) = tan\u207b\u00b9((4/7+3/11)/(1-12/77)) = tan\u207b\u00b9((65/77)/(65/77)) = tan\u207b\u00b9(1) = \u03c0/4.",
-      "explanation_incorrect": "Grouping into pairs and applying the addition formula twice, the sum reduces to tan\u207b\u00b9(1) = \u03c0/4."
+      "explanation_correct": "Group as (tan⁻¹(1/3) + tan⁻¹(1/5)) + (tan⁻¹(1/7) + tan⁻¹(1/8)). First pair: tan⁻¹((1/3+1/5)/(1-1/15)) = tan⁻¹((8/15)/(14/15)) = tan⁻¹(4/7). Second pair: tan⁻¹((1/7+1/8)/(1-1/56)) = tan⁻¹((15/56)/(55/56)) = tan⁻¹(3/11). Now tan⁻¹(4/7) + tan⁻¹(3/11) = tan⁻¹((4/7+3/11)/(1-12/77)) = tan⁻¹((65/77)/(65/77)) = tan⁻¹(1) = π/4.",
+      "explanation_incorrect": "Grouping into pairs and applying the addition formula twice, the sum reduces to tan⁻¹(1) = π/4."
     },
     {
       "question_id": "T01.02.Q049",
       "type": "true_false",
       "concept_id": "T01.02.C02",
       "difficulty": "exam_style",
-      "question_text": "2tan\u207b\u00b9(1) = sin\u207b\u00b9(1).",
-      "options": [{"id": "A", "text": "True"}, {"id": "B", "text": "False"}],
+      "cognitive_level": "recall",
+      "question_text": "2tan⁻¹(1) = sin⁻¹(1).",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "2tan\u207b\u00b9(1) = 2 \u00d7 \u03c0/4 = \u03c0/2. sin\u207b\u00b9(1) = \u03c0/2. They are equal. Alternatively, using 2tan\u207b\u00b9(x) = sin\u207b\u00b9(2x/(1+x\u00b2)) with x = 1: sin\u207b\u00b9(2/2) = sin\u207b\u00b9(1) = \u03c0/2.",
-      "explanation_incorrect": "2tan\u207b\u00b9(1) = 2(\u03c0/4) = \u03c0/2 = sin\u207b\u00b9(1). So the statement is true."
+      "explanation_correct": "2tan⁻¹(1) = 2 × π/4 = π/2. sin⁻¹(1) = π/2. They are equal. Alternatively, using 2tan⁻¹(x) = sin⁻¹(2x/(1+x²)) with x = 1: sin⁻¹(2/2) = sin⁻¹(1) = π/2.",
+      "explanation_incorrect": "2tan⁻¹(1) = 2(π/4) = π/2 = sin⁻¹(1). So the statement is true."
     },
     {
       "question_id": "T01.02.Q050",
       "type": "fill_blank",
       "concept_id": "T01.02.C03",
       "difficulty": "exam_style",
-      "question_text": "The value of cos(sin\u207b\u00b9(3/5) + cos\u207b\u00b9(12/13)) is ___.",
-      "options": [{"id": "A", "text": "33/65"}, {"id": "B", "text": "56/65"}, {"id": "C", "text": "16/65"}, {"id": "D", "text": "63/65"}],
+      "cognitive_level": "recall",
+      "question_text": "The value of cos(sin⁻¹(3/5) + cos⁻¹(12/13)) is ___.",
+      "options": [
+        {
+          "id": "A",
+          "text": "33/65"
+        },
+        {
+          "id": "B",
+          "text": "56/65"
+        },
+        {
+          "id": "C",
+          "text": "16/65"
+        },
+        {
+          "id": "D",
+          "text": "63/65"
+        }
+      ],
       "correct_answer": "A",
-      "explanation_correct": "Let \u03b1 = sin\u207b\u00b9(3/5): sin\u03b1 = 3/5, cos\u03b1 = 4/5. Let \u03b2 = cos\u207b\u00b9(12/13): cos\u03b2 = 12/13, sin\u03b2 = 5/13. cos(\u03b1+\u03b2) = cos\u03b1cos\u03b2 - sin\u03b1sin\u03b2 = (4/5)(12/13) - (3/5)(5/13) = 48/65 - 15/65 = 33/65.",
-      "explanation_incorrect": "Using cos(\u03b1+\u03b2) = cos\u03b1cos\u03b2 - sin\u03b1sin\u03b2 with the appropriate triangle values gives 33/65."
+      "explanation_correct": "Let α = sin⁻¹(3/5): sinα = 3/5, cosα = 4/5. Let β = cos⁻¹(12/13): cosβ = 12/13, sinβ = 5/13. cos(α+β) = cosαcosβ - sinαsinβ = (4/5)(12/13) - (3/5)(5/13) = 48/65 - 15/65 = 33/65.",
+      "explanation_incorrect": "Using cos(α+β) = cosαcosβ - sinαsinβ with the appropriate triangle values gives 33/65."
     }
   ]
 }

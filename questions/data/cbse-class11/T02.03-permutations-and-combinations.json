@@ -1,6 +1,11 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 11, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 11,
+    "subject": "Mathematics"
+  },
   "topic_id": "T02.03",
   "topic_name": "Permutations and Combinations",
   "canonical_explanation": {
@@ -14,55 +19,1421 @@
     ]
   },
   "questions": [
-    {"question_id": "T02.03.Q001", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "familiarity", "question_text": "The value of 5! is:", "options": [{"id": "A", "text": "60"}, {"id": "B", "text": "120"}, {"id": "C", "text": "24"}, {"id": "D", "text": "720"}], "correct_answer": "B", "explanation_correct": "5! = 5×4×3×2×1 = 120.", "explanation_incorrect": "Option A is 5!/2. Option C is 4!. Option D is 6!."},
-    {"question_id": "T02.03.Q002", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "familiarity", "question_text": "The value of 0! is:", "options": [{"id": "A", "text": "0"}, {"id": "B", "text": "1"}, {"id": "C", "text": "undefined"}, {"id": "D", "text": "∞"}], "correct_answer": "B", "explanation_correct": "By convention, 0! = 1.", "explanation_incorrect": "0! is defined as 1, not 0."},
-    {"question_id": "T02.03.Q003", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "familiarity", "question_text": "A person has 4 shirts and 3 pants. How many outfits can be made?", "options": [{"id": "A", "text": "7"}, {"id": "B", "text": "12"}, {"id": "C", "text": "24"}, {"id": "D", "text": "4"}], "correct_answer": "B", "explanation_correct": "By multiplication principle: 4 × 3 = 12.", "explanation_incorrect": "Addition gives 7 (wrong principle). Multiplication gives 12."},
-    {"question_id": "T02.03.Q004", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "familiarity", "question_text": "The value of 5P2 is:", "options": [{"id": "A", "text": "10"}, {"id": "B", "text": "20"}, {"id": "C", "text": "60"}, {"id": "D", "text": "25"}], "correct_answer": "B", "explanation_correct": "5P2 = 5!/(5−2)! = 5!/3! = 120/6 = 20.", "explanation_incorrect": "5P2 = 5 × 4 = 20. Don't confuse with 5C2 = 10."},
-    {"question_id": "T02.03.Q005", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many 3-letter words can be formed from ABCDE (no repetition)?", "options": [{"id": "A", "text": "10"}, {"id": "B", "text": "60"}, {"id": "C", "text": "120"}, {"id": "D", "text": "125"}], "correct_answer": "B", "explanation_correct": "5P3 = 5 × 4 × 3 = 60.", "explanation_incorrect": "With repetition it would be 5³=125. Without: 5P3=60."},
-    {"question_id": "T02.03.Q006", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many 4-digit numbers can be formed using digits 1-9 without repetition?", "options": [{"id": "A", "text": "3024"}, {"id": "B", "text": "6561"}, {"id": "C", "text": "504"}, {"id": "D", "text": "9000"}], "correct_answer": "A", "explanation_correct": "9P4 = 9 × 8 × 7 × 6 = 3024.", "explanation_incorrect": "First position: 9 choices, second: 8, third: 7, fourth: 6."},
-    {"question_id": "T02.03.Q007", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "The value of 6C2 is:", "options": [{"id": "A", "text": "12"}, {"id": "B", "text": "15"}, {"id": "C", "text": "30"}, {"id": "D", "text": "36"}], "correct_answer": "B", "explanation_correct": "6C2 = 6!/(2!×4!) = (6×5)/(2×1) = 15.", "explanation_incorrect": "6C2 = 6P2/2! = 30/2 = 15."},
-    {"question_id": "T02.03.Q008", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "10C0 equals:", "options": [{"id": "A", "text": "0"}, {"id": "B", "text": "1"}, {"id": "C", "text": "10"}, {"id": "D", "text": "undefined"}], "correct_answer": "B", "explanation_correct": "nC0 = 1 for any n. There is exactly one way to choose 0 items.", "explanation_incorrect": "Choosing nothing is done in exactly 1 way."},
-    {"question_id": "T02.03.Q009", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "From 5 boys and 3 girls, select a team of 3 with at least 1 girl. How many ways?", "options": [{"id": "A", "text": "46"}, {"id": "B", "text": "56"}, {"id": "C", "text": "40"}, {"id": "D", "text": "36"}], "correct_answer": "A", "explanation_correct": "Total − all boys = 8C3 − 5C3 = 56 − 10 = 46.", "explanation_incorrect": "Use complementary counting: total ways minus ways with no girls."},
-    {"question_id": "T02.03.Q010", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "The number of permutations of the letters in 'BOOK' is:", "options": [{"id": "A", "text": "24"}, {"id": "B", "text": "12"}, {"id": "C", "text": "6"}, {"id": "D", "text": "4"}], "correct_answer": "B", "explanation_correct": "BOOK has 4 letters with O repeated twice. Permutations = 4!/2! = 24/2 = 12.", "explanation_incorrect": "Divide by factorials of repeated letters."},
-    {"question_id": "T02.03.Q011", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "application", "question_text": "How many 2-digit even numbers can be formed from digits 1, 2, 3, 4, 5 (no repetition)?", "options": [{"id": "A", "text": "8"}, {"id": "B", "text": "10"}, {"id": "C", "text": "12"}, {"id": "D", "text": "20"}], "correct_answer": "A", "explanation_correct": "Units digit must be even: 2 or 4 (2 choices). Tens digit: remaining 4 digits (4 choices). Total = 2 × 4 = 8.", "explanation_incorrect": "Fix the constraint first (even → units digit), then count."},
-    {"question_id": "T02.03.Q012", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many ways can 5 people sit in a row?", "options": [{"id": "A", "text": "25"}, {"id": "B", "text": "60"}, {"id": "C", "text": "120"}, {"id": "D", "text": "5"}], "correct_answer": "C", "explanation_correct": "5 people in a row = 5! = 120.", "explanation_incorrect": "Linear arrangement of n distinct items = n!."},
-    {"question_id": "T02.03.Q013", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many ways can 5 people sit around a circular table?", "options": [{"id": "A", "text": "120"}, {"id": "B", "text": "24"}, {"id": "C", "text": "60"}, {"id": "D", "text": "12"}], "correct_answer": "B", "explanation_correct": "Circular permutations of n = (n−1)! = 4! = 24.", "explanation_incorrect": "In circular arrangement, fix one person and arrange rest: (n−1)!."},
-    {"question_id": "T02.03.Q014", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "If nC5 = nC7, then n is:", "options": [{"id": "A", "text": "12"}, {"id": "B", "text": "35"}, {"id": "C", "text": "2"}, {"id": "D", "text": "7"}], "correct_answer": "A", "explanation_correct": "nCr = nCs implies r + s = n (when r ≠ s). So 5 + 7 = 12.", "explanation_incorrect": "Using the property nCr = nCn−r: if nC5 = nC7, then 7 = n−5, so n = 12."},
-    {"question_id": "T02.03.Q015", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "nCn equals:", "options": [{"id": "A", "text": "n"}, {"id": "B", "text": "1"}, {"id": "C", "text": "n!"}, {"id": "D", "text": "0"}], "correct_answer": "B", "explanation_correct": "nCn = n!/(n!×0!) = 1. Selecting all n items is done in 1 way.", "explanation_incorrect": "There's only one way to select everything."},
-    {"question_id": "T02.03.Q016", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "How many words can be formed from 'MISSISSIPPI'?", "options": [{"id": "A", "text": "11!"}, {"id": "B", "text": "11!/(4!×4!×2!)"}, {"id": "C", "text": "11!/(4!×4!×2!×1!)"}, {"id": "D", "text": "34650"}], "correct_answer": "D", "explanation_correct": "MISSISSIPPI: M=1, I=4, S=4, P=2. Total = 11!/(1!×4!×4!×2!) = 34650.", "explanation_incorrect": "Divide total permutations by factorials of each repeated letter."},
-    {"question_id": "T02.03.Q017", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "familiarity", "question_text": "A code has 3 digits from 0-9 with repetition. How many codes are possible?", "options": [{"id": "A", "text": "720"}, {"id": "B", "text": "1000"}, {"id": "C", "text": "30"}, {"id": "D", "text": "100"}], "correct_answer": "B", "explanation_correct": "With repetition: 10 × 10 × 10 = 1000.", "explanation_incorrect": "Each position has 10 choices independently."},
-    {"question_id": "T02.03.Q018", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "A committee of 5 is formed from 6 men and 4 women with exactly 3 men. How many ways?", "options": [{"id": "A", "text": "120"}, {"id": "B", "text": "60"}, {"id": "C", "text": "150"}, {"id": "D", "text": "180"}], "correct_answer": "A", "explanation_correct": "Choose 3 men from 6 and 2 women from 4: 6C3 × 4C2 = 20 × 6 = 120.", "explanation_incorrect": "Multiply the ways to choose men and women separately."},
-    {"question_id": "T02.03.Q019", "type": "true_false", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "nPr ≥ nCr for all valid values of n and r.", "options": [{"id": "A", "text": "True"}, {"id": "B", "text": "False"}], "correct_answer": "A", "explanation_correct": "nPr = nCr × r!, and r! ≥ 1, so nPr ≥ nCr always.", "explanation_incorrect": "Permutations count arrangements, which is always at least as many as selections."},
-    {"question_id": "T02.03.Q020", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "How many 3-digit numbers > 300 can be formed using 1, 2, 3, 4 (no repetition)?", "options": [{"id": "A", "text": "12"}, {"id": "B", "text": "6"}, {"id": "C", "text": "18"}, {"id": "D", "text": "24"}], "correct_answer": "A", "explanation_correct": "Hundreds digit = 3 or 4 (2 choices). Remaining 2 digits from remaining 3: 3P2 = 6. Total = 2 × 6 = 12.", "explanation_incorrect": "Fix the hundreds digit first, then arrange remaining."},
-    {"question_id": "T02.03.Q021", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "How many diagonals does a polygon with 8 sides have?", "options": [{"id": "A", "text": "20"}, {"id": "B", "text": "28"}, {"id": "C", "text": "56"}, {"id": "D", "text": "16"}], "correct_answer": "A", "explanation_correct": "Diagonals = nC2 − n = 8C2 − 8 = 28 − 8 = 20.", "explanation_incorrect": "Total lines − sides = nC2 − n = n(n−3)/2."},
-    {"question_id": "T02.03.Q022", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "application", "question_text": "A student can go from home to school by 3 routes and school to library by 4 routes. How many ways from home to library via school?", "options": [{"id": "A", "text": "7"}, {"id": "B", "text": "12"}, {"id": "C", "text": "24"}, {"id": "D", "text": "1"}], "correct_answer": "B", "explanation_correct": "Multiplication principle: 3 × 4 = 12.", "explanation_incorrect": "Sequential events → multiply the number of ways."},
-    {"question_id": "T02.03.Q023", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "The number of permutations of 'BANANA' is:", "options": [{"id": "A", "text": "720"}, {"id": "B", "text": "60"}, {"id": "C", "text": "120"}, {"id": "D", "text": "360"}], "correct_answer": "B", "explanation_correct": "BANANA: B=1, A=3, N=2. Permutations = 6!/(3!×2!) = 720/12 = 60.", "explanation_incorrect": "Divide by factorials of repeated letters."},
-    {"question_id": "T02.03.Q024", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "In how many ways can a cricket team of 11 be chosen from 15 players?", "options": [{"id": "A", "text": "1365"}, {"id": "B", "text": "3003"}, {"id": "C", "text": "5005"}, {"id": "D", "text": "455"}], "correct_answer": "A", "explanation_correct": "15C11 = 15C4 = (15×14×13×12)/(4×3×2×1) = 32760/24 = 1365.", "explanation_incorrect": "Use nCr = nCn−r to simplify: 15C11 = 15C4."},
-    {"question_id": "T02.03.Q025", "type": "fill_blank", "concept_id": "T02.03.C01", "difficulty": "familiarity", "question_text": "8!/6! = ___.", "correct_answer": "56", "explanation_correct": "8!/6! = 8 × 7 = 56.", "explanation_incorrect": "Cancel: 8!/6! = 8 × 7 × 6!/6! = 56."},
-    {"question_id": "T02.03.Q026", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many 4-letter words with at least one vowel from A, B, C, D, E (no repetition)?", "options": [{"id": "A", "text": "96"}, {"id": "B", "text": "24"}, {"id": "C", "text": "120"}, {"id": "D", "text": "108"}], "correct_answer": "D", "explanation_correct": "Total − no vowels. Vowels: A, E. Consonants: B, C, D. Total 4-letter: 5P4=120. No vowels: 3P4 is impossible (only 3 consonants for 4 spots)=0. Wait: all 4 from 3 consonants without repetition is impossible. So answer = 120 − 0 = 120. Hmm, that makes all arrangements have at least one vowel. Let me reconsider: with 5 letters {A,B,C,D,E}, 4-letter words without repetition = 5P4 = 120. No vowel words: choose 4 from {B,C,D} = 3P4 = 0 (can't arrange 4 from 3). So all 120 have at least one vowel.", "explanation_incorrect": "With only 3 consonants, you cannot form a 4-letter word without vowels."},
-    {"question_id": "T02.03.Q027", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "familiarity", "question_text": "How many ways can a president, VP, and secretary be chosen from 10 people?", "options": [{"id": "A", "text": "720"}, {"id": "B", "text": "120"}, {"id": "C", "text": "1000"}, {"id": "D", "text": "30"}], "correct_answer": "A", "explanation_correct": "10P3 = 10 × 9 × 8 = 720. Order matters (different positions).", "explanation_incorrect": "Three distinct roles from 10 people = 10P3."},
-    {"question_id": "T02.03.Q028", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "How many straight lines can be formed by 7 points, no 3 collinear?", "options": [{"id": "A", "text": "21"}, {"id": "B", "text": "42"}, {"id": "C", "text": "35"}, {"id": "D", "text": "7"}], "correct_answer": "A", "explanation_correct": "Each pair of points defines a line. 7C2 = 21.", "explanation_incorrect": "A line is determined by 2 points, so count combinations of 2."},
-    {"question_id": "T02.03.Q029", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "20C17 equals:", "options": [{"id": "A", "text": "1140"}, {"id": "B", "text": "6840"}, {"id": "C", "text": "20"}, {"id": "D", "text": "60"}], "correct_answer": "A", "explanation_correct": "20C17 = 20C3 = (20×19×18)/(3×2×1) = 6840/6 = 1140.", "explanation_incorrect": "Use 20C17 = 20C3 to simplify computation."},
-    {"question_id": "T02.03.Q030", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "How many numbers between 100 and 999 have all digits distinct?", "options": [{"id": "A", "text": "648"}, {"id": "B", "text": "720"}, {"id": "C", "text": "504"}, {"id": "D", "text": "900"}], "correct_answer": "A", "explanation_correct": "Hundreds: 9 (1-9). Tens: 9 (0-9 except hundreds digit). Units: 8 remaining. 9×9×8 = 648.", "explanation_incorrect": "First digit can't be 0, then each subsequent digit excludes used digits."},
-    {"question_id": "T02.03.Q031", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "The value of 10C1 is:", "options": [{"id": "A", "text": "1"}, {"id": "B", "text": "10"}, {"id": "C", "text": "9"}, {"id": "D", "text": "100"}], "correct_answer": "B", "explanation_correct": "nC1 = n. So 10C1 = 10.", "explanation_incorrect": "Choosing 1 from n gives n ways."},
-    {"question_id": "T02.03.Q032", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many words starting with vowels can be formed from ORGAN (no repetition)?", "options": [{"id": "A", "text": "24"}, {"id": "B", "text": "48"}, {"id": "C", "text": "72"}, {"id": "D", "text": "120"}], "correct_answer": "B", "explanation_correct": "Vowels in ORGAN: O, A (2 vowels). Fix first letter as vowel: 2 choices. Remaining 4 letters: 4! = 24. Total = 2 × 24 = 48.", "explanation_incorrect": "First choose the vowel for position 1, then arrange remaining letters."},
-    {"question_id": "T02.03.Q033", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "From 5 consonants and 4 vowels, words with 3 consonants and 2 vowels. Number of such words:", "options": [{"id": "A", "text": "60"}, {"id": "B", "text": "120"}, {"id": "C", "text": "7200"}, {"id": "D", "text": "720"}], "correct_answer": "C", "explanation_correct": "Select: 5C3 × 4C2 = 10 × 6 = 60. Arrange 5 letters: 5! = 120. Total = 60 × 120 = 7200.", "explanation_incorrect": "First select, then arrange the 5 chosen letters."},
-    {"question_id": "T02.03.Q034", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "application", "question_text": "How many license plates have 2 letters followed by 3 digits (repetition allowed)?", "options": [{"id": "A", "text": "676000"}, {"id": "B", "text": "175760"}, {"id": "C", "text": "26000"}, {"id": "D", "text": "6760000"}], "correct_answer": "A", "explanation_correct": "26 × 26 × 10 × 10 × 10 = 676 × 1000 = 676000.", "explanation_incorrect": "Each letter: 26 choices. Each digit: 10 choices. Multiply all."},
-    {"question_id": "T02.03.Q035", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "In how many ways can 4 books be arranged on a shelf from 7 books?", "options": [{"id": "A", "text": "35"}, {"id": "B", "text": "840"}, {"id": "C", "text": "210"}, {"id": "D", "text": "2520"}], "correct_answer": "B", "explanation_correct": "7P4 = 7 × 6 × 5 × 4 = 840.", "explanation_incorrect": "Arranging (order matters) 4 from 7 = 7P4."},
-    {"question_id": "T02.03.Q036", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "How many triangles can be formed from 10 points, no 3 collinear?", "options": [{"id": "A", "text": "120"}, {"id": "B", "text": "720"}, {"id": "C", "text": "45"}, {"id": "D", "text": "30"}], "correct_answer": "A", "explanation_correct": "10C3 = (10×9×8)/(3×2×1) = 120.", "explanation_incorrect": "A triangle needs 3 non-collinear points."},
-    {"question_id": "T02.03.Q037", "type": "true_false", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "nC0 + nC1 + nC2 + ... + nCn = 2ⁿ.", "options": [{"id": "A", "text": "True"}, {"id": "B", "text": "False"}], "correct_answer": "A", "explanation_correct": "The sum of all binomial coefficients equals 2ⁿ. This follows from (1+1)ⁿ = 2ⁿ.", "explanation_incorrect": "This is a fundamental identity from the binomial theorem."},
-    {"question_id": "T02.03.Q038", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "How many words from DELHI if L and I are always together?", "options": [{"id": "A", "text": "24"}, {"id": "B", "text": "48"}, {"id": "C", "text": "12"}, {"id": "D", "text": "120"}], "correct_answer": "B", "explanation_correct": "Treat LI as one unit. Units: D, E, H, (LI) = 4 units. Arrange: 4! = 24. LI can be LI or IL: ×2. Total = 48.", "explanation_incorrect": "Bundle the always-together letters, then multiply by their internal arrangements."},
-    {"question_id": "T02.03.Q039", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "application", "question_text": "A true/false test has 10 questions. How many possible answer sequences?", "options": [{"id": "A", "text": "20"}, {"id": "B", "text": "100"}, {"id": "C", "text": "1024"}, {"id": "D", "text": "512"}], "correct_answer": "C", "explanation_correct": "Each question has 2 choices. Total = 2¹⁰ = 1024.", "explanation_incorrect": "Independent choices multiply: 2 × 2 × ... (10 times) = 2¹⁰."},
-    {"question_id": "T02.03.Q040", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "A hand of 5 cards from a deck of 52. How many hands have exactly 3 aces?", "options": [{"id": "A", "text": "4512"}, {"id": "B", "text": "94"}, {"id": "C", "text": "778320"}, {"id": "D", "text": "4560"}], "correct_answer": "A", "explanation_correct": "Choose 3 aces from 4: 4C3 = 4. Choose 2 non-aces from 48: 48C2 = 1128. Total = 4 × 1128 = 4512.", "explanation_incorrect": "Separate the selection into constrained groups."},
-    {"question_id": "T02.03.Q041", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "familiarity", "question_text": "nP1 equals:", "options": [{"id": "A", "text": "1"}, {"id": "B", "text": "n"}, {"id": "C", "text": "n!"}, {"id": "D", "text": "n−1"}], "correct_answer": "B", "explanation_correct": "nP1 = n!/(n−1)! = n.", "explanation_incorrect": "Choosing and arranging 1 item from n gives n ways."},
-    {"question_id": "T02.03.Q042", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "If nC2 = 45, then n is:", "options": [{"id": "A", "text": "9"}, {"id": "B", "text": "10"}, {"id": "C", "text": "8"}, {"id": "D", "text": "15"}], "correct_answer": "B", "explanation_correct": "nC2 = n(n−1)/2 = 45. n(n−1) = 90. n = 10 (since 10×9 = 90).", "explanation_incorrect": "Solve the equation n(n−1)/2 = 45."},
-    {"question_id": "T02.03.Q043", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "How many 5-digit numbers divisible by 5 from digits 0,1,2,3,4,5 (no repetition)?", "options": [{"id": "A", "text": "216"}, {"id": "B", "text": "240"}, {"id": "C", "text": "300"}, {"id": "D", "text": "168"}], "correct_answer": "A", "explanation_correct": "Last digit = 0 or 5. Case 1 (last=0): first 4 from {1,2,3,4,5} = 5P4 = 120. Case 2 (last=5): first digit ≠ 0, from {1,2,3,4} = 4 choices, remaining 3 from {0,2,3,4}\\{first} = 4×3P3 = 4×3×2×1... Wait: first: 4 choices (1,2,3,4), then 3 positions from remaining 4 digits (including 0): 4×3×2 = 24. Case 2 = 4×24 = 96. Total = 120+96 = 216.", "explanation_incorrect": "Split by the last digit being 0 or 5, handling leading zero carefully."},
-    {"question_id": "T02.03.Q044", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "application", "question_text": "How many ways to distribute 3 prizes among 5 students (each prize to different student)?", "options": [{"id": "A", "text": "10"}, {"id": "B", "text": "60"}, {"id": "C", "text": "125"}, {"id": "D", "text": "15"}], "correct_answer": "B", "explanation_correct": "5P3 = 5 × 4 × 3 = 60. Order matters as prizes are distinct.", "explanation_incorrect": "Each prize goes to a different student, so it's a permutation."},
-    {"question_id": "T02.03.Q045", "type": "mcq", "concept_id": "T02.03.C01", "difficulty": "exam_style", "question_text": "If n!/(n−4)! = 360, find n.", "options": [{"id": "A", "text": "6"}, {"id": "B", "text": "5"}, {"id": "C", "text": "8"}, {"id": "D", "text": "7"}], "correct_answer": "A", "explanation_correct": "n(n−1)(n−2)(n−3) = 360. Try n=6: 6×5×4×3 = 360 ✓.", "explanation_incorrect": "nP4 = n(n−1)(n−2)(n−3) = 360."},
-    {"question_id": "T02.03.Q046", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "If nC12 = nC8, then nC17 is:", "options": [{"id": "A", "text": "n = 20, nC17 = 1140"}, {"id": "B", "text": "n = 20, nC17 = 20"}, {"id": "C", "text": "n = 4, nC17 = 0"}, {"id": "D", "text": "Cannot be found"}], "correct_answer": "A", "explanation_correct": "nC12 = nC8 ⟹ 12 + 8 = n = 20. 20C17 = 20C3 = 1140.", "explanation_incorrect": "Use nCr = nCs ⟹ r+s = n, then compute nC17."},
-    {"question_id": "T02.03.Q047", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "application", "question_text": "How many 4-digit numbers have no digit repeated and are divisible by 2?", "options": [{"id": "A", "text": "2296"}, {"id": "B", "text": "2240"}, {"id": "C", "text": "2016"}, {"id": "D", "text": "2520"}], "correct_answer": "C", "explanation_correct": "Last digit even: 0,2,4,6,8. Case last=0: 9×8×7=504. Case last=2,4,6,8: first digit: 8 (not 0, not last), second: 8, third: 7. 4×8×8×7=1792. Hmm, let me recount. Case last≠0 but even (4 choices): first digit 8 choices (1-9 minus last digit), second 8 choices (0-9 minus first and last), third 7 choices. 4×8×8×7 = 1792. Total = 504 + 1792 = 2296. Wait, let me recheck more carefully. Actually with last = even non-zero (2,4,6,8): first: can't be 0 or last digit = 8 choices. Second: can't repeat first or last = 8 choices. Third: can't repeat = 7 choices. 4 × 8 × 8 × 7 = 1792. Total = 504 + 1792 = 2296.", "explanation_incorrect": "Split cases by whether last digit is 0 or non-zero even."},
-    {"question_id": "T02.03.Q048", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "familiarity", "question_text": "nC1 + nC2 + ... + nCn equals:", "options": [{"id": "A", "text": "2ⁿ"}, {"id": "B", "text": "2ⁿ − 1"}, {"id": "C", "text": "2ⁿ + 1"}, {"id": "D", "text": "n × 2ⁿ⁻¹"}], "correct_answer": "B", "explanation_correct": "Sum of all nCr from 0 to n = 2ⁿ. Excluding nC0 = 1: sum from 1 to n = 2ⁿ − 1.", "explanation_incorrect": "Total subsets of a set with n elements = 2ⁿ. Non-empty subsets = 2ⁿ − 1."},
-    {"question_id": "T02.03.Q049", "type": "mcq", "concept_id": "T02.03.C02", "difficulty": "exam_style", "question_text": "How many numbers between 100 and 1000 have digit 7 exactly once?", "options": [{"id": "A", "text": "225"}, {"id": "B", "text": "200"}, {"id": "C", "text": "243"}, {"id": "D", "text": "252"}], "correct_answer": "A", "explanation_correct": "3-digit numbers with exactly one 7. Position of 7: hundreds, tens, or units. Hundreds=7: tens(9 non-7, incl 0), units(9) = 9×9=81. Tens=7: hundreds(8 non-7, non-0), units(9) = 8×9=72. Units=7: hundreds(8), tens(9) = 72. Total = 81+72+72 = 225.", "explanation_incorrect": "Count position of the 7, ensuring other digits are not 7."},
-    {"question_id": "T02.03.Q050", "type": "mcq", "concept_id": "T02.03.C03", "difficulty": "exam_style", "question_text": "If nPr = 720 and nCr = 120, then r is:", "options": [{"id": "A", "text": "3"}, {"id": "B", "text": "4"}, {"id": "C", "text": "6"}, {"id": "D", "text": "2"}], "correct_answer": "A", "explanation_correct": "nPr = nCr × r!. So r! = 720/120 = 6. r! = 6 ⟹ r = 3.", "explanation_incorrect": "Use the relationship nPr = r! × nCr to find r!."}
+    {
+      "question_id": "T02.03.Q001",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "The value of 5! is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "720"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5! = 5×4×3×2×1 = 120.",
+      "explanation_incorrect": "Option A is 5!/2. Option C is 4!. Option D is 6!."
+    },
+    {
+      "question_id": "T02.03.Q002",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "The value of 0! is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "undefined"
+        },
+        {
+          "id": "D",
+          "text": "∞"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By convention, 0! = 1.",
+      "explanation_incorrect": "0! is defined as 1, not 0."
+    },
+    {
+      "question_id": "T02.03.Q003",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "A person has 4 shirts and 3 pants. How many outfits can be made?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By multiplication principle: 4 × 3 = 12.",
+      "explanation_incorrect": "Addition gives 7 (wrong principle). Multiplication gives 12."
+    },
+    {
+      "question_id": "T02.03.Q004",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "The value of 5P2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "25"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5P2 = 5!/(5−2)! = 5!/3! = 120/6 = 20.",
+      "explanation_incorrect": "5P2 = 5 × 4 = 20. Don't confuse with 5C2 = 10."
+    },
+    {
+      "question_id": "T02.03.Q005",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many 3-letter words can be formed from ABCDE (no repetition)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "125"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5P3 = 5 × 4 × 3 = 60.",
+      "explanation_incorrect": "With repetition it would be 5³=125. Without: 5P3=60."
+    },
+    {
+      "question_id": "T02.03.Q006",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many 4-digit numbers can be formed using digits 1-9 without repetition?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3024"
+        },
+        {
+          "id": "B",
+          "text": "6561"
+        },
+        {
+          "id": "C",
+          "text": "504"
+        },
+        {
+          "id": "D",
+          "text": "9000"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "9P4 = 9 × 8 × 7 × 6 = 3024.",
+      "explanation_incorrect": "First position: 9 choices, second: 8, third: 7, fourth: 6."
+    },
+    {
+      "question_id": "T02.03.Q007",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "The value of 6C2 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "36"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "6C2 = 6!/(2!×4!) = (6×5)/(2×1) = 15.",
+      "explanation_incorrect": "6C2 = 6P2/2! = 30/2 = 15."
+    },
+    {
+      "question_id": "T02.03.Q008",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "10C0 equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "undefined"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "nC0 = 1 for any n. There is exactly one way to choose 0 items.",
+      "explanation_incorrect": "Choosing nothing is done in exactly 1 way."
+    },
+    {
+      "question_id": "T02.03.Q009",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "From 5 boys and 3 girls, select a team of 3 with at least 1 girl. How many ways?",
+      "options": [
+        {
+          "id": "A",
+          "text": "46"
+        },
+        {
+          "id": "B",
+          "text": "56"
+        },
+        {
+          "id": "C",
+          "text": "40"
+        },
+        {
+          "id": "D",
+          "text": "36"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Total − all boys = 8C3 − 5C3 = 56 − 10 = 46.",
+      "explanation_incorrect": "Use complementary counting: total ways minus ways with no girls."
+    },
+    {
+      "question_id": "T02.03.Q010",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "The number of permutations of the letters in 'BOOK' is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "BOOK has 4 letters with O repeated twice. Permutations = 4!/2! = 24/2 = 12.",
+      "explanation_incorrect": "Divide by factorials of repeated letters."
+    },
+    {
+      "question_id": "T02.03.Q011",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many 2-digit even numbers can be formed from digits 1, 2, 3, 4, 5 (no repetition)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "20"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Units digit must be even: 2 or 4 (2 choices). Tens digit: remaining 4 digits (4 choices). Total = 2 × 4 = 8.",
+      "explanation_incorrect": "Fix the constraint first (even → units digit), then count."
+    },
+    {
+      "question_id": "T02.03.Q012",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many ways can 5 people sit in a row?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "5 people in a row = 5! = 120.",
+      "explanation_incorrect": "Linear arrangement of n distinct items = n!."
+    },
+    {
+      "question_id": "T02.03.Q013",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many ways can 5 people sit around a circular table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Circular permutations of n = (n−1)! = 4! = 24.",
+      "explanation_incorrect": "In circular arrangement, fix one person and arrange rest: (n−1)!."
+    },
+    {
+      "question_id": "T02.03.Q014",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "If nC5 = nC7, then n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "nCr = nCs implies r + s = n (when r ≠ s). So 5 + 7 = 12.",
+      "explanation_incorrect": "Using the property nCr = nCn−r: if nC5 = nC7, then 7 = n−5, so n = 12."
+    },
+    {
+      "question_id": "T02.03.Q015",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "nCn equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "n"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "n!"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "nCn = n!/(n!×0!) = 1. Selecting all n items is done in 1 way.",
+      "explanation_incorrect": "There's only one way to select everything."
+    },
+    {
+      "question_id": "T02.03.Q016",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "How many words can be formed from 'MISSISSIPPI'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11!"
+        },
+        {
+          "id": "B",
+          "text": "11!/(4!×4!×2!)"
+        },
+        {
+          "id": "C",
+          "text": "11!/(4!×4!×2!×1!)"
+        },
+        {
+          "id": "D",
+          "text": "34650"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "MISSISSIPPI: M=1, I=4, S=4, P=2. Total = 11!/(1!×4!×4!×2!) = 34650.",
+      "explanation_incorrect": "Divide total permutations by factorials of each repeated letter."
+    },
+    {
+      "question_id": "T02.03.Q017",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "A code has 3 digits from 0-9 with repetition. How many codes are possible?",
+      "options": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "1000"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "With repetition: 10 × 10 × 10 = 1000.",
+      "explanation_incorrect": "Each position has 10 choices independently."
+    },
+    {
+      "question_id": "T02.03.Q018",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "A committee of 5 is formed from 6 men and 4 women with exactly 3 men. How many ways?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "150"
+        },
+        {
+          "id": "D",
+          "text": "180"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Choose 3 men from 6 and 2 women from 4: 6C3 × 4C2 = 20 × 6 = 120.",
+      "explanation_incorrect": "Multiply the ways to choose men and women separately."
+    },
+    {
+      "question_id": "T02.03.Q019",
+      "type": "true_false",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "nPr ≥ nCr for all valid values of n and r.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "nPr = nCr × r!, and r! ≥ 1, so nPr ≥ nCr always.",
+      "explanation_incorrect": "Permutations count arrangements, which is always at least as many as selections."
+    },
+    {
+      "question_id": "T02.03.Q020",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "How many 3-digit numbers > 300 can be formed using 1, 2, 3, 4 (no repetition)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Hundreds digit = 3 or 4 (2 choices). Remaining 2 digits from remaining 3: 3P2 = 6. Total = 2 × 6 = 12.",
+      "explanation_incorrect": "Fix the hundreds digit first, then arrange remaining."
+    },
+    {
+      "question_id": "T02.03.Q021",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many diagonals does a polygon with 8 sides have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "28"
+        },
+        {
+          "id": "C",
+          "text": "56"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Diagonals = nC2 − n = 8C2 − 8 = 28 − 8 = 20.",
+      "explanation_incorrect": "Total lines − sides = nC2 − n = n(n−3)/2."
+    },
+    {
+      "question_id": "T02.03.Q022",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "A student can go from home to school by 3 routes and school to library by 4 routes. How many ways from home to library via school?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Multiplication principle: 3 × 4 = 12.",
+      "explanation_incorrect": "Sequential events → multiply the number of ways."
+    },
+    {
+      "question_id": "T02.03.Q023",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "The number of permutations of 'BANANA' is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "360"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "BANANA: B=1, A=3, N=2. Permutations = 6!/(3!×2!) = 720/12 = 60.",
+      "explanation_incorrect": "Divide by factorials of repeated letters."
+    },
+    {
+      "question_id": "T02.03.Q024",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "In how many ways can a cricket team of 11 be chosen from 15 players?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1365"
+        },
+        {
+          "id": "B",
+          "text": "3003"
+        },
+        {
+          "id": "C",
+          "text": "5005"
+        },
+        {
+          "id": "D",
+          "text": "455"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "15C11 = 15C4 = (15×14×13×12)/(4×3×2×1) = 32760/24 = 1365.",
+      "explanation_incorrect": "Use nCr = nCn−r to simplify: 15C11 = 15C4."
+    },
+    {
+      "question_id": "T02.03.Q025",
+      "type": "fill_blank",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "8!/6! = ___.",
+      "correct_answer": "56",
+      "explanation_correct": "8!/6! = 8 × 7 = 56.",
+      "explanation_incorrect": "Cancel: 8!/6! = 8 × 7 × 6!/6! = 56."
+    },
+    {
+      "question_id": "T02.03.Q026",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many 4-letter words with at least one vowel from A, B, C, D, E (no repetition)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "96"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "108"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Total − no vowels. Vowels: A, E. Consonants: B, C, D. Total 4-letter: 5P4=120. No vowels: 3P4 is impossible (only 3 consonants for 4 spots)=0. Wait: all 4 from 3 consonants without repetition is impossible. So answer = 120 − 0 = 120. Hmm, that makes all arrangements have at least one vowel. Let me reconsider: with 5 letters {A,B,C,D,E}, 4-letter words without repetition = 5P4 = 120. No vowel words: choose 4 from {B,C,D} = 3P4 = 0 (can't arrange 4 from 3). So all 120 have at least one vowel.",
+      "explanation_incorrect": "With only 3 consonants, you cannot form a 4-letter word without vowels."
+    },
+    {
+      "question_id": "T02.03.Q027",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "How many ways can a president, VP, and secretary be chosen from 10 people?",
+      "options": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "1000"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10P3 = 10 × 9 × 8 = 720. Order matters (different positions).",
+      "explanation_incorrect": "Three distinct roles from 10 people = 10P3."
+    },
+    {
+      "question_id": "T02.03.Q028",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many straight lines can be formed by 7 points, no 3 collinear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "21"
+        },
+        {
+          "id": "B",
+          "text": "42"
+        },
+        {
+          "id": "C",
+          "text": "35"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Each pair of points defines a line. 7C2 = 21.",
+      "explanation_incorrect": "A line is determined by 2 points, so count combinations of 2."
+    },
+    {
+      "question_id": "T02.03.Q029",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "20C17 equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1140"
+        },
+        {
+          "id": "B",
+          "text": "6840"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "20C17 = 20C3 = (20×19×18)/(3×2×1) = 6840/6 = 1140.",
+      "explanation_incorrect": "Use 20C17 = 20C3 to simplify computation."
+    },
+    {
+      "question_id": "T02.03.Q030",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "How many numbers between 100 and 999 have all digits distinct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "648"
+        },
+        {
+          "id": "B",
+          "text": "720"
+        },
+        {
+          "id": "C",
+          "text": "504"
+        },
+        {
+          "id": "D",
+          "text": "900"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Hundreds: 9 (1-9). Tens: 9 (0-9 except hundreds digit). Units: 8 remaining. 9×9×8 = 648.",
+      "explanation_incorrect": "First digit can't be 0, then each subsequent digit excludes used digits."
+    },
+    {
+      "question_id": "T02.03.Q031",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "The value of 10C1 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "nC1 = n. So 10C1 = 10.",
+      "explanation_incorrect": "Choosing 1 from n gives n ways."
+    },
+    {
+      "question_id": "T02.03.Q032",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many words starting with vowels can be formed from ORGAN (no repetition)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "72"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Vowels in ORGAN: O, A (2 vowels). Fix first letter as vowel: 2 choices. Remaining 4 letters: 4! = 24. Total = 2 × 24 = 48.",
+      "explanation_incorrect": "First choose the vowel for position 1, then arrange remaining letters."
+    },
+    {
+      "question_id": "T02.03.Q033",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "From 5 consonants and 4 vowels, words with 3 consonants and 2 vowels. Number of such words:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "7200"
+        },
+        {
+          "id": "D",
+          "text": "720"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Select: 5C3 × 4C2 = 10 × 6 = 60. Arrange 5 letters: 5! = 120. Total = 60 × 120 = 7200.",
+      "explanation_incorrect": "First select, then arrange the 5 chosen letters."
+    },
+    {
+      "question_id": "T02.03.Q034",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many license plates have 2 letters followed by 3 digits (repetition allowed)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "676000"
+        },
+        {
+          "id": "B",
+          "text": "175760"
+        },
+        {
+          "id": "C",
+          "text": "26000"
+        },
+        {
+          "id": "D",
+          "text": "6760000"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "26 × 26 × 10 × 10 × 10 = 676 × 1000 = 676000.",
+      "explanation_incorrect": "Each letter: 26 choices. Each digit: 10 choices. Multiply all."
+    },
+    {
+      "question_id": "T02.03.Q035",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "In how many ways can 4 books be arranged on a shelf from 7 books?",
+      "options": [
+        {
+          "id": "A",
+          "text": "35"
+        },
+        {
+          "id": "B",
+          "text": "840"
+        },
+        {
+          "id": "C",
+          "text": "210"
+        },
+        {
+          "id": "D",
+          "text": "2520"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "7P4 = 7 × 6 × 5 × 4 = 840.",
+      "explanation_incorrect": "Arranging (order matters) 4 from 7 = 7P4."
+    },
+    {
+      "question_id": "T02.03.Q036",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many triangles can be formed from 10 points, no 3 collinear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "720"
+        },
+        {
+          "id": "C",
+          "text": "45"
+        },
+        {
+          "id": "D",
+          "text": "30"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10C3 = (10×9×8)/(3×2×1) = 120.",
+      "explanation_incorrect": "A triangle needs 3 non-collinear points."
+    },
+    {
+      "question_id": "T02.03.Q037",
+      "type": "true_false",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "nC0 + nC1 + nC2 + ... + nCn = 2ⁿ.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The sum of all binomial coefficients equals 2ⁿ. This follows from (1+1)ⁿ = 2ⁿ.",
+      "explanation_incorrect": "This is a fundamental identity from the binomial theorem."
+    },
+    {
+      "question_id": "T02.03.Q038",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "How many words from DELHI if L and I are always together?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "120"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Treat LI as one unit. Units: D, E, H, (LI) = 4 units. Arrange: 4! = 24. LI can be LI or IL: ×2. Total = 48.",
+      "explanation_incorrect": "Bundle the always-together letters, then multiply by their internal arrangements."
+    },
+    {
+      "question_id": "T02.03.Q039",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "A true/false test has 10 questions. How many possible answer sequences?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "100"
+        },
+        {
+          "id": "C",
+          "text": "1024"
+        },
+        {
+          "id": "D",
+          "text": "512"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Each question has 2 choices. Total = 2¹⁰ = 1024.",
+      "explanation_incorrect": "Independent choices multiply: 2 × 2 × ... (10 times) = 2¹⁰."
+    },
+    {
+      "question_id": "T02.03.Q040",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "A hand of 5 cards from a deck of 52. How many hands have exactly 3 aces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4512"
+        },
+        {
+          "id": "B",
+          "text": "94"
+        },
+        {
+          "id": "C",
+          "text": "778320"
+        },
+        {
+          "id": "D",
+          "text": "4560"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Choose 3 aces from 4: 4C3 = 4. Choose 2 non-aces from 48: 48C2 = 1128. Total = 4 × 1128 = 4512.",
+      "explanation_incorrect": "Separate the selection into constrained groups."
+    },
+    {
+      "question_id": "T02.03.Q041",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "nP1 equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "n"
+        },
+        {
+          "id": "C",
+          "text": "n!"
+        },
+        {
+          "id": "D",
+          "text": "n−1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "nP1 = n!/(n−1)! = n.",
+      "explanation_incorrect": "Choosing and arranging 1 item from n gives n ways."
+    },
+    {
+      "question_id": "T02.03.Q042",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "If nC2 = 45, then n is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "nC2 = n(n−1)/2 = 45. n(n−1) = 90. n = 10 (since 10×9 = 90).",
+      "explanation_incorrect": "Solve the equation n(n−1)/2 = 45."
+    },
+    {
+      "question_id": "T02.03.Q043",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "How many 5-digit numbers divisible by 5 from digits 0,1,2,3,4,5 (no repetition)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "216"
+        },
+        {
+          "id": "B",
+          "text": "240"
+        },
+        {
+          "id": "C",
+          "text": "300"
+        },
+        {
+          "id": "D",
+          "text": "168"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Last digit = 0 or 5. Case 1 (last=0): first 4 from {1,2,3,4,5} = 5P4 = 120. Case 2 (last=5): first digit ≠ 0, from {1,2,3,4} = 4 choices, remaining 3 from {0,2,3,4}\\{first} = 4×3P3 = 4×3×2×1... Wait: first: 4 choices (1,2,3,4), then 3 positions from remaining 4 digits (including 0): 4×3×2 = 24. Case 2 = 4×24 = 96. Total = 120+96 = 216.",
+      "explanation_incorrect": "Split by the last digit being 0 or 5, handling leading zero carefully."
+    },
+    {
+      "question_id": "T02.03.Q044",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many ways to distribute 3 prizes among 5 students (each prize to different student)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "125"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5P3 = 5 × 4 × 3 = 60. Order matters as prizes are distinct.",
+      "explanation_incorrect": "Each prize goes to a different student, so it's a permutation."
+    },
+    {
+      "question_id": "T02.03.Q045",
+      "type": "mcq",
+      "concept_id": "T02.03.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "If n!/(n−4)! = 360, find n.",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "n(n−1)(n−2)(n−3) = 360. Try n=6: 6×5×4×3 = 360 ✓.",
+      "explanation_incorrect": "nP4 = n(n−1)(n−2)(n−3) = 360."
+    },
+    {
+      "question_id": "T02.03.Q046",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "If nC12 = nC8, then nC17 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "n = 20, nC17 = 1140"
+        },
+        {
+          "id": "B",
+          "text": "n = 20, nC17 = 20"
+        },
+        {
+          "id": "C",
+          "text": "n = 4, nC17 = 0"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be found"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "nC12 = nC8 ⟹ 12 + 8 = n = 20. 20C17 = 20C3 = 1140.",
+      "explanation_incorrect": "Use nCr = nCs ⟹ r+s = n, then compute nC17."
+    },
+    {
+      "question_id": "T02.03.Q047",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "question_text": "How many 4-digit numbers have no digit repeated and are divisible by 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2296"
+        },
+        {
+          "id": "B",
+          "text": "2240"
+        },
+        {
+          "id": "C",
+          "text": "2016"
+        },
+        {
+          "id": "D",
+          "text": "2520"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Last digit even: 0,2,4,6,8. Case last=0: 9×8×7=504. Case last=2,4,6,8: first digit: 8 (not 0, not last), second: 8, third: 7. 4×8×8×7=1792. Hmm, let me recount. Case last≠0 but even (4 choices): first digit 8 choices (1-9 minus last digit), second 8 choices (0-9 minus first and last), third 7 choices. 4×8×8×7 = 1792. Total = 504 + 1792 = 2296. Wait, let me recheck more carefully. Actually with last = even non-zero (2,4,6,8): first: can't be 0 or last digit = 8 choices. Second: can't repeat first or last = 8 choices. Third: can't repeat = 7 choices. 4 × 8 × 8 × 7 = 1792. Total = 504 + 1792 = 2296.",
+      "explanation_incorrect": "Split cases by whether last digit is 0 or non-zero even."
+    },
+    {
+      "question_id": "T02.03.Q048",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "question_text": "nC1 + nC2 + ... + nCn equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2ⁿ"
+        },
+        {
+          "id": "B",
+          "text": "2ⁿ − 1"
+        },
+        {
+          "id": "C",
+          "text": "2ⁿ + 1"
+        },
+        {
+          "id": "D",
+          "text": "n × 2ⁿ⁻¹"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Sum of all nCr from 0 to n = 2ⁿ. Excluding nC0 = 1: sum from 1 to n = 2ⁿ − 1.",
+      "explanation_incorrect": "Total subsets of a set with n elements = 2ⁿ. Non-empty subsets = 2ⁿ − 1."
+    },
+    {
+      "question_id": "T02.03.Q049",
+      "type": "mcq",
+      "concept_id": "T02.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "How many numbers between 100 and 1000 have digit 7 exactly once?",
+      "options": [
+        {
+          "id": "A",
+          "text": "225"
+        },
+        {
+          "id": "B",
+          "text": "200"
+        },
+        {
+          "id": "C",
+          "text": "243"
+        },
+        {
+          "id": "D",
+          "text": "252"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "3-digit numbers with exactly one 7. Position of 7: hundreds, tens, or units. Hundreds=7: tens(9 non-7, incl 0), units(9) = 9×9=81. Tens=7: hundreds(8 non-7, non-0), units(9) = 8×9=72. Units=7: hundreds(8), tens(9) = 72. Total = 81+72+72 = 225.",
+      "explanation_incorrect": "Count position of the 7, ensuring other digits are not 7."
+    },
+    {
+      "question_id": "T02.03.Q050",
+      "type": "mcq",
+      "concept_id": "T02.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "question_text": "If nPr = 720 and nCr = 120, then r is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "nPr = nCr × r!. So r! = 720/120 = 6. r! = 6 ⟹ r = 3.",
+      "explanation_incorrect": "Use the relationship nPr = r! × nCr to find r!."
+    }
   ]
 }

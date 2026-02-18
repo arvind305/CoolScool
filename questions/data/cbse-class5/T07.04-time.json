@@ -1,62 +1,1335 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 5, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 5,
+    "subject": "Mathematics"
+  },
   "topic_id": "T07.04",
   "topic_name": "Time",
   "canonical_explanation": {
     "text": "Time is measured in seconds, minutes, hours, days, weeks, months, and years. Key conversions: 1 minute = 60 seconds, 1 hour = 60 minutes, 1 day = 24 hours, 1 week = 7 days, 1 year = 12 months = 365 days (366 in a leap year). The 12-hour clock uses AM (midnight to noon) and PM (noon to midnight). The 24-hour clock goes from 00:00 to 23:59. To convert from 12-hour PM to 24-hour, add 12 to the hour. Elapsed time is the difference between start and end times.",
-    "rules": ["1 minute = 60 seconds", "1 hour = 60 minutes", "1 day = 24 hours", "1 week = 7 days", "1 year = 12 months = 365 days (366 in leap year)", "12-hour format: uses AM and PM", "24-hour format: 1:00 PM = 13:00, 2:00 PM = 14:00, etc.", "Elapsed time = End time - Start time", "Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec", "Months with 30 days: Apr, Jun, Sep, Nov", "February: 28 days (29 in leap year)"]
+    "rules": [
+      "1 minute = 60 seconds",
+      "1 hour = 60 minutes",
+      "1 day = 24 hours",
+      "1 week = 7 days",
+      "1 year = 12 months = 365 days (366 in leap year)",
+      "12-hour format: uses AM and PM",
+      "24-hour format: 1:00 PM = 13:00, 2:00 PM = 14:00, etc.",
+      "Elapsed time = End time - Start time",
+      "Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec",
+      "Months with 30 days: Apr, Jun, Sep, Nov",
+      "February: 28 days (29 in leap year)"
+    ]
   },
   "questions": [
-    {"question_id":"T07.04.Q001","concept_id":"T07.04.C01","difficulty":"familiarity","type":"mcq","question_text":"1 hour = ___ minutes","options":[{"id":"A","text":"30"},{"id":"B","text":"60"},{"id":"C","text":"100"},{"id":"D","text":"24"}],"correct_answer":"B","explanation_correct":"1 hour = 60 minutes.","explanation_incorrect":"1 hour = 60 minutes, 1 minute = 60 seconds."},
-    {"question_id":"T07.04.Q002","concept_id":"T07.04.C01","difficulty":"familiarity","type":"mcq","question_text":"3:00 PM in 24-hour format is:","options":[{"id":"A","text":"03:00"},{"id":"B","text":"12:00"},{"id":"C","text":"15:00"},{"id":"D","text":"30:00"}],"correct_answer":"C","explanation_correct":"PM hours: add 12 to the hour. 3 + 12 = 15. So 3:00 PM = 15:00.","explanation_incorrect":"3:00 PM = 3 + 12 = 15:00 in 24-hour format."},
-    {"question_id":"T07.04.Q003","concept_id":"T07.04.C01","difficulty":"familiarity","type":"mcq","question_text":"8:00 AM in 24-hour format is:","options":[{"id":"A","text":"08:00"},{"id":"B","text":"20:00"},{"id":"C","text":"80:00"},{"id":"D","text":"18:00"}],"correct_answer":"A","explanation_correct":"AM hours stay the same in 24-hour format. 8:00 AM = 08:00.","explanation_incorrect":"AM times remain the same. 8:00 AM = 08:00."},
-    {"question_id":"T07.04.Q004","concept_id":"T07.04.C01","difficulty":"familiarity","type":"mcq","question_text":"18:00 in 12-hour format is:","options":[{"id":"A","text":"6:00 AM"},{"id":"B","text":"6:00 PM"},{"id":"C","text":"8:00 PM"},{"id":"D","text":"8:00 AM"}],"correct_answer":"B","explanation_correct":"18 - 12 = 6. After noon, so 6:00 PM.","explanation_incorrect":"18:00 = 18 - 12 = 6:00 PM."},
-    {"question_id":"T07.04.Q005","concept_id":"T07.04.C01","difficulty":"familiarity","type":"true_false","question_text":"12:00 noon can be written as 12:00 in 24-hour format.","correct_answer":"true","explanation_correct":"Noon is 12:00 in both 12-hour and 24-hour formats. (Midnight is 00:00 in 24-hour format.)","explanation_incorrect":"Noon = 12:00 (same in both formats)."},
-    {"question_id":"T07.04.Q006","concept_id":"T07.04.C01","difficulty":"application","type":"mcq","question_text":"7:30 PM in 24-hour format is:","options":[{"id":"A","text":"07:30"},{"id":"B","text":"19:30"},{"id":"C","text":"17:30"},{"id":"D","text":"73:00"}],"correct_answer":"B","explanation_correct":"7:30 PM: 7 + 12 = 19. So 19:30.","explanation_incorrect":"7 PM = 7 + 12 = 19. So 7:30 PM = 19:30."},
-    {"question_id":"T07.04.Q007","concept_id":"T07.04.C01","difficulty":"application","type":"mcq","question_text":"21:45 in 12-hour format is:","options":[{"id":"A","text":"9:45 AM"},{"id":"B","text":"9:45 PM"},{"id":"C","text":"11:45 PM"},{"id":"D","text":"1:45 PM"}],"correct_answer":"B","explanation_correct":"21 - 12 = 9. After noon, so 9:45 PM.","explanation_incorrect":"21:45 = 21 - 12 = 9:45 PM."},
-    {"question_id":"T07.04.Q008","concept_id":"T07.04.C02","difficulty":"familiarity","type":"mcq","question_text":"A movie starts at 4:15 PM and ends at 6:45 PM. How long is the movie?","options":[{"id":"A","text":"2 hours 30 minutes"},{"id":"B","text":"2 hours 15 minutes"},{"id":"C","text":"2 hours 45 minutes"},{"id":"D","text":"3 hours"}],"correct_answer":"A","explanation_correct":"From 4:15 to 6:15 = 2 hours. From 6:15 to 6:45 = 30 minutes. Total = 2 hours 30 minutes.","explanation_incorrect":"4:15 PM to 6:45 PM = 2 hours 30 minutes."},
-    {"question_id":"T07.04.Q009","concept_id":"T07.04.C02","difficulty":"application","type":"mcq","question_text":"Anu started studying at 5:30 PM and studied for 1 hour 45 minutes. What time did she finish?","options":[{"id":"A","text":"6:45 PM"},{"id":"B","text":"7:15 PM"},{"id":"C","text":"7:00 PM"},{"id":"D","text":"7:45 PM"}],"correct_answer":"B","explanation_correct":"5:30 + 1 hour = 6:30. 6:30 + 45 minutes = 7:15 PM.","explanation_incorrect":"5:30 PM + 1 hr 45 min = 7:15 PM."},
-    {"question_id":"T07.04.Q010","concept_id":"T07.04.C02","difficulty":"application","type":"mcq","question_text":"A train left at 9:20 AM and arrived at 2:50 PM. How long was the journey?","options":[{"id":"A","text":"5 hours 30 minutes"},{"id":"B","text":"4 hours 30 minutes"},{"id":"C","text":"5 hours 20 minutes"},{"id":"D","text":"6 hours 30 minutes"}],"correct_answer":"A","explanation_correct":"9:20 AM to 2:20 PM = 5 hours. 2:20 PM to 2:50 PM = 30 minutes. Total = 5 hours 30 minutes.","explanation_incorrect":"9:20 AM to 2:50 PM = 5 hours 30 minutes."},
-    {"question_id":"T07.04.Q011","concept_id":"T07.04.C03","difficulty":"familiarity","type":"mcq","question_text":"How many days are in the month of February in a non-leap year?","options":[{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}],"correct_answer":"A","explanation_correct":"February has 28 days in a non-leap year and 29 days in a leap year.","explanation_incorrect":"February = 28 days (29 in a leap year)."},
-    {"question_id":"T07.04.Q012","concept_id":"T07.04.C03","difficulty":"familiarity","type":"mcq","question_text":"How many months have 31 days?","options":[{"id":"A","text":"5"},{"id":"B","text":"6"},{"id":"C","text":"7"},{"id":"D","text":"8"}],"correct_answer":"C","explanation_correct":"Jan, Mar, May, Jul, Aug, Oct, Dec = 7 months have 31 days.","explanation_incorrect":"7 months have 31 days: January, March, May, July, August, October, December."},
-    {"question_id":"T07.04.Q013","concept_id":"T07.04.C03","difficulty":"familiarity","type":"mcq","question_text":"How many days are in a week?","options":[{"id":"A","text":"5"},{"id":"B","text":"6"},{"id":"C","text":"7"},{"id":"D","text":"10"}],"correct_answer":"C","explanation_correct":"A week has 7 days.","explanation_incorrect":"1 week = 7 days."},
-    {"question_id":"T07.04.Q014","concept_id":"T07.04.C03","difficulty":"familiarity","type":"true_false","question_text":"A leap year has 366 days.","correct_answer":"true","explanation_correct":"A leap year has 366 days (February has 29 days instead of 28).","explanation_incorrect":"Leap year = 366 days. Non-leap year = 365 days."},
-    {"question_id":"T07.04.Q015","concept_id":"T07.04.C03","difficulty":"application","type":"mcq","question_text":"How many weeks are there in the month of March?","options":[{"id":"A","text":"Exactly 4"},{"id":"B","text":"4 weeks and 3 days"},{"id":"C","text":"5"},{"id":"D","text":"Exactly 3"}],"correct_answer":"B","explanation_correct":"March has 31 days. 31 ÷ 7 = 4 weeks and 3 days.","explanation_incorrect":"31 ÷ 7 = 4 remainder 3. So 4 weeks and 3 days."},
-    {"question_id":"T07.04.Q016","concept_id":"T07.04.C04","difficulty":"application","type":"mcq","question_text":"Priya's school starts at 8:00 AM. She takes 45 minutes to get ready and 30 minutes to travel. What time should she wake up?","options":[{"id":"A","text":"6:45 AM"},{"id":"B","text":"7:00 AM"},{"id":"C","text":"7:15 AM"},{"id":"D","text":"6:30 AM"}],"correct_answer":"A","explanation_correct":"She needs 45 + 30 = 75 minutes = 1 hour 15 minutes before 8:00 AM. So she should wake up at 6:45 AM.","explanation_incorrect":"45 min + 30 min = 75 min = 1 hr 15 min before 8:00 AM = 6:45 AM."},
-    {"question_id":"T07.04.Q017","concept_id":"T07.04.C02","difficulty":"application","type":"fill_blank","question_text":"If a bus leaves at 10:30 AM and arrives at 1:15 PM, the journey takes ___ hours ___ minutes.","correct_answer":"2 hours 45 minutes","explanation_correct":"10:30 to 12:30 = 2 hours. 12:30 to 1:15 = 45 minutes. Total = 2 hours 45 minutes.","explanation_incorrect":"10:30 AM to 1:15 PM = 2 hours 45 minutes."},
-    {"question_id":"T07.04.Q018","concept_id":"T07.04.C01","difficulty":"exam_style","type":"mcq","question_text":"Midnight in 24-hour format is:","options":[{"id":"A","text":"12:00"},{"id":"B","text":"00:00"},{"id":"C","text":"24:00"},{"id":"D","text":"0:00 PM"}],"correct_answer":"B","explanation_correct":"Midnight is 00:00 in 24-hour format (the start of a new day).","explanation_incorrect":"Midnight = 00:00 in 24-hour format. Noon = 12:00."},
-    {"question_id":"T07.04.Q019","concept_id":"T07.04.C03","difficulty":"application","type":"mcq","question_text":"Which year is a leap year?","options":[{"id":"A","text":"2023"},{"id":"B","text":"2024"},{"id":"C","text":"2025"},{"id":"D","text":"2026"}],"correct_answer":"B","explanation_correct":"A year divisible by 4 is a leap year (except century years, which must be divisible by 400). 2024 ÷ 4 = 506 exactly, so 2024 is a leap year.","explanation_incorrect":"2024 is divisible by 4, so it is a leap year."},
-    {"question_id":"T07.04.Q020","concept_id":"T07.04.C04","difficulty":"application","type":"mcq","question_text":"Ravi's cricket match started at 2:00 PM and lasted for 3 hours 20 minutes. It ended at:","options":[{"id":"A","text":"5:20 PM"},{"id":"B","text":"5:00 PM"},{"id":"C","text":"4:20 PM"},{"id":"D","text":"6:20 PM"}],"correct_answer":"A","explanation_correct":"2:00 PM + 3 hours = 5:00 PM. 5:00 PM + 20 minutes = 5:20 PM.","explanation_incorrect":"2:00 PM + 3 hr 20 min = 5:20 PM."},
-    {"question_id":"T07.04.Q021","concept_id":"T07.04.C02","difficulty":"exam_style","type":"mcq","question_text":"A class starts at 09:15 and ends at 10:00. The class duration is:","options":[{"id":"A","text":"45 minutes"},{"id":"B","text":"55 minutes"},{"id":"C","text":"1 hour"},{"id":"D","text":"35 minutes"}],"correct_answer":"A","explanation_correct":"10:00 - 09:15 = 45 minutes.","explanation_incorrect":"From 9:15 to 10:00 = 45 minutes."},
-    {"question_id":"T07.04.Q022","concept_id":"T07.04.C01","difficulty":"familiarity","type":"mcq","question_text":"1 day = ___ hours","options":[{"id":"A","text":"12"},{"id":"B","text":"24"},{"id":"C","text":"48"},{"id":"D","text":"60"}],"correct_answer":"B","explanation_correct":"1 day = 24 hours.","explanation_incorrect":"A day has 24 hours (12 hours AM + 12 hours PM)."},
-    {"question_id":"T07.04.Q023","concept_id":"T07.04.C03","difficulty":"familiarity","type":"mcq","question_text":"Which month comes after July?","options":[{"id":"A","text":"June"},{"id":"B","text":"August"},{"id":"C","text":"September"},{"id":"D","text":"May"}],"correct_answer":"B","explanation_correct":"August comes after July.","explanation_incorrect":"Month order: ...June, July, August, September..."},
-    {"question_id":"T07.04.Q024","concept_id":"T07.04.C04","difficulty":"exam_style","type":"mcq","question_text":"Kavya left home at 7:45 AM and reached school at 8:30 AM. How long did her journey take?","options":[{"id":"A","text":"30 minutes"},{"id":"B","text":"45 minutes"},{"id":"C","text":"55 minutes"},{"id":"D","text":"1 hour 15 minutes"}],"correct_answer":"B","explanation_correct":"7:45 to 8:00 = 15 minutes. 8:00 to 8:30 = 30 minutes. Total = 45 minutes.","explanation_incorrect":"7:45 AM to 8:30 AM = 45 minutes."},
-    {"question_id":"T07.04.Q025","concept_id":"T07.04.C01","difficulty":"application","type":"mcq","question_text":"How many minutes are in 2 hours 30 minutes?","options":[{"id":"A","text":"150 minutes"},{"id":"B","text":"230 minutes"},{"id":"C","text":"130 minutes"},{"id":"D","text":"120 minutes"}],"correct_answer":"A","explanation_correct":"2 hours = 2 × 60 = 120 minutes. 120 + 30 = 150 minutes.","explanation_incorrect":"2 hr 30 min = (2 × 60) + 30 = 120 + 30 = 150 min."},
-    {"question_id":"T07.04.Q026","concept_id":"T07.04.C02","difficulty":"exam_style","type":"mcq","question_text":"A baker puts bread in the oven at 11:40 AM. It needs to bake for 50 minutes. At what time should he take it out?","options":[{"id":"A","text":"12:20 PM"},{"id":"B","text":"12:30 PM"},{"id":"C","text":"12:10 PM"},{"id":"D","text":"12:40 PM"}],"correct_answer":"B","explanation_correct":"11:40 + 50 minutes: 11:40 + 20 = 12:00. 12:00 + 30 = 12:30 PM.","explanation_incorrect":"11:40 AM + 50 min = 12:30 PM."},
-    {"question_id":"T07.04.Q027","concept_id":"T07.04.C03","difficulty":"exam_style","type":"mcq","question_text":"How many days are there from 15th March to 10th April?","options":[{"id":"A","text":"25"},{"id":"B","text":"26"},{"id":"C","text":"27"},{"id":"D","text":"24"}],"correct_answer":"B","explanation_correct":"March has 31 days. From 15th to 31st March = 16 days. From 1st to 10th April = 10 days. Total = 16 + 10 = 26 days.","explanation_incorrect":"March 15 to March 31 = 16 days. April 1 to April 10 = 10 days. Total = 26 days."},
-    {"question_id":"T07.04.Q028","concept_id":"T07.04.C01","difficulty":"exam_style","type":"fill_blank","question_text":"11:00 PM in 24-hour format is ___:00","correct_answer":"23","explanation_correct":"11 PM = 11 + 12 = 23. So 11:00 PM = 23:00.","explanation_incorrect":"11 PM = 11 + 12 = 23:00 in 24-hour format."},
-    {"question_id":"T07.04.Q029","concept_id":"T07.04.C04","difficulty":"application","type":"mcq","question_text":"Meena watches TV from 5:15 PM to 6:45 PM. How long does she watch?","options":[{"id":"A","text":"1 hour 15 minutes"},{"id":"B","text":"1 hour 30 minutes"},{"id":"C","text":"1 hour 45 minutes"},{"id":"D","text":"2 hours"}],"correct_answer":"B","explanation_correct":"5:15 to 6:15 = 1 hour. 6:15 to 6:45 = 30 minutes. Total = 1 hour 30 minutes.","explanation_incorrect":"5:15 PM to 6:45 PM = 1 hour 30 minutes."},
-    {"question_id":"T07.04.Q030","concept_id":"T07.04.C01","difficulty":"familiarity","type":"true_false","question_text":"1 minute = 60 seconds.","correct_answer":"true","explanation_correct":"Yes, 1 minute = 60 seconds.","explanation_incorrect":"1 minute = 60 seconds."},
-    {"question_id":"T07.04.Q031","concept_id":"T07.04.C03","difficulty":"application","type":"mcq","question_text":"How many months have 30 days?","options":[{"id":"A","text":"3"},{"id":"B","text":"4"},{"id":"C","text":"5"},{"id":"D","text":"6"}],"correct_answer":"B","explanation_correct":"April, June, September, November = 4 months have 30 days.","explanation_incorrect":"4 months: April, June, September, November."},
-    {"question_id":"T07.04.Q032","concept_id":"T07.04.C02","difficulty":"exam_style","type":"mcq","question_text":"A flight departs at 22:30 and arrives at 01:45 the next day. Flight duration:","options":[{"id":"A","text":"2 hours 15 minutes"},{"id":"B","text":"3 hours 15 minutes"},{"id":"C","text":"3 hours 45 minutes"},{"id":"D","text":"2 hours 45 minutes"}],"correct_answer":"B","explanation_correct":"22:30 to 00:00 = 1 hour 30 minutes. 00:00 to 01:45 = 1 hour 45 minutes. Total = 3 hours 15 minutes.","explanation_incorrect":"22:30 to 01:45 (next day) = 3 hours 15 minutes."},
-    {"question_id":"T07.04.Q033","concept_id":"T07.04.C04","difficulty":"exam_style","type":"mcq","question_text":"Sanjay's birthday is on 20th August. His friend's birthday is 45 days later. On what date is his friend's birthday?","options":[{"id":"A","text":"3rd October"},{"id":"B","text":"4th October"},{"id":"C","text":"5th October"},{"id":"D","text":"30th September"}],"correct_answer":"B","explanation_correct":"August has 31 days. From Aug 20 to Aug 31 = 11 days. September = 30 days. 11 + 30 = 41 days. Remaining: 45 - 41 = 4 days into October. So October 4th.","explanation_incorrect":"Aug 20 to Aug 31 = 11 days. Sep = 30 days. Total = 41. Need 45 - 41 = 4 more = Oct 4."},
-    {"question_id":"T07.04.Q034","concept_id":"T07.04.C01","difficulty":"application","type":"mcq","question_text":"Convert 180 minutes to hours:","options":[{"id":"A","text":"2 hours"},{"id":"B","text":"3 hours"},{"id":"C","text":"2 hours 30 minutes"},{"id":"D","text":"1 hour 80 minutes"}],"correct_answer":"B","explanation_correct":"180 ÷ 60 = 3 hours.","explanation_incorrect":"180 min ÷ 60 = 3 hours."},
-    {"question_id":"T07.04.Q035","concept_id":"T07.04.C03","difficulty":"familiarity","type":"mcq","question_text":"How many days are in the month of September?","options":[{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}],"correct_answer":"C","explanation_correct":"September has 30 days. (Remember: '30 days hath September, April, June, and November.')","explanation_incorrect":"September has 30 days."},
-    {"question_id":"T07.04.Q036","concept_id":"T07.04.C04","difficulty":"application","type":"mcq","question_text":"A TV show runs from 7:30 PM to 8:00 PM daily. How much TV does Rohan watch in a week?","options":[{"id":"A","text":"2 hours 30 minutes"},{"id":"B","text":"3 hours"},{"id":"C","text":"3 hours 30 minutes"},{"id":"D","text":"4 hours"}],"correct_answer":"C","explanation_correct":"Each episode = 30 minutes. 7 days × 30 min = 210 min = 3 hours 30 minutes.","explanation_incorrect":"30 min × 7 days = 210 min = 3 hr 30 min."},
-    {"question_id":"T07.04.Q037","concept_id":"T07.04.C01","difficulty":"exam_style","type":"mcq","question_text":"How many seconds are in 5 minutes?","options":[{"id":"A","text":"300"},{"id":"B","text":"500"},{"id":"C","text":"50"},{"id":"D","text":"350"}],"correct_answer":"A","explanation_correct":"5 × 60 = 300 seconds.","explanation_incorrect":"5 min × 60 sec/min = 300 seconds."},
-    {"question_id":"T07.04.Q038","concept_id":"T07.04.C02","difficulty":"exam_style","type":"mcq","question_text":"School starts at 8:00 AM and ends at 2:30 PM. How long is the school day?","options":[{"id":"A","text":"5 hours 30 minutes"},{"id":"B","text":"6 hours 30 minutes"},{"id":"C","text":"6 hours"},{"id":"D","text":"7 hours"}],"correct_answer":"B","explanation_correct":"8:00 AM to 2:00 PM = 6 hours. 2:00 to 2:30 = 30 minutes. Total = 6 hours 30 minutes.","explanation_incorrect":"8:00 AM to 2:30 PM = 6 hours 30 minutes."},
-    {"question_id":"T07.04.Q039","concept_id":"T07.04.C03","difficulty":"exam_style","type":"true_false","question_text":"Every year divisible by 4 is a leap year.","correct_answer":"false","explanation_correct":"Century years (1800, 1900, 2100) must be divisible by 400 to be leap years. So 1900 is not a leap year, but 2000 is.","explanation_incorrect":"Not always. Century years must also be divisible by 400. E.g., 1900 is NOT a leap year, but 2000 is."},
-    {"question_id":"T07.04.Q040","concept_id":"T07.04.C04","difficulty":"exam_style","type":"mcq","question_text":"A cake needs to be baked for 1 hour 15 minutes. If put in at 10:50 AM, when should it come out?","options":[{"id":"A","text":"12:05 PM"},{"id":"B","text":"12:15 PM"},{"id":"C","text":"11:55 AM"},{"id":"D","text":"12:00 PM"}],"correct_answer":"A","explanation_correct":"10:50 + 1 hour = 11:50. 11:50 + 15 minutes = 12:05 PM.","explanation_incorrect":"10:50 AM + 1 hr 15 min = 12:05 PM."},
-    {"question_id":"T07.04.Q041","concept_id":"T07.04.C01","difficulty":"familiarity","type":"mcq","question_text":"Which is NOT a correct 24-hour time?","options":[{"id":"A","text":"00:00"},{"id":"B","text":"13:30"},{"id":"C","text":"25:00"},{"id":"D","text":"23:59"}],"correct_answer":"C","explanation_correct":"24-hour format goes from 00:00 to 23:59. 25:00 is not valid.","explanation_incorrect":"The maximum valid hour in 24-hour format is 23. 25:00 does not exist."},
-    {"question_id":"T07.04.Q042","concept_id":"T07.04.C03","difficulty":"application","type":"fill_blank","question_text":"The number of days in 3 non-leap years is ___","correct_answer":"1095","explanation_correct":"3 × 365 = 1095 days.","explanation_incorrect":"3 non-leap years × 365 days = 1095 days."},
-    {"question_id":"T07.04.Q043","concept_id":"T07.04.C02","difficulty":"application","type":"mcq","question_text":"Arjun started his homework at 4:45 PM and finished at 6:10 PM. How long did he take?","options":[{"id":"A","text":"1 hour 15 minutes"},{"id":"B","text":"1 hour 25 minutes"},{"id":"C","text":"1 hour 35 minutes"},{"id":"D","text":"2 hours 25 minutes"}],"correct_answer":"B","explanation_correct":"4:45 to 5:45 = 1 hour. 5:45 to 6:10 = 25 minutes. Total = 1 hour 25 minutes.","explanation_incorrect":"4:45 PM to 6:10 PM = 1 hour 25 minutes."},
-    {"question_id":"T07.04.Q044","concept_id":"T07.04.C01","difficulty":"exam_style","type":"mcq","question_text":"12:30 AM in 24-hour format is:","options":[{"id":"A","text":"12:30"},{"id":"B","text":"00:30"},{"id":"C","text":"24:30"},{"id":"D","text":"0:30 PM"}],"correct_answer":"B","explanation_correct":"12:30 AM is 30 minutes past midnight. In 24-hour format, midnight is 00:00, so 12:30 AM = 00:30.","explanation_incorrect":"12:30 AM = 00:30 (30 minutes after midnight)."},
-    {"question_id":"T07.04.Q045","concept_id":"T07.04.C04","difficulty":"exam_style","type":"mcq","question_text":"A bus departs every 40 minutes. The first bus is at 6:00 AM. When does the 4th bus depart?","options":[{"id":"A","text":"7:40 AM"},{"id":"B","text":"8:00 AM"},{"id":"C","text":"8:40 AM"},{"id":"D","text":"7:20 AM"}],"correct_answer":"B","explanation_correct":"1st at 6:00, 2nd at 6:40, 3rd at 7:20, 4th at 8:00 AM. (3 intervals of 40 min = 120 min = 2 hours.)","explanation_incorrect":"3 intervals × 40 min = 120 min = 2 hours after 6:00 AM = 8:00 AM."},
-    {"question_id":"T07.04.Q046","concept_id":"T07.04.C03","difficulty":"familiarity","type":"mcq","question_text":"Which month has the fewest days?","options":[{"id":"A","text":"April"},{"id":"B","text":"February"},{"id":"C","text":"November"},{"id":"D","text":"September"}],"correct_answer":"B","explanation_correct":"February has only 28 days (or 29 in a leap year), the fewest of any month.","explanation_incorrect":"February is the shortest month with 28 days (29 in leap year)."},
-    {"question_id":"T07.04.Q047","concept_id":"T07.04.C04","difficulty":"application","type":"true_false","question_text":"If today is Wednesday, then 10 days from now will be Saturday.","correct_answer":"true","explanation_correct":"10 days from Wednesday: Wed+7 = next Wednesday, +3 more = Saturday. Or: 10 ÷ 7 = 1 week + 3 days. Wednesday + 3 = Saturday.","explanation_incorrect":"10 ÷ 7 = 1 remainder 3. Wednesday + 3 days = Thursday, Friday, Saturday. Yes, Saturday."},
-    {"question_id":"T07.04.Q048","concept_id":"T07.04.C02","difficulty":"exam_style","type":"mcq","question_text":"How many hours and minutes is 200 minutes?","options":[{"id":"A","text":"2 hours 20 minutes"},{"id":"B","text":"3 hours 20 minutes"},{"id":"C","text":"3 hours 40 minutes"},{"id":"D","text":"2 hours 40 minutes"}],"correct_answer":"B","explanation_correct":"200 ÷ 60 = 3 remainder 20. So 3 hours 20 minutes.","explanation_incorrect":"200 min = 3 × 60 + 20 = 3 hours 20 minutes."},
-    {"question_id":"T07.04.Q049","concept_id":"T07.04.C01","difficulty":"application","type":"mcq","question_text":"How many hours are in 3 days?","options":[{"id":"A","text":"36"},{"id":"B","text":"48"},{"id":"C","text":"72"},{"id":"D","text":"60"}],"correct_answer":"C","explanation_correct":"3 × 24 = 72 hours.","explanation_incorrect":"3 days × 24 hours/day = 72 hours."},
-    {"question_id":"T07.04.Q050","concept_id":"T07.04.C04","difficulty":"exam_style","type":"mcq","question_text":"A doctor told Ritu to take medicine every 8 hours starting from 6:00 AM. At what times will she take it in one day?","options":[{"id":"A","text":"6:00 AM, 2:00 PM, 10:00 PM"},{"id":"B","text":"6:00 AM, 12:00 PM, 6:00 PM"},{"id":"C","text":"6:00 AM, 4:00 PM, 12:00 AM"},{"id":"D","text":"6:00 AM, 8:00 AM, 10:00 AM"}],"correct_answer":"A","explanation_correct":"6:00 AM + 8 hours = 2:00 PM. 2:00 PM + 8 hours = 10:00 PM.","explanation_incorrect":"6 AM, 6+8=2 PM, 2+8=10 PM. Three doses every 8 hours."}
+    {
+      "question_id": "T07.04.Q001",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "1 hour = ___ minutes",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 hour = 60 minutes.",
+      "explanation_incorrect": "1 hour = 60 minutes, 1 minute = 60 seconds."
+    },
+    {
+      "question_id": "T07.04.Q002",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "3:00 PM in 24-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "03:00"
+        },
+        {
+          "id": "B",
+          "text": "12:00"
+        },
+        {
+          "id": "C",
+          "text": "15:00"
+        },
+        {
+          "id": "D",
+          "text": "30:00"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "PM hours: add 12 to the hour. 3 + 12 = 15. So 3:00 PM = 15:00.",
+      "explanation_incorrect": "3:00 PM = 3 + 12 = 15:00 in 24-hour format."
+    },
+    {
+      "question_id": "T07.04.Q003",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "8:00 AM in 24-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "08:00"
+        },
+        {
+          "id": "B",
+          "text": "20:00"
+        },
+        {
+          "id": "C",
+          "text": "80:00"
+        },
+        {
+          "id": "D",
+          "text": "18:00"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "AM hours stay the same in 24-hour format. 8:00 AM = 08:00.",
+      "explanation_incorrect": "AM times remain the same. 8:00 AM = 08:00."
+    },
+    {
+      "question_id": "T07.04.Q004",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "18:00 in 12-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:00 AM"
+        },
+        {
+          "id": "B",
+          "text": "6:00 PM"
+        },
+        {
+          "id": "C",
+          "text": "8:00 PM"
+        },
+        {
+          "id": "D",
+          "text": "8:00 AM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "18 - 12 = 6. After noon, so 6:00 PM.",
+      "explanation_incorrect": "18:00 = 18 - 12 = 6:00 PM."
+    },
+    {
+      "question_id": "T07.04.Q005",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "12:00 noon can be written as 12:00 in 24-hour format.",
+      "correct_answer": "true",
+      "explanation_correct": "Noon is 12:00 in both 12-hour and 24-hour formats. (Midnight is 00:00 in 24-hour format.)",
+      "explanation_incorrect": "Noon = 12:00 (same in both formats)."
+    },
+    {
+      "question_id": "T07.04.Q006",
+      "concept_id": "T07.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "7:30 PM in 24-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "07:30"
+        },
+        {
+          "id": "B",
+          "text": "19:30"
+        },
+        {
+          "id": "C",
+          "text": "17:30"
+        },
+        {
+          "id": "D",
+          "text": "73:00"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "7:30 PM: 7 + 12 = 19. So 19:30.",
+      "explanation_incorrect": "7 PM = 7 + 12 = 19. So 7:30 PM = 19:30."
+    },
+    {
+      "question_id": "T07.04.Q007",
+      "concept_id": "T07.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "21:45 in 12-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "9:45 AM"
+        },
+        {
+          "id": "B",
+          "text": "9:45 PM"
+        },
+        {
+          "id": "C",
+          "text": "11:45 PM"
+        },
+        {
+          "id": "D",
+          "text": "1:45 PM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "21 - 12 = 9. After noon, so 9:45 PM.",
+      "explanation_incorrect": "21:45 = 21 - 12 = 9:45 PM."
+    },
+    {
+      "question_id": "T07.04.Q008",
+      "concept_id": "T07.04.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A movie starts at 4:15 PM and ends at 6:45 PM. How long is the movie?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "2 hours 15 minutes"
+        },
+        {
+          "id": "C",
+          "text": "2 hours 45 minutes"
+        },
+        {
+          "id": "D",
+          "text": "3 hours"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From 4:15 to 6:15 = 2 hours. From 6:15 to 6:45 = 30 minutes. Total = 2 hours 30 minutes.",
+      "explanation_incorrect": "4:15 PM to 6:45 PM = 2 hours 30 minutes."
+    },
+    {
+      "question_id": "T07.04.Q009",
+      "concept_id": "T07.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Anu started studying at 5:30 PM and studied for 1 hour 45 minutes. What time did she finish?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:45 PM"
+        },
+        {
+          "id": "B",
+          "text": "7:15 PM"
+        },
+        {
+          "id": "C",
+          "text": "7:00 PM"
+        },
+        {
+          "id": "D",
+          "text": "7:45 PM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5:30 + 1 hour = 6:30. 6:30 + 45 minutes = 7:15 PM.",
+      "explanation_incorrect": "5:30 PM + 1 hr 45 min = 7:15 PM."
+    },
+    {
+      "question_id": "T07.04.Q010",
+      "concept_id": "T07.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A train left at 9:20 AM and arrived at 2:50 PM. How long was the journey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 hours 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "4 hours 30 minutes"
+        },
+        {
+          "id": "C",
+          "text": "5 hours 20 minutes"
+        },
+        {
+          "id": "D",
+          "text": "6 hours 30 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "9:20 AM to 2:20 PM = 5 hours. 2:20 PM to 2:50 PM = 30 minutes. Total = 5 hours 30 minutes.",
+      "explanation_incorrect": "9:20 AM to 2:50 PM = 5 hours 30 minutes."
+    },
+    {
+      "question_id": "T07.04.Q011",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in the month of February in a non-leap year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "February has 28 days in a non-leap year and 29 days in a leap year.",
+      "explanation_incorrect": "February = 28 days (29 in a leap year)."
+    },
+    {
+      "question_id": "T07.04.Q012",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many months have 31 days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Jan, Mar, May, Jul, Aug, Oct, Dec = 7 months have 31 days.",
+      "explanation_incorrect": "7 months have 31 days: January, March, May, July, August, October, December."
+    },
+    {
+      "question_id": "T07.04.Q013",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in a week?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A week has 7 days.",
+      "explanation_incorrect": "1 week = 7 days."
+    },
+    {
+      "question_id": "T07.04.Q014",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A leap year has 366 days.",
+      "correct_answer": "true",
+      "explanation_correct": "A leap year has 366 days (February has 29 days instead of 28).",
+      "explanation_incorrect": "Leap year = 366 days. Non-leap year = 365 days."
+    },
+    {
+      "question_id": "T07.04.Q015",
+      "concept_id": "T07.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many weeks are there in the month of March?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exactly 4"
+        },
+        {
+          "id": "B",
+          "text": "4 weeks and 3 days"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "Exactly 3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "March has 31 days. 31 ÷ 7 = 4 weeks and 3 days.",
+      "explanation_incorrect": "31 ÷ 7 = 4 remainder 3. So 4 weeks and 3 days."
+    },
+    {
+      "question_id": "T07.04.Q016",
+      "concept_id": "T07.04.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Priya's school starts at 8:00 AM. She takes 45 minutes to get ready and 30 minutes to travel. What time should she wake up?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:45 AM"
+        },
+        {
+          "id": "B",
+          "text": "7:00 AM"
+        },
+        {
+          "id": "C",
+          "text": "7:15 AM"
+        },
+        {
+          "id": "D",
+          "text": "6:30 AM"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "She needs 45 + 30 = 75 minutes = 1 hour 15 minutes before 8:00 AM. So she should wake up at 6:45 AM.",
+      "explanation_incorrect": "45 min + 30 min = 75 min = 1 hr 15 min before 8:00 AM = 6:45 AM."
+    },
+    {
+      "question_id": "T07.04.Q017",
+      "concept_id": "T07.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "If a bus leaves at 10:30 AM and arrives at 1:15 PM, the journey takes ___ hours ___ minutes.",
+      "correct_answer": "2 hours 45 minutes",
+      "explanation_correct": "10:30 to 12:30 = 2 hours. 12:30 to 1:15 = 45 minutes. Total = 2 hours 45 minutes.",
+      "explanation_incorrect": "10:30 AM to 1:15 PM = 2 hours 45 minutes."
+    },
+    {
+      "question_id": "T07.04.Q018",
+      "concept_id": "T07.04.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Midnight in 24-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12:00"
+        },
+        {
+          "id": "B",
+          "text": "00:00"
+        },
+        {
+          "id": "C",
+          "text": "24:00"
+        },
+        {
+          "id": "D",
+          "text": "0:00 PM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Midnight is 00:00 in 24-hour format (the start of a new day).",
+      "explanation_incorrect": "Midnight = 00:00 in 24-hour format. Noon = 12:00."
+    },
+    {
+      "question_id": "T07.04.Q019",
+      "concept_id": "T07.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which year is a leap year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2023"
+        },
+        {
+          "id": "B",
+          "text": "2024"
+        },
+        {
+          "id": "C",
+          "text": "2025"
+        },
+        {
+          "id": "D",
+          "text": "2026"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A year divisible by 4 is a leap year (except century years, which must be divisible by 400). 2024 ÷ 4 = 506 exactly, so 2024 is a leap year.",
+      "explanation_incorrect": "2024 is divisible by 4, so it is a leap year."
+    },
+    {
+      "question_id": "T07.04.Q020",
+      "concept_id": "T07.04.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Ravi's cricket match started at 2:00 PM and lasted for 3 hours 20 minutes. It ended at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:20 PM"
+        },
+        {
+          "id": "B",
+          "text": "5:00 PM"
+        },
+        {
+          "id": "C",
+          "text": "4:20 PM"
+        },
+        {
+          "id": "D",
+          "text": "6:20 PM"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2:00 PM + 3 hours = 5:00 PM. 5:00 PM + 20 minutes = 5:20 PM.",
+      "explanation_incorrect": "2:00 PM + 3 hr 20 min = 5:20 PM."
+    },
+    {
+      "question_id": "T07.04.Q021",
+      "concept_id": "T07.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A class starts at 09:15 and ends at 10:00. The class duration is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "45 minutes"
+        },
+        {
+          "id": "B",
+          "text": "55 minutes"
+        },
+        {
+          "id": "C",
+          "text": "1 hour"
+        },
+        {
+          "id": "D",
+          "text": "35 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10:00 - 09:15 = 45 minutes.",
+      "explanation_incorrect": "From 9:15 to 10:00 = 45 minutes."
+    },
+    {
+      "question_id": "T07.04.Q022",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "1 day = ___ hours",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "48"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 day = 24 hours.",
+      "explanation_incorrect": "A day has 24 hours (12 hours AM + 12 hours PM)."
+    },
+    {
+      "question_id": "T07.04.Q023",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which month comes after July?",
+      "options": [
+        {
+          "id": "A",
+          "text": "June"
+        },
+        {
+          "id": "B",
+          "text": "August"
+        },
+        {
+          "id": "C",
+          "text": "September"
+        },
+        {
+          "id": "D",
+          "text": "May"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "August comes after July.",
+      "explanation_incorrect": "Month order: ...June, July, August, September..."
+    },
+    {
+      "question_id": "T07.04.Q024",
+      "concept_id": "T07.04.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Kavya left home at 7:45 AM and reached school at 8:30 AM. How long did her journey take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "45 minutes"
+        },
+        {
+          "id": "C",
+          "text": "55 minutes"
+        },
+        {
+          "id": "D",
+          "text": "1 hour 15 minutes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "7:45 to 8:00 = 15 minutes. 8:00 to 8:30 = 30 minutes. Total = 45 minutes.",
+      "explanation_incorrect": "7:45 AM to 8:30 AM = 45 minutes."
+    },
+    {
+      "question_id": "T07.04.Q025",
+      "concept_id": "T07.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many minutes are in 2 hours 30 minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "150 minutes"
+        },
+        {
+          "id": "B",
+          "text": "230 minutes"
+        },
+        {
+          "id": "C",
+          "text": "130 minutes"
+        },
+        {
+          "id": "D",
+          "text": "120 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2 hours = 2 × 60 = 120 minutes. 120 + 30 = 150 minutes.",
+      "explanation_incorrect": "2 hr 30 min = (2 × 60) + 30 = 120 + 30 = 150 min."
+    },
+    {
+      "question_id": "T07.04.Q026",
+      "concept_id": "T07.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A baker puts bread in the oven at 11:40 AM. It needs to bake for 50 minutes. At what time should he take it out?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12:20 PM"
+        },
+        {
+          "id": "B",
+          "text": "12:30 PM"
+        },
+        {
+          "id": "C",
+          "text": "12:10 PM"
+        },
+        {
+          "id": "D",
+          "text": "12:40 PM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "11:40 + 50 minutes: 11:40 + 20 = 12:00. 12:00 + 30 = 12:30 PM.",
+      "explanation_incorrect": "11:40 AM + 50 min = 12:30 PM."
+    },
+    {
+      "question_id": "T07.04.Q027",
+      "concept_id": "T07.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are there from 15th March to 10th April?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "26"
+        },
+        {
+          "id": "C",
+          "text": "27"
+        },
+        {
+          "id": "D",
+          "text": "24"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "March has 31 days. From 15th to 31st March = 16 days. From 1st to 10th April = 10 days. Total = 16 + 10 = 26 days.",
+      "explanation_incorrect": "March 15 to March 31 = 16 days. April 1 to April 10 = 10 days. Total = 26 days."
+    },
+    {
+      "question_id": "T07.04.Q028",
+      "concept_id": "T07.04.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "11:00 PM in 24-hour format is ___:00",
+      "correct_answer": "23",
+      "explanation_correct": "11 PM = 11 + 12 = 23. So 11:00 PM = 23:00.",
+      "explanation_incorrect": "11 PM = 11 + 12 = 23:00 in 24-hour format."
+    },
+    {
+      "question_id": "T07.04.Q029",
+      "concept_id": "T07.04.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Meena watches TV from 5:15 PM to 6:45 PM. How long does she watch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 hour 15 minutes"
+        },
+        {
+          "id": "B",
+          "text": "1 hour 30 minutes"
+        },
+        {
+          "id": "C",
+          "text": "1 hour 45 minutes"
+        },
+        {
+          "id": "D",
+          "text": "2 hours"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5:15 to 6:15 = 1 hour. 6:15 to 6:45 = 30 minutes. Total = 1 hour 30 minutes.",
+      "explanation_incorrect": "5:15 PM to 6:45 PM = 1 hour 30 minutes."
+    },
+    {
+      "question_id": "T07.04.Q030",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "1 minute = 60 seconds.",
+      "correct_answer": "true",
+      "explanation_correct": "Yes, 1 minute = 60 seconds.",
+      "explanation_incorrect": "1 minute = 60 seconds."
+    },
+    {
+      "question_id": "T07.04.Q031",
+      "concept_id": "T07.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many months have 30 days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "April, June, September, November = 4 months have 30 days.",
+      "explanation_incorrect": "4 months: April, June, September, November."
+    },
+    {
+      "question_id": "T07.04.Q032",
+      "concept_id": "T07.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A flight departs at 22:30 and arrives at 01:45 the next day. Flight duration:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours 15 minutes"
+        },
+        {
+          "id": "B",
+          "text": "3 hours 15 minutes"
+        },
+        {
+          "id": "C",
+          "text": "3 hours 45 minutes"
+        },
+        {
+          "id": "D",
+          "text": "2 hours 45 minutes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "22:30 to 00:00 = 1 hour 30 minutes. 00:00 to 01:45 = 1 hour 45 minutes. Total = 3 hours 15 minutes.",
+      "explanation_incorrect": "22:30 to 01:45 (next day) = 3 hours 15 minutes."
+    },
+    {
+      "question_id": "T07.04.Q033",
+      "concept_id": "T07.04.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Sanjay's birthday is on 20th August. His friend's birthday is 45 days later. On what date is his friend's birthday?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3rd October"
+        },
+        {
+          "id": "B",
+          "text": "4th October"
+        },
+        {
+          "id": "C",
+          "text": "5th October"
+        },
+        {
+          "id": "D",
+          "text": "30th September"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "August has 31 days. From Aug 20 to Aug 31 = 11 days. September = 30 days. 11 + 30 = 41 days. Remaining: 45 - 41 = 4 days into October. So October 4th.",
+      "explanation_incorrect": "Aug 20 to Aug 31 = 11 days. Sep = 30 days. Total = 41. Need 45 - 41 = 4 more = Oct 4."
+    },
+    {
+      "question_id": "T07.04.Q034",
+      "concept_id": "T07.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Convert 180 minutes to hours:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours"
+        },
+        {
+          "id": "B",
+          "text": "3 hours"
+        },
+        {
+          "id": "C",
+          "text": "2 hours 30 minutes"
+        },
+        {
+          "id": "D",
+          "text": "1 hour 80 minutes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "180 ÷ 60 = 3 hours.",
+      "explanation_incorrect": "180 min ÷ 60 = 3 hours."
+    },
+    {
+      "question_id": "T07.04.Q035",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in the month of September?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "September has 30 days. (Remember: '30 days hath September, April, June, and November.')",
+      "explanation_incorrect": "September has 30 days."
+    },
+    {
+      "question_id": "T07.04.Q036",
+      "concept_id": "T07.04.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A TV show runs from 7:30 PM to 8:00 PM daily. How much TV does Rohan watch in a week?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "3 hours"
+        },
+        {
+          "id": "C",
+          "text": "3 hours 30 minutes"
+        },
+        {
+          "id": "D",
+          "text": "4 hours"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Each episode = 30 minutes. 7 days × 30 min = 210 min = 3 hours 30 minutes.",
+      "explanation_incorrect": "30 min × 7 days = 210 min = 3 hr 30 min."
+    },
+    {
+      "question_id": "T07.04.Q037",
+      "concept_id": "T07.04.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many seconds are in 5 minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "300"
+        },
+        {
+          "id": "B",
+          "text": "500"
+        },
+        {
+          "id": "C",
+          "text": "50"
+        },
+        {
+          "id": "D",
+          "text": "350"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5 × 60 = 300 seconds.",
+      "explanation_incorrect": "5 min × 60 sec/min = 300 seconds."
+    },
+    {
+      "question_id": "T07.04.Q038",
+      "concept_id": "T07.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "School starts at 8:00 AM and ends at 2:30 PM. How long is the school day?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 hours 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "6 hours 30 minutes"
+        },
+        {
+          "id": "C",
+          "text": "6 hours"
+        },
+        {
+          "id": "D",
+          "text": "7 hours"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "8:00 AM to 2:00 PM = 6 hours. 2:00 to 2:30 = 30 minutes. Total = 6 hours 30 minutes.",
+      "explanation_incorrect": "8:00 AM to 2:30 PM = 6 hours 30 minutes."
+    },
+    {
+      "question_id": "T07.04.Q039",
+      "concept_id": "T07.04.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Every year divisible by 4 is a leap year.",
+      "correct_answer": "false",
+      "explanation_correct": "Century years (1800, 1900, 2100) must be divisible by 400 to be leap years. So 1900 is not a leap year, but 2000 is.",
+      "explanation_incorrect": "Not always. Century years must also be divisible by 400. E.g., 1900 is NOT a leap year, but 2000 is."
+    },
+    {
+      "question_id": "T07.04.Q040",
+      "concept_id": "T07.04.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cake needs to be baked for 1 hour 15 minutes. If put in at 10:50 AM, when should it come out?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12:05 PM"
+        },
+        {
+          "id": "B",
+          "text": "12:15 PM"
+        },
+        {
+          "id": "C",
+          "text": "11:55 AM"
+        },
+        {
+          "id": "D",
+          "text": "12:00 PM"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10:50 + 1 hour = 11:50. 11:50 + 15 minutes = 12:05 PM.",
+      "explanation_incorrect": "10:50 AM + 1 hr 15 min = 12:05 PM."
+    },
+    {
+      "question_id": "T07.04.Q041",
+      "concept_id": "T07.04.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which is NOT a correct 24-hour time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "00:00"
+        },
+        {
+          "id": "B",
+          "text": "13:30"
+        },
+        {
+          "id": "C",
+          "text": "25:00"
+        },
+        {
+          "id": "D",
+          "text": "23:59"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "24-hour format goes from 00:00 to 23:59. 25:00 is not valid.",
+      "explanation_incorrect": "The maximum valid hour in 24-hour format is 23. 25:00 does not exist."
+    },
+    {
+      "question_id": "T07.04.Q042",
+      "concept_id": "T07.04.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The number of days in 3 non-leap years is ___",
+      "correct_answer": "1095",
+      "explanation_correct": "3 × 365 = 1095 days.",
+      "explanation_incorrect": "3 non-leap years × 365 days = 1095 days."
+    },
+    {
+      "question_id": "T07.04.Q043",
+      "concept_id": "T07.04.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Arjun started his homework at 4:45 PM and finished at 6:10 PM. How long did he take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 hour 15 minutes"
+        },
+        {
+          "id": "B",
+          "text": "1 hour 25 minutes"
+        },
+        {
+          "id": "C",
+          "text": "1 hour 35 minutes"
+        },
+        {
+          "id": "D",
+          "text": "2 hours 25 minutes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "4:45 to 5:45 = 1 hour. 5:45 to 6:10 = 25 minutes. Total = 1 hour 25 minutes.",
+      "explanation_incorrect": "4:45 PM to 6:10 PM = 1 hour 25 minutes."
+    },
+    {
+      "question_id": "T07.04.Q044",
+      "concept_id": "T07.04.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "12:30 AM in 24-hour format is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12:30"
+        },
+        {
+          "id": "B",
+          "text": "00:30"
+        },
+        {
+          "id": "C",
+          "text": "24:30"
+        },
+        {
+          "id": "D",
+          "text": "0:30 PM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "12:30 AM is 30 minutes past midnight. In 24-hour format, midnight is 00:00, so 12:30 AM = 00:30.",
+      "explanation_incorrect": "12:30 AM = 00:30 (30 minutes after midnight)."
+    },
+    {
+      "question_id": "T07.04.Q045",
+      "concept_id": "T07.04.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A bus departs every 40 minutes. The first bus is at 6:00 AM. When does the 4th bus depart?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7:40 AM"
+        },
+        {
+          "id": "B",
+          "text": "8:00 AM"
+        },
+        {
+          "id": "C",
+          "text": "8:40 AM"
+        },
+        {
+          "id": "D",
+          "text": "7:20 AM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1st at 6:00, 2nd at 6:40, 3rd at 7:20, 4th at 8:00 AM. (3 intervals of 40 min = 120 min = 2 hours.)",
+      "explanation_incorrect": "3 intervals × 40 min = 120 min = 2 hours after 6:00 AM = 8:00 AM."
+    },
+    {
+      "question_id": "T07.04.Q046",
+      "concept_id": "T07.04.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which month has the fewest days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "April"
+        },
+        {
+          "id": "B",
+          "text": "February"
+        },
+        {
+          "id": "C",
+          "text": "November"
+        },
+        {
+          "id": "D",
+          "text": "September"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "February has only 28 days (or 29 in a leap year), the fewest of any month.",
+      "explanation_incorrect": "February is the shortest month with 28 days (29 in leap year)."
+    },
+    {
+      "question_id": "T07.04.Q047",
+      "concept_id": "T07.04.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "If today is Wednesday, then 10 days from now will be Saturday.",
+      "correct_answer": "true",
+      "explanation_correct": "10 days from Wednesday: Wed+7 = next Wednesday, +3 more = Saturday. Or: 10 ÷ 7 = 1 week + 3 days. Wednesday + 3 = Saturday.",
+      "explanation_incorrect": "10 ÷ 7 = 1 remainder 3. Wednesday + 3 days = Thursday, Friday, Saturday. Yes, Saturday."
+    },
+    {
+      "question_id": "T07.04.Q048",
+      "concept_id": "T07.04.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many hours and minutes is 200 minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours 20 minutes"
+        },
+        {
+          "id": "B",
+          "text": "3 hours 20 minutes"
+        },
+        {
+          "id": "C",
+          "text": "3 hours 40 minutes"
+        },
+        {
+          "id": "D",
+          "text": "2 hours 40 minutes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "200 ÷ 60 = 3 remainder 20. So 3 hours 20 minutes.",
+      "explanation_incorrect": "200 min = 3 × 60 + 20 = 3 hours 20 minutes."
+    },
+    {
+      "question_id": "T07.04.Q049",
+      "concept_id": "T07.04.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many hours are in 3 days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "36"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "72"
+        },
+        {
+          "id": "D",
+          "text": "60"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "3 × 24 = 72 hours.",
+      "explanation_incorrect": "3 days × 24 hours/day = 72 hours."
+    },
+    {
+      "question_id": "T07.04.Q050",
+      "concept_id": "T07.04.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A doctor told Ritu to take medicine every 8 hours starting from 6:00 AM. At what times will she take it in one day?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:00 AM, 2:00 PM, 10:00 PM"
+        },
+        {
+          "id": "B",
+          "text": "6:00 AM, 12:00 PM, 6:00 PM"
+        },
+        {
+          "id": "C",
+          "text": "6:00 AM, 4:00 PM, 12:00 AM"
+        },
+        {
+          "id": "D",
+          "text": "6:00 AM, 8:00 AM, 10:00 AM"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6:00 AM + 8 hours = 2:00 PM. 2:00 PM + 8 hours = 10:00 PM.",
+      "explanation_incorrect": "6 AM, 6+8=2 PM, 2+8=10 PM. Three doses every 8 hours."
+    }
   ]
 }

@@ -1,62 +1,1362 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version":"1.0.0","board":"CBSE","class":7,"subject":"Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 7,
+    "subject": "Mathematics"
+  },
   "topic_id": "T04.06",
   "topic_name": "Practical Geometry",
   "canonical_explanation": {
     "text": "Practical geometry involves constructing triangles using ruler, compass, and protractor given specific measurements. A triangle can be constructed when: (1) SSS — three sides are given, (2) SAS — two sides and the included angle are given, (3) ASA — two angles and the included side are given, (4) RHS — the hypotenuse and one side of a right-angled triangle are given. Each construction method follows a specific sequence of steps.",
-    "rules": ["SSS: Draw base, then arcs from both endpoints to locate third vertex","SAS: Draw one side, construct the given angle at one end, mark the other side's length","ASA: Draw the included side, construct both angles at its endpoints; intersection gives third vertex","RHS: Draw one leg, construct right angle, draw arc with radius = hypotenuse to find third vertex","A triangle cannot be constructed if the sum of any two sides is not greater than the third side","The sum of angles of a triangle is always 180 degrees"]
+    "rules": [
+      "SSS: Draw base, then arcs from both endpoints to locate third vertex",
+      "SAS: Draw one side, construct the given angle at one end, mark the other side's length",
+      "ASA: Draw the included side, construct both angles at its endpoints; intersection gives third vertex",
+      "RHS: Draw one leg, construct right angle, draw arc with radius = hypotenuse to find third vertex",
+      "A triangle cannot be constructed if the sum of any two sides is not greater than the third side",
+      "The sum of angles of a triangle is always 180 degrees"
+    ]
   },
   "questions": [
-    {"question_id":"T04.06.Q001","concept_id":"T04.06.C01","difficulty":"familiarity","type":"mcq","question_text":"To construct a triangle given all three sides (SSS), the first step after drawing the base is to:","options":[{"id":"A","text":"Measure angles"},{"id":"B","text":"Draw arcs from both endpoints of the base"},{"id":"C","text":"Draw a perpendicular"},{"id":"D","text":"Draw parallel lines"}],"correct_answer":"B","explanation_correct":"In SSS construction, after drawing the base, we draw arcs from both endpoints using the other two side lengths. The intersection of these arcs gives the third vertex.","explanation_incorrect":"After drawing the base, arcs of the remaining two sides are drawn from the endpoints."},
-    {"question_id":"T04.06.Q002","concept_id":"T04.06.C01","difficulty":"familiarity","type":"mcq","question_text":"In SSS construction of triangle ABC with AB = 5 cm, BC = 6 cm, AC = 4 cm, which side would you typically draw first?","options":[{"id":"A","text":"Any one of the three sides can be the base"},{"id":"B","text":"Only the longest side"},{"id":"C","text":"Only the shortest side"},{"id":"D","text":"Only the middle-length side"}],"correct_answer":"A","explanation_correct":"In SSS construction, any side can be chosen as the base. The remaining two sides are then used for drawing arcs.","explanation_incorrect":"Any side can serve as the base for SSS construction."},
-    {"question_id":"T04.06.Q003","concept_id":"T04.06.C01","difficulty":"familiarity","type":"true_false","question_text":"A triangle can be constructed with sides 3 cm, 4 cm, and 8 cm.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"B","explanation_correct":"3 + 4 = 7 < 8. Since the sum of two sides (3 + 4 = 7) is less than the third side (8), the triangle inequality is violated and the triangle cannot be constructed.","explanation_incorrect":"The sum of two sides must be greater than the third side. 3 + 4 = 7 < 8, so construction is impossible."},
-    {"question_id":"T04.06.Q004","concept_id":"T04.06.C01","difficulty":"familiarity","type":"mcq","question_text":"Can a triangle be constructed with sides 5 cm, 7 cm, and 10 cm?","options":[{"id":"A","text":"Yes, because 5 + 7 > 10"},{"id":"B","text":"No, because 5 + 7 < 10"},{"id":"C","text":"No, because all sides must be equal"},{"id":"D","text":"Yes, only if one angle is 90 degrees"}],"correct_answer":"A","explanation_correct":"5 + 7 = 12 > 10, 5 + 10 = 15 > 7, 7 + 10 = 17 > 5. All triangle inequality conditions are satisfied, so the triangle can be constructed.","explanation_incorrect":"The triangle inequality is satisfied: 5 + 7 = 12 > 10."},
-    {"question_id":"T04.06.Q005","concept_id":"T04.06.C01","difficulty":"familiarity","type":"mcq","question_text":"How many arcs are drawn to locate the third vertex in SSS construction?","options":[{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"4"}],"correct_answer":"B","explanation_correct":"Two arcs are drawn — one from each endpoint of the base — using the lengths of the other two sides. Their intersection gives the third vertex.","explanation_incorrect":"2 arcs, one from each end of the base, intersect at the third vertex."},
-    {"question_id":"T04.06.Q006","concept_id":"T04.06.C01","difficulty":"familiarity","type":"fill_blank","question_text":"In SSS construction of triangle PQR with PQ = 6 cm, QR = 5 cm, PR = 7 cm, to locate vertex R, an arc of radius ___ cm is drawn from P.","correct_answer":"7","explanation_correct":"From P, the arc is drawn with radius PR = 7 cm. From Q, the arc is drawn with radius QR = 5 cm. Their intersection gives R.","explanation_incorrect":"The arc from P has radius = PR = 7 cm."},
-    {"question_id":"T04.06.Q007","concept_id":"T04.06.C01","difficulty":"application","type":"mcq","question_text":"While constructing triangle ABC with AB = 4 cm, BC = 3 cm, and AC = 5 cm using SSS, you draw AB as the base. What radii do you use for the arcs from A and B respectively?","options":[{"id":"A","text":"3 cm from A, 5 cm from B"},{"id":"B","text":"5 cm from A, 3 cm from B"},{"id":"C","text":"4 cm from A, 4 cm from B"},{"id":"D","text":"5 cm from A, 4 cm from B"}],"correct_answer":"B","explanation_correct":"From A, the arc has radius AC = 5 cm. From B, the arc has radius BC = 3 cm. The intersection of these arcs gives vertex C.","explanation_incorrect":"Arc from A has radius AC = 5 cm; arc from B has radius BC = 3 cm."},
-    {"question_id":"T04.06.Q008","concept_id":"T04.06.C01","difficulty":"application","type":"true_false","question_text":"A triangle can be constructed with sides 2 cm, 3 cm, and 5 cm.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"B","explanation_correct":"2 + 3 = 5, which is equal to (not greater than) the third side. The triangle inequality requires the sum to be strictly greater, so construction is not possible.","explanation_incorrect":"2 + 3 = 5, not greater than 5. Triangle inequality requires strict inequality."},
-    {"question_id":"T04.06.Q009","concept_id":"T04.06.C01","difficulty":"application","type":"mcq","question_text":"You are constructing a triangle with sides 6 cm, 8 cm, and 10 cm. After drawing the base of 10 cm, the two arcs will intersect:","options":[{"id":"A","text":"At exactly one point above the base"},{"id":"B","text":"At two points (one above and one below)"},{"id":"C","text":"At no point"},{"id":"D","text":"At three points"}],"correct_answer":"B","explanation_correct":"The two arcs generally intersect at two points — one above the base and one below. We choose the one above (by convention) to complete the triangle.","explanation_incorrect":"Arcs intersect at two points; we choose the one above the base line."},
-    {"question_id":"T04.06.Q010","concept_id":"T04.06.C01","difficulty":"application","type":"mcq","question_text":"Which of the following sets of side lengths can form a triangle?","options":[{"id":"A","text":"1 cm, 2 cm, 4 cm"},{"id":"B","text":"3 cm, 3 cm, 7 cm"},{"id":"C","text":"5 cm, 6 cm, 10 cm"},{"id":"D","text":"4 cm, 4 cm, 9 cm"}],"correct_answer":"C","explanation_correct":"For (C): 5 + 6 = 11 > 10, 5 + 10 = 15 > 6, 6 + 10 = 16 > 5. All conditions satisfied. Others: (A) 1+2=3 < 4, (B) 3+3=6 < 7, (D) 4+4=8 < 9.","explanation_incorrect":"Only 5, 6, 10 satisfies the triangle inequality for all three pairs."},
-    {"question_id":"T04.06.Q011","concept_id":"T04.06.C02","difficulty":"familiarity","type":"mcq","question_text":"In SAS construction, 'included angle' means the angle:","options":[{"id":"A","text":"Opposite to the longest side"},{"id":"B","text":"Between the two given sides"},{"id":"C","text":"That is always 90 degrees"},{"id":"D","text":"Formed outside the triangle"}],"correct_answer":"B","explanation_correct":"The included angle is the angle formed between the two given sides. In SAS, we need two sides and the angle between them.","explanation_incorrect":"The included angle is the angle between the two given sides."},
-    {"question_id":"T04.06.Q012","concept_id":"T04.06.C02","difficulty":"familiarity","type":"mcq","question_text":"To construct triangle DEF with DE = 5 cm, angle D = 60 degrees, and DF = 4 cm (SAS), the first step after drawing DE is to:","options":[{"id":"A","text":"Draw an arc of 4 cm from E"},{"id":"B","text":"Construct an angle of 60 degrees at D"},{"id":"C","text":"Draw a perpendicular at E"},{"id":"D","text":"Bisect DE"}],"correct_answer":"B","explanation_correct":"In SAS construction, after drawing one side (DE), we construct the given angle (60 degrees) at the vertex where both sides meet (D), then mark the other side's length (DF = 4 cm) along the angle ray.","explanation_incorrect":"After drawing DE, construct angle D = 60 degrees at vertex D."},
-    {"question_id":"T04.06.Q013","concept_id":"T04.06.C02","difficulty":"familiarity","type":"fill_blank","question_text":"In SAS construction of triangle XYZ with XY = 6 cm, angle Y = 45 degrees, and YZ = 5 cm, the angle of 45 degrees is constructed at vertex ___.","correct_answer":"Y","explanation_correct":"The angle given is angle Y = 45 degrees, so it is constructed at vertex Y, which is the common endpoint of sides XY and YZ.","explanation_incorrect":"Angle Y is at vertex Y, between sides XY and YZ."},
-    {"question_id":"T04.06.Q014","concept_id":"T04.06.C02","difficulty":"familiarity","type":"mcq","question_text":"Which instrument is essential for constructing a given angle in SAS construction?","options":[{"id":"A","text":"Only ruler"},{"id":"B","text":"Only compass"},{"id":"C","text":"Protractor (or compass for standard angles)"},{"id":"D","text":"Set square only"}],"correct_answer":"C","explanation_correct":"To construct a specific angle, we use a protractor. For standard angles like 60 or 90 degrees, a compass can also be used.","explanation_incorrect":"A protractor is used to construct the required angle."},
-    {"question_id":"T04.06.Q015","concept_id":"T04.06.C02","difficulty":"application","type":"mcq","question_text":"To construct triangle ABC with AB = 7 cm, angle A = 75 degrees, AC = 6 cm using SAS, after drawing AB and constructing angle A, the next step is:","options":[{"id":"A","text":"Draw an arc of 7 cm from B"},{"id":"B","text":"Mark a point C on the angle ray at 6 cm from A"},{"id":"C","text":"Measure angle B"},{"id":"D","text":"Join B to the midpoint of AC"}],"correct_answer":"B","explanation_correct":"After drawing AB and constructing the angle at A, we mark point C on the angle ray at a distance of AC = 6 cm from A. Then we join B to C to complete the triangle.","explanation_incorrect":"Mark C at 6 cm from A on the ray of the constructed angle, then join BC."},
-    {"question_id":"T04.06.Q016","concept_id":"T04.06.C02","difficulty":"application","type":"mcq","question_text":"In SAS construction of triangle PQR with PQ = 5 cm, angle Q = 110 degrees, QR = 4 cm, what type of triangle is being constructed?","options":[{"id":"A","text":"Acute-angled"},{"id":"B","text":"Right-angled"},{"id":"C","text":"Obtuse-angled"},{"id":"D","text":"Cannot be determined"}],"correct_answer":"C","explanation_correct":"Angle Q = 110 degrees > 90 degrees, so the triangle has an obtuse angle and is therefore an obtuse-angled triangle.","explanation_incorrect":"Since 110 degrees > 90 degrees, the triangle is obtuse-angled."},
-    {"question_id":"T04.06.Q017","concept_id":"T04.06.C02","difficulty":"application","type":"true_false","question_text":"In SAS construction, if the given angle is not between the two given sides, the triangle cannot be uniquely constructed.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"A","explanation_correct":"SAS requires the angle to be the included angle (between the two given sides). If the angle is not between the two sides, it is the SSA case, which does not guarantee a unique triangle.","explanation_incorrect":"The angle must be between the two sides for a unique construction."},
-    {"question_id":"T04.06.Q018","concept_id":"T04.06.C02","difficulty":"application","type":"mcq","question_text":"You want to construct an isosceles triangle with two equal sides of 5 cm and the included angle of 40 degrees. Which construction method do you use?","options":[{"id":"A","text":"SSS"},{"id":"B","text":"SAS"},{"id":"C","text":"ASA"},{"id":"D","text":"RHS"}],"correct_answer":"B","explanation_correct":"Two sides (5 cm each) and the included angle (40 degrees) are given. This is SAS construction.","explanation_incorrect":"Two sides and the included angle = SAS."},
-    {"question_id":"T04.06.Q019","concept_id":"T04.06.C03","difficulty":"familiarity","type":"mcq","question_text":"In ASA construction of a triangle, 'included side' means the side:","options":[{"id":"A","text":"Opposite to the largest angle"},{"id":"B","text":"Between the two given angles"},{"id":"C","text":"That is the hypotenuse"},{"id":"D","text":"Longest side of the triangle"}],"correct_answer":"B","explanation_correct":"The included side is the side between the two given angles. In ASA, we know two angles and the side between them.","explanation_incorrect":"The included side lies between the two given angles."},
-    {"question_id":"T04.06.Q020","concept_id":"T04.06.C03","difficulty":"familiarity","type":"mcq","question_text":"To construct triangle ABC with angle A = 50 degrees, AB = 6 cm, and angle B = 70 degrees (ASA), the first step after drawing AB is to:","options":[{"id":"A","text":"Construct angle A = 50 degrees at A and angle B = 70 degrees at B"},{"id":"B","text":"Draw arcs from A and B"},{"id":"C","text":"Find angle C first"},{"id":"D","text":"Draw a perpendicular bisector of AB"}],"correct_answer":"A","explanation_correct":"In ASA construction, after drawing the included side AB, we construct the two given angles at each endpoint: 50 degrees at A and 70 degrees at B. The rays intersect at C.","explanation_incorrect":"Construct both angles at the endpoints of the included side; their rays meet at the third vertex."},
-    {"question_id":"T04.06.Q021","concept_id":"T04.06.C03","difficulty":"familiarity","type":"fill_blank","question_text":"In ASA construction of triangle XYZ with angle X = 60 degrees, XY = 5 cm, angle Y = 80 degrees, the third angle Z = ___ degrees.","correct_answer":"40","explanation_correct":"Sum of angles = 180 degrees. Angle Z = 180 - 60 - 80 = 40 degrees.","explanation_incorrect":"180 - 60 - 80 = 40 degrees."},
-    {"question_id":"T04.06.Q022","concept_id":"T04.06.C03","difficulty":"familiarity","type":"true_false","question_text":"In ASA construction, the two angle rays drawn from the endpoints of the included side always intersect.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"A","explanation_correct":"As long as the sum of the two given angles is less than 180 degrees (which is always true for a valid triangle), the two rays will converge and intersect at the third vertex.","explanation_incorrect":"The rays must intersect since the angle sum of a triangle is 180 degrees."},
-    {"question_id":"T04.06.Q023","concept_id":"T04.06.C03","difficulty":"application","type":"mcq","question_text":"To construct triangle DEF with angle D = 45 degrees, DF = 7 cm, and angle F = 60 degrees (ASA), the angle at D is constructed at which end of segment DF?","options":[{"id":"A","text":"At D"},{"id":"B","text":"At F"},{"id":"C","text":"At the midpoint of DF"},{"id":"D","text":"At any point"}],"correct_answer":"A","explanation_correct":"Angle D = 45 degrees is constructed at vertex D, which is one endpoint of the included side DF. Similarly, angle F = 60 degrees is constructed at vertex F.","explanation_incorrect":"Each angle is constructed at its own vertex: angle D at D, angle F at F."},
-    {"question_id":"T04.06.Q024","concept_id":"T04.06.C03","difficulty":"application","type":"mcq","question_text":"In ASA construction of triangle PQR with angle P = 55 degrees, PQ = 8 cm, angle Q = 65 degrees, the two rays (from P and Q) intersect to give vertex R. The angle at R is:","options":[{"id":"A","text":"55 degrees"},{"id":"B","text":"60 degrees"},{"id":"C","text":"65 degrees"},{"id":"D","text":"120 degrees"}],"correct_answer":"B","explanation_correct":"Angle R = 180 - 55 - 65 = 60 degrees. The angle at R is automatically determined by the angle sum property.","explanation_incorrect":"180 - 55 - 65 = 60 degrees."},
-    {"question_id":"T04.06.Q025","concept_id":"T04.06.C03","difficulty":"application","type":"mcq","question_text":"Which of the following information can construct a unique triangle?","options":[{"id":"A","text":"Three angles: 60, 70, 50 degrees"},{"id":"B","text":"Angle A = 40 degrees, AB = 5 cm, angle B = 80 degrees"},{"id":"C","text":"Two sides: 4 cm, 5 cm"},{"id":"D","text":"One side and one angle only"}],"correct_answer":"B","explanation_correct":"Option B gives ASA (two angles and the included side), which uniquely determines a triangle. Three angles alone (option A) can give similar but not congruent triangles. Two sides or one side with one angle are insufficient.","explanation_incorrect":"ASA (two angles and included side) gives a unique triangle."},
-    {"question_id":"T04.06.Q026","concept_id":"T04.06.C03","difficulty":"application","type":"mcq","question_text":"Can a triangle be constructed using ASA if the two given angles are 100 degrees and 90 degrees?","options":[{"id":"A","text":"Yes"},{"id":"B","text":"No, because 100 + 90 = 190 > 180"},{"id":"C","text":"No, because angles must be equal"},{"id":"D","text":"Yes, if the side is long enough"}],"correct_answer":"B","explanation_correct":"The sum of two angles is 100 + 90 = 190 degrees, which exceeds 180 degrees. Since the sum of all three angles must be 180 degrees, no valid triangle can exist.","explanation_incorrect":"100 + 90 = 190 > 180; impossible for a triangle."},
-    {"question_id":"T04.06.Q027","concept_id":"T04.06.C04","difficulty":"familiarity","type":"mcq","question_text":"In RHS construction, the given information is:","options":[{"id":"A","text":"Three sides"},{"id":"B","text":"A right angle, the hypotenuse, and one side"},{"id":"C","text":"Two angles and a side"},{"id":"D","text":"Two sides and an angle (not right angle)"}],"correct_answer":"B","explanation_correct":"RHS stands for Right angle, Hypotenuse, Side. We need a right angle, the length of the hypotenuse, and the length of one other side.","explanation_incorrect":"RHS = Right angle + Hypotenuse + one Side."},
-    {"question_id":"T04.06.Q028","concept_id":"T04.06.C04","difficulty":"familiarity","type":"mcq","question_text":"To construct a right triangle with hypotenuse 5 cm and one side 3 cm (RHS), the first step after drawing the side of 3 cm is to:","options":[{"id":"A","text":"Draw a perpendicular at one endpoint"},{"id":"B","text":"Draw arcs of 5 cm from both ends"},{"id":"C","text":"Measure the third side"},{"id":"D","text":"Bisect the side"}],"correct_answer":"A","explanation_correct":"In RHS construction, after drawing one leg (3 cm), we construct a right angle (90 degrees) at one endpoint. Then we draw an arc of radius = hypotenuse (5 cm) from the other endpoint to intersect the perpendicular.","explanation_incorrect":"Construct a 90-degree angle at one end, then draw an arc of hypotenuse length from the other end."},
-    {"question_id":"T04.06.Q029","concept_id":"T04.06.C04","difficulty":"familiarity","type":"fill_blank","question_text":"In RHS construction of a right triangle with hypotenuse 13 cm and one side 5 cm, the third side will be ___ cm.","correct_answer":"12","explanation_correct":"Using Pythagoras theorem: third side = sqrt(13^2 - 5^2) = sqrt(169 - 25) = sqrt(144) = 12 cm.","explanation_incorrect":"sqrt(169 - 25) = sqrt(144) = 12 cm."},
-    {"question_id":"T04.06.Q030","concept_id":"T04.06.C04","difficulty":"familiarity","type":"mcq","question_text":"In RHS construction, the right angle is always at:","options":[{"id":"A","text":"The vertex opposite the hypotenuse"},{"id":"B","text":"The midpoint of the hypotenuse"},{"id":"C","text":"Any vertex"},{"id":"D","text":"The endpoint of the hypotenuse"}],"correct_answer":"A","explanation_correct":"The right angle is at the vertex where the two legs meet, which is the vertex opposite to the hypotenuse.","explanation_incorrect":"The right angle is at the vertex opposite the hypotenuse."},
-    {"question_id":"T04.06.Q031","concept_id":"T04.06.C01","difficulty":"exam_style","type":"mcq","question_text":"Arrange the steps of SSS construction of triangle ABC (AB = 5 cm, BC = 4 cm, AC = 6 cm) in correct order:\n(i) Join AC and BC\n(ii) Draw arcs of 6 cm from A and 4 cm from B\n(iii) Draw AB = 5 cm\n(iv) Mark intersection as C","options":[{"id":"A","text":"(iii), (ii), (iv), (i)"},{"id":"B","text":"(ii), (iii), (iv), (i)"},{"id":"C","text":"(iii), (iv), (ii), (i)"},{"id":"D","text":"(i), (ii), (iii), (iv)"}],"correct_answer":"A","explanation_correct":"Correct order: (iii) Draw base AB = 5 cm, (ii) Draw arcs from A (6 cm) and B (4 cm), (iv) Mark intersection as C, (i) Join AC and BC.","explanation_incorrect":"Draw base, draw arcs, mark intersection, join sides."},
-    {"question_id":"T04.06.Q032","concept_id":"T04.06.C01","difficulty":"exam_style","type":"mcq","question_text":"In constructing an equilateral triangle with side 5 cm, which method is used?","options":[{"id":"A","text":"SAS with angle = 60 degrees"},{"id":"B","text":"SSS with all sides = 5 cm"},{"id":"C","text":"Both A and B work"},{"id":"D","text":"Neither A nor B"}],"correct_answer":"C","explanation_correct":"An equilateral triangle has all sides equal (SSS: 5, 5, 5) and all angles equal to 60 degrees (SAS: side 5, angle 60, side 5). Both methods give the same result.","explanation_incorrect":"Both SSS (all sides 5 cm) and SAS (5 cm, 60 degrees, 5 cm) work for equilateral triangles."},
-    {"question_id":"T04.06.Q033","concept_id":"T04.06.C02","difficulty":"exam_style","type":"mcq","question_text":"A student constructs triangle PQR with PQ = 4 cm, angle Q = 90 degrees, and QR = 3 cm. What will be the length of PR?","options":[{"id":"A","text":"5 cm"},{"id":"B","text":"7 cm"},{"id":"C","text":"6 cm"},{"id":"D","text":"4.5 cm"}],"correct_answer":"A","explanation_correct":"This is SAS with angle Q = 90 degrees. By Pythagoras theorem: PR = sqrt(PQ^2 + QR^2) = sqrt(16 + 9) = sqrt(25) = 5 cm.","explanation_incorrect":"sqrt(4^2 + 3^2) = sqrt(25) = 5 cm."},
-    {"question_id":"T04.06.Q034","concept_id":"T04.06.C02","difficulty":"exam_style","type":"mcq","question_text":"Construct triangle XYZ with XY = 6 cm, angle X = 30 degrees, and XZ = 4 cm. Using SAS, which angle is constructed?","options":[{"id":"A","text":"Angle Y"},{"id":"B","text":"Angle Z"},{"id":"C","text":"Angle X"},{"id":"D","text":"No angle is needed"}],"correct_answer":"C","explanation_correct":"The included angle between sides XY and XZ is angle X. So angle X = 30 degrees is constructed at vertex X.","explanation_incorrect":"Angle X is the included angle between XY and XZ."},
-    {"question_id":"T04.06.Q035","concept_id":"T04.06.C03","difficulty":"exam_style","type":"mcq","question_text":"To construct triangle ABC with angle B = 35 degrees, BC = 5 cm, and angle C = 65 degrees, what is the measure of angle A?","options":[{"id":"A","text":"60 degrees"},{"id":"B","text":"80 degrees"},{"id":"C","text":"100 degrees"},{"id":"D","text":"70 degrees"}],"correct_answer":"B","explanation_correct":"Angle A = 180 - 35 - 65 = 80 degrees. The angle sum property gives us the third angle.","explanation_incorrect":"180 - 35 - 65 = 80 degrees."},
-    {"question_id":"T04.06.Q036","concept_id":"T04.06.C04","difficulty":"application","type":"mcq","question_text":"To construct a right triangle with hypotenuse 10 cm and one leg 6 cm using RHS, the other leg measures:","options":[{"id":"A","text":"4 cm"},{"id":"B","text":"8 cm"},{"id":"C","text":"7 cm"},{"id":"D","text":"9 cm"}],"correct_answer":"B","explanation_correct":"Other leg = sqrt(10^2 - 6^2) = sqrt(100 - 36) = sqrt(64) = 8 cm.","explanation_incorrect":"sqrt(100 - 36) = sqrt(64) = 8 cm."},
-    {"question_id":"T04.06.Q037","concept_id":"T04.06.C04","difficulty":"application","type":"mcq","question_text":"In RHS construction, after drawing leg AB and the right angle at B, an arc of radius equal to the hypotenuse is drawn from:","options":[{"id":"A","text":"Point B"},{"id":"B","text":"Point A"},{"id":"C","text":"The midpoint of AB"},{"id":"D","text":"Any point on the perpendicular"}],"correct_answer":"B","explanation_correct":"The arc is drawn from A (the other endpoint of the leg) with radius equal to the hypotenuse. This arc intersects the perpendicular at B to give the third vertex C.","explanation_incorrect":"Arc of hypotenuse length is drawn from the endpoint that is not at the right angle."},
-    {"question_id":"T04.06.Q038","concept_id":"T04.06.C04","difficulty":"application","type":"true_false","question_text":"A right triangle can be constructed using RHS if the hypotenuse is 7 cm and one leg is 9 cm.","options":[{"id":"A","text":"True"},{"id":"B","text":"False"}],"correct_answer":"B","explanation_correct":"The hypotenuse must be the longest side of a right triangle. Since 7 < 9, the hypotenuse (7 cm) is shorter than the leg (9 cm), which is impossible. Construction cannot be done.","explanation_incorrect":"Hypotenuse must be longer than any leg. 7 < 9 is not valid."},
-    {"question_id":"T04.06.Q039","concept_id":"T04.06.C01","difficulty":"exam_style","type":"mcq","question_text":"Which of the following sets of measurements allows construction of a unique triangle using SSS?","options":[{"id":"A","text":"4 cm, 6 cm, 11 cm"},{"id":"B","text":"3 cm, 4 cm, 5 cm"},{"id":"C","text":"1 cm, 2 cm, 5 cm"},{"id":"D","text":"2 cm, 3 cm, 6 cm"}],"correct_answer":"B","explanation_correct":"For (B): 3 + 4 = 7 > 5, 3 + 5 = 8 > 4, 4 + 5 = 9 > 3. All conditions satisfied. Others: (A) 4+6=10 < 11, (C) 1+2=3 < 5, (D) 2+3=5 < 6.","explanation_incorrect":"Only 3, 4, 5 satisfies the triangle inequality."},
-    {"question_id":"T04.06.Q040","concept_id":"T04.06.C02","difficulty":"exam_style","type":"mcq","question_text":"A student wants to construct a triangle with two sides 5 cm and 7 cm. If the included angle is 0 degrees, what happens?","options":[{"id":"A","text":"The triangle is very thin"},{"id":"B","text":"The two sides overlap and no triangle is formed"},{"id":"C","text":"An equilateral triangle is formed"},{"id":"D","text":"A right triangle is formed"}],"correct_answer":"B","explanation_correct":"If the included angle is 0 degrees, the two sides would lie along the same line and overlap. No triangle can be formed with a 0-degree angle.","explanation_incorrect":"A 0-degree included angle means the sides overlap; no triangle is possible."},
-    {"question_id":"T04.06.Q041","concept_id":"T04.06.C03","difficulty":"exam_style","type":"mcq","question_text":"In ASA construction, if both given angles are 60 degrees and the included side is 5 cm, what kind of triangle is constructed?","options":[{"id":"A","text":"Scalene"},{"id":"B","text":"Isosceles"},{"id":"C","text":"Equilateral"},{"id":"D","text":"Right-angled"}],"correct_answer":"C","explanation_correct":"Both base angles are 60 degrees, so the third angle = 180 - 60 - 60 = 60 degrees. All angles are 60 degrees, making it equilateral. The included side of 5 cm means all sides are 5 cm.","explanation_incorrect":"All three angles = 60 degrees means equilateral triangle with all sides 5 cm."},
-    {"question_id":"T04.06.Q042","concept_id":"T04.06.C04","difficulty":"exam_style","type":"mcq","question_text":"Arrange the RHS construction steps for a right triangle with hypotenuse 5 cm and one leg 3 cm in correct order:\n(i) Construct 90 degrees at B\n(ii) Draw AB = 3 cm\n(iii) From A, draw arc of radius 5 cm to cut the perpendicular at C\n(iv) Join AC","options":[{"id":"A","text":"(ii), (i), (iii), (iv)"},{"id":"B","text":"(i), (ii), (iii), (iv)"},{"id":"C","text":"(ii), (iii), (i), (iv)"},{"id":"D","text":"(iii), (ii), (iv), (i)"}],"correct_answer":"A","explanation_correct":"Correct order: (ii) Draw leg AB = 3 cm, (i) Construct 90 degrees at B, (iii) From A, arc of radius 5 cm cuts perpendicular at C, (iv) Join AC to complete the triangle.","explanation_incorrect":"Draw leg, construct right angle, draw hypotenuse arc, join."},
-    {"question_id":"T04.06.Q043","concept_id":"T04.06.C01","difficulty":"exam_style","type":"mcq","question_text":"How many distinct triangles can be drawn with sides 4 cm, 5 cm, and 6 cm?","options":[{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"Infinitely many"}],"correct_answer":"B","explanation_correct":"When all three sides are specified (SSS), exactly one unique triangle (up to congruence) can be constructed. The shape and size are completely determined.","explanation_incorrect":"SSS uniquely determines a triangle (only one possible shape)."},
-    {"question_id":"T04.06.Q044","concept_id":"T04.06.C02","difficulty":"exam_style","type":"mcq","question_text":"To construct an isosceles right triangle with equal legs of 4 cm each, you would use:","options":[{"id":"A","text":"SAS: two sides of 4 cm with included angle 90 degrees"},{"id":"B","text":"ASA: two angles of 45 degrees"},{"id":"C","text":"SSS: all three sides equal"},{"id":"D","text":"RHS: hypotenuse = 4 cm and one side = 4 cm"}],"correct_answer":"A","explanation_correct":"An isosceles right triangle has two equal legs and a 90-degree angle between them. SAS with sides 4 cm, 4 cm, and included angle 90 degrees is the most direct method.","explanation_incorrect":"SAS: 4 cm, 90 degrees, 4 cm gives an isosceles right triangle."},
-    {"question_id":"T04.06.Q045","concept_id":"T04.06.C03","difficulty":"exam_style","type":"mcq","question_text":"Can a triangle be constructed with angle A = 90 degrees, AB = 6 cm, and angle B = 90 degrees using ASA?","options":[{"id":"A","text":"Yes, it is a rectangle"},{"id":"B","text":"No, because 90 + 90 = 180 leaves no room for angle C"},{"id":"C","text":"Yes, it is a right triangle"},{"id":"D","text":"No, because AB is too long"}],"correct_answer":"B","explanation_correct":"If angle A = 90 degrees and angle B = 90 degrees, their sum is 180 degrees, leaving 0 degrees for angle C. A triangle must have all angles positive, so this is impossible.","explanation_incorrect":"90 + 90 = 180; angle C would be 0 degrees, which is impossible."},
-    {"question_id":"T04.06.Q046","concept_id":"T04.06.C01","difficulty":"application","type":"mcq","question_text":"A student draws a segment of 8 cm. From one endpoint, he draws an arc of 5 cm and from the other an arc of 4 cm. The arcs do not intersect. What can we conclude?","options":[{"id":"A","text":"He made a measurement error"},{"id":"B","text":"5 + 4 < 8, so the triangle cannot be formed"},{"id":"C","text":"The arcs will intersect if extended"},{"id":"D","text":"He should use a larger compass"}],"correct_answer":"B","explanation_correct":"5 + 4 = 9 > 8, so actually the arcs should intersect. However, if we check: the arcs are drawn with radii 5 and 4 from endpoints of a segment of length 8. Since 5 + 4 = 9 > 8, the arcs do intersect. If they truly do not intersect, the student made a measurement error.","explanation_incorrect":"Check: 5 + 4 = 9 > 8, so arcs should intersect. If they don't, there is a drawing error."},
-    {"question_id":"T04.06.Q047","concept_id":"T04.06.C02","difficulty":"application","type":"mcq","question_text":"Construct triangle MNO with MN = 5 cm, angle M = 90 degrees, and MO = 12 cm. The length of NO is:","options":[{"id":"A","text":"7 cm"},{"id":"B","text":"13 cm"},{"id":"C","text":"17 cm"},{"id":"D","text":"10 cm"}],"correct_answer":"B","explanation_correct":"Since angle M = 90 degrees, NO is the hypotenuse. NO = sqrt(MN^2 + MO^2) = sqrt(25 + 144) = sqrt(169) = 13 cm.","explanation_incorrect":"sqrt(5^2 + 12^2) = sqrt(169) = 13 cm."},
-    {"question_id":"T04.06.Q048","concept_id":"T04.06.C03","difficulty":"exam_style","type":"mcq","question_text":"If two angles and a non-included side are given, which method is most appropriate for construction?","options":[{"id":"A","text":"SSS"},{"id":"B","text":"SAS"},{"id":"C","text":"ASA (after finding the third angle)"},{"id":"D","text":"RHS"}],"correct_answer":"C","explanation_correct":"With two angles given, the third angle can be calculated (180 - sum of given angles). Then we can identify the included side and use ASA construction. This is essentially the AAS case converted to ASA.","explanation_incorrect":"Find the third angle first, then use ASA with the side that is now included between two known angles."},
-    {"question_id":"T04.06.Q049","concept_id":"T04.06.C04","difficulty":"exam_style","type":"mcq","question_text":"Which of these is NOT a valid combination for constructing a unique triangle?","options":[{"id":"A","text":"SSS: 3 cm, 4 cm, 5 cm"},{"id":"B","text":"SAS: 5 cm, 60 degrees, 7 cm"},{"id":"C","text":"AAA: 60 degrees, 70 degrees, 50 degrees"},{"id":"D","text":"RHS: hypotenuse 10 cm, leg 6 cm"}],"correct_answer":"C","explanation_correct":"AAA (three angles only) does not determine a unique triangle. It determines the shape but not the size — infinitely many similar triangles can have the same three angles but different side lengths.","explanation_incorrect":"AAA gives similar triangles, not a unique (congruent) triangle."},
-    {"question_id":"T04.06.Q050","concept_id":"T04.06.C04","difficulty":"exam_style","type":"mcq","question_text":"A right triangle has hypotenuse 15 cm and one leg 9 cm. Using RHS, the other leg is:","options":[{"id":"A","text":"6 cm"},{"id":"B","text":"10 cm"},{"id":"C","text":"12 cm"},{"id":"D","text":"8 cm"}],"correct_answer":"C","explanation_correct":"Other leg = sqrt(15^2 - 9^2) = sqrt(225 - 81) = sqrt(144) = 12 cm.","explanation_incorrect":"sqrt(225 - 81) = sqrt(144) = 12 cm."}
+    {
+      "question_id": "T04.06.Q001",
+      "concept_id": "T04.06.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct a triangle given all three sides (SSS), the first step after drawing the base is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Measure angles"
+        },
+        {
+          "id": "B",
+          "text": "Draw arcs from both endpoints of the base"
+        },
+        {
+          "id": "C",
+          "text": "Draw a perpendicular"
+        },
+        {
+          "id": "D",
+          "text": "Draw parallel lines"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In SSS construction, after drawing the base, we draw arcs from both endpoints using the other two side lengths. The intersection of these arcs gives the third vertex.",
+      "explanation_incorrect": "After drawing the base, arcs of the remaining two sides are drawn from the endpoints."
+    },
+    {
+      "question_id": "T04.06.Q002",
+      "concept_id": "T04.06.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In SSS construction of triangle ABC with AB = 5 cm, BC = 6 cm, AC = 4 cm, which side would you typically draw first?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any one of the three sides can be the base"
+        },
+        {
+          "id": "B",
+          "text": "Only the longest side"
+        },
+        {
+          "id": "C",
+          "text": "Only the shortest side"
+        },
+        {
+          "id": "D",
+          "text": "Only the middle-length side"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In SSS construction, any side can be chosen as the base. The remaining two sides are then used for drawing arcs.",
+      "explanation_incorrect": "Any side can serve as the base for SSS construction."
+    },
+    {
+      "question_id": "T04.06.Q003",
+      "concept_id": "T04.06.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A triangle can be constructed with sides 3 cm, 4 cm, and 8 cm.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "3 + 4 = 7 < 8. Since the sum of two sides (3 + 4 = 7) is less than the third side (8), the triangle inequality is violated and the triangle cannot be constructed.",
+      "explanation_incorrect": "The sum of two sides must be greater than the third side. 3 + 4 = 7 < 8, so construction is impossible."
+    },
+    {
+      "question_id": "T04.06.Q004",
+      "concept_id": "T04.06.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Can a triangle be constructed with sides 5 cm, 7 cm, and 10 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, because 5 + 7 > 10"
+        },
+        {
+          "id": "B",
+          "text": "No, because 5 + 7 < 10"
+        },
+        {
+          "id": "C",
+          "text": "No, because all sides must be equal"
+        },
+        {
+          "id": "D",
+          "text": "Yes, only if one angle is 90 degrees"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5 + 7 = 12 > 10, 5 + 10 = 15 > 7, 7 + 10 = 17 > 5. All triangle inequality conditions are satisfied, so the triangle can be constructed.",
+      "explanation_incorrect": "The triangle inequality is satisfied: 5 + 7 = 12 > 10."
+    },
+    {
+      "question_id": "T04.06.Q005",
+      "concept_id": "T04.06.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many arcs are drawn to locate the third vertex in SSS construction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two arcs are drawn — one from each endpoint of the base — using the lengths of the other two sides. Their intersection gives the third vertex.",
+      "explanation_incorrect": "2 arcs, one from each end of the base, intersect at the third vertex."
+    },
+    {
+      "question_id": "T04.06.Q006",
+      "concept_id": "T04.06.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "In SSS construction of triangle PQR with PQ = 6 cm, QR = 5 cm, PR = 7 cm, to locate vertex R, an arc of radius ___ cm is drawn from P.",
+      "correct_answer": "7",
+      "explanation_correct": "From P, the arc is drawn with radius PR = 7 cm. From Q, the arc is drawn with radius QR = 5 cm. Their intersection gives R.",
+      "explanation_incorrect": "The arc from P has radius = PR = 7 cm."
+    },
+    {
+      "question_id": "T04.06.Q007",
+      "concept_id": "T04.06.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "While constructing triangle ABC with AB = 4 cm, BC = 3 cm, and AC = 5 cm using SSS, you draw AB as the base. What radii do you use for the arcs from A and B respectively?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 cm from A, 5 cm from B"
+        },
+        {
+          "id": "B",
+          "text": "5 cm from A, 3 cm from B"
+        },
+        {
+          "id": "C",
+          "text": "4 cm from A, 4 cm from B"
+        },
+        {
+          "id": "D",
+          "text": "5 cm from A, 4 cm from B"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From A, the arc has radius AC = 5 cm. From B, the arc has radius BC = 3 cm. The intersection of these arcs gives vertex C.",
+      "explanation_incorrect": "Arc from A has radius AC = 5 cm; arc from B has radius BC = 3 cm."
+    },
+    {
+      "question_id": "T04.06.Q008",
+      "concept_id": "T04.06.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A triangle can be constructed with sides 2 cm, 3 cm, and 5 cm.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2 + 3 = 5, which is equal to (not greater than) the third side. The triangle inequality requires the sum to be strictly greater, so construction is not possible.",
+      "explanation_incorrect": "2 + 3 = 5, not greater than 5. Triangle inequality requires strict inequality."
+    },
+    {
+      "question_id": "T04.06.Q009",
+      "concept_id": "T04.06.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "You are constructing a triangle with sides 6 cm, 8 cm, and 10 cm. After drawing the base of 10 cm, the two arcs will intersect:",
+      "options": [
+        {
+          "id": "A",
+          "text": "At exactly one point above the base"
+        },
+        {
+          "id": "B",
+          "text": "At two points (one above and one below)"
+        },
+        {
+          "id": "C",
+          "text": "At no point"
+        },
+        {
+          "id": "D",
+          "text": "At three points"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The two arcs generally intersect at two points — one above the base and one below. We choose the one above (by convention) to complete the triangle.",
+      "explanation_incorrect": "Arcs intersect at two points; we choose the one above the base line."
+    },
+    {
+      "question_id": "T04.06.Q010",
+      "concept_id": "T04.06.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following sets of side lengths can form a triangle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 cm, 2 cm, 4 cm"
+        },
+        {
+          "id": "B",
+          "text": "3 cm, 3 cm, 7 cm"
+        },
+        {
+          "id": "C",
+          "text": "5 cm, 6 cm, 10 cm"
+        },
+        {
+          "id": "D",
+          "text": "4 cm, 4 cm, 9 cm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For (C): 5 + 6 = 11 > 10, 5 + 10 = 15 > 6, 6 + 10 = 16 > 5. All conditions satisfied. Others: (A) 1+2=3 < 4, (B) 3+3=6 < 7, (D) 4+4=8 < 9.",
+      "explanation_incorrect": "Only 5, 6, 10 satisfies the triangle inequality for all three pairs."
+    },
+    {
+      "question_id": "T04.06.Q011",
+      "concept_id": "T04.06.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In SAS construction, 'included angle' means the angle:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Opposite to the longest side"
+        },
+        {
+          "id": "B",
+          "text": "Between the two given sides"
+        },
+        {
+          "id": "C",
+          "text": "That is always 90 degrees"
+        },
+        {
+          "id": "D",
+          "text": "Formed outside the triangle"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The included angle is the angle formed between the two given sides. In SAS, we need two sides and the angle between them.",
+      "explanation_incorrect": "The included angle is the angle between the two given sides."
+    },
+    {
+      "question_id": "T04.06.Q012",
+      "concept_id": "T04.06.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct triangle DEF with DE = 5 cm, angle D = 60 degrees, and DF = 4 cm (SAS), the first step after drawing DE is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Draw an arc of 4 cm from E"
+        },
+        {
+          "id": "B",
+          "text": "Construct an angle of 60 degrees at D"
+        },
+        {
+          "id": "C",
+          "text": "Draw a perpendicular at E"
+        },
+        {
+          "id": "D",
+          "text": "Bisect DE"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In SAS construction, after drawing one side (DE), we construct the given angle (60 degrees) at the vertex where both sides meet (D), then mark the other side's length (DF = 4 cm) along the angle ray.",
+      "explanation_incorrect": "After drawing DE, construct angle D = 60 degrees at vertex D."
+    },
+    {
+      "question_id": "T04.06.Q013",
+      "concept_id": "T04.06.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "In SAS construction of triangle XYZ with XY = 6 cm, angle Y = 45 degrees, and YZ = 5 cm, the angle of 45 degrees is constructed at vertex ___.",
+      "correct_answer": "Y",
+      "explanation_correct": "The angle given is angle Y = 45 degrees, so it is constructed at vertex Y, which is the common endpoint of sides XY and YZ.",
+      "explanation_incorrect": "Angle Y is at vertex Y, between sides XY and YZ."
+    },
+    {
+      "question_id": "T04.06.Q014",
+      "concept_id": "T04.06.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which instrument is essential for constructing a given angle in SAS construction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only ruler"
+        },
+        {
+          "id": "B",
+          "text": "Only compass"
+        },
+        {
+          "id": "C",
+          "text": "Protractor (or compass for standard angles)"
+        },
+        {
+          "id": "D",
+          "text": "Set square only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "To construct a specific angle, we use a protractor. For standard angles like 60 or 90 degrees, a compass can also be used.",
+      "explanation_incorrect": "A protractor is used to construct the required angle."
+    },
+    {
+      "question_id": "T04.06.Q015",
+      "concept_id": "T04.06.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct triangle ABC with AB = 7 cm, angle A = 75 degrees, AC = 6 cm using SAS, after drawing AB and constructing angle A, the next step is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Draw an arc of 7 cm from B"
+        },
+        {
+          "id": "B",
+          "text": "Mark a point C on the angle ray at 6 cm from A"
+        },
+        {
+          "id": "C",
+          "text": "Measure angle B"
+        },
+        {
+          "id": "D",
+          "text": "Join B to the midpoint of AC"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "After drawing AB and constructing the angle at A, we mark point C on the angle ray at a distance of AC = 6 cm from A. Then we join B to C to complete the triangle.",
+      "explanation_incorrect": "Mark C at 6 cm from A on the ray of the constructed angle, then join BC."
+    },
+    {
+      "question_id": "T04.06.Q016",
+      "concept_id": "T04.06.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "In SAS construction of triangle PQR with PQ = 5 cm, angle Q = 110 degrees, QR = 4 cm, what type of triangle is being constructed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acute-angled"
+        },
+        {
+          "id": "B",
+          "text": "Right-angled"
+        },
+        {
+          "id": "C",
+          "text": "Obtuse-angled"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be determined"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Angle Q = 110 degrees > 90 degrees, so the triangle has an obtuse angle and is therefore an obtuse-angled triangle.",
+      "explanation_incorrect": "Since 110 degrees > 90 degrees, the triangle is obtuse-angled."
+    },
+    {
+      "question_id": "T04.06.Q017",
+      "concept_id": "T04.06.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "In SAS construction, if the given angle is not between the two given sides, the triangle cannot be uniquely constructed.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "SAS requires the angle to be the included angle (between the two given sides). If the angle is not between the two sides, it is the SSA case, which does not guarantee a unique triangle.",
+      "explanation_incorrect": "The angle must be between the two sides for a unique construction."
+    },
+    {
+      "question_id": "T04.06.Q018",
+      "concept_id": "T04.06.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "You want to construct an isosceles triangle with two equal sides of 5 cm and the included angle of 40 degrees. Which construction method do you use?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SSS"
+        },
+        {
+          "id": "B",
+          "text": "SAS"
+        },
+        {
+          "id": "C",
+          "text": "ASA"
+        },
+        {
+          "id": "D",
+          "text": "RHS"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Two sides (5 cm each) and the included angle (40 degrees) are given. This is SAS construction.",
+      "explanation_incorrect": "Two sides and the included angle = SAS."
+    },
+    {
+      "question_id": "T04.06.Q019",
+      "concept_id": "T04.06.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In ASA construction of a triangle, 'included side' means the side:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Opposite to the largest angle"
+        },
+        {
+          "id": "B",
+          "text": "Between the two given angles"
+        },
+        {
+          "id": "C",
+          "text": "That is the hypotenuse"
+        },
+        {
+          "id": "D",
+          "text": "Longest side of the triangle"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The included side is the side between the two given angles. In ASA, we know two angles and the side between them.",
+      "explanation_incorrect": "The included side lies between the two given angles."
+    },
+    {
+      "question_id": "T04.06.Q020",
+      "concept_id": "T04.06.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct triangle ABC with angle A = 50 degrees, AB = 6 cm, and angle B = 70 degrees (ASA), the first step after drawing AB is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Construct angle A = 50 degrees at A and angle B = 70 degrees at B"
+        },
+        {
+          "id": "B",
+          "text": "Draw arcs from A and B"
+        },
+        {
+          "id": "C",
+          "text": "Find angle C first"
+        },
+        {
+          "id": "D",
+          "text": "Draw a perpendicular bisector of AB"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In ASA construction, after drawing the included side AB, we construct the two given angles at each endpoint: 50 degrees at A and 70 degrees at B. The rays intersect at C.",
+      "explanation_incorrect": "Construct both angles at the endpoints of the included side; their rays meet at the third vertex."
+    },
+    {
+      "question_id": "T04.06.Q021",
+      "concept_id": "T04.06.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "In ASA construction of triangle XYZ with angle X = 60 degrees, XY = 5 cm, angle Y = 80 degrees, the third angle Z = ___ degrees.",
+      "correct_answer": "40",
+      "explanation_correct": "Sum of angles = 180 degrees. Angle Z = 180 - 60 - 80 = 40 degrees.",
+      "explanation_incorrect": "180 - 60 - 80 = 40 degrees."
+    },
+    {
+      "question_id": "T04.06.Q022",
+      "concept_id": "T04.06.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "In ASA construction, the two angle rays drawn from the endpoints of the included side always intersect.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "As long as the sum of the two given angles is less than 180 degrees (which is always true for a valid triangle), the two rays will converge and intersect at the third vertex.",
+      "explanation_incorrect": "The rays must intersect since the angle sum of a triangle is 180 degrees."
+    },
+    {
+      "question_id": "T04.06.Q023",
+      "concept_id": "T04.06.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct triangle DEF with angle D = 45 degrees, DF = 7 cm, and angle F = 60 degrees (ASA), the angle at D is constructed at which end of segment DF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At D"
+        },
+        {
+          "id": "B",
+          "text": "At F"
+        },
+        {
+          "id": "C",
+          "text": "At the midpoint of DF"
+        },
+        {
+          "id": "D",
+          "text": "At any point"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Angle D = 45 degrees is constructed at vertex D, which is one endpoint of the included side DF. Similarly, angle F = 60 degrees is constructed at vertex F.",
+      "explanation_incorrect": "Each angle is constructed at its own vertex: angle D at D, angle F at F."
+    },
+    {
+      "question_id": "T04.06.Q024",
+      "concept_id": "T04.06.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In ASA construction of triangle PQR with angle P = 55 degrees, PQ = 8 cm, angle Q = 65 degrees, the two rays (from P and Q) intersect to give vertex R. The angle at R is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "55 degrees"
+        },
+        {
+          "id": "B",
+          "text": "60 degrees"
+        },
+        {
+          "id": "C",
+          "text": "65 degrees"
+        },
+        {
+          "id": "D",
+          "text": "120 degrees"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Angle R = 180 - 55 - 65 = 60 degrees. The angle at R is automatically determined by the angle sum property.",
+      "explanation_incorrect": "180 - 55 - 65 = 60 degrees."
+    },
+    {
+      "question_id": "T04.06.Q025",
+      "concept_id": "T04.06.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following information can construct a unique triangle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Three angles: 60, 70, 50 degrees"
+        },
+        {
+          "id": "B",
+          "text": "Angle A = 40 degrees, AB = 5 cm, angle B = 80 degrees"
+        },
+        {
+          "id": "C",
+          "text": "Two sides: 4 cm, 5 cm"
+        },
+        {
+          "id": "D",
+          "text": "One side and one angle only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Option B gives ASA (two angles and the included side), which uniquely determines a triangle. Three angles alone (option A) can give similar but not congruent triangles. Two sides or one side with one angle are insufficient.",
+      "explanation_incorrect": "ASA (two angles and included side) gives a unique triangle."
+    },
+    {
+      "question_id": "T04.06.Q026",
+      "concept_id": "T04.06.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Can a triangle be constructed using ASA if the two given angles are 100 degrees and 90 degrees?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No, because 100 + 90 = 190 > 180"
+        },
+        {
+          "id": "C",
+          "text": "No, because angles must be equal"
+        },
+        {
+          "id": "D",
+          "text": "Yes, if the side is long enough"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The sum of two angles is 100 + 90 = 190 degrees, which exceeds 180 degrees. Since the sum of all three angles must be 180 degrees, no valid triangle can exist.",
+      "explanation_incorrect": "100 + 90 = 190 > 180; impossible for a triangle."
+    },
+    {
+      "question_id": "T04.06.Q027",
+      "concept_id": "T04.06.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In RHS construction, the given information is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Three sides"
+        },
+        {
+          "id": "B",
+          "text": "A right angle, the hypotenuse, and one side"
+        },
+        {
+          "id": "C",
+          "text": "Two angles and a side"
+        },
+        {
+          "id": "D",
+          "text": "Two sides and an angle (not right angle)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "RHS stands for Right angle, Hypotenuse, Side. We need a right angle, the length of the hypotenuse, and the length of one other side.",
+      "explanation_incorrect": "RHS = Right angle + Hypotenuse + one Side."
+    },
+    {
+      "question_id": "T04.06.Q028",
+      "concept_id": "T04.06.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct a right triangle with hypotenuse 5 cm and one side 3 cm (RHS), the first step after drawing the side of 3 cm is to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Draw a perpendicular at one endpoint"
+        },
+        {
+          "id": "B",
+          "text": "Draw arcs of 5 cm from both ends"
+        },
+        {
+          "id": "C",
+          "text": "Measure the third side"
+        },
+        {
+          "id": "D",
+          "text": "Bisect the side"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In RHS construction, after drawing one leg (3 cm), we construct a right angle (90 degrees) at one endpoint. Then we draw an arc of radius = hypotenuse (5 cm) from the other endpoint to intersect the perpendicular.",
+      "explanation_incorrect": "Construct a 90-degree angle at one end, then draw an arc of hypotenuse length from the other end."
+    },
+    {
+      "question_id": "T04.06.Q029",
+      "concept_id": "T04.06.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "In RHS construction of a right triangle with hypotenuse 13 cm and one side 5 cm, the third side will be ___ cm.",
+      "correct_answer": "12",
+      "explanation_correct": "Using Pythagoras theorem: third side = sqrt(13^2 - 5^2) = sqrt(169 - 25) = sqrt(144) = 12 cm.",
+      "explanation_incorrect": "sqrt(169 - 25) = sqrt(144) = 12 cm."
+    },
+    {
+      "question_id": "T04.06.Q030",
+      "concept_id": "T04.06.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In RHS construction, the right angle is always at:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The vertex opposite the hypotenuse"
+        },
+        {
+          "id": "B",
+          "text": "The midpoint of the hypotenuse"
+        },
+        {
+          "id": "C",
+          "text": "Any vertex"
+        },
+        {
+          "id": "D",
+          "text": "The endpoint of the hypotenuse"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The right angle is at the vertex where the two legs meet, which is the vertex opposite to the hypotenuse.",
+      "explanation_incorrect": "The right angle is at the vertex opposite the hypotenuse."
+    },
+    {
+      "question_id": "T04.06.Q031",
+      "concept_id": "T04.06.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Arrange the steps of SSS construction of triangle ABC (AB = 5 cm, BC = 4 cm, AC = 6 cm) in correct order:\n(i) Join AC and BC\n(ii) Draw arcs of 6 cm from A and 4 cm from B\n(iii) Draw AB = 5 cm\n(iv) Mark intersection as C",
+      "options": [
+        {
+          "id": "A",
+          "text": "(iii), (ii), (iv), (i)"
+        },
+        {
+          "id": "B",
+          "text": "(ii), (iii), (iv), (i)"
+        },
+        {
+          "id": "C",
+          "text": "(iii), (iv), (ii), (i)"
+        },
+        {
+          "id": "D",
+          "text": "(i), (ii), (iii), (iv)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Correct order: (iii) Draw base AB = 5 cm, (ii) Draw arcs from A (6 cm) and B (4 cm), (iv) Mark intersection as C, (i) Join AC and BC.",
+      "explanation_incorrect": "Draw base, draw arcs, mark intersection, join sides."
+    },
+    {
+      "question_id": "T04.06.Q032",
+      "concept_id": "T04.06.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In constructing an equilateral triangle with side 5 cm, which method is used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAS with angle = 60 degrees"
+        },
+        {
+          "id": "B",
+          "text": "SSS with all sides = 5 cm"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B work"
+        },
+        {
+          "id": "D",
+          "text": "Neither A nor B"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An equilateral triangle has all sides equal (SSS: 5, 5, 5) and all angles equal to 60 degrees (SAS: side 5, angle 60, side 5). Both methods give the same result.",
+      "explanation_incorrect": "Both SSS (all sides 5 cm) and SAS (5 cm, 60 degrees, 5 cm) work for equilateral triangles."
+    },
+    {
+      "question_id": "T04.06.Q033",
+      "concept_id": "T04.06.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A student constructs triangle PQR with PQ = 4 cm, angle Q = 90 degrees, and QR = 3 cm. What will be the length of PR?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 cm"
+        },
+        {
+          "id": "B",
+          "text": "7 cm"
+        },
+        {
+          "id": "C",
+          "text": "6 cm"
+        },
+        {
+          "id": "D",
+          "text": "4.5 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is SAS with angle Q = 90 degrees. By Pythagoras theorem: PR = sqrt(PQ^2 + QR^2) = sqrt(16 + 9) = sqrt(25) = 5 cm.",
+      "explanation_incorrect": "sqrt(4^2 + 3^2) = sqrt(25) = 5 cm."
+    },
+    {
+      "question_id": "T04.06.Q034",
+      "concept_id": "T04.06.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Construct triangle XYZ with XY = 6 cm, angle X = 30 degrees, and XZ = 4 cm. Using SAS, which angle is constructed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Angle Y"
+        },
+        {
+          "id": "B",
+          "text": "Angle Z"
+        },
+        {
+          "id": "C",
+          "text": "Angle X"
+        },
+        {
+          "id": "D",
+          "text": "No angle is needed"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The included angle between sides XY and XZ is angle X. So angle X = 30 degrees is constructed at vertex X.",
+      "explanation_incorrect": "Angle X is the included angle between XY and XZ."
+    },
+    {
+      "question_id": "T04.06.Q035",
+      "concept_id": "T04.06.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct triangle ABC with angle B = 35 degrees, BC = 5 cm, and angle C = 65 degrees, what is the measure of angle A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 degrees"
+        },
+        {
+          "id": "B",
+          "text": "80 degrees"
+        },
+        {
+          "id": "C",
+          "text": "100 degrees"
+        },
+        {
+          "id": "D",
+          "text": "70 degrees"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Angle A = 180 - 35 - 65 = 80 degrees. The angle sum property gives us the third angle.",
+      "explanation_incorrect": "180 - 35 - 65 = 80 degrees."
+    },
+    {
+      "question_id": "T04.06.Q036",
+      "concept_id": "T04.06.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct a right triangle with hypotenuse 10 cm and one leg 6 cm using RHS, the other leg measures:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 cm"
+        },
+        {
+          "id": "B",
+          "text": "8 cm"
+        },
+        {
+          "id": "C",
+          "text": "7 cm"
+        },
+        {
+          "id": "D",
+          "text": "9 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Other leg = sqrt(10^2 - 6^2) = sqrt(100 - 36) = sqrt(64) = 8 cm.",
+      "explanation_incorrect": "sqrt(100 - 36) = sqrt(64) = 8 cm."
+    },
+    {
+      "question_id": "T04.06.Q037",
+      "concept_id": "T04.06.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In RHS construction, after drawing leg AB and the right angle at B, an arc of radius equal to the hypotenuse is drawn from:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Point B"
+        },
+        {
+          "id": "B",
+          "text": "Point A"
+        },
+        {
+          "id": "C",
+          "text": "The midpoint of AB"
+        },
+        {
+          "id": "D",
+          "text": "Any point on the perpendicular"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The arc is drawn from A (the other endpoint of the leg) with radius equal to the hypotenuse. This arc intersects the perpendicular at B to give the third vertex C.",
+      "explanation_incorrect": "Arc of hypotenuse length is drawn from the endpoint that is not at the right angle."
+    },
+    {
+      "question_id": "T04.06.Q038",
+      "concept_id": "T04.06.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A right triangle can be constructed using RHS if the hypotenuse is 7 cm and one leg is 9 cm.",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The hypotenuse must be the longest side of a right triangle. Since 7 < 9, the hypotenuse (7 cm) is shorter than the leg (9 cm), which is impossible. Construction cannot be done.",
+      "explanation_incorrect": "Hypotenuse must be longer than any leg. 7 < 9 is not valid."
+    },
+    {
+      "question_id": "T04.06.Q039",
+      "concept_id": "T04.06.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of the following sets of measurements allows construction of a unique triangle using SSS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 cm, 6 cm, 11 cm"
+        },
+        {
+          "id": "B",
+          "text": "3 cm, 4 cm, 5 cm"
+        },
+        {
+          "id": "C",
+          "text": "1 cm, 2 cm, 5 cm"
+        },
+        {
+          "id": "D",
+          "text": "2 cm, 3 cm, 6 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For (B): 3 + 4 = 7 > 5, 3 + 5 = 8 > 4, 4 + 5 = 9 > 3. All conditions satisfied. Others: (A) 4+6=10 < 11, (C) 1+2=3 < 5, (D) 2+3=5 < 6.",
+      "explanation_incorrect": "Only 3, 4, 5 satisfies the triangle inequality."
+    },
+    {
+      "question_id": "T04.06.Q040",
+      "concept_id": "T04.06.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A student wants to construct a triangle with two sides 5 cm and 7 cm. If the included angle is 0 degrees, what happens?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The triangle is very thin"
+        },
+        {
+          "id": "B",
+          "text": "The two sides overlap and no triangle is formed"
+        },
+        {
+          "id": "C",
+          "text": "An equilateral triangle is formed"
+        },
+        {
+          "id": "D",
+          "text": "A right triangle is formed"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If the included angle is 0 degrees, the two sides would lie along the same line and overlap. No triangle can be formed with a 0-degree angle.",
+      "explanation_incorrect": "A 0-degree included angle means the sides overlap; no triangle is possible."
+    },
+    {
+      "question_id": "T04.06.Q041",
+      "concept_id": "T04.06.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "In ASA construction, if both given angles are 60 degrees and the included side is 5 cm, what kind of triangle is constructed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scalene"
+        },
+        {
+          "id": "B",
+          "text": "Isosceles"
+        },
+        {
+          "id": "C",
+          "text": "Equilateral"
+        },
+        {
+          "id": "D",
+          "text": "Right-angled"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Both base angles are 60 degrees, so the third angle = 180 - 60 - 60 = 60 degrees. All angles are 60 degrees, making it equilateral. The included side of 5 cm means all sides are 5 cm.",
+      "explanation_incorrect": "All three angles = 60 degrees means equilateral triangle with all sides 5 cm."
+    },
+    {
+      "question_id": "T04.06.Q042",
+      "concept_id": "T04.06.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Arrange the RHS construction steps for a right triangle with hypotenuse 5 cm and one leg 3 cm in correct order:\n(i) Construct 90 degrees at B\n(ii) Draw AB = 3 cm\n(iii) From A, draw arc of radius 5 cm to cut the perpendicular at C\n(iv) Join AC",
+      "options": [
+        {
+          "id": "A",
+          "text": "(ii), (i), (iii), (iv)"
+        },
+        {
+          "id": "B",
+          "text": "(i), (ii), (iii), (iv)"
+        },
+        {
+          "id": "C",
+          "text": "(ii), (iii), (i), (iv)"
+        },
+        {
+          "id": "D",
+          "text": "(iii), (ii), (iv), (i)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Correct order: (ii) Draw leg AB = 3 cm, (i) Construct 90 degrees at B, (iii) From A, arc of radius 5 cm cuts perpendicular at C, (iv) Join AC to complete the triangle.",
+      "explanation_incorrect": "Draw leg, construct right angle, draw hypotenuse arc, join."
+    },
+    {
+      "question_id": "T04.06.Q043",
+      "concept_id": "T04.06.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many distinct triangles can be drawn with sides 4 cm, 5 cm, and 6 cm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "Infinitely many"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When all three sides are specified (SSS), exactly one unique triangle (up to congruence) can be constructed. The shape and size are completely determined.",
+      "explanation_incorrect": "SSS uniquely determines a triangle (only one possible shape)."
+    },
+    {
+      "question_id": "T04.06.Q044",
+      "concept_id": "T04.06.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To construct an isosceles right triangle with equal legs of 4 cm each, you would use:",
+      "options": [
+        {
+          "id": "A",
+          "text": "SAS: two sides of 4 cm with included angle 90 degrees"
+        },
+        {
+          "id": "B",
+          "text": "ASA: two angles of 45 degrees"
+        },
+        {
+          "id": "C",
+          "text": "SSS: all three sides equal"
+        },
+        {
+          "id": "D",
+          "text": "RHS: hypotenuse = 4 cm and one side = 4 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "An isosceles right triangle has two equal legs and a 90-degree angle between them. SAS with sides 4 cm, 4 cm, and included angle 90 degrees is the most direct method.",
+      "explanation_incorrect": "SAS: 4 cm, 90 degrees, 4 cm gives an isosceles right triangle."
+    },
+    {
+      "question_id": "T04.06.Q045",
+      "concept_id": "T04.06.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Can a triangle be constructed with angle A = 90 degrees, AB = 6 cm, and angle B = 90 degrees using ASA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes, it is a rectangle"
+        },
+        {
+          "id": "B",
+          "text": "No, because 90 + 90 = 180 leaves no room for angle C"
+        },
+        {
+          "id": "C",
+          "text": "Yes, it is a right triangle"
+        },
+        {
+          "id": "D",
+          "text": "No, because AB is too long"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "If angle A = 90 degrees and angle B = 90 degrees, their sum is 180 degrees, leaving 0 degrees for angle C. A triangle must have all angles positive, so this is impossible.",
+      "explanation_incorrect": "90 + 90 = 180; angle C would be 0 degrees, which is impossible."
+    },
+    {
+      "question_id": "T04.06.Q046",
+      "concept_id": "T04.06.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A student draws a segment of 8 cm. From one endpoint, he draws an arc of 5 cm and from the other an arc of 4 cm. The arcs do not intersect. What can we conclude?",
+      "options": [
+        {
+          "id": "A",
+          "text": "He made a measurement error"
+        },
+        {
+          "id": "B",
+          "text": "5 + 4 < 8, so the triangle cannot be formed"
+        },
+        {
+          "id": "C",
+          "text": "The arcs will intersect if extended"
+        },
+        {
+          "id": "D",
+          "text": "He should use a larger compass"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "5 + 4 = 9 > 8, so actually the arcs should intersect. However, if we check: the arcs are drawn with radii 5 and 4 from endpoints of a segment of length 8. Since 5 + 4 = 9 > 8, the arcs do intersect. If they truly do not intersect, the student made a measurement error.",
+      "explanation_incorrect": "Check: 5 + 4 = 9 > 8, so arcs should intersect. If they don't, there is a drawing error."
+    },
+    {
+      "question_id": "T04.06.Q047",
+      "concept_id": "T04.06.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Construct triangle MNO with MN = 5 cm, angle M = 90 degrees, and MO = 12 cm. The length of NO is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 cm"
+        },
+        {
+          "id": "B",
+          "text": "13 cm"
+        },
+        {
+          "id": "C",
+          "text": "17 cm"
+        },
+        {
+          "id": "D",
+          "text": "10 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since angle M = 90 degrees, NO is the hypotenuse. NO = sqrt(MN^2 + MO^2) = sqrt(25 + 144) = sqrt(169) = 13 cm.",
+      "explanation_incorrect": "sqrt(5^2 + 12^2) = sqrt(169) = 13 cm."
+    },
+    {
+      "question_id": "T04.06.Q048",
+      "concept_id": "T04.06.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If two angles and a non-included side are given, which method is most appropriate for construction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SSS"
+        },
+        {
+          "id": "B",
+          "text": "SAS"
+        },
+        {
+          "id": "C",
+          "text": "ASA (after finding the third angle)"
+        },
+        {
+          "id": "D",
+          "text": "RHS"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "With two angles given, the third angle can be calculated (180 - sum of given angles). Then we can identify the included side and use ASA construction. This is essentially the AAS case converted to ASA.",
+      "explanation_incorrect": "Find the third angle first, then use ASA with the side that is now included between two known angles."
+    },
+    {
+      "question_id": "T04.06.Q049",
+      "concept_id": "T04.06.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of these is NOT a valid combination for constructing a unique triangle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SSS: 3 cm, 4 cm, 5 cm"
+        },
+        {
+          "id": "B",
+          "text": "SAS: 5 cm, 60 degrees, 7 cm"
+        },
+        {
+          "id": "C",
+          "text": "AAA: 60 degrees, 70 degrees, 50 degrees"
+        },
+        {
+          "id": "D",
+          "text": "RHS: hypotenuse 10 cm, leg 6 cm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "AAA (three angles only) does not determine a unique triangle. It determines the shape but not the size — infinitely many similar triangles can have the same three angles but different side lengths.",
+      "explanation_incorrect": "AAA gives similar triangles, not a unique (congruent) triangle."
+    },
+    {
+      "question_id": "T04.06.Q050",
+      "concept_id": "T04.06.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A right triangle has hypotenuse 15 cm and one leg 9 cm. Using RHS, the other leg is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "12 cm"
+        },
+        {
+          "id": "D",
+          "text": "8 cm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Other leg = sqrt(15^2 - 9^2) = sqrt(225 - 81) = sqrt(144) = 12 cm.",
+      "explanation_incorrect": "sqrt(225 - 81) = sqrt(144) = 12 cm."
+    }
   ]
 }

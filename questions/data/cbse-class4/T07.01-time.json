@@ -1,62 +1,1459 @@
 {
   "version": "1.0.0",
-  "cam_reference": { "cam_version": "1.0.0", "board": "CBSE", "class": 4, "subject": "Mathematics" },
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 4,
+    "subject": "Mathematics"
+  },
   "topic_id": "T07.01",
   "topic_name": "Time",
   "canonical_explanation": {
     "text": "Time is measured in hours, minutes, and seconds. We use 12-hour format (with a.m. and p.m.) and 24-hour format. 1 hour = 60 minutes, 1 minute = 60 seconds. We can calculate elapsed time and read calendars to find days, weeks, and months.",
-    "rules": ["1 hour = 60 minutes", "1 minute = 60 seconds", "12-hour format uses a.m. (midnight to noon) and p.m. (noon to midnight)", "In 24-hour format, add 12 to p.m. hours (except 12 p.m. stays 12:00) and 12 a.m. = 00:00", "Elapsed time = End time - Start time", "Days in months: Jan-31, Feb-28/29, Mar-31, Apr-30, May-31, Jun-30, Jul-31, Aug-31, Sep-30, Oct-31, Nov-30, Dec-31", "Leap year: February has 29 days (every 4 years)"]
+    "rules": [
+      "1 hour = 60 minutes",
+      "1 minute = 60 seconds",
+      "12-hour format uses a.m. (midnight to noon) and p.m. (noon to midnight)",
+      "In 24-hour format, add 12 to p.m. hours (except 12 p.m. stays 12:00) and 12 a.m. = 00:00",
+      "Elapsed time = End time - Start time",
+      "Days in months: Jan-31, Feb-28/29, Mar-31, Apr-30, May-31, Jun-30, Jul-31, Aug-31, Sep-30, Oct-31, Nov-30, Dec-31",
+      "Leap year: February has 29 days (every 4 years)"
+    ]
   },
   "questions": [
-    { "question_id": "T07.01.Q001", "concept_id": "T07.01.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "How many minutes are in 1 hour?", "options": [{"id":"A","text":"30"},{"id":"B","text":"60"},{"id":"C","text":"100"},{"id":"D","text":"45"}], "correct_answer": "B", "explanation_correct": "1 hour = 60 minutes.", "explanation_incorrect": "1 hour = 60 minutes. Option B." },
-    { "question_id": "T07.01.Q002", "concept_id": "T07.01.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "What time does 'a.m.' refer to?", "options": [{"id":"A","text":"Midnight to noon"},{"id":"B","text":"Noon to midnight"},{"id":"C","text":"Morning only"},{"id":"D","text":"Evening only"}], "correct_answer": "A", "explanation_correct": "a.m. stands for 'ante meridiem' and refers to the time from midnight (12:00) to noon (12:00).", "explanation_incorrect": "a.m. refers to midnight to noon. Option A." },
-    { "question_id": "T07.01.Q003", "concept_id": "T07.01.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "How many seconds are in 1 minute?", "options": [{"id":"A","text":"100"},{"id":"B","text":"30"},{"id":"C","text":"60"},{"id":"D","text":"45"}], "correct_answer": "C", "explanation_correct": "1 minute = 60 seconds.", "explanation_incorrect": "1 minute = 60 seconds. Option C." },
-    { "question_id": "T07.01.Q004", "concept_id": "T07.01.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "What is 3:00 p.m. in 24-hour format?", "options": [{"id":"A","text":"03:00"},{"id":"B","text":"15:00"},{"id":"C","text":"12:00"},{"id":"D","text":"13:00"}], "correct_answer": "B", "explanation_correct": "3 p.m. = 3 + 12 = 15:00 in 24-hour format.", "explanation_incorrect": "To convert p.m. to 24-hour format, add 12. 3 + 12 = 15:00. Option B." },
-    { "question_id": "T07.01.Q005", "concept_id": "T07.01.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "What is 18:00 in 12-hour format?", "options": [{"id":"A","text":"6:00 a.m."},{"id":"B","text":"6:00 p.m."},{"id":"C","text":"8:00 p.m."},{"id":"D","text":"8:00 a.m."}], "correct_answer": "B", "explanation_correct": "18:00 = 18 - 12 = 6:00 p.m.", "explanation_incorrect": "18 - 12 = 6. Since it's after noon, it's 6:00 p.m. Option B." },
-    { "question_id": "T07.01.Q006", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "A movie starts at 4:30 p.m. and ends at 6:15 p.m. How long is the movie?", "options": [{"id":"A","text":"1 hour 45 minutes"},{"id":"B","text":"2 hours 15 minutes"},{"id":"C","text":"1 hour 30 minutes"},{"id":"D","text":"2 hours 45 minutes"}], "correct_answer": "A", "explanation_correct": "From 4:30 to 6:15: 4:30 to 6:00 = 1 hour 30 minutes. 6:00 to 6:15 = 15 minutes. Total: 1 hour 45 minutes.", "explanation_incorrect": "4:30 to 6:15 = 1 hour 45 minutes. Option A." },
-    { "question_id": "T07.01.Q007", "concept_id": "T07.01.C04", "difficulty": "familiarity", "type": "mcq", "question_text": "How many days are in the month of February in a non-leap year?", "options": [{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}], "correct_answer": "A", "explanation_correct": "February has 28 days in a non-leap year.", "explanation_incorrect": "In a non-leap year, February has 28 days. Option A." },
-    { "question_id": "T07.01.Q008", "concept_id": "T07.01.C04", "difficulty": "familiarity", "type": "mcq", "question_text": "How many months are in a year?", "options": [{"id":"A","text":"10"},{"id":"B","text":"11"},{"id":"C","text":"12"},{"id":"D","text":"13"}], "correct_answer": "C", "explanation_correct": "There are 12 months in a year.", "explanation_incorrect": "A year has 12 months. Option C." },
-    { "question_id": "T07.01.Q009", "concept_id": "T07.01.C02", "difficulty": "application", "type": "mcq", "question_text": "What is 11:45 a.m. in 24-hour format?", "options": [{"id":"A","text":"11:45"},{"id":"B","text":"23:45"},{"id":"C","text":"00:45"},{"id":"D","text":"12:45"}], "correct_answer": "A", "explanation_correct": "11:45 a.m. is before noon, so in 24-hour format it stays 11:45.", "explanation_incorrect": "a.m. times before noon stay the same in 24-hour format. 11:45 a.m. = 11:45. Option A." },
-    { "question_id": "T07.01.Q010", "concept_id": "T07.01.C02", "difficulty": "application", "type": "mcq", "question_text": "What is 12:00 midnight in 24-hour format?", "options": [{"id":"A","text":"00:00"},{"id":"B","text":"12:00"},{"id":"C","text":"24:00"},{"id":"D","text":"01:00"}], "correct_answer": "A", "explanation_correct": "12:00 midnight = 00:00 in 24-hour format.", "explanation_incorrect": "Midnight is written as 00:00 in 24-hour format. Option A." },
-    { "question_id": "T07.01.Q011", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "School starts at 8:00 a.m. and ends at 2:30 p.m. How long is the school day?", "options": [{"id":"A","text":"6 hours 30 minutes"},{"id":"B","text":"5 hours 30 minutes"},{"id":"C","text":"7 hours 30 minutes"},{"id":"D","text":"6 hours"}], "correct_answer": "A", "explanation_correct": "From 8:00 a.m. to 2:30 p.m.: 8:00 to 12:00 = 4 hours. 12:00 to 2:30 = 2 hours 30 minutes. Total: 6 hours 30 minutes.", "explanation_incorrect": "8:00 a.m. to 2:30 p.m. = 6 hours 30 minutes. Option A." },
-    { "question_id": "T07.01.Q012", "concept_id": "T07.01.C04", "difficulty": "application", "type": "mcq", "question_text": "How many days are in the month of April?", "options": [{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}], "correct_answer": "C", "explanation_correct": "April has 30 days.", "explanation_incorrect": "April has 30 days. Option C." },
-    { "question_id": "T07.01.Q013", "concept_id": "T07.01.C01", "difficulty": "application", "type": "mcq", "question_text": "How many minutes are in 2 hours 30 minutes?", "options": [{"id":"A","text":"150"},{"id":"B","text":"130"},{"id":"C","text":"120"},{"id":"D","text":"160"}], "correct_answer": "A", "explanation_correct": "2 hours = 2 x 60 = 120 minutes. 120 + 30 = 150 minutes.", "explanation_incorrect": "2 x 60 + 30 = 150 minutes. Option A." },
-    { "question_id": "T07.01.Q014", "concept_id": "T07.01.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "What is 9:15 p.m. in 24-hour format?", "options": [{"id":"A","text":"09:15"},{"id":"B","text":"21:15"},{"id":"C","text":"19:15"},{"id":"D","text":"22:15"}], "correct_answer": "B", "explanation_correct": "9 p.m. = 9 + 12 = 21. So 9:15 p.m. = 21:15.", "explanation_incorrect": "9 + 12 = 21. So 9:15 p.m. = 21:15. Option B." },
-    { "question_id": "T07.01.Q015", "concept_id": "T07.01.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "Aarav left home at 9:15 a.m. and reached school at 9:50 a.m. How long did the journey take?", "options": [{"id":"A","text":"35 minutes"},{"id":"B","text":"45 minutes"},{"id":"C","text":"25 minutes"},{"id":"D","text":"40 minutes"}], "correct_answer": "A", "explanation_correct": "9:50 - 9:15 = 35 minutes.", "explanation_incorrect": "50 - 15 = 35 minutes. Option A." },
-    { "question_id": "T07.01.Q016", "concept_id": "T07.01.C04", "difficulty": "application", "type": "mcq", "question_text": "How many days are in a leap year?", "options": [{"id":"A","text":"364"},{"id":"B","text":"365"},{"id":"C","text":"366"},{"id":"D","text":"367"}], "correct_answer": "C", "explanation_correct": "A leap year has 366 days (February has 29 days instead of 28).", "explanation_incorrect": "A leap year has 366 days. Option C." },
-    { "question_id": "T07.01.Q017", "concept_id": "T07.01.C01", "difficulty": "familiarity", "type": "true_false", "question_text": "There are 24 hours in a day. True or false?", "options": [{"id":"A","text":"True"},{"id":"B","text":"False"}], "correct_answer": "A", "explanation_correct": "True. A day has 24 hours.", "explanation_incorrect": "A full day has 24 hours. True." },
-    { "question_id": "T07.01.Q018", "concept_id": "T07.01.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "Convert 16:30 to 12-hour format.", "options": [{"id":"A","text":"4:30 a.m."},{"id":"B","text":"4:30 p.m."},{"id":"C","text":"6:30 p.m."},{"id":"D","text":"6:30 a.m."}], "correct_answer": "B", "explanation_correct": "16 - 12 = 4. Since 16:00 is after noon, it's 4:30 p.m.", "explanation_incorrect": "16 - 12 = 4. It's afternoon, so 4:30 p.m. Option B." },
-    { "question_id": "T07.01.Q019", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "A train departs at 10:45 a.m. and arrives at 1:15 p.m. How long is the journey?", "options": [{"id":"A","text":"2 hours 30 minutes"},{"id":"B","text":"3 hours 30 minutes"},{"id":"C","text":"2 hours 15 minutes"},{"id":"D","text":"3 hours 15 minutes"}], "correct_answer": "A", "explanation_correct": "10:45 to 12:45 = 2 hours. 12:45 to 1:15 = 30 minutes. Total: 2 hours 30 minutes.", "explanation_incorrect": "10:45 a.m. to 1:15 p.m. = 2 hours 30 minutes. Option A." },
-    { "question_id": "T07.01.Q020", "concept_id": "T07.01.C04", "difficulty": "exam_style", "type": "mcq", "question_text": "How many weeks are in a year?", "options": [{"id":"A","text":"48"},{"id":"B","text":"50"},{"id":"C","text":"52"},{"id":"D","text":"54"}], "correct_answer": "C", "explanation_correct": "A year has 52 weeks (365 / 7 = 52 weeks and 1 day).", "explanation_incorrect": "365 / 7 = 52 weeks (and 1 extra day). Option C." },
-    { "question_id": "T07.01.Q021", "concept_id": "T07.01.C01", "difficulty": "application", "type": "mcq", "question_text": "How many hours are in 2 days?", "options": [{"id":"A","text":"36"},{"id":"B","text":"48"},{"id":"C","text":"24"},{"id":"D","text":"72"}], "correct_answer": "B", "explanation_correct": "1 day = 24 hours. 2 days = 2 x 24 = 48 hours.", "explanation_incorrect": "2 x 24 = 48 hours. Option B." },
-    { "question_id": "T07.01.Q022", "concept_id": "T07.01.C02", "difficulty": "application", "type": "mcq", "question_text": "What is 12:00 noon in 24-hour format?", "options": [{"id":"A","text":"00:00"},{"id":"B","text":"12:00"},{"id":"C","text":"24:00"},{"id":"D","text":"13:00"}], "correct_answer": "B", "explanation_correct": "12:00 noon = 12:00 in 24-hour format.", "explanation_incorrect": "Noon is 12:00 in 24-hour format. Option B." },
-    { "question_id": "T07.01.Q023", "concept_id": "T07.01.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "A cricket match starts at 2:00 p.m. and lasts 3 hours 45 minutes. At what time does it end?", "options": [{"id":"A","text":"5:45 p.m."},{"id":"B","text":"6:45 p.m."},{"id":"C","text":"5:15 p.m."},{"id":"D","text":"6:15 p.m."}], "correct_answer": "A", "explanation_correct": "2:00 + 3 hours = 5:00. 5:00 + 45 minutes = 5:45 p.m.", "explanation_incorrect": "2:00 p.m. + 3 hours 45 minutes = 5:45 p.m. Option A." },
-    { "question_id": "T07.01.Q024", "concept_id": "T07.01.C04", "difficulty": "familiarity", "type": "mcq", "question_text": "How many days are in the month of January?", "options": [{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}], "correct_answer": "D", "explanation_correct": "January has 31 days.", "explanation_incorrect": "January has 31 days. Option D." },
-    { "question_id": "T07.01.Q025", "concept_id": "T07.01.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "Convert 180 minutes to hours.", "options": [{"id":"A","text":"2 hours"},{"id":"B","text":"3 hours"},{"id":"C","text":"2 hours 30 minutes"},{"id":"D","text":"3 hours 30 minutes"}], "correct_answer": "B", "explanation_correct": "180 / 60 = 3 hours.", "explanation_incorrect": "180 / 60 = 3 hours. Option B." },
-    { "question_id": "T07.01.Q026", "concept_id": "T07.01.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "What is 7:30 p.m. in 24-hour format?", "options": [{"id":"A","text":"07:30"},{"id":"B","text":"17:30"},{"id":"C","text":"19:30"},{"id":"D","text":"20:30"}], "correct_answer": "C", "explanation_correct": "7 p.m. = 7 + 12 = 19. So 7:30 p.m. = 19:30.", "explanation_incorrect": "7 + 12 = 19. 7:30 p.m. = 19:30. Option C." },
-    { "question_id": "T07.01.Q027", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "Priya starts her homework at 5:15 p.m. and finishes at 6:45 p.m. How long did she study?", "options": [{"id":"A","text":"1 hour 30 minutes"},{"id":"B","text":"1 hour 15 minutes"},{"id":"C","text":"1 hour 45 minutes"},{"id":"D","text":"2 hours"}], "correct_answer": "A", "explanation_correct": "5:15 to 6:15 = 1 hour. 6:15 to 6:45 = 30 minutes. Total: 1 hour 30 minutes.", "explanation_incorrect": "5:15 p.m. to 6:45 p.m. = 1 hour 30 minutes. Option A." },
-    { "question_id": "T07.01.Q028", "concept_id": "T07.01.C04", "difficulty": "application", "type": "mcq", "question_text": "Which of these is a leap year?", "options": [{"id":"A","text":"2025"},{"id":"B","text":"2024"},{"id":"C","text":"2023"},{"id":"D","text":"2022"}], "correct_answer": "B", "explanation_correct": "2024 is divisible by 4, so it is a leap year.", "explanation_incorrect": "A leap year is divisible by 4. 2024 / 4 = 506. So 2024 is a leap year. Option B." },
-    { "question_id": "T07.01.Q029", "concept_id": "T07.01.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "How many minutes are in half an hour?", "options": [{"id":"A","text":"15"},{"id":"B","text":"20"},{"id":"C","text":"30"},{"id":"D","text":"45"}], "correct_answer": "C", "explanation_correct": "Half of 60 minutes = 30 minutes.", "explanation_incorrect": "Half an hour = 60 / 2 = 30 minutes. Option C." },
-    { "question_id": "T07.01.Q030", "concept_id": "T07.01.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "What is 1:00 a.m. in 24-hour format?", "options": [{"id":"A","text":"01:00"},{"id":"B","text":"13:00"},{"id":"C","text":"00:00"},{"id":"D","text":"11:00"}], "correct_answer": "A", "explanation_correct": "1:00 a.m. = 01:00 in 24-hour format.", "explanation_incorrect": "a.m. times stay the same (with leading zero if needed). 1:00 a.m. = 01:00. Option A." },
-    { "question_id": "T07.01.Q031", "concept_id": "T07.01.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "A bus leaves at 7:20 a.m. and reaches its destination at 10:05 a.m. How long is the journey?", "options": [{"id":"A","text":"2 hours 45 minutes"},{"id":"B","text":"3 hours 45 minutes"},{"id":"C","text":"2 hours 25 minutes"},{"id":"D","text":"3 hours 25 minutes"}], "correct_answer": "A", "explanation_correct": "7:20 to 10:00 = 2 hours 40 minutes. 10:00 to 10:05 = 5 minutes. Total: 2 hours 45 minutes.", "explanation_incorrect": "7:20 a.m. to 10:05 a.m. = 2 hours 45 minutes. Option A." },
-    { "question_id": "T07.01.Q032", "concept_id": "T07.01.C04", "difficulty": "exam_style", "type": "mcq", "question_text": "How many days are there from March 15 to April 10 (including both days)?", "options": [{"id":"A","text":"27"},{"id":"B","text":"25"},{"id":"C","text":"26"},{"id":"D","text":"28"}], "correct_answer": "A", "explanation_correct": "March has 31 days. March 15 to March 31 = 17 days (including Mar 15). April 1 to April 10 = 10 days. Total: 17 + 10 = 27 days.", "explanation_incorrect": "Remaining days in March (from 15th): 17. Days in April up to 10th: 10. Total: 27. Option A." },
-    { "question_id": "T07.01.Q033", "concept_id": "T07.01.C01", "difficulty": "application", "type": "fill_blank", "question_text": "3 hours = ___ minutes", "options": [{"id":"A","text":"180"},{"id":"B","text":"120"},{"id":"C","text":"150"},{"id":"D","text":"200"}], "correct_answer": "A", "explanation_correct": "3 x 60 = 180 minutes.", "explanation_incorrect": "3 x 60 = 180 minutes. Option A." },
-    { "question_id": "T07.01.Q034", "concept_id": "T07.01.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "Convert 20:45 to 12-hour format.", "options": [{"id":"A","text":"8:45 a.m."},{"id":"B","text":"8:45 p.m."},{"id":"C","text":"10:45 p.m."},{"id":"D","text":"10:45 a.m."}], "correct_answer": "B", "explanation_correct": "20 - 12 = 8. Since 20:00 is after noon, it's 8:45 p.m.", "explanation_incorrect": "20 - 12 = 8. It's evening, so 8:45 p.m. Option B." },
-    { "question_id": "T07.01.Q035", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "A concert starts at 6:30 p.m. and lasts for 2 hours 15 minutes. When does it end?", "options": [{"id":"A","text":"8:45 p.m."},{"id":"B","text":"9:15 p.m."},{"id":"C","text":"8:15 p.m."},{"id":"D","text":"9:45 p.m."}], "correct_answer": "A", "explanation_correct": "6:30 + 2 hours = 8:30. 8:30 + 15 minutes = 8:45 p.m.", "explanation_incorrect": "6:30 p.m. + 2 hours 15 minutes = 8:45 p.m. Option A." },
-    { "question_id": "T07.01.Q036", "concept_id": "T07.01.C04", "difficulty": "familiarity", "type": "mcq", "question_text": "How many days are in the month of June?", "options": [{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}], "correct_answer": "C", "explanation_correct": "June has 30 days.", "explanation_incorrect": "June has 30 days. Option C." },
-    { "question_id": "T07.01.Q037", "concept_id": "T07.01.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "How many seconds are in 5 minutes?", "options": [{"id":"A","text":"300"},{"id":"B","text":"250"},{"id":"C","text":"500"},{"id":"D","text":"350"}], "correct_answer": "A", "explanation_correct": "5 x 60 = 300 seconds.", "explanation_incorrect": "5 x 60 = 300 seconds. Option A." },
-    { "question_id": "T07.01.Q038", "concept_id": "T07.01.C02", "difficulty": "application", "type": "mcq", "question_text": "What is 5:00 p.m. in 24-hour format?", "options": [{"id":"A","text":"05:00"},{"id":"B","text":"15:00"},{"id":"C","text":"17:00"},{"id":"D","text":"19:00"}], "correct_answer": "C", "explanation_correct": "5 p.m. = 5 + 12 = 17:00.", "explanation_incorrect": "5 + 12 = 17. So 5:00 p.m. = 17:00. Option C." },
-    { "question_id": "T07.01.Q039", "concept_id": "T07.01.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "Ravi starts playing at 4:40 p.m. and plays for 1 hour 35 minutes. When does he stop?", "options": [{"id":"A","text":"6:15 p.m."},{"id":"B","text":"5:15 p.m."},{"id":"C","text":"6:35 p.m."},{"id":"D","text":"5:35 p.m."}], "correct_answer": "A", "explanation_correct": "4:40 + 1 hour = 5:40. 5:40 + 35 minutes = 6:15 p.m.", "explanation_incorrect": "4:40 p.m. + 1 hour 35 minutes = 6:15 p.m. Option A." },
-    { "question_id": "T07.01.Q040", "concept_id": "T07.01.C04", "difficulty": "exam_style", "type": "mcq", "question_text": "How many days are in February in the year 2024?", "options": [{"id":"A","text":"28"},{"id":"B","text":"29"},{"id":"C","text":"30"},{"id":"D","text":"31"}], "correct_answer": "B", "explanation_correct": "2024 is a leap year (divisible by 4). So February has 29 days.", "explanation_incorrect": "2024 is a leap year. February has 29 days. Option B." },
-    { "question_id": "T07.01.Q041", "concept_id": "T07.01.C01", "difficulty": "familiarity", "type": "true_false", "question_text": "A quarter of an hour is 15 minutes. True or false?", "options": [{"id":"A","text":"True"},{"id":"B","text":"False"}], "correct_answer": "A", "explanation_correct": "True. 1 hour = 60 minutes. 60 / 4 = 15 minutes.", "explanation_incorrect": "60 / 4 = 15 minutes. True." },
-    { "question_id": "T07.01.Q042", "concept_id": "T07.01.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "Convert 14:20 to 12-hour format.", "options": [{"id":"A","text":"2:20 a.m."},{"id":"B","text":"2:20 p.m."},{"id":"C","text":"4:20 p.m."},{"id":"D","text":"4:20 a.m."}], "correct_answer": "B", "explanation_correct": "14 - 12 = 2. Since it's after noon, 14:20 = 2:20 p.m.", "explanation_incorrect": "14 - 12 = 2. It's afternoon. 14:20 = 2:20 p.m. Option B." },
-    { "question_id": "T07.01.Q043", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "Mum put a cake in the oven at 11:30 a.m. It needs to bake for 45 minutes. When should she take it out?", "options": [{"id":"A","text":"12:15 p.m."},{"id":"B","text":"12:30 p.m."},{"id":"C","text":"12:00 noon"},{"id":"D","text":"11:45 a.m."}], "correct_answer": "A", "explanation_correct": "11:30 + 30 minutes = 12:00. 12:00 + 15 minutes = 12:15 p.m.", "explanation_incorrect": "11:30 a.m. + 45 minutes = 12:15 p.m. Option A." },
-    { "question_id": "T07.01.Q044", "concept_id": "T07.01.C04", "difficulty": "application", "type": "mcq", "question_text": "How many days are in a week?", "options": [{"id":"A","text":"5"},{"id":"B","text":"6"},{"id":"C","text":"7"},{"id":"D","text":"8"}], "correct_answer": "C", "explanation_correct": "A week has 7 days.", "explanation_incorrect": "There are 7 days in a week. Option C." },
-    { "question_id": "T07.01.Q045", "concept_id": "T07.01.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "Convert 2 hours 15 minutes to minutes.", "options": [{"id":"A","text":"135"},{"id":"B","text":"125"},{"id":"C","text":"145"},{"id":"D","text":"215"}], "correct_answer": "A", "explanation_correct": "2 hours = 120 minutes. 120 + 15 = 135 minutes.", "explanation_incorrect": "2 x 60 + 15 = 135 minutes. Option A." },
-    { "question_id": "T07.01.Q046", "concept_id": "T07.01.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "A flight departs at 11:50 p.m. and the flight duration is 2 hours 30 minutes. When does it land?", "options": [{"id":"A","text":"2:20 a.m."},{"id":"B","text":"1:20 a.m."},{"id":"C","text":"2:50 a.m."},{"id":"D","text":"1:50 a.m."}], "correct_answer": "A", "explanation_correct": "11:50 p.m. + 2 hours = 1:50 a.m. + 30 minutes = 2:20 a.m.", "explanation_incorrect": "11:50 p.m. + 2 hours 30 minutes = 2:20 a.m. (next day). Option A." },
-    { "question_id": "T07.01.Q047", "concept_id": "T07.01.C04", "difficulty": "exam_style", "type": "mcq", "question_text": "If today is Wednesday and you count 10 days from today, what day will it be?", "options": [{"id":"A","text":"Saturday"},{"id":"B","text":"Friday"},{"id":"C","text":"Sunday"},{"id":"D","text":"Monday"}], "correct_answer": "A", "explanation_correct": "10 days from Wednesday: 10 / 7 = 1 week and 3 days. Wednesday + 3 days = Saturday.", "explanation_incorrect": "10 = 7 + 3. One week later is Wednesday, plus 3 more days = Saturday. Option A." },
-    { "question_id": "T07.01.Q048", "concept_id": "T07.01.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "What is 6:00 a.m. in 24-hour format?", "options": [{"id":"A","text":"06:00"},{"id":"B","text":"18:00"},{"id":"C","text":"00:06"},{"id":"D","text":"16:00"}], "correct_answer": "A", "explanation_correct": "6:00 a.m. = 06:00 in 24-hour format.", "explanation_incorrect": "Morning a.m. times stay the same. 6:00 a.m. = 06:00. Option A." },
-    { "question_id": "T07.01.Q049", "concept_id": "T07.01.C03", "difficulty": "application", "type": "mcq", "question_text": "Sneha started reading at 7:10 p.m. and read for 50 minutes. When did she finish?", "options": [{"id":"A","text":"8:00 p.m."},{"id":"B","text":"7:50 p.m."},{"id":"C","text":"8:10 p.m."},{"id":"D","text":"7:40 p.m."}], "correct_answer": "A", "explanation_correct": "7:10 + 50 minutes = 8:00 p.m.", "explanation_incorrect": "7:10 p.m. + 50 minutes = 8:00 p.m. Option A." },
-    { "question_id": "T07.01.Q050", "concept_id": "T07.01.C04", "difficulty": "exam_style", "type": "mcq", "question_text": "How many days are there in a non-leap year?", "options": [{"id":"A","text":"364"},{"id":"B","text":"365"},{"id":"C","text":"366"},{"id":"D","text":"360"}], "correct_answer": "B", "explanation_correct": "A non-leap year has 365 days.", "explanation_incorrect": "A non-leap year has 365 days. Option B." }
+    {
+      "question_id": "T07.01.Q001",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many minutes are in 1 hour?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "100"
+        },
+        {
+          "id": "D",
+          "text": "45"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 hour = 60 minutes.",
+      "explanation_incorrect": "1 hour = 60 minutes. Option B."
+    },
+    {
+      "question_id": "T07.01.Q002",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What time does 'a.m.' refer to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Midnight to noon"
+        },
+        {
+          "id": "B",
+          "text": "Noon to midnight"
+        },
+        {
+          "id": "C",
+          "text": "Morning only"
+        },
+        {
+          "id": "D",
+          "text": "Evening only"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "a.m. stands for 'ante meridiem' and refers to the time from midnight (12:00) to noon (12:00).",
+      "explanation_incorrect": "a.m. refers to midnight to noon. Option A."
+    },
+    {
+      "question_id": "T07.01.Q003",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many seconds are in 1 minute?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100"
+        },
+        {
+          "id": "B",
+          "text": "30"
+        },
+        {
+          "id": "C",
+          "text": "60"
+        },
+        {
+          "id": "D",
+          "text": "45"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "1 minute = 60 seconds.",
+      "explanation_incorrect": "1 minute = 60 seconds. Option C."
+    },
+    {
+      "question_id": "T07.01.Q004",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 3:00 p.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "03:00"
+        },
+        {
+          "id": "B",
+          "text": "15:00"
+        },
+        {
+          "id": "C",
+          "text": "12:00"
+        },
+        {
+          "id": "D",
+          "text": "13:00"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "3 p.m. = 3 + 12 = 15:00 in 24-hour format.",
+      "explanation_incorrect": "To convert p.m. to 24-hour format, add 12. 3 + 12 = 15:00. Option B."
+    },
+    {
+      "question_id": "T07.01.Q005",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 18:00 in 12-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:00 a.m."
+        },
+        {
+          "id": "B",
+          "text": "6:00 p.m."
+        },
+        {
+          "id": "C",
+          "text": "8:00 p.m."
+        },
+        {
+          "id": "D",
+          "text": "8:00 a.m."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "18:00 = 18 - 12 = 6:00 p.m.",
+      "explanation_incorrect": "18 - 12 = 6. Since it's after noon, it's 6:00 p.m. Option B."
+    },
+    {
+      "question_id": "T07.01.Q006",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A movie starts at 4:30 p.m. and ends at 6:15 p.m. How long is the movie?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 hour 45 minutes"
+        },
+        {
+          "id": "B",
+          "text": "2 hours 15 minutes"
+        },
+        {
+          "id": "C",
+          "text": "1 hour 30 minutes"
+        },
+        {
+          "id": "D",
+          "text": "2 hours 45 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From 4:30 to 6:15: 4:30 to 6:00 = 1 hour 30 minutes. 6:00 to 6:15 = 15 minutes. Total: 1 hour 45 minutes.",
+      "explanation_incorrect": "4:30 to 6:15 = 1 hour 45 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q007",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in the month of February in a non-leap year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "February has 28 days in a non-leap year.",
+      "explanation_incorrect": "In a non-leap year, February has 28 days. Option A."
+    },
+    {
+      "question_id": "T07.01.Q008",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many months are in a year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "11"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "There are 12 months in a year.",
+      "explanation_incorrect": "A year has 12 months. Option C."
+    },
+    {
+      "question_id": "T07.01.Q009",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 11:45 a.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11:45"
+        },
+        {
+          "id": "B",
+          "text": "23:45"
+        },
+        {
+          "id": "C",
+          "text": "00:45"
+        },
+        {
+          "id": "D",
+          "text": "12:45"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "11:45 a.m. is before noon, so in 24-hour format it stays 11:45.",
+      "explanation_incorrect": "a.m. times before noon stay the same in 24-hour format. 11:45 a.m. = 11:45. Option A."
+    },
+    {
+      "question_id": "T07.01.Q010",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 12:00 midnight in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "00:00"
+        },
+        {
+          "id": "B",
+          "text": "12:00"
+        },
+        {
+          "id": "C",
+          "text": "24:00"
+        },
+        {
+          "id": "D",
+          "text": "01:00"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "12:00 midnight = 00:00 in 24-hour format.",
+      "explanation_incorrect": "Midnight is written as 00:00 in 24-hour format. Option A."
+    },
+    {
+      "question_id": "T07.01.Q011",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "School starts at 8:00 a.m. and ends at 2:30 p.m. How long is the school day?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 hours 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "5 hours 30 minutes"
+        },
+        {
+          "id": "C",
+          "text": "7 hours 30 minutes"
+        },
+        {
+          "id": "D",
+          "text": "6 hours"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From 8:00 a.m. to 2:30 p.m.: 8:00 to 12:00 = 4 hours. 12:00 to 2:30 = 2 hours 30 minutes. Total: 6 hours 30 minutes.",
+      "explanation_incorrect": "8:00 a.m. to 2:30 p.m. = 6 hours 30 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q012",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in the month of April?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "April has 30 days.",
+      "explanation_incorrect": "April has 30 days. Option C."
+    },
+    {
+      "question_id": "T07.01.Q013",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many minutes are in 2 hours 30 minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "150"
+        },
+        {
+          "id": "B",
+          "text": "130"
+        },
+        {
+          "id": "C",
+          "text": "120"
+        },
+        {
+          "id": "D",
+          "text": "160"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2 hours = 2 x 60 = 120 minutes. 120 + 30 = 150 minutes.",
+      "explanation_incorrect": "2 x 60 + 30 = 150 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q014",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 9:15 p.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "09:15"
+        },
+        {
+          "id": "B",
+          "text": "21:15"
+        },
+        {
+          "id": "C",
+          "text": "19:15"
+        },
+        {
+          "id": "D",
+          "text": "22:15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "9 p.m. = 9 + 12 = 21. So 9:15 p.m. = 21:15.",
+      "explanation_incorrect": "9 + 12 = 21. So 9:15 p.m. = 21:15. Option B."
+    },
+    {
+      "question_id": "T07.01.Q015",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Aarav left home at 9:15 a.m. and reached school at 9:50 a.m. How long did the journey take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "35 minutes"
+        },
+        {
+          "id": "B",
+          "text": "45 minutes"
+        },
+        {
+          "id": "C",
+          "text": "25 minutes"
+        },
+        {
+          "id": "D",
+          "text": "40 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "9:50 - 9:15 = 35 minutes.",
+      "explanation_incorrect": "50 - 15 = 35 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q016",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in a leap year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "364"
+        },
+        {
+          "id": "B",
+          "text": "365"
+        },
+        {
+          "id": "C",
+          "text": "366"
+        },
+        {
+          "id": "D",
+          "text": "367"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A leap year has 366 days (February has 29 days instead of 28).",
+      "explanation_incorrect": "A leap year has 366 days. Option C."
+    },
+    {
+      "question_id": "T07.01.Q017",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "There are 24 hours in a day. True or false?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. A day has 24 hours.",
+      "explanation_incorrect": "A full day has 24 hours. True."
+    },
+    {
+      "question_id": "T07.01.Q018",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Convert 16:30 to 12-hour format.",
+      "options": [
+        {
+          "id": "A",
+          "text": "4:30 a.m."
+        },
+        {
+          "id": "B",
+          "text": "4:30 p.m."
+        },
+        {
+          "id": "C",
+          "text": "6:30 p.m."
+        },
+        {
+          "id": "D",
+          "text": "6:30 a.m."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "16 - 12 = 4. Since 16:00 is after noon, it's 4:30 p.m.",
+      "explanation_incorrect": "16 - 12 = 4. It's afternoon, so 4:30 p.m. Option B."
+    },
+    {
+      "question_id": "T07.01.Q019",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A train departs at 10:45 a.m. and arrives at 1:15 p.m. How long is the journey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "3 hours 30 minutes"
+        },
+        {
+          "id": "C",
+          "text": "2 hours 15 minutes"
+        },
+        {
+          "id": "D",
+          "text": "3 hours 15 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10:45 to 12:45 = 2 hours. 12:45 to 1:15 = 30 minutes. Total: 2 hours 30 minutes.",
+      "explanation_incorrect": "10:45 a.m. to 1:15 p.m. = 2 hours 30 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q020",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many weeks are in a year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "48"
+        },
+        {
+          "id": "B",
+          "text": "50"
+        },
+        {
+          "id": "C",
+          "text": "52"
+        },
+        {
+          "id": "D",
+          "text": "54"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A year has 52 weeks (365 / 7 = 52 weeks and 1 day).",
+      "explanation_incorrect": "365 / 7 = 52 weeks (and 1 extra day). Option C."
+    },
+    {
+      "question_id": "T07.01.Q021",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many hours are in 2 days?",
+      "options": [
+        {
+          "id": "A",
+          "text": "36"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "72"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "1 day = 24 hours. 2 days = 2 x 24 = 48 hours.",
+      "explanation_incorrect": "2 x 24 = 48 hours. Option B."
+    },
+    {
+      "question_id": "T07.01.Q022",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 12:00 noon in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "00:00"
+        },
+        {
+          "id": "B",
+          "text": "12:00"
+        },
+        {
+          "id": "C",
+          "text": "24:00"
+        },
+        {
+          "id": "D",
+          "text": "13:00"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "12:00 noon = 12:00 in 24-hour format.",
+      "explanation_incorrect": "Noon is 12:00 in 24-hour format. Option B."
+    },
+    {
+      "question_id": "T07.01.Q023",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cricket match starts at 2:00 p.m. and lasts 3 hours 45 minutes. At what time does it end?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:45 p.m."
+        },
+        {
+          "id": "B",
+          "text": "6:45 p.m."
+        },
+        {
+          "id": "C",
+          "text": "5:15 p.m."
+        },
+        {
+          "id": "D",
+          "text": "6:15 p.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2:00 + 3 hours = 5:00. 5:00 + 45 minutes = 5:45 p.m.",
+      "explanation_incorrect": "2:00 p.m. + 3 hours 45 minutes = 5:45 p.m. Option A."
+    },
+    {
+      "question_id": "T07.01.Q024",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in the month of January?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "January has 31 days.",
+      "explanation_incorrect": "January has 31 days. Option D."
+    },
+    {
+      "question_id": "T07.01.Q025",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Convert 180 minutes to hours.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours"
+        },
+        {
+          "id": "B",
+          "text": "3 hours"
+        },
+        {
+          "id": "C",
+          "text": "2 hours 30 minutes"
+        },
+        {
+          "id": "D",
+          "text": "3 hours 30 minutes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "180 / 60 = 3 hours.",
+      "explanation_incorrect": "180 / 60 = 3 hours. Option B."
+    },
+    {
+      "question_id": "T07.01.Q026",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 7:30 p.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "07:30"
+        },
+        {
+          "id": "B",
+          "text": "17:30"
+        },
+        {
+          "id": "C",
+          "text": "19:30"
+        },
+        {
+          "id": "D",
+          "text": "20:30"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "7 p.m. = 7 + 12 = 19. So 7:30 p.m. = 19:30.",
+      "explanation_incorrect": "7 + 12 = 19. 7:30 p.m. = 19:30. Option C."
+    },
+    {
+      "question_id": "T07.01.Q027",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Priya starts her homework at 5:15 p.m. and finishes at 6:45 p.m. How long did she study?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 hour 30 minutes"
+        },
+        {
+          "id": "B",
+          "text": "1 hour 15 minutes"
+        },
+        {
+          "id": "C",
+          "text": "1 hour 45 minutes"
+        },
+        {
+          "id": "D",
+          "text": "2 hours"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5:15 to 6:15 = 1 hour. 6:15 to 6:45 = 30 minutes. Total: 1 hour 30 minutes.",
+      "explanation_incorrect": "5:15 p.m. to 6:45 p.m. = 1 hour 30 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q028",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which of these is a leap year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2025"
+        },
+        {
+          "id": "B",
+          "text": "2024"
+        },
+        {
+          "id": "C",
+          "text": "2023"
+        },
+        {
+          "id": "D",
+          "text": "2022"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2024 is divisible by 4, so it is a leap year.",
+      "explanation_incorrect": "A leap year is divisible by 4. 2024 / 4 = 506. So 2024 is a leap year. Option B."
+    },
+    {
+      "question_id": "T07.01.Q029",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many minutes are in half an hour?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "45"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Half of 60 minutes = 30 minutes.",
+      "explanation_incorrect": "Half an hour = 60 / 2 = 30 minutes. Option C."
+    },
+    {
+      "question_id": "T07.01.Q030",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 1:00 a.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "01:00"
+        },
+        {
+          "id": "B",
+          "text": "13:00"
+        },
+        {
+          "id": "C",
+          "text": "00:00"
+        },
+        {
+          "id": "D",
+          "text": "11:00"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "1:00 a.m. = 01:00 in 24-hour format.",
+      "explanation_incorrect": "a.m. times stay the same (with leading zero if needed). 1:00 a.m. = 01:00. Option A."
+    },
+    {
+      "question_id": "T07.01.Q031",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A bus leaves at 7:20 a.m. and reaches its destination at 10:05 a.m. How long is the journey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 hours 45 minutes"
+        },
+        {
+          "id": "B",
+          "text": "3 hours 45 minutes"
+        },
+        {
+          "id": "C",
+          "text": "2 hours 25 minutes"
+        },
+        {
+          "id": "D",
+          "text": "3 hours 25 minutes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "7:20 to 10:00 = 2 hours 40 minutes. 10:00 to 10:05 = 5 minutes. Total: 2 hours 45 minutes.",
+      "explanation_incorrect": "7:20 a.m. to 10:05 a.m. = 2 hours 45 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q032",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are there from March 15 to April 10 (including both days)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "27"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "26"
+        },
+        {
+          "id": "D",
+          "text": "28"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "March has 31 days. March 15 to March 31 = 17 days (including Mar 15). April 1 to April 10 = 10 days. Total: 17 + 10 = 27 days.",
+      "explanation_incorrect": "Remaining days in March (from 15th): 17. Days in April up to 10th: 10. Total: 27. Option A."
+    },
+    {
+      "question_id": "T07.01.Q033",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "3 hours = ___ minutes",
+      "options": [
+        {
+          "id": "A",
+          "text": "180"
+        },
+        {
+          "id": "B",
+          "text": "120"
+        },
+        {
+          "id": "C",
+          "text": "150"
+        },
+        {
+          "id": "D",
+          "text": "200"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "3 x 60 = 180 minutes.",
+      "explanation_incorrect": "3 x 60 = 180 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q034",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Convert 20:45 to 12-hour format.",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:45 a.m."
+        },
+        {
+          "id": "B",
+          "text": "8:45 p.m."
+        },
+        {
+          "id": "C",
+          "text": "10:45 p.m."
+        },
+        {
+          "id": "D",
+          "text": "10:45 a.m."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "20 - 12 = 8. Since 20:00 is after noon, it's 8:45 p.m.",
+      "explanation_incorrect": "20 - 12 = 8. It's evening, so 8:45 p.m. Option B."
+    },
+    {
+      "question_id": "T07.01.Q035",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A concert starts at 6:30 p.m. and lasts for 2 hours 15 minutes. When does it end?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:45 p.m."
+        },
+        {
+          "id": "B",
+          "text": "9:15 p.m."
+        },
+        {
+          "id": "C",
+          "text": "8:15 p.m."
+        },
+        {
+          "id": "D",
+          "text": "9:45 p.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6:30 + 2 hours = 8:30. 8:30 + 15 minutes = 8:45 p.m.",
+      "explanation_incorrect": "6:30 p.m. + 2 hours 15 minutes = 8:45 p.m. Option A."
+    },
+    {
+      "question_id": "T07.01.Q036",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in the month of June?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "June has 30 days.",
+      "explanation_incorrect": "June has 30 days. Option C."
+    },
+    {
+      "question_id": "T07.01.Q037",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many seconds are in 5 minutes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "300"
+        },
+        {
+          "id": "B",
+          "text": "250"
+        },
+        {
+          "id": "C",
+          "text": "500"
+        },
+        {
+          "id": "D",
+          "text": "350"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "5 x 60 = 300 seconds.",
+      "explanation_incorrect": "5 x 60 = 300 seconds. Option A."
+    },
+    {
+      "question_id": "T07.01.Q038",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 5:00 p.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "05:00"
+        },
+        {
+          "id": "B",
+          "text": "15:00"
+        },
+        {
+          "id": "C",
+          "text": "17:00"
+        },
+        {
+          "id": "D",
+          "text": "19:00"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "5 p.m. = 5 + 12 = 17:00.",
+      "explanation_incorrect": "5 + 12 = 17. So 5:00 p.m. = 17:00. Option C."
+    },
+    {
+      "question_id": "T07.01.Q039",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Ravi starts playing at 4:40 p.m. and plays for 1 hour 35 minutes. When does he stop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:15 p.m."
+        },
+        {
+          "id": "B",
+          "text": "5:15 p.m."
+        },
+        {
+          "id": "C",
+          "text": "6:35 p.m."
+        },
+        {
+          "id": "D",
+          "text": "5:35 p.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "4:40 + 1 hour = 5:40. 5:40 + 35 minutes = 6:15 p.m.",
+      "explanation_incorrect": "4:40 p.m. + 1 hour 35 minutes = 6:15 p.m. Option A."
+    },
+    {
+      "question_id": "T07.01.Q040",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in February in the year 2024?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "31"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "2024 is a leap year (divisible by 4). So February has 29 days.",
+      "explanation_incorrect": "2024 is a leap year. February has 29 days. Option B."
+    },
+    {
+      "question_id": "T07.01.Q041",
+      "concept_id": "T07.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A quarter of an hour is 15 minutes. True or false?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. 1 hour = 60 minutes. 60 / 4 = 15 minutes.",
+      "explanation_incorrect": "60 / 4 = 15 minutes. True."
+    },
+    {
+      "question_id": "T07.01.Q042",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Convert 14:20 to 12-hour format.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2:20 a.m."
+        },
+        {
+          "id": "B",
+          "text": "2:20 p.m."
+        },
+        {
+          "id": "C",
+          "text": "4:20 p.m."
+        },
+        {
+          "id": "D",
+          "text": "4:20 a.m."
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "14 - 12 = 2. Since it's after noon, 14:20 = 2:20 p.m.",
+      "explanation_incorrect": "14 - 12 = 2. It's afternoon. 14:20 = 2:20 p.m. Option B."
+    },
+    {
+      "question_id": "T07.01.Q043",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Mum put a cake in the oven at 11:30 a.m. It needs to bake for 45 minutes. When should she take it out?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12:15 p.m."
+        },
+        {
+          "id": "B",
+          "text": "12:30 p.m."
+        },
+        {
+          "id": "C",
+          "text": "12:00 noon"
+        },
+        {
+          "id": "D",
+          "text": "11:45 a.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "11:30 + 30 minutes = 12:00. 12:00 + 15 minutes = 12:15 p.m.",
+      "explanation_incorrect": "11:30 a.m. + 45 minutes = 12:15 p.m. Option A."
+    },
+    {
+      "question_id": "T07.01.Q044",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are in a week?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A week has 7 days.",
+      "explanation_incorrect": "There are 7 days in a week. Option C."
+    },
+    {
+      "question_id": "T07.01.Q045",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Convert 2 hours 15 minutes to minutes.",
+      "options": [
+        {
+          "id": "A",
+          "text": "135"
+        },
+        {
+          "id": "B",
+          "text": "125"
+        },
+        {
+          "id": "C",
+          "text": "145"
+        },
+        {
+          "id": "D",
+          "text": "215"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "2 hours = 120 minutes. 120 + 15 = 135 minutes.",
+      "explanation_incorrect": "2 x 60 + 15 = 135 minutes. Option A."
+    },
+    {
+      "question_id": "T07.01.Q046",
+      "concept_id": "T07.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A flight departs at 11:50 p.m. and the flight duration is 2 hours 30 minutes. When does it land?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2:20 a.m."
+        },
+        {
+          "id": "B",
+          "text": "1:20 a.m."
+        },
+        {
+          "id": "C",
+          "text": "2:50 a.m."
+        },
+        {
+          "id": "D",
+          "text": "1:50 a.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "11:50 p.m. + 2 hours = 1:50 a.m. + 30 minutes = 2:20 a.m.",
+      "explanation_incorrect": "11:50 p.m. + 2 hours 30 minutes = 2:20 a.m. (next day). Option A."
+    },
+    {
+      "question_id": "T07.01.Q047",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If today is Wednesday and you count 10 days from today, what day will it be?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Saturday"
+        },
+        {
+          "id": "B",
+          "text": "Friday"
+        },
+        {
+          "id": "C",
+          "text": "Sunday"
+        },
+        {
+          "id": "D",
+          "text": "Monday"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "10 days from Wednesday: 10 / 7 = 1 week and 3 days. Wednesday + 3 days = Saturday.",
+      "explanation_incorrect": "10 = 7 + 3. One week later is Wednesday, plus 3 more days = Saturday. Option A."
+    },
+    {
+      "question_id": "T07.01.Q048",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "What is 6:00 a.m. in 24-hour format?",
+      "options": [
+        {
+          "id": "A",
+          "text": "06:00"
+        },
+        {
+          "id": "B",
+          "text": "18:00"
+        },
+        {
+          "id": "C",
+          "text": "00:06"
+        },
+        {
+          "id": "D",
+          "text": "16:00"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "6:00 a.m. = 06:00 in 24-hour format.",
+      "explanation_incorrect": "Morning a.m. times stay the same. 6:00 a.m. = 06:00. Option A."
+    },
+    {
+      "question_id": "T07.01.Q049",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "Sneha started reading at 7:10 p.m. and read for 50 minutes. When did she finish?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:00 p.m."
+        },
+        {
+          "id": "B",
+          "text": "7:50 p.m."
+        },
+        {
+          "id": "C",
+          "text": "8:10 p.m."
+        },
+        {
+          "id": "D",
+          "text": "7:40 p.m."
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "7:10 + 50 minutes = 8:00 p.m.",
+      "explanation_incorrect": "7:10 p.m. + 50 minutes = 8:00 p.m. Option A."
+    },
+    {
+      "question_id": "T07.01.Q050",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many days are there in a non-leap year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "364"
+        },
+        {
+          "id": "B",
+          "text": "365"
+        },
+        {
+          "id": "C",
+          "text": "366"
+        },
+        {
+          "id": "D",
+          "text": "360"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A non-leap year has 365 days.",
+      "explanation_incorrect": "A non-leap year has 365 days. Option B."
+    }
   ]
 }

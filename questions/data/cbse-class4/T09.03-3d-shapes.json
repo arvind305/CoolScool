@@ -1,62 +1,1452 @@
 {
   "version": "1.0.0",
-  "cam_reference": { "cam_version": "1.0.0", "board": "CBSE", "class": 4, "subject": "Mathematics" },
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 4,
+    "subject": "Mathematics"
+  },
   "topic_id": "T09.03",
   "topic_name": "3D Shapes",
   "canonical_explanation": {
     "text": "3D (three-dimensional) shapes have length, breadth, and height. They have faces (flat or curved surfaces), edges (where two faces meet), and vertices (corners where edges meet). Common 3D shapes include cube, cuboid, sphere, cylinder, and cone.",
-    "rules": ["Cube: 6 faces, 12 edges, 8 vertices", "Cuboid: 6 faces, 12 edges, 8 vertices", "Cylinder: 2 flat faces + 1 curved face, 2 edges, 0 vertices", "Cone: 1 flat face + 1 curved face, 1 edge, 1 vertex", "Sphere: 1 curved face, 0 edges, 0 vertices", "Face = flat or curved surface of a 3D shape", "Edge = line where two faces meet", "Vertex = corner point where edges meet"]
+    "rules": [
+      "Cube: 6 faces, 12 edges, 8 vertices",
+      "Cuboid: 6 faces, 12 edges, 8 vertices",
+      "Cylinder: 2 flat faces + 1 curved face, 2 edges, 0 vertices",
+      "Cone: 1 flat face + 1 curved face, 1 edge, 1 vertex",
+      "Sphere: 1 curved face, 0 edges, 0 vertices",
+      "Face = flat or curved surface of a 3D shape",
+      "Edge = line where two faces meet",
+      "Vertex = corner point where edges meet"
+    ]
   },
   "questions": [
-    { "question_id": "T09.03.Q001", "concept_id": "T09.03.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "A dice is an example of which 3D shape?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cuboid"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cylinder"}], "correct_answer": "A", "explanation_correct": "A dice has 6 equal square faces, making it a cube.", "explanation_incorrect": "A dice is a cube - 6 equal square faces. Option A." },
-    { "question_id": "T09.03.Q002", "concept_id": "T09.03.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "A football is an example of which 3D shape?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cone"}], "correct_answer": "C", "explanation_correct": "A football is round from every direction, making it a sphere.", "explanation_incorrect": "A football is a sphere. Option C." },
-    { "question_id": "T09.03.Q003", "concept_id": "T09.03.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "A soft drink can is an example of which 3D shape?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cone"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Sphere"}], "correct_answer": "C", "explanation_correct": "A soft drink can has two circular flat faces and one curved face, making it a cylinder.", "explanation_incorrect": "A can is shaped like a cylinder. Option C." },
-    { "question_id": "T09.03.Q004", "concept_id": "T09.03.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "An ice cream cone is an example of which 3D shape?", "options": [{"id":"A","text":"Cylinder"},{"id":"B","text":"Cone"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cuboid"}], "correct_answer": "B", "explanation_correct": "An ice cream cone has a circular base that narrows to a point, making it a cone.", "explanation_incorrect": "An ice cream cone is shaped like a cone. Option B." },
-    { "question_id": "T09.03.Q005", "concept_id": "T09.03.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "How many faces does a cube have?", "options": [{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"12"}], "correct_answer": "B", "explanation_correct": "A cube has 6 square faces.", "explanation_incorrect": "A cube has 6 faces. Option B." },
-    { "question_id": "T09.03.Q006", "concept_id": "T09.03.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "How many edges does a cube have?", "options": [{"id":"A","text":"6"},{"id":"B","text":"8"},{"id":"C","text":"12"},{"id":"D","text":"4"}], "correct_answer": "C", "explanation_correct": "A cube has 12 edges.", "explanation_incorrect": "A cube has 12 edges. Option C." },
-    { "question_id": "T09.03.Q007", "concept_id": "T09.03.C02", "difficulty": "familiarity", "type": "mcq", "question_text": "How many vertices does a cube have?", "options": [{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"12"}], "correct_answer": "C", "explanation_correct": "A cube has 8 vertices (corners).", "explanation_incorrect": "A cube has 8 vertices. Option C." },
-    { "question_id": "T09.03.Q008", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "How many flat faces does a cylinder have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "C", "explanation_correct": "A cylinder has 2 flat circular faces (top and bottom).", "explanation_incorrect": "A cylinder has 2 flat faces. Option C." },
-    { "question_id": "T09.03.Q009", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "How many vertices does a sphere have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"Infinite"}], "correct_answer": "A", "explanation_correct": "A sphere has no vertices (no corners). It is perfectly round.", "explanation_incorrect": "A sphere has 0 vertices. Option A." },
-    { "question_id": "T09.03.Q010", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "How many edges does a sphere have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"4"}], "correct_answer": "A", "explanation_correct": "A sphere has no edges.", "explanation_incorrect": "A sphere has 0 edges. Option A." },
-    { "question_id": "T09.03.Q011", "concept_id": "T09.03.C01", "difficulty": "application", "type": "mcq", "question_text": "A brick is an example of which 3D shape?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cuboid"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cone"}], "correct_answer": "B", "explanation_correct": "A brick has 6 rectangular faces with opposite faces equal - it is a cuboid.", "explanation_incorrect": "A brick is a cuboid. Option B." },
-    { "question_id": "T09.03.Q012", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "A cone has how many vertices?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "B", "explanation_correct": "A cone has 1 vertex (the pointed tip at the top).", "explanation_incorrect": "A cone has 1 vertex (the tip). Option B." },
-    { "question_id": "T09.03.Q013", "concept_id": "T09.03.C03", "difficulty": "familiarity", "type": "mcq", "question_text": "Which everyday object is shaped like a cuboid?", "options": [{"id":"A","text":"A book"},{"id":"B","text":"A ball"},{"id":"C","text":"A coin"},{"id":"D","text":"A marble"}], "correct_answer": "A", "explanation_correct": "A book has a rectangular box shape, making it a cuboid.", "explanation_incorrect": "A book is cuboid-shaped. Option A." },
-    { "question_id": "T09.03.Q014", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "How many faces does a cuboid have?", "options": [{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"12"}], "correct_answer": "B", "explanation_correct": "A cuboid has 6 faces (3 pairs of opposite rectangular faces).", "explanation_incorrect": "A cuboid has 6 faces. Option B." },
-    { "question_id": "T09.03.Q015", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "A cone has how many edges?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "B", "explanation_correct": "A cone has 1 edge (the circular edge where the flat face meets the curved face).", "explanation_incorrect": "A cone has 1 edge. Option B." },
-    { "question_id": "T09.03.Q016", "concept_id": "T09.03.C01", "difficulty": "application", "type": "true_false", "question_text": "A cube has all faces that are squares. True or false?", "options": [{"id":"A","text":"True"},{"id":"B","text":"False"}], "correct_answer": "A", "explanation_correct": "True. All 6 faces of a cube are identical squares.", "explanation_incorrect": "A cube has 6 identical square faces. True." },
-    { "question_id": "T09.03.Q017", "concept_id": "T09.03.C03", "difficulty": "application", "type": "mcq", "question_text": "Which everyday object is shaped like a cylinder?", "options": [{"id":"A","text":"A dice"},{"id":"B","text":"A water pipe"},{"id":"C","text":"A birthday cap"},{"id":"D","text":"A box"}], "correct_answer": "B", "explanation_correct": "A water pipe has a circular cross-section and is long like a cylinder.", "explanation_incorrect": "A water pipe is shaped like a cylinder. Option B." },
-    { "question_id": "T09.03.Q018", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "How many curved faces does a cylinder have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "B", "explanation_correct": "A cylinder has 1 curved face (the surface that wraps around).", "explanation_incorrect": "A cylinder has 1 curved face. Option B." },
-    { "question_id": "T09.03.Q019", "concept_id": "T09.03.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "Which 3D shape has no flat face at all?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cone"}], "correct_answer": "C", "explanation_correct": "A sphere has only one curved face and no flat faces.", "explanation_incorrect": "A sphere has no flat faces. Option C." },
-    { "question_id": "T09.03.Q020", "concept_id": "T09.03.C03", "difficulty": "familiarity", "type": "mcq", "question_text": "A birthday party hat is shaped like a:", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cone"},{"id":"D","text":"Sphere"}], "correct_answer": "C", "explanation_correct": "A party hat has a circular base and comes to a point at the top, like a cone.", "explanation_incorrect": "A party hat is cone-shaped. Option C." },
-    { "question_id": "T09.03.Q021", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "Which shape has the same number of faces, edges, and vertices as a cube?", "options": [{"id":"A","text":"Cuboid"},{"id":"B","text":"Sphere"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cone"}], "correct_answer": "A", "explanation_correct": "Both cube and cuboid have 6 faces, 12 edges, and 8 vertices.", "explanation_incorrect": "A cuboid also has 6 faces, 12 edges, and 8 vertices. Option A." },
-    { "question_id": "T09.03.Q022", "concept_id": "T09.03.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "A marble is shaped like a:", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cone"},{"id":"D","text":"Sphere"}], "correct_answer": "D", "explanation_correct": "A marble is perfectly round, making it a sphere.", "explanation_incorrect": "A marble is a sphere. Option D." },
-    { "question_id": "T09.03.Q023", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "A cylinder has how many edges?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "C", "explanation_correct": "A cylinder has 2 edges (the circular edges where the flat faces meet the curved face).", "explanation_incorrect": "A cylinder has 2 edges. Option C." },
-    { "question_id": "T09.03.Q024", "concept_id": "T09.03.C03", "difficulty": "application", "type": "mcq", "question_text": "Which of these is NOT a 3D shape?", "options": [{"id":"A","text":"Square"},{"id":"B","text":"Cube"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cylinder"}], "correct_answer": "A", "explanation_correct": "A square is a 2D shape with only length and breadth. The others are all 3D shapes.", "explanation_incorrect": "A square is 2D, not 3D. Option A." },
-    { "question_id": "T09.03.Q025", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "How many total faces (flat + curved) does a cone have?", "options": [{"id":"A","text":"1"},{"id":"B","text":"2"},{"id":"C","text":"3"},{"id":"D","text":"4"}], "correct_answer": "B", "explanation_correct": "A cone has 2 faces: 1 flat circular face and 1 curved face.", "explanation_incorrect": "A cone has 1 flat + 1 curved = 2 total faces. Option B." },
-    { "question_id": "T09.03.Q026", "concept_id": "T09.03.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "A matchbox is shaped like a:", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cuboid"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cone"}], "correct_answer": "B", "explanation_correct": "A matchbox has length, breadth, and height with rectangular faces - it is a cuboid.", "explanation_incorrect": "A matchbox is a cuboid. Option B." },
-    { "question_id": "T09.03.Q027", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "How many vertices does a cylinder have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"4"}], "correct_answer": "A", "explanation_correct": "A cylinder has no vertices. Its edges are circular, not pointed.", "explanation_incorrect": "A cylinder has 0 vertices. Option A." },
-    { "question_id": "T09.03.Q028", "concept_id": "T09.03.C03", "difficulty": "application", "type": "mcq", "question_text": "A drum is shaped like a:", "options": [{"id":"A","text":"Sphere"},{"id":"B","text":"Cube"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cone"}], "correct_answer": "C", "explanation_correct": "A drum has two flat circular ends and a curved surface in between - it is a cylinder.", "explanation_incorrect": "A drum is a cylinder. Option C." },
-    { "question_id": "T09.03.Q029", "concept_id": "T09.03.C01", "difficulty": "application", "type": "true_false", "question_text": "A sphere can roll in any direction. True or false?", "options": [{"id":"A","text":"True"},{"id":"B","text":"False"}], "correct_answer": "A", "explanation_correct": "True. A sphere is perfectly round, so it can roll in any direction.", "explanation_incorrect": "A sphere is round from every angle and can roll in any direction. True." },
-    { "question_id": "T09.03.Q030", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "Which 3D shape has 1 curved face and 1 flat face?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cone"},{"id":"D","text":"Sphere"}], "correct_answer": "C", "explanation_correct": "A cone has 1 flat circular face (base) and 1 curved face.", "explanation_incorrect": "A cone has 1 flat and 1 curved face. Option C." },
-    { "question_id": "T09.03.Q031", "concept_id": "T09.03.C03", "difficulty": "familiarity", "type": "mcq", "question_text": "A glass bangle is shaped most like a:", "options": [{"id":"A","text":"Sphere"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cube"},{"id":"D","text":"Cone"}], "correct_answer": "B", "explanation_correct": "A bangle has a circular cross-section and wraps around, similar to a short cylinder (or ring/torus, but closest to cylinder in basic shapes).", "explanation_incorrect": "A bangle is closest to a cylinder shape. Option B." },
-    { "question_id": "T09.03.Q032", "concept_id": "T09.03.C02", "difficulty": "application", "type": "mcq", "question_text": "Which 3D shape has 6 faces, all of which are rectangles?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cuboid"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cone"}], "correct_answer": "B", "explanation_correct": "A cuboid has 6 faces, all of which are rectangles (a cube has all squares, which are special rectangles).", "explanation_incorrect": "A cuboid has 6 rectangular faces. Option B." },
-    { "question_id": "T09.03.Q033", "concept_id": "T09.03.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "Which 3D shape can slide but cannot roll?", "options": [{"id":"A","text":"Sphere"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cube"},{"id":"D","text":"Cone"}], "correct_answer": "C", "explanation_correct": "A cube has flat faces and can slide on them, but it cannot roll because it has no curved surface.", "explanation_incorrect": "A cube can only slide, not roll. Option C." },
-    { "question_id": "T09.03.Q034", "concept_id": "T09.03.C03", "difficulty": "application", "type": "mcq", "question_text": "A tin of biscuits is usually shaped like a:", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cuboid"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Sphere"}], "correct_answer": "C", "explanation_correct": "A biscuit tin is typically round with flat top and bottom - a cylinder.", "explanation_incorrect": "A biscuit tin is usually cylindrical. Option C." },
-    { "question_id": "T09.03.Q035", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "How many faces does a sphere have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "B", "explanation_correct": "A sphere has 1 curved face.", "explanation_incorrect": "A sphere has 1 (curved) face. Option B." },
-    { "question_id": "T09.03.Q036", "concept_id": "T09.03.C01", "difficulty": "familiarity", "type": "mcq", "question_text": "A joker's cap is shaped like a:", "options": [{"id":"A","text":"Sphere"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cone"},{"id":"D","text":"Cuboid"}], "correct_answer": "C", "explanation_correct": "A joker's cap comes to a point at the top with a circular base - it is cone-shaped.", "explanation_incorrect": "A joker's cap is cone-shaped. Option C." },
-    { "question_id": "T09.03.Q037", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "A cuboid has how many edges?", "options": [{"id":"A","text":"6"},{"id":"B","text":"8"},{"id":"C","text":"12"},{"id":"D","text":"10"}], "correct_answer": "C", "explanation_correct": "A cuboid has 12 edges.", "explanation_incorrect": "A cuboid has 12 edges. Option C." },
-    { "question_id": "T09.03.Q038", "concept_id": "T09.03.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "Which pair of everyday objects are both cuboids?", "options": [{"id":"A","text":"A shoe box and a book"},{"id":"B","text":"A ball and a marble"},{"id":"C","text":"A tin can and a glass"},{"id":"D","text":"A dice and a marble"}], "correct_answer": "A", "explanation_correct": "Both a shoe box and a book are rectangular box shapes - cuboids.", "explanation_incorrect": "A shoe box and a book are both cuboids. Option A." },
-    { "question_id": "T09.03.Q039", "concept_id": "T09.03.C01", "difficulty": "application", "type": "mcq", "question_text": "Which 3D shape can both roll and slide?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Sphere"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cuboid"}], "correct_answer": "C", "explanation_correct": "A cylinder can roll on its curved surface and slide on its flat faces.", "explanation_incorrect": "A cylinder can roll (curved face) and slide (flat faces). Option C." },
-    { "question_id": "T09.03.Q040", "concept_id": "T09.03.C02", "difficulty": "application", "type": "fill_blank", "question_text": "A cube has 6 faces, 12 edges, and ___ vertices.", "options": [{"id":"A","text":"8"},{"id":"B","text":"6"},{"id":"C","text":"10"},{"id":"D","text":"4"}], "correct_answer": "A", "explanation_correct": "A cube has 8 vertices.", "explanation_incorrect": "A cube has 8 vertices. Option A." },
-    { "question_id": "T09.03.Q041", "concept_id": "T09.03.C03", "difficulty": "familiarity", "type": "mcq", "question_text": "An orange is shaped like a:", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cone"},{"id":"D","text":"Sphere"}], "correct_answer": "D", "explanation_correct": "An orange is round, making it approximately a sphere.", "explanation_incorrect": "An orange is sphere-shaped. Option D." },
-    { "question_id": "T09.03.Q042", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "How many flat faces does a cone have?", "options": [{"id":"A","text":"0"},{"id":"B","text":"1"},{"id":"C","text":"2"},{"id":"D","text":"3"}], "correct_answer": "B", "explanation_correct": "A cone has 1 flat circular face (the base).", "explanation_incorrect": "A cone has 1 flat face. Option B." },
-    { "question_id": "T09.03.Q043", "concept_id": "T09.03.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "What is the difference between a cube and a cuboid?", "options": [{"id":"A","text":"A cube has all equal faces; a cuboid may not"},{"id":"B","text":"A cube has more faces"},{"id":"C","text":"A cuboid has more edges"},{"id":"D","text":"A cube has curved faces"}], "correct_answer": "A", "explanation_correct": "A cube has all 6 faces as equal squares, while a cuboid has rectangular faces that may have different dimensions.", "explanation_incorrect": "Cube = all equal square faces. Cuboid = rectangular faces of possibly different sizes. Option A." },
-    { "question_id": "T09.03.Q044", "concept_id": "T09.03.C03", "difficulty": "application", "type": "mcq", "question_text": "A chalk box is shaped like a:", "options": [{"id":"A","text":"Sphere"},{"id":"B","text":"Cylinder"},{"id":"C","text":"Cuboid"},{"id":"D","text":"Cone"}], "correct_answer": "C", "explanation_correct": "A chalk box is a rectangular box - a cuboid.", "explanation_incorrect": "A chalk box is a cuboid. Option C." },
-    { "question_id": "T09.03.Q045", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "true_false", "question_text": "A cylinder has 2 edges and 0 vertices. True or false?", "options": [{"id":"A","text":"True"},{"id":"B","text":"False"}], "correct_answer": "A", "explanation_correct": "True. A cylinder has 2 circular edges and 0 vertices (no corners).", "explanation_incorrect": "A cylinder has 2 edges and 0 vertices. True." },
-    { "question_id": "T09.03.Q046", "concept_id": "T09.03.C01", "difficulty": "exam_style", "type": "mcq", "question_text": "Which shape will you get if you stack coins one on top of the other?", "options": [{"id":"A","text":"Cube"},{"id":"B","text":"Cuboid"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cone"}], "correct_answer": "C", "explanation_correct": "Stacking circular coins creates a cylinder shape.", "explanation_incorrect": "Stacking coins makes a cylinder. Option C." },
-    { "question_id": "T09.03.Q047", "concept_id": "T09.03.C03", "difficulty": "exam_style", "type": "mcq", "question_text": "A Rubik's cube is an example of a:", "options": [{"id":"A","text":"Cuboid"},{"id":"B","text":"Cube"},{"id":"C","text":"Sphere"},{"id":"D","text":"Cylinder"}], "correct_answer": "B", "explanation_correct": "A Rubik's cube has 6 equal square faces - it is a cube.", "explanation_incorrect": "A Rubik's cube is a cube. Option B." },
-    { "question_id": "T09.03.Q048", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "A cuboid has how many vertices?", "options": [{"id":"A","text":"4"},{"id":"B","text":"6"},{"id":"C","text":"8"},{"id":"D","text":"12"}], "correct_answer": "C", "explanation_correct": "A cuboid has 8 vertices.", "explanation_incorrect": "A cuboid has 8 vertices. Option C." },
-    { "question_id": "T09.03.Q049", "concept_id": "T09.03.C01", "difficulty": "application", "type": "mcq", "question_text": "A traffic cone on the road is shaped like a:", "options": [{"id":"A","text":"Cylinder"},{"id":"B","text":"Sphere"},{"id":"C","text":"Cone"},{"id":"D","text":"Cuboid"}], "correct_answer": "C", "explanation_correct": "A traffic cone has a circular base and comes to a point at the top - it is cone-shaped.", "explanation_incorrect": "A traffic cone is cone-shaped. Option C." },
-    { "question_id": "T09.03.Q050", "concept_id": "T09.03.C02", "difficulty": "exam_style", "type": "mcq", "question_text": "Which 3D shape has the most edges?", "options": [{"id":"A","text":"Sphere"},{"id":"B","text":"Cone"},{"id":"C","text":"Cylinder"},{"id":"D","text":"Cube"}], "correct_answer": "D", "explanation_correct": "Cube has 12 edges. Sphere has 0, Cone has 1, Cylinder has 2. The cube has the most.", "explanation_incorrect": "Cube: 12, Cylinder: 2, Cone: 1, Sphere: 0. Cube has the most. Option D." }
+    {
+      "question_id": "T09.03.Q001",
+      "concept_id": "T09.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "A dice is an example of which 3D shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cuboid"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cylinder"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A dice has 6 equal square faces, making it a cube.",
+      "explanation_incorrect": "A dice is a cube - 6 equal square faces. Option A."
+    },
+    {
+      "question_id": "T09.03.Q002",
+      "concept_id": "T09.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "A football is an example of which 3D shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A football is round from every direction, making it a sphere.",
+      "explanation_incorrect": "A football is a sphere. Option C."
+    },
+    {
+      "question_id": "T09.03.Q003",
+      "concept_id": "T09.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "A soft drink can is an example of which 3D shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cone"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Sphere"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A soft drink can has two circular flat faces and one curved face, making it a cylinder.",
+      "explanation_incorrect": "A can is shaped like a cylinder. Option C."
+    },
+    {
+      "question_id": "T09.03.Q004",
+      "concept_id": "T09.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "An ice cream cone is an example of which 3D shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cylinder"
+        },
+        {
+          "id": "B",
+          "text": "Cone"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cuboid"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An ice cream cone has a circular base that narrows to a point, making it a cone.",
+      "explanation_incorrect": "An ice cream cone is shaped like a cone. Option B."
+    },
+    {
+      "question_id": "T09.03.Q005",
+      "concept_id": "T09.03.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces does a cube have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cube has 6 square faces.",
+      "explanation_incorrect": "A cube has 6 faces. Option B."
+    },
+    {
+      "question_id": "T09.03.Q006",
+      "concept_id": "T09.03.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many edges does a cube have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cube has 12 edges.",
+      "explanation_incorrect": "A cube has 12 edges. Option C."
+    },
+    {
+      "question_id": "T09.03.Q007",
+      "concept_id": "T09.03.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many vertices does a cube have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cube has 8 vertices (corners).",
+      "explanation_incorrect": "A cube has 8 vertices. Option C."
+    },
+    {
+      "question_id": "T09.03.Q008",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many flat faces does a cylinder have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cylinder has 2 flat circular faces (top and bottom).",
+      "explanation_incorrect": "A cylinder has 2 flat faces. Option C."
+    },
+    {
+      "question_id": "T09.03.Q009",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many vertices does a sphere have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "Infinite"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A sphere has no vertices (no corners). It is perfectly round.",
+      "explanation_incorrect": "A sphere has 0 vertices. Option A."
+    },
+    {
+      "question_id": "T09.03.Q010",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many edges does a sphere have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A sphere has no edges.",
+      "explanation_incorrect": "A sphere has 0 edges. Option A."
+    },
+    {
+      "question_id": "T09.03.Q011",
+      "concept_id": "T09.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "A brick is an example of which 3D shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cuboid"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A brick has 6 rectangular faces with opposite faces equal - it is a cuboid.",
+      "explanation_incorrect": "A brick is a cuboid. Option B."
+    },
+    {
+      "question_id": "T09.03.Q012",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cone has how many vertices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cone has 1 vertex (the pointed tip at the top).",
+      "explanation_incorrect": "A cone has 1 vertex (the tip). Option B."
+    },
+    {
+      "question_id": "T09.03.Q013",
+      "concept_id": "T09.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which everyday object is shaped like a cuboid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A book"
+        },
+        {
+          "id": "B",
+          "text": "A ball"
+        },
+        {
+          "id": "C",
+          "text": "A coin"
+        },
+        {
+          "id": "D",
+          "text": "A marble"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A book has a rectangular box shape, making it a cuboid.",
+      "explanation_incorrect": "A book is cuboid-shaped. Option A."
+    },
+    {
+      "question_id": "T09.03.Q014",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces does a cuboid have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cuboid has 6 faces (3 pairs of opposite rectangular faces).",
+      "explanation_incorrect": "A cuboid has 6 faces. Option B."
+    },
+    {
+      "question_id": "T09.03.Q015",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cone has how many edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cone has 1 edge (the circular edge where the flat face meets the curved face).",
+      "explanation_incorrect": "A cone has 1 edge. Option B."
+    },
+    {
+      "question_id": "T09.03.Q016",
+      "concept_id": "T09.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A cube has all faces that are squares. True or false?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. All 6 faces of a cube are identical squares.",
+      "explanation_incorrect": "A cube has 6 identical square faces. True."
+    },
+    {
+      "question_id": "T09.03.Q017",
+      "concept_id": "T09.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which everyday object is shaped like a cylinder?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A dice"
+        },
+        {
+          "id": "B",
+          "text": "A water pipe"
+        },
+        {
+          "id": "C",
+          "text": "A birthday cap"
+        },
+        {
+          "id": "D",
+          "text": "A box"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A water pipe has a circular cross-section and is long like a cylinder.",
+      "explanation_incorrect": "A water pipe is shaped like a cylinder. Option B."
+    },
+    {
+      "question_id": "T09.03.Q018",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many curved faces does a cylinder have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cylinder has 1 curved face (the surface that wraps around).",
+      "explanation_incorrect": "A cylinder has 1 curved face. Option B."
+    },
+    {
+      "question_id": "T09.03.Q019",
+      "concept_id": "T09.03.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape has no flat face at all?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A sphere has only one curved face and no flat faces.",
+      "explanation_incorrect": "A sphere has no flat faces. Option C."
+    },
+    {
+      "question_id": "T09.03.Q020",
+      "concept_id": "T09.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A birthday party hat is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cone"
+        },
+        {
+          "id": "D",
+          "text": "Sphere"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A party hat has a circular base and comes to a point at the top, like a cone.",
+      "explanation_incorrect": "A party hat is cone-shaped. Option C."
+    },
+    {
+      "question_id": "T09.03.Q021",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which shape has the same number of faces, edges, and vertices as a cube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cuboid"
+        },
+        {
+          "id": "B",
+          "text": "Sphere"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Both cube and cuboid have 6 faces, 12 edges, and 8 vertices.",
+      "explanation_incorrect": "A cuboid also has 6 faces, 12 edges, and 8 vertices. Option A."
+    },
+    {
+      "question_id": "T09.03.Q022",
+      "concept_id": "T09.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A marble is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cone"
+        },
+        {
+          "id": "D",
+          "text": "Sphere"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "A marble is perfectly round, making it a sphere.",
+      "explanation_incorrect": "A marble is a sphere. Option D."
+    },
+    {
+      "question_id": "T09.03.Q023",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cylinder has how many edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cylinder has 2 edges (the circular edges where the flat faces meet the curved face).",
+      "explanation_incorrect": "A cylinder has 2 edges. Option C."
+    },
+    {
+      "question_id": "T09.03.Q024",
+      "concept_id": "T09.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which of these is NOT a 3D shape?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Square"
+        },
+        {
+          "id": "B",
+          "text": "Cube"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cylinder"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A square is a 2D shape with only length and breadth. The others are all 3D shapes.",
+      "explanation_incorrect": "A square is 2D, not 3D. Option A."
+    },
+    {
+      "question_id": "T09.03.Q025",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many total faces (flat + curved) does a cone have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cone has 2 faces: 1 flat circular face and 1 curved face.",
+      "explanation_incorrect": "A cone has 1 flat + 1 curved = 2 total faces. Option B."
+    },
+    {
+      "question_id": "T09.03.Q026",
+      "concept_id": "T09.03.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A matchbox is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cuboid"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A matchbox has length, breadth, and height with rectangular faces - it is a cuboid.",
+      "explanation_incorrect": "A matchbox is a cuboid. Option B."
+    },
+    {
+      "question_id": "T09.03.Q027",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many vertices does a cylinder have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A cylinder has no vertices. Its edges are circular, not pointed.",
+      "explanation_incorrect": "A cylinder has 0 vertices. Option A."
+    },
+    {
+      "question_id": "T09.03.Q028",
+      "concept_id": "T09.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A drum is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere"
+        },
+        {
+          "id": "B",
+          "text": "Cube"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A drum has two flat circular ends and a curved surface in between - it is a cylinder.",
+      "explanation_incorrect": "A drum is a cylinder. Option C."
+    },
+    {
+      "question_id": "T09.03.Q029",
+      "concept_id": "T09.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A sphere can roll in any direction. True or false?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. A sphere is perfectly round, so it can roll in any direction.",
+      "explanation_incorrect": "A sphere is round from every angle and can roll in any direction. True."
+    },
+    {
+      "question_id": "T09.03.Q030",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape has 1 curved face and 1 flat face?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cone"
+        },
+        {
+          "id": "D",
+          "text": "Sphere"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cone has 1 flat circular face (base) and 1 curved face.",
+      "explanation_incorrect": "A cone has 1 flat and 1 curved face. Option C."
+    },
+    {
+      "question_id": "T09.03.Q031",
+      "concept_id": "T09.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A glass bangle is shaped most like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cube"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A bangle has a circular cross-section and wraps around, similar to a short cylinder (or ring/torus, but closest to cylinder in basic shapes).",
+      "explanation_incorrect": "A bangle is closest to a cylinder shape. Option B."
+    },
+    {
+      "question_id": "T09.03.Q032",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape has 6 faces, all of which are rectangles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cuboid"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cuboid has 6 faces, all of which are rectangles (a cube has all squares, which are special rectangles).",
+      "explanation_incorrect": "A cuboid has 6 rectangular faces. Option B."
+    },
+    {
+      "question_id": "T09.03.Q033",
+      "concept_id": "T09.03.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "type": "mcq",
+      "question_text": "Which 3D shape can slide but cannot roll?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cube"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cube has flat faces and can slide on them, but it cannot roll because it has no curved surface.",
+      "explanation_incorrect": "A cube can only slide, not roll. Option C."
+    },
+    {
+      "question_id": "T09.03.Q034",
+      "concept_id": "T09.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A tin of biscuits is usually shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cuboid"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Sphere"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A biscuit tin is typically round with flat top and bottom - a cylinder.",
+      "explanation_incorrect": "A biscuit tin is usually cylindrical. Option C."
+    },
+    {
+      "question_id": "T09.03.Q035",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many faces does a sphere have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A sphere has 1 curved face.",
+      "explanation_incorrect": "A sphere has 1 (curved) face. Option B."
+    },
+    {
+      "question_id": "T09.03.Q036",
+      "concept_id": "T09.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A joker's cap is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cone"
+        },
+        {
+          "id": "D",
+          "text": "Cuboid"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A joker's cap comes to a point at the top with a circular base - it is cone-shaped.",
+      "explanation_incorrect": "A joker's cap is cone-shaped. Option C."
+    },
+    {
+      "question_id": "T09.03.Q037",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cuboid has how many edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cuboid has 12 edges.",
+      "explanation_incorrect": "A cuboid has 12 edges. Option C."
+    },
+    {
+      "question_id": "T09.03.Q038",
+      "concept_id": "T09.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which pair of everyday objects are both cuboids?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A shoe box and a book"
+        },
+        {
+          "id": "B",
+          "text": "A ball and a marble"
+        },
+        {
+          "id": "C",
+          "text": "A tin can and a glass"
+        },
+        {
+          "id": "D",
+          "text": "A dice and a marble"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Both a shoe box and a book are rectangular box shapes - cuboids.",
+      "explanation_incorrect": "A shoe box and a book are both cuboids. Option A."
+    },
+    {
+      "question_id": "T09.03.Q039",
+      "concept_id": "T09.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape can both roll and slide?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Sphere"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cuboid"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cylinder can roll on its curved surface and slide on its flat faces.",
+      "explanation_incorrect": "A cylinder can roll (curved face) and slide (flat faces). Option C."
+    },
+    {
+      "question_id": "T09.03.Q040",
+      "concept_id": "T09.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "A cube has 6 faces, 12 edges, and ___ vertices.",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A cube has 8 vertices.",
+      "explanation_incorrect": "A cube has 8 vertices. Option A."
+    },
+    {
+      "question_id": "T09.03.Q041",
+      "concept_id": "T09.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "An orange is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cone"
+        },
+        {
+          "id": "D",
+          "text": "Sphere"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "An orange is round, making it approximately a sphere.",
+      "explanation_incorrect": "An orange is sphere-shaped. Option D."
+    },
+    {
+      "question_id": "T09.03.Q042",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "How many flat faces does a cone have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A cone has 1 flat circular face (the base).",
+      "explanation_incorrect": "A cone has 1 flat face. Option B."
+    },
+    {
+      "question_id": "T09.03.Q043",
+      "concept_id": "T09.03.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "type": "mcq",
+      "question_text": "What is the difference between a cube and a cuboid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cube has all equal faces; a cuboid may not"
+        },
+        {
+          "id": "B",
+          "text": "A cube has more faces"
+        },
+        {
+          "id": "C",
+          "text": "A cuboid has more edges"
+        },
+        {
+          "id": "D",
+          "text": "A cube has curved faces"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A cube has all 6 faces as equal squares, while a cuboid has rectangular faces that may have different dimensions.",
+      "explanation_incorrect": "Cube = all equal square faces. Cuboid = rectangular faces of possibly different sizes. Option A."
+    },
+    {
+      "question_id": "T09.03.Q044",
+      "concept_id": "T09.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A chalk box is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere"
+        },
+        {
+          "id": "B",
+          "text": "Cylinder"
+        },
+        {
+          "id": "C",
+          "text": "Cuboid"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A chalk box is a rectangular box - a cuboid.",
+      "explanation_incorrect": "A chalk box is a cuboid. Option C."
+    },
+    {
+      "question_id": "T09.03.Q045",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "A cylinder has 2 edges and 0 vertices. True or false?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "True. A cylinder has 2 circular edges and 0 vertices (no corners).",
+      "explanation_incorrect": "A cylinder has 2 edges and 0 vertices. True."
+    },
+    {
+      "question_id": "T09.03.Q046",
+      "concept_id": "T09.03.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which shape will you get if you stack coins one on top of the other?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cube"
+        },
+        {
+          "id": "B",
+          "text": "Cuboid"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cone"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Stacking circular coins creates a cylinder shape.",
+      "explanation_incorrect": "Stacking coins makes a cylinder. Option C."
+    },
+    {
+      "question_id": "T09.03.Q047",
+      "concept_id": "T09.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "type": "mcq",
+      "question_text": "A Rubik's cube is an example of a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cuboid"
+        },
+        {
+          "id": "B",
+          "text": "Cube"
+        },
+        {
+          "id": "C",
+          "text": "Sphere"
+        },
+        {
+          "id": "D",
+          "text": "Cylinder"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A Rubik's cube has 6 equal square faces - it is a cube.",
+      "explanation_incorrect": "A Rubik's cube is a cube. Option B."
+    },
+    {
+      "question_id": "T09.03.Q048",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A cuboid has how many vertices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cuboid has 8 vertices.",
+      "explanation_incorrect": "A cuboid has 8 vertices. Option C."
+    },
+    {
+      "question_id": "T09.03.Q049",
+      "concept_id": "T09.03.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A traffic cone on the road is shaped like a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cylinder"
+        },
+        {
+          "id": "B",
+          "text": "Sphere"
+        },
+        {
+          "id": "C",
+          "text": "Cone"
+        },
+        {
+          "id": "D",
+          "text": "Cuboid"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A traffic cone has a circular base and comes to a point at the top - it is cone-shaped.",
+      "explanation_incorrect": "A traffic cone is cone-shaped. Option C."
+    },
+    {
+      "question_id": "T09.03.Q050",
+      "concept_id": "T09.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Which 3D shape has the most edges?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere"
+        },
+        {
+          "id": "B",
+          "text": "Cone"
+        },
+        {
+          "id": "C",
+          "text": "Cylinder"
+        },
+        {
+          "id": "D",
+          "text": "Cube"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Cube has 12 edges. Sphere has 0, Cone has 1, Cylinder has 2. The cube has the most.",
+      "explanation_incorrect": "Cube: 12, Cylinder: 2, Cone: 1, Sphere: 0. Cube has the most. Option D."
+    }
   ]
 }

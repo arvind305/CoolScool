@@ -1,62 +1,1276 @@
 {
   "version": "1.0.0",
-  "cam_reference": {"cam_version": "1.0.0", "board": "CBSE", "class": 9, "subject": "Mathematics"},
+  "cam_reference": {
+    "cam_version": "1.0.0",
+    "board": "CBSE",
+    "class": 9,
+    "subject": "Mathematics"
+  },
   "topic_id": "T05.01",
   "topic_name": "Herons Formula",
   "canonical_explanation": {
     "text": "Heron's formula allows us to find the area of a triangle when all three sides are known, without needing the height. For a triangle with sides a, b, c: first calculate the semi-perimeter s = (a+b+c)/2, then the area = sqrt(s(s-a)(s-b)(s-c)). This formula works for all triangles (scalene, isosceles, equilateral). For finding the area of a quadrilateral, divide it into two triangles by drawing a diagonal and apply Heron's formula to each triangle.",
-    "rules": ["Semi-perimeter: s = (a+b+c)/2","Area = sqrt(s(s-a)(s-b)(s-c))","For equilateral triangle with side a: s = 3a/2, Area = (sqrt(3)/4)*a^2","For quadrilateral: divide into triangles using a diagonal and sum the areas","Always verify triangle inequality before applying the formula","The formula gives area in square units"]
+    "rules": [
+      "Semi-perimeter: s = (a+b+c)/2",
+      "Area = sqrt(s(s-a)(s-b)(s-c))",
+      "For equilateral triangle with side a: s = 3a/2, Area = (sqrt(3)/4)*a^2",
+      "For quadrilateral: divide into triangles using a diagonal and sum the areas",
+      "Always verify triangle inequality before applying the formula",
+      "The formula gives area in square units"
+    ]
   },
   "questions": [
-    {"question_id":"T05.01.Q001","concept_id":"T05.01.C03","difficulty":"familiarity","type":"mcq","question_text":"The semi-perimeter of a triangle with sides 3 cm, 4 cm, and 5 cm is:","options":[{"id":"A","text":"6 cm"},{"id":"B","text":"12 cm"},{"id":"C","text":"7 cm"},{"id":"D","text":"5 cm"}],"correct_answer":"A","explanation_correct":"s = (3 + 4 + 5)/2 = 12/2 = 6 cm.","explanation_incorrect":"Semi-perimeter = half of perimeter = (3+4+5)/2 = 6 cm."},
-    {"question_id":"T05.01.Q002","concept_id":"T05.01.C01","difficulty":"familiarity","type":"mcq","question_text":"Heron's formula for the area of a triangle with sides a, b, c is:","options":[{"id":"A","text":"sqrt(s(s+a)(s+b)(s+c))"},{"id":"B","text":"sqrt(s(s-a)(s-b)(s-c))"},{"id":"C","text":"s(s-a)(s-b)(s-c)"},{"id":"D","text":"(s-a)(s-b)(s-c)/s"}],"correct_answer":"B","explanation_correct":"Heron's formula: Area = sqrt(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2.","explanation_incorrect":"The correct formula uses (s-a), (s-b), (s-c) with a square root over the product."},
-    {"question_id":"T05.01.Q003","concept_id":"T05.01.C03","difficulty":"familiarity","type":"mcq","question_text":"The semi-perimeter of a triangle with sides 10 cm, 12 cm, and 14 cm is:","options":[{"id":"A","text":"36 cm"},{"id":"B","text":"18 cm"},{"id":"C","text":"12 cm"},{"id":"D","text":"20 cm"}],"correct_answer":"B","explanation_correct":"s = (10 + 12 + 14)/2 = 36/2 = 18 cm.","explanation_incorrect":"Semi-perimeter = (10+12+14)/2 = 18 cm."},
-    {"question_id":"T05.01.Q004","concept_id":"T05.01.C01","difficulty":"familiarity","type":"true_false","question_text":"Heron's formula can be used to find the area of a triangle without knowing its height.","correct_answer":"true","explanation_correct":"Heron's formula uses only the three side lengths to calculate area, so no height is needed.","explanation_incorrect":"The key advantage of Heron's formula is that it requires only the three sides, not the height."},
-    {"question_id":"T05.01.Q005","concept_id":"T05.01.C01","difficulty":"familiarity","type":"mcq","question_text":"Heron's formula is named after:","options":[{"id":"A","text":"Heron of Alexandria"},{"id":"B","text":"Heron of Athens"},{"id":"C","text":"Hero of Rome"},{"id":"D","text":"Heronimus"}],"correct_answer":"A","explanation_correct":"Heron's formula is attributed to Heron of Alexandria (c. 10-70 AD), an ancient Greek mathematician.","explanation_incorrect":"The formula is named after the Greek mathematician Heron of Alexandria."},
-    {"question_id":"T05.01.Q006","concept_id":"T05.01.C03","difficulty":"familiarity","type":"fill_blank","question_text":"If s is the semi-perimeter of a triangle with sides a, b, c, then s = (a + b + c) / ___.","correct_answer":"2","explanation_correct":"Semi-perimeter means half the perimeter: s = (a + b + c)/2.","explanation_incorrect":"'Semi' means half, so the semi-perimeter is the perimeter divided by 2."},
-    {"question_id":"T05.01.Q007","concept_id":"T05.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The area of a triangle with sides 3 cm, 4 cm, and 5 cm using Heron's formula is:","options":[{"id":"A","text":"12 sq cm"},{"id":"B","text":"6 sq cm"},{"id":"C","text":"10 sq cm"},{"id":"D","text":"8 sq cm"}],"correct_answer":"B","explanation_correct":"s = 6. Area = sqrt(6 x 3 x 2 x 1) = sqrt(36) = 6 sq cm. (This is a right triangle: (1/2)(3)(4) = 6.)","explanation_incorrect":"s = 6, s-a = 3, s-b = 2, s-c = 1. Area = sqrt(6 x 3 x 2 x 1) = sqrt(36) = 6 sq cm."},
-    {"question_id":"T05.01.Q008","concept_id":"T05.01.C02","difficulty":"familiarity","type":"mcq","question_text":"To find the area of a quadrilateral using Heron's formula, we:","options":[{"id":"A","text":"Apply the formula directly to the 4 sides"},{"id":"B","text":"Divide it into two triangles using a diagonal"},{"id":"C","text":"Find the average of all sides"},{"id":"D","text":"Multiply all four sides together"}],"correct_answer":"B","explanation_correct":"A quadrilateral is divided into two triangles by drawing a diagonal. Heron's formula is applied to each triangle and the areas are added.","explanation_incorrect":"Heron's formula works for triangles. For a quadrilateral, split it into two triangles first."},
-    {"question_id":"T05.01.Q009","concept_id":"T05.01.C03","difficulty":"familiarity","type":"mcq","question_text":"For a triangle with sides 5, 12, 13 cm, the value of (s - a) where a = 5 is:","options":[{"id":"A","text":"10"},{"id":"B","text":"3"},{"id":"C","text":"2"},{"id":"D","text":"15"}],"correct_answer":"A","explanation_correct":"s = (5 + 12 + 13)/2 = 15. s - a = 15 - 5 = 10.","explanation_incorrect":"s = 15, so s - 5 = 10."},
-    {"question_id":"T05.01.Q010","concept_id":"T05.01.C01","difficulty":"familiarity","type":"true_false","question_text":"Heron's formula works only for right-angled triangles.","correct_answer":"false","explanation_correct":"Heron's formula works for ALL triangles regardless of type (scalene, isosceles, equilateral, right, obtuse, acute).","explanation_incorrect":"Heron's formula is universally applicable to any triangle, not just right-angled ones."},
-    {"question_id":"T05.01.Q011","concept_id":"T05.01.C01","difficulty":"familiarity","type":"mcq","question_text":"For an equilateral triangle with side a, the semi-perimeter is:","options":[{"id":"A","text":"3a"},{"id":"B","text":"3a/2"},{"id":"C","text":"a/2"},{"id":"D","text":"2a"}],"correct_answer":"B","explanation_correct":"An equilateral triangle has all three sides = a. s = (a + a + a)/2 = 3a/2.","explanation_incorrect":"Semi-perimeter = (a + a + a)/2 = 3a/2."},
-    {"question_id":"T05.01.Q012","concept_id":"T05.01.C03","difficulty":"familiarity","type":"mcq","question_text":"The perimeter of a triangle with semi-perimeter 15 cm is:","options":[{"id":"A","text":"15 cm"},{"id":"B","text":"30 cm"},{"id":"C","text":"7.5 cm"},{"id":"D","text":"45 cm"}],"correct_answer":"B","explanation_correct":"Perimeter = 2 x semi-perimeter = 2 x 15 = 30 cm.","explanation_incorrect":"If s = 15, then perimeter = 2s = 30 cm."},
-    {"question_id":"T05.01.Q013","concept_id":"T05.01.C01","difficulty":"familiarity","type":"mcq","question_text":"The area of a triangle with sides 6 cm, 8 cm, and 10 cm is:","options":[{"id":"A","text":"48 sq cm"},{"id":"B","text":"24 sq cm"},{"id":"C","text":"30 sq cm"},{"id":"D","text":"40 sq cm"}],"correct_answer":"B","explanation_correct":"s = (6+8+10)/2 = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm. (Also a right triangle: (1/2)(6)(8) = 24.)","explanation_incorrect":"s = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm."},
-    {"question_id":"T05.01.Q014","concept_id":"T05.01.C02","difficulty":"familiarity","type":"fill_blank","question_text":"To find the area of a quadrilateral, we split it into ___ triangles using a diagonal.","correct_answer":"2","explanation_correct":"A diagonal of a quadrilateral divides it into exactly 2 triangles.","explanation_incorrect":"A diagonal splits a quadrilateral into two triangles."},
-    {"question_id":"T05.01.Q015","concept_id":"T05.01.C01","difficulty":"familiarity","type":"mcq","question_text":"Using Heron's formula, the area of an equilateral triangle with side 4 cm is:","options":[{"id":"A","text":"4*sqrt(3) sq cm"},{"id":"B","text":"8 sq cm"},{"id":"C","text":"16 sq cm"},{"id":"D","text":"4 sq cm"}],"correct_answer":"A","explanation_correct":"s = 3(4)/2 = 6. Area = sqrt(6 x 2 x 2 x 2) = sqrt(48) = 4*sqrt(3) sq cm. (Also: (sqrt(3)/4) x 16 = 4*sqrt(3).)","explanation_incorrect":"s = 6, s-4 = 2. Area = sqrt(6 x 2 x 2 x 2) = sqrt(48) = 4*sqrt(3) sq cm."},
-    {"question_id":"T05.01.Q016","concept_id":"T05.01.C03","difficulty":"familiarity","type":"mcq","question_text":"For a triangle with sides 7, 8, 9 cm, the value of s(s-a)(s-b)(s-c) is:","options":[{"id":"A","text":"720"},{"id":"B","text":"12 x 5 x 4 x 3"},{"id":"C","text":"Both A and B"},{"id":"D","text":"360"}],"correct_answer":"C","explanation_correct":"s = (7+8+9)/2 = 12. s(s-a)(s-b)(s-c) = 12 x 5 x 4 x 3 = 720. Both A and B express the same value.","explanation_incorrect":"s = 12, s-7 = 5, s-8 = 4, s-9 = 3. Product = 12 x 5 x 4 x 3 = 720."},
-    {"question_id":"T05.01.Q017","concept_id":"T05.01.C01","difficulty":"familiarity","type":"true_false","question_text":"The area obtained from Heron's formula is always in square units.","correct_answer":"true","explanation_correct":"Area is always measured in square units (sq cm, sq m, etc.) regardless of the method used to calculate it.","explanation_incorrect":"Heron's formula computes area, which is always expressed in square units."},
-    {"question_id":"T05.01.Q018","concept_id":"T05.01.C03","difficulty":"familiarity","type":"mcq","question_text":"If the sides of a triangle are 13, 14, 15 cm, the semi-perimeter is:","options":[{"id":"A","text":"21 cm"},{"id":"B","text":"42 cm"},{"id":"C","text":"14 cm"},{"id":"D","text":"20 cm"}],"correct_answer":"A","explanation_correct":"s = (13 + 14 + 15)/2 = 42/2 = 21 cm.","explanation_incorrect":"Semi-perimeter = (13+14+15)/2 = 21 cm."},
-    {"question_id":"T05.01.Q019","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"The area of a triangle with sides 13, 14, 15 cm is:","options":[{"id":"A","text":"84 sq cm"},{"id":"B","text":"80 sq cm"},{"id":"C","text":"90 sq cm"},{"id":"D","text":"78 sq cm"}],"correct_answer":"A","explanation_correct":"s = 21. Area = sqrt(21 x 8 x 7 x 6) = sqrt(7056) = 84 sq cm.","explanation_incorrect":"s = 21, s-13 = 8, s-14 = 7, s-15 = 6. Area = sqrt(21 x 8 x 7 x 6) = sqrt(7056) = 84 sq cm."},
-    {"question_id":"T05.01.Q020","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"The area of an isosceles triangle with sides 5, 5, and 6 cm is:","options":[{"id":"A","text":"12 sq cm"},{"id":"B","text":"15 sq cm"},{"id":"C","text":"10 sq cm"},{"id":"D","text":"8 sq cm"}],"correct_answer":"A","explanation_correct":"s = (5+5+6)/2 = 8. Area = sqrt(8 x 3 x 3 x 2) = sqrt(144) = 12 sq cm.","explanation_incorrect":"s = 8, s-5 = 3, s-5 = 3, s-6 = 2. Area = sqrt(8 x 3 x 3 x 2) = sqrt(144) = 12 sq cm."},
-    {"question_id":"T05.01.Q021","concept_id":"T05.01.C03","difficulty":"application","type":"mcq","question_text":"For a triangle with sides a, b, c, if s = 10, s-a = 3, s-b = 5, then s-c equals:","options":[{"id":"A","text":"2"},{"id":"B","text":"4"},{"id":"C","text":"8"},{"id":"D","text":"7"}],"correct_answer":"A","explanation_correct":"We know s = 10, s-a = 3 so a = 7, s-b = 5 so b = 5. Then c = 2s - a - b = 20 - 7 - 5 = 8. s-c = 10-8 = 2. Alternatively, (s-a)+(s-b)+(s-c) = 3s - (a+b+c) = 3s - 2s = s = 10. So 3 + 5 + (s-c) = 10, s-c = 2.","explanation_incorrect":"(s-a) + (s-b) + (s-c) = s. So 3 + 5 + (s-c) = 10, giving s-c = 2."},
-    {"question_id":"T05.01.Q022","concept_id":"T05.01.C02","difficulty":"application","type":"mcq","question_text":"A rhombus has diagonals of length 16 cm and 12 cm. Its area is:","options":[{"id":"A","text":"192 sq cm"},{"id":"B","text":"96 sq cm"},{"id":"C","text":"48 sq cm"},{"id":"D","text":"144 sq cm"}],"correct_answer":"B","explanation_correct":"Area of rhombus = (1/2) x d1 x d2 = (1/2) x 16 x 12 = 96 sq cm. (We can also split into triangles and use Heron's formula since the side = sqrt(8^2 + 6^2) = 10.)","explanation_incorrect":"Area of rhombus = (1/2)(d1)(d2) = (1/2)(16)(12) = 96 sq cm."},
-    {"question_id":"T05.01.Q023","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"The area of a triangle with sides 10 cm, 10 cm, and 12 cm is:","options":[{"id":"A","text":"48 sq cm"},{"id":"B","text":"60 sq cm"},{"id":"C","text":"36 sq cm"},{"id":"D","text":"40 sq cm"}],"correct_answer":"A","explanation_correct":"s = (10+10+12)/2 = 16. Area = sqrt(16 x 6 x 6 x 4) = sqrt(2304) = 48 sq cm.","explanation_incorrect":"s = 16, s-10 = 6, s-10 = 6, s-12 = 4. Area = sqrt(16 x 6 x 6 x 4) = sqrt(2304) = 48 sq cm."},
-    {"question_id":"T05.01.Q024","concept_id":"T05.01.C01","difficulty":"application","type":"fill_blank","question_text":"The area of an equilateral triangle with side 6 cm is ___ *sqrt(3) sq cm.","correct_answer":"9","explanation_correct":"Area of equilateral triangle = (sqrt(3)/4) x a^2 = (sqrt(3)/4) x 36 = 9*sqrt(3) sq cm.","explanation_incorrect":"(sqrt(3)/4) x 6^2 = (sqrt(3)/4) x 36 = 9*sqrt(3) sq cm."},
-    {"question_id":"T05.01.Q025","concept_id":"T05.01.C02","difficulty":"application","type":"mcq","question_text":"A quadrilateral ABCD has diagonal AC = 13 cm. Triangle ABC has sides 5, 12, 13 cm and triangle ACD has sides 13, 14, 15 cm. The area of the quadrilateral is:","options":[{"id":"A","text":"114 sq cm"},{"id":"B","text":"30 sq cm"},{"id":"C","text":"84 sq cm"},{"id":"D","text":"54 sq cm"}],"correct_answer":"A","explanation_correct":"Area(ABC): s = 15, Area = sqrt(15 x 10 x 3 x 2) = sqrt(900) = 30. Area(ACD): s = 21, Area = sqrt(21 x 8 x 7 x 6) = sqrt(7056) = 84. Total = 30 + 84 = 114 sq cm.","explanation_incorrect":"Area of quadrilateral = Area(ABC) + Area(ACD) = 30 + 84 = 114 sq cm."},
-    {"question_id":"T05.01.Q026","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"A triangular field has sides 50 m, 60 m, and 70 m. Its area is:","options":[{"id":"A","text":"1500 sq m"},{"id":"B","text":"600*sqrt(6) sq m"},{"id":"C","text":"1200 sq m"},{"id":"D","text":"700 sq m"}],"correct_answer":"B","explanation_correct":"s = (50+60+70)/2 = 90. Area = sqrt(90 x 40 x 30 x 20) = sqrt(2160000) = 600*sqrt(6) sq m (approximately 1469.7 sq m).","explanation_incorrect":"s = 90. Area = sqrt(90 x 40 x 30 x 20) = sqrt(2160000) = 600*sqrt(6) sq m."},
-    {"question_id":"T05.01.Q027","concept_id":"T05.01.C03","difficulty":"application","type":"mcq","question_text":"If the perimeter of a triangle is 24 cm and the sides are in the ratio 3:4:5, the semi-perimeter is:","options":[{"id":"A","text":"6 cm"},{"id":"B","text":"10 cm"},{"id":"C","text":"12 cm"},{"id":"D","text":"24 cm"}],"correct_answer":"C","explanation_correct":"Semi-perimeter = 24/2 = 12 cm. The sides would be 6, 8, 10 cm (in ratio 3:4:5).","explanation_incorrect":"s = perimeter/2 = 24/2 = 12 cm."},
-    {"question_id":"T05.01.Q028","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"If the perimeter of a triangle is 24 cm and sides are in ratio 3:4:5, the area is:","options":[{"id":"A","text":"24 sq cm"},{"id":"B","text":"48 sq cm"},{"id":"C","text":"36 sq cm"},{"id":"D","text":"20 sq cm"}],"correct_answer":"A","explanation_correct":"Sides: 6, 8, 10 cm. s = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm.","explanation_incorrect":"Sides = 6, 8, 10. s = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm."},
-    {"question_id":"T05.01.Q029","concept_id":"T05.01.C02","difficulty":"application","type":"true_false","question_text":"The area of a quadrilateral can be found by splitting it into triangles along any diagonal and summing the triangle areas.","correct_answer":"true","explanation_correct":"Any diagonal of a quadrilateral divides it into two triangles. The total area equals the sum of both triangle areas.","explanation_incorrect":"This is the standard method: draw a diagonal, compute each triangle's area, then add."},
-    {"question_id":"T05.01.Q030","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"A right triangle has legs 8 cm and 15 cm. Using Heron's formula, its area is:","options":[{"id":"A","text":"60 sq cm"},{"id":"B","text":"120 sq cm"},{"id":"C","text":"68 sq cm"},{"id":"D","text":"45 sq cm"}],"correct_answer":"A","explanation_correct":"Hypotenuse = sqrt(64+225) = sqrt(289) = 17. s = (8+15+17)/2 = 20. Area = sqrt(20 x 12 x 5 x 3) = sqrt(3600) = 60 sq cm. (Check: (1/2)(8)(15) = 60.)","explanation_incorrect":"Sides: 8, 15, 17. s = 20. Area = sqrt(20 x 12 x 5 x 3) = sqrt(3600) = 60 sq cm."},
-    {"question_id":"T05.01.Q031","concept_id":"T05.01.C03","difficulty":"application","type":"fill_blank","question_text":"For a triangle with sides 8, 11, 13 cm, the semi-perimeter is ___ cm.","correct_answer":"16","explanation_correct":"s = (8 + 11 + 13)/2 = 32/2 = 16 cm.","explanation_incorrect":"Semi-perimeter = (8+11+13)/2 = 16 cm."},
-    {"question_id":"T05.01.Q032","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"The area of a triangle with sides 8, 11, 13 cm is:","options":[{"id":"A","text":"8*sqrt(30) sq cm"},{"id":"B","text":"4*sqrt(30) sq cm"},{"id":"C","text":"30 sq cm"},{"id":"D","text":"16*sqrt(30) sq cm"}],"correct_answer":"A","explanation_correct":"s = (8+11+13)/2 = 16. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = sqrt(64 x 30) = 8*sqrt(30) sq cm.","explanation_incorrect":"s = 16, s-8 = 8, s-11 = 5, s-13 = 3. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = 8*sqrt(30) sq cm."},
-    {"question_id":"T05.01.Q033","concept_id":"T05.01.C02","difficulty":"application","type":"mcq","question_text":"A quadrilateral ABCD has diagonal AC = 13 cm. Triangle ABC has sides 5, 12, 13 cm. The area of triangle ABC is:","options":[{"id":"A","text":"24 sq cm"},{"id":"B","text":"30 sq cm"},{"id":"C","text":"36 sq cm"},{"id":"D","text":"20 sq cm"}],"correct_answer":"B","explanation_correct":"For triangle with sides 5, 12, 13: s = (5+12+13)/2 = 15. Area = sqrt(15 x 10 x 3 x 2) = sqrt(900) = 30 sq cm. (Also a right triangle: (1/2)(5)(12) = 30.)","explanation_incorrect":"s = 15. Area = sqrt(15 x 10 x 3 x 2) = sqrt(900) = 30 sq cm."},
-    {"question_id":"T05.01.Q034","concept_id":"T05.01.C01","difficulty":"application","type":"true_false","question_text":"The area of an equilateral triangle with side 10 cm is 25*sqrt(3) sq cm.","correct_answer":"true","explanation_correct":"Area = (sqrt(3)/4) x 10^2 = (sqrt(3)/4) x 100 = 25*sqrt(3) sq cm.","explanation_incorrect":"Equilateral triangle area = (sqrt(3)/4) x a^2 = (sqrt(3)/4) x 100 = 25*sqrt(3) sq cm."},
-    {"question_id":"T05.01.Q035","concept_id":"T05.01.C03","difficulty":"application","type":"mcq","question_text":"A triangle has sides 17, 25, and 28 cm. The values of (s-a), (s-b), (s-c) are:","options":[{"id":"A","text":"18, 10, 7"},{"id":"B","text":"17, 10, 7"},{"id":"C","text":"18, 10, 8"},{"id":"D","text":"15, 10, 7"}],"correct_answer":"A","explanation_correct":"s = (17+25+28)/2 = 35. s-17 = 18, s-25 = 10, s-28 = 7.","explanation_incorrect":"s = 35. (s-a, s-b, s-c) = (35-17, 35-25, 35-28) = (18, 10, 7)."},
-    {"question_id":"T05.01.Q036","concept_id":"T05.01.C01","difficulty":"application","type":"mcq","question_text":"A triangle has sides 17, 25, 28 cm. Its area is:","options":[{"id":"A","text":"210 sq cm"},{"id":"B","text":"420 sq cm"},{"id":"C","text":"180 sq cm"},{"id":"D","text":"350 sq cm"}],"correct_answer":"A","explanation_correct":"s = 35. Area = sqrt(35 x 18 x 10 x 7) = sqrt(44100) = 210 sq cm.","explanation_incorrect":"s = 35. s-17 = 18, s-25 = 10, s-28 = 7. Area = sqrt(35 x 18 x 10 x 7) = sqrt(44100) = 210 sq cm."},
-    {"question_id":"T05.01.Q037","concept_id":"T05.01.C02","difficulty":"exam_style","type":"mcq","question_text":"A quadrilateral ABCD has diagonal AC = 25 cm. Triangle ABC has sides 7, 24, 25 and triangle ACD has sides 25, 20, 15. The total area of the quadrilateral is:","options":[{"id":"A","text":"234 sq cm"},{"id":"B","text":"84 sq cm"},{"id":"C","text":"150 sq cm"},{"id":"D","text":"300 sq cm"}],"correct_answer":"A","explanation_correct":"Triangle ABC (7,24,25): s = 28. Area = sqrt(28 x 21 x 4 x 3) = sqrt(7056) = 84 sq cm. Triangle ACD (25,20,15): s = 30. Area = sqrt(30 x 5 x 10 x 15) = sqrt(22500) = 150 sq cm. Total = 84 + 150 = 234 sq cm.","explanation_incorrect":"Area = Area(ABC) + Area(ACD) = 84 + 150 = 234 sq cm."},
-    {"question_id":"T05.01.Q038","concept_id":"T05.01.C01","difficulty":"exam_style","type":"mcq","question_text":"The sides of a triangle are in the ratio 5:12:13. If the perimeter is 60 cm, the area of the triangle is:","options":[{"id":"A","text":"120 sq cm"},{"id":"B","text":"150 sq cm"},{"id":"C","text":"100 sq cm"},{"id":"D","text":"180 sq cm"}],"correct_answer":"A","explanation_correct":"Sides: 5k + 12k + 13k = 60 so k = 2. Sides = 10, 24, 26. s = 30. Area = sqrt(30 x 20 x 6 x 4) = sqrt(14400) = 120 sq cm.","explanation_incorrect":"Sides = 10, 24, 26 cm. s = 30. Area = sqrt(30 x 20 x 6 x 4) = sqrt(14400) = 120 sq cm."},
-    {"question_id":"T05.01.Q039","concept_id":"T05.01.C03","difficulty":"exam_style","type":"mcq","question_text":"A triangle has area 84 sq cm and sides 13, 14, 15 cm. If its base is 14 cm, the corresponding height is:","options":[{"id":"A","text":"12 cm"},{"id":"B","text":"10 cm"},{"id":"C","text":"8 cm"},{"id":"D","text":"6 cm"}],"correct_answer":"A","explanation_correct":"Area = (1/2) x base x height. 84 = (1/2) x 14 x h. h = (84 x 2)/14 = 12 cm.","explanation_incorrect":"h = 2 x Area / base = 2 x 84 / 14 = 12 cm."},
-    {"question_id":"T05.01.Q040","concept_id":"T05.01.C01","difficulty":"exam_style","type":"mcq","question_text":"A triangular plot has sides 120 m, 160 m, and 200 m. The cost of levelling it at Rs 5 per sq m is:","options":[{"id":"A","text":"Rs 48,000"},{"id":"B","text":"Rs 96,000"},{"id":"C","text":"Rs 24,000"},{"id":"D","text":"Rs 60,000"}],"correct_answer":"A","explanation_correct":"This is a right triangle since 120^2 + 160^2 = 14400 + 25600 = 40000 = 200^2. Area = (1/2)(120)(160) = 9600 sq m. By Heron's: s = 240, Area = sqrt(240 x 120 x 80 x 40) = sqrt(92160000) = 9600 sq m. Cost = 9600 x 5 = Rs 48,000.","explanation_incorrect":"s = 240. Area = sqrt(240 x 120 x 80 x 40) = 9600 sq m. Cost = 9600 x 5 = Rs 48,000."},
-    {"question_id":"T05.01.Q041","concept_id":"T05.01.C02","difficulty":"exam_style","type":"mcq","question_text":"A quadrilateral ABCD has AB = 3 cm, BC = 4 cm, CD = 12 cm, DA = 13 cm, and diagonal AC = 5 cm. The area of the quadrilateral is:","options":[{"id":"A","text":"36 sq cm"},{"id":"B","text":"30 sq cm"},{"id":"C","text":"24 sq cm"},{"id":"D","text":"42 sq cm"}],"correct_answer":"A","explanation_correct":"Triangle ABC (3, 4, 5): right triangle, area = (1/2)(3)(4) = 6 sq cm. Triangle ACD (5, 12, 13): right triangle, area = (1/2)(5)(12) = 30 sq cm. Total = 6 + 30 = 36 sq cm.","explanation_incorrect":"Both triangles are right triangles. Area(ABC) = 6, Area(ACD) = 30. Total = 36 sq cm."},
-    {"question_id":"T05.01.Q042","concept_id":"T05.01.C01","difficulty":"exam_style","type":"fill_blank","question_text":"A triangle with sides 20, 21, and 29 cm has area ___ sq cm.","correct_answer":"210","explanation_correct":"s = (20+21+29)/2 = 35. Area = sqrt(35 x 15 x 14 x 6) = sqrt(44100) = 210 sq cm.","explanation_incorrect":"s = 35. Area = sqrt(35 x 15 x 14 x 6) = sqrt(44100) = 210 sq cm."},
-    {"question_id":"T05.01.Q043","concept_id":"T05.01.C02","difficulty":"exam_style","type":"mcq","question_text":"A rectangular plot has dimensions 50 m x 40 m. A triangular portion with sides 50, 30, 40 m is cut off. The area of the remaining portion is:","options":[{"id":"A","text":"1400 sq m"},{"id":"B","text":"2000 sq m"},{"id":"C","text":"600 sq m"},{"id":"D","text":"1000 sq m"}],"correct_answer":"A","explanation_correct":"Rectangle area = 50 x 40 = 2000 sq m. Triangle (50, 30, 40): s = 60. Area = sqrt(60 x 10 x 30 x 20) = sqrt(360000) = 600 sq m. Remaining = 2000 - 600 = 1400 sq m.","explanation_incorrect":"Remaining area = Rectangle area - Triangle area = 2000 - 600 = 1400 sq m."},
-    {"question_id":"T05.01.Q044","concept_id":"T05.01.C01","difficulty":"exam_style","type":"mcq","question_text":"Two sides of a triangle are 8 cm and 11 cm, and the perimeter is 32 cm. The area of the triangle is:","options":[{"id":"A","text":"8*sqrt(30) sq cm"},{"id":"B","text":"4*sqrt(30) sq cm"},{"id":"C","text":"30 sq cm"},{"id":"D","text":"60 sq cm"}],"correct_answer":"A","explanation_correct":"Third side = 32 - 8 - 11 = 13 cm. s = 16. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = sqrt(64 x 30) = 8*sqrt(30) sq cm.","explanation_incorrect":"Third side = 13 cm. s = 16. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = 8*sqrt(30) sq cm."},
-    {"question_id":"T05.01.Q045","concept_id":"T05.01.C03","difficulty":"exam_style","type":"mcq","question_text":"If the area of an equilateral triangle is 16*sqrt(3) sq cm, the side of the triangle is:","options":[{"id":"A","text":"4 cm"},{"id":"B","text":"8 cm"},{"id":"C","text":"16 cm"},{"id":"D","text":"6 cm"}],"correct_answer":"B","explanation_correct":"Area = (sqrt(3)/4) x a^2 = 16*sqrt(3). So a^2 = 16*sqrt(3) x 4/sqrt(3) = 64. a = 8 cm.","explanation_incorrect":"(sqrt(3)/4) x a^2 = 16*sqrt(3). a^2 = 64. a = 8 cm."},
-    {"question_id":"T05.01.Q046","concept_id":"T05.01.C01","difficulty":"exam_style","type":"mcq","question_text":"A triangular field has sides 26 m, 28 m, and 30 m. The cost of fencing at Rs 10/m and the area of the field are:","options":[{"id":"A","text":"Fencing: Rs 840, Area: 336 sq m"},{"id":"B","text":"Fencing: Rs 840, Area: 420 sq m"},{"id":"C","text":"Fencing: Rs 800, Area: 336 sq m"},{"id":"D","text":"Fencing: Rs 900, Area: 300 sq m"}],"correct_answer":"A","explanation_correct":"Perimeter = 26+28+30 = 84 m. Fencing = 84 x 10 = Rs 840. s = 42. Area = sqrt(42 x 16 x 14 x 12) = sqrt(112896) = 336 sq m.","explanation_incorrect":"Perimeter = 84 m, fencing = Rs 840. s = 42. Area = sqrt(42 x 16 x 14 x 12) = sqrt(112896) = 336 sq m."},
-    {"question_id":"T05.01.Q047","concept_id":"T05.01.C02","difficulty":"exam_style","type":"mcq","question_text":"A kite has diagonals of 24 cm and 10 cm. Its area is:","options":[{"id":"A","text":"240 sq cm"},{"id":"B","text":"120 sq cm"},{"id":"C","text":"60 sq cm"},{"id":"D","text":"480 sq cm"}],"correct_answer":"B","explanation_correct":"Area of kite = (1/2) x d1 x d2 = (1/2) x 24 x 10 = 120 sq cm.","explanation_incorrect":"Area of kite = (1/2)(d1)(d2) = (1/2)(24)(10) = 120 sq cm."},
-    {"question_id":"T05.01.Q048","concept_id":"T05.01.C01","difficulty":"exam_style","type":"true_false","question_text":"If the sides of a triangle are 1 cm, 2 cm, and 4 cm, Heron's formula gives a valid area.","correct_answer":"false","explanation_correct":"These sides do not satisfy the triangle inequality: 1 + 2 = 3 < 4. No triangle can be formed, so Heron's formula does not apply.","explanation_incorrect":"1 + 2 = 3 < 4 violates the triangle inequality. A triangle cannot exist with these sides."},
-    {"question_id":"T05.01.Q049","concept_id":"T05.01.C03","difficulty":"exam_style","type":"mcq","question_text":"An isosceles triangle has equal sides of 13 cm each and area 60 sq cm. The base of the triangle is:","options":[{"id":"A","text":"12 cm"},{"id":"B","text":"10 cm"},{"id":"C","text":"8 cm"},{"id":"D","text":"14 cm"}],"correct_answer":"B","explanation_correct":"For sides 13, 13, b: height h = sqrt(169 - b^2/4). Area = (1/2)(b)(h) = 60. Try b = 10: h = sqrt(169 - 25) = sqrt(144) = 12. Area = (1/2)(10)(12) = 60 sq cm. Verified! Using Heron's: s = (13+13+10)/2 = 18. Area = sqrt(18 x 5 x 5 x 8) = sqrt(3600) = 60 sq cm.","explanation_incorrect":"s = 18, sides 13, 13, 10. Area = sqrt(18 x 5 x 5 x 8) = sqrt(3600) = 60 sq cm. Base = 10 cm."},
-    {"question_id":"T05.01.Q050","concept_id":"T05.01.C01","difficulty":"exam_style","type":"mcq","question_text":"A triangular sign board has sides 26 cm, 25 cm, and 3 cm. Its area is:","options":[{"id":"A","text":"36 sq cm"},{"id":"B","text":"24 sq cm"},{"id":"C","text":"30 sq cm"},{"id":"D","text":"48 sq cm"}],"correct_answer":"A","explanation_correct":"s = (26+25+3)/2 = 27. Area = sqrt(27 x 1 x 2 x 24) = sqrt(1296) = 36 sq cm.","explanation_incorrect":"s = 27, s-26 = 1, s-25 = 2, s-3 = 24. Area = sqrt(27 x 1 x 2 x 24) = sqrt(1296) = 36 sq cm."}
+    {
+      "question_id": "T05.01.Q001",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The semi-perimeter of a triangle with sides 3 cm, 4 cm, and 5 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "12 cm"
+        },
+        {
+          "id": "C",
+          "text": "7 cm"
+        },
+        {
+          "id": "D",
+          "text": "5 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (3 + 4 + 5)/2 = 12/2 = 6 cm.",
+      "explanation_incorrect": "Semi-perimeter = half of perimeter = (3+4+5)/2 = 6 cm."
+    },
+    {
+      "question_id": "T05.01.Q002",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Heron's formula for the area of a triangle with sides a, b, c is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "sqrt(s(s+a)(s+b)(s+c))"
+        },
+        {
+          "id": "B",
+          "text": "sqrt(s(s-a)(s-b)(s-c))"
+        },
+        {
+          "id": "C",
+          "text": "s(s-a)(s-b)(s-c)"
+        },
+        {
+          "id": "D",
+          "text": "(s-a)(s-b)(s-c)/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Heron's formula: Area = sqrt(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2.",
+      "explanation_incorrect": "The correct formula uses (s-a), (s-b), (s-c) with a square root over the product."
+    },
+    {
+      "question_id": "T05.01.Q003",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The semi-perimeter of a triangle with sides 10 cm, 12 cm, and 14 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "36 cm"
+        },
+        {
+          "id": "B",
+          "text": "18 cm"
+        },
+        {
+          "id": "C",
+          "text": "12 cm"
+        },
+        {
+          "id": "D",
+          "text": "20 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "s = (10 + 12 + 14)/2 = 36/2 = 18 cm.",
+      "explanation_incorrect": "Semi-perimeter = (10+12+14)/2 = 18 cm."
+    },
+    {
+      "question_id": "T05.01.Q004",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Heron's formula can be used to find the area of a triangle without knowing its height.",
+      "correct_answer": "true",
+      "explanation_correct": "Heron's formula uses only the three side lengths to calculate area, so no height is needed.",
+      "explanation_incorrect": "The key advantage of Heron's formula is that it requires only the three sides, not the height."
+    },
+    {
+      "question_id": "T05.01.Q005",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Heron's formula is named after:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heron of Alexandria"
+        },
+        {
+          "id": "B",
+          "text": "Heron of Athens"
+        },
+        {
+          "id": "C",
+          "text": "Hero of Rome"
+        },
+        {
+          "id": "D",
+          "text": "Heronimus"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Heron's formula is attributed to Heron of Alexandria (c. 10-70 AD), an ancient Greek mathematician.",
+      "explanation_incorrect": "The formula is named after the Greek mathematician Heron of Alexandria."
+    },
+    {
+      "question_id": "T05.01.Q006",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "If s is the semi-perimeter of a triangle with sides a, b, c, then s = (a + b + c) / ___.",
+      "correct_answer": "2",
+      "explanation_correct": "Semi-perimeter means half the perimeter: s = (a + b + c)/2.",
+      "explanation_incorrect": "'Semi' means half, so the semi-perimeter is the perimeter divided by 2."
+    },
+    {
+      "question_id": "T05.01.Q007",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a triangle with sides 3 cm, 4 cm, and 5 cm using Heron's formula is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "6 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "10 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "8 sq cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "s = 6. Area = sqrt(6 x 3 x 2 x 1) = sqrt(36) = 6 sq cm. (This is a right triangle: (1/2)(3)(4) = 6.)",
+      "explanation_incorrect": "s = 6, s-a = 3, s-b = 2, s-c = 1. Area = sqrt(6 x 3 x 2 x 1) = sqrt(36) = 6 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q008",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "To find the area of a quadrilateral using Heron's formula, we:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apply the formula directly to the 4 sides"
+        },
+        {
+          "id": "B",
+          "text": "Divide it into two triangles using a diagonal"
+        },
+        {
+          "id": "C",
+          "text": "Find the average of all sides"
+        },
+        {
+          "id": "D",
+          "text": "Multiply all four sides together"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A quadrilateral is divided into two triangles by drawing a diagonal. Heron's formula is applied to each triangle and the areas are added.",
+      "explanation_incorrect": "Heron's formula works for triangles. For a quadrilateral, split it into two triangles first."
+    },
+    {
+      "question_id": "T05.01.Q009",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "For a triangle with sides 5, 12, 13 cm, the value of (s - a) where a = 5 is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "10"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (5 + 12 + 13)/2 = 15. s - a = 15 - 5 = 10.",
+      "explanation_incorrect": "s = 15, so s - 5 = 10."
+    },
+    {
+      "question_id": "T05.01.Q010",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "Heron's formula works only for right-angled triangles.",
+      "correct_answer": "false",
+      "explanation_correct": "Heron's formula works for ALL triangles regardless of type (scalene, isosceles, equilateral, right, obtuse, acute).",
+      "explanation_incorrect": "Heron's formula is universally applicable to any triangle, not just right-angled ones."
+    },
+    {
+      "question_id": "T05.01.Q011",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "For an equilateral triangle with side a, the semi-perimeter is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3a"
+        },
+        {
+          "id": "B",
+          "text": "3a/2"
+        },
+        {
+          "id": "C",
+          "text": "a/2"
+        },
+        {
+          "id": "D",
+          "text": "2a"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An equilateral triangle has all three sides = a. s = (a + a + a)/2 = 3a/2.",
+      "explanation_incorrect": "Semi-perimeter = (a + a + a)/2 = 3a/2."
+    },
+    {
+      "question_id": "T05.01.Q012",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The perimeter of a triangle with semi-perimeter 15 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 cm"
+        },
+        {
+          "id": "B",
+          "text": "30 cm"
+        },
+        {
+          "id": "C",
+          "text": "7.5 cm"
+        },
+        {
+          "id": "D",
+          "text": "45 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Perimeter = 2 x semi-perimeter = 2 x 15 = 30 cm.",
+      "explanation_incorrect": "If s = 15, then perimeter = 2s = 30 cm."
+    },
+    {
+      "question_id": "T05.01.Q013",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a triangle with sides 6 cm, 8 cm, and 10 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "48 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "24 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "40 sq cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "s = (6+8+10)/2 = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm. (Also a right triangle: (1/2)(6)(8) = 24.)",
+      "explanation_incorrect": "s = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q014",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "To find the area of a quadrilateral, we split it into ___ triangles using a diagonal.",
+      "correct_answer": "2",
+      "explanation_correct": "A diagonal of a quadrilateral divides it into exactly 2 triangles.",
+      "explanation_incorrect": "A diagonal splits a quadrilateral into two triangles."
+    },
+    {
+      "question_id": "T05.01.Q015",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Using Heron's formula, the area of an equilateral triangle with side 4 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4*sqrt(3) sq cm"
+        },
+        {
+          "id": "B",
+          "text": "8 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "16 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "4 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = 3(4)/2 = 6. Area = sqrt(6 x 2 x 2 x 2) = sqrt(48) = 4*sqrt(3) sq cm. (Also: (sqrt(3)/4) x 16 = 4*sqrt(3).)",
+      "explanation_incorrect": "s = 6, s-4 = 2. Area = sqrt(6 x 2 x 2 x 2) = sqrt(48) = 4*sqrt(3) sq cm."
+    },
+    {
+      "question_id": "T05.01.Q016",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "For a triangle with sides 7, 8, 9 cm, the value of s(s-a)(s-b)(s-c) is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "720"
+        },
+        {
+          "id": "B",
+          "text": "12 x 5 x 4 x 3"
+        },
+        {
+          "id": "C",
+          "text": "Both A and B"
+        },
+        {
+          "id": "D",
+          "text": "360"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "s = (7+8+9)/2 = 12. s(s-a)(s-b)(s-c) = 12 x 5 x 4 x 3 = 720. Both A and B express the same value.",
+      "explanation_incorrect": "s = 12, s-7 = 5, s-8 = 4, s-9 = 3. Product = 12 x 5 x 4 x 3 = 720."
+    },
+    {
+      "question_id": "T05.01.Q017",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The area obtained from Heron's formula is always in square units.",
+      "correct_answer": "true",
+      "explanation_correct": "Area is always measured in square units (sq cm, sq m, etc.) regardless of the method used to calculate it.",
+      "explanation_incorrect": "Heron's formula computes area, which is always expressed in square units."
+    },
+    {
+      "question_id": "T05.01.Q018",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If the sides of a triangle are 13, 14, 15 cm, the semi-perimeter is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "21 cm"
+        },
+        {
+          "id": "B",
+          "text": "42 cm"
+        },
+        {
+          "id": "C",
+          "text": "14 cm"
+        },
+        {
+          "id": "D",
+          "text": "20 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (13 + 14 + 15)/2 = 42/2 = 21 cm.",
+      "explanation_incorrect": "Semi-perimeter = (13+14+15)/2 = 21 cm."
+    },
+    {
+      "question_id": "T05.01.Q019",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a triangle with sides 13, 14, 15 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "84 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "80 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "90 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "78 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = 21. Area = sqrt(21 x 8 x 7 x 6) = sqrt(7056) = 84 sq cm.",
+      "explanation_incorrect": "s = 21, s-13 = 8, s-14 = 7, s-15 = 6. Area = sqrt(21 x 8 x 7 x 6) = sqrt(7056) = 84 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q020",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of an isosceles triangle with sides 5, 5, and 6 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "15 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "10 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "8 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (5+5+6)/2 = 8. Area = sqrt(8 x 3 x 3 x 2) = sqrt(144) = 12 sq cm.",
+      "explanation_incorrect": "s = 8, s-5 = 3, s-5 = 3, s-6 = 2. Area = sqrt(8 x 3 x 3 x 2) = sqrt(144) = 12 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q021",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "For a triangle with sides a, b, c, if s = 10, s-a = 3, s-b = 5, then s-c equals:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "We know s = 10, s-a = 3 so a = 7, s-b = 5 so b = 5. Then c = 2s - a - b = 20 - 7 - 5 = 8. s-c = 10-8 = 2. Alternatively, (s-a)+(s-b)+(s-c) = 3s - (a+b+c) = 3s - 2s = s = 10. So 3 + 5 + (s-c) = 10, s-c = 2.",
+      "explanation_incorrect": "(s-a) + (s-b) + (s-c) = s. So 3 + 5 + (s-c) = 10, giving s-c = 2."
+    },
+    {
+      "question_id": "T05.01.Q022",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A rhombus has diagonals of length 16 cm and 12 cm. Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "192 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "96 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "48 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "144 sq cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area of rhombus = (1/2) x d1 x d2 = (1/2) x 16 x 12 = 96 sq cm. (We can also split into triangles and use Heron's formula since the side = sqrt(8^2 + 6^2) = 10.)",
+      "explanation_incorrect": "Area of rhombus = (1/2)(d1)(d2) = (1/2)(16)(12) = 96 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q023",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a triangle with sides 10 cm, 10 cm, and 12 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "48 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "60 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "36 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "40 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (10+10+12)/2 = 16. Area = sqrt(16 x 6 x 6 x 4) = sqrt(2304) = 48 sq cm.",
+      "explanation_incorrect": "s = 16, s-10 = 6, s-10 = 6, s-12 = 4. Area = sqrt(16 x 6 x 6 x 4) = sqrt(2304) = 48 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q024",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "The area of an equilateral triangle with side 6 cm is ___ *sqrt(3) sq cm.",
+      "correct_answer": "9",
+      "explanation_correct": "Area of equilateral triangle = (sqrt(3)/4) x a^2 = (sqrt(3)/4) x 36 = 9*sqrt(3) sq cm.",
+      "explanation_incorrect": "(sqrt(3)/4) x 6^2 = (sqrt(3)/4) x 36 = 9*sqrt(3) sq cm."
+    },
+    {
+      "question_id": "T05.01.Q025",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A quadrilateral ABCD has diagonal AC = 13 cm. Triangle ABC has sides 5, 12, 13 cm and triangle ACD has sides 13, 14, 15 cm. The area of the quadrilateral is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "114 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "84 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "54 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Area(ABC): s = 15, Area = sqrt(15 x 10 x 3 x 2) = sqrt(900) = 30. Area(ACD): s = 21, Area = sqrt(21 x 8 x 7 x 6) = sqrt(7056) = 84. Total = 30 + 84 = 114 sq cm.",
+      "explanation_incorrect": "Area of quadrilateral = Area(ABC) + Area(ACD) = 30 + 84 = 114 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q026",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A triangular field has sides 50 m, 60 m, and 70 m. Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1500 sq m"
+        },
+        {
+          "id": "B",
+          "text": "600*sqrt(6) sq m"
+        },
+        {
+          "id": "C",
+          "text": "1200 sq m"
+        },
+        {
+          "id": "D",
+          "text": "700 sq m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "s = (50+60+70)/2 = 90. Area = sqrt(90 x 40 x 30 x 20) = sqrt(2160000) = 600*sqrt(6) sq m (approximately 1469.7 sq m).",
+      "explanation_incorrect": "s = 90. Area = sqrt(90 x 40 x 30 x 20) = sqrt(2160000) = 600*sqrt(6) sq m."
+    },
+    {
+      "question_id": "T05.01.Q027",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If the perimeter of a triangle is 24 cm and the sides are in the ratio 3:4:5, the semi-perimeter is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "12 cm"
+        },
+        {
+          "id": "D",
+          "text": "24 cm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Semi-perimeter = 24/2 = 12 cm. The sides would be 6, 8, 10 cm (in ratio 3:4:5).",
+      "explanation_incorrect": "s = perimeter/2 = 24/2 = 12 cm."
+    },
+    {
+      "question_id": "T05.01.Q028",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If the perimeter of a triangle is 24 cm and sides are in ratio 3:4:5, the area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "48 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "36 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "20 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sides: 6, 8, 10 cm. s = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm.",
+      "explanation_incorrect": "Sides = 6, 8, 10. s = 12. Area = sqrt(12 x 6 x 4 x 2) = sqrt(576) = 24 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q029",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The area of a quadrilateral can be found by splitting it into triangles along any diagonal and summing the triangle areas.",
+      "correct_answer": "true",
+      "explanation_correct": "Any diagonal of a quadrilateral divides it into two triangles. The total area equals the sum of both triangle areas.",
+      "explanation_incorrect": "This is the standard method: draw a diagonal, compute each triangle's area, then add."
+    },
+    {
+      "question_id": "T05.01.Q030",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A right triangle has legs 8 cm and 15 cm. Using Heron's formula, its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "120 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "68 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "45 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Hypotenuse = sqrt(64+225) = sqrt(289) = 17. s = (8+15+17)/2 = 20. Area = sqrt(20 x 12 x 5 x 3) = sqrt(3600) = 60 sq cm. (Check: (1/2)(8)(15) = 60.)",
+      "explanation_incorrect": "Sides: 8, 15, 17. s = 20. Area = sqrt(20 x 12 x 5 x 3) = sqrt(3600) = 60 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q031",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "For a triangle with sides 8, 11, 13 cm, the semi-perimeter is ___ cm.",
+      "correct_answer": "16",
+      "explanation_correct": "s = (8 + 11 + 13)/2 = 32/2 = 16 cm.",
+      "explanation_incorrect": "Semi-perimeter = (8+11+13)/2 = 16 cm."
+    },
+    {
+      "question_id": "T05.01.Q032",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The area of a triangle with sides 8, 11, 13 cm is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8*sqrt(30) sq cm"
+        },
+        {
+          "id": "B",
+          "text": "4*sqrt(30) sq cm"
+        },
+        {
+          "id": "C",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "16*sqrt(30) sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (8+11+13)/2 = 16. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = sqrt(64 x 30) = 8*sqrt(30) sq cm.",
+      "explanation_incorrect": "s = 16, s-8 = 8, s-11 = 5, s-13 = 3. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = 8*sqrt(30) sq cm."
+    },
+    {
+      "question_id": "T05.01.Q033",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A quadrilateral ABCD has diagonal AC = 13 cm. Triangle ABC has sides 5, 12, 13 cm. The area of triangle ABC is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "36 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "20 sq cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For triangle with sides 5, 12, 13: s = (5+12+13)/2 = 15. Area = sqrt(15 x 10 x 3 x 2) = sqrt(900) = 30 sq cm. (Also a right triangle: (1/2)(5)(12) = 30.)",
+      "explanation_incorrect": "s = 15. Area = sqrt(15 x 10 x 3 x 2) = sqrt(900) = 30 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q034",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "The area of an equilateral triangle with side 10 cm is 25*sqrt(3) sq cm.",
+      "correct_answer": "true",
+      "explanation_correct": "Area = (sqrt(3)/4) x 10^2 = (sqrt(3)/4) x 100 = 25*sqrt(3) sq cm.",
+      "explanation_incorrect": "Equilateral triangle area = (sqrt(3)/4) x a^2 = (sqrt(3)/4) x 100 = 25*sqrt(3) sq cm."
+    },
+    {
+      "question_id": "T05.01.Q035",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A triangle has sides 17, 25, and 28 cm. The values of (s-a), (s-b), (s-c) are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "18, 10, 7"
+        },
+        {
+          "id": "B",
+          "text": "17, 10, 7"
+        },
+        {
+          "id": "C",
+          "text": "18, 10, 8"
+        },
+        {
+          "id": "D",
+          "text": "15, 10, 7"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (17+25+28)/2 = 35. s-17 = 18, s-25 = 10, s-28 = 7.",
+      "explanation_incorrect": "s = 35. (s-a, s-b, s-c) = (35-17, 35-25, 35-28) = (18, 10, 7)."
+    },
+    {
+      "question_id": "T05.01.Q036",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A triangle has sides 17, 25, 28 cm. Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "210 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "420 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "180 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "350 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = 35. Area = sqrt(35 x 18 x 10 x 7) = sqrt(44100) = 210 sq cm.",
+      "explanation_incorrect": "s = 35. s-17 = 18, s-25 = 10, s-28 = 7. Area = sqrt(35 x 18 x 10 x 7) = sqrt(44100) = 210 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q037",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A quadrilateral ABCD has diagonal AC = 25 cm. Triangle ABC has sides 7, 24, 25 and triangle ACD has sides 25, 20, 15. The total area of the quadrilateral is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "234 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "84 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "150 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "300 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Triangle ABC (7,24,25): s = 28. Area = sqrt(28 x 21 x 4 x 3) = sqrt(7056) = 84 sq cm. Triangle ACD (25,20,15): s = 30. Area = sqrt(30 x 5 x 10 x 15) = sqrt(22500) = 150 sq cm. Total = 84 + 150 = 234 sq cm.",
+      "explanation_incorrect": "Area = Area(ABC) + Area(ACD) = 84 + 150 = 234 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q038",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "The sides of a triangle are in the ratio 5:12:13. If the perimeter is 60 cm, the area of the triangle is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "120 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "150 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "100 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "180 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sides: 5k + 12k + 13k = 60 so k = 2. Sides = 10, 24, 26. s = 30. Area = sqrt(30 x 20 x 6 x 4) = sqrt(14400) = 120 sq cm.",
+      "explanation_incorrect": "Sides = 10, 24, 26 cm. s = 30. Area = sqrt(30 x 20 x 6 x 4) = sqrt(14400) = 120 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q039",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A triangle has area 84 sq cm and sides 13, 14, 15 cm. If its base is 14 cm, the corresponding height is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "8 cm"
+        },
+        {
+          "id": "D",
+          "text": "6 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Area = (1/2) x base x height. 84 = (1/2) x 14 x h. h = (84 x 2)/14 = 12 cm.",
+      "explanation_incorrect": "h = 2 x Area / base = 2 x 84 / 14 = 12 cm."
+    },
+    {
+      "question_id": "T05.01.Q040",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A triangular plot has sides 120 m, 160 m, and 200 m. The cost of levelling it at Rs 5 per sq m is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rs 48,000"
+        },
+        {
+          "id": "B",
+          "text": "Rs 96,000"
+        },
+        {
+          "id": "C",
+          "text": "Rs 24,000"
+        },
+        {
+          "id": "D",
+          "text": "Rs 60,000"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "This is a right triangle since 120^2 + 160^2 = 14400 + 25600 = 40000 = 200^2. Area = (1/2)(120)(160) = 9600 sq m. By Heron's: s = 240, Area = sqrt(240 x 120 x 80 x 40) = sqrt(92160000) = 9600 sq m. Cost = 9600 x 5 = Rs 48,000.",
+      "explanation_incorrect": "s = 240. Area = sqrt(240 x 120 x 80 x 40) = 9600 sq m. Cost = 9600 x 5 = Rs 48,000."
+    },
+    {
+      "question_id": "T05.01.Q041",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A quadrilateral ABCD has AB = 3 cm, BC = 4 cm, CD = 12 cm, DA = 13 cm, and diagonal AC = 5 cm. The area of the quadrilateral is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "36 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "24 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "42 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Triangle ABC (3, 4, 5): right triangle, area = (1/2)(3)(4) = 6 sq cm. Triangle ACD (5, 12, 13): right triangle, area = (1/2)(5)(12) = 30 sq cm. Total = 6 + 30 = 36 sq cm.",
+      "explanation_incorrect": "Both triangles are right triangles. Area(ABC) = 6, Area(ACD) = 30. Total = 36 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q042",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "fill_blank",
+      "question_text": "A triangle with sides 20, 21, and 29 cm has area ___ sq cm.",
+      "correct_answer": "210",
+      "explanation_correct": "s = (20+21+29)/2 = 35. Area = sqrt(35 x 15 x 14 x 6) = sqrt(44100) = 210 sq cm.",
+      "explanation_incorrect": "s = 35. Area = sqrt(35 x 15 x 14 x 6) = sqrt(44100) = 210 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q043",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A rectangular plot has dimensions 50 m x 40 m. A triangular portion with sides 50, 30, 40 m is cut off. The area of the remaining portion is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "1400 sq m"
+        },
+        {
+          "id": "B",
+          "text": "2000 sq m"
+        },
+        {
+          "id": "C",
+          "text": "600 sq m"
+        },
+        {
+          "id": "D",
+          "text": "1000 sq m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Rectangle area = 50 x 40 = 2000 sq m. Triangle (50, 30, 40): s = 60. Area = sqrt(60 x 10 x 30 x 20) = sqrt(360000) = 600 sq m. Remaining = 2000 - 600 = 1400 sq m.",
+      "explanation_incorrect": "Remaining area = Rectangle area - Triangle area = 2000 - 600 = 1400 sq m."
+    },
+    {
+      "question_id": "T05.01.Q044",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "Two sides of a triangle are 8 cm and 11 cm, and the perimeter is 32 cm. The area of the triangle is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "8*sqrt(30) sq cm"
+        },
+        {
+          "id": "B",
+          "text": "4*sqrt(30) sq cm"
+        },
+        {
+          "id": "C",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "60 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Third side = 32 - 8 - 11 = 13 cm. s = 16. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = sqrt(64 x 30) = 8*sqrt(30) sq cm.",
+      "explanation_incorrect": "Third side = 13 cm. s = 16. Area = sqrt(16 x 8 x 5 x 3) = sqrt(1920) = 8*sqrt(30) sq cm."
+    },
+    {
+      "question_id": "T05.01.Q045",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "If the area of an equilateral triangle is 16*sqrt(3) sq cm, the side of the triangle is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 cm"
+        },
+        {
+          "id": "B",
+          "text": "8 cm"
+        },
+        {
+          "id": "C",
+          "text": "16 cm"
+        },
+        {
+          "id": "D",
+          "text": "6 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area = (sqrt(3)/4) x a^2 = 16*sqrt(3). So a^2 = 16*sqrt(3) x 4/sqrt(3) = 64. a = 8 cm.",
+      "explanation_incorrect": "(sqrt(3)/4) x a^2 = 16*sqrt(3). a^2 = 64. a = 8 cm."
+    },
+    {
+      "question_id": "T05.01.Q046",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "type": "mcq",
+      "question_text": "A triangular field has sides 26 m, 28 m, and 30 m. The cost of fencing at Rs 10/m and the area of the field are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fencing: Rs 840, Area: 336 sq m"
+        },
+        {
+          "id": "B",
+          "text": "Fencing: Rs 840, Area: 420 sq m"
+        },
+        {
+          "id": "C",
+          "text": "Fencing: Rs 800, Area: 336 sq m"
+        },
+        {
+          "id": "D",
+          "text": "Fencing: Rs 900, Area: 300 sq m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Perimeter = 26+28+30 = 84 m. Fencing = 84 x 10 = Rs 840. s = 42. Area = sqrt(42 x 16 x 14 x 12) = sqrt(112896) = 336 sq m.",
+      "explanation_incorrect": "Perimeter = 84 m, fencing = Rs 840. s = 42. Area = sqrt(42 x 16 x 14 x 12) = sqrt(112896) = 336 sq m."
+    },
+    {
+      "question_id": "T05.01.Q047",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A kite has diagonals of 24 cm and 10 cm. Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "240 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "120 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "60 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "480 sq cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Area of kite = (1/2) x d1 x d2 = (1/2) x 24 x 10 = 120 sq cm.",
+      "explanation_incorrect": "Area of kite = (1/2)(d1)(d2) = (1/2)(24)(10) = 120 sq cm."
+    },
+    {
+      "question_id": "T05.01.Q048",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "true_false",
+      "question_text": "If the sides of a triangle are 1 cm, 2 cm, and 4 cm, Heron's formula gives a valid area.",
+      "correct_answer": "false",
+      "explanation_correct": "These sides do not satisfy the triangle inequality: 1 + 2 = 3 < 4. No triangle can be formed, so Heron's formula does not apply.",
+      "explanation_incorrect": "1 + 2 = 3 < 4 violates the triangle inequality. A triangle cannot exist with these sides."
+    },
+    {
+      "question_id": "T05.01.Q049",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "An isosceles triangle has equal sides of 13 cm each and area 60 sq cm. The base of the triangle is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 cm"
+        },
+        {
+          "id": "B",
+          "text": "10 cm"
+        },
+        {
+          "id": "C",
+          "text": "8 cm"
+        },
+        {
+          "id": "D",
+          "text": "14 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For sides 13, 13, b: height h = sqrt(169 - b^2/4). Area = (1/2)(b)(h) = 60. Try b = 10: h = sqrt(169 - 25) = sqrt(144) = 12. Area = (1/2)(10)(12) = 60 sq cm. Verified! Using Heron's: s = (13+13+10)/2 = 18. Area = sqrt(18 x 5 x 5 x 8) = sqrt(3600) = 60 sq cm.",
+      "explanation_incorrect": "s = 18, sides 13, 13, 10. Area = sqrt(18 x 5 x 5 x 8) = sqrt(3600) = 60 sq cm. Base = 10 cm."
+    },
+    {
+      "question_id": "T05.01.Q050",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "recall",
+      "type": "mcq",
+      "question_text": "A triangular sign board has sides 26 cm, 25 cm, and 3 cm. Its area is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "36 sq cm"
+        },
+        {
+          "id": "B",
+          "text": "24 sq cm"
+        },
+        {
+          "id": "C",
+          "text": "30 sq cm"
+        },
+        {
+          "id": "D",
+          "text": "48 sq cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "s = (26+25+3)/2 = 27. Area = sqrt(27 x 1 x 2 x 24) = sqrt(1296) = 36 sq cm.",
+      "explanation_incorrect": "s = 27, s-26 = 1, s-25 = 2, s-3 = 24. Area = sqrt(27 x 1 x 2 x 24) = sqrt(1296) = 36 sq cm."
+    }
   ]
 }

@@ -971,18 +971,19 @@ function buildQuestionPool(
 
     const isRecommended = question.difficulty === recommendedDifficulty;
 
-    // Calculate priority score
-    // No recency penalty needed — correctly-answered questions are already excluded
-    const neverSeen = !history;
+    // Calculate priority score with recency penalty
+    // Questions that survived exclusion (wrong answers, 3+ sessions ago) still get
+    // a recency penalty so the algorithm prefers fresher content when available.
+    const recencyPenalty = getRecencyPenalty(history?.sessionsAgo);
     const priorityScore = calculatePriorityScore(question, progress, isRecommended)
-      + (neverSeen ? 20 : 0); // Bonus for fresh questions
+      + recencyPenalty;
 
     pool.push({
       ...question,
       eligible: true,
       is_recommended: isRecommended,
       priority_score: priorityScore,
-      recency_penalty: neverSeen ? 20 : 0,
+      recency_penalty: recencyPenalty,
       concept_progress: progress,
     });
   }

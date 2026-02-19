@@ -1231,31 +1231,611 @@
       ],
       "explanation_correct": "The centre of mass position lies between the individual masses, so it must be arranged between the positions of the 1 kg and 3 kg masses. The order of the positions from left to right is: 1 kg mass, centre of mass, 2 kg mass, 3 kg mass.",
       "explanation_incorrect": "One common mistake could be to arrange the masses in the order of their positions, i.e., 1 kg at 1 m, 2 kg at 3 m, 3 kg at 5 m. However, the centre of mass position is calculated based on the masses and their positions, and it will lie between the individual masses. Therefore, the correct order is: position of 1 kg mass, centre of mass position, position of 2 kg mass, position of 3 kg mass."
+    },
+    {
+      "question_id": "T05.01.Q051",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the centre of mass of a uniform ring differ from that of a uniform solid disc, both of the same radius R?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ring's COM is at the centre; disc's COM is on its surface"
+        },
+        {
+          "id": "B",
+          "text": "Both have their COM at the geometric centre, but the ring's COM is in empty space while the disc's COM is within the material"
+        },
+        {
+          "id": "C",
+          "text": "The disc's COM is at the edge"
+        },
+        {
+          "id": "D",
+          "text": "The ring has no COM because it has a hole"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Both a uniform ring and a uniform disc have their COM at the geometric centre by symmetry. However, the ring's centre is empty space (no material there), while the disc's centre has actual material. The COM need not lie within the body's material.",
+      "explanation_incorrect": "Both have COM at the centre due to symmetry. The difference is that the ring has no material at its centre, making it a classic example of COM lying outside the body's material."
+    },
+    {
+      "question_id": "T05.01.Q052",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the moment of inertia of a thin rod about its centre differ from that about one end?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both are equal"
+        },
+        {
+          "id": "B",
+          "text": "I_centre = ML²/12 and I_end = ML²/3; the end axis gives 4 times the centre value"
+        },
+        {
+          "id": "C",
+          "text": "I_end is smaller than I_centre"
+        },
+        {
+          "id": "D",
+          "text": "I_centre = ML²/3 and I_end = ML²/12"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I_centre = ML²/12. By the parallel axis theorem: I_end = ML²/12 + M(L/2)² = ML²/12 + ML²/4 = ML²/3. The ratio is (ML²/3)/(ML²/12) = 4. The end axis gives 4 times the moment of inertia.",
+      "explanation_incorrect": "Shifting the axis from the centre to the end adds Md² = M(L/2)² = ML²/4 to the moment of inertia. This makes I_end = ML²/3, which is 4 times ML²/12."
+    },
+    {
+      "question_id": "T05.01.Q053",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the acceleration of a disc rolling down an incline differ from that of a ring rolling down the same incline?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both have the same acceleration"
+        },
+        {
+          "id": "B",
+          "text": "Disc has greater acceleration (2g sin θ/3) than ring (g sin θ/2) because the disc has a smaller k²/R²"
+        },
+        {
+          "id": "C",
+          "text": "Ring is faster because it has more inertia"
+        },
+        {
+          "id": "D",
+          "text": "Both have acceleration g sin θ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "a = g sin θ/(1 + k²/R²). For disc: k²/R² = 1/2, so a = 2g sin θ/3. For ring: k²/R² = 1, so a = g sin θ/2. Since 2/3 > 1/2, the disc accelerates faster. More of its energy goes to translation.",
+      "explanation_incorrect": "The disc (k²/R² = 0.5) diverts less energy to rotation than the ring (k²/R² = 1), so the disc has larger translational acceleration."
+    },
+    {
+      "question_id": "T05.01.Q054",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does torque differ from force in terms of what they produce?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both produce linear acceleration"
+        },
+        {
+          "id": "B",
+          "text": "Force produces linear acceleration (F = ma); torque produces angular acceleration (τ = Iα)"
+        },
+        {
+          "id": "C",
+          "text": "Torque produces linear acceleration; force produces angular acceleration"
+        },
+        {
+          "id": "D",
+          "text": "Both produce angular acceleration"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Force is the cause of linear acceleration (F = ma). Torque is the cause of angular acceleration (τ = Iα). Torque is the rotational analogue of force.",
+      "explanation_incorrect": "Force and torque are analogues in their respective domains. F = ma governs translation; τ = Iα governs rotation. They are not interchangeable."
+    },
+    {
+      "question_id": "T05.01.Q055",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does translational equilibrium differ from rotational equilibrium for a rigid body?",
+      "options": [
+        {
+          "id": "A",
+          "text": "They are the same condition"
+        },
+        {
+          "id": "B",
+          "text": "Translational equilibrium requires net force = 0; rotational equilibrium requires net torque = 0 about any point"
+        },
+        {
+          "id": "C",
+          "text": "Translational equilibrium requires net torque = 0"
+        },
+        {
+          "id": "D",
+          "text": "Rotational equilibrium requires net force = 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Translational equilibrium means ΣF = 0 (no linear acceleration). Rotational equilibrium means Στ = 0 (no angular acceleration). Complete mechanical equilibrium requires both simultaneously.",
+      "explanation_incorrect": "A body can have ΣF = 0 but Στ ≠ 0 (e.g., a couple), or Στ = 0 but ΣF ≠ 0. Both conditions must hold for complete equilibrium."
+    },
+    {
+      "question_id": "T05.01.Q056",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A body has I = 2MR²/5 about an axis through its centre. It is a solid body with mass distributed throughout its volume. This body is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thin ring"
+        },
+        {
+          "id": "B",
+          "text": "Solid sphere"
+        },
+        {
+          "id": "C",
+          "text": "Hollow sphere"
+        },
+        {
+          "id": "D",
+          "text": "Solid disc"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I = 2MR²/5 is the moment of inertia of a solid sphere about its diameter. The clue 'mass distributed throughout its volume' confirms it is a solid sphere, not a ring (MR²), disc (MR²/2), or hollow sphere (2MR²/3).",
+      "explanation_incorrect": "Ring has I = MR², disc has MR²/2, hollow sphere has 2MR²/3. Only the solid sphere matches I = 2MR²/5 and has mass distributed through its entire volume."
+    },
+    {
+      "question_id": "T05.01.Q057",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A physical quantity is the rate of change of angular momentum, has units N·m, and is a vector perpendicular to the plane containing the position vector and force. This quantity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Angular velocity"
+        },
+        {
+          "id": "B",
+          "text": "Torque"
+        },
+        {
+          "id": "C",
+          "text": "Moment of inertia"
+        },
+        {
+          "id": "D",
+          "text": "Angular momentum"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Torque τ = dL/dt (rate of change of angular momentum), has units N·m, and τ = r × F is perpendicular to both r and F by the right-hand rule. All three clues identify torque.",
+      "explanation_incorrect": "Angular velocity has units rad/s. Moment of inertia has units kg·m². Angular momentum has units kg·m²/s. Only torque matches N·m, is dL/dt, and is perpendicular to the r-F plane."
+    },
+    {
+      "question_id": "T05.01.Q058",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A body is in a state where both the net external force and the net external torque acting on it are zero. It has no linear or angular acceleration. This state is called:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Translational equilibrium only"
+        },
+        {
+          "id": "B",
+          "text": "Rotational equilibrium only"
+        },
+        {
+          "id": "C",
+          "text": "Complete (mechanical) equilibrium"
+        },
+        {
+          "id": "D",
+          "text": "Dynamic equilibrium only"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When both ΣF = 0 (no linear acceleration) and Στ = 0 (no angular acceleration), the body is in complete mechanical equilibrium. This requires both translational and rotational equilibrium simultaneously.",
+      "explanation_incorrect": "Translational equilibrium alone requires only ΣF = 0. Rotational equilibrium alone requires only Στ = 0. Both together constitute complete mechanical equilibrium."
+    },
+    {
+      "question_id": "T05.01.Q059",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A body's COM lies outside the physical material of the body and has rotational symmetry about one axis. Mass is distributed uniformly along a closed curve. This body is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid cylinder"
+        },
+        {
+          "id": "B",
+          "text": "Uniform ring"
+        },
+        {
+          "id": "C",
+          "text": "Solid sphere"
+        },
+        {
+          "id": "D",
+          "text": "Solid cone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A uniform ring has COM at the centre (not on the material), has rotational symmetry, and has mass distributed along a closed curve (circle). Solid cylinder, sphere, and cone all have COM within their material.",
+      "explanation_incorrect": "Only a ring has COM outside its material (in the empty centre). Solid bodies have COM within. The 'closed curve' clue points to a ring."
+    },
+    {
+      "question_id": "T05.01.Q060",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya (25 kg) and Amit (35 kg) stand at opposite ends of a 6 m long boat of mass 60 kg floating on a lake. When Riya walks 2 m towards Amit, how far does the boat move (assuming no friction with water)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 m"
+        },
+        {
+          "id": "B",
+          "text": "0.42 m away from Riya's original end"
+        },
+        {
+          "id": "C",
+          "text": "1 m"
+        },
+        {
+          "id": "D",
+          "text": "The boat does not move"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "With no external horizontal force, the COM of the system (Riya + Amit + boat) stays fixed. Riya moves 2 m towards Amit. Let boat move x in the opposite direction. 25 × (2 − x) = (35 + 60) × x. 50 − 25x = 95x. 50 = 120x. x = 50/120 ≈ 0.42 m.",
+      "explanation_incorrect": "The COM of the entire system must remain stationary. Using conservation of momentum (net external force = 0), Riya's displacement causes the boat + Amit to shift the other way by about 0.42 m."
+    },
+    {
+      "question_id": "T05.01.Q061",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Priya, in a school lab, applies a 12 N force at the end of a 0.25 m wrench, perpendicular to the handle, to tighten a bolt. The torque she applies is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 N·m"
+        },
+        {
+          "id": "B",
+          "text": "48 N·m"
+        },
+        {
+          "id": "C",
+          "text": "0.48 N·m"
+        },
+        {
+          "id": "D",
+          "text": "6 N·m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "τ = rF sin 90° = 0.25 × 12 × 1 = 3 N·m. Since the force is perpendicular to the wrench, sin 90° = 1 and the full force contributes to the torque.",
+      "explanation_incorrect": "Torque = r × F × sin θ = 0.25 × 12 × 1 = 3 N·m. The perpendicular application gives maximum torque for the given force and distance."
+    },
+    {
+      "question_id": "T05.01.Q062",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Arjun rolls a solid cylinder (mass 3 kg, radius 0.1 m) down a 2 m high ramp in the lab. The speed at the bottom is (g = 10 m/s²):",
+      "options": [
+        {
+          "id": "A",
+          "text": "√(2 × 10 × 2) ≈ 6.32 m/s"
+        },
+        {
+          "id": "B",
+          "text": "√(4 × 10 × 2/3) ≈ 5.16 m/s"
+        },
+        {
+          "id": "C",
+          "text": "√(10 × 2) ≈ 4.47 m/s"
+        },
+        {
+          "id": "D",
+          "text": "√(10 × 2 / 2) ≈ 3.16 m/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a rolling cylinder: v = √(2gh/(1 + k²/R²)) = √(2 × 10 × 2/(1 + 1/2)) = √(40/(3/2)) = √(80/3) = √(4gh/3) ≈ 5.16 m/s. The mass and radius cancel out.",
+      "explanation_incorrect": "Option A ignores rotation. For rolling: v = √(4gh/3) for a cylinder (k²/R² = 1/2). Energy splits between translation and rotation."
+    },
+    {
+      "question_id": "T05.01.Q063",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera balances a 3 m uniform plank (weight 100 N) on a fulcrum at its centre. She places a 50 N weight 1 m from the left end. Where must she place a weight on the right side to balance the plank? The distance from the centre is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 m with a 50 N weight"
+        },
+        {
+          "id": "B",
+          "text": "1 m with a 25 N weight"
+        },
+        {
+          "id": "C",
+          "text": "0.5 m with a 25 N weight"
+        },
+        {
+          "id": "D",
+          "text": "Cannot determine without more information"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The 50 N weight is 1 m from the left end, which is 0.5 m from the centre (fulcrum). Clockwise torque = 50 × 0.5 = 25 N·m. To balance, we need 25 N·m on the other side. With 50 N: d = 25/50 = 0.5 m from centre. The plank's weight acts at the fulcrum and produces no torque.",
+      "explanation_incorrect": "Taking torques about the fulcrum: the plank's weight produces zero torque (acts at fulcrum). The 50 N weight creates 50 × 0.5 = 25 N·m. Balancing with 50 N on the other side needs d = 0.5 m."
+    },
+    {
+      "question_id": "T05.01.Q064",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan, in a physics project, needs to calculate the moment of inertia of a solid sphere (mass 2 kg, radius 0.1 m) about a tangent line. Using the parallel axis theorem, the value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.008 kg·m²"
+        },
+        {
+          "id": "B",
+          "text": "0.028 kg·m²"
+        },
+        {
+          "id": "C",
+          "text": "0.02 kg·m²"
+        },
+        {
+          "id": "D",
+          "text": "0.04 kg·m²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I_diameter = 2MR²/5 = 2 × 2 × 0.01/5 = 0.008 kg·m². By parallel axis theorem: I_tangent = I_diameter + MR² = 0.008 + 2 × 0.01 = 0.008 + 0.02 = 0.028 kg·m².",
+      "explanation_incorrect": "I = 2MR²/5 + MR² = 7MR²/5 = 7 × 2 × 0.01/5 = 0.028 kg·m². The tangent is at distance R from the centre."
+    },
+    {
+      "question_id": "T05.01.Q065",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following uniform bodies has a moment of inertia that seems large for its shape because all its mass is concentrated at the maximum distance from the axis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid sphere (I = 2MR²/5)"
+        },
+        {
+          "id": "B",
+          "text": "Solid disc (I = MR²/2)"
+        },
+        {
+          "id": "C",
+          "text": "Thin ring (I = MR²)"
+        },
+        {
+          "id": "D",
+          "text": "Thin rod about centre (I = ML²/12)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A thin ring has all its mass at the maximum distance R from the central axis, giving I = MR² — the largest possible value for a body of mass M and radius R. Students might expect disc-like objects to have the same I, but the disc (MR²/2) and sphere (2MR²/5) have smaller I because their mass is distributed closer to the axis.",
+      "explanation_incorrect": "The ring has I = MR² because every mass element is exactly at distance R. For the disc and sphere, mass closer to the axis reduces I. The ring is the 'extreme case' among common shapes."
+    },
+    {
+      "question_id": "T05.01.Q066",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "An L-shaped uniform wire is made by joining two identical straight wires at right angles. Where is the COM of this system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the junction point"
+        },
+        {
+          "id": "B",
+          "text": "At the midpoint of one arm"
+        },
+        {
+          "id": "C",
+          "text": "At a point in space that is NOT on the wire itself — equidistant from the midpoints of both arms"
+        },
+        {
+          "id": "D",
+          "text": "At the midpoint of the longer arm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Each arm's COM is at its midpoint. The system COM is the average of these two midpoints (equal masses). This point lies inside the L-shape, in empty space, not on the wire. This is an exception to the intuition that the COM must lie on the body.",
+      "explanation_incorrect": "The COM is not at the junction (that would require both arms' masses to be concentrated there). It is the weighted average of the two midpoints, which lies off the wire, in the interior of the L-shape."
+    },
+    {
+      "question_id": "T05.01.Q067",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A sphere is placed on a perfectly frictionless incline. Students expect it to roll, but instead it:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rolls without slipping as expected"
+        },
+        {
+          "id": "B",
+          "text": "Slides without rotating, because friction is needed to provide the torque for rolling"
+        },
+        {
+          "id": "C",
+          "text": "Remains stationary on the incline"
+        },
+        {
+          "id": "D",
+          "text": "Rolls with slipping"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "On a frictionless surface, the only forces on the sphere are gravity (acting through the COM) and the normal force. Neither produces a torque about the COM. With no torque, there is no angular acceleration, so the sphere slides without rotating — contrary to the common expectation that spheres always roll.",
+      "explanation_incorrect": "Friction is essential for rolling. It provides the tangential force at the contact point that creates the torque needed for angular acceleration. Without friction, no torque acts, and the body slides."
+    },
+    {
+      "question_id": "T05.01.Q068",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does a longer spanner make it easier to loosen a tight bolt?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because a longer spanner applies more force"
+        },
+        {
+          "id": "B",
+          "text": "Because torque = rF sin θ, and a longer spanner increases the moment arm r, producing more torque for the same applied force"
+        },
+        {
+          "id": "C",
+          "text": "Because a longer spanner reduces friction"
+        },
+        {
+          "id": "D",
+          "text": "Because the bolt's moment of inertia decreases with a longer spanner"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Torque τ = rF sin θ. A longer spanner increases r (the perpendicular distance from the axis of rotation to the line of action of force). For the same force F, a larger r produces a larger torque, making it easier to turn the bolt.",
+      "explanation_incorrect": "The force applied is the same regardless of spanner length. The longer spanner increases the moment arm, which increases the torque. Friction and moment of inertia of the bolt are not affected by spanner length."
+    },
+    {
+      "question_id": "T05.01.Q069",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does a solid sphere have a smaller moment of inertia than a hollow sphere of the same mass and radius?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the solid sphere is denser"
+        },
+        {
+          "id": "B",
+          "text": "Because in a solid sphere, mass is distributed throughout the volume (including close to the axis), whereas in a hollow sphere all mass is at the maximum distance R from the axis"
+        },
+        {
+          "id": "C",
+          "text": "Because the solid sphere has a smaller radius"
+        },
+        {
+          "id": "D",
+          "text": "Because gravity acts differently on solid and hollow bodies"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "I = Σmᵢrᵢ². In a solid sphere, much of the mass is at distances less than R from the axis (close to the centre), reducing the average rᵢ². In a hollow sphere, all mass is at the maximum distance R, maximizing rᵢ². Hence I_solid (2MR²/5) < I_hollow (2MR²/3).",
+      "explanation_incorrect": "Both have the same mass and radius. The difference is mass distribution: solid sphere has mass at all radii from 0 to R (averaging closer to axis), while hollow sphere has all mass at R."
+    },
+    {
+      "question_id": "T05.01.Q070",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does a solid sphere reach the bottom of an incline before a ring when both roll without slipping from the same height?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the sphere has more mass"
+        },
+        {
+          "id": "B",
+          "text": "Because the sphere has a smaller k²/R² ratio (2/5 vs 1), meaning a smaller fraction of gravitational PE is converted to rotational KE, leaving more for translational KE and thus greater acceleration"
+        },
+        {
+          "id": "C",
+          "text": "Because the sphere has less friction"
+        },
+        {
+          "id": "D",
+          "text": "Because the ring has more air resistance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The rolling acceleration a = g sin θ/(1 + k²/R²). The sphere (k²/R² = 2/5) has a = 5g sin θ/7, while the ring (k²/R² = 1) has a = g sin θ/2. Since 5/7 > 1/2, the sphere accelerates faster. The physical reason is that the sphere diverts a smaller fraction of its energy to rotation.",
+      "explanation_incorrect": "Mass cancels out of the acceleration formula. The key is k²/R²: a body with a smaller ratio converts more PE to translational KE, achieving greater speed. The sphere's mass distribution (closer to the axis) gives it the advantage."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 13,
-        "application": 21,
-        "exam_style": 16
+        "familiarity": 19,
+        "application": 29,
+        "exam_style": 22
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 50,
-        "compare": 0,
-        "classify": 0,
-        "scenario": 0,
-        "exception": 0,
-        "reason": 0
+        "compare": 5,
+        "classify": 4,
+        "scenario": 5,
+        "exception": 3,
+        "reason": 3
       }
     }
   }

@@ -1473,6 +1473,586 @@
       "correct_answer": "B",
       "explanation_correct": "KE_rot = Mv²/4. KE_total = Mv²/2 + Mv²/4 = 3Mv²/4. Fraction = (Mv²/4)/(3Mv²/4) = 1/3.",
       "explanation_incorrect": "For cylinder: KE_rot/KE_total = (½ × MR²/2 × ω²)/(½mv² + ½ × MR²/2 × ω²) = 1/3."
+    },
+    {
+      "question_id": "T05.01.Q051",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the centre of mass of a uniform semicircular wire differ from that of a uniform semicircular disc, both of radius R?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both are at the same distance from the centre"
+        },
+        {
+          "id": "B",
+          "text": "Semicircular wire: 2R/π from centre; semicircular disc: 4R/(3π) from centre — the wire's COM is farther"
+        },
+        {
+          "id": "C",
+          "text": "Semicircular disc's COM is farther than the wire's"
+        },
+        {
+          "id": "D",
+          "text": "Both lie at R/2 from the centre"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a semicircular wire, y_cm = 2R/π. For a semicircular disc, y_cm = 4R/(3π). Since 2R/π > 4R/(3π) (as 2/π ≈ 0.637 > 4/(3π) ≈ 0.424), the wire's COM is farther from the centre.",
+      "explanation_incorrect": "The wire has all mass concentrated on the arc (farther from centre on average), while the disc has mass distributed from 0 to R. So the wire's COM is farther."
+    },
+    {
+      "question_id": "T05.01.Q052",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the moment of inertia of a solid sphere about its diameter differ from that of a hollow sphere of the same mass and radius?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid sphere has larger I (2MR²/5 > 2MR²/3)"
+        },
+        {
+          "id": "B",
+          "text": "They are equal"
+        },
+        {
+          "id": "C",
+          "text": "Solid sphere has smaller I (2MR²/5 < 2MR²/3) because its mass is distributed closer to the axis"
+        },
+        {
+          "id": "D",
+          "text": "Hollow sphere has smaller I because it is lighter"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Solid sphere: I = 2MR²/5. Hollow sphere: I = 2MR²/3. Since 2/5 < 2/3, the solid sphere has a smaller moment of inertia. This is because the solid sphere's mass is distributed throughout its volume (closer to the axis on average), while the hollow sphere has all mass at the maximum distance R.",
+      "explanation_incorrect": "Both have the same mass M and radius R. The difference is mass distribution: a solid sphere has more mass near the centre, reducing I. A hollow sphere has all mass on the surface at distance R, increasing I."
+    },
+    {
+      "question_id": "T05.01.Q053",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the speed at the bottom of an incline differ between a ring and a solid sphere of the same mass and radius rolling without slipping from the same height h?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ring is faster because it has higher moment of inertia"
+        },
+        {
+          "id": "B",
+          "text": "Both have the same speed"
+        },
+        {
+          "id": "C",
+          "text": "Solid sphere is faster: v_sphere = √(10gh/7), v_ring = √(gh)"
+        },
+        {
+          "id": "D",
+          "text": "Solid sphere is slower because it is heavier"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For rolling, v = √(2gh/(1 + k²/R²)). Solid sphere: k²/R² = 2/5, so v = √(10gh/7). Ring: k²/R² = 1, so v = √(gh). Since 10/7 > 1, the sphere is faster. A smaller k²/R² means less energy goes to rotation, leaving more for translation.",
+      "explanation_incorrect": "Speed depends on k²/R². The sphere (2/5) diverts less energy to rotation than the ring (1), so the sphere arrives faster."
+    },
+    {
+      "question_id": "T05.01.Q054",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the parallel axis theorem differ from the perpendicular axis theorem in terms of applicability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both apply to all bodies"
+        },
+        {
+          "id": "B",
+          "text": "Parallel axis theorem applies to any rigid body; perpendicular axis theorem applies only to planar (2D) bodies"
+        },
+        {
+          "id": "C",
+          "text": "Parallel axis theorem applies only to planar bodies; perpendicular axis theorem applies to all"
+        },
+        {
+          "id": "D",
+          "text": "Neither applies to spheres"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The parallel axis theorem (I = I_cm + Md²) works for any rigid body in any dimension. The perpendicular axis theorem (I_z = I_x + I_y) is valid only for flat, planar (laminar) bodies lying in the xy-plane.",
+      "explanation_incorrect": "The parallel axis theorem has no restriction on body shape. The perpendicular axis theorem requires the body to be a 2D lamina. You can use the parallel axis theorem on spheres, rods, etc."
+    },
+    {
+      "question_id": "T05.01.Q055",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the angular momentum of a particle moving in a straight line differ from that of a particle moving in a circle, both about the same point?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Angular momentum exists only for circular motion, not for straight-line motion"
+        },
+        {
+          "id": "B",
+          "text": "Both have angular momentum about a point; for straight-line motion L = mvr⊥ (constant if no external torque), for circular motion L = mvR = Iω"
+        },
+        {
+          "id": "C",
+          "text": "Angular momentum is always zero for straight-line motion"
+        },
+        {
+          "id": "D",
+          "text": "Circular motion has zero angular momentum because the particle returns to the same point"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Angular momentum L = r × p exists for any motion about any point. For a particle in a straight line, L = mvr⊥ (where r⊥ is the perpendicular distance from the line to the point) and remains constant if no torque acts. For circular motion, L = mvR = Iω.",
+      "explanation_incorrect": "Angular momentum is defined for any motion, not just circular. A particle in a straight line has constant angular momentum about any point (as long as no external torque acts), because the perpendicular distance from the point to the line of motion stays constant."
+    },
+    {
+      "question_id": "T05.01.Q056",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A body has moment of inertia I = MR² about an axis through its centre perpendicular to its plane. All its mass is at the same distance R from the axis. This body is a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid disc"
+        },
+        {
+          "id": "B",
+          "text": "Solid sphere"
+        },
+        {
+          "id": "C",
+          "text": "Thin ring (or hollow cylinder)"
+        },
+        {
+          "id": "D",
+          "text": "Thin rod"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Only a thin ring (or thin-walled hollow cylinder) has all mass at the same distance R from the axis, giving I = MR². A disc has I = MR²/2, a solid sphere has I = 2MR²/5.",
+      "explanation_incorrect": "I = MR² means every mass element is at distance R. Only a thin ring satisfies this. Disc and sphere have mass distributed at various distances, giving smaller I values."
+    },
+    {
+      "question_id": "T05.01.Q057",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A system of particles has its centre of mass located outside the physical body. The total mass is concentrated on a curved surface. This system is most likely a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid sphere"
+        },
+        {
+          "id": "B",
+          "text": "Uniform ring"
+        },
+        {
+          "id": "C",
+          "text": "Solid disc"
+        },
+        {
+          "id": "D",
+          "text": "Solid cube"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A uniform ring has its COM at the geometric centre, which lies in empty space (not on the material of the ring). Additionally, all mass is on a curved surface (the circumference). Solid sphere, disc, and cube have their COM inside the material.",
+      "explanation_incorrect": "The COM of a ring lies at its centre, which is empty space — not on the ring material. This is a classic example of COM lying outside the body."
+    },
+    {
+      "question_id": "T05.01.Q058",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A body moves on a surface with its bottom point instantaneously at rest and its topmost point moving at 2v. The body is undergoing:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pure translation"
+        },
+        {
+          "id": "B",
+          "text": "Pure rotation"
+        },
+        {
+          "id": "C",
+          "text": "Rolling without slipping (combined translation + rotation)"
+        },
+        {
+          "id": "D",
+          "text": "Rolling with slipping"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In pure rolling (without slipping), the contact point has zero velocity (v_cm − Rω = 0) and the topmost point has velocity 2v_cm. These conditions define rolling without slipping: v = Rω.",
+      "explanation_incorrect": "Pure translation would give all points the same velocity. Pure rotation about the centre would give the contact point velocity v (not zero). Only rolling without slipping gives zero at bottom and 2v at top."
+    },
+    {
+      "question_id": "T05.01.Q059",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A quantity is vector, has SI unit kg·m²/s, is conserved when net external torque is zero, and equals Iω. This quantity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Torque"
+        },
+        {
+          "id": "B",
+          "text": "Moment of inertia"
+        },
+        {
+          "id": "C",
+          "text": "Angular momentum"
+        },
+        {
+          "id": "D",
+          "text": "Linear momentum"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Angular momentum L = Iω has units kg·m²/s, is a vector (axial), and is conserved when net external torque is zero (τ = dL/dt = 0 implies L = constant). All clues point to angular momentum.",
+      "explanation_incorrect": "Torque has units N·m. Moment of inertia has units kg·m² and is a scalar. Linear momentum has units kg·m/s. Only angular momentum matches all the given properties."
+    },
+    {
+      "question_id": "T05.01.Q060",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Riya and Amit sit on opposite ends of a 4 m long uniform seesaw of negligible mass. Riya (30 kg) sits at one end and Amit (40 kg) at the other. The distance of the centre of mass from Riya's end is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.0 m"
+        },
+        {
+          "id": "B",
+          "text": "2.3 m"
+        },
+        {
+          "id": "C",
+          "text": "1.7 m"
+        },
+        {
+          "id": "D",
+          "text": "3.0 m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "x_cm = (m₁x₁ + m₂x₂)/(m₁ + m₂) = (30×0 + 40×4)/(30+40) = 160/70 ≈ 2.29 m from Riya's end. The COM is closer to the heavier person (Amit).",
+      "explanation_incorrect": "The COM is at (30×0 + 40×4)/70 = 160/70 ≈ 2.3 m from Riya. It is not at the midpoint (2 m) because the masses are unequal."
+    },
+    {
+      "question_id": "T05.01.Q061",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya, performing a physics experiment in the school lab, applies a force of 8 N at the end of a 0.5 m spanner at 30° to the spanner handle. The torque she produces about the bolt is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 N·m"
+        },
+        {
+          "id": "B",
+          "text": "2 N·m"
+        },
+        {
+          "id": "C",
+          "text": "3.46 N·m"
+        },
+        {
+          "id": "D",
+          "text": "1 N·m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "τ = rF sin θ = 0.5 × 8 × sin 30° = 0.5 × 8 × 0.5 = 2 N·m. Only the perpendicular component of force (F sin θ) contributes to torque.",
+      "explanation_incorrect": "Torque = rF sin θ. The angle between the force and the lever arm is 30°. τ = 0.5 × 8 × 0.5 = 2 N·m."
+    },
+    {
+      "question_id": "T05.01.Q062",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Arjun rolls a solid sphere (mass 2 kg, radius 0.1 m) and a ring (mass 2 kg, radius 0.1 m) down a 5 m high incline in the school lab. The difference in their speeds at the bottom is (g = 10 m/s²):",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphere: √(500/7) ≈ 8.45 m/s; Ring: √50 ≈ 7.07 m/s; difference ≈ 1.38 m/s"
+        },
+        {
+          "id": "B",
+          "text": "Both arrive at the same speed"
+        },
+        {
+          "id": "C",
+          "text": "Sphere: 10 m/s; Ring: 5 m/s; difference = 5 m/s"
+        },
+        {
+          "id": "D",
+          "text": "Ring is faster by 2 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Sphere: v = √(10gh/7) = √(10×10×5/7) = √(500/7) ≈ 8.45 m/s. Ring: v = √(gh) = √(10×5) = √50 ≈ 7.07 m/s. Difference ≈ 1.38 m/s. The sphere is faster because it has a smaller k²/R².",
+      "explanation_incorrect": "Speed at the bottom depends on k²/R², not on mass or radius directly. Sphere (k²/R² = 2/5) is faster than ring (k²/R² = 1). Mass cancels out in the energy equation."
+    },
+    {
+      "question_id": "T05.01.Q063",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is designing a flywheel for a physics project. She has a solid disc of mass 5 kg and radius 0.2 m. She needs to know its moment of inertia about an axis at the edge of the disc, perpendicular to its plane. The value is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.1 kg·m²"
+        },
+        {
+          "id": "B",
+          "text": "0.2 kg·m²"
+        },
+        {
+          "id": "C",
+          "text": "0.3 kg·m²"
+        },
+        {
+          "id": "D",
+          "text": "0.5 kg·m²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "I_centre = ½MR² = ½ × 5 × 0.04 = 0.1 kg·m². By parallel axis theorem: I_edge = I_centre + MR² = 0.1 + 5 × 0.04 = 0.1 + 0.2 = 0.3 kg·m².",
+      "explanation_incorrect": "By the parallel axis theorem: I = I_cm + Md² = MR²/2 + MR² = 3MR²/2 = 3 × 5 × 0.04/2 = 0.3 kg·m²."
+    },
+    {
+      "question_id": "T05.01.Q064",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan observes a spinning top (solid cone) in a toy shop. The top has I = 0.002 kg·m² and spins at 60 rad/s. When the tip friction slows it down, it takes 30 s to stop. The average frictional torque is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.004 N·m"
+        },
+        {
+          "id": "B",
+          "text": "0.002 N·m"
+        },
+        {
+          "id": "C",
+          "text": "0.12 N·m"
+        },
+        {
+          "id": "D",
+          "text": "0.06 N·m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "α = Δω/Δt = 60/30 = 2 rad/s². τ = Iα = 0.002 × 2 = 0.004 N·m. This is the average retarding torque due to friction at the tip.",
+      "explanation_incorrect": "The angular deceleration is α = 60/30 = 2 rad/s². Torque = Iα = 0.002 × 2 = 0.004 N·m."
+    },
+    {
+      "question_id": "T05.01.Q065",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "The perpendicular axis theorem states I_z = I_x + I_y for planar bodies. Which of the following bodies cannot use this theorem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Thin ring"
+        },
+        {
+          "id": "B",
+          "text": "Flat rectangular plate"
+        },
+        {
+          "id": "C",
+          "text": "Solid sphere"
+        },
+        {
+          "id": "D",
+          "text": "Thin disc"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The perpendicular axis theorem is valid only for planar (2D/laminar) bodies. A solid sphere is a 3D body with mass distributed in all three dimensions, so the perpendicular axis theorem cannot be applied to it.",
+      "explanation_incorrect": "Ring, disc, and rectangular plate are all flat, planar bodies that lie in a single plane. The perpendicular axis theorem works for them. A solid sphere has mass in three dimensions and is not a lamina."
+    },
+    {
+      "question_id": "T05.01.Q066",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following uniform bodies has its centre of mass NOT at a point where there is material?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid sphere"
+        },
+        {
+          "id": "B",
+          "text": "Uniform rod"
+        },
+        {
+          "id": "C",
+          "text": "Uniform ring"
+        },
+        {
+          "id": "D",
+          "text": "Solid cube"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A uniform ring has its COM at the geometric centre, which is empty space. Students often assume the COM must be inside the body's material, but a ring is the classic counterexample. Solid sphere, rod, and cube all have their COM at a point within the material.",
+      "explanation_incorrect": "The COM of a solid sphere, rod, and cube all lie inside the material. The ring's COM is at the centre of the ring, which has no material — it is in empty space."
+    },
+    {
+      "question_id": "T05.01.Q067",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A body sliding down a frictionless incline does NOT roll. Which of the following seems like it should roll but actually slides without rolling on a frictionless surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A solid sphere on a rough incline"
+        },
+        {
+          "id": "B",
+          "text": "A cylinder on a rough surface"
+        },
+        {
+          "id": "C",
+          "text": "A solid sphere on a perfectly frictionless incline"
+        },
+        {
+          "id": "D",
+          "text": "A ring on a rough surface"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A sphere looks like a rolling object, but on a perfectly frictionless incline, there is no tangential force to create torque about the COM. Without torque, no angular acceleration occurs, so the sphere slides without rotating. Friction is essential for rolling.",
+      "explanation_incorrect": "On a rough surface (A, B, D), friction provides the torque needed for rolling. On a frictionless surface, even a sphere will simply slide, because gravity through the COM produces zero torque about the COM."
+    },
+    {
+      "question_id": "T05.01.Q068",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does a ballet dancer spin faster when she pulls her arms inward?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because pulling arms inward increases her angular momentum"
+        },
+        {
+          "id": "B",
+          "text": "Because pulling arms inward reduces her moment of inertia, and since angular momentum (Iω) is conserved (no external torque), ω must increase"
+        },
+        {
+          "id": "C",
+          "text": "Because the external torque from her feet increases her speed"
+        },
+        {
+          "id": "D",
+          "text": "Because her mass decreases when she folds her arms"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "With no external torque, L = Iω is conserved. Pulling arms in reduces I (mass moves closer to axis). To keep L constant, ω must increase proportionally. This is conservation of angular momentum in action.",
+      "explanation_incorrect": "Her mass doesn't change. Angular momentum doesn't increase (it's conserved). There is no significant external torque. The reason is purely the conservation of angular momentum: smaller I requires larger ω."
+    },
+    {
+      "question_id": "T05.01.Q069",
+      "type": "mcq",
+      "concept_id": "T05.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is the moment of inertia about the centre of mass axis always the minimum among all parallel axes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the COM axis is always the longest"
+        },
+        {
+          "id": "B",
+          "text": "Because the parallel axis theorem adds a positive term Md² to I_cm, so any shifted axis has I > I_cm"
+        },
+        {
+          "id": "C",
+          "text": "Because the COM is always at the geometric centre"
+        },
+        {
+          "id": "D",
+          "text": "Because the body's density is maximum at the COM"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The parallel axis theorem states I = I_cm + Md². Since M > 0 and d² > 0 (for any axis not through COM), the term Md² is always positive. Therefore I > I_cm for any parallel axis displaced by d from the COM axis.",
+      "explanation_incorrect": "The COM is not always at the geometric centre (non-uniform bodies). The reason is purely mathematical: the Md² term in the parallel axis theorem is always positive, making I_cm the minimum."
+    },
+    {
+      "question_id": "T05.01.Q070",
+      "type": "mcq",
+      "concept_id": "T05.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does a solid sphere reach the bottom of an incline faster than a hollow sphere when both roll without slipping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the solid sphere is heavier"
+        },
+        {
+          "id": "B",
+          "text": "Because the solid sphere has a smaller k²/R² (2/5 vs 2/3), so a smaller fraction of its energy goes to rotation, leaving more for translation and giving a larger acceleration"
+        },
+        {
+          "id": "C",
+          "text": "Because the solid sphere has less friction"
+        },
+        {
+          "id": "D",
+          "text": "Because the hollow sphere has more air resistance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rolling acceleration a = g sin θ/(1 + k²/R²). Solid sphere has k²/R² = 2/5, giving a = 5g sin θ/7. Hollow sphere has k²/R² = 2/3, giving a = 3g sin θ/5. Since 5/7 > 3/5, the solid sphere accelerates faster. This is because a smaller k²/R² means less energy is diverted to rotation.",
+      "explanation_incorrect": "Mass and radius cancel in the rolling acceleration formula. The key factor is k²/R², which determines the fraction of gravitational PE converted to rotational KE vs translational KE. Smaller k²/R² = faster rolling."
     }
   ]
 }

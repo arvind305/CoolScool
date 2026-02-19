@@ -1228,31 +1228,371 @@
       ],
       "explanation_correct": "An isolated system has no exchange of matter or energy with the surroundings, while a closed system can exchange energy but not matter, and an open system can exchange both energy and matter. Therefore, the order from least to most ability to exchange with surroundings is: isolated system, closed system, open system.",
       "explanation_incorrect": "The incorrect order would be: open system, closed system, isolated system. This is incorrect because an open system has the highest ability to exchange with the surroundings, as it can exchange both energy and matter. A closed system has a lower ability to exchange, as it can only exchange energy. An isolated system has the lowest ability to exchange, as it cannot exchange either energy or matter with the surroundings."
+    },
+    {
+      "question_id": "T06.01.Q051",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the heat exchanged in a reaction at constant pressure differ from the heat exchanged at constant volume?",
+      "options": [
+        {"id": "A", "text": "At constant pressure, q = ΔU; at constant volume, q = ΔH"},
+        {"id": "B", "text": "At constant pressure, q = ΔH; at constant volume, q = ΔU"},
+        {"id": "C", "text": "Both give the same value q = ΔG"},
+        {"id": "D", "text": "At constant pressure, q = 0; at constant volume, q = ΔS"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At constant pressure, the heat exchanged (qp) equals the enthalpy change (ΔH), since no additional work is done beyond expansion work. At constant volume, no PV work is done (w = 0), so the heat exchanged (qv) equals the change in internal energy (ΔU). This distinction is fundamental in thermochemistry.",
+      "explanation_incorrect": "The relationships are not interchangeable. At constant pressure, q = ΔH (because enthalpy accounts for both internal energy and PV work). At constant volume, q = ΔU (because there is no work done). Neither involves ΔG or ΔS directly."
+    },
+    {
+      "question_id": "T06.01.Q052",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the entropy change for freezing of water differ from the entropy change for evaporation of water?",
+      "options": [
+        {"id": "A", "text": "Both processes have positive entropy changes"},
+        {"id": "B", "text": "Freezing has a negative ΔS (decreased disorder) while evaporation has a positive ΔS (increased disorder)"},
+        {"id": "C", "text": "Both processes have negative entropy changes"},
+        {"id": "D", "text": "Freezing has a positive ΔS while evaporation has a negative ΔS"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Freezing converts liquid water to a highly ordered solid (ice), decreasing randomness and giving a negative ΔS. Evaporation converts liquid water to gas, where molecules have maximum freedom of movement, greatly increasing randomness and giving a large positive ΔS.",
+      "explanation_incorrect": "Freezing and evaporation have opposite effects on molecular order. Freezing increases order (negative ΔS) while evaporation increases disorder (positive ΔS). The two processes are thermodynamically opposite in their entropy effects."
+    },
+    {
+      "question_id": "T06.01.Q053",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the enthalpy of neutralisation of a strong acid with a strong base differ from that of a weak acid with a strong base?",
+      "options": [
+        {"id": "A", "text": "Both are exactly -57.1 kJ/mol"},
+        {"id": "B", "text": "Strong acid-strong base neutralisation gives -57.1 kJ/mol; weak acid-strong base gives a less negative value because some energy is used to ionise the weak acid"},
+        {"id": "C", "text": "Weak acid-strong base gives a more negative value"},
+        {"id": "D", "text": "The values are positive for both"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of neutralisation of a strong acid with a strong base is approximately -57.1 kJ/mol, as both are fully ionised and the net reaction is simply H⁺ + OH⁻ → H₂O. For a weak acid with a strong base, some energy must be used to ionise the weak acid first, so the overall enthalpy of neutralisation is less negative (less exothermic) than -57.1 kJ/mol.",
+      "explanation_incorrect": "The two values are not identical. The weak acid requires energy for ionisation, which partially offsets the exothermic neutralisation. Thus, the net enthalpy is less negative for weak acid neutralisation compared to strong acid neutralisation."
+    },
+    {
+      "question_id": "T06.01.Q054",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does an isothermal process differ from an adiabatic process for an ideal gas?",
+      "options": [
+        {"id": "A", "text": "In isothermal: temperature changes, q = 0; in adiabatic: temperature is constant, q ≠ 0"},
+        {"id": "B", "text": "In isothermal: temperature is constant, ΔU = 0, q = -w; in adiabatic: no heat exchange (q = 0), ΔU = w, temperature changes"},
+        {"id": "C", "text": "Both processes have identical conditions"},
+        {"id": "D", "text": "In isothermal: ΔH ≠ 0; in adiabatic: ΔU = 0"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an isothermal process for an ideal gas, temperature remains constant, so ΔU = 0 and q = -w (heat absorbed equals work done by the gas). In an adiabatic process, no heat is exchanged (q = 0), so ΔU = w and the temperature changes. These are fundamentally different thermodynamic conditions.",
+      "explanation_incorrect": "The two processes have opposite constraints: isothermal maintains constant temperature with heat exchange, while adiabatic prohibits heat exchange but allows temperature change. They cannot have identical conditions."
+    },
+    {
+      "question_id": "T06.01.Q055",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does a reaction with ΔH < 0 and ΔS > 0 differ from a reaction with ΔH > 0 and ΔS < 0 in terms of spontaneity?",
+      "options": [
+        {"id": "A", "text": "Both are spontaneous at all temperatures"},
+        {"id": "B", "text": "The first (ΔH < 0, ΔS > 0) is spontaneous at all temperatures; the second (ΔH > 0, ΔS < 0) is never spontaneous"},
+        {"id": "C", "text": "Both are non-spontaneous at all temperatures"},
+        {"id": "D", "text": "The second is always spontaneous; the first is never spontaneous"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When ΔH < 0 and ΔS > 0, ΔG = ΔH - TΔS is always negative (both terms contribute to making ΔG negative), so the reaction is spontaneous at all temperatures. When ΔH > 0 and ΔS < 0, ΔG is always positive (both terms contribute to making ΔG positive), so the reaction is never spontaneous at any temperature.",
+      "explanation_incorrect": "These two combinations represent the extreme cases of spontaneity. The first is the most favourable (always spontaneous) while the second is the least favourable (never spontaneous). They are thermodynamic opposites."
+    },
+    {
+      "question_id": "T06.01.Q056",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A thermodynamic quantity depends only on the initial and final states of the system and not on the path taken. Examples include U, H, S, and G. This type of quantity is classified as a:",
+      "options": [
+        {"id": "A", "text": "Path function"},
+        {"id": "B", "text": "State function"},
+        {"id": "C", "text": "Extensive property only"},
+        {"id": "D", "text": "Intensive property only"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A state function depends only on the current state (initial and final states) of the system, regardless of the path taken to reach that state. Internal energy (U), enthalpy (H), entropy (S), and Gibbs free energy (G) are all state functions. In contrast, heat (q) and work (w) are path functions.",
+      "explanation_incorrect": "Path functions depend on the specific process taken. State functions are independent of the path. While some state functions are extensive (U, H) and others can be written as intensive (molar quantities), the defining characteristic is their path-independence."
+    },
+    {
+      "question_id": "T06.01.Q057",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A thermochemical quantity is always positive, represents the energy required to completely separate all atoms in one mole of a substance into gaseous atoms, and is used to calculate reaction enthalpies. This quantity is the:",
+      "options": [
+        {"id": "A", "text": "Enthalpy of combustion"},
+        {"id": "B", "text": "Enthalpy of atomisation"},
+        {"id": "C", "text": "Enthalpy of neutralisation"},
+        {"id": "D", "text": "Enthalpy of solution"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of atomisation is the enthalpy change when one mole of a substance is completely converted to gaseous atoms. It is always endothermic (positive) because energy is required to break all bonds. It can be used to calculate bond energies and reaction enthalpies.",
+      "explanation_incorrect": "Enthalpy of combustion is always negative (exothermic). Enthalpy of neutralisation is also negative. Enthalpy of solution can be positive or negative. Only enthalpy of atomisation is always positive and specifically refers to converting a substance into gaseous atoms."
+    },
+    {
+      "question_id": "T06.01.Q058",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A process has ΔH = +120 kJ/mol and ΔS = +300 J/(mol·K). It is non-spontaneous at low temperatures but becomes spontaneous at high temperatures. This process is classified as:",
+      "options": [
+        {"id": "A", "text": "Spontaneous at all temperatures"},
+        {"id": "B", "text": "Non-spontaneous at all temperatures"},
+        {"id": "C", "text": "Entropy-driven, becoming spontaneous above T = ΔH/ΔS"},
+        {"id": "D", "text": "Enthalpy-driven and spontaneous only at low temperatures"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "With ΔH > 0 (endothermic) and ΔS > 0 (entropy increase), the process is entropy-driven. At low temperatures, the positive ΔH dominates, making ΔG positive (non-spontaneous). As temperature increases, the TΔS term grows and eventually overcomes ΔH, making ΔG negative. The crossover temperature is T = ΔH/ΔS = 120,000/300 = 400 K.",
+      "explanation_incorrect": "This is not spontaneous at all temperatures (because ΔH > 0) or non-spontaneous at all temperatures (because ΔS > 0). It becomes spontaneous only above the crossover temperature where TΔS exceeds ΔH. This is the entropy-driven case."
+    },
+    {
+      "question_id": "T06.01.Q059",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A system can exchange both matter and energy with its surroundings, such as boiling water in an open beaker. This type of system is classified as:",
+      "options": [
+        {"id": "A", "text": "Isolated system"},
+        {"id": "B", "text": "Closed system"},
+        {"id": "C", "text": "Open system"},
+        {"id": "D", "text": "Adiabatic system"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An open system can exchange both matter and energy with its surroundings. Boiling water in an open beaker is an example because steam (matter) escapes and heat (energy) is exchanged with the surroundings. This contrasts with a closed system (energy only) and an isolated system (neither).",
+      "explanation_incorrect": "An isolated system exchanges neither matter nor energy. A closed system exchanges only energy. An adiabatic system exchanges no heat. Only an open system exchanges both matter and energy."
+    },
+    {
+      "question_id": "T06.01.Q060",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya performed a calorimetry experiment in her school lab. She dissolved ammonium nitrate (NH₄NO₃) in water in a beaker and noticed that the beaker became very cold. What type of process is this, and what is the sign of ΔH?",
+      "options": [
+        {"id": "A", "text": "Exothermic process; ΔH is negative"},
+        {"id": "B", "text": "Endothermic process; ΔH is positive because heat is absorbed from the surroundings, making the beaker feel cold"},
+        {"id": "C", "text": "Adiabatic process; ΔH is zero"},
+        {"id": "D", "text": "Isothermal process; ΔH cannot be determined"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The dissolution of ammonium nitrate in water is an endothermic process. The system absorbs heat from the surroundings (the water and beaker), causing the temperature to drop and the beaker to feel cold. Since heat is absorbed, ΔH is positive. This is why ammonium nitrate is used in instant cold packs.",
+      "explanation_incorrect": "The beaker becoming cold indicates that the system is absorbing heat from the surroundings, not releasing it. An exothermic process would make the surroundings warmer. This is clearly an endothermic dissolution with a positive ΔH."
+    },
+    {
+      "question_id": "T06.01.Q061",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit studied that diamond spontaneously converts to graphite at room temperature, yet diamonds appear to last forever. His teacher explained that ΔG for this conversion is negative. Why does the conversion not occur at a noticeable rate?",
+      "options": [
+        {"id": "A", "text": "Because ΔG is actually positive for this conversion"},
+        {"id": "B", "text": "Because although ΔG is negative (thermodynamically favourable), the activation energy barrier is extremely high, making the rate negligibly slow at room temperature"},
+        {"id": "C", "text": "Because diamonds and graphite have the same free energy"},
+        {"id": "D", "text": "Because entropy opposes this conversion"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Thermodynamics tells us that diamond-to-graphite conversion is spontaneous (ΔG < 0), but thermodynamics does not tell us about the rate. The conversion requires breaking and reforming many C-C bonds, which involves an extremely high activation energy barrier. At room temperature, virtually no carbon atoms have enough energy to overcome this barrier, so the rate is negligibly slow despite being thermodynamically favourable.",
+      "explanation_incorrect": "ΔG is indeed negative for this conversion, making it thermodynamically spontaneous. However, spontaneity does not imply speed. The key distinction is between thermodynamic favourability and kinetic feasibility. The enormous activation energy barrier prevents the conversion at room temperature."
+    },
+    {
+      "question_id": "T06.01.Q062",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya heated 2 moles of an ideal gas in a sealed rigid container (constant volume) and measured the heat absorbed as 500 J. What is the change in internal energy (ΔU) of the gas?",
+      "options": [
+        {"id": "A", "text": "0 J, because the container is rigid"},
+        {"id": "B", "text": "500 J, because at constant volume, ΔU = qv and no work is done"},
+        {"id": "C", "text": "250 J, because only half the heat converts to internal energy"},
+        {"id": "D", "text": "Cannot be determined without knowing the temperature"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a rigid (constant volume) container, no expansion work is done (w = 0, since ΔV = 0). By the first law of thermodynamics, ΔU = q + w = q + 0 = q. Therefore, all 500 J of heat absorbed goes directly into increasing the internal energy, giving ΔU = 500 J.",
+      "explanation_incorrect": "At constant volume, the work done is zero because there is no volume change. This means all heat absorbed directly increases the internal energy. The answer is simply ΔU = qv = 500 J."
+    },
+    {
+      "question_id": "T06.01.Q063",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Arjun calculated the enthalpy of a reaction using the formula ΔH = Σ ΔHf(products) - Σ ΔHf(reactants) and got -200 kJ/mol. His friend Rohan calculated the same reaction using bond enthalpies and got -195 kJ/mol. Why might these values differ slightly?",
+      "options": [
+        {"id": "A", "text": "Because Hess's law is invalid"},
+        {"id": "B", "text": "Because bond enthalpy values are average values for a bond type across many molecules, not exact values for specific molecules, leading to slight differences"},
+        {"id": "C", "text": "Because enthalpy of formation values are always approximate"},
+        {"id": "D", "text": "Because temperature affects bond enthalpies but not formation enthalpies"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Bond dissociation enthalpies used in calculations are average values obtained from many different molecules containing that bond type. The actual bond energy in a specific molecule may differ from this average. In contrast, standard enthalpies of formation are precise values for specific compounds. This is why bond enthalpy calculations often give approximate results that may differ slightly from Hess's law calculations using formation enthalpies.",
+      "explanation_incorrect": "Hess's law is perfectly valid and formation enthalpies are precise standard values. The discrepancy arises because bond enthalpies are averaged over many molecules, introducing inherent approximations. This is a well-known limitation of the bond enthalpy method."
+    },
+    {
+      "question_id": "T06.01.Q064",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera found that the dissolution of NaCl in water is slightly endothermic (ΔH > 0) yet occurs spontaneously. Using the Gibbs free energy equation, what can she conclude about the entropy change for this process?",
+      "options": [
+        {"id": "A", "text": "ΔS must be negative"},
+        {"id": "B", "text": "ΔS must be positive and large enough that TΔS > ΔH, making ΔG negative"},
+        {"id": "C", "text": "ΔS must be zero"},
+        {"id": "D", "text": "The entropy change is irrelevant for spontaneity"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since the dissolution is spontaneous (ΔG < 0) but endothermic (ΔH > 0), the entropy term must compensate. From ΔG = ΔH - TΔS < 0, we need TΔS > ΔH, which requires ΔS to be positive and sufficiently large. The increase in disorder when NaCl dissociates into hydrated Na⁺ and Cl⁻ ions provides this favourable entropy change.",
+      "explanation_incorrect": "A negative ΔS would make ΔG even more positive, preventing spontaneity. ΔS = 0 would also not help since ΔH > 0 alone would give ΔG > 0. The entropy change is essential for explaining the spontaneity of endothermic dissolution."
+    },
+    {
+      "question_id": "T06.01.Q065",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "All of the following are state functions EXCEPT:",
+      "options": [
+        {"id": "A", "text": "Internal energy (U)"},
+        {"id": "B", "text": "Enthalpy (H)"},
+        {"id": "C", "text": "Work (w)"},
+        {"id": "D", "text": "Entropy (S)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Work (w) is a path function, not a state function. Its value depends on the specific process or path taken between the initial and final states. Internal energy, enthalpy, and entropy are all state functions whose values depend only on the state of the system, not the path.",
+      "explanation_incorrect": "Students often confuse state functions and path functions. Internal energy (U), enthalpy (H), and entropy (S) are all state functions. Work (w), like heat (q), is a path function because the amount of work done depends on how the process is carried out."
+    },
+    {
+      "question_id": "T06.01.Q066",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "All of the following processes have a positive entropy change (ΔS > 0) EXCEPT:",
+      "options": [
+        {"id": "A", "text": "Evaporation of liquid water"},
+        {"id": "B", "text": "Dissolution of sugar in water"},
+        {"id": "C", "text": "Freezing of water to ice"},
+        {"id": "D", "text": "Expansion of a gas into a vacuum"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Freezing of water to ice is the exception because it converts a disordered liquid into a highly ordered crystalline solid, resulting in a decrease in entropy (ΔS < 0). Evaporation, dissolution, and gas expansion all increase disorder and have positive ΔS values.",
+      "explanation_incorrect": "Students may think all natural processes have positive entropy changes, but that applies to the universe, not necessarily to the system. Freezing decreases the system's entropy because it increases molecular order. The other three processes all increase disorder."
+    },
+    {
+      "question_id": "T06.01.Q067",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "All of the following enthalpy changes are always negative (exothermic) EXCEPT:",
+      "options": [
+        {"id": "A", "text": "Enthalpy of combustion"},
+        {"id": "B", "text": "Enthalpy of neutralisation (strong acid + strong base)"},
+        {"id": "C", "text": "Enthalpy of atomisation"},
+        {"id": "D", "text": "Bond formation enthalpy"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Enthalpy of atomisation is always positive (endothermic) because energy is required to break all bonds in a substance to form individual gaseous atoms. Combustion is always exothermic, strong acid-strong base neutralisation is always exothermic (-57.1 kJ/mol), and bond formation always releases energy (exothermic).",
+      "explanation_incorrect": "Students may assume all enthalpy changes are exothermic. Atomisation requires breaking bonds to produce gaseous atoms, which always requires energy input. This makes it the exception among the listed processes, which are all exothermic."
+    },
+    {
+      "question_id": "T06.01.Q068",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why can an endothermic reaction be spontaneous, even though it absorbs heat from the surroundings?",
+      "options": [
+        {"id": "A", "text": "Because endothermic reactions always have negative ΔG"},
+        {"id": "B", "text": "Because if the entropy increase (TΔS) is large enough to exceed the positive ΔH, the Gibbs free energy change ΔG = ΔH - TΔS becomes negative, driving spontaneity"},
+        {"id": "C", "text": "Because heat absorption does not affect spontaneity at all"},
+        {"id": "D", "text": "Because the first law of thermodynamics requires endothermic reactions to be spontaneous"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Spontaneity depends on ΔG, not just ΔH. For an endothermic reaction (ΔH > 0), if the associated entropy increase is large enough (ΔS >> 0), then at a sufficiently high temperature, TΔS exceeds ΔH, making ΔG = ΔH - TΔS negative. The entropy-driven contribution overcomes the unfavourable enthalpy, making the reaction spontaneous.",
+      "explanation_incorrect": "Not all endothermic reactions are spontaneous; it depends on the entropy change. Heat absorption is a factor in spontaneity through ΔH, but it can be overcome by entropy. The first law deals with energy conservation, not spontaneity."
+    },
+    {
+      "question_id": "T06.01.Q069",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the relationship ΔH = ΔU + ΔngRT important for gaseous reactions?",
+      "options": [
+        {"id": "A", "text": "Because it converts heat capacity values between Cp and Cv"},
+        {"id": "B", "text": "Because gaseous reactions may involve a change in the number of moles of gas, and the ΔngRT term accounts for the PV work associated with this volume change, making ΔH different from ΔU"},
+        {"id": "C", "text": "Because it shows that ΔH and ΔU are always equal for all reactions"},
+        {"id": "D", "text": "Because it is used only for reactions at constant volume"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In gaseous reactions where the number of moles of gas changes (Δng ≠ 0), there is a difference between the heat at constant pressure (ΔH) and at constant volume (ΔU). The ΔngRT term represents the additional PV work done when the volume of gas changes. This is important because calorimetric measurements (bomb calorimeter) give ΔU, but we often need ΔH for standard thermochemical calculations.",
+      "explanation_incorrect": "ΔH and ΔU are equal only when Δng = 0. The relationship specifically accounts for the PV work term in gaseous reactions. It is not about heat capacities or applicable only at constant volume."
+    },
+    {
+      "question_id": "T06.01.Q070",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the enthalpy of formation of an element in its standard state defined as zero?",
+      "options": [
+        {"id": "A", "text": "Because elements cannot absorb or release heat"},
+        {"id": "B", "text": "Because forming an element from itself involves no change, so no enthalpy change occurs; this provides a convenient reference point for calculating enthalpies of formation of compounds"},
+        {"id": "C", "text": "Because all elements are at absolute zero temperature in their standard state"},
+        {"id": "D", "text": "Because elements do not participate in chemical reactions"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The enthalpy of formation is defined as the enthalpy change when one mole of a compound is formed from its constituent elements in their standard states. For an element already in its standard state, no change occurs (it is 'formed from itself'), so ΔHf = 0. This convention provides a useful reference baseline for calculating enthalpies of formation and reaction enthalpies using Hess's law.",
+      "explanation_incorrect": "Elements can absorb and release heat, and they do participate in reactions. They are not at absolute zero in standard state (standard state is 298 K, 1 bar). The zero value is a convention based on the logical fact that forming something from itself involves no change."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 15,
-        "application": 20,
-        "exam_style": 15
+        "familiarity": 21,
+        "application": 28,
+        "exam_style": 21
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 50,
-        "compare": 0,
-        "classify": 0,
-        "scenario": 0,
-        "exception": 0,
-        "reason": 0
+        "compare": 5,
+        "classify": 4,
+        "scenario": 5,
+        "exception": 3,
+        "reason": 3
       }
     }
   }

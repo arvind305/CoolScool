@@ -1337,31 +1337,372 @@
       ],
       "explanation_correct": "The terminal voltage is lowest for a short circuit (R = 0) because the current is highest, leading to the largest voltage drop across the internal resistance r of the cell. The terminal voltage is highest for an open circuit (no current) because there is no current flow and no voltage drop across r. The normal load (R = r) has a terminal voltage in between the short circuit and open circuit conditions.",
       "explanation_incorrect": "The correct order from lowest to highest terminal voltage is: short circuit (R = 0), normal load (R = r), open circuit (no current). This is because as the external resistance R decreases, the current in the circuit increases, leading to a larger voltage drop across the internal resistance r of the cell and a lower terminal voltage. Conversely, as R increases, the current decreases, reducing the voltage drop across r and increasing the terminal voltage."
+    },
+    {
+      "question_id": "T06.02.Q058",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the equivalent resistance of resistors in series differ from the equivalent resistance of the same resistors in parallel?",
+      "options": [
+        {"id": "A", "text": "Series equivalent is the sum of resistances; parallel equivalent is always less than the smallest resistance"},
+        {"id": "B", "text": "Series equivalent is less than the smallest; parallel equivalent is the sum"},
+        {"id": "C", "text": "Both are calculated by adding individual resistances"},
+        {"id": "D", "text": "Series equivalent equals parallel equivalent for all combinations"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In series, Rs = R1 + R2 + R3, so the equivalent resistance is always the sum and is greater than any individual resistance. In parallel, 1/Rp = 1/R1 + 1/R2 + 1/R3, so the equivalent resistance is always less than the smallest individual resistance. This is a fundamental difference between the two connection methods.",
+      "explanation_incorrect": "Option B reverses the properties. Series resistance is the sum (always greater than the largest), not less than the smallest. Parallel resistance is always less than the smallest, not the sum. The two methods give very different results for the same set of resistors."
+    },
+    {
+      "question_id": "T06.02.Q059",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the current distribution differ between a series circuit and a parallel circuit?",
+      "options": [
+        {"id": "A", "text": "In series, current is the same through all resistors; in parallel, current divides inversely proportional to resistance"},
+        {"id": "B", "text": "In series, current divides; in parallel, current is the same"},
+        {"id": "C", "text": "Current is the same in both series and parallel circuits"},
+        {"id": "D", "text": "In series, current is proportional to resistance; in parallel, current is zero through larger resistors"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In a series circuit, there is only one path for current, so the same current flows through all resistors. In a parallel circuit, the current from the source splits among the branches, with each branch carrying current inversely proportional to its resistance (I = V/R for each branch, where V is the same for all).",
+      "explanation_incorrect": "In series, current does not divide — it is the same everywhere. In parallel, current is not the same through all resistors — it varies inversely with resistance. Current is never zero through any resistor in a parallel circuit (unless the resistance is infinite)."
+    },
+    {
+      "question_id": "T06.02.Q060",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the voltage distribution differ between a series circuit and a parallel circuit?",
+      "options": [
+        {"id": "A", "text": "In series, voltage is the same across all; in parallel, voltage divides"},
+        {"id": "B", "text": "In series, voltage divides proportional to resistance; in parallel, voltage is the same across all"},
+        {"id": "C", "text": "Voltage is the same in both types of circuits"},
+        {"id": "D", "text": "In series, voltage divides inversely to resistance; in parallel, voltage divides proportionally"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series circuit, the total voltage divides among resistors in proportion to their resistance (V = IR, and since I is same, V is proportional to R). In a parallel circuit, all resistors are connected across the same two points, so the voltage is the same across all branches.",
+      "explanation_incorrect": "In series, voltage is not the same — it divides. In parallel, voltage does not divide — it is the same. Voltage divides proportionally (not inversely) to resistance in series. These are complementary properties: what is the same in series (current) divides in parallel, and vice versa."
+    },
+    {
+      "question_id": "T06.02.Q061",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the terminal voltage of a cell differ from its EMF when current is flowing through the circuit?",
+      "options": [
+        {"id": "A", "text": "Terminal voltage equals EMF regardless of current"},
+        {"id": "B", "text": "Terminal voltage is less than EMF by the amount Ir (voltage drop across internal resistance)"},
+        {"id": "C", "text": "Terminal voltage is greater than EMF when current flows"},
+        {"id": "D", "text": "Terminal voltage and EMF are unrelated quantities"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When current I flows through a cell with internal resistance r, there is a voltage drop Ir across the internal resistance. The terminal voltage V = E - Ir, which is always less than the EMF (E) when current flows. Only in an open circuit (I = 0) does V = E.",
+      "explanation_incorrect": "Terminal voltage does not equal EMF when current flows — it is reduced by Ir. Terminal voltage cannot exceed EMF for a discharging cell. EMF and terminal voltage are directly related by V = E - Ir, so they are not unrelated."
+    },
+    {
+      "question_id": "T06.02.Q062",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the maximum equivalent resistance obtainable from three 4 ohm resistors differ from the minimum equivalent resistance obtainable from the same resistors?",
+      "options": [
+        {"id": "A", "text": "Maximum is 12 ohms (all in series); minimum is 1.33 ohms (all in parallel)"},
+        {"id": "B", "text": "Maximum is 4 ohms; minimum is 4 ohms"},
+        {"id": "C", "text": "Maximum is 12 ohms; minimum is 4 ohms"},
+        {"id": "D", "text": "Maximum is 8 ohms; minimum is 2 ohms"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Maximum resistance is obtained by connecting all three in series: Rs = 4 + 4 + 4 = 12 ohms. Minimum resistance is obtained by connecting all three in parallel: 1/Rp = 1/4 + 1/4 + 1/4 = 3/4, so Rp = 4/3 = 1.33 ohms. The ratio of maximum to minimum is 9:1.",
+      "explanation_incorrect": "Series gives 12 ohms, not 8 or 4. Parallel gives 4/3 = 1.33 ohms, not 4 or 2. The maximum and minimum are not equal. Series always gives the highest resistance, parallel always gives the lowest for the same set of resistors."
+    },
+    {
+      "question_id": "T06.02.Q063",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "In a circuit, three resistors carry the same current but have different voltages across them. The voltage across each resistor is proportional to its resistance. These resistors are connected in:",
+      "options": [
+        {"id": "A", "text": "Parallel"},
+        {"id": "B", "text": "Series"},
+        {"id": "C", "text": "A mixed combination"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Same current through all resistors with voltage proportional to resistance (V = IR with same I) is the defining characteristic of a series connection. In parallel, voltage is the same but current differs. The observations described uniquely identify a series connection.",
+      "explanation_incorrect": "In parallel, the voltage is the same across all (not proportional to R), and current differs. A mixed combination would not have the same current through all resistors. The combination of same current + voltage proportional to R is uniquely characteristic of series."
+    },
+    {
+      "question_id": "T06.02.Q064",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "Three resistors of 2 ohm, 4 ohm, and 6 ohm are connected in a circuit. The voltage across each resistor is 12 V, but the current through the 2 ohm resistor is 6 A, through the 4 ohm is 3 A, and through the 6 ohm is 2 A. These resistors are connected in:",
+      "options": [
+        {"id": "A", "text": "Series"},
+        {"id": "B", "text": "Parallel"},
+        {"id": "C", "text": "A Wheatstone bridge"},
+        {"id": "D", "text": "Cannot be determined"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Same voltage (12 V) across all resistors with current inversely proportional to resistance (6A through 2 ohm, 3A through 4 ohm, 2A through 6 ohm — each satisfying I = V/R) is the defining characteristic of a parallel connection. The current divides, but voltage is shared.",
+      "explanation_incorrect": "In series, the current would be the same through all resistors, not different. The current values follow I = V/R exactly for each resistor with V = 12V, confirming parallel. A Wheatstone bridge has a specific diamond configuration not described here."
+    },
+    {
+      "question_id": "T06.02.Q065",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A circuit has an equivalent resistance of 4 ohms. It contains two 4 ohm resistors in parallel connected in series with a 2 ohm resistor. This circuit is classified as a:",
+      "options": [
+        {"id": "A", "text": "Pure series circuit"},
+        {"id": "B", "text": "Pure parallel circuit"},
+        {"id": "C", "text": "Mixed or series-parallel combination"},
+        {"id": "D", "text": "Open circuit"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The circuit contains both series and parallel elements: two 4 ohm resistors in parallel (giving 2 ohms) connected in series with a 2 ohm resistor (giving 2 + 2 = 4 ohms total). This is classified as a mixed or series-parallel combination circuit.",
+      "explanation_incorrect": "A pure series circuit would have all resistors in one path. A pure parallel circuit would have all resistors across the same two terminals. This circuit has some resistors in parallel and then that combination in series with another resistor, making it a mixed combination."
+    },
+    {
+      "question_id": "T06.02.Q066",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A cell has EMF 1.5 V and terminal voltage 1.2 V when delivering current. The difference (0.3 V) represents the voltage drop across the cell's:",
+      "options": [
+        {"id": "A", "text": "External resistance"},
+        {"id": "B", "text": "Internal resistance"},
+        {"id": "C", "text": "Both external and internal resistance"},
+        {"id": "D", "text": "The cell casing"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The difference between EMF and terminal voltage (E - V = 1.5 - 1.2 = 0.3 V) equals Ir, the voltage drop across the internal resistance of the cell. This is because V = E - Ir, so E - V = Ir. The internal resistance causes this voltage loss within the cell itself.",
+      "explanation_incorrect": "The voltage drop across the external resistance equals the terminal voltage (1.2 V), not the difference. The difference (0.3 V) is specifically the drop across the internal resistance. The cell casing does not create a separate voltage drop. The formula E = V + Ir makes this clear."
+    },
+    {
+      "question_id": "T06.02.Q067",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya connects three resistors of 2 ohm, 3 ohm, and 5 ohm in series with a 10 V battery in her physics lab. She measures the current using an ammeter. What current reading does Riya observe?",
+      "options": [
+        {"id": "A", "text": "1 A"},
+        {"id": "B", "text": "2 A"},
+        {"id": "C", "text": "5 A"},
+        {"id": "D", "text": "10 A"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In series, total resistance Rs = 2 + 3 + 5 = 10 ohms. Current I = V/R = 10/10 = 1 A. This same current of 1 A flows through all three resistors since they are in series. Riya's ammeter will show 1 A regardless of where in the series circuit she places it.",
+      "explanation_incorrect": "The total resistance is 10 ohms (not 2, 5, or 1 ohm). Using Ohm's law I = V/R = 10/10 = 1 A. In a series circuit, the current is the same everywhere and equals the total voltage divided by the total resistance."
+    },
+    {
+      "question_id": "T06.02.Q068",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit connects two resistors of 6 ohm and 3 ohm in parallel across a 12 V battery. He wants to find the total current drawn from the battery. What is the total current?",
+      "options": [
+        {"id": "A", "text": "2 A"},
+        {"id": "B", "text": "4 A"},
+        {"id": "C", "text": "6 A"},
+        {"id": "D", "text": "1.33 A"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In parallel, equivalent resistance Rp = (6 x 3)/(6 + 3) = 18/9 = 2 ohms. Total current I = V/Rp = 12/2 = 6 A. Alternatively: current through 6 ohm = 12/6 = 2 A, current through 3 ohm = 12/3 = 4 A, total = 2 + 4 = 6 A. Both methods give the same answer.",
+      "explanation_incorrect": "The parallel resistance is 2 ohms, not 9 ohms or 3 ohms. Using I = V/R = 12/2 = 6 A. The currents through individual branches add up to give the total current from the battery. 2A + 4A = 6A confirms the answer."
+    },
+    {
+      "question_id": "T06.02.Q069",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya has a cell of EMF 3 V and internal resistance 0.5 ohm. She connects it to an external resistance of 5.5 ohms. She wants to find the terminal voltage across the external resistance. What value does she calculate?",
+      "options": [
+        {"id": "A", "text": "3 V"},
+        {"id": "B", "text": "2.75 V"},
+        {"id": "C", "text": "2.5 V"},
+        {"id": "D", "text": "0.25 V"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Current in circuit I = E/(R + r) = 3/(5.5 + 0.5) = 3/6 = 0.5 A. Terminal voltage V = E - Ir = 3 - (0.5 x 0.5) = 3 - 0.25 = 2.75 V. Alternatively, V = IR = 0.5 x 5.5 = 2.75 V. The terminal voltage is less than the EMF due to the internal resistance drop.",
+      "explanation_incorrect": "3 V is the EMF, not the terminal voltage (it would only equal terminal voltage if r = 0 or no current flows). 2.5 V and 0.25 V do not match the calculation. The internal resistance causes a 0.25 V drop, giving V = 3 - 0.25 = 2.75 V."
+    },
+    {
+      "question_id": "T06.02.Q070",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Arjun has three 6 ohm resistors. His teacher asks him to connect them to get an equivalent resistance of 4 ohms. How should Arjun connect them?",
+      "options": [
+        {"id": "A", "text": "All three in series"},
+        {"id": "B", "text": "All three in parallel"},
+        {"id": "C", "text": "Two in parallel, then in series with the third"},
+        {"id": "D", "text": "Two in series, then in parallel with the third"}
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Two 6 ohm resistors in series give Rs = 6 + 6 = 12 ohms. This 12 ohm combination in parallel with the third 6 ohm resistor gives Rp = (12 x 6)/(12 + 6) = 72/18 = 4 ohms. This is the combination Arjun needs to achieve exactly 4 ohms.",
+      "explanation_incorrect": "All in series gives 18 ohms. All in parallel gives 2 ohms. Two in parallel + one in series gives (3 + 6) = 9 ohms. Only two in series (12 ohms) then in parallel with the third (6 ohms) gives (12 x 6)/(12+6) = 4 ohms."
+    },
+    {
+      "question_id": "T06.02.Q071",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Meera connects a 4 ohm and 6 ohm resistor in series with a 20 V battery in her school lab. She wants to find the voltage across the 6 ohm resistor. What value does she get?",
+      "options": [
+        {"id": "A", "text": "8 V"},
+        {"id": "B", "text": "12 V"},
+        {"id": "C", "text": "20 V"},
+        {"id": "D", "text": "6 V"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Total resistance = 4 + 6 = 10 ohms. Current I = V/R = 20/10 = 2 A. Voltage across 6 ohm = I x R = 2 x 6 = 12 V. Alternatively, using voltage divider: V6 = (6/10) x 20 = 12 V. The voltage divides in proportion to resistance in a series circuit.",
+      "explanation_incorrect": "The voltage is not 20 V across the 6 ohm resistor (that is the total battery voltage). Using the voltage divider principle, V6 = (6/(4+6)) x 20 = 12 V. The 4 ohm resistor gets 8 V and the 6 ohm gets 12 V, totalling 20 V."
+    },
+    {
+      "question_id": "T06.02.Q072",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Adding more resistors in parallel always decreases the total resistance of the circuit. This is true EXCEPT when:",
+      "options": [
+        {"id": "A", "text": "The added resistor has very high resistance"},
+        {"id": "B", "text": "The added resistor has infinite resistance (open circuit)"},
+        {"id": "C", "text": "The added resistor is equal to the existing ones"},
+        {"id": "D", "text": "The added resistor has zero resistance"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding a resistor with infinite resistance (open circuit) in parallel does not change the total resistance because no current can flow through an infinite resistance branch. Mathematically, 1/Rp = 1/R1 + 1/infinity = 1/R1 + 0, so Rp remains unchanged. For any finite resistance added in parallel, the total resistance always decreases.",
+      "explanation_incorrect": "Even a very high resistance added in parallel slightly decreases the total (option A is not an exception). Equal resistors in parallel definitely decrease the total. Zero resistance would short-circuit the combination (total becomes 0). Only infinite resistance has no effect because 1/infinity = 0."
+    },
+    {
+      "question_id": "T06.02.Q073",
+      "type": "mcq",
+      "concept_id": "T06.02.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "In a series circuit, removing any one resistor stops current through ALL remaining resistors. In a parallel circuit, this does NOT happen. The reason is that in parallel:",
+      "options": [
+        {"id": "A", "text": "Removing a parallel branch increases total resistance, so other branches get more current"},
+        {"id": "B", "text": "Each parallel branch provides an independent path, so removing one does not break the path through others"},
+        {"id": "C", "text": "Parallel circuits have no current flowing through individual branches"},
+        {"id": "D", "text": "Removing a branch from parallel has no effect on total resistance"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a parallel circuit, each branch is independently connected across the same two terminals. Removing one branch does not break the circuit for other branches — they continue to operate with the same voltage across them. In series, there is only one path, so removing any resistor breaks the entire circuit.",
+      "explanation_incorrect": "Removing a parallel branch does change the total resistance (it increases) and total current (it decreases). But the remaining branches continue to function independently. Parallel circuits do have current through each branch. The key point is the independence of parallel paths."
+    },
+    {
+      "question_id": "T06.02.Q074",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "The terminal voltage of a cell is always less than its EMF. This is true EXCEPT when:",
+      "options": [
+        {"id": "A", "text": "The external resistance is very large"},
+        {"id": "B", "text": "No current flows through the circuit (open circuit)"},
+        {"id": "C", "text": "The cell is fully charged"},
+        {"id": "D", "text": "The cell is connected to a high-power appliance"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When no current flows (open circuit), V = E - Ir = E - 0 = E. The terminal voltage equals the EMF only when the current is zero, i.e., in an open circuit. For any non-zero current, V < E because of the Ir drop across the internal resistance.",
+      "explanation_incorrect": "Even with a very large external resistance, some current flows and V is slightly less than E. A fully charged cell still has internal resistance. A high-power appliance draws more current, making V much less than E. Only in an open circuit (I = 0) does V exactly equal E."
+    },
+    {
+      "question_id": "T06.02.Q075",
+      "type": "mcq",
+      "concept_id": "T06.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is the equivalent resistance of resistors in parallel always less than the smallest individual resistance?",
+      "options": [
+        {"id": "A", "text": "Because parallel connection uses less wire"},
+        {"id": "B", "text": "Because adding parallel paths provides more routes for current flow, reducing overall opposition to current"},
+        {"id": "C", "text": "Because the resistors cancel each other out"},
+        {"id": "D", "text": "Because the voltage across parallel resistors is zero"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Each parallel branch provides an additional path for current to flow. More paths mean less overall opposition to current (lower total resistance). Even the smallest resistor already allows a certain current; adding more paths alongside it allows even more total current for the same voltage, meaning the effective resistance must be even lower.",
+      "explanation_incorrect": "Wire length does not determine parallel resistance. Resistors do not cancel each other — they provide additional current paths. The voltage across parallel resistors is the same (not zero). The fundamental reason is that parallel paths increase total current-carrying capacity, reducing effective resistance."
+    },
+    {
+      "question_id": "T06.02.Q076",
+      "type": "mcq",
+      "concept_id": "T06.02.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does voltage divide across resistors in a series circuit in proportion to their resistance values?",
+      "options": [
+        {"id": "A", "text": "Because larger resistors are physically bigger and take up more voltage"},
+        {"id": "B", "text": "Because the same current flows through all resistors, and by Ohm's law V = IR, so the resistor with higher R has higher voltage drop"},
+        {"id": "C", "text": "Because the battery distributes voltage equally to all resistors"},
+        {"id": "D", "text": "Because resistors in series have different currents"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series circuit, the current I is the same through every resistor (single path for current). By Ohm's law, V = IR for each resistor. Since I is constant, V is directly proportional to R. A resistor with higher resistance will have a proportionally higher voltage drop across it. This is the voltage divider principle.",
+      "explanation_incorrect": "Physical size has nothing to do with voltage distribution. The battery does not distribute voltage equally — it provides a fixed total EMF. Resistors in series have the same current, not different. The reason is purely Ohm's law applied to each resistor with the same current."
+    },
+    {
+      "question_id": "T06.02.Q077",
+      "type": "mcq",
+      "concept_id": "T06.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does maximum power transfer occur when the external resistance equals the internal resistance of the cell?",
+      "options": [
+        {"id": "A", "text": "Because the current is maximum when R = r"},
+        {"id": "B", "text": "Because the terminal voltage is maximum when R = r"},
+        {"id": "C", "text": "Because at R = r, the product of current and terminal voltage (I x V) is maximised, balancing current and voltage optimally"},
+        {"id": "D", "text": "Because the internal resistance becomes zero when R = r"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Power delivered to external resistance P = I^2 x R = [E/(R+r)]^2 x R. When R is very small, current is high but voltage across R is low. When R is very large, voltage is high but current is low. Maximum power occurs at R = r, which is the mathematical optimum where the product of current and external voltage is maximised. This can be proven by calculus (dP/dR = 0 when R = r).",
+      "explanation_incorrect": "Current is maximum when R = 0 (short circuit), not when R = r. Terminal voltage is maximum when R is infinite (open circuit), not when R = r. Internal resistance does not change — it is a fixed property of the cell. The maximum power transfer theorem is about optimising the balance between current and voltage."
     }
   ],
   "metadata": {
     "created_at": "2026-02-08",
+    "updated_at": "2026-02-19",
     "status": "draft",
     "question_count": {
-      "total": 57,
+      "total": 77,
       "by_difficulty": {
-        "familiarity": 28,
-        "application": 20,
-        "exam_style": 9
+        "familiarity": 25,
+        "application": 36,
+        "exam_style": 16
       },
       "by_type": {
-        "mcq": 30,
+        "mcq": 50,
         "true_false": 10,
         "fill_blank": 12,
         "ordering": 5
       },
       "by_cognitive_level": {
         "recall": 57,
-        "compare": 0,
-        "classify": 0,
-        "scenario": 0,
-        "exception": 0,
-        "reason": 0
+        "compare": 5,
+        "classify": 4,
+        "scenario": 5,
+        "exception": 3,
+        "reason": 3
       }
     }
   }

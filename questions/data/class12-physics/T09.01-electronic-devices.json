@@ -1231,31 +1231,611 @@
       ],
       "explanation_correct": "The correct answer is A, B, C, D because connecting the two inputs of a NAND gate together effectively turns it into a NOT gate. The input signal is then applied to the connected inputs, and the inverted output is obtained at the NAND gate output. Verifying the truth table confirms that this configuration implements a NOT gate.",
       "explanation_incorrect": "The incorrect answer would be to not connect the two inputs together (step A). This would result in the NAND gate not functioning as a NOT gate, and the output would not be the inverse of the input. The correct steps are to first connect the inputs, then apply the input signal, obtain the inverted output, and verify the truth table to confirm the NOT gate operation."
+    },
+    {
+      "question_id": "T09.01.Q051",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does an n-type semiconductor differ from a p-type semiconductor in terms of the position of the Fermi level?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In n-type the Fermi level lies closer to the conduction band, while in p-type it lies closer to the valence band"
+        },
+        {
+          "id": "B",
+          "text": "In both n-type and p-type, the Fermi level lies exactly at the centre of the band gap"
+        },
+        {
+          "id": "C",
+          "text": "In n-type the Fermi level lies closer to the valence band, while in p-type it lies closer to the conduction band"
+        },
+        {
+          "id": "D",
+          "text": "In n-type the Fermi level is inside the conduction band, while in p-type it is inside the valence band"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In an n-type semiconductor, the donor impurity levels lie just below the conduction band, shifting the Fermi level upward toward the conduction band. In a p-type semiconductor, the acceptor levels lie just above the valence band, shifting the Fermi level downward toward the valence band. This asymmetric shift reflects the different majority carrier concentrations in the two types.",
+      "explanation_incorrect": "Option B is incorrect because doping breaks the symmetry of the intrinsic Fermi level. Option C reverses the correct positions. Option D describes degenerate semiconductors with extremely heavy doping, not the typical moderately doped extrinsic semiconductors discussed at the ISC level."
+    },
+    {
+      "question_id": "T09.01.Q052",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the forward-bias V-I characteristic of a silicon diode differ from that of a germanium diode in terms of the knee voltage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Silicon has a knee voltage of about 0.3 V while germanium has about 0.7 V"
+        },
+        {
+          "id": "B",
+          "text": "Silicon has a knee voltage of about 0.7 V while germanium has about 0.3 V"
+        },
+        {
+          "id": "C",
+          "text": "Both have the same knee voltage of about 0.5 V"
+        },
+        {
+          "id": "D",
+          "text": "Silicon has a knee voltage of about 1.1 V while germanium has about 0.67 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The knee voltage (threshold or cut-in voltage) of a silicon diode is approximately 0.7 V, whereas that of a germanium diode is approximately 0.3 V. This difference arises because silicon has a larger energy band gap (1.1 eV) compared to germanium (0.67 eV), so a higher external voltage is needed to overcome the built-in potential barrier in silicon.",
+      "explanation_incorrect": "Option A reverses the values. Option C is incorrect because the two materials have distinctly different knee voltages due to their different band gaps. Option D confuses the band gap energy values (1.1 eV and 0.67 eV) with the knee voltages; the knee voltage is related to the barrier potential, not numerically equal to the band gap."
+    },
+    {
+      "question_id": "T09.01.Q053",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does a half-wave rectifier differ from a full-wave rectifier in terms of the ripple frequency for a 50 Hz AC input?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Half-wave gives 50 Hz ripple; full-wave gives 100 Hz ripple"
+        },
+        {
+          "id": "B",
+          "text": "Half-wave gives 100 Hz ripple; full-wave gives 50 Hz ripple"
+        },
+        {
+          "id": "C",
+          "text": "Both give 50 Hz ripple"
+        },
+        {
+          "id": "D",
+          "text": "Both give 100 Hz ripple"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A half-wave rectifier passes only one half-cycle of the AC input per period, so the output pulses at the same frequency as the input, which is 50 Hz. A full-wave rectifier utilises both half-cycles, producing two output pulses per input cycle, doubling the ripple frequency to 100 Hz. The higher ripple frequency of a full-wave rectifier also makes it easier to smooth the output with a filter capacitor.",
+      "explanation_incorrect": "Option B reverses the correct values. Option C is wrong because a full-wave rectifier uses both half-cycles, doubling the output frequency. Option D is wrong because a half-wave rectifier only uses one half-cycle, keeping the frequency at 50 Hz."
+    },
+    {
+      "question_id": "T09.01.Q054",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does a photodiode differ from an LED in terms of the energy conversion process at the p-n junction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A photodiode converts electrical energy to light; an LED converts light to electrical energy"
+        },
+        {
+          "id": "B",
+          "text": "A photodiode converts light energy to electrical energy; an LED converts electrical energy to light energy"
+        },
+        {
+          "id": "C",
+          "text": "Both convert electrical energy to light energy but at different wavelengths"
+        },
+        {
+          "id": "D",
+          "text": "Both convert light energy to electrical energy but with different efficiencies"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A photodiode absorbs incident photons and generates electron-hole pairs, converting light energy into electrical energy (photocurrent). An LED operates under forward bias where electron-hole recombination releases energy as photons, converting electrical energy into light energy. They are, in a sense, complementary devices exploiting the same p-n junction physics in opposite directions.",
+      "explanation_incorrect": "Option A reverses the correct processes. Options C and D incorrectly state that both devices perform the same type of energy conversion. A photodiode and an LED are fundamentally opposite in their energy conversion: one absorbs photons to generate current, and the other uses current to emit photons."
+    },
+    {
+      "question_id": "T09.01.Q055",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does a NAND gate differ from a NOR gate when both inputs are 0?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NAND output is 0; NOR output is 1"
+        },
+        {
+          "id": "B",
+          "text": "NAND output is 1; NOR output is 1"
+        },
+        {
+          "id": "C",
+          "text": "NAND output is 0; NOR output is 0"
+        },
+        {
+          "id": "D",
+          "text": "NAND output is 1; NOR output is 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When both inputs are 0: for NAND, the AND of (0,0) = 0, and NOT of 0 = 1, so NAND output is 1. For NOR, the OR of (0,0) = 0, and NOT of 0 = 1, so NOR output is also 1. This is the one input combination where both universal gates produce the same output. They differ for all other input combinations.",
+      "explanation_incorrect": "Option A is incorrect because the NOR output for inputs (0,0) is 1, not the other way around. Option C is wrong because neither gate gives 0 for both inputs being 0. Option D is wrong because the NOR output is 1, not 0, when both inputs are 0. Applying the truth tables carefully: NAND(0,0) = NOT(0 AND 0) = NOT(0) = 1; NOR(0,0) = NOT(0 OR 0) = NOT(0) = 1."
+    },
+    {
+      "question_id": "T09.01.Q056",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A material has a band gap of approximately 1.42 eV, its conductivity increases with temperature, and it is widely used in solar cells. This material is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A conductor"
+        },
+        {
+          "id": "B",
+          "text": "An insulator"
+        },
+        {
+          "id": "C",
+          "text": "A semiconductor"
+        },
+        {
+          "id": "D",
+          "text": "A superconductor"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A band gap of ~1.42 eV falls in the semiconductor range (roughly 0.5 to 3 eV), increasing conductivity with temperature is characteristic of semiconductors (unlike metals), and use in solar cells confirms it is a semiconductor. The described material matches gallium arsenide (GaAs), a well-known compound semiconductor.",
+      "explanation_incorrect": "Conductors have overlapping bands or negligible band gaps and their conductivity decreases with temperature. Insulators have band gaps greater than 3 eV. Superconductors are defined by zero resistance below a critical temperature, which is unrelated to band gap. The described properties uniquely identify a semiconductor."
+    },
+    {
+      "question_id": "T09.01.Q057",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A two-terminal device shows negligible current for small applied voltages of either polarity, but when the reverse voltage exceeds a specific value it conducts heavily while maintaining a nearly constant voltage drop. This device is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A standard p-n junction diode"
+        },
+        {
+          "id": "B",
+          "text": "A Zener diode"
+        },
+        {
+          "id": "C",
+          "text": "A photodiode"
+        },
+        {
+          "id": "D",
+          "text": "An LED"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The key feature described is heavy conduction in the reverse direction beyond a specific breakdown voltage while maintaining a nearly constant voltage drop. This is the defining operating characteristic of a Zener diode, which is designed to operate reliably in the reverse breakdown region for voltage regulation purposes.",
+      "explanation_incorrect": "A standard p-n junction diode avoids reverse breakdown in normal operation and would be damaged by it. A photodiode operates in reverse bias but its current depends on incident light, not on reaching a breakdown voltage. An LED is a forward-biased device that emits light. Only the Zener diode is specifically designed for controlled reverse breakdown at a constant voltage."
+    },
+    {
+      "question_id": "T09.01.Q058",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A logic gate produces an output of 1 only when all of its inputs are 0, and produces 0 for every other input combination. This gate is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "AND gate"
+        },
+        {
+          "id": "B",
+          "text": "OR gate"
+        },
+        {
+          "id": "C",
+          "text": "NOR gate"
+        },
+        {
+          "id": "D",
+          "text": "NAND gate"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A NOR gate gives output 1 only when all inputs are 0, because NOR computes NOT(A OR B). The OR of all-zero inputs is 0, and NOT(0) = 1. For any other input combination, at least one input is 1, making OR = 1 and NOT(1) = 0. This matches the described behaviour exactly.",
+      "explanation_incorrect": "An AND gate gives 1 only when all inputs are 1. An OR gate gives 1 when at least one input is 1. A NAND gate gives 0 only when all inputs are 1 and gives 1 for all other combinations. None of these match the description of output 1 exclusively for all-zero inputs."
+    },
+    {
+      "question_id": "T09.01.Q059",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A semiconductor device operates under forward bias, emits monochromatic light when current flows through it, and uses a direct band gap material such as GaAsP. This device is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A photodiode"
+        },
+        {
+          "id": "B",
+          "text": "A solar cell"
+        },
+        {
+          "id": "C",
+          "text": "A Light Emitting Diode (LED)"
+        },
+        {
+          "id": "D",
+          "text": "A Zener diode"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The three clues all point to an LED: it operates in forward bias (unlike photodiodes and Zener diodes which operate in reverse bias), it emits monochromatic light (unlike a solar cell which absorbs light), and it uses a direct band gap compound semiconductor like GaAsP to ensure efficient radiative recombination.",
+      "explanation_incorrect": "A photodiode operates in reverse bias and absorbs light to generate photocurrent. A solar cell absorbs light and generates voltage without external bias. A Zener diode operates in reverse breakdown for voltage regulation and does not emit light. Only an LED matches all three stated features."
+    },
+    {
+      "question_id": "T09.01.Q060",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is performing a semiconductor experiment in her ISC physics lab. She measures the resistance of a sample at 25 degrees C and finds it to be 500 ohms. When she heats the sample to 80 degrees C, the resistance drops to 120 ohms. She also observes that the sample was doped with arsenic, a pentavalent element. What type of semiconductor is Riya working with?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Intrinsic semiconductor"
+        },
+        {
+          "id": "B",
+          "text": "p-type extrinsic semiconductor"
+        },
+        {
+          "id": "C",
+          "text": "n-type extrinsic semiconductor"
+        },
+        {
+          "id": "D",
+          "text": "Insulator behaving as a semiconductor at high temperature"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The key information is that the sample is doped with arsenic, which is a pentavalent (Group 15) element. Pentavalent dopants donate extra electrons to the crystal lattice, creating an n-type extrinsic semiconductor. The decreasing resistance with increasing temperature is consistent with semiconductor behaviour but does not distinguish the type; it is the dopant identity that determines n-type vs p-type.",
+      "explanation_incorrect": "Option A is wrong because the sample is doped, so it is not intrinsic. Option B is wrong because arsenic is pentavalent (donor), not trivalent (acceptor), so it creates n-type, not p-type. Option D is wrong because the material is a doped semiconductor, not an insulator, and its behaviour at elevated temperature is normal for semiconductors."
+    },
+    {
+      "question_id": "T09.01.Q061",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is building a simple circuit in his JEE coaching lab. He connects a silicon diode in series with a 1 kohm resistor and a 5 V DC supply. He measures the current through the circuit to be approximately 4.3 mA. Amit's teacher asks him to explain why the current is not 5 mA (which would be 5 V / 1 kohm). What is the correct reason?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The resistor has a tolerance error making it larger than 1 kohm"
+        },
+        {
+          "id": "B",
+          "text": "The silicon diode drops approximately 0.7 V in forward bias, leaving only 4.3 V across the resistor"
+        },
+        {
+          "id": "C",
+          "text": "The diode consumes current internally, reducing the total current"
+        },
+        {
+          "id": "D",
+          "text": "The power supply cannot deliver exactly 5 V under load"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A forward-biased silicon diode drops approximately 0.7 V across itself. In a series circuit with a 5 V supply, the voltage across the 1 kohm resistor is 5 - 0.7 = 4.3 V, giving a current of 4.3 V / 1 kohm = 4.3 mA. This is exactly what Amit measured, confirming that the 'missing' voltage is accounted for by the diode's forward voltage drop.",
+      "explanation_incorrect": "Option A is a practical possibility but does not explain the specific measured value of 4.3 mA, which perfectly matches the 0.7 V diode drop. Option C is incorrect because a diode does not 'consume' current separately; the same series current flows through both the diode and resistor. Option D is unlikely to produce such a precise discrepancy that matches the silicon forward drop."
+    },
+    {
+      "question_id": "T09.01.Q062",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is designing a power supply for a school electronics project. She uses a full-wave bridge rectifier with four diodes and connects a 220 V, 50 Hz AC mains through a step-down transformer. After rectification, she notices the DC output still has a pulsating waveform at 100 Hz. To smooth the output, Priya should:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Add another diode in series to the circuit"
+        },
+        {
+          "id": "B",
+          "text": "Connect a large capacitor in parallel with the load"
+        },
+        {
+          "id": "C",
+          "text": "Replace the full-wave rectifier with a half-wave rectifier"
+        },
+        {
+          "id": "D",
+          "text": "Increase the transformer turns ratio to raise the output voltage"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A filter capacitor connected in parallel with the load charges to the peak voltage during each pulse and discharges slowly through the load between pulses, thereby smoothing the pulsating DC into a nearly steady DC. The 100 Hz ripple frequency of a full-wave rectifier is easier to filter than the 50 Hz ripple of a half-wave rectifier because the capacitor has less time to discharge between successive peaks.",
+      "explanation_incorrect": "Option A would only add another voltage drop and would not smooth the output. Option C would worsen the problem by reducing the ripple frequency to 50 Hz and using only half the AC cycle. Option D changes the output voltage level but does not address the ripple issue."
+    },
+    {
+      "question_id": "T09.01.Q063",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is designing a digital alarm system for his tech startup prototype. The alarm should sound (output = 1) only when both the door sensor (A) and the motion sensor (B) detect intrusion simultaneously (both inputs = 1). Rohan has only NAND gates available on his breadboard. What is the minimum number of NAND gates he needs to implement this logic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rohan needs an AND gate (output = 1 only when both inputs are 1). An AND gate can be constructed from NAND gates by feeding the output of one NAND gate into a second NAND gate with both its inputs tied together (acting as a NOT gate). So: first NAND gives NOT(A AND B), and the second NAND (used as NOT) inverts it back to (A AND B). Total: 2 NAND gates.",
+      "explanation_incorrect": "Option A (1 gate) is wrong because a single NAND gate gives the complement of the required AND function. Option C (3 gates) and Option D (4 gates) use more than necessary. The minimum is 2: one NAND gate followed by another NAND gate wired as an inverter."
+    },
+    {
+      "question_id": "T09.01.Q064",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is testing a Zener diode voltage regulator in her electronics lab. The Zener diode has a breakdown voltage of 5.6 V. She connects it in reverse bias with a series resistor to a 12 V DC supply and measures the voltage across the load. The supply voltage fluctuates between 10 V and 14 V during the experiment. What voltage does Meera measure across the load?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It fluctuates between 10 V and 14 V along with the supply"
+        },
+        {
+          "id": "B",
+          "text": "It remains constant at approximately 5.6 V"
+        },
+        {
+          "id": "C",
+          "text": "It remains constant at 12 V"
+        },
+        {
+          "id": "D",
+          "text": "It drops to zero because the Zener is in reverse bias"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A Zener diode operating in the reverse breakdown region maintains a nearly constant voltage (equal to its Zener voltage of 5.6 V) across itself regardless of variations in the supply voltage, as long as the supply voltage remains above the Zener voltage. The series resistor absorbs the excess voltage. This is the fundamental principle of Zener voltage regulation.",
+      "explanation_incorrect": "Option A is wrong because the whole purpose of a Zener regulator is to isolate the load from supply fluctuations. Option C is wrong because the regulated voltage equals the Zener breakdown voltage (5.6 V), not the nominal supply voltage. Option D is wrong because in the breakdown region, a Zener diode conducts in reverse and maintains a definite voltage across it."
+    },
+    {
+      "question_id": "T09.01.Q065",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about semiconductors appears correct but is actually a misconception?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adding a pentavalent impurity to silicon creates extra free electrons"
+        },
+        {
+          "id": "B",
+          "text": "The conductivity of a semiconductor increases with temperature"
+        },
+        {
+          "id": "C",
+          "text": "An n-type semiconductor carries a net negative charge because it has excess electrons"
+        },
+        {
+          "id": "D",
+          "text": "Holes in a p-type semiconductor act as positive charge carriers"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "This is a very common misconception. An n-type semiconductor has excess free electrons compared to holes, but it is electrically neutral overall. The donor atoms that provide the extra electrons are themselves neutral atoms before doping; after donating an electron, each becomes a fixed positive ion. The total positive charge (from donor ions plus holes) equals the total negative charge (from free electrons), so the material has no net charge.",
+      "explanation_incorrect": "Option A is correct: pentavalent impurities donate an extra electron per atom. Option B is correct: thermal generation of electron-hole pairs increases conductivity. Option D is correct: holes behave as mobile positive charge carriers. Only Option C is the misconception, because having excess electrons as majority carriers does not make the semiconductor negatively charged."
+    },
+    {
+      "question_id": "T09.01.Q066",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about a p-n junction diode seems plausible but is actually incorrect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In forward bias, the depletion region width decreases"
+        },
+        {
+          "id": "B",
+          "text": "In reverse bias, the current is due to minority carriers"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the reverse bias voltage beyond breakdown always permanently damages the diode"
+        },
+        {
+          "id": "D",
+          "text": "The barrier potential depends on the doping concentration and the semiconductor material"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Many students believe reverse breakdown always destroys a diode, but this is not necessarily true. Zener diodes are specifically designed to operate in reverse breakdown without damage, and even ordinary diodes can withstand brief breakdown if the current is limited by an external resistor. Permanent damage occurs only when excessive current causes thermal destruction. The statement in option C is the misconception.",
+      "explanation_incorrect": "Option A is correct: forward bias opposes the built-in potential, narrowing the depletion region. Option B is correct: the small reverse saturation current is carried by minority carriers (holes in n-region, electrons in p-region) that drift across the junction. Option D is correct: barrier potential depends on both the material's band gap and the doping levels."
+    },
+    {
+      "question_id": "T09.01.Q067",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about logic gates seems correct but is actually wrong?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A NAND gate with both inputs tied together acts as a NOT gate"
+        },
+        {
+          "id": "B",
+          "text": "Any Boolean function can be realised using only NAND gates"
+        },
+        {
+          "id": "C",
+          "text": "An XOR gate is a universal gate because it can produce both 0 and 1 outputs"
+        },
+        {
+          "id": "D",
+          "text": "A NOR gate with both inputs tied together acts as a NOT gate"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The ability to produce both 0 and 1 outputs is not the criterion for being a universal gate. A universal gate must be able to implement all other logic gates (AND, OR, NOT) using only copies of itself. The XOR gate cannot do this because it cannot implement an AND gate or an OR gate using XOR gates alone. Only NAND and NOR are universal gates.",
+      "explanation_incorrect": "Option A is correct: NAND(A,A) = NOT(A AND A) = NOT(A). Option B is correct: NAND is a universal gate and can implement any Boolean function. Option D is correct: NOR(A,A) = NOT(A OR A) = NOT(A). Only option C is the misconception, since XOR is not a universal gate despite being able to produce both 0 and 1."
+    },
+    {
+      "question_id": "T09.01.Q068",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is silicon preferred over germanium for most semiconductor device fabrication?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because silicon has a smaller band gap, allowing higher conductivity at room temperature"
+        },
+        {
+          "id": "B",
+          "text": "Because silicon's larger band gap results in lower reverse saturation current (leakage), making devices more thermally stable"
+        },
+        {
+          "id": "C",
+          "text": "Because silicon is a better conductor of heat than germanium"
+        },
+        {
+          "id": "D",
+          "text": "Because silicon has more free electrons at room temperature than germanium"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Silicon's band gap (1.1 eV) is larger than germanium's (0.67 eV). This means fewer thermally generated electron-hole pairs at room temperature, resulting in a much lower reverse saturation (leakage) current. Devices made from silicon therefore have better thermal stability and more predictable performance over a wider temperature range, which is why silicon dominates the semiconductor industry.",
+      "explanation_incorrect": "Option A incorrectly states that silicon has a smaller band gap; it is actually larger. Option C is irrelevant; thermal conductivity differences are not the primary reason for silicon's dominance. Option D is wrong because silicon actually has fewer thermally generated free electrons than germanium at room temperature precisely because of its larger band gap, and this is an advantage, not a disadvantage."
+    },
+    {
+      "question_id": "T09.01.Q069",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does the depletion region of a p-n junction widen under reverse bias rather than narrow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the reverse bias injects more majority carriers into the junction, pushing the boundaries apart"
+        },
+        {
+          "id": "B",
+          "text": "Because the reverse bias reinforces the built-in electric field, pulling majority carriers further away from the junction and exposing more immobile ions"
+        },
+        {
+          "id": "C",
+          "text": "Because the reverse bias causes breakdown, which physically expands the junction region"
+        },
+        {
+          "id": "D",
+          "text": "Because minority carriers accumulate at the junction under reverse bias, widening the charge-free zone"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Under reverse bias, the external voltage is applied in the same direction as the built-in potential (positive terminal to n-side, negative to p-side). This strengthens the electric field across the depletion region, pulling majority carriers (electrons in n-side, holes in p-side) further away from the junction. As majority carriers retreat, more fixed donor and acceptor ions are exposed, widening the depletion layer.",
+      "explanation_incorrect": "Option A is wrong because reverse bias pulls majority carriers away from the junction rather than injecting them into it. Option C is wrong because depletion region widening occurs at all reverse voltages, not only at breakdown. Option D is wrong because minority carriers drift across the junction under reverse bias; they do not accumulate there."
+    },
+    {
+      "question_id": "T09.01.Q070",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why must an LED be made from a direct band gap semiconductor (like GaAs) rather than an indirect band gap semiconductor (like Si)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because direct band gap materials are cheaper and more abundant than silicon"
+        },
+        {
+          "id": "B",
+          "text": "Because in a direct band gap material, electron-hole recombination can directly emit a photon without requiring a phonon, making radiative recombination efficient"
+        },
+        {
+          "id": "C",
+          "text": "Because silicon has too large a band gap to emit visible light"
+        },
+        {
+          "id": "D",
+          "text": "Because direct band gap materials have a wider depletion region that traps more light"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a direct band gap semiconductor, the conduction band minimum and valence band maximum occur at the same crystal momentum (k-value). This allows an electron to recombine with a hole and directly emit a photon, conserving both energy and momentum. In indirect band gap materials like silicon, a phonon (lattice vibration) is also required for momentum conservation, making photon emission far less probable and the material unsuitable for efficient light emission.",
+      "explanation_incorrect": "Option A is wrong because GaAs and GaAsP are actually more expensive than silicon, not cheaper. Option C is wrong because silicon's band gap (1.1 eV) corresponds to infrared wavelengths; the issue is not the gap size but the indirect nature of the gap. Option D is wrong because the depletion region width has nothing to do with light emission efficiency; the key factor is the nature of the band gap (direct vs indirect)."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 14,
-        "application": 20,
-        "exam_style": 16
+        "familiarity": 19,
+        "application": 29,
+        "exam_style": 22
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 48,
-        "compare": 1,
-        "classify": 1,
-        "scenario": 0,
-        "exception": 0,
-        "reason": 0
+        "compare": 6,
+        "classify": 5,
+        "scenario": 5,
+        "exception": 3,
+        "reason": 3
       }
     }
   }

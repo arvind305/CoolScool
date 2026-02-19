@@ -815,7 +815,7 @@
       "concept_id": "T01.01.C04",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "A body with initial velocity 2 m/s has a uniform acceleration of 3 m/s². What is the velocity after covering 12 m?",
+      "question_text": "A body with initial velocity 2 m/s has a uniform acceleration of 3 m/s². What is the velocity after covering 10 m?",
       "options": [
         {
           "id": "A",
@@ -831,12 +831,12 @@
         },
         {
           "id": "D",
-          "text": "76 m/s"
+          "text": "64 m/s"
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "Using v² = u² + 2as: v² = (2)² + 2(3)(12) = 4 + 72 = 76. Therefore v = √76 ≈ 8.7 m/s. The closest answer is 8 m/s. Actually recalculating: v² = 4 + 72 = 76, v ≈ 8.72 m/s. Let me re-check the options — with u = 2, a = 3, s = 12: v² = 4 + 72 = 76, v = √76 ≈ 8.7 m/s ≈ 8 m/s (nearest option).",
-      "explanation_incorrect": "Using v² = u² + 2as = 4 + 72 = 76. v = √76 ≈ 8.7 m/s. 76 m/s is v², not v. 6 m/s and 10 m/s do not satisfy the equation."
+      "explanation_correct": "Using v² = u² + 2as: v² = (2)² + 2(3)(10) = 4 + 60 = 64. Therefore v = √64 = 8 m/s.",
+      "explanation_incorrect": "Using v² = u² + 2as = 4 + 60 = 64, so v = √64 = 8 m/s. 64 m/s is v², not v. 6 m/s and 10 m/s do not satisfy the equation."
     },
     {
       "question_id": "T01.01.Q029",
@@ -1327,7 +1327,7 @@
       "options": [
         {
           "id": "A",
-          "text": "22/14"
+          "text": "7/22"
         },
         {
           "id": "B",
@@ -1339,12 +1339,615 @@
         },
         {
           "id": "D",
-          "text": "π/2"
+          "text": "22/7"
         }
       ],
       "correct_answer": "B",
       "explanation_correct": "Distance = half circumference = πr = 22/7 × 7 = 22 m. Displacement = diameter = 2r = 14 m. Ratio = 22/14 = 11/7.",
-      "explanation_incorrect": "Distance along semicircle = πr = 22 m. Displacement = diameter = 14 m. Ratio = 22/14 = 11/7. Options A and B are the same value (22/14 = 11/7); the simplified form 11/7 is the standard answer."
+      "explanation_incorrect": "Distance along semicircle = πr = 22 m. Displacement = diameter = 14 m. Ratio = distance/displacement = 22/14 = 11/7. Option A (7/22) and C (7/11) are inverses of the correct values. Option D (22/7) equals π, which is the ratio of circumference to diameter for a full circle, not the distance-to-displacement ratio for a semicircle."
+    },
+    {
+      "question_id": "T01.01.Q051",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does distance differ from displacement in terms of the path taken by an object?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Distance measures the shortest path; displacement measures the actual path"
+        },
+        {
+          "id": "B",
+          "text": "Distance measures the actual path length; displacement measures the shortest straight-line separation between start and end points"
+        },
+        {
+          "id": "C",
+          "text": "Both measure the actual path length but in different units"
+        },
+        {
+          "id": "D",
+          "text": "Distance and displacement are identical for all types of motion"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Distance is the total length of the actual path travelled by an object (scalar, always positive), whereas displacement is the shortest straight-line distance from the initial to the final position (vector, can be positive, negative, or zero). They differ fundamentally in what path information they capture.",
+      "explanation_incorrect": "Option A reverses the definitions. Option C is wrong because both use the same unit (metre) but measure different things. Option D is false because distance equals displacement only for straight-line motion without reversal."
+    },
+    {
+      "question_id": "T01.01.Q052",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does speed differ from velocity in terms of the physical quantity each involves?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speed uses displacement; velocity uses distance"
+        },
+        {
+          "id": "B",
+          "text": "Speed is always greater than velocity"
+        },
+        {
+          "id": "C",
+          "text": "Speed is the rate of change of distance (scalar); velocity is the rate of change of displacement (vector)"
+        },
+        {
+          "id": "D",
+          "text": "Speed has direction; velocity does not"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Speed is defined as distance covered per unit time and is a scalar quantity (magnitude only). Velocity is defined as displacement per unit time and is a vector quantity (has both magnitude and direction). This is the fundamental difference between the two.",
+      "explanation_incorrect": "Option A reverses the definitions. Option B is not always true — for straight-line motion without reversal, speed equals the magnitude of velocity. Option D reverses the scalar/vector nature. Speed is scalar; velocity is vector."
+    },
+    {
+      "question_id": "T01.01.Q053",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does uniform motion differ from non-uniform motion in terms of the velocity-time graph?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform motion gives a curved line; non-uniform motion gives a straight horizontal line"
+        },
+        {
+          "id": "B",
+          "text": "Uniform motion gives a straight horizontal line (zero slope); non-uniform motion gives a line with non-zero slope or a curve"
+        },
+        {
+          "id": "C",
+          "text": "Both give identical straight lines on a velocity-time graph"
+        },
+        {
+          "id": "D",
+          "text": "Uniform motion cannot be represented on a velocity-time graph"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In uniform motion the velocity is constant, so the velocity-time graph is a straight horizontal line (slope = 0, meaning zero acceleration). In non-uniform motion the velocity changes with time, producing either a sloped straight line (uniform acceleration) or a curve (non-uniform acceleration).",
+      "explanation_incorrect": "Option A reverses the descriptions. Option C is wrong because the two types of motion produce distinctly different graphs. Option D is incorrect — uniform motion is simply a horizontal line on the v-t graph."
+    },
+    {
+      "question_id": "T01.01.Q054",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the distance-time graph of a uniformly accelerated body differ from that of a body moving with uniform speed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform speed gives a parabola; uniform acceleration gives a straight line"
+        },
+        {
+          "id": "B",
+          "text": "Both give straight lines with different slopes"
+        },
+        {
+          "id": "C",
+          "text": "Uniform speed gives a straight line with constant slope; uniform acceleration gives a curve (parabola) with increasing slope"
+        },
+        {
+          "id": "D",
+          "text": "There is no difference between the two graphs"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For uniform speed, equal distances are covered in equal times, so the distance-time graph is a straight line with a constant slope. For uniformly accelerated motion, the distance increases as t², producing a parabolic curve whose slope (speed) increases with time.",
+      "explanation_incorrect": "Option A reverses the shapes. Option B is wrong because only uniform speed gives a straight line; accelerated motion gives a curve. Option D is incorrect because the shapes are fundamentally different."
+    },
+    {
+      "question_id": "T01.01.Q055",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does uniform circular motion differ from uniform linear motion in terms of acceleration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both have zero acceleration since speed is constant in each case"
+        },
+        {
+          "id": "B",
+          "text": "Uniform linear motion has zero acceleration; uniform circular motion has non-zero acceleration because the direction of velocity keeps changing"
+        },
+        {
+          "id": "C",
+          "text": "Uniform linear motion has non-zero acceleration; uniform circular motion has zero acceleration"
+        },
+        {
+          "id": "D",
+          "text": "Both have non-zero acceleration"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In uniform linear motion, both the magnitude and direction of velocity remain constant, so acceleration is zero. In uniform circular motion, although speed is constant, the direction of velocity changes continuously, producing a non-zero acceleration directed towards the centre of the circle.",
+      "explanation_incorrect": "Option A wrongly assumes that constant speed always means zero acceleration. Option C reverses the facts. Option D is wrong because uniform linear motion truly has zero acceleration. The key is that velocity is a vector — a change in direction also counts as acceleration."
+    },
+    {
+      "question_id": "T01.01.Q056",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A quantity related to motion has magnitude only, is always non-negative, and depends on the actual path taken. This quantity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Displacement"
+        },
+        {
+          "id": "B",
+          "text": "Velocity"
+        },
+        {
+          "id": "C",
+          "text": "Distance"
+        },
+        {
+          "id": "D",
+          "text": "Acceleration"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Distance is a scalar quantity (magnitude only), is always non-negative for a moving object, and depends on the actual path taken. These three features together uniquely identify distance. Displacement, by contrast, is a vector that can be negative or zero and depends only on start and end positions, not the path.",
+      "explanation_incorrect": "Displacement is a vector (has direction) and can be negative or zero, so it does not match. Velocity and acceleration are also vectors. Only distance has all three stated properties."
+    },
+    {
+      "question_id": "T01.01.Q057",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "An object's velocity changes from 10 m/s to 10 m/s over 5 seconds, but its direction changes from east to north. This motion should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform motion, because the speed is constant"
+        },
+        {
+          "id": "B",
+          "text": "Non-uniform motion, because the velocity has changed due to change in direction"
+        },
+        {
+          "id": "C",
+          "text": "Motion at rest, because the speed did not change"
+        },
+        {
+          "id": "D",
+          "text": "Uniform acceleration, because the speed is the same at start and end"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Uniform motion requires constant velocity, which means both magnitude and direction must remain the same. Here, although the speed (magnitude) stays at 10 m/s, the direction changes from east to north. Since velocity is a vector, this change in direction means the velocity has changed, making the motion non-uniform.",
+      "explanation_incorrect": "Option A confuses speed with velocity — constant speed does not mean constant velocity if direction changes. Option C is wrong because the object is clearly moving. Option D is not valid reasoning; having the same speed at two points does not define uniform acceleration."
+    },
+    {
+      "question_id": "T01.01.Q058",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "On a velocity-time graph, a straight line passing through the origin with a positive slope represents motion that is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform velocity"
+        },
+        {
+          "id": "B",
+          "text": "Uniformly accelerated motion starting from rest"
+        },
+        {
+          "id": "C",
+          "text": "Non-uniform acceleration"
+        },
+        {
+          "id": "D",
+          "text": "Uniform deceleration"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A straight line on a velocity-time graph indicates constant (uniform) acceleration, since the slope (which represents acceleration) is constant. The line passes through the origin, meaning velocity is zero at time zero — the body starts from rest. A positive slope means the velocity is increasing. Together, these features classify the motion as uniformly accelerated motion starting from rest.",
+      "explanation_incorrect": "Option A would be a horizontal line (zero slope). Option C would give a curve, not a straight line. Option D would have a negative slope. A straight line through the origin with positive slope uniquely represents uniformly accelerated motion from rest."
+    },
+    {
+      "question_id": "T01.01.Q059",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A physical quantity is defined as the rate of change of displacement with time, has both magnitude and direction, and its SI unit is m/s. This quantity is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Speed"
+        },
+        {
+          "id": "B",
+          "text": "Distance"
+        },
+        {
+          "id": "C",
+          "text": "Velocity"
+        },
+        {
+          "id": "D",
+          "text": "Acceleration"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Velocity is defined as displacement per unit time, is a vector quantity (has both magnitude and direction), and its SI unit is m/s. All three features match velocity. Speed also has the unit m/s but is a scalar and uses distance, not displacement.",
+      "explanation_incorrect": "Speed is scalar and uses distance, not displacement. Distance is measured in metres and is not a rate. Acceleration has the unit m/s², not m/s. Only velocity matches all three given features."
+    },
+    {
+      "question_id": "T01.01.Q060",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya cycles from her home to school, covering 3 km in 15 minutes. She then cycles back home along the same route in 15 minutes. What are her average speed and average velocity for the entire trip?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Average speed = 6 km/h, Average velocity = 6 km/h"
+        },
+        {
+          "id": "B",
+          "text": "Average speed = 6 km/h, Average velocity = 0 km/h"
+        },
+        {
+          "id": "C",
+          "text": "Average speed = 0 km/h, Average velocity = 0 km/h"
+        },
+        {
+          "id": "D",
+          "text": "Average speed = 12 km/h, Average velocity = 0 km/h"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Total distance = 3 + 3 = 6 km. Total time = 15 + 15 = 30 min = 0.5 h. Average speed = 6/0.5 = 12 km/h. Since Riya returns to her starting point, displacement = 0 km, so average velocity = 0/0.5 = 0 km/h. Therefore, average speed is 12 km/h and average velocity is 0 km/h.",
+      "explanation_incorrect": "Option A and B incorrectly give average speed as 6 km/h. The total distance is 6 km and total time is 0.5 h, so average speed = 6/0.5 = 12 km/h, not 6 km/h. Option C is wrong because the object did move, so average speed cannot be zero. Displacement is 0 (returns to start), so average velocity = 0 km/h."
+    },
+    {
+      "question_id": "T01.01.Q061",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit drops a ball from the balcony of his apartment, 45 m above the ground. Taking g = 10 m/s², how long does the ball take to reach the ground?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 s"
+        },
+        {
+          "id": "B",
+          "text": "4.5 s"
+        },
+        {
+          "id": "C",
+          "text": "9 s"
+        },
+        {
+          "id": "D",
+          "text": "2.5 s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The ball is dropped (u = 0) from height s = 45 m with g = 10 m/s². Using s = ut + ½gt²: 45 = 0 + ½(10)t² = 5t². So t² = 9, giving t = 3 s. The ball takes 3 seconds to reach the ground.",
+      "explanation_incorrect": "Using s = ½gt² with u = 0: 45 = 5t², t² = 9, t = 3 s. Option B (4.5 s) results from dividing 45 by 10 without using the correct formula. Option C (9 s) confuses t² with t. Option D (2.5 s) does not satisfy the equation."
+    },
+    {
+      "question_id": "T01.01.Q062",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is on a train that accelerates uniformly from rest. She notices that the train covers 50 m in the first 10 seconds. What is the acceleration of the train?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "1 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "2 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "0.5 m/s²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The train starts from rest, so u = 0. Using s = ut + ½at²: 50 = 0 + ½a(10²) = 50a. Therefore a = 50/50 = 1 m/s². The train accelerates at 1 m/s².",
+      "explanation_incorrect": "With u = 0, s = 50 m, t = 10 s: 50 = ½a(100) = 50a, so a = 1 m/s². Option A (5 m/s²) comes from dividing 50 by 10. Option C and D do not satisfy the equation of motion."
+    },
+    {
+      "question_id": "T01.01.Q063",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan runs around a rectangular playground that is 80 m long and 60 m wide, starting and finishing at the same corner. What are the distance covered and the displacement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Distance = 280 m, Displacement = 100 m"
+        },
+        {
+          "id": "B",
+          "text": "Distance = 280 m, Displacement = 0 m"
+        },
+        {
+          "id": "C",
+          "text": "Distance = 140 m, Displacement = 0 m"
+        },
+        {
+          "id": "D",
+          "text": "Distance = 280 m, Displacement = 280 m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The perimeter of the rectangle = 2(80 + 60) = 2 × 140 = 280 m. This is the total distance Rohan covers. Since he starts and finishes at the same corner, the displacement is 0 m (initial and final positions are the same).",
+      "explanation_incorrect": "Option A wrongly gives a non-zero displacement. Option C halves the perimeter. Option D equates displacement with distance. Since Rohan returns to the starting point, displacement = 0 m, and the full perimeter = 280 m."
+    },
+    {
+      "question_id": "T01.01.Q064",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is driving on a highway at 54 km/h when she spots a stop sign 37.5 m ahead and applies brakes, decelerating uniformly. If she stops exactly at the sign, what is the magnitude of her deceleration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "3 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "5 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "1.5 m/s²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "First convert 54 km/h to m/s: 54 × 5/18 = 15 m/s. Using v² = u² + 2as with v = 0: 0 = 15² + 2a(37.5) = 225 + 75a. So a = −225/75 = −3 m/s². The magnitude of deceleration is 3 m/s².",
+      "explanation_incorrect": "54 km/h = 15 m/s. Using v² = u² + 2as: 0 = 225 + 75a, a = −3 m/s². The deceleration magnitude is 3 m/s². Option A uses wrong arithmetic. Option C and D do not satisfy the equation."
+    },
+    {
+      "question_id": "T01.01.Q065",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following is actually an example of accelerated motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A car moving at 60 km/h on a straight highway"
+        },
+        {
+          "id": "B",
+          "text": "A train moving at constant speed on a straight track"
+        },
+        {
+          "id": "C",
+          "text": "A cyclist moving at constant speed along a circular roundabout"
+        },
+        {
+          "id": "D",
+          "text": "A ball rolling at constant speed on a straight flat surface"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A cyclist moving at constant speed along a circular roundabout is in uniform circular motion. Although the speed is constant, the direction of velocity changes continuously, which means the velocity is changing. Any change in velocity constitutes acceleration. This is the exception that students often miss — constant speed does NOT always mean zero acceleration.",
+      "explanation_incorrect": "Options A, B, and D all describe motion at constant speed in a straight line, where both speed and direction remain unchanged, so velocity is constant and acceleration is zero. Only option C involves a change in direction, making it accelerated despite constant speed."
+    },
+    {
+      "question_id": "T01.01.Q066",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "In which of the following cases is the magnitude of displacement actually equal to the distance covered?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A runner completing one lap around a 400 m track"
+        },
+        {
+          "id": "B",
+          "text": "A ball thrown vertically up and caught back at the same height"
+        },
+        {
+          "id": "C",
+          "text": "An auto-rickshaw taking a U-turn on a road"
+        },
+        {
+          "id": "D",
+          "text": "A stone sliding 5 m down a straight frictionless ramp without changing direction"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Displacement equals distance only when an object moves in a straight line without changing direction. In option D, the stone slides straight down the ramp in one direction, so distance = displacement = 5 m. In all other options, the object changes direction at some point, making distance greater than displacement.",
+      "explanation_incorrect": "In option A, the runner returns to the start (displacement = 0, distance = 400 m). In option B, the ball returns to the same height (displacement = 0). In option C, a U-turn reverses direction. Only in option D does the object move in a single straight-line direction, keeping distance equal to displacement."
+    },
+    {
+      "question_id": "T01.01.Q067",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following situations actually represents zero acceleration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A ball rolling down an inclined plane"
+        },
+        {
+          "id": "B",
+          "text": "A satellite orbiting Earth at constant speed"
+        },
+        {
+          "id": "C",
+          "text": "A car moving at 40 km/h in a straight line on a level road"
+        },
+        {
+          "id": "D",
+          "text": "A stone thrown vertically upward at its highest point"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A car moving at constant speed in a straight line has constant velocity (both magnitude and direction unchanged), so acceleration is zero. Options A and D involve gravitational acceleration. Option B involves continuous change in direction (circular orbit), which means non-zero centripetal acceleration despite constant speed. Students often mistakenly think the stone at its highest point has zero acceleration, but gravity still acts on it.",
+      "explanation_incorrect": "A ball on an incline accelerates due to gravity. A satellite in orbit has centripetal acceleration. A stone at its highest point still has gravitational acceleration (g = 9.8 m/s² downward) even though its velocity is momentarily zero. Only the car moving at constant speed in a straight line has zero acceleration."
+    },
+    {
+      "question_id": "T01.01.Q068",
+      "type": "mcq",
+      "concept_id": "T01.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is uniform circular motion classified as accelerated motion and not uniform motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the object covers unequal distances in equal time intervals"
+        },
+        {
+          "id": "B",
+          "text": "Because the speed of the object keeps increasing"
+        },
+        {
+          "id": "C",
+          "text": "Because velocity is a vector, and the continuous change in direction means velocity is changing even though speed is constant"
+        },
+        {
+          "id": "D",
+          "text": "Because the radius of the circular path keeps changing"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Uniform circular motion involves constant speed, so the object does cover equal distances in equal time intervals. However, velocity is a vector quantity — it has both magnitude and direction. In circular motion, the direction of motion changes at every point on the path. Since velocity changes (even though only its direction changes), there is a non-zero acceleration. Therefore, it is classified as accelerated motion.",
+      "explanation_incorrect": "Option A is incorrect because in uniform circular motion, equal distances are covered in equal time intervals (speed is constant). Option B is wrong because speed remains constant. Option D is wrong because the radius stays the same. The reason is that velocity is a vector and its direction changes continuously."
+    },
+    {
+      "question_id": "T01.01.Q069",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does the area under a velocity-time graph give the distance covered, rather than the velocity or acceleration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the slope of the graph gives distance"
+        },
+        {
+          "id": "B",
+          "text": "Because the area has the dimensions of velocity × time = (m/s) × s = m, which is the dimension of distance"
+        },
+        {
+          "id": "C",
+          "text": "Because the graph is always a straight line"
+        },
+        {
+          "id": "D",
+          "text": "Because distance is always plotted on the y-axis"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The area under a velocity-time graph is calculated as the product of the y-axis quantity (velocity, in m/s) and the x-axis quantity (time, in s). The resulting dimension is (m/s) × s = m, which is the dimension of length or distance. This is why the area gives distance, not velocity or acceleration.",
+      "explanation_incorrect": "Option A is wrong — the slope of a v-t graph gives acceleration, not distance. Option C is irrelevant; the graph can be a curve for non-uniform acceleration. Option D is wrong because velocity, not distance, is plotted on the y-axis. The correct reason is the dimensional analysis: velocity × time = distance."
+    },
+    {
+      "question_id": "T01.01.Q070",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why can the average speed of an object never be negative, while the average velocity can be?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because speed is measured in km/h while velocity is measured in m/s"
+        },
+        {
+          "id": "B",
+          "text": "Because speed is calculated using distance (always non-negative) and time (always positive), while velocity uses displacement which can be negative"
+        },
+        {
+          "id": "C",
+          "text": "Because speed is always larger than velocity"
+        },
+        {
+          "id": "D",
+          "text": "Because negative speed has no practical meaning in physics"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Average speed = total distance / total time. Distance is always non-negative (it is a scalar measuring path length) and time is always positive, so their ratio can never be negative. Average velocity = displacement / time. Displacement is a vector that can be positive, negative, or zero depending on direction, so velocity can also be negative.",
+      "explanation_incorrect": "Option A is wrong — both can be expressed in either unit. Option C is not always true and does not explain the sign. Option D is circular reasoning. The actual reason is that distance (used for speed) is always non-negative, while displacement (used for velocity) can be negative."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 24,
+        "application": 27,
+        "exam_style": 19
+      },
+      "by_type": {
+        "mcq": 62,
+        "true_false": 4,
+        "fill_blank": 4
+      },
+      "by_cognitive_level": {
+        "recall": 48,
+        "compare": 5,
+        "classify": 4,
+        "scenario": 6,
+        "exception": 3,
+        "reason": 4
+      }
+    }
+  }
 }

@@ -1227,31 +1227,611 @@
       ],
       "explanation_correct": "Molality (A) is the least dependent on temperature since it is defined as the number of moles of solute per kilogram of solvent, which does not change with temperature. Mole fraction (B) is more dependent on temperature because it depends on the number of moles of each component, which can change with temperature. Molarity (C) is the most temperature dependent as it is defined as the number of moles of solute per litre of solution, and the volume of the solution changes with temperature.",
       "explanation_incorrect": "The correct order from least to most dependent on temperature is A, B, C. Molarity (C) depends on the volume of the solution, which changes with temperature, making it the most dependent. Mole fraction (B) depends on the number of moles of each component, which can change with temperature. Molality (A) is the least dependent since it is defined in terms of the mass of the solvent, which does not change significantly with temperature."
+    },
+    {
+      "question_id": "T02.01.Q051",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does molality differ from molarity in terms of temperature dependence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Molality depends on temperature because it uses volume of solvent, whereas molarity does not"
+        },
+        {
+          "id": "B",
+          "text": "Molality is temperature-independent because it uses mass of solvent, whereas molarity changes with temperature because it uses volume of solution"
+        },
+        {
+          "id": "C",
+          "text": "Both molality and molarity are independent of temperature"
+        },
+        {
+          "id": "D",
+          "text": "Both molality and molarity depend on temperature equally since both involve the solvent"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Molality is defined as moles of solute per kilogram of solvent. Since mass does not change with temperature, molality is temperature-independent. Molarity, on the other hand, is defined as moles of solute per litre of solution. Because liquid volumes expand or contract with temperature changes, molarity varies with temperature.",
+      "explanation_incorrect": "Option A reverses the relationship — molality uses mass (not volume) of solvent and is therefore temperature-independent. Option C is wrong because molarity does depend on temperature through volume changes. Option D is wrong because mass-based and volume-based concentration units respond differently to temperature fluctuations."
+    },
+    {
+      "question_id": "T02.01.Q052",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does a solution showing positive deviation from Raoult's law differ from one showing negative deviation in terms of the enthalpy of mixing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive deviation has delta_mix H < 0 (exothermic), negative deviation has delta_mix H > 0 (endothermic)"
+        },
+        {
+          "id": "B",
+          "text": "Positive deviation has delta_mix H > 0 (endothermic), negative deviation has delta_mix H < 0 (exothermic)"
+        },
+        {
+          "id": "C",
+          "text": "Both have delta_mix H = 0 since deviations only affect vapour pressure"
+        },
+        {
+          "id": "D",
+          "text": "Positive deviation has delta_mix H = 0, negative deviation has delta_mix H > 0"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In positive deviation, solute-solvent interactions are weaker than the pure component interactions. Energy is required to break the stronger original interactions, making the mixing endothermic (delta_mix H > 0). In negative deviation, new solute-solvent interactions are stronger than the original ones, releasing energy and making mixing exothermic (delta_mix H < 0).",
+      "explanation_incorrect": "Option A reverses the correct relationship between deviation type and enthalpy sign. Option C is incorrect because delta_mix H = 0 applies only to ideal solutions. Option D incorrectly assigns zero enthalpy to positive deviation; positive deviation arises precisely because energy must be absorbed to overcome stronger like-like interactions."
+    },
+    {
+      "question_id": "T02.01.Q053",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the freezing point depression method differ from the osmotic pressure method for determining molar mass of macromolecules like proteins?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Freezing point depression gives more accurate results for macromolecules because delta_Tf values are large"
+        },
+        {
+          "id": "B",
+          "text": "Osmotic pressure is preferred because even dilute solutions of macromolecules produce measurably large osmotic pressures, whereas delta_Tf values are negligibly small"
+        },
+        {
+          "id": "C",
+          "text": "Both methods give equally accurate results for macromolecules"
+        },
+        {
+          "id": "D",
+          "text": "Neither method can be used for macromolecules since colligative properties do not apply to polymers"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Macromolecules have very high molar masses, so even at appreciable mass concentrations their molar concentration is extremely low. This makes delta_Tf (= Kf m) negligibly small and difficult to measure accurately. However, osmotic pressure (pi = CRT) produces measurably large values even at low molar concentrations because the proportionality constant RT is large (e.g., ~24.6 L atm at 300 K), making it the preferred method.",
+      "explanation_incorrect": "Option A is wrong because delta_Tf for macromolecular solutions is extremely small, not large. Option C is wrong because the two methods differ greatly in sensitivity at low molar concentrations. Option D is wrong because colligative properties apply to all non-volatile solutes, including polymers."
+    },
+    {
+      "question_id": "T02.01.Q054",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the van't Hoff factor for a strong electrolyte like NaCl differ from that of a solute that undergoes association like benzoic acid in benzene?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NaCl has i < 1 due to dissociation; benzoic acid has i > 1 due to association"
+        },
+        {
+          "id": "B",
+          "text": "NaCl has i > 1 because dissociation increases particle count; benzoic acid in benzene has i < 1 because association decreases particle count"
+        },
+        {
+          "id": "C",
+          "text": "Both have i = 1 because the effects of association and dissociation cancel out"
+        },
+        {
+          "id": "D",
+          "text": "NaCl has i = 2 and benzoic acid in benzene has i = 2, since both produce two species"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Dissociation increases the total number of solute particles in solution, so the observed colligative property exceeds the calculated value, giving i > 1 (for NaCl, i = 2 at complete dissociation). Association decreases the number of independent solute particles, so the observed colligative property is less than the calculated value, giving i < 1 (for complete dimerization of benzoic acid, i = 0.5).",
+      "explanation_incorrect": "Option A reverses the relationship: dissociation gives i > 1, not i < 1. Option C is wrong because the van't Hoff factor is different for these two types of solutes. Option D is wrong because benzoic acid dimerizes (two molecules form one unit), reducing particle count, so i < 1, not 2."
+    },
+    {
+      "question_id": "T02.01.Q055",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the minimum boiling azeotrope of ethanol-water differ from the maximum boiling azeotrope of HCl-water in terms of vapour pressure behaviour?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethanol-water shows negative deviation (lower vapour pressure than ideal), while HCl-water shows positive deviation (higher vapour pressure than ideal)"
+        },
+        {
+          "id": "B",
+          "text": "Both show positive deviation from Raoult's law"
+        },
+        {
+          "id": "C",
+          "text": "Ethanol-water shows positive deviation (higher vapour pressure, hence lower boiling point), while HCl-water shows negative deviation (lower vapour pressure, hence higher boiling point)"
+        },
+        {
+          "id": "D",
+          "text": "Both show negative deviation from Raoult's law"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A minimum boiling azeotrope (like ethanol-water, 95.6% ethanol at 78.1 degrees C) forms from solutions showing positive deviation from Raoult's law, where the actual vapour pressure is higher than ideal, causing the mixture to boil at a temperature lower than either pure component. A maximum boiling azeotrope (like HCl-water at 108.6 degrees C) forms from solutions showing negative deviation, where stronger A-B interactions lower vapour pressure and raise the boiling point above that of either pure component.",
+      "explanation_incorrect": "Option A reverses the deviations. Option B is wrong because maximum boiling azeotropes arise from negative deviation. Option D is wrong because minimum boiling azeotropes arise from positive deviation. The key link is: positive deviation leads to higher vapour pressure and lower boiling point (minimum boiling azeotrope), while negative deviation leads to lower vapour pressure and higher boiling point (maximum boiling azeotrope)."
+    },
+    {
+      "question_id": "T02.01.Q056",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A binary liquid mixture has delta_mix H > 0, delta_mix V > 0, and its total vapour pressure is higher than predicted by Raoult's law. This mixture should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An ideal solution"
+        },
+        {
+          "id": "B",
+          "text": "A solution showing negative deviation from Raoult's law"
+        },
+        {
+          "id": "C",
+          "text": "A solution showing positive deviation from Raoult's law"
+        },
+        {
+          "id": "D",
+          "text": "A maximum boiling azeotrope"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "All three characteristics — endothermic mixing (delta_mix H > 0), expansion on mixing (delta_mix V > 0), and total vapour pressure higher than ideal — are hallmarks of positive deviation from Raoult's law. The A-B interactions are weaker than A-A and B-B interactions, so molecules escape more readily into the vapour phase.",
+      "explanation_incorrect": "Option A is wrong because ideal solutions have delta_mix H = 0 and delta_mix V = 0, with no deviation from Raoult's law. Option B is wrong because negative deviation involves stronger A-B interactions, giving delta_mix H < 0 and lower-than-expected vapour pressure. Option D is wrong because maximum boiling azeotropes result from negative deviation, not positive deviation."
+    },
+    {
+      "question_id": "T02.01.Q057",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A property of a dilute solution is found to depend solely on the number of solute particles per unit quantity of solvent and not on the chemical identity of the solute. This property should be classified as a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Constitutive property"
+        },
+        {
+          "id": "B",
+          "text": "Additive property"
+        },
+        {
+          "id": "C",
+          "text": "Colligative property"
+        },
+        {
+          "id": "D",
+          "text": "Intensive property of the pure solvent"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A colligative property is defined as one that depends on the number (concentration) of solute particles in a solution but is independent of the nature or chemical identity of those particles. Examples include relative lowering of vapour pressure, boiling point elevation, freezing point depression, and osmotic pressure.",
+      "explanation_incorrect": "Option A is wrong because constitutive properties depend on the molecular structure of the solute. Option B is wrong because additive properties are the sum of contributions from each component based on their amounts. Option D is wrong because the property described depends on the presence of solute particles, not just the pure solvent."
+    },
+    {
+      "question_id": "T02.01.Q058",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "An electrolyte dissolved in water gives a van't Hoff factor of 3.0. The number of ions it produces per formula unit and its possible identity should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 ions per formula unit — likely NaCl or KBr"
+        },
+        {
+          "id": "B",
+          "text": "3 ions per formula unit — likely CaCl2 or Na2SO4"
+        },
+        {
+          "id": "C",
+          "text": "4 ions per formula unit — likely AlCl3 or FeCl3"
+        },
+        {
+          "id": "D",
+          "text": "1 particle — likely glucose or urea (non-electrolyte)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A van't Hoff factor of 3 for complete dissociation means each formula unit produces 3 ions. CaCl2 dissociates as CaCl2 -> Ca2+ + 2Cl- (3 ions), and Na2SO4 dissociates as Na2SO4 -> 2Na+ + SO4^2- (3 ions). Both yield i = 3.",
+      "explanation_incorrect": "Option A is wrong because electrolytes producing 2 ions (like NaCl -> Na+ + Cl-) give i = 2, not 3. Option C is wrong because electrolytes producing 4 ions (like AlCl3 -> Al3+ + 3Cl-) give i = 4, not 3. Option D is wrong because non-electrolytes give i = 1."
+    },
+    {
+      "question_id": "T02.01.Q059",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A gas has a very high KH value in water at a given temperature. This gas should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Highly soluble in water"
+        },
+        {
+          "id": "B",
+          "text": "Sparingly soluble in water"
+        },
+        {
+          "id": "C",
+          "text": "A gas that reacts chemically with water"
+        },
+        {
+          "id": "D",
+          "text": "A gas whose solubility is independent of pressure"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to Henry's law (p = KH x), a higher KH means that a greater partial pressure is required to achieve the same mole fraction of dissolved gas. In other words, a high KH indicates low solubility — the gas is sparingly soluble. Gases like He, N2, and H2 have high KH values, while more soluble gases like HCl and NH3 have much lower KH values.",
+      "explanation_incorrect": "Option A is wrong because a high KH means the gas requires more pressure to dissolve, indicating low solubility, not high. Option C is wrong because Henry's law applies specifically to gases that do not react with the solvent. Option D is wrong because Henry's law explicitly shows that solubility depends on pressure."
+    },
+    {
+      "question_id": "T02.01.Q060",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is working on a project at a pharmaceutical research facility. She dissolves 6.0 g of a newly synthesised non-electrolyte drug (unknown molar mass) in 100 g of water and measures the boiling point elevation to be 0.52 K. Given that Kb for water is 0.52 K kg/mol, what molar mass does Riya calculate for the drug?",
+      "options": [
+        {
+          "id": "A",
+          "text": "30 g/mol"
+        },
+        {
+          "id": "B",
+          "text": "60 g/mol"
+        },
+        {
+          "id": "C",
+          "text": "120 g/mol"
+        },
+        {
+          "id": "D",
+          "text": "180 g/mol"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using delta_Tb = Kb x m, we get m = delta_Tb / Kb = 0.52 / 0.52 = 1.0 mol/kg. Since the solvent mass is 100 g = 0.1 kg, moles of solute = m x mass of solvent in kg = 1.0 x 0.1 = 0.1 mol. Molar mass = mass of solute / moles of solute = 6.0 / 0.1 = 60 g/mol.",
+      "explanation_incorrect": "Option A (30 g/mol) would result if the solvent mass were incorrectly taken as 200 g. Option C (120 g/mol) would result if delta_Tb were incorrectly halved. Option D (180 g/mol) would result from an error in the molality calculation. The correct approach gives molality = 1.0 mol/kg, moles = 0.1, and molar mass = 60 g/mol."
+    },
+    {
+      "question_id": "T02.01.Q061",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit works at a water treatment plant in Chennai. He tests two salt water samples: Sample X has an osmotic pressure of 8.2 atm at 300 K, and Sample Y has an osmotic pressure of 4.1 atm at the same temperature. To desalinate Sample X by reverse osmosis, Amit must apply an external pressure that is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Less than 4.1 atm"
+        },
+        {
+          "id": "B",
+          "text": "Between 4.1 atm and 8.2 atm"
+        },
+        {
+          "id": "C",
+          "text": "Greater than 8.2 atm"
+        },
+        {
+          "id": "D",
+          "text": "Exactly 8.2 atm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In reverse osmosis, the applied external pressure must exceed the osmotic pressure of the solution to force solvent molecules through the semi-permeable membrane from the concentrated side to the dilute side. Since Sample X has an osmotic pressure of 8.2 atm, the applied pressure must be greater than 8.2 atm for effective desalination.",
+      "explanation_incorrect": "Option A and B are wrong because pressures below or equal to the osmotic pressure cannot reverse the natural direction of osmosis. Option D (exactly 8.2 atm) would only achieve equilibrium with no net flow of solvent. Only a pressure strictly greater than 8.2 atm will drive the solvent from the concentrated salt water through the membrane."
+    },
+    {
+      "question_id": "T02.01.Q062",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya prepares a 0.05 m aqueous solution of an unknown electrolyte in her chemistry lab. She measures the freezing point depression to be 0.279 K. Given that Kf for water is 1.86 K kg/mol, Priya calculates the van't Hoff factor. She concludes that the electrolyte most likely is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "NaCl (expected i = 2)"
+        },
+        {
+          "id": "B",
+          "text": "CaCl2 (expected i = 3)"
+        },
+        {
+          "id": "C",
+          "text": "Glucose (expected i = 1)"
+        },
+        {
+          "id": "D",
+          "text": "AlCl3 (expected i = 4)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using delta_Tf = i Kf m, we get i = delta_Tf / (Kf x m) = 0.279 / (1.86 x 0.05) = 0.279 / 0.093 = 3.0. A van't Hoff factor of 3 corresponds to an electrolyte producing 3 ions per formula unit on complete dissociation. CaCl2 -> Ca2+ + 2Cl- gives exactly 3 ions, so the electrolyte is most likely CaCl2.",
+      "explanation_incorrect": "Option A (NaCl) gives i = 2, which would produce delta_Tf = 2 x 1.86 x 0.05 = 0.186 K, not 0.279 K. Option C (glucose) gives i = 1 and delta_Tf = 0.093 K. Option D (AlCl3) gives i = 4 and delta_Tf = 0.372 K. Only CaCl2 with i = 3 matches the observed depression of 0.279 K."
+    },
+    {
+      "question_id": "T02.01.Q063",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is studying the effect of pressure on gas solubility in his school laboratory. He has a sealed soda bottle containing CO2 dissolved in water under a pressure of 3 atm. When Rohan opens the bottle and reduces the pressure to 1 atm, what does Henry's law predict about the solubility of CO2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The solubility remains the same because the liquid temperature has not changed"
+        },
+        {
+          "id": "B",
+          "text": "The solubility decreases to one-third of the original value, causing the dissolved CO2 to escape as bubbles"
+        },
+        {
+          "id": "C",
+          "text": "The solubility doubles because the gas expands"
+        },
+        {
+          "id": "D",
+          "text": "The solubility increases to three times the original value"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to Henry's law (p = KH x), the mole fraction (x) of a dissolved gas is directly proportional to the partial pressure (p) of the gas above the solution. When the pressure is reduced from 3 atm to 1 atm (one-third), the solubility also drops to one-third. The excess dissolved CO2 escapes as effervescent bubbles, which is exactly what we observe when opening a soda bottle.",
+      "explanation_incorrect": "Option A is wrong because Henry's law shows that solubility depends on the partial pressure of the gas, not just on temperature. Option C is wrong because decreasing pressure decreases solubility, not increases it. Option D is wrong because it reverses the relationship between pressure and solubility."
+    },
+    {
+      "question_id": "T02.01.Q064",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is preparing a binary liquid mixture in the chemistry lab. She mixes chloroform (CHCl3) and acetone (CH3COCH3) and observes that the flask becomes warm. She also notes that the volume of the mixture is slightly less than the sum of individual volumes. Which type of solution has Meera prepared?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An ideal solution obeying Raoult's law"
+        },
+        {
+          "id": "B",
+          "text": "A solution showing positive deviation from Raoult's law"
+        },
+        {
+          "id": "C",
+          "text": "A solution showing negative deviation from Raoult's law"
+        },
+        {
+          "id": "D",
+          "text": "A supersaturated solution"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Warming of the flask indicates exothermic mixing (delta_mix H < 0) and the volume contraction (delta_mix V < 0) confirms stronger solute-solvent interactions than the pure component interactions. Both are characteristic of negative deviation from Raoult's law. Chloroform and acetone form hydrogen bonds between Cl of CHCl3 and the carbonyl oxygen of acetone, creating stronger A-B interactions.",
+      "explanation_incorrect": "Option A is wrong because ideal solutions have delta_mix H = 0 and delta_mix V = 0 — no heating and no volume change. Option B is wrong because positive deviation involves endothermic mixing (cooling) and volume expansion. Option D is wrong because supersaturation refers to dissolving more solute than the equilibrium amount and is unrelated to the observed thermal and volume changes."
+    },
+    {
+      "question_id": "T02.01.Q065",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following solutions would NOT show a colligative property magnitude consistent with its formula-based molar concentration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glucose in water"
+        },
+        {
+          "id": "B",
+          "text": "Urea in water"
+        },
+        {
+          "id": "C",
+          "text": "Sucrose in water"
+        },
+        {
+          "id": "D",
+          "text": "Potassium chloride in water"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Glucose, urea, and sucrose are all non-electrolytes — they do not dissociate in water, so their colligative properties match the values predicted from their formula-based molar concentrations (i = 1). Potassium chloride, however, is a strong electrolyte that dissociates into K+ and Cl- (i = 2), so its observed colligative property is roughly double the value calculated from its molar concentration without accounting for dissociation.",
+      "explanation_incorrect": "Options A, B, and C are all non-electrolytes with i = 1, meaning their observed colligative properties match the calculated values directly. Only KCl (option D) dissociates in water, producing more particles than formula units, causing a discrepancy between the expected and observed colligative property values."
+    },
+    {
+      "question_id": "T02.01.Q066",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following pairs, despite both being mixtures of volatile liquids, actually forms a nearly ideal solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ethanol and water"
+        },
+        {
+          "id": "B",
+          "text": "Chloroform and acetone"
+        },
+        {
+          "id": "C",
+          "text": "n-Hexane and n-heptane"
+        },
+        {
+          "id": "D",
+          "text": "Acetone and carbon disulphide"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At first glance, all four pairs are mixtures of volatile liquids, and one might expect all to show deviations. However, n-hexane and n-heptane are both non-polar alkanes with very similar molecular structures, sizes, and intermolecular forces (London dispersion forces). This similarity makes A-B interactions essentially identical to A-A and B-B interactions, so the solution obeys Raoult's law and behaves as a nearly ideal solution.",
+      "explanation_incorrect": "Option A (ethanol-water) shows positive deviation due to disruption of hydrogen bonding in both components. Option B (chloroform-acetone) shows negative deviation because of hydrogen bond formation between CHCl3 and acetone. Option D (acetone-CS2) shows positive deviation due to weaker unlike interactions. Only n-hexane and n-heptane, being structurally similar non-polar molecules, form a nearly ideal solution."
+    },
+    {
+      "question_id": "T02.01.Q067",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following solutes in water would seem to have a molar mass from colligative property measurements that is HIGHER than its actual formula mass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NaCl"
+        },
+        {
+          "id": "B",
+          "text": "K2SO4"
+        },
+        {
+          "id": "C",
+          "text": "Acetic acid (in water at moderate concentration showing some dimerization)"
+        },
+        {
+          "id": "D",
+          "text": "CaCl2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "NaCl, K2SO4, and CaCl2 all dissociate in water, producing more particles than expected (i > 1). This makes the observed colligative property larger than the calculated value, resulting in an apparent molar mass that is lower than the true molar mass. In contrast, acetic acid can undergo partial association (dimerization through hydrogen bonding) even in water at certain concentrations, reducing the effective particle count (i < 1). This gives a smaller colligative effect and hence an observed molar mass that appears higher than the actual formula mass of 60 g/mol.",
+      "explanation_incorrect": "Options A, B, and D are all strong electrolytes that dissociate in water. Dissociation increases the number of particles (i > 1), leading to enhanced colligative effects and an apparent molar mass lower than the true value. Only association (as with acetic acid dimerizing) reduces particle count and makes the apparent molar mass higher than the actual value."
+    },
+    {
+      "question_id": "T02.01.Q068",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is osmotic pressure classified as a colligative property rather than a constitutive property?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because osmotic pressure depends on the molecular structure and functional groups of the solute"
+        },
+        {
+          "id": "B",
+          "text": "Because osmotic pressure depends solely on the number of solute particles per unit volume, irrespective of their chemical identity"
+        },
+        {
+          "id": "C",
+          "text": "Because osmotic pressure is always zero for dilute solutions"
+        },
+        {
+          "id": "D",
+          "text": "Because osmotic pressure depends on the mass of the solute rather than the number of particles"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A colligative property is one that depends only on the number (concentration) of solute particles, not on their nature or identity. Osmotic pressure (pi = iCRT) fits this definition perfectly — it is determined by the molar concentration C and the van't Hoff factor i (number of particles), with no term for the solute's identity. A constitutive property, by contrast, depends on the molecular structure of the species.",
+      "explanation_incorrect": "Option A describes a constitutive property, not a colligative one. Option C is false — dilute solutions still exhibit measurable osmotic pressure. Option D is incorrect because colligative properties depend on the number of particles, not their mass; equal masses of different solutes with different molar masses produce different osmotic pressures."
+    },
+    {
+      "question_id": "T02.01.Q069",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does a solution of chloroform and acetone show negative deviation from Raoult's law, rather than positive deviation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because chloroform and acetone are both polar molecules with identical dipole moments"
+        },
+        {
+          "id": "B",
+          "text": "Because chloroform can form a hydrogen bond with the carbonyl oxygen of acetone, making A-B interactions stronger than A-A and B-B interactions"
+        },
+        {
+          "id": "C",
+          "text": "Because both chloroform and acetone are non-polar, leading to ideal behaviour"
+        },
+        {
+          "id": "D",
+          "text": "Because the molecular masses of chloroform and acetone are nearly equal"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The C-H bond in chloroform (CHCl3) is sufficiently polarised by the three electronegative chlorine atoms to act as a hydrogen bond donor to the lone pair on the carbonyl oxygen of acetone (CH3COCH3). This newly formed A-B hydrogen bond is stronger than the dipole-dipole interactions in pure chloroform (A-A) and the dipole-dipole interactions in pure acetone (B-B). Stronger A-B interactions lower the tendency of molecules to escape into the vapour phase, reducing vapour pressure below Raoult's law prediction (negative deviation).",
+      "explanation_incorrect": "Option A is wrong because having identical dipole moments does not cause negative deviation; it is the formation of new, stronger A-B interactions that matters. Option C is wrong because both molecules are polar, not non-polar. Option D is wrong because similar molecular masses do not determine the type of deviation — intermolecular interaction strength does."
+    },
+    {
+      "question_id": "T02.01.Q070",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does increasing temperature generally decrease the solubility of gases in liquids, according to Henry's law?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the KH value decreases with increasing temperature, allowing more gas to dissolve"
+        },
+        {
+          "id": "B",
+          "text": "Because dissolution of a gas in a liquid is typically exothermic, and by Le Chatelier's principle, heating shifts the equilibrium toward the gas phase, increasing KH and reducing solubility"
+        },
+        {
+          "id": "C",
+          "text": "Because at higher temperatures, the liquid volume increases, diluting the dissolved gas"
+        },
+        {
+          "id": "D",
+          "text": "Because at higher temperatures, the gas molecules move slower and cannot penetrate the liquid surface"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The dissolution of most gases in liquids is an exothermic process (delta_H < 0). By Le Chatelier's principle, increasing temperature shifts the equilibrium in the endothermic direction — toward releasing dissolved gas molecules back into the gas phase. This increases the Henry's law constant KH (since p = KH x, a higher KH at the same pressure means lower x, i.e., lower solubility).",
+      "explanation_incorrect": "Option A is wrong because KH actually increases with temperature for most gases, not decreases. Option C is wrong because although volume does expand, the fundamental reason is the thermodynamic shift in equilibrium, not dilution. Option D is wrong because gas molecules actually move faster at higher temperatures, and kinetic speed is not the reason for decreased solubility."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 16,
-        "application": 19,
-        "exam_style": 15
+        "familiarity": 22,
+        "application": 27,
+        "exam_style": 21
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 48,
-        "compare": 0,
-        "classify": 1,
-        "scenario": 0,
-        "exception": 1,
-        "reason": 0
+        "compare": 5,
+        "classify": 5,
+        "scenario": 5,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

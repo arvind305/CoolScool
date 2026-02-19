@@ -1340,31 +1340,611 @@
       ],
       "explanation_correct": "The factors that affect resistance are directly proportional to the length (longer wire has higher resistance), directly proportional to the resistivity of the material (higher resistivity means higher resistance), and inversely proportional to the cross-sectional area (larger area means lower resistance).",
       "explanation_incorrect": "The incorrect order would be: Length (directly proportional), Area (directly proportional), Resistivity (directly proportional). This is incorrect because the area is inversely proportional to resistance, meaning a larger area will decrease the resistance, not increase it."
+    },
+    {
+      "question_id": "T06.01.Q058",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does conventional current differ from electron flow in terms of direction in an external circuit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both flow from positive to negative terminal"
+        },
+        {
+          "id": "B",
+          "text": "Conventional current flows from positive to negative, while electron flow is from negative to positive"
+        },
+        {
+          "id": "C",
+          "text": "Both flow from negative to positive terminal"
+        },
+        {
+          "id": "D",
+          "text": "Conventional current flows from negative to positive, while electron flow is from positive to negative"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the external circuit, conventional current is defined as flowing from the positive terminal to the negative terminal, which is the direction a positive charge would move. However, actual electrons (being negatively charged) flow in the opposite direction, from the negative terminal to the positive terminal. This is the key directional difference between conventional current and electron flow.",
+      "explanation_incorrect": "Conventional current and electron flow are not in the same direction. By convention, current direction was established as the direction positive charges would move (positive to negative), before the discovery that electrons are the actual charge carriers in metallic conductors. Electrons, being negative, are repelled by the negative terminal and attracted to the positive terminal, so they flow from negative to positive -- opposite to conventional current."
+    },
+    {
+      "question_id": "T06.01.Q059",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does an ideal ammeter differ from an ideal voltmeter in terms of resistance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both have zero resistance"
+        },
+        {
+          "id": "B",
+          "text": "Both have infinite resistance"
+        },
+        {
+          "id": "C",
+          "text": "An ideal ammeter has zero resistance, while an ideal voltmeter has infinite resistance"
+        },
+        {
+          "id": "D",
+          "text": "An ideal ammeter has infinite resistance, while an ideal voltmeter has zero resistance"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "An ideal ammeter has zero resistance so that when connected in series, it does not alter the current it is measuring. An ideal voltmeter has infinite resistance so that when connected in parallel, it draws no current from the circuit and measures the true potential difference across the component. This fundamental difference in resistance ensures both instruments give accurate readings without disturbing the circuit.",
+      "explanation_incorrect": "Ammeters and voltmeters serve different purposes and must have opposite resistance characteristics. An ammeter in series must not add resistance (so zero resistance is ideal), while a voltmeter in parallel must not draw current (so infinite resistance is ideal). If these were reversed, the ammeter would block current flow and the voltmeter would short-circuit the component."
+    },
+    {
+      "question_id": "T06.01.Q060",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the effect of increasing temperature on the resistance of a metal differ from its effect on a semiconductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resistance increases for both metals and semiconductors"
+        },
+        {
+          "id": "B",
+          "text": "Resistance decreases for both metals and semiconductors"
+        },
+        {
+          "id": "C",
+          "text": "Resistance increases for metals but decreases for semiconductors"
+        },
+        {
+          "id": "D",
+          "text": "Resistance decreases for metals but increases for semiconductors"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When temperature increases, the resistance of metals increases because greater atomic vibrations cause more frequent collisions with the drifting electrons, impeding their flow. In semiconductors, however, increasing temperature provides enough energy to break more covalent bonds and release additional charge carriers (electrons and holes), so the number of free charge carriers increases significantly, causing the overall resistance to decrease.",
+      "explanation_incorrect": "Metals and semiconductors respond to temperature changes in opposite ways. Metals have abundant free electrons already, so higher temperature mainly increases lattice vibrations that obstruct electron flow, raising resistance. Semiconductors at room temperature have relatively few free carriers; heating them liberates many more carriers, and this effect dominates over increased collisions, so their resistance falls."
+    },
+    {
+      "question_id": "T06.01.Q061",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does EMF differ from terminal voltage when a cell is supplying current to an external circuit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "EMF is always less than terminal voltage because energy is gained inside the cell"
+        },
+        {
+          "id": "B",
+          "text": "EMF is always greater than terminal voltage because of the voltage drop across the internal resistance"
+        },
+        {
+          "id": "C",
+          "text": "EMF and terminal voltage are always equal regardless of current drawn"
+        },
+        {
+          "id": "D",
+          "text": "EMF is greater than terminal voltage only when external resistance is zero"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When a cell supplies current, the EMF is always greater than the terminal voltage. This is because part of the energy supplied per unit charge (EMF) is used to overcome the internal resistance of the cell. The relationship is: Terminal voltage = EMF - Ir, where I is the current and r is the internal resistance. Since Ir is always positive when current flows, the terminal voltage is always less than the EMF.",
+      "explanation_incorrect": "EMF and terminal voltage are equal only in an open circuit (when no current flows). As soon as the cell supplies current, there is a voltage drop (Ir) across the internal resistance, making the terminal voltage less than the EMF. The EMF is never less than the terminal voltage during discharge; rather, EMF is the total energy per unit charge supplied by the cell, while the terminal voltage is what is available to the external circuit after the internal drop."
+    },
+    {
+      "question_id": "T06.01.Q062",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does resistance differ from resistivity in terms of dependence on the dimensions of a conductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both depend on length and cross-sectional area of the conductor"
+        },
+        {
+          "id": "B",
+          "text": "Neither depends on the dimensions of the conductor"
+        },
+        {
+          "id": "C",
+          "text": "Resistance depends on length and area, while resistivity is independent of dimensions"
+        },
+        {
+          "id": "D",
+          "text": "Resistivity depends on length and area, while resistance is independent of dimensions"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Resistance (R) depends on three factors: the material (resistivity), the length (L), and the cross-sectional area (A) of the conductor, as given by R = rho x L/A. Resistivity (rho), on the other hand, is purely a material property and does not change with the dimensions of the conductor. Two copper wires of different lengths have the same resistivity but different resistances.",
+      "explanation_incorrect": "Resistance and resistivity are related but distinct quantities. Resistance is an extrinsic property that depends on the conductor's dimensions (length and area) as well as the material. Resistivity is an intrinsic material property that characterises how strongly a material opposes current flow, regardless of its shape or size. The formula R = rho x L/A clearly shows this distinction."
+    },
+    {
+      "question_id": "T06.01.Q063",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A conductor has the following properties: its resistance increases when heated, it shows a straight-line V-I graph at constant temperature, and it has very low resistivity. This conductor is most likely:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A semiconductor like silicon"
+        },
+        {
+          "id": "B",
+          "text": "A metallic conductor like copper"
+        },
+        {
+          "id": "C",
+          "text": "An insulator like rubber"
+        },
+        {
+          "id": "D",
+          "text": "A non-ohmic device like a diode"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The three properties described -- resistance increasing with temperature, a linear V-I graph (obeying Ohm's law), and very low resistivity -- are all characteristic of metallic conductors like copper. Metals have abundant free electrons giving low resistivity, obey Ohm's law at constant temperature (linear V-I graph), and show increased resistance at higher temperatures due to greater lattice vibrations hindering electron flow.",
+      "explanation_incorrect": "A semiconductor would show decreasing resistance with increasing temperature, not increasing resistance. An insulator would have extremely high resistivity, not very low resistivity. A non-ohmic device like a diode would not show a straight-line V-I graph. Only a metallic conductor satisfies all three properties simultaneously."
+    },
+    {
+      "question_id": "T06.01.Q064",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A device has a V-I graph that is a curve (not a straight line). It does not maintain a constant ratio of V to I as the voltage changes. This device should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An ohmic conductor"
+        },
+        {
+          "id": "B",
+          "text": "A superconductor"
+        },
+        {
+          "id": "C",
+          "text": "A non-ohmic conductor"
+        },
+        {
+          "id": "D",
+          "text": "A perfect insulator"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A device whose V-I graph is curved and whose V/I ratio (resistance) changes with applied voltage does not obey Ohm's law. Such devices are classified as non-ohmic conductors. Examples include filament bulbs, diodes, and thermistors. Ohm's law (V = IR with constant R) only applies to ohmic conductors, which produce a straight-line V-I graph through the origin.",
+      "explanation_incorrect": "An ohmic conductor would show a straight-line V-I graph with a constant ratio of V to I, which contradicts the given description. A superconductor has zero resistance, not a variable resistance. A perfect insulator would not conduct current at all. The curved V-I graph and varying V/I ratio are defining features of a non-ohmic conductor."
+    },
+    {
+      "question_id": "T06.01.Q065",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A wire has the following characteristics: it is made of an alloy, has very high resistivity compared to pure metals, and its resistance changes very little with temperature. This wire is best classified as a material used for:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connecting wires in household circuits"
+        },
+        {
+          "id": "B",
+          "text": "Heating elements in appliances"
+        },
+        {
+          "id": "C",
+          "text": "Fuse wires for circuit protection"
+        },
+        {
+          "id": "D",
+          "text": "Transmission lines for long-distance power supply"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The properties described -- being an alloy, having very high resistivity, and showing little change in resistance with temperature -- are characteristic of materials like nichrome, which are specifically used as heating elements in appliances such as electric irons, toasters, and heaters. High resistivity means more electrical energy is converted to heat, and stable resistance with temperature ensures consistent performance during heating.",
+      "explanation_incorrect": "Connecting wires need very low resistivity (like copper) to minimise energy loss, not high resistivity. Fuse wires need low melting points and specific resistance characteristics, not temperature-stable resistance. Transmission lines also need very low resistivity to reduce power losses over long distances. Only heating elements benefit from the combination of high resistivity and temperature-stable resistance."
+    },
+    {
+      "question_id": "T06.01.Q066",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A physical quantity is measured in Coulombs per second, is a scalar quantity, and represents the rate at which charge passes through a cross-section of a conductor. This quantity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Potential difference"
+        },
+        {
+          "id": "B",
+          "text": "Resistance"
+        },
+        {
+          "id": "C",
+          "text": "Electric current"
+        },
+        {
+          "id": "D",
+          "text": "Electric power"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Electric current is the rate of flow of electric charge, measured in Coulombs per second (which equals Ampere). It is a scalar quantity (it has magnitude but does not obey vector addition laws) and it quantifies how much charge passes through a given cross-section of a conductor per unit time. All three given characteristics -- unit of C/s, scalar nature, and representing rate of charge flow -- uniquely identify electric current.",
+      "explanation_incorrect": "Potential difference is measured in Volts (Joules per Coulomb), not Coulombs per second. Resistance is measured in Ohms (Volts per Ampere). Electric power is measured in Watts (Joules per second). Only electric current is measured in Coulombs per second and represents the rate of charge flow through a conductor."
+    },
+    {
+      "question_id": "T06.01.Q067",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is working on a science fair project. She connects a cell with EMF 3 V and internal resistance 1 ohm to an external resistance of 5 ohms. She wants to calculate the terminal voltage of the cell. What terminal voltage will Riya measure across the cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.0 V"
+        },
+        {
+          "id": "B",
+          "text": "2.5 V"
+        },
+        {
+          "id": "C",
+          "text": "2.0 V"
+        },
+        {
+          "id": "D",
+          "text": "1.5 V"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "First, Riya needs to find the current: I = EMF / (R + r) = 3 / (5 + 1) = 3/6 = 0.5 A. Then the terminal voltage = EMF - Ir = 3 - (0.5 x 1) = 3 - 0.5 = 2.5 V. The terminal voltage is less than the EMF because of the voltage drop across the internal resistance of the cell.",
+      "explanation_incorrect": "The terminal voltage is not equal to the EMF (3.0 V) because when current flows, there is a voltage drop across the internal resistance. To find the correct answer, first calculate the current using total resistance (external + internal): I = 3/(5+1) = 0.5 A. Then terminal voltage = EMF - Ir = 3 - 0.5 = 2.5 V."
+    },
+    {
+      "question_id": "T06.01.Q068",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit has two copper wires in his physics lab. Wire P is 2 m long with a cross-sectional area of 1 mm^2, and Wire Q is 4 m long with a cross-sectional area of 2 mm^2. If the resistance of Wire P is 8 ohms, what is the resistance of Wire Q?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 ohms"
+        },
+        {
+          "id": "B",
+          "text": "8 ohms"
+        },
+        {
+          "id": "C",
+          "text": "16 ohms"
+        },
+        {
+          "id": "D",
+          "text": "32 ohms"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since both wires are copper (same resistivity), we can use the ratio method. R = rho x L/A. For Wire P: 8 = rho x 2/1. For Wire Q: R_Q = rho x 4/2 = rho x 2. Since rho x 2 = 8 (from Wire P), R_Q = 8 ohms. Wire Q is twice as long (doubling resistance) but also has twice the area (halving resistance), so the two effects cancel out and the resistance remains 8 ohms.",
+      "explanation_incorrect": "Both wires are made of the same material (copper), so they have identical resistivity. Wire Q has double the length of Wire P (which would double the resistance) and also double the cross-sectional area (which would halve the resistance). These two effects exactly cancel each other: R_Q = rho x 4/2 = rho x 2 = 8 ohms, the same as Wire P."
+    },
+    {
+      "question_id": "T06.01.Q069",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is verifying Ohm's law in her school lab. She measures the following readings: when the voltmeter reads 2 V, the ammeter reads 0.5 A; when the voltmeter reads 4 V, the ammeter reads 1.0 A; and when the voltmeter reads 6 V, the ammeter reads 1.5 A. What can Priya conclude about the resistance of the conductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The resistance is 4 ohms and the conductor obeys Ohm's law"
+        },
+        {
+          "id": "B",
+          "text": "The resistance is 2 ohms and the conductor obeys Ohm's law"
+        },
+        {
+          "id": "C",
+          "text": "The resistance keeps changing, so the conductor is non-ohmic"
+        },
+        {
+          "id": "D",
+          "text": "The resistance is 0.25 ohms and the conductor obeys Ohm's law"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At each reading, R = V/I: at 2 V, R = 2/0.5 = 4 ohms; at 4 V, R = 4/1.0 = 4 ohms; at 6 V, R = 6/1.5 = 4 ohms. The ratio V/I remains constant at 4 ohms across all measurements, confirming that the conductor has a constant resistance of 4 ohms and obeys Ohm's law. The V-I relationship is linear, which is the hallmark of an ohmic conductor.",
+      "explanation_incorrect": "Calculating R = V/I for each reading gives 2/0.5 = 4, 4/1.0 = 4, and 6/1.5 = 4 ohms. The resistance is consistently 4 ohms (not 2 ohms or 0.25 ohms), and since V/I is constant, the conductor obeys Ohm's law and is not non-ohmic."
+    },
+    {
+      "question_id": "T06.01.Q070",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is designing a heating coil for a school project. He has a nichrome wire of resistivity 1.1 x 10^-6 ohm-m. He needs a resistance of 22 ohms and has a wire with a cross-sectional area of 0.5 mm^2. What length of nichrome wire should Rohan cut?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 m"
+        },
+        {
+          "id": "B",
+          "text": "10 m"
+        },
+        {
+          "id": "C",
+          "text": "15 m"
+        },
+        {
+          "id": "D",
+          "text": "20 m"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using R = rho x L/A, rearranging for L: L = R x A / rho. Substituting values: L = 22 x 0.5 x 10^-6 / (1.1 x 10^-6) = 22 x 0.5 / 1.1 = 11 / 1.1 = 10 m. Rohan needs to cut 10 m of nichrome wire to obtain a resistance of 22 ohms with the given cross-sectional area and resistivity.",
+      "explanation_incorrect": "Using the formula R = rho x L/A and solving for L: L = R x A / rho = 22 x (0.5 x 10^-6) / (1.1 x 10^-6) = 11/1.1 = 10 m. The other options arise from common calculation errors such as forgetting to convert mm^2 to m^2 consistently, or incorrectly rearranging the formula."
+    },
+    {
+      "question_id": "T06.01.Q071",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is conducting an experiment at home. She observes that a current of 0.4 A flows through a torch bulb for 5 minutes. She wants to calculate the total charge that flows through the bulb. What value should Meera get?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 C"
+        },
+        {
+          "id": "B",
+          "text": "12.5 C"
+        },
+        {
+          "id": "C",
+          "text": "120 C"
+        },
+        {
+          "id": "D",
+          "text": "200 C"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using I = Q/t, we get Q = I x t. The time must be converted to seconds: 5 minutes = 5 x 60 = 300 seconds. So Q = 0.4 x 300 = 120 C. Meera should calculate that 120 Coulombs of charge flow through the torch bulb in 5 minutes.",
+      "explanation_incorrect": "The key step is converting 5 minutes to seconds (300 s) before using Q = I x t. Option A (2 C) would result from using 5 seconds instead of 300 seconds. Option B (12.5 C) comes from an incorrect calculation. Option D (200 C) might result from using 500 seconds. The correct answer is Q = 0.4 x 300 = 120 C."
+    },
+    {
+      "question_id": "T06.01.Q072",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following does NOT affect the resistance of a metallic conductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The length of the conductor"
+        },
+        {
+          "id": "B",
+          "text": "The current flowing through the conductor"
+        },
+        {
+          "id": "C",
+          "text": "The cross-sectional area of the conductor"
+        },
+        {
+          "id": "D",
+          "text": "The nature of the material of the conductor"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For an ohmic (metallic) conductor at constant temperature, resistance depends on length, cross-sectional area, and the nature of the material (resistivity), as given by R = rho x L/A. The current flowing through the conductor does NOT affect its resistance. This is a common misconception -- students sometimes confuse Ohm's law (V = IR) to mean that R changes with I, but for ohmic conductors, R is constant regardless of the current.",
+      "explanation_incorrect": "Length, cross-sectional area, and the nature of the material all affect the resistance of a metallic conductor (R = rho x L/A). The current flowing through the conductor does not change its resistance. Ohm's law states V = IR, meaning if you increase current, the voltage across the conductor increases proportionally, but the resistance itself remains unchanged for an ohmic conductor."
+    },
+    {
+      "question_id": "T06.01.Q073",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about resistivity is actually INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Resistivity is an intrinsic property of the material"
+        },
+        {
+          "id": "B",
+          "text": "Resistivity depends on the temperature of the material"
+        },
+        {
+          "id": "C",
+          "text": "Resistivity changes when the wire is made thinner"
+        },
+        {
+          "id": "D",
+          "text": "Resistivity has the SI unit of ohm-meter"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Resistivity is a property of the material itself and does not change when the physical dimensions of the conductor (such as its thickness or length) are altered. Making a wire thinner changes its resistance (because area decreases), but the resistivity remains the same as it depends only on the material and its temperature. Options A, B, and D are all correct statements about resistivity.",
+      "explanation_incorrect": "Resistivity is indeed an intrinsic material property (A is correct), it does vary with temperature (B is correct), and its SI unit is ohm-meter (D is correct). The incorrect statement is C -- changing the dimensions of a wire (making it thinner or longer) changes the resistance but NOT the resistivity. Resistivity is determined solely by the material's atomic structure and temperature."
+    },
+    {
+      "question_id": "T06.01.Q074",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following devices does NOT obey Ohm's law?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A copper wire at constant temperature"
+        },
+        {
+          "id": "B",
+          "text": "A nichrome wire at constant temperature"
+        },
+        {
+          "id": "C",
+          "text": "A filament lamp"
+        },
+        {
+          "id": "D",
+          "text": "A manganin wire at constant temperature"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A filament lamp does NOT obey Ohm's law because as current flows through the tungsten filament, it heats up significantly, causing its resistance to increase with temperature. This means the V-I graph of a filament lamp is a curve, not a straight line. Copper, nichrome, and manganin wires all obey Ohm's law when kept at constant temperature, producing linear V-I graphs.",
+      "explanation_incorrect": "Copper, nichrome, and manganin wires are all ohmic conductors at constant temperature -- they maintain a constant resistance and produce straight-line V-I graphs. A filament lamp, however, is a classic non-ohmic device because its filament heats up during operation, and the changing temperature causes its resistance to vary with current, producing a curved V-I graph."
+    },
+    {
+      "question_id": "T06.01.Q075",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is potential difference measured in Volts rather than in Amperes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because potential difference measures the rate of flow of charge, which requires a time-based unit"
+        },
+        {
+          "id": "B",
+          "text": "Because potential difference measures the work done per unit charge, which has dimensions of energy per charge"
+        },
+        {
+          "id": "C",
+          "text": "Because potential difference is a vector quantity and requires a directional unit"
+        },
+        {
+          "id": "D",
+          "text": "Because potential difference depends on the resistance of the conductor, which is measured in Ohms"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Potential difference is defined as the work done per unit charge (V = W/Q). Since work is measured in Joules and charge in Coulombs, the unit of potential difference is Joules per Coulomb, which is defined as the Volt. This is fundamentally different from current (charge per unit time, measured in Amperes). The Volt reflects the energy dimension of potential difference, not the flow dimension.",
+      "explanation_incorrect": "Option A describes current (rate of charge flow), not potential difference. Option C is wrong because potential difference is a scalar, not a vector. Option D confuses the dependent relationship with the reason for the unit -- while V = IR relates voltage to resistance, the unit Volt comes from the definition V = W/Q (energy per charge), not from resistance."
+    },
+    {
+      "question_id": "T06.01.Q076",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does increasing the cross-sectional area of a wire decrease its resistance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because a wider wire has a shorter path for electrons to travel"
+        },
+        {
+          "id": "B",
+          "text": "Because a wider wire provides more parallel paths for charge carriers, allowing more current to flow with less opposition"
+        },
+        {
+          "id": "C",
+          "text": "Because increasing area changes the material of the wire to one with lower resistivity"
+        },
+        {
+          "id": "D",
+          "text": "Because a wider wire has fewer atoms, so there are fewer collisions with electrons"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the cross-sectional area of a wire increases, there is more space available for electrons to drift through. This is equivalent to having more parallel paths for charge carriers. With more pathways, the overall opposition to the flow of current decreases, resulting in lower resistance. This is why R = rho x L/A shows an inverse relationship between resistance and area.",
+      "explanation_incorrect": "Option A is wrong because the path length depends on the wire's length, not its cross-sectional area. Option C is wrong because changing dimensions does not change the material or its resistivity. Option D is wrong because a wider wire actually has more atoms in its cross-section, not fewer. The correct reason is that a larger area provides more parallel channels for electron flow, reducing the overall resistance."
+    },
+    {
+      "question_id": "T06.01.Q077",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why are alloys like nichrome preferred over pure metals like copper for making heating elements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because alloys are cheaper to manufacture than pure metals"
+        },
+        {
+          "id": "B",
+          "text": "Because alloys have higher resistivity and their resistance changes very little with temperature, ensuring stable and efficient heat production"
+        },
+        {
+          "id": "C",
+          "text": "Because alloys have lower melting points, making them easier to shape into coils"
+        },
+        {
+          "id": "D",
+          "text": "Because alloys conduct electricity better than pure metals"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Alloys like nichrome are preferred for heating elements for two important reasons: (1) they have much higher resistivity than pure metals, which means more electrical energy is converted to heat energy per unit length, and (2) their resistance remains nearly constant even at high operating temperatures, ensuring consistent and predictable heat output. Pure metals like copper have very low resistivity (generating little heat) and their resistance changes significantly with temperature.",
+      "explanation_incorrect": "Cost (option A) is not the primary scientific reason for choosing heating element materials. Alloys used for heating actually have high melting points, not low ones (option C), so they can withstand high operating temperatures without melting. Alloys have higher resistivity than pure metals, meaning they conduct electricity less well, not better (option D). The correct reason combines high resistivity (for efficient heating) with stable resistance at varying temperatures."
     }
   ],
   "metadata": {
     "created_at": "2026-02-08",
     "status": "draft",
     "question_count": {
-      "total": 57,
+      "total": 77,
       "by_difficulty": {
-        "familiarity": 28,
-        "application": 20,
-        "exam_style": 9
+        "familiarity": 34,
+        "application": 28,
+        "exam_style": 15
       },
       "by_type": {
-        "mcq": 30,
+        "mcq": 50,
         "true_false": 10,
         "fill_blank": 12,
         "ordering": 5
       },
       "by_cognitive_level": {
         "recall": 54,
-        "compare": 2,
-        "classify": 0,
-        "scenario": 0,
-        "exception": 1,
-        "reason": 0
+        "compare": 7,
+        "classify": 4,
+        "scenario": 5,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

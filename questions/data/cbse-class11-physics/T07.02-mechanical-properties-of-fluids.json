@@ -1471,6 +1471,607 @@
       "correct_answer": "A",
       "explanation_correct": "Water rises to the top of the tube but does not overflow. The meniscus adjusts to a larger radius of curvature to reduce the excess pressure to match the shorter column. Since h = 2Scosθ/(ρgr), if h is limited, the effective r of the meniscus increases.",
       "explanation_incorrect": "In a tube shorter than h, water cannot overflow (that would violate energy conservation). Instead, the meniscus at the top adjusts its curvature — it becomes flatter (larger R) so that the reduced capillary pressure balances the shorter water column."
+    },
+    {
+      "question_id": "T07.02.Q051",
+      "type": "mcq",
+      "concept_id": "T07.02.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the excess pressure inside a soap bubble differ from that inside a liquid drop of the same radius R and surface tension S?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The soap bubble has twice the excess pressure (4S/R) because it has two surfaces, whereas the drop has one surface (2S/R)"
+        },
+        {
+          "id": "B",
+          "text": "The liquid drop has twice the excess pressure because liquids are denser than soap films"
+        },
+        {
+          "id": "C",
+          "text": "Both have the same excess pressure 2S/R since the radius is identical"
+        },
+        {
+          "id": "D",
+          "text": "The soap bubble has four times the excess pressure because soap has lower surface tension"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A soap bubble has two free surfaces (inner and outer), each contributing 2S/R, giving a total excess pressure of 4S/R. A liquid drop has only one free surface, so its excess pressure is 2S/R. The key difference is the number of surfaces, not the material properties.",
+      "explanation_incorrect": "The distinction arises purely from the number of free surfaces. A liquid drop has one surface (ΔP = 2S/R); a soap bubble has two surfaces (ΔP = 4S/R). Density or surface tension magnitude is not the reason for the factor of two."
+    },
+    {
+      "question_id": "T07.02.Q052",
+      "type": "mcq",
+      "concept_id": "T07.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the equation of continuity differ from Bernoulli's equation in terms of the conservation principle each is based on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The equation of continuity is based on conservation of mass, while Bernoulli's equation is based on conservation of energy"
+        },
+        {
+          "id": "B",
+          "text": "The equation of continuity is based on conservation of energy, while Bernoulli's equation is based on conservation of momentum"
+        },
+        {
+          "id": "C",
+          "text": "Both are based on conservation of mass but apply to different flow regimes"
+        },
+        {
+          "id": "D",
+          "text": "The equation of continuity is based on conservation of momentum, while Bernoulli's equation is based on conservation of mass"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The equation of continuity (A₁v₁ = A₂v₂) expresses conservation of mass for an incompressible fluid — the same mass flows through every cross-section per unit time. Bernoulli's equation (P + ½ρv² + ρgh = constant) is derived from the work-energy theorem and expresses conservation of energy per unit volume along a streamline.",
+      "explanation_incorrect": "These two fundamental fluid-flow equations rest on different conservation laws. Continuity ensures mass is neither created nor destroyed (mass conservation), while Bernoulli relates pressure energy, kinetic energy, and potential energy per unit volume (energy conservation)."
+    },
+    {
+      "question_id": "T07.02.Q053",
+      "type": "mcq",
+      "concept_id": "T07.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the dependence of viscous drag force on velocity differ between Stokes' law (low Reynolds number) and turbulent drag (high Reynolds number)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stokes' drag is proportional to v (first power), whereas turbulent drag is proportional to v²"
+        },
+        {
+          "id": "B",
+          "text": "Stokes' drag is proportional to v², whereas turbulent drag is proportional to v"
+        },
+        {
+          "id": "C",
+          "text": "Both are proportional to v, but turbulent drag has a larger coefficient"
+        },
+        {
+          "id": "D",
+          "text": "Stokes' drag is independent of velocity, whereas turbulent drag depends on v²"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Stokes' law gives F = 6πηrv, which is linear in v. This applies at low Reynolds numbers (laminar/creeping flow). At high Reynolds numbers (turbulent regime), the drag force is approximately proportional to v² (F ∝ ½CdρAv²). The transition from linear to quadratic dependence marks the shift from laminar to turbulent drag.",
+      "explanation_incorrect": "In laminar (Stokes) flow, viscous forces dominate and drag scales as v. In turbulent flow, inertial forces dominate and drag scales as v². This difference is fundamental to understanding why terminal velocity calculations change at high speeds."
+    },
+    {
+      "question_id": "T07.02.Q054",
+      "type": "mcq",
+      "concept_id": "T07.02.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does gauge pressure differ from absolute pressure at a point inside a liquid at depth h?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gauge pressure is ρgh (excludes atmospheric pressure), while absolute pressure is P₀ + ρgh (includes atmospheric pressure)"
+        },
+        {
+          "id": "B",
+          "text": "Gauge pressure is P₀ + ρgh, while absolute pressure is ρgh"
+        },
+        {
+          "id": "C",
+          "text": "Gauge pressure equals absolute pressure; the terms are synonymous"
+        },
+        {
+          "id": "D",
+          "text": "Gauge pressure is always negative, while absolute pressure is always positive"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Gauge pressure measures only the pressure due to the fluid column above the point: P_gauge = ρgh. Absolute pressure includes the atmospheric pressure acting on the free surface as well: P_abs = P₀ + ρgh. A gauge pressure of zero corresponds to atmospheric pressure, not vacuum.",
+      "explanation_incorrect": "Absolute pressure = atmospheric pressure + gauge pressure. At depth h: P_abs = P₀ + ρgh, and P_gauge = ρgh. Gauge pressure is the excess over atmospheric; absolute pressure is the total. They differ by exactly P₀."
+    },
+    {
+      "question_id": "T07.02.Q055",
+      "type": "mcq",
+      "concept_id": "T07.02.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does capillary action differ between water in a glass tube and mercury in a glass tube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Water rises (concave meniscus, acute contact angle) while mercury is depressed (convex meniscus, obtuse contact angle)"
+        },
+        {
+          "id": "B",
+          "text": "Both rise but mercury rises higher due to its greater density"
+        },
+        {
+          "id": "C",
+          "text": "Water is depressed while mercury rises because mercury has higher surface tension"
+        },
+        {
+          "id": "D",
+          "text": "Both show capillary depression because glass is non-wettable by all liquids"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Water wets glass (adhesive forces > cohesive forces), producing a concave meniscus with contact angle ≈ 0°; cosθ > 0, so the capillary height h = 2Scosθ/(ρgr) is positive (rise). Mercury does not wet glass (cohesive > adhesive), producing a convex meniscus with contact angle ≈ 140°; cosθ < 0, so h is negative (depression).",
+      "explanation_incorrect": "The sign of capillary height depends on cosθ. For water–glass, θ ≈ 0° (concave meniscus, capillary rise). For mercury–glass, θ ≈ 140° (convex meniscus, capillary depression). The behaviour is governed by the relative strengths of adhesive and cohesive forces."
+    },
+    {
+      "question_id": "T07.02.Q056",
+      "type": "mcq",
+      "concept_id": "T07.02.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A physical quantity has SI unit Pa (pascal), represents energy stored per unit volume, and is transmitted undiminished through an enclosed fluid. Which quantity is this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pressure"
+        },
+        {
+          "id": "B",
+          "text": "Surface tension"
+        },
+        {
+          "id": "C",
+          "text": "Viscosity"
+        },
+        {
+          "id": "D",
+          "text": "Stress"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Pressure has the unit pascal (Pa = N/m² = J/m³), so it can be interpreted as energy per unit volume. Pascal's law states that pressure applied to an enclosed fluid is transmitted undiminished throughout. While stress also has unit Pa, it is not transmitted through fluids — it applies to solids.",
+      "explanation_incorrect": "Surface tension has unit N/m (not Pa). Viscosity has unit Pa·s. Stress has unit Pa but is not 'transmitted undiminished through enclosed fluids.' Pressure uniquely satisfies all three stated properties."
+    },
+    {
+      "question_id": "T07.02.Q057",
+      "type": "mcq",
+      "concept_id": "T07.02.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A fluid property has SI unit Pa·s, arises from internal friction between fluid layers, and causes velocity gradients to produce shear stress. This property is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Coefficient of viscosity"
+        },
+        {
+          "id": "B",
+          "text": "Surface tension"
+        },
+        {
+          "id": "C",
+          "text": "Bulk modulus"
+        },
+        {
+          "id": "D",
+          "text": "Pressure"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The coefficient of viscosity (η) has SI unit Pa·s (or equivalently N·s/m² or kg/(m·s)). It quantifies internal friction in a fluid. Newton's law of viscosity states F = ηA(dv/dx): the shear stress between fluid layers is proportional to the velocity gradient, with η as the proportionality constant.",
+      "explanation_incorrect": "Surface tension has unit N/m and acts along the surface, not between fluid layers. Bulk modulus (Pa) relates to compressibility. Pressure (Pa) is force per unit area, not a frictional property. Only viscosity (Pa·s) describes internal friction and relates velocity gradients to shear stress."
+    },
+    {
+      "question_id": "T07.02.Q058",
+      "type": "mcq",
+      "concept_id": "T07.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A body is fully submerged in a fluid. The upward force on it equals the weight of the fluid displaced, it depends on the fluid density and the volume of the body but not on the body's density, and it acts at the centre of buoyancy. This force is best identified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Buoyant force (Archimedes' principle)"
+        },
+        {
+          "id": "B",
+          "text": "Viscous drag force (Stokes' law)"
+        },
+        {
+          "id": "C",
+          "text": "Surface tension force"
+        },
+        {
+          "id": "D",
+          "text": "Atmospheric thrust"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "All three stated properties uniquely identify the buoyant force described by Archimedes' principle: F_b = ρ_fluid × V_displaced × g. It is independent of the body's density (only fluid density and displaced volume matter), and it acts at the centre of buoyancy (centroid of the displaced fluid volume).",
+      "explanation_incorrect": "Viscous drag depends on the body's velocity, not displaced volume. Surface tension acts along the liquid surface, not on a submerged body. Atmospheric thrust acts on surfaces exposed to the atmosphere. Only the buoyant force matches all the described properties."
+    },
+    {
+      "question_id": "T07.02.Q059",
+      "type": "mcq",
+      "concept_id": "T07.02.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A phenomenon causes a liquid to spontaneously rise or fall inside a narrow tube. It depends on surface tension, contact angle, and tube radius, and the height varies inversely with the tube radius. This phenomenon is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Capillarity"
+        },
+        {
+          "id": "B",
+          "text": "Osmosis"
+        },
+        {
+          "id": "C",
+          "text": "Bernoulli effect"
+        },
+        {
+          "id": "D",
+          "text": "Venturi effect"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Capillarity (capillary action) is the rise or fall of a liquid in a narrow tube due to the interplay of adhesive and cohesive forces. The height is h = 2Scosθ/(ρgr), depending on surface tension S, contact angle θ, and tube radius r, with h ∝ 1/r.",
+      "explanation_incorrect": "Osmosis involves solvent movement across a semipermeable membrane (not relevant to tubes). The Bernoulli and Venturi effects relate to pressure changes due to fluid velocity, not spontaneous rise in narrow tubes. Only capillarity fits all the stated features."
+    },
+    {
+      "question_id": "T07.02.Q060",
+      "type": "mcq",
+      "concept_id": "T07.02.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is designing a hydraulic jack for her Class 11 physics project. Her small piston has an area of 5 cm² and the large piston has an area of 250 cm². She wants the large piston to exert a force of 5000 N to lift a heavy load. What minimum force must Riya apply on the small piston?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100 N"
+        },
+        {
+          "id": "B",
+          "text": "250 N"
+        },
+        {
+          "id": "C",
+          "text": "50 N"
+        },
+        {
+          "id": "D",
+          "text": "1000 N"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By Pascal's law: F₁/A₁ = F₂/A₂. F₁ = F₂ × (A₁/A₂) = 5000 × (5/250) = 5000 × (1/50) = 100 N. The hydraulic jack provides a mechanical advantage of 50.",
+      "explanation_incorrect": "The pressure is transmitted equally: P = F₁/A₁ = F₂/A₂. So F₁ = F₂ × (A₁/A₂) = 5000 × (5/250) = 100 N. Riya needs to apply only 100 N to lift 5000 N — that is the power of Pascal's law."
+    },
+    {
+      "question_id": "T07.02.Q061",
+      "type": "mcq",
+      "concept_id": "T07.02.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit drops a solid aluminium ball (density 2700 kg/m³, volume 200 cm³) into a tank of water (density 1000 kg/m³) in his school laboratory. He measures the apparent weight of the ball while it is fully submerged. What is the apparent weight of the ball? (g = 10 m/s²)",
+      "options": [
+        {
+          "id": "A",
+          "text": "3.4 N"
+        },
+        {
+          "id": "B",
+          "text": "5.4 N"
+        },
+        {
+          "id": "C",
+          "text": "2.0 N"
+        },
+        {
+          "id": "D",
+          "text": "5.0 N"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Actual weight = ρ_Al × V × g = 2700 × 200 × 10⁻⁶ × 10 = 5.4 N. Buoyant force = ρ_water × V × g = 1000 × 200 × 10⁻⁶ × 10 = 2.0 N. Apparent weight = 5.4 − 2.0 = 3.4 N.",
+      "explanation_incorrect": "Apparent weight = actual weight − buoyant force = Vg(ρ_body − ρ_fluid) = 200 × 10⁻⁶ × 10 × (2700 − 1000) = 0.002 × 1700 = 3.4 N."
+    },
+    {
+      "question_id": "T07.02.Q062",
+      "type": "mcq",
+      "concept_id": "T07.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya observes water flowing through a garden hose at her home. The hose has an inner diameter of 2 cm and water flows at 1 m/s. She attaches a nozzle that narrows the opening to a diameter of 0.5 cm. What is the speed of water emerging from the nozzle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16 m/s"
+        },
+        {
+          "id": "B",
+          "text": "4 m/s"
+        },
+        {
+          "id": "C",
+          "text": "8 m/s"
+        },
+        {
+          "id": "D",
+          "text": "2 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By equation of continuity: A₁v₁ = A₂v₂. Since A = π(d/2)², the ratio A₁/A₂ = (d₁/d₂)² = (2/0.5)² = 16. So v₂ = 16 × 1 = 16 m/s.",
+      "explanation_incorrect": "The equation of continuity gives v₂ = v₁ × (A₁/A₂) = v₁ × (d₁/d₂)² = 1 × (2/0.5)² = 1 × 16 = 16 m/s. The area ratio goes as the square of the diameter ratio."
+    },
+    {
+      "question_id": "T07.02.Q063",
+      "type": "mcq",
+      "concept_id": "T07.02.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan drops two steel ball bearings into a tall cylinder of glycerine in his school lab. Ball A has radius 1 mm and Ball B has radius 2 mm. Both are made of the same steel (density 7800 kg/m³) and the glycerine has density 1260 kg/m³. What is the ratio of terminal velocity of Ball A to that of Ball B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 : 4"
+        },
+        {
+          "id": "B",
+          "text": "1 : 2"
+        },
+        {
+          "id": "C",
+          "text": "1 : 8"
+        },
+        {
+          "id": "D",
+          "text": "2 : 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Terminal velocity v_t = 2r²(ρ − σ)g/(9η). Since the material and fluid are the same for both balls, v_t ∝ r². The ratio v_A/v_B = r_A²/r_B² = (1)²/(2)² = 1/4. So the ratio is 1 : 4.",
+      "explanation_incorrect": "Terminal velocity depends on r². With r_A = 1 mm and r_B = 2 mm: v_A/v_B = (1)²/(2)² = 1/4 = 1 : 4. The larger ball falls four times faster at terminal velocity."
+    },
+    {
+      "question_id": "T07.02.Q064",
+      "type": "mcq",
+      "concept_id": "T07.02.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera conducts an experiment where she dips capillary tubes of different radii in water (S = 0.072 N/m, θ ≈ 0°, ρ = 1000 kg/m³, g = 10 m/s²). She notices that water rises to 3.6 cm in one tube. What is the radius of that capillary tube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.4 mm"
+        },
+        {
+          "id": "B",
+          "text": "0.2 mm"
+        },
+        {
+          "id": "C",
+          "text": "0.8 mm"
+        },
+        {
+          "id": "D",
+          "text": "1.0 mm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "h = 2Scosθ/(ρgr). Solving for r: r = 2Scosθ/(ρgh) = 2 × 0.072 × 1/(1000 × 10 × 0.036) = 0.144/360 = 4 × 10⁻⁴ m = 0.4 mm.",
+      "explanation_incorrect": "From h = 2Scosθ/(ρgr), we get r = 2S/(ρgh) = 2(0.072)/(1000 × 10 × 0.036) = 0.144/360 = 0.0004 m = 0.4 mm."
+    },
+    {
+      "question_id": "T07.02.Q065",
+      "type": "mcq",
+      "concept_id": "T07.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "A student claims that a body always floats if the buoyant force acts on it. Which of the following is an exception to this claim?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A solid iron ball in water — buoyant force acts on it but its weight exceeds the buoyant force, so it sinks"
+        },
+        {
+          "id": "B",
+          "text": "A wooden log in water — it floats because the buoyant force exceeds its weight"
+        },
+        {
+          "id": "C",
+          "text": "A ship on the ocean — it floats because it displaces enough water"
+        },
+        {
+          "id": "D",
+          "text": "An air bubble in water — buoyant force causes it to rise"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Every body immersed in a fluid experiences a buoyant force, but floating requires the buoyant force to equal or exceed the body's weight. An iron ball (ρ_iron ≈ 7800 kg/m³ >> ρ_water) experiences buoyancy but sinks because its weight is much greater. The mere presence of buoyancy does not guarantee floating.",
+      "explanation_incorrect": "The misconception is that 'buoyant force acts' implies 'the body floats.' In reality, a body floats only when ρ_body ≤ ρ_fluid (weight ≤ maximum buoyancy). An iron ball experiences buoyancy but still sinks because ρ_iron >> ρ_water."
+    },
+    {
+      "question_id": "T07.02.Q066",
+      "type": "mcq",
+      "concept_id": "T07.02.C03",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Bernoulli's equation is often applied to explain various flow phenomena. In which of the following situations does Bernoulli's equation NOT strictly apply?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Blood flow through arteries — blood is a viscous fluid and Bernoulli's equation assumes zero viscosity"
+        },
+        {
+          "id": "B",
+          "text": "Water flowing through a horizontal pipe of varying cross-section at low speed"
+        },
+        {
+          "id": "C",
+          "text": "Air flowing over an aeroplane wing at moderate speeds"
+        },
+        {
+          "id": "D",
+          "text": "Water efflux from a hole in a large tank (Torricelli's theorem)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Bernoulli's equation is derived for an ideal fluid: non-viscous, incompressible, and undergoing steady streamline flow. Blood is a viscous, non-Newtonian fluid. While a simplified Bernoulli analysis is sometimes used for estimation, the equation does not strictly apply because viscous energy dissipation is significant in narrow arteries.",
+      "explanation_incorrect": "Students often apply Bernoulli's equation universally. However, it fails for viscous fluids where energy is lost to internal friction. Blood in arteries is viscous and non-Newtonian, violating the fundamental assumption of zero viscosity."
+    },
+    {
+      "question_id": "T07.02.Q067",
+      "type": "mcq",
+      "concept_id": "T07.02.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A student states: 'Pressure at any point inside a fluid depends only on the depth below the free surface.' Which situation is an exception to this statement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A fluid in an accelerating container — a pseudo-force modifies the effective gravity, so pressure also depends on horizontal position"
+        },
+        {
+          "id": "B",
+          "text": "A static fluid in a wide open tank at rest"
+        },
+        {
+          "id": "C",
+          "text": "A static fluid in a narrow open tube at rest"
+        },
+        {
+          "id": "D",
+          "text": "Mercury in a barometer tube at rest"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The formula P = P₀ + ρgh holds for fluids in static equilibrium under gravity alone. When the container accelerates (e.g., horizontally), a pseudo-force acts on the fluid, tilting the free surface. Pressure then depends on both vertical depth and horizontal position, violating the 'depth only' claim.",
+      "explanation_incorrect": "P = P₀ + ρgh assumes a fluid at rest in an inertial frame with uniform gravity. An accelerating container introduces a pseudo-force, so the effective gravitational field is no longer purely vertical. Pressure varies with horizontal position as well as depth."
+    },
+    {
+      "question_id": "T07.02.Q068",
+      "type": "mcq",
+      "concept_id": "T07.02.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does a ship made of steel float on water, even though steel is nearly 8 times denser than water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the ship's hollow shape gives it a large volume and low average density, allowing it to displace enough water for the buoyant force to equal its weight"
+        },
+        {
+          "id": "B",
+          "text": "Because the surface tension of water supports the ship from below"
+        },
+        {
+          "id": "C",
+          "text": "Because the ship's engine provides an upward thrust that counteracts gravity"
+        },
+        {
+          "id": "D",
+          "text": "Because the atmospheric pressure pushing down on the water prevents the ship from sinking"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Floating depends on average density, not the density of the material alone. A steel ship is hollow and encloses large volumes of air, making its average density (total mass / total volume including the hull cavity) less than that of water. It displaces a volume of water whose weight equals the ship's total weight, satisfying Archimedes' principle.",
+      "explanation_incorrect": "Surface tension is far too weak to support a massive ship. Engine thrust acts horizontally. Atmospheric pressure acts equally on all surfaces and does not provide net upward force. The ship floats because its overall (average) density — including the air-filled interior — is less than water's density."
+    },
+    {
+      "question_id": "T07.02.Q069",
+      "type": "mcq",
+      "concept_id": "T07.02.C04",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does terminal velocity depend on the square of the radius (v_t ∝ r²) for a sphere falling through a viscous fluid, rather than on r or r³?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the driving force (weight minus buoyancy) scales as r³ while the drag force (Stokes' law) scales as r, and their ratio at equilibrium gives r²"
+        },
+        {
+          "id": "B",
+          "text": "Because both the driving force and the drag force scale as r², so they cancel to give r²"
+        },
+        {
+          "id": "C",
+          "text": "Because the viscous drag scales as r³ and the weight scales as r⁵"
+        },
+        {
+          "id": "D",
+          "text": "Because the buoyant force is independent of radius, so only the weight (∝ r²) matters"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At terminal velocity, the net downward force equals the drag: (4/3)πr³(ρ − σ)g = 6πηrv_t. The left side scales as r³ (volume-dependent weight minus buoyancy). The right side scales as rv_t (Stokes' drag is linear in both r and v). Solving: v_t = [2r²(ρ − σ)g]/(9η), which gives v_t ∝ r³/r = r².",
+      "explanation_incorrect": "The r² dependence arises from the mismatch in how forces scale with radius. Weight minus buoyancy ∝ r³ (volume), while Stokes' drag ∝ r × v. Setting them equal: v_t ∝ r³/r = r². This is why doubling the radius quadruples the terminal velocity."
+    },
+    {
+      "question_id": "T07.02.Q070",
+      "type": "mcq",
+      "concept_id": "T07.02.C05",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does adding detergent to water cause it to spread more easily on a greasy surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because detergent reduces the surface tension of water, allowing it to wet surfaces that pure water cannot"
+        },
+        {
+          "id": "B",
+          "text": "Because detergent increases the viscosity of water, making it flow more slowly and cover more area"
+        },
+        {
+          "id": "C",
+          "text": "Because detergent increases the density of water, producing greater hydrostatic pressure"
+        },
+        {
+          "id": "D",
+          "text": "Because detergent increases the surface tension, pulling the water outward along the surface"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Detergents are surfactants — their molecules have hydrophilic and hydrophobic ends that sit at the water surface, disrupting the hydrogen bonding network and reducing surface tension. Lower surface tension reduces the contact angle on greasy surfaces, allowing water to spread and wet the surface more effectively.",
+      "explanation_incorrect": "The key mechanism is reduction of surface tension. High surface tension in pure water causes it to bead up on greasy (non-polar) surfaces. Detergent lowers surface tension, reducing the contact angle and enabling spreading. It does not increase viscosity, density, or surface tension."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 22,
+        "application": 26,
+        "exam_style": 22
+      },
+      "by_type": {
+        "mcq": 70
+      },
+      "by_cognitive_level": {
+        "recall": 47,
+        "compare": 6,
+        "classify": 4,
+        "scenario": 7,
+        "exception": 3,
+        "reason": 3
+      }
+    }
+  }
 }

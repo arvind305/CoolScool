@@ -1473,6 +1473,367 @@
       "correct_answer": "C",
       "explanation_correct": "The maximum useful (non-expansion) work obtainable from a process at constant T and P equals −ΔG. If ΔG is negative, the magnitude |ΔG| represents the maximum work the system can perform.",
       "explanation_incorrect": "ΔH includes both useful work and heat exchanged with surroundings. ΔU is the total energy change at constant volume. TΔS is the heat contribution related to entropy, not the total useful work."
+    },
+    {
+      "question_id": "T06.01.Q051",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does an isothermal process differ from an adiabatic process in terms of the thermodynamic quantity held constant?",
+      "options": [
+        {"id": "A", "text": "Isothermal holds pressure constant; adiabatic holds volume constant"},
+        {"id": "B", "text": "Isothermal holds temperature constant; adiabatic holds heat exchange at zero"},
+        {"id": "C", "text": "Isothermal holds entropy constant; adiabatic holds enthalpy constant"},
+        {"id": "D", "text": "Isothermal holds internal energy constant; adiabatic holds temperature constant"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an isothermal process, temperature remains constant (dT = 0), so the system must exchange heat with the surroundings. In an adiabatic process, no heat is exchanged (q = 0), so temperature generally changes as work is done.",
+      "explanation_incorrect": "Constant pressure defines an isobaric process, and constant volume defines an isochoric process — neither describes isothermal or adiabatic. Entropy is not held constant in isothermal processes. Internal energy is constant in isothermal processes only for ideal gases, which is not the defining condition."
+    },
+    {
+      "question_id": "T06.01.Q052",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the work done during reversible isothermal expansion differ from that during irreversible expansion against constant external pressure for the same initial and final volumes?",
+      "options": [
+        {"id": "A", "text": "Reversible work is smaller in magnitude than irreversible work"},
+        {"id": "B", "text": "Reversible work is larger in magnitude than irreversible work"},
+        {"id": "C", "text": "Both are equal because work is a state function"},
+        {"id": "D", "text": "Reversible work is zero while irreversible work is non-zero"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For expansion, the magnitude of work done by the gas is maximum in a reversible process because at every step the external pressure is only infinitesimally less than the internal pressure. In irreversible expansion against a constant (lower) external pressure, less work is obtained. Work is a path function, so the two values differ even for the same initial and final states.",
+      "explanation_incorrect": "Reversible work is not smaller — it is the theoretical maximum. They are not equal because work is a path function, not a state function. Reversible work is certainly not zero; only free expansion into vacuum gives w = 0."
+    },
+    {
+      "question_id": "T06.01.Q053",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the standard enthalpy of formation (ΔfH°) differ from the standard enthalpy of combustion (ΔcH°) in terms of the reaction they describe?",
+      "options": [
+        {"id": "A", "text": "ΔfH° describes formation of one mole of a compound from its elements in standard states; ΔcH° describes complete burning of one mole of a substance in excess O₂"},
+        {"id": "B", "text": "ΔfH° is always negative; ΔcH° is always positive"},
+        {"id": "C", "text": "ΔfH° involves only gaseous reactants; ΔcH° involves only solid reactants"},
+        {"id": "D", "text": "ΔfH° uses Hess's law; ΔcH° does not use Hess's law"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The standard enthalpy of formation refers to the enthalpy change when one mole of a compound is formed from its constituent elements, each in their standard state (most stable form at 1 bar, 298 K). The standard enthalpy of combustion refers to the enthalpy change when one mole of a substance is completely burned in excess oxygen under standard conditions.",
+      "explanation_incorrect": "ΔfH° can be positive or negative (e.g., ΔfH° of NO is positive). ΔcH° is always negative. Reactants in formation reactions can be in any standard phase (solid, liquid, or gas). Both quantities can be determined using Hess's law."
+    },
+    {
+      "question_id": "T06.01.Q054",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does a process with ΔH > 0 and ΔS > 0 differ from one with ΔH > 0 and ΔS < 0 in terms of their temperature-dependent spontaneity?",
+      "options": [
+        {"id": "A", "text": "The first becomes spontaneous at high T; the second is never spontaneous"},
+        {"id": "B", "text": "The first is never spontaneous; the second becomes spontaneous at high T"},
+        {"id": "C", "text": "Both become spontaneous at the same temperature"},
+        {"id": "D", "text": "The first is spontaneous at low T; the second is spontaneous at high T"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For ΔH > 0, ΔS > 0: ΔG = ΔH − TΔS becomes negative at sufficiently high T (when TΔS > ΔH), so it is spontaneous at high temperatures. For ΔH > 0, ΔS < 0: ΔG = ΔH − TΔS is always positive because both ΔH and −TΔS are positive at all temperatures, making the process non-spontaneous at every temperature.",
+      "explanation_incorrect": "A process with ΔH > 0 and ΔS > 0 is not never spontaneous — it becomes spontaneous at high T. The ΔH > 0, ΔS < 0 case is never spontaneous, not spontaneous at high T. They do not become spontaneous at the same temperature because they have fundamentally different thermodynamic behaviours."
+    },
+    {
+      "question_id": "T06.01.Q055",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the Gibbs free energy criterion for spontaneity (ΔG < 0) differ from the entropy criterion (ΔS_universe > 0)?",
+      "options": [
+        {"id": "A", "text": "ΔG applies only to isolated systems; ΔS_universe applies to all systems"},
+        {"id": "B", "text": "ΔG focuses on the system at constant T and P; ΔS_universe considers both system and surroundings"},
+        {"id": "C", "text": "ΔG predicts spontaneity at constant volume; ΔS_universe predicts spontaneity at constant pressure"},
+        {"id": "D", "text": "ΔG is a path function; ΔS_universe is a state function"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Gibbs free energy criterion (ΔG < 0) is derived from the condition ΔS_universe > 0 but is expressed entirely in terms of system properties (ΔH and ΔS of the system) at constant T and P. The entropy criterion (ΔS_universe > 0) is the fundamental second-law condition and explicitly considers entropy changes of both the system and surroundings. Both criteria are equivalent at constant T and P.",
+      "explanation_incorrect": "ΔG applies to closed systems at constant T and P, not isolated systems. ΔG is the constant-pressure criterion; the Helmholtz energy (A) is for constant volume. Both ΔG and ΔS are state functions."
+    },
+    {
+      "question_id": "T06.01.Q056",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A system can exchange energy with its surroundings but no matter can enter or leave it. This system is classified as:",
+      "options": [
+        {"id": "A", "text": "Open system"},
+        {"id": "B", "text": "Closed system"},
+        {"id": "C", "text": "Isolated system"},
+        {"id": "D", "text": "Adiabatic system"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A system that permits energy transfer (as heat or work) but does not allow matter to cross its boundary is, by definition, a closed system. A sealed gas cylinder being heated is a common example.",
+      "explanation_incorrect": "An open system allows both energy and matter exchange. An isolated system allows neither. An adiabatic system specifically prevents heat exchange but may or may not exchange matter — it is a process descriptor, not a system classification."
+    },
+    {
+      "question_id": "T06.01.Q057",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A thermochemical quantity has these features: it is measured when one mole of a substance reacts completely with excess oxygen, it is always negative, and the products are CO₂(g) and H₂O(l). This quantity is:",
+      "options": [
+        {"id": "A", "text": "Standard enthalpy of formation"},
+        {"id": "B", "text": "Standard enthalpy of combustion"},
+        {"id": "C", "text": "Standard enthalpy of atomisation"},
+        {"id": "D", "text": "Standard enthalpy of neutralisation"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The standard enthalpy of combustion (ΔcH°) is defined as the enthalpy change when one mole of a substance undergoes complete combustion in excess oxygen under standard conditions. It is always negative (exothermic), and for organic compounds the products are CO₂(g) and H₂O(l).",
+      "explanation_incorrect": "Enthalpy of formation describes forming a compound from its elements, not combustion in oxygen. Enthalpy of atomisation converts a substance to gaseous atoms. Enthalpy of neutralisation involves acid-base reactions, not combustion."
+    },
+    {
+      "question_id": "T06.01.Q058",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A thermodynamic quantity has these characteristics: it measures the degree of disorder in a system, it is a state function, and it increases when a solid dissolves in a liquid. This quantity is:",
+      "options": [
+        {"id": "A", "text": "Enthalpy (H)"},
+        {"id": "B", "text": "Internal energy (U)"},
+        {"id": "C", "text": "Entropy (S)"},
+        {"id": "D", "text": "Gibbs free energy (G)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Entropy (S) is a state function that quantifies the degree of randomness or disorder in a system. When a solid dissolves in a liquid, the ordered crystal lattice breaks apart and particles disperse randomly, increasing entropy.",
+      "explanation_incorrect": "Enthalpy measures heat content at constant pressure, not disorder. Internal energy measures total kinetic and potential energy of particles. Gibbs free energy combines enthalpy and entropy but does not directly measure disorder."
+    },
+    {
+      "question_id": "T06.01.Q059",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A reaction has ΔG = 0 and the forward and reverse rates are equal. This condition is classified as:",
+      "options": [
+        {"id": "A", "text": "Spontaneous process"},
+        {"id": "B", "text": "Non-spontaneous process"},
+        {"id": "C", "text": "Thermodynamic equilibrium"},
+        {"id": "D", "text": "Irreversible process"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "When ΔG = 0, the system is at thermodynamic equilibrium. There is no net driving force for the reaction to proceed in either direction, and the forward and reverse rates are equal (dynamic equilibrium).",
+      "explanation_incorrect": "A spontaneous process requires ΔG < 0. A non-spontaneous process has ΔG > 0. An irreversible process proceeds in one direction with ΔG ≠ 0 and increases the total entropy of the universe."
+    },
+    {
+      "question_id": "T06.01.Q060",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya heats 2 mol of an ideal gas in a sealed rigid steel container from 300 K to 600 K in her school laboratory. Which of the following correctly describes the thermodynamic changes in the gas?",
+      "options": [
+        {"id": "A", "text": "w = 0 and ΔU = qᵥ, because no expansion work is done at constant volume"},
+        {"id": "B", "text": "q = 0 and ΔU = w, because the container is sealed"},
+        {"id": "C", "text": "ΔH = 0, because temperature increases cancel out"},
+        {"id": "D", "text": "ΔU = 0, because the gas is ideal"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The rigid steel container means the volume is constant (isochoric process). At constant volume, no expansion work is done: w = −P_ext ΔV = 0. From the first law, ΔU = q + w = q + 0 = qᵥ. All the heat supplied goes into increasing the internal energy of the gas.",
+      "explanation_incorrect": "A sealed container does not mean q = 0 — heat is being supplied externally. ΔH is not zero because enthalpy changes with temperature. ΔU = 0 applies to isothermal processes for ideal gases, not when temperature increases from 300 K to 600 K."
+    },
+    {
+      "question_id": "T06.01.Q061",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is performing a calorimetry experiment in his chemistry lab. He burns 1.00 g of ethanol (C₂H₅OH, molar mass = 46 g/mol) in a bomb calorimeter and measures a temperature rise of 4.6 °C. The heat capacity of the calorimeter is 2500 J/°C. What is the molar enthalpy of combustion of ethanol based on Amit's data?",
+      "options": [
+        {"id": "A", "text": "−529 kJ/mol"},
+        {"id": "B", "text": "−11.5 kJ/mol"},
+        {"id": "C", "text": "−250 kJ/mol"},
+        {"id": "D", "text": "−1059 kJ/mol"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Heat released = C_cal × ΔT = 2500 × 4.6 = 11,500 J = 11.5 kJ. Moles of ethanol burned = 1.00/46 = 0.02174 mol. Molar enthalpy of combustion = −11.5/0.02174 = −529 kJ/mol (negative because combustion is exothermic).",
+      "explanation_incorrect": "−11.5 kJ/mol is the total heat released, not the molar value. −250 kJ/mol uses an incorrect moles calculation. −1059 kJ/mol doubles the correct answer, as if 0.5 g were used instead of 1.00 g."
+    },
+    {
+      "question_id": "T06.01.Q062",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is studying the decomposition of calcium carbonate: CaCO₃(s) → CaO(s) + CO₂(g), which has ΔH = +178 kJ/mol and ΔS = +161 J/(mol·K). She wants to determine the minimum temperature at which this reaction becomes spontaneous. What should she calculate?",
+      "options": [
+        {"id": "A", "text": "T = ΔH/ΔS = 178000/161 ≈ 1106 K, so the reaction is spontaneous above about 1106 K"},
+        {"id": "B", "text": "T = ΔS/ΔH = 161/178000 ≈ 0.0009 K, so the reaction is spontaneous above 0.0009 K"},
+        {"id": "C", "text": "T = ΔH × ΔS = 178 × 161 ≈ 28658 K, so the reaction is never practically spontaneous"},
+        {"id": "D", "text": "The reaction is spontaneous at all temperatures because both ΔH and ΔS are positive"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At the crossover temperature, ΔG = 0, so ΔH = TΔS. Solving: T = ΔH/ΔS = 178,000 J mol⁻¹ / 161 J mol⁻¹ K⁻¹ ≈ 1106 K. Above this temperature, TΔS > ΔH and ΔG < 0, making the decomposition spontaneous. This explains why limestone must be heated to high temperatures in lime kilns.",
+      "explanation_incorrect": "T = ΔS/ΔH inverts the formula. T = ΔH × ΔS is dimensionally incorrect. The reaction is not spontaneous at all temperatures — at low temperatures the positive ΔH dominates, making ΔG > 0."
+    },
+    {
+      "question_id": "T06.01.Q063",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Arjun dissolves ammonium nitrate (NH₄NO₃) in water for a cold pack experiment in his school lab. The solution becomes noticeably cold. Given that the dissolution is spontaneous at room temperature despite being endothermic, what drives this process?",
+      "options": [
+        {"id": "A", "text": "The enthalpy decrease (ΔH < 0) makes ΔG negative"},
+        {"id": "B", "text": "The large positive entropy change (ΔS > 0) makes TΔS > ΔH, so ΔG < 0"},
+        {"id": "C", "text": "The process is non-spontaneous; it occurs only because Arjun stirs the solution"},
+        {"id": "D", "text": "The process releases latent heat that compensates for the cooling effect"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The dissolution of NH₄NO₃ is endothermic (ΔH > 0), which is why the solution cools. Despite this, the process is spontaneous because the entropy increase upon dissolving the ionic solid in water is large enough that TΔS > ΔH, making ΔG = ΔH − TΔS < 0. This is an entropy-driven process.",
+      "explanation_incorrect": "ΔH is positive (endothermic), not negative — the solution cools. Stirring does not make a non-spontaneous process spontaneous; it only speeds dissolution. No latent heat is released — the cooling confirms heat is absorbed from the surroundings."
+    },
+    {
+      "question_id": "T06.01.Q064",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera sets up an experiment where an ideal gas is compressed adiabatically from 5 L to 2 L. She records that 500 J of work is done on the gas. What are the values of q and ΔU for this process?",
+      "options": [
+        {"id": "A", "text": "q = 0 and ΔU = +500 J"},
+        {"id": "B", "text": "q = +500 J and ΔU = 0"},
+        {"id": "C", "text": "q = −500 J and ΔU = 0"},
+        {"id": "D", "text": "q = 0 and ΔU = −500 J"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In an adiabatic process, q = 0 (no heat exchange with surroundings). From the first law (IUPAC convention), ΔU = q + w = 0 + 500 = +500 J. The work done on the gas increases its internal energy (and hence its temperature).",
+      "explanation_incorrect": "q ≠ +500 J because no heat is exchanged in an adiabatic process. ΔU is not zero — it equals the work done on the gas. ΔU is +500 J (positive), not −500 J, because work is done on the system."
+    },
+    {
+      "question_id": "T06.01.Q065",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following elements does NOT have a standard enthalpy of formation (ΔfH°) equal to zero?",
+      "options": [
+        {"id": "A", "text": "O₂(g)"},
+        {"id": "B", "text": "C(graphite)"},
+        {"id": "C", "text": "C(diamond)"},
+        {"id": "D", "text": "Fe(s)"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "ΔfH° is zero only for elements in their most stable allotropic form at standard conditions. Graphite, not diamond, is the most stable allotrope of carbon. Therefore ΔfH° of C(diamond) is not zero — it is +1.9 kJ/mol, representing the energy needed to convert graphite to diamond.",
+      "explanation_incorrect": "O₂(g) is the most stable form of oxygen at standard conditions, so its ΔfH° = 0. C(graphite) is the standard state of carbon, so ΔfH° = 0. Fe(s) is the standard state of iron, so ΔfH° = 0."
+    },
+    {
+      "question_id": "T06.01.Q066",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following spontaneous processes does NOT have a positive entropy change for the system (ΔS_system)?",
+      "options": [
+        {"id": "A", "text": "Evaporation of water at 100 °C"},
+        {"id": "B", "text": "Dissolution of NaCl in water"},
+        {"id": "C", "text": "Freezing of water at −10 °C"},
+        {"id": "D", "text": "Expansion of a gas into a vacuum"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Freezing of water at −10 °C is spontaneous (below the freezing point), yet the system entropy decreases (ΔS_system < 0) because liquid water becomes more ordered solid ice. This process is driven by the large exothermic enthalpy change (ΔH < 0), which increases the entropy of the surroundings enough to make ΔS_universe > 0.",
+      "explanation_incorrect": "Evaporation increases system entropy (liquid → gas). Dissolution of NaCl increases system entropy (ordered crystal → dispersed ions). Gas expansion into vacuum increases system entropy (greater volume, more microstates). All three have ΔS_system > 0."
+    },
+    {
+      "question_id": "T06.01.Q067",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A student claims that all exothermic reactions (ΔH < 0) are spontaneous. Which of the following exothermic reactions is NOT spontaneous at 298 K? (Assume standard conditions.)",
+      "options": [
+        {"id": "A", "text": "Combustion of methane: CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(l)"},
+        {"id": "B", "text": "Rusting of iron: 4Fe(s) + 3O₂(g) → 2Fe₂O₃(s)"},
+        {"id": "C", "text": "A hypothetical reaction with ΔH = −10 kJ/mol and ΔS = −200 J/(mol·K)"},
+        {"id": "D", "text": "Neutralisation of HCl with NaOH"}
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For this reaction, ΔG = ΔH − TΔS = −10,000 − 298 × (−200) = −10,000 + 59,600 = +49,600 J/mol = +49.6 kJ/mol. Since ΔG > 0, the reaction is non-spontaneous at 298 K despite being exothermic. The highly negative ΔS makes the −TΔS term large and positive, overwhelming the favourable ΔH.",
+      "explanation_incorrect": "Combustion of methane is highly spontaneous (very negative ΔG). Rusting of iron is spontaneous at 298 K (ΔG < 0). Neutralisation of a strong acid by a strong base is spontaneous. Only the reaction with a very large negative entropy change is non-spontaneous despite being exothermic."
+    },
+    {
+      "question_id": "T06.01.Q068",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the relationship ΔH = qₚ valid only at constant pressure and not at constant volume?",
+      "options": [
+        {"id": "A", "text": "Because at constant volume, no work is done, so all heat goes into internal energy (qᵥ = ΔU), not enthalpy"},
+        {"id": "B", "text": "Because enthalpy is only defined at constant pressure"},
+        {"id": "C", "text": "Because heat capacity at constant pressure is always larger than at constant volume"},
+        {"id": "D", "text": "Because the first law of thermodynamics only applies at constant pressure"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Enthalpy is defined as H = U + PV. At constant pressure, ΔH = ΔU + PΔV = (q + w) + PΔV. Since w = −PΔV for expansion work at constant P, ΔH = q − PΔV + PΔV = qₚ. At constant volume, w = 0 and the heat absorbed equals ΔU (qᵥ = ΔU), not ΔH. The PΔV work term makes the difference.",
+      "explanation_incorrect": "Enthalpy is defined at all conditions, not just constant pressure — the equation ΔH = qₚ is a special case. While Cₚ > Cᵥ is true for gases, this does not explain why ΔH ≠ qᵥ. The first law applies universally, not just at constant pressure."
+    },
+    {
+      "question_id": "T06.01.Q069",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the entropy of a gas higher than that of a liquid at the same temperature?",
+      "options": [
+        {"id": "A", "text": "Because gas molecules have stronger intermolecular forces, leading to more vibrational modes"},
+        {"id": "B", "text": "Because gas molecules occupy a much larger volume with far greater translational freedom, resulting in a vastly larger number of accessible microstates"},
+        {"id": "C", "text": "Because gas molecules have lower kinetic energy and thus more randomness"},
+        {"id": "D", "text": "Because gases always have higher enthalpy than liquids"}
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Entropy is related to the number of microstates (S = kB ln W). Gas molecules are spread over a much larger volume compared to the liquid phase, with much greater translational freedom and negligible intermolecular constraints. This results in an enormously larger number of accessible microstates and hence higher entropy.",
+      "explanation_incorrect": "Gas molecules have weaker, not stronger, intermolecular forces. At the same temperature, gas and liquid molecules have the same average kinetic energy — randomness arises from spatial freedom, not lower energy. Enthalpy is generally higher for gases, but that is not why entropy is higher; entropy specifically relates to disorder and microstates."
+    },
+    {
+      "question_id": "T06.01.Q070",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is the dissolution of NH₄NO₃ in water spontaneous at room temperature even though it is endothermic (ΔH > 0)?",
+      "options": [
+        {"id": "A", "text": "Because the large positive entropy change from ion hydration and lattice disruption makes TΔS > ΔH, so ΔG < 0"},
+        {"id": "B", "text": "Because the enthalpy of hydration is greater than the lattice enthalpy, making ΔH negative overall"},
+        {"id": "C", "text": "Because the activation energy is very low, allowing the reaction to proceed"},
+        {"id": "D", "text": "Because the equilibrium constant is less than 1, making ΔG° negative"}
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Although dissolving NH₄NO₃ absorbs heat (ΔH > 0), the process results in a large increase in entropy as the ordered ionic lattice breaks apart and ions become dispersed in the solvent. At room temperature, the TΔS term is large enough to exceed ΔH, making ΔG = ΔH − TΔS negative and the process spontaneous. This is a classic example of an entropy-driven process.",
+      "explanation_incorrect": "The dissolution is endothermic precisely because the lattice enthalpy exceeds the hydration enthalpy, so ΔH is not negative. Activation energy determines reaction rate, not spontaneity. If K > 1 (dissolution is spontaneous), then ΔG° is negative, not the reverse — and K < 1 would mean ΔG° > 0."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 22,
+        "application": 27,
+        "exam_style": 21
+      },
+      "by_type": {
+        "mcq": 70
+      },
+      "by_cognitive_level": {
+        "recall": 47,
+        "compare": 5,
+        "classify": 6,
+        "scenario": 5,
+        "exception": 4,
+        "reason": 3
+      }
+    }
+  }
 }

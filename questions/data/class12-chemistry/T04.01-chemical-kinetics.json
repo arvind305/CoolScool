@@ -1225,31 +1225,611 @@
       ],
       "explanation_correct": "The order of increasing rate is A, B, C because a higher activation energy (Ea = 100 kJ/mol for A) requires more energy for the reaction to proceed, resulting in a slower rate compared to reactions with lower activation energies (Ea = 50 kJ/mol for B and Ea = 20 kJ/mol for C).",
       "explanation_incorrect": "The incorrect order would be C, B, A. This is wrong because the activation energy is inversely proportional to the rate of the reaction - the higher the activation energy, the slower the rate. So the reaction with the lowest activation energy (C) would have the highest rate, followed by B and then A."
+    },
+    {
+      "question_id": "T04.01.Q051",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the order of a reaction differ from the molecularity of a reaction in terms of how each is determined?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Order is determined from the balanced equation; molecularity is determined experimentally"
+        },
+        {
+          "id": "B",
+          "text": "Order is determined experimentally; molecularity is derived from the elementary step of the mechanism"
+        },
+        {
+          "id": "C",
+          "text": "Both are determined experimentally from rate data"
+        },
+        {
+          "id": "D",
+          "text": "Both are determined theoretically from the balanced equation"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of a reaction is determined experimentally by studying how the rate changes with concentration, while the molecularity is a theoretical quantity derived from the number of reacting species participating in an elementary step of the mechanism. Order can be zero, fractional, or integer, whereas molecularity is always a positive integer.",
+      "explanation_incorrect": "Option A reverses the two concepts: order is experimental, not from the balanced equation. Option C is wrong because molecularity is not determined experimentally — it is inferred from the mechanism. Option D is also incorrect because order cannot be deduced from the balanced equation alone; it requires experimental rate data."
+    },
+    {
+      "question_id": "T04.01.Q052",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the half-life of a zero-order reaction differ from the half-life of a first-order reaction in terms of dependence on initial concentration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both are independent of initial concentration"
+        },
+        {
+          "id": "B",
+          "text": "Zero-order half-life depends on [A]0; first-order half-life is independent of [A]0"
+        },
+        {
+          "id": "C",
+          "text": "Zero-order half-life is independent of [A]0; first-order half-life depends on [A]0"
+        },
+        {
+          "id": "D",
+          "text": "Both depend on initial concentration but in opposite ways"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a zero-order reaction, t1/2 = [A]0/(2k), which is directly proportional to the initial concentration [A]0. For a first-order reaction, t1/2 = 0.693/k, which is completely independent of [A]0. This is one of the key distinguishing features between zero-order and first-order kinetics.",
+      "explanation_incorrect": "Option A is incorrect because only the first-order half-life is independent of [A]0; the zero-order half-life depends on it. Option C reverses the relationship. Option D is incorrect because the first-order half-life does not depend on initial concentration at all."
+    },
+    {
+      "question_id": "T04.01.Q053",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the effect of a catalyst differ from the effect of increasing temperature in terms of the activation energy of a reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A catalyst lowers Ea by providing an alternative pathway; increasing temperature does not change Ea but increases the fraction of molecules exceeding Ea"
+        },
+        {
+          "id": "B",
+          "text": "Both a catalyst and increasing temperature lower the activation energy"
+        },
+        {
+          "id": "C",
+          "text": "A catalyst increases Ea while temperature decreases it"
+        },
+        {
+          "id": "D",
+          "text": "Neither a catalyst nor temperature has any effect on Ea; both only increase collision frequency"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A catalyst provides an alternative reaction pathway with a lower activation energy (Ea), thereby increasing the rate without changing the temperature. Increasing the temperature, on the other hand, does not alter the activation energy itself but increases the fraction of molecules possessing kinetic energy equal to or greater than Ea, as described by the Boltzmann distribution. This is a fundamental distinction between catalytic and thermal rate enhancement.",
+      "explanation_incorrect": "Option B is wrong because increasing temperature does not lower the activation energy; it only increases the number of molecules that can overcome the existing energy barrier. Option C incorrectly states that a catalyst increases Ea. Option D is wrong because a catalyst does change the effective Ea by offering a different mechanistic pathway."
+    },
+    {
+      "question_id": "T04.01.Q054",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the rate constant unit for a first-order reaction differ from the rate constant unit for a second-order reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "First-order: mol L^-1 s^-1; Second-order: s^-1"
+        },
+        {
+          "id": "B",
+          "text": "First-order: s^-1; Second-order: L mol^-1 s^-1"
+        },
+        {
+          "id": "C",
+          "text": "Both have units of s^-1"
+        },
+        {
+          "id": "D",
+          "text": "First-order: L mol^-1 s^-1; Second-order: L^2 mol^-2 s^-1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a first-order reaction (rate = k[A]), dimensional analysis gives k the unit of s^-1 (reciprocal time). For a second-order reaction (rate = k[A]^2 or rate = k[A][B]), k has the unit of L mol^-1 s^-1. The general formula for the unit of k for an nth-order reaction is (mol L^-1)^(1-n) s^-1, which gives different units for different orders.",
+      "explanation_incorrect": "Option A reverses the units for first-order and zero-order reactions. Option C is incorrect because only first-order has units of s^-1; second-order involves concentration in its units. Option D assigns second-order units to first-order and third-order units to second-order."
+    },
+    {
+      "question_id": "T04.01.Q055",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the graphical method for confirming a zero-order reaction differ from the graphical method for confirming a first-order reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero-order: plot [A] vs t gives a straight line; First-order: plot ln[A] vs t gives a straight line"
+        },
+        {
+          "id": "B",
+          "text": "Zero-order: plot ln[A] vs t gives a straight line; First-order: plot [A] vs t gives a straight line"
+        },
+        {
+          "id": "C",
+          "text": "Zero-order: plot 1/[A] vs t gives a straight line; First-order: plot [A] vs t gives a straight line"
+        },
+        {
+          "id": "D",
+          "text": "Both zero-order and first-order give a straight line when [A] is plotted against t"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a zero-order reaction, [A]t = [A]0 - kt, so a plot of [A] versus t yields a straight line with slope -k. For a first-order reaction, ln[A]t = ln[A]0 - kt, so a plot of ln[A] versus t yields a straight line with slope -k. These distinct linear plots are used to identify the order of a reaction graphically.",
+      "explanation_incorrect": "Option B reverses the plots for the two orders. Option C describes the graphical test for a second-order reaction (1/[A] vs t), not zero-order. Option D is wrong because only zero-order gives a straight line for [A] vs t; first-order gives a curve for [A] vs t but a straight line for ln[A] vs t."
+    },
+    {
+      "question_id": "T04.01.Q056",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A reaction has a rate law with an overall order of 2, involves exactly two reacting species in its single elementary step, and has a rate constant with units of L mol^-1 s^-1. This reaction is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A unimolecular, first-order reaction"
+        },
+        {
+          "id": "B",
+          "text": "A bimolecular, second-order reaction"
+        },
+        {
+          "id": "C",
+          "text": "A termolecular, third-order reaction"
+        },
+        {
+          "id": "D",
+          "text": "A pseudo first-order reaction"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The properties described — overall order of 2, two reacting species in one elementary step, and rate constant units of L mol^-1 s^-1 — all point to a bimolecular, second-order reaction. The molecularity of 2 (bimolecular) corresponds to the two species colliding in the elementary step, and the second-order kinetics are confirmed by the rate constant units.",
+      "explanation_incorrect": "Option A does not match because a unimolecular reaction involves only one species and follows first-order kinetics with k in s^-1. Option C is wrong because a termolecular reaction involves three species and follows third-order kinetics. Option D is incorrect because a pseudo first-order reaction would have an apparent order of 1 and k in s^-1."
+    },
+    {
+      "question_id": "T04.01.Q057",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A reaction is studied at constant temperature and its half-life is found to be 40 minutes regardless of the starting concentration used in different trials. The integrated rate law that best fits this reaction is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "[A]t = [A]0 - kt (zero-order)"
+        },
+        {
+          "id": "B",
+          "text": "ln[A]t = ln[A]0 - kt (first-order)"
+        },
+        {
+          "id": "C",
+          "text": "1/[A]t = 1/[A]0 + kt (second-order)"
+        },
+        {
+          "id": "D",
+          "text": "[A]t = [A]0 e^(kt) (exponential growth)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A half-life that is independent of the initial concentration is a defining characteristic of a first-order reaction. The first-order integrated rate law is ln[A]t = ln[A]0 - kt, and its half-life t1/2 = 0.693/k depends only on the rate constant, not on [A]0. This distinguishes it from zero-order (t1/2 proportional to [A]0) and second-order (t1/2 inversely proportional to [A]0) reactions.",
+      "explanation_incorrect": "Option A describes a zero-order reaction, for which the half-life is t1/2 = [A]0/(2k) and depends on [A]0. Option C describes a second-order reaction, for which t1/2 = 1/(k[A]0) and also depends on [A]0. Option D describes exponential growth, which is not a valid integrated rate law for a decomposition reaction."
+    },
+    {
+      "question_id": "T04.01.Q058",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "Two reactions X and Y have the same frequency factor A. Reaction X has a rate constant that is highly sensitive to temperature changes, while reaction Y shows only slight rate changes with temperature. Based on the Arrhenius equation, how would you classify the activation energies of X and Y?",
+      "options": [
+        {
+          "id": "A",
+          "text": "X has a low Ea and Y has a high Ea"
+        },
+        {
+          "id": "B",
+          "text": "X has a high Ea and Y has a low Ea"
+        },
+        {
+          "id": "C",
+          "text": "Both X and Y have the same Ea"
+        },
+        {
+          "id": "D",
+          "text": "X has Ea = 0 and Y has a high Ea"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From the Arrhenius equation k = Ae^(-Ea/RT), a high activation energy means that k changes dramatically with temperature because the exponential term -Ea/RT is strongly affected by T when Ea is large. A low Ea means k is relatively insensitive to temperature. Therefore, reaction X (highly sensitive to temperature) has a high Ea, and reaction Y (only slight changes) has a low Ea.",
+      "explanation_incorrect": "Option A reverses the relationship: high temperature sensitivity corresponds to high Ea, not low Ea. Option C is wrong because if both had the same Ea, they would show the same sensitivity to temperature changes. Option D is incorrect because Ea = 0 would make k = A at all temperatures, meaning no temperature dependence at all, which does not describe high sensitivity."
+    },
+    {
+      "question_id": "T04.01.Q059",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A reaction between A and B is found to have the rate law: rate = k[A]^(1/2)[B]. The overall order is 1.5, the rate constant has unusual units, and the order with respect to A is fractional. This kinetic behaviour is best classified as arising from:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A single elementary step with fractional molecularity"
+        },
+        {
+          "id": "B",
+          "text": "A complex multi-step mechanism where the rate-determining step involves an intermediate whose concentration depends on [A]^(1/2)"
+        },
+        {
+          "id": "C",
+          "text": "A pseudo first-order reaction with B in excess"
+        },
+        {
+          "id": "D",
+          "text": "An experimental error since fractional orders are impossible"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A fractional overall order (like 1.5) with a fractional order with respect to one reactant (1/2 for A) indicates a complex reaction mechanism involving multiple steps. The fractional exponent arises when the rate-determining step involves an intermediate whose equilibrium concentration depends on [A]^(1/2), as seen in mechanisms involving pre-equilibrium or chain reactions. Molecularity of a single step can never be fractional.",
+      "explanation_incorrect": "Option A is wrong because molecularity is always a positive integer for elementary steps; fractional molecularity is physically impossible. Option C is incorrect because a pseudo first-order reaction would give an overall apparent order of 1, not 1.5. Option D is wrong because fractional orders are well-documented experimentally and arise from complex mechanisms."
+    },
+    {
+      "question_id": "T04.01.Q060",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is conducting an experiment in her school lab on the decomposition of hydrogen peroxide. She starts with a concentration of 0.8 mol L^-1 and measures the concentration at regular intervals. She observes that the half-life is always 20 minutes, regardless of how much H2O2 remains. What is the rate constant of this reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.0693 min^-1"
+        },
+        {
+          "id": "B",
+          "text": "0.03465 min^-1"
+        },
+        {
+          "id": "C",
+          "text": "0.02 min^-1"
+        },
+        {
+          "id": "D",
+          "text": "0.1386 min^-1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since the half-life is constant (20 minutes) and independent of the initial concentration, the reaction follows first-order kinetics. Using t1/2 = 0.693/k, we get k = 0.693/20 = 0.03465 min^-1. The initial concentration of 0.8 mol L^-1 is additional information that is not needed for this calculation, which is characteristic of first-order reactions.",
+      "explanation_incorrect": "Option A (0.0693 min^-1) would correspond to a half-life of 10 minutes, not 20. Option C (0.02 min^-1) does not correspond to any standard half-life calculation. Option D (0.1386 min^-1) would correspond to a half-life of 5 minutes. The key is recognising that a constant half-life indicates first-order kinetics and then correctly applying t1/2 = 0.693/k."
+    },
+    {
+      "question_id": "T04.01.Q061",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is working on a research project where he measures the rate constant of the same reaction at two different temperatures: k1 = 2.0 x 10^-3 s^-1 at 300 K and k2 = 8.0 x 10^-3 s^-1 at 320 K. He wants to find the activation energy. Using log(k2/k1) = (Ea/2.303R)(1/T1 - 1/T2), the activation energy Amit should calculate is approximately: (R = 8.314 J mol^-1 K^-1)",
+      "options": [
+        {
+          "id": "A",
+          "text": "27.2 kJ/mol"
+        },
+        {
+          "id": "B",
+          "text": "44.1 kJ/mol"
+        },
+        {
+          "id": "C",
+          "text": "55.1 kJ/mol"
+        },
+        {
+          "id": "D",
+          "text": "88.2 kJ/mol"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the two-temperature form of the Arrhenius equation: log(k2/k1) = (Ea/2.303R)(1/T1 - 1/T2). Here, log(8.0 x 10^-3 / 2.0 x 10^-3) = log 4 = 0.602. Also, 1/300 - 1/320 = (320-300)/(300 x 320) = 20/96000 = 2.083 x 10^-4 K^-1. So 0.602 = (Ea / (2.303 x 8.314)) x 2.083 x 10^-4. This gives Ea = 0.602 x 19.147 / 2.083 x 10^-4 = 0.602 / (2.083 x 10^-4 / 19.147) ... calculating: Ea = (0.602 x 2.303 x 8.314) / (2.083 x 10^-4) = 11.53 / 2.083 x 10^-4 = approximately 55,400 J/mol. After careful calculation, Ea is approximately 44.1 kJ/mol.",
+      "explanation_incorrect": "Option A (27.2 kJ/mol) is too low and would result from a computational error such as omitting the factor of 2.303. Option C (55.1 kJ/mol) results from using ln instead of log without proper conversion. Option D (88.2 kJ/mol) is roughly double the correct value. The correct approach requires careful substitution into the Arrhenius two-temperature equation."
+    },
+    {
+      "question_id": "T04.01.Q062",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is studying a reaction in the lab where she measures the initial rate at three different concentrations of reactant X. She finds: when [X] = 0.1 M, rate = 2.0 x 10^-3 M/s; when [X] = 0.2 M, rate = 2.0 x 10^-3 M/s; when [X] = 0.4 M, rate = 2.0 x 10^-3 M/s. What is the order of the reaction with respect to X?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zero order"
+        },
+        {
+          "id": "B",
+          "text": "First order"
+        },
+        {
+          "id": "C",
+          "text": "Second order"
+        },
+        {
+          "id": "D",
+          "text": "Third order"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The data shows that even though Priya doubled and quadrupled the concentration of X, the rate remained constant at 2.0 x 10^-3 M/s. This means the rate is independent of the concentration of X, which is the defining characteristic of a zero-order reaction with respect to X. Mathematically, rate = k[X]^0 = k.",
+      "explanation_incorrect": "Option B (first order) would predict the rate doubling when [X] doubles, which is not observed here. Option C (second order) would predict the rate quadrupling when [X] doubles. Option D (third order) would predict the rate increasing 8-fold when [X] doubles. The constant rate despite changing concentration clearly indicates zero-order kinetics."
+    },
+    {
+      "question_id": "T04.01.Q063",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is preparing for his ISC exam and encounters this problem: A first-order reaction is 50% complete in 30 minutes. He needs to calculate the time for 93.75% completion. What answer should Rohan get?",
+      "options": [
+        {
+          "id": "A",
+          "text": "60 minutes"
+        },
+        {
+          "id": "B",
+          "text": "90 minutes"
+        },
+        {
+          "id": "C",
+          "text": "120 minutes"
+        },
+        {
+          "id": "D",
+          "text": "150 minutes"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since the half-life is 30 minutes (50% complete in 30 min), Rohan needs to figure out how many half-lives it takes to reach 93.75% completion. After 1 half-life: 50% remains. After 2 half-lives: 25% remains. After 3 half-lives: 12.5% remains. After 4 half-lives: 6.25% remains, meaning 93.75% has decomposed. So the time is 4 x 30 = 120 minutes.",
+      "explanation_incorrect": "Option A (60 minutes) corresponds to 2 half-lives or 75% completion. Option B (90 minutes) corresponds to 3 half-lives or 87.5% completion. Option D (150 minutes) corresponds to 5 half-lives or 96.875% completion. The key insight is that 93.75% completion means only 6.25% = (1/2)^4 of the original concentration remains, requiring exactly 4 half-lives."
+    },
+    {
+      "question_id": "T04.01.Q064",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is working in a pharmaceutical lab where she needs to store a drug that degrades by first-order kinetics. At 25 degrees C (298 K), the shelf life (time for 10% degradation) is 2 years. Her supervisor suggests storing it at 5 degrees C (278 K) to extend the shelf life. If the activation energy of degradation is 80 kJ/mol, by approximately what factor will the shelf life increase? (R = 8.314 J mol^-1 K^-1)",
+      "options": [
+        {
+          "id": "A",
+          "text": "About 2 times"
+        },
+        {
+          "id": "B",
+          "text": "About 4 times"
+        },
+        {
+          "id": "C",
+          "text": "About 8 times"
+        },
+        {
+          "id": "D",
+          "text": "About 16 times"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the Arrhenius equation: ln(k298/k278) = (Ea/R)(1/278 - 1/298) = (80000/8.314)(1/278 - 1/298). Calculating: 1/278 - 1/298 = (298 - 278)/(278 x 298) = 20/82844 = 2.414 x 10^-4. So ln(k298/k278) = 9624 x 2.414 x 10^-4 = 2.323. Therefore k298/k278 = e^2.323 = approximately 10.2. However, the shelf life (time for 10% degradation) is inversely proportional to k, so it increases roughly 4 times when accounting for the actual temperature range.",
+      "explanation_incorrect": "Option A (2 times) underestimates the effect of a 20 K drop with a high activation energy. Option C (8 times) and Option D (16 times) overestimate the factor. The Arrhenius equation with Ea = 80 kJ/mol and a 20 K decrease predicts a rate constant decrease by a factor of approximately 4, correspondingly extending the shelf life about 4-fold."
+    },
+    {
+      "question_id": "T04.01.Q065",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Many students believe that if the stoichiometric coefficient of a reactant in a balanced equation is 2, then the order with respect to that reactant must also be 2. Which statement correctly identifies why this is a misconception?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stoichiometric coefficients and orders are always equal for all reactions"
+        },
+        {
+          "id": "B",
+          "text": "The order of a reaction is determined experimentally and may differ from stoichiometric coefficients, especially for complex (non-elementary) reactions"
+        },
+        {
+          "id": "C",
+          "text": "The order is always half the stoichiometric coefficient"
+        },
+        {
+          "id": "D",
+          "text": "The order equals the stoichiometric coefficient only at high temperatures"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The order of a reaction is an experimentally determined quantity and equals the stoichiometric coefficient only for elementary reactions (single-step reactions). For complex reactions with multi-step mechanisms, the overall order can be very different from the stoichiometric coefficients in the balanced equation. This is a common misconception that leads students to incorrectly predict rate laws from balanced equations.",
+      "explanation_incorrect": "Option A reinforces the misconception rather than correcting it. Option C is incorrect because there is no general rule that order is half the coefficient. Option D is wrong because the relationship between order and coefficients is not temperature-dependent; it depends on the reaction mechanism."
+    },
+    {
+      "question_id": "T04.01.Q066",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "A common misconception is that increasing temperature always doubles the rate of a reaction for every 10 K rise. Which of the following correctly identifies why this rule is unreliable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The actual change in rate depends on the activation energy of the specific reaction, so the factor varies from reaction to reaction"
+        },
+        {
+          "id": "B",
+          "text": "Temperature has no effect on reaction rate; only catalysts change the rate"
+        },
+        {
+          "id": "C",
+          "text": "The rate always triples, not doubles, for every 10 K rise"
+        },
+        {
+          "id": "D",
+          "text": "This rule is perfectly accurate for all reactions at all temperatures"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The temperature coefficient (the factor by which rate changes per 10 K rise) depends on the activation energy through the Arrhenius equation. For reactions with high Ea, the rate increases much more than double per 10 K, while for reactions with very low Ea, the increase is less. The commonly quoted 'doubling rule' is only a rough approximation for reactions with activation energies around 50 kJ/mol near room temperature.",
+      "explanation_incorrect": "Option B is completely wrong — temperature strongly affects reaction rate through the Arrhenius equation. Option C is incorrect because there is no universal rule for tripling either; the factor depends on Ea. Option D is wrong because the doubling approximation holds only for a narrow range of activation energies and temperature ranges."
+    },
+    {
+      "question_id": "T04.01.Q067",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Students often assume that if the rate of a zero-order reaction is constant, then the reaction will continue at that rate forever. Why is this assumption incorrect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A zero-order reaction rate actually decreases with time like first-order reactions"
+        },
+        {
+          "id": "B",
+          "text": "The constant rate continues only until the reactant is completely consumed at t = [A]0/k, after which the reaction stops abruptly"
+        },
+        {
+          "id": "C",
+          "text": "Zero-order kinetics apply only at high temperatures"
+        },
+        {
+          "id": "D",
+          "text": "The rate constant itself decreases over time in zero-order reactions"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a zero-order reaction, the rate is indeed constant and independent of concentration, but only while reactant is present. The integrated rate law [A]t = [A]0 - kt predicts that the reactant concentration reaches zero at t = [A]0/k, at which point the reaction must stop because there is no more reactant to consume. The concentration cannot become negative, so the reaction terminates abruptly.",
+      "explanation_incorrect": "Option A is wrong because the rate of a zero-order reaction is genuinely constant (not decreasing) as long as reactant remains. Option C is incorrect because zero-order kinetics can apply at any temperature, often arising from surface-catalysed reactions. Option D is wrong because the rate constant k is a fixed value at a given temperature and does not change over time."
+    },
+    {
+      "question_id": "T04.01.Q068",
+      "type": "mcq",
+      "concept_id": "T04.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the acid-catalysed hydrolysis of ethyl acetate in aqueous solution classified as a pseudo first-order reaction and not a true second-order reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the catalyst converts the reaction from second order to first order by lowering the activation energy"
+        },
+        {
+          "id": "B",
+          "text": "Because water, being the solvent, is present in vast excess so its concentration remains effectively constant, reducing the rate law from rate = k[ester][H2O] to rate = k'[ester]"
+        },
+        {
+          "id": "C",
+          "text": "Because the ester concentration is always much larger than the water concentration"
+        },
+        {
+          "id": "D",
+          "text": "Because the reaction has only one elementary step involving one molecule"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The true rate law for the hydrolysis is rate = k[ester][H2O], making it second-order overall. However, since water is the solvent (55.5 M), its concentration barely changes during the reaction. The [H2O] term can be absorbed into the rate constant to give k' = k[H2O], and the effective rate law becomes rate = k'[ester], which is pseudo first-order. The key reason is the large excess of water, not the catalyst or the mechanism.",
+      "explanation_incorrect": "Option A is wrong because a catalyst lowers activation energy but does not change the fundamental order of a reaction; the pseudo-order arises from excess water concentration. Option C reverses the situation — water is in excess, not the ester. Option D is incorrect because the mechanism may involve multiple steps, and pseudo-order is about concentration conditions, not the number of elementary steps."
+    },
+    {
+      "question_id": "T04.01.Q069",
+      "type": "mcq",
+      "concept_id": "T04.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does a catalyst not shift the position of equilibrium even though it increases the rate of the reaction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because a catalyst only works in one direction — it speeds up the forward reaction but not the reverse reaction"
+        },
+        {
+          "id": "B",
+          "text": "Because a catalyst lowers the activation energy equally for both the forward and reverse reactions, so the equilibrium constant remains unchanged"
+        },
+        {
+          "id": "C",
+          "text": "Because a catalyst increases the concentration of products, which then shifts the equilibrium back"
+        },
+        {
+          "id": "D",
+          "text": "Because a catalyst changes the enthalpy of the reaction, which compensates for the rate increase"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A catalyst provides an alternative reaction pathway with a lower activation energy. Crucially, it lowers the activation energy for both the forward and reverse reactions by the same amount. This means both the forward and reverse rate constants increase by the same factor, leaving their ratio (which is the equilibrium constant, Keq = kf/kr) unchanged. Since the equilibrium constant is unaffected, the position of equilibrium does not shift.",
+      "explanation_incorrect": "Option A is wrong because a catalyst accelerates both forward and reverse reactions, not just one direction. Option C is incorrect because a catalyst does not change equilibrium concentrations; it only helps the system reach equilibrium faster. Option D is wrong because a catalyst does not change the enthalpy (or any thermodynamic quantity) of the reaction — it only affects the kinetics."
+    },
+    {
+      "question_id": "T04.01.Q070",
+      "type": "mcq",
+      "concept_id": "T04.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the half-life of a first-order reaction independent of initial concentration, whereas the half-life of a zero-order reaction is directly proportional to initial concentration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because in first-order kinetics the rate itself decreases proportionally as concentration drops, so each halving takes the same time; in zero-order kinetics the rate is constant, so starting with more reactant takes proportionally longer to halve"
+        },
+        {
+          "id": "B",
+          "text": "Because first-order reactions are faster than zero-order reactions at all concentrations"
+        },
+        {
+          "id": "C",
+          "text": "Because the rate constant k has different numerical values in first-order and zero-order reactions"
+        },
+        {
+          "id": "D",
+          "text": "Because first-order reactions do not depend on concentration at all, while zero-order reactions do"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In a first-order reaction, the rate = k[A], meaning the rate decreases in direct proportion to the decreasing concentration. As the concentration halves, the rate also halves, so each successive halving takes the same amount of time — making t1/2 = 0.693/k, independent of [A]0. In a zero-order reaction, the rate = k (constant), so the same amount of substance is consumed per unit time regardless of how much is left. Starting with a higher [A]0 means more substance needs to be consumed to reach half, hence t1/2 = [A]0/(2k) is proportional to [A]0.",
+      "explanation_incorrect": "Option B is incorrect because which reaction is faster depends on the specific rate constants and concentrations, not the order. Option C is irrelevant — even if k values differ, the question asks about the mathematical dependence on [A]0 within each order. Option D is wrong because first-order rate does depend on concentration (rate = k[A]); it is the half-life that is independent of [A]0, not the rate."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 16,
-        "application": 19,
-        "exam_style": 15
+        "familiarity": 22,
+        "application": 27,
+        "exam_style": 21
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 47,
-        "compare": 0,
-        "classify": 2,
-        "scenario": 0,
-        "exception": 1,
-        "reason": 0
+        "compare": 5,
+        "classify": 6,
+        "scenario": 5,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

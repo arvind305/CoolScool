@@ -1230,31 +1230,611 @@
       ],
       "explanation_correct": "The correct order is He, H₂, CO₂, NH₃ from lowest to highest critical temperature. This is because gases with stronger intermolecular forces (like hydrogen bonding in NH₃) are easier to liquefy and have higher critical temperatures compared to gases with weaker forces (like the monatomic He).",
       "explanation_incorrect": "The incorrect order would be H₂, He, CO₂, NH₃. This is because hydrogen (H₂) has a lower critical temperature than helium (He), even though helium is a monatomic gas with weaker intermolecular forces. The correct order is based on the strength of intermolecular forces, with NH₃ being the easiest to liquefy due to its strong hydrogen bonding."
+    },
+    {
+      "question_id": "T05.01.Q051",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does Boyle's law differ from Charles's law in terms of the variable held constant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boyle's law holds temperature constant while Charles's law holds pressure constant"
+        },
+        {
+          "id": "B",
+          "text": "Boyle's law holds pressure constant while Charles's law holds temperature constant"
+        },
+        {
+          "id": "C",
+          "text": "Both laws hold volume constant but differ in the dependent variable"
+        },
+        {
+          "id": "D",
+          "text": "Boyle's law holds amount of gas constant while Charles's law holds volume constant"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Boyle's law studies the pressure-volume relationship at constant temperature (isothermal process), yielding PV = constant. Charles's law studies the volume-temperature relationship at constant pressure (isobaric process), yielding V/T = constant. The key distinction is the constrained variable: temperature for Boyle's law and pressure for Charles's law.",
+      "explanation_incorrect": "Option B reverses the constraints. Option C is incorrect because neither law holds volume constant; Gay-Lussac's law does that. Option D is incorrect because both Boyle's and Charles's laws assume a fixed amount of gas; the distinguishing factor is temperature versus pressure being held constant."
+    },
+    {
+      "question_id": "T05.01.Q052",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the rms speed of gas molecules differ from the most probable speed in terms of their mathematical dependence on temperature and molar mass?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rms speed uses the factor √(3RT/M) while the most probable speed uses √(2RT/M), so the rms speed is always higher by a factor of √(3/2)"
+        },
+        {
+          "id": "B",
+          "text": "The rms speed depends on temperature but the most probable speed does not"
+        },
+        {
+          "id": "C",
+          "text": "The most probable speed is always greater than the rms speed"
+        },
+        {
+          "id": "D",
+          "text": "Both speeds have identical formulae but differ only for real gases"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The rms speed is given by u_rms = √(3RT/M) and the most probable speed by u_mp = √(2RT/M). Both depend on T and M in the same way (directly proportional to √T and inversely proportional to √M), but the numerical prefactor differs: 3 for rms versus 2 for most probable. This makes u_rms/u_mp = √(3/2) ≈ 1.22, so the rms speed is always about 22% higher.",
+      "explanation_incorrect": "Option B is incorrect because both speeds depend on absolute temperature. Option C is wrong because u_rms > u_avg > u_mp always. Option D is incorrect because they have different numerical factors (3 versus 2 under the square root) even for ideal gases."
+    },
+    {
+      "question_id": "T05.01.Q053",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the compressibility factor (Z) of a real gas at low pressures differ from its value at very high pressures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Z < 1 at low pressures due to dominant attractive forces; Z > 1 at very high pressures due to dominant repulsive/volume effects"
+        },
+        {
+          "id": "B",
+          "text": "Z > 1 at both low and high pressures for all real gases"
+        },
+        {
+          "id": "C",
+          "text": "Z = 1 at low pressures and Z < 1 at high pressures"
+        },
+        {
+          "id": "D",
+          "text": "Z is always less than 1 regardless of pressure for any real gas"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At low to moderate pressures, intermolecular attractive forces dominate, pulling molecules closer together than the ideal gas model predicts, giving Z < 1 (the gas is more compressible than ideal). At very high pressures, the finite molecular volume becomes dominant because molecules are forced very close together, making the actual volume larger than the ideal prediction, so Z > 1.",
+      "explanation_incorrect": "Option B is incorrect because most real gases show Z < 1 at moderate pressures. Option C reverses the trend at high pressure. Option D is wrong because all real gases eventually show Z > 1 at sufficiently high pressures when repulsive (volume exclusion) effects dominate."
+    },
+    {
+      "question_id": "T05.01.Q054",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does Dalton's law of partial pressures differ from Graham's law of diffusion in terms of what they describe about gas mixtures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dalton's law describes the total pressure contribution of each gas, while Graham's law describes the relative rate of movement of gas molecules based on molar mass"
+        },
+        {
+          "id": "B",
+          "text": "Both laws describe the same property but using different mathematical formulations"
+        },
+        {
+          "id": "C",
+          "text": "Dalton's law applies only to real gases while Graham's law applies only to ideal gases"
+        },
+        {
+          "id": "D",
+          "text": "Graham's law describes pressure relationships while Dalton's law describes speed relationships"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Dalton's law states that the total pressure of a non-reacting gas mixture equals the sum of partial pressures, where each partial pressure depends on the mole fraction. Graham's law describes diffusion rates, stating that the rate of diffusion of a gas is inversely proportional to the square root of its molar mass. One concerns static pressure contributions; the other concerns dynamic molecular transport.",
+      "explanation_incorrect": "Option B is incorrect because the two laws address fundamentally different properties (pressure vs. diffusion rate). Option C is wrong because both laws were originally formulated for ideal gas behavior. Option D reverses the two laws completely."
+    },
+    {
+      "question_id": "T05.01.Q055",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the van der Waals constant 'a' differ from the constant 'b' in terms of the physical property each corrects for?",
+      "options": [
+        {
+          "id": "A",
+          "text": "'a' corrects for the finite volume of molecules while 'b' corrects for intermolecular attractions"
+        },
+        {
+          "id": "B",
+          "text": "'a' corrects for intermolecular attractive forces while 'b' corrects for the excluded volume due to finite molecular size"
+        },
+        {
+          "id": "C",
+          "text": "Both 'a' and 'b' correct for intermolecular forces but at different temperature ranges"
+        },
+        {
+          "id": "D",
+          "text": "'a' corrects for temperature deviations while 'b' corrects for pressure deviations"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the van der Waals equation (P + an²/V²)(V − nb) = nRT, the constant 'a' appears in the pressure correction term (an²/V²) and accounts for intermolecular attractive forces that reduce the effective pressure exerted by the gas. The constant 'b' appears in the volume correction term (nb) and accounts for the excluded volume, i.e., the volume actually occupied by the gas molecules that is unavailable for free motion.",
+      "explanation_incorrect": "Option A reverses the roles of 'a' and 'b'. Option C is incorrect because 'a' and 'b' correct for different physical properties (attractions vs. volume), not the same property at different temperatures. Option D is wrong because both constants modify the equation to account for molecular interactions and size, not temperature or pressure deviations directly."
+    },
+    {
+      "question_id": "T05.01.Q056",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A gas law is found to relate two variables such that doubling one variable causes the other to halve, while temperature and amount of gas remain fixed. Which gas law does this describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Charles's law"
+        },
+        {
+          "id": "B",
+          "text": "Boyle's law"
+        },
+        {
+          "id": "C",
+          "text": "Avogadro's law"
+        },
+        {
+          "id": "D",
+          "text": "Gay-Lussac's law"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The described relationship is an inverse proportionality between two variables at constant temperature and constant amount of gas. This is Boyle's law, which states P ∝ 1/V at constant T and n. Doubling the pressure halves the volume and vice versa.",
+      "explanation_incorrect": "Option A (Charles's law) describes a direct proportionality between V and T at constant P. Option C (Avogadro's law) describes V ∝ n at constant T and P. Option D (Gay-Lussac's law) describes P ∝ T at constant V. None of these show an inverse relationship between two variables at constant temperature."
+    },
+    {
+      "question_id": "T05.01.Q057",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A molecular speed parameter is defined as the square root of the mean of the squares of all individual molecular speeds in a gas sample. This parameter is known as the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Most probable speed"
+        },
+        {
+          "id": "B",
+          "text": "Average speed"
+        },
+        {
+          "id": "C",
+          "text": "Root mean square (rms) speed"
+        },
+        {
+          "id": "D",
+          "text": "Drift speed"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The definition given — the square root of the mean of the squares of individual molecular speeds — is precisely the mathematical definition of the root mean square (rms) speed. It is calculated as u_rms = √(3RT/M) and is always the highest among the three characteristic molecular speeds (u_rms > u_avg > u_mp).",
+      "explanation_incorrect": "Option A (most probable speed) is the speed possessed by the largest fraction of molecules, given by √(2RT/M). Option B (average speed) is the arithmetic mean of all molecular speeds, given by √(8RT/πM). Option D (drift speed) is not a standard term in kinetic molecular theory of gases."
+    },
+    {
+      "question_id": "T05.01.Q058",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A gas has Z = 0.85 at a given temperature and moderate pressure. It occupies less volume than predicted by PV = nRT. Which category of deviation from ideal behaviour does this represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Positive deviation, where repulsive forces dominate"
+        },
+        {
+          "id": "B",
+          "text": "Negative deviation, where attractive intermolecular forces dominate"
+        },
+        {
+          "id": "C",
+          "text": "No deviation — the gas is behaving ideally"
+        },
+        {
+          "id": "D",
+          "text": "Positive deviation, where the molecular volume correction dominates"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When Z < 1, the actual molar volume (PV/nRT) is less than that of an ideal gas. This occurs because intermolecular attractive forces pull the molecules closer together, reducing the effective pressure and causing the gas to be more compressible than ideal. This is termed negative deviation from ideality.",
+      "explanation_incorrect": "Options A and D describe positive deviation (Z > 1), which occurs at very high pressures when molecular volume effects dominate. Option C is incorrect because Z = 1 for an ideal gas, and Z = 0.85 clearly indicates non-ideal behaviour."
+    },
+    {
+      "question_id": "T05.01.Q059",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A process is carried out at constant pressure where the volume of a gas increases linearly with absolute temperature. This process obeys which gas law?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boyle's law"
+        },
+        {
+          "id": "B",
+          "text": "Graham's law"
+        },
+        {
+          "id": "C",
+          "text": "Charles's law"
+        },
+        {
+          "id": "D",
+          "text": "Dalton's law"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The description matches Charles's law, which states that at constant pressure, the volume of a gas is directly proportional to its absolute temperature (V ∝ T at constant P). A linear V vs. T plot passing through the origin in Kelvin is the hallmark of Charles's law.",
+      "explanation_incorrect": "Option A (Boyle's law) involves pressure-volume changes at constant temperature. Option B (Graham's law) concerns diffusion rates, not volume-temperature relationships. Option D (Dalton's law) deals with partial pressures in gas mixtures. None of these describe a direct V-T proportionality at constant P."
+    },
+    {
+      "question_id": "T05.01.Q060",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is conducting an experiment in her school laboratory. She fills a sealed glass syringe with 100 mL of air at 1 atm and 25°C. She then places the syringe in a hot water bath at 75°C, keeping the piston free to move so that the pressure remains constant. What is the approximate final volume of air in the syringe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "75 mL"
+        },
+        {
+          "id": "B",
+          "text": "100 mL"
+        },
+        {
+          "id": "C",
+          "text": "117 mL"
+        },
+        {
+          "id": "D",
+          "text": "300 mL"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Since the pressure is constant (piston free to move), Charles's law applies: V₁/T₁ = V₂/T₂. Converting to Kelvin: T₁ = 298 K, T₂ = 348 K. So V₂ = 100 mL × (348/298) ≈ 116.8 mL ≈ 117 mL. The volume increases because heating a gas at constant pressure causes it to expand.",
+      "explanation_incorrect": "Option A (75 mL) incorrectly suggests the volume decreases with heating. Option B (100 mL) ignores the temperature change entirely. Option D (300 mL) would require a much larger temperature increase. Students must convert Celsius to Kelvin before applying Charles's law — using Celsius directly gives incorrect ratios."
+    },
+    {
+      "question_id": "T05.01.Q061",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is studying gas diffusion in his chemistry lab. He introduces H₂ gas (M = 2) at one end of a 1-metre tube and SO₂ gas (M = 64) at the other end simultaneously. The gases diffuse toward each other. At what approximate distance from the H₂ end will the two gases first meet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 cm from the H₂ end"
+        },
+        {
+          "id": "B",
+          "text": "25 cm from the H₂ end"
+        },
+        {
+          "id": "C",
+          "text": "80 cm from the H₂ end"
+        },
+        {
+          "id": "D",
+          "text": "67 cm from the H₂ end"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "By Graham's law, rate(H₂)/rate(SO₂) = √(M_SO₂/M_H₂) = √(64/2) = √32 ≈ 5.66. The distances covered are proportional to rates, so d_H₂/d_SO₂ = 5.66. Since d_H₂ + d_SO₂ = 100 cm, we get d_H₂ = 100 × 5.66/6.66 ≈ 85 cm. Among the options, 80 cm is the closest approximation to the expected meeting point from the H₂ end.",
+      "explanation_incorrect": "Option A (50 cm) assumes equal diffusion rates, ignoring the molar mass difference. Option B (25 cm) reverses which gas is faster. Option D (67 cm) underestimates the speed ratio. H₂ diffuses much faster than SO₂ due to its much lower molar mass, so the meeting point is far from the H₂ end."
+    },
+    {
+      "question_id": "T05.01.Q062",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is reading about gas storage in a factory near Pune. A technician stores ammonia (NH₃) at 200 atm and 25°C. The compressibility factor Z of ammonia under these conditions is 0.82. Priya calculates the molar volume using the ideal gas equation and gets V_ideal. What can she conclude about the actual molar volume V_actual?",
+      "options": [
+        {
+          "id": "A",
+          "text": "V_actual = V_ideal because the gas still follows PV = nRT"
+        },
+        {
+          "id": "B",
+          "text": "V_actual > V_ideal because molecular volume dominates"
+        },
+        {
+          "id": "C",
+          "text": "V_actual < V_ideal because intermolecular attractive forces compress the gas beyond ideal prediction"
+        },
+        {
+          "id": "D",
+          "text": "V_actual is exactly half of V_ideal"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The compressibility factor Z = PV_actual/(nRT), so V_actual = Z × V_ideal. Since Z = 0.82 (< 1), V_actual = 0.82 × V_ideal, meaning the actual molar volume is 82% of the ideal value. This occurs because intermolecular attractive forces in NH₃ (strong hydrogen bonding) pull molecules closer together than the ideal model predicts, reducing the volume.",
+      "explanation_incorrect": "Option A is wrong because Z ≠ 1 means the gas does not follow PV = nRT. Option B would apply when Z > 1, which is the case at extremely high pressures where molecular volume effects dominate. Option D overstates the deviation; V_actual is 82% of V_ideal, not 50%."
+    },
+    {
+      "question_id": "T05.01.Q063",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan inflates a balloon with helium to a volume of 2.0 L inside his air-conditioned room at 25°C and 1 atm. He then takes the balloon outside in the Delhi summer where the temperature is 45°C and atmospheric pressure is still 1 atm. What is the approximate new volume of the balloon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.8 L"
+        },
+        {
+          "id": "B",
+          "text": "2.0 L"
+        },
+        {
+          "id": "C",
+          "text": "2.13 L"
+        },
+        {
+          "id": "D",
+          "text": "3.6 L"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "At constant pressure (balloon is flexible, pressure equalises with atmosphere), Charles's law applies: V₁/T₁ = V₂/T₂. T₁ = 298 K, T₂ = 318 K. V₂ = 2.0 × (318/298) ≈ 2.13 L. The balloon expands slightly due to the 20°C temperature increase.",
+      "explanation_incorrect": "Option A suggests the balloon shrinks, which contradicts heating at constant pressure. Option B ignores the temperature change. Option D overestimates the expansion — a 20°C rise from 298 K to 318 K is only about a 6.7% increase in volume, not an 80% increase."
+    },
+    {
+      "question_id": "T05.01.Q064",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is investigating a gas leak in her school's chemistry lab. She detects two gases escaping simultaneously from different cylinders: methane (CH₄, M = 16) and chlorine (Cl₂, M = 71). She notices one gas reaches the far end of the lab much earlier. Which gas reaches her first, and by what approximate speed ratio?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cl₂ reaches first; it is about 2.1 times faster than CH₄"
+        },
+        {
+          "id": "B",
+          "text": "CH₄ reaches first; it is about 2.1 times faster than Cl₂"
+        },
+        {
+          "id": "C",
+          "text": "Both reach at the same time since the temperature is the same"
+        },
+        {
+          "id": "D",
+          "text": "CH₄ reaches first; it is about 4.4 times faster than Cl₂"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Graham's law, rate(CH₄)/rate(Cl₂) = √(M_Cl₂/M_CH₄) = √(71/16) = √4.44 ≈ 2.1. Methane diffuses approximately 2.1 times faster than chlorine because it has a much lower molar mass. Lighter gases diffuse and effuse faster.",
+      "explanation_incorrect": "Option A reverses which gas is faster; the lighter gas always diffuses faster. Option C is wrong because although both gases are at the same temperature (equal average KE), their diffusion rates differ due to different molar masses. Option D gives the ratio of molar masses rather than the ratio of speeds (which is the square root of the molar mass ratio)."
+    },
+    {
+      "question_id": "T05.01.Q065",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "A student claims that according to Charles's law, if the temperature of a gas is doubled from 50°C to 100°C at constant pressure, the volume will also double. What is wrong with this reasoning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Charles's law does not apply at constant pressure"
+        },
+        {
+          "id": "B",
+          "text": "Temperature must be in Kelvin; 50°C (323 K) to 100°C (373 K) is not a doubling in absolute temperature"
+        },
+        {
+          "id": "C",
+          "text": "Volume is inversely proportional to temperature, so it would halve"
+        },
+        {
+          "id": "D",
+          "text": "Charles's law applies only to real gases, not ideal gases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The critical misconception is using Celsius instead of Kelvin. Charles's law requires absolute temperature (Kelvin). Going from 50°C to 100°C is 323 K to 373 K, which is only a factor of 373/323 ≈ 1.15, not 2. To truly double the volume, the temperature must go from 323 K to 646 K (i.e., 50°C to 373°C).",
+      "explanation_incorrect": "Option A is wrong because Charles's law specifically applies at constant pressure. Option C confuses Charles's law (direct proportionality, V ∝ T) with Boyle's law (inverse proportionality, V ∝ 1/P). Option D is incorrect because Charles's law was derived for ideal gases."
+    },
+    {
+      "question_id": "T05.01.Q066",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A student states: 'Since heavier gas molecules have greater mass, they must have greater average kinetic energy at the same temperature.' Why is this reasoning incorrect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavier molecules actually move faster to compensate for their mass"
+        },
+        {
+          "id": "B",
+          "text": "Average kinetic energy per molecule depends only on absolute temperature (KE = 3/2 kT), not on molar mass; heavier molecules move slower to maintain the same KE"
+        },
+        {
+          "id": "C",
+          "text": "Kinetic energy depends on volume, not mass"
+        },
+        {
+          "id": "D",
+          "text": "The kinetic molecular theory does not apply to heavy gases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to the kinetic molecular theory, the average kinetic energy per molecule is KE = 3/2 kT, where k is the Boltzmann constant and T is the absolute temperature. This expression is independent of molar mass. Heavier molecules have lower rms speeds (u_rms = √(3RT/M)) so that the product ½mv² remains the same for all gases at the same temperature.",
+      "explanation_incorrect": "Option A is the opposite of reality — heavier molecules move slower, not faster. Option C is incorrect because kinetic energy depends on mass and speed (½mv²), not volume. Option D is incorrect because the kinetic molecular theory applies to all gases regardless of molecular mass."
+    },
+    {
+      "question_id": "T05.01.Q067",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A student claims: 'Hydrogen (H₂) always shows Z > 1 at all pressures because it is a very small molecule with negligible intermolecular forces.' What is the flaw in this reasoning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The claim is correct — H₂ always shows Z > 1"
+        },
+        {
+          "id": "B",
+          "text": "H₂ does show Z > 1 over a wide range but at very low temperatures it can show Z < 1 because weak van der Waals attractions, though small, are not zero"
+        },
+        {
+          "id": "C",
+          "text": "H₂ always shows Z < 1 because it is a non-polar gas"
+        },
+        {
+          "id": "D",
+          "text": "The compressibility factor cannot be defined for H₂ because it is too light"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "While H₂ has very weak intermolecular forces and its Z vs P plot often stays above 1 at room temperature (because the 'b' correction dominates over the very small 'a' correction), at sufficiently low temperatures the attractive forces, though weak, become significant enough to cause Z < 1 in a certain pressure range. No real gas has truly zero intermolecular forces.",
+      "explanation_incorrect": "Option A oversimplifies; H₂ can show Z < 1 at low enough temperatures. Option C is incorrect because polarity is not the only factor — even non-polar molecules have London dispersion forces. Option D is nonsensical; Z = PV/(nRT) is defined for any gas."
+    },
+    {
+      "question_id": "T05.01.Q068",
+      "type": "mcq",
+      "concept_id": "T05.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the ideal gas equation PV = nRT considered a combined gas law rather than an independent law?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it was discovered before Boyle's and Charles's laws"
+        },
+        {
+          "id": "B",
+          "text": "Because it mathematically combines Boyle's law (P ∝ 1/V), Charles's law (V ∝ T), and Avogadro's law (V ∝ n) into a single equation"
+        },
+        {
+          "id": "C",
+          "text": "Because it applies only to gas mixtures, not pure gases"
+        },
+        {
+          "id": "D",
+          "text": "Because the constant R has no physical meaning and was arbitrarily introduced"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ideal gas equation PV = nRT is called a combined gas law because it unifies three individually established relationships: Boyle's law (PV = constant at fixed T, n), Charles's law (V/T = constant at fixed P, n), and Avogadro's law (V/n = constant at fixed T, P). The universal gas constant R ties all these proportionalities into one equation.",
+      "explanation_incorrect": "Option A is historically incorrect — the individual laws were discovered first. Option C is wrong because PV = nRT applies to both pure gases and mixtures (for mixtures, n is total moles and P is total pressure). Option D is incorrect because R is a fundamental physical constant with the dimensions of energy per mole per kelvin."
+    },
+    {
+      "question_id": "T05.01.Q069",
+      "type": "mcq",
+      "concept_id": "T05.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does NH₃ have a much higher van der Waals constant 'a' than N₂, even though both contain nitrogen atoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because NH₃ has a larger molar mass than N₂"
+        },
+        {
+          "id": "B",
+          "text": "Because NH₃ molecules exhibit strong hydrogen bonding and dipole-dipole interactions, leading to much stronger intermolecular attractive forces than the weak London dispersion forces in non-polar N₂"
+        },
+        {
+          "id": "C",
+          "text": "Because N₂ is diatomic while NH₃ is tetra-atomic, so NH₃ has more electrons"
+        },
+        {
+          "id": "D",
+          "text": "Because NH₃ is a lighter molecule and lighter molecules always have higher 'a' values"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The van der Waals constant 'a' reflects the strength of intermolecular attractive forces. NH₃ is a polar molecule with a lone pair on nitrogen, enabling strong hydrogen bonding between molecules. N₂ is non-polar and can only interact through weak London dispersion forces. The much stronger intermolecular attractions in NH₃ give it a significantly higher 'a' value.",
+      "explanation_incorrect": "Option A is factually incorrect — NH₃ (M = 17) is lighter than N₂ (M = 28). Option C, while true about electron count, misses the key point: it is the type of intermolecular forces (hydrogen bonding vs. London forces) that matters, not merely the number of electrons. Option D is incorrect because molar mass alone does not determine 'a'; the nature of intermolecular forces does."
+    },
+    {
+      "question_id": "T05.01.Q070",
+      "type": "mcq",
+      "concept_id": "T05.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does the Maxwell-Boltzmann distribution curve flatten and shift to the right when temperature increases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because molecules are destroyed at higher temperatures, reducing the total number"
+        },
+        {
+          "id": "B",
+          "text": "Because higher temperature means greater average kinetic energy, so more molecules achieve higher speeds, broadening the distribution and shifting the most probable speed to a higher value"
+        },
+        {
+          "id": "C",
+          "text": "Because pressure increases with temperature, compressing the speed distribution"
+        },
+        {
+          "id": "D",
+          "text": "Because molar mass increases with temperature"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At higher temperatures, molecules have greater average kinetic energy (KE = 3/2 kT). This means a larger proportion of molecules attain higher speeds, shifting the peak (most probable speed) to the right. The curve also flattens and broadens because the spread of speeds increases, while the total area under the curve (total number of molecules) remains constant.",
+      "explanation_incorrect": "Option A is incorrect because temperature changes do not destroy molecules; the total number is conserved. Option C is wrong because the Maxwell-Boltzmann distribution describes speeds at a given temperature regardless of pressure-volume details. Option D is incorrect because molar mass is an intrinsic molecular property that does not change with temperature."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 15,
-        "application": 20,
-        "exam_style": 15
+        "familiarity": 21,
+        "application": 29,
+        "exam_style": 20
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 46,
-        "compare": 0,
-        "classify": 0,
-        "scenario": 3,
-        "exception": 1,
-        "reason": 0
+        "compare": 5,
+        "classify": 4,
+        "scenario": 8,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

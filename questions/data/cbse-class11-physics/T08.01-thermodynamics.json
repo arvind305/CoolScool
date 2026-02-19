@@ -1390,6 +1390,609 @@
       "correct_answer": "Carnot",
       "explanation_correct": "The Carnot engine is an ideal reversible engine that achieves the maximum possible efficiency η = 1 − T₂/T₁ for any engine operating between temperatures T₁ and T₂. No real engine can exceed the Carnot efficiency for the same reservoir temperatures.",
       "explanation_incorrect": "The correct answer is 'Carnot'. Carnot's theorem states that no engine operating between two heat reservoirs can be more efficient than a Carnot engine operating between the same reservoirs. The Carnot engine is reversible and represents the theoretical upper limit."
+    },
+    {
+      "question_id": "T08.01.Q051",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the work done by an ideal gas during isothermal expansion differ from that during adiabatic expansion between the same initial state and the same final volume?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Isothermal work is less than adiabatic work"
+        },
+        {
+          "id": "B",
+          "text": "Isothermal work is greater than adiabatic work"
+        },
+        {
+          "id": "C",
+          "text": "Both are equal since the volume change is the same"
+        },
+        {
+          "id": "D",
+          "text": "Adiabatic work is greater because the gas heats up during expansion"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "During isothermal expansion the temperature remains constant and heat flows in to maintain it, keeping the pressure higher throughout the process. During adiabatic expansion the temperature drops (Q = 0), so the pressure falls more steeply. On a P-V diagram the isothermal curve lies above the adiabatic curve for the same expansion, hence the area under the isothermal curve (work) is larger.",
+      "explanation_incorrect": "The isothermal work exceeds adiabatic work because the gas maintains a higher pressure throughout the expansion by absorbing heat. In adiabatic expansion no heat enters, the gas cools, and the pressure drops more rapidly — reducing the area under the P-V curve. The gas does not heat up during adiabatic expansion; it cools."
+    },
+    {
+      "question_id": "T08.01.Q052",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the heat capacity at constant pressure (Cp) differ from the heat capacity at constant volume (Cv) for an ideal gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cp < Cv because pressure restricts molecular motion"
+        },
+        {
+          "id": "B",
+          "text": "Cp > Cv because extra heat is needed for the gas to do expansion work at constant pressure"
+        },
+        {
+          "id": "C",
+          "text": "Cp = Cv for an ideal gas"
+        },
+        {
+          "id": "D",
+          "text": "Cp > Cv because molecules move faster at constant pressure"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At constant volume no work is done, so all heat goes into raising the internal energy. At constant pressure the gas expands as it is heated, doing work PΔV on the surroundings. Therefore extra heat equal to nRΔT is required at constant pressure, giving Cp − Cv = R, and hence Cp > Cv.",
+      "explanation_incorrect": "Cp is always greater than Cv for an ideal gas because heating at constant pressure requires additional energy for the expansion work the gas performs. The difference is exactly R per mole (Mayer's relation). The reason is not faster molecular motion — it is the additional PΔV work."
+    },
+    {
+      "question_id": "T08.01.Q053",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the coefficient of performance (COP) of a Carnot refrigerator differ from the efficiency (η) of a Carnot engine operating between the same two reservoir temperatures T₁ and T₂ (T₁ > T₂)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "COP = η"
+        },
+        {
+          "id": "B",
+          "text": "COP = (1 − η)/η"
+        },
+        {
+          "id": "C",
+          "text": "COP = 1/η"
+        },
+        {
+          "id": "D",
+          "text": "COP = η/(1 − η)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a Carnot engine, η = 1 − T₂/T₁, so T₂/T₁ = 1 − η. For the refrigerator, COP = T₂/(T₁ − T₂). Dividing numerator and denominator by T₁: COP = (T₂/T₁)/(1 − T₂/T₁) = (1 − η)/η. For example, if η = 0.4, then COP = 0.6/0.4 = 1.5.",
+      "explanation_incorrect": "The correct relationship is COP = (1 − η)/η. This can be derived from η = (T₁ − T₂)/T₁ and COP = T₂/(T₁ − T₂). Note that COP can be greater than 1, while η is always less than 1. Option C (1/η) gives T₁/(T₁ − T₂), which is COP + 1, not COP itself."
+    },
+    {
+      "question_id": "T08.01.Q054",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the Kelvin-Planck statement of the second law differ from the Clausius statement in terms of the device each restricts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kelvin-Planck restricts refrigerators; Clausius restricts heat engines"
+        },
+        {
+          "id": "B",
+          "text": "Kelvin-Planck restricts heat engines; Clausius restricts refrigerators"
+        },
+        {
+          "id": "C",
+          "text": "Both restrict heat engines only"
+        },
+        {
+          "id": "D",
+          "text": "Both restrict refrigerators only"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The Kelvin-Planck statement says no heat engine operating in a cycle can convert all absorbed heat into work — it must reject some heat to a cold reservoir. The Clausius statement says no refrigerator can transfer heat from a cold body to a hot body without external work input. Thus Kelvin-Planck restricts perfect heat engines, while Clausius restricts perfect refrigerators.",
+      "explanation_incorrect": "Kelvin-Planck deals with the impossibility of a perfect heat engine (100% conversion of heat to work), while Clausius deals with the impossibility of a perfect refrigerator (spontaneous heat flow from cold to hot). Though the two statements are equivalent, each directly addresses a different type of device."
+    },
+    {
+      "question_id": "T08.01.Q055",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the change in internal energy of an ideal gas differ between an isobaric and an isochoric process if both processes raise the gas temperature by the same amount ΔT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ΔU is greater in the isobaric process"
+        },
+        {
+          "id": "B",
+          "text": "ΔU is greater in the isochoric process"
+        },
+        {
+          "id": "C",
+          "text": "ΔU is the same in both processes"
+        },
+        {
+          "id": "D",
+          "text": "ΔU is zero in the isobaric process"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For an ideal gas, internal energy is a function of temperature only. Therefore ΔU = nCvΔT regardless of whether the process is isobaric, isochoric, or any other type. If ΔT is the same, ΔU is the same. The difference between the two processes lies in how much heat is absorbed and how much work is done, not in the change in internal energy.",
+      "explanation_incorrect": "Internal energy of an ideal gas depends solely on temperature. Since both processes produce the same temperature change, ΔU = nCvΔT is identical in both cases. More heat is needed in the isobaric process (Q = nCpΔT) than in the isochoric process (Q = nCvΔT), but the extra heat goes into doing expansion work, not into changing U."
+    },
+    {
+      "question_id": "T08.01.Q056",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A thermodynamic process satisfies the following conditions: no heat is exchanged with the surroundings, and the gas is thermally insulated from its environment. This process is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Isothermal"
+        },
+        {
+          "id": "B",
+          "text": "Isobaric"
+        },
+        {
+          "id": "C",
+          "text": "Adiabatic"
+        },
+        {
+          "id": "D",
+          "text": "Isochoric"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A process in which the system is thermally insulated and no heat is exchanged (Q = 0) is called an adiabatic process. In such a process, all changes in internal energy come from work done by or on the gas. The governing equation for an ideal gas is PV^γ = constant.",
+      "explanation_incorrect": "The two stated conditions — thermal insulation and zero heat exchange — are the defining characteristics of an adiabatic process. Isothermal means constant temperature, isobaric means constant pressure, and isochoric means constant volume. None of these require thermal insulation."
+    },
+    {
+      "question_id": "T08.01.Q057",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A gas confined in a rigid steel container is heated, causing its pressure to increase while the volume remains unchanged. The heat supplied equals the change in internal energy. This process is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adiabatic"
+        },
+        {
+          "id": "B",
+          "text": "Isothermal"
+        },
+        {
+          "id": "C",
+          "text": "Isobaric"
+        },
+        {
+          "id": "D",
+          "text": "Isochoric"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "The key features are: constant volume (rigid container) and Q = ΔU (since W = PΔV = 0 when volume is constant). These are the defining properties of an isochoric process. In an isochoric process, all heat supplied goes into increasing the internal energy of the gas.",
+      "explanation_incorrect": "A rigid container ensures ΔV = 0, so the process occurs at constant volume — this is isochoric. The relation Q = ΔU follows because W = 0 when the volume does not change. Adiabatic requires Q = 0, isothermal requires constant temperature, and isobaric requires constant pressure."
+    },
+    {
+      "question_id": "T08.01.Q058",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A cyclic device absorbs heat from a cold body, requires external work input, and rejects a larger amount of heat to a hot body. This device is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A heat engine"
+        },
+        {
+          "id": "B",
+          "text": "A Carnot engine"
+        },
+        {
+          "id": "C",
+          "text": "A refrigerator (or heat pump)"
+        },
+        {
+          "id": "D",
+          "text": "A perpetual motion machine"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A device that absorbs heat from a cold reservoir, uses external work, and rejects a larger amount of heat (Q₁ = Q₂ + W) to a hot reservoir is a refrigerator or heat pump. It transfers heat against the natural direction of flow by consuming work. Its performance is measured by COP = Q₂/W.",
+      "explanation_incorrect": "This description matches a refrigerator or heat pump. A heat engine does the opposite — it absorbs heat from a hot reservoir and converts part of it into work while rejecting the rest to a cold reservoir. This device is not a perpetual motion machine because it requires external work input."
+    },
+    {
+      "question_id": "T08.01.Q059",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A hypothetical device operates in a cycle, extracting heat from a single thermal reservoir at 400 K and converting it entirely into mechanical work with no other effect. This device is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Carnot engine with 100% efficiency"
+        },
+        {
+          "id": "B",
+          "text": "A perpetual motion machine of the first kind"
+        },
+        {
+          "id": "C",
+          "text": "A perpetual motion machine of the second kind"
+        },
+        {
+          "id": "D",
+          "text": "A reversible heat engine"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A perpetual motion machine of the second kind is one that violates the second law of thermodynamics by extracting heat from a single reservoir and converting it entirely into work in a cyclic process with no other effect. This violates the Kelvin-Planck statement. A machine of the first kind violates the first law (creates energy from nothing).",
+      "explanation_incorrect": "This device violates the Kelvin-Planck statement by converting all absorbed heat into work from a single reservoir. It is a perpetual motion machine of the second kind. It does not violate energy conservation (first law), so it is not a machine of the first kind. No Carnot engine can achieve 100% efficiency."
+    },
+    {
+      "question_id": "T08.01.Q060",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya performs an experiment in her school physics lab by rapidly compressing air in a bicycle pump while keeping the nozzle sealed. She notices that the pump barrel becomes warm. Which thermodynamic process best describes this compression, and why does the temperature rise?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Isothermal compression — temperature rises due to friction only"
+        },
+        {
+          "id": "B",
+          "text": "Adiabatic compression — no time for heat exchange, so work done on the gas raises its internal energy and temperature"
+        },
+        {
+          "id": "C",
+          "text": "Isobaric compression — the pressure stays constant while volume decreases"
+        },
+        {
+          "id": "D",
+          "text": "Isochoric process — the volume stays constant and heat is added"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Rapid compression in a bicycle pump is approximately adiabatic because the process happens too quickly for significant heat exchange with the surroundings (Q ≈ 0). By the first law, ΔU = −W. Since work is done on the gas (W < 0), ΔU is positive, so the internal energy and temperature increase, making the barrel feel warm.",
+      "explanation_incorrect": "Rapid compression is nearly adiabatic, not isothermal. The warming is not due to friction alone but due to the work done on the gas raising its internal energy. In an isothermal process the temperature would remain constant. The volume clearly changes, so it is not isochoric, and the pressure increases, so it is not isobaric."
+    },
+    {
+      "question_id": "T08.01.Q061",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit visits a thermal power plant near his town where steam at 550 K drives a turbine, and the exhaust steam is cooled by river water at 300 K. If the plant operates as an ideal Carnot engine and absorbs 5000 kJ of heat per cycle, how much work is delivered per cycle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2727 kJ"
+        },
+        {
+          "id": "B",
+          "text": "2273 kJ"
+        },
+        {
+          "id": "C",
+          "text": "1500 kJ"
+        },
+        {
+          "id": "D",
+          "text": "3500 kJ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Carnot efficiency η = 1 − T₂/T₁ = 1 − 300/550 = 1 − 0.5455 = 0.4545 ≈ 45.45%. Work per cycle = η × Q₁ = 0.4545 × 5000 = 2272.7 ≈ 2273 kJ. The remaining 2727 kJ is rejected as waste heat to the river water.",
+      "explanation_incorrect": "η = 1 − 300/550 ≈ 0.4545. Work = 0.4545 × 5000 ≈ 2273 kJ. Option A (2727 kJ) is the heat rejected, not the work output. Option C uses an incorrect efficiency. Always compute η first, then multiply by Q₁ to get W."
+    },
+    {
+      "question_id": "T08.01.Q062",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya heats 2 moles of a diatomic ideal gas (Cv = 5R/2) in a sealed rigid flask from 300 K to 500 K. How much heat does the gas absorb?",
+      "options": [
+        {
+          "id": "A",
+          "text": "nCpΔT = 2 × (7R/2) × 200 = 2 × 7 × 8.314 × 100 ≈ 11640 J"
+        },
+        {
+          "id": "B",
+          "text": "nCvΔT = 2 × (5R/2) × 200 = 2 × 5 × 8.314 × 100 ≈ 8314 J"
+        },
+        {
+          "id": "C",
+          "text": "nRΔT = 2 × 8.314 × 200 ≈ 3326 J"
+        },
+        {
+          "id": "D",
+          "text": "Zero, because volume is constant"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A sealed rigid flask means constant volume (isochoric process), so W = 0 and Q = ΔU = nCvΔT. Substituting: Q = 2 × (5/2 × 8.314) × (500 − 300) = 2 × 20.785 × 200 = 8314 J. We use Cv, not Cp, because the volume is constant.",
+      "explanation_incorrect": "In a rigid flask the volume is fixed, making this an isochoric process. Heat absorbed equals nCvΔT, not nCpΔT. Option A incorrectly uses Cp. Option C uses R instead of Cv. Option D is wrong because heat is indeed absorbed — it just goes entirely into internal energy since no work is done."
+    },
+    {
+      "question_id": "T08.01.Q063",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan's family buys a new refrigerator that operates between an interior temperature of 260 K and room temperature of 300 K. If the refrigerator works as an ideal Carnot refrigerator, what is its coefficient of performance (COP)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.5"
+        },
+        {
+          "id": "B",
+          "text": "7.5"
+        },
+        {
+          "id": "C",
+          "text": "0.87"
+        },
+        {
+          "id": "D",
+          "text": "1.15"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "COP of a Carnot refrigerator = T₂/(T₁ − T₂) = 260/(300 − 260) = 260/40 = 6.5. This means for every joule of work input, the refrigerator extracts 6.5 joules of heat from the cold interior.",
+      "explanation_incorrect": "COP = T₂/(T₁ − T₂) = 260/40 = 6.5. Option B (7.5) uses T₁/(T₁ − T₂) which is COP + 1. Option C (0.87) equals T₂/T₁ = 260/300, which is neither the COP nor the efficiency. The actual Carnot efficiency would be 1 − 260/300 ≈ 0.133. The COP of a refrigerator can be much greater than 1."
+    },
+    {
+      "question_id": "T08.01.Q064",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Meera inflates a balloon slowly by blowing air into it at atmospheric pressure. As the balloon expands, it does work against the atmosphere at constant pressure. If the volume increases by 0.002 m³ at atmospheric pressure (1.0 × 10⁵ Pa), the work done by the gas against the atmosphere is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "100 J"
+        },
+        {
+          "id": "B",
+          "text": "200 J"
+        },
+        {
+          "id": "C",
+          "text": "500 J"
+        },
+        {
+          "id": "D",
+          "text": "20 J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "This is an isobaric expansion at constant atmospheric pressure. Work done W = PΔV = 1.0 × 10⁵ × 0.002 = 200 J. The gas inside the balloon does 200 J of work pushing against the atmosphere as it expands.",
+      "explanation_incorrect": "At constant pressure, W = PΔV = 1.0 × 10⁵ Pa × 0.002 m³ = 200 J. Option A forgets to multiply correctly. Option C uses an incorrect volume change. The key is to use the isobaric work formula W = PΔV."
+    },
+    {
+      "question_id": "T08.01.Q065",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about internal energy is INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Internal energy of an ideal gas depends only on temperature"
+        },
+        {
+          "id": "B",
+          "text": "Internal energy is a state function"
+        },
+        {
+          "id": "C",
+          "text": "Internal energy of an ideal gas changes during isothermal expansion"
+        },
+        {
+          "id": "D",
+          "text": "Change in internal energy is zero for a complete cyclic process"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Option C is incorrect. For an ideal gas, internal energy depends only on temperature. In an isothermal expansion, the temperature remains constant, so ΔU = 0. Students often mistakenly think that because volume changes and work is done, the internal energy must change — but for an ideal gas at constant temperature, it does not.",
+      "explanation_incorrect": "The internal energy of an ideal gas is solely a function of temperature (A is correct). It is a state function (B is correct). In a complete cycle the system returns to its initial state, so ΔU = 0 (D is correct). Option C is wrong because ΔU = 0 in any isothermal process for an ideal gas."
+    },
+    {
+      "question_id": "T08.01.Q066",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about thermodynamic processes is INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In an adiabatic expansion, the gas cools down"
+        },
+        {
+          "id": "B",
+          "text": "In an isothermal process, all heat supplied is converted into work"
+        },
+        {
+          "id": "C",
+          "text": "In an adiabatic process, the gas can exchange heat with the surroundings if the process is slow enough"
+        },
+        {
+          "id": "D",
+          "text": "In an isochoric process, the work done by the gas is zero"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Option C is incorrect. An adiabatic process is defined by Q = 0 — no heat exchange with the surroundings, regardless of the speed of the process. Students often confuse the practical condition (rapid process prevents heat exchange) with the definition. If a process is slow enough to exchange heat, it is no longer adiabatic by definition.",
+      "explanation_incorrect": "An adiabatic process means Q = 0 by definition. If the gas exchanges heat, the process is not adiabatic. Options A, B, and D are all correct: adiabatic expansion cools the gas (ΔU = −W), isothermal ΔU = 0 so Q = W, and isochoric W = 0 since ΔV = 0."
+    },
+    {
+      "question_id": "T08.01.Q067",
+      "type": "mcq",
+      "concept_id": "T08.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about Carnot engines is INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Carnot engine is a reversible engine"
+        },
+        {
+          "id": "B",
+          "text": "The Carnot efficiency depends only on the reservoir temperatures"
+        },
+        {
+          "id": "C",
+          "text": "A real engine operating between the same two temperatures can exceed the Carnot efficiency if friction is eliminated"
+        },
+        {
+          "id": "D",
+          "text": "The Carnot cycle consists of two isothermal and two adiabatic processes"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Option C is incorrect. Carnot's theorem states that no engine operating between two given temperatures can have an efficiency greater than that of a Carnot engine. Eliminating friction makes an engine more efficient but can never make it exceed the Carnot limit. The Carnot efficiency is the absolute theoretical maximum.",
+      "explanation_incorrect": "No real engine can exceed Carnot efficiency — this is a fundamental consequence of the second law of thermodynamics, not merely a practical limitation due to friction. All other statements are correct: Carnot engines are reversible (A), their efficiency depends only on temperatures (B), and the cycle comprises two isothermal and two adiabatic steps (D)."
+    },
+    {
+      "question_id": "T08.01.Q068",
+      "type": "mcq",
+      "concept_id": "T08.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does the internal energy of an ideal gas depend only on temperature and not on pressure or volume?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because ideal gas molecules have intermolecular forces that cancel out"
+        },
+        {
+          "id": "B",
+          "text": "Because ideal gas molecules have no intermolecular forces, so their energy is purely kinetic and depends only on temperature"
+        },
+        {
+          "id": "C",
+          "text": "Because pressure and volume are not thermodynamic variables"
+        },
+        {
+          "id": "D",
+          "text": "Because the first law of thermodynamics forbids dependence on pressure"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an ideal gas, molecules are point particles with no intermolecular interactions. The only form of energy is translational (and rotational/vibrational for polyatomic molecules) kinetic energy, which depends solely on temperature via the equipartition theorem. With no potential energy contribution from intermolecular forces, changing volume or pressure at constant temperature does not alter the internal energy.",
+      "explanation_incorrect": "The correct reason is the absence of intermolecular forces in an ideal gas. Without such forces there is no potential energy contribution, and the kinetic energy depends only on temperature. Pressure and volume are valid thermodynamic variables (C is wrong), and the first law does not impose any such restriction (D is wrong)."
+    },
+    {
+      "question_id": "T08.01.Q069",
+      "type": "mcq",
+      "concept_id": "T08.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does an ideal gas cool during adiabatic expansion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the gas radiates heat to the surroundings during expansion"
+        },
+        {
+          "id": "B",
+          "text": "Because the gas does work on the surroundings at the expense of its internal energy, since no heat enters the system"
+        },
+        {
+          "id": "C",
+          "text": "Because the pressure decreases, which always causes cooling"
+        },
+        {
+          "id": "D",
+          "text": "Because the molecules slow down due to collisions with the expanding walls"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In an adiabatic process, Q = 0 (no heat exchange). By the first law, ΔU = −W. During expansion the gas does positive work on the surroundings (W > 0), so ΔU is negative — the internal energy decreases. Since internal energy of an ideal gas depends only on temperature, a decrease in U means a decrease in temperature.",
+      "explanation_incorrect": "The cooling occurs because the gas expends its own internal energy to do work, with no heat input to compensate. Option A is wrong because adiabatic means Q = 0 (no radiation or heat exchange). Option C is wrong because pressure decrease alone does not necessarily cause cooling (e.g., isothermal expansion). Option D is a misconception about the mechanism."
+    },
+    {
+      "question_id": "T08.01.Q070",
+      "type": "mcq",
+      "concept_id": "T08.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is it impossible to construct a heat engine that converts all absorbed heat into work in a cyclic process?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because energy cannot be created or destroyed"
+        },
+        {
+          "id": "B",
+          "text": "Because the first law requires that Q = ΔU + W, and ΔU cannot be zero"
+        },
+        {
+          "id": "C",
+          "text": "Because the second law requires that some heat must be rejected to a cold reservoir to maintain the direction of natural processes"
+        },
+        {
+          "id": "D",
+          "text": "Because friction always prevents 100% conversion"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The Kelvin-Planck statement of the second law explicitly forbids complete conversion of heat into work in a cyclic process. This is not merely a practical limitation due to friction — it is a fundamental law of nature. Some heat must always be rejected to a cold reservoir. The impossibility arises from the directional nature of natural processes (entropy must not decrease in an isolated system).",
+      "explanation_incorrect": "The first law (energy conservation) does not prohibit 100% conversion — it only says energy is conserved. In a cycle ΔU = 0, so Q = W is energetically allowed. The real prohibition comes from the second law (option C). Friction (option D) is a practical issue but not the fundamental reason — even a frictionless engine cannot achieve 100% efficiency in a cycle."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 26,
+        "application": 25,
+        "exam_style": 19
+      },
+      "by_type": {
+        "mcq": 63,
+        "true_false": 4,
+        "fill_blank": 3
+      },
+      "by_cognitive_level": {
+        "recall": 47,
+        "compare": 6,
+        "classify": 5,
+        "scenario": 6,
+        "exception": 3,
+        "reason": 3
+      }
+    }
+  }
 }

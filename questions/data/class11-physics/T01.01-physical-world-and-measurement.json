@@ -1231,31 +1231,611 @@
       ],
       "explanation_correct": "The correct order is Velocity [L¹], Acceleration [L¹], Force [L¹], Energy [L²] because the dimensions of all these quantities are powers of length (L). Velocity, acceleration and force all have the dimension of length raised to the power 1, while energy has the dimension of length raised to the power 2, making it the quantity with the highest dimension of length.",
       "explanation_incorrect": "The incorrect order would be Velocity [L¹], Acceleration [L¹], Energy [L²], Force [L¹]. This is wrong because while velocity, acceleration and force all have the same dimension of length (L¹), energy has a higher dimension of length (L²), so it should come after the other three quantities in the order."
+    },
+    {
+      "question_id": "T01.01.Q051",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the dimensional formula of work differ from that of torque?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Work is [M L² T⁻²] whereas torque is [M L T⁻²]"
+        },
+        {
+          "id": "B",
+          "text": "They have the same dimensional formula [M L² T⁻²] but differ in their physical nature — work is a scalar while torque is a vector"
+        },
+        {
+          "id": "C",
+          "text": "Work is [M L² T⁻²] whereas torque is [M L² T⁻¹]"
+        },
+        {
+          "id": "D",
+          "text": "Work is dimensionless whereas torque has dimensions [M L² T⁻²]"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Work (force × displacement) and torque (force × lever arm) both have the dimensional formula [M L² T⁻²]. However, work is defined through a dot product and is therefore a scalar quantity, while torque is defined through a cross product and is a vector quantity. Dimensional analysis alone cannot distinguish between them.",
+      "explanation_incorrect": "Options A, C and D incorrectly assign different dimensional formulae to work and torque. Both quantities share the same dimensions [M L² T⁻²] because each is the product of a force [M L T⁻²] and a length [L]. The distinction between them is physical, not dimensional: work is a scalar (dot product) and torque is a pseudovector (cross product)."
+    },
+    {
+      "question_id": "T01.01.Q052",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the method of dimensional analysis for deriving a formula differ from the method of unit conversion between systems?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formula derivation requires knowing the dependent variables but not dimensionless constants, while unit conversion requires the dimensional formula and the ratio of base units between the two systems"
+        },
+        {
+          "id": "B",
+          "text": "Formula derivation can find dimensionless constants, while unit conversion cannot"
+        },
+        {
+          "id": "C",
+          "text": "Both methods are identical in procedure and differ only in the final step"
+        },
+        {
+          "id": "D",
+          "text": "Unit conversion requires knowledge of the dependent variables, while formula derivation does not"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "When deriving a formula by dimensional analysis, one assumes the physical quantity depends on certain variables and equates the powers of M, L and T on both sides; however, pure numerical constants (like 2π) cannot be obtained. When converting units, one writes the dimensional formula and substitutes the ratio of corresponding base units (e.g., 1 kg/1 g, 1 m/1 cm) to obtain the conversion factor. The two procedures use dimensional homogeneity in fundamentally different ways.",
+      "explanation_incorrect": "Option B is wrong because dimensional analysis can never find dimensionless constants — that is actually one of its well-known limitations. Option C is wrong because the two procedures differ in both setup and execution, not just the final step. Option D reverses the requirements: it is formula derivation that needs knowledge of dependent variables, not unit conversion."
+    },
+    {
+      "question_id": "T01.01.Q053",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does absolute error differ from relative error in the context of measurement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Absolute error has units and gives the magnitude of the deviation, while relative error is a dimensionless ratio of the absolute error to the measured (or true) value"
+        },
+        {
+          "id": "B",
+          "text": "Absolute error is always larger than relative error in numerical value"
+        },
+        {
+          "id": "C",
+          "text": "Relative error has units of percentage while absolute error is dimensionless"
+        },
+        {
+          "id": "D",
+          "text": "Absolute error applies only to systematic errors while relative error applies only to random errors"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Absolute error is defined as |measured value − true value| and carries the same unit as the measured quantity (e.g., 0.02 cm). Relative error is the ratio of absolute error to the true (or mean) value, making it a pure number with no unit. Multiplying the relative error by 100 gives the percentage error. This distinction is crucial when comparing the precision of measurements of different quantities.",
+      "explanation_incorrect": "Option B is incorrect because if the measured value is less than 1, the relative error can be numerically larger than the absolute error. Option C reverses the facts — percentage error is just relative error multiplied by 100 and is not a 'unit'; absolute error carries actual physical units. Option D is wrong because both types of error metrics can be applied to any source of error, whether systematic or random."
+    },
+    {
+      "question_id": "T01.01.Q054",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the rule for significant figures differ between multiplication/division and addition/subtraction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In multiplication/division the result keeps the fewest significant figures among the operands; in addition/subtraction the result keeps the fewest decimal places among the operands"
+        },
+        {
+          "id": "B",
+          "text": "In both operations the result keeps the fewest significant figures among the operands"
+        },
+        {
+          "id": "C",
+          "text": "In multiplication/division the result keeps the fewest decimal places; in addition/subtraction it keeps the fewest significant figures"
+        },
+        {
+          "id": "D",
+          "text": "There is no difference — the same rounding rule applies to all arithmetic operations"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For multiplication and division, the number of significant figures in the result equals the smallest number of significant figures among all the factors. For addition and subtraction, the result is rounded to the same number of decimal places as the quantity with the fewest decimal places. These are two distinct rules, and confusing them is a very common source of error in numerical calculations.",
+      "explanation_incorrect": "Option B is wrong because addition/subtraction follow the decimal-places rule, not the significant-figures rule. Option C has the two rules swapped. Option D is incorrect because there are indeed two different rules, one for each type of operation."
+    },
+    {
+      "question_id": "T01.01.Q055",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the precision of a vernier callipers (least count 0.01 cm) compare with that of a screw gauge (least count 0.001 cm) when measuring the diameter of a thin wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both instruments are equally precise since they measure the same physical quantity"
+        },
+        {
+          "id": "B",
+          "text": "The screw gauge is 10 times more precise because its least count is one-tenth that of the vernier callipers"
+        },
+        {
+          "id": "C",
+          "text": "The vernier callipers is more precise because it has a longer scale"
+        },
+        {
+          "id": "D",
+          "text": "Precision cannot be compared between two different instruments"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Precision of a measuring instrument is governed by its least count — the smallest division it can resolve. The screw gauge has a least count of 0.001 cm compared to 0.01 cm for the vernier callipers, making it ten times more precise. For measuring very small dimensions like the diameter of a thin wire, the screw gauge is therefore the preferred instrument.",
+      "explanation_incorrect": "Option A is wrong because measuring the same quantity does not make two instruments equally precise; precision depends on the least count. Option C confuses the length of the scale with precision — a longer scale does not mean a smaller least count. Option D is incorrect because precision is directly and quantitatively compared through the least count."
+    },
+    {
+      "question_id": "T01.01.Q056",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A laboratory thermometer consistently reads 0.5 °C higher than the actual temperature due to a manufacturing defect. This error is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Random error"
+        },
+        {
+          "id": "B",
+          "text": "Systematic instrumental error"
+        },
+        {
+          "id": "C",
+          "text": "Gross error"
+        },
+        {
+          "id": "D",
+          "text": "Least count error"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A consistent bias that shifts every reading in the same direction by the same amount is a hallmark of a systematic error. Since the source of this bias is a manufacturing defect in the instrument itself, it is specifically classified as a systematic instrumental error. Such errors cannot be reduced by averaging repeated readings; they require recalibration or replacement of the instrument.",
+      "explanation_incorrect": "Option A is wrong because random errors fluctuate unpredictably in sign and magnitude, whereas this error is constant at +0.5 °C. Option C (gross error) refers to outright blunders such as misreading a scale, not a consistent instrumental bias. Option D (least count error) refers to the uncertainty inherent in the smallest division of the scale, not a fixed offset in readings."
+    },
+    {
+      "question_id": "T01.01.Q057",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A physical quantity has the dimensional formula [M L⁻¹ T⁻²]. This quantity can be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Force"
+        },
+        {
+          "id": "B",
+          "text": "Energy"
+        },
+        {
+          "id": "C",
+          "text": "Pressure or stress"
+        },
+        {
+          "id": "D",
+          "text": "Power"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The dimensional formula [M L⁻¹ T⁻²] corresponds to force per unit area, which describes both pressure (normal force per unit area on a surface) and stress (restoring force per unit area within a deformed body). Young's modulus, bulk modulus and energy density also share this dimensional formula.",
+      "explanation_incorrect": "Option A (force) has dimensions [M L T⁻²], which has L to the positive first power, not negative first. Option B (energy) has dimensions [M L² T⁻²], with L squared. Option D (power) has dimensions [M L² T⁻³]. None of these match [M L⁻¹ T⁻²]."
+    },
+    {
+      "question_id": "T01.01.Q058",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "During an experiment, a student records five time-period readings that scatter irregularly above and below the mean with no consistent pattern. This scatter is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Systematic environmental error"
+        },
+        {
+          "id": "B",
+          "text": "Personal (parallax) error"
+        },
+        {
+          "id": "C",
+          "text": "Random error"
+        },
+        {
+          "id": "D",
+          "text": "Zero error of the stopwatch"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Readings that fluctuate irregularly and unpredictably about the mean value — sometimes higher, sometimes lower — are the defining signature of random errors. These arise from small, uncontrollable variations in experimental conditions (reaction time, vibration, air currents). Random errors can be minimised by taking the mean of many observations.",
+      "explanation_incorrect": "Option A (systematic environmental error) would shift all readings consistently in one direction, not scatter them irregularly. Option B (parallax error) is a type of systematic personal error that also tends to bias readings in one direction. Option D (zero error) is a fixed offset that would shift every reading by the same amount, not cause irregular scatter."
+    },
+    {
+      "question_id": "T01.01.Q059",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A student is given a physical quantity whose dimensional formula is [M⁰ L⁰ T⁰]. This quantity should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A quantity that has no physical meaning"
+        },
+        {
+          "id": "B",
+          "text": "A dimensionless quantity such as a ratio, angle, or pure number"
+        },
+        {
+          "id": "C",
+          "text": "A base quantity of the SI system"
+        },
+        {
+          "id": "D",
+          "text": "A quantity that can have any unit"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A dimensional formula of [M⁰ L⁰ T⁰] means the quantity has no dependence on mass, length or time. Such quantities are dimensionless — examples include strain, refractive index, relative density, plane angles (in radians) and all pure numbers. They are perfectly meaningful physical quantities even though their dimensions are all zero.",
+      "explanation_incorrect": "Option A is wrong because dimensionless quantities like strain and refractive index have clear physical meaning. Option C is wrong because every SI base quantity has a non-trivial dimension (e.g., length is [L¹]). Option D is incorrect because a dimensionless quantity has no unit in the dimensional sense (though supplementary units like radian may be used for clarity)."
+    },
+    {
+      "question_id": "T01.01.Q060",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is performing a dimensional analysis to derive the expression for the centripetal force on a body of mass m moving with speed v in a circle of radius r. She assumes F = k · mᵃ · vᵇ · rᶜ and equates dimensions on both sides. What values of a, b and c does she obtain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "a = 1, b = 1, c = 1"
+        },
+        {
+          "id": "B",
+          "text": "a = 1, b = 2, c = −1"
+        },
+        {
+          "id": "C",
+          "text": "a = 2, b = 1, c = −1"
+        },
+        {
+          "id": "D",
+          "text": "a = 1, b = 2, c = 1"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Equating dimensions: [M L T⁻²] = [M]ᵃ [L T⁻¹]ᵇ [L]ᶜ gives M: a = 1, T: −b = −2 so b = 2, and L: b + c = 1 so c = −1. Therefore F = k · m · v² / r, which is the familiar centripetal force expression mv²/r (with k = 1). Riya correctly obtains a = 1, b = 2, c = −1.",
+      "explanation_incorrect": "Option A gives F = k·m·v·r which has dimensions [M L² T⁻¹], not [M L T⁻²]. Option C with a = 2 would require M² on the right side, which does not balance with M¹ on the left. Option D gives F = k·m·v²·r with dimensions [M L³ T⁻²], not [M L T⁻²]. Only a = 1, b = 2, c = −1 satisfies all three dimensional equations simultaneously."
+    },
+    {
+      "question_id": "T01.01.Q061",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit measures the diameter of a wire using a screw gauge with a zero error of +0.03 mm. The main scale reading is 2 mm and the circular scale reading is 37 divisions (least count = 0.01 mm). What is the corrected diameter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.37 mm"
+        },
+        {
+          "id": "B",
+          "text": "2.34 mm"
+        },
+        {
+          "id": "C",
+          "text": "2.40 mm"
+        },
+        {
+          "id": "D",
+          "text": "2.07 mm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The observed reading is MSR + (CSR × LC) = 2 mm + (37 × 0.01) mm = 2.37 mm. Since the zero error is positive (+0.03 mm), the corrected reading is the observed reading minus the zero error: 2.37 − 0.03 = 2.34 mm. A positive zero error means the instrument reads more than the actual value, so the correction is subtracted.",
+      "explanation_incorrect": "Option A (2.37 mm) is the uncorrected observed reading and ignores the zero error. Option C (2.40 mm) incorrectly adds the zero error instead of subtracting it. Option D (2.07 mm) appears to subtract the circular scale reading incorrectly. The correct procedure requires subtracting a positive zero error from the observed reading."
+    },
+    {
+      "question_id": "T01.01.Q062",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya measures the length of a metal rod as 15.6 cm and its width as 2.15 cm in her school lab. She calculates the area as length × width. What should she report as the area with the correct number of significant figures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "33.540 cm²"
+        },
+        {
+          "id": "B",
+          "text": "33.54 cm²"
+        },
+        {
+          "id": "C",
+          "text": "33.5 cm²"
+        },
+        {
+          "id": "D",
+          "text": "34 cm²"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The product 15.6 × 2.15 = 33.54 cm². In multiplication, the result must be rounded to the same number of significant figures as the factor with the fewest significant figures. Here 15.6 has 3 significant figures and 2.15 has 3 significant figures, so the answer should have 3 significant figures: 33.5 cm².",
+      "explanation_incorrect": "Option A (33.540 cm²) has 5 significant figures, far more than justified. Option B (33.54 cm²) has 4 significant figures, which is one too many. Option D (34 cm²) has only 2 significant figures, which discards more precision than necessary. The correct answer is 33.5 cm² with 3 significant figures."
+    },
+    {
+      "question_id": "T01.01.Q063",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan measures the radius of a sphere as r = 2.0 ± 0.1 cm in his school laboratory. He uses the formula V = (4/3)πr³ to calculate the volume. What is the percentage error in his calculated volume?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5%"
+        },
+        {
+          "id": "B",
+          "text": "10%"
+        },
+        {
+          "id": "C",
+          "text": "15%"
+        },
+        {
+          "id": "D",
+          "text": "20%"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For V = (4/3)πr³, the percentage error in V is 3 times the percentage error in r (since r is raised to the third power). The percentage error in r is (0.1/2.0) × 100 = 5%. Therefore, the percentage error in V = 3 × 5% = 15%. The constant (4/3)π has no error as it is an exact number.",
+      "explanation_incorrect": "Option A (5%) gives only the percentage error in r itself, without accounting for the cube power. Option B (10%) might come from incorrectly multiplying by 2 instead of 3. Option D (20%) might come from incorrectly multiplying by 4. Since V depends on r³, the fractional error in V is exactly 3 times the fractional error in r."
+    },
+    {
+      "question_id": "T01.01.Q064",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is asked in a viva to determine the dimensional formula of the quantity η (coefficient of viscosity) using the relation F = 6πηrv, where F is force, r is radius and v is velocity. What dimensional formula should she derive?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[M L⁻¹ T⁻¹]"
+        },
+        {
+          "id": "B",
+          "text": "[M L T⁻²]"
+        },
+        {
+          "id": "C",
+          "text": "[M L⁻¹ T⁻²]"
+        },
+        {
+          "id": "D",
+          "text": "[M L² T⁻¹]"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From F = 6πηrv, we get η = F/(6πrv). Ignoring the dimensionless constant 6π: [η] = [F]/([r][v]) = [M L T⁻²]/([L][L T⁻¹]) = [M L T⁻²]/[L² T⁻¹] = [M L⁻¹ T⁻¹]. Meera should report the dimensional formula of the coefficient of viscosity as [M L⁻¹ T⁻¹].",
+      "explanation_incorrect": "Option B [M L T⁻²] is the dimensional formula of force, not viscosity. Option C [M L⁻¹ T⁻²] is the dimensional formula of pressure, not viscosity. Option D [M L² T⁻¹] is the dimensional formula of angular momentum or Planck's constant, not viscosity. Only option A correctly results from solving for η in the Stokes' law relation."
+    },
+    {
+      "question_id": "T01.01.Q065",
+      "type": "mcq",
+      "concept_id": "T01.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about significant figures is INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trailing zeros after the decimal point are significant (e.g., 2.50 has 3 significant figures)"
+        },
+        {
+          "id": "B",
+          "text": "Leading zeros before the first non-zero digit are significant (e.g., 0.003 has 4 significant figures)"
+        },
+        {
+          "id": "C",
+          "text": "All non-zero digits are always significant"
+        },
+        {
+          "id": "D",
+          "text": "Zeros between two non-zero digits are significant (e.g., 2003 has 4 significant figures)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Leading zeros that appear before the first non-zero digit are never significant — they merely indicate the position of the decimal point. For example, 0.003 has only 1 significant figure (the digit 3). This is one of the most common misconceptions students have about significant figures. The other three statements are all correct rules.",
+      "explanation_incorrect": "Options A, C and D are all correct rules of significant figures. Trailing zeros after a decimal point are significant, all non-zero digits are always significant, and zeros trapped between non-zero digits are significant. Only option B is incorrect: leading zeros are never significant, so 0.003 has 1 significant figure, not 4."
+    },
+    {
+      "question_id": "T01.01.Q066",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following equations CANNOT be shown to be wrong by dimensional analysis alone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "v = u + at² (v: velocity, u: velocity, a: acceleration, t: time)"
+        },
+        {
+          "id": "B",
+          "text": "s = ut + at² (s: displacement, u: velocity, a: acceleration, t: time)"
+        },
+        {
+          "id": "C",
+          "text": "E = mc (E: energy, m: mass, c: speed of light)"
+        },
+        {
+          "id": "D",
+          "text": "F = mv + ma (F: force, m: mass, v: velocity, a: acceleration)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In option B, s = ut + at², every term has dimensions of [L]: ut has [L T⁻¹ × T] = [L], and at² has [L T⁻² × T²] = [L]. The equation is dimensionally homogeneous even though it is physically wrong (the correct equation is s = ut + ½at²). Dimensional analysis cannot detect the missing factor of ½ because it is a dimensionless constant. All other options are dimensionally inconsistent and can be caught by dimensional analysis.",
+      "explanation_incorrect": "Option A is dimensionally wrong because at² has dimensions [L T⁻² × T²] = [L], which does not match velocity [L T⁻¹]. Option C is wrong because mc has dimensions [M L T⁻¹], not [M L² T⁻²]. Option D is wrong because mv has dimensions [M L T⁻¹] (momentum) while ma has dimensions [M L T⁻²] (force) — these cannot be added. Only option B is dimensionally correct despite being physically incorrect."
+    },
+    {
+      "question_id": "T01.01.Q067",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about error propagation is INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When two quantities are added, their absolute errors add"
+        },
+        {
+          "id": "B",
+          "text": "When two quantities are multiplied, their relative (fractional) errors add"
+        },
+        {
+          "id": "C",
+          "text": "When a quantity is raised to a power n, the relative error is multiplied by n"
+        },
+        {
+          "id": "D",
+          "text": "When two quantities are multiplied, their absolute errors are multiplied to give the absolute error in the result"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Option D states a common misconception. When two quantities are multiplied, it is their relative (fractional) errors that add — not their absolute errors being multiplied. The absolute error of the product is then obtained from the combined relative error. Statements A, B and C are all correct standard rules of error propagation.",
+      "explanation_incorrect": "Options A, B and C are all correct. For a sum Z = A + B, the absolute error ΔZ = ΔA + ΔB. For a product Z = A × B, the relative error ΔZ/Z = ΔA/A + ΔB/B. For Z = Aⁿ, the relative error is n(ΔA/A). Option D is the only incorrect statement — multiplying absolute errors together has no basis in standard error propagation theory."
+    },
+    {
+      "question_id": "T01.01.Q068",
+      "type": "mcq",
+      "concept_id": "T01.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why are there exactly seven base quantities in the SI system rather than more or fewer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because seven is the minimum number of independent physical quantities needed to express all known physical quantities through dimensional combinations"
+        },
+        {
+          "id": "B",
+          "text": "Because the General Conference on Weights and Measures (CGPM) chose seven as a convenient historical convention — some base quantities could, in principle, be derived from others"
+        },
+        {
+          "id": "C",
+          "text": "Because every physical quantity requires exactly seven dimensions to be fully described"
+        },
+        {
+          "id": "D",
+          "text": "Because the number of fundamental forces in nature is seven"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The choice of seven base quantities is ultimately a convention established by the CGPM. Historically, electrical and thermal quantities could have been defined in terms of mechanical quantities alone (for instance, the ampere through force between current-carrying conductors). The selection of seven independent base quantities was made for practical convenience and historical reasons, not because exactly seven are mathematically necessary.",
+      "explanation_incorrect": "Option A overstates the case — the number seven is not a strict mathematical minimum. With different choices (e.g., treating charge as derivable from force), fewer base quantities could suffice. Option C is wrong because not every quantity involves all seven dimensions; most use only M, L and T. Option D is wrong because there are four fundamental forces in nature, not seven."
+    },
+    {
+      "question_id": "T01.01.Q069",
+      "type": "mcq",
+      "concept_id": "T01.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does the percentage error in the volume of a sphere (V = 4πr³/3) become three times the percentage error in its radius?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because there are three spatial dimensions in a sphere"
+        },
+        {
+          "id": "B",
+          "text": "Because the factor 4/3 in the formula contributes an additional factor of 3 to the error"
+        },
+        {
+          "id": "C",
+          "text": "Because V depends on r raised to the third power, and the rule for error propagation in powers states that the relative error is multiplied by the exponent"
+        },
+        {
+          "id": "D",
+          "text": "Because the sphere has three equal principal axes, and the error in each axis adds independently"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "For any quantity Z = kAⁿ (where k is an exact constant), the error propagation rule gives ΔZ/Z = n × (ΔA/A). Since V depends on r³, the exponent n = 3, and therefore ΔV/V = 3 × (Δr/r). This is a direct consequence of logarithmic differentiation: ln V = ln(4π/3) + 3 ln r, so dV/V = 3(dr/r). The factor of 3 comes purely from the exponent, not from the geometry or the numerical constant.",
+      "explanation_incorrect": "Option A confuses spatial dimensionality with the mathematical exponent in the formula — the factor of 3 comes from r³, not from 3D space. Option B is wrong because the constant 4/3 is an exact number with zero error and contributes nothing to the error. Option D is wrong because the formula uses a single variable r, not three independent measurements of different axes."
+    },
+    {
+      "question_id": "T01.01.Q070",
+      "type": "mcq",
+      "concept_id": "T01.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why can dimensional analysis not distinguish between the formulae T = 2π√(l/g) and T = √(l/g) for the time period of a simple pendulum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the two formulae have different dimensions and dimensional analysis fails for oscillatory motion"
+        },
+        {
+          "id": "B",
+          "text": "Because 2π is a dimensionless constant, and dimensional analysis can only determine the combination of variables and their powers — not pure numerical coefficients"
+        },
+        {
+          "id": "C",
+          "text": "Because dimensional analysis works only for linear, non-periodic quantities"
+        },
+        {
+          "id": "D",
+          "text": "Because the gravitational constant g is not a true SI quantity"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Both T = 2π√(l/g) and T = √(l/g) have the same dimensional structure: [T] = [L/LT⁻²]^(1/2) = [T]. The factor 2π is a pure number (dimensionless) and therefore invisible to dimensional analysis. This is a fundamental and well-known limitation of the method: it can determine the functional dependence on physical variables and their exponents, but it cannot fix dimensionless numerical constants.",
+      "explanation_incorrect": "Option A is wrong because the two formulae actually have the same dimensions, not different ones. Option C is wrong because dimensional analysis applies to all types of physical quantities, periodic or otherwise. Option D is wrong because g (acceleration due to gravity) is a perfectly valid derived SI quantity with dimensions [L T⁻²]."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 15,
-        "application": 19,
-        "exam_style": 16
+        "familiarity": 21,
+        "application": 28,
+        "exam_style": 21
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 47,
-        "compare": 0,
-        "classify": 1,
-        "scenario": 1,
-        "exception": 1,
-        "reason": 0
+        "compare": 5,
+        "classify": 5,
+        "scenario": 6,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

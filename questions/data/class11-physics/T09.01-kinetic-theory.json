@@ -1231,31 +1231,611 @@
       ],
       "explanation_correct": "The order of increasing γ = Cp/Cv is as follows: Monoatomic (f=3) has γ = 5/3, Diatomic at moderate temperature (f=5) has γ = 7/5, Triatomic nonlinear (f=6) has γ = 4/3, and Diatomic at high temperature (f=7) has γ = 9/7. This is because γ = (f+2)/f, where f is the number of degrees of freedom of the gas.",
       "explanation_incorrect": "The incorrect order would be to place the Diatomic at moderate temperature (f=5) before the Triatomic nonlinear (f=6). This is because the number of degrees of freedom (f) is directly related to the value of γ = Cp/Cv, with a higher f leading to a lower γ. So the correct order from lowest to highest γ is: Monoatomic (f=3), Diatomic at moderate temperature (f=5), Triatomic nonlinear (f=6), and Diatomic at high temperature (f=7)."
+    },
+    {
+      "question_id": "T09.01.Q051",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the RMS speed of helium (M = 4 g/mol) differ from that of argon (M = 40 g/mol) at the same temperature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Helium's RMS speed is √10 times that of argon"
+        },
+        {
+          "id": "B",
+          "text": "Helium's RMS speed is 10 times that of argon"
+        },
+        {
+          "id": "C",
+          "text": "Both have the same RMS speed since both are monoatomic"
+        },
+        {
+          "id": "D",
+          "text": "Argon's RMS speed is √10 times that of helium"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The RMS speed is given by v_rms = √(3RT/M). At the same temperature, v_rms is inversely proportional to √M. The ratio v_He/v_Ar = √(M_Ar/M_He) = √(40/4) = √10. Therefore helium molecules move √10 ≈ 3.16 times faster than argon molecules at the same temperature.",
+      "explanation_incorrect": "Option B is wrong because the RMS speed depends on √M, not M directly, so the factor is √10, not 10. Option C is wrong because although both are monoatomic, the RMS speed depends on molar mass, not atomicity. Option D reverses the relationship — the lighter gas (helium) has the higher RMS speed, not the heavier one (argon)."
+    },
+    {
+      "question_id": "T09.01.Q052",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the molar specific heat at constant volume (Cᵥ) of a monoatomic ideal gas differ from that of a diatomic ideal gas at moderate temperatures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monoatomic Cᵥ = (3/2)R, diatomic Cᵥ = (5/2)R; the diatomic gas has higher Cᵥ due to rotational degrees of freedom"
+        },
+        {
+          "id": "B",
+          "text": "Both have Cᵥ = (3/2)R since kinetic energy depends only on temperature"
+        },
+        {
+          "id": "C",
+          "text": "Monoatomic Cᵥ = (5/2)R, diatomic Cᵥ = (3/2)R; the monoatomic gas has higher Cᵥ"
+        },
+        {
+          "id": "D",
+          "text": "Monoatomic Cᵥ = (3/2)R, diatomic Cᵥ = (7/2)R; the diatomic gas has higher Cᵥ due to vibrational modes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By the law of equipartition of energy, each degree of freedom contributes (1/2)R per mole to Cᵥ. A monoatomic gas has f = 3 (translational only), giving Cᵥ = (3/2)R. A diatomic gas at moderate temperatures has f = 5 (3 translational + 2 rotational), giving Cᵥ = (5/2)R. The additional 2 rotational degrees of freedom in the diatomic gas account for the difference.",
+      "explanation_incorrect": "Option B is incorrect because Cᵥ depends on the total degrees of freedom, not just translational energy. Option C reverses the values. Option D assigns (7/2)R to diatomic Cᵥ, which is actually the value of Cₚ (not Cᵥ) for a diatomic gas at moderate temperatures; vibrational modes are frozen out at moderate temperatures."
+    },
+    {
+      "question_id": "T09.01.Q053",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does Boyle's law differ from Charles's law in terms of the variable held constant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boyle's law holds temperature constant; Charles's law holds pressure constant"
+        },
+        {
+          "id": "B",
+          "text": "Boyle's law holds pressure constant; Charles's law holds temperature constant"
+        },
+        {
+          "id": "C",
+          "text": "Both laws hold temperature constant but differ in which variables are related"
+        },
+        {
+          "id": "D",
+          "text": "Boyle's law holds volume constant; Charles's law holds pressure constant"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Boyle's law states PV = constant at constant temperature, relating pressure and volume inversely. Charles's law states V/T = constant at constant pressure, relating volume and absolute temperature directly. The key distinction is the controlled variable: temperature for Boyle's law and pressure for Charles's law.",
+      "explanation_incorrect": "Option B reverses the controlled variables. Option C is wrong because Charles's law holds pressure constant, not temperature. Option D is wrong because Boyle's law holds temperature constant, not volume; Gay-Lussac's law is the one that holds volume constant."
+    },
+    {
+      "question_id": "T09.01.Q054",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the mean speed (v_mean) differ from the RMS speed (v_rms) in terms of their mathematical definitions and numerical values for an ideal gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "v_mean = √(8RT/πM) and v_rms = √(3RT/M); v_rms is always greater than v_mean by a factor of √(3π/8)"
+        },
+        {
+          "id": "B",
+          "text": "v_mean = √(3RT/M) and v_rms = √(8RT/πM); v_mean is always greater than v_rms"
+        },
+        {
+          "id": "C",
+          "text": "Both are defined identically but computed differently; they are numerically equal"
+        },
+        {
+          "id": "D",
+          "text": "v_mean = √(2RT/M) and v_rms = √(3RT/M); v_rms exceeds v_mean by a factor of √(3/2)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The mean speed is the arithmetic average of all molecular speeds: v_mean = √(8RT/πM), while the RMS speed is the square root of the mean of squared speeds: v_rms = √(3RT/M). Their ratio is v_rms/v_mean = √(3RT/M)/√(8RT/πM) = √(3π/8) ≈ 1.085, so v_rms is always about 8.5% larger than v_mean.",
+      "explanation_incorrect": "Option B swaps the two formulae. Option C is incorrect because the two speeds are defined differently (arithmetic mean vs. root of mean squares) and are numerically different. Option D assigns the most probable speed formula √(2RT/M) to v_mean, which is incorrect."
+    },
+    {
+      "question_id": "T09.01.Q055",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the total internal energy of one mole of a monoatomic ideal gas differ from that of one mole of a diatomic ideal gas (at moderate temperatures) at the same temperature T?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monoatomic: (3/2)RT; Diatomic: (5/2)RT — the diatomic gas stores more energy per mole"
+        },
+        {
+          "id": "B",
+          "text": "Both have the same internal energy (3/2)RT since temperature is the same"
+        },
+        {
+          "id": "C",
+          "text": "Monoatomic: (5/2)RT; Diatomic: (3/2)RT — the monoatomic gas stores more energy per mole"
+        },
+        {
+          "id": "D",
+          "text": "Monoatomic: (3/2)RT; Diatomic: (7/2)RT — the diatomic gas stores more than double the energy"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The internal energy per mole is U = (f/2)RT, where f is the number of degrees of freedom. For a monoatomic gas, f = 3, so U = (3/2)RT. For a diatomic gas at moderate temperatures, f = 5 (3 translational + 2 rotational), so U = (5/2)RT. The diatomic gas has additional rotational energy storage modes, giving it a higher total internal energy per mole.",
+      "explanation_incorrect": "Option B incorrectly assumes that internal energy depends only on translational kinetic energy; rotational degrees of freedom also store energy. Option C reverses the values. Option D uses f = 7, which applies only at high temperatures when vibrational modes are excited, not at moderate temperatures."
+    },
+    {
+      "question_id": "T09.01.Q056",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A gas molecule has 3 translational and 2 rotational degrees of freedom at moderate temperatures. Its vibrational modes are frozen out. Which type of molecule is this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monoatomic gas (e.g., He, Ar)"
+        },
+        {
+          "id": "B",
+          "text": "Diatomic gas (e.g., N₂, O₂)"
+        },
+        {
+          "id": "C",
+          "text": "Triatomic linear gas (e.g., CO₂)"
+        },
+        {
+          "id": "D",
+          "text": "Triatomic nonlinear gas (e.g., H₂O)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A molecule with f = 5 (3 translational + 2 rotational, vibrational modes frozen out) at moderate temperatures is a diatomic gas such as N₂ or O₂. Monoatomic gases have only 3 translational degrees of freedom. Triatomic linear molecules have 5 or 7 degrees of freedom depending on whether vibrations are active, and triatomic nonlinear molecules have 6 degrees of freedom at moderate temperatures.",
+      "explanation_incorrect": "Option A is wrong because monoatomic gases have only 3 degrees of freedom (translational only, no rotational or vibrational). Option C is wrong because a triatomic linear molecule has 2 rotational degrees of freedom but also has vibrational modes that contribute differently. Option D is wrong because a triatomic nonlinear molecule has 3 rotational degrees of freedom, giving f = 6 at moderate temperatures."
+    },
+    {
+      "question_id": "T09.01.Q057",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A gas law states: 'At constant volume, the pressure of a fixed amount of gas is directly proportional to its absolute temperature.' Which gas law is described?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boyle's law"
+        },
+        {
+          "id": "B",
+          "text": "Charles's law"
+        },
+        {
+          "id": "C",
+          "text": "Gay-Lussac's law (Pressure law)"
+        },
+        {
+          "id": "D",
+          "text": "Avogadro's law"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The statement describes Gay-Lussac's law (also called the Pressure law), which states P/T = constant at constant volume. Boyle's law relates P and V at constant T, Charles's law relates V and T at constant P, and Avogadro's law relates volume to amount of gas at constant T and P.",
+      "explanation_incorrect": "Option A (Boyle's law) relates pressure and volume at constant temperature, not pressure and temperature at constant volume. Option B (Charles's law) relates volume and temperature at constant pressure. Option D (Avogadro's law) states that equal volumes of gases at the same temperature and pressure contain equal numbers of molecules."
+    },
+    {
+      "question_id": "T09.01.Q058",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A gas has γ = Cₚ/Cᵥ = 5/3. Which category of gas does this value identify?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diatomic gas at moderate temperatures"
+        },
+        {
+          "id": "B",
+          "text": "Monoatomic ideal gas"
+        },
+        {
+          "id": "C",
+          "text": "Triatomic nonlinear gas"
+        },
+        {
+          "id": "D",
+          "text": "Diatomic gas at high temperatures with vibrational modes active"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The ratio γ = Cₚ/Cᵥ = (f + 2)/f. For γ = 5/3, solving gives f = 3. A gas with 3 degrees of freedom is monoatomic (e.g., He, Ne, Ar), having only translational degrees of freedom. Diatomic gases at moderate temperatures have γ = 7/5 (f = 5), and triatomic nonlinear gases have γ = 4/3 (f = 6).",
+      "explanation_incorrect": "Option A is wrong because diatomic gases at moderate temperatures have f = 5, giving γ = 7/5, not 5/3. Option C is wrong because triatomic nonlinear gases have f = 6, giving γ = 4/3. Option D is wrong because diatomic gases at high temperatures have f = 7, giving γ = 9/7."
+    },
+    {
+      "question_id": "T09.01.Q059",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A molecular speed is defined as 'the square root of the mean of the squares of speeds of all molecules.' Which speed is being described?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Most probable speed (v_mp)"
+        },
+        {
+          "id": "B",
+          "text": "Mean speed (v_mean)"
+        },
+        {
+          "id": "C",
+          "text": "Root mean square speed (v_rms)"
+        },
+        {
+          "id": "D",
+          "text": "Average velocity"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The definition 'square root of the mean of the squares of speeds' is precisely the root-mean-square (RMS) speed. Mathematically, v_rms = √(<v²>) = √(3RT/M). The most probable speed is the speed at the peak of the Maxwell-Boltzmann distribution, the mean speed is the simple arithmetic average of all molecular speeds, and the average velocity of gas molecules is zero due to random directions.",
+      "explanation_incorrect": "Option A is wrong because the most probable speed is the speed possessed by the greatest number of molecules, not the root of the mean squared speed. Option B is wrong because the mean speed is the arithmetic average √(8RT/πM). Option D is wrong because the average velocity of gas molecules is zero owing to the random, isotropic nature of molecular motion."
+    },
+    {
+      "question_id": "T09.01.Q060",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is conducting an experiment in her school laboratory with a sealed flask containing an ideal gas at 27°C and 1 atm. She places the flask in a hot water bath and raises the temperature to 127°C. What is the new pressure inside the flask?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4/3 atm ≈ 1.33 atm"
+        },
+        {
+          "id": "B",
+          "text": "127/27 atm ≈ 4.7 atm"
+        },
+        {
+          "id": "C",
+          "text": "2 atm"
+        },
+        {
+          "id": "D",
+          "text": "1 atm (pressure does not change)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Since the flask is sealed, the volume is constant. Using Gay-Lussac's law (P/T = constant at constant V): P₂ = P₁ × (T₂/T₁) = 1 atm × (400 K / 300 K) = 4/3 atm ≈ 1.33 atm. The temperatures must be converted to the absolute scale: 27°C = 300 K, 127°C = 400 K.",
+      "explanation_incorrect": "Option B incorrectly uses Celsius temperatures instead of absolute temperatures (Kelvin). Option C would require a doubling of absolute temperature, which does not occur here. Option D ignores the temperature-pressure relationship entirely; at constant volume, pressure increases with temperature."
+    },
+    {
+      "question_id": "T09.01.Q061",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is studying molecular speeds at a chemical plant where nitrogen gas (M = 28 g/mol) is stored at 27°C. He heats a separate sample of the same gas to find the temperature at which the RMS speed doubles. What temperature must he reach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "54°C"
+        },
+        {
+          "id": "B",
+          "text": "600°C"
+        },
+        {
+          "id": "C",
+          "text": "927°C"
+        },
+        {
+          "id": "D",
+          "text": "1200°C"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The RMS speed is proportional to √T (in Kelvin). To double v_rms, T must increase by a factor of 4. Initial T₁ = 27°C = 300 K. So T₂ = 4 × 300 = 1200 K = 927°C. This is independent of the molar mass of the gas.",
+      "explanation_incorrect": "Option A (54°C = 327 K) only doubles the Celsius value, which is incorrect since gas laws use absolute temperature. Option B (600°C = 873 K) does not correspond to any correct scaling. Option D (1200°C = 1473 K) confuses the Kelvin result with a Celsius value. The correct method requires quadrupling the absolute temperature."
+    },
+    {
+      "question_id": "T09.01.Q062",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is comparing two gas cylinders in her physics lab: Cylinder A contains 2 moles of helium (monoatomic, f = 3) and Cylinder B contains 2 moles of nitrogen (diatomic, f = 5), both at 300 K. What is the ratio of the total internal energy of Cylinder A to Cylinder B?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 : 5"
+        },
+        {
+          "id": "B",
+          "text": "5 : 3"
+        },
+        {
+          "id": "C",
+          "text": "1 : 1 (same temperature means same internal energy)"
+        },
+        {
+          "id": "D",
+          "text": "9 : 25"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The total internal energy of n moles of an ideal gas is U = n(f/2)RT. For Cylinder A (He): U_A = 2 × (3/2)RT = 3RT. For Cylinder B (N₂): U_B = 2 × (5/2)RT = 5RT. The ratio U_A : U_B = 3RT : 5RT = 3 : 5. The diatomic gas stores more internal energy per mole because of additional rotational degrees of freedom.",
+      "explanation_incorrect": "Option B reverses the ratio. Option C is wrong because while both cylinders are at the same temperature, internal energy depends on the degrees of freedom, not just temperature. Option D squares the ratio incorrectly; the relationship between U and f is linear, not quadratic."
+    },
+    {
+      "question_id": "T09.01.Q063",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan inflates a balloon at a hill station where the atmospheric pressure is 0.8 atm and temperature is 7°C. He then carries the sealed balloon to the plains where the temperature is 37°C and atmospheric pressure is 1 atm. Ignoring any elastic forces of the balloon, what happens to the balloon's volume?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases by a factor of (310/280) × (0.8/1) ≈ 0.886, i.e., it shrinks slightly"
+        },
+        {
+          "id": "B",
+          "text": "It increases by a factor of (37/7) × (0.8/1) ≈ 4.23"
+        },
+        {
+          "id": "C",
+          "text": "It remains exactly the same since temperature increase compensates for pressure increase"
+        },
+        {
+          "id": "D",
+          "text": "It increases by a factor of (310/280) × (1/0.8) ≈ 1.384"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using the combined gas law P₁V₁/T₁ = P₂V₂/T₂, we get V₂/V₁ = (P₁/P₂)(T₂/T₁) = (0.8/1)(310/280) ≈ 0.886. The balloon actually shrinks slightly. Although the temperature increases (which tends to expand the gas), the higher atmospheric pressure at the plains compresses the gas more, resulting in a net decrease in volume.",
+      "explanation_incorrect": "Option B incorrectly uses Celsius values instead of Kelvin temperatures. Option C is wrong because the two effects do not perfectly cancel. Option D inverts the pressure ratio — going from lower pressure to higher pressure should decrease volume, not increase it."
+    },
+    {
+      "question_id": "T09.01.Q064",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is studying gas mixtures at an industrial plant. A container holds 3 moles of oxygen (O₂) and 2 moles of helium (He) at 300 K. The total pressure is 5 atm. She needs to determine the partial pressure of helium. What is it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 atm"
+        },
+        {
+          "id": "B",
+          "text": "2 atm"
+        },
+        {
+          "id": "C",
+          "text": "1 atm"
+        },
+        {
+          "id": "D",
+          "text": "2.5 atm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "By Dalton's law of partial pressures, the partial pressure of a component is proportional to its mole fraction. Mole fraction of He = 2/(3 + 2) = 2/5. Partial pressure of He = (2/5) × 5 atm = 2 atm. The partial pressure is independent of the molar mass of the gases.",
+      "explanation_incorrect": "Option A (3 atm) is the partial pressure of oxygen, not helium. Option C (1 atm) would be correct only if the total moles were 10 with 2 moles of He. Option D (2.5 atm) incorrectly assumes each gas contributes equally regardless of mole number."
+    },
+    {
+      "question_id": "T09.01.Q065",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about the RMS speed of gas molecules is NOT correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "v_rms increases with increasing temperature"
+        },
+        {
+          "id": "B",
+          "text": "v_rms is inversely proportional to the square root of molar mass"
+        },
+        {
+          "id": "C",
+          "text": "v_rms depends on the pressure of the gas at constant temperature"
+        },
+        {
+          "id": "D",
+          "text": "v_rms = √(3RT/M)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The formula v_rms = √(3RT/M) shows that the RMS speed depends only on the absolute temperature T and the molar mass M of the gas. It does not explicitly depend on pressure at constant temperature. A common misconception is that higher pressure means faster molecules, but at constant temperature, increasing pressure increases density while the RMS speed remains unchanged.",
+      "explanation_incorrect": "Options A, B, and D are all correct statements. Option A follows from v_rms ∝ √T. Option B follows from v_rms ∝ 1/√M. Option D is the standard formula. Option C is the incorrect statement because RMS speed is independent of pressure when temperature is held constant."
+    },
+    {
+      "question_id": "T09.01.Q066",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about the average kinetic energy of an ideal gas is NOT correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is directly proportional to absolute temperature"
+        },
+        {
+          "id": "B",
+          "text": "It is the same for all ideal gases at the same temperature"
+        },
+        {
+          "id": "C",
+          "text": "It depends on the molar mass of the gas"
+        },
+        {
+          "id": "D",
+          "text": "It equals (3/2)kT per molecule for translational motion"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The average translational kinetic energy per molecule is (3/2)kT, which depends only on absolute temperature T and the Boltzmann constant k. It does not depend on the molar mass of the gas. This is one of the most common misconceptions — students confuse the mass-dependence of RMS speed with a mass-dependence of kinetic energy. While lighter molecules move faster, their lower mass exactly compensates, keeping the kinetic energy the same.",
+      "explanation_incorrect": "Options A, B, and D are all correct. Option A: KE = (3/2)kT is proportional to T. Option B: since KE = (3/2)kT contains no mass term, all gases at the same T have the same KE per molecule. Option D: this is the standard formula for translational kinetic energy. Option C is the incorrect statement."
+    },
+    {
+      "question_id": "T09.01.Q067",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following is NOT a valid assumption of the kinetic theory of an ideal gas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The time of a molecular collision is negligible compared to the time between collisions"
+        },
+        {
+          "id": "B",
+          "text": "Molecules exert attractive forces on each other at all separations"
+        },
+        {
+          "id": "C",
+          "text": "Collisions between molecules and container walls are perfectly elastic"
+        },
+        {
+          "id": "D",
+          "text": "Molecules are identical particles in random motion"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In the kinetic theory of ideal gases, intermolecular forces are assumed to be zero except during brief collisions. The assumption that molecules exert attractive forces at all separations is a feature of real gases (described by van der Waals' equation), not ideal gases. Students often confuse ideal gas assumptions with real gas behaviour.",
+      "explanation_incorrect": "Options A, C, and D are all valid assumptions of the kinetic theory of ideal gases. Option A: collision duration is negligible. Option C: all collisions are perfectly elastic, conserving kinetic energy. Option D: molecules are identical point particles moving randomly. Only Option B contradicts the ideal gas model."
+    },
+    {
+      "question_id": "T09.01.Q068",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does the RMS speed of gas molecules increase when the temperature of the gas is raised?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because higher temperature decreases the density of the gas, giving molecules more room to accelerate"
+        },
+        {
+          "id": "B",
+          "text": "Because temperature is a direct measure of the average translational kinetic energy of molecules, and higher kinetic energy means higher speed"
+        },
+        {
+          "id": "C",
+          "text": "Because heating a gas increases the number of molecules, which increases the average speed"
+        },
+        {
+          "id": "D",
+          "text": "Because the molar mass of the gas decreases at higher temperatures, leading to faster molecules"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to kinetic theory, the average translational kinetic energy per molecule is (3/2)kT. Temperature is the macroscopic quantity that directly reflects the microscopic kinetic energy of molecular motion. When temperature increases, the average kinetic energy (½mv²_rms) increases, and since the molecular mass m is constant, v_rms must increase.",
+      "explanation_incorrect": "Option A is wrong because the density change is a consequence, not the cause; moreover, molecules do not 'accelerate' due to empty space. Option C is wrong because heating a closed system does not change the number of molecules. Option D is wrong because molar mass is an intrinsic property of the substance and does not change with temperature."
+    },
+    {
+      "question_id": "T09.01.Q069",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does the pressure of an ideal gas increase when it is heated at constant volume?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the molecules expand in size at higher temperatures, occupying more space and pushing harder on the walls"
+        },
+        {
+          "id": "B",
+          "text": "Because at higher temperature, molecules have greater kinetic energy, strike the walls more frequently and with greater momentum, increasing the force per unit area"
+        },
+        {
+          "id": "C",
+          "text": "Because heating at constant volume creates new gas molecules through thermal dissociation"
+        },
+        {
+          "id": "D",
+          "text": "Because the container walls contract when heated, reducing the effective volume"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From kinetic theory, pressure arises from the rate of momentum transfer by molecular collisions with the container walls. At higher temperature, each molecule has greater average kinetic energy, meaning higher v_rms. This results in both more frequent collisions (molecules traverse the container faster) and greater momentum transfer per collision (higher speed), both contributing to increased pressure.",
+      "explanation_incorrect": "Option A is wrong because in the ideal gas model, molecules are point particles with no size. Option C is wrong because heating does not create new molecules in an ideal gas (no chemical reactions). Option D is wrong because in standard problems the container is rigid and does not change volume."
+    },
+    {
+      "question_id": "T09.01.Q070",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the mean free path of a gas molecule longer at lower pressures (constant temperature)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because lower pressure means molecules move slower and collide less often"
+        },
+        {
+          "id": "B",
+          "text": "Because lower pressure reduces the number density of molecules, so there are fewer molecules per unit volume to collide with"
+        },
+        {
+          "id": "C",
+          "text": "Because lower pressure decreases the molecular diameter, reducing the collision cross-section"
+        },
+        {
+          "id": "D",
+          "text": "Because lower pressure increases the temperature, which elongates the path between collisions"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The mean free path λ = 1/(√2 · π · d² · n), where n is the number density and d is the molecular diameter. At constant temperature, reducing the pressure directly reduces the number density n (since P = nkT). With fewer molecules per unit volume, a given molecule travels a longer average distance before encountering another molecule, hence a longer mean free path.",
+      "explanation_incorrect": "Option A is wrong because at constant temperature, the average molecular speed does not change with pressure; speed depends on temperature, not pressure. Option C is wrong because molecular diameter is an intrinsic property and does not change with pressure. Option D is wrong because the question specifies constant temperature."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 14,
-        "application": 20,
-        "exam_style": 16
+        "familiarity": 20,
+        "application": 28,
+        "exam_style": 22
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 47,
-        "compare": 1,
-        "classify": 0,
-        "scenario": 1,
-        "exception": 1,
-        "reason": 0
+        "compare": 6,
+        "classify": 4,
+        "scenario": 6,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

@@ -1280,6 +1280,609 @@
       "correct_answer": "B",
       "explanation_correct": "This statement is false. 1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6 × 10⁶ J, not 3600 J. 3600 J = 1 Wh (watt-hour). The factor of 1000 (from kilo) makes a significant difference.",
       "explanation_incorrect": "1 kWh is not 3600 J. The correct conversion is 1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J. The value 3600 J equals only 1 watt-hour, not 1 kilowatt-hour."
+    },
+    {
+      "question_id": "T01.03.Q051",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the total resistance of resistors connected in series differ from that of the same resistors connected in parallel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Series total is always less than parallel total"
+        },
+        {
+          "id": "B",
+          "text": "Series total is always greater than parallel total"
+        },
+        {
+          "id": "C",
+          "text": "Series total equals parallel total"
+        },
+        {
+          "id": "D",
+          "text": "The comparison depends on the number of resistors"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In series, R_total = R₁ + R₂ + ..., which is the sum of all resistances. In parallel, 1/R_total = 1/R₁ + 1/R₂ + ..., which always gives a value less than the smallest individual resistance. Therefore, the series total is always greater than the parallel total for the same set of resistors.",
+      "explanation_incorrect": "The series equivalent is always greater because resistances add directly. The parallel equivalent is always smaller because additional paths reduce overall opposition to current. This holds true regardless of the number of resistors."
+    },
+    {
+      "question_id": "T01.03.Q052",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the resistance of a copper wire differ from that of a nichrome wire of the same length and cross-sectional area?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Copper has higher resistance because it is a better conductor"
+        },
+        {
+          "id": "B",
+          "text": "Nichrome has higher resistance because its resistivity is much greater than copper"
+        },
+        {
+          "id": "C",
+          "text": "Both have the same resistance since dimensions are equal"
+        },
+        {
+          "id": "D",
+          "text": "Copper has higher resistance because it is a metal"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since R = ρl/A and both wires have the same length and area, resistance depends on resistivity (ρ). The resistivity of nichrome (about 1.10 × 10⁻⁶ Ω·m) is much greater than that of copper (about 1.62 × 10⁻⁸ Ω·m). Therefore, the nichrome wire has significantly higher resistance.",
+      "explanation_incorrect": "When length and area are the same, resistance depends entirely on the material's resistivity. Copper is an excellent conductor with very low resistivity, while nichrome is an alloy with high resistivity, making nichrome's resistance much greater."
+    },
+    {
+      "question_id": "T01.03.Q053",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does an ammeter differ from a voltmeter in terms of connection in a circuit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "An ammeter is connected in parallel; a voltmeter is connected in series"
+        },
+        {
+          "id": "B",
+          "text": "An ammeter is connected in series; a voltmeter is connected in parallel"
+        },
+        {
+          "id": "C",
+          "text": "Both are connected in series"
+        },
+        {
+          "id": "D",
+          "text": "Both are connected in parallel"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An ammeter is connected in series with the circuit element to measure the current flowing through it, and it has very low resistance. A voltmeter is connected in parallel across the component to measure the potential difference, and it has very high resistance.",
+      "explanation_incorrect": "An ammeter must be in series (low resistance, so it does not alter the current), while a voltmeter must be in parallel (high resistance, so it draws negligible current). Connecting them the wrong way can damage instruments or give incorrect readings."
+    },
+    {
+      "question_id": "T01.03.Q054",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the heat produced in a wire of resistance 5 Ω differ from that in a wire of resistance 10 Ω when both carry the same current for the same time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The 5 Ω wire produces more heat"
+        },
+        {
+          "id": "B",
+          "text": "The 10 Ω wire produces twice as much heat"
+        },
+        {
+          "id": "C",
+          "text": "Both produce the same heat"
+        },
+        {
+          "id": "D",
+          "text": "The 10 Ω wire produces four times as much heat"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using Joule's law H = I²Rt, when current (I) and time (t) are the same, heat is directly proportional to resistance. The 10 Ω wire has twice the resistance of the 5 Ω wire, so it produces exactly twice the heat.",
+      "explanation_incorrect": "Since H = I²Rt and I and t are the same for both wires, H is directly proportional to R. So the ratio of heat is 10/5 = 2. The higher-resistance wire produces more heat when the current is constant, which is why heating elements are made of high-resistance materials."
+    },
+    {
+      "question_id": "T01.03.Q055",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the brightness of a bulb in a series circuit of three identical bulbs differ from its brightness when connected alone to the same battery?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The bulb glows brighter in series because the total resistance is higher"
+        },
+        {
+          "id": "B",
+          "text": "The bulb glows dimmer in series because the current is reduced by the higher total resistance"
+        },
+        {
+          "id": "C",
+          "text": "The brightness is the same in both cases"
+        },
+        {
+          "id": "D",
+          "text": "The bulb does not glow at all in series"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series circuit of three identical bulbs, the total resistance is three times that of a single bulb. By Ohm's law (I = V/R), the current is reduced to one-third. Since power dissipated in each bulb P = I²R decreases, each bulb glows dimmer compared to when it is connected alone to the same battery.",
+      "explanation_incorrect": "Adding more bulbs in series increases total resistance, which decreases current from the battery. Each bulb then receives less power (P = I²R with smaller I), making it glow dimmer. This is why series connections are not used for household lighting."
+    },
+    {
+      "question_id": "T01.03.Q056",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A component shows a V-I graph that is a straight line passing through the origin with a constant slope. This component should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A non-ohmic conductor like a filament bulb"
+        },
+        {
+          "id": "B",
+          "text": "An ohmic conductor obeying Ohm's law"
+        },
+        {
+          "id": "C",
+          "text": "A semiconductor like a diode"
+        },
+        {
+          "id": "D",
+          "text": "An insulator with infinite resistance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A straight-line V-I graph through the origin with a constant slope indicates a constant ratio of V to I, meaning the resistance is constant. This is the defining characteristic of an ohmic conductor that obeys Ohm's law (V = IR with R constant).",
+      "explanation_incorrect": "A linear V-I graph through the origin means V/I = constant, which is the hallmark of an ohmic conductor. Non-ohmic devices like filament bulbs or diodes produce curved V-I graphs because their resistance changes with current or voltage."
+    },
+    {
+      "question_id": "T01.03.Q057",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "In a circuit, the same current flows through three components and the voltage is divided among them. This type of connection is classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Parallel connection"
+        },
+        {
+          "id": "B",
+          "text": "Short circuit"
+        },
+        {
+          "id": "C",
+          "text": "Series connection"
+        },
+        {
+          "id": "D",
+          "text": "Open circuit"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In a series connection, there is only one path for current flow, so the same current passes through all components. The total voltage of the source is divided among the components in proportion to their resistances (V = V₁ + V₂ + V₃). These are the defining features of a series circuit.",
+      "explanation_incorrect": "Same current through all components and divided voltage are the two key characteristics of a series connection. In parallel, the voltage is the same across all branches and the current divides. An open circuit has no current, and a short circuit has negligible resistance."
+    },
+    {
+      "question_id": "T01.03.Q058",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A material has a resistivity of about 1.0 × 10⁻⁶ Ω·m. Based on this value, this material should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A good conductor like copper"
+        },
+        {
+          "id": "B",
+          "text": "An insulator like rubber"
+        },
+        {
+          "id": "C",
+          "text": "An alloy used in heating elements"
+        },
+        {
+          "id": "D",
+          "text": "A superconductor with zero resistance"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Resistivity of about 10⁻⁶ Ω·m is typical of alloys like nichrome or manganin used in heating elements and standard resistors. Good conductors like copper have resistivity around 10⁻⁸ Ω·m, while insulators have resistivity of 10¹² to 10¹⁷ Ω·m. Alloys have intermediate resistivities that are much higher than pure metals.",
+      "explanation_incorrect": "A resistivity of 10⁻⁶ Ω·m is about 100 times higher than that of copper (10⁻⁸ Ω·m), ruling out a good conductor. It is far too low for an insulator (10¹² Ω·m or more). This range is characteristic of alloys like nichrome, which are used for heating elements because of their high and stable resistance."
+    },
+    {
+      "question_id": "T01.03.Q059",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A device converts electrical energy entirely into heat energy using a coil of high-resistance wire. This device is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An electric motor"
+        },
+        {
+          "id": "B",
+          "text": "A heating appliance working on Joule's heating effect"
+        },
+        {
+          "id": "C",
+          "text": "A generator"
+        },
+        {
+          "id": "D",
+          "text": "A transformer"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A device that uses a high-resistance coil to convert electrical energy into heat is a heating appliance based on Joule's law of heating (H = I²Rt). Examples include electric heaters, toasters, and electric irons, which all use nichrome wire elements with high resistance.",
+      "explanation_incorrect": "An electric motor converts electrical energy into mechanical energy. A generator converts mechanical energy into electrical energy. A transformer changes voltage levels. The description matches a heating appliance that works on Joule's heating effect (H = I²Rt)."
+    },
+    {
+      "question_id": "T01.03.Q060",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is performing a physics practical in her school lab. She connects a 3 V battery, an ammeter, a bulb, and a switch in a complete circuit. The ammeter reads 0.5 A. She then notes the time for which the circuit was on as 2 minutes. How much charge flowed through the circuit during this time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 C"
+        },
+        {
+          "id": "B",
+          "text": "6.0 C"
+        },
+        {
+          "id": "C",
+          "text": "60 C"
+        },
+        {
+          "id": "D",
+          "text": "150 C"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "From the scenario, I = 0.5 A and t = 2 minutes = 120 seconds. Using Q = It = 0.5 × 120 = 60 C. The charge that flowed through Riya's circuit is 60 coulombs. The battery voltage (3 V) is not needed for this calculation.",
+      "explanation_incorrect": "Q = It, where I = 0.5 A and t must be in seconds: 2 min = 120 s. So Q = 0.5 × 120 = 60 C. Option A forgets to convert minutes to seconds. Option B uses t = 12 s. Option D incorrectly multiplies voltage into the calculation."
+    },
+    {
+      "question_id": "T01.03.Q061",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit sets up a circuit in his school lab with two resistors of 6 Ω and 12 Ω connected in parallel across a 12 V battery. He wants to find the total current drawn from the battery. What is the total current in Amit's circuit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 A"
+        },
+        {
+          "id": "B",
+          "text": "2 A"
+        },
+        {
+          "id": "C",
+          "text": "3 A"
+        },
+        {
+          "id": "D",
+          "text": "4 A"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In Amit's parallel circuit, the equivalent resistance is R = (6 × 12)/(6 + 12) = 72/18 = 4 Ω. Total current I = V/R = 12/4 = 3 A. Alternatively, current through 6 Ω branch = 12/6 = 2 A, current through 12 Ω branch = 12/12 = 1 A, total = 2 + 1 = 3 A.",
+      "explanation_incorrect": "For parallel resistors: R_eq = (6 × 12)/(6 + 12) = 4 Ω. Then I = V/R_eq = 12/4 = 3 A. Option A considers only the 12 Ω branch. Option B considers only the 6 Ω branch. Option D incorrectly uses series resistance."
+    },
+    {
+      "question_id": "T01.03.Q062",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Priya's family uses a 1000 W electric iron for 2 hours every day. At the end of 30 days, they receive their electricity bill. If the cost of electricity is ₹5 per unit (kWh), how much did the electric iron contribute to the monthly bill?",
+      "options": [
+        {
+          "id": "A",
+          "text": "₹100"
+        },
+        {
+          "id": "B",
+          "text": "₹300"
+        },
+        {
+          "id": "C",
+          "text": "₹150"
+        },
+        {
+          "id": "D",
+          "text": "₹600"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Energy consumed per day = 1000 W × 2 h = 2000 Wh = 2 kWh. In 30 days, total energy = 2 × 30 = 60 kWh. Cost = 60 × ₹5 = ₹300. The electric iron contributed ₹300 to Priya's family's monthly electricity bill.",
+      "explanation_incorrect": "Energy = Power × Time = 1 kW × 2 h/day × 30 days = 60 kWh. Cost = 60 × ₹5 = ₹300. Option A uses only 10 days. Option C forgets to use the daily time correctly. Option D doubles the energy consumption."
+    },
+    {
+      "question_id": "T01.03.Q063",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan has two wires, P and Q, made of the same material. Wire P is 2 m long with cross-sectional area 0.5 mm², and wire Q is 4 m long with cross-sectional area 1 mm². Rohan measures the resistance of wire P as 8 Ω. What will be the resistance of wire Q?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 Ω"
+        },
+        {
+          "id": "B",
+          "text": "8 Ω"
+        },
+        {
+          "id": "C",
+          "text": "16 Ω"
+        },
+        {
+          "id": "D",
+          "text": "32 Ω"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Since R = ρl/A and both wires have the same material (same ρ): R_P = ρ(2)/(0.5) = 4ρ = 8 Ω, so ρ = 2. R_Q = ρ(4)/(1) = 4ρ = 4 × 2 = 8 Ω. Wire Q has double the length but also double the area compared to P, so the effects cancel out and both have the same resistance of 8 Ω.",
+      "explanation_incorrect": "R = ρl/A. For wire P: 8 = ρ × 2/0.5, giving ρ = 2. For wire Q: R = 2 × 4/1 = 8 Ω. Doubling both the length and the area leaves resistance unchanged because R is proportional to l/A."
+    },
+    {
+      "question_id": "T01.03.Q064",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera observes that her household geyser is rated 2000 W, 220 V. During a physics class discussion, she wants to calculate the resistance of the heating element. What is the resistance of Meera's geyser?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24.2 Ω"
+        },
+        {
+          "id": "B",
+          "text": "110 Ω"
+        },
+        {
+          "id": "C",
+          "text": "48.4 Ω"
+        },
+        {
+          "id": "D",
+          "text": "0.11 Ω"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using P = V²/R, we get R = V²/P = (220)²/2000 = 48400/2000 = 24.2 Ω. The heating element in Meera's geyser has a resistance of 24.2 Ω.",
+      "explanation_incorrect": "R = V²/P = (220)² / 2000 = 48400/2000 = 24.2 Ω. Option B incorrectly uses R = V/I with a wrong current value. Option C incorrectly uses R = V²/(P/2). Option D confuses R = P/V²."
+    },
+    {
+      "question_id": "T01.03.Q065",
+      "type": "mcq",
+      "concept_id": "T01.03.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "A student claims that doubling the voltage across a filament lamp always doubles the current through it. Which of the following correctly identifies the flaw in this reasoning?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The claim is correct; Ohm's law guarantees that current doubles when voltage doubles"
+        },
+        {
+          "id": "B",
+          "text": "A filament lamp is non-ohmic — its resistance increases as the filament heats up, so the current does not exactly double"
+        },
+        {
+          "id": "C",
+          "text": "Doubling the voltage would actually halve the current"
+        },
+        {
+          "id": "D",
+          "text": "Voltage and current are not related in a filament lamp"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A filament lamp is a non-ohmic device. As the voltage increases, the filament heats up, which increases its resistance. Since resistance is not constant, V = IR does not produce a linear relationship. Doubling the voltage increases the current, but by less than double because R has also increased.",
+      "explanation_incorrect": "Ohm's law (V = IR with constant R) only applies to ohmic conductors at constant temperature. A filament lamp's resistance rises significantly with temperature. The V-I graph of a filament is a curve, not a straight line, which is why current does not double when voltage doubles."
+    },
+    {
+      "question_id": "T01.03.Q066",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A student solving a problem adds the resistances directly (R₁ + R₂) to find the equivalent resistance of two resistors in parallel. Which of the following correctly identifies the error?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The student's method is correct for parallel combinations"
+        },
+        {
+          "id": "B",
+          "text": "In parallel, it is the reciprocals that add: 1/R = 1/R₁ + 1/R₂, not the resistances directly"
+        },
+        {
+          "id": "C",
+          "text": "In parallel, resistances should be multiplied, not added"
+        },
+        {
+          "id": "D",
+          "text": "Resistors in parallel cannot have an equivalent resistance"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Adding resistances directly (R₁ + R₂) is the formula for series combination. For parallel combination, the correct formula is 1/R_total = 1/R₁ + 1/R₂, which gives R_total = (R₁ × R₂)/(R₁ + R₂) for two resistors. This is a very common mistake among students.",
+      "explanation_incorrect": "The formula R₁ + R₂ applies only to series. In parallel, reciprocals add: 1/R = 1/R₁ + 1/R₂. For two resistors, this simplifies to R = R₁R₂/(R₁ + R₂). Confusing series and parallel formulas is one of the most frequent errors in circuit analysis."
+    },
+    {
+      "question_id": "T01.03.Q067",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "A student states: 'A 100 W bulb has more resistance than a 60 W bulb.' Assuming both are rated for the same voltage (220 V), which of the following correctly identifies the error?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The statement is correct — higher power means higher resistance"
+        },
+        {
+          "id": "B",
+          "text": "The 100 W bulb actually has lower resistance, since P = V²/R means higher power requires lower resistance at the same voltage"
+        },
+        {
+          "id": "C",
+          "text": "Power and resistance are completely unrelated"
+        },
+        {
+          "id": "D",
+          "text": "Both bulbs must have exactly the same resistance since they run on the same voltage"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using P = V²/R, we get R = V²/P. For the 100 W bulb: R = (220)²/100 = 484 Ω. For the 60 W bulb: R = (220)²/60 = 806.7 Ω. The 100 W bulb has lower resistance. This is a common misconception — students assume more power means more resistance, but at the same voltage, higher power requires lower resistance to draw more current.",
+      "explanation_incorrect": "From P = V²/R, R = V²/P. Higher power at the same voltage means lower resistance. The 100 W bulb (R = 484 Ω) has less resistance than the 60 W bulb (R ≈ 807 Ω). More current flows through the lower-resistance 100 W bulb, making it brighter."
+    },
+    {
+      "question_id": "T01.03.Q068",
+      "type": "mcq",
+      "concept_id": "T01.03.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the direction of conventional current taken from the positive terminal to the negative terminal of a cell, even though electrons flow in the opposite direction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because electrons are positively charged"
+        },
+        {
+          "id": "B",
+          "text": "Because the convention was established before the discovery of electrons, based on the assumed flow of positive charges"
+        },
+        {
+          "id": "C",
+          "text": "Because current actually flows from positive to negative inside the cell"
+        },
+        {
+          "id": "D",
+          "text": "Because the negative terminal repels conventional current"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The convention for current direction was established in the early study of electricity, long before the electron was discovered. Scientists assumed that positive charges flowed from the positive to the negative terminal. Even after the discovery that electrons (negative charges) actually flow from negative to positive, the original convention was retained because it does not affect circuit calculations.",
+      "explanation_incorrect": "Electrons carry negative charge, not positive. The conventional current direction (positive to negative) was fixed before J.J. Thomson discovered the electron in 1897. The convention is kept because reversing it would not change any physics — all equations still work correctly."
+    },
+    {
+      "question_id": "T01.03.Q069",
+      "type": "mcq",
+      "concept_id": "T01.03.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why are the heating elements of appliances like electric heaters and toasters made of alloys such as nichrome rather than pure metals like copper?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because alloys are cheaper than pure metals"
+        },
+        {
+          "id": "B",
+          "text": "Because alloys have high resistivity, high melting point, and do not oxidise easily at high temperatures"
+        },
+        {
+          "id": "C",
+          "text": "Because alloys are better conductors of electricity"
+        },
+        {
+          "id": "D",
+          "text": "Because alloys have lower resistivity than pure metals"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Nichrome and similar alloys are used as heating elements because they have (i) high resistivity, which produces more heat for a given current (H = I²Rt), (ii) a high melting point, so they do not melt at operating temperatures, and (iii) they do not oxidise easily when heated in air, giving them long life.",
+      "explanation_incorrect": "Alloys like nichrome are chosen not because they are cheap or better conductors, but because of their high resistivity (produces more heat), high melting point (withstands operating temperatures), and resistance to oxidation at high temperatures. Pure metals like copper have very low resistivity and would not generate sufficient heat."
+    },
+    {
+      "question_id": "T01.03.Q070",
+      "type": "mcq",
+      "concept_id": "T01.03.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why are household electrical appliances connected in parallel rather than in series?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because parallel connection uses less wire"
+        },
+        {
+          "id": "B",
+          "text": "Because in parallel each appliance gets the full supply voltage, can operate independently, and the failure of one does not affect others"
+        },
+        {
+          "id": "C",
+          "text": "Because parallel connection increases the total resistance of the household circuit"
+        },
+        {
+          "id": "D",
+          "text": "Because series connection would make all appliances brighter"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a parallel connection, each appliance receives the full mains voltage (220 V in India), appliances can be switched on or off independently without affecting others, and if one appliance fails the rest continue to work. In series, voltage would be shared, all appliances would have to be on together, and one failure would break the entire circuit.",
+      "explanation_incorrect": "Parallel connection ensures (i) same voltage across every appliance, (ii) independent operation via individual switches, and (iii) uninterrupted working of other appliances if one fails. Series connection would divide the voltage, reduce performance, and cause total failure if any one device breaks."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 21,
+        "application": 27,
+        "exam_style": 22
+      },
+      "by_type": {
+        "mcq": 56,
+        "true_false": 6,
+        "fill_blank": 8
+      },
+      "by_cognitive_level": {
+        "recall": 49,
+        "compare": 5,
+        "classify": 4,
+        "scenario": 5,
+        "exception": 4,
+        "reason": 3
+      }
+    }
+  }
 }

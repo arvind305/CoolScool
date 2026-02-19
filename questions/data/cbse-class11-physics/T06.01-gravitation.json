@@ -1471,6 +1471,607 @@
       "correct_answer": "A",
       "explanation_correct": "The orbital velocity for a circular orbit around mass M/2 at radius r would be v₀' = √(G(M/2)/r) = v₀/√2. Since the Earth retains its original velocity v₀ > v₀' × √2 = v₀, and vₑ for the new mass is √(2G(M/2)/r) = vₑ_old/√2 = v₀, the Earth's velocity equals the new escape velocity, so it escapes.",
       "explanation_incorrect": "Original orbital velocity v₀ = √(GM/r). New escape velocity from same point = √(2G(M/2)/r) = √(GM/r) = v₀. Since the Earth's speed equals the new escape velocity, it will just escape the Sun's gravitational field on a parabolic trajectory."
+    },
+    {
+      "question_id": "T06.01.Q051",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the variation of acceleration due to gravity with depth differ from its variation with altitude (for small values compared to Earth's radius)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "g decreases linearly with depth but decreases with twice the rate for the same fractional change in altitude"
+        },
+        {
+          "id": "B",
+          "text": "g increases linearly with depth but decreases linearly with altitude"
+        },
+        {
+          "id": "C",
+          "text": "g decreases at the same rate with both depth and altitude"
+        },
+        {
+          "id": "D",
+          "text": "g decreases with depth but increases with altitude"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At depth d: g' = g(1 − d/R). At height h (h << R): g' ≈ g(1 − 2h/R). For the same value of d = h, the decrease with altitude is twice as large as the decrease with depth. Both are linear approximations, but the altitude formula has a factor of 2.",
+      "explanation_incorrect": "The key difference lies in the coefficients: the depth formula is g(1 − d/R) and the altitude approximation is g(1 − 2h/R). The factor of 2 in the altitude formula means g decreases faster with height than with depth for the same displacement."
+    },
+    {
+      "question_id": "T06.01.Q052",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the escape velocity from Earth's surface differ from the orbital velocity of a satellite in a near-surface orbit in terms of their dependence on the mass of the projectile/satellite?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Neither depends on the mass of the projectile/satellite; both depend only on Earth's mass and radius"
+        },
+        {
+          "id": "B",
+          "text": "Escape velocity depends on the mass of the projectile, but orbital velocity does not"
+        },
+        {
+          "id": "C",
+          "text": "Orbital velocity depends on the mass of the satellite, but escape velocity does not"
+        },
+        {
+          "id": "D",
+          "text": "Both depend on the mass of the projectile/satellite"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Escape velocity vₑ = √(2GM/R) and orbital velocity v₀ = √(GM/R). In both expressions, the mass of the projectile or satellite cancels out during derivation. Both depend solely on the mass M and radius R of the Earth.",
+      "explanation_incorrect": "In deriving both velocities, the mass of the orbiting or escaping body cancels. For escape velocity: ½mv² = GMm/R gives v = √(2GM/R). For orbital velocity: mv²/R = GMm/R² gives v = √(GM/R). Neither depends on m."
+    },
+    {
+      "question_id": "T06.01.Q053",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the gravitational potential at the centre of a uniform solid sphere differ from the gravitational potential at its surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The potential at the centre is 3/2 times the surface potential, i.e., more negative"
+        },
+        {
+          "id": "B",
+          "text": "The potential at the centre is zero since the gravitational field there is zero"
+        },
+        {
+          "id": "C",
+          "text": "The potential at the centre equals the surface potential since it is constant inside"
+        },
+        {
+          "id": "D",
+          "text": "The potential at the centre is half the surface potential, i.e., less negative"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At the surface: V_s = −GM/R. At the centre (using V = −GM(3R² − r²)/(2R³) with r = 0): V_c = −3GM/(2R) = (3/2)V_s. The centre potential is 1.5 times the surface value, meaning it is more negative. Note: zero gravitational field does not imply zero potential.",
+      "explanation_incorrect": "Gravitational field being zero at the centre does not mean the potential is zero. Potential is a scalar sum and is most negative at the centre of a solid sphere. V_centre = −3GM/(2R) = 1.5 × V_surface."
+    },
+    {
+      "question_id": "T06.01.Q054",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does a geostationary satellite differ from a polar satellite in terms of orbital plane and period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A geostationary satellite orbits in the equatorial plane with T = 24 h, while a polar satellite orbits in a plane passing through the poles with T ≈ 100 min"
+        },
+        {
+          "id": "B",
+          "text": "Both orbit in the equatorial plane but a geostationary satellite has a longer period"
+        },
+        {
+          "id": "C",
+          "text": "A geostationary satellite orbits at the poles while a polar satellite orbits at the equator"
+        },
+        {
+          "id": "D",
+          "text": "Both have the same period of 24 h but orbit in different planes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A geostationary satellite must be in the equatorial plane at ~36,000 km altitude with a 24-hour period to appear stationary. A polar satellite orbits in a plane passing through (or near) the poles, typically at low altitude (~500–800 km) with a period of about 100 minutes.",
+      "explanation_incorrect": "The two types of satellites differ in both orbital plane and period. Geostationary: equatorial, T = 24 h, high altitude. Polar: passes over poles, T ≈ 100 min, low altitude. They serve different purposes (communication vs Earth observation/mapping)."
+    },
+    {
+      "question_id": "T06.01.Q055",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the total energy of a satellite in circular orbit differ from its kinetic energy and potential energy individually?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total energy equals negative of kinetic energy and half of the potential energy"
+        },
+        {
+          "id": "B",
+          "text": "Total energy equals kinetic energy plus twice the potential energy"
+        },
+        {
+          "id": "C",
+          "text": "Total energy equals the sum of equal magnitudes of KE and PE"
+        },
+        {
+          "id": "D",
+          "text": "Total energy is always positive and equals the difference of KE and PE"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a satellite in circular orbit: KE = GMm/2r, PE = −GMm/r, and E = −GMm/2r. Thus E = −KE and E = PE/2. The total energy is negative (bound orbit), equals the negative of kinetic energy, and equals half the potential energy.",
+      "explanation_incorrect": "The virial theorem for gravitational orbits gives KE = −E and PE = 2E. So total energy = −KE = PE/2. Since PE is negative and KE is positive, the total energy is negative, confirming a bound system."
+    },
+    {
+      "question_id": "T06.01.Q056",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A force between two objects has the following properties: (i) always attractive, (ii) proportional to the product of a specific property of each object, (iii) obeys inverse square law with distance. Which type of force does this describe?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gravitational force"
+        },
+        {
+          "id": "B",
+          "text": "Electrostatic force"
+        },
+        {
+          "id": "C",
+          "text": "Magnetic force"
+        },
+        {
+          "id": "D",
+          "text": "Nuclear force"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Only the gravitational force satisfies all three conditions: it is always attractive, proportional to the product of masses, and follows an inverse square law. Electrostatic force is also inverse-square and proportional to charges, but it can be repulsive. Magnetic and nuclear forces have different distance dependences.",
+      "explanation_incorrect": "Electrostatic force can be repulsive (like charges repel), so it fails condition (i). Magnetic force between poles also can repel. Nuclear force does not follow an inverse square law. Gravitational force uniquely satisfies all three properties."
+    },
+    {
+      "question_id": "T06.01.Q057",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A satellite orbits with a period T such that T² is proportional to the cube of its orbital radius. This observation is the mathematical form of which law?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kepler's third law (law of periods)"
+        },
+        {
+          "id": "B",
+          "text": "Kepler's second law (law of areas)"
+        },
+        {
+          "id": "C",
+          "text": "Kepler's first law (law of orbits)"
+        },
+        {
+          "id": "D",
+          "text": "Newton's law of gravitation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The relation T² ∝ r³ is Kepler's third law, the law of periods. It was discovered empirically by Kepler for planetary orbits and later derived by Newton from his law of gravitation. It applies to any orbiting body — planets, moons, or artificial satellites.",
+      "explanation_incorrect": "Kepler's first law describes elliptical orbits. Kepler's second law states equal areas in equal times (conservation of angular momentum). Newton's law of gravitation gives the force. The T² ∝ r³ relation is specifically Kepler's third law."
+    },
+    {
+      "question_id": "T06.01.Q058",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A satellite has total mechanical energy E = −GMm/2r, where E is negative. Based on the sign of its total energy, this satellite should be classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A gravitationally bound satellite in a closed orbit"
+        },
+        {
+          "id": "B",
+          "text": "An unbound object on a hyperbolic trajectory"
+        },
+        {
+          "id": "C",
+          "text": "An object at the threshold of escape (parabolic trajectory)"
+        },
+        {
+          "id": "D",
+          "text": "A satellite with increasing orbital radius"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Negative total energy (E < 0) means the satellite is gravitationally bound and moves in a closed orbit (elliptical or circular). For E = 0, the object follows a parabolic escape trajectory. For E > 0, the trajectory is hyperbolic (unbound).",
+      "explanation_incorrect": "The sign of total energy determines the nature of the orbit: E < 0 → bound (ellipse/circle), E = 0 → marginally unbound (parabola), E > 0 → unbound (hyperbola). Since E = −GMm/2r < 0, the satellite is bound."
+    },
+    {
+      "question_id": "T06.01.Q059",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "An astronaut measures that the effective gravitational acceleration at a certain location is g_eff = g − ω²R cos²λ, where λ is the latitude. Based on the cos²λ factor, at which type of location on Earth is the reduction in g due to rotation the greatest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "At the equator (λ = 0°), where the reduction is maximum"
+        },
+        {
+          "id": "B",
+          "text": "At the poles (λ = 90°), where the reduction is maximum"
+        },
+        {
+          "id": "C",
+          "text": "At latitude 45°, where the reduction is maximum"
+        },
+        {
+          "id": "D",
+          "text": "The reduction is the same at all latitudes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The centrifugal reduction term is ω²R cos²λ. At the equator (λ = 0°), cos²λ = 1, giving the maximum reduction ω²R. At the poles (λ = 90°), cos²λ = 0, so there is no reduction. Therefore, the rotational effect on g is greatest at the equator.",
+      "explanation_incorrect": "Since the reduction term is proportional to cos²λ, it is maximised when cos²λ is largest, which occurs at λ = 0° (equator). At the poles, cos 90° = 0, so the entire reduction term vanishes."
+    },
+    {
+      "question_id": "T06.01.Q060",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is working on an ISRO project involving two spherical satellites, each of mass 500 kg, that are 10 m apart in free space. She needs to calculate the gravitational force between them. Using G = 6.674 × 10⁻¹¹ N·m²/kg², what is the approximate gravitational attraction between the two satellites?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.67 × 10⁻⁷ N"
+        },
+        {
+          "id": "B",
+          "text": "1.67 × 10⁻⁵ N"
+        },
+        {
+          "id": "C",
+          "text": "3.34 × 10⁻⁷ N"
+        },
+        {
+          "id": "D",
+          "text": "6.67 × 10⁻⁸ N"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "F = GMm/r² = (6.674 × 10⁻¹¹)(500)(500)/(10²) = (6.674 × 10⁻¹¹)(250000)/100 = (6.674 × 10⁻¹¹)(2500) = 1.6685 × 10⁻⁷ N ≈ 1.67 × 10⁻⁷ N.",
+      "explanation_incorrect": "Applying F = GMm/r²: numerator = 6.674 × 10⁻¹¹ × 500 × 500 = 6.674 × 10⁻¹¹ × 2.5 × 10⁵ = 1.6685 × 10⁻⁵. Dividing by r² = 100: F = 1.6685 × 10⁻⁷ N. The force is extremely small, illustrating why gravitational effects between everyday objects are negligible."
+    },
+    {
+      "question_id": "T06.01.Q061",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is conducting an experiment on a hilltop at height h above the Earth's surface, where h is much smaller than R. He drops a ball and measures the free-fall acceleration to be 9.7 m/s². If g at the surface is 9.8 m/s² and R = 6400 km, what is the approximate height of the hilltop?",
+      "options": [
+        {
+          "id": "A",
+          "text": "About 32.7 km"
+        },
+        {
+          "id": "B",
+          "text": "About 65.3 km"
+        },
+        {
+          "id": "C",
+          "text": "About 16.3 km"
+        },
+        {
+          "id": "D",
+          "text": "About 6.4 km"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using g' = g(1 − 2h/R) for h << R: 9.7 = 9.8(1 − 2h/6400). So 1 − 2h/6400 = 9.7/9.8 = 0.99. Thus 2h/6400 = 0.01, giving h = 0.01 × 6400/2 = 32 km ≈ 32.7 km (using more precise values).",
+      "explanation_incorrect": "From g' = g(1 − 2h/R): (g − g')/g = 2h/R → h = R(g − g')/(2g) = 6400 × (0.1)/(2 × 9.8) = 6400 × 0.005102 ≈ 32.7 km."
+    },
+    {
+      "question_id": "T06.01.Q062",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is studying for her JEE exam and encounters the following problem: a rocket of mass 1000 kg is launched from the surface of a planet of mass 6 × 10²⁴ kg and radius 6000 km. She needs to find the minimum kinetic energy required at launch for the rocket to escape the planet's gravity. What value should Priya calculate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6.674 × 10¹⁰ J"
+        },
+        {
+          "id": "B",
+          "text": "3.337 × 10¹⁰ J"
+        },
+        {
+          "id": "C",
+          "text": "6.674 × 10⁷ J"
+        },
+        {
+          "id": "D",
+          "text": "1.335 × 10¹¹ J"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Minimum KE = |gravitational PE at surface| = GMm/R = (6.674 × 10⁻¹¹)(6 × 10²⁴)(1000)/(6 × 10⁶) = (6.674 × 10⁻¹¹ × 6 × 10²⁷)/(6 × 10⁶) = 6.674 × 10⁻¹¹ × 10²¹ = 6.674 × 10¹⁰ J.",
+      "explanation_incorrect": "For escape, the total energy must be at least zero: ½mv² − GMm/R ≥ 0, so KE_min = GMm/R. Substituting: (6.674 × 10⁻¹¹)(6 × 10²⁴)(10³)/(6 × 10⁶) = 6.674 × 10¹⁰ J."
+    },
+    {
+      "question_id": "T06.01.Q063",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "During a physics class discussion, Arjun argues that a newly discovered asteroid orbiting the Sun at 4 times the Earth-Sun distance should have an orbital period of 4 years. Meera disagrees. Using Kepler's third law, what is the correct orbital period of the asteroid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 years"
+        },
+        {
+          "id": "B",
+          "text": "4 years"
+        },
+        {
+          "id": "C",
+          "text": "16 years"
+        },
+        {
+          "id": "D",
+          "text": "64 years"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "By Kepler's third law, T² ∝ r³. For the asteroid: T²_a/T²_E = (4r_E/r_E)³ = 64. Since T_E = 1 year, T²_a = 64 → T_a = 8 years. Meera is correct; the period is not simply proportional to the distance.",
+      "explanation_incorrect": "Arjun's error is assuming T ∝ r (linear relationship). The correct relation is T ∝ r^(3/2). So T = 1 × 4^(3/2) = 1 × 8 = 8 years. Period scales as the 3/2 power of the orbital radius."
+    },
+    {
+      "question_id": "T06.01.Q064",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is watching an ISRO rocket launch and wonders: if a satellite is placed in a circular orbit at a height equal to the Earth's radius (R = 6400 km), what orbital velocity must it have? Given g = 9.8 m/s².",
+      "options": [
+        {
+          "id": "A",
+          "text": "About 5.6 km/s"
+        },
+        {
+          "id": "B",
+          "text": "About 7.9 km/s"
+        },
+        {
+          "id": "C",
+          "text": "About 11.2 km/s"
+        },
+        {
+          "id": "D",
+          "text": "About 3.9 km/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At height h = R, the orbital radius is 2R. Orbital velocity v = √(GM/(2R)) = √(gR²/(2R)) = √(gR/2) = √(9.8 × 6.4 × 10⁶/2) = √(3.136 × 10⁷) ≈ 5600 m/s ≈ 5.6 km/s.",
+      "explanation_incorrect": "The orbital velocity at distance r from Earth's centre is v = √(GM/r). At r = 2R: v = √(GM/2R) = v₀/√2 = 7.9/√2 ≈ 5.6 km/s. This is lower than the near-surface orbital velocity because the satellite is farther away."
+    },
+    {
+      "question_id": "T06.01.Q065",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "A student claims that since the gravitational field inside a uniform spherical shell is zero, the gravitational potential inside the shell must also be zero. Which of the following correctly identifies the error?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The potential inside the shell is not zero; it is constant and equal to −GM/R (the surface value), because zero field means zero gradient of potential, not zero potential"
+        },
+        {
+          "id": "B",
+          "text": "The student is correct — both field and potential are zero inside the shell"
+        },
+        {
+          "id": "C",
+          "text": "The potential inside the shell is positive, not zero"
+        },
+        {
+          "id": "D",
+          "text": "The potential is zero only at the centre of the shell but varies elsewhere inside"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Zero gravitational field means the potential does not change with position (dV/dr = 0), not that V = 0. Inside a uniform shell, V is constant and equal to its value at the surface: V = −GM/R. This is a common misconception — constant potential does not mean zero potential.",
+      "explanation_incorrect": "The gravitational field is the negative gradient of the potential: E = −dV/dr. If E = 0 everywhere inside, then V is constant inside. But that constant value equals the surface potential −GM/R, which is not zero."
+    },
+    {
+      "question_id": "T06.01.Q066",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A student states: 'A satellite in orbit is weightless because there is no gravitational force acting on it.' What is wrong with this statement?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gravity is not zero in orbit; the satellite is in free fall, so the apparent weight is zero, but the gravitational force provides the centripetal acceleration"
+        },
+        {
+          "id": "B",
+          "text": "The student is correct — gravity is zero in orbit, which is why objects float"
+        },
+        {
+          "id": "C",
+          "text": "The satellite is weightless because it is moving too fast for gravity to act on it"
+        },
+        {
+          "id": "D",
+          "text": "The gravitational force acts only on the satellite, not on objects inside it"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Gravity at orbital altitudes is only slightly less than on the surface (e.g., at 400 km, g ≈ 8.7 m/s²). The satellite and everything inside it are in free fall — they all accelerate equally due to gravity. The apparent weight (normal force) is zero, but the gravitational force is very much present and is what keeps the satellite in orbit.",
+      "explanation_incorrect": "This is one of the most common misconceptions. Weightlessness in orbit is not due to absence of gravity but due to free fall. The gravitational force acts as the centripetal force: mg = mv²/r. Without gravity, the satellite would fly off in a straight line."
+    },
+    {
+      "question_id": "T06.01.Q067",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "A student uses the formula g' = g(1 − 2h/R) to calculate the acceleration due to gravity at a height h = R above the Earth's surface, obtaining g' = −g. What is the flaw in this approach?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The formula g' = g(1 − 2h/R) is only a first-order approximation valid for h << R; the exact formula g' = gR²/(R+h)² must be used for large h"
+        },
+        {
+          "id": "B",
+          "text": "The calculation is correct; g can indeed be negative at large heights"
+        },
+        {
+          "id": "C",
+          "text": "The formula is correct for all h but the student made an arithmetic error"
+        },
+        {
+          "id": "D",
+          "text": "The formula works for h up to 2R and fails only beyond that"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The formula g' = g(1 − 2h/R) is derived using a binomial approximation of gR²/(R+h)² ≈ g(1 − 2h/R), valid only when h << R. For h = R, the exact formula gives g' = gR²/(2R)² = g/4, not −g. Using the approximation beyond its domain gives a physically absurd negative value.",
+      "explanation_incorrect": "Acceleration due to gravity is always positive (directed towards the centre). A negative result signals misuse of the approximation. The exact formula gR²/(R+h)² never gives a negative value for any positive h."
+    },
+    {
+      "question_id": "T06.01.Q068",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does the gravitational force between two bodies obey Newton's third law, even when the masses are vastly different (e.g., the Earth and an apple)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because Newton's law of gravitation is symmetric in the two masses — F₁₂ = Gm₁m₂/r² = F₂₁ — the force depends equally on both masses"
+        },
+        {
+          "id": "B",
+          "text": "Because the larger mass generates a stronger field that compensates for the smaller mass"
+        },
+        {
+          "id": "C",
+          "text": "Because the gravitational constant G adjusts its value depending on the mass ratio"
+        },
+        {
+          "id": "D",
+          "text": "Because the apple is too small to exert any force on the Earth"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The gravitational force formula F = Gm₁m₂/r² is symmetric: exchanging m₁ and m₂ gives the same magnitude. The force on the apple due to the Earth is exactly equal in magnitude (and opposite in direction) to the force on the Earth due to the apple. The difference lies in acceleration (a = F/m), not force.",
+      "explanation_incorrect": "Newton's third law is a fundamental principle: every action has an equal and opposite reaction. The apple pulls the Earth with the same force as the Earth pulls the apple. The Earth's huge mass means its acceleration is negligibly small, but the force is identical."
+    },
+    {
+      "question_id": "T06.01.Q069",
+      "type": "mcq",
+      "concept_id": "T06.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does the areal velocity of a planet remain constant as it orbits the Sun, according to Kepler's second law?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the gravitational force is a central force directed along the radius vector, producing zero torque about the Sun, so angular momentum is conserved"
+        },
+        {
+          "id": "B",
+          "text": "Because the gravitational force is constant in magnitude throughout the orbit"
+        },
+        {
+          "id": "C",
+          "text": "Because the planet's kinetic energy is conserved during orbital motion"
+        },
+        {
+          "id": "D",
+          "text": "Because the Sun's gravitational field is uniform across the planet's orbit"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The gravitational force is central — always directed from the planet toward the Sun. Since the torque τ = r × F = 0 (r and F are antiparallel), the angular momentum L = mr × v is conserved. The areal velocity dA/dt = L/(2m) = constant follows directly from conservation of angular momentum.",
+      "explanation_incorrect": "The gravitational force varies with distance (F ∝ 1/r²), so option B is wrong. KE is not conserved as the planet speeds up and slows down (only total energy is conserved). The field is not uniform. The correct reason is the central nature of gravity, which ensures zero torque and conserved angular momentum."
+    },
+    {
+      "question_id": "T06.01.Q070",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is the escape velocity from a planet independent of the direction in which the body is projected?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because escape velocity is derived from energy conservation, which involves only scalar quantities (KE and PE), and scalars do not depend on direction"
+        },
+        {
+          "id": "B",
+          "text": "Because the gravitational field of a planet is uniform in all directions at the surface"
+        },
+        {
+          "id": "C",
+          "text": "Because escape velocity depends on the momentum of the body, which is a scalar"
+        },
+        {
+          "id": "D",
+          "text": "Because the atmosphere provides equal resistance in all directions"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Escape velocity is derived from energy conservation: ½mv² = GMm/R. Kinetic energy (½mv²) and potential energy (−GMm/r) are both scalar quantities and do not depend on the direction of motion. Therefore, the minimum speed needed to escape is the same regardless of the projection angle.",
+      "explanation_incorrect": "Momentum is a vector, not a scalar (option C is wrong). The gravitational field is radial, not uniform (option B is wrong). Atmospheric resistance is irrelevant to the concept (option D is wrong). The key insight is that energy conservation uses speed (scalar), not velocity (vector)."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 21,
+        "application": 26,
+        "exam_style": 23
+      },
+      "by_type": {
+        "mcq": 70
+      },
+      "by_cognitive_level": {
+        "recall": 49,
+        "compare": 5,
+        "classify": 4,
+        "scenario": 6,
+        "exception": 3,
+        "reason": 3
+      }
+    }
+  }
 }

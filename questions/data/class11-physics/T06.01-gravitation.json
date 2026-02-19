@@ -1231,31 +1231,611 @@
       ],
       "explanation_correct": "The orbital period of a satellite depends on its distance from the Earth. Satellites closer to the Earth have a shorter orbital period, while those farther away have a longer period. Therefore, the correct order from shortest to longest orbital period is: ISS (~400 km altitude), GPS satellite (~20200 km), Geostationary satellite (~36000 km), and the Moon (~384000 km).",
       "explanation_incorrect": "The incorrect order would be to arrange the satellites based on their altitude alone, without considering the dependence of orbital period on distance from the Earth. This would result in the order: ISS (~400 km altitude), GPS satellite (~20200 km), Moon (~384000 km), and Geostationary satellite (~36000 km). However, this is incorrect because the orbital period does not scale linearly with altitude."
+    },
+    {
+      "question_id": "T06.01.Q051",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the gravitational force between two masses differ from the electrostatic force in terms of their dependence on the medium between them?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both forces depend on the medium between them"
+        },
+        {
+          "id": "B",
+          "text": "Gravitational force depends on the medium while electrostatic force does not"
+        },
+        {
+          "id": "C",
+          "text": "Electrostatic force depends on the medium while gravitational force does not"
+        },
+        {
+          "id": "D",
+          "text": "Neither force depends on the medium between them"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The gravitational force between two masses is independent of the medium between them and depends only on the masses and the distance between them. In contrast, the electrostatic force depends on the dielectric constant of the medium, which reduces the force in materials with higher dielectric constants. This fundamental difference arises because gravity acts through spacetime itself, while electromagnetic interactions are mediated through the medium.",
+      "explanation_incorrect": "The gravitational force does not depend on any medium between the masses. Unlike electrostatic force, which is affected by the dielectric properties of the medium (becoming weaker in materials with higher dielectric constants), gravitational force remains constant regardless of what material lies between the masses. This is a fundamental property of gravity."
+    },
+    {
+      "question_id": "T06.01.Q052",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the variation of g with altitude differ from its variation with depth below the Earth's surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both decrease linearly with distance"
+        },
+        {
+          "id": "B",
+          "text": "g decreases as (1 − 2h/R) with altitude but as (1 − d/R) with depth"
+        },
+        {
+          "id": "C",
+          "text": "g increases with altitude but decreases with depth"
+        },
+        {
+          "id": "D",
+          "text": "Both follow the inverse square law"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For small heights h above the Earth's surface (h << R), the acceleration due to gravity decreases approximately as g' = g(1 − 2h/R). However, at depth d below the surface, g decreases linearly as g' = g(1 − d/R). The difference arises because at altitude, the entire Earth's mass is below you at increasing distance, while at depth, only the mass in the inner sphere of radius (R − d) contributes to the gravitational force, with the outer shell producing zero net force.",
+      "explanation_incorrect": "The variation of g with altitude and depth are fundamentally different. At altitude, g decreases as (1 − 2h/R) because the distance from Earth's center increases. At depth, g decreases as (1 − d/R) because only the mass inside the sphere of radius (R − d) contributes to gravity. The factor of 2 in the altitude formula comes from the inverse square law approximation, while the depth formula is linear because of the shell theorem."
+    },
+    {
+      "question_id": "T06.01.Q053",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the escape velocity from Earth's surface compare with the escape velocity from a point at height h = R/2 above the surface?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The escape velocity at h = R/2 is √(2/3) times the surface escape velocity"
+        },
+        {
+          "id": "B",
+          "text": "The escape velocity at h = R/2 is (2/3) times the surface escape velocity"
+        },
+        {
+          "id": "C",
+          "text": "The escape velocity at h = R/2 is 1/√3 times the surface escape velocity"
+        },
+        {
+          "id": "D",
+          "text": "Both escape velocities are the same"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Escape velocity at any point is vₑ = √(2GM/r), where r is the distance from Earth's center. At the surface, r = R, so vₑ(surface) = √(2GM/R). At height h = R/2, r = R + R/2 = 3R/2, so vₑ(h) = √(2GM/(3R/2)) = √(4GM/3R) = √(2/3) × √(2GM/R) = √(2/3) × vₑ(surface). The escape velocity decreases with height because less energy is needed to escape from a point already farther from Earth's center.",
+      "explanation_incorrect": "The escape velocity depends on the distance from Earth's center as vₑ = √(2GM/r). At height h = R/2, the distance from center is 3R/2, not R. Therefore, vₑ(h) = √(2GM/(3R/2)) = √(2/3) × √(2GM/R) = √(2/3) × vₑ(surface). The relationship is not (2/3) but √(2/3) because of the square root in the velocity formula."
+    },
+    {
+      "question_id": "T06.01.Q054",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does Kepler's second law (law of areas) compare with Kepler's third law (T² ∝ r³) in terms of what they conserve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Second law implies conservation of linear momentum; third law implies conservation of energy"
+        },
+        {
+          "id": "B",
+          "text": "Second law implies conservation of angular momentum; third law is a consequence of the gravitational force law"
+        },
+        {
+          "id": "C",
+          "text": "Both laws imply conservation of total mechanical energy"
+        },
+        {
+          "id": "D",
+          "text": "Second law implies conservation of energy; third law implies conservation of angular momentum"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kepler's second law states that a planet sweeps equal areas in equal times, which is a direct consequence of the conservation of angular momentum. Since the gravitational force acts radially (toward the Sun), it exerts no torque, and angular momentum is conserved. Kepler's third law, T² ∝ r³, is derived from Newton's law of gravitation and the requirement for circular (or elliptical) orbits, relating the orbital period to the orbital radius through the gravitational force law.",
+      "explanation_incorrect": "Kepler's second law is not about linear momentum or energy conservation—it specifically relates to angular momentum conservation. When a planet is closer to the Sun (perihelion), it moves faster; when farther (aphelion), it moves slower, such that the areal velocity remains constant. Kepler's third law is a mathematical relationship derived from gravitational dynamics, not a conservation law."
+    },
+    {
+      "question_id": "T06.01.Q055",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the gravitational force between Earth and Moon compare with the gravitational force between Earth and a satellite of mass 1000 kg orbiting at the Moon's distance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The force on the Moon is approximately 7.3 × 10¹⁹ times greater"
+        },
+        {
+          "id": "B",
+          "text": "Both forces are equal"
+        },
+        {
+          "id": "C",
+          "text": "The force on the satellite is greater because it is man-made"
+        },
+        {
+          "id": "D",
+          "text": "Cannot be compared without knowing Earth's mass"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The gravitational force is F = GMm/r². For the same distance r (Moon's orbital radius), the force is proportional to the mass. The Moon's mass is approximately 7.3 × 10²² kg, while the satellite has mass 1000 kg. Therefore, F(Moon)/F(satellite) = m(Moon)/m(satellite) = (7.3 × 10²²)/(10³) ≈ 7.3 × 10¹⁹. The force on the Moon is enormously greater, which is why the Moon significantly affects Earth's tides while artificial satellites do not.",
+      "explanation_incorrect": "The gravitational force depends on both masses involved. At the same distance from Earth's center, the force is directly proportional to the mass of the object. Since the Moon's mass (~7.3 × 10²² kg) is vastly larger than a 1000 kg satellite, the gravitational force on the Moon is proportionally greater. The force does not depend on whether the object is natural or artificial."
+    },
+    {
+      "question_id": "T06.01.Q056",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A location has the following properties: (i) g = 0, (ii) gravitational potential is minimum, (iii) all mass is at equal or greater distance from this point. Identify this location:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Earth's surface"
+        },
+        {
+          "id": "B",
+          "text": "Centre of the Earth"
+        },
+        {
+          "id": "C",
+          "text": "Point at infinity"
+        },
+        {
+          "id": "D",
+          "text": "Geostationary orbit"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At the Earth's center, the acceleration due to gravity g = 0 because the gravitational forces from all surrounding mass cancel out by symmetry. The gravitational potential at the center is at its minimum value (most negative) for any point on or inside Earth. Additionally, all of Earth's mass surrounds this central point, making it at equal or greater distance. These three properties uniquely identify the center of the Earth.",
+      "explanation_incorrect": "At Earth's surface, g = 9.8 m/s², not zero, so it doesn't satisfy property (i). At infinity, g = 0 and potential is maximum (zero), not minimum, so it doesn't satisfy property (ii). In geostationary orbit, g is not zero and the point is far from Earth's center, so it satisfies none of the properties. Only the Earth's center satisfies all three conditions."
+    },
+    {
+      "question_id": "T06.01.Q057",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A satellite has the following characteristics: (i) Total energy = −GMm/(2r), (ii) Kinetic energy = GMm/(2r), (iii) Speed is constant. Identify the orbit type:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Elliptical orbit"
+        },
+        {
+          "id": "B",
+          "text": "Parabolic trajectory"
+        },
+        {
+          "id": "C",
+          "text": "Circular orbit"
+        },
+        {
+          "id": "D",
+          "text": "Hyperbolic trajectory"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "All three properties indicate a circular orbit. In a circular orbit, the total energy is E = −GMm/(2r), the kinetic energy is KE = GMm/(2r), and the speed remains constant throughout the orbit because the radius r is constant. In elliptical orbits, the speed varies (faster at perihelion, slower at aphelion). Parabolic and hyperbolic trajectories have zero or positive total energy, not negative.",
+      "explanation_incorrect": "In an elliptical orbit, the speed is not constant—it varies according to Kepler's second law. Parabolic trajectories have total energy equal to zero (just enough to escape), while hyperbolic trajectories have positive total energy (more than enough to escape). Only circular orbits have constant speed and the specific energy relationships E = −GMm/(2r) and KE = GMm/(2r)."
+    },
+    {
+      "question_id": "T06.01.Q058",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "An orbit has these properties: (i) Period = 24 hours, (ii) Appears stationary from Earth's surface, (iii) Orbital plane coincides with equatorial plane. Identify the satellite:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Polar satellite"
+        },
+        {
+          "id": "B",
+          "text": "Geostationary satellite"
+        },
+        {
+          "id": "C",
+          "text": "GPS satellite"
+        },
+        {
+          "id": "D",
+          "text": "ISS (International Space Station)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "All three properties uniquely identify a geostationary satellite. These satellites have a 24-hour orbital period matching Earth's rotation, orbit directly above the equator (equatorial plane), and appear stationary relative to a fixed point on Earth's surface. This makes them ideal for telecommunications and weather monitoring. Polar satellites orbit over the poles, GPS satellites have 12-hour periods, and ISS has a ~90-minute period and inclined orbit.",
+      "explanation_incorrect": "Polar satellites orbit over the poles with much shorter periods and are not stationary. GPS satellites have approximately 12-hour orbits and are not geostationary. The ISS orbits at low altitude with a period of about 90 minutes and an inclination of 51.6°, so it is not in the equatorial plane and is not stationary. Only geostationary satellites satisfy all three properties."
+    },
+    {
+      "question_id": "T06.01.Q059",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A system exhibits: (i) Force proportional to product of two quantities, (ii) Force inversely proportional to square of distance, (iii) Force always attractive. Identify this force:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrostatic force"
+        },
+        {
+          "id": "B",
+          "text": "Magnetic force"
+        },
+        {
+          "id": "C",
+          "text": "Gravitational force"
+        },
+        {
+          "id": "D",
+          "text": "Nuclear force"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The gravitational force satisfies all three properties: F = Gm₁m₂/r² shows it is proportional to the product of masses, inversely proportional to the square of distance, and Newton's law specifies it is always attractive. While electrostatic force also follows an inverse square law and is proportional to the product of charges, it can be either attractive or repulsive. Magnetic and nuclear forces do not follow inverse square laws over all distances.",
+      "explanation_incorrect": "Electrostatic force follows the inverse square law and is proportional to the product of charges, but it can be both attractive (opposite charges) and repulsive (like charges), violating property (iii). Magnetic force depends on velocity and doesn't follow a simple inverse square law. Nuclear force is extremely short-range and doesn't follow an inverse square law. Only gravitational force satisfies all three properties."
+    },
+    {
+      "question_id": "T06.01.Q060",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is conducting an experiment in a deep mine in Kolar, Karnataka, at a depth of 2 km below Earth's surface. She measures the acceleration due to gravity using a pendulum. If the Earth's radius is 6400 km and g at the surface is 9.8 m/s², what value should she approximately obtain?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9.8 m/s²"
+        },
+        {
+          "id": "B",
+          "text": "9.77 m/s²"
+        },
+        {
+          "id": "C",
+          "text": "9.83 m/s²"
+        },
+        {
+          "id": "D",
+          "text": "10.1 m/s²"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At depth d below Earth's surface, g' = g(1 − d/R). Here, d = 2 km and R = 6400 km, so g' = 9.8 × (1 − 2/6400) = 9.8 × (1 − 1/3200) = 9.8 × (3199/3200) ≈ 9.8 × 0.99969 ≈ 9.77 m/s². The value of g decreases linearly with depth because only the mass of the sphere inside the current radius contributes to gravity, while the outer shell contributes zero net force.",
+      "explanation_incorrect": "At depth, g decreases, so it cannot be 9.8 m/s² (surface value) or any value higher than 9.8 m/s². Using g' = g(1 − d/R) with d = 2 km and R = 6400 km gives g' = 9.8 × (1 − 2/6400) ≈ 9.77 m/s². The decrease is small because 2 km is a tiny fraction of Earth's 6400 km radius. Options A, C, and D do not account for the decrease of g with depth."
+    },
+    {
+      "question_id": "T06.01.Q061",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit wants to launch a small rocket from Chennai (at sea level) to just reach the Kármán line (100 km altitude, often considered the boundary of space). Assuming g = 10 m/s² and neglecting air resistance, what minimum speed must he launch the rocket with?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.0 km/s"
+        },
+        {
+          "id": "B",
+          "text": "1.4 km/s"
+        },
+        {
+          "id": "C",
+          "text": "7.9 km/s"
+        },
+        {
+          "id": "D",
+          "text": "11.2 km/s"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "To just reach height h, the initial kinetic energy must equal the work done against gravity: (1/2)mv² = mgh (approximately, for h << R). Solving for v: v = √(2gh) = √(2 × 10 × 100,000 m) = √(2,000,000) ≈ 1414 m/s ≈ 1.4 km/s. This is much less than orbital velocity (7.9 km/s) or escape velocity (11.2 km/s) because 100 km is a relatively small height compared to Earth's radius. The rocket goes up and comes back down.",
+      "explanation_incorrect": "This is not escape velocity (11.2 km/s) or orbital velocity (7.9 km/s)—those are needed for much more energetic scenarios. For a simple ballistic trajectory to height h = 100 km, use energy conservation: (1/2)mv² = mgh gives v = √(2gh) = √(2 × 10 × 100,000) ≈ 1.4 km/s. Option A (1.0 km/s) is too low and would only reach about 50 km."
+    },
+    {
+      "question_id": "T06.01.Q062",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is analyzing data from ISRO's INSAT-3D weather satellite, which is in geostationary orbit at approximately 36,000 km above Earth's equator. If ISRO wanted to place another satellite in an orbit with half the radius (measured from Earth's center), what would be the new orbital period?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 hours"
+        },
+        {
+          "id": "B",
+          "text": "6 hours"
+        },
+        {
+          "id": "C",
+          "text": "8.5 hours"
+        },
+        {
+          "id": "D",
+          "text": "3 hours"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "According to Kepler's third law, T² ∝ r³, so T₂/T₁ = (r₂/r₁)^(3/2). If the new orbital radius is r₂ = r₁/2, then T₂ = T₁ × (1/2)^(3/2) = T₁ × (1/2√2) = T₁/(2^1.5) = 24/(2.828) ≈ 8.5 hours. Note that halving the radius does not halve the period—the relationship is r³/² due to Kepler's third law. This demonstrates that closer satellites orbit faster.",
+      "explanation_incorrect": "The relationship is not linear. Kepler's third law states T² ∝ r³, not T ∝ r. If radius is halved, T₂ = T₁ × (1/2)^(3/2) = 24/(2^1.5) ≈ 8.5 hours, not 12 hours (which would be T ∝ r). Option B (6 hours) assumes T ∝ r² which is also incorrect. Option D (3 hours) has no basis in Kepler's laws. The correct answer accounts for the (3/2) power relationship."
+    },
+    {
+      "question_id": "T06.01.Q063",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is studying binary star systems where two stars orbit their common center of mass. If star A has mass 2M and star B has mass M, and they are separated by distance d, at what distance from star A is the center of mass located?",
+      "options": [
+        {
+          "id": "A",
+          "text": "d/2"
+        },
+        {
+          "id": "B",
+          "text": "d/3"
+        },
+        {
+          "id": "C",
+          "text": "2d/3"
+        },
+        {
+          "id": "D",
+          "text": "d/4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The center of mass is located at position x from star A such that (2M) × x = M × (d − x), where the moments about the center of mass are equal. Solving: 2Mx = Md − Mx, so 3Mx = Md, giving x = d/3. The center of mass is closer to the more massive star A. In orbital motion, both stars orbit this common center of mass, with star A moving in a smaller orbit and star B in a larger orbit.",
+      "explanation_incorrect": "The center of mass is not at the midpoint (d/2) because the stars have unequal masses. It must be closer to the heavier star. Using the definition of center of mass: m₁x₁ = m₂x₂, where x₁ and x₂ are distances from the center of mass, and x₁ + x₂ = d. For masses 2M and M, we get 2M × x = M × (d − x), solving gives x = d/3 from the heavier star."
+    },
+    {
+      "question_id": "T06.01.Q064",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is on a space station at height h above Earth's surface where g' = g/4. If Earth's radius is R, what is the height h in terms of R? (Assume h << R for the approximation g' = g(1 − 2h/R) to be valid)",
+      "options": [
+        {
+          "id": "A",
+          "text": "R/4"
+        },
+        {
+          "id": "B",
+          "text": "3R/8"
+        },
+        {
+          "id": "C",
+          "text": "R/2"
+        },
+        {
+          "id": "D",
+          "text": "R/8"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using g' = g(1 − 2h/R), we have g/4 = g(1 − 2h/R). Dividing both sides by g: 1/4 = 1 − 2h/R, so 2h/R = 1 − 1/4 = 3/4, giving h = 3R/8. However, note that h = 3R/8 is not << R, so this approximation is pushing its validity limits. The exact formula g' = g(R/(R+h))² would give a slightly different result, but within the approximation framework, h = 3R/8.",
+      "explanation_incorrect": "Setting g' = g/4 in the formula g' = g(1 − 2h/R) gives g/4 = g(1 − 2h/R), which simplifies to 1/4 = 1 − 2h/R. Solving: 2h/R = 3/4, so h = 3R/8. Option A (R/4) would give g' = g(1 − 1/2) = g/2, not g/4. Option C (R/2) would give g' = 0, which is physically impossible at a finite height. Option D (R/8) would give g' = 3g/4, not g/4."
+    },
+    {
+      "question_id": "T06.01.Q065",
+      "type": "mcq",
+      "concept_id": "T06.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Students often believe that astronauts in the International Space Station (ISS) are weightless because there is no gravity at that altitude. What is the actual reason for weightlessness in the ISS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gravity is zero at ISS altitude (~400 km)"
+        },
+        {
+          "id": "B",
+          "text": "Astronauts and ISS are in free fall together, continuously falling toward Earth"
+        },
+        {
+          "id": "C",
+          "text": "The ISS is beyond Earth's gravitational field"
+        },
+        {
+          "id": "D",
+          "text": "Artificial gravity generators cancel Earth's gravity"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At ISS altitude (~400 km), gravity is still about 90% of surface value (g' ≈ 8.8 m/s²), not zero. Astronauts feel weightless because both they and the ISS are in continuous free fall toward Earth, accelerating together at the same rate. The ISS's horizontal velocity is precisely calibrated so that as it falls toward Earth, Earth's surface curves away beneath it at the same rate—this is orbital motion. Weightlessness = free fall, not absence of gravity.",
+      "explanation_incorrect": "This is a very common misconception. Gravity at 400 km altitude is still strong—about 90% of surface gravity. The ISS is definitely within Earth's gravitational field. There are no artificial gravity generators (those are science fiction). The real reason is that the ISS and everything in it are in free fall together, creating the sensation of weightlessness even though gravity is acting on them."
+    },
+    {
+      "question_id": "T06.01.Q066",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Many students incorrectly think that if you dig a hole through Earth and jump in, you would fall faster and faster until exiting the other side. What would actually happen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "You would accelerate continuously and exit at very high speed"
+        },
+        {
+          "id": "B",
+          "text": "You would oscillate back and forth, with maximum speed at Earth's center"
+        },
+        {
+          "id": "C",
+          "text": "You would stop at Earth's center where g = 0"
+        },
+        {
+          "id": "D",
+          "text": "You would float in the middle due to zero gravity throughout"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "As you fall toward Earth's center, g decreases linearly (g' = g(1 − d/R)), reaching zero at the center. You would accelerate until reaching the center (maximum speed), then decelerate on the other side as gravity pulls you back. You would emerge at the other side with zero velocity, then fall back, oscillating like a mass on a spring with period T = 2π√(R/g) ≈ 84 minutes. Neglecting friction, you'd oscillate forever—this is simple harmonic motion through Earth.",
+      "explanation_incorrect": "You don't accelerate continuously because g decreases as you go deeper, reaching zero at the center. You don't stop at the center because you have momentum—you coast through it. It's not zero gravity throughout—gravity varies with depth. The motion is oscillatory: you accelerate to the center (gaining speed), pass through it at maximum speed, decelerate on the other side (losing speed), emerge at the opposite point with zero speed, and fall back."
+    },
+    {
+      "question_id": "T06.01.Q067",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "A common misconception is that escape velocity is the constant speed at which a rocket must travel to escape Earth. What is the correct interpretation of escape velocity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The rocket must maintain 11.2 km/s throughout its journey"
+        },
+        {
+          "id": "B",
+          "text": "It is the minimum initial speed needed to escape, after which the rocket can slow down and still escape"
+        },
+        {
+          "id": "C",
+          "text": "It is the average speed required during the escape journey"
+        },
+        {
+          "id": "D",
+          "text": "It is the final speed when the rocket reaches infinity"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Escape velocity (11.2 km/s) is the minimum initial speed needed to escape Earth's gravity if no additional thrust is applied afterward. Once launched at this speed, the object will slow down continuously due to gravity but will still have enough kinetic energy to reach infinity (theoretically arriving with zero velocity). Real rockets use continuous thrust and don't need to reach escape velocity initially—they can escape at much lower speeds by applying thrust over time.",
+      "explanation_incorrect": "Escape velocity is not a constant speed that must be maintained—that would require continuous thrust. It is the initial speed that, if achieved instantaneously with no further propulsion, would allow the object to coast to infinity despite gravity slowing it down. Once launched at vₑ, the object's speed decreases continuously but never stops, asymptotically approaching zero at infinite distance. It's not an average or final speed, but a critical initial speed."
+    },
+    {
+      "question_id": "T06.01.Q068",
+      "type": "mcq",
+      "concept_id": "T06.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is the total mechanical energy of a satellite in a stable orbit always negative?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the satellite is losing energy due to air resistance"
+        },
+        {
+          "id": "B",
+          "text": "Because gravitational potential energy is defined as zero at infinity, and the satellite is at finite distance where PE is negative and greater in magnitude than positive KE"
+        },
+        {
+          "id": "C",
+          "text": "Because the kinetic energy is negative for orbiting objects"
+        },
+        {
+          "id": "D",
+          "text": "Because the satellite is moving in the opposite direction to Earth's gravity"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Gravitational potential energy is defined as zero at infinity and becomes increasingly negative as objects get closer: PE = −GMm/r. For a satellite at radius r, PE = −GMm/r (negative), while KE = GMm/(2r) (positive). The total energy E = KE + PE = GMm/(2r) − GMm/r = −GMm/(2r), which is negative. Negative total energy indicates a bound system—the satellite doesn't have enough energy to escape to infinity. If E were positive or zero, the object would escape.",
+      "explanation_incorrect": "Air resistance is negligible for satellites in proper orbits and is not the reason for negative energy. Kinetic energy is always positive (KE = ½mv²). The satellite's direction doesn't make energy negative. The real reason is that we define PE = 0 at infinity, so PE is negative at finite distances. Since |PE| > KE for bound orbits, the total energy E = KE + PE is negative, signifying the satellite is gravitationally bound to Earth."
+    },
+    {
+      "question_id": "T06.01.Q069",
+      "type": "mcq",
+      "concept_id": "T06.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does Kepler's second law (equal areas in equal times) imply that a planet moves faster when it is closer to the Sun?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the Sun's gravitational pull is stronger when the planet is closer"
+        },
+        {
+          "id": "B",
+          "text": "Because angular momentum L = mvr is conserved, so when r decreases, v must increase to keep L constant"
+        },
+        {
+          "id": "C",
+          "text": "Because the planet has more kinetic energy when closer to the Sun"
+        },
+        {
+          "id": "D",
+          "text": "Because Kepler observed this pattern empirically without physical reason"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Kepler's second law is a consequence of conservation of angular momentum. Since the gravitational force is radial (toward the Sun), it exerts no torque, so L = mvr is constant. When the planet is closer to the Sun (smaller r at perihelion), velocity v must increase to maintain constant L. Conversely, at aphelion (larger r), v decreases. This results in equal areas being swept in equal times. The areal velocity (dA/dt = L/2m) is constant.",
+      "explanation_incorrect": "While it's true that the Sun's gravity is stronger when closer (option A) and the planet has more KE (option C), these are consequences, not the fundamental reason. The law wasn't just empirical (option D)—it follows from physics. The core reason is conservation of angular momentum: L = mvr = constant. When r decreases (closer to Sun), v must increase proportionally to keep L constant. This physical principle underlies Kepler's second law."
+    },
+    {
+      "question_id": "T06.01.Q070",
+      "type": "mcq",
+      "concept_id": "T06.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the value of g slightly less at the equator compared to the poles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the equator is farther from the Sun"
+        },
+        {
+          "id": "B",
+          "text": "Because Earth's rotation creates centrifugal force at the equator that opposes gravity, and Earth is slightly oblate (larger radius at equator)"
+        },
+        {
+          "id": "C",
+          "text": "Because there is more atmosphere at the equator"
+        },
+        {
+          "id": "D",
+          "text": "Because the Moon's gravity cancels some of Earth's gravity at the equator"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "There are two reasons g is less at the equator: (1) Earth's rotation creates a centrifugal effect at the equator (maximum rotational speed), effectively reducing the measured g by about 0.034 m/s²; (2) Earth is oblate (bulges at the equator), making the equatorial radius about 21 km larger than the polar radius, which reduces g by about 0.018 m/s² due to greater distance from Earth's center. Combined, these effects make g ≈ 9.78 m/s² at the equator vs. 9.83 m/s² at the poles.",
+      "explanation_incorrect": "The equator's distance from the Sun is irrelevant to g, which depends on Earth's mass and radius. Atmospheric thickness doesn't affect gravitational acceleration. The Moon's gravity affects tides but doesn't significantly reduce g at the equator specifically. The real reasons are Earth's rotation (centrifugal effect reduces effective g) and Earth's oblate shape (equator is farther from Earth's center). Both effects work together to make g measurably smaller at the equator."
     }
   ],
   "metadata": {
     "created_at": "2026-02-10",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 14,
-        "application": 20,
-        "exam_style": 16
+        "familiarity": 20,
+        "application": 28,
+        "exam_style": 22
       },
       "by_type": {
-        "mcq": 35,
+        "mcq": 55,
         "true_false": 5,
         "fill_blank": 7,
         "ordering": 3
       },
       "by_cognitive_level": {
         "recall": 48,
-        "compare": 0,
-        "classify": 0,
-        "scenario": 2,
-        "exception": 0,
-        "reason": 0
+        "compare": 5,
+        "classify": 4,
+        "scenario": 5,
+        "exception": 3,
+        "reason": 3
       }
     }
   }

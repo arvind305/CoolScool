@@ -1346,30 +1346,610 @@
       "correct_answer": "neAv_d",
       "explanation_correct": "Electric current I = neAv_d, where n is the number density of free electrons, e is the electronic charge, A is the cross-sectional area, and v_d is the drift velocity. This follows from the fact that all free electrons in a volume A*v_d*dt pass through a cross-section in time dt.",
       "explanation_incorrect": "The complete expression requires all four quantities: n, e, A, and v_d. Missing any factor (e.g., writing I = nAv_d without e, or I = nev_d without A) gives an incorrect expression."
+    },
+    {
+      "question_id": "T02.01.Q051",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does drift velocity differ from the speed of the electric signal in a metallic conductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Drift velocity is approximately 10^-4 m/s while signal speed is nearly 3 x 10^8 m/s, because drift velocity measures electron motion while signal speed measures electric field propagation"
+        },
+        {
+          "id": "B",
+          "text": "Both are approximately equal at 3 x 10^8 m/s since electrons carry the signal"
+        },
+        {
+          "id": "C",
+          "text": "Drift velocity is higher because individual electrons move faster than the collective signal"
+        },
+        {
+          "id": "D",
+          "text": "They differ only in semiconductors; in metals both are approximately 10^-4 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Drift velocity (about 10^-4 m/s) is the slow average velocity of electrons under an applied field, while the electric signal propagates at nearly the speed of light (about 3 x 10^8 m/s). The signal speed is due to the rapid propagation of the electric field through the conductor, not the physical movement of electrons from one end to the other.",
+      "explanation_incorrect": "Option B incorrectly equates both speeds. Option C reverses the relationship. Option D is wrong because the distinction holds in all conductors, not just semiconductors. The key difference is that drift velocity refers to actual electron displacement, while signal speed refers to electric field propagation."
+    },
+    {
+      "question_id": "T02.01.Q052",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the temperature dependence of resistivity in metals differ from that in semiconductors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both metals and semiconductors show increasing resistivity with temperature due to increased lattice vibrations"
+        },
+        {
+          "id": "B",
+          "text": "Metals have a positive temperature coefficient (resistivity increases) while semiconductors have a negative temperature coefficient (resistivity decreases), because in semiconductors more charge carriers are released at higher temperatures"
+        },
+        {
+          "id": "C",
+          "text": "Metals show decreasing resistivity while semiconductors show increasing resistivity with temperature"
+        },
+        {
+          "id": "D",
+          "text": "Both show decreasing resistivity with temperature, but semiconductors decrease faster"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In metals, higher temperature increases lattice vibrations, causing more frequent electron-ion collisions and thus higher resistivity (positive temperature coefficient). In semiconductors, higher temperature generates more electron-hole pairs, greatly increasing the number of charge carriers, which more than compensates for increased scattering, leading to decreased resistivity (negative temperature coefficient).",
+      "explanation_incorrect": "Option A is wrong because semiconductors show decreasing resistivity with temperature. Option C reverses the behaviour of metals. Option D is wrong because metals show increasing resistivity. The critical distinction is the dominant mechanism: scattering in metals vs. carrier generation in semiconductors."
+    },
+    {
+      "question_id": "T02.01.Q053",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the equivalent resistance of n identical resistors (each of resistance R) connected in series differ from that when connected in parallel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Series gives nR while parallel gives R/n; the ratio of series to parallel equivalent resistance is n^2"
+        },
+        {
+          "id": "B",
+          "text": "Series gives R/n while parallel gives nR; series always gives smaller resistance"
+        },
+        {
+          "id": "C",
+          "text": "Series gives nR while parallel gives nR; both combinations give the same result"
+        },
+        {
+          "id": "D",
+          "text": "Series gives nR while parallel gives R/n; the ratio of series to parallel equivalent resistance is n"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For n identical resistors of resistance R each: series equivalent = R + R + ... (n times) = nR; parallel equivalent = R/n (since 1/R_eq = n/R). The ratio R_series/R_parallel = nR/(R/n) = n^2. This means series resistance is always n^2 times the parallel resistance for n identical resistors.",
+      "explanation_incorrect": "Option B reverses the formulas. Option C incorrectly claims equal results. Option D has correct individual formulas but gives the wrong ratio (it should be n^2, not n). The series combination always yields the maximum possible resistance while parallel yields the minimum."
+    },
+    {
+      "question_id": "T02.01.Q054",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the Wheatstone bridge method of measuring resistance differ from the metre bridge method in terms of the source of the ratio arms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In a Wheatstone bridge, all four arms use discrete resistors, while in a metre bridge two ratio arms are formed by the two segments of a uniform wire separated by the jockey position"
+        },
+        {
+          "id": "B",
+          "text": "The Wheatstone bridge uses a potentiometer wire while the metre bridge uses fixed resistors"
+        },
+        {
+          "id": "C",
+          "text": "There is no structural difference; metre bridge and Wheatstone bridge are completely different instruments with different principles"
+        },
+        {
+          "id": "D",
+          "text": "The Wheatstone bridge measures EMF while the metre bridge measures resistance"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Both instruments use the same Wheatstone bridge principle (P/Q = R/S at balance). In a standard Wheatstone bridge, all four arms are discrete resistance boxes. In a metre bridge, two of the ratio arms are replaced by the two lengths of a uniform wire on either side of the jockey contact point, with R/S = l/(100-l). The metre bridge is essentially a practical form of the Wheatstone bridge.",
+      "explanation_incorrect": "Option B reverses the descriptions. Option C is wrong because the metre bridge is a practical implementation of the Wheatstone bridge principle. Option D is wrong because both measure resistance. The key distinction is that the metre bridge uses a uniform wire to provide continuously variable ratio arms."
+    },
+    {
+      "question_id": "T02.01.Q055",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does a potentiometer differ from a voltmeter in measuring the EMF of a cell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A voltmeter has infinite resistance while a potentiometer has zero resistance"
+        },
+        {
+          "id": "B",
+          "text": "A potentiometer draws no current from the cell at balance (null method) and measures true EMF, while a voltmeter always draws current and measures a value less than the true EMF"
+        },
+        {
+          "id": "C",
+          "text": "A voltmeter is more accurate because it gives a direct digital reading"
+        },
+        {
+          "id": "D",
+          "text": "Both draw the same current but a potentiometer compensates mathematically for the internal resistance drop"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The fundamental advantage of a potentiometer is that at the balance point, it draws zero current from the cell being measured, so there is no voltage drop across the cell's internal resistance, and the measured value equals the true EMF. A voltmeter, however ideal, draws some current, causing V = E - Ir, so it always reads less than the true EMF.",
+      "explanation_incorrect": "Option A is wrong because a potentiometer does not have zero resistance; it simply draws no current at balance. Option C confuses ease of reading with accuracy of measurement. Option D is wrong because the potentiometer genuinely draws zero current at balance, not just compensating mathematically."
+    },
+    {
+      "question_id": "T02.01.Q056",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A device has a V-I characteristic that is non-linear, asymmetric, and shows negligible current in one direction of applied voltage while significant current in the other direction. This device is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An ohmic conductor like a copper wire"
+        },
+        {
+          "id": "B",
+          "text": "A semiconductor diode (p-n junction)"
+        },
+        {
+          "id": "C",
+          "text": "A standard resistance wire like manganin"
+        },
+        {
+          "id": "D",
+          "text": "A superconductor below its critical temperature"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A non-linear and asymmetric V-I characteristic with significant current only in one direction (forward bias) and negligible current in the other (reverse bias) is the defining characteristic of a semiconductor diode (p-n junction). Ohmic conductors have linear, symmetric V-I curves, and superconductors have zero resistance in both directions.",
+      "explanation_incorrect": "Option A is wrong because ohmic conductors have linear, symmetric V-I characteristics. Option C is wrong because manganin is also an ohmic conductor. Option D is wrong because a superconductor has zero resistance regardless of current direction. The asymmetric, non-linear behaviour with rectifying properties uniquely identifies a p-n junction diode."
+    },
+    {
+      "question_id": "T02.01.Q057",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A material has resistivity of the order of 10^-6 ohm.m, a positive temperature coefficient of resistance, and is commonly used for making heating elements. This material is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A pure semiconductor like silicon"
+        },
+        {
+          "id": "B",
+          "text": "An insulator like rubber"
+        },
+        {
+          "id": "C",
+          "text": "A high-resistivity alloy like nichrome"
+        },
+        {
+          "id": "D",
+          "text": "A pure metal like copper"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Resistivity of the order of 10^-6 ohm.m is higher than pure metals (about 10^-8 ohm.m) but much lower than semiconductors or insulators. A positive temperature coefficient and use in heating elements are characteristic of high-resistivity alloys like nichrome (resistivity about 1.5 x 10^-6 ohm.m), which are chosen for heating elements because their high resistivity dissipates more power per unit length.",
+      "explanation_incorrect": "Option A is wrong because semiconductors have negative temperature coefficients and much higher resistivity. Option B is wrong because insulators have resistivity around 10^12 ohm.m or more. Option D is wrong because pure metals like copper have much lower resistivity (about 1.7 x 10^-8 ohm.m) and are used for wiring, not heating elements."
+    },
+    {
+      "question_id": "T02.01.Q058",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "In a circuit, three currents I1 = 3 A, I2 = 5 A, and I3 enter a junction, while I4 = 6 A and I5 leave the junction. Using the appropriate Kirchhoff's law, the value of I3 is found to be -2 A (entering). This calculation is an application of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kirchhoff's loop rule (conservation of energy)"
+        },
+        {
+          "id": "B",
+          "text": "Ohm's law (V = IR)"
+        },
+        {
+          "id": "C",
+          "text": "Kirchhoff's junction rule (conservation of charge)"
+        },
+        {
+          "id": "D",
+          "text": "The maximum power transfer theorem"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The problem involves balancing currents at a junction: the algebraic sum of currents at a node must be zero. This is Kirchhoff's junction rule (first law), based on conservation of charge. Here, I1 + I2 + I3 = I4 + I5, giving 3 + 5 + I3 = 6 + I5. The fact that I3 is negative means its actual direction is opposite to what was assumed, i.e., it actually leaves the junction.",
+      "explanation_incorrect": "Option A (loop rule) deals with potential differences around closed loops, not currents at junctions. Option B is the relationship between voltage and current in a resistor. Option D concerns power delivery to a load. The application of summing currents at a junction is specifically Kirchhoff's junction rule."
+    },
+    {
+      "question_id": "T02.01.Q059",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "An instrument uses a long uniform wire carrying a steady current and achieves measurement by finding a point where a galvanometer shows null deflection, drawing zero current from the source being measured. This instrument is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An ammeter"
+        },
+        {
+          "id": "B",
+          "text": "A Wheatstone bridge"
+        },
+        {
+          "id": "C",
+          "text": "A potentiometer"
+        },
+        {
+          "id": "D",
+          "text": "A voltmeter"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The key identifying features are: (1) a long uniform wire with steady current, (2) a null method using galvanometer balance, and (3) zero current drawn from the source at balance. These are the defining characteristics of a potentiometer. A Wheatstone bridge also uses null deflection but uses discrete resistor arms, not a long uniform wire. Ammeters and voltmeters are deflection instruments.",
+      "explanation_incorrect": "Option A is wrong because ammeters measure current by deflection, not null methods. Option B is partially correct about null methods but a Wheatstone bridge uses discrete resistance arms, not a long uniform wire. Option D is wrong because voltmeters draw current during measurement. The combination of a uniform wire and null method uniquely identifies a potentiometer."
+    },
+    {
+      "question_id": "T02.01.Q060",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is performing an experiment in her physics lab. She connects a copper wire of cross-sectional area 2 x 10^-6 m^2 to a battery and measures a current of 3.2 A using an ammeter. Her teacher tells her the number density of free electrons in copper is 8 x 10^28 m^-3 and asks her to calculate the drift velocity. What value should Riya report?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.25 x 10^-4 m/s"
+        },
+        {
+          "id": "B",
+          "text": "2.5 x 10^-4 m/s"
+        },
+        {
+          "id": "C",
+          "text": "1.25 x 10^-3 m/s"
+        },
+        {
+          "id": "D",
+          "text": "6.25 x 10^-5 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using I = neAv_d, Riya should calculate v_d = I/(neA) = 3.2 / (8 x 10^28 x 1.6 x 10^-19 x 2 x 10^-6) = 3.2 / (8 x 1.6 x 2 x 10^3) = 3.2 / 25600 = 1.25 x 10^-4 m/s.",
+      "explanation_incorrect": "The relevant data from the scenario is: I = 3.2 A, A = 2 x 10^-6 m^2, n = 8 x 10^28 m^-3, e = 1.6 x 10^-19 C. Substituting into v_d = I/(neA) gives 1.25 x 10^-4 m/s. Other options result from errors in handling the powers of ten or using wrong values."
+    },
+    {
+      "question_id": "T02.01.Q061",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is preparing for his JEE exam and encounters this problem: A cell of EMF 1.5 V and internal resistance 0.5 ohm is connected to an external resistance R. Amit wants the maximum power to be delivered to R. He also needs to find the maximum power dissipated in R. What external resistance should Amit choose, and what is the maximum power?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R = 0.5 ohm, P_max = 1.125 W"
+        },
+        {
+          "id": "B",
+          "text": "R = 1.0 ohm, P_max = 0.75 W"
+        },
+        {
+          "id": "C",
+          "text": "R = 0.5 ohm, P_max = 2.25 W"
+        },
+        {
+          "id": "D",
+          "text": "R = 1.5 ohm, P_max = 0.5625 W"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For maximum power transfer, R = r = 0.5 ohm. The current at this condition is I = E/(R + r) = 1.5/(0.5 + 0.5) = 1.5 A. Maximum power in R = I^2 * R = (1.5)^2 x 0.5 = 2.25 x 0.5 = 1.125 W. Alternatively, P_max = E^2/(4r) = 2.25/2 = 1.125 W.",
+      "explanation_incorrect": "The maximum power transfer theorem requires R = r = 0.5 ohm. Then I = 1.5/1 = 1.5 A and P = I^2R = 1.125 W. Option B uses wrong R. Option C calculates power incorrectly (that is the total power, not just in R). Option D uses R = 1.5 ohm which does not maximise power in R."
+    },
+    {
+      "question_id": "T02.01.Q062",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is conducting a metre bridge experiment in her school lab. She places a 5 ohm resistance in the left gap and an unknown resistance in the right gap. She carefully slides the jockey along the wire and finds the galvanometer shows null deflection at 33.3 cm from the left end. She then swaps the two resistances and takes a second reading to reduce systematic error. What balance length (from the left end) should Priya expect in the second reading?",
+      "options": [
+        {
+          "id": "A",
+          "text": "33.3 cm"
+        },
+        {
+          "id": "B",
+          "text": "50.0 cm"
+        },
+        {
+          "id": "C",
+          "text": "66.7 cm"
+        },
+        {
+          "id": "D",
+          "text": "75.0 cm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "From the first reading: 5/S = 33.3/66.7 = 1/2, so S = 10 ohm. When Priya swaps resistances, S (10 ohm) is in the left gap and 5 ohm is in the right gap: 10/5 = l'/(100-l'), so 2 = l'/(100-l'), giving l' = 200 - 2l', hence 3l' = 200, l' = 66.7 cm. This is simply 100 - 33.3 = 66.7 cm.",
+      "explanation_incorrect": "When resistances are interchanged in a metre bridge, the new balance point is the complement of the original: l' = 100 - l = 100 - 33.3 = 66.7 cm. Option A assumes no change. Option B assumes the balance always occurs at the midpoint. Option D results from incorrect calculation."
+    },
+    {
+      "question_id": "T02.01.Q063",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is performing a potentiometer experiment in his JEE coaching lab. He first balances a standard cell of EMF 1.08 V at 54 cm. He then replaces the standard cell with a test cell and connects a 5 ohm shunt resistance across it. The balance length is now 40 cm. Without the shunt, the test cell balances at 50 cm. What internal resistance of the test cell should Rohan report?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.5 ohm"
+        },
+        {
+          "id": "B",
+          "text": "1.0 ohm"
+        },
+        {
+          "id": "C",
+          "text": "1.25 ohm"
+        },
+        {
+          "id": "D",
+          "text": "2.5 ohm"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using the formula r = R(l1 - l2)/l2 where l1 = 50 cm (open circuit), l2 = 40 cm (with shunt R = 5 ohm): r = 5 x (50 - 40)/40 = 5 x 10/40 = 50/40 = 1.25 ohm. Note: the standard cell data (1.08 V at 54 cm) is used to find the potential gradient but is not needed for internal resistance calculation.",
+      "explanation_incorrect": "The internal resistance formula requires only the open-circuit balance length (50 cm), the shunted balance length (40 cm), and the shunt resistance (5 ohm). The standard cell information is extra context. r = 5 x (50-40)/40 = 1.25 ohm. Other options result from using wrong balance lengths or the standard cell data incorrectly."
+    },
+    {
+      "question_id": "T02.01.Q064",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is studying the Drude model in her electronics workshop. She learns that when the temperature of a copper wire is doubled from 150 K to 300 K, the relaxation time of free electrons approximately halves. If the number density of free electrons remains essentially constant, what happens to the resistivity of the copper wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It approximately doubles, because resistivity is inversely proportional to relaxation time"
+        },
+        {
+          "id": "B",
+          "text": "It approximately halves, because resistivity is directly proportional to relaxation time"
+        },
+        {
+          "id": "C",
+          "text": "It remains the same because the number density is unchanged"
+        },
+        {
+          "id": "D",
+          "text": "It quadruples because resistivity is inversely proportional to the square of relaxation time"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In the Drude model, resistivity rho = m/(ne^2*tau), where tau is the relaxation time. Resistivity is inversely proportional to relaxation time. If tau halves (due to doubled temperature and increased lattice vibrations), the resistivity approximately doubles. This is consistent with the positive temperature coefficient of metals.",
+      "explanation_incorrect": "Option B has the proportionality reversed. Option C ignores the role of relaxation time. Option D uses an incorrect power dependence. Since rho = m/(ne^2*tau), halving tau exactly doubles rho, making option A correct."
+    },
+    {
+      "question_id": "T02.01.Q065",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following is actually a property of resistivity but NOT of resistance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It increases when the length of the conductor is doubled"
+        },
+        {
+          "id": "B",
+          "text": "It decreases when the cross-sectional area is increased"
+        },
+        {
+          "id": "C",
+          "text": "It depends on the nature of the material and its temperature but not on the conductor's dimensions"
+        },
+        {
+          "id": "D",
+          "text": "It is measured in ohms"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Resistivity is an intrinsic material property that depends only on the nature of the material and temperature, not on dimensions. This is what distinguishes it from resistance. Options A and B describe properties of resistance (R = rho*l/A), and option D gives the unit of resistance, not resistivity (which is ohm.m). Many students confuse the properties of resistance and resistivity.",
+      "explanation_incorrect": "Option A describes resistance (R doubles when l doubles). Option B also describes resistance (R decreases when A increases). Option D gives the unit of resistance, not resistivity. Only option C correctly identifies a property unique to resistivity: dimensional independence."
+    },
+    {
+      "question_id": "T02.01.Q066",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Students often assume that a Wheatstone bridge is always more accurate when the balance point is near the middle. Which of the following situations is actually a case where the metre bridge gives an INACCURATE result despite appearing to work correctly?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When the balance point is at 50 cm and both resistances are equal"
+        },
+        {
+          "id": "B",
+          "text": "When the balance point is near an extreme end (say 2 cm), because the percentage error in measuring a small length is very high"
+        },
+        {
+          "id": "C",
+          "text": "When the galvanometer has infinite sensitivity"
+        },
+        {
+          "id": "D",
+          "text": "When the wire has perfectly uniform cross-section"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "When the balance point is very close to one end (e.g., 2 cm), a small absolute error in measuring the balance length (say 1 mm) translates into a very large percentage error in the smaller length. This makes the calculated resistance ratio unreliable. This is why textbooks recommend that the balance point should ideally lie between 30 cm and 70 cm for best accuracy.",
+      "explanation_incorrect": "Option A is actually the ideal situation for accuracy. Option C (infinite galvanometer sensitivity) would improve accuracy, not reduce it. Option D (uniform cross-section) is the ideal condition assumed in the derivation. The real issue is extreme balance point positions, where percentage errors in length measurement become unacceptable."
+    },
+    {
+      "question_id": "T02.01.Q067",
+      "type": "mcq",
+      "concept_id": "T02.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following is actually a limitation of the potentiometer that students often overlook, despite its reputation as a highly accurate instrument?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It cannot measure EMF because it always draws current"
+        },
+        {
+          "id": "B",
+          "text": "The EMF of the driver cell must be greater than the EMF being measured, otherwise no balance point can be obtained on the wire"
+        },
+        {
+          "id": "C",
+          "text": "It can only measure resistance, not EMF or potential difference"
+        },
+        {
+          "id": "D",
+          "text": "It requires the wire to be made of a superconducting material"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A critical but often overlooked requirement is that the potential drop across the full length of the potentiometer wire (determined by the driver cell) must exceed the EMF being measured. If the unknown EMF is larger, the potential along the wire never reaches that value, and no null point exists. This is not an obvious limitation because students focus on the null-method advantage without considering this prerequisite.",
+      "explanation_incorrect": "Option A is wrong because the potentiometer's main advantage IS that it draws no current at balance. Option C is wrong because the potentiometer measures EMF and potential differences, and can also determine internal resistance. Option D is absurd. The real limitation is the requirement that the driver cell EMF must exceed the EMF under measurement."
+    },
+    {
+      "question_id": "T02.01.Q068",
+      "type": "mcq",
+      "concept_id": "T02.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is the drift velocity of electrons in a conductor extremely small (about 10^-4 m/s) even though the electric field establishes itself almost instantaneously?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the applied voltage is always very small"
+        },
+        {
+          "id": "B",
+          "text": "Because electrons undergo frequent collisions with lattice ions (every 10^-14 s approximately), which repeatedly randomise their velocities, so the net drift superimposed on their random thermal motion is very small"
+        },
+        {
+          "id": "C",
+          "text": "Because electrons are very heavy particles and therefore accelerate slowly"
+        },
+        {
+          "id": "D",
+          "text": "Because the wire's cross-sectional area limits the number of electrons that can move simultaneously"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Although the electric field accelerates electrons, they collide with lattice ions approximately every 10^-14 seconds, and each collision randomises their velocity direction. The drift velocity represents only the tiny net displacement per unit time in the field direction, superimposed on a much larger random thermal velocity (about 10^5 m/s). The frequent collisions prevent sustained acceleration, keeping the drift extremely slow.",
+      "explanation_incorrect": "Option A is not the fundamental reason -- even with large voltages, drift velocity remains small. Option C is wrong because electron mass is very small (9.1 x 10^-31 kg), so they actually accelerate rapidly between collisions. Option D confuses current carrying capacity with drift speed. The correct reason is the frequent scattering by lattice ions."
+    },
+    {
+      "question_id": "T02.01.Q069",
+      "type": "mcq",
+      "concept_id": "T02.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is Kirchhoff's junction rule classified as a consequence of conservation of charge rather than conservation of energy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because it deals with potential differences around loops, which relate to work done on charges"
+        },
+        {
+          "id": "B",
+          "text": "Because it states that currents at a junction sum to zero, which means charge cannot accumulate at or vanish from any node -- a direct statement of charge conservation in steady-state circuits"
+        },
+        {
+          "id": "C",
+          "text": "Because it involves the resistance of circuit elements which dissipate energy"
+        },
+        {
+          "id": "D",
+          "text": "Because it applies only when the circuit has no energy source such as a battery"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The junction rule states that the algebraic sum of currents at any node is zero (total current entering equals total current leaving). This is a direct consequence of the fact that electric charge is conserved and, in steady state, cannot pile up at or disappear from a junction. If charge were not conserved, the inflow and outflow at a junction could differ, violating the rule.",
+      "explanation_incorrect": "Option A describes the loop rule, not the junction rule. Option C is irrelevant because the junction rule applies regardless of what elements meet at the junction. Option D is wrong because the junction rule applies to all circuits, with or without energy sources. The fundamental basis is that charge is neither created nor destroyed at any node."
+    },
+    {
+      "question_id": "T02.01.Q070",
+      "type": "mcq",
+      "concept_id": "T02.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why is manganin classified as a suitable material for standard resistors rather than copper, even though both are metallic conductors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because manganin has a much lower resistivity than copper, allowing smaller resistors"
+        },
+        {
+          "id": "B",
+          "text": "Because manganin has a nearly zero temperature coefficient of resistance (about 10^-5 per deg C compared to about 4 x 10^-3 per deg C for copper), so its resistance remains virtually constant over normal temperature variations"
+        },
+        {
+          "id": "C",
+          "text": "Because manganin is a semiconductor and therefore naturally stable"
+        },
+        {
+          "id": "D",
+          "text": "Because manganin is cheaper and more widely available than copper"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Standard resistors require extremely stable resistance values. Manganin has a temperature coefficient of resistance of about 1 x 10^-5 per deg C, which is roughly 400 times smaller than copper's (about 3.9 x 10^-3 per deg C). This means manganin's resistance changes negligibly with normal temperature fluctuations in a laboratory, making it ideal for precision resistance standards.",
+      "explanation_incorrect": "Option A is wrong because manganin actually has higher resistivity than copper. Option C is wrong because manganin is an alloy (Cu-Mn-Ni), not a semiconductor. Option D is wrong because cost is not the deciding factor. The critical reason is the exceptionally low temperature coefficient, ensuring resistance stability."
     }
   ],
   "metadata": {
     "created_at": "2026-02-14",
     "status": "draft",
     "question_count": {
-      "total": 50,
+      "total": 70,
       "by_difficulty": {
-        "familiarity": 20,
-        "application": 17,
-        "exam_style": 13
+        "familiarity": 26,
+        "application": 25,
+        "exam_style": 19
       },
       "by_type": {
-        "mcq": 43,
+        "mcq": 63,
         "true_false": 4,
         "fill_blank": 3
       },
       "by_cognitive_level": {
         "recall": 48,
-        "compare": 0,
-        "classify": 1,
-        "scenario": 0,
-        "exception": 1,
-        "reason": 0
+        "compare": 5,
+        "classify": 5,
+        "scenario": 5,
+        "exception": 4,
+        "reason": 3
       }
     }
   }

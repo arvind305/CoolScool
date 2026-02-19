@@ -21,6 +21,27 @@
       "Half-wave rectifier: one diode, output frequency = input frequency; Full-wave: two diodes, output frequency = 2 x input frequency"
     ]
   },
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 25,
+        "application": 25,
+        "exam_style": 20
+      },
+      "by_type": {
+        "mcq": 70
+      },
+      "by_cognitive_level": {
+        "recall": 48,
+        "compare": 5,
+        "classify": 5,
+        "scenario": 6,
+        "exception": 3,
+        "reason": 3
+      }
+    }
+  },
   "questions": [
     {
       "question_id": "T09.01.Q001",
@@ -1471,6 +1492,586 @@
       "correct_answer": "C",
       "explanation_correct": "The NAND gate gives output 0 only when all inputs are 1: Y = (A.B)'. When A = 1, B = 1: Y = (1.1)' = 1' = 0. For all other input combinations (00, 01, 10), the output is 1.",
       "explanation_incorrect": "OR gives 0 only when both inputs are 0. AND gives 1 only when both are 1 (not 0). NOR gives 1 only when both are 0. NAND gives 0 only when both inputs are 1, matching the description."
+    },
+    {
+      "question_id": "T09.01.Q051",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the position of the Fermi level in an n-type semiconductor differ from that in a p-type semiconductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In n-type it lies close to the conduction band, while in p-type it lies close to the valence band"
+        },
+        {
+          "id": "B",
+          "text": "In n-type it lies close to the valence band, while in p-type it lies close to the conduction band"
+        },
+        {
+          "id": "C",
+          "text": "In both n-type and p-type, the Fermi level lies at the centre of the band gap"
+        },
+        {
+          "id": "D",
+          "text": "In n-type the Fermi level is inside the conduction band, while in p-type it is inside the valence band"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In n-type semiconductors, the excess electrons from donor impurities shift the Fermi level upward, close to the conduction band. In p-type semiconductors, the excess holes from acceptor impurities shift the Fermi level downward, close to the valence band. The Fermi level at the centre of the band gap is characteristic of an intrinsic (undoped) semiconductor.",
+      "explanation_incorrect": "The Fermi level shifts toward the band with the majority carriers. In n-type, electrons are the majority carriers and the Fermi level moves toward the conduction band. In p-type, holes are majority carriers and it moves toward the valence band. It does not enter the bands at normal doping levels."
+    },
+    {
+      "question_id": "T09.01.Q052",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the depletion region width in forward bias differ from that in reverse bias of a p-n junction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both forward and reverse bias increase the depletion width equally"
+        },
+        {
+          "id": "B",
+          "text": "Forward bias increases the depletion width, while reverse bias decreases it"
+        },
+        {
+          "id": "C",
+          "text": "Forward bias decreases the depletion width, while reverse bias increases it"
+        },
+        {
+          "id": "D",
+          "text": "The depletion width remains unchanged under both forward and reverse bias"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In forward bias, the external voltage opposes the built-in potential, pushing majority carriers toward the junction and narrowing the depletion region. In reverse bias, the external voltage adds to the built-in potential, pulling majority carriers away from the junction and widening the depletion region. This is why forward bias allows easy current flow while reverse bias blocks it.",
+      "explanation_incorrect": "Forward and reverse bias have opposite effects on the depletion width. Forward bias reduces it by opposing the barrier, enabling majority carrier diffusion. Reverse bias increases it by reinforcing the barrier, blocking majority carriers and allowing only a tiny minority carrier drift current."
+    },
+    {
+      "question_id": "T09.01.Q053",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the output ripple frequency of a half-wave rectifier differ from that of a full-wave rectifier for the same 50 Hz AC input?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Half-wave gives 50 Hz ripple, full-wave gives 100 Hz ripple"
+        },
+        {
+          "id": "B",
+          "text": "Half-wave gives 100 Hz ripple, full-wave gives 50 Hz ripple"
+        },
+        {
+          "id": "C",
+          "text": "Both give 50 Hz ripple"
+        },
+        {
+          "id": "D",
+          "text": "Both give 100 Hz ripple"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A half-wave rectifier passes only one half-cycle per input cycle, producing one output pulse per cycle, so the ripple frequency equals the input frequency (50 Hz). A full-wave rectifier converts both half-cycles, producing two output pulses per cycle, so the ripple frequency is double the input frequency (100 Hz). The higher ripple frequency of the full-wave rectifier makes it easier to filter into smooth DC.",
+      "explanation_incorrect": "The ripple frequency is determined by how many output pulses appear per input cycle. Half-wave produces one pulse per cycle (50 Hz), while full-wave produces two pulses per cycle (100 Hz). The full-wave rectifier is preferred because its higher ripple frequency is easier to smooth with a capacitor filter."
+    },
+    {
+      "question_id": "T09.01.Q054",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the current gain alpha (common-base) differ from the current gain beta (common-emitter) in a transistor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "alpha = I_C/I_E and is always less than 1, while beta = I_C/I_B and is always greater than 1"
+        },
+        {
+          "id": "B",
+          "text": "alpha = I_C/I_B and is always greater than 1, while beta = I_C/I_E and is always less than 1"
+        },
+        {
+          "id": "C",
+          "text": "Both alpha and beta are always less than 1"
+        },
+        {
+          "id": "D",
+          "text": "Both alpha and beta are always greater than 1"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "In common-base configuration, alpha = I_C/I_E. Since I_C is slightly less than I_E (because I_E = I_C + I_B), alpha is always slightly less than 1 (typically 0.95 to 0.99). In common-emitter configuration, beta = I_C/I_B. Since I_B is very small, beta is always much greater than 1 (typically 20 to 500). They are related by beta = alpha/(1 - alpha).",
+      "explanation_incorrect": "alpha = I_C/I_E is the CB current gain and is less than 1 because the collector current is slightly less than the emitter current. beta = I_C/I_B is the CE current gain and is much greater than 1 because the base current is very small compared to the collector current."
+    },
+    {
+      "question_id": "T09.01.Q055",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the operating bias of an LED differ from that of a photodiode in their normal working conditions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both LED and photodiode operate in forward bias"
+        },
+        {
+          "id": "B",
+          "text": "LED operates in forward bias, while photodiode operates in reverse bias"
+        },
+        {
+          "id": "C",
+          "text": "LED operates in reverse bias, while photodiode operates in forward bias"
+        },
+        {
+          "id": "D",
+          "text": "Both LED and photodiode operate in reverse bias"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "An LED operates in forward bias, where electrons and holes recombine at the junction and release energy as light photons. A photodiode operates in reverse bias, where the wide depletion region efficiently absorbs incident light to create electron-hole pairs, which are swept by the strong junction field to produce a photocurrent. Their functions are essentially opposite: LED converts electrical energy to light, while a photodiode converts light to electrical signal.",
+      "explanation_incorrect": "LED needs forward bias for carrier recombination and light emission. Photodiode needs reverse bias for a wide depletion region and fast carrier collection when illuminated. They operate under opposite bias conditions because they perform complementary functions."
+    },
+    {
+      "question_id": "T09.01.Q056",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A material has a band gap of 0.67 eV, its conductivity increases with rising temperature, and it is doped with arsenic to increase the number of free electrons. This material is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "An insulator doped with a trivalent impurity"
+        },
+        {
+          "id": "B",
+          "text": "An n-type extrinsic semiconductor (germanium)"
+        },
+        {
+          "id": "C",
+          "text": "A p-type extrinsic semiconductor (silicon)"
+        },
+        {
+          "id": "D",
+          "text": "A conductor with impurity scattering"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A band gap of 0.67 eV identifies the material as germanium (Si has 1.1 eV). Conductivity increasing with temperature confirms it is a semiconductor, not a conductor. Arsenic is a pentavalent element (Group 15), so it acts as a donor impurity, contributing extra electrons and making it n-type. Therefore, this is n-type extrinsic germanium.",
+      "explanation_incorrect": "The band gap of 0.67 eV matches germanium, not silicon (1.1 eV) or an insulator (> 3 eV). Arsenic is pentavalent, making it a donor (n-type), not an acceptor (p-type). Conductors have no band gap and their conductivity decreases with temperature. All clues point to n-type germanium."
+    },
+    {
+      "question_id": "T09.01.Q057",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A special-purpose diode maintains a nearly constant voltage of 6.2 V across it even when the current through it varies from 5 mA to 100 mA, and it is operated in the reverse breakdown region. This device is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A light-emitting diode (LED)"
+        },
+        {
+          "id": "B",
+          "text": "A photodiode"
+        },
+        {
+          "id": "C",
+          "text": "A Zener diode used as a voltage regulator"
+        },
+        {
+          "id": "D",
+          "text": "An ordinary rectifier diode in forward bias"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The key features are: operation in reverse breakdown region and maintaining a nearly constant voltage despite varying current. This is the defining characteristic of a Zener diode used for voltage regulation. LEDs operate in forward bias and emit light. Photodiodes detect light in reverse bias but do not operate at breakdown. Ordinary rectifier diodes are not designed to operate at breakdown.",
+      "explanation_incorrect": "Operating in reverse breakdown with a constant voltage is unique to the Zener diode. LEDs work in forward bias to emit light. Photodiodes work in reverse bias but well below breakdown. The constant-voltage property in the breakdown region is what makes Zener diodes ideal for voltage regulation."
+    },
+    {
+      "question_id": "T09.01.Q058",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A three-terminal semiconductor device has its first junction forward biased and its second junction reverse biased. The input is applied to the first junction and an amplified output is taken from the second junction. This device operating in this mode is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A p-n junction diode in forward bias"
+        },
+        {
+          "id": "B",
+          "text": "A Zener diode in breakdown"
+        },
+        {
+          "id": "C",
+          "text": "A transistor operating in the active (amplification) region"
+        },
+        {
+          "id": "D",
+          "text": "A transistor operating in the saturation region"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "A transistor in the active region has its emitter-base junction forward biased (to inject carriers) and its collector-base junction reverse biased (to collect carriers). This configuration allows a small input signal at the base to control a much larger output current at the collector, achieving amplification. In saturation, both junctions would be forward biased.",
+      "explanation_incorrect": "A diode has only one junction and two terminals. A Zener diode operates in reverse breakdown. A transistor in saturation has both junctions forward biased. The described configuration (one junction forward, one reverse, with amplification) uniquely identifies a transistor in the active region."
+    },
+    {
+      "question_id": "T09.01.Q059",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A two-input logic gate produces output 1 for input combinations (0,0), (0,1), and (1,0), but produces output 0 only for input combination (1,1). This gate is best classified as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "AND gate"
+        },
+        {
+          "id": "B",
+          "text": "OR gate"
+        },
+        {
+          "id": "C",
+          "text": "NAND gate"
+        },
+        {
+          "id": "D",
+          "text": "NOR gate"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The NAND gate has the truth table: (0,0) -> 1, (0,1) -> 1, (1,0) -> 1, (1,1) -> 0. It gives output 0 only when both inputs are 1, which exactly matches the described behaviour. Y = (A.B)'. The AND gate gives the opposite pattern (output 1 only when both are 1). The NOR gate gives 1 only when both are 0.",
+      "explanation_incorrect": "AND gives 1 only for (1,1). OR gives 0 only for (0,0). NOR gives 1 only for (0,0). NAND gives 0 only for (1,1), which is exactly the described truth table. Remember: NAND = NOT(AND), so it inverts the AND gate's output."
+    },
+    {
+      "question_id": "T09.01.Q060",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya is working on her physics project at a JEE coaching centre. She connects a silicon p-n junction diode in series with a 2 kohm resistor and a 10 V battery in forward bias. She measures the current through the circuit using an ammeter. What reading should Riya expect on the ammeter?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.0 mA"
+        },
+        {
+          "id": "B",
+          "text": "4.65 mA"
+        },
+        {
+          "id": "C",
+          "text": "10.0 mA"
+        },
+        {
+          "id": "D",
+          "text": "0.35 mA"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a silicon diode in forward bias, the voltage drop across the diode is approximately 0.7 V. The voltage across the 2 kohm resistor = 10 - 0.7 = 9.3 V. Using Ohm's law: I = 9.3/2000 = 0.00465 A = 4.65 mA. Riya should read approximately 4.65 mA on the ammeter.",
+      "explanation_incorrect": "The silicon diode drops about 0.7 V. The remaining 9.3 V appears across the 2 kohm resistor. I = 9.3/2000 = 4.65 mA. Ignoring the diode drop would give 5.0 mA, which is incorrect. The 0.7 V drop must be subtracted from the supply voltage before applying Ohm's law."
+    },
+    {
+      "question_id": "T09.01.Q061",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is testing a transistor amplifier in the electronics workshop at his school. He measures I_B = 40 microampere and I_C = 4.96 mA in the common-emitter configuration. He wants to calculate the emitter current I_E. What value should Amit get?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.96 mA"
+        },
+        {
+          "id": "B",
+          "text": "5.00 mA"
+        },
+        {
+          "id": "C",
+          "text": "4.92 mA"
+        },
+        {
+          "id": "D",
+          "text": "40.00 mA"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using the transistor current relation I_E = I_C + I_B: I_E = 4.96 mA + 0.04 mA = 5.00 mA. The emitter current is always the sum of collector and base currents by Kirchhoff's current law. Since I_B is small (40 microampere = 0.04 mA), I_E is only slightly larger than I_C.",
+      "explanation_incorrect": "I_E = I_C + I_B = 4.96 + 0.04 = 5.00 mA. The base current must be converted to the same units: 40 microampere = 0.04 mA. The emitter current equals the sum of collector and base currents, not just the collector current or the base current alone."
+    },
+    {
+      "question_id": "T09.01.Q062",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya visits a semiconductor factory during a school field trip. The guide explains that a certain diode is made of gallium arsenide phosphide (GaAsP) and is designed to convert electrical energy directly into red light when a small forward current flows through it. The guide asks students to identify the device. What should Priya answer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zener diode"
+        },
+        {
+          "id": "B",
+          "text": "Photodiode"
+        },
+        {
+          "id": "C",
+          "text": "Light Emitting Diode (LED)"
+        },
+        {
+          "id": "D",
+          "text": "Solar cell"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The device described is a Light Emitting Diode (LED). Key clues: it is made of a compound semiconductor (GaAsP), it operates in forward bias, and it converts electrical energy into visible light (red). GaAsP is a direct band gap semiconductor specifically used for red and yellow LEDs. Zener diodes are for voltage regulation, photodiodes detect light, and solar cells generate electricity from light.",
+      "explanation_incorrect": "GaAsP is a direct band gap compound semiconductor used in LEDs. The conversion of electrical energy to light in forward bias is the defining function of an LED. Photodiodes and solar cells convert light to electrical energy (the reverse process). Zener diodes regulate voltage and do not emit light."
+    },
+    {
+      "question_id": "T09.01.Q063",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is designing a digital circuit in his school electronics lab. He needs a gate whose output is HIGH (1) only when both input switches are OFF (0). His teacher gives him OR, AND, NOR, and NAND gate ICs. Which gate should Rohan select?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OR gate"
+        },
+        {
+          "id": "B",
+          "text": "AND gate"
+        },
+        {
+          "id": "C",
+          "text": "NAND gate"
+        },
+        {
+          "id": "D",
+          "text": "NOR gate"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "Rohan needs output 1 only when both inputs are 0. Checking each gate: OR(0,0) = 0, AND(0,0) = 0, NAND(0,0) = 1 (but NAND also gives 1 for inputs 01 and 10), NOR(0,0) = 1. The NOR gate Y = (A+B)' gives 1 only when both inputs are 0, exactly matching Rohan's requirement.",
+      "explanation_incorrect": "OR gives 0 when both inputs are 0. AND gives 0 when both inputs are 0. NAND gives 1 for (0,0) but also for (0,1) and (1,0) — so it gives 1 for inputs other than both-zero. Only NOR gives output 1 exclusively when both inputs are 0."
+    },
+    {
+      "question_id": "T09.01.Q064",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is studying for her CBSE board exam and reads that a pure silicon crystal has an intrinsic carrier concentration of n_i = 1.5 x 10^16 per m^3 at room temperature. Her sample is doped with phosphorus to give an electron concentration of n_e = 4.5 x 10^22 per m^3. What is the hole concentration in Meera's doped sample?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.5 x 10^22 per m^3"
+        },
+        {
+          "id": "B",
+          "text": "1.5 x 10^16 per m^3"
+        },
+        {
+          "id": "C",
+          "text": "5.0 x 10^9 per m^3"
+        },
+        {
+          "id": "D",
+          "text": "6.75 x 10^38 per m^3"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using the mass action law: n_e x n_h = n_i^2. So n_h = n_i^2 / n_e = (1.5 x 10^16)^2 / (4.5 x 10^22) = 2.25 x 10^32 / 4.5 x 10^22 = 5.0 x 10^9 per m^3. Doping with phosphorus (pentavalent) makes it n-type, greatly increasing electrons and drastically reducing holes.",
+      "explanation_incorrect": "The mass action law n_e x n_h = n_i^2 holds for all semiconductors at thermal equilibrium. When n_e increases due to n-type doping, n_h must decrease to keep the product equal to n_i^2. The hole concentration becomes very small: n_h = (1.5 x 10^16)^2 / (4.5 x 10^22) = 5.0 x 10^9 per m^3."
+    },
+    {
+      "question_id": "T09.01.Q065",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following is actually an n-type dopant for silicon, even though students often mistakenly group all Group 13 and Group 15 elements together?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boron (Z = 5, Group 13)"
+        },
+        {
+          "id": "B",
+          "text": "Aluminium (Z = 13, Group 13)"
+        },
+        {
+          "id": "C",
+          "text": "Antimony (Z = 51, Group 15)"
+        },
+        {
+          "id": "D",
+          "text": "Indium (Z = 49, Group 13)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Antimony (Sb) is a pentavalent element from Group 15. It has 5 valence electrons and acts as a donor impurity in silicon, making it an n-type dopant. Students sometimes confuse it with acceptor impurities because its name sounds unfamiliar. Boron, aluminium, and indium are all trivalent (Group 13) elements that create p-type semiconductors.",
+      "explanation_incorrect": "Boron, aluminium, and indium are all trivalent (3 valence electrons, Group 13) and create p-type semiconductors by introducing holes. Antimony is the only pentavalent (5 valence electrons, Group 15) element in the options and creates n-type semiconductors by donating electrons."
+    },
+    {
+      "question_id": "T09.01.Q066",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Students commonly believe that no current flows through a reverse-biased p-n junction. Which of the following statements is actually true about a reverse-biased diode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Absolutely zero current flows because the potential barrier blocks all carriers"
+        },
+        {
+          "id": "B",
+          "text": "A very small reverse saturation current flows due to thermally generated minority carriers drifting across the junction"
+        },
+        {
+          "id": "C",
+          "text": "The current equals the forward bias current but in the opposite direction"
+        },
+        {
+          "id": "D",
+          "text": "A large current flows because the wide depletion region acts as a conductor"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Even in reverse bias, a small reverse saturation current flows. This current is due to thermally generated minority carriers (electrons in the p-region and holes in the n-region) that drift across the junction under the influence of the electric field. This current is very small (of the order of microamperes for Ge and nanoamperes for Si) and is nearly independent of the reverse voltage, but it is not zero.",
+      "explanation_incorrect": "The reverse current is not zero — it is a small but measurable current due to minority carriers. It is also not equal to the forward current (which is much larger). The depletion region is depleted of free carriers and does not conduct. The reverse saturation current is a real physical phenomenon that students often overlook."
+    },
+    {
+      "question_id": "T09.01.Q067",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Students often assume that the emitter and collector of a transistor can be interchanged because an npn transistor looks symmetric with two n-regions on either side. Which of the following is actually a reason why they cannot be simply interchanged?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The emitter and collector are made of different semiconductor materials"
+        },
+        {
+          "id": "B",
+          "text": "The emitter is heavily doped to efficiently inject carriers, while the collector is moderately doped and has a larger area to collect them"
+        },
+        {
+          "id": "C",
+          "text": "The emitter and collector have opposite polarities"
+        },
+        {
+          "id": "D",
+          "text": "The base is connected to the emitter and cannot be connected to the collector"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Although an npn transistor has two n-regions, the emitter and collector are not identical. The emitter is heavily doped to inject a large number of carriers into the base. The collector is moderately doped and has a larger junction area to efficiently collect carriers that pass through the thin base. Interchanging them would drastically reduce the transistor's current gain and performance.",
+      "explanation_incorrect": "The emitter and collector are made of the same type of semiconductor material (both n-type in an npn), so that is not the reason. They do not have opposite polarities. The base can be adjacent to both. The real asymmetry is in doping levels and physical size: the emitter is heavily doped (for efficient injection) and the collector is larger and moderately doped (for efficient collection)."
+    },
+    {
+      "question_id": "T09.01.Q068",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is silicon preferred over germanium for most semiconductor devices, and not the other way around?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because silicon has a smaller band gap, allowing more current flow"
+        },
+        {
+          "id": "B",
+          "text": "Because silicon has a larger band gap (1.1 eV vs 0.67 eV), giving lower reverse leakage current and better thermal stability"
+        },
+        {
+          "id": "C",
+          "text": "Because silicon is a compound semiconductor with a direct band gap"
+        },
+        {
+          "id": "D",
+          "text": "Because silicon has higher intrinsic carrier concentration than germanium"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Silicon's larger band gap (1.1 eV compared to Ge's 0.67 eV) means fewer thermally generated carriers at room temperature, resulting in lower reverse leakage current and better performance at elevated temperatures. Additionally, silicon forms a stable native oxide (SiO2) which is essential for device fabrication. Silicon is also abundantly available. These factors together make silicon the preferred material.",
+      "explanation_incorrect": "Silicon actually has a larger band gap than germanium, not smaller. A larger band gap means fewer intrinsic carriers at room temperature, leading to lower leakage current and better thermal stability. Silicon is an elemental semiconductor with an indirect band gap, not a compound semiconductor. Germanium has higher intrinsic carrier concentration, which is a disadvantage for device stability."
+    },
+    {
+      "question_id": "T09.01.Q069",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is a Zener diode operated in reverse breakdown for voltage regulation, rather than being used in forward bias like an ordinary diode?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because a Zener diode cannot conduct in forward bias"
+        },
+        {
+          "id": "B",
+          "text": "Because the forward bias voltage drop is too high for practical use"
+        },
+        {
+          "id": "C",
+          "text": "Because in reverse breakdown, the voltage across it remains nearly constant over a wide range of current, which is the property needed for regulation"
+        },
+        {
+          "id": "D",
+          "text": "Because reverse breakdown produces a higher power output than forward bias"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In reverse breakdown, the Zener diode maintains a nearly constant voltage across its terminals even as the current through it varies significantly. This flat voltage-current characteristic in the breakdown region is precisely what is needed for voltage regulation. In forward bias, a Zener diode behaves like an ordinary diode with a varying voltage-current relationship, which does not provide the constant voltage output required for regulation.",
+      "explanation_incorrect": "A Zener diode can conduct in forward bias — it behaves like a normal diode. The reason for reverse-bias operation is the unique property of the breakdown region: nearly constant voltage across a wide current range. This constant-voltage characteristic is the key to voltage regulation. Forward bias does not offer this property."
+    },
+    {
+      "question_id": "T09.01.Q070",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why are NAND and NOR gates called 'universal gates', while basic AND, OR, and NOT gates are not given this designation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because NAND and NOR gates are cheaper to manufacture than AND, OR, and NOT gates"
+        },
+        {
+          "id": "B",
+          "text": "Because any Boolean function or logic gate (AND, OR, NOT, and their combinations) can be implemented using only NAND gates or only NOR gates alone"
+        },
+        {
+          "id": "C",
+          "text": "Because NAND and NOR gates have more inputs than basic gates"
+        },
+        {
+          "id": "D",
+          "text": "Because NAND and NOR gates consume less power than other gates"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "NAND and NOR are called universal gates because each one, by itself, can be used to construct any other logic gate (AND, OR, NOT) and therefore implement any Boolean function. For example, a NOT gate is made by connecting both inputs of a NAND gate together; an AND gate by following a NAND with another NAND used as NOT. Basic AND, OR, or NOT gates individually cannot reproduce all other gates — you need at least two of the three basic gate types together.",
+      "explanation_incorrect": "The term 'universal' refers to functional completeness — the ability to build any logic circuit using only that gate type. NAND alone (or NOR alone) can create AND, OR, NOT, and any combination. Basic AND, OR, or NOT gates cannot individually do this. The designation has nothing to do with cost, number of inputs, or power consumption."
     }
   ]
 }

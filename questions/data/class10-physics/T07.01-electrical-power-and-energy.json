@@ -1344,31 +1344,611 @@
       ],
       "explanation_correct": "The order from slowest to fastest response time is: Fuse (melts when hot), MCB (trips quickly), Earth leakage circuit breaker (ELCB). This is because a fuse takes time to heat up and melt, an MCB trips instantly when there's an overload, while an ELCB can detect even a small current leakage and cut off the power supply immediately.",
       "explanation_incorrect": "The incorrect order would be: MCB (trips quickly), Earth leakage circuit breaker (ELCB), Fuse (melts when hot). This is wrong because a fuse takes the longest time to respond, as it needs to heat up and melt, while an MCB can detect and cut off the power supply instantly. An ELCB is also faster than a fuse, as it can detect even small current leakages and shut off the power supply immediately."
+    },
+    {
+      "question_id": "T07.01.Q058",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the formula P = I^2R differ from P = V^2/R in terms of the variable kept constant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = I^2R is used when voltage is constant; P = V^2/R is used when current is constant"
+        },
+        {
+          "id": "B",
+          "text": "P = I^2R is used when current is constant; P = V^2/R is used when voltage is constant"
+        },
+        {
+          "id": "C",
+          "text": "Both are used only when resistance is constant"
+        },
+        {
+          "id": "D",
+          "text": "P = I^2R is used when resistance is zero; P = V^2/R is used when resistance is infinite"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "P = I^2R is most useful when the current through the circuit is known and kept constant, as it directly relates power to the square of the current. P = V^2/R is most useful when the voltage across the component is known and kept constant, as it directly relates power to the square of the voltage. In each formula, the known constant quantity (current or voltage) is the one that appears in the expression.",
+      "explanation_incorrect": "Option A reverses the correct relationship. Option C is incorrect because these formulas are always valid regardless of what is constant, but each is most convenient when a particular quantity is known. Option D is nonsensical because resistance cannot be zero or infinite in practical circuits for meaningful power calculations."
+    },
+    {
+      "question_id": "T07.01.Q059",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does a fuse differ from an MCB in terms of reusability after tripping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A fuse can be reset by flipping a switch, while an MCB must be replaced"
+        },
+        {
+          "id": "B",
+          "text": "A fuse wire melts and must be replaced, while an MCB can be reset by switching it back on"
+        },
+        {
+          "id": "C",
+          "text": "Both need to be replaced after tripping"
+        },
+        {
+          "id": "D",
+          "text": "Both can be reset without replacement"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A fuse contains a thin wire made of a lead-tin alloy that melts when excessive current flows through it, permanently breaking the circuit. After the fuse blows, the entire fuse wire must be replaced. An MCB (Miniature Circuit Breaker), on the other hand, uses an electromagnetic or thermal mechanism to trip a switch. Once the fault is fixed, the MCB can simply be switched back on, making it reusable.",
+      "explanation_incorrect": "Option A reverses the properties of fuse and MCB. Option C is incorrect because only the fuse needs replacement; an MCB can be reset. Option D is incorrect because a fuse cannot be reset once its wire melts."
+    },
+    {
+      "question_id": "T07.01.Q060",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the heat produced in a nichrome wire differ from that in a copper wire of the same length and thickness when the same current flows for the same time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nichrome produces less heat because it has higher resistivity"
+        },
+        {
+          "id": "B",
+          "text": "Nichrome produces more heat because it has higher resistivity and therefore higher resistance"
+        },
+        {
+          "id": "C",
+          "text": "Both produce the same heat since the current is the same"
+        },
+        {
+          "id": "D",
+          "text": "Copper produces more heat because it is a better conductor"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "According to Joule's law, H = I^2Rt. When the same current flows for the same time, the heat produced depends on the resistance. Nichrome has a much higher resistivity than copper, so for the same dimensions, a nichrome wire has a much higher resistance. Higher resistance means more heat is produced (H is directly proportional to R). This is precisely why nichrome is used in heating elements and copper is used for wiring.",
+      "explanation_incorrect": "Option A incorrectly states that higher resistivity leads to less heat, when in fact higher resistance produces more heat for the same current. Option C ignores the role of resistance in heat production. Option D confuses good conductivity (low resistance) with more heat production; a better conductor actually produces less heat."
+    },
+    {
+      "question_id": "T07.01.Q061",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the Joule (J) differ from the kilowatt-hour (kWh) as a unit of energy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joule is the SI unit used in scientific calculations; kWh is the commercial unit used for electricity billing"
+        },
+        {
+          "id": "B",
+          "text": "Joule measures power; kWh measures energy"
+        },
+        {
+          "id": "C",
+          "text": "Joule is larger than kWh"
+        },
+        {
+          "id": "D",
+          "text": "kWh is the SI unit; Joule is the commercial unit"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Both Joule and kilowatt-hour are units of energy, but they serve different practical purposes. The Joule (J) is the SI unit of energy used in scientific and physics calculations. The kilowatt-hour (kWh) is the commercial unit used by electricity boards for billing purposes because typical household energy consumption would involve inconveniently large numbers if expressed in Joules (1 kWh = 3.6 x 10^6 J).",
+      "explanation_incorrect": "Option B is wrong because both Joule and kWh measure energy, not power. Option C is wrong because 1 kWh = 3.6 x 10^6 J, meaning kWh is much larger. Option D reverses the correct designations."
+    },
+    {
+      "question_id": "T07.01.Q062",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the brightness of a 60 W bulb differ from that of a 100 W bulb when both are connected in series to a 220 V supply?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The 100 W bulb glows brighter because it has higher power rating"
+        },
+        {
+          "id": "B",
+          "text": "The 60 W bulb glows brighter because it has higher resistance and dissipates more power in series"
+        },
+        {
+          "id": "C",
+          "text": "Both glow equally bright because they carry the same current"
+        },
+        {
+          "id": "D",
+          "text": "Neither glows because bulbs cannot work in series"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series circuit, the same current flows through both bulbs. The 60 W bulb has a higher resistance than the 100 W bulb (since R = V^2/P, and lower power at the same rated voltage means higher resistance). In series, the power dissipated by each bulb is P = I^2R, so the bulb with higher resistance (60 W rated) dissipates more power and glows brighter. This is the opposite of what happens in parallel connection.",
+      "explanation_incorrect": "Option A applies to parallel connection where each bulb gets the full voltage, not series. Option C is wrong because even though the current is the same, the power dissipated depends on resistance (P = I^2R), and the two bulbs have different resistances. Option D is incorrect because bulbs can work in series, though at reduced brightness."
+    },
+    {
+      "question_id": "T07.01.Q063",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A device is connected to the metal body of an appliance, has green insulation, and carries no current during normal operation. This device is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Live wire"
+        },
+        {
+          "id": "B",
+          "text": "Neutral wire"
+        },
+        {
+          "id": "C",
+          "text": "Earth wire"
+        },
+        {
+          "id": "D",
+          "text": "Fuse wire"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The three features described — connection to the metal body of an appliance, green insulation, and no current during normal operation — are all characteristic of the earth wire. The earth wire is a safety feature that provides a low-resistance path to the ground for any leakage current, preventing electric shock. It only carries current when there is a fault in the appliance.",
+      "explanation_incorrect": "The live wire (red/brown) carries current to the appliance during normal operation. The neutral wire (black/blue) carries return current and is not connected to the metal body. The fuse wire is connected in the live wire circuit and melts during overcurrent, but it is not connected to the metal body of the appliance."
+    },
+    {
+      "question_id": "T07.01.Q064",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A material has very high resistivity, does not oxidise easily at high temperatures, and has a high melting point. This material is most suitable for use in:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connecting wires for household wiring"
+        },
+        {
+          "id": "B",
+          "text": "Heating elements of appliances"
+        },
+        {
+          "id": "C",
+          "text": "Fuse wires"
+        },
+        {
+          "id": "D",
+          "text": "Insulation of cables"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The three properties described — very high resistivity, resistance to oxidation at high temperatures, and a high melting point — are exactly the requirements for a heating element material like nichrome. High resistivity ensures maximum heat production (H = I^2Rt), resistance to oxidation ensures the element does not corrode when heated, and a high melting point ensures the element does not melt during operation.",
+      "explanation_incorrect": "Connecting wires need low resistivity (like copper), not high. Fuse wires need a low melting point so they can melt and break the circuit during overload. Insulation materials are non-conductors, not materials with high resistivity — they are fundamentally different from resistive conductors."
+    },
+    {
+      "question_id": "T07.01.Q065",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "An electrical quantity is measured in watts, equals the product of voltage and current, and represents the rate of energy consumption. This quantity is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Electrical energy"
+        },
+        {
+          "id": "B",
+          "text": "Electrical power"
+        },
+        {
+          "id": "C",
+          "text": "Electrical resistance"
+        },
+        {
+          "id": "D",
+          "text": "Electric current"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The three features described — measured in watts, equals the product of voltage and current (P = VI), and represents the rate of energy consumption — are all defining characteristics of electrical power. Power tells us how quickly electrical energy is being used or converted, and its SI unit is the Watt (W).",
+      "explanation_incorrect": "Electrical energy is measured in Joules (or kWh), not watts, and equals VIt (not VI). Electrical resistance is measured in ohms and equals V/I. Electric current is measured in amperes. Only electrical power matches all three given characteristics."
+    },
+    {
+      "question_id": "T07.01.Q066",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "classify",
+      "question_text": "A safety device is made of a low melting point alloy of lead and tin, is connected in series with the live wire, and needs replacement after it operates. This device is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "MCB"
+        },
+        {
+          "id": "B",
+          "text": "ELCB"
+        },
+        {
+          "id": "C",
+          "text": "Electric fuse"
+        },
+        {
+          "id": "D",
+          "text": "Earth wire"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The three features described — made of a low melting point alloy of lead and tin, connected in series with the live wire, and needs replacement after operating — are the defining characteristics of an electric fuse. When excessive current flows, the fuse wire heats up beyond its melting point and breaks the circuit, after which the blown fuse wire must be replaced with a new one.",
+      "explanation_incorrect": "An MCB uses an electromagnetic mechanism and can be reset without replacement. An ELCB detects earth leakage current and can also be reset. The earth wire is not a device that operates and needs replacement — it is a permanent safety conductor connected to the ground."
+    },
+    {
+      "question_id": "T07.01.Q067",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "familiarity",
+      "cognitive_level": "scenario",
+      "question_text": "Riya's family uses a 1500 W geyser for 1 hour every morning and a 1000 W room heater for 3 hours every evening. If the electricity rate is Rs. 6 per unit, what is their daily cost for these two appliances?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rs. 18"
+        },
+        {
+          "id": "B",
+          "text": "Rs. 27"
+        },
+        {
+          "id": "C",
+          "text": "Rs. 36"
+        },
+        {
+          "id": "D",
+          "text": "Rs. 15"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The geyser consumes 1500 W x 1 h = 1.5 kWh per day. The room heater consumes 1000 W x 3 h = 3 kWh per day. Total daily consumption = 1.5 + 3 = 4.5 kWh = 4.5 units. At Rs. 6 per unit, the daily cost = 4.5 x 6 = Rs. 27.",
+      "explanation_incorrect": "Rs. 18 would result from miscalculating the heater usage (e.g., using 1 hour instead of 3). Rs. 36 could come from incorrectly adding the wattages first and then multiplying. Rs. 15 likely results from not including one of the appliances. The correct approach is to calculate each appliance's energy separately, sum them, and then multiply by the rate."
+    },
+    {
+      "question_id": "T07.01.Q068",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is doing a physics experiment in his school lab. He connects a 44 ohm resistor to a 220 V supply and measures the current. He then replaces it with a 22 ohm resistor at the same voltage. What happens to the power consumed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Power decreases to half"
+        },
+        {
+          "id": "B",
+          "text": "Power doubles"
+        },
+        {
+          "id": "C",
+          "text": "Power remains the same"
+        },
+        {
+          "id": "D",
+          "text": "Power becomes four times"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Using P = V^2/R, with the 44 ohm resistor: P = 220^2/44 = 1100 W. With the 22 ohm resistor: P = 220^2/22 = 2200 W. Since the resistance is halved while voltage remains constant, the power exactly doubles. This follows from the inverse relationship between power and resistance in the formula P = V^2/R.",
+      "explanation_incorrect": "Power does not decrease to half because power is inversely proportional to resistance (not directly proportional) at constant voltage. Power does not remain the same because changing resistance changes the power when voltage is constant. Power does not become four times because that would require the resistance to be reduced to one-fourth."
+    },
+    {
+      "question_id": "T07.01.Q069",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya notices that the MCB in her house trips every time she switches on the electric iron (1100 W) along with the geyser (2000 W), washing machine (500 W), and microwave (1200 W). The MCB is rated 20 A and the supply voltage is 220 V. What is the most likely reason?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The iron is faulty"
+        },
+        {
+          "id": "B",
+          "text": "The total current drawn exceeds the 20 A MCB rating"
+        },
+        {
+          "id": "C",
+          "text": "The earth wire is disconnected"
+        },
+        {
+          "id": "D",
+          "text": "The voltage supply is too high"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The total power when all appliances are running = 1100 + 2000 + 500 + 1200 = 4800 W. The total current drawn = P/V = 4800/220 = 21.8 A. This exceeds the 20 A MCB rating, causing it to trip. The MCB is functioning correctly by protecting the circuit from overloading. Priya should avoid running all these high-power appliances simultaneously on the same circuit.",
+      "explanation_incorrect": "The iron being faulty would cause the MCB to trip even when the iron is used alone. A disconnected earth wire would not cause the MCB to trip during normal operation. The voltage supply being too high is unlikely in a standard domestic setup. The real issue is that the combined current of all appliances (21.8 A) exceeds the 20 A MCB rating."
+    },
+    {
+      "question_id": "T07.01.Q070",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan passes a current of 3 A through a 20 ohm resistance wire immersed in 500 g of water for 10 minutes in his school lab. Assuming all the heat is absorbed by the water, what is the heat produced in the wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1800 J"
+        },
+        {
+          "id": "B",
+          "text": "18000 J"
+        },
+        {
+          "id": "C",
+          "text": "108000 J"
+        },
+        {
+          "id": "D",
+          "text": "10800 J"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Using Joule's law, H = I^2Rt = (3)^2 x 20 x (10 x 60) = 9 x 20 x 600 = 108000 J. Note that the time must be converted from minutes to seconds: 10 minutes = 600 seconds. The information about water mass is extra data given to test whether students can identify the relevant variables for the heat calculation.",
+      "explanation_incorrect": "1800 J results from forgetting to convert minutes to seconds (using t = 10 instead of 600). 18000 J results from using I = 3 but forgetting to square it. 10800 J results from an arithmetic error. The correct calculation requires squaring the current, and converting time to seconds: H = 9 x 20 x 600 = 108000 J."
+    },
+    {
+      "question_id": "T07.01.Q071",
+      "type": "mcq",
+      "concept_id": "T07.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Meera's electricity bill shows that her family consumed 150 units in a month. She notices that they use five 10 W LED bulbs for 8 hours daily, a 1500 W geyser for 1 hour daily, and a 75 W ceiling fan for 10 hours daily. Approximately how many units are consumed by these appliances in a 30-day month?",
+      "options": [
+        {
+          "id": "A",
+          "text": "79.5 units"
+        },
+        {
+          "id": "B",
+          "text": "57 units"
+        },
+        {
+          "id": "C",
+          "text": "150 units"
+        },
+        {
+          "id": "D",
+          "text": "100.5 units"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Daily consumption of 5 LED bulbs = 5 x 10 W x 8 h = 400 Wh = 0.4 kWh. Daily consumption of geyser = 1500 W x 1 h = 1500 Wh = 1.5 kWh. Daily consumption of fan = 75 W x 10 h = 750 Wh = 0.75 kWh. Total daily = 0.4 + 1.5 + 0.75 = 2.65 kWh. Monthly = 2.65 x 30 = 79.5 units. The remaining units (150 - 79.5 = 70.5) are consumed by other appliances not listed.",
+      "explanation_incorrect": "57 units could result from forgetting to include all five LED bulbs. 150 units incorrectly assumes these are the only appliances. 100.5 units results from miscalculating one of the appliance consumptions. The correct approach requires calculating each appliance's daily energy, summing them, and multiplying by 30 days."
+    },
+    {
+      "question_id": "T07.01.Q072",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following is actually NOT a correct formula for electrical power?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = VI"
+        },
+        {
+          "id": "B",
+          "text": "P = I^2R"
+        },
+        {
+          "id": "C",
+          "text": "P = V^2/R"
+        },
+        {
+          "id": "D",
+          "text": "P = IR^2"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation_correct": "P = IR^2 is NOT a valid formula for electrical power. The three correct formulas for power are P = VI, P = I^2R, and P = V^2/R. Students often confuse P = I^2R with P = IR^2 because both contain I and R, but the square must be on the current (I^2), not on the resistance (R^2). This is a common error in ICSE board exams.",
+      "explanation_incorrect": "P = VI is the fundamental power formula derived from the definition of power as rate of energy transfer. P = I^2R is obtained by substituting V = IR into P = VI. P = V^2/R is obtained by substituting I = V/R into P = VI. All three of these are valid; only P = IR^2 is incorrect."
+    },
+    {
+      "question_id": "T07.01.Q073",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following situations does NOT cause a fuse to blow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Short circuit between live and neutral wires"
+        },
+        {
+          "id": "B",
+          "text": "Connecting too many high-power appliances simultaneously"
+        },
+        {
+          "id": "C",
+          "text": "Switching off an appliance using the wall switch"
+        },
+        {
+          "id": "D",
+          "text": "A faulty appliance drawing excessive current"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Switching off an appliance using the wall switch is a normal operation that simply breaks the circuit in the live wire — it does not cause any surge or excessive current, so the fuse remains intact. A short circuit, overloading (too many appliances), and a faulty appliance all cause excessive current to flow, which heats the fuse wire beyond its melting point and blows it.",
+      "explanation_incorrect": "A short circuit creates a very low resistance path, causing a huge current surge that blows the fuse. Connecting too many appliances overloads the circuit beyond the fuse rating. A faulty appliance may have internal short circuits or insulation failure that draws excessive current. Only switching off an appliance is a normal, safe operation."
+    },
+    {
+      "question_id": "T07.01.Q074",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following materials is actually NOT suitable for making heating elements, despite being a metallic conductor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nichrome"
+        },
+        {
+          "id": "B",
+          "text": "Copper"
+        },
+        {
+          "id": "C",
+          "text": "Kanthal (iron-chromium-aluminium alloy)"
+        },
+        {
+          "id": "D",
+          "text": "Tungsten"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Copper is NOT suitable for heating elements despite being a metallic conductor. Copper has very low resistivity (1.7 x 10^-8 ohm-m), which means it produces very little heat for a given current — it is designed to conduct with minimal energy loss. Students often think any metal wire can be a heating element, but only materials with high resistivity like nichrome, Kanthal, and tungsten generate enough heat to be useful as heating elements.",
+      "explanation_incorrect": "Nichrome has very high resistivity and is the most common heating element material. Kanthal is another high-resistivity alloy widely used in industrial heating. Tungsten has high resistivity and is used in incandescent lamp filaments, which are essentially heating elements that glow. Only copper, with its very low resistivity, is unsuitable."
+    },
+    {
+      "question_id": "T07.01.Q075",
+      "type": "mcq",
+      "concept_id": "T07.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does a 60 W bulb glow brighter than a 100 W bulb when both are connected in series to a 220 V supply?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the 60 W bulb has a lower power rating and consumes less energy"
+        },
+        {
+          "id": "B",
+          "text": "Because the 60 W bulb has higher resistance, and in series the same current flows through both, so more power is dissipated in the higher resistance bulb (P = I^2R)"
+        },
+        {
+          "id": "C",
+          "text": "Because the 60 W bulb receives more voltage in series since it is connected first"
+        },
+        {
+          "id": "D",
+          "text": "Because the 60 W bulb has a thicker filament that glows more easily"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In a series circuit, the same current passes through both bulbs. The 60 W bulb has a higher resistance than the 100 W bulb (R = V^2/P, so R_60 = 220^2/60 = 806.7 ohms and R_100 = 220^2/100 = 484 ohms). Since power dissipated is P = I^2R and the current is the same, the bulb with higher resistance (60 W rated) dissipates more power and glows brighter. This is a fundamental consequence of series circuit behaviour.",
+      "explanation_incorrect": "Option A states a fact about power rating but does not explain why the 60 W bulb glows brighter in series — a lower rating actually means higher resistance. Option C is wrong because voltage division in series depends on resistance, not physical position. Option D is wrong because the 60 W bulb has a thinner filament (higher resistance), not thicker."
+    },
+    {
+      "question_id": "T07.01.Q076",
+      "type": "mcq",
+      "concept_id": "T07.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why is the switch always connected in the live wire and not in the neutral wire?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the live wire is easier to access than the neutral wire"
+        },
+        {
+          "id": "B",
+          "text": "Because connecting the switch in the live wire ensures the appliance is completely disconnected from the high-voltage supply when the switch is off, preventing accidental electric shock during repairs"
+        },
+        {
+          "id": "C",
+          "text": "Because the neutral wire has zero resistance and cannot be switched"
+        },
+        {
+          "id": "D",
+          "text": "Because the live wire carries AC current while the neutral wire carries DC current"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The switch is placed in the live wire as a safety measure. The live wire is at a high potential (220 V in India), so if the switch were in the neutral wire, the appliance body and internal wiring would still be at 220 V even when the switch is off. This is dangerous because a person touching the internal parts during repair could receive a shock. By placing the switch in the live wire, the entire appliance is disconnected from the high-voltage supply when switched off.",
+      "explanation_incorrect": "Option A is incorrect because placement is not about convenience but safety. Option C is wrong because the neutral wire does have some resistance, and any wire can be switched. Option D is fundamentally wrong because both live and neutral wires carry AC current in domestic supply."
+    },
+    {
+      "question_id": "T07.01.Q077",
+      "type": "mcq",
+      "concept_id": "T07.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the fuse wire made of a lead-tin alloy rather than copper or nichrome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because lead-tin alloy is cheaper than copper and nichrome"
+        },
+        {
+          "id": "B",
+          "text": "Because lead-tin alloy has a very low melting point and high resistivity, so it melts quickly when excessive current flows, breaking the circuit before damage occurs"
+        },
+        {
+          "id": "C",
+          "text": "Because lead-tin alloy has very high resistance and prevents current from flowing"
+        },
+        {
+          "id": "D",
+          "text": "Because lead-tin alloy is a better conductor than copper"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The fuse wire must melt quickly and reliably when the current exceeds a safe limit. Lead-tin alloy has a low melting point (around 200 degrees C), so it melts readily when heated by excessive current. It also has reasonably high resistivity, which ensures it heats up sufficiently. Copper has too high a melting point (1085 degrees C) and would not melt in time. Nichrome has a very high melting point (around 1400 degrees C) and is designed NOT to melt, making it unsuitable for fuses.",
+      "explanation_incorrect": "Option A focuses on cost, which is not the primary reason for material selection in a safety device. Option C is incorrect because the fuse wire should allow normal current to flow — it only breaks the circuit during overload. Option D is completely wrong because lead-tin alloy is a much poorer conductor than copper."
     }
   ],
   "metadata": {
     "created_at": "2026-02-08",
     "status": "draft",
     "question_count": {
-      "total": 57,
+      "total": 77,
       "by_difficulty": {
-        "familiarity": 28,
-        "application": 20,
-        "exam_style": 9
+        "familiarity": 34,
+        "application": 28,
+        "exam_style": 15
       },
       "by_type": {
-        "mcq": 30,
+        "mcq": 50,
         "true_false": 10,
         "fill_blank": 12,
         "ordering": 5
       },
       "by_cognitive_level": {
         "recall": 55,
-        "compare": 1,
-        "classify": 0,
-        "scenario": 1,
-        "exception": 0,
-        "reason": 0
+        "compare": 6,
+        "classify": 4,
+        "scenario": 6,
+        "exception": 3,
+        "reason": 3
       }
     }
   }

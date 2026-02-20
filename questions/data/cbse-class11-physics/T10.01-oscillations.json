@@ -1371,6 +1371,609 @@
       "correct_answer": "(1/2)mw^2(A^2 - x^2)",
       "explanation_correct": "The kinetic energy in SHM is KE = (1/2)mv^2 = (1/2)m[w^2(A^2 - x^2)] = (1/2)mw^2(A^2 - x^2). At x = 0, KE = (1/2)mw^2 A^2 (maximum), and at x = A, KE = 0.",
       "explanation_incorrect": "Using v^2 = w^2(A^2 - x^2) in KE = (1/2)mv^2 gives KE = (1/2)mw^2(A^2 - x^2). This shows KE is maximum at the mean position and zero at the extremes."
+    },
+    {
+      "question_id": "T10.01.Q051",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the position of maximum velocity differ from the position of maximum acceleration for a particle executing SHM?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both maximum velocity and maximum acceleration occur at the mean position"
+        },
+        {
+          "id": "B",
+          "text": "Maximum velocity occurs at the mean position while maximum acceleration occurs at the extreme positions"
+        },
+        {
+          "id": "C",
+          "text": "Maximum velocity occurs at the extreme positions while maximum acceleration occurs at the mean position"
+        },
+        {
+          "id": "D",
+          "text": "Both maximum velocity and maximum acceleration occur at the extreme positions"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In SHM, velocity v = w sqrt(A^2 - x^2) is maximum at x = 0 (mean position) where v_max = Aw, and acceleration a = -w^2 x has maximum magnitude at x = A (extreme positions) where |a_max| = w^2 A. This contrast arises because velocity depends on (A^2 - x^2) while acceleration is directly proportional to x.",
+      "explanation_incorrect": "Velocity is maximum where displacement is zero (mean position) because all energy is kinetic there. Acceleration is maximum where displacement is maximum (extreme positions) because the restoring force F = -kx is greatest there. They do not peak at the same position."
+    },
+    {
+      "question_id": "T10.01.Q052",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the dependence of time period on gravitational acceleration differ between a spring-mass system and a simple pendulum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both depend on g: the spring-mass time period increases with g while the pendulum time period decreases with g"
+        },
+        {
+          "id": "B",
+          "text": "The spring-mass time period is independent of g while the pendulum time period is inversely proportional to sqrt(g)"
+        },
+        {
+          "id": "C",
+          "text": "The pendulum time period is independent of g while the spring-mass time period depends on g"
+        },
+        {
+          "id": "D",
+          "text": "Both are independent of g and depend only on the mass of the oscillating body"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a spring-mass system, T = 2pi sqrt(m/k), which has no g term and is therefore independent of gravity. For a simple pendulum, T = 2pi sqrt(l/g), where T is proportional to 1/sqrt(g). This is why a spring-mass system oscillates with the same period on Earth and the Moon, while a pendulum oscillates more slowly on the Moon where g is smaller.",
+      "explanation_incorrect": "The spring-mass formula T = 2pi sqrt(m/k) contains no g, making it gravity-independent. The pendulum formula T = 2pi sqrt(l/g) explicitly depends on g. Neither system has the opposite dependence, and the pendulum is certainly not independent of g."
+    },
+    {
+      "question_id": "T10.01.Q053",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the total mechanical energy of a damped oscillator differ from that of an ideal (undamped) SHM oscillator over time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In both cases, total energy remains constant throughout the motion"
+        },
+        {
+          "id": "B",
+          "text": "In ideal SHM, total energy remains constant, while in damped oscillations it decreases continuously due to energy dissipation by resistive forces"
+        },
+        {
+          "id": "C",
+          "text": "In ideal SHM, total energy decreases, while in damped oscillations it remains constant because damping supplies energy"
+        },
+        {
+          "id": "D",
+          "text": "In both cases, total energy decreases with time but at different rates"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In ideal SHM, there are no dissipative forces and the total mechanical energy TE = (1/2)mw^2 A^2 remains constant as kinetic and potential energies interchange. In damped oscillations, the damping force F = -bv continuously removes energy from the system, converting mechanical energy into heat. The amplitude decays exponentially and so does the total energy, since E is proportional to A^2.",
+      "explanation_incorrect": "Ideal SHM is conservative — no energy is lost, so total energy is constant. Damped oscillations involve dissipative forces that drain energy from the system continuously. Damping does not supply energy; it removes it. The two cases are fundamentally different in energy conservation."
+    },
+    {
+      "question_id": "T10.01.Q054",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the effective spring constant of two identical springs (each of spring constant k) connected in series differ from that when they are connected in parallel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Series gives k_eff = 2k and parallel gives k_eff = k/2"
+        },
+        {
+          "id": "B",
+          "text": "Series gives k_eff = k/2 and parallel gives k_eff = 2k, meaning the parallel combination is 4 times stiffer than the series combination"
+        },
+        {
+          "id": "C",
+          "text": "Both combinations give k_eff = k"
+        },
+        {
+          "id": "D",
+          "text": "Series gives k_eff = k/2 and parallel gives k_eff = 2k, meaning the parallel combination is 2 times stiffer than the series combination"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For two identical springs in series: 1/k_eff = 1/k + 1/k = 2/k, so k_eff = k/2. For two identical springs in parallel: k_eff = k + k = 2k. The ratio of parallel to series stiffness is 2k / (k/2) = 4. The parallel combination is 4 times stiffer than the series combination. In series, springs share the force but each extends independently, making the system more compliant. In parallel, both springs resist together, making the system stiffer.",
+      "explanation_incorrect": "Series combination: 1/k_eff = 1/k + 1/k = 2/k gives k_eff = k/2 (softer). Parallel combination: k_eff = k + k = 2k (stiffer). The ratio is 2k/(k/2) = 4, so parallel is 4 times stiffer. Option A reverses the formulas. Option D gives the wrong ratio."
+    },
+    {
+      "question_id": "T10.01.Q055",
+      "type": "mcq",
+      "concept_id": "T10.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the oscillation frequency of a system in free oscillations differ from its oscillation frequency in the steady state of forced oscillations?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In both cases, the system oscillates at its natural frequency"
+        },
+        {
+          "id": "B",
+          "text": "In free oscillations, the system oscillates at the driving frequency; in forced oscillations, it oscillates at the natural frequency"
+        },
+        {
+          "id": "C",
+          "text": "In free oscillations, the system oscillates at its natural frequency; in forced oscillations (steady state), it oscillates at the driving frequency"
+        },
+        {
+          "id": "D",
+          "text": "In both cases, the system oscillates at the driving frequency"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "In free oscillations, there is no external driving force, and the system oscillates at its own natural frequency w_0 = sqrt(k/m) for a spring-mass system. In forced oscillations, once transients die out (steady state), the system is compelled to oscillate at the frequency of the external driving force, regardless of its natural frequency. The natural frequency only determines the amplitude response — resonance occurs when the driving frequency matches it.",
+      "explanation_incorrect": "Free oscillations have no driving force, so there is no driving frequency — the system can only oscillate at its natural frequency. In steady-state forced oscillations, the external force imposes its frequency on the system. These are fundamentally different situations."
+    },
+    {
+      "question_id": "T10.01.Q056",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A motion has the following characteristics: (i) the restoring force is directly proportional to displacement, (ii) the force is always directed towards a fixed equilibrium point, (iii) the motion is periodic. Identify the type of motion:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uniform circular motion"
+        },
+        {
+          "id": "B",
+          "text": "Projectile motion"
+        },
+        {
+          "id": "C",
+          "text": "Simple harmonic motion"
+        },
+        {
+          "id": "D",
+          "text": "Damped oscillation"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Feature (i) — restoring force proportional to displacement (F = -kx) — is the defining condition for SHM. Feature (ii) — force directed towards a fixed point — confirms the restoring nature. Feature (iii) — periodicity — is a consequence of SHM. Together, these uniquely identify simple harmonic motion. Damped oscillations have an additional velocity-dependent dissipative force, uniform circular motion has centripetal force, and projectile motion involves constant gravitational force.",
+      "explanation_incorrect": "Uniform circular motion involves centripetal force (not proportional to displacement from equilibrium). Projectile motion has constant gravity, not a displacement-proportional restoring force. Damped oscillations additionally involve a velocity-dependent dissipative force. Only SHM satisfies all three features: F proportional to x, force towards equilibrium, and periodic motion."
+    },
+    {
+      "question_id": "T10.01.Q057",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "An oscillating system exhibits: (i) amplitude that progressively decreases with each cycle, (ii) frequency slightly lower than the natural frequency, (iii) energy being lost to the surroundings as heat. Identify the type of oscillation:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Free (undamped) oscillation"
+        },
+        {
+          "id": "B",
+          "text": "Damped oscillation"
+        },
+        {
+          "id": "C",
+          "text": "Forced oscillation at resonance"
+        },
+        {
+          "id": "D",
+          "text": "Simple harmonic motion"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Feature (i) — decreasing amplitude — indicates energy loss, ruling out ideal SHM or free undamped oscillations where amplitude stays constant. Feature (ii) — frequency slightly below natural frequency — is characteristic of damped oscillations where w_d = sqrt(w_0^2 - (b/2m)^2) < w_0. Feature (iii) — energy loss as heat — confirms the presence of dissipative forces. Together, these identify damped oscillations.",
+      "explanation_incorrect": "Free undamped oscillations and ideal SHM maintain constant amplitude, so features (i) and (iii) rule them out. Forced oscillations at resonance produce maximum (not decreasing) amplitude at the driving frequency. Only damped oscillations show all three features: declining amplitude, reduced frequency, and energy dissipation."
+    },
+    {
+      "question_id": "T10.01.Q058",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "An oscillating system has a time period given by T = 2pi sqrt(m/k), where m and k are constants. The system's time period does not change when taken from Earth to the Moon. Identify the system:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Simple pendulum"
+        },
+        {
+          "id": "B",
+          "text": "Spring-mass system"
+        },
+        {
+          "id": "C",
+          "text": "Seconds pendulum"
+        },
+        {
+          "id": "D",
+          "text": "Conical pendulum"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The formula T = 2pi sqrt(m/k) is specific to a spring-mass system, where m is the attached mass and k is the spring constant. Critically, this formula contains no gravitational acceleration term (g), which is why the time period remains unchanged when the system is moved from Earth (g = 9.8 m/s^2) to the Moon (g = 1.6 m/s^2). A simple pendulum uses T = 2pi sqrt(l/g) and would oscillate more slowly on the Moon.",
+      "explanation_incorrect": "A simple pendulum and seconds pendulum both depend on g (T = 2pi sqrt(l/g)), so their time periods change on the Moon. A conical pendulum also depends on g. Only the spring-mass system has T = 2pi sqrt(m/k) with no g dependence, making it gravity-independent."
+    },
+    {
+      "question_id": "T10.01.Q059",
+      "type": "mcq",
+      "concept_id": "T10.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A system is observed to: (i) oscillate with maximum amplitude when driven at a specific frequency, (ii) show rapidly decreasing amplitude when the driving frequency is moved away from this specific value, (iii) have its peak amplitude limited by damping. Identify the phenomenon:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Beats"
+        },
+        {
+          "id": "B",
+          "text": "Resonance"
+        },
+        {
+          "id": "C",
+          "text": "Free oscillation"
+        },
+        {
+          "id": "D",
+          "text": "Critical damping"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Feature (i) — maximum amplitude at a specific driving frequency — is the hallmark of resonance, which occurs when the driving frequency equals the natural frequency. Feature (ii) — amplitude dropping off away from this frequency — describes the resonance peak. Feature (iii) — damping limiting the peak amplitude — explains why the amplitude at resonance is finite rather than infinite. Together, these describe the resonance phenomenon in a damped driven oscillator.",
+      "explanation_incorrect": "Beats involve periodic variation in loudness from two close frequencies, not maximum amplitude at a specific driving frequency. Free oscillations have no driving force. Critical damping prevents oscillation entirely (the system returns to equilibrium without oscillating). Only resonance matches all three features: peak amplitude at a specific frequency, amplitude decrease away from it, and damping-limited peak."
+    },
+    {
+      "question_id": "T10.01.Q060",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya sets up an experiment in her college physics lab with a 0.4 kg block oscillating on a frictionless surface attached to a spring. She measures the amplitude as 0.2 m and the angular frequency as 5 rad/s. What is the kinetic energy of the block when it is 0.1 m from the mean position?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.15 J"
+        },
+        {
+          "id": "B",
+          "text": "0.30 J"
+        },
+        {
+          "id": "C",
+          "text": "0.10 J"
+        },
+        {
+          "id": "D",
+          "text": "1.0 J"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "KE = (1/2)mw^2(A^2 - x^2) = (1/2)(0.4)(25)(0.04 - 0.01) = (1/2)(0.4)(25)(0.03). Computing step by step: (1/2)(0.4) = 0.2; 0.2 x 25 = 5; 5 x 0.03 = 0.15 J. The kinetic energy at x = 0.1 m is 0.15 J.",
+      "explanation_incorrect": "Using KE = (1/2)mw^2(A^2 - x^2): m = 0.4 kg, w = 5 rad/s, A = 0.2 m, x = 0.1 m. A^2 = 0.04, x^2 = 0.01, so A^2 - x^2 = 0.03. KE = 0.5 x 0.4 x 25 x 0.03 = 0.15 J. Make sure to square both A and x before subtracting."
+    },
+    {
+      "question_id": "T10.01.Q061",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is performing an experiment with a simple pendulum in his school laboratory. He measures its length as 0.25 m and finds it completes 20 oscillations in 20 seconds. He then shortens the pendulum to 0.0625 m. What is the new time period? (g = 10 m/s^2, pi^2 = 10)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 s"
+        },
+        {
+          "id": "B",
+          "text": "1 s"
+        },
+        {
+          "id": "C",
+          "text": "0.5 s"
+        },
+        {
+          "id": "D",
+          "text": "0.25 s"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The new length l = 0.0625 m. Using T = 2pi sqrt(l/g) = 2pi sqrt(0.0625/10) = 2pi sqrt(0.00625) = 2pi x 0.079 s. Alternatively, the original period is T1 = 20/20 = 1 s with l1 = 0.25 m. Since T is proportional to sqrt(l), T2/T1 = sqrt(l2/l1) = sqrt(0.0625/0.25) = sqrt(0.25) = 0.5. So T2 = 0.5 x 1 = 0.5 s.",
+      "explanation_incorrect": "From the original measurement, T1 = 20 s / 20 oscillations = 1 s for l1 = 0.25 m. Using the ratio T2/T1 = sqrt(l2/l1) = sqrt(0.0625/0.25) = sqrt(1/4) = 1/2. Therefore T2 = 1 x 0.5 = 0.5 s. The new length is one-fourth of the original, so the time period is halved."
+    },
+    {
+      "question_id": "T10.01.Q062",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Priya is designing a vibration isolation system at a research centre. She has a 2 kg instrument that must oscillate with a time period of exactly pi/5 seconds. What spring constant should she select for the mounting spring?",
+      "options": [
+        {
+          "id": "A",
+          "text": "200 N/m"
+        },
+        {
+          "id": "B",
+          "text": "400 N/m"
+        },
+        {
+          "id": "C",
+          "text": "800 N/m"
+        },
+        {
+          "id": "D",
+          "text": "100 N/m"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From T = 2pi sqrt(m/k), rearranging gives k = 4pi^2 m / T^2. With T = pi/5 s: T^2 = pi^2/25. So k = 4pi^2 x 2 / (pi^2/25) = 8pi^2 x 25/pi^2 = 200 N/m. Alternatively, w = 2pi/T = 2pi/(pi/5) = 10 rad/s, and k = mw^2 = 2 x 100 = 200 N/m.",
+      "explanation_incorrect": "Using T = 2pi sqrt(m/k), rearranging: k = 4pi^2 m / T^2. With T = pi/5, T^2 = pi^2/25, and 4pi^2 x 2 = 8pi^2. Dividing: 8pi^2 x 25/pi^2 = 200 N/m. Option B (400) and C (800) result from errors in computing T^2 or omitting the factor of 4."
+    },
+    {
+      "question_id": "T10.01.Q063",
+      "type": "mcq",
+      "concept_id": "T10.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is demonstrating resonance using a set of tuning forks and a hollow tube in his college lab. He finds that a tube of length 25 cm (closed at one end) resonates strongly when a 340 Hz tuning fork is held above it. From this, what is the speed of sound Rohan can calculate? (Assume fundamental mode resonance, with end correction negligible)",
+      "options": [
+        {
+          "id": "A",
+          "text": "340 m/s"
+        },
+        {
+          "id": "B",
+          "text": "170 m/s"
+        },
+        {
+          "id": "C",
+          "text": "680 m/s"
+        },
+        {
+          "id": "D",
+          "text": "85 m/s"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "For a closed pipe in the fundamental mode, the length L = lambda/4, so lambda = 4L = 4 x 0.25 = 1.0 m. The speed of sound v = f x lambda = 340 x 1.0 = 340 m/s. This is consistent with the expected speed of sound in air at room temperature, confirming the resonance is indeed at the fundamental mode.",
+      "explanation_incorrect": "In a closed pipe, the fundamental resonance has L = lambda/4. With L = 0.25 m: lambda = 4 x 0.25 = 1 m. Speed v = f lambda = 340 x 1 = 340 m/s. Option B incorrectly uses L = lambda/2 (which applies to open pipes). Option C doubles the correct answer. The speed of sound is 340 m/s."
+    },
+    {
+      "question_id": "T10.01.Q064",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is studying SHM in her physics lab. She observes a 0.5 kg block on a spring oscillating with amplitude 0.1 m. She measures the block's maximum speed as 2 m/s. What is the potential energy of the block when it is at a displacement of 0.05 m from the mean position?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.05 J"
+        },
+        {
+          "id": "B",
+          "text": "0.25 J"
+        },
+        {
+          "id": "C",
+          "text": "0.125 J"
+        },
+        {
+          "id": "D",
+          "text": "0.50 J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "From v_max = Aw, we get w = v_max/A = 2/0.1 = 20 rad/s. PE = (1/2)mw^2 x^2 = (1/2)(0.5)(400)(0.0025). Computing step by step: (1/2)(0.5) = 0.25; 0.25 x 400 = 100; 100 x 0.0025 = 0.25 J. The potential energy at x = 0.05 m is 0.25 J. Note: the total energy TE = (1/2)mw^2 A^2 = 0.25 x 400 x 0.01 = 1.0 J, so PE = 0.25 J is one-quarter of the total, consistent with x = A/2.",
+      "explanation_incorrect": "First find w from v_max = Aw: w = 2/0.1 = 20 rad/s. Then PE = (1/2)mw^2 x^2 = 0.5 x 0.5 x 400 x 0.0025. Step by step: w^2 = 400, x^2 = (0.05)^2 = 0.0025. PE = 0.25 x 1 = 0.25 J. Option C (0.125 J) is a common error from forgetting to square x correctly or using the wrong formula."
+    },
+    {
+      "question_id": "T10.01.Q065",
+      "type": "mcq",
+      "concept_id": "T10.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following motions, despite appearing oscillatory, is NOT simple harmonic motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A mass on a spring on a frictionless surface"
+        },
+        {
+          "id": "B",
+          "text": "A ball bouncing repeatedly between two walls with constant speed"
+        },
+        {
+          "id": "C",
+          "text": "Small oscillations of a simple pendulum"
+        },
+        {
+          "id": "D",
+          "text": "Oscillation of a liquid column in a U-tube"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "A ball bouncing between two walls moves back and forth periodically, so it appears oscillatory, but the restoring force is NOT proportional to displacement — the ball moves at constant speed between impulsive forces at the walls. For SHM, the force must satisfy F = -kx at every instant. The spring-mass system, small-angle pendulum, and U-tube oscillation all have restoring forces proportional to displacement and are genuine examples of SHM.",
+      "explanation_incorrect": "The key criterion for SHM is F = -kx (restoring force proportional to displacement). A bouncing ball has zero net force while travelling and only impulsive forces at the walls — this is periodic but not SHM. The other three systems all satisfy the proportionality condition for small displacements."
+    },
+    {
+      "question_id": "T10.01.Q066",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "A student claims: 'Increasing the mass of the bob always increases the time period of oscillation.' For which of the following systems is this claim actually INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A spring-mass system oscillating horizontally"
+        },
+        {
+          "id": "B",
+          "text": "A simple pendulum"
+        },
+        {
+          "id": "C",
+          "text": "A spring-mass system oscillating vertically"
+        },
+        {
+          "id": "D",
+          "text": "Both A and C"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The claim is incorrect for the simple pendulum. For a simple pendulum, T = 2pi sqrt(l/g) — the time period depends only on length and gravity, NOT on the mass of the bob. Increasing the bob's mass has no effect on the time period. For both horizontal and vertical spring-mass systems, T = 2pi sqrt(m/k), so increasing mass does increase the time period. This is a common misconception: students often assume heavier pendulum bobs swing more slowly, but they do not.",
+      "explanation_incorrect": "For a spring-mass system (horizontal or vertical), T = 2pi sqrt(m/k), so increasing m does increase T — the claim is correct there. For a simple pendulum, T = 2pi sqrt(l/g) has no m term, so increasing mass has zero effect on the time period. The claim is incorrect specifically for the simple pendulum."
+    },
+    {
+      "question_id": "T10.01.Q067",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Which of the following statements about energy in SHM is actually INCORRECT?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Total energy is proportional to the square of the amplitude"
+        },
+        {
+          "id": "B",
+          "text": "Kinetic energy is maximum at the mean position"
+        },
+        {
+          "id": "C",
+          "text": "Potential energy is maximum at the mean position"
+        },
+        {
+          "id": "D",
+          "text": "The sum of kinetic and potential energies is constant throughout the motion"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "Option C is incorrect. At the mean position, displacement x = 0, so PE = (1/2)mw^2 x^2 = 0. Potential energy is actually MINIMUM (zero) at the mean position and MAXIMUM at the extreme positions where x = A. Students often confuse this because both KE and velocity are maximum at the mean position, leading them to incorrectly assume PE is also maximum there. In reality, KE and PE are complementary: when one is maximum, the other is minimum.",
+      "explanation_incorrect": "Options A, B, and D are all correct: TE = (1/2)mw^2 A^2 is proportional to A^2 (A is correct); KE = (1/2)mw^2(A^2 - x^2) is maximum when x = 0 at the mean position (B is correct); TE = KE + PE = constant (D is correct). Only C is wrong — PE = (1/2)mw^2 x^2 is zero (minimum) at the mean position, not maximum."
+    },
+    {
+      "question_id": "T10.01.Q068",
+      "type": "mcq",
+      "concept_id": "T10.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does the total mechanical energy of a particle executing ideal SHM remain constant throughout the motion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the velocity of the particle is constant at all positions"
+        },
+        {
+          "id": "B",
+          "text": "Because the restoring force is conservative — it converts kinetic energy to potential energy and vice versa without any energy dissipation"
+        },
+        {
+          "id": "C",
+          "text": "Because the amplitude of oscillation increases with time to compensate for energy loss"
+        },
+        {
+          "id": "D",
+          "text": "Because an external force continuously supplies energy to the system"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In ideal SHM, the only force acting is the restoring force F = -kx, which is conservative (derivable from a potential energy function PE = (1/2)kx^2). A conservative force cannot dissipate energy — it can only convert kinetic energy to potential energy and back. As the particle moves from the mean position to the extreme, KE converts to PE; on the return, PE converts back to KE. No energy leaves the system, so TE = KE + PE = (1/2)mw^2 A^2 = constant.",
+      "explanation_incorrect": "Velocity is NOT constant in SHM — it varies from zero at the extremes to maximum at the mean position, ruling out A. Amplitude does not increase in ideal SHM (C is wrong). No external force acts in free SHM (D is wrong). The correct reason is that the spring/restoring force is conservative, meaning it only interconverts energy forms without dissipation."
+    },
+    {
+      "question_id": "T10.01.Q069",
+      "type": "mcq",
+      "concept_id": "T10.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "reason",
+      "question_text": "Why does the amplitude of a damped oscillator decrease with time?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the natural frequency of the system changes with each oscillation"
+        },
+        {
+          "id": "B",
+          "text": "Because the restoring force becomes weaker as the spring ages during oscillation"
+        },
+        {
+          "id": "C",
+          "text": "Because the damping force (proportional to velocity) continuously removes mechanical energy from the system and converts it into heat"
+        },
+        {
+          "id": "D",
+          "text": "Because the mass of the oscillating body increases due to air molecules sticking to it"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The damping force F_d = -bv acts opposite to the velocity, doing negative work on the oscillating body every cycle. This negative work removes mechanical energy from the system, converting it into thermal energy (heat) in the surrounding medium. Since total energy E is proportional to A^2, the progressive loss of energy manifests as a decreasing amplitude. The amplitude decays exponentially as A(t) = A_0 e^(-bt/2m).",
+      "explanation_incorrect": "The natural frequency changes only very slightly due to damping — this is not the cause of amplitude decrease (A is wrong). The spring constant does not change during oscillation (B is wrong). Mass increase from air molecules is negligible and not a real mechanism (D is wrong). The correct reason is that the velocity-dependent damping force continuously extracts mechanical energy, which reduces the amplitude over time."
+    },
+    {
+      "question_id": "T10.01.Q070",
+      "type": "mcq",
+      "concept_id": "T10.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the time period of a spring-mass system independent of gravitational acceleration, unlike that of a simple pendulum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because the spring force is much stronger than gravity, so gravity has a negligible effect"
+        },
+        {
+          "id": "B",
+          "text": "Because in a spring-mass system the restoring force arises from the spring's elasticity (F = -kx), which does not involve gravity, whereas in a pendulum the restoring force (mg sin theta) is gravitational in origin"
+        },
+        {
+          "id": "C",
+          "text": "Because the spring-mass system only works in horizontal orientation where gravity is perpendicular to the motion"
+        },
+        {
+          "id": "D",
+          "text": "Because the spring cancels out the effect of gravity by stretching to a new equilibrium position, so gravity plays no role even in a vertical spring"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "The fundamental reason is the origin of the restoring force. In a spring-mass system, the restoring force F = -kx comes from the elastic deformation of the spring, governed by the spring constant k and displacement x — gravity plays no role in this force law. In a simple pendulum, the restoring force is the tangential component of gravity: F = -mg sin(theta) approximately -mg(theta) for small angles. Since gravity provides the restoring force for the pendulum, its time period T = 2pi sqrt(l/g) depends on g. For the spring-mass system, T = 2pi sqrt(m/k) has no g term. Note: even for a vertical spring, gravity only shifts the equilibrium position but does not affect the oscillation about that equilibrium.",
+      "explanation_incorrect": "Option A is wrong because the comparison of force magnitudes is irrelevant — what matters is whether g appears in the restoring force law. Option C is wrong because spring-mass systems work vertically too, and the time period is still independent of g. Option D describes a correct observation (vertical spring shifts equilibrium) but does not explain the fundamental reason — it is a consequence, not the cause. The root reason (B) is that the spring's restoring force is elastic, not gravitational."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 31,
+        "application": 25,
+        "exam_style": 14
+      },
+      "by_type": {
+        "mcq": 62,
+        "true_false": 4,
+        "fill_blank": 4
+      },
+      "by_cognitive_level": {
+        "recall": 46,
+        "compare": 5,
+        "classify": 6,
+        "scenario": 6,
+        "exception": 4,
+        "reason": 3
+      }
+    }
+  }
 }

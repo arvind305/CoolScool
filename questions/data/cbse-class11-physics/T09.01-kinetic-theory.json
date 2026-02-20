@@ -1328,6 +1328,609 @@
       "correct_answer": "C",
       "explanation_correct": "Translational KE = (3/2)nRT. For 1 mole at T: E = (3/2)(1)RT. For 3 moles at 2T: E' = (3/2)(3)(R)(2T) = 6 × (3/2)RT = 6E.",
       "explanation_incorrect": "KE scales with both the number of moles and the temperature. Going from 1 mole at T to 3 moles at 2T multiplies the energy by 3 × 2 = 6. So the new energy is 6E."
+    },
+    {
+      "question_id": "T09.01.Q051",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does Boyle's law differ from Charles's law in the variable held constant?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Boyle's law holds pressure constant; Charles's law holds temperature constant"
+        },
+        {
+          "id": "B",
+          "text": "Boyle's law holds temperature constant; Charles's law holds pressure constant"
+        },
+        {
+          "id": "C",
+          "text": "Both hold temperature constant but vary different quantities"
+        },
+        {
+          "id": "D",
+          "text": "Boyle's law holds volume constant; Charles's law holds pressure constant"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Boyle's law (PV = const) applies at constant temperature, relating P and V inversely. Charles's law (V/T = const) applies at constant pressure, relating V and T directly. The key distinction is which thermodynamic variable is held fixed.",
+      "explanation_incorrect": "Boyle's law requires constant temperature (isothermal), while Charles's law requires constant pressure (isobaric). Option A reverses the two. Option C incorrectly claims both hold T constant. Option D confuses Boyle's law with Gay-Lussac's law, which holds volume constant."
+    },
+    {
+      "question_id": "T09.01.Q052",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the pressure exerted by a gas differ from the kinetic energy per unit volume in terms of their dependence on v²_rms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "P = (1/3)ρv²_rms while KE per unit volume = (1/2)ρv²_rms; they differ by the prefactor"
+        },
+        {
+          "id": "B",
+          "text": "Both are exactly equal to (1/3)ρv²_rms"
+        },
+        {
+          "id": "C",
+          "text": "P = (1/2)ρv²_rms while KE per unit volume = (1/3)ρv²_rms"
+        },
+        {
+          "id": "D",
+          "text": "Both are exactly equal to (1/2)ρv²_rms"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The kinetic theory pressure is P = (1/3)ρv²_rms, while the translational kinetic energy per unit volume is (1/2)ρv²_rms. Hence P = (2/3) × (KE per unit volume). The prefactors 1/3 and 1/2 arise from different averaging considerations: the 1/3 from projecting three-dimensional motion onto one wall, and the 1/2 from the definition of kinetic energy.",
+      "explanation_incorrect": "Pressure and KE density both depend on ρv²_rms but with different numerical coefficients. P = (1/3)ρv²_rms comes from momentum transfer to walls, while (1/2)ρv²_rms is the standard kinetic energy density. Options B, C, and D assign incorrect prefactors."
+    },
+    {
+      "question_id": "T09.01.Q053",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "application",
+      "cognitive_level": "compare",
+      "question_text": "How does the most probable speed (v_mp) differ from the RMS speed (v_rms) for a gas at temperature T?",
+      "options": [
+        {
+          "id": "A",
+          "text": "v_mp = √(2kT/m) and v_rms = √(3kT/m); v_rms is always greater than v_mp by a factor of √(3/2)"
+        },
+        {
+          "id": "B",
+          "text": "v_mp = √(3kT/m) and v_rms = √(2kT/m); v_mp is always greater than v_rms"
+        },
+        {
+          "id": "C",
+          "text": "Both are equal at all temperatures"
+        },
+        {
+          "id": "D",
+          "text": "v_mp = √(8kT/πm) and v_rms = √(3kT/m); v_rms is always smaller than v_mp"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "The most probable speed v_mp = √(2kT/m) corresponds to the peak of the Maxwell-Boltzmann distribution, while v_rms = √(3kT/m) is the square root of the mean of squared speeds. Since √3 > √2, v_rms > v_mp by the factor √(3/2) ≈ 1.225.",
+      "explanation_incorrect": "v_mp = √(2kT/m) is the speed at the distribution peak, and v_rms = √(3kT/m) is derived from the mean squared speed. Option B reverses the formulas. Option C is incorrect because the two speeds are never equal. Option D assigns the mean speed formula √(8kT/πm) to v_mp."
+    },
+    {
+      "question_id": "T09.01.Q054",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "compare",
+      "question_text": "How does the molar specific heat at constant volume (Cᵥ) of a monoatomic gas differ from that of a diatomic gas at moderate temperatures?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monoatomic: Cᵥ = (3/2)R; Diatomic: Cᵥ = (5/2)R — the diatomic value is higher due to additional rotational degrees of freedom"
+        },
+        {
+          "id": "B",
+          "text": "Monoatomic: Cᵥ = (5/2)R; Diatomic: Cᵥ = (3/2)R — the monoatomic value is higher"
+        },
+        {
+          "id": "C",
+          "text": "Both have Cᵥ = (3/2)R because translational energy is the same"
+        },
+        {
+          "id": "D",
+          "text": "Monoatomic: Cᵥ = (3/2)R; Diatomic: Cᵥ = (7/2)R — the diatomic value includes vibrational modes"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "A monoatomic gas has f = 3 (translational only), giving Cᵥ = (3/2)R. A diatomic gas at moderate temperatures has f = 5 (3 translational + 2 rotational), giving Cᵥ = (5/2)R. The diatomic gas absorbs more heat per kelvin because energy is distributed across additional rotational degrees of freedom.",
+      "explanation_incorrect": "Option B reverses the values. Option C ignores the rotational contribution in diatomic molecules. Option D incorrectly includes vibrational modes, which are not significantly excited at moderate temperatures (that would give f = 7 and Cᵥ = (7/2)R only at very high T)."
+    },
+    {
+      "question_id": "T09.01.Q055",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "exam_style",
+      "cognitive_level": "compare",
+      "question_text": "How does the mean free path of gas A (molecular diameter d) differ from that of gas B (molecular diameter 2d) at the same temperature and pressure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gas A has a mean free path 4 times that of gas B"
+        },
+        {
+          "id": "B",
+          "text": "Gas A has a mean free path 2 times that of gas B"
+        },
+        {
+          "id": "C",
+          "text": "Both have the same mean free path since T and P are equal"
+        },
+        {
+          "id": "D",
+          "text": "Gas A has a mean free path √2 times that of gas B"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "From λ = kT/(√2 π d² P), at the same T and P, λ ∝ 1/d². If gas B has diameter 2d, its mean free path λ_B ∝ 1/(2d)² = 1/(4d²), so λ_A/λ_B = 4. Gas A has four times the mean free path because its smaller collision cross-section leads to fewer collisions per unit distance.",
+      "explanation_incorrect": "Mean free path depends on the square of the molecular diameter: λ ∝ 1/d². Doubling d reduces λ by a factor of 4, not 2 or √2. Option C wrongly assumes mean free path is independent of molecular size."
+    },
+    {
+      "question_id": "T09.01.Q056",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A fixed mass of gas undergoes a process in which its volume increases while its pressure decreases such that PV remains constant. This process obeys:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Charles's law"
+        },
+        {
+          "id": "B",
+          "text": "Gay-Lussac's law"
+        },
+        {
+          "id": "C",
+          "text": "Boyle's law"
+        },
+        {
+          "id": "D",
+          "text": "Avogadro's law"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The defining feature of Boyle's law is PV = constant, which holds at constant temperature. The described process — volume increasing while pressure decreases with PV unchanged — is the hallmark of an isothermal Boyle's law process.",
+      "explanation_incorrect": "Charles's law (V/T = const at constant P) and Gay-Lussac's law (P/T = const at constant V) involve temperature changes. Avogadro's law (V ∝ n at constant T, P) involves changing the amount of gas. Only Boyle's law maintains PV = const."
+    },
+    {
+      "question_id": "T09.01.Q057",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "classify",
+      "question_text": "A gas model assumes: (i) molecules are point particles, (ii) no intermolecular forces exist, (iii) collisions are perfectly elastic, and (iv) molecular motion is random. This model describes:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A van der Waals gas"
+        },
+        {
+          "id": "B",
+          "text": "An ideal gas under kinetic theory"
+        },
+        {
+          "id": "C",
+          "text": "A real gas at high pressure"
+        },
+        {
+          "id": "D",
+          "text": "A Bose-Einstein condensate"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "All four stated assumptions — point particles, negligible intermolecular forces, perfectly elastic collisions, and random motion — are precisely the postulates of the kinetic theory of an ideal gas. Van der Waals gases account for finite molecular size and intermolecular forces, real gases at high pressure deviate from ideality, and Bose-Einstein condensates are quantum systems.",
+      "explanation_incorrect": "A van der Waals gas (option A) explicitly includes molecular volume and attractive forces. Real gases at high pressure (option C) have significant intermolecular interactions. A Bose-Einstein condensate (option D) is a quantum state, not a classical kinetic model. Only the ideal gas under kinetic theory satisfies all four assumptions."
+    },
+    {
+      "question_id": "T09.01.Q058",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "A gas has γ = Cₚ/Cᵥ = 7/5. This gas is most likely:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Monoatomic (e.g., Ar)"
+        },
+        {
+          "id": "B",
+          "text": "Diatomic at moderate temperature (e.g., N₂)"
+        },
+        {
+          "id": "C",
+          "text": "Polyatomic nonlinear (e.g., CH₄)"
+        },
+        {
+          "id": "D",
+          "text": "A diatomic gas with fully excited vibrational modes"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "γ = 1 + 2/f. For γ = 7/5 = 1.4, solving gives f = 5, which corresponds to a diatomic gas at moderate temperatures (3 translational + 2 rotational degrees of freedom). Monoatomic gases have γ = 5/3, polyatomic nonlinear have γ = 4/3, and diatomic with vibrational modes (f = 7) would have γ = 9/7.",
+      "explanation_incorrect": "Monoatomic gases give γ = 5/3 ≈ 1.67 (option A). Polyatomic nonlinear gases give γ = 4/3 ≈ 1.33 (option C). Diatomic with vibrational excitation gives γ = 9/7 ≈ 1.29 (option D). Only f = 5 (diatomic at moderate T) yields γ = 7/5 = 1.4."
+    },
+    {
+      "question_id": "T09.01.Q059",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "familiarity",
+      "cognitive_level": "classify",
+      "question_text": "In a gas sample, the average distance a molecule travels between successive collisions is found to increase when the gas is heated at constant pressure. The quantity being described is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The molecular diameter"
+        },
+        {
+          "id": "B",
+          "text": "The collision frequency"
+        },
+        {
+          "id": "C",
+          "text": "The mean free path"
+        },
+        {
+          "id": "D",
+          "text": "The RMS speed"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The mean free path is defined as the average distance between successive collisions. At constant pressure, heating increases T, which reduces the number density n = P/(kT), thereby increasing the mean free path λ = 1/(√2 π n d²). The description matches the mean free path exactly.",
+      "explanation_incorrect": "The molecular diameter (option A) is fixed and does not change with heating. The collision frequency (option B) is a rate, not a distance. The RMS speed (option D) is a velocity, not a distance between collisions. The quantity described — average inter-collision distance — is the mean free path."
+    },
+    {
+      "question_id": "T09.01.Q060",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Riya inflates a balloon to a volume of 2 L inside her air-conditioned room at 27°C. She then takes it outdoors where the temperature is 47°C. Assuming the pressure remains constant and the balloon is flexible, the new volume of the balloon is approximately:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.13 L"
+        },
+        {
+          "id": "B",
+          "text": "3.48 L"
+        },
+        {
+          "id": "C",
+          "text": "1.87 L"
+        },
+        {
+          "id": "D",
+          "text": "2.50 L"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Using Charles's law V₁/T₁ = V₂/T₂ at constant pressure. T₁ = 27 + 273 = 300 K, T₂ = 47 + 273 = 320 K. V₂ = V₁ × T₂/T₁ = 2 × 320/300 = 2 × 1.067 = 2.13 L. The balloon expands slightly because the absolute temperature increases by about 6.7%.",
+      "explanation_incorrect": "Convert to Kelvin: T₁ = 300 K, T₂ = 320 K. By Charles's law at constant P, V₂ = 2 × (320/300) ≈ 2.13 L. Option B likely results from using Celsius directly. Option C implies the volume decreases, which contradicts the temperature increase. Option D overestimates the expansion."
+    },
+    {
+      "question_id": "T09.01.Q061",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Amit is studying kinetic theory in his college lab. He has a sealed container of helium (M = 4 g/mol) at 300 K and measures the RMS speed. His labmate Priya has an identical container of argon (M = 40 g/mol) at the same temperature. The ratio of the RMS speed of helium to that of argon is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "√10"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "1/√10"
+        },
+        {
+          "id": "D",
+          "text": "100"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At the same temperature, v_rms ∝ 1/√M. Therefore v_He/v_Ar = √(M_Ar/M_He) = √(40/4) = √10 ≈ 3.16. Helium molecules move √10 times faster than argon atoms at the same temperature because they are 10 times lighter.",
+      "explanation_incorrect": "Since v_rms = √(3RT/M), the ratio depends on the square root of the inverse mass ratio: √(40/4) = √10. Option B uses the mass ratio directly without the square root. Option C inverts the ratio. Option D squares the mass ratio."
+    },
+    {
+      "question_id": "T09.01.Q062",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Meera is conducting a research project on molecular speeds. She heats a sample of nitrogen gas from 300 K to 1200 K and measures the RMS speed at both temperatures. If the initial RMS speed was v₀, the final RMS speed she measures is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "4v₀"
+        },
+        {
+          "id": "B",
+          "text": "2v₀"
+        },
+        {
+          "id": "C",
+          "text": "v₀√2"
+        },
+        {
+          "id": "D",
+          "text": "16v₀"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v_rms ∝ √T for a given gas. The temperature ratio is T₂/T₁ = 1200/300 = 4. Therefore v₂/v₁ = √(T₂/T₁) = √4 = 2, so the final RMS speed is 2v₀. Quadrupling the absolute temperature doubles the RMS speed.",
+      "explanation_incorrect": "Since v_rms ∝ √T, the speed ratio equals the square root of the temperature ratio. √(1200/300) = √4 = 2. Option A uses the temperature ratio directly (not its square root). Option C uses √2 instead of 2. Option D squares the temperature ratio."
+    },
+    {
+      "question_id": "T09.01.Q063",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "exam_style",
+      "cognitive_level": "scenario",
+      "question_text": "Arjun is solving a thermodynamics problem in which 2 moles of a monoatomic ideal gas are heated at constant volume from 200 K to 500 K. He needs to find the heat absorbed. The correct answer is (R = 8.314 J mol⁻¹ K⁻¹):",
+      "options": [
+        {
+          "id": "A",
+          "text": "4988 J"
+        },
+        {
+          "id": "B",
+          "text": "7482 J"
+        },
+        {
+          "id": "C",
+          "text": "8314 J"
+        },
+        {
+          "id": "D",
+          "text": "12471 J"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "For a monoatomic gas, Cᵥ = (3/2)R. Q = nCᵥΔT = 2 × (3/2) × 8.314 × (500 - 200) = 2 × 1.5 × 8.314 × 300 = 3 × 8.314 × 300 = 7482.6 J ≈ 7482 J.",
+      "explanation_incorrect": "Using Q = nCᵥΔT with Cᵥ = (3/2)R: Q = 2 × (3/2) × 8.314 × 300 = 7482 J. Option A uses only 1 mole. Option C uses Cᵥ = R incorrectly. Option D uses Cᵥ = (5/2)R, which applies to diatomic gases, not monoatomic."
+    },
+    {
+      "question_id": "T09.01.Q064",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "scenario",
+      "question_text": "Rohan is studying gas behaviour at a research centre. He has a gas sample at 1 atm and 300 K with a mean free path of λ. He then compresses the gas isothermally to 4 atm. The new mean free path is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "λ/4"
+        },
+        {
+          "id": "B",
+          "text": "λ/2"
+        },
+        {
+          "id": "C",
+          "text": "4λ"
+        },
+        {
+          "id": "D",
+          "text": "λ"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "At constant temperature, the number density n = P/(kT) is proportional to pressure. When P increases from 1 atm to 4 atm, n increases by a factor of 4. Since λ = 1/(√2 π n d²) ∝ 1/n, the mean free path decreases to λ/4.",
+      "explanation_incorrect": "At constant T, λ ∝ 1/P. Quadrupling the pressure quadruples the number density, reducing the mean free path to one-fourth its original value. Option B halves instead of quartering. Option C inverts the relationship. Option D incorrectly assumes λ is pressure-independent."
+    },
+    {
+      "question_id": "T09.01.Q065",
+      "type": "mcq",
+      "concept_id": "T09.01.C02",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "A common misconception is that doubling the temperature of a gas (in °C) doubles the RMS speed of its molecules. For a gas initially at 100°C, what is the actual effect of raising the temperature to 200°C on the RMS speed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The RMS speed doubles"
+        },
+        {
+          "id": "B",
+          "text": "The RMS speed increases by a factor of √(473/373) ≈ 1.13"
+        },
+        {
+          "id": "C",
+          "text": "The RMS speed increases by a factor of 2"
+        },
+        {
+          "id": "D",
+          "text": "The RMS speed remains unchanged"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "v_rms ∝ √T where T is in Kelvin. T₁ = 100 + 273 = 373 K, T₂ = 200 + 273 = 473 K. The ratio v₂/v₁ = √(473/373) ≈ √1.268 ≈ 1.13. The RMS speed increases by only about 13%, far from doubling, because the Kelvin temperatures are not in a 1:2 ratio.",
+      "explanation_incorrect": "The misconception arises from using Celsius instead of Kelvin. Doubling the Celsius value from 100°C to 200°C does NOT double the absolute temperature (373 K to 473 K is only a 27% increase). Since v_rms ∝ √T_K, the speed increase is √(473/373) ≈ 1.13, not 2."
+    },
+    {
+      "question_id": "T09.01.Q066",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "exception",
+      "question_text": "Students often assume that the average translational kinetic energy of a gas molecule depends on the molecular mass. Which of the following statements is actually correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heavier molecules have greater average translational KE at the same temperature"
+        },
+        {
+          "id": "B",
+          "text": "Lighter molecules have greater average translational KE at the same temperature"
+        },
+        {
+          "id": "C",
+          "text": "The average translational KE per molecule is (3/2)kT, independent of molecular mass"
+        },
+        {
+          "id": "D",
+          "text": "The average translational KE depends on both mass and temperature as (3/2)mkT"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation_correct": "The average translational kinetic energy per molecule is (3/2)kT and depends only on temperature, not on molecular mass. This is a fundamental result of kinetic theory. While heavier molecules move slower, their greater mass exactly compensates, keeping the average KE the same for all ideal gases at the same temperature.",
+      "explanation_incorrect": "The formula KE_avg = (3/2)kT contains no mass term. The mass independence arises because v_rms = √(3kT/m), so (1/2)mv²_rms = (1/2)m(3kT/m) = (3/2)kT — the mass cancels. Options A and B incorrectly introduce a mass dependence. Option D invents a formula with an extra factor of m."
+    },
+    {
+      "question_id": "T09.01.Q067",
+      "type": "mcq",
+      "concept_id": "T09.01.C04",
+      "difficulty": "application",
+      "cognitive_level": "exception",
+      "question_text": "A student claims that the vibrational degrees of freedom of a diatomic gas always contribute to its specific heat. Which of the following correctly identifies the flaw in this claim?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diatomic molecules have no vibrational modes at all"
+        },
+        {
+          "id": "B",
+          "text": "Vibrational modes exist but are not excited at moderate temperatures; they contribute significantly only at high temperatures"
+        },
+        {
+          "id": "C",
+          "text": "Vibrational modes contribute equally at all temperatures"
+        },
+        {
+          "id": "D",
+          "text": "Vibrational modes only matter for polyatomic gases, never for diatomic gases"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "Diatomic molecules do possess vibrational degrees of freedom (1 vibrational mode contributing 2 quadratic terms), but quantum mechanics dictates that these modes are 'frozen out' at moderate temperatures because the energy spacing is too large compared to kT. They become significant only at high temperatures (typically above ~1000 K for common diatomic gases), increasing f from 5 to 7.",
+      "explanation_incorrect": "Option A is wrong because diatomic molecules do have vibrational modes. Option C is wrong because excitation of vibrational modes is temperature-dependent (quantum freeze-out). Option D is wrong because diatomic gases do exhibit vibrational contributions at sufficiently high temperatures."
+    },
+    {
+      "question_id": "T09.01.Q068",
+      "type": "mcq",
+      "concept_id": "T09.01.C01",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why does Gay-Lussac's law (P ∝ T at constant V) follow naturally from the kinetic theory of gases?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because increasing temperature increases molecular mass, which increases pressure"
+        },
+        {
+          "id": "B",
+          "text": "Because higher temperature means higher average kinetic energy and faster molecules, which strike the walls harder and more frequently, increasing pressure"
+        },
+        {
+          "id": "C",
+          "text": "Because higher temperature causes the gas to expand, reducing the number of collisions"
+        },
+        {
+          "id": "D",
+          "text": "Because higher temperature increases intermolecular forces, which pushes molecules toward the walls"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "In kinetic theory, temperature is proportional to the average translational KE of molecules: KE = (3/2)kT. Higher temperature means greater average speed (v_rms ∝ √T). At constant volume, the number density is fixed, so faster-moving molecules strike the container walls with greater momentum and at a higher rate. This directly increases the pressure, giving P ∝ T.",
+      "explanation_incorrect": "Option A is incorrect because molecular mass does not change with temperature. Option C describes what happens at constant pressure (Charles's law), not constant volume. Option D is incorrect because ideal gas theory assumes negligible intermolecular forces."
+    },
+    {
+      "question_id": "T09.01.Q069",
+      "type": "mcq",
+      "concept_id": "T09.01.C03",
+      "difficulty": "exam_style",
+      "cognitive_level": "reason",
+      "question_text": "Why is the RMS speed of gas molecules always greater than their average speed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because squaring emphasises higher speeds — faster molecules contribute disproportionately more to the mean of v², making √(mean of v²) larger than the mean of v"
+        },
+        {
+          "id": "B",
+          "text": "Because the RMS speed includes potential energy contributions that the average speed does not"
+        },
+        {
+          "id": "C",
+          "text": "Because the average speed uses only the most probable speed in its calculation"
+        },
+        {
+          "id": "D",
+          "text": "Because v_rms is measured in different units than v_avg"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation_correct": "Mathematically, for any distribution that is not a delta function, √(⟨v²⟩) > ⟨v⟩. This is a consequence of the Cauchy-Schwarz inequality (or equivalently, the fact that variance is positive). Squaring speeds gives extra weight to the faster molecules in the distribution tail. Since the Maxwell-Boltzmann distribution has a long high-speed tail, the mean of v² is pulled upward, making v_rms = √(⟨v²⟩) > v_avg = ⟨v⟩.",
+      "explanation_incorrect": "Option B is wrong because ideal gas molecules have no potential energy. Option C is incorrect because v_avg is a proper average over the full distribution, not just v_mp. Option D is wrong because both speeds have the same units (m/s)."
+    },
+    {
+      "question_id": "T09.01.Q070",
+      "type": "mcq",
+      "concept_id": "T09.01.C05",
+      "difficulty": "application",
+      "cognitive_level": "reason",
+      "question_text": "Why does the mean free path of a gas increase when it is heated at constant pressure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Because heating increases the molecular diameter, creating fewer collisions"
+        },
+        {
+          "id": "B",
+          "text": "Because heating at constant pressure causes the gas to expand, reducing the number density so molecules travel farther between collisions"
+        },
+        {
+          "id": "C",
+          "text": "Because heating slows down the molecules, giving them more time between collisions"
+        },
+        {
+          "id": "D",
+          "text": "Because heating increases intermolecular forces, which repel molecules apart"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation_correct": "At constant pressure, heating a gas increases its volume (Charles's law: V ∝ T). This expansion reduces the number density n = N/V. Since the mean free path λ = 1/(√2 π n d²) is inversely proportional to n, a lower number density means molecules encounter fewer collision partners per unit distance, and λ increases. Quantitatively, since n = P/(kT) at constant P, n ∝ 1/T, so λ ∝ T.",
+      "explanation_incorrect": "Option A is wrong because molecular diameter is an intrinsic property that does not change with temperature. Option C is wrong because heating speeds up molecules (v_rms ∝ √T). Option D is wrong because ideal gas theory assumes negligible intermolecular forces. The correct mechanism is density reduction through thermal expansion."
     }
-  ]
+  ],
+  "metadata": {
+    "question_count": {
+      "total": 70,
+      "by_difficulty": {
+        "familiarity": 25,
+        "application": 26,
+        "exam_style": 19
+      },
+      "by_type": {
+        "mcq": 62,
+        "true_false": 4,
+        "fill_blank": 4
+      },
+      "by_cognitive_level": {
+        "recall": 46,
+        "compare": 7,
+        "classify": 4,
+        "scenario": 6,
+        "exception": 4,
+        "reason": 3
+      }
+    }
+  }
 }

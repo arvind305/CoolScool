@@ -1039,7 +1039,7 @@
       "difficulty": "familiarity",
       "cognitive_level": "recall",
       "question_text": "Matrix multiplication is commutative, i.e., AB = BA for all matrices A and B of compatible orders.",
-      "correct_answer": false,
+      "correct_answer": "B",
       "explanation_correct": "Matrix multiplication is not commutative, meaning AB ≠ BA in general. The order of the matrices matters, as the number of columns in the first matrix must match the number of rows in the second matrix for the multiplication to be defined.",
       "explanation_incorrect": "Many students mistakenly think that matrix multiplication is commutative, like regular number multiplication. However, this is not the case. Matrix multiplication follows a specific set of rules, and the order of the matrices is crucial. If the dimensions of the matrices do not match, the multiplication cannot even be performed."
     },
@@ -1050,7 +1050,7 @@
       "difficulty": "familiarity",
       "cognitive_level": "recall",
       "question_text": "If any row or column of a determinant consists entirely of zeros, then the value of the determinant is zero.",
-      "correct_answer": true,
+      "correct_answer": "A",
       "explanation_correct": "If any row or column of a determinant consists entirely of zeros, then the value of the determinant is automatically zero. This is because the determinant is calculated by multiplying elements along diagonals, and a row or column with all zeros means that at least one of those diagonal products will be zero, making the entire determinant zero.",
       "explanation_incorrect": "The statement is incorrect because even if one row or column of a determinant has all zeros, the determinant can still have a non-zero value. This is because the determinant is calculated using all the elements in the matrix, not just one row or column. As long as the other rows and columns have non-zero elements, the determinant can still have a non-zero value."
     },
@@ -1061,7 +1061,7 @@
       "difficulty": "application",
       "cognitive_level": "recall",
       "question_text": "A square matrix A is invertible if and only if |A| ≠ 0.",
-      "correct_answer": true,
+      "correct_answer": "A",
       "explanation_correct": "A square matrix A is invertible if and only if its determinant |A| is non-zero. This is because the inverse matrix A⁻¹ exists only when |A| ≠ 0, as the formula for the inverse is A⁻¹ = adj(A)/|A|.",
       "explanation_incorrect": "The statement is true. A square matrix A is invertible if and only if its determinant |A| is non-zero. If |A| = 0, then the matrix is not invertible and does not have an inverse. This is because the formula for the inverse matrix A⁻¹ is given by A⁻¹ = adj(A)/|A|, and when |A| = 0, the division is not defined, and the inverse does not exist."
     },
@@ -1072,7 +1072,7 @@
       "difficulty": "application",
       "cognitive_level": "recall",
       "question_text": "The determinant of a 3×3 skew-symmetric matrix is always zero.",
-      "correct_answer": true,
+      "correct_answer": "A",
       "explanation_correct": "The determinant of a 3x3 skew-symmetric matrix is always zero because the rows (or columns) of a skew-symmetric matrix are linearly dependent, meaning they can be expressed as a linear combination of the other rows (or columns).",
       "explanation_incorrect": "The determinant of a 3x3 matrix represents the volume of the parallelepiped formed by the column vectors (or row vectors) of the matrix. For a skew-symmetric matrix, the columns (or rows) are orthogonal to each other, so the volume of the parallelepiped is zero, and the determinant is also zero."
     },
@@ -1083,7 +1083,7 @@
       "difficulty": "exam_style",
       "cognitive_level": "recall",
       "question_text": "If |A| = k and A is an n×n matrix, then |cA| = cⁿ|A| for any scalar c.",
-      "correct_answer": true,
+      "correct_answer": "A",
       "explanation_correct": "The statement is true because the determinant of a matrix is a scalar value, and when you multiply a matrix by a scalar c, each element of the matrix is multiplied by c. The properties of determinants show that |cA| = cⁿ|A|, where n is the dimension of the square matrix A.",
       "explanation_incorrect": "The statement is not correct. The formula for the determinant of a scalar multiple of a matrix is |cA| = cⁿ|A|, where n is the dimension of the square matrix A. This means that if |A| = k, then |cA| = cⁿk, not cⁿ|A|. The key difference is that the determinant of A is a scalar value (k), while the determinant of cA depends on the scalar c as well as the dimension n of the matrix."
     },

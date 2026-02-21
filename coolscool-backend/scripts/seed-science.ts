@@ -223,7 +223,29 @@ async function seedSubjectClass(
       }
     }
 
-    // 4. Seed questions from question files
+    // 4. Pre-load concept UUID map (one query instead of one per question)
+    const conceptMapResult = await client.query(
+      'SELECT concept_id, id FROM concepts WHERE curriculum_id = $1',
+      [curriculumId]
+    );
+    const conceptMap = new Map<string, string>();
+    for (const row of conceptMapResult.rows) {
+      conceptMap.set(row.concept_id, row.id);
+    }
+
+    // Pre-load topic UUID map
+    const topicMapResult = await client.query(
+      'SELECT topic_id, id FROM topics WHERE curriculum_id = $1',
+      [curriculumId]
+    );
+    const topicMap = new Map<string, string>();
+    for (const row of topicMapResult.rows) {
+      topicMap.set(row.topic_id, row.id);
+    }
+
+    // 5. Seed questions from question files (batched)
+    const BATCH_SIZE = 100;
+    const COLS = 16;
     const files = fs.readdirSync(questionsDir)
       .filter(f => f.endsWith('.json') && f.startsWith('T'))
       .sort();
@@ -232,17 +254,11 @@ async function seedSubjectClass(
       const filePath = path.join(questionsDir, file);
       const data: QuestionBank = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-      // Get topic UUID
-      const topicResult = await client.query(
-        'SELECT id FROM topics WHERE curriculum_id = $1 AND topic_id = $2',
-        [curriculumId, data.topic_id]
-      );
-
-      if (topicResult.rows.length === 0) {
+      const topicUuid = topicMap.get(data.topic_id);
+      if (!topicUuid) {
         console.warn(`    WARNING: Topic ${data.topic_id} not found, skipping ${file}`);
         continue;
       }
-      const topicUuid = topicResult.rows[0].id;
 
       // Insert canonical explanation
       if (data.canonical_explanation) {
@@ -258,35 +274,50 @@ async function seedSubjectClass(
         explanationCount++;
       }
 
-      // Insert questions
+      // Filter valid questions
+      const validQuestions: Question[] = [];
       for (const q of data.questions) {
-        const conceptResult = await client.query(
-          'SELECT id FROM concepts WHERE curriculum_id = $1 AND concept_id = $2',
-          [curriculumId, q.concept_id]
-        );
+        if (!conceptMap.has(q.concept_id)) continue;
+        validQuestions.push(q);
+      }
 
-        if (conceptResult.rows.length === 0) {
-          // Try to find by pattern match (some concept IDs might be slightly different)
-          continue;
-        }
-        const conceptUuid = conceptResult.rows[0].id;
+      // Batch-insert questions
+      for (let i = 0; i < validQuestions.length; i += BATCH_SIZE) {
+        const batch = validQuestions.slice(i, i + BATCH_SIZE);
+        const valuesClauses: string[] = [];
+        const params: unknown[] = [];
 
-        let correctAnswer = q.correct_answer;
-        let orderingItems = q.ordering_items;
+        batch.forEach((q, idx) => {
+          const o = idx * COLS;
+          valuesClauses.push(
+            `($${o+1}::uuid, $${o+2}, $${o+3}::uuid, $${o+4}, $${o+5}, $${o+6}, $${o+7}, $${o+8}, $${o+9}, $${o+10}::jsonb, $${o+11}::jsonb, $${o+12}::jsonb, $${o+13}, $${o+14}, $${o+15}, $${o+16}::jsonb)`
+          );
 
-        // Handle ordering questions with items/correct_order format
-        if (q.type === 'ordering') {
-          if (q.items && q.correct_order) {
-            // Convert items array to ordering_items format (just the text values in correct order)
-            orderingItems = q.correct_order.map(id => {
-              const item = q.items!.find(i => i.id === id);
-              return item ? item.text : id;
-            });
-            correctAnswer = q.correct_order;
-          } else if (q.ordering_items && !correctAnswer) {
-            correctAnswer = q.ordering_items;
+          let correctAnswer = q.correct_answer;
+          let orderingItems = q.ordering_items;
+          if (q.type === 'ordering') {
+            if (q.items && q.correct_order) {
+              orderingItems = q.correct_order.map(id => {
+                const item = q.items!.find(i => i.id === id);
+                return item ? item.text : id;
+              });
+              correctAnswer = q.correct_order;
+            } else if (q.ordering_items && !correctAnswer) {
+              correctAnswer = q.ordering_items;
+            }
           }
-        }
+
+          params.push(
+            curriculumId, q.question_id, conceptMap.get(q.concept_id)!, q.concept_id, data.topic_id,
+            q.difficulty, q.cognitive_level || 'recall', q.type, q.question_text,
+            q.options ? JSON.stringify(q.options) : null,
+            JSON.stringify(correctAnswer),
+            orderingItems ? JSON.stringify(orderingItems) : null,
+            q.explanation_correct || null, q.explanation_incorrect || null,
+            q.image_url || null,
+            q.option_images ? JSON.stringify(q.option_images) : null,
+          );
+        });
 
         await client.query(
           `INSERT INTO questions (
@@ -296,7 +327,7 @@ async function seedSubjectClass(
              explanation_correct, explanation_incorrect,
              image_url, option_images
            )
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
+           VALUES ${valuesClauses.join(',\n')}
            ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
              concept_id = EXCLUDED.concept_id,
              concept_id_str = EXCLUDED.concept_id_str,
@@ -310,19 +341,9 @@ async function seedSubjectClass(
              explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect),
              image_url = COALESCE(EXCLUDED.image_url, questions.image_url),
              option_images = COALESCE(EXCLUDED.option_images, questions.option_images)`,
-          [
-            curriculumId, q.question_id, conceptUuid, q.concept_id, data.topic_id,
-            q.difficulty, q.cognitive_level || 'recall', q.type, q.question_text,
-            q.options ? JSON.stringify(q.options) : null,
-            JSON.stringify(correctAnswer),
-            orderingItems ? JSON.stringify(orderingItems) : null,
-            q.explanation_correct || null,
-            q.explanation_incorrect || null,
-            q.image_url || null,
-            q.option_images ? JSON.stringify(q.option_images) : null,
-          ]
+          params
         );
-        questionCount++;
+        questionCount += batch.length;
       }
     }
 

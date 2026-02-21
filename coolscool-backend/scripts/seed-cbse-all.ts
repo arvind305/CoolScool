@@ -197,7 +197,29 @@ async function seedCurriculumAndQuestions(
       }
     }
 
-    // 3. Seed questions from directory
+    // 3. Pre-load concept and topic UUID maps (one query each instead of one per question)
+    const conceptMapResult = await client.query(
+      'SELECT concept_id, id FROM concepts WHERE curriculum_id = $1',
+      [curriculumId]
+    );
+    const conceptMap = new Map<string, string>();
+    for (const row of conceptMapResult.rows) {
+      conceptMap.set(row.concept_id, row.id);
+    }
+
+    const topicMapResult = await client.query(
+      'SELECT topic_id, id FROM topics WHERE curriculum_id = $1',
+      [curriculumId]
+    );
+    const topicMap = new Map<string, string>();
+    for (const row of topicMapResult.rows) {
+      topicMap.set(row.topic_id, row.id);
+    }
+
+    // 4. Seed questions from directory (batched)
+    const BATCH_SIZE = 100;
+    const COLS = 19;
+
     if (fs.existsSync(questionsDirPath)) {
       const files = fs.readdirSync(questionsDirPath)
         .filter(f => f.endsWith('.json') && f.startsWith('T'))
@@ -206,16 +228,11 @@ async function seedCurriculumAndQuestions(
       for (const file of files) {
         const data: QuestionBank = JSON.parse(fs.readFileSync(path.join(questionsDirPath, file), 'utf8'));
 
-        const topicResult = await client.query(
-          'SELECT id FROM topics WHERE curriculum_id = $1 AND topic_id = $2',
-          [curriculumId, data.topic_id]
-        );
-
-        if (topicResult.rows.length === 0) {
+        const topicUuid = topicMap.get(data.topic_id);
+        if (!topicUuid) {
           console.warn(`    ⚠ Topic ${data.topic_id} not found, skipping ${file}`);
           continue;
         }
-        const topicUuid = topicResult.rows[0].id;
 
         // Canonical explanation
         if (data.canonical_explanation) {
@@ -231,51 +248,29 @@ async function seedCurriculumAndQuestions(
           explanationCount++;
         }
 
-        // Questions
-        for (const q of data.questions) {
-          const conceptResult = await client.query(
-            'SELECT id FROM concepts WHERE curriculum_id = $1 AND concept_id = $2',
-            [curriculumId, q.concept_id]
-          );
+        // Filter valid questions
+        const validQuestions = data.questions.filter(q => conceptMap.has(q.concept_id));
 
-          if (conceptResult.rows.length === 0) {
-            continue; // skip orphaned questions
-          }
-          const conceptUuid = conceptResult.rows[0].id;
+        // Batch-insert questions
+        for (let i = 0; i < validQuestions.length; i += BATCH_SIZE) {
+          const batch = validQuestions.slice(i, i + BATCH_SIZE);
+          const valuesClauses: string[] = [];
+          const params: unknown[] = [];
 
-          let correctAnswer = q.correct_answer;
-          if (!correctAnswer) {
-            if (q.type === 'match' && q.match_pairs) correctAnswer = q.match_pairs;
-            else if (q.type === 'ordering' && q.ordering_items) correctAnswer = q.ordering_items;
-          }
+          batch.forEach((q, idx) => {
+            const o = idx * COLS;
+            valuesClauses.push(
+              `($${o+1}::uuid, $${o+2}, $${o+3}::uuid, $${o+4}, $${o+5}, $${o+6}, $${o+7}, $${o+8}, $${o+9}, $${o+10}::jsonb, $${o+11}::jsonb, $${o+12}::jsonb, $${o+13}::jsonb, $${o+14}, $${o+15}::text[], $${o+16}, $${o+17}, $${o+18}, $${o+19}::jsonb)`
+            );
 
-          await client.query(
-            `INSERT INTO questions (
-               curriculum_id, question_id, concept_id, concept_id_str, topic_id_str,
-               difficulty, cognitive_level, question_type, question_text, options,
-               correct_answer, match_pairs, ordering_items, hint, tags,
-               explanation_correct, explanation_incorrect,
-               image_url, option_images
-             )
-             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)
-             ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
-               concept_id = EXCLUDED.concept_id,
-               concept_id_str = EXCLUDED.concept_id_str,
-               topic_id_str = EXCLUDED.topic_id_str,
-               question_text = EXCLUDED.question_text,
-               cognitive_level = EXCLUDED.cognitive_level,
-               options = EXCLUDED.options,
-               correct_answer = EXCLUDED.correct_answer,
-               match_pairs = EXCLUDED.match_pairs,
-               ordering_items = EXCLUDED.ordering_items,
-               hint = EXCLUDED.hint,
-               tags = EXCLUDED.tags,
-               explanation_correct = COALESCE(EXCLUDED.explanation_correct, questions.explanation_correct),
-               explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect),
-               image_url = COALESCE(EXCLUDED.image_url, questions.image_url),
-               option_images = COALESCE(EXCLUDED.option_images, questions.option_images)`,
-            [
-              curriculumId, q.question_id, conceptUuid, q.concept_id, data.topic_id,
+            let correctAnswer = q.correct_answer;
+            if (!correctAnswer) {
+              if (q.type === 'match' && q.match_pairs) correctAnswer = q.match_pairs;
+              else if (q.type === 'ordering' && q.ordering_items) correctAnswer = q.ordering_items;
+            }
+
+            params.push(
+              curriculumId, q.question_id, conceptMap.get(q.concept_id)!, q.concept_id, data.topic_id,
               q.difficulty, q.cognitive_level || 'recall', q.type, q.question_text,
               q.options ? JSON.stringify(q.options) : null,
               JSON.stringify(correctAnswer),
@@ -285,9 +280,39 @@ async function seedCurriculumAndQuestions(
               q.explanation_correct || null, q.explanation_incorrect || null,
               q.image_url || null,
               q.option_images ? JSON.stringify(q.option_images) : null,
-            ]
-          );
-          questionCount++;
+            );
+          });
+
+          if (valuesClauses.length > 0) {
+            await client.query(
+              `INSERT INTO questions (
+                 curriculum_id, question_id, concept_id, concept_id_str, topic_id_str,
+                 difficulty, cognitive_level, question_type, question_text, options,
+                 correct_answer, match_pairs, ordering_items, hint, tags,
+                 explanation_correct, explanation_incorrect,
+                 image_url, option_images
+               )
+               VALUES ${valuesClauses.join(',\n')}
+               ON CONFLICT (curriculum_id, question_id) DO UPDATE SET
+                 concept_id = EXCLUDED.concept_id,
+                 concept_id_str = EXCLUDED.concept_id_str,
+                 topic_id_str = EXCLUDED.topic_id_str,
+                 question_text = EXCLUDED.question_text,
+                 cognitive_level = EXCLUDED.cognitive_level,
+                 options = EXCLUDED.options,
+                 correct_answer = EXCLUDED.correct_answer,
+                 match_pairs = EXCLUDED.match_pairs,
+                 ordering_items = EXCLUDED.ordering_items,
+                 hint = EXCLUDED.hint,
+                 tags = EXCLUDED.tags,
+                 explanation_correct = COALESCE(EXCLUDED.explanation_correct, questions.explanation_correct),
+                 explanation_incorrect = COALESCE(EXCLUDED.explanation_incorrect, questions.explanation_incorrect),
+                 image_url = COALESCE(EXCLUDED.image_url, questions.image_url),
+                 option_images = COALESCE(EXCLUDED.option_images, questions.option_images)`,
+              params
+            );
+            questionCount += batch.length;
+          }
         }
       }
     } else {

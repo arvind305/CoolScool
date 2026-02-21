@@ -60,8 +60,12 @@ export const AnswerOptions = forwardRef<HTMLDivElement, AnswerOptionsProps>(
   ) {
     // Normalize answer for comparison (handles case differences and true_false format variants)
     const normalizeAnswer = useCallback(
-      (answer: string | string[] | null | undefined): string => {
+      (answer: string | string[] | boolean | null | undefined): string => {
         if (answer === null || answer === undefined) return '';
+        // Handle booleans (DB stores true_false correct_answer as jsonb boolean)
+        if (typeof answer === 'boolean') {
+          return answer ? 'a' : 'b';
+        }
         if (typeof answer === 'string') {
           const lower = answer.toLowerCase().trim();
           // For true_false, normalize all variants to canonical "a"/"b"

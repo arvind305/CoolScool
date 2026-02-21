@@ -500,11 +500,10 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
       if (!sessionId) return null;
 
       try {
-        // Only call end API if session isn't already completed by the backend
-        const currentStatus = state.session?.status;
-        if (currentStatus !== 'completed') {
-          await sessionApi.endSession(sessionId, completed, elapsedMs);
-        }
+        // Always call endSession API — even if backend already marked the session
+        // complete (e.g. after the last answer), we still need to save
+        // time_elapsed_ms and re-calculate topic proficiency.
+        await sessionApi.endSession(sessionId, completed, elapsedMs);
 
         // Fetch summary
         const { summary } = await sessionApi.getSessionSummary(sessionId);
@@ -543,7 +542,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
         return null;
       }
     },
-    [state.session?.status]
+    []
   );
 
   // Get total XP (from backend progress)

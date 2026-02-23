@@ -4,14 +4,25 @@ import * as React from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { StatCard } from '@/components/dashboard/stat-card';
-import { SessionHistory } from '@/components/dashboard/session-history';
 import { TopicProgressCard } from '@/components/dashboard/topic-progress-card';
-import { ProgressCharts } from '@/components/parent/progress-charts';
 import { ActivityFeed } from '@/components/parent/activity-feed';
-import { getChildFullProgress, getActivityFeed } from '@/services/parent-api';
-import type { ChildFullProgress, ActivityItem } from '@/types/parent';
+import { WeeklySummaryCard } from '@/components/parent/weekly-summary-card';
+import { SubjectComparisonChart } from '@/components/parent/subject-comparison-chart';
+import { AreasOfConcern } from '@/components/parent/areas-of-concern';
+import { SessionTimeline } from '@/components/parent/session-timeline';
+import { useChildView, useChildSessionsQuery } from '@/queries/use-parent-queries';
+import type { ActivityItem as ParentActivityItem } from '@/types/parent';
 
-function getInitials(name: string): string {
+const BAND_LABELS: Record<string, string> = {
+  not_started: 'Not Started',
+  building_familiarity: 'Building Familiarity',
+  growing_confidence: 'Growing Confidence',
+  consistent_understanding: 'Consistent Understanding',
+  exam_ready: 'Exam Ready',
+};
+
+function getInitials(name: string | null): string {
+  if (!name) return '?';
   return name
     .split(' ')
     .map((n) => n[0])
@@ -39,38 +50,20 @@ export default function ChildProgressPage() {
   const params = useParams();
   const childId = params.id as string;
 
-  const [progressData, setProgressData] = React.useState<ChildFullProgress | null>(null);
-  const [activities, setActivities] = React.useState<ActivityItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [error, setError] = React.useState<string | null>(null);
+  const {
+    progress,
+    activities,
+    weeklySummary,
+    subjectBreakdown,
+    concerns,
+    isLoading,
+    isLoadingWeeklySummary,
+    isLoadingSubjectBreakdown,
+    isLoadingConcerns,
+    progressError,
+  } = useChildView(childId);
 
-  React.useEffect(() => {
-    async function loadData() {
-      try {
-        setIsLoading(true);
-        setError(null);
-        const [progress, activityData] = await Promise.all([
-          getChildFullProgress(childId),
-          getActivityFeed(childId, 5),
-        ]);
-
-        if (!progress) {
-          setError('Child not found. They may have been unlinked from your account.');
-          return;
-        }
-
-        setProgressData(progress);
-        setActivities(activityData);
-      } catch (err) {
-        setError('Failed to load progress data. Please try again.');
-        console.error('Error loading child progress:', err);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    loadData();
-  }, [childId]);
+  const sessionsQuery = useChildSessionsQuery(childId, { limit: 20 });
 
   if (isLoading) {
     return (
@@ -85,7 +78,7 @@ export default function ChildProgressPage() {
     );
   }
 
-  if (error || !progressData) {
+  if (progressError || !progress) {
     return (
       <main className="child-progress-page">
         <div className="child-progress-container">
@@ -95,7 +88,7 @@ export default function ChildProgressPage() {
               <line x1="12" y1="8" x2="12" y2="12" />
               <line x1="12" y1="16" x2="12.01" y2="16" />
             </svg>
-            <p>{error || 'Something went wrong'}</p>
+            <p>Failed to load progress data. Please try again.</p>
             <Link href="/parent" className="btn btn-primary">
               Back to Dashboard
             </Link>
@@ -105,7 +98,27 @@ export default function ChildProgressPage() {
     );
   }
 
-  const { child, summary, subjectProgress, topicProgress, recentSessions, strengths, areasToImprove } = progressData;
+  const { child, summary, topics, recentSessions } = progress;
+  const displayName = child.displayName || child.email.split('@')[0] || 'Child';
+
+  // Map activities for ActivityFeed component
+  const mappedActivities: ParentActivityItem[] = activities.map((a) => ({
+    id: a.id,
+    childId: a.childId,
+    childName: a.childName,
+    childAvatar: null,
+    type: 'session_completed' as const,
+    title: 'Completed Practice Session',
+    description: a.description,
+    timestamp: a.timestamp,
+    metadata: {
+      topicId: a.metadata?.topicId,
+      topicName: a.metadata?.topicName,
+      xpEarned: a.metadata?.xpEarned,
+      questionsCorrect: a.metadata?.questionsCorrect,
+      questionsTotal: a.metadata?.questionsTotal,
+    },
+  }));
 
   return (
     <main className="child-progress-page">
@@ -127,25 +140,16 @@ export default function ChildProgressPage() {
               <img src={child.avatarUrl} alt="" />
             ) : (
               <span className="child-progress-avatar-initials">
-                {getInitials(child.displayName)}
+                {getInitials(displayName)}
               </span>
             )}
           </div>
           <div className="child-progress-info">
-            <h1 className="child-progress-name">{child.displayName}</h1>
+            <h1 className="child-progress-name">{displayName}</h1>
             <p className="child-progress-last-active">
-              Last active: {formatTimeAgo(summary.lastActiveAt)}
+              Last active: {recentSessions.length > 0 ? formatTimeAgo(recentSessions[0]?.completedAt ?? null) : 'Never'}
             </p>
           </div>
-          {summary.currentStreak > 0 && (
-            <div className="child-progress-streak">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2c.55 0 1 .45 1 1v2c0 .55-.45 1-1 1s-1-.45-1-1V3c0-.55.45-1 1-1zm0 15a3 3 0 100-6 3 3 0 000 6z" />
-              </svg>
-              <span className="child-progress-streak-count">{summary.currentStreak}</span>
-              <span className="child-progress-streak-label">day streak</span>
-            </div>
-          )}
         </header>
 
         {/* Stats Overview */}
@@ -153,7 +157,7 @@ export default function ChildProgressPage() {
           <div className="child-progress-stats-grid">
             <StatCard
               label="Total XP"
-              value={summary.totalXP.toLocaleString()}
+              value={summary.totalXp.toLocaleString()}
               icon={
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -181,16 +185,6 @@ export default function ChildProgressPage() {
               }
             />
             <StatCard
-              label="Topics Mastered"
-              value={summary.topicsMastered}
-              icon={
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="8" r="7" />
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                </svg>
-              }
-            />
-            <StatCard
               label="Accuracy"
               value={`${summary.averageAccuracy}%`}
               icon={
@@ -201,84 +195,62 @@ export default function ChildProgressPage() {
                 </svg>
               }
             />
-            <StatCard
-              label="Longest Streak"
-              value={`${summary.longestStreak} days`}
-              icon={
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z" />
-                </svg>
-              }
-            />
           </div>
+        </section>
+
+        {/* Weekly Summary */}
+        <section className="child-progress-section">
+          <WeeklySummaryCard
+            summary={weeklySummary || {
+              currentWeek: { sessionsCompleted: 0, questionsAnswered: 0, questionsCorrect: 0, accuracy: 0, xpEarned: 0, timeSpentMs: 0 },
+              previousWeek: { sessionsCompleted: 0, questionsAnswered: 0, questionsCorrect: 0, accuracy: 0, xpEarned: 0, timeSpentMs: 0 },
+              deltas: { sessions: 0, questions: 0, accuracy: 0, xp: 0 },
+            }}
+            isLoading={isLoadingWeeklySummary}
+          />
         </section>
 
         {/* Main Content Grid */}
         <div className="child-progress-grid">
-          {/* Left Column - Charts and Insights */}
+          {/* Left Column */}
           <div className="child-progress-main">
-            {/* Progress Charts */}
+            {/* Subject Comparison Chart */}
             <section className="child-progress-section">
-              <h2 className="child-progress-section-title">Progress Overview</h2>
-              <ProgressCharts
-                subjectProgress={subjectProgress}
-                topicProgress={topicProgress}
+              <SubjectComparisonChart
+                data={subjectBreakdown}
+                isLoading={isLoadingSubjectBreakdown}
               />
             </section>
 
-            {/* Strengths and Areas to Improve */}
-            <section className="child-progress-section child-progress-insights">
-              <div className="child-progress-insights-grid">
-                <div className="insight-card strengths">
-                  <h3 className="insight-card-title">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
-                    </svg>
-                    Strengths
-                  </h3>
-                  <ul className="insight-list">
-                    {strengths.map((strength, i) => (
-                      <li key={i}>{strength}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="insight-card improvements">
-                  <h3 className="insight-card-title">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                      <polyline points="17 6 23 6 23 12" />
-                    </svg>
-                    Areas to Practice
-                  </h3>
-                  <ul className="insight-list">
-                    {areasToImprove.map((area, i) => (
-                      <li key={i}>{area}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+            {/* Areas of Concern */}
+            <section className="child-progress-section">
+              <AreasOfConcern
+                concerns={concerns}
+                isLoading={isLoadingConcerns}
+              />
             </section>
 
             {/* Topics In Progress */}
             <section className="child-progress-section">
               <h2 className="child-progress-section-title">Topics In Progress</h2>
-              {topicProgress.length > 0 ? (
+              {topics.length > 0 ? (
                 <div className="child-progress-topics-list">
-                  {topicProgress.map((topic) => (
-                    <TopicProgressCard
-                      key={topic.topicId}
-                      topicId={topic.topicId}
-                      topicName={topic.topicName}
-                      themeName={topic.themeName}
-                      proficiencyBand={topic.proficiencyBand}
-                      proficiencyLabel={topic.proficiencyLabel}
-                      conceptsStarted={topic.conceptsStarted}
-                      conceptsTotal={topic.conceptsTotal}
-                      xpEarned={topic.xpEarned}
-                      totalAttempts={topic.totalAttempts}
-                      lastAttemptedAt={topic.lastAttemptedAt}
-                    />
-                  ))}
+                  {topics
+                    .filter((t) => t.proficiencyBand !== 'not_started')
+                    .map((topic) => (
+                      <TopicProgressCard
+                        key={topic.topicId}
+                        topicId={topic.topicId}
+                        topicName={topic.topicName}
+                        proficiencyBand={topic.proficiencyBand as any}
+                        proficiencyLabel={BAND_LABELS[topic.proficiencyBand] || topic.proficiencyBand}
+                        conceptsStarted={topic.conceptsStarted}
+                        conceptsTotal={topic.conceptsTotal}
+                        xpEarned={topic.xpEarned}
+                        totalAttempts={0}
+                        lastAttemptedAt={topic.lastAttemptedAt}
+                      />
+                    ))}
                 </div>
               ) : (
                 <div className="child-progress-topics-empty">
@@ -288,23 +260,23 @@ export default function ChildProgressPage() {
             </section>
           </div>
 
-          {/* Right Column - Activity and Sessions */}
+          {/* Right Column */}
           <div className="child-progress-sidebar">
-            {/* Recent Activity */}
+            {/* Session Timeline */}
             <section className="child-progress-section">
-              <ActivityFeed
-                activities={activities}
-                maxItems={5}
-                showChildName={false}
+              <SessionTimeline
+                sessions={sessionsQuery.data?.sessions || []}
+                childId={childId}
+                isLoading={sessionsQuery.isLoading}
               />
             </section>
 
-            {/* Recent Sessions */}
+            {/* Recent Activity */}
             <section className="child-progress-section">
-              <SessionHistory
-                sessions={recentSessions}
+              <ActivityFeed
+                activities={mappedActivities}
                 maxItems={5}
-                showViewAll={false}
+                showChildName={false}
               />
             </section>
           </div>

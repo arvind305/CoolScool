@@ -35,6 +35,11 @@ export const queryKeys = {
     child: (childId: string) => ['parent', 'child', childId] as const,
     childProgress: (childId: string) => ['parent', 'child', childId, 'progress'] as const,
     childSessions: (childId: string) => ['parent', 'child', childId, 'sessions'] as const,
+    childWeeklySummary: (childId: string) => ['parent', 'child', childId, 'weekly-summary'] as const,
+    childSubjectBreakdown: (childId: string) => ['parent', 'child', childId, 'subject-breakdown'] as const,
+    childConcerns: (childId: string) => ['parent', 'child', childId, 'concerns'] as const,
+    childSessionDetail: (childId: string, sessionId: string) => ['parent', 'child', childId, 'sessions', sessionId] as const,
+    notifications: () => ['parent', 'notifications'] as const,
     activity: (childId?: string) => ['parent', 'activity', childId] as const,
   },
 

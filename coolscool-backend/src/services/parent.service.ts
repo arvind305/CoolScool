@@ -7,6 +7,7 @@
 import { query, withTransaction } from '../db/index.js';
 import { User } from '../models/user.model.js';
 import { NotFoundError, BadRequestError, ConflictError } from '../middleware/error.js';
+import * as analyticsService from './analytics.service.js';
 
 // ============================================
 // INTERFACES
@@ -574,4 +575,461 @@ export async function getAllChildrenActivity(
       questionsTotal: s.questions_answered,
     },
   }));
+}
+
+// ============================================
+// WEEKLY SUMMARY
+// ============================================
+
+export interface WeekStats {
+  sessionsCompleted: number;
+  questionsAnswered: number;
+  questionsCorrect: number;
+  accuracy: number;
+  xpEarned: number;
+  timeSpentMs: number;
+}
+
+export interface WeeklySummary {
+  currentWeek: WeekStats;
+  previousWeek: WeekStats;
+  deltas: {
+    sessions: number;
+    questions: number;
+    accuracy: number;
+    xp: number;
+  };
+}
+
+/**
+ * Gets weekly summary comparing current week vs previous week
+ */
+export async function getChildWeeklySummary(
+  parentId: string,
+  childId: string
+): Promise<WeeklySummary> {
+  await verifyParentChild(parentId, childId);
+
+  const result = await query<{
+    week_label: string;
+    sessions_completed: string;
+    questions_answered: string;
+    questions_correct: string;
+    accuracy: string;
+    xp_earned: string;
+    time_spent_ms: string;
+  }>(
+    `WITH week_data AS (
+      SELECT
+        CASE
+          WHEN qs.completed_at >= date_trunc('week', NOW()) THEN 'current'
+          ELSE 'previous'
+        END as week_label,
+        COUNT(*) as sessions_completed,
+        COALESCE(SUM(qs.questions_answered), 0) as questions_answered,
+        COALESCE(SUM(qs.questions_correct), 0) as questions_correct,
+        CASE WHEN SUM(qs.questions_answered) > 0
+          THEN ROUND(SUM(qs.questions_correct)::numeric / SUM(qs.questions_answered) * 100, 1)
+          ELSE 0
+        END as accuracy,
+        COALESCE(SUM(qs.xp_earned), 0) as xp_earned,
+        COALESCE(SUM(qs.time_elapsed_ms), 0) as time_spent_ms
+      FROM quiz_sessions qs
+      WHERE qs.user_id = $1
+        AND qs.session_status = 'completed'
+        AND qs.completed_at >= date_trunc('week', NOW()) - INTERVAL '7 days'
+      GROUP BY week_label
+    )
+    SELECT * FROM week_data`,
+    [childId]
+  );
+
+  const empty: WeekStats = {
+    sessionsCompleted: 0,
+    questionsAnswered: 0,
+    questionsCorrect: 0,
+    accuracy: 0,
+    xpEarned: 0,
+    timeSpentMs: 0,
+  };
+
+  let currentWeek = { ...empty };
+  let previousWeek = { ...empty };
+
+  for (const row of result.rows) {
+    const stats: WeekStats = {
+      sessionsCompleted: Number(row.sessions_completed),
+      questionsAnswered: Number(row.questions_answered),
+      questionsCorrect: Number(row.questions_correct),
+      accuracy: Number(row.accuracy),
+      xpEarned: Number(row.xp_earned),
+      timeSpentMs: Number(row.time_spent_ms),
+    };
+    if (row.week_label === 'current') {
+      currentWeek = stats;
+    } else {
+      previousWeek = stats;
+    }
+  }
+
+  return {
+    currentWeek,
+    previousWeek,
+    deltas: {
+      sessions: currentWeek.sessionsCompleted - previousWeek.sessionsCompleted,
+      questions: currentWeek.questionsAnswered - previousWeek.questionsAnswered,
+      accuracy: Math.round((currentWeek.accuracy - previousWeek.accuracy) * 10) / 10,
+      xp: currentWeek.xpEarned - previousWeek.xpEarned,
+    },
+  };
+}
+
+// ============================================
+// SUBJECT BREAKDOWN
+// ============================================
+
+/**
+ * Gets subject breakdown for a child (parent-verified wrapper)
+ */
+export async function getChildSubjectBreakdown(
+  parentId: string,
+  childId: string
+) {
+  await verifyParentChild(parentId, childId);
+  return analyticsService.getSubjectBreakdown(childId);
+}
+
+// ============================================
+// AREAS OF CONCERN
+// ============================================
+
+export interface AreaOfConcern {
+  topicId: string;
+  topicName: string;
+  subject: string;
+  accuracy: number;
+  trend: 'declining' | 'consistently_low';
+  recentAccuracy: number;
+  previousAccuracy: number;
+  totalAttempts: number;
+}
+
+/**
+ * Gets areas of concern combining weak areas + declining trends
+ */
+export async function getChildConcerns(
+  parentId: string,
+  childId: string
+): Promise<AreaOfConcern[]> {
+  await verifyParentChild(parentId, childId);
+
+  // Get consistently low areas from analytics
+  const weakAreas = await analyticsService.getWeakAreas(childId, 10);
+
+  // Get declining trends: compare last 7 days vs previous 7 days
+  const trendResult = await query<{
+    topic_id: string;
+    topic_name: string;
+    subject: string;
+    recent_correct: string;
+    recent_total: string;
+    recent_accuracy: string;
+    previous_correct: string;
+    previous_total: string;
+    previous_accuracy: string;
+  }>(
+    `WITH recent AS (
+      SELECT
+        q.topic_id,
+        t.topic_name,
+        c.subject,
+        COUNT(*) FILTER (WHERE sa.is_correct) as correct,
+        COUNT(*) as total
+      FROM session_answers sa
+      JOIN questions q ON sa.question_id = q.id
+      JOIN topics t ON q.topic_id = t.id
+      JOIN themes th ON t.theme_id = th.id
+      JOIN curricula c ON th.curriculum_id = c.id
+      JOIN quiz_sessions qs ON sa.session_id = qs.id
+      WHERE qs.user_id = $1
+        AND sa.answered_at >= NOW() - INTERVAL '7 days'
+      GROUP BY q.topic_id, t.topic_name, c.subject
+      HAVING COUNT(*) >= 3
+    ),
+    previous AS (
+      SELECT
+        q.topic_id,
+        COUNT(*) FILTER (WHERE sa.is_correct) as correct,
+        COUNT(*) as total
+      FROM session_answers sa
+      JOIN questions q ON sa.question_id = q.id
+      JOIN quiz_sessions qs ON sa.session_id = qs.id
+      WHERE qs.user_id = $1
+        AND sa.answered_at >= NOW() - INTERVAL '14 days'
+        AND sa.answered_at < NOW() - INTERVAL '7 days'
+      GROUP BY q.topic_id
+      HAVING COUNT(*) >= 3
+    )
+    SELECT
+      r.topic_id,
+      r.topic_name,
+      r.subject,
+      r.correct as recent_correct,
+      r.total as recent_total,
+      ROUND(r.correct::numeric / r.total * 100, 1) as recent_accuracy,
+      COALESCE(p.correct, 0) as previous_correct,
+      COALESCE(p.total, 0) as previous_total,
+      CASE WHEN COALESCE(p.total, 0) > 0
+        THEN ROUND(p.correct::numeric / p.total * 100, 1)
+        ELSE 0
+      END as previous_accuracy
+    FROM recent r
+    LEFT JOIN previous p ON r.topic_id = p.topic_id
+    WHERE COALESCE(p.total, 0) > 0
+    ORDER BY (ROUND(r.correct::numeric / r.total * 100, 1) - ROUND(p.correct::numeric / p.total * 100, 1)) ASC`,
+    [childId]
+  );
+
+  // Build combined concerns list
+  const concerns = new Map<string, AreaOfConcern>();
+
+  // Add consistently low from weak areas
+  for (const wa of weakAreas) {
+    if (wa.accuracy < 60) {
+      concerns.set(wa.topicId, {
+        topicId: wa.topicId,
+        topicName: wa.topicName,
+        subject: wa.subject,
+        accuracy: wa.accuracy,
+        trend: 'consistently_low',
+        recentAccuracy: wa.accuracy,
+        previousAccuracy: wa.accuracy,
+        totalAttempts: wa.totalAttempts,
+      });
+    }
+  }
+
+  // Add declining trends (accuracy dropped by 10+ points)
+  for (const row of trendResult.rows) {
+    const recentAcc = Number(row.recent_accuracy);
+    const prevAcc = Number(row.previous_accuracy);
+    if (prevAcc - recentAcc >= 10) {
+      const existing = concerns.get(row.topic_id);
+      if (existing) {
+        existing.trend = 'declining';
+        existing.recentAccuracy = recentAcc;
+        existing.previousAccuracy = prevAcc;
+      } else {
+        concerns.set(row.topic_id, {
+          topicId: row.topic_id,
+          topicName: row.topic_name,
+          subject: row.subject,
+          accuracy: recentAcc,
+          trend: 'declining',
+          recentAccuracy: recentAcc,
+          previousAccuracy: prevAcc,
+          totalAttempts: Number(row.recent_total) + Number(row.previous_total),
+        });
+      }
+    }
+  }
+
+  return Array.from(concerns.values()).sort((a, b) => a.accuracy - b.accuracy);
+}
+
+// ============================================
+// SESSION DETAIL
+// ============================================
+
+export interface SessionDetailAnswer {
+  questionId: string;
+  questionText: string;
+  selectedOption: string;
+  correctOption: string;
+  isCorrect: boolean;
+  explanation: string | null;
+  answeredAt: string;
+}
+
+export interface SessionDetail {
+  sessionId: string;
+  topicId: string;
+  topicName: string;
+  questionsAnswered: number;
+  questionsCorrect: number;
+  xpEarned: number;
+  timeElapsedMs: number;
+  completedAt: string | null;
+  answers: SessionDetailAnswer[];
+}
+
+/**
+ * Gets detailed session data including individual answers
+ */
+export async function getChildSessionDetail(
+  parentId: string,
+  childId: string,
+  sessionId: string
+): Promise<SessionDetail> {
+  await verifyParentChild(parentId, childId);
+
+  // Verify session belongs to the child
+  const sessionResult = await query<{
+    id: string;
+    topic_id_str: string;
+    topic_name: string;
+    questions_answered: number;
+    questions_correct: number;
+    xp_earned: number;
+    time_elapsed_ms: number;
+    completed_at: string | null;
+  }>(
+    `SELECT id, topic_id_str, topic_name, questions_answered, questions_correct,
+            xp_earned, time_elapsed_ms, completed_at
+     FROM quiz_sessions
+     WHERE id = $1 AND user_id = $2`,
+    [sessionId, childId]
+  );
+
+  if (!sessionResult.rows[0]) {
+    throw new NotFoundError('Session not found');
+  }
+
+  const session = sessionResult.rows[0];
+
+  // Get individual answers
+  const answersResult = await query<{
+    question_id: string;
+    question_text: string;
+    selected_option: string;
+    correct_option: string;
+    is_correct: boolean;
+    explanation: string | null;
+    answered_at: string;
+  }>(
+    `SELECT
+      sa.question_id,
+      q.question_text,
+      sa.selected_option,
+      q.correct_answer as correct_option,
+      sa.is_correct,
+      q.explanation,
+      sa.answered_at
+    FROM session_answers sa
+    JOIN questions q ON sa.question_id = q.id
+    WHERE sa.session_id = $1
+    ORDER BY sa.answered_at ASC`,
+    [sessionId]
+  );
+
+  return {
+    sessionId: session.id,
+    topicId: session.topic_id_str,
+    topicName: session.topic_name,
+    questionsAnswered: session.questions_answered,
+    questionsCorrect: session.questions_correct,
+    xpEarned: session.xp_earned,
+    timeElapsedMs: session.time_elapsed_ms,
+    completedAt: session.completed_at,
+    answers: answersResult.rows.map(a => ({
+      questionId: a.question_id,
+      questionText: a.question_text,
+      selectedOption: a.selected_option,
+      correctOption: a.correct_option,
+      isCorrect: a.is_correct,
+      explanation: a.explanation,
+      answeredAt: a.answered_at,
+    })),
+  };
+}
+
+// ============================================
+// NOTIFICATION PREFERENCES
+// ============================================
+
+export interface NotificationPreferences {
+  emailDigest: 'daily' | 'weekly' | 'off';
+  lowAccuracyAlerts: boolean;
+  inactivityAlerts: boolean;
+  inactivityThresholdDays: number;
+}
+
+/**
+ * Gets notification preferences for a parent (returns defaults if not set)
+ */
+export async function getNotificationPreferences(
+  userId: string
+): Promise<NotificationPreferences> {
+  const result = await query<{
+    email_digest: string;
+    low_accuracy_alerts: boolean;
+    inactivity_alerts: boolean;
+    inactivity_threshold_days: number;
+  }>(
+    `SELECT email_digest, low_accuracy_alerts, inactivity_alerts, inactivity_threshold_days
+     FROM parent_notification_preferences
+     WHERE user_id = $1`,
+    [userId]
+  );
+
+  if (!result.rows[0]) {
+    return {
+      emailDigest: 'weekly',
+      lowAccuracyAlerts: true,
+      inactivityAlerts: true,
+      inactivityThresholdDays: 3,
+    };
+  }
+
+  const row = result.rows[0];
+  return {
+    emailDigest: row.email_digest as NotificationPreferences['emailDigest'],
+    lowAccuracyAlerts: row.low_accuracy_alerts,
+    inactivityAlerts: row.inactivity_alerts,
+    inactivityThresholdDays: row.inactivity_threshold_days,
+  };
+}
+
+/**
+ * Updates notification preferences (upsert)
+ */
+export async function updateNotificationPreferences(
+  userId: string,
+  updates: Partial<NotificationPreferences>
+): Promise<NotificationPreferences> {
+  const current = await getNotificationPreferences(userId);
+  const merged = { ...current, ...updates };
+
+  await query(
+    `INSERT INTO parent_notification_preferences
+       (user_id, email_digest, low_accuracy_alerts, inactivity_alerts, inactivity_threshold_days)
+     VALUES ($1, $2, $3, $4, $5)
+     ON CONFLICT (user_id)
+     DO UPDATE SET
+       email_digest = EXCLUDED.email_digest,
+       low_accuracy_alerts = EXCLUDED.low_accuracy_alerts,
+       inactivity_alerts = EXCLUDED.inactivity_alerts,
+       inactivity_threshold_days = EXCLUDED.inactivity_threshold_days,
+       updated_at = NOW()`,
+    [userId, merged.emailDigest, merged.lowAccuracyAlerts, merged.inactivityAlerts, merged.inactivityThresholdDays]
+  );
+
+  return merged;
+}
+
+// ============================================
+// HELPERS
+// ============================================
+
+/**
+ * Verifies parent-child relationship, throws NotFoundError if not linked
+ */
+async function verifyParentChild(parentId: string, childId: string): Promise<void> {
+  const result = await query(
+    'SELECT id FROM users WHERE id = $1 AND parent_id = $2',
+    [childId, parentId]
+  );
+  if (result.rowCount === 0) {
+    throw new NotFoundError('Child not found or not linked to your account');
+  }
 }

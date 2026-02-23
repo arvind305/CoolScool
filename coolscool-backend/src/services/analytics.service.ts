@@ -132,7 +132,7 @@ export async function getSubjectBreakdown(
     accuracy: string;
   }>(
     `SELECT
-      th.subject,
+      c.subject,
       COUNT(DISTINCT qs.id) as sessions,
       COALESCE(SUM(qs.questions_answered), 0) as questions,
       COALESCE(SUM(qs.questions_correct), 0) as correct,
@@ -143,8 +143,9 @@ export async function getSubjectBreakdown(
     FROM quiz_sessions qs
     JOIN topics t ON qs.topic_id_str = t.topic_id
     JOIN themes th ON t.theme_id = th.id
+    JOIN curricula c ON th.curriculum_id = c.id
     WHERE qs.user_id = $1 AND qs.session_status = 'completed'
-    GROUP BY th.subject`,
+    GROUP BY c.subject`,
     [userId]
   );
 
@@ -260,7 +261,7 @@ export async function getWeakAreas(
     `SELECT
       tp.topic_id_str as topic_id,
       t.topic_name,
-      th.subject,
+      c.subject,
       tp.total_attempts,
       tp.total_correct,
       CASE WHEN tp.total_attempts > 0
@@ -271,6 +272,7 @@ export async function getWeakAreas(
     FROM topic_progress tp
     JOIN topics t ON tp.topic_id_str = t.topic_id
     JOIN themes th ON t.theme_id = th.id
+    JOIN curricula c ON th.curriculum_id = c.id
     WHERE tp.user_id = $1 AND tp.total_attempts >= 3
     ORDER BY accuracy ASC
     LIMIT $2`,

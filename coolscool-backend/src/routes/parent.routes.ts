@@ -39,6 +39,18 @@ const activityQuery = Joi.object({
   childId: Joi.string().uuid().optional(),
 });
 
+const sessionDetailParams = Joi.object({
+  childId: Joi.string().uuid().required(),
+  sessionId: Joi.string().uuid().required(),
+});
+
+const notificationPrefsBody = Joi.object({
+  emailDigest: Joi.string().valid('daily', 'weekly', 'off').optional(),
+  lowAccuracyAlerts: Joi.boolean().optional(),
+  inactivityAlerts: Joi.boolean().optional(),
+  inactivityThresholdDays: Joi.number().integer().min(1).max(30).optional(),
+});
+
 // GET /parent/children - List linked children
 router.get('/children', parentController.getChildren);
 
@@ -85,11 +97,52 @@ router.get(
   parentController.getChildSessions
 );
 
+// GET /parent/children/:childId/weekly-summary
+router.get(
+  '/children/:childId/weekly-summary',
+  validate(childIdParam, 'params'),
+  parentController.getChildWeeklySummary
+);
+
+// GET /parent/children/:childId/subject-breakdown
+router.get(
+  '/children/:childId/subject-breakdown',
+  validate(childIdParam, 'params'),
+  parentController.getChildSubjectBreakdown
+);
+
+// GET /parent/children/:childId/concerns
+router.get(
+  '/children/:childId/concerns',
+  validate(childIdParam, 'params'),
+  parentController.getChildConcerns
+);
+
+// GET /parent/children/:childId/sessions/:sessionId - Session detail
+router.get(
+  '/children/:childId/sessions/:sessionId',
+  validate(sessionDetailParams, 'params'),
+  parentController.getChildSessionDetail
+);
+
 // GET /parent/activity - Get activity feed
 router.get(
   '/activity',
   validate(activityQuery, 'query'),
   parentController.getActivity
+);
+
+// GET /parent/notifications
+router.get(
+  '/notifications',
+  parentController.getNotificationPreferences
+);
+
+// PUT /parent/notifications
+router.put(
+  '/notifications',
+  validate(notificationPrefsBody),
+  parentController.updateNotificationPreferences
 );
 
 export default router;

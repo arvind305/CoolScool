@@ -17,6 +17,11 @@ import {
   type ActivityItem,
   type ChildSession,
   type PaginationParams,
+  type WeeklySummary,
+  type SubjectBreakdownItem,
+  type AreaOfConcern,
+  type SessionDetail,
+  type NotificationPreferences,
 } from '@/lib/api';
 
 // ============================================
@@ -181,6 +186,136 @@ export function useActivityQuery(childId?: string, limit: number = 20) {
 }
 
 // ============================================
+// WEEKLY SUMMARY HOOKS
+// ============================================
+
+/**
+ * Query hook for fetching child's weekly summary
+ */
+export function useChildWeeklySummary(childId: string | null) {
+  const { data: session, status } = useSession();
+
+  return useQuery({
+    queryKey: queryKeys.parent.childWeeklySummary(childId || ''),
+    queryFn: async (): Promise<WeeklySummary> => {
+      const result = await api.get<{ summary: WeeklySummary }>(
+        ENDPOINTS.PARENT_CHILD_WEEKLY_SUMMARY(childId!)
+      );
+      return result.summary;
+    },
+    enabled: status === 'authenticated' && session?.user?.role === 'parent' && !!childId,
+  });
+}
+
+// ============================================
+// SUBJECT BREAKDOWN HOOKS
+// ============================================
+
+/**
+ * Query hook for fetching child's subject breakdown
+ */
+export function useChildSubjectBreakdown(childId: string | null) {
+  const { data: session, status } = useSession();
+
+  return useQuery({
+    queryKey: queryKeys.parent.childSubjectBreakdown(childId || ''),
+    queryFn: async (): Promise<SubjectBreakdownItem[]> => {
+      const result = await api.get<{ subjects: SubjectBreakdownItem[] }>(
+        ENDPOINTS.PARENT_CHILD_SUBJECT_BREAKDOWN(childId!)
+      );
+      return result.subjects;
+    },
+    enabled: status === 'authenticated' && session?.user?.role === 'parent' && !!childId,
+  });
+}
+
+// ============================================
+// CONCERNS HOOKS
+// ============================================
+
+/**
+ * Query hook for fetching child's areas of concern
+ */
+export function useChildConcerns(childId: string | null) {
+  const { data: session, status } = useSession();
+
+  return useQuery({
+    queryKey: queryKeys.parent.childConcerns(childId || ''),
+    queryFn: async (): Promise<AreaOfConcern[]> => {
+      const result = await api.get<{ concerns: AreaOfConcern[] }>(
+        ENDPOINTS.PARENT_CHILD_CONCERNS(childId!)
+      );
+      return result.concerns;
+    },
+    enabled: status === 'authenticated' && session?.user?.role === 'parent' && !!childId,
+  });
+}
+
+// ============================================
+// SESSION DETAIL HOOKS
+// ============================================
+
+/**
+ * Query hook for fetching a specific session's detail
+ */
+export function useSessionDetail(childId: string | null, sessionId: string | null) {
+  const { data: session, status } = useSession();
+
+  return useQuery({
+    queryKey: queryKeys.parent.childSessionDetail(childId || '', sessionId || ''),
+    queryFn: async (): Promise<SessionDetail> => {
+      const result = await api.get<{ session: SessionDetail }>(
+        ENDPOINTS.PARENT_CHILD_SESSION_DETAIL(childId!, sessionId!)
+      );
+      return result.session;
+    },
+    enabled: status === 'authenticated' && session?.user?.role === 'parent' && !!childId && !!sessionId,
+  });
+}
+
+// ============================================
+// NOTIFICATION PREFERENCES HOOKS
+// ============================================
+
+/**
+ * Query hook for fetching notification preferences
+ */
+export function useNotificationPreferences() {
+  const { data: session, status } = useSession();
+
+  return useQuery({
+    queryKey: queryKeys.parent.notifications(),
+    queryFn: async (): Promise<NotificationPreferences> => {
+      const result = await api.get<{ preferences: NotificationPreferences }>(
+        ENDPOINTS.PARENT_NOTIFICATIONS
+      );
+      return result.preferences;
+    },
+    enabled: status === 'authenticated' && session?.user?.role === 'parent',
+  });
+}
+
+/**
+ * Mutation hook for updating notification preferences
+ */
+export function useUpdateNotificationPreferences() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (updates: Partial<NotificationPreferences>): Promise<NotificationPreferences> => {
+      const result = await api.put<{ preferences: NotificationPreferences }>(
+        ENDPOINTS.PARENT_NOTIFICATIONS,
+        updates
+      );
+      return result.preferences;
+    },
+    onSuccess: (data) => {
+      queryClient.setQueryData(queryKeys.parent.notifications(), data);
+    },
+  });
+}
+
+// ============================================
 // COMBINED HOOKS
 // ============================================
 
@@ -251,6 +386,9 @@ export function useChildManagement() {
 export function useChildView(childId: string | null) {
   const progressQuery = useChildProgressQuery(childId);
   const activityQuery = useActivityQuery(childId || undefined);
+  const weeklySummaryQuery = useChildWeeklySummary(childId);
+  const subjectBreakdownQuery = useChildSubjectBreakdown(childId);
+  const concernsQuery = useChildConcerns(childId);
 
   return {
     // Progress
@@ -262,6 +400,18 @@ export function useChildView(childId: string | null) {
     activities: activityQuery.data || [],
     isLoadingActivity: activityQuery.isLoading,
 
+    // Weekly summary
+    weeklySummary: weeklySummaryQuery.data,
+    isLoadingWeeklySummary: weeklySummaryQuery.isLoading,
+
+    // Subject breakdown
+    subjectBreakdown: subjectBreakdownQuery.data || [],
+    isLoadingSubjectBreakdown: subjectBreakdownQuery.isLoading,
+
+    // Concerns
+    concerns: concernsQuery.data || [],
+    isLoadingConcerns: concernsQuery.isLoading,
+
     // Child info
     child: progressQuery.data?.child,
 
@@ -272,6 +422,9 @@ export function useChildView(childId: string | null) {
     refetch: () => {
       progressQuery.refetch();
       activityQuery.refetch();
+      weeklySummaryQuery.refetch();
+      subjectBreakdownQuery.refetch();
+      concernsQuery.refetch();
     },
   };
 }

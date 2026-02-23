@@ -198,3 +198,129 @@ export async function getActivity(
     next(error);
   }
 }
+
+// GET /parent/children/:childId/weekly-summary
+export async function getChildWeeklySummary(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const parentId = req.user!.id;
+    const childId = req.params.childId!;
+
+    const summary = await parentService.getChildWeeklySummary(parentId, childId);
+
+    res.status(200).json({
+      success: true,
+      data: { summary },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /parent/children/:childId/subject-breakdown
+export async function getChildSubjectBreakdown(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const parentId = req.user!.id;
+    const childId = req.params.childId!;
+
+    const subjects = await parentService.getChildSubjectBreakdown(parentId, childId);
+
+    res.status(200).json({
+      success: true,
+      data: { subjects },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /parent/children/:childId/concerns
+export async function getChildConcerns(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const parentId = req.user!.id;
+    const childId = req.params.childId!;
+
+    const concerns = await parentService.getChildConcerns(parentId, childId);
+
+    res.status(200).json({
+      success: true,
+      data: { concerns },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /parent/children/:childId/sessions/:sessionId
+export async function getChildSessionDetail(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const parentId = req.user!.id;
+    const childId = req.params.childId!;
+    const sessionId = req.params.sessionId!;
+
+    const detail = await parentService.getChildSessionDetail(parentId, childId, sessionId);
+
+    res.status(200).json({
+      success: true,
+      data: { session: detail },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// GET /parent/notifications
+export async function getNotificationPreferences(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const userId = req.user!.id;
+
+    const preferences = await parentService.getNotificationPreferences(userId);
+
+    res.status(200).json({
+      success: true,
+      data: { preferences },
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
+// PUT /parent/notifications
+export async function updateNotificationPreferences(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  try {
+    const userId = req.user!.id;
+
+    const preferences = await parentService.updateNotificationPreferences(userId, req.body);
+
+    res.status(200).json({
+      success: true,
+      data: { preferences },
+      message: 'Notification preferences updated',
+    });
+  } catch (error) {
+    next(error);
+  }
+}

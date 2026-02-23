@@ -52,6 +52,11 @@ export const ENDPOINTS = {
   PARENT_CHILD_PROGRESS: (childId: string) => `/api/v1/parent/children/${childId}/progress`,
   PARENT_CHILD_SESSIONS: (childId: string) => `/api/v1/parent/children/${childId}/sessions`,
   PARENT_CHILD_CONSENT: (childId: string) => `/api/v1/parent/children/${childId}/consent`,
+  PARENT_CHILD_WEEKLY_SUMMARY: (childId: string) => `/api/v1/parent/children/${childId}/weekly-summary`,
+  PARENT_CHILD_SUBJECT_BREAKDOWN: (childId: string) => `/api/v1/parent/children/${childId}/subject-breakdown`,
+  PARENT_CHILD_CONCERNS: (childId: string) => `/api/v1/parent/children/${childId}/concerns`,
+  PARENT_CHILD_SESSION_DETAIL: (childId: string, sessionId: string) => `/api/v1/parent/children/${childId}/sessions/${sessionId}`,
+  PARENT_NOTIFICATIONS: '/api/v1/parent/notifications',
   PARENT_ACTIVITY: '/api/v1/parent/activity',
 
   // CAM / Curriculum (legacy - uses default curriculum)

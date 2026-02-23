@@ -4,39 +4,96 @@ import * as React from 'react';
 import { useSession } from 'next-auth/react';
 import { ChildList } from '@/components/parent/child-list';
 import { ActivityFeed } from '@/components/parent/activity-feed';
-import { getParentDashboardData } from '@/services/parent-api';
-import type { ParentDashboardData } from '@/types/parent';
+import { NotificationSettings } from '@/components/parent/notification-settings';
+import { useParentDashboard, useChildrenQuery } from '@/queries/use-parent-queries';
+import type { ChildCardData, ActivityItem as ParentActivityItem } from '@/types/parent';
+import type { LinkedChild as APILinkedChild, ActivityItem as APIActivity } from '@/lib/api';
+
+/**
+ * Maps backend API data to the ChildCardData shape used by ChildList/ChildCard.
+ */
+function mapToChildCardData(
+  children: APILinkedChild[],
+  activities: APIActivity[]
+): ChildCardData[] {
+  return children.map((child) => ({
+    child: {
+      id: child.id,
+      displayName: child.displayName || child.email.split('@')[0] || 'Child',
+      avatarUrl: child.avatarUrl,
+      email: child.email,
+      role: 'child' as const,
+      linkedAt: child.linkedAt,
+      consentGiven: child.parentalConsentGiven,
+    },
+    summary: {
+      childId: child.id,
+      totalXP: 0,
+      sessionsCompleted: 0,
+      topicsStarted: 0,
+      topicsMastered: 0,
+      averageAccuracy: 0,
+      totalTimeSpentMs: 0,
+      lastActiveAt: null,
+      currentStreak: 0,
+      longestStreak: 0,
+    },
+    recentActivity: activities
+      .filter((a) => a.childId === child.id)
+      .slice(0, 3)
+      .map((a) => ({
+        id: a.id,
+        childId: a.childId,
+        childName: a.childName,
+        childAvatar: null,
+        type: 'session_completed' as const,
+        title: 'Completed Practice Session',
+        description: a.description,
+        timestamp: a.timestamp,
+        metadata: {
+          topicId: a.metadata?.topicId,
+          topicName: a.metadata?.topicName,
+          xpEarned: a.metadata?.xpEarned,
+          questionsCorrect: a.metadata?.questionsCorrect,
+          questionsTotal: a.metadata?.questionsTotal,
+        },
+      })),
+  }));
+}
+
+function mapActivities(activities: APIActivity[]): ParentActivityItem[] {
+  return activities.map((a) => ({
+    id: a.id,
+    childId: a.childId,
+    childName: a.childName,
+    childAvatar: null,
+    type: 'session_completed' as const,
+    title: 'Completed Practice Session',
+    description: a.description,
+    timestamp: a.timestamp,
+    metadata: {
+      topicId: a.metadata?.topicId,
+      topicName: a.metadata?.topicName,
+      xpEarned: a.metadata?.xpEarned,
+      questionsCorrect: a.metadata?.questionsCorrect,
+      questionsTotal: a.metadata?.questionsTotal,
+    },
+  }));
+}
 
 export default function ParentDashboardPage() {
   const { data: session } = useSession();
-  const [dashboardData, setDashboardData] = React.useState<ParentDashboardData | null>(null);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [error, setError] = React.useState<string | null>(null);
+  const { children, activities, isLoading } = useParentDashboard();
+  const [showNotifications, setShowNotifications] = React.useState(false);
 
   const userName = session?.user?.displayName?.split(' ')[0] || 'Parent';
 
-  React.useEffect(() => {
-    async function loadData() {
-      try {
-        setIsLoading(true);
-        setError(null);
-        const data = await getParentDashboardData();
-        setDashboardData(data);
-      } catch (err) {
-        setError('Failed to load dashboard data. Please try again.');
-        console.error('Error loading parent dashboard:', err);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    loadData();
-  }, []);
-
   const handleAddChild = () => {
-    // TODO: Implement add child modal
     alert('Add child functionality coming soon! This will allow you to link your children\'s accounts.');
   };
+
+  const childCardData = mapToChildCardData(children, activities);
+  const mappedActivities = mapActivities(activities);
 
   if (isLoading) {
     return (
@@ -45,26 +102,6 @@ export default function ParentDashboardPage() {
           <div className="parent-dashboard-loading">
             <div className="parent-dashboard-loading-spinner" />
             <p>Loading your family dashboard...</p>
-          </div>
-        </div>
-      </main>
-    );
-  }
-
-  if (error) {
-    return (
-      <main className="parent-dashboard-page">
-        <div className="parent-dashboard-container">
-          <div className="parent-dashboard-error">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="8" x2="12" y2="12" />
-              <line x1="12" y1="16" x2="12.01" y2="16" />
-            </svg>
-            <p>{error}</p>
-            <button className="btn btn-primary" onClick={() => window.location.reload()}>
-              Try Again
-            </button>
           </div>
         </div>
       </main>
@@ -85,6 +122,16 @@ export default function ParentDashboardPage() {
             </p>
           </div>
           <div className="parent-dashboard-header-actions">
+            <button
+              className="btn btn-secondary btn-icon"
+              onClick={() => setShowNotifications(true)}
+              title="Notification Settings"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+              </svg>
+            </button>
             <button className="btn btn-primary" onClick={handleAddChild}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="12" y1="5" x2="12" y2="19" />
@@ -100,11 +147,11 @@ export default function ParentDashboardPage() {
           <div className="parent-dashboard-section-header">
             <h2 className="parent-dashboard-section-title">Your Children</h2>
             <span className="parent-dashboard-section-count">
-              {dashboardData?.children.length || 0} linked
+              {children.length} linked
             </span>
           </div>
           <ChildList
-            children={dashboardData?.children || []}
+            children={childCardData}
             isLoading={isLoading}
             onAddChild={handleAddChild}
           />
@@ -113,7 +160,7 @@ export default function ParentDashboardPage() {
         {/* Activity Feed Section */}
         <section className="parent-dashboard-section parent-dashboard-activity">
           <ActivityFeed
-            activities={dashboardData?.activityFeed || []}
+            activities={mappedActivities}
             maxItems={8}
             showChildName={true}
             isLoading={isLoading}
@@ -164,6 +211,12 @@ export default function ParentDashboardPage() {
           </div>
         </section>
       </div>
+
+      {/* Notification Settings Modal */}
+      <NotificationSettings
+        isOpen={showNotifications}
+        onClose={() => setShowNotifications(false)}
+      />
     </main>
   );
 }

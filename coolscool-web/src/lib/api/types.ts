@@ -125,6 +125,79 @@ export interface ChildSession {
   completedAt: string | null;
 }
 
+// Weekly summary types
+export interface WeekStats {
+  sessionsCompleted: number;
+  questionsAnswered: number;
+  questionsCorrect: number;
+  accuracy: number;
+  xpEarned: number;
+  timeSpentMs: number;
+}
+
+export interface WeeklySummary {
+  currentWeek: WeekStats;
+  previousWeek: WeekStats;
+  deltas: {
+    sessions: number;
+    questions: number;
+    accuracy: number;
+    xp: number;
+  };
+}
+
+// Subject breakdown (from analytics)
+export interface SubjectBreakdownItem {
+  subject: string;
+  sessions: number;
+  questions: number;
+  correct: number;
+  accuracy: number;
+}
+
+// Areas of concern
+export interface AreaOfConcern {
+  topicId: string;
+  topicName: string;
+  subject: string;
+  accuracy: number;
+  trend: 'declining' | 'consistently_low';
+  recentAccuracy: number;
+  previousAccuracy: number;
+  totalAttempts: number;
+}
+
+// Session detail (drill-down)
+export interface SessionDetailAnswer {
+  questionId: string;
+  questionText: string;
+  selectedOption: string;
+  correctOption: string;
+  isCorrect: boolean;
+  explanation: string | null;
+  answeredAt: string;
+}
+
+export interface SessionDetail {
+  sessionId: string;
+  topicId: string;
+  topicName: string;
+  questionsAnswered: number;
+  questionsCorrect: number;
+  xpEarned: number;
+  timeElapsedMs: number;
+  completedAt: string | null;
+  answers: SessionDetailAnswer[];
+}
+
+// Notification preferences
+export interface NotificationPreferences {
+  emailDigest: 'daily' | 'weekly' | 'off';
+  lowAccuracyAlerts: boolean;
+  inactivityAlerts: boolean;
+  inactivityThresholdDays: number;
+}
+
 // Curriculum types
 export interface Curriculum {
   id: string;

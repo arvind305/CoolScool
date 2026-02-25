@@ -7,9 +7,40 @@ import { ToastProvider } from '@/components/ui/toast';
 import { CurriculumProvider } from '@/contexts/CurriculumContext';
 
 export const metadata: Metadata = {
-  title: 'Cool S-Cool | Pressure-free Curriculum Practice',
+  title: 'CoolScool | Pressure-free Curriculum Practice',
   description: 'Master your curriculum with adaptive practice. ICSE, CBSE, and State Board content for classes 1-12.',
   keywords: ['education', 'quiz', 'practice', 'ICSE', 'CBSE', 'mathematics', 'science'],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title: 'CoolScool | Pressure-free Curriculum Practice',
+    description: 'Master your curriculum with adaptive practice. ICSE, CBSE, and State Board content for classes 1-12.',
+    url: 'https://www.coolscool.in',
+    siteName: 'CoolScool',
+    images: [
+      {
+        url: 'https://www.coolscool.in/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'CoolScool — Pressure-free Curriculum Practice',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CoolScool | Pressure-free Curriculum Practice',
+    description: 'Master your curriculum with adaptive practice. ICSE, CBSE, and State Board content for classes 1-12.',
+    images: ['https://www.coolscool.in/og-image.png'],
+  },
 };
 
 // Script to apply theme immediately on page load (prevents flash)

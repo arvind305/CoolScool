@@ -1,4 +1,4 @@
-// Auth type definitions for Cool S-Cool
+// Auth type definitions for CoolScool
 
 export type UserRole = 'child' | 'parent' | 'admin';
 

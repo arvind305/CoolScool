@@ -13,9 +13,11 @@ export function Header() {
     <header className="app-header">
       <div className="header-content">
         <Link href="/" className="app-logo">
-          <div className="app-logo-icon">S</div>
+          <div className="app-logo-icon">
+            <img src="/mark.svg" alt="CoolScool" width={38} height={38} />
+          </div>
           <span className="app-title">
-            Cool <span className="title-highlight">S</span>-Cool
+            Cool<span className="title-highlight">S</span>cool
           </span>
         </Link>
 

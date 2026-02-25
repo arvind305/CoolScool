@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { BOARDS } from '@/lib/curriculum/config';
 
 export const metadata = {
-  title: 'Browse Boards | Cool S-Cool',
+  title: 'Browse Boards | CoolScool',
   description: 'Choose your education board to start practicing',
 };
 

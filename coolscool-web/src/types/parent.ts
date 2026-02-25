@@ -1,4 +1,4 @@
-// Parent Dashboard type definitions for Cool S-Cool
+// Parent Dashboard type definitions for CoolScool
 
 import type { UserRole } from './auth';
 import type { ProficiencyBand, SessionSummary } from '@/lib/quiz-engine/types';

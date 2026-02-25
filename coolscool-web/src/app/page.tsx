@@ -51,7 +51,7 @@ export default function HomePage() {
 
       {/* Feature Highlights */}
       <section className="landing-features">
-        <h2 className="landing-section-title">Why Cool S-Cool?</h2>
+        <h2 className="landing-section-title">Why CoolScool?</h2>
         <div className="feature-cards-grid">
           <div className="feature-card">
             <div className="feature-card-icon" style={{ background: 'var(--color-primary-subtle)', color: 'var(--color-primary)' }}>

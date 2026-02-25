@@ -20,7 +20,7 @@ import type {
 // ============================================================
 
 export const EXPORT_VERSION = '1.0.0';
-export const APP_NAME = 'Cool S-Cool Pressure-free Curriculum Practice';
+export const APP_NAME = 'CoolScool Pressure-free Curriculum Practice';
 
 // ============================================================
 // Export Functions

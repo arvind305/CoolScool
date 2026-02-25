@@ -1,4 +1,4 @@
-# Cool S-Cool Frontend Deployment Guide
+# CoolScool Frontend Deployment Guide
 
 ## Vercel Deployment
 

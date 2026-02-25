@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props) {
   if (!board || !classLevel) return { title: 'Not Found' };
 
   return {
-    title: `${board.name} ${formatClassLevel(classLevel)} Subjects | Cool S-Cool`,
+    title: `${board.name} ${formatClassLevel(classLevel)} Subjects | CoolScool`,
     description: `Browse subjects for ${board.name} ${formatClassLevel(classLevel)}`,
   };
 }

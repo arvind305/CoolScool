@@ -1,4 +1,4 @@
-// Parent API service with mock data for Cool S-Cool
+// Parent API service with mock data for CoolScool
 // This provides mock data until backend APIs are implemented
 
 import type {

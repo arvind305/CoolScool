@@ -1,6 +1,6 @@
 /**
  * Curriculum Configuration
- * Multi-board/class structure for Cool S-Cool
+ * Multi-board/class structure for CoolScool
  */
 
 export const BOARDS = {

@@ -1,7 +1,7 @@
 /**
  * Topic Browser Components
  *
- * Components for browsing themes and topics in the Cool S-Cool app.
+ * Components for browsing themes and topics in the CoolScool app.
  */
 
 export { ProficiencyBadge } from './proficiency-badge';

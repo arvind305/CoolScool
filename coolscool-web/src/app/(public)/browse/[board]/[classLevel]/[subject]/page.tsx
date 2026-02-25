@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props) {
   if (!board || !classLevel || !subject) return { title: 'Not Found' };
 
   return {
-    title: `${subject.name} Topics - ${board.name} ${formatClassLevel(classLevel)} | Cool S-Cool`,
+    title: `${subject.name} Topics - ${board.name} ${formatClassLevel(classLevel)} | CoolScool`,
     description: `Practice ${subject.name} topics for ${board.name} ${formatClassLevel(classLevel)}`,
   };
 }

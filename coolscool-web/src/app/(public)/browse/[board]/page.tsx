@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props) {
   if (!board) return { title: 'Board Not Found' };
 
   return {
-    title: `${board.name} Classes | Cool S-Cool`,
+    title: `${board.name} Classes | CoolScool`,
     description: `Browse classes for ${board.fullName}`,
   };
 }

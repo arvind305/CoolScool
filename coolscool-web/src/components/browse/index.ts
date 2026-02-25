@@ -1,6 +1,6 @@
 /**
  * Browse Components
- * Components for board, class, and subject selection in Cool S-Cool
+ * Components for board, class, and subject selection in CoolScool
  */
 
 // Card components

@@ -32,6 +32,8 @@ const createMockUser = (overrides = {}) => ({
   id: 'user-123',
   email: 'test@example.com',
   displayName: 'Test User',
+  firstName: 'Test',
+  lastName: 'User',
   avatarUrl: null,
   role: 'child' as const,
   ...overrides,

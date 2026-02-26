@@ -296,12 +296,17 @@ async function seedSubjectClass(
           let correctAnswer = q.correct_answer;
           let orderingItems = q.ordering_items;
           if (q.type === 'ordering') {
-            if (q.items && q.correct_order) {
+            if (q.items && q.correct_order && typeof q.items[0] === 'object') {
+              // Object format: items [{id, text}] + correct_order
               orderingItems = q.correct_order.map(id => {
-                const item = q.items!.find(i => i.id === id);
+                const item = (q.items as OrderingItem[]).find(i => i.id === id);
                 return item ? item.text : id;
               });
               correctAnswer = q.correct_order;
+            } else if (q.items && Array.isArray(q.items) && q.items.length > 0 && typeof q.items[0] === 'string') {
+              // Flat string array format: items ["str1", "str2"] + correct_answer
+              orderingItems = q.items as unknown as string[];
+              if (!correctAnswer) correctAnswer = q.items;
             } else if (q.ordering_items && !correctAnswer) {
               correctAnswer = q.ordering_items;
             }

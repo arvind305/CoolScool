@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useProgress } from '@/hooks/use-progress';
 import { useAnalytics } from '@/hooks/use-analytics';
+import { useAchievementStats, useLevelInfo, useDailyChallenge, useSubmitDailyChallenge } from '@/hooks/use-gamification';
 import { ProgressOverview } from '@/components/dashboard/progress-overview';
 import { SessionHistory } from '@/components/dashboard/session-history';
 import { TopicProgressCard } from '@/components/dashboard/topic-progress-card';
@@ -12,6 +13,9 @@ import { ActivityChart } from '@/components/dashboard/activity-chart';
 import { SubjectBreakdown } from '@/components/dashboard/subject-breakdown';
 import { WeakAreas } from '@/components/dashboard/weak-areas';
 import { StatCard } from '@/components/dashboard/stat-card';
+import { LevelProgress } from '@/components/dashboard/level-progress';
+import { AchievementShowcase } from '@/components/dashboard/achievement-showcase';
+import { DailyChallengeCard } from '@/components/dashboard/daily-challenge-card';
 import { Button } from '@/components/ui/button';
 
 /**
@@ -60,6 +64,10 @@ export default function DashboardPage() {
   const { data: session } = useSession();
   const { isLoading: progressLoading, error: progressError, data: progressData, refresh: refreshProgress } = useProgress();
   const { isLoading: analyticsLoading, error: analyticsError, data: analyticsData, refresh: refreshAnalytics } = useAnalytics();
+  const { stats: achievementStats } = useAchievementStats();
+  const { levelInfo } = useLevelInfo();
+  const { data: dailyChallengeData } = useDailyChallenge();
+  const { isSubmitting: isDailyChallengeSubmitting, submit: submitDailyChallenge } = useSubmitDailyChallenge();
 
   const userName = session?.user?.displayName?.split(' ')[0] || 'Student';
 
@@ -157,6 +165,9 @@ export default function DashboardPage() {
                   longestStreak={streak.longestStreak}
                 />
               )}
+              {levelInfo && (
+                <LevelProgress levelInfo={levelInfo} />
+              )}
             </div>
             <p className="dashboard-subtitle">
               Track your learning progress and continue practicing
@@ -216,15 +227,29 @@ export default function DashboardPage() {
           </div>
         </section>
 
+        {/* Daily Challenge */}
+        {dailyChallengeData && (
+          <section className="dashboard-section">
+            <DailyChallengeCard
+              data={dailyChallengeData}
+              onSubmit={submitDailyChallenge}
+              isSubmitting={isDailyChallengeSubmitting}
+            />
+          </section>
+        )}
+
         {/* Activity Chart - 30 day trends */}
         <section className="dashboard-section">
           <ActivityChart data={trends} />
         </section>
 
-        {/* Analytics Row - Subject Breakdown + Weak Areas */}
+        {/* Analytics Row - Subject Breakdown + Weak Areas + Achievements */}
         <div className="dashboard-analytics-row">
           <SubjectBreakdown data={subjects} />
           <WeakAreas areas={weakAreas} />
+          {achievementStats && (
+            <AchievementShowcase stats={achievementStats} />
+          )}
         </div>
 
         {/* Main Content Grid */}

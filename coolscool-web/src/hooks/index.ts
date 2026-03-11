@@ -5,3 +5,6 @@ export { useAccessControl, type UseAccessControlReturn } from './use-access-cont
 export { useSpeech, type UseSpeechOptions, type UseSpeechReturn } from './useSpeech';
 export { useAnalytics, type DailyTrend, type SubjectBreakdown, type StreakData, type WeakArea, type AnalyticsData } from './use-analytics';
 export { useFlags, type FlagReason, type FlagSubmission } from './use-flags';
+export { useAchievements, useAchievementStats, useLevelInfo, useDailyChallenge, useSubmitDailyChallenge } from './use-gamification';
+export { useAdminFlags, type FlagItem, type FlagStats, type FlagStatusFilter } from './use-admin-flags';
+export { useFlagStats } from './use-flag-stats';

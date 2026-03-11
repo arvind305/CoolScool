@@ -55,6 +55,13 @@ export interface BackendSubmitResult {
   explanationIncorrect: string | null;
   isSessionComplete: boolean;
   nextQuestion: BackendQuestion | null;
+  newAchievements: {
+    achievementId: string;
+    name: string;
+    description: string | null;
+    icon: string;
+    xpReward: number;
+  }[];
 }
 
 /** Result from skipping a question */

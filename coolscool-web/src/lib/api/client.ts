@@ -165,6 +165,13 @@ export const api = {
   },
 
   /**
+   * PATCH request
+   */
+  patch<T>(endpoint: string, body?: unknown, options?: Omit<RequestOptions, 'method'>): Promise<T> {
+    return apiRequest<T>(endpoint, { ...options, method: 'PATCH', body });
+  },
+
+  /**
    * DELETE request
    */
   delete<T>(endpoint: string, body?: unknown, options?: Omit<RequestOptions, 'method'>): Promise<T> {

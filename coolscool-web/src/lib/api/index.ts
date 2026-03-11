@@ -30,4 +30,10 @@ export type {
   UserProgress,
   TopicProgress,
   ProgressSummary,
+  Achievement,
+  AchievementStats,
+  LevelInfo,
+  AwardedAchievement,
+  DailyChallenge,
+  DailyChallengeResult,
 } from './types';

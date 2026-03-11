@@ -2,11 +2,12 @@ import { auth } from '@/auth';
 import { NextResponse } from 'next/server';
 
 // Routes that require authentication
-const protectedRoutes = ['/dashboard', '/parent', '/settings', '/profile'];
+const protectedRoutes = ['/dashboard', '/parent', '/settings', '/profile', '/admin'];
 
 // Routes that require specific roles
 const parentRoutes = ['/parent'];
 const childRoutes = ['/dashboard'];
+const adminRoutes = ['/admin'];
 
 export default auth((req) => {
   const { nextUrl } = req;
@@ -33,6 +34,14 @@ export default auth((req) => {
     );
     if (isParentRoute && user.role !== 'parent' && user.role !== 'admin') {
       // Redirect non-parents to their dashboard
+      return NextResponse.redirect(new URL('/dashboard', nextUrl.origin));
+    }
+
+    // Check admin routes
+    const isAdminRoute = adminRoutes.some((route) =>
+      pathname.startsWith(route)
+    );
+    if (isAdminRoute && user.role !== 'admin') {
       return NextResponse.redirect(new URL('/dashboard', nextUrl.origin));
     }
 
@@ -66,6 +75,7 @@ export const config = {
     '/parent/:path*',
     '/settings/:path*',
     '/profile/:path*',
+    '/admin/:path*',
     // Auth routes (for session error handling)
     '/browse/:path*',
     '/practice/:path*',

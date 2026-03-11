@@ -35,6 +35,12 @@ export const config = {
   // Question Encryption
   questionEncryptionKey: process.env.QUESTION_ENCRYPTION_KEY || '',
 
+  // Email (Resend)
+  email: {
+    resendApiKey: process.env.RESEND_API_KEY || '',
+    adminEmail: process.env.ADMIN_NOTIFICATION_EMAIL || '',
+  },
+
   // Logging
   logLevel: process.env.LOG_LEVEL || 'info',
 

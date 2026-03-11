@@ -13,6 +13,8 @@ import settingsRoutes from './routes/settings.routes.js';
 import parentRoutes from './routes/parent.routes.js';
 import profileRoutes from './routes/profile.routes.js';
 import flagRoutes from './routes/flag.routes.js';
+import achievementRoutes from './routes/achievement.routes.js';
+import dailyChallengeRoutes from './routes/daily-challenge.routes.js';
 
 /**
  * Creates and configures the Express app without starting the server.
@@ -50,6 +52,8 @@ export function createApp(apiVersion: string = 'v1'): Express {
   app.use(`/api/${apiVersion}/parent`, parentRoutes);
   app.use(`/api/${apiVersion}/profile`, profileRoutes);
   app.use(`/api/${apiVersion}/flags`, flagRoutes);
+  app.use(`/api/${apiVersion}/achievements`, achievementRoutes);
+  app.use(`/api/${apiVersion}/daily-challenge`, dailyChallengeRoutes);
 
   // 404 handler
   app.use(notFoundHandler);

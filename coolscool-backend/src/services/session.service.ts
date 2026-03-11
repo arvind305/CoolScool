@@ -14,6 +14,7 @@ import { query, withTransaction } from '../db/index.js';
 import * as QuestionModel from '../models/question.model.js';
 import { recordAttempt, getOrCreateConceptProgress, XP_VALUES, DIFFICULTY_ORDER, getRecommendedDifficulty, ConceptProgress, MasteryData } from './mastery.service.js';
 import { updateTopicProgress } from './proficiency.service.js';
+import * as achievementService from './achievement.service.js';
 
 // ============================================
 // CONSTANTS
@@ -103,6 +104,7 @@ export interface SubmitAnswerResult {
   explanationIncorrect: string | null;
   isSessionComplete: boolean;
   nextQuestion: QuestionModel.QuestionForClient | null;
+  newAchievements: achievementService.AwardedAchievement[];
 }
 
 export interface SessionSummary {
@@ -432,9 +434,11 @@ export async function submitAnswer(
     ]
   );
 
-  // Update topic progress if session complete
+  // Update topic progress and check achievements if session complete
+  let newAchievements: achievementService.AwardedAchievement[] = [];
   if (isSessionComplete) {
     await updateTopicProgress(userId, session.curriculum_id, session.topic_id_str);
+    newAchievements = await achievementService.checkAndAwardAchievements(userId);
   }
 
   // Get next question if available
@@ -457,6 +461,7 @@ export async function submitAnswer(
     explanationIncorrect: question.explanation_incorrect,
     isSessionComplete,
     nextQuestion,
+    newAchievements,
   };
 }
 

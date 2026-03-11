@@ -8,6 +8,7 @@
 
 import { Request, Response, NextFunction } from 'express';
 import * as flagService from '../services/flag.service.js';
+import { sendFlagNotification } from '../services/email.service.js';
 
 // POST /flags - Submit a flag (any authenticated user)
 export async function submitFlag(
@@ -24,6 +25,15 @@ export async function submitFlag(
       curriculumId,
       flagReason,
       userComment,
+    });
+
+    // Fire-and-forget email notification (don't block response)
+    sendFlagNotification({
+      questionId,
+      flagReason,
+      userComment: userComment || null,
+      reporterEmail: req.user!.email,
+      createdAt: flag.createdAt,
     });
 
     res.status(201).json({

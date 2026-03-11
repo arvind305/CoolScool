@@ -4,6 +4,7 @@ import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import type { UserRole } from '@/types/auth';
+import { useFlagStats } from '@/hooks/use-flag-stats';
 
 const roleLabels: Record<UserRole, string> = {
   child: 'Student',
@@ -61,6 +62,7 @@ export function UserMenu() {
   }
 
   const { user } = session;
+  const { openCount: flagCount } = useFlagStats(user.role === 'admin');
   const initials = user.displayName
     ? user.displayName
         .split(' ')
@@ -155,6 +157,20 @@ export function UserMenu() {
             >
               Browse Topics
             </Link>
+            {user.role === 'admin' && (
+              <Link
+                href="/admin/flags"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-between px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+              >
+                <span>Flagged Questions</span>
+                {flagCount > 0 && (
+                  <span className="ml-2 inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-red-500 text-white text-xs font-medium">
+                    {flagCount}
+                  </span>
+                )}
+              </Link>
+            )}
             <Link
               href="/settings"
               onClick={() => setIsOpen(false)}

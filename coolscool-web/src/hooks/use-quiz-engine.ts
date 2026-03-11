@@ -374,6 +374,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
               correct: updatedSession.progress.questions_correct,
               xp: updatedSession.progress.xp_earned,
             },
+            newAchievements: result.newAchievements,
           };
 
           return {
@@ -402,6 +403,7 @@ export function useQuizEngine(options: UseQuizEngineOptions = {}): UseQuizEngine
             correct: (state.session?.progress.questions_correct ?? 0) + (result.isCorrect ? 1 : 0),
             xp: (state.session?.progress.xp_earned ?? 0) + result.xpEarned,
           },
+          newAchievements: result.newAchievements,
         };
       } catch (error) {
         console.error('Failed to submit answer:', error);

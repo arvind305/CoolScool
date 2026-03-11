@@ -59,6 +59,12 @@ export const ENDPOINTS = {
   PARENT_NOTIFICATIONS: '/api/v1/parent/notifications',
   PARENT_ACTIVITY: '/api/v1/parent/activity',
 
+  // Achievements & Gamification
+  ACHIEVEMENTS: '/api/v1/achievements',
+  ACHIEVEMENT_STATS: '/api/v1/achievements/stats',
+  LEVEL_INFO: '/api/v1/achievements/level',
+  DAILY_CHALLENGE: '/api/v1/daily-challenge',
+
   // CAM / Curriculum (legacy - uses default curriculum)
   CAM: '/api/v1/cam',
   CAM_THEMES: '/api/v1/cam/themes',

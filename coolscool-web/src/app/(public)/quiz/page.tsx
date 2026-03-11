@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useState, useCallback, useEffect, useRef } from 'react';
+import { Suspense, useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
@@ -13,6 +13,8 @@ import {
   FlagModal,
 } from '@/components/quiz';
 import { Button, LoginPrompt, useToast } from '@/components/ui';
+import { AchievementToast } from '@/components/ui/achievement-toast';
+import type { AchievementToastData } from '@/components/ui/achievement-toast';
 import { useQuizEngine, useAccessControl, useFlags } from '@/hooks';
 import type { TimeMode, ProficiencyBand, SessionSummary } from '@/lib/quiz-engine/types';
 
@@ -57,6 +59,7 @@ function QuizPageContent() {
   const flags = useFlags();
   const { success: toastSuccess } = useToast();
   const [flagModalOpen, setFlagModalOpen] = useState(false);
+  const [pendingAchievements, setPendingAchievements] = useState<AchievementToastData[]>([]);
 
   // Quiz engine hook
   const engine = useQuizEngine({
@@ -169,6 +172,11 @@ function QuizPageContent() {
 
     if (result) {
       setQuizState('feedback');
+
+      // Show achievement toast if any new achievements were earned
+      if (result.newAchievements && result.newAchievements.length > 0) {
+        setPendingAchievements(result.newAchievements);
+      }
 
       // For anonymous users, record sample usage and check if exhausted
       if (!access.isAuthenticated) {
@@ -552,6 +560,14 @@ function QuizPageContent() {
           onSubmit={handleFlagSubmit}
           isSubmitting={flags.isSubmitting}
           questionText={currentQuestion.question_text}
+        />
+      )}
+
+      {/* Achievement Toast */}
+      {pendingAchievements.length > 0 && (
+        <AchievementToast
+          achievements={pendingAchievements}
+          onDismiss={() => setPendingAchievements([])}
         />
       )}
     </div>

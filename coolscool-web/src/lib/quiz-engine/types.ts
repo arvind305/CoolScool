@@ -441,6 +441,13 @@ export interface AnswerSubmitResult {
     correct: number;
     xp: number;
   };
+  newAchievements?: {
+    achievementId: string;
+    name: string;
+    description: string | null;
+    icon: string;
+    xpReward: number;
+  }[];
 }
 
 export interface SkipResult {

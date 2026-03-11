@@ -147,6 +147,7 @@ export async function submitAnswer(
         explanationIncorrect: result.explanationIncorrect,
         isSessionComplete: result.isSessionComplete,
         nextQuestion: result.nextQuestion,
+        newAchievements: result.newAchievements,
       },
     });
   } catch (error) {

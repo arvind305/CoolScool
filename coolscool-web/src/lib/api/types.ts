@@ -230,6 +230,69 @@ export interface CurriculaOverviewResponse {
   curricula: CurriculumWithCounts[];
 }
 
+// Gamification types
+export interface Achievement {
+  achievementId: string;
+  name: string;
+  description: string | null;
+  category: string;
+  icon: string;
+  xpReward: number;
+  sortOrder: number;
+  earned: boolean;
+  earnedAt: string | null;
+}
+
+export interface AchievementStats {
+  earned: number;
+  total: number;
+  recentAchievements: Achievement[];
+}
+
+export interface LevelInfo {
+  level: number;
+  currentXp: number;
+  xpForNextLevel: number;
+  progress: number;
+  totalXp: number;
+}
+
+export interface AwardedAchievement {
+  achievementId: string;
+  name: string;
+  description: string | null;
+  icon: string;
+  xpReward: number;
+}
+
+export interface DailyChallenge {
+  challenge: {
+    id: string;
+    challengeDate: string;
+    bonusXp: number;
+    question: {
+      id: string;
+      question_id: string;
+      question_type: string;
+      question_text: string;
+      options: { id: string; text: string }[] | null;
+      image_url: string | null;
+    };
+  } | null;
+  attempted: boolean;
+  result: {
+    isCorrect: boolean;
+    xpEarned: number;
+  } | null;
+}
+
+export interface DailyChallengeResult {
+  isCorrect: boolean;
+  xpEarned: number;
+  correctAnswer: string;
+  explanation: string | null;
+}
+
 // Progress types
 export interface UserProgress {
   userId: string;

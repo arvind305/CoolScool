@@ -244,8 +244,8 @@
       "question_text": "Round 12.345 to 1 decimal place: _______",
       "correct_answer": "12.3",
       "hint": "Look at the second decimal place to decide whether to round up or down.",
-      "explanation_correct": "To round 12.345 to 1 decimal place, we look at the number in the second decimal place, which is 4. Since 4 is less than 5, we round down the first decimal place to 3. Therefore, 12.345 rounded to 1 decimal place is 12.3.",
-      "explanation_incorrect": "The incorrect answer would be 12.35. This is because when rounding to 1 decimal place, we look at the number in the second decimal place. Since 4 is less than 5, we round down the first decimal place to 3, not up to 5. The correct answer, rounded to 1 decimal place, is 12.3."
+      "explanation_correct": "To round 12.345 to 1 decimal place, we look at the tenths digit which is 3. The digit after it (in the hundredths place) is 4, which is less than 5, so we round down. Therefore, 12.345 rounded to 1 decimal place is 12.3.",
+      "explanation_incorrect": "The incorrect answer would be 12.4. When rounding to 1 decimal place, we look at the tenths digit (3) and check the hundredths digit (4). Since 4 is less than 5, we keep the tenths digit as 3, giving us 12.3, not 12.4."
     },
     {
       "question_id": "T01.03.Q011",
@@ -568,8 +568,8 @@
       "question_text": "When 1 is divided by 7, the result is a terminating decimal.",
       "correct_answer": "B",
       "hint": "Try the division to see if it ends or repeats.",
-      "explanation_correct": "The result of dividing 1 by 7 is a non-terminating decimal, which means the decimal representation goes on forever without repeating. This is because 7 is a prime number, and the decimal representation of 1/7 cannot be expressed as a finite decimal.",
-      "explanation_incorrect": "A common misconception is that all divisions result in terminating decimals. However, this is not the case. When you divide 1 by 7, the result is a non-terminating, non-repeating decimal. This is because 7 is a prime number, and the decimal representation cannot be expressed as a finite decimal."
+      "explanation_correct": "The result of dividing 1 by 7 is 0.142857142857..., which is a non-terminating, repeating (recurring) decimal. The six digits 142857 repeat forever. Since the denominator 7 has a prime factor other than 2 or 5, the decimal cannot terminate.",
+      "explanation_incorrect": "A common misconception is that 1/7 might give a terminating decimal. However, a fraction terminates only when its denominator (in lowest terms) has no prime factors other than 2 and 5. Since 7 is prime and is neither 2 nor 5, 1/7 = 0.142857142857... is a non-terminating, repeating decimal."
     },
     {
       "question_id": "T01.03.Q026",
@@ -892,8 +892,8 @@
       "question_text": "Calculate: 16.8 ÷ 0.07 = _______",
       "correct_answer": "240",
       "hint": "Make the divisor a whole number by multiplying both by 100.",
-      "explanation_correct": "To calculate 16.8 ÷ 0.07, we can think of it as dividing 16.8 by 0.07. This is the same as multiplying 16.8 by the reciprocal of 0.07, which is 1/0.07 = 14.29. So the answer is 16.8 × 14.29 = 240.",
-      "explanation_incorrect": "The wrong answer would be 23.4, as some students may mistakenly divide 16.8 by 0.7 instead of 0.07. However, the correct answer is 240, as 16.8 ÷ 0.07 = 240. Remember, when dividing by a decimal, you can convert the decimal to a whole number by multiplying both the numerator and denominator by the same number."
+      "explanation_correct": "To calculate 16.8 ÷ 0.07, multiply both the dividend and divisor by 100 to eliminate the decimal in the divisor: 1680 ÷ 7 = 240. Therefore, 16.8 ÷ 0.07 = 240.",
+      "explanation_incorrect": "A common mistake is to divide 16.8 by 0.7 instead of 0.07, which would give 24. The correct approach is to multiply both numbers by 100 to make the divisor a whole number: 1680 ÷ 7 = 240."
     },
     {
       "question_id": "T01.03.Q042",
@@ -1226,7 +1226,7 @@
     }
   ],
   "metadata": {
-    "total_questions": 50,
+    "total_questions": 53,
     "difficulty_distribution": {
       "familiarity": 17,
       "application": 17,

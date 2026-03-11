@@ -5,7 +5,7 @@
     "subject": "Mathematics",
     "topic_id": "T06.01",
     "topic_name": "Data Handling",
-    "total_questions": 50,
+    "total_questions": 62,
     "difficulty_distribution": {
       "easy": 17,
       "medium": 17,
@@ -252,7 +252,7 @@
       "correct_answer": "A",
       "type": "true_false",
       "explanation_correct": "The sum of all frequencies in a frequency distribution equals the total number of observations because each frequency represents the count or number of times a particular data value appears. Adding up all the frequencies gives the total number of observations in the data set.",
-      "explanation_incorrect": "The sum of all frequencies in a frequency distribution does not necessarily equal the total number of observations. This is a common misconception. The total number of observations is the sum of all the data values, while the sum of frequencies is the total count of all the data values. The two numbers may be equal, but they represent different things in the frequency distribution."
+      "explanation_incorrect": "If you answered False, that is incorrect. The sum of all frequencies in a frequency distribution always equals the total number of observations. Each observation is counted exactly once in the frequency distribution, so adding up all the frequencies gives you the total count of observations. Do not confuse the sum of the data values with the sum of the frequencies — the frequencies count how many times each value appears, and their total is the number of observations."
     },
     {
       "question_id": "T06.01.Q012",
@@ -591,7 +591,7 @@
       "concept_id": "T06.01.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "A frequency table shows:\nValue: 5, 10, 15, 20, 25\nFrequency: 3, 7, x, 5, 2\n\nIf the mean is 13.5 and the total frequency is 25, find x.",
+      "question_text": "A frequency table shows:\nValue: 5, 10, 15, 20, 25\nFrequency: 3, 7, x, 5, 2\n\nIf the mean is 14.2 and the total frequency is 25, find x.",
       "options": [
         {
           "id": "A",
@@ -612,8 +612,8 @@
       ],
       "correct_answer": "C",
       "type": "mcq",
-      "explanation_correct": "The correct answer is C) 8. To find the missing frequency 'x', we can use the formula for calculating the mean: (sum of all values × total frequency) / total number of values. With the given information, the mean is 13.5 and the total frequency is 25. Solving this equation gives us x = 8.",
-      "explanation_incorrect": "The incorrect answers are A) 6, B) 7, and D) 9. These options do not satisfy the given information, where the mean is 13.5 and the total frequency is 25. The correct frequency 'x' is 8, as it makes the mean equal to 13.5 when calculated using the formula."
+      "explanation_correct": "The correct answer is C) 8. From the total frequency: 3 + 7 + x + 5 + 2 = 25, so x = 8. We can verify using the mean: Σ(f × x) = 3×5 + 7×10 + 8×15 + 5×20 + 2×25 = 15 + 70 + 120 + 100 + 50 = 355. Mean = 355 ÷ 25 = 14.2, which matches.",
+      "explanation_incorrect": "The incorrect answers are A) 6, B) 7, and D) 9. Since the total frequency is 25 and the other frequencies sum to 17 (3 + 7 + 5 + 2 = 17), x must equal 25 − 17 = 8. Only x = 8 also gives the correct mean of 14.2."
     },
     {
       "question_id": "T06.01.Q035",
@@ -772,8 +772,8 @@
       "question_text": "If Mean = 32, Mode = 38, then using the empirical formula, Median = _____.",
       "correct_answer": "34",
       "type": "fill_blank",
-      "explanation_correct": "The median is the middle value in a set of numbers when they are arranged in order. Since the mean is 32 and the mode is 38, the median can be calculated using the empirical formula: Median = (Mean + Mode) / 2, which gives us 34.",
-      "explanation_incorrect": "The incorrect answer would be to simply state the mean as the median, which is 32. However, the median is not the same as the mean. The median is the middle value in a set of numbers, and to find it using the empirical formula, you need to use the mean and mode values, which gives us 34 as the correct answer."
+      "explanation_correct": "Using the empirical formula: Mode = 3 × Median − 2 × Mean. Substituting: 38 = 3 × Median − 2 × 32 = 3 × Median − 64. So 3 × Median = 38 + 64 = 102, and Median = 102 ÷ 3 = 34.",
+      "explanation_incorrect": "A common mistake is to use an incorrect formula such as (Mean + Mode) / 2. The correct empirical relationship is Mode = 3 × Median − 2 × Mean. Rearranging: Median = (Mode + 2 × Mean) / 3 = (38 + 64) / 3 = 102 / 3 = 34."
     },
     {
       "question_id": "T06.01.Q043",
@@ -1019,7 +1019,7 @@
       "concept_id": "T06.01.C06",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the best use case: of Bar graph?",
+      "question_text": "What is the best use case of Bar graph?",
       "options": [
         {
           "id": "A",
@@ -1048,7 +1048,7 @@
       "concept_id": "T06.01.C06",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the best use case: of Histogram?",
+      "question_text": "What is the best use case of Histogram?",
       "options": [
         {
           "id": "A",
@@ -1077,7 +1077,7 @@
       "concept_id": "T06.01.C06",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the best use case: of Pie chart?",
+      "question_text": "What is the best use case of Pie chart?",
       "options": [
         {
           "id": "A",
@@ -1106,7 +1106,7 @@
       "concept_id": "T06.01.C06",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the best use case: of Line graph?",
+      "question_text": "What is the best use case of Line graph?",
       "options": [
         {
           "id": "A",
@@ -1135,7 +1135,7 @@
       "concept_id": "T06.01.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the mode: of 3, 5, 5, 7, 9?",
+      "question_text": "What is the mode of 3, 5, 5, 7, 9?",
       "options": [
         {
           "id": "A",
@@ -1164,7 +1164,7 @@
       "concept_id": "T06.01.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the mode: of 2, 4, 6, 8, 10?",
+      "question_text": "What is the mode of 2, 4, 6, 8, 10?",
       "options": [
         {
           "id": "A",
@@ -1193,7 +1193,7 @@
       "concept_id": "T06.01.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the mode: of 1, 1, 2, 2, 3?",
+      "question_text": "What is the mode of 1, 1, 2, 2, 3?",
       "options": [
         {
           "id": "A",
@@ -1222,7 +1222,7 @@
       "concept_id": "T06.01.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the mode: of 7, 7, 7, 8, 9?",
+      "question_text": "What is the mode of 7, 7, 7, 8, 9?",
       "options": [
         {
           "id": "A",

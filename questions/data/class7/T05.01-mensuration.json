@@ -206,7 +206,7 @@
       "options": [
         {
           "id": "A",
-          "text": "156 m²"
+          "text": "148 m²"
         },
         {
           "id": "B",
@@ -223,8 +223,8 @@
       ],
       "correct_answer": "A",
       "type": "mcq",
-      "explanation_correct": "The correct answer is A) 156 m². The garden is 25 m long and 16 m wide. The path runs along the boundary and is 2 m wide. To find the area of the path, we need to calculate the perimeter of the garden (25 m + 16 m + 25 m + 16 m = 82 m) and multiply it by the width of the path (2 m), which gives us the area of the path as 82 m × 2 m = 156 m².",
-      "explanation_incorrect": "The incorrect answer is B) 231 m². This is because the area of the path is not the same as the area of the entire garden. The area of the garden is 25 m × 16 m = 400 m², but the area of the path is the perimeter of the garden (82 m) multiplied by the width of the path (2 m), which gives us 156 m²."
+      "explanation_correct": "The correct answer is A) 148 m². The garden is 25 m long and 16 m wide, so its total area is 25 × 16 = 400 m². The path runs inside the garden and is 2 m wide, so the inner rectangle (excluding the path) has dimensions (25 − 2 × 2) × (16 − 2 × 2) = 21 × 12 = 252 m². The area of the path is the difference: 400 − 252 = 148 m².",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the path area. To find the area of a path running inside a rectangle, subtract the area of the inner rectangle from the outer rectangle. Outer area = 25 × 16 = 400 m². Inner dimensions = (25 − 4) × (16 − 4) = 21 × 12 = 252 m². Path area = 400 − 252 = 148 m². Options B, C, and D do not match this calculation."
     },
     {
       "question_id": "T05.01.Q013",
@@ -569,7 +569,7 @@
         },
         {
           "id": "C",
-          "text": "2:14"
+          "text": "2:7"
         },
         {
           "id": "D",
@@ -579,7 +579,7 @@
       "correct_answer": "A",
       "type": "mcq",
       "explanation_correct": "The correct answer is A) 1:7. The circumference of a circle is given by the formula 2πr, where r is the radius. The area of a circle is given by the formula πr^2. Using the given radius of 14 cm and π = 22/7, the ratio of the circumference to the area is 2πr / πr^2 = 2/r = 1:7.",
-      "explanation_incorrect": "The incorrect options B) 7:1, C) 2:14, and D) 1:14 are not correct because they do not represent the accurate ratio of the circumference to the area of the circle. The correct ratio is 1:7, as the circumference is directly proportional to the radius, while the area is proportional to the square of the radius, resulting in the ratio of 1:7."
+      "explanation_incorrect": "The incorrect options B) 7:1, C) 2:7, and D) 1:14 are not correct because they do not represent the accurate ratio of the circumference to the area of the circle. Circumference = 2πr = 2 × (22/7) × 14 = 88 cm. Area = πr² = (22/7) × 196 = 616 cm². The ratio is 88:616 = 1:7."
     },
     {
       "question_id": "T05.01.Q035",
@@ -700,10 +700,10 @@
       "question_text": "A circle with radius 7 cm has a greater area than a square with side 12 cm. (use π = 22/7)",
       "difficulty": "exam_style",
       "cognitive_level": "compare",
-      "correct_answer": "B",
+      "correct_answer": "A",
       "type": "true_false",
-      "explanation_correct": "The area of a circle with radius 7 cm is given by the formula π × r^2, where r is the radius. Using the given value of π = 22/7, the area of the circle is 154 cm^2. The area of a square with side 12 cm is 12 × 12 = 144 cm^2. Since 154 cm^2 is greater than 144 cm^2, the statement is false.",
-      "explanation_incorrect": "The statement is false because the area of a circle with radius 7 cm is actually larger than the area of a square with side 12 cm. This is because the formula for the area of a circle is π × r^2, while the formula for the area of a square is s^2, where s is the side length. Even though the side length of the square is larger, the circle's area is greater due to the π factor."
+      "explanation_correct": "The area of a circle with radius 7 cm is π × r² = (22/7) × 7² = (22/7) × 49 = 154 cm². The area of a square with side 12 cm is 12 × 12 = 144 cm². Since 154 cm² > 144 cm², the circle does have a greater area than the square, so the statement is true.",
+      "explanation_incorrect": "The area of the circle with radius 7 cm is (22/7) × 49 = 154 cm², and the area of the square with side 12 cm is 144 cm². Since 154 > 144, the circle's area is indeed greater than the square's area, making the statement true, not false."
     },
     {
       "question_id": "T05.01.Q043",
@@ -799,13 +799,13 @@
     {
       "question_id": "T05.01.Q047",
       "concept_id": "T05.01.C05",
-      "question_text": "A rhombus has an area of 150 cm² and its diagonals are in the ratio 5:6. The length of the longer diagonal is _____ cm.",
+      "question_text": "A rhombus has an area of 240 cm² and its diagonals are in the ratio 5:6. The length of the longer diagonal is _____ cm.",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "correct_answer": "30",
+      "correct_answer": "24",
       "type": "fill_blank",
-      "explanation_correct": "To find the length of the longer diagonal, we can use the formula for the area of a rhombus: Area = (diagonal1 × diagonal2) / 2. Since the area is 150 cm² and the diagonals are in the ratio 5:6, we can solve for the length of the longer diagonal.",
-      "explanation_incorrect": "The incorrect answer would be to assume that the diagonals are equal in length, which is not the case. The question specifically states that the diagonals are in the ratio 5:6, so the length of the longer diagonal cannot be 25 cm. To find the correct length, we need to use the given area and the ratio of the diagonals to solve for the longer diagonal."
+      "explanation_correct": "Let the diagonals be 5k and 6k. The area of a rhombus = ½ × d₁ × d₂ = ½ × 5k × 6k = 15k². Setting 15k² = 240, we get k² = 16, so k = 4. The longer diagonal = 6k = 6 × 4 = 24 cm.",
+      "explanation_incorrect": "A common mistake is to assume the diagonals are equal or to forget to apply the ½ factor in the area formula. The area of a rhombus is ½ × d₁ × d₂. With diagonals in the ratio 5:6, let them be 5k and 6k. Then ½ × 5k × 6k = 15k² = 240, giving k = 4. The longer diagonal is 6 × 4 = 24 cm."
     },
     {
       "question_id": "T05.01.Q048",
@@ -850,13 +850,13 @@
     {
       "question_id": "T05.01.Q050",
       "concept_id": "T05.01.C02",
-      "question_text": "A rectangular field is 80 m long and 50 m wide. A path of uniform width runs all around inside it. If the area of the path is 1500 m², the width of the path is _____ m.",
+      "question_text": "A rectangular field is 80 m long and 50 m wide. A path of uniform width runs all around inside it. If the area of the path is 1200 m², the width of the path is _____ m.",
       "difficulty": "exam_style",
       "cognitive_level": "scenario",
       "correct_answer": "5",
       "type": "fill_blank",
-      "explanation_correct": "The width of the path is 5 m because the area of the path is 1500 m² and the length and width of the rectangular field are 80 m and 50 m respectively. To find the width of the path, we can subtract the area of the field (80 m x 50 m = 4000 m²) from the total area (4000 m² + 1500 m² = 5500 m²) and then divide the remaining area by 2 (since the path runs all around the field).",
-      "explanation_incorrect": "If the answer was 10 m, it would mean that the width of the path is 10 m. However, this is incorrect because the area of the path is 1500 m² and the length and width of the rectangular field are 80 m and 50 m respectively. The correct width of the path is 5 m, as calculated by subtracting the area of the field from the total area and then dividing the remaining area by 2."
+      "explanation_correct": "The total area of the field is 80 × 50 = 4000 m². Let the width of the path be w. The inner rectangle (excluding the path) has dimensions (80 − 2w) × (50 − 2w). The area of the path = Total area − Inner area. So 1200 = 4000 − (80 − 2w)(50 − 2w). This gives (80 − 2w)(50 − 2w) = 2800. With w = 5: (80 − 10)(50 − 10) = 70 × 40 = 2800. Therefore, the width of the path is 5 m.",
+      "explanation_incorrect": "A common mistake is to simply divide the path area by the perimeter. The correct approach is: Total area = 80 × 50 = 4000 m². Inner area = 4000 − 1200 = 2800 m². The inner rectangle has dimensions (80 − 2w) × (50 − 2w) = 2800. Substituting w = 5 gives 70 × 40 = 2800, confirming the width is 5 m."
     },
     {
       "question_id": "T05.01.Q051",
@@ -980,7 +980,7 @@
       "concept_id": "T05.01.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Base 8 cm, Height 5 cm?",
+      "question_text": "What is the area of a triangle with base 8 cm and height 5 cm?",
       "options": [
         {
           "id": "A",
@@ -1009,7 +1009,7 @@
       "concept_id": "T05.01.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Base 12 cm, Height 7 cm?",
+      "question_text": "What is the area of a triangle with base 12 cm and height 7 cm?",
       "options": [
         {
           "id": "A",
@@ -1038,7 +1038,7 @@
       "concept_id": "T05.01.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Base 16 cm, Height 9 cm?",
+      "question_text": "What is the area of a triangle with base 16 cm and height 9 cm?",
       "options": [
         {
           "id": "A",
@@ -1067,7 +1067,7 @@
       "concept_id": "T05.01.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Base 10 cm, Height 10 cm?",
+      "question_text": "What is the area of a triangle with base 10 cm and height 10 cm?",
       "options": [
         {
           "id": "A",
@@ -1096,7 +1096,7 @@
       "concept_id": "T05.01.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Length 15 cm, Breadth 8 cm?",
+      "question_text": "What is the area of a rectangle with length 15 cm and breadth 8 cm?",
       "options": [
         {
           "id": "A",
@@ -1125,7 +1125,7 @@
       "concept_id": "T05.01.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Length 20 cm, Breadth 5 cm?",
+      "question_text": "What is the area of a rectangle with length 20 cm and breadth 5 cm?",
       "options": [
         {
           "id": "A",
@@ -1154,7 +1154,7 @@
       "concept_id": "T05.01.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Length 12 cm, Breadth 12 cm?",
+      "question_text": "What is the area of a square with side 12 cm?",
       "options": [
         {
           "id": "A",
@@ -1183,7 +1183,7 @@
       "concept_id": "T05.01.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Length 18 cm, Breadth 6 cm?",
+      "question_text": "What is the area of a rectangle with length 18 cm and breadth 6 cm?",
       "options": [
         {
           "id": "A",
@@ -1212,7 +1212,7 @@
       "concept_id": "T05.01.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Diagonals 10 cm and 14 cm?",
+      "question_text": "What is the area of a rhombus with diagonals 10 cm and 14 cm?",
       "options": [
         {
           "id": "A",
@@ -1232,8 +1232,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The correct answer is B) 70 cm². The area of a rectangle is calculated by multiplying its length and width. The diagonals of a rectangle are 10 cm and 14 cm, so the length and width of the rectangle are 10 cm and 14 cm. Multiplying these gives the area of 70 cm².",
-      "explanation_incorrect": "The incorrect options are not correct because they do not match the formula for the area of a rectangle. Option A) 80 cm² is too high, Option C) 150 cm² is too high, and Option D) 48 cm² is too low. The correct formula is to multiply the length and width of the rectangle, which in this case are 10 cm and 14 cm, giving an area of 70 cm²."
+      "explanation_correct": "The correct answer is B) 70 cm². The area of a rhombus is calculated using the formula: Area = ½ × d₁ × d₂, where d₁ and d₂ are the diagonals. With diagonals of 10 cm and 14 cm, the area is ½ × 10 × 14 = 70 cm².",
+      "explanation_incorrect": "The incorrect options do not correctly apply the rhombus area formula. The area of a rhombus = ½ × d₁ × d₂ = ½ × 10 × 14 = 70 cm². Option A) 80 cm², Option C) 150 cm², and Option D) 48 cm² are all incorrect."
     },
     {
       "question_id": "T05.01.Q064",
@@ -1241,7 +1241,7 @@
       "concept_id": "T05.01.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Diagonals 8 cm and 12 cm?",
+      "question_text": "What is the area of a rhombus with diagonals 8 cm and 12 cm?",
       "options": [
         {
           "id": "A",
@@ -1261,8 +1261,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The correct answer is D) 48 cm². The area of a rectangle is calculated by multiplying the lengths of its diagonals and dividing the result by 2. With diagonals of 8 cm and 12 cm, the area is (8 cm × 12 cm) / 2 = 48 cm².",
-      "explanation_incorrect": "The incorrect answers are not correct because they do not follow the formula for calculating the area of a rectangle using its diagonals. The area is not 70 cm², 80 cm², or 150 cm² - these are incorrect calculations. The correct formula is to multiply the lengths of the diagonals and divide by 2, which gives the answer of 48 cm²."
+      "explanation_correct": "The correct answer is D) 48 cm². The area of a rhombus is calculated using the formula: Area = ½ × d₁ × d₂. With diagonals of 8 cm and 12 cm, the area is ½ × 8 × 12 = 48 cm².",
+      "explanation_incorrect": "The incorrect options do not correctly apply the rhombus area formula. The area of a rhombus = ½ × d₁ × d₂ = ½ × 8 × 12 = 48 cm². Options A) 70 cm², B) 80 cm², and C) 150 cm² are all incorrect."
     },
     {
       "question_id": "T05.01.Q065",
@@ -1270,7 +1270,7 @@
       "concept_id": "T05.01.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Diagonals 20 cm and 15 cm?",
+      "question_text": "What is the area of a rhombus with diagonals 20 cm and 15 cm?",
       "options": [
         {
           "id": "A",
@@ -1290,8 +1290,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The correct answer is D) 150 cm². The area of a rectangle is calculated by multiplying its two diagonals and dividing the result by 2. With diagonals of 20 cm and 15 cm, the area would be (20 cm × 15 cm) / 2 = 150 cm².",
-      "explanation_incorrect": "The incorrect answers are not correct because they do not correctly apply the formula for the area of a rectangle using its diagonals. The correct formula is to multiply the lengths of the two diagonals and then divide the result by 2. Applying this formula to the given diagonals of 20 cm and 15 cm results in an area of 150 cm²."
+      "explanation_correct": "The correct answer is D) 150 cm². The area of a rhombus is calculated using the formula: Area = ½ × d₁ × d₂. With diagonals of 20 cm and 15 cm, the area is ½ × 20 × 15 = 150 cm².",
+      "explanation_incorrect": "The incorrect options do not correctly apply the rhombus area formula. The area of a rhombus = ½ × d₁ × d₂ = ½ × 20 × 15 = 150 cm². Options A) 70 cm², B) 48 cm², and C) 80 cm² are all incorrect."
     },
     {
       "question_id": "T05.01.Q066",
@@ -1299,7 +1299,7 @@
       "concept_id": "T05.01.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their areas: of Diagonals 16 cm and 10 cm?",
+      "question_text": "What is the area of a rhombus with diagonals 16 cm and 10 cm?",
       "options": [
         {
           "id": "A",
@@ -1319,8 +1319,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The area of a rectangle is calculated by multiplying the length of its diagonals. Since the diagonals are 16 cm and 10 cm, the area is 16 cm × 10 cm = 80 cm².",
-      "explanation_incorrect": "The area of a rectangle is not calculated by adding its diagonals. The correct way to find the area is by multiplying the lengths of the diagonals. In this case, the diagonals are 16 cm and 10 cm, so the area is 16 cm × 10 cm = 80 cm²."
+      "explanation_correct": "The correct answer is A) 80 cm². The area of a rhombus is calculated using the formula: Area = ½ × d₁ × d₂. With diagonals of 16 cm and 10 cm, the area is ½ × 16 × 10 = 80 cm².",
+      "explanation_incorrect": "The incorrect options do not correctly apply the rhombus area formula. The area of a rhombus = ½ × d₁ × d₂ = ½ × 16 × 10 = 80 cm². Options B) 70 cm², C) 48 cm², and D) 150 cm² are all incorrect."
     },
     {
       "question_id": "T05.01.Q067",

@@ -482,8 +482,8 @@
       ],
       "correct_answer": "C",
       "type": "mcq",
-      "explanation_correct": "The set {a, b, c} has 8 subsets. The 8 subsets are: the empty set {}, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, and {a, b, c}. This is because each element can either be included or excluded in a subset, leading to 2^3 = 8 possible subsets.",
-      "explanation_incorrect": "The set {a, b, c} does not have 6, 7, or 9 subsets. To find the total number of subsets, we need to consider that each element can either be included or excluded in a subset. With 3 elements, there are 2^3 = 8 possible subsets. Therefore, the correct answer is 8 subsets."
+      "explanation_correct": "The set containing a, b, and c has 8 subsets. The 8 subsets are: the empty set, the set containing only a, the set containing only b, the set containing only c, the set containing a and b, the set containing a and c, the set containing b and c, and the full set containing a, b, and c. This is because each element can either be included or excluded in a subset, leading to 2^3 = 8 possible subsets.",
+      "explanation_incorrect": "The set containing a, b, and c does not have 6, 7, or 9 subsets. To find the total number of subsets, we need to consider that each element can either be included or excluded in a subset. With 3 elements, there are 2^3 = 8 possible subsets. Therefore, the correct answer is 8 subsets."
     },
     {
       "question_id": "T01.06.Q026",
@@ -766,19 +766,19 @@
       "question_text": "Given A = {1, 2, 3}, B = {2, 3, 4}, arrange the following from smallest to largest cardinality: A ∩ B, A − B, B − A, A ∪ B",
       "ordering_items": [
         "A − B",
-        "A ∩ B",
         "B − A",
+        "A ∩ B",
         "A ∪ B"
       ],
       "correct_answer": [
         "A − B",
-        "A ∩ B",
         "B − A",
+        "A ∩ B",
         "A ∪ B"
       ],
       "type": "ordering",
-      "explanation_correct": "The correct order from smallest to largest cardinality is A - B, A ∩ B, B - A, A ∪ B. This is because A - B has the smallest number of elements, followed by A ∩ B which has the elements common to both A and B, then B - A with the elements in B but not in A, and finally A ∪ B which has all the elements in both A and B.",
-      "explanation_incorrect": "The incorrect order would be to arrange the sets in the order A ∩ B, A - B, A ∪ B, B - A. This is wrong because A ∩ B has fewer elements than A - B, which is the set of elements in A but not in B. Similarly, A ∪ B has more elements than B - A, which is the set of elements in B but not in A."
+      "explanation_correct": "With A = {1, 2, 3} and B = {2, 3, 4}: A − B = {1} (1 element), B − A = {4} (1 element), A ∩ B = {2, 3} (2 elements), A ∪ B = {1, 2, 3, 4} (4 elements). Ordering by cardinality: A − B (1) = B − A (1) < A ∩ B (2) < A ∪ B (4). Since A − B and B − A have the same cardinality, either can come first.",
+      "explanation_incorrect": "A common mistake is placing A ∩ B (2 elements) before B − A (1 element). Compute each set: A − B = {1}, B − A = {4}, A ∩ B = {2, 3}, A ∪ B = {1, 2, 3, 4}. The sets with 1 element (A − B, B − A) come before A ∩ B (2 elements), which comes before A ∪ B (4 elements)."
     },
     {
       "question_id": "T01.06.Q042",
@@ -894,22 +894,22 @@
       "concept_id": "T01.06.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "Arrange the following sets in order of their cardinality (number of elements) from smallest to largest: P = {prime numbers less than 10}, V = {vowels in English}, D = {digits}, E = {even prime numbers}",
+      "question_text": "Arrange the following sets in order of their cardinality (number of elements) from smallest to largest: P = set of prime numbers less than 10, V = set of vowels in English, D = set of digits, E = set of even prime numbers",
       "ordering_items": [
         "E",
-        "V",
         "P",
+        "V",
         "D"
       ],
       "correct_answer": [
         "E",
-        "V",
         "P",
+        "V",
         "D"
       ],
       "type": "ordering",
-      "explanation_correct": "The set E (even prime numbers) has the smallest number of elements, as the only even prime number is 2. The set V (vowels in English) has 5 elements, the set P (prime numbers less than 10) has 4 elements, and the set D (digits) has 10 elements. Therefore, the sets are arranged in order of increasing cardinality as E, V, P, D.",
-      "explanation_incorrect": "The incorrect order would be D, P, V, E. This is because the set D (digits) has the most elements, followed by the set P (prime numbers less than 10), then the set V (vowels in English), and lastly the set E (even prime numbers). However, the correct order is E, V, P, D, as explained earlier."
+      "explanation_correct": "E = {2} has 1 element (2 is the only even prime). P = {2, 3, 5, 7} has 4 elements (prime numbers less than 10). V = {a, e, i, o, u} has 5 elements (vowels in English). D = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} has 10 elements (digits). Ordering by cardinality: E(1) < P(4) < V(5) < D(10).",
+      "explanation_incorrect": "A common mistake is placing V (vowels, 5 elements) before P (primes less than 10, 4 elements). The prime numbers less than 10 are 2, 3, 5, and 7 — only 4 primes, which is fewer than the 5 vowels. So the correct ascending order is E(1), P(4), V(5), D(10)."
     },
     {
       "question_id": "T01.06.Q049",
@@ -1189,7 +1189,7 @@
       "concept_id": "T01.06.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their types: of {x : x is a prime number greater than 2 and less than 3}?",
+      "question_text": "What type of set is {x : x is a prime number greater than 2 and less than 3}?",
       "options": [
         {
           "id": "A",
@@ -1218,7 +1218,7 @@
       "concept_id": "T01.06.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their types: of {2}?",
+      "question_text": "What type of set is {2}?",
       "options": [
         {
           "id": "A",
@@ -1247,7 +1247,7 @@
       "concept_id": "T01.06.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their types: of {1, 2, 3, 4, 5}?",
+      "question_text": "What type of set is {1, 2, 3, 4, 5}?",
       "options": [
         {
           "id": "A",
@@ -1276,7 +1276,7 @@
       "concept_id": "T01.06.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the their types: of {x : x is a whole number}?",
+      "question_text": "What type of set is {x : x is a whole number}?",
       "options": [
         {
           "id": "A",
@@ -1305,7 +1305,7 @@
       "concept_id": "T01.06.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the set-builder form: of {1, 3, 5, 7, 9}?",
+      "question_text": "What is the set-builder form of {1, 3, 5, 7, 9}?",
       "options": [
         {
           "id": "A",
@@ -1334,7 +1334,7 @@
       "concept_id": "T01.06.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the set-builder form: of {2, 4, 6, 8}?",
+      "question_text": "What is the set-builder form of {2, 4, 6, 8}?",
       "options": [
         {
           "id": "A",
@@ -1363,7 +1363,7 @@
       "concept_id": "T01.06.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the set-builder form: of {1, 4, 9, 16}?",
+      "question_text": "What is the set-builder form of {1, 4, 9, 16}?",
       "options": [
         {
           "id": "A",
@@ -1392,7 +1392,7 @@
       "concept_id": "T01.06.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the set-builder form: of {0, 1, 2, 3}?",
+      "question_text": "What is the set-builder form of {0, 1, 2, 3}?",
       "options": [
         {
           "id": "A",

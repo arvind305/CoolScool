@@ -556,8 +556,8 @@
       "cognitive_level": "recall",
       "correct_answer": "600",
       "type": "fill_blank",
-      "explanation_correct": "The simple interest on Rs. 10,000 at 12% per annum for 6 months is Rs. 600. This is because the formula for simple interest is (Principal × Rate × Time) / 100, and when we plug in the given values, we get (10,000 × 12 × 6) / 100 = 600.",
-      "explanation_incorrect": "The accepted answer format is a number, not a word or phrase. The correct answer is Rs. 600, not any other amount. This is because the simple interest formula is (Principal × Rate × Time) / 100, and when we plug in the given values of Rs. 10,000, 12% per annum, and 6 months, the result is Rs. 600."
+      "explanation_correct": "The simple interest on Rs. 10,000 at 12% per annum for 6 months is Rs. 600. Since the rate is per annum, 6 months must be converted to years: T = 6/12 = 0.5 years. Using the formula SI = (P x R x T) / 100 = (10,000 x 12 x 0.5) / 100 = 60,000 / 100 = Rs. 600.",
+      "explanation_incorrect": "The correct answer is Rs. 600. A common mistake is to use T = 6 instead of T = 0.5 in the formula. Since the rate is per annum, the time must be in years: 6 months = 0.5 years. SI = (10,000 x 12 x 0.5) / 100 = Rs. 600. Using T = 6 would incorrectly give Rs. 7,200."
     },
     {
       "question_id": "T02.05.Q031",
@@ -674,10 +674,10 @@
           "text": "Rs. 12000"
         }
       ],
-      "correct_answer": "B",
+      "correct_answer": "D",
       "type": "mcq",
-      "explanation_correct": "The correct answer is B) Rs. 10800. This is because the simple interest on the first part for 2 years at 6% equals the interest on the second part for 3 years at 8%, which means the principal amount for the first part is Rs. 10800.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the given conditions. Option A) Rs. 10000 is incorrect because the simple interest on Rs. 10000 for 2 years at 6% is less than the interest on the second part for 3 years at 8%. Option C) Rs. 9000 is incorrect because the simple interest on Rs. 9000 for 2 years at 6% is less than the interest on the second part for 3 years at 8%. Option D) Rs. 12000 is incorrect because the simple interest on Rs. 12000 for 2 years at 6% is more than the interest on the second part for 3 years at 8%."
+      "explanation_correct": "The correct answer is D) Rs. 12000. Let the first part be P1 and the second part be (18000 - P1). SI on first part = (P1 x 6 x 2)/100 = 12P1/100. SI on second part = ((18000 - P1) x 8 x 3)/100 = 24(18000 - P1)/100. Setting them equal: 12P1 = 24(18000 - P1), so 12P1 = 432000 - 24P1, giving 36P1 = 432000, and P1 = Rs. 12000.",
+      "explanation_incorrect": "Option B) Rs. 10800 is incorrect. If P1 = 10800, SI on first part = (10800 x 6 x 2)/100 = Rs. 1296, but SI on second part = (7200 x 8 x 3)/100 = Rs. 1728, which are not equal. The correct first part is Rs. 12000, where both interests equal Rs. 1440."
     },
     {
       "question_id": "T02.05.Q037",
@@ -819,13 +819,13 @@
     {
       "question_id": "T02.05.Q045",
       "concept_id": "T02.05.C05",
-      "question_text": "A father wants to distribute Rs. 50000 between his two sons aged 15 and 18 years such that they get equal amounts at 8% per annum when they reach 21 years. The younger son should get Rs. _____.",
+      "question_text": "A father wants to distribute Rs. 34000 between his two sons aged 15 and 18 years such that they get equal amounts at 8% per annum simple interest when they reach 21 years. The younger son should get Rs. _____.",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "correct_answer": "26000",
+      "correct_answer": "15500",
       "type": "fill_blank",
-      "explanation_correct": "The younger son should get Rs. 26,000 because the amount is distributed equally between the two sons when they reach 21 years, and the amount grows at 8% interest per year. When the younger son reaches 21, the Rs. 26,000 he received will be equal to the amount the older son receives.",
-      "explanation_incorrect": "The incorrect answer would be a different amount, such as Rs. 24,000. This is wrong because the amount needs to be distributed equally between the two sons when they reach 21 years, and the amount grows at 8% interest per year. The correct amount for the younger son is Rs. 26,000."
+      "explanation_correct": "The younger son (age 15) has 6 years until 21, the elder (age 18) has 3 years. Let the younger son get P1 and the elder get (34000 - P1). For equal amounts at 21: P1(1 + 8 x 6/100) = (34000 - P1)(1 + 8 x 3/100). So 1.48 x P1 = 1.24 x (34000 - P1). Solving: 1.48P1 = 42160 - 1.24P1, giving 2.72P1 = 42160, so P1 = Rs. 15500.",
+      "explanation_incorrect": "The accepted answer is Rs. 15500. The younger son's money grows for 6 years (from age 15 to 21), while the elder's grows for only 3 years (from age 18 to 21). Since the younger son's money has more time to grow, he should receive less. Verification: 15500 x 1.48 = 22940, and 18500 x 1.24 = 22940. Both amounts are equal at age 21."
     },
     {
       "question_id": "T02.05.Q047",
@@ -859,13 +859,13 @@
     {
       "question_id": "T02.05.Q048",
       "concept_id": "T02.05.C04",
-      "question_text": "A certain sum amounts to Rs. 5600 in 4 years and Rs. 6400 in 7 years at simple interest. The rate of interest is _____% per annum.",
+      "question_text": "A certain sum amounts to Rs. 5600 in 4 years and Rs. 7200 in 8 years at simple interest. The rate of interest is _____% per annum.",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "correct_answer": "5",
+      "correct_answer": "10",
       "type": "fill_blank",
-      "explanation_correct": "The rate of interest is 5% per annum. This can be calculated by setting up the simple interest formula and solving for the rate of interest, given the principal amount, time, and total amounts at the end of 4 and 7 years.",
-      "explanation_incorrect": "The accepted answer format is a single number. If you thought the rate of interest was a different percentage, you may have made a mistake in setting up or solving the simple interest formula. Remember, the simple interest formula is I = Prt, where I is the total interest, P is the principal amount, r is the rate of interest per annum, and t is the time in years."
+      "explanation_correct": "The rate of interest is 10% per annum. SI for (8 - 4) = 4 years is Rs. 7200 - Rs. 5600 = Rs. 1600. So SI per year = Rs. 1600 / 4 = Rs. 400. Total SI for 4 years = Rs. 1600. Principal = Rs. 5600 - Rs. 1600 = Rs. 4000. Rate = (SI per year x 100) / Principal = (400 x 100) / 4000 = 10% per annum.",
+      "explanation_incorrect": "To solve this problem: first find the SI for the difference in time periods (8 - 4 = 4 years), which is Rs. 7200 - Rs. 5600 = Rs. 1600. This gives SI per year = Rs. 400. Then find the principal by subtracting 4 years' worth of SI from the 4-year amount: P = 5600 - 1600 = Rs. 4000. Finally, Rate = (400 x 100) / 4000 = 10%."
     },
     {
       "question_id": "T02.05.Q049",
@@ -1243,7 +1243,7 @@
       "concept_id": "T02.05.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the the amount at 5% per annum for 4 years: of Rs. 5000?",
+      "question_text": "What is the amount when Rs. 5000 is invested at 5% per annum for 4 years?",
       "options": [
         {
           "id": "A",
@@ -1272,7 +1272,7 @@
       "concept_id": "T02.05.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the the amount at 5% per annum for 4 years: of Rs. 10000?",
+      "question_text": "What is the amount when Rs. 10000 is invested at 5% per annum for 4 years?",
       "options": [
         {
           "id": "A",
@@ -1301,7 +1301,7 @@
       "concept_id": "T02.05.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the the amount at 5% per annum for 4 years: of Rs. 15000?",
+      "question_text": "What is the amount when Rs. 15000 is invested at 5% per annum for 4 years?",
       "options": [
         {
           "id": "A",
@@ -1330,7 +1330,7 @@
       "concept_id": "T02.05.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the the amount at 5% per annum for 4 years: of Rs. 20000?",
+      "question_text": "What is the amount when Rs. 20000 is invested at 5% per annum for 4 years?",
       "options": [
         {
           "id": "A",

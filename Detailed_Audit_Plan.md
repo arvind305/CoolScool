@@ -132,7 +132,7 @@ Audits proceed sequentially: one class, one subject at a time. Lower classes fir
 |---|-----------|-----------|-------|-----------|--------|--------------|--------------|------|
 | A01 | ICSE Class 1 Maths | `class1/` | 24 | 1,748 | **Complete** | 140 | 140 | 2026-03-12 |
 | A02 | ICSE Class 2 Maths | `class2/` | 23 | 1,672 | **Complete** | 86 | 86 | 2026-03-12 |
-| A03 | ICSE Class 3 Maths | `class3/` | 29 | 2,145 | Not Started | — | — | — |
+| A03 | ICSE Class 3 Maths | `class3/` | 29 | 2,145 | **Complete** | 236 | 236 | 2026-03-12 |
 | A04 | ICSE Class 4 Maths | `class4/` | 15 | 1,186 | Not Started | — | — | — |
 | A05 | ICSE Class 5 Maths | `class5/` | 32 | 1,666 | Not Started | — | — | — |
 | A06 | ICSE Class 6 Maths | `class6/` | 26 | 2,070 | Not Started | — | — | — |
@@ -300,8 +300,8 @@ The entire audit is complete when all 76 audit units are marked Complete.
 
 | Phase | Audit Units | Questions | Status | Errors Found | Errors Fixed |
 |-------|------------|-----------|--------|--------------|--------------|
-| A: ICSE Maths | 2/12 | 3,420/18,289 | In Progress | 226 | 226 |
+| A: ICSE Maths | 3/12 | 5,565/18,289 | In Progress | 462 | 462 |
 | B: ICSE Science | 0/26 | 0/21,406 | Not Started | — | — |
 | C: CBSE Maths | 0/12 | 0/10,300 | Not Started | — | — |
 | D: CBSE Science | 0/26 | 0/12,690 | Not Started | — | — |
-| **Total** | **2/76** | **3,420/62,685** | **In Progress** | **226** | **226** |
+| **Total** | **3/76** | **5,565/62,685** | **In Progress** | **462** | **462** |

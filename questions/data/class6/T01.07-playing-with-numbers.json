@@ -80,7 +80,7 @@
       "question_text": "Simplify: 48 ÷ {24 - (12 + 4)}",
       "correct_answer": "A",
       "explanation_correct": "The correct answer is A) 6. First, we need to simplify the expression inside the curly braces: 24 - (12 + 4) = 24 - 16 = 8. Then, we divide 48 by 8, which gives us 6.",
-      "explanation_incorrect": "The incorrect answer is C) 4. This is because the student may have made a mistake in the order of operations. They might have first calculated 12 + 4 = 16, then subtracted 16 from 24 to get 8, and finally divided 48 by 8 to get 4. However, the correct way to simplify the expression is to follow the BODMAS rule (Brackets, Orders, Division/Multiplication, Addition/Subtraction) and get the answer 6."
+      "explanation_incorrect": "Option B) 8 is incorrect because that is only the intermediate result inside the curly braces (24 - 16 = 8), not the final answer. Option C) 4 could result from incorrectly simplifying the brackets. Option D) 12 does not follow from correct BODMAS simplification. The correct final answer is 48 ÷ 8 = 6."
     },
     {
       "question_id": "T01.07.Q003",
@@ -124,7 +124,7 @@
         },
         {
           "id": "B",
-          "text": "144"
+          "text": "140"
         },
         {
           "id": "C",
@@ -137,8 +137,8 @@
       ],
       "question_text": "Which number is divisible by both 3 and 8?",
       "correct_answer": "D",
-      "explanation_correct": "The number 168 is divisible by both 3 and 8 because it is a multiple of their product, 24. This means that 168 can be divided by 3 and 8 without leaving any remainder.",
-      "explanation_incorrect": "Option A (124), B (144), and C (156) are not divisible by both 3 and 8. For a number to be divisible by both 3 and 8, it must be a multiple of their product, which is 24. Option D (168) is the only number in the given options that is a multiple of 24 and hence divisible by both 3 and 8."
+      "explanation_correct": "The number 168 is divisible by both 3 and 8. Checking: 168 ÷ 3 = 56 (exact) and 168 ÷ 8 = 21 (exact). Also, 168 ÷ 24 = 7, confirming it is a multiple of 24 (the LCM of 3 and 8).",
+      "explanation_incorrect": "Option A (124): 124 ÷ 3 = 41.33, not divisible by 3. Option B (140): 140 ÷ 3 = 46.67, not divisible by 3. Option C (156): 156 ÷ 8 = 19.5, not divisible by 8. Only option D (168) is divisible by both 3 and 8."
     },
     {
       "question_id": "T01.07.Q005",
@@ -331,10 +331,10 @@
       "type": "fill_blank",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "Simplify: 100 ÷ [50 - {30 - (10 + 5)}] = ___",
-      "correct_answer": "4",
-      "explanation_correct": "The answer is 4 because the expression inside the brackets, {30 - (10 + 5)}, simplifies to 15. Then, 50 - 15 = 35. Finally, 100 divided by 35 is 4.",
-      "explanation_incorrect": "The accepted answer format is a single number, 4. However, the incorrect answer would be obtained by simplifying the expression step-by-step incorrectly. For example, one might subtract 10 + 5 first, then subtract that from 30, and then subtract that from 50, leading to a wrong result. The correct step-by-step simplification is the one explained in the correct explanation."
+      "question_text": "Simplify: 100 ÷ [50 - {30 + (10 + 5)}] = ___",
+      "correct_answer": "20",
+      "explanation_correct": "First solve the innermost bracket: (10 + 5) = 15. Then the curly bracket: {30 + 15} = 45. Then the square bracket: [50 - 45] = 5. Finally, 100 ÷ 5 = 20.",
+      "explanation_incorrect": "A common mistake is to ignore the order of brackets. You must simplify from the innermost bracket outward: first (10 + 5) = 15, then {30 + 15} = 45, then [50 - 45] = 5, and finally 100 ÷ 5 = 20."
     },
     {
       "question_id": "T01.07.Q013",
@@ -365,9 +365,9 @@
       "difficulty": "exam_style",
       "cognitive_level": "recall",
       "question_text": "If 5x72 is divisible by 3, the smallest value of x is ___.",
-      "correct_answer": "0",
-      "explanation_correct": "The smallest value of x that makes 5x72 divisible by 3 is 0. This is because for a number to be divisible by 3, the sum of its digits must be divisible by 3. When x = 0, the sum of the digits in 5x72 is 5 + 0 + 7 + 2 = 14, which is divisible by 3.",
-      "explanation_incorrect": "The incorrect answer is 1. This is because for a number to be divisible by 3, the sum of its digits must be divisible by 3. However, when x = 1, the sum of the digits in 5x72 is 5 + 1 + 7 + 2 = 15, which is not divisible by 3. The correct answer is 0, as the sum of the digits in 5x72 will be divisible by 3 when x = 0."
+      "correct_answer": "1",
+      "explanation_correct": "For a number to be divisible by 3, the sum of its digits must be divisible by 3. The digits of 5x72 are 5, x, 7, and 2. Sum = 5 + x + 7 + 2 = 14 + x. For 14 + x to be divisible by 3: when x = 0, sum = 14 (not divisible by 3); when x = 1, sum = 15 (divisible by 3). So the smallest value of x is 1.",
+      "explanation_incorrect": "A common mistake is to choose x = 0. However, when x = 0, the digit sum is 5 + 0 + 7 + 2 = 14, and 14 is not divisible by 3. The correct answer is x = 1, because 5 + 1 + 7 + 2 = 15, and 15 ÷ 3 = 5 exactly."
     },
     {
       "question_id": "T01.07.Q016",
@@ -443,8 +443,8 @@
       "cognitive_level": "recall",
       "question_text": "The value of 50 - 20 ÷ 4 × 2 is 15.",
       "correct_answer": "B",
-      "explanation_correct": "The value of 50 - 20 ÷ 4 × 2 is not 15. This is because the order of operations, called BODMAS, needs to be followed. First, the division and multiplication operations are done, then the subtraction operation is done.",
-      "explanation_incorrect": "The correct value of 50 - 20 ÷ 4 × 2 is 30. This is because we need to follow the BODMAS rule, which stands for Brackets, Orders, Division and Multiplication, Addition and Subtraction. First, we do the division and multiplication, which is 20 ÷ 4 = 5 and 5 × 2 = 10. Then, we subtract 10 from 50 to get the final answer of 30."
+      "explanation_correct": "The value of 50 - 20 ÷ 4 × 2 is not 15. Following BODMAS, division and multiplication are done left to right first: 20 ÷ 4 = 5, then 5 × 2 = 10. Finally, 50 - 10 = 40. So the correct value is 40, not 15.",
+      "explanation_incorrect": "The correct value of 50 - 20 ÷ 4 × 2 is 40, not 15. Following BODMAS: first do division and multiplication from left to right: 20 ÷ 4 = 5, then 5 × 2 = 10. Finally, subtract: 50 - 10 = 40."
     },
     {
       "question_id": "T01.07.Q023",
@@ -521,7 +521,7 @@
       "question_text": "Two prime numbers are always co-prime.",
       "correct_answer": "A",
       "explanation_correct": "Two prime numbers are always co-prime because they have no common factors other than 1. Since prime numbers are only divisible by 1 and themselves, they cannot share any other common factors.",
-      "explanation_incorrect": "The statement is not correct. Two prime numbers can sometimes be co-prime, but not always. For example, 3 and 5 are both prime numbers and are also co-prime. However, 3 and 6 are both prime numbers, but they are not co-prime because they share a common factor of 3."
+      "explanation_incorrect": "Some might think two prime numbers could share a common factor other than 1. However, since each prime number has only two factors (1 and itself), two different prime numbers cannot share any factor other than 1. Therefore, any two prime numbers are always co-prime. For example, 3 and 7 are co-prime, as are 2 and 5."
     },
     {
       "question_id": "T01.07.Q030",
@@ -621,8 +621,8 @@
         "9 ÷ 3 = 3",
         "3 ÷ 3 = 1"
       ],
-      "explanation_correct": "The steps are arranged in the correct order to find the prime factorization of 72 using the division method. The steps show how 72 is divided by 2 repeatedly until the result becomes 1, which gives us the prime factors of 72 as 2, 2, 2, and 3.",
-      "explanation_incorrect": "The steps are not in the correct order. The prime factorization of 72 using the division method should start with 72 ÷ 2 = 36, then 36 ÷ 2 = 18, 18 ÷ 2 = 9, 9 ÷ 3 = 3, and finally 3 ÷ 3 = 1. This gives the prime factors of 72 as 2, 2, 2, and 3."
+      "explanation_correct": "The steps are arranged in the correct order to find the prime factorization of 72 using the division method. Starting with 72, we divide by 2 three times (72→36→18→9), then by 3 twice (9→3→1). This gives the prime factorization 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3².",
+      "explanation_incorrect": "The steps must be in the correct order. The prime factorization of 72 using the division method starts with 72 ÷ 2 = 36, then 36 ÷ 2 = 18, 18 ÷ 2 = 9, 9 ÷ 3 = 3, and finally 3 ÷ 3 = 1. This gives the prime factorization 72 = 2³ × 3² (three 2s and two 3s)."
     },
     {
       "question_id": "T01.07.Q045",
@@ -878,7 +878,7 @@
       "concept_id": "T01.07.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 12?",
+      "question_text": "How many factors does the number 12 have?",
       "options": [
         {
           "id": "A",
@@ -898,8 +898,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The value of 12 is 6 because 12 divided by 2 is 6. This is because 12 is an even number, and even numbers can be divided by 2 to get the result.",
-      "explanation_incorrect": "Option A, 6, is the correct answer. Even numbers like 12 can be divided by 2 to get the result, which is 6. The other options, 8, 2, and 5, are not the correct values of 12 divided by 2."
+      "explanation_correct": "The number 12 has 6 factors: 1, 2, 3, 4, 6, and 12. To find all factors, we check which numbers divide 12 exactly without a remainder.",
+      "explanation_incorrect": "The correct answer is 6. The factors of 12 are 1, 2, 3, 4, 6, and 12, which gives us a total of 6 factors. Options 8, 2, and 5 do not correctly count all the factors of 12."
     },
     {
       "question_id": "T01.07.Q056",
@@ -907,7 +907,7 @@
       "concept_id": "T01.07.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 17?",
+      "question_text": "How many factors does the number 17 have?",
       "options": [
         {
           "id": "A",
@@ -927,8 +927,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The value of 17 is 2. This is because 17 is a prime number, and the only positive factors of a prime number are 1 and the number itself. So the value of 17 is 2.",
-      "explanation_incorrect": "The value of 17 is not 5, 6, or 8. These are not the factors of the prime number 17. The only factors of 17 are 1 and 17 itself, so the value of 17 is 2."
+      "explanation_correct": "The number 17 has exactly 2 factors: 1 and 17 itself. This is because 17 is a prime number, and prime numbers have only two factors.",
+      "explanation_incorrect": "The correct answer is 2. Since 17 is a prime number, its only factors are 1 and 17. Therefore, it has exactly 2 factors, not 5, 6, or 8."
     },
     {
       "question_id": "T01.07.Q057",
@@ -936,7 +936,7 @@
       "concept_id": "T01.07.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 16?",
+      "question_text": "How many factors does the number 16 have?",
       "options": [
         {
           "id": "A",
@@ -956,8 +956,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The value of 16 is 5. This is because 16 is a perfect square, and the square root of 16 is 4. Therefore, the value of 16 is 5.",
-      "explanation_incorrect": "The correct answer is B) 5. This is because 16 is a perfect square, which means it can be expressed as the product of two equal integers. The square root of 16 is 4, so the value of 16 is 5."
+      "explanation_correct": "The number 16 has 5 factors: 1, 2, 4, 8, and 16. Since 16 = 2^4, the number of factors is (4+1) = 5.",
+      "explanation_incorrect": "The correct answer is 5. The factors of 16 are 1, 2, 4, 8, and 16, giving a total of 5 factors. Options 6, 2, and 8 do not correctly count the factors of 16."
     },
     {
       "question_id": "T01.07.Q058",
@@ -965,7 +965,7 @@
       "concept_id": "T01.07.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 30?",
+      "question_text": "How many factors does the number 30 have?",
       "options": [
         {
           "id": "A",
@@ -985,8 +985,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The value of 30 is 8. This is because 30 = 2^3, which means 30 is equal to 2 multiplied by itself 3 times, which is 2 x 2 x 2 = 8.",
-      "explanation_incorrect": "The value of 30 is not 2, 6, or 5. The correct value is 8 because 30 is equal to 2 raised to the power of 3, which is 2 x 2 x 2 = 8."
+      "explanation_correct": "The number 30 has 8 factors: 1, 2, 3, 5, 6, 10, 15, and 30. Since 30 = 2 x 3 x 5, the number of factors is (1+1)(1+1)(1+1) = 8.",
+      "explanation_incorrect": "The correct answer is 8. The factors of 30 are 1, 2, 3, 5, 6, 10, 15, and 30, giving a total of 8 factors. Options 2, 6, and 5 do not correctly count all factors of 30."
     },
     {
       "question_id": "T01.07.Q059",
@@ -994,7 +994,7 @@
       "concept_id": "T01.07.C03",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Last digit is 0 or 5?",
+      "question_text": "The divisibility rule 'last digit is 0 or 5' tests for divisibility by which number?",
       "options": [
         {
           "id": "A",
@@ -1014,8 +1014,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The value of the last digit being 0 or 5 is 5. This is because numbers ending in 0 or 5 are always divisible by 5, so the last digit must be 5.",
-      "explanation_incorrect": "The last digit being 0 or 5 does not mean the value is 4, 2, or 9. These are not the correct values for numbers with a last digit of 0 or 5. The correct value is 5, as numbers ending in 0 or 5 are always divisible by 5."
+      "explanation_correct": "The divisibility rule 'last digit is 0 or 5' is the rule for divisibility by 5. If a number ends in 0 or 5, it is divisible by 5.",
+      "explanation_incorrect": "The rule 'last digit is 0 or 5' is specifically the divisibility test for 5, not for 4, 2, or 9. A number is divisible by 5 if and only if its last digit is 0 or 5."
     },
     {
       "question_id": "T01.07.Q060",
@@ -1023,7 +1023,7 @@
       "concept_id": "T01.07.C03",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Sum of digits divisible by 9?",
+      "question_text": "The divisibility rule 'sum of digits is divisible by 9' tests for divisibility by which number?",
       "options": [
         {
           "id": "A",
@@ -1043,8 +1043,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The sum of digits of a number divisible by 9 is always divisible by 9. This is because the divisibility rule for 9 states that if the sum of digits of a number is divisible by 9, then the original number is also divisible by 9. Therefore, the correct answer is B) 9.",
-      "explanation_incorrect": "The sum of digits of a number divisible by 9 is always divisible by 9. This is because the divisibility rule for 9 states that if the sum of digits of a number is divisible by 9, then the original number is also divisible by 9. The options A) 4, C) 2, and D) 5 are not the correct answers as they do not follow the divisibility rule for 9."
+      "explanation_correct": "The divisibility rule 'sum of digits is divisible by 9' is the rule for divisibility by 9. If the sum of all digits of a number is divisible by 9, then the number itself is divisible by 9.",
+      "explanation_incorrect": "This rule is specifically the divisibility test for 9, not for 4, 2, or 5. Each of those numbers has its own different divisibility rule."
     },
     {
       "question_id": "T01.07.Q061",
@@ -1052,7 +1052,7 @@
       "concept_id": "T01.07.C03",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Last digit is even?",
+      "question_text": "The divisibility rule 'last digit is even' tests for divisibility by which number?",
       "options": [
         {
           "id": "A",
@@ -1072,8 +1072,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The answer is A) 2. The last digit of an even number is always 2, 4, 6, or 8. This is because even numbers are divisible by 2, and the last digit of any number divisible by 2 will be an even number.",
-      "explanation_incorrect": "The correct answer is A) 2. The other options are not the last digits of even numbers. Option B) 9 is an odd number, option C) 4 is an even number but not the only possibility, and option D) 5 is an odd number. Only option A) 2 is a valid last digit for an even number."
+      "explanation_correct": "The divisibility rule 'last digit is even (0, 2, 4, 6, or 8)' is the rule for divisibility by 2. If a number ends in an even digit, it is divisible by 2.",
+      "explanation_incorrect": "This rule is specifically the divisibility test for 2, not for 9, 4, or 5. A number is divisible by 2 if and only if its last digit is even (0, 2, 4, 6, or 8)."
     },
     {
       "question_id": "T01.07.Q062",
@@ -1081,7 +1081,7 @@
       "concept_id": "T01.07.C03",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Last two digits divisible by 4?",
+      "question_text": "The divisibility rule 'last two digits are divisible by 4' tests for divisibility by which number?",
       "options": [
         {
           "id": "A",
@@ -1110,7 +1110,7 @@
       "concept_id": "T01.07.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 29?",
+      "question_text": "How would you classify the number 29?",
       "options": [
         {
           "id": "A",
@@ -1139,7 +1139,7 @@
       "concept_id": "T01.07.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 28?",
+      "question_text": "How would you classify the number 28?",
       "options": [
         {
           "id": "A",
@@ -1168,7 +1168,7 @@
       "concept_id": "T01.07.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 27?",
+      "question_text": "How would you classify the number 27?",
       "options": [
         {
           "id": "A",
@@ -1197,7 +1197,7 @@
       "concept_id": "T01.07.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 2?",
+      "question_text": "How would you classify the number 2?",
       "options": [
         {
           "id": "A",
@@ -1218,7 +1218,7 @@
       ],
       "correct_answer": "D",
       "explanation_correct": "The correct answer is D. 2 is an even prime number, meaning it is divisible only by 1 and itself, but it is also an even number. This makes 2 a special number that is both prime and even.",
-      "explanation_incorrect": "The other options are not correct. Option A is incorrect because 2 is a prime number, not just 'prime'. Option B is incorrect because 2 is an even number, not an odd number. Option C is incorrect because 2 is a prime number, not a composite number."
+      "explanation_incorrect": "Option A ('Prime') is partially correct since 2 is prime, but D ('Even prime') is the most precise classification. 2 is the only even prime number. Option B ('Composite and odd') is wrong because 2 is neither composite nor odd. Option C ('Composite and even') is wrong because 2 is not composite."
     },
     {
       "question_id": "T01.07.Q067",
@@ -1226,7 +1226,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 24?",
+      "question_text": "What is the prime factorisation of 24?",
       "options": [
         {
           "id": "A",
@@ -1255,7 +1255,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 45?",
+      "question_text": "What is the prime factorisation of 45?",
       "options": [
         {
           "id": "A",
@@ -1284,7 +1284,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 50?",
+      "question_text": "What is the prime factorisation of 50?",
       "options": [
         {
           "id": "A",
@@ -1313,7 +1313,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 63?",
+      "question_text": "What is the prime factorisation of 63?",
       "options": [
         {
           "id": "A",
@@ -1342,7 +1342,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 18 and 24?",
+      "question_text": "What is the HCF of 18 and 24?",
       "options": [
         {
           "id": "A",
@@ -1371,7 +1371,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 20 and 30?",
+      "question_text": "What is the HCF of 20 and 30?",
       "options": [
         {
           "id": "A",
@@ -1391,8 +1391,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The value of 20 and 30 is 10 because when we add two numbers together, we get the sum of those numbers. 20 + 30 = 50, and 50 divided by 5 is 10, so the correct answer is C) 10.",
-      "explanation_incorrect": "The correct answer is C) 10. This is because when you add two numbers together, you get the sum of those numbers. 20 + 30 = 50, and 50 divided by 5 is 10. The other options, A) 5, B) 7, and D) 6, are incorrect because they do not represent the correct sum of 20 and 30."
+      "explanation_correct": "The HCF (Highest Common Factor) of 20 and 30 is 10. The factors of 20 are 1, 2, 4, 5, 10, 20 and the factors of 30 are 1, 2, 3, 5, 6, 10, 15, 30. The highest common factor is 10.",
+      "explanation_incorrect": "The correct answer is C) 10. The HCF of 20 and 30 is 10 because 10 is the largest number that divides both 20 and 30 without a remainder. Option A) 5 is a common factor but not the highest. Options B) 7 and D) 6 are not common factors of both 20 and 30."
     },
     {
       "question_id": "T01.07.Q073",
@@ -1400,7 +1400,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 15 and 25?",
+      "question_text": "What is the HCF of 15 and 25?",
       "options": [
         {
           "id": "A",
@@ -1429,7 +1429,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 21 and 35?",
+      "question_text": "What is the HCF of 21 and 35?",
       "options": [
         {
           "id": "A",
@@ -1458,7 +1458,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 4 and 6?",
+      "question_text": "What is the LCM of 4 and 6?",
       "options": [
         {
           "id": "A",
@@ -1478,8 +1478,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The value of 4 and 6 is 12. This is because when we multiply two numbers, the result is called the product. In this case, the product of 4 and 6 is 12.",
-      "explanation_incorrect": "The correct answer is 12, not 36, 24, or 30. This is because when we multiply two numbers, we get the product. 4 multiplied by 6 is equal to 12. So the value of 4 and 6 is 12, not the other options."
+      "explanation_correct": "The LCM (Least Common Multiple) of 4 and 6 is 12. The multiples of 4 are 4, 8, 12, 16, ... and the multiples of 6 are 6, 12, 18, ... The smallest common multiple is 12.",
+      "explanation_incorrect": "The correct answer is 12. The LCM of 4 and 6 is the smallest number that is divisible by both 4 and 6. 12 is the smallest such number (12 ÷ 4 = 3 and 12 ÷ 6 = 2). Options A) 36, B) 24, and D) 30 are all common multiples or not multiples at all, but 12 is the least."
     },
     {
       "question_id": "T01.07.Q076",
@@ -1487,7 +1487,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 6 and 8?",
+      "question_text": "What is the LCM of 6 and 8?",
       "options": [
         {
           "id": "A",
@@ -1507,8 +1507,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The value of 6 and 8 is 24. When you multiply two numbers, you get their product. 6 x 8 = 24, so the correct answer is D.",
-      "explanation_incorrect": "The incorrect answers are not correct because they do not represent the product of 6 and 8. A) 30 is not the correct answer because 6 x 8 does not equal 30. B) 36 is not the correct answer because 6 x 8 does not equal 36. C) 12 is not the correct answer because 6 x 8 does not equal 12."
+      "explanation_correct": "The LCM (Least Common Multiple) of 6 and 8 is 24. The multiples of 6 are 6, 12, 18, 24, ... and the multiples of 8 are 8, 16, 24, ... The smallest common multiple is 24.",
+      "explanation_incorrect": "The correct answer is D) 24. The LCM of 6 and 8 is 24, because 24 is the smallest number divisible by both 6 and 8. Option A) 30 is not divisible by 8. Option B) 36 is divisible by 6 but not by 8. Option C) 12 is divisible by 6 but not by 8."
     },
     {
       "question_id": "T01.07.Q077",
@@ -1516,7 +1516,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 9 and 12?",
+      "question_text": "What is the LCM of 9 and 12?",
       "options": [
         {
           "id": "A",
@@ -1536,8 +1536,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The value of 9 and 12 is 36. This is because 9 and 12 are numbers, and when you add them together, the result is 36.",
-      "explanation_incorrect": "The incorrect answer is 24. This is not correct because 9 and 12 are numbers, and when you add them together, the result is 36. The correct answer is 36, which is option C."
+      "explanation_correct": "The LCM (Least Common Multiple) of 9 and 12 is 36. The multiples of 9 are 9, 18, 27, 36, ... and the multiples of 12 are 12, 24, 36, ... The smallest common multiple is 36.",
+      "explanation_incorrect": "The correct answer is C) 36. The LCM of 9 and 12 is 36 because 36 is the smallest number divisible by both 9 and 12 (36 ÷ 9 = 4 and 36 ÷ 12 = 3). Option A) 24 is divisible by 12 but not by 9. Option B) 30 is not divisible by either. Option D) 12 is not divisible by 9."
     },
     {
       "question_id": "T01.07.Q078",
@@ -1545,7 +1545,7 @@
       "concept_id": "T01.07.C06",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 10 and 15?",
+      "question_text": "What is the LCM of 10 and 15?",
       "options": [
         {
           "id": "A",
@@ -1565,8 +1565,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The value of 10 and 15 is 30 because when we multiply two numbers, we get their product. So, 10 x 15 = 30.",
-      "explanation_incorrect": "The correct answer is B) 30. This is because when you multiply two numbers, you get their product. 10 x 15 = 150, which is the value of 10 and 15. Option A) 12, C) 24, and D) 36 are incorrect because they are not the product of 10 and 15."
+      "explanation_correct": "The LCM (Least Common Multiple) of 10 and 15 is 30. The multiples of 10 are 10, 20, 30, ... and the multiples of 15 are 15, 30, ... The smallest common multiple is 30.",
+      "explanation_incorrect": "The correct answer is B) 30. The LCM of 10 and 15 is 30 because 30 is the smallest number divisible by both 10 and 15 (30 ÷ 10 = 3 and 30 ÷ 15 = 2). Options A) 12, C) 24, and D) 36 are not the least common multiple of 10 and 15."
     },
     {
       "question_id": "T01.07.Q079",
@@ -1574,11 +1574,11 @@
       "concept_id": "T01.07.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 132?",
+      "question_text": "Which of the following is 132 divisible by?",
       "options": [
         {
           "id": "A",
-          "text": "Divisible by 6"
+          "text": "Divisible by 7"
         },
         {
           "id": "B",
@@ -1594,8 +1594,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The value of 132 is divisible by 11. This is because when we divide 132 by 11, the result is 12, which is a whole number.",
-      "explanation_incorrect": "The value of 132 is not divisible by 6, 8, or 9. This is because when we divide 132 by these numbers, the result is not a whole number. However, 132 is divisible by 11 because when we divide 132 by 11, the result is 12, which is a whole number."
+      "explanation_correct": "132 is divisible by 11 because 132 ÷ 11 = 12. To check divisibility by 11, find the alternating sum of digits: 1 - 3 + 2 = 0, which is divisible by 11.",
+      "explanation_incorrect": "The correct answer is D) Divisible by 11 (132 ÷ 11 = 12). 132 is not divisible by 7 (132 ÷ 7 ≈ 18.86), 8 (132 ÷ 8 = 16.5), or 9 (digit sum = 1+3+2 = 6, not divisible by 9)."
     },
     {
       "question_id": "T01.07.Q080",
@@ -1603,11 +1603,11 @@
       "concept_id": "T01.07.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 144?",
+      "question_text": "Which of the following is 144 divisible by?",
       "options": [
         {
           "id": "A",
-          "text": "Divisible by 6"
+          "text": "Divisible by 7"
         },
         {
           "id": "B",
@@ -1619,12 +1619,12 @@
         },
         {
           "id": "D",
-          "text": "Divisible by 9"
+          "text": "Divisible by 5"
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The value of 144 is divisible by 8 because 144 = 8 x 18. This means 144 can be divided by 8 without any remainder.",
-      "explanation_incorrect": "144 is not divisible by 6 because 144 is not a multiple of 6. It is also not divisible by 11 or 9 because 144 is not a multiple of 11 or 9 either. However, 144 is divisible by 8 because it is a multiple of 8."
+      "explanation_correct": "144 is divisible by 8 because 144 ÷ 8 = 18. To check divisibility by 8, we look at the last three digits: 144 ÷ 8 = 18 with no remainder.",
+      "explanation_incorrect": "The correct answer is B) Divisible by 8 (144 ÷ 8 = 18). 144 is not divisible by 7 (144 ÷ 7 ≈ 20.57), 11 (144 ÷ 11 ≈ 13.09), or 5 (144 does not end in 0 or 5)."
     },
     {
       "question_id": "T01.07.Q081",
@@ -1632,7 +1632,7 @@
       "concept_id": "T01.07.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 150?",
+      "question_text": "Which of the following is 150 divisible by?",
       "options": [
         {
           "id": "A",
@@ -1661,7 +1661,7 @@
       "concept_id": "T01.07.C03",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of 135?",
+      "question_text": "Which of the following is 135 divisible by?",
       "options": [
         {
           "id": "A",
@@ -1806,7 +1806,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the whether they are co-prime of 8 and 15?",
+      "question_text": "Are the numbers 8 and 15 co-prime?",
       "options": [
         {
           "id": "A",
@@ -1827,7 +1827,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "8 and 15 are co-prime numbers because the only common factor between them is 1. This means they have no other common factors, so they are co-prime.",
-      "explanation_incorrect": "8 and 15 are not co-prime because they do have some common factors. The common factors of 8 and 15 are 1 and 5. Since they have more than just 1 as a common factor, they are not considered co-prime numbers. Option B ('Not co-prime') is incorrect. Option C ('Cannot be determined') is incorrect. Option D ('Only if both are odd') is incorrect."
+      "explanation_incorrect": "8 and 15 are indeed co-prime because their only common factor is 1. The factors of 8 are 1, 2, 4, 8, and the factors of 15 are 1, 3, 5, 15. The only number common to both lists is 1, so they are co-prime. Option B ('Not co-prime') is incorrect. Option C ('Cannot be determined') is incorrect. Option D ('Only if both are odd') is incorrect."
     },
     {
       "question_id": "T01.07.Q088",
@@ -1835,7 +1835,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the whether they are co-prime of 12 and 18?",
+      "question_text": "Are the numbers 12 and 18 co-prime?",
       "options": [
         {
           "id": "A",
@@ -1864,7 +1864,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the whether they are co-prime of 13 and 26?",
+      "question_text": "Are the numbers 13 and 26 co-prime?",
       "options": [
         {
           "id": "A",
@@ -1893,7 +1893,7 @@
       "concept_id": "T01.07.C05",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the whether they are co-prime of 21 and 25?",
+      "question_text": "Are the numbers 21 and 25 co-prime?",
       "options": [
         {
           "id": "A",

@@ -221,8 +221,8 @@
       ],
       "type": "mcq",
       "correct_answer": "B",
-      "explanation_correct": "The word 'BOOK' has 4 distinct letters: B, O, O, K. Since a set contains only unique elements, the set B has 3 elements, so the cardinality n(B) is 3.",
-      "explanation_incorrect": "The incorrect options do not match the number of distinct letters in the word 'BOOK'. Option A has 2 letters, but the word 'BOOK' has 4 distinct letters. Option C has 4 letters, which is the total number of letters in the word, but a set only contains unique elements. Option D includes all the letters, but a set should only have distinct elements. The correct option is B, which has 3 letters, matching the 3 unique letters in the word 'BOOK'."
+      "explanation_correct": "The word 'BOOK' has 4 letters total (B, O, O, K), but since a set contains only distinct elements, B = {B, O, K}, which has 3 elements. Therefore, n(B) = 3.",
+      "explanation_incorrect": "The word 'BOOK' has 4 letters total but only 3 distinct letters: B, O, and K. Since sets do not count repeated elements, n(B) = 3. Option A (2) is too few, option C (4) counts the total letters including the repeated O, and option D (5) is too many."
     },
     {
       "question_id": "T01.04.Q008",
@@ -407,8 +407,8 @@
       "question_text": "If B = {vowels in 'EDUCATION'}, then n(B) = ___.",
       "type": "fill_blank",
       "correct_answer": "5",
-      "explanation_correct": "The word 'EDUCATION' has 5 vowels (E, U, A, T, I), so the set B containing the vowels in 'EDUCATION' has 5 elements. Therefore, the cardinality n(B) is 5.",
-      "explanation_incorrect": "The accepted answer format is a single number. The word 'EDUCATION' has 9 letters, but the set B only contains the 5 vowels (E, U, A, T, I). So the number of elements in set B, or n(B), is 5, not 9."
+      "explanation_correct": "The word 'EDUCATION' contains the vowels E, U, A, I, and O. Since sets contain only distinct elements, B = {E, U, A, I, O}, which has 5 elements. Therefore, n(B) = 5.",
+      "explanation_incorrect": "The accepted answer format is a single number. The word 'EDUCATION' has 9 letters (E, D, U, C, A, T, I, O, N), but the set B only contains the distinct vowels: E, U, A, I, and O. So n(B) = 5, not 9."
     },
     {
       "question_id": "T01.04.Q020",
@@ -462,8 +462,8 @@
       "question_text": "An empty set and a set containing zero are the same.",
       "type": "true_false",
       "correct_answer": "B",
-      "explanation_correct": "The empty set and a set with zero elements are not the same. The empty set has no elements at all, while a set with zero elements has one element - the empty set itself.",
-      "explanation_incorrect": "It may seem like an empty set and a set with zero elements are the same, but they are actually different. The empty set has no elements at all, while a set with zero elements has one element - the empty set itself. So they are not the same, even though they both represent a lack of elements."
+      "explanation_correct": "The empty set {} and the set containing zero {0} are not the same. The empty set has no elements at all (its cardinality is 0), while the set {0} has one element, which is the number zero (its cardinality is 1).",
+      "explanation_incorrect": "It may seem like the empty set and a set containing zero are the same, but they are actually different. The empty set {} has no elements at all, while {0} is a set that contains one element: the number 0. So {} has cardinality 0, but {0} has cardinality 1."
     },
     {
       "question_id": "T01.04.Q025",
@@ -518,7 +518,7 @@
       "type": "true_false",
       "correct_answer": "A",
       "explanation_correct": "Roster form and tabular form are the same method of representing sets. Both involve listing out the individual elements of the set in a list or table format.",
-      "explanation_incorrect": "Roster form and tabular form are not the same. Roster form is when you list out the individual elements of the set, like {1, 2, 3}. Tabular form is when you represent the set in a table or chart format. So roster form and tabular form are different ways of showing a set, not the same method."
+      "explanation_incorrect": "Roster form and tabular form are indeed the same method of representing a set by listing its elements within curly braces, such as {1, 2, 3}. If you chose False, note that 'tabular form' is simply another name for 'roster form' in set theory. Both refer to listing the elements of a set explicitly."
     },
     {
       "question_id": "T01.04.Q030",
@@ -594,8 +594,8 @@
         "{days in a week}",
         "{single digit numbers}"
       ],
-      "explanation_correct": "The sets are arranged in increasing order of their cardinality (number of elements) as follows: {letters in 'MATH'} has 4 elements, {factors of 10} has 4 elements, {days in a week} has 7 elements, and {single digit numbers} has 10 elements.",
-      "explanation_incorrect": "The incorrect order would be to arrange the sets from smallest to largest based on the number of elements in each set. However, this is not correct because {single digit numbers} has 10 elements, which is more than the 7 elements in {days in a week} and the 4 elements in {factors of 10} and {letters in 'MATH'}. The correct order is to arrange the sets from smallest to largest cardinality."
+      "explanation_correct": "The sets are arranged in increasing order of their cardinality (number of elements): {letters in 'MATH'} = {M, A, T, H} has 4 elements, {factors of 10} = {1, 2, 5, 10} has 4 elements (tied with MATH, so either order is acceptable), {days in a week} has 7 elements, and {single digit numbers} = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} has 10 elements.",
+      "explanation_incorrect": "To arrange in increasing cardinality: {letters in 'MATH'} has 4 elements, {factors of 10} has 4 elements (these two are tied), {days in a week} has 7 elements, and {single digit numbers} has 10 elements. The first two sets both have 4 elements, so they may appear in either order."
     },
     {
       "question_id": "T01.04.Q044",
@@ -757,7 +757,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the description of Roster form?",
+      "question_text": "Which of the following best describes roster form?",
       "options": [
         {
           "id": "A",
@@ -786,7 +786,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the description of Set-builder form?",
+      "question_text": "Which of the following best describes set-builder form?",
       "options": [
         {
           "id": "A",
@@ -815,7 +815,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the description of Curly braces?",
+      "question_text": "What do curly braces { } represent in set notation?",
       "options": [
         {
           "id": "A",
@@ -844,7 +844,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the description of Capital letters?",
+      "question_text": "What is the role of capital letters in set notation?",
       "options": [
         {
           "id": "A",
@@ -1155,7 +1155,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The factors of 12 are 1, 2, 3, 4, 6, and 12. This means the roster form (or list) of the set {x | x is a factor of 12} is {1, 2, 3, 4, 6, 12}. Option B shows this list, so it is the correct answer.",
-      "explanation_incorrect": "Option A lists the 5 vowels, which are not the factors of 12. Option C lists the prime numbers between 1 and 10, which are not the factors of 12. Option D lists 3 months, which are not the factors of 12. Therefore, none of these options correctly represent the roster form of the set {x | x is a factor of 12}."
+      "explanation_incorrect": "Option A lists the 5 vowels, which are not the factors of 12. Option C lists the odd numbers from 1 to 9, which are not the factors of 12. Option D lists 3 months, which are not the factors of 12. The correct roster form of {x | x is a factor of 12} is {1, 2, 3, 4, 6, 12}."
     },
     {
       "question_id": "T01.04.Q065",
@@ -1213,7 +1213,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The roster form of a set represents the elements of the set by listing them. Since the question asks for the set of months starting with J, the correct answer is {January, June, July}.",
-      "explanation_incorrect": "The other options are not the roster form of the set of months starting with J. Option A lists the months with odd numbers, option C lists the vowels, and option D lists the months of the year. The correct answer is the set of months that start with the letter J, which are January, June, and July."
+      "explanation_incorrect": "The other options are not the roster form of the set of months starting with J. Option A lists odd numbers, option C lists the vowels, and option D lists the factors of 12. The correct answer is the set of months that start with the letter J, which are January, June, and July."
     },
     {
       "question_id": "T01.04.Q067",
@@ -1221,7 +1221,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the meaning of Finite set?",
+      "question_text": "What does the term 'finite set' mean?",
       "options": [
         {
           "id": "A",
@@ -1250,7 +1250,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the meaning of Infinite set?",
+      "question_text": "What does the term 'infinite set' mean?",
       "options": [
         {
           "id": "A",
@@ -1279,7 +1279,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the meaning of Empty set?",
+      "question_text": "What does the term 'empty set' mean?",
       "options": [
         {
           "id": "A",
@@ -1308,7 +1308,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the meaning of Well-defined?",
+      "question_text": "What does it mean for a set to be 'well-defined'?",
       "options": [
         {
           "id": "A",
@@ -1453,7 +1453,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it forms a well-defined collection of Digits in your phone number?",
+      "question_text": "Does the collection of digits in your phone number form a well-defined set?",
       "options": [
         {
           "id": "A",
@@ -1474,7 +1474,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "Your phone number forms a well-defined set of digits because it is a specific collection of numbers that uniquely identifies you. Each digit in your phone number is distinct and can be counted, so it meets the definition of a set.",
-      "explanation_incorrect": "Your phone number does not form a well-defined set of digits because it is not a fixed collection of distinct objects. The digits in your phone number can change over time, and the order of the digits is also important, so it does not fit the definition of a set. Option B ('Not well-defined') is incorrect. Option C ('Partially well-defined') is incorrect. Option D ('Depends on context') is incorrect."
+      "explanation_incorrect": "The digits in your phone number form a well-defined set because each digit is a specific number (0-9) and it is clear exactly which digits appear in the number. Even though a phone number has a specific order, the set of distinct digits used in it is well-defined. Option B ('Not well-defined') is incorrect. Option C ('Partially well-defined') is incorrect. Option D ('Depends on context') is incorrect."
     },
     {
       "question_id": "T01.04.Q076",
@@ -1482,7 +1482,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it forms a well-defined collection of Intelligent students?",
+      "question_text": "Does the collection of intelligent students in your class form a well-defined set?",
       "options": [
         {
           "id": "A",
@@ -1511,7 +1511,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it forms a well-defined collection of Prime numbers less than 20?",
+      "question_text": "Does the collection of prime numbers less than 20 form a well-defined set?",
       "options": [
         {
           "id": "A",
@@ -1540,7 +1540,7 @@
       "concept_id": "T01.04.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it forms a well-defined collection of Difficult problems?",
+      "question_text": "Does the collection of difficult problems form a well-defined set?",
       "options": [
         {
           "id": "A",
@@ -1569,7 +1569,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the an example of Finite set?",
+      "question_text": "Which of the following is an example of a finite set?",
       "options": [
         {
           "id": "A",
@@ -1598,7 +1598,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the an example of Infinite set?",
+      "question_text": "Which of the following is an example of an infinite set?",
       "options": [
         {
           "id": "A",
@@ -1627,7 +1627,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the an example of Empty set?",
+      "question_text": "Which of the following is an example of an empty set?",
       "options": [
         {
           "id": "A",
@@ -1656,7 +1656,7 @@
       "concept_id": "T01.04.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the an example of Singleton set?",
+      "question_text": "Which of the following is an example of a singleton set?",
       "options": [
         {
           "id": "A",
@@ -1677,7 +1677,7 @@
       ],
       "correct_answer": "C",
       "explanation_correct": "A singleton set is a set with only one element. The number zero is an example of a singleton set, as it is a single, distinct object.",
-      "explanation_incorrect": "The option 'the number zero' is the correct answer because a singleton set is a set with only one element. The other options do not represent singleton sets - 'people living on Mars' and 'even numbers' are examples of infinite sets, while 'continents on Earth' is an example of a finite set with more than one element."
+      "explanation_incorrect": "The option 'the number zero' is the correct answer because a singleton set is a set with only one element. The other options do not represent singleton sets: {people living on Mars} is an empty set (no elements), {even numbers} is an infinite set, and {continents on Earth} is a finite set with 7 elements."
     },
     {
       "question_id": "T01.04.Q083",
@@ -1743,7 +1743,7 @@
       "concept_id": "T01.04.C03",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the cardinality of {multiples of 5 between 10 and 30}?",
+      "question_text": "What is the cardinality of {multiples of 5 from 11 to 30}?",
       "options": [
         {
           "id": "A",
@@ -1763,8 +1763,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The set {multiples of 5 between 10 and 30} has 4 elements: 15, 20, 25, and 30. This is because the multiples of 5 that fall between 10 and 30 are 15, 20, 25, and 30. The cardinality, or number of elements, in this set is 4.",
-      "explanation_incorrect": "Option C) 3 is incorrect because the multiples of 5 between 10 and 30 are 15, 20, 25, and 30. There are 4 elements in this set, not 3. Option B) 2 is incorrect because there are more than 2 multiples of 5 between 10 and 30. Option D ('5') is incorrect."
+      "explanation_correct": "The multiples of 5 from 11 to 30 are 15, 20, 25, and 30. This gives us 4 elements, so the cardinality is 4.",
+      "explanation_incorrect": "The multiples of 5 from 11 to 30 are 15, 20, 25, and 30 (we exclude 10 since we start from 11). There are 4 such multiples, not 2, 3, or 5."
     },
     {
       "question_id": "T01.04.Q086",

@@ -254,7 +254,7 @@
       "question_id": "T03.05.Q011",
       "question_text": "Using logarithm laws, log(5) + log(2) equals:",
       "explanation_correct": "The correct answer is B) log(10). This is because the logarithm laws state that log(a) + log(b) = log(ab). So, log(5) + log(2) = log(5 × 2) = log(10).",
-      "explanation_incorrect": "The incorrect answers are not correct because they do not follow the logarithm laws. A) log(7) is incorrect because 5 + 2 does not equal 7. C) log(3) is incorrect because 5 + 2 does not equal 3. D) log(25) is incorrect because 5 + 2 does not equal 25."
+      "explanation_incorrect": "The incorrect answers do not follow the logarithm product rule. A) log(7) is wrong because the rule is log(a) + log(b) = log(a × b), not log(a + b). So log(5) + log(2) = log(5 × 2) = log(10), not log(5 + 2) = log(7). C) log(3) and D) log(25) are also incorrect for the same reason."
     },
     {
       "type": "mcq",
@@ -293,7 +293,7 @@
       "correct_answer": "4",
       "question_id": "T03.05.Q013",
       "question_text": "log(8) - log(2) = log(___)",
-      "explanation_correct": "The correct answer is 4 because log(8) = 3 and log(2) = 1. Subtracting these gives log(8) - log(2) = 3 - 1 = 2, which is the logarithm of the number 4.",
+      "explanation_correct": "The correct answer is 4. Using the quotient rule for logarithms: log(8) - log(2) = log(8/2) = log(4). So the blank should be filled with 4.",
       "explanation_incorrect": "The accepted answer format is a single number. Subtracting logarithms is the same as dividing the corresponding numbers. So log(8) - log(2) means 8 divided by 2, which equals 4. Therefore, the correct answer is 4."
     },
     {
@@ -685,9 +685,9 @@
       ],
       "correct_answer": "A",
       "question_id": "T03.05.Q034",
-      "question_text": "Evaluate: [(2^3)^2 × 2^(-4)]/2^6",
-      "explanation_correct": "The correct answer is A) 1/4. When we evaluate the expression, we first simplify the exponents. (2^3)^2 = 2^(3*2) = 2^6. Then, we multiply with 2^(-4), which is the same as 1/2^4. So the final result is (2^6 * 1/2^4) / 2^6 = 1/4.",
-      "explanation_incorrect": "The incorrect options B) 1, C) 4, and D) 16 are wrong because they do not correctly apply the laws of indices. Option B) 1 does not account for the negative exponent, option C) 4 does not simplify the exponents properly, and option D) 16 incorrectly calculates the overall expression."
+      "question_text": "Evaluate: [(2^3)^2 × 2^(-4)]/2^4",
+      "explanation_correct": "The correct answer is A) 1/4. Numerator: (2^3)^2 = 2^6. Then 2^6 × 2^(-4) = 2^(6-4) = 2^2. Denominator: 2^4. So the result is 2^2 / 2^4 = 2^(2-4) = 2^(-2) = 1/4.",
+      "explanation_incorrect": "The incorrect options B) 1, C) 4, and D) 16 are wrong because they do not correctly apply the laws of indices. The numerator simplifies to 2^2 = 4, and dividing by 2^4 = 16 gives 4/16 = 1/4. Option B) 1 does not account for the division, option C) 4 only computes the numerator, and option D) 16 only computes the denominator."
     },
     {
       "type": "mcq",
@@ -715,8 +715,8 @@
       "correct_answer": "A",
       "question_id": "T03.05.Q036",
       "question_text": "Simplify and express with positive exponents: (x^(-3) × x^5)/(x^(-1) × x^4)",
-      "explanation_correct": "The correct answer is 'x^2'. When simplifying expressions with exponents, we can use the laws of indices. In this case, the numerator has x raised to the power of 5, and the denominator has x raised to the power of -1. By applying the rule that x^a / x^b = x^(a-b), we get x^(5-(-1)) = x^2.",
-      "explanation_incorrect": "The incorrect answer would be 'x^1'. This is because someone may think that when dividing x^(-3) by x^(-1), the exponents simply cancel out, leaving x^(5-4) = x^1. However, this is not correct. The proper way to simplify the expression is to apply the law of indices, which results in x^2 as the final answer."
+      "explanation_correct": "The correct answer is A) x^(-1). Numerator: x^(-3) × x^5 = x^(-3+5) = x^2. Denominator: x^(-1) × x^4 = x^(-1+4) = x^3. Dividing: x^2 / x^3 = x^(2-3) = x^(-1). Note that x^(-1) = 1/x, so options A and B represent the same value.",
+      "explanation_incorrect": "The incorrect answers are C) x and D) x^2. The numerator simplifies to x^2 and the denominator to x^3. Dividing gives x^(2-3) = x^(-1), not x or x^2. A common mistake is to forget to combine exponents in the denominator before dividing."
     },
     {
       "type": "mcq",
@@ -773,8 +773,8 @@
       "correct_answer": "B",
       "question_id": "T03.05.Q038",
       "question_text": "Find the value of x if 9^(x+1) = 27^(x-1)",
-      "explanation_correct": "To solve this, we can use the rule of indices: a^x * a^y = a^(x+y). Applying this, we get 9^(x+1) = 27^(x-1). Simplifying, we get x+1 = (x-1)*3, which gives x = 2.",
-      "explanation_incorrect": "The correct answer is B. This is because the given equation 9^(x+1) = 27^(x-1) can be simplified using the rule of indices. Specifically, we can rewrite 27^(x-1) as (3^3)^(x-1), which is equal to 3^(3x-3). Then, we can set the exponents equal to each other: x+1 = 3x-3, which gives x = 2."
+      "explanation_correct": "Rewrite both sides with base 3: 9 = 3^2 and 27 = 3^3. So (3^2)^(x+1) = (3^3)^(x-1), giving 3^(2x+2) = 3^(3x-3). Setting exponents equal: 2x + 2 = 3x - 3, so x = 5.",
+      "explanation_incorrect": "The correct answer is B (x = 5). Rewriting: 9 = 3^2 and 27 = 3^3. So 3^(2(x+1)) = 3^(3(x-1)), which gives 2x + 2 = 3x - 3. Solving: x = 5. Common mistakes include incorrectly simplifying the exponents or not rewriting both bases as powers of 3."
     },
     {
       "type": "mcq",
@@ -802,8 +802,8 @@
       "correct_answer": "A",
       "question_id": "T03.05.Q039",
       "question_text": "If log₁₀(x) + log₁₀(x - 3) = 1, find the value of x.",
-      "explanation_correct": "The correct answer is x = 4. This is because if log₁₀(x) + log₁₀(x - 3) = 1, then we can rewrite this as log₁₀(x) + log₁₀(x - 3) = log₁₀(10). This means that x and x - 3 must be numbers whose product is 10, and the only way this is true is if x = 4.",
-      "explanation_incorrect": "The accepted answer format is A. However, the incorrect explanation would be to try to solve the equation log₁₀(x) + log₁₀(x - 3) = 1 directly. This would involve taking the log of both sides, which would not lead to the correct solution of x = 4. The key step is recognizing that the sum of the logs is equal to the log of the product, which then allows us to solve for x."
+      "explanation_correct": "Using the product rule: log₁₀(x) + log₁₀(x - 3) = log₁₀(x(x - 3)) = 1. So x(x - 3) = 10. This gives x² - 3x - 10 = 0, which factors as (x - 5)(x + 2) = 0. Since x must be greater than 3 (for both logarithms to be defined), x = 5.",
+      "explanation_incorrect": "The correct answer is A (x = 5). Using the product rule for logarithms: log₁₀(x(x-3)) = 1, so x(x-3) = 10. Solving x² - 3x - 10 = 0 gives x = 5 or x = -2. Since x must be positive and greater than 3, x = 5 is the only valid solution."
     },
     {
       "type": "mcq",
@@ -933,8 +933,8 @@
       "correct_answer": "C",
       "question_id": "T03.05.Q046",
       "question_text": "If a^(2/3) = 16, find the value of a.",
-      "explanation_correct": "To find the value of a, we can use the given equation a^(2/3) = 16. Since the exponent is 2/3, we can take the cube root of both sides to get a = 2. This is because 2^(2/3) = 16.",
-      "explanation_incorrect": "The accepted answer format is a single letter C. The incorrect explanation would be: If a^(2/3) = 16, then a must be 4. This is because 4^(2/3) = 16. However, this is not correct - the actual value of a is 2, as taking the cube root of both sides of the equation gives us a = 2."
+      "explanation_correct": "To find a, raise both sides to the power 3/2: a = 16^(3/2). First, 16^(1/2) = 4 (square root of 16). Then 4^3 = 64. So a = 64. Verification: 64^(2/3) = (64^(1/3))^2 = 4^2 = 16.",
+      "explanation_incorrect": "The correct answer is C (64). To solve a^(2/3) = 16, raise both sides to the power 3/2: a = 16^(3/2) = (√16)^3 = 4^3 = 64. A common mistake is to take the cube root instead of applying the reciprocal exponent correctly."
     },
     {
       "type": "fill_blank",
@@ -1053,7 +1053,7 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The simplified form of (3^2)^3 is 3^6. This is because the exponents are multiplied. First, 3^2 = 9, and then (9)^3 = 27^3 = 3^6.",
+      "explanation_correct": "The simplified form of (3^2)^3 is 3^6. When raising a power to another power, multiply the exponents: (3^2)^3 = 3^(2×3) = 3^6 = 729.",
       "explanation_incorrect": "Option A is incorrect because 2^5 is not the simplified form of (3^2)^3. Option B is incorrect because 5^2 is not the simplified form either. Option D is incorrect because 1 is not the simplified form. The correct simplified form is 3^6, as the exponents are multiplied when raising a power to a power."
     },
     {
@@ -1140,7 +1140,7 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The simplified form of log(20) + log(5) is log(100), because log(20) = log(4) + log(5) = 2 + 1 = 3, and log(5) = 1. Therefore, the sum log(20) + log(5) is equal to 3 + 1 = 4, which simplifies to log(100).",
+      "explanation_correct": "Using the product rule for logarithms: log(20) + log(5) = log(20 × 5) = log(100). Since 20 × 5 = 100, the simplified form is log(100), which equals 2.",
       "explanation_incorrect": "The incorrect options do not represent the simplified form of log(20) + log(5). Option A, log(10), is incorrect because log(20) + log(5) is not equal to log(10). Option C, log(8), is incorrect because it does not represent the sum of the logarithms. Option D, 3, is incorrect because the simplified form should be a logarithm, not a numerical value."
     },
     {

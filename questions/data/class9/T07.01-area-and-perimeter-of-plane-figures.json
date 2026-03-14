@@ -475,8 +475,8 @@
       "correct_answer": "86",
       "question_id": "T07.01.Q023",
       "question_text": "A sector of radius 21 cm has a central angle of 120°. Its perimeter is _____ cm. (Take π = 22/7)",
-      "explanation_correct": "The perimeter of the sector is the sum of the arc length and the lengths of the two radii. The arc length is (120°/360°) × 2π × 21 = 42 cm, and the length of each radius is 21 cm. So the total perimeter is 42 + 21 + 21 = 84 cm.",
-      "explanation_incorrect": "The incorrect answer is 86 cm. The correct way to calculate the perimeter is to first find the arc length, which is (120°/360°) × 2π × 21 = 42 cm. Then, add the lengths of the two radii, which are each 21 cm. So the total perimeter is 42 + 21 + 21 = 84 cm, not 86 cm."
+      "explanation_correct": "The perimeter of a sector is the sum of the arc length and the two radii. Arc length = (120/360) × 2 × (22/7) × 21 = (1/3) × 2 × 22 × 3 = (1/3) × 132 = 44 cm. Adding the two radii: Perimeter = 44 + 21 + 21 = 86 cm.",
+      "explanation_incorrect": "To find the perimeter of a sector, calculate the arc length using (θ/360) × 2πr, then add the two radii. Arc = (120/360) × 2 × (22/7) × 21 = 44 cm. Perimeter = 44 + 21 + 21 = 86 cm. A common mistake is to compute the arc length incorrectly as 42 cm."
     },
     {
       "concept_id": "T07.01.C04",
@@ -709,14 +709,14 @@
         },
         {
           "id": "D",
-          "text": "192 m²"
+          "text": "196 m²"
         }
       ],
-      "correct_answer": "A",
+      "correct_answer": "D",
       "question_id": "T07.01.Q036",
       "question_text": "A field is in the shape of a trapezium whose parallel sides are 25 m and 10 m. The non-parallel sides are 14 m and 13 m. Find its area.",
-      "explanation_correct": "The correct answer is A) 210 m². To find the area of a trapezium, we use the formula: Area = (1/2) × (sum of parallel sides) × height. In this case, the parallel sides are 25 m and 10 m, and the height is 14 m. Plugging these values into the formula gives us (1/2) × (25 m + 10 m) × 14 m = 210 m².",
-      "explanation_incorrect": "The incorrect options are not correct because they do not use the correct formula for the area of a trapezium. The formula is (1/2) × (sum of parallel sides) × height, not just the product of the parallel sides or the non-parallel sides. By applying the correct formula, we get the area of 210 m²."
+      "explanation_correct": "The correct answer is D) 196 m². To find the height, consider the triangle formed by the non-parallel sides and the difference of the parallel sides: sides 13, 14, and 15 (= 25 - 10). Using Heron's formula: s = (13+14+15)/2 = 21. Area of triangle = sqrt(21 × 8 × 7 × 6) = sqrt(7056) = 84 m². Height h = 2 × 84 / 15 = 11.2 m. Trapezium area = (1/2) × (25 + 10) × 11.2 = 17.5 × 11.2 = 196 m².",
+      "explanation_incorrect": "The other options are incorrect because they do not correctly compute the height of the trapezium. The height must be found using the triangle formed by the non-parallel sides (13 and 14) and the difference of parallel sides (15). Using Heron's formula on this triangle gives area = 84, so h = 2 × 84/15 = 11.2 m. Then area = (1/2)(25+10)(11.2) = 196 m²."
     },
     {
       "concept_id": "T07.01.C05",
@@ -845,26 +845,26 @@
       "options": [
         {
           "id": "A",
-          "text": "1540 m²"
+          "text": "1386 m²"
         },
         {
           "id": "B",
-          "text": "1848 m²"
+          "text": "1540 m²"
         },
         {
           "id": "C",
-          "text": "308 m²"
+          "text": "1848 m²"
         },
         {
           "id": "D",
           "text": "2156 m²"
         }
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "question_id": "T07.01.Q047",
       "question_text": "A circular plot of radius 35 m has a path of uniform width 7 m running around it inside. Find the area of the path. (Take π = 22/7)",
-      "explanation_correct": "The correct answer is option B) 1848 m². The circular plot has a radius of 35 m, and the path around it has a uniform width of 7 m. To find the area of the path, we need to calculate the difference between the area of the larger circle (with radius 35 + 7 = 42 m) and the area of the smaller circle (with radius 35 m). Using the formula for the area of a circle, A = πr², we get the area of the path as π(42²) - π(35²) = 1848 m².",
-      "explanation_incorrect": "The incorrect options are not correct because they do not accurately calculate the area of the path. Option A) 1540 m² is too low, as it does not account for the full width of the path. Option C) 308 m² is too low, as it only considers the difference in the radii without considering the full width of the path. Option D) 2156 m² is too high, as it likely includes the area of the entire circular plot instead of just the path."
+      "explanation_correct": "The correct answer is A) 1386 m². Since the path runs inside the circular plot, the outer radius is 35 m and the inner radius is 35 - 7 = 28 m. Area of path = π(R² - r²) = (22/7)(35² - 28²) = (22/7)(1225 - 784) = (22/7)(441) = 22 × 63 = 1386 m².",
+      "explanation_incorrect": "The incorrect options do not correctly calculate the area of the path running inside the plot. Since the path is inside, the outer radius is 35 m and the inner radius is 28 m. Area = (22/7)(35² - 28²) = (22/7)(441) = 1386 m². A common mistake is computing with the path outside (radius 42), but the question specifies the path is inside."
     },
     {
       "concept_id": "T07.01.C04",

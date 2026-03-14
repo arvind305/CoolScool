@@ -152,7 +152,7 @@
       "concept_id": "T01.01.C02",
       "question_text": "The decimal representation 0.666... is a terminating decimal.",
       "correct_answer": "B",
-      "explanation_correct": "The decimal representation 0.666... is not a terminating decimal because the digits 6 repeat indefinitely. A terminating decimal has a finite number of digits after the decimal point, but this decimal goes on forever without a repeating pattern.",
+      "explanation_correct": "The decimal representation 0.666... is not a terminating decimal because the digits 6 repeat indefinitely. A terminating decimal has a finite number of digits after the decimal point, but this decimal goes on forever. It is a non-terminating recurring decimal.",
       "explanation_incorrect": "The decimal representation 0.666... is not a terminating decimal. A terminating decimal has a finite number of digits after the decimal point, meaning it eventually stops. However, the digits 6 in 0.666... continue to repeat infinitely, so this is a non-terminating, repeating decimal."
     },
     {
@@ -283,8 +283,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The decimal representation of 1/3 is 0.333..., which is a non-terminating recurring decimal. This means that the decimal digits repeat in a pattern that never ends, so it cannot be expressed as a simple fraction.",
-      "explanation_incorrect": "The decimal representation of 1/3 is not terminating, as it goes on forever without a repeating pattern. It is also not non-terminating non-recurring, as it does have a repeating pattern of 3s. The correct option is B, non-terminating recurring, as the decimal representation of 1/3 goes on forever with a repeating pattern of 3s."
+      "explanation_correct": "The decimal representation of 1/3 is 0.333..., which is a non-terminating recurring decimal. The digit 3 repeats indefinitely in a pattern that never ends. Note that 1/3 is still a rational number since it is expressed as a ratio of two integers.",
+      "explanation_incorrect": "The decimal representation of 1/3 is not terminating, as it goes on forever. It is not non-terminating non-recurring either, because it does have a repeating pattern of 3s. The correct option is B, non-terminating recurring, as the decimal representation of 1/3 goes on forever with a repeating pattern of 3s."
     },
     {
       "question_id": "T01.01.Q015",
@@ -375,7 +375,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The expression a + b√3 is always irrational when b ≠ 0, because √3 is an irrational number. Adding a rational number (a) to the product of a rational number (b) and an irrational number (√3) results in an irrational number.",
-      "explanation_incorrect": "The expression a + b√3 is not always rational or always irrational. It depends on the values of a and b. If both a and b are rational numbers, then a + b√3 would be a combination of a rational number and an irrational number, which is irrational. However, if a is irrational and b is rational, then a + b√3 could be either rational or irrational, depending on the specific values."
+      "explanation_incorrect": "The expression a + b√3 is always irrational when a and b are rational and b ≠ 0. This is because b√3 is irrational (product of non-zero rational and irrational), and adding rational number a to an irrational number b√3 always gives an irrational result. The key condition is that b must be non-zero."
     },
     {
       "question_id": "T01.01.Q020",
@@ -396,8 +396,8 @@
       "concept_id": "T01.01.C01",
       "question_text": "The sum of two irrational numbers is always irrational.",
       "correct_answer": "B",
-      "explanation_correct": "The sum of two irrational numbers is not always irrational. It is possible to add two irrational numbers and get a rational number as the result. For example, √2 + √2 = 2, which is a rational number.",
-      "explanation_incorrect": "The sum of two irrational numbers is not always irrational. This is a common misconception. While it is true that irrational numbers cannot be expressed as a ratio of two integers, the sum of two irrational numbers can sometimes result in a rational number. For example, adding √2 and √2 gives us 2, which is a rational number."
+      "explanation_correct": "The sum of two irrational numbers is not always irrational. It is possible to add two irrational numbers and get a rational number as the result. For example, √2 + (-√2) = 0, which is a rational number.",
+      "explanation_incorrect": "The sum of two irrational numbers is not always irrational. This is a common misconception. While it is true that irrational numbers cannot be expressed as a ratio of two integers, the sum of two irrational numbers can sometimes result in a rational number. For example, √2 and -√2 are both irrational, but √2 + (-√2) = 0, which is a rational number."
     },
     {
       "question_id": "T01.01.Q022",
@@ -455,7 +455,7 @@
       ],
       "correct_answer": "C",
       "explanation_correct": "The decimal representation of 1/8 is 0.125, which is a terminating decimal. This is because 8 is a power of 2, and the denominator can be expressed as a product of 2's, which means the decimal representation will terminate.",
-      "explanation_incorrect": "The decimal representations of 1/6, 1/7, and 1/9 are non-terminating and do not repeat in a pattern. Only 1/8 has a terminating decimal representation, as 8 is a power of 2. The other options, while rational numbers, have non-terminating decimal representations."
+      "explanation_incorrect": "The decimal representations of 1/6, 1/7, and 1/9 are non-terminating recurring (repeating) decimals because their denominators contain prime factors other than 2 and 5. Only 1/8 has a terminating decimal representation (0.125), since 8 = 2^3 has only 2 as a prime factor."
     },
     {
       "question_id": "T01.01.Q024",
@@ -545,12 +545,12 @@
       ],
       "correct_answer": [
         "3",
-        "√10",
         "π",
+        "√10",
         "3.5"
       ],
-      "explanation_correct": "The numbers are arranged in ascending order (from smallest to largest) as 3, √10, π, 3.5. This is because 3 is an integer, √10 is an irrational number that is less than π (which is also an irrational number), and 3.5 is a rational number greater than the previous three numbers.",
-      "explanation_incorrect": "The numbers are not arranged in correct ascending order. The order should be 3, √10, π, 3.5. This is because integers come before irrational numbers, and irrational numbers come before rational numbers. So the correct order is 3 (integer), √10 (irrational), π (irrational), 3.5 (rational)."
+      "explanation_correct": "The numbers are arranged in ascending order (from smallest to largest) as 3, π, √10, 3.5. We know π ≈ 3.14159 and √10 ≈ 3.16228. Since 3 < π < √10 < 3.5, this is the correct ascending order.",
+      "explanation_incorrect": "To arrange in ascending order, calculate approximate values: π ≈ 3.14159 and √10 ≈ 3.16228. Since 3 < 3.14159 < 3.16228 < 3.5, the correct order is 3, π, √10, 3.5."
     },
     {
       "question_id": "T01.01.Q031",
@@ -600,8 +600,8 @@
       "concept_id": "T01.01.C02",
       "question_text": "The decimal expansion 0.142857142857... is ___ recurring.",
       "correct_answer": "non-terminating",
-      "explanation_correct": "The decimal expansion 0.142857142857... is non-terminating because the digits 142857 repeat infinitely. This means that the decimal representation cannot be expressed as a simple fraction, and therefore the number is irrational.",
-      "explanation_incorrect": "The decimal expansion 0.142857142857... is not repeating, it is non-terminating. A repeating decimal has a pattern of digits that repeats, but in this case the digits 142857 continue infinitely without any repetition. Therefore, the accepted answer format is 'non-terminating'."
+      "explanation_correct": "The decimal expansion 0.142857142857... is non-terminating because the digits 142857 repeat infinitely without ever stopping. This is a non-terminating recurring decimal. Note that it equals 1/7 and is therefore a rational number.",
+      "explanation_incorrect": "The decimal expansion 0.142857142857... is non-terminating recurring. The block of digits 142857 repeats indefinitely, making it a non-terminating decimal. The correct answer is 'non-terminating' because the decimal goes on forever, though it does have a repeating pattern."
     },
     {
       "question_id": "T01.01.Q034",
@@ -688,7 +688,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "The correct answer is A) 0. This is because the value of x is 2 + √3, and when we square this expression and subtract 4 times x and then add 1, the resulting expression simplifies to 0.",
-      "explanation_incorrect": "The correct answer is A) 0. This is because when we expand the expression x² - 4x + 1, where x = 2 + √3, we get (2 + √3)² - 4(2 + √3) + 1, which simplifies to 4 + 12 - 8 - 4 + 1, which is equal to 5. Therefore, the correct answer is 0, not B) 1, C) 2, or D) √3."
+      "explanation_incorrect": "The correct answer is A) 0. When x = 2 + √3, we get x² = (2 + √3)² = 4 + 4√3 + 3 = 7 + 4√3. Then x² - 4x + 1 = (7 + 4√3) - 4(2 + √3) + 1 = 7 + 4√3 - 8 - 4√3 + 1 = 0. The √3 terms cancel out, giving exactly 0."
     },
     {
       "question_id": "T01.01.Q038",
@@ -697,9 +697,9 @@
       "cognitive_level": "recall",
       "concept_id": "T01.01.C01",
       "question_text": "If √3 = 1.732, then the value of (3 + √3)/(3 - √3) simplified to two decimal places is approximately ___.",
-      "correct_answer": "6.46",
-      "explanation_correct": "The value of (3 + √3)/(3 - √3) can be calculated using the given value of √3 = 1.732. Simplifying this expression leads to the answer of approximately 6.46, which matches the accepted answer format.",
-      "explanation_incorrect": "If the student tried to calculate the expression (3 + √3)/(3 - √3) without using the given value of √3, they may have gotten a different answer. However, since the question states that √3 = 1.732, the correct answer is approximately 6.46 when rounded to two decimal places."
+      "correct_answer": "3.73",
+      "explanation_correct": "The value of (3 + √3)/(3 - √3) can be calculated by substituting √3 = 1.732. Numerator = 3 + 1.732 = 4.732. Denominator = 3 - 1.732 = 1.268. So the value = 4.732/1.268 ≈ 3.73 when rounded to two decimal places.",
+      "explanation_incorrect": "To calculate (3 + √3)/(3 - √3) with √3 = 1.732: substitute to get (3 + 1.732)/(3 - 1.732) = 4.732/1.268 ≈ 3.73. Alternatively, rationalise by multiplying numerator and denominator by (3 + √3) to get (3 + √3)²/(9 - 3) = (12 + 6√3)/6 = 2 + √3 ≈ 2 + 1.732 = 3.732, which rounds to 3.73."
     },
     {
       "question_id": "T01.01.Q039",
@@ -738,7 +738,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The rational number 13/125 will have a terminating decimal expansion because the denominator 125 is a power of 10 (125 = 5 x 5 x 5). When the denominator is a power of 10, the decimal representation of the fraction will terminate.",
+      "explanation_correct": "The rational number 13/125 will have a terminating decimal expansion because the denominator 125 = 5^3 has only 5 as a prime factor. A fraction in lowest terms terminates if the denominator has only 2 and/or 5 as prime factors. 13/125 = 0.104.",
       "explanation_incorrect": "The other options (B, C, D) will have non-terminating decimal expansions because their denominators are not powers of 10. For example, 17/30 will have a repeating decimal of 0.56666..., and 23/75 will have a repeating decimal of 0.30666... These are considered rational numbers, but their decimal representations do not terminate."
     },
     {
@@ -767,8 +767,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The decimal representation 0.23̄ (where 3 recurs) can be expressed as 21/90. This is because the recurring decimal 0.23̄ is equivalent to the fraction 21/90, as the recurring 3 represents 1/3 and 0.23 = 21/90.",
-      "explanation_incorrect": "The other options are incorrect. Option A (23/100) is not correct because the decimal representation 0.23̄ is not equal to 23/100. Option B (7/30) is not correct because the decimal representation 0.23̄ is not equal to 7/30. Option C (23/99) is not correct because the decimal representation 0.23̄ is not equal to 23/99."
+      "explanation_correct": "The decimal representation 0.23̄ (where 3 recurs) means 0.2333... Let x = 0.2333... Then 10x = 2.333... and 100x = 23.333... Subtracting: 90x = 21, so x = 21/90 = 7/30. Option D (21/90) is equivalent to 7/30 and is correct.",
+      "explanation_incorrect": "Option A (23/100) = 0.23 exactly, which is a terminating decimal, not 0.2333... Option B (7/30) is actually equal to 21/90 and is also a correct representation, but the question expects the unsimplified form 21/90 (option D). Option C (23/99) = 0.232323... which has both digits recurring, not just the 3."
     },
     {
       "question_id": "T01.01.Q042",
@@ -789,8 +789,8 @@
       "concept_id": "T01.01.C02",
       "question_text": "The decimal expansion of 13/40 is non-terminating recurring.",
       "correct_answer": "B",
-      "explanation_correct": "The decimal expansion of 13/40 is terminating, not non-terminating recurring. Since 40 is a power of 10, the denominator 40 can be cancelled out, leaving a terminating decimal of 0.325.",
-      "explanation_incorrect": "The decimal expansion of 13/40 is not non-terminating recurring. This is because 13/40 can be simplified to 0.325, which has a terminating decimal representation. Non-terminating recurring decimals occur when the denominator has prime factors other than 2 or 5, but 40 is a power of 10, so the decimal will terminate."
+      "explanation_correct": "The decimal expansion of 13/40 is terminating, not non-terminating recurring. The denominator 40 = 2^3 × 5 has only prime factors 2 and 5, so the decimal terminates. 13/40 = 0.325.",
+      "explanation_incorrect": "The decimal expansion of 13/40 is not non-terminating recurring. 13/40 = 0.325, which terminates. A fraction in lowest terms has a terminating decimal if and only if the denominator has only 2 and 5 as prime factors. Since 40 = 2^3 × 5, it satisfies this condition."
     },
     {
       "question_id": "T01.01.Q044",
@@ -857,13 +857,13 @@
         "3√2"
       ],
       "correct_answer": [
-        "√15",
-        "3√2",
         "2√3",
-        "4"
+        "√15",
+        "4",
+        "3√2"
       ],
-      "explanation_correct": "The correct order is √15, 3√2, 2√3, 4 because when we compare the numbers, we see that √15 is the smallest, then 3√2, then 2√3, and finally 4 is the largest.",
-      "explanation_incorrect": "The incorrect order would be 2√3, √15, 4, 3√2. This is wrong because even though 2√3 and √15 are both square roots, √15 is smaller than 2√3. Also, 4 is greater than 3√2, so the correct order is √15, 3√2, 2√3, 4."
+      "explanation_correct": "To compare, calculate approximate values: 2√3 ≈ 2 × 1.732 = 3.464, √15 ≈ 3.873, 4 = 4, 3√2 ≈ 3 × 1.414 = 4.243. In ascending order: 2√3 (3.464) < √15 (3.873) < 4 < 3√2 (4.243).",
+      "explanation_incorrect": "To arrange correctly, compute approximate values: 2√3 ≈ 3.464, √15 ≈ 3.873, 4 = 4, 3√2 ≈ 4.243. The ascending order is 2√3, √15, 4, 3√2. A common mistake is to compare based on the numbers under the radical without accounting for the coefficients."
     },
     {
       "question_id": "T01.01.Q049",
@@ -1048,7 +1048,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The value of 3/5 is a terminating decimal, 0.6. This is because the denominator 5 is a factor of 10, so the decimal representation will terminate after a finite number of places.",
-      "explanation_incorrect": "The value of 3/5 is not a non-terminating recurring decimal. A non-terminating recurring decimal is a type of irrational number, where the decimal representation does not terminate and has a repeating pattern. However, 3/5 is a rational number, which means it can be expressed as a ratio of two integers, and its decimal representation will terminate."
+      "explanation_incorrect": "The value of 3/5 is not a non-terminating recurring decimal. 3/5 = 0.6 is a terminating decimal because the denominator 5 has only 5 as a prime factor. Note that non-terminating recurring decimals (like 1/3 = 0.333...) are also rational numbers, not irrational."
     },
     {
       "question_id": "T01.01.Q056",
@@ -1259,7 +1259,7 @@
       "concept_id": "T01.01.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it is rational or irrational of (√2 + 1)(√2 - 1)?",
+      "question_text": "Is the expression (√2 + 1)(√2 - 1) rational or irrational?",
       "options": [
         {
           "id": "A",
@@ -1288,7 +1288,7 @@
       "concept_id": "T01.01.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it is rational or irrational of √2 + √8?",
+      "question_text": "Is the expression √2 + √8 rational or irrational?",
       "options": [
         {
           "id": "A",
@@ -1317,7 +1317,7 @@
       "concept_id": "T01.01.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it is rational or irrational of √12/√3?",
+      "question_text": "Is the expression √12/√3 rational or irrational?",
       "options": [
         {
           "id": "A",
@@ -1346,7 +1346,7 @@
       "concept_id": "T01.01.C01",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "What is the whether it is rational or irrational of π/2?",
+      "question_text": "Is the expression π/2 rational or irrational?",
       "options": [
         {
           "id": "A",

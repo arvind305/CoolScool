@@ -188,7 +188,7 @@
       "question_id": "T04.05.Q009",
       "question_text": "The proof of Pythagoras theorem can be demonstrated using geometric methods.",
       "explanation_correct": "The proof of the Pythagoras theorem can be demonstrated using geometric methods. This is because the theorem relates the lengths of the sides of a right-angled triangle, which can be shown through geometric proofs using shapes and angles.",
-      "explanation_incorrect": "The Pythagoras theorem cannot be proven using algebraic methods alone. The theorem is a geometric relationship between the sides of a right-angled triangle, so it requires a geometric proof to fully demonstrate why it is true. Algebraic manipulations alone would not be sufficient to prove the theorem."
+      "explanation_incorrect": "Some students may think the theorem can only be proven algebraically, but it can indeed be proven using geometric methods such as constructing squares on the sides of a right triangle, rearranging congruent triangles, or using similar triangles. Multiple geometric proofs exist and have been known since ancient times."
     },
     {
       "concept_id": "T04.05.C05",
@@ -279,7 +279,7 @@
       "question_id": "T04.05.Q015",
       "question_text": "If (3, 4, 5) is a Pythagorean triplet, then (6, 8, 10) is also a Pythagorean triplet.",
       "explanation_correct": "Since (3, 4, 5) is a Pythagorean triplet, it means that 3^2 + 4^2 = 5^2. Therefore, if we multiply all the sides by 2, we get (6, 8, 10), which is also a Pythagorean triplet because 6^2 + 8^2 = 10^2.",
-      "explanation_incorrect": "The incorrect explanation would be that (6, 8, 10) is not a Pythagorean triplet. This is because even though 6^2 + 8^2 = 100, 10^2 = 100, which does not satisfy the Pythagorean theorem condition that the square of the hypotenuse should be equal to the sum of the squares of the other two sides."
+      "explanation_incorrect": "Some students may think that multiplying a Pythagorean triplet by a constant does not preserve the property. However, if (a, b, c) satisfies a² + b² = c², then (ka)² + (kb)² = k²a² + k²b² = k²(a² + b²) = k²c² = (kc)². So (6, 8, 10) = 2×(3, 4, 5) is indeed a Pythagorean triplet."
     },
     {
       "concept_id": "T04.05.C05",
@@ -307,8 +307,8 @@
       "correct_answer": "A",
       "question_id": "T04.05.Q016",
       "question_text": "Two poles of heights 6 m and 11 m stand vertically on the ground. If the distance between their feet is 12 m, what is the distance between their tops?",
-      "explanation_correct": "The correct answer is A) 13 m. This can be calculated using the Pythagorean theorem. The two poles form the two shorter sides of a right-angled triangle, with the distance between their tops being the hypotenuse. Plugging in the given values of 6 m and 11 m for the shorter sides, we can calculate the length of the hypotenuse using the formula a² + b² = c², which gives us 13 m.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not match the value calculated using the Pythagorean theorem. The Pythagorean theorem states that in a right-angled triangle, the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides. By applying this formula to the given information, the correct distance between the tops of the poles is 13 m."
+      "explanation_correct": "The correct answer is A) 13 m. The difference in heights of the two poles is 11 - 6 = 5 m. The horizontal distance between the poles is 12 m. The distance between the tops forms the hypotenuse of a right triangle with legs 5 m and 12 m. Using the Pythagorean theorem: √(5² + 12²) = √(25 + 144) = √169 = 13 m.",
+      "explanation_incorrect": "The key is to find the height difference (11 - 6 = 5 m) and use it as one leg of the right triangle, with the horizontal distance (12 m) as the other leg. Then apply the Pythagorean theorem: √(5² + 12²) = √169 = 13 m."
     },
     {
       "concept_id": "T04.05.C03",
@@ -502,8 +502,8 @@
       "correct_answer": "A",
       "question_id": "T04.05.Q027",
       "question_text": "The sides of a triangle are in the ratio 3:4:5. If the perimeter is 36 cm, verify whether the triangle is right-angled. What is the length of the hypotenuse?",
-      "explanation_correct": "The sides of the triangle are in the ratio 3:4:5, which satisfies the Pythagorean relationship a^2 + b^2 = c^2. Since the perimeter is 36 cm, the length of each side can be calculated as 12 cm, 16 cm, and 20 cm. This means the triangle is right-angled, and the length of the hypotenuse is 20 cm.",
-      "explanation_incorrect": "Option B is incorrect because if the sides of the triangle are in the ratio 3:4:5, then the triangle is right-angled, and the length of the hypotenuse would be 20 cm, not 12 cm. Options C and D are also incorrect because the perimeter of the triangle with sides 3:4:5 is 36 cm, not 18 cm or 20 cm."
+      "explanation_correct": "The sides are in the ratio 3:4:5. With perimeter 36 cm: 3k + 4k + 5k = 12k = 36, so k = 3. The sides are 9 cm, 12 cm, and 15 cm. Check: 9² + 12² = 81 + 144 = 225 = 15². Since a² + b² = c², the triangle is right-angled with hypotenuse 15 cm.",
+      "explanation_incorrect": "With perimeter 36 cm and ratio 3:4:5, each side is found by dividing 36 by 12 (the sum of the ratio parts) to get k = 3. The sides are 9, 12, 15 cm (not 12, 16, 20). The hypotenuse is 15 cm, confirming the triangle is right-angled."
     },
     {
       "concept_id": "T04.05.C05",
@@ -725,9 +725,9 @@
       ],
       "correct_answer": "A",
       "question_id": "T04.05.Q038",
-      "question_text": "A tree breaks due to storm and the broken part bends so that the top touches the ground making an angle of 30° with it. The distance from the foot of the tree to the point where the top touches the ground is 8 m. If the tree was standing 10 m tall before breaking, what is the height at which it broke? (Use Pythagoras theorem considering the right triangle formed)",
-      "explanation_correct": "The correct answer is A) 6 m. Using the Pythagoras theorem, we can form a right triangle with the broken tree, the ground, and the line from the foot of the tree to the point where the top touches the ground. The distance from the foot of the tree to the point where the top touches the ground is 8 m, and the angle between the tree and the ground is 30°. Applying Pythagoras theorem, the height at which the tree broke is 6 m.",
-      "explanation_incorrect": "The incorrect answers are not correct because they do not accurately apply the Pythagoras theorem to the given information. The key step is to form a right triangle and then use the formula a^2 + b^2 = c^2 to find the height at which the tree broke. Considering the angle of 30° and the distance of 8 m, the correct height is 6 m."
+      "question_text": "A tree breaks due to storm and the broken part bends so that the top touches the ground. The distance from the foot of the tree to the point where the top touches the ground is 8 m. If the tree was standing 16 m tall before breaking, what is the height at which it broke? (Use Pythagoras theorem considering the right triangle formed)",
+      "explanation_correct": "The correct answer is A) 6 m. Let h be the height at which the tree broke. The broken part has length (16 - h) m and forms the hypotenuse of a right triangle with the standing part (h m) and the ground distance (8 m). By the Pythagorean theorem: h² + 8² = (16 - h)². So h² + 64 = 256 - 32h + h². Simplifying: 64 = 256 - 32h, giving 32h = 192, and h = 6 m.",
+      "explanation_incorrect": "The right triangle has legs h (standing height) and 8 m (ground distance), with hypotenuse (16 - h) m (broken part). Using h² + 64 = (16-h)² and solving gives h = 6 m. Other values like 4 m or 8 m do not satisfy this equation."
     },
     {
       "concept_id": "T04.05.C01",
@@ -778,7 +778,7 @@
       "question_id": "T04.05.Q042",
       "question_text": "The Pythagoras theorem can be proved using _______ method by arranging four congruent right triangles.",
       "explanation_correct": "The Pythagoras theorem can be proved using the geometric method by arranging four congruent right triangles in a special way. This arrangement shows that the square of the hypotenuse (longest side) is equal to the sum of the squares of the other two sides, which is the core of the Pythagoras theorem.",
-      "explanation_incorrect": "The Pythagoras theorem cannot be proved using an algebraic method. The theorem is best understood and proved using a geometric approach, where four congruent right-angled triangles are arranged to form a larger square. This geometric arrangement clearly demonstrates the relationship between the lengths of the sides in a right-angled triangle."
+      "explanation_incorrect": "While algebraic proofs also exist, the specific proof involving four congruent right triangles arranged inside a square is a geometric method. The correct answer is 'geometric' because this arrangement creates a visual demonstration of the relationship a² + b² = c²."
     },
     {
       "concept_id": "T04.05.C05",
@@ -1196,7 +1196,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The correct answer is B) (15, 20, 25) because these numbers are the common multiples of the Pythagorean triplet (3, 4, 5). This means that if you multiply each side of the triangle (3, 4, 5) by the same number, you will get the sides (15, 20, 25), which also satisfy the Pythagorean relationship a² + b² = c².",
-      "explanation_incorrect": "The other options are incorrect because they do not represent the common multiples of the Pythagorean triplet (3, 4, 5). Option A) (10, 24, 26) and Option C) (16, 30, 34) do not satisfy the Pythagorean relationship, and Option D) (14, 48, 50) are not common multiples of (3, 4, 5)."
+      "explanation_incorrect": "The other options are Pythagorean triplets but are NOT multiples of (3, 4, 5). Option A (10, 24, 26) = 2×(5, 12, 13). Option C (16, 30, 34) = 2×(8, 15, 17). Option D (14, 48, 50) = 2×(7, 24, 25). Only option B (15, 20, 25) = 5×(3, 4, 5)."
     },
     {
       "question_id": "T04.05.Q060",
@@ -1253,8 +1253,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The common multiples of (8, 15, 17) are the numbers that are divisible by all three of these numbers. The smallest such number is 8 × 15 × 17 = 2040, and the next common multiple is 2 × 2040 = 4080, which is (16, 30, 34). Therefore, option A is the correct answer.",
-      "explanation_incorrect": "The other options are not the common multiples of (8, 15, 17). Option B, (14, 48, 50), is not a Pythagorean triplet, as 14² + 48² ≠ 50². Option C, (15, 20, 25), is not a Pythagorean triplet either, as 15² + 20² ≠ 25². Option D, (10, 24, 26), is a Pythagorean triplet, but it is not a multiple of (8, 15, 17)."
+      "explanation_correct": "A common multiple of a Pythagorean triplet (a, b, c) is (ka, kb, kc) where k is a positive integer. For (8, 15, 17), multiplying by k = 2 gives (16, 30, 34). We can verify: 16² + 30² = 256 + 900 = 1156 = 34². Therefore, option A is correct.",
+      "explanation_incorrect": "The other options are not multiples of (8, 15, 17). Option B (14, 48, 50) = 2×(7, 24, 25). Option C (15, 20, 25) = 5×(3, 4, 5). Option D (10, 24, 26) = 2×(5, 12, 13). Only option A (16, 30, 34) = 2×(8, 15, 17)."
     },
     {
       "question_id": "T04.05.Q062",
@@ -1283,7 +1283,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "The correct answer is A) (14, 48, 50) because these are the common multiples of the original Pythagorean triplet (7, 24, 25). To find the common multiples, we simply multiply each number in the original triplet by the same factor, in this case 2.",
-      "explanation_incorrect": "The other options are incorrect because they do not represent the common multiples of the original Pythagorean triplet (7, 24, 25). Option B) (15, 20, 25) is not a Pythagorean triplet, and options C) (10, 24, 26) and D) (16, 30, 34) are not common multiples of (7, 24, 25)."
+      "explanation_incorrect": "The other options are Pythagorean triplets but are NOT multiples of (7, 24, 25). Option B (15, 20, 25) = 5×(3, 4, 5). Option C (10, 24, 26) = 2×(5, 12, 13). Option D (16, 30, 34) = 2×(8, 15, 17). Only option A (14, 48, 50) = 2×(7, 24, 25)."
     },
     {
       "question_id": "T04.05.Q063",

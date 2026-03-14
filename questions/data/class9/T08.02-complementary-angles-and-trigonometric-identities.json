@@ -247,7 +247,7 @@
       "question_id": "T08.02.Q011",
       "question_text": "tan²θ + 1 = sec²θ for all values of θ",
       "explanation_correct": "The statement 'tan²θ + 1 = sec²θ for all values of θ' is true. This is because the fundamental trigonometric identity 1 + tan²θ = sec²θ holds true for all values of the angle θ.",
-      "explanation_incorrect": "The statement 'tan²θ + 1 = sec²θ for all values of θ' is not correct. Some students may think this is true because they confuse the trigonometric identities. However, the correct identity is 1 + tan²θ = sec²θ, not tan²θ + 1 = sec²θ. The left-hand side of the incorrect statement does not match the right-hand side."
+      "explanation_incorrect": "The statement tan²θ + 1 = sec²θ is indeed true because addition is commutative, so tan²θ + 1 = 1 + tan²θ = sec²θ. If you answered False, remember that the order of addition does not change the result."
     },
     {
       "type": "fill_blank",
@@ -257,8 +257,8 @@
       "correct_answer": "5",
       "question_id": "T08.02.Q012",
       "question_text": "If cot θ = 2, then csc²θ = ___.",
-      "explanation_correct": "If cot θ = 2, then sin θ = 1/2 and cos θ = 1/√5. Using the identity csc²θ = 1/sin²θ, we can calculate csc²θ = 5.",
-      "explanation_incorrect": "If cot θ = 2, then sin θ = 1/2. However, the identity 1 + cot²θ = csc²θ does not directly give us the value of csc²θ. We need to use the fact that cot θ = cos θ/sin θ, and then substitute the values to get csc²θ = 5."
+      "explanation_correct": "If cot θ = 2, then using the identity 1 + cot²θ = csc²θ, we get csc²θ = 1 + 4 = 5.",
+      "explanation_incorrect": "The identity 1 + cot²θ = csc²θ directly gives us csc²θ = 1 + cot²θ = 1 + 2² = 1 + 4 = 5. Some students may try to find sin θ and cos θ separately, but using the identity is the most efficient approach."
     },
     {
       "type": "mcq",
@@ -298,7 +298,7 @@
       "question_id": "T08.02.Q014",
       "question_text": "csc²θ - cot²θ = 1 for all values of θ",
       "explanation_correct": "The statement 'csc²θ - cot²θ = 1 for all values of θ' is true. This is because the identity 1 + cot²θ = csc²θ can be rearranged to get csc²θ - cot²θ = 1, which is valid for all values of θ.",
-      "explanation_incorrect": "The statement 'csc²θ - cot²θ = 1 for all values of θ' is not true. Some students may think this is true because they are familiar with the trigonometric identity 1 + cot²θ = csc²θ. However, this identity cannot be directly rearranged to get the given statement. The correct identity is csc²θ - cot²θ = 1, which is valid for all values of θ."
+      "explanation_incorrect": "The statement csc²θ - cot²θ = 1 is indeed true. It follows directly from the identity 1 + cot²θ = csc²θ, which rearranges to csc²θ - cot²θ = 1. If you answered False, remember this is one of the three fundamental Pythagorean identities."
     },
     {
       "type": "fill_blank",
@@ -464,8 +464,8 @@
       "correct_answer": "B",
       "question_id": "T08.02.Q021",
       "question_text": "If csc θ = 5/3, what is the value of cot θ?",
-      "explanation_correct": "The correct answer is B) 4/3. Since csc θ = 5/3, we can use the identity cot θ = 1 / tan θ to find the value of cot θ. Substituting the given value of csc θ, we get cot θ = 1 / (5/3) = 4/3.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the identity cot θ = 1 / tan θ when csc θ = 5/3. For example, option A) 3/4 is incorrect because 3/4 is not the reciprocal of 5/3. The correct value of cot θ is 4/3."
+      "explanation_correct": "The correct answer is B) 4/3. Since csc θ = 5/3, sin θ = 3/5. Using sin²θ + cos²θ = 1, cos θ = 4/5. Therefore cot θ = cos θ / sin θ = (4/5) / (3/5) = 4/3.",
+      "explanation_incorrect": "Since csc θ = 5/3, we know sin θ = 3/5 and cos θ = 4/5 (using the Pythagorean identity). So cot θ = cos θ / sin θ = 4/3. Option A) 3/4 is the value of tan θ, not cot θ."
     },
     {
       "type": "fill_blank",
@@ -640,7 +640,7 @@
       "question_id": "T08.02.Q032",
       "question_text": "If cos 2θ = sin 3θ, where both angles are acute, then θ = ___°.",
       "explanation_correct": "The angle θ is 18° because for complementary angles, cos(2θ) = sin(90° - 2θ) = sin(3θ). This means that 2θ = 90° - 3θ, or 5θ = 90°, so θ = 18°.",
-      "explanation_incorrect": "The accepted answer format is a single number, 18. However, the incorrect answer would be 45°. This is because if cos(2θ) = sin(3θ), then 2θ = 90° - 3θ, which means θ = 45°. But this is not the correct solution, as the question states that both angles are acute, and 45° is not an acute angle."
+      "explanation_incorrect": "A common mistake is to solve the equation incorrectly. The key step is recognizing that cos(2θ) = sin(90° - 2θ). So sin(90° - 2θ) = sin(3θ), which gives 90° - 2θ = 3θ, i.e. 5θ = 90°, so θ = 18°. Some students may make algebraic errors and arrive at other values."
     },
     {
       "type": "true_false",
@@ -651,7 +651,7 @@
       "question_id": "T08.02.Q033",
       "question_text": "(1 + tan²θ)(1 + cot²θ) = sec²θ csc²θ",
       "explanation_correct": "The statement is true because the left-hand side of the equation (1 + tan²θ)(1 + cot²θ) is equal to sec²θ csc²θ, which is one of the fundamental trigonometric identities.",
-      "explanation_incorrect": "The statement is false because the left-hand side (1 + tan²θ)(1 + cot²θ) is not equal to sec²θ csc²θ. The correct identity is 1 + tan²θ = sec²θ and 1 + cot²θ = csc²θ, so the product of these two expressions does not simplify to sec²θ csc²θ."
+      "explanation_incorrect": "The statement is actually true. Since 1 + tan²θ = sec²θ and 1 + cot²θ = csc²θ, the product (1 + tan²θ)(1 + cot²θ) = sec²θ × csc²θ. If you answered False, remember that each factor equals its corresponding identity."
     },
     {
       "type": "mcq",
@@ -764,11 +764,11 @@
       "difficulty": "exam_style",
       "cognitive_level": "recall",
       "concept_id": "T08.02.C02",
-      "correct_answer": "1/11",
+      "correct_answer": "5/11",
       "question_id": "T08.02.Q042",
       "question_text": "If sin θ = 3/5 and θ is acute, find the value of (2 cos θ - sin θ)/(2 cos θ + sin θ).",
-      "explanation_correct": "Since sin θ = 3/5 and θ is acute, we can use the complementary angle identity to find cos θ = 4/5. Plugging these values into the expression (2 cos θ - sin θ)/(2 cos θ + sin θ) gives 1/11, which is the correct answer.",
-      "explanation_incorrect": "The incorrect answer would be to not use the complementary angle identity and instead directly plug in sin θ = 3/5. This would give an incorrect expression of (2 * 4/5 - 3/5)/(2 * 4/5 + 3/5), which does not simplify to 1/11. The correct answer format is a single fraction, 1/11."
+      "explanation_correct": "Since sin θ = 3/5 and θ is acute, cos θ = 4/5 (using sin²θ + cos²θ = 1). Plugging in: (2 × 4/5 - 3/5)/(2 × 4/5 + 3/5) = (8/5 - 3/5)/(8/5 + 3/5) = (5/5)/(11/5) = 5/11.",
+      "explanation_incorrect": "To solve this correctly, first find cos θ = 4/5 using the identity sin²θ + cos²θ = 1. Then substitute into the expression: (2(4/5) - 3/5)/(2(4/5) + 3/5) = 5/11. A common mistake is to confuse the numerator and denominator or to use incorrect values for sin and cos."
     },
     {
       "type": "fill_blank",

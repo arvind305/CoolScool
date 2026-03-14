@@ -384,8 +384,8 @@
       "correct_answer": "A",
       "question_id": "T04.09.Q021",
       "question_text": "If two chords of a circle are at different distances from the centre, they must have different lengths.",
-      "explanation_correct": "If two chords of a circle are at different distances from the centre, they must have different lengths. This is because the lengths of chords are directly proportional to their distances from the centre of the circle. Chords that are farther from the centre will be longer than chords closer to the centre.",
-      "explanation_incorrect": "It may seem like two chords at different distances from the centre could have the same length, but this is not the case. The length of a chord is determined by its distance from the centre of the circle. Chords that are closer to the centre will always be shorter than chords that are farther away, even if they appear to be the same length."
+      "explanation_correct": "If two chords of a circle are at different distances from the centre, they must have different lengths. Equal chords are equidistant from the centre, so chords at different distances cannot be equal. The closer a chord is to the centre, the longer it is (the diameter, which passes through the centre, is the longest chord).",
+      "explanation_incorrect": "Some students may think two chords at different distances could still have the same length. However, this contradicts the theorem that equal chords are equidistant from the centre. If two chords were equal but at different distances, it would violate this property. Therefore, chords at different distances must have different lengths."
     },
     {
       "concept_id": "T04.09.C04",
@@ -504,8 +504,8 @@
       "correct_answer": "110",
       "question_id": "T04.09.Q027",
       "question_text": "In a cyclic quadrilateral PQRS, if angle P = 85° and angle Q = 70°, then angle S = ________ degrees.",
-      "explanation_correct": "In a cyclic quadrilateral, the sum of the opposite angles is 180 degrees. Since the angle P is 85 degrees and the angle Q is 70 degrees, the sum of these two angles is 155 degrees. Therefore, the angle S must be 180 - 155 = 110 degrees.",
-      "explanation_incorrect": "The correct answer is 110 degrees. The question states that in a cyclic quadrilateral PQRS, the angle P is 85 degrees and the angle Q is 70 degrees. To find the angle S, we need to use the property that in a cyclic quadrilateral, the sum of the opposite angles is 180 degrees. So, we can add the given angles P and Q, which is 85 + 70 = 155 degrees, and then subtract this from 180 degrees to get the angle S, which is 180 - 155 = 110 degrees."
+      "explanation_correct": "In a cyclic quadrilateral PQRS, opposite angles are supplementary (sum to 180°). Since Q and S are opposite angles, angle Q + angle S = 180°. Therefore, angle S = 180° - 70° = 110°.",
+      "explanation_incorrect": "A common mistake is to confuse which angles are opposite. In cyclic quadrilateral PQRS, the opposite pairs are (P, R) and (Q, S). Since we need angle S, and S is opposite to Q, we use: angle S = 180° - angle Q = 180° - 70° = 110°. Note that angle P is not opposite to S."
     },
     {
       "concept_id": "T04.09.C02",
@@ -686,8 +686,8 @@
       "correct_answer": "C",
       "question_id": "T04.09.Q037",
       "question_text": "AB is a diameter of a circle with centre O. C and D are points on the circle such that angle CAD = 35°. Find angle CBD.",
-      "explanation_correct": "The correct answer is C) 55°. Since AB is a diameter, angle CAD is an angle in a semicircle, which is 90°. Therefore, angle CBD is half of angle CAD, which is 35°. So, angle CBD is 55°.",
-      "explanation_incorrect": "The incorrect options are not correct. Option A) 35° is the angle CAD, not angle CBD. Option B) 45° is incorrect because angle CBD is not equal to angle CAD. Option D) 70° is incorrect because angle CBD is half of angle CAD, which is 35°."
+      "explanation_correct": "Since AB is a diameter, angle ACB = 90° (angle in a semicircle). Given angle CAD = 35°, and since angles CAD and CBD subtend the same arc CD from the same side, angle CBD would relate to angle CAD. However, in this configuration with AB as diameter, angle ADB = 90° (angle in semicircle). In triangle ABD, angle DAB = 35° so angle ABD = angle CBD = 90° - 35° = 55°.",
+      "explanation_incorrect": "Option A (35°) is the given angle CAD, not angle CBD. Since AB is a diameter, angles in the semicircle are 90°, and using the angle relationships in the resulting triangles, angle CBD = 55°, not 35°, 45°, or 70°."
     },
     {
       "concept_id": "T04.09.C06",
@@ -712,11 +712,11 @@
           "text": "60°"
         }
       ],
-      "correct_answer": "D",
+      "correct_answer": "C",
       "question_id": "T04.09.Q038",
-      "question_text": "ABCD is a cyclic quadrilateral in which angle DAC = 35°, angle ABC = 80°, and angle CAB = 40°. Find angle ACD.",
-      "explanation_correct": "The correct answer is D) 60°. In a cyclic quadrilateral, the sum of the opposite angles is 180°. Since the angles DAC, ABC, and CAB are given, we can find the angle ACD by subtracting the sum of these angles from 180°: 180° - (35° + 80° + 40°) = 25°.",
-      "explanation_incorrect": "The incorrect answers do not consider the key property of cyclic quadrilaterals, where the sum of the opposite angles is 180°. The question provides three of the angles in the cyclic quadrilateral ABCD, so we can use this property to find the fourth angle ACD by subtracting the sum of the given angles from 180°."
+      "question_text": "ABCD is a cyclic quadrilateral in which angle DAC = 35°, angle ABC = 75°, and angle CAB = 40°. Find angle ACD.",
+      "explanation_correct": "In a cyclic quadrilateral, angles subtended by the same arc in the same segment are equal. Angle DAC = 35° subtends arc DC, so angle DBC = 35° (same arc, same segment). Since angle ABC = 75° = angle ABD + angle DBC, we get angle ABD = 75° - 35° = 40°. Now angle ABD and angle ACD both subtend arc AD from the same segment, so angle ACD = angle ABD = 40°.",
+      "explanation_incorrect": "The answer is not found by simply subtracting angles from 180°. Instead, we use the property that angles in the same segment subtending the same arc are equal. Through this property, angle DBC = angle DAC = 35°, then angle ABD = 75° - 35° = 40°, and finally angle ACD = angle ABD = 40°."
     },
     {
       "concept_id": "T04.09.C02",
@@ -763,11 +763,11 @@
           "text": "No such value exists"
         }
       ],
-      "correct_answer": "D",
+      "correct_answer": "C",
       "question_id": "T04.09.Q041",
       "question_text": "An arc subtends an angle of x° at the centre and (x - 30)° at the circumference of a circle. Find x.",
-      "explanation_correct": "There is no value of x that satisfies the given condition. The angle subtended by an arc at the centre is always twice the angle subtended by the same arc at any point on the circumference. Therefore, the angle subtended at the centre cannot be 'x°' while the angle subtended at the circumference is '(x - 30)°'.",
-      "explanation_incorrect": "The correct option is D. The angle subtended by an arc at the centre is always twice the angle subtended by the same arc at any point on the circumference. So if the arc subtends an angle of x° at the centre, it must subtend an angle of x/2° at the circumference. However, the question states that the arc subtends an angle of (x - 30)° at the circumference, which is not possible. Therefore, no such value of x exists that satisfies the given condition."
+      "explanation_correct": "The angle subtended by an arc at the centre is always twice the angle subtended by the same arc at any point on the circumference. So x = 2(x - 30). Solving: x = 2x - 60, which gives x = 60°.",
+      "explanation_incorrect": "A common mistake is to think that no solution exists. However, using the property that the central angle equals twice the inscribed angle: x = 2(x - 30) = 2x - 60. Rearranging: -x = -60, so x = 60°. We can verify: 60° at centre and 30° at circumference, and indeed 60 = 2 × 30."
     },
     {
       "concept_id": "T04.09.C05",
@@ -807,7 +807,7 @@
       "question_id": "T04.09.Q043",
       "question_text": "PQRS is a cyclic quadrilateral. The sides PQ and SR are produced to meet at T. If angle Q = 70° and angle QTR = 40°, find angle S.",
       "explanation_correct": "The correct answer is C) 110°. Since PQRS is a cyclic quadrilateral, the opposite angles are supplementary, meaning they add up to 180°. Since angle Q is 70°, angle S must be 110° (180° - 70°).",
-      "explanation_incorrect": "The incorrect answer is B) 100°. This is incorrect because in a cyclic quadrilateral, the opposite angles are supplementary and add up to 180°. Since angle Q is 70°, and angle QTR is 40°, the angle S must be the remaining angle, which is 110° (180° - 70° - 40°)."
+      "explanation_incorrect": "The incorrect answer might be obtained by using angle QTR in the calculation. However, in a cyclic quadrilateral, opposite angles are supplementary. Since Q and S are opposite angles, angle S = 180° - angle Q = 180° - 70° = 110°. The angle QTR = 40° is extra information that confirms the configuration but is not needed to find angle S."
     },
     {
       "concept_id": "T04.09.C02",
@@ -828,8 +828,8 @@
       "correct_answer": "B",
       "question_id": "T04.09.Q045",
       "question_text": "In a circle, among all chords, the diameter is at the maximum distance from the centre.",
-      "explanation_correct": "The diameter of a circle is not at the maximum distance from the centre. All points on the circle are equidistant from the centre, so all chords (including the diameter) are at the same distance from the centre.",
-      "explanation_incorrect": "The statement is false because the diameter of a circle is not at the maximum distance from the centre. The diameter is the longest chord of the circle, but all chords are equidistant from the centre. This means that the diameter is not the farthest chord from the centre, as all chords are at the same distance from the centre."
+      "explanation_correct": "The statement is false. The diameter passes through the centre, so its distance from the centre is 0 - making it the chord at the MINIMUM distance from the centre, not the maximum. Shorter chords are farther from the centre, while longer chords are closer to the centre.",
+      "explanation_incorrect": "The diameter is the longest chord and passes through the centre, so its distance from the centre is 0. This makes it the chord closest to (passing through) the centre, not the farthest. In fact, shorter chords have greater distances from the centre. The relationship is: the longer the chord, the smaller its distance from the centre."
     },
     {
       "concept_id": "T04.09.C05",
@@ -918,9 +918,9 @@
       ],
       "correct_answer": "C",
       "question_id": "T04.09.Q050",
-      "question_text": "In cyclic quadrilateral ABCD, angle A = (2x + 10)°, angle B = (3x - 20)°, angle C = (2y + 15)°, and angle D = (y + 35)°. Find the value of x + y.",
-      "explanation_correct": "The correct answer is C) 100. In a cyclic quadrilateral, opposite angles are supplementary (sum to 180°). So, angle A + angle C = 180° and angle B + angle D = 180°. Using the given angle expressions, we get 2x + 10 + 2y + 15 = 180 and 3x - 20 + y + 35 = 180. Solving these equations gives x + y = 50, so the value of x + y is 100.",
-      "explanation_incorrect": "The incorrect answer is A) 80. This is because the question states that angle A = (2x + 10)°, angle B = (3x - 20)°, angle C = (2y + 15)°, and angle D = (y + 35)°. However, the correct solution involves using the property that in a cyclic quadrilateral, opposite angles are supplementary (sum to 180°). Solving the equations for this property gives x + y = 50, not 80."
+      "question_text": "In cyclic quadrilateral ABCD, angle A = (3x - 10)°, angle B = (2y + 20)°, angle C = (x + 30)°, and angle D = (y - 20)°. Find the value of x + y.",
+      "explanation_correct": "In a cyclic quadrilateral, opposite angles are supplementary. From angle A + angle C = 180°: (3x - 10) + (x + 30) = 180 → 4x + 20 = 180 → x = 40. From angle B + angle D = 180°: (2y + 20) + (y - 20) = 180 → 3y = 180 → y = 60. Therefore x + y = 40 + 60 = 100.",
+      "explanation_incorrect": "The answer is found by setting up two equations using the property that opposite angles in a cyclic quadrilateral are supplementary. A + C = 180° gives 4x + 20 = 180, so x = 40. B + D = 180° gives 3y = 180, so y = 60. Therefore x + y = 100, not 80, 90, or 110."
     },
     {
       "question_id": "T04.09.Q051",

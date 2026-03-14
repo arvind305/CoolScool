@@ -138,7 +138,7 @@ Audits proceed sequentially: one class, one subject at a time. Lower classes fir
 | A06 | ICSE Class 6 Maths | `class6/` | 26 | 2,070 | **Complete** | 210 | 210 | 2026-03-13 |
 | A07 | ICSE Class 7 Maths | `class7/` | 25 | 1,480 | **Complete** | 92 | 92 | 2026-03-13 |
 | A08 | ICSE Class 8 Maths | `class8/` | 22 | 1,256 | **Complete** | 200 | 200 | 2026-03-14 |
-| A09 | ICSE Class 9 Maths | `class9/` | 29 | 1,732 | Not Started | — | — | — |
+| A09 | ICSE Class 9 Maths | `class9/` | 29 | 1,732 | **Complete** | 150 | 150 | 2026-03-14 |
 | A10 | ICSE Class 10 Maths | `class10/` | 25 | 1,984 | Not Started | — | — | — |
 | A11 | ICSE Class 11 Maths | `class11/` | 16 | 800 | Not Started | — | — | — |
 | A12 | ICSE Class 12 Maths | `class12/` | 11 | 550 | Not Started | — | — | — |

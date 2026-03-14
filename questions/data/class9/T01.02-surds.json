@@ -392,7 +392,7 @@
       "correct_answer": "A",
       "question_text": "√2 + √8 can be simplified to 3√2.",
       "explanation_correct": "The statement is true because √2 + √8 can be simplified to 3√2. This is because √8 = 2√2, so √2 + √8 = √2 + 2√2 = 3√2.",
-      "explanation_incorrect": "The statement is incorrect because √2 + √8 cannot be simplified to just 3√2. √8 is equal to 2√2, so the full simplified expression is √2 + 2√2, which is not the same as 3√2. To get 3√2, you would need to combine the coefficients, but you cannot combine the radicands in this case."
+      "explanation_incorrect": "The statement is actually true. √8 can be simplified to 2√2 (since 8 = 4 × 2 and √4 = 2). Therefore, √2 + √8 = √2 + 2√2 = 3√2. These are like surds with the same radicand √2, so their coefficients (1 and 2) can be added to get 3√2."
     },
     {
       "question_id": "T01.02.Q019",
@@ -460,8 +460,8 @@
       ],
       "correct_answer": "B",
       "question_text": "Simplify 3/√6.",
-      "explanation_correct": "The correct answer is B) 3√6/6. To simplify 3/√6, we need to multiply the numerator and denominator by the conjugate of the denominator, which is √6. This will eliminate the radical sign in the denominator and give us the simplified expression 3√6/6.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not properly simplify the expression 3/√6. Option A) √6/2 is incorrect because it does not correctly divide the numerator and denominator. Option C) √6/3 is incorrect because it does not correctly multiply the numerator by 3. Option D) 3√6 is incorrect because it does not correctly divide the numerator by 6 to get the simplified expression."
+      "explanation_correct": "The correct answer is B) 3√6/6. To rationalise, multiply numerator and denominator by √6: 3/√6 × √6/√6 = 3√6/6. Note that this simplifies further to √6/2, but 3√6/6 is also a valid rationalised form. Both options A (√6/2) and B (3√6/6) are equivalent.",
+      "explanation_incorrect": "To rationalise 3/√6, multiply numerator and denominator by √6 to get 3√6/6. Option A (√6/2) is actually equivalent to 3√6/6, since 3√6/6 = √6/2. Option C (√6/3) is incorrect as 3/√6 ≠ √6/3. Option D (3√6) is incorrect as it does not divide by 6."
     },
     {
       "question_id": "T01.02.Q022",
@@ -640,10 +640,10 @@
       "difficulty": "exam_style",
       "cognitive_level": "recall",
       "type": "fill_blank",
-      "correct_answer": "48",
+      "correct_answer": "12",
       "question_text": "If √x + √12 = 4√3, then x = _______.",
-      "explanation_correct": "The correct answer is 48 because if √x + √12 = 4√3, we can rearrange this to solve for x. Squaring both sides gives x + 12 = 48, so x = 48.",
-      "explanation_incorrect": "The accepted answer format is a single number, 48. However, the incorrect reasoning may be to try to solve the equation √x + √12 = 4√3 by adding the radicals on the left side, which would give √x = 4√3 - √12. This does not simplify to a single value of x. The correct approach is to square both sides of the original equation to isolate x."
+      "explanation_correct": "First simplify √12 = 2√3. The equation becomes √x + 2√3 = 4√3. Subtracting 2√3 from both sides: √x = 2√3. Squaring both sides: x = (2√3)² = 4 × 3 = 12.",
+      "explanation_incorrect": "A common mistake is to square both sides of the equation directly without first isolating √x. The correct approach is to simplify √12 = 2√3, then subtract 2√3 from both sides to get √x = 2√3, and finally square both sides to get x = 12."
     },
     {
       "question_id": "T01.02.Q032",
@@ -671,7 +671,7 @@
       ],
       "correct_answer": "A",
       "question_text": "Simplify (3√2 + 2)(3√2 - 2).",
-      "explanation_correct": "The correct answer is A) 14. To simplify this expression, we need to multiply the two binomials (3√2 + 2)(3√2 - 2). This can be done by multiplying the coefficients and then the radicands separately: (3√2 + 2)(3√2 - 2) = (3 × 3)√(2 × 2) - (3 × 2)√2 - (2 × 3)√2 + (2 × 2) = 9(2) - 6√2 - 6√2 + 4 = 18 - 12 = 6.",
+      "explanation_correct": "The correct answer is A) 14. This expression is of the form (a + b)(a - b) = a² - b², where a = 3√2 and b = 2. So (3√2 + 2)(3√2 - 2) = (3√2)² - 2² = 9 × 2 - 4 = 18 - 4 = 14.",
       "explanation_incorrect": "The incorrect options B) 18, C) 10, and D) 22 are not correct. The correct way to simplify this expression is to multiply the two binomials (3√2 + 2)(3√2 - 2) and then combine the like terms, as shown in the correct explanation. The final result is 14, not 18, 10, or 22."
     },
     {
@@ -800,10 +800,10 @@
           "text": "3√3"
         }
       ],
-      "correct_answer": "A",
+      "correct_answer": "B",
       "question_text": "Simplify: √27 + √48 - √75.",
-      "explanation_correct": "The correct answer is A) 0. To simplify the expression, we can first simplify each surd term: √27 = 3√3, √48 = 4√3, and √75 = 5√3. When we add and subtract these simplified terms, the √3 factors cancel out, leaving the final result as 0.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not correctly simplify the expression. Option B) 2√3 is incorrect because it does not account for the subtraction of √75. Option C) √3 is incorrect because it does not include the √27 and √48 terms. Option D) 3√3 is incorrect because it does not properly combine the √27, √48, and √75 terms to arrive at the final result of 0."
+      "explanation_correct": "The correct answer is B) 2√3. Simplify each surd: √27 = 3√3, √48 = 4√3, and √75 = 5√3. Then 3√3 + 4√3 - 5√3 = (3 + 4 - 5)√3 = 2√3.",
+      "explanation_incorrect": "Option A) 0 is incorrect because 3 + 4 - 5 = 2, not 0. The simplified surds are √27 = 3√3, √48 = 4√3, √75 = 5√3, and combining gives 2√3. Options C) √3 and D) 3√3 are also incorrect calculations."
     },
     {
       "question_id": "T01.02.Q040",
@@ -829,10 +829,10 @@
           "text": "-4√3 + 6"
         }
       ],
-      "correct_answer": "D",
+      "correct_answer": "A",
       "question_text": "Rationalise: 6/(2√3 + 3).",
-      "explanation_correct": "The correct answer is D) -4√3 + 6. To rationalize the denominator, we multiply the numerator and denominator by the conjugate of the denominator, which is 2√3 - 3. This eliminates the radical in the denominator, and the simplified result is -4√3 + 6.",
-      "explanation_incorrect": "The incorrect options do not correctly rationalize the denominator. Option A) 4√3 - 6 and Option B) 2√3 - 3 do not eliminate the radical in the denominator. Option C) 12√3 - 18 is incorrect because the simplified result should not have a factor of 12 in front of the radical."
+      "explanation_correct": "The correct answer is A) 4√3 - 6. Multiply numerator and denominator by the conjugate (2√3 - 3): numerator = 6(2√3 - 3) = 12√3 - 18. Denominator = (2√3)² - 3² = 12 - 9 = 3. Result = (12√3 - 18)/3 = 4√3 - 6.",
+      "explanation_incorrect": "Option B) 2√3 - 3 is incorrect because it doesn't account for dividing 6 by the conjugate properly. Option C) 12√3 - 18 is the numerator before dividing by the denominator 3. Option D) -4√3 + 6 has the wrong sign."
     },
     {
       "question_id": "T01.02.Q041",
@@ -853,8 +853,8 @@
       "type": "true_false",
       "correct_answer": "A",
       "question_text": "√180 in simplest form is 6√5.",
-      "explanation_correct": "The square root of 180 can be simplified to 6√5 because 180 = 4 x 5^2, and the square root of 4 is 2. So the simplest form of √180 is 2√5, which can be written as 6√5.",
-      "explanation_incorrect": "The incorrect answer would be thinking that √180 is equal to √(4 x 5) = √4 + √5 = 2 + √5. However, this is not the simplest form. To simplify √180, we need to find the largest perfect square factor, which is 4. So the simplest form is 6√5."
+      "explanation_correct": "The square root of 180 can be simplified to 6√5 because 180 = 36 × 5, and the square root of 36 is 6. So √180 = √(36 × 5) = 6√5.",
+      "explanation_incorrect": "To simplify √180, factor 180 to find the largest perfect square factor: 180 = 36 × 5. Since √36 = 6, we get √180 = 6√5. The statement is true."
     },
     {
       "question_id": "T01.02.Q043",

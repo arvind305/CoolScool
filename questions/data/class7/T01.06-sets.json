@@ -98,7 +98,7 @@
         },
         {
           "id": "B",
-          "text": "{x : x is an even natural number less than 12}"
+          "text": "{x : x is an even natural number less than or equal to 12}"
         },
         {
           "id": "C",
@@ -112,7 +112,7 @@
       "correct_answer": "D",
       "type": "mcq",
       "explanation_correct": "The set {2, 4, 6, 8, 10} can be represented in set-builder form as {x : x = 2n, where n ∈ {1, 2, 3, 4, 5}}. This means that the set contains all the values of x which are equal to 2 multiplied by some natural number between 1 and 5.",
-      "explanation_incorrect": "Option D is the correct answer because the set {2, 4, 6, 8, 10} contains all the even numbers from 2 to 10. This set can be represented in set-builder form as {x : x = 2n, where n ∈ {1, 2, 3, 4, 5}}. The other options do not accurately describe this set. Option A is too broad, as it includes all even numbers, not just the ones in the given set. Option B is too specific, as it only includes even natural numbers less than 12. Option C is also too broad, as it includes all multiples of 2, not just the ones in the given set."
+      "explanation_incorrect": "Option D is the correct answer because the set {2, 4, 6, 8, 10} contains all the even numbers from 2 to 10. This set can be represented in set-builder form as {x : x = 2n, where n ∈ {1, 2, 3, 4, 5}}. The other options do not accurately describe this set. Option A is too broad, as it includes all even numbers, not just the ones in the given set. Option B is incorrect because even natural numbers less than or equal to 12 would include 12 as well, giving {2, 4, 6, 8, 10, 12}. Option C is also too broad, as it includes all multiples of 2, not just the ones in the given set."
     },
     {
       "question_id": "T01.06.Q006",
@@ -152,7 +152,7 @@
       "correct_answer": "A",
       "type": "true_false",
       "explanation_correct": "A singleton set is a set that contains exactly one element. This means that a singleton set has only one member or element in it.",
-      "explanation_incorrect": "A common misconception is that a set with multiple elements cannot be a singleton set. This is not true. A set can have any number of elements, and a singleton set is a special case where the set has exactly one element. The key is that a singleton set contains precisely one element, no more and no less."
+      "explanation_incorrect": "A singleton set is defined as a set that contains exactly one element. If someone answers False, they may be confusing a singleton set with an empty set or thinking that 'singleton' refers to something else. The key point is that a singleton set contains precisely one element, no more and no less. For example, {5} and {a} are both singleton sets."
     },
     {
       "question_id": "T01.06.Q008",
@@ -192,7 +192,7 @@
       "correct_answer": "A",
       "type": "mcq",
       "explanation_correct": "The sets A and B are equal because they contain the same elements, even though the order of the elements is different. Since the elements in both sets are the same, they are considered equal sets.",
-      "explanation_incorrect": "The sets A and B are not equal because the order of the elements is different. However, this does not matter when comparing sets. The sets A and B are equal because they contain the same elements, even though the order is different. Sets are compared based on their contents, not the order of the elements."
+      "explanation_incorrect": "If you answered that A and B are not equal, remember that in set theory, the order of elements does not matter. Two sets are equal if and only if they contain exactly the same elements. Since A = {1, 2, 3} and B = {3, 2, 1} contain the same elements (1, 2, and 3), they are equal sets. Options C and D are also incorrect because A and B are equal, not just subsets of each other."
     },
     {
       "question_id": "T01.06.Q010",
@@ -563,7 +563,7 @@
       "correct_answer": "A",
       "type": "true_false",
       "explanation_correct": "The statement 'A ∪ B = B ∪ A' is true because the union of two sets is a set that contains all the elements that are in either set A or set B, or in both sets. The order in which the sets are combined does not matter, so the result is the same.",
-      "explanation_incorrect": "The statement 'A ∪ B = B ∪ A' is not true. This is because the order in which the sets are combined does matter. The union of set A and set B is different from the union of set B and set A. The elements in the two unions may be the same, but the order in which they are listed is different."
+      "explanation_incorrect": "If you answered False, you may be thinking that the order matters when combining sets. However, the union operation in set theory is commutative, meaning A ∪ B always equals B ∪ A. The union contains all elements that belong to either set, regardless of the order in which the sets are written. Since sets themselves are unordered collections, the order of listing does not affect equality."
     },
     {
       "question_id": "T01.06.Q030",
@@ -1209,7 +1209,7 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The set {x : x is a prime number greater than 2 and less than 3} is an empty set because there are no prime numbers between 2 and 3. The only prime numbers in this range are 2 and 3, and the question specifically excludes 2, so the set is empty.",
+      "explanation_correct": "The set {x : x is a prime number greater than 2 and less than 3} is an empty set because there are no prime numbers between 2 and 3. Since the condition requires the number to be strictly greater than 2 and strictly less than 3, and there is no integer (let alone a prime number) between 2 and 3, the set has no elements.",
       "explanation_incorrect": "The set {x : x is a prime number greater than 2 and less than 3} cannot be a finite set, an infinite set, or a singleton set. This is because there are no prime numbers between 2 and 3, so the set contains no elements at all. Therefore, the correct answer is that it is an empty set."
     },
     {
@@ -1422,9 +1422,9 @@
     "question_count": {
       "total": 62,
       "by_difficulty": {
-        "familiarity": 13,
-        "application": 23,
-        "exam_style": 14
+        "familiarity": 16,
+        "application": 29,
+        "exam_style": 17
       },
       "by_type": {
         "mcq": 38,

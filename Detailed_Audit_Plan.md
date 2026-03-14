@@ -140,8 +140,8 @@ Audits proceed sequentially: one class, one subject at a time. Lower classes fir
 | A08 | ICSE Class 8 Maths | `class8/` | 22 | 1,256 | **Complete** | 200 | 200 | 2026-03-14 |
 | A09 | ICSE Class 9 Maths | `class9/` | 29 | 1,732 | **Complete** | 150 | 150 | 2026-03-14 |
 | A10 | ICSE Class 10 Maths | `class10/` | 25 | 1,984 | **Complete** | 85 | 85 | 2026-03-14 |
-| A11 | ICSE Class 11 Maths | `class11/` | 16 | 800 | Not Started | — | — | — |
-| A12 | ICSE Class 12 Maths | `class12/` | 11 | 550 | Not Started | — | — | — |
+| A11 | ICSE Class 11 Maths | `class11/` | 16 | 800 | **Complete** | 78 | 78 | 2026-03-14 |
+| A12 | ICSE Class 12 Maths | `class12/` | 11 | 550 | **Complete** | 60 | 60 | 2026-03-14 |
 
 ### Phase B: ICSE Science (26 audit units, ~21,406 questions)
 

@@ -131,9 +131,9 @@
           "text": "360"
         }
       ],
-      "correct_answer": "B",
-      "explanation_correct": "The correct answer is B) 345. This is because the given arithmetic progression (AP) has a first term of 4 and a common difference of 3, so the 15th term is 4 + 14(3) = 46. The sum of the first 15 terms of an AP is given by the formula Sn = n/2[2a + (n-1)d], where n is the number of terms, a is the first term, and d is the common difference. Plugging in the values, we get S15 = 15/2[2(4) + (15-1)(3)] = 345.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not match the actual sum of the first 15 terms of the given arithmetic progression. Option A) 375 is incorrect because it does not account for the common difference of 3 between consecutive terms. Option C) 330 is incorrect because it underestimates the sum. Option D) 360 is incorrect because it overestimates the sum. The correct answer is B) 345, which is obtained by applying the formula for the sum of an arithmetic progression."
+      "correct_answer": "A",
+      "explanation_correct": "The correct answer is A) 375. The given AP has first term a = 4 and common difference d = 3. Using the formula S₁₅ = 15/2[2(4) + (15−1)(3)] = 15/2[8 + 42] = 15/2 × 50 = 375.",
+      "explanation_incorrect": "The incorrect options do not match the correct sum. Using S₁₅ = n/2[2a + (n−1)d] = 15/2[2(4) + 14(3)] = 15/2[8 + 42] = 15/2 × 50 = 375. Options B (345), C (330), and D (360) are all incorrect."
     },
     {
       "question_id": "T02.06.Q005",
@@ -277,8 +277,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 2. In a geometric progression (GP), the common ratio between consecutive terms is constant. If the 3rd term is 12 and the 6th term is 96, then the common ratio is 4 (96/12 = 4). Since the common ratio is 4, and the ratio between the 3rd and 6th terms is 4^3 = 64, the common ratio must be 2.",
-      "explanation_incorrect": "The other options are incorrect because they do not match the common ratio calculated from the given information. Option B) 3 is wrong because the ratio between the 3rd and 6th terms is 3^3 = 27, not 64. Option C) 4 is wrong because the ratio between the 3rd and 6th terms is 4^3 = 64, not 96. Option D) 8 is wrong because the ratio between the 3rd and 6th terms is 8^3 = 512, which is not the given ratio of 64."
+      "explanation_correct": "In a GP, T₃ = ar² = 12 and T₆ = ar⁵ = 96. Dividing: T₆/T₃ = r³ = 96/12 = 8, so r = ∛8 = 2. The common ratio is 2.",
+      "explanation_incorrect": "Option B (3) is wrong because r³ would be 27, not 8. Option C (4) is wrong because r³ would be 64, not 8. Option D (8) is wrong because r³ would be 512, not 8. Since T₆/T₃ = r³ = 96/12 = 8, the common ratio is r = 2."
     },
     {
       "question_id": "T02.06.Q010",
@@ -510,7 +510,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "The numbers 5, 7, 9 are in arithmetic progression (AP) with a common difference of 2. The sum of these three numbers is 21 and their product is 315, which matches the given information in the question.",
-      "explanation_incorrect": "The numbers 3, 7, 11 are not in arithmetic progression (AP) because the common difference between consecutive terms is not constant. The numbers 4, 7, 10 and 6, 7, 8 are also not in AP because their sum is not 21 and product is not 315."
+      "explanation_incorrect": "Option B (3, 7, 11) is in AP with d = 4 and sum = 21, but its product is 3 × 7 × 11 = 231, not 315. Option C (4, 7, 10) is in AP with sum = 21, but its product is 4 × 7 × 10 = 280, not 315. Option D (6, 7, 8) is in AP with sum = 21, but its product is 6 × 7 × 8 = 336, not 315. Only 5, 7, 9 satisfies both conditions."
     },
     {
       "question_id": "T02.06.Q018",
@@ -973,8 +973,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The sum of all even numbers from 2 to 100 is 2 + 4 + 6 + ... + 100, which is an arithmetic progression with first term 2 and common difference 2. Using the formula for the sum of an AP, the total sum is n/2 * (2a + (n-1)d) = 50 * (2 + 99*2) = 2550.",
-      "explanation_incorrect": "Option B is incorrect because the formula for the sum of an arithmetic progression assumes that the number of terms is odd, which is not the case here. Option C and D are incorrect because they do not use the correct formula for the sum of an arithmetic progression with an even number of terms."
+      "explanation_correct": "The even numbers 2, 4, 6, ..., 100 form an AP with a = 2, d = 2, and n = 50 terms. Using S = n/2 × (first + last) = 50/2 × (2 + 100) = 25 × 102 = 2550.",
+      "explanation_incorrect": "Option B (2500) and Options C (5050) and D (5000) result from incorrect calculations. The sum of the first n natural numbers is n(n+1)/2, giving 5050 for n = 100, but we need only even numbers. Using S = n/2 × (a + l) = 25 × 102 = 2550."
     },
     {
       "question_id": "T02.06.Q034",
@@ -1002,8 +1002,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 4. In a geometric progression (GP), the product of any three consecutive terms is equal to the first term multiplied by the common ratio squared. Since the product of the three terms is 512, and the first term is 2, the common ratio must be 4 (2 x 4^2 = 512).",
-      "explanation_incorrect": "The correct answer is A) 4. The common ratio in a GP is found by taking the nth root of the ratio of any two consecutive terms. Since the product of the three terms is 512 and the first term is 2, we can set up the equation 2 x r^2 = 512, where r is the common ratio. Solving for r, we get r = 4."
+      "explanation_correct": "If the three consecutive GP terms are a, ar, ar², their product is a³r³. Given a = 2 and product = 512: 2³ × r³ = 512, so 8r³ = 512, r³ = 64, r = 4.",
+      "explanation_incorrect": "Option B (8) gives product = 2 × 16 × 128 = 4096, not 512. Option C (2) gives product = 2 × 4 × 8 = 64, not 512. Option D (16) gives product = 2 × 32 × 512 = 32768, not 512. Using a³r³ = 512 with a = 2: r³ = 64, so r = 4."
     },
     {
       "question_id": "T02.06.Q035",

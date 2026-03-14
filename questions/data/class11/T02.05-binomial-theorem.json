@@ -306,8 +306,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The 5th row in Pascal's triangle contains the binomial coefficients for the expansion of (a + b)⁴. The entries are 1, 4, 6, 4, 1, which corresponds to the options given in choice A.",
-      "explanation_incorrect": "Option A is the correct answer because the entries in the 5th row of Pascal's triangle are the binomial coefficients for the expansion of (a + b)⁴, which are 1, 4, 6, 4, 1. The other options do not correctly represent the entries in the 5th row."
+      "explanation_correct": "The 5th row in Pascal's triangle (counting from row 0) contains the binomial coefficients for the expansion of (a + b)⁵. The entries are 1, 5, 10, 10, 5, 1, which corresponds to option A.",
+      "explanation_incorrect": "Option A is the correct answer because the entries in the 5th row of Pascal's triangle (starting from row 0) are the binomial coefficients ⁵C₀, ⁵C₁, ⁵C₂, ⁵C₃, ⁵C₄, ⁵C₅ = 1, 5, 10, 10, 5, 1. Option B gives the entries for row 4, option C is missing an entry, and option D gives the entries for row 6."
     },
     {
       "question_id": "T02.05.Q011",
@@ -451,8 +451,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The value of (√2 + 1)⁴ + (√2 - 1)⁴ is 34. This is because the binomial theorem tells us that (a + b)⁴ = a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴. Plugging in the values a = √2 and b = 1, we get (√2 + 1)⁴ = 16 + 8√2 + 6(2) + 4√2 + 1 = 34.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not match the result of applying the binomial theorem to the given expressions. Option B (18) and Option C (24) are incorrect because they do not account for the full expansion of the binomial terms. Option D (48) is incorrect because it doubles the correct answer of 34."
+      "explanation_correct": "When we add (a+b)⁴ + (a−b)⁴, all the odd-power terms cancel and we get 2(a⁴ + 6a²b² + b⁴). With a = √2 and b = 1: 2[(√2)⁴ + 6(√2)²(1)² + 1⁴] = 2[4 + 12 + 1] = 2 × 17 = 34.",
+      "explanation_incorrect": "Option B (18) and Option C (24) result from incorrectly computing the binomial expansion or not properly cancelling the odd-power terms. Option D (48) likely comes from doubling incorrectly. Using the identity (a+b)⁴ + (a−b)⁴ = 2(a⁴ + 6a²b² + b⁴), with a = √2 and b = 1, the correct answer is 34."
     },
     {
       "question_id": "T02.05.Q016",
@@ -493,7 +493,7 @@
       "options": [
         {
           "id": "A",
-          "text": "0"
+          "text": "−4"
         },
         {
           "id": "B",
@@ -509,8 +509,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The coefficient of x² in (1 + x)⁵(1 - x)⁴ is 0 because the terms with x² cancel out when we multiply the two expansions. The coefficient of x² in (1 + x)⁵ is 10, and the coefficient of x² in (1 - x)⁴ is -4, but when we multiply them, the terms with x² cancel each other out, resulting in a coefficient of 0.",
-      "explanation_incorrect": "The correct coefficient of x² in (1 + x)⁵(1 - x)⁴ is 0, not -1, 1, or 4. This is because the terms with x² in the two expansions cancel each other out when we multiply them. The coefficient of x² in (1 + x)⁵ is 10, and the coefficient of x² in (1 - x)⁴ is -4, but when we multiply them, the x² terms cancel, resulting in a coefficient of 0."
+      "explanation_correct": "To find the coefficient of x² in (1 + x)⁵(1 − x)⁴, we collect the x² terms from the product. (1+x)⁵ = 1 + 5x + 10x² + ... and (1−x)⁴ = 1 − 4x + 6x² − .... The coefficient of x² is: (1)(6) + (5)(−4) + (10)(1) = 6 − 20 + 10 = −4.",
+      "explanation_incorrect": "The coefficient of x² in (1 + x)⁵(1 − x)⁴ is found by summing: (coeff of x⁰ in first) × (coeff of x² in second) + (coeff of x¹ in first) × (coeff of x¹ in second) + (coeff of x² in first) × (coeff of x⁰ in second) = 1·6 + 5·(−4) + 10·1 = 6 − 20 + 10 = −4. The other options are incorrect."
     },
     {
       "question_id": "T02.05.Q018",
@@ -596,8 +596,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The term independent of x in the expansion of (3x - 2/x²)⁹ is T₄, which corresponds to the coefficient of x⁰. This is because the binomial theorem shows that the general term is ⁿCᵣ aⁿ⁻ʳ bʳ, and in this case a = 3x and b = -2/x², so the term independent of x is when r = 4.",
-      "explanation_incorrect": "The correct answer is A) T₄, which is the term independent of x in the expansion. This is because the exponent of x in the general term is n-r, and when r = 4, the exponent of x becomes 9-4 = 5, resulting in a term that does not contain x. The other options B) T₅, C) T₆, and D) 'There is no such term' are incorrect because they do not correspond to the term independent of x in this expansion."
+      "explanation_correct": "The general term T(r+1) = ⁹Cᵣ (3x)⁹⁻ʳ (−2/x²)ʳ = ⁹Cᵣ · 3⁹⁻ʳ · (−2)ʳ · x⁹⁻ʳ⁻²ʳ = ⁹Cᵣ · 3⁹⁻ʳ · (−2)ʳ · x⁹⁻³ʳ. For the term independent of x, set 9 − 3r = 0, so r = 3. This gives T₄ (since r+1 = 4). Therefore the term independent of x is T₄.",
+      "explanation_incorrect": "The correct answer is A) T₄. The power of x in the general term is 9 − 3r. Setting this to 0 gives r = 3, which corresponds to T₄ = ⁹C₃ · 3⁶ · (−2)³. The other options are incorrect because T₅ (r=4 gives x⁹⁻¹² = x⁻³), T₆ (r=5 gives x⁹⁻¹⁵ = x⁻⁶), and 'no such term' is false since r = 3 is a valid integer."
     },
     {
       "question_id": "T02.05.Q021",
@@ -837,7 +837,7 @@
       "concept_id": "T02.05.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "In the expansion of (1 + x)²⁰, the two middle terms are:",
+      "question_text": "In the expansion of (1 + x)²⁰, the middle term is:",
       "options": [
         {
           "id": "A",
@@ -857,8 +857,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The expansion of (1 + x)²⁰ has 21 terms, since the exponent is 20 (a positive integer). The middle term is the 11th term, T₁₁, because 20 is an even number and the middle term is at (20 / 2) + 1 = 11.",
-      "explanation_incorrect": "Option A is incorrect because the two middle terms are T₁₀ and T₁₁, not T₁₀ and T₁₁. Option C is incorrect because there are two middle terms, not just one. Option D is incorrect because the middle terms are T₁₀ and T₁₁, not T₉ and T₁₂."
+      "explanation_correct": "The expansion of (1 + x)²⁰ has 21 terms. Since n = 20 is even, there is exactly one middle term at position (n/2 + 1) = 11, which is T₁₁.",
+      "explanation_incorrect": "Option A is incorrect because when n is even there is only one middle term, not two. Option C (T₁₀ only) is the wrong position. Option D (T₉ and T₁₂) are not middle terms. Since n = 20 is even, the single middle term is T₁₁ = T(n/2 + 1)."
     },
     {
       "question_id": "T02.05.Q030",
@@ -943,9 +943,9 @@
           "text": "7/6"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The ratio of the 5th term to the 3rd term in the expansion of (1 + x)¹⁰ for x = 1/2 is 35/48. This is because the general term in the binomial expansion is ⁿCᵣ a^(n-r) b^r, where a = 1, b = 1/2, and n = 10. Plugging in the values for the 5th and 3rd terms, we get the ratio 10C5 * (1)^(10-5) * (1/2)^5 / 10C3 * (1)^(10-3) * (1/2)^3 = 35/48.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not represent the ratio of the 5th term to the 3rd term in the expansion of (1 + x)¹⁰ for x = 1/2. The correct answer is 35/48, which is calculated by using the general term in the binomial expansion formula."
+      "correct_answer": "D",
+      "explanation_correct": "The 5th term T₅ = ¹⁰C₄ · (1/2)⁴ = 210 · 1/16 = 210/16. The 3rd term T₃ = ¹⁰C₂ · (1/2)² = 45 · 1/4 = 45/4. The ratio T₅/T₃ = (210/16) ÷ (45/4) = (210/16) × (4/45) = 840/720 = 7/6.",
+      "explanation_incorrect": "The ratio is T₅/T₃ = [¹⁰C₄ · (1/2)⁴] / [¹⁰C₂ · (1/2)²] = (210 × 1/16) / (45 × 1/4) = (210/16) × (4/45) = 7/6. Options A (35/24), B (5/3), and C (35/48) do not match this calculation."
     },
     {
       "question_id": "T02.05.Q033",
@@ -1032,7 +1032,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The coefficient of a³b² in (a + b)⁵ is 10. This is because the general term T(r+1) = ⁿCᵣ aⁿ⁻ʳ bʳ, and when n = 5 and r = 2, we get ⁵C₂ = 10.",
-      "explanation_incorrect": "The correct answer is B) 10. The binomial expansion of (a + b)⁵ is a⁵ + 5a⁴b + 10a³b² + 10ab³ + b⁵, so the coefficient of a³b² is 10. Option A) 5 is incorrect because the coefficient of a³b² is not 5, and options C) 20 and D) 1 are also incorrect."
+      "explanation_incorrect": "The binomial expansion of (a + b)⁵ is a⁵ + 5a⁴b + 10a³b² + 10a²b³ + 5ab⁴ + b⁵, so the coefficient of a³b² is 10. Option A (5) corresponds to ⁵C₁ or ⁵C₄, not ⁵C₂. Options C (20) and D (1) are also incorrect values of ⁵C₂."
     },
     {
       "question_id": "T02.05.Q036",
@@ -1051,10 +1051,10 @@
       "concept_id": "T02.05.C02",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "The middle term in the expansion of (a + b)⁷ is T₄.",
+      "question_text": "In the expansion of (a + b)⁷, T₄ is one of the two middle terms.",
       "correct_answer": "A",
-      "explanation_correct": "The expansion of (a + b)^7 has 8 terms, with the middle term being T4. This is because the number of terms is n+1, where n = 7, so there are 8 terms. The middle term is the (n/2 + 1)th term, which is T4.",
-      "explanation_incorrect": "If the student thought the middle term was T5, they likely miscounted the terms. The expansion of (a + b)^7 has 8 terms, from T0 to T7, not 9 terms. The middle term is the (n/2 + 1)th term, which is T4 when n = 7."
+      "explanation_correct": "The expansion of (a + b)⁷ has n+1 = 8 terms (T₁ to T₈). Since n = 7 is odd, there are two middle terms: T((n+1)/2) = T₄ and T((n+3)/2) = T₅. So T₄ is indeed one of the two middle terms.",
+      "explanation_incorrect": "Since n = 7 is odd, the expansion has 8 terms and there are two middle terms at positions 4 and 5, i.e., T₄ and T₅. T₄ is one of them, making the statement true. The formula for two middle terms when n is odd gives T((n+1)/2) and T((n+3)/2)."
     },
     {
       "question_id": "T02.05.Q038",
@@ -1075,8 +1075,8 @@
       "cognitive_level": "recall",
       "question_text": "In the expansion of (a − b)⁶, all terms are positive.",
       "correct_answer": "B",
-      "explanation_correct": "The expansion of (a - b)^6 will have both positive and negative terms because the binomial coefficients in the expansion formula can be negative when the power n is even and the exponent r is greater than n/2.",
-      "explanation_incorrect": "The statement is false because in the expansion of (a - b)^6, there will be both positive and negative terms. This is because the binomial coefficients in the expansion formula can be negative when the power n is even and the exponent r is greater than n/2. For example, the term -6a^3b^3 will be negative."
+      "explanation_correct": "The expansion of (a − b)⁶ has terms T(r+1) = ⁶Cᵣ a⁶⁻ʳ (−b)ʳ = (−1)ʳ ⁶Cᵣ a⁶⁻ʳ bʳ. When r is odd (r = 1, 3, 5), the factor (−1)ʳ makes those terms negative. So the expansion has both positive and negative terms, making the statement false.",
+      "explanation_incorrect": "The statement is false. In (a − b)⁶, the general term includes the factor (−1)ʳ from (−b)ʳ. Binomial coefficients ⁶Cᵣ are always positive, but the (−1)ʳ factor makes terms with odd r negative. For example, the second term is −6a⁵b and the fourth term is −20a³b³. So not all terms are positive."
     },
     {
       "question_id": "T02.05.Q040",
@@ -1119,8 +1119,8 @@
       "cognitive_level": "recall",
       "question_text": "The 3rd entry in the 4th row (row 0 is first) of Pascal's triangle is ___.",
       "correct_answer": "6",
-      "explanation_correct": "The 4th row of Pascal's triangle (starting from row 0) contains the binomial coefficients for (a + b)³. The 3rd entry in this row is 6, which represents the coefficient of the term a²b, as per the binomial expansion formula.",
-      "explanation_incorrect": "The accepted answer format is a single number. The 3rd entry in the 4th row of Pascal's triangle is 6, not 'a²b' or any other expression. The binomial coefficients in Pascal's triangle follow a specific pattern, and the 3rd entry in the 4th row is the coefficient of the a²b term in the expansion of (a + b)³."
+      "explanation_correct": "The 4th row of Pascal's triangle (starting from row 0) contains the binomial coefficients for (a + b)⁴: 1, 4, 6, 4, 1. The 3rd entry (counting from entry 1) is 6, which equals ⁴C₂.",
+      "explanation_incorrect": "The accepted answer format is a single number. The 4th row of Pascal's triangle is 1, 4, 6, 4, 1 (corresponding to ⁴C₀, ⁴C₁, ⁴C₂, ⁴C₃, ⁴C₄). The 3rd entry is ⁴C₂ = 6."
     },
     {
       "question_id": "T02.05.Q044",

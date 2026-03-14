@@ -130,7 +130,7 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The angle between two lines with direction ratios (1, 1, 2) and (√3 - 1, -√3 - 1, 4) is π/3 (60 degrees) because the dot product of the direction vectors is 0, indicating the lines are perpendicular to each other.",
+      "explanation_correct": "The angle between two lines with direction ratios (1, 1, 2) and (√3 − 1, −√3 − 1, 4) is π/3. The dot product is (√3−1) + (−√3−1) + 8 = 6. The magnitudes are √6 and √24. So cos θ = 6/(√6·√24) = 6/12 = 1/2, giving θ = π/3.",
       "explanation_incorrect": "The incorrect options are not correct because the angle between the two lines is 60 degrees, which is π/3 radians. The direction ratios of the two lines can be used to calculate the angle between them, and the result is π/3."
     },
     {
@@ -433,7 +433,7 @@
       "options": [
         {
           "id": "A",
-          "text": "sin⁻¹(1/√6)"
+          "text": "sin⁻¹(1/3)"
         },
         {
           "id": "B",
@@ -449,8 +449,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The angle between a line and a plane can be found using the formula sin θ = |b · n|/(|b||n|), where b is the direction vector of the line and n is the normal vector of the plane. In this case, the direction vector of the line is (2, -1, 1) and the normal vector of the plane is (2, 1, -1). Plugging these values into the formula gives sin θ = 1/√6, so the angle between the line and the plane is sin⁻¹(1/√6).",
-      "explanation_incorrect": "The incorrect options do not correctly apply the formula to find the angle between the line and the plane. Option B is the cosine of the angle, not the sine. Option C uses the incorrect vector (2, 1, -1) instead of the correct normal vector (2, 1, -1). Option D is incorrect because the line and plane are not perpendicular, so the angle between them is not 0°."
+      "explanation_correct": "The angle between a line and a plane is given by sin θ = |b · n|/(|b||n|). The direction vector of the line is b = (2, −1, 1) and the normal to the plane is n = (2, 1, −1). b · n = 4 − 1 − 1 = 2, |b| = √6, |n| = √6. So sin θ = 2/6 = 1/3, and the angle is sin⁻¹(1/3).",
+      "explanation_incorrect": "Option B gives the cosine inverse, not the sine inverse needed for the line-plane angle formula. Option C (sin⁻¹(2/√6)) uses incorrect values. Option D (0°) would require b · n = 0, but b · n = 2 ≠ 0."
     },
     {
       "question_id": "T03.02.Q016",
@@ -557,16 +557,16 @@
         },
         {
           "id": "C",
-          "text": "x + 5y + 3z = 2"
+          "text": "5x + y − 3z = 4"
         },
         {
           "id": "D",
-          "text": "Requires calculation with the specific condition"
+          "text": "x + 5y + 3z = 2"
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The equation of the plane is given by the normal vector (a, b, c) and a point (x0, y0, z0) on the plane, which satisfies the equation a(x-x0) + b(y-y0) + c(z-z0) = 0. In this case, the direction vector of the line is (2, -1, 3), and the point (0, 1, -1) lies on the plane. Plugging these values, we get the equation x + 5y + 3z = 2, which is option C.",
-      "explanation_incorrect": "The other options are incorrect because they do not satisfy the given conditions. Option A represents a plane that is perpendicular to the line, while Option B represents a plane that does not contain the point (0, 1, -1). Option D is not a valid answer, as the question asks for the equation of the plane, not a calculation."
+      "explanation_correct": "The line passes through (1, −1, 0) with direction (2, −1, 3). The vector from (1, −1, 0) to the given point (0, 1, −1) is (−1, 2, −1). The normal to the plane is (2, −1, 3) × (−1, 2, −1) = (−5, −1, 3), so the plane is −5(x − 0) − (y − 1) + 3(z + 1) = 0, which simplifies to 5x + y − 3z = 4.",
+      "explanation_incorrect": "Options A and B do not contain the line, as substituting the line point (1, −1, 0) does not satisfy those equations. Option D (x + 5y + 3z = 2) passes through (0, 1, −1) but not through the line point (1, −1, 0)."
     },
     {
       "question_id": "T03.02.Q020",
@@ -768,8 +768,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The magnitude of the direction ratio vector (3, -4, 12) is given by the formula √(3^2 + (-4)^2 + 12^2) = √(9 + 16 + 144) = √169 = 13, which is option D.",
-      "explanation_incorrect": "The magnitude of the direction ratio vector (3, -4, 12) is not 11 (option A) or 7 (option C) because these values do not satisfy the formula for the magnitude of a vector. The correct magnitude is 13 (option D) because the square root of the sum of the squares of the direction ratios is √(3^2 + (-4)^2 + 12^2) = √169 = 13."
+      "explanation_correct": "The magnitude of the direction ratio vector (3, −4, 12) is √(9 + 16 + 144) = √169 = 13, which is option B.",
+      "explanation_incorrect": "Option A (11) and option C (7) do not equal √(9 + 16 + 144). Option D (√169 = 13) is equivalent to option B; both give 13. The correct magnitude is 13."
     },
     {
       "question_id": "T03.02.Q027",
@@ -1139,8 +1139,8 @@
       "cognitive_level": "recall",
       "question_text": "Two parallel planes differ only in their constant term. The distance between the planes x + 2y − 2z = 1 and x + 2y − 2z = 4 is ___.",
       "correct_answer": "1",
-      "explanation_correct": "The distance between two parallel planes is simply the difference between their constant terms. Since the planes x + 2y - 2z = 1 and x + 2y - 2z = 4 differ by a constant of 3, the distance between them is 3 units.",
-      "explanation_incorrect": "The incorrect answer would be to think that the distance between the planes is not 1 unit. This is because the planes are parallel, meaning they have the same normal vector (1, 2, -2), and the only difference between them is the constant term. So the distance between the planes is simply the difference between their constant terms, which is 4 - 1 = 3 units."
+      "explanation_correct": "The distance between two parallel planes ax + by + cz = d₁ and ax + by + cz = d₂ is |d₂ − d₁|/√(a² + b² + c²). Here, |4 − 1|/√(1 + 4 + 4) = 3/3 = 1.",
+      "explanation_incorrect": "One common mistake is to compute the distance as just |d₂ − d₁| = 3 without dividing by the magnitude of the normal vector √(1² + 2² + (−2)²) = 3. The correct distance is 3/3 = 1."
     },
     {
       "question_id": "T03.02.Q046",

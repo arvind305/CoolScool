@@ -443,7 +443,7 @@
         },
         {
           "id": "C",
-          "text": "16/52"
+          "text": "3/52"
         },
         {
           "id": "D",
@@ -451,8 +451,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 4/13. There are 4 kings and 13 spades in a deck of 52 cards, so the total probability of getting a king or a spade is the sum of their individual probabilities, which is 4/52 + 13/52 = 4/13.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not accurately calculate the probability of getting a king or a spade. Option B) 17/52 is incorrect because it does not account for the fact that the kings and spades are not mutually exclusive events. Option C) 16/52 is incorrect because it only considers the 16 spades and does not include the 4 kings. Option D) 1/4 is incorrect because it does not correctly calculate the probability, which is 4/13 or approximately 0.31."
+      "explanation_correct": "The correct answer is A) 4/13. Using the addition theorem: P(King or Spade) = P(King) + P(Spade) − P(King and Spade) = 4/52 + 13/52 − 1/52 = 16/52 = 4/13. We subtract 1/52 because the King of Spades is counted in both groups.",
+      "explanation_incorrect": "Option B) 17/52 incorrectly adds P(King) + P(Spade) without subtracting the overlap (King of Spades). Option C) 3/52 incorrectly counts only the 3 non-spade kings. Option D) 1/4 = 13/52 is just P(Spade) alone, ignoring the non-spade kings."
     },
     {
       "question_id": "T06.02.Q016",
@@ -712,8 +712,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The probability of getting a sum greater than 10 when two dice are thrown is 1/12. This is because the possible outcomes with a sum greater than 10 are (5,6), (6,5), which gives a total of 2 favorable outcomes out of the 36 possible outcomes when two dice are thrown.",
-      "explanation_incorrect": "Option B, 1/6, is incorrect because there are 6 possible outcomes with a sum greater than 10 (4,6), (5,5), (5,6), (6,4), (6,5), (6,6), but the total number of possible outcomes when two dice are thrown is 36, so the probability is 6/36 = 1/6."
+      "explanation_correct": "The probability of getting a sum greater than 10 when two dice are thrown is 1/12. Sum > 10 means sum = 11 or sum = 12. Sum = 11: (5,6) and (6,5) = 2 outcomes. Sum = 12: (6,6) = 1 outcome. Total favorable = 3 out of 36 possible outcomes. P = 3/36 = 1/12.",
+      "explanation_incorrect": "Option B (1/6 = 6/36) would require 6 favorable outcomes, which is incorrect. Option C (1/18 = 2/36) only counts sum=11 outcomes. Option D (5/36) is also incorrect. The correct count is 3 favorable outcomes: (5,6), (6,5), and (6,6)."
     },
     {
       "question_id": "T06.02.Q025",
@@ -857,7 +857,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The probability of getting a number greater than 4 on a die is 1/3, as there is only 1 outcome (6) out of the total 6 possible outcomes (1, 2, 3, 4, 5, 6) that is greater than 4.",
+      "explanation_correct": "The probability of getting a number greater than 4 on a die is 1/3, as there are 2 favorable outcomes (5 and 6) out of the total 6 possible outcomes (1, 2, 3, 4, 5, 6). P = 2/6 = 1/3.",
       "explanation_incorrect": "The correct answer is A) 1/3. This is because a die has 6 possible outcomes (1, 2, 3, 4, 5, 6), and only 2 of those outcomes (5 and 6) are greater than 4. Therefore, the probability of getting a number greater than 4 is 2/6 or 1/3."
     },
     {

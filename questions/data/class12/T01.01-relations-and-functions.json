@@ -101,8 +101,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The relation R = {(1,1), (2,2), (3,3), (1,2), (2,1)} does not satisfy all three properties (reflexive, symmetric, and transitive) since it is not symmetric - (1,2) is in R but (2,1) is not.",
-      "explanation_incorrect": "The relation R is not reflexive, since not all elements (1, 2, 3) are paired with themselves. It is also not symmetric, as (1,2) is in R but (2,1) is not. However, R is transitive, as (1,2) and (2,1) are both in R, so (1,1) must also be in R. Therefore, R does not satisfy all three properties."
+      "explanation_correct": "The relation R = {(1,1), (2,2), (3,3), (1,2), (2,1)} satisfies all three properties. It is reflexive because (1,1), (2,2), (3,3) are all present. It is symmetric because both (1,2) and (2,1) are in R. It is transitive because (1,2) and (2,1) imply (1,1), and (2,1) and (1,2) imply (2,2), both of which are present. Therefore R is an equivalence relation.",
+      "explanation_incorrect": "The relation R satisfies all three properties: reflexive (all diagonal pairs present), symmetric ((1,2) and (2,1) both in R), and transitive (all implied pairs are present). Therefore, the correct answer is D."
     },
     {
       "question_id": "T01.01.Q004",
@@ -429,7 +429,7 @@
       "concept_id": "T01.01.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "If f(x) = 2x and g(x) = x + 5, then the value of x for which (f o g)(x) = (g o f)(x) is:",
+      "question_text": "If f(x) = 2x and g(x) = x + 5, then (f o g)(x) − (g o f)(x) equals:",
       "options": [
         {
           "id": "A",
@@ -445,12 +445,12 @@
         },
         {
           "id": "D",
-          "text": "All real values of x"
+          "text": "10"
         }
       ],
-      "correct_answer": "D",
-      "explanation_correct": "The value of x for which (f o g)(x) = (g o f)(x) is any real value, because the composition of these linear functions is commutative. Regardless of the order in which the functions are applied, the final result is the same.",
-      "explanation_incorrect": "Option D is correct because the composition of linear functions like f(x) = 2x and g(x) = x + 5 is commutative, meaning the order in which they are applied does not affect the final result. Substituting the functions, we get (f o g)(x) = f(g(x)) = f(x + 5) = 2(x + 5) = 2x + 10, and (g o f)(x) = g(f(x)) = g(2x) = 2x + 5. Equating the two, we see that the equality holds for all real values of x."
+      "correct_answer": "A",
+      "explanation_correct": "(f o g)(x) = f(g(x)) = f(x + 5) = 2(x + 5) = 2x + 10. (g o f)(x) = g(f(x)) = g(2x) = 2x + 5. Therefore (f o g)(x) − (g o f)(x) = (2x + 10) − (2x + 5) = 5.",
+      "explanation_incorrect": "Option A is correct. (f o g)(x) = 2(x + 5) = 2x + 10 and (g o f)(x) = 2x + 5. Their difference is 2x + 10 − 2x − 5 = 5. Note that composition of functions is generally NOT commutative, and this example illustrates that."
     },
     {
       "question_id": "T01.01.Q016",
@@ -535,9 +535,9 @@
           "text": "x + 5"
         }
       ],
-      "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) x. This is because the composition of the three functions, (g o f o g)(x), simplifies to just x. When we apply g to f(x) = 3x - 5, we get g(f(x)) = (3x - 5 + 5)/3 = x. Then, when we apply g again to the result, we get (x + 5)/3 = x.",
-      "explanation_incorrect": "The incorrect options B) 3x - 5, C) (x + 5)/3, and D) x + 5 are not correct because they do not represent the simplified result of the composition (g o f o g)(x). The correct answer is A) x, which is the final result after applying the three functions in succession."
+      "correct_answer": "C",
+      "explanation_correct": "Since g(x) = (x+5)/3 is the inverse of f(x) = 3x-5, we have g o f = identity. Therefore (g o f o g)(x) = (g o f)(g(x)) = g(x) = (x+5)/3. So the answer is (x+5)/3.",
+      "explanation_incorrect": "Option A is incorrect because (g o f o g)(x) does not simplify to x. Since f and g are inverses, g o f is the identity, so (g o f o g)(x) = identity(g(x)) = g(x) = (x+5)/3. Options B and D are also incorrect."
     },
     {
       "question_id": "T01.01.Q019",
@@ -796,9 +796,9 @@
           "text": "None of these"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The relation R is transitive because if (1, 2) and (2, 3) are in the relation, then (1, 3) must also be in the relation. This means the relation satisfies the transitive property.",
-      "explanation_incorrect": "The relation R is not reflexive because there is no pair (a, a) in the relation for every a in the set A = {1, 2, 3}. It is also not symmetric because the pair (2, 3) is in the relation, but the pair (3, 2) is not. However, the relation is transitive since if (1, 2) and (2, 3) are in the relation, then (1, 3) must also be in the relation."
+      "correct_answer": "D",
+      "explanation_correct": "The relation R = {(1,2), (2,3)} is not reflexive (missing (1,1), (2,2), (3,3)), not symmetric (e.g. (1,2) is in R but (2,1) is not), and not transitive (since (1,2) and (2,3) are in R but (1,3) is NOT in R). Therefore, R satisfies none of these properties.",
+      "explanation_incorrect": "R is not transitive because transitivity requires that if (1,2) and (2,3) are both in R, then (1,3) must also be in R. Since (1,3) is not in R, transitivity fails. R is also not reflexive or symmetric. Hence the answer is 'None of these'."
     },
     {
       "question_id": "T01.01.Q028",
@@ -912,9 +912,9 @@
           "text": "18"
         }
       ],
-      "correct_answer": "B",
-      "explanation_correct": "The correct answer is B. To find (f o g)(2), we first evaluate g(2) = 1 - 1/(1 - 2) = 1 - 1/-1 = 1 + 1 = 2. Then, we plug this into f(x) = x^2 + 2, so f(2) = 2^2 + 2 = 4 + 2 = 6.",
-      "explanation_incorrect": "The incorrect answers are: A) 2 - This is incorrect because we need to first evaluate g(2) before plugging it into f(x). C) 6 - This is the correct answer, as shown in the correct explanation. D) 18 - This is incorrect because f(x) = x^2 + 2, so f(2) cannot be 18."
+      "correct_answer": "C",
+      "explanation_correct": "To find (f o g)(2), first compute g(2) = 1 - 1/(1 - 2) = 1 - 1/(-1) = 1 + 1 = 2. Then f(g(2)) = f(2) = 2² + 2 = 4 + 2 = 6. So (f o g)(2) = 6.",
+      "explanation_incorrect": "Option C is correct because (f o g)(2) = f(g(2)) = f(2) = 6. Option A (2) is the value of g(2), not f(g(2)). Option B (3) is incorrect. Option D (18) is also incorrect."
     },
     {
       "question_id": "T01.01.Q032",
@@ -971,8 +971,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The answer is B) 5. This is because there are 2^n (2 raised to the power n) possible equivalence relations on a set of n elements. In this case, n = 3, so the total number of equivalence relations is 2^3 = 8. However, the empty set and the universal relation (where all elements are related to each other) are not counted as proper equivalence relations. Therefore, the total number of equivalence relations on the set {1, 2, 3} is 8 - 2 = 5.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not consider the proper definition of an equivalence relation and the formula to calculate the total number of equivalence relations on a set. The correct answer is B) 5, as there are 2^n - 2 equivalence relations on a set of n elements, where n = 3 in this case."
+      "explanation_correct": "The total number of equivalence relations on {1, 2, 3} equals the Bell number B(3) = 5. These correspond to the 5 partitions of a 3-element set: {{1},{2},{3}}, {{1,2},{3}}, {{1,3},{2}}, {{2,3},{1}}, and {{1,2,3}}. Each partition uniquely defines an equivalence relation.",
+      "explanation_incorrect": "The Bell number B(3) = 5 counts all equivalence relations on a 3-element set. The 5 partitions are: all singletons, three ways to pair two elements, and the single partition grouping all three together. Options A (3), C (7), and D (8) do not match the Bell number."
     },
     {
       "question_id": "T01.01.Q034",
@@ -1001,7 +1001,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The correct answer is B) 2. To find the inverse of f(x) = x^2 + 4, we need to solve the equation y = x^2 + 4 for x. Substituting y = 8, we get x^2 = 4, which gives x = ±2. Since the domain of f is the positive real numbers, we take the positive value, which is x = 2.",
-      "explanation_incorrect": "The incorrect options are not the right inverse of f(x) = x^2 + 4 when f(x) = 8. Option A) 4 is incorrect because 4^2 + 4 = 20, not 8. Option C) √2 is incorrect because (√2)^2 + 4 = 4 + 4 = 8, not 8. Option D) 68 is incorrect because (√68)^2 + 4 = 4624 + 4 = 4628, not 8."
+      "explanation_incorrect": "Option A) 4 is incorrect because 4² + 4 = 20, not 8. Option C) √2 is incorrect because (√2)² + 4 = 2 + 4 = 6, not 8. Option D) 68 is incorrect because it does not satisfy f(x) = 8. The correct answer is B) 2 since 2² + 4 = 8."
     },
     {
       "question_id": "T01.01.Q035",

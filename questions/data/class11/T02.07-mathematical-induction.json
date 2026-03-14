@@ -365,7 +365,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The statement 2ⁿ > n for all n ≥ 1 can be proved using mathematical induction. The base case of n = 1 is true, and the inductive step can show that if the statement is true for n = k, then it is also true for n = k+1.",
-      "explanation_incorrect": "The statement n² > 2n for all n ≥ 1 is not true. As n increases, the difference between n² and 2n becomes larger, and eventually n² will be greater than 2n. Similarly, the statement n > n² for all n ≥ 1 is not true, as for large values of n, n² will be greater than n. The statement n! < 2ⁿ for all n ≥ 1 is a true statement that can be proved by induction."
+      "explanation_incorrect": "Option A (n² > 2n for all n ≥ 1) fails at n = 1 since 1 > 2 is false, and at n = 2 since 4 > 4 is false. Option C (n! < 2ⁿ for all n ≥ 1) fails at n = 4 since 4! = 24 > 16 = 2⁴. Option D (n > n² for all n ≥ 1) fails at n = 2 since 2 > 4 is false. Only 2ⁿ > n can be proved by induction for all n ≥ 1."
     },
     {
       "question_id": "T02.07.Q013",
@@ -1075,8 +1075,8 @@
       "cognitive_level": "recall",
       "question_text": "The statement 2ⁿ > n² is true for all n ≥ 1.",
       "correct_answer": "B",
-      "explanation_correct": "The statement '2^n > n^2' is false for all n ≥ 1. This is because as n gets larger, the value of n^2 grows much faster than 2^n. For example, when n = 10, 2^10 = 1024 but 10^2 = 100, which is much greater than 1024.",
-      "explanation_incorrect": "The statement '2^n > n^2' is not true for all n ≥ 1. This is a common misconception, as the inequality is only true for very small values of n, like n = 1 or 2. However, as n gets larger, the value of n^2 grows much faster than 2^n, and the inequality becomes false. For example, when n = 10, 2^10 = 1024 but 10^2 = 100, which is much greater than 1024."
+      "explanation_correct": "The statement 2ⁿ > n² is not true for ALL n ≥ 1. It fails at n = 2 (2² = 4, not > 4), n = 3 (2³ = 8, not > 9), and n = 4 (2⁴ = 16, not > 16). Although it becomes true for n ≥ 5, the claim 'for all n ≥ 1' is false.",
+      "explanation_incorrect": "The statement fails for small values: at n = 2, 2² = 4 and n² = 4 (not strictly greater); at n = 3, 2³ = 8 < 9 = 3². While 2ⁿ (exponential) does eventually grow faster than n² (polynomial), and the inequality holds for n ≥ 5, it is not true for ALL n ≥ 1."
     },
     {
       "question_id": "T02.07.Q040",

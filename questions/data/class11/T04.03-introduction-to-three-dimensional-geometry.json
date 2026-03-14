@@ -422,8 +422,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) ±4. This can be found by using the distance formula between the two points (x, 1, 3) and (0, 1, 0), which is √((x₂−x₁)² + (y₂−y₁)² + (z₂−z₁)²). Plugging in the given values, we get √((-0)² + (1-1)² + (0-3)²) = 5, which simplifies to √(0 + 0 + 9) = 5. Solving for x, we get x = ±4.",
-      "explanation_incorrect": "The other options are incorrect because they do not satisfy the given distance formula. Option B) ±5 is incorrect because the distance between the two points is not 5. Option C) ±3 is incorrect because the distance between the points is not 3. Option D) ±2 is incorrect because the distance between the points is not 2. The correct answer is A) ±4, as this value satisfies the distance formula and gives a distance of 5 between the two points."
+      "explanation_correct": "The correct answer is A) ±4. Using the distance formula: √((x−0)² + (1−1)² + (3−0)²) = 5, which gives √(x² + 0 + 9) = 5. Squaring both sides: x² + 9 = 25, so x² = 16, and x = ±4.",
+      "explanation_incorrect": "The other options are incorrect because they do not satisfy the equation x² + 9 = 25. Option B) ±5 gives 25 + 9 = 34 ≠ 25. Option C) ±3 gives 9 + 9 = 18 ≠ 25. Option D) ±2 gives 4 + 9 = 13 ≠ 25. Only x = ±4 satisfies x² = 16, giving a distance of 5."
     },
     {
       "question_id": "T04.03.Q015",
@@ -451,8 +451,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The image of a point (x, y, z) on the XY-plane has the form (x, y, 0), since the z-coordinate becomes 0 when projecting the point onto the XY-plane. Therefore, the image of the point (3, 4, 5) on the XY-plane is (3, 4, 0).",
-      "explanation_incorrect": "Option A is incorrect because the z-coordinate does not become negative when projecting the point (3, 4, 5) onto the XY-plane. Option B is incorrect because the x-coordinate does not become negative. Option C is incorrect because the y-coordinate does not become negative. The correct option is A, which shows the image of the point (3, 4, 5) on the XY-plane as (3, 4, 0)."
+      "explanation_correct": "The image (reflection) of a point (x, y, z) in the XY-plane is (x, y, −z), since reflecting across the XY-plane negates the z-coordinate. Therefore, the image of (3, 4, 5) in the XY-plane is (3, 4, −5), which is option A.",
+      "explanation_incorrect": "Option B (−3, 4, 5) is incorrect because reflecting in the XY-plane negates z, not x. Option C (3, −4, 5) is incorrect because it negates y, not z. Option D (3, 4, 0) is the projection onto the XY-plane, not the reflection. The correct image is (3, 4, −5)."
     },
     {
       "question_id": "T04.03.Q016",
@@ -481,7 +481,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "The point dividing the line segment from (6, 3, 9) to (2, 7, 1) in the ratio 1:3 internally is (5, 4, 7). This is because the section formula for 3D coordinates gives us this point when applying the 1:3 ratio.",
-      "explanation_incorrect": "Option A (5, 4, 7) is the correct answer. To find the point that divides the line segment from (6, 3, 9) to (2, 7, 1) in the ratio 1:3 internally, we use the 3D section formula: (x₁+3x₂)/(1+3), (y₁+3y₂)/(1+3), (z₁+3z₂)/(1+3). Plugging in the coordinates, we get (5, 4, 7) as the point that satisfies this ratio."
+      "explanation_incorrect": "Option A (5, 4, 7) is the correct answer. To find the point that divides the line segment from (6, 3, 9) to (2, 7, 1) in the ratio 1:3 internally, we use the 3D section formula: ((1×2+3×6)/4, (1×7+3×3)/4, (1×1+3×9)/4) = (20/4, 16/4, 28/4) = (5, 4, 7)."
     },
     {
       "question_id": "T04.03.Q017",
@@ -538,8 +538,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The image of a point (x, y, z) in the YZ-plane is (0, y, z). Since the given point is (2, -3, 5), the image in the YZ-plane is (-2, -3, 5).",
-      "explanation_incorrect": "The image of a point (x, y, z) in the YZ-plane does not retain the x-coordinate. The correct image of (2, -3, 5) in the YZ-plane is (-2, -3, 5), not (2, 3, 5) or (2, -3, -5) or (0, -3, 5)."
+      "explanation_correct": "The image (reflection) of a point (x, y, z) in the YZ-plane is (−x, y, z), since reflecting across the YZ-plane negates the x-coordinate. For the point (2, −3, 5), the image is (−2, −3, 5), which is option A.",
+      "explanation_incorrect": "Option B (2, 3, 5) negates y instead of x. Option C (2, −3, −5) negates z instead of x. Option D (0, −3, 5) is the projection onto the YZ-plane, not the reflection. The correct image is (−2, −3, 5)."
     },
     {
       "question_id": "T04.03.Q019",
@@ -712,8 +712,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The image of a point (x, y, z) in the XZ-plane is simply (x, 0, z), as the y-coordinate is projected to 0. So, the image of (5, 2, -7) in the XZ-plane is (5, 0, -7), which is option A.",
-      "explanation_incorrect": "Option A is correct because the image of a point (x, y, z) in the XZ-plane is (x, 0, z), where the y-coordinate is projected to 0. So, the image of (5, 2, -7) is (5, 0, -7). The other options are incorrect as they do not correctly project the y-coordinate to 0 in the XZ-plane."
+      "explanation_correct": "The image (reflection) of a point (x, y, z) in the XZ-plane is (x, −y, z), since reflecting across the XZ-plane negates the y-coordinate. For the point (5, 2, −7), the image is (5, −2, −7), which is option A.",
+      "explanation_incorrect": "Option B (−5, 2, −7) negates x instead of y. Option C (5, 2, 7) negates z instead of y. Option D (5, 0, −7) is the projection onto the XZ-plane, not the reflection. The correct image is (5, −2, −7)."
     },
     {
       "question_id": "T04.03.Q025",
@@ -829,7 +829,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "The distance of a point (x, y, z) from the XY-plane is simply the z-coordinate of the point, which is 3 for the given point (1, 2, 3). Therefore, the correct answer is A) 3.",
-      "explanation_incorrect": "The distance formula in three-dimensional geometry is √((x₂−x₁)² + (y₂−y₁)² + (z₂−z₁)²). Plugging in the given point (1, 2, 3), we get √((1-0)² + (2-0)² + (3-0)²) = √(1 + 4 + 9) = √14. Therefore, the correct answer is D) √14."
+      "explanation_incorrect": "The distance from a point to the XY-plane is simply the absolute value of the z-coordinate, not the distance from the origin. Option B (1) is the x-coordinate, Option C (2) is the y-coordinate, and Option D (√14) is the distance from the origin, not from the XY-plane. The correct answer is A) 3."
     },
     {
       "question_id": "T04.03.Q029",
@@ -895,28 +895,28 @@
       "concept_id": "T04.03.C02",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "The perimeter of the triangle with vertices A(1,1,1), B(2,3,5), C(3,5,3) is (AB=2√6, BC=√12, CA=√12):",
+      "question_text": "The perimeter of the triangle with vertices A(1,1,1), B(2,3,5), C(3,5,3) is (AB=√21, BC=3, CA=2√6):",
       "options": [
         {
           "id": "A",
-          "text": "2√6 + 2√12"
+          "text": "√21 + 3 + 2√6"
         },
         {
           "id": "B",
-          "text": "2√6 + 4√3"
+          "text": "2√6 + 2√12"
         },
         {
           "id": "C",
-          "text": "Both A and B"
+          "text": "12"
         },
         {
           "id": "D",
-          "text": "12"
+          "text": "3 + 4√3"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The correct answer is C. To find the perimeter of a triangle, we need to add the lengths of all three sides. In this case, the lengths of the sides are AB = 2√6, BC = √12, and CA = √12. So the total perimeter is 2√6 + 2√12 = 2√6 + 4√3.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not account for all three sides of the triangle. Option A only includes the length of one side (AB), while option D is simply the sum of the lengths of the three sides without considering that the triangle inequality may not be satisfied. The correct option C includes the lengths of all three sides, which is necessary to find the perimeter of the triangle."
+      "correct_answer": "A",
+      "explanation_correct": "The perimeter is the sum of all three side lengths. AB = √((2−1)²+(3−1)²+(5−1)²) = √(1+4+16) = √21. BC = √((3−2)²+(5−3)²+(3−5)²) = √(1+4+4) = 3. CA = √((1−3)²+(1−5)²+(1−3)²) = √(4+16+4) = √24 = 2√6. Perimeter = √21 + 3 + 2√6.",
+      "explanation_incorrect": "Options B, C, and D do not correctly compute the sum of the three side lengths. The side lengths are AB = √21, BC = 3, and CA = 2√6, so the perimeter is √21 + 3 + 2√6."
     },
     {
       "question_id": "T04.03.Q032",
@@ -969,12 +969,12 @@
         },
         {
           "id": "D",
-          "text": "x² = y² = z²"
+          "text": "x² + y² + z² = 1"
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is option A, |x| = |y| = |z|. This is because a point that is equidistant from the three coordinate planes (XY, YZ, XZ) must have the same absolute value for all three coordinates (x, y, z), ensuring that the distances from the planes are equal.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not represent the conditions for a point that is equidistant from the three coordinate planes. Option B, x = y = z, is incorrect because the point could be located anywhere along the main diagonal of the octant. Option C, x + y + z = 0, is incorrect because it represents a point on the main diagonal of the first octant. Option D, x² = y² = z², is incorrect because it represents a point on the surface of a sphere, which does not necessarily imply equidistance from the three planes."
+      "explanation_correct": "The correct answer is option A, |x| = |y| = |z|. The distance from the XY-plane is |z|, from the YZ-plane is |x|, and from the XZ-plane is |y|. For these distances to be equal, we need |x| = |y| = |z|.",
+      "explanation_incorrect": "Option B (x = y = z) is too restrictive -- it only considers one octant. The condition requires absolute values, since points like (1, −1, 1) are also equidistant from all three planes. Option C (x + y + z = 0) describes a plane, not the equidistance condition. Option D (x² + y² + z² = 1) describes a sphere, which is unrelated to equidistance from coordinate planes."
     },
     {
       "question_id": "T04.03.Q034",
@@ -1163,7 +1163,7 @@
       "cognitive_level": "recall",
       "question_text": "The point dividing (0, 0, 0) and (6, 9, 12) in ratio 1:2 internally is (___, ___, ___).",
       "correct_answer": "2, 3, 4",
-      "explanation_correct": "The point dividing the line segment from (0, 0, 0) to (6, 9, 12) in the ratio 1:2 internally is (2, 3, 4) because the section formula in three-dimensional geometry states that the coordinates of the internal division point are (x₁ + k(x₂ - x₁), y₁ + k(y₂ - y₁), z₁ + k(z₂ - z₁)), where k is the ratio of division. In this case, k = 1/2, so the coordinates are (0 + (1/2)(6), 0 + (1/2)(9), 0 + (1/2)(12)) = (2, 3, 4).",
+      "explanation_correct": "Using the section formula for ratio m:n = 1:2 internally from (0,0,0) to (6,9,12): x = (1×6+2×0)/(1+2) = 6/3 = 2, y = (1×9+2×0)/3 = 9/3 = 3, z = (1×12+2×0)/3 = 12/3 = 4. So the point is (2, 3, 4).",
       "explanation_incorrect": "The incorrect answer would be (4, 6, 8), which is obtained by simply taking the average of the coordinates of the two given points (0, 0, 0) and (6, 9, 12). However, this is not the correct way to find the point that divides the line segment in a given ratio. The correct method is to use the section formula in three-dimensional geometry, as explained in the correct explanation."
     },
     {

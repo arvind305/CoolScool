@@ -275,8 +275,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The minimum value of the objective function Z = 3x + 2y occurs at the corner point (6, 0), where Z = 3(6) + 2(0) = 18. This is the lowest value of Z among the given corner points (0, 8), (4, 4), and (6, 0).",
-      "explanation_incorrect": "The correct answer is A) 16. To find the minimum value of Z, we need to evaluate the objective function at each corner point and select the lowest value. At the corner point (0, 8), Z = 3(0) + 2(8) = 16, which is the minimum value among the given options."
+      "explanation_correct": "Evaluating Z = 3x + 2y at each corner point: Z(0,8) = 0 + 16 = 16, Z(4,4) = 12 + 8 = 20, Z(6,0) = 18 + 0 = 18. The minimum value is 16 at (0, 8).",
+      "explanation_incorrect": "The minimum is not at (4,4) where Z = 20 or at (6,0) where Z = 18. The lowest value among all corner points is 16 at (0, 8), so the correct answer is 16."
     },
     {
       "question_id": "T04.01.Q010",
@@ -622,9 +622,9 @@
           "text": "42"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The maximum value of Z is 36. By plotting the feasible region and evaluating the objective function Z at each corner point, we find that the maximum value of Z occurs at the point (2, 2), where Z = 11(2) + 7(2) = 36.",
-      "explanation_incorrect": "Option C is correct because the graphical method of solving the linear programming problem involves finding the optimal value of the objective function at the corner points of the feasible region. In this case, the feasible region is a triangle with vertices at (0, 0), (2, 0), and (2, 2), and the maximum value of Z occurs at the point (2, 2) where Z = 11(2) + 7(2) = 36."
+      "correct_answer": "D",
+      "explanation_correct": "The feasible region has corner points (0, 0), (2, 0), (2, 2), and (0, 6). Evaluating Z = 11x + 7y: Z(0,0) = 0, Z(2,0) = 22, Z(2,2) = 36, Z(0,6) = 42. The maximum is 42 at (0, 6).",
+      "explanation_incorrect": "Option C (36) is the value at (2, 2), but (0, 6) is also a feasible corner point (satisfies 2(0)+6 = 6 ≤ 6 and 0 ≤ 2), and Z(0, 6) = 42 > 36. So the maximum is 42, not 36."
     },
     {
       "question_id": "T04.01.Q022",
@@ -710,8 +710,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The minimum value of Z = 3x + 5y occurs at the corner point (0, 2), where x = 0 and y = 2. Substituting these values, we get Z = 3(0) + 5(2) = 10, which is the minimum value of the objective function.",
-      "explanation_incorrect": "The incorrect options do not correctly minimize the objective function Z = 3x + 5y. Option A (5) is too low, Option C (6) is too high, and Option D (9) is also too high. The correct minimum value of Z is 7, which occurs at the corner point (0, 2) of the feasible region."
+      "explanation_correct": "The corner points of the feasible region are (0, 2), (3/2, 1/2), and (3, 0). Evaluating Z = 3x + 5y: Z(0,2) = 10, Z(3/2, 1/2) = 9/2 + 5/2 = 7, Z(3,0) = 9. The minimum value is 7 at (3/2, 1/2).",
+      "explanation_incorrect": "Option A (5) is less than the actual minimum. Option C (6) is also less than the minimum. Option D (9) is the value at the corner point (3, 0), not the minimum. The minimum is 7 at the intersection point (3/2, 1/2)."
     },
     {
       "question_id": "T04.01.Q025",
@@ -739,8 +739,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The maximum value of the objective function Z = x + y is 8. This can be determined by finding the corner points of the feasible region defined by the given constraints, and evaluating Z at each corner point. The corner points are (0, 5), (4, 3), and (10, 0), and Z evaluated at these points gives 5, 7, and 8 respectively. Therefore, the maximum value of Z is 8.",
-      "explanation_incorrect": "The correct answer is A) 8. This is because the optimal value of the objective function Z = x + y occurs at one of the corner points of the feasible region, and the maximum value of Z evaluated at the corner points is 8. The other options are incorrect because they do not represent the maximum value of the objective function given the constraints."
+      "explanation_correct": "The corner points of the feasible region are (0, 0), (7, 0), (6, 2), and (0, 5). Evaluating Z = x + y: Z(0,0) = 0, Z(7,0) = 7, Z(6,2) = 8, Z(0,5) = 5. The maximum value is 8 at (6, 2).",
+      "explanation_incorrect": "Option B (10) and D (14) exceed the actual maximum. Option C (7) is the value at (7, 0), not the maximum. The correct maximum is 8 at the intersection point (6, 2)."
     },
     {
       "question_id": "T04.01.Q026",
@@ -855,7 +855,7 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The correct answer is B) ₹528. This is because the maximum profit is obtained by making the maximum number of chairs (3) and tables (2), given the time constraints. The profit per chair is ₹100 and per table is ₹120, so the total profit is 3 x ₹100 + 2 x ₹120 = ₹480 + ₹240 = ₹528.",
+      "explanation_correct": "The constraints are 2x + 3y ≤ 12 (cutting) and 3x + 2y ≤ 12 (assembly), x ≥ 0, y ≥ 0. The corner points include (0,0), (4,0), (12/5, 12/5), and (0,4). At (12/5, 12/5): Z = 100(2.4) + 120(2.4) = 240 + 288 = ₹528, which is the maximum.",
       "explanation_incorrect": "The incorrect options are not correct because they do not consider the time constraints and the maximum number of chairs and tables that can be made. Option A) ₹480 is too low, as it does not account for the maximum possible production. Option C) ₹540 is too high, as it exceeds the maximum profit that can be obtained given the time constraints. Option D) ₹600 is also incorrect, as it is not the maximum profit that can be achieved."
     },
     {
@@ -1029,8 +1029,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The maximum value of Z = 3x + 4y is 28, which occurs at the vertex (4, 3) of the feasible region. This can be verified by evaluating the objective function at each corner point of the feasible region (determined by the given constraints) and finding the maximum value.",
-      "explanation_incorrect": "The correct answer is A) 28. To find the maximum value, we first plot the constraints x + y ≤ 7 and 2x + y ≤ 10 to determine the feasible region, which is a triangle. We then evaluate the objective function Z = 3x + 4y at each corner point of the triangle and find that the maximum value is 28, which occurs at the point (4, 3)."
+      "explanation_correct": "The corner points of the feasible region are (0, 0), (5, 0), (3, 4), and (0, 7). Evaluating Z = 3x + 4y: Z(0,0) = 0, Z(5,0) = 15, Z(3,4) = 25, Z(0,7) = 28. The maximum value is 28 at (0, 7).",
+      "explanation_incorrect": "Option B (25) is the value at (3, 4), not the maximum. Option C (27) and D (30) do not match any corner point evaluation. The correct maximum is 28 at (0, 7)."
     },
     {
       "question_id": "T04.01.Q036",

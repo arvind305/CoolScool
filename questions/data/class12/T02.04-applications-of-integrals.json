@@ -159,8 +159,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The area bounded by the curve y = x³, the x-axis, x = -1, and x = 1 is the area under the curve from x = -1 to x = 1. This can be calculated using the definite integral ∫₋₁¹ x³ dx, which gives a value of 1/2.",
-      "explanation_incorrect": "The incorrect options do not correctly calculate the area under the curve y = x³ from x = -1 to x = 1. Option A (0) is incorrect because the area under the curve is not zero. Option B (1/4) is incorrect because it does not account for the full area under the curve from -1 to 1. Option D (1) is incorrect because the area under the curve is less than 1."
+      "explanation_correct": "The area bounded by y = x³, the x-axis, x = −1, and x = 1 is 1/2. Since x³ changes sign at x = 0, we must compute the area in two parts: Area = |∫₋₁⁰ x³dx| + |∫₀¹ x³dx| = |[x⁴/4]₋₁⁰| + |[x⁴/4]₀¹| = |0 − 1/4| + |1/4 − 0| = 1/4 + 1/4 = 1/2.",
+      "explanation_incorrect": "Option A (0) is incorrect because ∫₋₁¹ x³dx = 0 (x³ is odd), but the question asks for area, not the integral value. Area requires absolute values. Option B (1/4) is half the correct answer, representing only the area on one side of the origin. Option D (1) is too large."
     },
     {
       "question_id": "T02.04.Q006",
@@ -304,8 +304,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The area enclosed between the curves y = x² and y = 2x is given by the integral ∫₀² (x² - 2x) dx. This evaluates to 4/3, which is option A.",
-      "explanation_incorrect": "The other options are incorrect because they do not represent the correct value of the integral. Option B (2/3) is too small, option C (8/3) is too large, and option D (1) does not match the actual area calculated from the integral."
+      "explanation_correct": "The area enclosed between y = x² and y = 2x is 4/3. The curves intersect at x = 0 and x = 2 (from x² = 2x). On [0, 2], 2x ≥ x². Area = ∫₀²(2x − x²)dx = [x² − x³/3]₀² = (4 − 8/3) = 4/3.",
+      "explanation_incorrect": "Option B (2/3) is half the correct area. Option C (8/3) is too large. Option D (1) does not match. The key is integrating (upper curve − lower curve) = (2x − x²) from 0 to 2."
     },
     {
       "question_id": "T02.04.Q011",
@@ -420,8 +420,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The area bounded by the parabola y² = 4x and the line y = 2x is 1/3. This is because the region is a triangle, and the area of a triangle is (1/2) * base * height. The base is the x-coordinate of the point where the parabola and line intersect, which is 4, and the height is the y-coordinate of that point, which is 8. Therefore, the area is (1/2) * 4 * 8 = 16.",
-      "explanation_incorrect": "The correct answer is A) 1/3. The area is calculated by finding the region where the parabola y² = 4x is above the line y = 2x. This is a triangular region, and the area of a triangle is (1/2) * base * height. The base is the x-coordinate of the intersection point, which is 4, and the height is the y-coordinate of that point, which is 8. Therefore, the area is (1/2) * 4 * 8 = 16, which simplifies to 1/3."
+      "explanation_correct": "The area bounded by y² = 4x and y = 2x is 1/3. The intersection points are found by substituting y = 2x into y² = 4x: 4x² = 4x → x(x−1) = 0 → x = 0 and x = 1. On [0,1], 2√x ≥ 2x (the parabola is above the line). Area = ∫₀¹(2√x − 2x)dx = [(4/3)x^(3/2) − x²]₀¹ = 4/3 − 1 = 1/3.",
+      "explanation_incorrect": "Option B (2/3) is double the correct area. Option C (1) is too large. Option D (4/3) represents only one part of the integral without subtracting the line. The correct computation requires integrating the difference between the upper curve (y = 2√x from the parabola) and the lower curve (y = 2x) from x = 0 to x = 1."
     },
     {
       "question_id": "T02.04.Q015",
@@ -652,8 +652,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The area between the curve y = x^2 and the line y = 4 is the integral of [x^2 - 4] from 0 to 2, which equals 32/3. This is because the curve y = x^2 is above the line y = 4 between x = 0 and x = 2.",
-      "explanation_incorrect": "The incorrect options A, C, and D do not correctly compute the area between the curve y = x^2 and the line y = 4. The correct formula is to integrate [f(x) - g(x)] from the lower bound to the upper bound, where f(x) is the upper curve (x^2) and g(x) is the lower curve (4). Integrating [x^2 - 4] from 0 to 2 gives the correct answer of 32/3."
+      "explanation_correct": "The area between y = x² and y = 4 is 32/3. The curves intersect where x² = 4, i.e., x = ±2. On [−2, 2], y = 4 is above y = x². Area = ∫₋₂²(4 − x²)dx = [4x − x³/3]₋₂² = (8 − 8/3) − (−8 + 8/3) = 16/3 + 16/3 = 32/3.",
+      "explanation_incorrect": "Option A (16/3) is half the correct area, corresponding to only the right half [0, 2]. Option C (8) and option D (64/3) do not match the correct integral. The key is that y = 4 is the upper curve and y = x² is the lower curve on [−2, 2], and we integrate (4 − x²), not (x² − 4)."
     },
     {
       "question_id": "T02.04.Q023",
@@ -739,8 +739,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The area bounded by y = x² and the y-axis from y = 0 to y = 4 is 16/3. This is because the curve y = x² is the equation of a parabola, and the area under a parabola from x = 0 to x = 2 (where y = 4) is given by the definite integral ∫₀²x² dx, which evaluates to 16/3.",
-      "explanation_incorrect": "The correct answer is A) 16/3. This is because the area under the curve y = x² from y = 0 to y = 4 can be calculated using integration. The limits of integration are from x = 0 to x = 2, since when y = 4, x = 2. The integral ∫₀²x² dx gives the area, which evaluates to 16/3. Options B, C, and D are incorrect as they do not represent the correct area calculation."
+      "explanation_correct": "The area bounded by y = x² and the y-axis from y = 0 to y = 4 is 16/3. Since we are finding the area between the curve and the y-axis, we integrate with respect to y: x = √y. Area = ∫₀⁴ √y dy = [(2/3)y^(3/2)]₀⁴ = (2/3)(4^(3/2)) = (2/3)(8) = 16/3.",
+      "explanation_incorrect": "Option B (8/3) would be the area between y = x² and the x-axis from x = 0 to x = 2, which is a different region. Option C (4) is incorrect. Option D (32/3) is too large. The key is that the area between the curve and the y-axis requires integration with respect to y."
     },
     {
       "question_id": "T02.04.Q026",
@@ -855,8 +855,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The area between the parabola y = 4 - x^2 and the x-axis is given by the definite integral from x = 0 to x = 2 of the expression (4 - x^2), which gives 32/3. This is the correct option B.",
-      "explanation_incorrect": "The incorrect options do not correctly compute the area between the given curves. Option A (16/3) would be the area under the parabola from x = 0 to x = 1, but the question asks for the area between the parabola and the x-axis from x = 0 to x = 2. Options C (8) and D (4) are incorrect as they do not match the actual area computed using integration."
+      "explanation_correct": "The area between y = 4 − x² and y = 0 is 32/3. The parabola intersects the x-axis at x = ±2. Area = ∫₋₂²(4 − x²)dx = [4x − x³/3]₋₂² = (8 − 8/3) − (−8 + 8/3) = 16/3 + 16/3 = 32/3. Alternatively, by symmetry: 2∫₀²(4 − x²)dx = 2[4x − x³/3]₀² = 2(8 − 8/3) = 2(16/3) = 32/3.",
+      "explanation_incorrect": "Option A (16/3) is half the correct area, representing only ∫₀²(4 − x²)dx. The full area from x = −2 to x = 2 is twice this value by symmetry. Options C (8) and D (4) do not match the correct integral computation."
     },
     {
       "question_id": "T02.04.Q030",
@@ -884,8 +884,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The area bounded by y = x², the y-axis, and y = 1 and y = 4 is 14/3 because the region is a triangle with base 3 (from y = 1 to y = 4) and height 1 (from x = 0 to x = 1), so the area is 1/2 × 3 × 1 = 14/3.",
-      "explanation_incorrect": "The correct answer is A) 14/3. This is the area of the triangle bounded by y = x², the y-axis, and y = 1 and y = 4. The base of the triangle is 3 (from y = 1 to y = 4) and the height is 1 (from x = 0 to x = 1), so the area is 1/2 × 3 × 1 = 14/3. The other options do not correctly calculate the area of this region."
+      "explanation_correct": "The area bounded by y = x², the y-axis, y = 1, and y = 4 is 14/3. Since x = √y (right of the y-axis), we integrate with respect to y: Area = ∫₁⁴ √y dy = [(2/3)y^(3/2)]₁⁴ = (2/3)(8) − (2/3)(1) = 16/3 − 2/3 = 14/3.",
+      "explanation_incorrect": "Option B (7/3) is half the correct area. Option C (10/3) does not match. Option D (16/3) would be the area from y = 0 to y = 4, not y = 1 to y = 4. The key is integrating x = √y with respect to y from 1 to 4."
     },
     {
       "question_id": "T02.04.Q031",
@@ -1149,9 +1149,9 @@
       "difficulty": "exam_style",
       "cognitive_level": "recall",
       "question_text": "The area enclosed between y = x² and y = x from x = 0 to x = 2 is ___.",
-      "correct_answer": "2/3",
-      "explanation_correct": "To find the area enclosed between the two curves y = x^2 and y = x from x = 0 to x = 2, we need to integrate the difference between the two functions. The area is given by the definite integral of [x^2 - x] from 0 to 2, which evaluates to 2/3.",
-      "explanation_incorrect": "The incorrect answer would be to simply integrate one of the functions, say y = x^2, from 0 to 2. This would give the area under the parabola y = x^2, which is not the area between the two curves. The correct answer is 2/3, obtained by integrating the difference between the two functions, [x^2 - x], from 0 to 2."
+      "correct_answer": "1",
+      "explanation_correct": "The curves y = x² and y = x intersect at x = 0 and x = 1. On [0,1], x ≥ x², and on [1,2], x² ≥ x. The area enclosed is: ∫₀¹(x − x²)dx + ∫₁²(x² − x)dx = [x²/2 − x³/3]₀¹ + [x³/3 − x²/2]₁² = (1/2 − 1/3) + (8/3 − 2 − 1/3 + 1/2) = 1/6 + 5/6 = 1.",
+      "explanation_incorrect": "A common error is to compute ∫₀²(x² − x)dx = 2/3, but this gives the signed integral, not the area. Since x − x² changes sign at x = 1, the area requires splitting into sub-intervals and taking absolute values: |∫₀¹(x − x²)dx| + |∫₁²(x² − x)dx| = 1/6 + 5/6 = 1."
     },
     {
       "question_id": "T02.04.Q047",
@@ -1161,8 +1161,8 @@
       "cognitive_level": "recall",
       "question_text": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is ___.",
       "correct_answer": "2",
-      "explanation_correct": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is 2 units. This is because the cosine function is positive between 0 and π, and the definite integral of cos(x) from 0 to π is equal to 2.",
-      "explanation_incorrect": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is not 1. The correct answer is 2. This is because the area under the cosine curve from 0 to π is equal to 2 units, as the definite integral of cos(x) from 0 to π is 2."
+      "explanation_correct": "The area bounded by y = cos(x), x = 0, x = π, and the x-axis is 2. Note that cos(x) is positive on [0, π/2] and negative on [π/2, π], so we must split the integral: Area = ∫₀^(π/2) cos(x)dx + |∫_(π/2)^π cos(x)dx| = [sin(x)]₀^(π/2) + |[sin(x)]_(π/2)^π| = 1 + |0 − 1| = 1 + 1 = 2.",
+      "explanation_incorrect": "Note that ∫₀^π cos(x)dx = 0 (not 2), because the positive and negative parts cancel. But the question asks for area, not the integral value. Area requires splitting at x = π/2 where cos(x) changes sign, giving |1| + |−1| = 2."
     },
     {
       "question_id": "T02.04.Q048",

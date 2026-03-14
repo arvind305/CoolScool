@@ -535,9 +535,9 @@
           "text": "12/32"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The correct answer is C) 6/19. This is because we can use Bayes' theorem to calculate the probability that the item was produced by Machine A, given that it is defective. The probability is calculated as P(A|B) = (P(B|A)P(A)) / P(B), which gives 6/19.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply Bayes' theorem. Option A) 3/7 and Option B) 3/8 do not correctly calculate the conditional probability P(A|B) using the given information. Option D) 12/32 is incorrect because it does not simplify the fraction to the correct answer of 6/19."
+      "correct_answer": "B",
+      "explanation_correct": "Using Bayes' theorem: P(A|defective) = P(defective|A)·P(A) / P(defective). P(defective) = 0.6×0.02 + 0.4×0.05 = 0.012 + 0.020 = 0.032. P(A|defective) = 0.012/0.032 = 12/32 = 3/8, which is option B.",
+      "explanation_incorrect": "Option A (3/7) does not follow from the Bayes' theorem calculation. Option C (6/19) would result from different defect rates or proportions. Option D (12/32) equals 3/8 and would also be correct, but B is the simplified form."
     },
     {
       "question_id": "T05.01.Q019",
@@ -768,7 +768,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 1/2. Since the events A and B are independent, the probability of their union P(A ∪ B) is simply the sum of their individual probabilities: P(A ∪ B) = P(A) + P(B) = 1/3 + 1/4 = 7/12.",
+      "explanation_correct": "The correct answer is A) 1/2. For independent events, P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 1/3 + 1/4 − (1/3)(1/4) = 4/12 + 3/12 − 1/12 = 6/12 = 1/2.",
       "explanation_incorrect": "The incorrect answer is B) 7/12. This is incorrect because the probability of the union of two independent events A and B is not the sum of their individual probabilities, but rather the sum of their individual probabilities minus their intersection probability. Since A and B are independent, P(A ∩ B) = P(A) · P(B) = 1/3 · 1/4 = 1/12, so the correct probability is P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 1/3 + 1/4 - 1/12 = 1/2."
     },
     {
@@ -1030,7 +1030,7 @@
       ],
       "correct_answer": "D",
       "explanation_correct": "The correct answer is D) 65/81. This is because the probability of X being greater than or equal to 1 is the same as the probability of X being 1, 2, 3, or 4, which can be calculated using the binomial distribution formula with n = 4 and p = 1/3.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the probability of X being greater than or equal to 1 in a binomial distribution with n = 4 and p = 1/3. Option A) 1 - (2/3)⁴ is the probability of X being 0, not greater than or equal to 1. Option B) (2/3)⁴ is the probability of X being exactly 4, not greater than or equal to 1. Option C) 1 - (1/3)⁴ is the probability of X being greater than 0, not greater than or equal to 1."
+      "explanation_incorrect": "Option A, 1 − (2/3)⁴, is actually equivalent to 65/81 and is also a correct expression. Option B, (2/3)⁴ = 16/81, equals P(X = 0), not P(X ≥ 1). Option C, 1 − (1/3)⁴, uses the wrong base and gives 1 − 1/81 = 80/81, which is incorrect."
     },
     {
       "question_id": "T05.01.Q036",

@@ -535,9 +535,9 @@
           "text": "√42"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The area of a triangle can be calculated using the vector cross product formula: A = (1/2)|a x b|, where a and b are the vectors representing two sides of the triangle. In this case, the vectors are AB = (0, 1, 2) and AC = (1, 2, 0), so the area is (1/2)|(0, 1, 2) x (1, 2, 0)| = √42/2.",
-      "explanation_incorrect": "The incorrect options do not correctly calculate the area of the triangle. Option A calculates the magnitude of the vector AB, not the area. Option B calculates the magnitude of the vector AB, which is not the area. Option D calculates the magnitude of the vector AB, which is also not the area of the triangle. The correct option C calculates the area using the vector cross product formula."
+      "correct_answer": "A",
+      "explanation_correct": "The area of the triangle is (1/2)|AB × AC|. AB = (0, 1, 2) and AC = (1, 2, 0). AB × AC = i(1·0 − 2·2) − j(0·0 − 2·1) + k(0·2 − 1·1) = −4i + 2j − k. |AB × AC| = √(16 + 4 + 1) = √21. So the area = √21/2, which is option A.",
+      "explanation_incorrect": "Option B (√21) would be the full parallelogram area, not the triangle. Option C (√42/2) and D (√42) are incorrect values. The cross product AB × AC = (−4, 2, −1), and its magnitude is √21, giving a triangle area of √21/2."
     },
     {
       "question_id": "T03.01.Q019",
@@ -854,9 +854,9 @@
           "text": "7"
         }
       ],
-      "correct_answer": "B",
-      "explanation_correct": "The correct answer is B) 7/3. This is because for the vector a + λb to be perpendicular to the vector a, their dot product must be zero. So we need to find the value of λ that satisfies a · (a + λb) = 0.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the condition for the vector a + λb to be perpendicular to the vector a. The correct value of λ is 7/3, which makes the dot product a · (a + λb) equal to zero, ensuring that the resultant vector is perpendicular to the original vector a."
+      "correct_answer": "A",
+      "explanation_correct": "For a + λb to be perpendicular to a, we need a · (a + λb) = 0. a · a = 1 + 4 + 9 = 14. a · b = 2 − 2 − 3 = −3. So 14 + λ(−3) = 0, giving λ = 14/3, which is option A.",
+      "explanation_incorrect": "The other options do not satisfy the perpendicularity condition. We need a · (a + λb) = |a|² + λ(a · b) = 14 − 3λ = 0, so λ = 14/3. Options B (7/3), C (14), and D (7) are incorrect."
     },
     {
       "question_id": "T03.01.Q030",
@@ -1021,7 +1021,7 @@
         },
         {
           "id": "C",
-          "text": "10"
+          "text": "13"
         },
         {
           "id": "D",
@@ -1029,8 +1029,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The correct answer is C) 10. This is because the scalar triple product a · (b × c) gives the volume of the parallelepiped formed by the three vectors a, b, and c. By calculating the vector cross product b × c and then taking the dot product with a, we get the volume of the 3D shape.",
-      "explanation_incorrect": "The incorrect answers are not correct because they do not represent the volume of the parallelepiped formed by the three vectors a, b, and c. Option A) 0 would mean the three vectors are coplanar, which is not the case here. Option B) -10 and D) -5 are incorrect values for the volume, which should be a positive number."
+      "explanation_correct": "b × c for b = (1, 1, −2) and c = (1, 3, −1) is: i(1·(−1) − (−2)·3) − j(1·(−1) − (−2)·1) + k(1·3 − 1·1) = 5i − j + 2k. Then a · (b × c) = 2(5) + (−1)(−1) + 1(2) = 10 + 1 + 2 = 13.",
+      "explanation_incorrect": "The scalar triple product a · (b × c) is computed as the determinant of the 3×3 matrix formed by the components of a, b, c. The result is 13. Option A (0) would mean the vectors are coplanar, which they are not. Options B (−10) and D (−5) are incorrect values."
     },
     {
       "question_id": "T03.01.Q036",

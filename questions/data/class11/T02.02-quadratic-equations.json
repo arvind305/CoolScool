@@ -306,8 +306,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 3/2. Since α and β are the roots of the quadratic equation x² - 3x + 2 = 0, we can use the formula 1/α + 1/β = -b/a, where a = 1, b = -3, and c = 2. Plugging in the values, we get 1/α + 1/β = -(-3)/1 = 3/1 = 3/2.",
-      "explanation_incorrect": "The other options are incorrect because they do not match the correct value of 3/2 obtained from the formula 1/α + 1/β = -b/a. Option B) 2/3 is incorrect as it is the reciprocal of the correct answer. Option C) 5/2 is incorrect as it does not match the correct value. Option D) 1 is incorrect as it does not consider the relationship between the roots and the coefficients of the quadratic equation."
+      "explanation_correct": "The correct answer is A) 3/2. Since α and β are the roots of x² − 3x + 2 = 0, we have α + β = 3 and αβ = 2. Then 1/α + 1/β = (α + β)/(αβ) = 3/2.",
+      "explanation_incorrect": "Using the formula 1/α + 1/β = (α + β)/(αβ), with α + β = −b/a = 3 and αβ = c/a = 2, we get 1/α + 1/β = 3/2. Option B) 2/3 is incorrect (it is αβ/(α + β), the reciprocal). Option C) 5/2 and Option D) 1 do not match the correct calculation."
     },
     {
       "question_id": "T02.02.Q011",
@@ -327,16 +327,16 @@
         },
         {
           "id": "C",
-          "text": "50/27"
+          "text": "−74/27"
         },
         {
           "id": "D",
           "text": "−50/27"
         }
       ],
-      "correct_answer": "D",
-      "explanation_correct": "The correct answer is D) -50/27. This is because the expression α³β + αβ³ can be simplified using the given information about the roots α and β of the quadratic equation 3x² + 5x - 2 = 0. The sum of the roots is -b/a = -5/3, and the product of the roots is c/a = -2/3. Substituting these values, we get α³β + αβ³ = (-5/3)³(-2/3) + (-5/3)(-2/3)³ = -50/27.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not correctly simplify the expression α³β + αβ³ using the given information about the roots α and β. Option A) αβ(α² + β²) and Option B) αβ(α + β)² do not take into account the specific values of the roots as determined by the coefficients of the quadratic equation. Option C) 50/27 is also incorrect, as the correct simplified expression is -50/27."
+      "correct_answer": "C",
+      "explanation_correct": "α³β + αβ³ = αβ(α² + β²). Here α + β = −5/3 and αβ = −2/3. Using α² + β² = (α + β)² − 2αβ = 25/9 − 2(−2/3) = 25/9 + 4/3 = 25/9 + 12/9 = 37/9. Therefore αβ(α² + β²) = (−2/3)(37/9) = −74/27.",
+      "explanation_incorrect": "Option A gives the correct algebraic expression αβ(α² + β²) but not its numerical value. Option B is wrong because α³β + αβ³ = αβ(α² + β²), not αβ(α + β)². Option D (−50/27) uses an incorrect computation. The correct numerical value is −74/27."
     },
     {
       "question_id": "T02.02.Q012",
@@ -537,9 +537,9 @@
           "text": "No real value of k"
         }
       ],
-      "correct_answer": "D",
-      "explanation_correct": "The correct answer is D) No real value of k. This is because for the equation to have equal roots, the discriminant D = b² - 4ac must be 0. In this case, D = (2k)² - 4(1)(k² + k + 2) = 4k² - 4k² - 4k - 8 = -4k - 8, which can never be 0 for any real value of k.",
-      "explanation_incorrect": "The incorrect options A) k = -2, B) k = 2, and C) k = 1 are not correct because plugging these values of k into the equation will not result in equal roots. For the equation to have equal roots, the discriminant must be 0, which is not the case for any of these values of k. The correct answer is D) No real value of k, as the discriminant can never be 0 for this equation, and therefore, there are no real values of k that will result in equal roots."
+      "correct_answer": "A",
+      "explanation_correct": "For equal roots, the discriminant D must equal 0. Here D = (2k)² − 4(1)(k² + k + 2) = 4k² − 4k² − 4k − 8 = −4k − 8. Setting D = 0: −4k − 8 = 0, so k = −2. Verification: when k = −2, the equation becomes x² − 4x + 4 = 0, i.e. (x − 2)² = 0, which has equal roots x = 2.",
+      "explanation_incorrect": "Option B (k = 2) gives D = −4(2) − 8 = −16 < 0, so the roots are complex, not equal. Option C (k = 1) gives D = −4(1) − 8 = −12 < 0, again complex roots. Option D is wrong because k = −2 does produce equal roots. The correct answer is k = −2."
     },
     {
       "question_id": "T02.02.Q019",
@@ -841,7 +841,7 @@
       "options": [
         {
           "id": "A",
-          "text": "0 or 1"
+          "text": "0 or 2"
         },
         {
           "id": "B",
@@ -856,9 +856,9 @@
           "text": "−1"
         }
       ],
-      "correct_answer": "C",
-      "explanation_correct": "The correct answer is C) 0 only. If α and β are roots of the equation x² - (k+1)x + k = 0, and their difference is 1, then the value of k must be 0. This is because the sum of the roots is -(k+1)/1 = -k-1, and their difference is 1, so the roots must be 0 and 1.",
-      "explanation_incorrect": "The incorrect options are not correct because: A) 0 or 1 is incorrect because the value of k can only be 0, not both 0 and 1. B) 1 only is incorrect because the value of k is 0, not 1. D) -1 is incorrect because the value of k is 0, not -1."
+      "correct_answer": "A",
+      "explanation_correct": "α + β = k + 1 and αβ = k. We know (α − β)² = (α + β)² − 4αβ = (k+1)² − 4k = k² − 2k + 1 = (k − 1)². Since α − β = 1, we get (k − 1)² = 1, so k − 1 = ±1, giving k = 0 or k = 2. Check: k = 0 gives x² − x = 0 with roots 0 and 1 (difference 1). k = 2 gives x² − 3x + 2 = 0 with roots 1 and 2 (difference 1). Both work.",
+      "explanation_incorrect": "Option B (1 only) is wrong because when k = 1 the equation is x² − 2x + 1 = 0 with repeated root 1, giving α − β = 0, not 1. Option C (0 only) misses k = 2 which also satisfies the condition. Option D (−1) gives x² − 0x − 1 = 0 with roots ±1, difference 2, not 1."
     },
     {
       "question_id": "T02.02.Q030",
@@ -972,9 +972,9 @@
           "text": "−1 or 2"
         }
       ],
-      "correct_answer": "B",
-      "explanation_correct": "The correct answer is B) Cube root of 2. This is because the product of the roots of the quadratic equation kx^2 + 5x + k^2 = 0 is given as 2. Using the formula for the product of roots, we get k^2 = 2, so k = cube root of 2.",
-      "explanation_incorrect": "The incorrect answers are A) -2, C) 2, and D) -1 or 2. These are not correct because they do not satisfy the condition that the product of the roots is 2. The correct value of k is the cube root of 2, as this gives a product of the roots equal to 2 when plugged back into the original equation."
+      "correct_answer": "C",
+      "explanation_correct": "For the quadratic equation kx² + 5x + k² = 0, the product of the roots is c/a = k²/k = k. Given that the product of roots is 2, we get k = 2. Therefore the correct answer is C) 2.",
+      "explanation_incorrect": "The product of the roots of ax² + bx + c = 0 is c/a. Here a = k, c = k², so the product is k²/k = k. Setting k = 2 satisfies the condition that the product equals 2. Option A) −2 is incorrect because k = −2 would give a product of −2, not 2. Option B) Cube root of 2 is incorrect because it would result from the wrong formula k³ = 2, not the correct k = 2. Option D) −1 or 2 is incorrect because k = −1 gives a product of −1."
     },
     {
       "question_id": "T02.02.Q034",
@@ -1064,8 +1064,8 @@
       "cognitive_level": "recall",
       "question_text": "If the discriminant of a quadratic equation is a perfect square and the coefficients are rational, then the roots are rational.",
       "correct_answer": "A",
-      "explanation_correct": "If the discriminant of a quadratic equation is a perfect square, it means that the roots of the equation are real and equal. Since the coefficients are rational, the roots must also be rational numbers.",
-      "explanation_incorrect": "If the discriminant of a quadratic equation is a perfect square, it does not necessarily mean that the roots are rational. The roots may still be irrational, even if the discriminant is a perfect square. However, if the coefficients of the quadratic equation are rational, then the roots will indeed be rational numbers, regardless of the value of the discriminant."
+      "explanation_correct": "This is true. If the discriminant D = b² − 4ac is a non-negative perfect square and the coefficients a, b, c are rational, then √D is rational. Since the roots are (−b ± √D)/(2a), and −b, √D, and 2a are all rational, the roots are rational.",
+      "explanation_incorrect": "A common mistake is to confuse 'perfect square discriminant' with 'equal roots'. Equal roots occur only when D = 0. A perfect square discriminant (e.g. D = 4, 9, 16) simply means √D is an integer (or rational), which combined with rational coefficients guarantees rational roots."
     },
     {
       "question_id": "T02.02.Q039",

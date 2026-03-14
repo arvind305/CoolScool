@@ -392,7 +392,7 @@
       ],
       "correct_answer": "A",
       "explanation_correct": "The absolute maximum of f(x) = x^3 - 3x on the closed interval [-2, 2] occurs at x = 2, where f(2) = 2^3 - 3(2) = 8 - 6 = 2. This is the largest value the function attains within the given interval.",
-      "explanation_incorrect": "Option A is correct because the function f(x) = x^3 - 3x has a critical point at x = 0, where the derivative f'(x) = 3x^2 - 3 = 0. However, evaluating the function at this critical point gives f(0) = 0, which is not the absolute maximum. The absolute maximum occurs at the endpoint x = 2, where f(2) = 2^3 - 3(2) = 8 - 6 = 2."
+      "explanation_incorrect": "The critical points are where f'(x) = 3x² − 3 = 0, giving x = ±1. Evaluating at all critical points and endpoints: f(−2) = −2, f(−1) = 2, f(0) = 0, f(1) = −2, f(2) = 2. The absolute maximum is 2, occurring at both x = −1 and x = 2. Options B, C, and D do not match this value."
     },
     {
       "question_id": "T02.02.Q014",
@@ -653,7 +653,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The function f(x) = sin(x) - cos(x) is strictly increasing on the interval (-π/4, 3π/4) because its derivative f'(x) = cos(x) + sin(x) is positive on this interval, meaning the function is increasing.",
-      "explanation_incorrect": "The function f(x) = sin(x) - cos(x) is not strictly increasing on the other intervals provided. On the interval (0, π/4), the derivative f'(x) = cos(x) + sin(x) is negative, so the function is decreasing. On the interval (0, π), the function is not strictly increasing as it has a local maximum at x = π/2. On the interval (π/4, 5π/4), the function is not strictly increasing as it has a local minimum at x = 3π/4."
+      "explanation_incorrect": "Option A (0, π/4) is a subset of the correct interval (−π/4, 3π/4), so the function IS increasing there, but A is not the maximal interval. Option C (0, π) is too wide because at x slightly less than π, f'(x) = cos(x) + sin(x) becomes negative (e.g., f'(5π/6) = cos(5π/6) + sin(5π/6) = −√3/2 + 1/2 < 0). Option D (π/4, 5π/4) is wrong because f'(x) < 0 on (3π/4, 5π/4)."
     },
     {
       "question_id": "T02.02.Q023",
@@ -971,8 +971,8 @@
         }
       ],
       "correct_answer": "C",
-      "explanation_correct": "The function f(x) = x/(1 + x·tan(x)) has a critical point at x = 0, where the derivative f'(x) is undefined. Since the derivative is not continuous at x = 0, the function does not have a local maximum or minimum at this point.",
-      "explanation_incorrect": "The correct answer is that the function does not have a local maximum or minimum at x = 0. This is because the derivative f'(x) is undefined at x = 0, indicating that the function is not differentiable at that point. When a function is not differentiable at a critical point, it cannot be classified as having a local maximum or minimum there."
+      "explanation_correct": "The function f(x) = x/(1 + x·tan(x)) at x = 0 has neither a local maximum nor minimum. At x = 0, f(0) = 0. Using the limit definition: f'(0) = lim(h→0) [h/(1 + h·tan(h))]/h = lim(h→0) 1/(1 + h·tan(h)) = 1. Since f'(0) = 1 ≠ 0, x = 0 is not a critical point, so it cannot be a local maximum or minimum.",
+      "explanation_incorrect": "Option A (maximum) and Option B (minimum) are incorrect because x = 0 is not a critical point of the function. The derivative at x = 0 equals 1, which is positive, meaning the function is increasing through x = 0. A necessary condition for a local extremum is that f'(c) = 0 or f'(c) is undefined, neither of which holds here."
     },
     {
       "question_id": "T02.02.Q034",

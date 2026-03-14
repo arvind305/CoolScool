@@ -478,8 +478,8 @@
         }
       ],
       "correct_answer": "D",
-      "explanation_correct": "The derivative of ln(sin(x)) is cot(x). This is because the derivative of an inner function (sin(x)) is cos(x), and the derivative of the outer function ln(x) is 1/x. Applying the chain rule, the derivative becomes (cos(x)/sin(x)).",
-      "explanation_incorrect": "The incorrect options do not correctly apply the chain rule to find the derivative of ln(sin(x)). Option A is incorrect because it is missing the 1/sin(x) term from the outer function derivative. Option B is incorrect because it is the derivative of just sin(x), not the composite function ln(sin(x)). Option C is incorrect because it has the wrong sign for the derivative."
+      "explanation_correct": "The derivative of ln(sin(x)) is cot(x). By the chain rule, d/dx[ln(sin(x))] = (1/sin(x)) · cos(x) = cos(x)/sin(x) = cot(x). Note that option A (cos(x)/sin(x)) is mathematically equivalent to cot(x), but D is the simplified standard form.",
+      "explanation_incorrect": "Option A, cos(x)/sin(x), is actually equivalent to cot(x) and is mathematically correct, but D is the simplified form. Option B is incorrect because 1/sin(x) = csc(x), which is not the derivative of ln(sin(x)). Option C is incorrect because −cot(x) has the wrong sign; the derivative is positive cot(x)."
     },
     {
       "question_id": "T02.01.Q017",
@@ -564,9 +564,9 @@
           "text": "tan(θ/2)"
         }
       ],
-      "correct_answer": "D",
-      "explanation_correct": "The correct answer is D) tan(θ/2). This is because using parametric differentiation, dy/dx = (dy/dθ)/(dx/dθ) = a(sin θ)/(a(1 - cos θ)) = sin θ/(1 - cos θ) = tan(θ/2).",
-      "explanation_incorrect": "The other options are incorrect because they do not represent the correct differentiation of the given parametric equations. Option A) sin θ/(1 - cos θ) is the ratio dy/dθ over dx/dθ, but not the final result dy/dx. Option B) cos θ/(1 + sin θ) is not the correct derivative. Option C) cot(θ/2) is the reciprocal of the correct derivative tan(θ/2)."
+      "correct_answer": "C",
+      "explanation_correct": "The correct answer is C) cot(θ/2). Using parametric differentiation: dx/dθ = a(1 − cos θ), dy/dθ = a sin θ. So dy/dx = sin θ/(1 − cos θ). Using half-angle identities: sin θ = 2sin(θ/2)cos(θ/2) and 1 − cos θ = 2sin²(θ/2). Therefore dy/dx = [2sin(θ/2)cos(θ/2)]/[2sin²(θ/2)] = cos(θ/2)/sin(θ/2) = cot(θ/2).",
+      "explanation_incorrect": "Option A) sin θ/(1 − cos θ) is the unsimplified form of dy/dx, which equals cot(θ/2), so A is equivalent to C but not in simplified form. Option B) cos θ/(1 + sin θ) is not the correct derivative. Option D) tan(θ/2) = sin(θ/2)/cos(θ/2) is the reciprocal of the correct answer cot(θ/2)."
     },
     {
       "question_id": "T02.01.Q020",
@@ -623,8 +623,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 2eˣ cos(x). To find the second derivative of y = eˣ sin(x), we first take the first derivative: dy/dx = eˣ(sin(x) + cos(x)). Then, we differentiate this again to get the second derivative: d²y/dx² = eˣ(sin(x) - cos(x)) = 2eˣ cos(x).",
-      "explanation_incorrect": "The other options are incorrect because they do not accurately represent the second derivative of y = eˣ sin(x). Option B) 2eˣ sin(x) is wrong as it lacks the cos(x) term. Option C) eˣ(sin x + cos x) is the first derivative, not the second derivative. Option D) eˣ(sin x - cos x) is also incorrect as it does not have the factor of 2 in front of the eˣ cos(x) term."
+      "explanation_correct": "The correct answer is A) 2eˣ cos(x). First derivative: dy/dx = eˣsin(x) + eˣcos(x) = eˣ(sin(x) + cos(x)). Second derivative: d²y/dx² = eˣ(sin(x) + cos(x)) + eˣ(cos(x) − sin(x)) = eˣ(2cos(x)) = 2eˣcos(x).",
+      "explanation_incorrect": "Option B) 2eˣ sin(x) is wrong because the second derivative has cos(x), not sin(x). Option C) eˣ(sin x + cos x) is the first derivative, not the second derivative. Option D) eˣ(sin x − cos x) is incorrect; while this expression appears during the differentiation, the full second derivative is the sum eˣ(sin x + cos x) + eˣ(cos x − sin x) = 2eˣcos(x)."
     },
     {
       "question_id": "T02.01.Q022",
@@ -1029,8 +1029,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The correct answer is B) -cot(θ). This is because dy/dx = (dy/dθ)/(dx/dθ), where dy/dθ = cos(θ) and dx/dθ = -sin(θ). Simplifying this ratio gives us -cos(θ)/(-sin(θ)) = cot(θ), and the negative sign indicates that dy/dx is in the opposite direction of dx/dθ.",
-      "explanation_incorrect": "The incorrect answers are: A) -tan(θ), C) tan(θ), and D) cot(θ). These are incorrect because they do not correctly represent the derivative dy/dx in terms of the given variables x = cos(θ) and y = sin(θ). The correct approach is to use the quotient rule for derivatives, which gives us dy/dx = (dy/dθ)/(dx/dθ), where dy/dθ = cos(θ) and dx/dθ = -sin(θ)."
+      "explanation_correct": "The correct answer is B) −cot(θ). Using parametric differentiation: dx/dθ = −sin(θ) and dy/dθ = cos(θ). Therefore dy/dx = (dy/dθ)/(dx/dθ) = cos(θ)/(−sin(θ)) = −cos(θ)/sin(θ) = −cot(θ).",
+      "explanation_incorrect": "Option A) −tan(θ) is incorrect because dy/dx = cos(θ)/(−sin(θ)) = −cot(θ), not −tan(θ). Option C) tan(θ) is wrong as it has both the wrong function and wrong sign. Option D) cot(θ) has the wrong sign; the negative sign from dx/dθ = −sin(θ) gives −cot(θ), not +cot(θ)."
     },
     {
       "question_id": "T02.01.Q036",

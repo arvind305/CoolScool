@@ -509,7 +509,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 3/5. This is because the limit lim(x→0) sin(3x)/(5x) is equivalent to lim(x→0) (3sin(x))/(5x), which simplifies to 3/5 using the standard limit result lim(x→0) sin(x)/x = 1.",
+      "explanation_correct": "The correct answer is A) 3/5. We rewrite sin(3x)/(5x) as (3/5) × sin(3x)/(3x). As x→0, 3x→0, and lim sin(3x)/(3x) = 1 by the standard limit. So the result is 3/5 × 1 = 3/5.",
       "explanation_incorrect": "The correct answer is A) 3/5. The other options are incorrect because B) 5/3 is the reciprocal of the correct answer, C) 1 is the limit of sin(x)/x but not of sin(3x)/(5x), and D) 0 is incorrect as the limit does not approach 0."
     },
     {
@@ -712,8 +712,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The derivative of tan x is sec²x. This is because the derivative of tan x is the derivative of sin x divided by the derivative of cos x, which is (cos x)/(-sin x) = sec²x.",
-      "explanation_incorrect": "The derivative of tan x is not cos²x, cot x, or sin x/cos²x. These are incorrect because the derivative of tan x is the ratio of the derivatives of sin x and cos x, which is sec²x. The other options do not correctly represent the derivative of the tangent function."
+      "explanation_correct": "The derivative of tan x is sec²x. Since tan x = sin x / cos x, applying the quotient rule: d/dx(tan x) = (cos x · cos x − sin x · (−sin x))/cos²x = (cos²x + sin²x)/cos²x = 1/cos²x = sec²x.",
+      "explanation_incorrect": "Option B (cos²x) is the reciprocal of the correct answer. Option C (cot x) is cos x/sin x, not the derivative of tan x. Option D (sin x/cos²x) is incomplete -- the full derivative includes the cos²x term in the numerator as well. The correct answer is sec²x."
     },
     {
       "question_id": "T05.01.Q025",
@@ -770,7 +770,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) 3/5. As x goes to infinity, the numerator (3x^2 + 2) grows much faster than the denominator (5x^2 - 1), so the fraction approaches 3/5.",
+      "explanation_correct": "The correct answer is A) 3/5. Dividing numerator and denominator by x²: (3 + 2/x²)/(5 − 1/x²). As x→∞, 2/x²→0 and 1/x²→0, so the limit is 3/5.",
       "explanation_incorrect": "The correct answer is A) 3/5. Option B) ∞ is incorrect because as x goes to infinity, the numerator and denominator both grow large, but the numerator grows faster, so the fraction approaches a finite limit. Option C) 0 is incorrect because the numerator does not approach 0 faster than the denominator. Option D) 1 is incorrect because the numerator and denominator do not approach the same value as x goes to infinity."
     },
     {
@@ -795,12 +795,12 @@
         },
         {
           "id": "D",
-          "text": "(x+1) + (x+2)"
+          "text": "2(x+1)(x+2)"
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is option A, 2x + 3. This is because the derivative of (x+1)(x+2) is found by using the product rule, which states that the derivative of the product of two functions is equal to the first function's derivative times the second function, plus the first function times the second function's derivative. Applying this rule gives 2x + 3.",
-      "explanation_incorrect": "The correct answer is option A, 2x + 3. The other options are incorrect because they do not correctly apply the product rule. Option B, x + 3, does not take into account the derivative of the second term. Option C, 2x + 2, is missing the +1 term that comes from the derivative of the first term. Option D, (x+1) + (x+2), does not properly combine the derivatives of the two terms."
+      "explanation_correct": "The correct answer is option A, 2x + 3. Expanding first: (x+1)(x+2) = x² + 3x + 2. Differentiating: d/dx(x² + 3x + 2) = 2x + 3. Alternatively, by the product rule: 1·(x+2) + (x+1)·1 = 2x + 3.",
+      "explanation_incorrect": "Option B (x + 3) is wrong because d/dx(x²) = 2x, not x. Option C (2x + 2) incorrectly differentiates the 3x term as 2 instead of 3. Option D (2(x+1)(x+2)) confuses the derivative with multiplying the original function by 2."
     },
     {
       "question_id": "T05.01.Q028",
@@ -1130,8 +1130,8 @@
       "cognitive_level": "recall",
       "question_text": "lim(x→2) (x² − 4)/(x − 2) = ___.",
       "correct_answer": "4",
-      "explanation_correct": "The correct answer is 4 because the limit expression (x² - 4)/(x - 2) simplifies to 2x - 4, and when x approaches 2, the value of 2x - 4 approaches 4.",
-      "explanation_incorrect": "The accepted answer format is a single number, 4. The incorrect answer might be obtained by not simplifying the limit expression properly. The correct step-by-step solution is: lim(x→2) (x² - 4)/(x - 2) = lim(x→2) (x + 2) = 2x - 4, and when x approaches 2, the value of 2x - 4 approaches 4."
+      "explanation_correct": "The correct answer is 4. Factor the numerator: x² − 4 = (x+2)(x−2). Cancel (x−2): lim(x→2) (x+2) = 2+2 = 4.",
+      "explanation_incorrect": "A common error is to plug x=2 directly into the original expression, getting 0/0, which is indeterminate. The correct approach is to factor first: (x²−4)/(x−2) = (x+2)(x−2)/(x−2) = x+2, then substitute x=2 to get 4."
     },
     {
       "question_id": "T05.01.Q045",

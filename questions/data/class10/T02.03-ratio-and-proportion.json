@@ -419,10 +419,10 @@
       "difficulty": "exam_style",
       "cognitive_level": "recall",
       "question_text": "If x/y = 3/5, then the value of (3x+2y)/(3x-2y) = _____.",
-      "correct_answer": "19/(-1)",
+      "correct_answer": "-19",
       "concept_id": "T02.03.C01",
-      "explanation_correct": "The correct answer is 19/(-1) because if x/y = 3/5, then using the property of cross multiplication, we get 5x = 3y. Substituting this into the expression (3x+2y)/(3x-2y), we get (3(5x/3)+2(3y/5))/(3(5x/3)-2(3y/5)) = (15x/3 + 6y/5)/(15x/3 - 6y/5) = 19/(-1).",
-      "explanation_incorrect": "The incorrect answer would be to simplify the expression (3x+2y)/(3x-2y) directly without using the given ratio x/y = 3/5. This would give a different result that is not the accepted answer of 19/(-1). The correct approach is to use the property of cross multiplication to relate x and y, and then substitute that into the expression to get the final answer."
+      "explanation_correct": "Since x/y = 3/5, let x = 3k and y = 5k. Then (3x + 2y)/(3x - 2y) = (9k + 10k)/(9k - 10k) = 19k/(-k) = -19.",
+      "explanation_incorrect": "The correct approach is to substitute x = 3k and y = 5k (from the ratio x/y = 3/5) into the expression. This gives (9k + 10k)/(9k - 10k) = 19/(-1) = -19. The answer is -19, not any positive value."
     },
     {
       "question_id": "T02.03.Q021",
@@ -611,24 +611,20 @@
       "type": "ordering",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "Arrange these numbers to form a continued proportion:",
+      "question_text": "Arrange these numbers in ascending order to form a continued proportion (select the 3 that work):",
       "ordering_items": [
-        "8",
-        "12",
-        "2",
         "18",
-        "6"
+        "6",
+        "2"
       ],
       "correct_answer": [
         "2",
         "6",
-        "8",
-        "12",
         "18"
       ],
       "concept_id": "T02.03.C04",
-      "explanation_correct": "The numbers are in continued proportion because the ratio between consecutive numbers is constant. The ratio between 2 and 6 is 3, and the ratio between 6 and 8 is also 3, so the numbers form a continued proportion.",
-      "explanation_incorrect": "The numbers are not in the correct order to form a continued proportion. A continued proportion means that the ratio between the first and second numbers is the same as the ratio between the second and third numbers, and so on. To form a continued proportion with the given numbers, the correct order would be 2, 6, 8, 12, 18."
+      "explanation_correct": "The numbers 2, 6, 18 are in continued proportion because the ratio between consecutive numbers is constant: 2/6 = 6/18 = 1/3. Also, b² = ac: 6² = 36 = 2 × 18 = 36.",
+      "explanation_incorrect": "A continued proportion requires a/b = b/c. For the numbers 2, 6, 18: 2/6 = 1/3 and 6/18 = 1/3. Since both ratios are equal, these numbers are in continued proportion in the order 2, 6, 18."
     },
     {
       "question_id": "T02.03.Q045",
@@ -637,22 +633,22 @@
       "cognitive_level": "recall",
       "question_text": "Arrange the steps to solve (x+3)/(x-3) = 5/2 using componendo-dividendo:",
       "ordering_items": [
-        "Final answer: x = 21/2",
+        "Final answer: x = 7",
         "Simplify: 2x/6 = 7/3",
         "Apply componendo-dividendo: ((x+3)+(x-3))/((x+3)-(x-3)) = (5+2)/(5-2)",
         "Cross multiply: 6x = 42",
-        "Simplify: 2x/6 = 7/3"
+        "Write as: 2x/6 = 7/3"
       ],
       "correct_answer": [
         "Apply componendo-dividendo: ((x+3)+(x-3))/((x+3)-(x-3)) = (5+2)/(5-2)",
-        "Cross multiply: 6x = 42",
-        "Final answer: x = 21/2",
         "Simplify: 2x/6 = 7/3",
-        "Simplify: 2x/6 = 7/3"
+        "Write as: 2x/6 = 7/3",
+        "Cross multiply: 6x = 42",
+        "Final answer: x = 7"
       ],
       "concept_id": "T02.03.C01",
-      "explanation_correct": "The correct steps are arranged in the right order to solve the given equation using the componendo-dividendo property. This property states that if a/b = c/d, then (a+b)/(a-b) = (c+d)/(c-d). Applying this to the given equation, we can simplify it step-by-step to arrive at the final answer of x = 21/2.",
-      "explanation_incorrect": "The incorrect explanation would be to solve the equation directly by cross-multiplying, which is not the correct approach for this question. The steps should involve first applying the componendo-dividendo property to simplify the equation, and then solving for x. The final answer format should be a simplified fraction, not a decimal value."
+      "explanation_correct": "By componendo-dividendo: ((x+3)+(x-3))/((x+3)-(x-3)) = (5+2)/(5-2) simplifies to 2x/6 = 7/3. Cross-multiplying: 6x = 42, so x = 7. Verification: (7+3)/(7-3) = 10/4 = 5/2.",
+      "explanation_incorrect": "The incorrect approach would be to solve directly by cross-multiplying the original equation. While that also works, the question asks to use componendo-dividendo. The steps should first simplify 2x/6 = 7/3, then cross-multiply to get x = 7."
     },
     {
       "question_id": "T02.03.Q046",
@@ -757,22 +753,22 @@
       "cognitive_level": "recall",
       "question_text": "Arrange the steps to find x if (3x+2y)/(3x-2y) = 5/3 and y = 6:",
       "ordering_items": [
-        "Simplify: 24x/12 = 8/2",
+        "Simplify: 6x/24 = 4",
         "Substitute y = 6: (3x+12)/(3x-12) = 5/3",
-        "Cross multiply: 3(3x+12) = 5(3x-12)",
-        "Final answer: x = 12",
+        "Solve: x = 16",
+        "Final answer: x = 16",
         "Apply componendo-dividendo: ((3x+12)+(3x-12))/((3x+12)-(3x-12)) = (5+3)/(5-3)"
       ],
       "correct_answer": [
         "Substitute y = 6: (3x+12)/(3x-12) = 5/3",
         "Apply componendo-dividendo: ((3x+12)+(3x-12))/((3x+12)-(3x-12)) = (5+3)/(5-3)",
-        "Simplify: 24x/12 = 8/2",
-        "Cross multiply: 3(3x+12) = 5(3x-12)",
-        "Final answer: x = 12"
+        "Simplify: 6x/24 = 4",
+        "Solve: x = 16",
+        "Final answer: x = 16"
       ],
       "concept_id": "T02.03.C01",
-      "explanation_correct": "The correct answer arranges the steps logically to solve the given problem. It starts by substituting the given value of y, then applies the componendo-dividendo property to simplify the expression, and finally solves for the unknown x by cross-multiplying and simplifying the result.",
-      "explanation_incorrect": "The incorrect explanation would be to rearrange the steps in a different order, such as starting with the cross-multiplication step before substituting the value of y or applying the componendo-dividendo property. This would not lead to the correct solution, as the steps need to be followed in a specific sequence to properly solve the given ratio and proportion problem."
+      "explanation_correct": "Substituting y = 6 gives (3x+12)/(3x-12) = 5/3. By componendo-dividendo: 6x/24 = 8/2 = 4. So x = 24 × 4/6 = 16. Verification: (48+12)/(48-12) = 60/36 = 5/3.",
+      "explanation_incorrect": "The incorrect approach would skip the componendo-dividendo step. The correct sequence is: substitute y = 6, apply componendo-dividendo to simplify, then solve for x to get x = 16."
     },
     {
       "question_id": "T02.03.Q051",

@@ -251,8 +251,8 @@
       "correct_answer": "C",
       "question_text": "For which pair of matrices is multiplication NOT possible?",
       "concept_id": "T02.04.C04",
-      "explanation_correct": "Matrix multiplication is only possible when the number of columns in the first matrix is equal to the number of rows in the second matrix. Since option C has two matrices with 3 columns and 2 rows each, matrix multiplication is not possible in this case.",
-      "explanation_incorrect": "Option A is correct because for matrix multiplication, the number of columns in the first matrix (2) must be equal to the number of rows in the second matrix (3). In option C, both matrices have 3 columns and 2 rows, so the dimensions are not compatible for multiplication."
+      "explanation_correct": "Matrix multiplication AB is only possible when the number of columns in A equals the number of rows in B. In option C, A is 3×2 (2 columns) and B is 3×2 (3 rows). Since 2 ≠ 3, AB is not defined.",
+      "explanation_incorrect": "For options A, B, and D, the number of columns in the first matrix matches the number of rows in the second matrix, making multiplication possible. Only option C has incompatible dimensions: A(3×2) has 2 columns but B(3×2) has 3 rows."
     },
     {
       "question_id": "T02.04.Q009",
@@ -306,11 +306,11 @@
           "text": "14"
         }
       ],
-      "correct_answer": "C",
+      "correct_answer": "D",
       "question_text": "If A = [[2, 1], [3, 2]] and A² = [[a, b], [c, d]], what is the value of a + d?",
       "concept_id": "T02.04.C04",
-      "explanation_correct": "The correct answer is C) 13. To find the value of a + d, we need to calculate the matrix A². Given that A = [[2, 1], [3, 2]], we can find A² by multiplying A with itself. The result is A² = [[7, 5], [11, 8]], so a = 7 and d = 8, making a + d = 15.",
-      "explanation_incorrect": "The incorrect answer is D) 14. This is because the correct value of a + d in the matrix A² is 7 + 8 = 15, not 14. The step-by-step process to find A² involves multiplying the matrix A with itself, resulting in the matrix [[7, 5], [11, 8]], where a = 7 and d = 8."
+      "explanation_correct": "The correct answer is D) 14. A² = A × A. (1,1): 2×2 + 1×3 = 7. (1,2): 2×1 + 1×2 = 4. (2,1): 3×2 + 2×3 = 12. (2,2): 3×1 + 2×2 = 7. So A² = [[7, 4], [12, 7]], giving a = 7 and d = 7, so a + d = 14.",
+      "explanation_incorrect": "Options A (11), B (12), and C (13) are incorrect. To find A², multiply A by itself: (1,1) = 2×2+1×3 = 7, (2,2) = 3×1+2×2 = 7. So a + d = 7 + 7 = 14."
     },
     {
       "question_id": "T02.04.Q011",

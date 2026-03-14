@@ -481,10 +481,10 @@
       "difficulty": "application",
       "cognitive_level": "recall",
       "question_text": "If two points A and B are 8 cm apart, there exist points that are 3 cm from A and 7 cm from B.",
-      "correct_answer": "B",
+      "correct_answer": "A",
       "type": "true_false",
-      "explanation_correct": "The statement is false because the sum of the distances from the two points A and B must be greater than or equal to the distance between A and B. In this case, the distance from A is 3 cm and the distance from B is 7 cm, which adds up to 10 cm, which is greater than the distance between A and B, which is 8 cm.",
-      "explanation_incorrect": "A common misconception is that the distances from the two points A and B can be added up to be less than the distance between A and B. However, this is not possible because the sum of the distances from the two points must be greater than or equal to the distance between A and B. In this case, the distance from A is 3 cm and the distance from B is 7 cm, which adds up to 10 cm, which is greater than the distance between A and B, which is 8 cm."
+      "explanation_correct": "The statement is true. The locus of points 3 cm from A is a circle with center A and radius 3 cm, and the locus of points 7 cm from B is a circle with center B and radius 7 cm. Since the sum of the radii (3 + 7 = 10) is greater than the distance between centers (8 cm), and the absolute difference of the radii (|7 - 3| = 4) is less than the distance between centers (8 cm), the two circles intersect at exactly two points.",
+      "explanation_incorrect": "A common misconception is that if the two distances don't add up to exactly the distance between A and B, no such points exist. However, for two circles to intersect, we need the sum of radii to be greater than or equal to the distance between centers, and the absolute difference of radii to be less than or equal to the distance between centers. Here, 3 + 7 = 10 > 8 and |7 - 3| = 4 < 8, so the circles do intersect, meaning such points exist."
     },
     {
       "question_id": "T03.04.Q027",
@@ -725,8 +725,8 @@
         "Centers 6 cm apart, radii 4 cm and 5 cm"
       ],
       "type": "ordering",
-      "explanation_correct": "The correct order from fewest to most intersection points between the circles is: Concentric circles with different radii (0 intersection points), centers 10 cm apart with radii 3 cm and 4 cm (2 intersection points), centers 10 cm apart with radii 5 cm and 5 cm (2 intersection points), and centers 6 cm apart with radii 4 cm and 5 cm (4 intersection points). This is because as the distance between the centers decreases and the radii become more similar, the number of intersection points increases.",
-      "explanation_incorrect": "The incorrect order would be: Centers 10 cm apart, radii 5 cm and 5 cm (2 intersection points), Centers 10 cm apart, radii 3 cm and 4 cm (2 intersection points), Centers 6 cm apart, radii 4 cm and 5 cm (4 intersection points), Concentric circles with different radii (0 intersection points). This is wrong because as the distance between the centers decreases and the radii become more similar, the number of intersection points increases, not the other way around."
+      "explanation_correct": "The correct order from fewest to most intersection points is: Concentric circles with different radii (0 points, they never intersect), centers 10 cm apart with radii 3 cm and 4 cm (0 points, since 3 + 4 = 7 < 10 so they are too far apart to intersect), centers 10 cm apart with radii 5 cm and 5 cm (1 point, since 5 + 5 = 10 = distance, they are externally tangent), and centers 6 cm apart with radii 4 cm and 5 cm (2 points, since 4 + 5 = 9 > 6 and |5 - 4| = 1 < 6, they intersect at two points). Two distinct circles can intersect at a maximum of 2 points.",
+      "explanation_incorrect": "The incorrect order would place the cases with more intersection points before those with fewer. Remember: concentric circles with different radii never intersect (0 points), circles whose sum of radii is less than the distance between centers don't intersect (0 points), circles whose sum of radii equals the distance are tangent (1 point), and circles whose sum of radii exceeds the distance intersect at 2 points (the maximum for two distinct circles)."
     },
     {
       "question_id": "T03.04.Q050",

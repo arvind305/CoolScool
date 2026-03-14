@@ -104,8 +104,8 @@
       ],
       "correct_answer": "A",
       "type": "mcq",
-      "explanation_correct": "The sum of the first 5 terms of the given arithmetic progression (2, 5, 8, 11, ...) can be calculated using the formula S_n = n/2[a + l], where 'a' is the first term and 'l' is the last term. Plugging in the values, we get S_5 = 5/2[2 + 11] = 40.",
-      "explanation_incorrect": "The incorrect answer is option C) 50. This is because the common difference between the terms is 3 (5 - 2 = 3), and the sum of the first 5 terms can be calculated using the formula S_n = n/2[2a + (n-1)d], where 'a' is the first term and 'd' is the common difference. Plugging in the values, we get S_5 = 5/2[2(2) + (5-1)(3)] = 50."
+      "explanation_correct": "The sum of the first 5 terms of the given arithmetic progression (2, 5, 8, 11, ...) can be calculated using the formula S_n = n/2[a + l], where 'a' is the first term and 'l' is the last term. The 5th term is a_5 = 2 + 4(3) = 14. Plugging in the values, we get S_5 = 5/2[2 + 14] = 5/2[16] = 40.",
+      "explanation_incorrect": "Option B) 45, C) 50, and D) 35 are incorrect. Using S_n = n/2[2a + (n-1)d] with a = 2, d = 3, and n = 5, we get S_5 = 5/2[4 + 12] = 5/2[16] = 40. Only option A gives the correct sum."
     },
     {
       "question_id": "T02.05.Q004",
@@ -170,7 +170,7 @@
       "concept_id": "T02.05.C02",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "The sum of the first 10 terms of an AP is 185 and the first term is 4. What is the common difference?",
+      "question_text": "The sum of the first 10 terms of an AP is 175 and the first term is 4. What is the common difference?",
       "options": [
         {
           "id": "A",
@@ -191,15 +191,15 @@
       ],
       "correct_answer": "A",
       "type": "mcq",
-      "explanation_correct": "The correct answer is A) 3. To find the common difference in an AP, we can use the formula for the sum of the first n terms: S_n = n/2[2a + (n-1)d], where S_n is the sum, a is the first term, n is the number of terms, and d is the common difference. Since the sum of the first 10 terms is 185 and the first term is 4, we can solve for the common difference d.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not satisfy the given information. The common difference must be a value that, when used in the formula for the sum of an AP, results in a sum of 185 for the first 10 terms with a first term of 4. Options B, C, and D do not produce the correct sum using this information."
+      "explanation_correct": "The correct answer is A) 3. Using the formula S_n = n/2[2a + (n-1)d], we get 175 = 10/2[2(4) + 9d] = 5[8 + 9d]. So 35 = 8 + 9d, giving 9d = 27, hence d = 3.",
+      "explanation_incorrect": "The incorrect options do not satisfy the given information. Using S_10 = 5[8 + 9d] = 175, we get d = 3. Options B (3.5), C (4), and D (4.5) do not produce a sum of 175 for the first 10 terms with a first term of 4."
     },
     {
       "question_id": "T02.05.Q007",
       "concept_id": "T02.05.C04",
       "difficulty": "application",
       "cognitive_level": "scenario",
-      "question_text": "A man saves Rs 500 in the first month and increases his savings by Rs 50 every month. In how many months will his total savings be Rs 7500?",
+      "question_text": "A man saves Rs 500 in the first month and increases his savings by Rs 50 every month. In how many months will his total savings be Rs 7250?",
       "options": [
         {
           "id": "A",
@@ -220,8 +220,8 @@
       ],
       "correct_answer": "A",
       "type": "mcq",
-      "explanation_correct": "The correct answer is A) 10 months. This is because the man saves Rs 500 in the first month, then increases his savings by Rs 50 each month. So, the progression of his savings is an arithmetic progression with a = 500 and d = 50. Using the formula for the sum of n terms, we can find that after 10 months, his total savings will be Rs 7500.",
-      "explanation_incorrect": "The incorrect answers are B) 12 months, C) 15 months, and D) 18 months. These answers do not correctly apply the formula for the sum of an arithmetic progression. The given information indicates that the progression is with a = 500 and d = 50, and the total savings need to be Rs 7500. Using the formula, we can calculate that it will take 10 months to reach the total savings of Rs 7500."
+      "explanation_correct": "The correct answer is A) 10 months. The savings form an AP with a = 500 and d = 50. Using S_n = n/2[2a + (n-1)d], we get S_10 = 10/2[2(500) + 9(50)] = 5[1000 + 450] = 5(1450) = 7250.",
+      "explanation_incorrect": "The incorrect answers are B) 12 months, C) 15 months, and D) 18 months. Using the AP sum formula S_n = n/2[2(500) + (n-1)(50)] with the target of Rs 7250, only n = 10 satisfies the equation."
     },
     {
       "question_id": "T02.05.Q008",
@@ -249,8 +249,8 @@
       ],
       "correct_answer": "A",
       "type": "mcq",
-      "explanation_correct": "The (p+q)th term of an arithmetic progression is equal to the first term (a) plus (p+q-1) times the common difference (d). Since the pth term is q and the qth term is p, the common difference d = q-p. Therefore, the (p+q)th term is a + (p+q-1)(q-p) = a, which is 0.",
-      "explanation_incorrect": "The correct answer is A) 0. This is because the (p+q)th term of an arithmetic progression is equal to the first term (a) plus (p+q-1) times the common difference (d). Since the pth term is q and the qth term is p, the common difference d = q-p. Plugging this in, the (p+q)th term becomes a + (p+q-1)(q-p) = a, which is 0."
+      "explanation_correct": "The correct answer is A) 0. From the given: a + (p-1)d = q and a + (q-1)d = p. Subtracting: (p-q)d = q-p, so d = -1. Substituting back: a = q - (p-1)(-1) = q + p - 1. The (p+q)th term = a + (p+q-1)d = (p+q-1) + (p+q-1)(-1) = 0.",
+      "explanation_incorrect": "Options B (p+q), C (p-q), and D (2(p+q)) are incorrect. By solving the simultaneous equations a + (p-1)d = q and a + (q-1)d = p, we get d = -1 and a = p+q-1. Therefore, the (p+q)th term = a + (p+q-1)d = (p+q-1) - (p+q-1) = 0."
     },
     {
       "question_id": "T02.05.Q009",
@@ -340,7 +340,7 @@
       "question_text": "The sum of the first 8 terms of the AP 3, 6, 9, 12, ... is _____.",
       "correct_answer": "108",
       "type": "fill_blank",
-      "explanation_correct": "The sum of the first 8 terms of an arithmetic progression can be calculated using the formula S_n = n/2[a + l], where n is the number of terms, a is the first term, and l is the last term. In this case, n = 8, a = 3, and the last term is 33 (3 + 7 * 6). Plugging these values into the formula gives S_8 = 8/2[3 + 33] = 108.",
+      "explanation_correct": "The sum of the first 8 terms of an arithmetic progression can be calculated using the formula S_n = n/2[a + l], where n is the number of terms, a is the first term, and l is the last term. In this case, n = 8, a = 3, d = 3, and the last term is a_8 = 3 + 7(3) = 24. Plugging these values into the formula gives S_8 = 8/2[3 + 24] = 4 × 27 = 108.",
       "explanation_incorrect": "The incorrect answer would be to simply add up the first 8 terms (3 + 6 + 9 + 12 + 15 + 18 + 21 + 24 = 108), rather than using the formula for the sum of an arithmetic progression. The correct formula is necessary to find the sum efficiently, especially for longer progressions."
     },
     {

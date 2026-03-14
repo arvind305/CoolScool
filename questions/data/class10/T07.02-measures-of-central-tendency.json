@@ -207,14 +207,14 @@
           "text": "40"
         }
       ],
-      "correct_answer": "C",
+      "correct_answer": "A",
       "boundary_tags": [
         "Median formula"
       ],
       "question_text": "In a frequency distribution, the median class is 30-40 with f = 12, cf = 25, N = 50, and h = 10. What is the median?",
       "concept_id": "T07.02.C02",
-      "explanation_correct": "The correct answer is C) 34.17. To calculate the median, we can use the formula: Median = L + [(N/2 - cf)/f] × h, where L is the lower boundary of the median class, N is the total frequency, cf is the cumulative frequency before the median class, f is the frequency of the median class, and h is the class width. Plugging in the given values, we get: Median = 30 + [(50/2 - 25)/12] × 10 = 34.17.",
-      "explanation_incorrect": "The other options are incorrect because they do not correctly apply the formula for calculating the median. Option A) 30 is the lower boundary of the median class, but it does not consider the other factors needed to find the actual median value. Option B) 30.42 and Option D) 40 are also incorrect, as they do not correctly use the given information to solve the problem."
+      "explanation_correct": "The correct answer is A) 30. Using the median formula: Median = L + [(N/2 - cf)/f] × h = 30 + [(50/2 - 25)/12] × 10 = 30 + [(25 - 25)/12] × 10 = 30 + 0 = 30. Since N/2 equals the cumulative frequency before the median class, the median falls exactly at the lower boundary of the median class.",
+      "explanation_incorrect": "The other options are incorrect. Applying the formula Median = L + [(N/2 - cf)/f] × h with L = 30, N/2 = 25, cf = 25, f = 12, and h = 10 gives: 30 + [(25 - 25)/12] × 10 = 30 + 0 = 30. Options B) 30.42, C) 34.17, and D) 40 result from incorrect calculations."
     },
     {
       "question_id": "T07.02.Q007",
@@ -479,10 +479,10 @@
       "boundary_tags": [
         "Mode formula"
       ],
-      "question_text": "If in the mode formula, f₁ = 25, f₀ = 18, f₂ = 15, L = 50, and h = 10, then (f₁ - f₀)/(2f₁ - f₀ - f₂) × h equals _____.",
+      "question_text": "If in the mode formula, f₁ = 25, f₀ = 18, f₂ = 22, L = 50, and h = 10, then (f₁ - f₀)/(2f₁ - f₀ - f₂) × h equals _____.",
       "concept_id": "T07.02.C03",
-      "explanation_correct": "The correct answer is 7 because the formula for finding the mode of grouped data is Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h, and by substituting the given values, we get (25 - 18)/(2×25 - 18 - 15) × 10 = 7.",
-      "explanation_incorrect": "The incorrect answer would be to simply plug in the values without understanding the formula. The correct formula is Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h, where f₁ = 25, f₀ = 18, f₂ = 15, L = 50, and h = 10. Plugging these values in, we get (25 - 18)/(2×25 - 18 - 15) × 10 = 7, which is the correct answer."
+      "explanation_correct": "The correct answer is 7 because substituting the given values: (f₁ - f₀)/(2f₁ - f₀ - f₂) × h = (25 - 18)/(2×25 - 18 - 22) × 10 = 7/(50 - 40) × 10 = 7/10 × 10 = 7.",
+      "explanation_incorrect": "The calculation is: (25 - 18)/(2×25 - 18 - 22) × 10 = 7/(50 - 40) × 10 = 7/10 × 10 = 7. Any other answer results from incorrectly computing the numerator (f₁ - f₀ = 7) or the denominator (2f₁ - f₀ - f₂ = 50 - 18 - 22 = 10)."
     },
     {
       "question_id": "T07.02.Q021",
@@ -622,8 +622,8 @@
       ],
       "question_text": "In the mode formula, if f₀ and f₂ are equal, the mode equals the class mark of the modal class.",
       "concept_id": "T07.02.C03",
-      "explanation_correct": "If f₀ and f₂ (the frequencies of the classes before and after the modal class) are equal, then the formula for mode simplifies to Mode = L + [(f₁)/(2f₁)] × h, which reduces to Mode = L + h/2. This means the mode is equal to the class mark of the modal class.",
-      "explanation_incorrect": "The statement is not correct. The mode formula does not simplify to the class mark of the modal class even if f₀ and f₂ are equal. The formula for mode is Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₂)] × h, where L is the lower boundary of the modal class, f₁ is the frequency of the modal class, f₀ is the frequency of the class before the modal class, and f₂ is the frequency of the class after the modal class. Even if f₀ and f₂ are equal, the mode would not be equal to the class mark."
+      "explanation_correct": "If f₀ = f₂, then the mode formula becomes: Mode = L + [(f₁ - f₀)/(2f₁ - f₀ - f₀)] × h = L + [(f₁ - f₀)/(2(f₁ - f₀))] × h = L + h/2. Since the class mark = L + h/2 (midpoint of the class), the mode equals the class mark of the modal class.",
+      "explanation_incorrect": "The statement is actually true. When f₀ = f₂, the mode formula simplifies to L + [(f₁ - f₀)/(2f₁ - 2f₀)] × h = L + [1/2] × h = L + h/2, which is exactly the class mark (midpoint) of the modal class. This is because equal surrounding frequencies indicate symmetric distribution within the modal class."
     },
     {
       "question_id": "T07.02.Q041",

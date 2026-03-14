@@ -175,7 +175,7 @@
       "options": [
         {
           "id": "A",
-          "text": "Rs 824.32"
+          "text": "Rs 849.29"
         },
         {
           "id": "B",
@@ -191,8 +191,8 @@
         }
       ],
       "correct_answer": "A",
-      "explanation_correct": "The correct answer is A) Rs 824.32. This is calculated using the compound interest formula A = P(1 + r/100)^n, where P = Rs 5000, r = 8% per annum (which is divided by 2 for half-yearly compounding), and n = 2 years (multiplied by 2 for half-yearly compounding).",
-      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the compound interest formula. Option B) Rs 800 is just the simple interest calculation, which does not account for compound interest. Option C) Rs 856.48 and Option D) Rs 832 are incorrect calculations of the compound interest."
+      "explanation_correct": "The correct answer is A) Rs 849.29. For half-yearly compounding, rate per half-year = 8/2 = 4% and number of periods = 2 × 2 = 4. A = 5000 × (1.04)^4 = 5000 × 1.16985856 = Rs 5849.29. CI = 5849.29 − 5000 = Rs 849.29.",
+      "explanation_incorrect": "The incorrect options are not correct because they do not properly apply the compound interest formula. Option B) Rs 800 is just the simple interest calculation (5000 × 8% × 2), which does not account for compounding. Option C) Rs 856.48 and Option D) Rs 832 are incorrect calculations of the compound interest."
     },
     {
       "question_id": "T01.01.Q007",
@@ -462,7 +462,7 @@
       "question_text": "The difference between compound interest and simple interest is zero for 1 year.",
       "correct_answer": "A",
       "explanation_correct": "The difference between compound interest and simple interest is zero for 1 year because the compound interest formula reduces to the simple interest formula when the time period is 1 year. This is because (1 + r/100)^1 = 1 + r/100, which is the formula for simple interest.",
-      "explanation_incorrect": "The difference between compound interest and simple interest is not zero for 1 year. Even though the compound interest formula reduces to the simple interest formula when the time period is 1 year, the two types of interest are still different. Compound interest takes into account the interest earned on the interest, while simple interest is calculated only on the principal amount."
+      "explanation_incorrect": "A common misconception is that CI is always greater than SI. While this is true for periods longer than 1 year, for exactly 1 year with annual compounding, CI and SI are identical. The compounding effect only kicks in from the second period onwards, so the difference is indeed zero for 1 year."
     },
     {
       "question_id": "T01.01.Q025",
@@ -516,8 +516,8 @@
       "concept_id": "T01.01.C01",
       "question_text": "If a sum doubles in 2 years at compound interest, the rate of interest is 50% per annum.",
       "correct_answer": "B",
-      "explanation_correct": "The rate of interest per annum cannot be 50% if the sum doubles in 2 years. The correct rate of interest can be calculated using the compound interest formula, which shows that for a sum to double in 2 years, the rate of interest would need to be around 35% per annum.",
-      "explanation_incorrect": "If a sum doubles in 2 years at compound interest, the rate of interest cannot be 50% per annum. This is because the compound interest formula shows that for a sum to double in 2 years, the rate of interest would need to be around 35% per annum, not 50%. The higher the rate of interest, the faster the sum will grow, but 50% per annum is too high for the given time period of 2 years."
+      "explanation_correct": "The rate of interest per annum cannot be 50% if the sum doubles in 2 years. Using the compound interest formula: 2P = P(1 + r/100)^2, so (1 + r/100) = sqrt(2) ≈ 1.4142, giving r ≈ 41.42% per annum, not 50%. At 50%, the sum would become 2.25P, not 2P.",
+      "explanation_incorrect": "If a sum doubles in 2 years at compound interest, the rate of interest cannot be 50% per annum. At 50% per annum compounded annually for 2 years, the amount would be P × (1.5)^2 = 2.25P, which is more than double. The actual rate required to double in 2 years is approximately 41.42% per annum."
     },
     {
       "question_id": "T01.01.Q030",
@@ -589,12 +589,12 @@
       ],
       "correct_answer": [
         "Difference between CI and SI",
-        "Principal amount",
         "Simple Interest (SI)",
-        "Compound Interest (CI)"
+        "Compound Interest (CI)",
+        "Principal amount"
       ],
-      "explanation_correct": "The correct order is 'Difference between CI and SI', 'Principal amount', 'Simple Interest (SI)', 'Compound Interest (CI)'. This is because the difference between CI and SI will always be the smallest, followed by the principal amount, then the SI, and finally the CI, which is the highest due to the compounding effect.",
-      "explanation_incorrect": "The incorrect order would be to arrange the items from smallest to largest. This is incorrect because the difference between CI and SI is the smallest, followed by the principal amount, then the SI, and finally the CI, which is the largest. The compounding effect makes the CI higher than the SI for the same principal and time period."
+      "explanation_correct": "The correct ascending order is 'Difference between CI and SI', 'Simple Interest (SI)', 'Compound Interest (CI)', 'Principal amount'. For typical values, the CI−SI difference is the smallest, followed by SI, then CI (which is slightly more than SI due to compounding), and finally the Principal amount which is the largest. For example, with P=5000, r=10%, n=2: Diff=50, SI=1000, CI=1050, P=5000.",
+      "explanation_incorrect": "A common mistake is placing the Principal before SI and CI. In most cases, the Principal amount is much larger than either the SI or CI earned over a short period. The correct ascending order is: Difference (smallest), SI, CI, Principal (largest)."
     },
     {
       "question_id": "T01.01.Q044",
@@ -1568,7 +1568,7 @@
       "concept_id": "T01.01.C03",
       "difficulty": "exam_style",
       "cognitive_level": "compare",
-      "question_text": "What is the difference between CI and SI of P = Rs 10000, r = 10%?",
+      "question_text": "What is the difference between CI and SI of P = Rs 10000, r = 10% for 2 years?",
       "options": [
         {
           "id": "A",
@@ -1588,8 +1588,8 @@
         }
       ],
       "correct_answer": "B",
-      "explanation_correct": "The correct answer is option B) Rs 100. This is because the difference between the compound interest (CI) and simple interest (SI) for a principal of Rs 10,000 at 10% interest rate over 1 year is Rs 100. The formula for CI is A = P(1 + r/100)^n, which gives Rs 11,000, while the formula for SI is I = P*r*t/100, which gives Rs 1,000, and the difference between the two is Rs 100.",
-      "explanation_incorrect": "The incorrect options are not correct because they do not accurately represent the difference between CI and SI for the given principal, rate, and time period. Option A) Rs 32 is too low, option C) Rs 50 is also too low, and option D) Rs 115.20 is too high. The correct formula to calculate the difference between CI and SI must be used to arrive at the right answer of Rs 100."
+      "explanation_correct": "The correct answer is option B) Rs 100. For 2 years, the difference between CI and SI = P × (r/100)^2 = 10000 × (10/100)^2 = 10000 × 0.01 = Rs 100. Alternatively: CI = 10000 × (1.1)^2 - 10000 = 2100, SI = 10000 × 10 × 2/100 = 2000. Difference = 2100 - 2000 = Rs 100.",
+      "explanation_incorrect": "The incorrect options do not correctly apply the CI-SI difference formula for 2 years. Option A) Rs 32 is too low, option C) Rs 50 is too low, and option D) Rs 115.20 is too high. The formula CI - SI = P × (r/100)^2 for 2 years gives Rs 100."
     },
     {
       "question_id": "T01.01.Q080",
@@ -1597,7 +1597,7 @@
       "concept_id": "T01.01.C03",
       "difficulty": "exam_style",
       "cognitive_level": "compare",
-      "question_text": "What is the difference between CI and SI of P = Rs 5000, r = 8%?",
+      "question_text": "What is the difference between CI and SI of P = Rs 5000, r = 8% for 2 years?",
       "options": [
         {
           "id": "A",
@@ -1626,7 +1626,7 @@
       "concept_id": "T01.01.C03",
       "difficulty": "exam_style",
       "cognitive_level": "compare",
-      "question_text": "What is the difference between CI and SI of P = Rs 20000, r = 5%?",
+      "question_text": "What is the difference between CI and SI of P = Rs 20000, r = 5% for 2 years?",
       "options": [
         {
           "id": "A",
@@ -1655,7 +1655,7 @@
       "concept_id": "T01.01.C03",
       "difficulty": "exam_style",
       "cognitive_level": "compare",
-      "question_text": "What is the difference between CI and SI of P = Rs 8000, r = 12%?",
+      "question_text": "What is the difference between CI and SI of P = Rs 8000, r = 12% for 2 years?",
       "options": [
         {
           "id": "A",

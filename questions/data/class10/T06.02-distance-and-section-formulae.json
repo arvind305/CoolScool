@@ -260,7 +260,7 @@
       "options": [
         {
           "id": "A",
-          "text": "3x + y = 6"
+          "text": "3x + y = 5"
         },
         {
           "id": "B",
@@ -279,8 +279,8 @@
       "question_id": "T06.02.Q009",
       "type": "mcq",
       "concept_id": "T06.02.C01",
-      "explanation_correct": "The correct answer is A) 3x + y = 6. Since P is equidistant from A and B, the line segment connecting P to the midpoint of AB is perpendicular to AB. The equation of this perpendicular bisector is 3x + y = 6, which represents the relation that must hold for P to be equidistant from A and B.",
-      "explanation_incorrect": "The other options are incorrect because they do not represent the equation of the perpendicular bisector of the line segment AB. Option B) x + y = 5 and Option D) x - y = 1 are not the correct equations, while Option C) 2x + y = 7 does not satisfy the condition of P being equidistant from A and B."
+      "explanation_correct": "The correct answer is A) 3x + y = 5. Since P is equidistant from A and B, PA² = PB². Expanding: (x-3)²+(y-6)² = (x+3)²+(y-4)². This simplifies to -6x-12y+45 = 6x-8y+25, giving -12x-4y+20 = 0, or 3x + y = 5.",
+      "explanation_incorrect": "The other options are incorrect. Setting PA² = PB² and expanding gives (x-3)²+(y-6)² = (x+3)²+(y-4)², which simplifies to 3x + y = 5. Options B, C, and D do not satisfy this equidistant condition."
     },
     {
       "difficulty": "exam_style",
@@ -402,13 +402,13 @@
     {
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "question_text": "If the points (2, 1) and (1, -2) are equidistant from point (x, y), and the point lies on the line x - y = 3, then x = _______.",
-      "correct_answer": "2",
+      "question_text": "If the points (1, 2) and (3, 4) are equidistant from point (x, y), and the point lies on the line y = 0, then x = _______.",
+      "correct_answer": "5",
       "question_id": "T06.02.Q019",
       "type": "fill_blank",
       "concept_id": "T06.02.C03",
-      "explanation_correct": "The point (x, y) is equidistant from (2, 1) and (1, -2), so it must lie on the perpendicular bisector of the line segment joining these two points. Since the point also lies on the line x - y = 3, the x-coordinate of the point must be 2.",
-      "explanation_incorrect": "If the points (2, 1) and (1, -2) are equidistant from the point (x, y), then the distance formula tells us that (x - 2)^2 + (y - 1)^2 = (x - 1)^2 + (y + 2)^2. Solving this equation and the given equation x - y = 3 simultaneously, we get x = 2. The accepted answer format is a single number, so the correct answer is 2."
+      "explanation_correct": "Setting PA² = PB²: (x-1)²+(y-2)² = (x-3)²+(y-4)². Expanding: x²-2x+1+y²-4y+4 = x²-6x+9+y²-8y+16. Simplifying: 4x+4y = 20, so x+y = 5. Since y = 0, we get x = 5.",
+      "explanation_incorrect": "The equidistant condition gives (x-1)²+(y-2)² = (x-3)²+(y-4)², which simplifies to x+y = 5. Combined with y = 0, we get x = 5. Any other value of x does not satisfy both conditions simultaneously."
     },
     {
       "difficulty": "exam_style",
@@ -528,8 +528,8 @@
       "question_id": "T06.02.Q030",
       "type": "true_false",
       "concept_id": "T06.02.C02",
-      "explanation_correct": "The y-axis divides the line segment joining (-4, 5) and (8, -7) in the ratio 1:2 because the x-coordinates of the two points are -4 and 8, and the y-axis passes through the point (0, 0), which is the middle point of the line segment.",
-      "explanation_incorrect": "If the line segment was divided by the y-axis in the ratio 1:2, the x-coordinates of the two points would be -4, 0, and 8, with the point on the y-axis being (0, 0). However, in this case, the x-coordinates are -4 and 8, so the y-axis divides the line segment in the ratio 1:1, not 1:2."
+      "explanation_correct": "The y-axis divides the line segment joining (-4, 5) and (8, -7) in the ratio 1:2. Using the section formula, if the y-axis divides in ratio k:1, then x-coordinate = 0 gives: (-4×1 + 8×k)/(k+1) = 0, so 8k = 4, k = 1/2. The ratio is 1/2:1 = 1:2.",
+      "explanation_incorrect": "The statement is true. Using the section formula for the point on the y-axis (x = 0), we get the ratio 1:2. The point of division is (0, 1), which lies on the y-axis. The midpoint would give ratio 1:1, but the y-axis does not pass through the midpoint of this segment."
     },
     {
       "difficulty": "familiarity",

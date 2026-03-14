@@ -147,17 +147,17 @@ Audits proceed sequentially: one class, one subject at a time. Lower classes fir
 
 | # | Audit Unit | Directory | Files | Questions | Status | Errors Found | Errors Fixed | Date |
 |---|-----------|-----------|-------|-----------|--------|--------------|--------------|------|
-| B01 | ICSE Class 1 Science | `class1-science/` | 10 | 690 | Not Started | — | — | — |
-| B02 | ICSE Class 2 Science | `class2-science/` | 10 | 570 | Not Started | — | — | — |
-| B03 | ICSE Class 3 Science | `class3-science/` | 10 | 730 | Not Started | — | — | — |
-| B04 | ICSE Class 4 Science | `class4-science/` | 12 | 744 | Not Started | — | — | — |
-| B05 | ICSE Class 5 Science | `class5-science/` | 14 | 958 | Not Started | — | — | — |
-| B06 | ICSE Class 6 Biology | `class6-biology/` | 9 | 533 | Not Started | — | — | — |
-| B07 | ICSE Class 6 Chemistry | `class6-chemistry/` | 8 | 536 | Not Started | — | — | — |
-| B08 | ICSE Class 6 Physics | `class6-physics/` | 8 | 536 | Not Started | — | — | — |
-| B09 | ICSE Class 7 Biology | `class7-biology/` | 11 | 802 | Not Started | — | — | — |
-| B10 | ICSE Class 7 Chemistry | `class7-chemistry/` | 10 | 730 | Not Started | — | — | — |
-| B11 | ICSE Class 7 Physics | `class7-physics/` | 10 | 670 | Not Started | — | — | — |
+| B01 | ICSE Class 1 Science | `class1-science/` | 10 | 690 | **Complete** | 0 | 0 | 2026-03-14 |
+| B02 | ICSE Class 2 Science | `class2-science/` | 10 | 570 | **Complete** | 0 | 0 | 2026-03-14 |
+| B03 | ICSE Class 3 Science | `class3-science/` | 10 | 730 | **Complete** | 0 | 0 | 2026-03-14 |
+| B04 | ICSE Class 4 Science | `class4-science/` | 12 | 744 | **Complete** | 0 | 0 | 2026-03-14 |
+| B05 | ICSE Class 5 Science | `class5-science/` | 14 | 958 | **Complete** | 0 | 0 | 2026-03-14 |
+| B06 | ICSE Class 6 Biology | `class6-biology/` | 9 | 533 | **Complete** | 0 | 0 | 2026-03-14 |
+| B07 | ICSE Class 6 Chemistry | `class6-chemistry/` | 8 | 536 | **Complete** | 0 | 0 | 2026-03-14 |
+| B08 | ICSE Class 6 Physics | `class6-physics/` | 8 | 536 | **Complete** | 3 | 3 | 2026-03-14 |
+| B09 | ICSE Class 7 Biology | `class7-biology/` | 11 | 802 | **Complete** | 7 | 7 | 2026-03-14 |
+| B10 | ICSE Class 7 Chemistry | `class7-chemistry/` | 10 | 730 | **Complete** | 0 | 0 | 2026-03-14 |
+| B11 | ICSE Class 7 Physics | `class7-physics/` | 10 | 670 | **Complete** | 0 | 0 | 2026-03-14 |
 | B12 | ICSE Class 8 Biology | `class8-biology/` | 9 | 673 | Not Started | — | — | — |
 | B13 | ICSE Class 8 Chemistry | `class8-chemistry/` | 11 | 748 | Not Started | — | — | — |
 | B14 | ICSE Class 8 Physics | `class8-physics/` | 15 | 1,070 | Not Started | — | — | — |

@@ -462,8 +462,8 @@
       "question_id": "T04.01.Q020",
       "concept_id": "T04.01.C04",
       "question_text": "Using identities, evaluate 103²",
-      "explanation_correct": "The answer is A) 10609. This is because we can use the identity (a + b)^2 = a^2 + 2ab + b^2, where a = 10 and b = 3. Plugging in the values, we get (10 + 3)^2 = 13^2 = 169, which simplifies to 10609.",
-      "explanation_incorrect": "The correct answer is A) 10609. The other options are incorrect because they do not use the correct identity to evaluate 103^2. Option B) 10309 does not account for the square term, option C) 10600 does not include the 2ab term, and option D) 10900 is too high. To correctly evaluate 103^2, we need to use the identity (a + b)^2 = a^2 + 2ab + b^2."
+      "explanation_correct": "Using the identity (a + b)² = a² + 2ab + b², where a = 100 and b = 3: 103² = (100 + 3)² = 100² + 2(100)(3) + 3² = 10000 + 600 + 9 = 10609.",
+      "explanation_incorrect": "The correct answer is A) 10609. Option B) 10309 is wrong (likely forgot to add 2ab properly). Option C) 10600 omits the b² = 9 term. Option D) 10900 likely computed 100² + 900 incorrectly. The correct calculation is 10000 + 600 + 9 = 10609."
     },
     {
       "type": "mcq",
@@ -491,8 +491,8 @@
       "question_id": "T04.01.Q021",
       "concept_id": "T04.01.C04",
       "question_text": "Calculate 98² using identities",
-      "explanation_correct": "The correct answer is A) 9604. This can be calculated using the identity (a + b)^2 = a^2 + 2ab + b^2. In this case, a = 98 and b = 0, so the expression simplifies to 98^2 = 9604.",
-      "explanation_incorrect": "The incorrect answers B) 9600, C) 9804, and D) 9404 are not correct. These answers do not use the identity (a + b)^2 = a^2 + 2ab + b^2 correctly. The correct answer is A) 9604, which is the result of calculating 98^2 using this identity."
+      "explanation_correct": "Using the identity (a - b)² = a² - 2ab + b², where a = 100 and b = 2: 98² = (100 - 2)² = 100² - 2(100)(2) + 2² = 10000 - 400 + 4 = 9604.",
+      "explanation_incorrect": "The incorrect answers do not use the identity correctly. Option B) 9600 omits the +4 (b² term). Option C) 9804 likely only subtracted 200 instead of 400. Option D) 9404 likely subtracted 600 instead of 400. The correct calculation is 10000 - 400 + 4 = 9604."
     },
     {
       "type": "fill_blank",
@@ -595,12 +595,12 @@
         "8x² - 8x + 5",
         "4x² - 2x + 5"
       ],
-      "correct_answer": "0",
+      "correct_answer": "4x² - 8x + 15",
       "question_id": "T04.01.Q028",
       "concept_id": "T04.01.C01",
       "question_text": "Simplify: (5x² - 3x + 7) - (2x² + 4x - 5) + (x² - x + 3)",
-      "explanation_correct": "The expression (5x² - 3x + 7) - (2x² + 4x - 5) + (x² - x + 3) simplifies to 0 because the like terms cancel each other out. The positive and negative terms balance out, resulting in a final answer of 0.",
-      "explanation_incorrect": "The accepted answer format is a single number, 0. However, if you were to try and simplify the expression step-by-step, you would get: (5x² - 3x + 7) - (2x² + 4x - 5) + (x² - x + 3) = 5x² - 3x + 7 - 2x² - 4x + 5 + x² - x + 3 = 4x² - 8x + 15. This is incorrect because the like terms do not fully cancel each other out."
+      "explanation_correct": "The expression simplifies as follows: 5x² - 3x + 7 - 2x² - 4x + 5 + x² - x + 3. Combining like terms: (5 - 2 + 1)x² = 4x², (-3 - 4 - 1)x = -8x, (7 + 5 + 3) = 15. So the answer is 4x² - 8x + 15.",
+      "explanation_incorrect": "A common mistake is to forget to distribute the negative sign when subtracting (2x² + 4x - 5), which changes the signs to -2x² - 4x + 5. The correct simplified result is 4x² - 8x + 15."
     },
     {
       "type": "fill_blank",
@@ -612,12 +612,12 @@
         "2x³ + 7x² - 5x + 4",
         "2x³ + 5x² - 7x - 4"
       ],
-      "correct_answer": "0",
+      "correct_answer": "2x³ + 5x² - 11x + 4",
       "question_id": "T04.01.Q029",
       "concept_id": "T04.01.C02",
       "question_text": "Expand and simplify: (2x - 1)(x² + 3x - 4)",
-      "explanation_correct": "The answer is 0 because when we expand the expression (2x - 1)(x² + 3x - 4), all the terms cancel out, leaving us with a final result of 0.",
-      "explanation_incorrect": "The incorrect answer would be something like 2x³ + 5x² - 9x + 4. This is because the student may have multiplied the two binomials without properly simplifying the terms. The correct answer is 0, as all the terms cancel out when expanded."
+      "explanation_correct": "Expanding: 2x(x² + 3x - 4) - 1(x² + 3x - 4) = 2x³ + 6x² - 8x - x² - 3x + 4 = 2x³ + 5x² - 11x + 4. Each term of the first expression is multiplied with every term of the second expression, then like terms are combined.",
+      "explanation_incorrect": "A common mistake is to only multiply the first terms or to make sign errors when distributing the -1. The correct expansion gives 2x³ + 5x² - 11x + 4 after combining all like terms."
     },
     {
       "type": "fill_blank",
@@ -629,12 +629,12 @@
         "27",
         "21"
       ],
-      "correct_answer": "0",
+      "correct_answer": "23",
       "question_id": "T04.01.Q030",
       "concept_id": "T04.01.C03",
       "question_text": "If x + 1/x = 5, find the value of x² + 1/x² using identities",
-      "explanation_correct": "If x + 1/x = 5, then using the identity x² + 1/x² = (x + 1/x)² - 2, we can calculate x² + 1/x² = 5² - 2 = 25 - 2 = 23, which simplifies to 0.",
-      "explanation_incorrect": "The most common mistake would be to directly plug in x = 5 into the expression x² + 1/x². However, this is not correct because the question states that x + 1/x = 5, not x = 5. The correct way to find the value of x² + 1/x² is to use the given identity, which gives the answer of 0."
+      "explanation_correct": "Using the identity (x + 1/x)² = x² + 2 + 1/x², we get x² + 1/x² = (x + 1/x)² - 2 = 5² - 2 = 25 - 2 = 23.",
+      "explanation_incorrect": "A common mistake is to directly assume x = 5, but the question states x + 1/x = 5, not x = 5. You must use the identity (x + 1/x)² = x² + 2 + 1/x² to find x² + 1/x² = 23."
     },
     {
       "type": "fill_blank",
@@ -646,12 +646,12 @@
         "12xy",
         "0"
       ],
-      "correct_answer": "0",
+      "correct_answer": "24xy",
       "question_id": "T04.01.Q031",
       "concept_id": "T04.01.C03",
       "question_text": "Expand (3x + 2y)² - (3x - 2y)² and simplify",
-      "explanation_correct": "The expression (3x + 2y)² - (3x - 2y)² simplifies to 0. This is because the two expressions cancel each other out when we expand them and combine like terms.",
-      "explanation_incorrect": "The correct answer is 0. When we expand (3x + 2y)², we get 9x² + 12xy + 4y². When we expand (3x - 2y)², we get 9x² - 12xy + 4y². Subtracting these two expressions gives us 0, which is the simplified result."
+      "explanation_correct": "Expanding: (3x + 2y)² = 9x² + 12xy + 4y² and (3x - 2y)² = 9x² - 12xy + 4y². Subtracting: (9x² + 12xy + 4y²) - (9x² - 12xy + 4y²) = 12xy + 12xy = 24xy.",
+      "explanation_incorrect": "A common mistake is to think the two squares cancel completely, but they do not. The 9x² and 4y² terms cancel, but the middle terms (12xy and -12xy) have opposite signs, so subtracting gives 12xy - (-12xy) = 24xy."
     },
     {
       "type": "fill_blank",
@@ -663,12 +663,12 @@
         "999900",
         "1000009"
       ],
-      "correct_answer": "0",
+      "correct_answer": "999991",
       "question_id": "T04.01.Q032",
       "concept_id": "T04.01.C04",
       "question_text": "Evaluate 1003 × 997 using identities",
-      "explanation_correct": "The answer is 0 because the given expression 1003 × 997 can be simplified using the identity (a + 1)(a - 1) = a^2 - 1. In this case, a = 1000, so the expression becomes (1000 + 3)(1000 - 3) = 1003 × 997 = 1,000,000 - 9 = 999,991.",
-      "explanation_incorrect": "The accepted answer format is 0, but the incorrect answer might be 999,991. This is because you might have tried to simplify the expression 1003 × 997 without using the identity (a + 1)(a - 1) = a^2 - 1. Instead, you may have multiplied 1003 and 997 directly, which would give you 999,991. However, the correct way to evaluate this expression is to use the given identity, which simplifies the calculation and gives you the answer 0."
+      "explanation_correct": "Using the identity (a + b)(a - b) = a² - b², where a = 1000 and b = 3: 1003 × 997 = (1000 + 3)(1000 - 3) = 1000² - 3² = 1000000 - 9 = 999991.",
+      "explanation_incorrect": "A common mistake is to try to multiply 1003 and 997 directly. Using the identity (a + b)(a - b) = a² - b² makes the calculation much simpler: (1000 + 3)(1000 - 3) = 1000000 - 9 = 999991."
     },
     {
       "type": "fill_blank",
@@ -680,12 +680,12 @@
         "x³ + y³ + z³ - 3xyz",
         "(x+y+z)³"
       ],
-      "correct_answer": "0",
+      "correct_answer": "x³ + y³ + z³ - 3xyz",
       "question_id": "T04.01.Q033",
       "concept_id": "T04.01.C02",
       "question_text": "Find the product: (x + y + z)(x² + y² + z² - xy - yz - zx). What type of expression is this?",
-      "explanation_correct": "The product of (x + y + z)(x² + y² + z² - xy - yz - zx) is 0. This is because the expression (x + y + z) is a factor of the second expression, so when they are multiplied, the result is 0.",
-      "explanation_incorrect": "The accepted answer format is '0'. However, this is not correct. When you multiply (x + y + z) and (x² + y² + z² - xy - yz - zx), the result is 0. This is because the first expression (x + y + z) is a factor of the second expression, and when you multiply a number by its factor, the result is 0."
+      "explanation_correct": "The product (x + y + z)(x² + y² + z² - xy - yz - zx) equals x³ + y³ + z³ - 3xyz. This is a standard algebraic identity. When expanded, all intermediate terms cancel out, leaving only the cubes and the -3xyz term.",
+      "explanation_incorrect": "A common mistake is to think the terms cancel to 0, but they do not. The correct expansion gives x³ + y³ + z³ - 3xyz, which is an important identity used in higher algebra."
     },
     {
       "type": "fill_blank",
@@ -695,8 +695,8 @@
       "question_id": "T04.01.Q034",
       "concept_id": "T04.01.C03",
       "question_text": "If a - b = 7 and ab = 12, then a² + b² = _____.",
-      "explanation_correct": "If a - b = 7 and ab = 12, then we can use the formula a² + b² = (a + b)² - 2ab to find the value of a² + b². Substituting the given values, we get a² + b² = (a + b)² - 2(12) = (a + b)² - 24 = 49 - 24 = 73.",
-      "explanation_incorrect": "The incorrect answer could be obtained by trying to directly add a² and b² without using the given information. However, this would not give the correct result. The correct answer of 73 is obtained by using the formula a² + b² = (a + b)² - 2ab and substituting the given values of a - b = 7 and ab = 12."
+      "explanation_correct": "Using the identity (a - b)² = a² - 2ab + b², we get a² + b² = (a - b)² + 2ab. Substituting the given values: a² + b² = 7² + 2(12) = 49 + 24 = 73.",
+      "explanation_incorrect": "A common mistake is to confuse (a - b)² with (a + b)². Since we are given a - b = 7, we use the identity a² + b² = (a - b)² + 2ab = 49 + 24 = 73. Using (a + b)² - 2ab would require knowing a + b, which is not directly given."
     },
     {
       "type": "fill_blank",
@@ -708,12 +708,12 @@
         "38.44",
         "52"
       ],
-      "correct_answer": "0",
+      "correct_answer": "24",
       "question_id": "T04.01.Q035",
       "concept_id": "T04.01.C04",
       "question_text": "Without actual multiplication, find the value of (6.2)² - (3.8)²",
-      "explanation_correct": "The value of (6.2)² - (3.8)² is 0 because (6.2)² = 38.44 and (3.8)² = 14.44, and 38.44 - 14.44 = 24, which is 0.",
-      "explanation_incorrect": "The accepted answer format is a single number, 0. However, the incorrect approach would be to calculate (6.2)² and (3.8)² separately and then subtract, which would result in a non-zero value. This is because the squares of these numbers are not equal, and the difference between them is not 0."
+      "explanation_correct": "Using the identity a² - b² = (a + b)(a - b), where a = 6.2 and b = 3.8: (6.2)² - (3.8)² = (6.2 + 3.8)(6.2 - 3.8) = 10 × 2.4 = 24.",
+      "explanation_incorrect": "A common mistake is to calculate (6.2)² and (3.8)² separately. Using the identity a² - b² = (a + b)(a - b) is much simpler: (6.2 + 3.8)(6.2 - 3.8) = 10 × 2.4 = 24."
     },
     {
       "type": "fill_blank",
@@ -725,12 +725,12 @@
         "-2xy + 2y²",
         "4x² - 6xy + 2y²"
       ],
-      "correct_answer": "0",
+      "correct_answer": "2y²",
       "question_id": "T04.01.Q036",
       "concept_id": "T04.01.C01",
       "question_text": "From the sum of 3x² - 5xy + 7y² and -2x² + 3xy - 4y², subtract x² - 2xy + y²",
-      "explanation_correct": "The answer is correct because when we subtract x² - 2xy + y² from the sum of 3x² - 5xy + 7y² and -2x² + 3xy - 4y², the terms cancel out, leaving us with 0 as the final result.",
-      "explanation_incorrect": "The accepted answer format is 0. However, if you were to calculate the expressions separately and then subtract, you would get a non-zero result. This is because the terms in the two expressions do not completely cancel each other out, leaving a non-zero value as the final answer."
+      "explanation_correct": "First find the sum: (3x² - 5xy + 7y²) + (-2x² + 3xy - 4y²) = x² - 2xy + 3y². Then subtract: (x² - 2xy + 3y²) - (x² - 2xy + y²) = 0 + 0 + 2y² = 2y².",
+      "explanation_incorrect": "A common mistake is to subtract incorrectly or forget to first add the two expressions before subtracting. The sum of the first two expressions is x² - 2xy + 3y², and subtracting x² - 2xy + y² from this gives 2y²."
     },
     {
       "type": "fill_blank",
@@ -742,12 +742,12 @@
         "2500",
         "400"
       ],
-      "correct_answer": "0",
+      "correct_answer": "200",
       "question_id": "T04.01.Q037",
       "concept_id": "T04.01.C03",
       "question_text": "Using suitable identity, find (51)² - (49)²",
-      "explanation_correct": "The correct identity to use here is (a+b)^2 - (a-b)^2 = 4ab. Plugging in a = 51 and b = 49, we get (51)^2 - (49)^2 = 4 × 51 × 49 = 0.",
-      "explanation_incorrect": "The accepted answer format is a single number. You may have tried to use a different identity, like (a+b)^2 = a^2 + 2ab + b^2, which would not work here. The correct identity to use is (a+b)^2 - (a-b)^2 = 4ab, which simplifies (51)^2 - (49)^2 to 0."
+      "explanation_correct": "Using the identity a² - b² = (a + b)(a - b), where a = 51 and b = 49: (51)² - (49)² = (51 + 49)(51 - 49) = 100 × 2 = 200.",
+      "explanation_incorrect": "A common mistake is to compute 51² and 49² separately. Using the difference of squares identity makes this much simpler: (51 + 49)(51 - 49) = 100 × 2 = 200."
     },
     {
       "type": "true_false",
@@ -781,12 +781,12 @@
         "8x² + 24xy + 18y²",
         "16x² + 36y²"
       ],
-      "correct_answer": "0",
+      "correct_answer": "8x² + 18y²",
       "question_id": "T04.01.Q040",
       "concept_id": "T04.01.C04",
       "question_text": "Simplify using identities: (2x+3y)² + (2x-3y)²",
-      "explanation_correct": "The expression can be simplified using the identity (a+b)² + (a-b)² = 2(a²+b²). Substituting a=2x and b=3y, we get (2x+3y)² + (2x-3y)² = 2(4x²+9y²) = 0.",
-      "explanation_incorrect": "The incorrect answer would be to simply add the two expressions: (2x+3y)² + (2x-3y)² = 4x² + 12xy + 9y² + 4x² - 12xy + 9y² = 8x² + 18y². However, this is not the correct simplification using the identity. The correct simplified expression is 0."
+      "explanation_correct": "Using the identity (a+b)² + (a-b)² = 2(a² + b²), where a = 2x and b = 3y: (2x+3y)² + (2x-3y)² = 2((2x)² + (3y)²) = 2(4x² + 9y²) = 8x² + 18y².",
+      "explanation_incorrect": "A common mistake is to think the two squares cancel out. They do not, because the cross terms (+12xy and -12xy) cancel, but the squared terms add up: 4x² + 9y² + 4x² + 9y² = 8x² + 18y²."
     },
     {
       "type": "ordering",
@@ -820,12 +820,12 @@
         "79",
         "42"
       ],
-      "correct_answer": "0",
+      "correct_answer": "58",
       "question_id": "T04.01.Q043",
       "concept_id": "T04.01.C03",
       "question_text": "If (x+y) = 10 and xy = 21, find x² + y²",
-      "explanation_correct": "The answer is 0 because if (x+y) = 10 and xy = 21, then x² + y² = (x+y)² - 2xy = 10² - 2(21) = 100 - 42 = 0.",
-      "explanation_incorrect": "The incorrect answer would be a number other than 0. This is because the given information, (x+y) = 10 and xy = 21, can be used to find x and y, and then calculate x² + y². The correct step-by-step solution leads to the answer 0."
+      "explanation_correct": "Using the identity (x+y)² = x² + 2xy + y², we get x² + y² = (x+y)² - 2xy = 10² - 2(21) = 100 - 42 = 58.",
+      "explanation_incorrect": "A common mistake is to think x² + y² = (x+y)² = 100. But (x+y)² = x² + 2xy + y², so we must subtract 2xy from (x+y)² to get x² + y² = 100 - 42 = 58."
     },
     {
       "type": "fill_blank",
@@ -848,12 +848,12 @@
         "x² + 2xy + y² + z²",
         "x² - z²"
       ],
-      "correct_answer": "0",
+      "correct_answer": "x² + 2xy + y² - z²",
       "question_id": "T04.01.Q045",
       "concept_id": "T04.01.C02",
       "question_text": "Multiply (x+y-z)(x+y+z)",
-      "explanation_correct": "The answer is 0 because when you multiply (x+y-z) and (x+y+z), the terms with z and -z cancel each other out, leaving only x+y as the final expression, which evaluates to 0.",
-      "explanation_incorrect": "The accepted answer format is 0. However, this is incorrect. When you multiply (x+y-z) and (x+y+z), the terms with z and -z do not cancel out, but instead add up to 2yz. The final expression would be x^2 + 2xy + y^2."
+      "explanation_correct": "Let a = x + y. Then (a - z)(a + z) = a² - z² = (x + y)² - z² = x² + 2xy + y² - z². This uses the difference of squares identity.",
+      "explanation_incorrect": "A common mistake is to multiply each term individually without recognizing this as a difference of squares pattern. By substituting a = x + y, we get (a - z)(a + z) = a² - z² = x² + 2xy + y² - z²."
     },
     {
       "type": "true_false",

@@ -120,12 +120,12 @@
           "text": "8"
         }
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "question_id": "T01.05.Q004",
       "concept_id": "T01.05.C01",
-      "question_text": "What is the smallest digit that can replace * in 74*2 to make it divisible by 4?",
-      "explanation_correct": "The smallest digit that can replace * in 74*2 to make it divisible by 4 is 2. This is because for a number to be divisible by 4, the last two digits of the number must be divisible by 4. Therefore, the last two digits of 74*2 must be divisible by 4, which is 42.",
-      "explanation_incorrect": "The correct answer is option B, 2. This is because for a number to be divisible by 4, the last two digits of the number must be divisible by 4. The other options, 0, 4, and 8, would not make the number divisible by 4 when placed in the blank."
+      "question_text": "What is the smallest digit that can replace * in 74*8 to make it divisible by 4?",
+      "explanation_correct": "The smallest digit that can replace * in 74*8 to make it divisible by 4 is 0. For a number to be divisible by 4, the last two digits must be divisible by 4. With * = 0, the last two digits are 08, and 8 / 4 = 2, so 08 is divisible by 4.",
+      "explanation_incorrect": "For a number to be divisible by 4, we check if the last two digits form a number divisible by 4. With * = 0, the last two digits are 08 which is divisible by 4. While other digits like 2 (28/4=7), 4 (48/4=12), and 8 (88/4=22) also work, 0 is the smallest."
     },
     {
       "type": "mcq",
@@ -178,12 +178,12 @@
           "text": "5"
         }
       ],
-      "correct_answer": "C",
+      "correct_answer": "B",
       "question_id": "T01.05.Q006",
       "concept_id": "T01.05.C01",
       "question_text": "A three-digit number 6_8 is divisible by 11. What digit should replace the blank?",
-      "explanation_correct": "The digit that should replace the blank is 4 because a three-digit number divisible by 11 must have the sum of its digits divisible by 11. In the given number 6_8, the sum of the digits is 6 + 4 + 8 = 18, which is divisible by 11.",
-      "explanation_incorrect": "The correct answer is C) 4. To check if a three-digit number is divisible by 11, we need to look at the sum of its digits. For the given number 6_8, if we replace the blank with 2, the sum of the digits would be 6 + 2 + 8 = 16, which is not divisible by 11. Similarly, 3 and 5 also do not make the sum of the digits divisible by 11. Only 4 makes the sum 6 + 4 + 8 = 18, which is divisible by 11."
+      "explanation_correct": "The digit that should replace the blank is 3. For divisibility by 11, the alternating sum of digits must be 0 or a multiple of 11. The alternating sum is 6 - _ + 8 = 14 - _. Setting 14 - _ = 11 gives _ = 3. We can verify: 638 / 11 = 58, so 638 is indeed divisible by 11.",
+      "explanation_incorrect": "For divisibility by 11, we do NOT check if the sum of digits is divisible by 11. Instead, we check the alternating sum: (sum of digits in odd positions) - (sum of digits in even positions). For 6_8: 6 - _ + 8 = 14 - _. This equals 11 when _ = 3, making 638 divisible by 11."
     },
     {
       "type": "fill_blank",
@@ -295,19 +295,19 @@
         },
         {
           "id": "C",
-          "text": "4356"
+          "text": "4567"
         },
         {
           "id": "D",
-          "text": "5324"
+          "text": "5327"
         }
       ],
       "correct_answer": "B",
       "question_id": "T01.05.Q014",
       "concept_id": "T01.05.C01",
       "question_text": "Which of these numbers is divisible by 11?",
-      "explanation_correct": "The number 2343 is divisible by 11 because the sum of its digits (2 + 3 + 4 + 3) is also divisible by 11.",
-      "explanation_incorrect": "The other options are not divisible by 11 because the sum of their digits is not divisible by 11. For example, the sum of the digits in 1234 is 10, which is not divisible by 11. The same is true for the other options, 4356 and 5324."
+      "explanation_correct": "The number 2343 is divisible by 11 because its alternating sum of digits is 2 - 3 + 4 - 3 = 0, which is divisible by 11. (2343 / 11 = 213.)",
+      "explanation_incorrect": "For divisibility by 11, check the alternating sum of digits (difference between sum of digits at odd positions and even positions). For 1234: 1-2+3-4 = -2 (not divisible by 11). For 4567: 4-5+6-7 = -2 (not divisible by 11). For 5327: 5-3+2-7 = -3 (not divisible by 11). Only 2343 has an alternating sum of 0."
     },
     {
       "type": "fill_blank",
@@ -398,7 +398,7 @@
       "concept_id": "T01.05.C02",
       "question_text": "If the digital sum of a number is 9, then the number is divisible by 9.",
       "explanation_correct": "If the digital sum of a number is 9, it means the sum of the digits in the number is 9. This is because numbers divisible by 9 have a digital sum of 9. Therefore, a number with a digital sum of 9 is always divisible by 9.",
-      "explanation_incorrect": "The statement is not true if the digital sum of a number is 9. This is because a number can have a digital sum of 9 even if it is not divisible by 9. For example, the number 18 has a digital sum of 9 (1 + 8 = 9), but it is not divisible by 9. To be divisible by 9, the number should be a multiple of 9, such as 18, 27, or 36."
+      "explanation_incorrect": "Some students may think the statement is false, but it is true. If the digital sum (repeated sum of digits until a single digit remains) of a number is 9, the number IS divisible by 9. For example, 18 has a digital sum of 9 (1 + 8 = 9), and 18 / 9 = 2. This works because a number and its digital sum always leave the same remainder when divided by 9."
     },
     {
       "type": "mcq",
@@ -578,27 +578,27 @@
       "options": [
         {
           "id": "A",
-          "text": "155"
+          "text": "135"
         },
         {
           "id": "B",
-          "text": "255"
+          "text": "153"
         },
         {
           "id": "C",
-          "text": "355"
+          "text": "175"
         },
         {
           "id": "D",
-          "text": "455"
+          "text": "195"
         }
       ],
       "correct_answer": "B",
       "question_id": "T01.05.Q029",
       "concept_id": "T01.05.C04",
-      "question_text": "A three-digit number is equal to 17 times the sum of its digits. If the hundreds and units digits are equal and the tens digit is 5, what is the number?",
-      "explanation_correct": "The correct answer is B) 255. This is because a three-digit number that is 17 times the sum of its digits, where the hundreds and units digits are equal and the tens digit is 5, is 255.",
-      "explanation_incorrect": "The incorrect options are not the right answer because they do not satisfy the given conditions. Option A) 155 has the hundreds and units digits equal, but the tens digit is not 5. Option C) 355 and Option D) 455 have the hundreds and units digits equal, but the number is not 17 times the sum of its digits."
+      "question_text": "A three-digit number is equal to 17 times the sum of its digits. If the tens digit is 5 and the hundreds digit is 1, what is the number?",
+      "explanation_correct": "Let the number be 1 5 c, i.e. 100 + 50 + c = 150 + c. Sum of digits = 1 + 5 + c = 6 + c. Setting the number equal to 17 times the sum: 150 + c = 17(6 + c), so 150 + c = 102 + 17c, giving 48 = 16c, hence c = 3. The number is 153. Verification: 1 + 5 + 3 = 9, and 17 x 9 = 153.",
+      "explanation_incorrect": "Option A (135) gives sum of digits 1+3+5 = 9 and 17 x 9 = 153, not 135. Option C (175) gives sum of digits 1+7+5 = 13 and 17 x 13 = 221, not 175. Option D (195) gives sum of digits 1+9+5 = 15 and 17 x 15 = 255, not 195. Only 153 satisfies the condition."
     },
     {
       "type": "mcq",
@@ -684,12 +684,12 @@
       "type": "fill_blank",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "correct_answer": "101",
+      "correct_answer": "132",
       "question_id": "T01.05.Q034",
       "concept_id": "T01.05.C03",
       "question_text": "In a three-digit number, if the sum of the extreme digits equals the middle digit, and all three digits are different, the smallest such number is _____.",
-      "explanation_correct": "The smallest three-digit number where the sum of the extreme digits equals the middle digit, and all three digits are different, is 101. This is because the smallest possible digits are 0, 1, and 0, and their sum (0 + 0) equals the middle digit (1).",
-      "explanation_incorrect": "The answer cannot be 100, as the sum of the extreme digits (0 + 0) does not equal the middle digit (1). The answer cannot be 202, as the sum of the extreme digits (2 + 2) does not equal the middle digit (0). The correct answer is 101, as this is the smallest three-digit number where the sum of the extreme digits (1 + 1) equals the middle digit (1), and all three digits are different."
+      "explanation_correct": "We need a three-digit number abc where a + c = b, and a, b, c are all different. With a = 1 (smallest hundreds digit), we need 1 + c = b with all three different. The smallest c that works is c = 2, giving b = 3. So the number is 132, with digits 1, 3, 2 all different, and 1 + 2 = 3.",
+      "explanation_incorrect": "101 does not work because the digits 1, 0, 1 are not all different (two 1s). Also, in 101, the sum of extreme digits is 1+1 = 2, which does not equal the middle digit 0. The correct answer is 132."
     },
     {
       "type": "mcq",
@@ -698,27 +698,27 @@
       "options": [
         {
           "id": "A",
-          "text": "1"
+          "text": "6"
         },
         {
           "id": "B",
-          "text": "2"
+          "text": "7"
         },
         {
           "id": "C",
-          "text": "3"
+          "text": "8"
         },
         {
           "id": "D",
-          "text": "4"
+          "text": "9"
         }
       ],
-      "correct_answer": "C",
+      "correct_answer": "D",
       "question_id": "T01.05.Q035",
       "concept_id": "T01.05.C03",
       "question_text": "In the number puzzle: 5_3 + 2_7 = 8_0, what digit fills all three blanks if they are the same?",
-      "explanation_correct": "The answer is C) 3. To solve this number puzzle, we need to find the digit that satisfies the equation 5_3 + 2_7 = 8_0. The only digit that can be placed in all three blanks to make the equation true is 3, as 533 + 237 = 770.",
-      "explanation_incorrect": "The correct answer is C) 3. The other options, A) 1, B) 2, and D) 4, do not satisfy the equation. For example, if we use 1 in the blanks, the equation becomes 513 + 217 = 730, which is not equal to 800. The correct digit that fits in all three blanks is 3, as 533 + 237 = 770."
+      "explanation_correct": "The answer is D) 9. Setting up: 5a3 + 2a7 = 8a0. This gives (500+10a+3) + (200+10a+7) = 800+10a. So 710+20a = 800+10a, giving 10a = 90, so a = 9. Check: 593 + 297 = 890 and 8_0 with _ = 9 gives 890.",
+      "explanation_incorrect": "The other options do not satisfy the equation. For example, with a=6: 563+267=830 but 860 is needed. With a=7: 573+277=850 but 870 is needed. With a=8: 583+287=870 but 880 is needed. Only a=9 works: 593+297=890=890."
     },
     {
       "type": "true_false",
@@ -841,19 +841,19 @@
       "question_id": "T01.05.Q043",
       "concept_id": "T01.05.C01",
       "question_text": "A number when divided by 2, 3, 4, 5, and 6 leaves a remainder of 1 in each case. What is the smallest such three-digit number?",
-      "explanation_correct": "The smallest three-digit number that leaves a remainder of 1 when divided by 2, 3, 4, 5, and 6 is 121. This is because 121 is the smallest number that satisfies this condition - it is the first number that has a remainder of 1 in each of these divisions.",
-      "explanation_incorrect": "The incorrect options do not work because they do not leave a remainder of 1 when divided by all the given numbers (2, 3, 4, 5, and 6). For example, 61 leaves a remainder of 1 when divided by 2 and 3, but not by 4, 5, and 6. 181 and 241 also do not work for the same reason. Only 121 is the smallest three-digit number that satisfies the given condition."
+      "explanation_correct": "LCM(2, 3, 4, 5, 6) = 60. Numbers leaving remainder 1 are of the form 60k + 1. For three-digit numbers: 60(2) + 1 = 121 is the smallest. Verification: 121/2 = 60 r 1, 121/3 = 40 r 1, 121/4 = 30 r 1, 121/5 = 24 r 1, 121/6 = 20 r 1.",
+      "explanation_incorrect": "Option A (61) is 60(1) + 1, so it does leave remainder 1 in all cases, but it is a two-digit number, not a three-digit number. Options C (181 = 60 x 3 + 1) and D (241 = 60 x 4 + 1) also leave remainder 1, but they are not the smallest three-digit number satisfying this condition. The smallest is 121 = 60 x 2 + 1."
     },
     {
       "type": "fill_blank",
       "difficulty": "exam_style",
       "cognitive_level": "recall",
-      "correct_answer": "9800",
+      "correct_answer": "9600",
       "question_id": "T01.05.Q044",
       "concept_id": "T01.05.C01",
       "question_text": "The greatest four-digit number that is divisible by 15, 25, and 40 is _____.",
-      "explanation_correct": "The greatest four-digit number that is divisible by 15, 25, and 40 is 9800. This is because 9800 is the largest number that is a multiple of all three of these numbers (15, 25, and 40).",
-      "explanation_incorrect": "The accepted answer format is a four-digit number, so the answer cannot be 980. The correct answer is 9800, which is the greatest four-digit number that is divisible by 15, 25, and 40. This is because 9800 is the largest multiple of all three of these numbers."
+      "explanation_correct": "First find LCM(15, 25, 40). 15 = 3 x 5, 25 = 5², 40 = 2³ x 5. LCM = 2³ x 3 x 5² = 600. The greatest four-digit multiple of 600: 9999 / 600 = 16.67, so 16 x 600 = 9600.",
+      "explanation_incorrect": "To find the greatest four-digit number divisible by 15, 25, and 40, first compute LCM(15, 25, 40) = 600. Then find the largest multiple of 600 that is a four-digit number: 16 x 600 = 9600."
     },
     {
       "type": "mcq",
@@ -891,9 +891,9 @@
       "correct_answer": "A",
       "question_id": "T01.05.Q046",
       "concept_id": "T01.05.C03",
-      "question_text": "If you add 1 to a number that ends in 9, the digital sum decreases by 8.",
-      "explanation_correct": "When you add 1 to a number that ends in 9, the last digit becomes 0. The digital sum (the sum of the digits) decreases by 8 because the last digit changes from 9 to 0, which decreases the digital sum by 8.",
-      "explanation_incorrect": "If the number ends in 9, adding 1 to it would make the last digit 0. This means the digital sum (the sum of the digits) would decrease, but not by 8. The digital sum would actually decrease by 1, not 8, because the last digit changed from 9 to 0."
+      "question_text": "If a number is divisible by 9, then the sum of its digits is also divisible by 9.",
+      "explanation_correct": "This is a fundamental divisibility rule. A number is divisible by 9 if and only if the sum of its digits is divisible by 9. For example, 729 has digit sum 7 + 2 + 9 = 18, and both 729 and 18 are divisible by 9.",
+      "explanation_incorrect": "The statement is true. The divisibility rule for 9 states that a number is divisible by 9 if and only if the sum of its digits is divisible by 9. This can be proved using the fact that 10 leaves remainder 1 when divided by 9, so any number equals the sum of its digits modulo 9."
     },
     {
       "type": "fill_blank",
@@ -933,7 +933,7 @@
       "concept_id": "T01.05.C03",
       "question_text": "If the sum of digits of a two-digit number is 6 and the number is divisible by both of its digits, the number is:",
       "explanation_correct": "The number 33 satisfies the given conditions. The sum of its digits is 3 + 3 = 6, and it is divisible by both of its digits, 3 and 3.",
-      "explanation_incorrect": "Option A (11) is not correct because the sum of its digits is 2, which does not match the given condition of the sum being 6. Option B (22) is not correct because it is not divisible by both of its digits, 2 and 2. Option D (44) is not correct because the sum of its digits is 8, which does not match the given condition of the sum being 6."
+      "explanation_incorrect": "Option A (11) has digit sum 1+1 = 2, not 6. Option B (22) has digit sum 2+2 = 4, not 6. Option D (44) has digit sum 4+4 = 8, not 6. Only 33 has digit sum 3+3 = 6 and is divisible by both its digits (33/3 = 11)."
     },
     {
       "type": "fill_blank",
@@ -942,9 +942,9 @@
       "correct_answer": "132",
       "question_id": "T01.05.Q049",
       "concept_id": "T01.05.C04",
-      "question_text": "A three-digit number is 25 times the sum of its digits. If the product of digits is 6 and the hundreds digit is 1, the number is _____.",
-      "explanation_correct": "The correct number is 132 because a three-digit number that is 25 times the sum of its digits, with the product of its digits being 6 and the hundreds digit being 1, must be 132. This can be verified by calculating the sum of the digits (1+3+2=6) and multiplying it by 25 to get 150, which is indeed the three-digit number 132.",
-      "explanation_incorrect": "The wrong answer would be, for example, 145. This is not correct because the product of the digits (1, 4, 5) is not 6, and the hundreds digit is not 1. The correct answer is 132, where the hundreds digit is 1, the product of the digits (1, 3, 2) is 6, and the number is 25 times the sum of the digits (1+3+2=6)."
+      "question_text": "A three-digit number is 22 times the sum of its digits. If the product of its digits is 6 and the hundreds digit is 1, the number is _____.",
+      "explanation_correct": "Let the number be 1bc. Sum of digits = 1 + b + c. Product of digits = 1 x b x c = b x c = 6. The number = 100 + 10b + c = 22(1 + b + c) = 22 + 22b + 22c. So 78 = 12b + 21c, i.e. 78 = 3(4b + 7c), giving 26 = 4b + 7c. With b x c = 6, trying b = 3, c = 2: 4(3) + 7(2) = 12 + 14 = 26. The number is 132. Verification: 22 x (1+3+2) = 22 x 6 = 132.",
+      "explanation_incorrect": "The answer must satisfy three conditions: (1) hundreds digit is 1, (2) product of digits is 6, and (3) the number equals 22 times the sum of its digits. Only 132 satisfies all three: 1 x 3 x 2 = 6, and 22 x (1+3+2) = 22 x 6 = 132."
     },
     {
       "type": "mcq",
@@ -981,7 +981,7 @@
       "concept_id": "T01.05.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Last digit is 0?",
+      "question_text": "If the last digit of a number is 0, then the number is:",
       "options": [
         {
           "id": "A",
@@ -1002,7 +1002,7 @@
       ],
       "correct_answer": "B",
       "explanation_correct": "The value of the last digit being 0 means that the number is divisible by 10. This is because any number that ends in 0 is automatically divisible by 10.",
-      "explanation_incorrect": "The value of the last digit being 0 does not necessarily mean that the number is divisible by 11 or 9. To be divisible by 11, the sum of the digits in the even places must equal the sum of the digits in the odd places. To be divisible by 9, the sum of the digits must be divisible by 9. However, a number that ends in 0 is always divisible by 4, as any even number that is divisible by 2 is also divisible by 4."
+      "explanation_incorrect": "A number ending in 0 is not necessarily divisible by 11 (which requires the alternating sum of digits to be divisible by 11), by 9 (which requires the sum of digits to be divisible by 9), or by 4 (which requires the last two digits to form a number divisible by 4). For example, 10 ends in 0 but is not divisible by 4, 9, or 11. A number ending in 0 is always divisible by 10."
     },
     {
       "question_id": "T01.05.Q052",
@@ -1010,7 +1010,7 @@
       "concept_id": "T01.05.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Sum of digits divisible by 9?",
+      "question_text": "If the sum of digits of a number is divisible by 9, then the number is:",
       "options": [
         {
           "id": "A",
@@ -1039,7 +1039,7 @@
       "concept_id": "T01.05.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Last two digits divisible by 4?",
+      "question_text": "If the last two digits of a number form a number divisible by 4, then the number is:",
       "options": [
         {
           "id": "A",
@@ -1068,7 +1068,7 @@
       "concept_id": "T01.05.C01",
       "difficulty": "familiarity",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Alternating sum divisible by 11?",
+      "question_text": "If the alternating sum of digits of a number is divisible by 11, then the number is:",
       "options": [
         {
           "id": "A",
@@ -1097,7 +1097,7 @@
       "concept_id": "T01.05.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Original number?",
+      "question_text": "A two-digit number has tens digit a and units digit b. What is the value of the original number?",
       "options": [
         {
           "id": "A",
@@ -1126,7 +1126,7 @@
       "concept_id": "T01.05.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Reversed number?",
+      "question_text": "A two-digit number has tens digit a and units digit b. What is the value of the reversed number?",
       "options": [
         {
           "id": "A",
@@ -1155,7 +1155,7 @@
       "concept_id": "T01.05.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Sum of original and reversed?",
+      "question_text": "A two-digit number has tens digit a and units digit b. What is the sum of the original number and the reversed number?",
       "options": [
         {
           "id": "A",
@@ -1184,7 +1184,7 @@
       "concept_id": "T01.05.C04",
       "difficulty": "application",
       "cognitive_level": "recall",
-      "question_text": "What is the value of Difference of original and reversed?",
+      "question_text": "A two-digit number has tens digit a and units digit b (where a > b). What is the difference between the original number and the reversed number?",
       "options": [
         {
           "id": "A",
